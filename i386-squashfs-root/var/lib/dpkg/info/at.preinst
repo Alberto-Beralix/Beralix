@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installinit
+if [ "$1" = install ] || [ "$1" = upgrade ]; then
+	if [ -e "/etc/init.d/atd" ] && [ ! -L "/etc/init.d/atd" ]; then
+		if [ "`md5sum \"/etc/init.d/atd\" | sed -e \"s/ .*//\"`" != \
+		     "`dpkg-query -W -f='${Conffiles}' at | sed -n -e \"\\\\' /etc/init.d/atd '{s/ obsolete$//;s/.* //p}\"`" ]
+		then
+			echo "Obsolete conffile /etc/init.d/atd has been modified by you, renaming to .dpkg-bak"
+			mv -f "/etc/init.d/atd" "/etc/init.d/atd.dpkg-bak"
+		else
+			rm -f "/etc/init.d/atd"
+		fi
+	fi
+fi
+# End automatically added section

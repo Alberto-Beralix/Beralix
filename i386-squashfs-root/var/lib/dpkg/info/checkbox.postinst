@@ -1,0 +1,17 @@
+#! /bin/sh -e
+
+. /usr/share/debconf/confmodule
+. /usr/share/checkbox/install/postinst
+
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p checkbox 
+fi
+
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p checkbox /usr/share/checkbox -V 2.6-
+fi
+
+# End automatically added section
+

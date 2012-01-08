@@ -1,0 +1,65 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="topic" style="task"
+      id="disable-account">
+
+  <info>
+    <link type="guide" xref="index#accounts"/>
+    <link type="seealso" xref="remove-account"/>
+    <desc>Prevent <app>Empathy</app> from automatically logging in to an account.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-14" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-10" status="review"/>
+    <revision pkgversion="2.28" version="0.3" date="2009-08-27" status="review"/>
+    <revision pkgversion="2.28" version="0.4" date="2009-08-31" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-08-31" status="done"/>
+      -->
+    </revision>
+    <revision pkgversion="2.30" version="0.5" date="2010-02-03" status="review"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Disable an account</title>
+
+  <p>You can disable an account to prevent <app>Empathy</app> from logging in to
+  it without removing the account entirely.  You may wish to disable and re-enable
+  an account if you only want to be logged in to the account at certain times,
+  but you still want to use <app>Empathy</app> for other accounts.</p>
+
+  <steps>
+    <item>
+      <p>From the <gui>Contact List</gui> window, choose <guiseq><gui>Edit</gui>
+      <gui>Accounts</gui></guiseq>, or press <key>F4</key>.</p>
+    </item>
+    <item>
+      <p>Select the account you wish to disable from the accounts list on the left
+      side of the window.</p>
+    </item>
+    <item>
+      <p>Deselect <gui style="checkbox">Enabled</gui> on the right side of the
+      window.
+      </p>
+    </item>
+  </steps>
+
+  <p>
+    To re-enable the account, simply select <gui style="checkbox">Enabled</gui>.
+  </p>
+</page>

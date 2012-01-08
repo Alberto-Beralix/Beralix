@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="calendar-meetings-sending-invitation" xml:lang="es">
+
+  <info>
+    <desc>Enviar una invitación para reunión.</desc>
+    
+    <link type="guide" xref="calendar-meetings"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-29" status="stub"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+ <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-calendar-apts.html.en#usage-calendar-rsvp -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>  
+
+  </info>
+
+<title>Enviar una invitación para reunión</title>
+
+<p>Al crear una reunión o una cita en grupo puede especificar a los asistentes en varias categorías como «presidencia» o «participante requerido». Cuando guarde su lista, cada invitado recibirá un mensaje con los datos de la cita y tendrán la opción de responder.</p>
+<p>Si no necesita recibir confirmaciones de asistencia al planificar un acontecimiento y sólo necesita anunciarlo, pulse con el botón derecho sobre la reunión y seleccione <gui>Reenviar como iCalendar</gui>. Esto abrirá un nuevo mensaje de correo con una notificación del acontecimiento adjunta. Los destinatarios podrán incluir el acontecimiento en sus calendarios con una pulsación, pero no le enviarán una respuesta automática acerca de si asistirán o no.</p>
+
+<p>Para planificar una reunión:</p>
+
+<steps>
+<item><p>Pulse <guiseq><gui>Archivo</gui><gui>Nuevo</gui><gui>Reunión</gui></guiseq>.</p></item>
+<item><p>Si tiene múltiples cuentas de correo seleccione la que quiere usar seleccionando un elemento en el campo <gui>Organizador</gui>.</p></item>
+<item><p>Seleccione un calendario en la lista desplegable <gui>Calendario</gui>.</p></item>
+<item><p>Pulse <gui style="button">Añadir</gui> para añadir las direcciones de correo-e de las personas a las que quiere invitar.</p></item>
+<item><p>Pulse <gui>Ver</gui> en la barra de menú para ver u ocultar los campos <gui>Tipo</gui>, <gui>Rol</gui>, <gui>Estado</gui> y <gui>RSVP</gui>.</p></item>
+<item><p>Escriba un breve resumen en el campo <gui>Resumen</gui>.</p></item>
+<item><p>(Opcional) Escriba una ubicación en el campo <gui>Lugar</gui>.</p></item>
+<item><p>Para seleccionar esta cita como un Acontecimiento para todo el día, pulse <guiseq><gui>Opciones</gui><gui>Acontecimiento para todo el día</gui></guiseq> o pulse el botón <gui>Acontecimiento para todo el día</gui> en la barra de herramientas.</p></item>
+<item><p>Seleccione la fecha y la hora.</p></item>
+<item><p>If the event is not an all day event, select either <gui>For</gui> to specify the duration, or select <gui>Until</gui> to specify the ending time of the event.</p></item>
+<item><p>(Opcional) Escriba una descripción en el campo <gui>Descripción</gui>.</p></item>
+<item><p>Para preguntar la información de <link xref="calendar-free-busy">Disponibilidad</link> de los asistentes, pulse el botón <gui>Disponibilidad</gui> en la barra de herramientas, o pulse <guiseq><gui>Opciones</gui><gui>Disponibilidad</gui></guiseq>.</p></item>
+<item><p>Pulse <gui>Guardar</gui> para guardar la reunión.</p></item>
+</steps>
+
+<p>Se enviará un correo-e a todos los destinatarios, invitándoles a su acontecimiento.</p>
+
+<note><p>También puede definir una <link xref="calendar-timezones">zona horaria</link>, una <link xref="using-categories">categoría</link>, un <link xref="calendar-alarms-and-reminders">recordatorio</link>, una <link xref="calendar-recurrence">repetición</link> o una <link xref="calendar-classifications">clasificación</link> para el acontecimiento o añadir un adjunto.</p></note>
+
+<note><p>Una reunión sólo puede tener un organizador, y sólo el organizador puede añadir participantes a esa reunión. Aunque se puede cambiar el organizador de una reunión, no se recomienda porque puede provocar confusión en el proceso de planificación. Si desea invitar a personas adicionales y no son los que ha invitado el organizador, es recomendable que reenvíe el mensaje de invitación que recibió del organizador original a los asistentes.</p></note>
+
+</page>

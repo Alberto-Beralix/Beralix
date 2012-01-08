@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="স্বনিৰ্ধাৰিত ফন্ট">
+							<longdesc>ভাষাৰ পেনেলৰ বাবে স্বনিৰ্বাচিত ফন্ট</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="স্বনিৰ্বাচিত ফন্ট ব্যৱহাৰ কৰা হ&apos;ব">
+							<longdesc>ভাষাৰ পেনেলৰ বাবে স্বনিৰ্বাচিত ফন্টৰ নাম ব্যৱহাৰ কৰক</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="নিবেশ পদ্ধতিৰ নাম দেখুৱাব">
+							<longdesc>ভাষাৰ বাৰত নিবেশ পদ্ধতিৰ নাম দেখুৱাব</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="প্ৰণালী ট্ৰত আইকন প্ৰদৰ্শন কৰা হ&apos;ব">
+							<longdesc>প্ৰণালী ট্ৰত আইকন প্ৰদৰ্শন কৰা হ&apos;ব</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="লুক-আপ টেবুলৰ দিশ">
+							<longdesc>লুকআপ টেবুলৰ দিশ । ০ = অনুভূমিক, ১ = উলম্ব</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="ভাষাৰ পেনেলৰ স্থান">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="ভাষাৰ পেনেলৰ স্থান">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="স্বয়ংক্ৰিয়ভাবে লুকাওক">
+							<longdesc>ভাষাৰ পেনেলৰ আচৰণ । ০ = তালিকাত প্ৰোথিত, ১ = স্বয়ংক্ৰিয়ভাবে লুকাওক, ২ = সদায় দেখুৱাওক</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="enable_by_default">
+						<local_schema short_desc="ইনপুট পদ্ধতি অবিকল্পিতভাৱে সামৰ্থবান কৰক">
+							<longdesc>যেতিয়া অনুপ্ৰয়োগে ইনপুট ফকাচ প্ৰাপ্ত কৰে তেতিয়া অবিকল্পিতভাৱে ইনপুট পদ্ধতি সামৰ্থবান কৰা</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_global_engine">
+						<local_schema short_desc="সৰ্বব্যাপী নিবেশ পদ্ধতি ব্যৱহাৰ কৰক">
+							<longdesc>সকলো অনুপ্ৰয়োগৰ মাজত একেই নিবেশ পদ্ধতি অংশীদাৰ কৰক</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="প্ৰিএডিট টেক্সট প্ৰোথিত কৰক">
+							<longdesc>অনুপ্ৰয়োগৰ সংযোগক্ষেত্ৰত প্ৰিএডিট টেক্সট প্ৰোথিত কৰক</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="প্ৰণালী চাবিৰ ফলক বিন্যাস প্ৰয়োগ কৰা হ&apos;ব">
+							<longdesc>প্ৰণালী চাবিৰ ফলক (XKB) বিন্যাস প্ৰয়োগ কৰা হ&apos;ব</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="কলঘৰ আগতে তুলি লোৱা হ&apos;ব">
+							<longdesc>ibus আৰম্ভৰ আগতে কলঘৰ তুলি লওক</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="পূৰ্ববৰ্তী কলঘৰৰ ছৰ্টকাট চাবি">
+								<longdesc>তালিকাত থকা পূৰ্বৱৰ্তী ইনপুট পদ্ধতিলে যাবলে চৰ্টকাট কিসমূহ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="পূৰ্ববৰ্তী কলঘৰৰ ছৰ্টকাট চাবি">
+								<longdesc>তালিকাত থকা পূৰ্বৱৰ্তী ইনপুট পদ্ধতিলে যাবলে চৰ্টকাট কিসমূহ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="পৰবৰ্তী কলঘৰৰ বাবে ছৰ্টকাট চাবি">
+								<longdesc>তালিকাত থকা পৰৱৰ্তী ইনপুট পদ্ধতিলে যাবলে চৰ্টকাট কিসমূহ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="পৰবৰ্তী কলঘৰৰ বাবে ছৰ্টকাট চাবি">
+								<longdesc>তালিকাত থকা পৰৱৰ্তী ইনপুট পদ্ধতিলে যাবলে চৰ্টকাট কিসমূহ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="disable_unconditional">
+							<local_schema short_desc="চৰ্টকাট কিসমূহ অসামৰ্থবান কৰক">
+								<longdesc>ইনপুট পদ্ধতি বন্ধ কৰিবলে চৰ্টকাট কিসমূহ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_unconditional">
+							<local_schema short_desc="চৰ্টকাট কিসমূহ সামৰ্থবান কৰা">
+								<longdesc>ইনপুট পদ্ধতি খুলিবলে চৰ্টকাট কিসমূহ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="ট্ৰিগাৰৰ ছৰ্টকাট চাবি">
+								<longdesc>নিবেশ পদ্ধতি খোলা আৰু বন্ধ কৰাৰ বাবে প্ৰয়োজনীয় ছৰ্ট-কাট চাবি নিৰ্ধাৰণ কৰক</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="ৱাই-ফাই নিৰ্মাণ নিষ্ক্ৰিয় কৰক">
+						<longdesc>এই এপ্লেটৰ সহায়ত এড-হক নে&apos;টৱৰ্ক নিৰ্মাণৰ ব্যৱস্থা নিষ্ক্ৰিয় কৰাৰ বাবে এই মান TRUE নিৰ্ধাৰণ কৰক ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="স্টেম্প">
+						<longdesc>নতুন সংস্কৰণত গুণ মাইগ্ৰেট কৰা হ&apos;ব নে নহয় নিৰ্ধাৰণ কৰিবলৈ ইয়াক ব্যৱহাৰ কৰা হয় ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="উপলব্ধ নে&apos;টৱৰ্কৰ বিজ্ঞপ্তি প্ৰদৰ্শন লুকুৱা হ&apos;ব">
+						<longdesc>বেতাঁৰ নে&apos;টৱৰ্ক থাকিলে বিজ্ঞপ্তিৰ ব্যৱস্থা নিষ্ক্ৰিয় কৰাৰ বাবে এই মান TRUE নিৰ্ধাৰণ কৰক ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="বিচ্ছিন্ন হোৱাৰ বিজ্ঞপ্তি নিষ্ক্ৰিয় কৰা হ&apos;ব">
+						<longdesc>নে&apos;টৱৰ্কৰ সৈতে সংযোগ বিচ্ছিন্ন কৰাৰ সময়ত বিজ্ঞপ্তিৰ ব্যৱস্থা নিষ্ক্ৰিয় কৰাৰ বাবে এই মান TRUE নিৰ্ধাৰণ কৰক ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="সংযুক্ত হোৱাৰ বিজ্ঞপ্তি নিষ্ক্ৰিয় কৰা হ&apos;ব">
+						<longdesc>নে&apos;টৱৰ্কৰ সৈতে সংযুক্ত কৰাৰ সময়ত বিজ্ঞপ্তিৰ ব্যৱস্থা নিষ্ক্ৰিয় কৰাৰ বাবে এই মান TRUE নিৰ্ধাৰণ কৰক ।</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

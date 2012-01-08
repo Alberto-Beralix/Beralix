@@ -1,0 +1,34 @@
+#! /bin/sh
+
+# This script puts the Novatel 3G modem in Toshiba Portege R500 to USB
+# suspend before going to sleep. Otherwise it may be in a weird state
+# after wakeup, namely everything looks fine from various AT commands,
+# the modem is registered to the cell network and reports a suitable
+# signal strength, but attempting to dial out by atdt*99# or, it seems,
+# any other number and the modem just responds instantly with NO CARRIER.
+
+# No amount of fiddling with the radio kill switch, unloading the
+# option and usb_serial drivers, disabling and enabling the RF side
+# via HCI (toshset -3g) or doing a USB port reset (usb_reset) or USB
+# suspending and waking the device seems to help. Rebooting works,
+# going to sleep again and waking works sometimes too.
+
+# USB bus and device, see for example lsusb|grep 3G output:
+# Bus 002 Device 002: ID 0930:1302 Toshiba Corp. Wireless
+# Broadband (3G HSDPA) SM-Bus Minicard Status Port
+BUS=2
+DEVICE=2
+
+if [ ! -x /sys/bus/usb/devices/${BUS}-${DEVICE}/power/level ]; then
+    exit 0
+fi
+
+case $1 in
+     suspend|suspend_hybrid|hibernate)
+	echo suspend > /sys/bus/usb/devices/${BUS}-${DEVICE}/power/level
+        ;;
+     resume|thaw)
+	# No need to do anything here, kernel unsuspends USB devices
+	:
+        ;;
+esac

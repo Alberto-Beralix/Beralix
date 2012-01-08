@@ -1,0 +1,46 @@
+#!/bin/sh -e
+
+case "$1" in
+    configure)
+
+    if [ "$(uname -s)" = "Linux" ]; then
+	if [ -e /dev/MAKEDEV ]; then
+	    # create /dev/parport*
+	    if [ ! -c /dev/parport0 ]; then
+		(cd /dev && ./MAKEDEV parport) || true 
+	    fi
+	    # create /dev/sg*
+	    if [ ! -c /dev/sg0 ]; then
+		(cd /dev && ./MAKEDEV sg) || true 
+	    fi
+	fi
+    fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+    echo "$0 called with unknown argument '$1'" >&2
+    exit 1
+    ;;
+esac
+
+
+# Automatically added by dh_installudev
+if [ "$1" = configure ]; then
+	if [ -e "/etc/udev/rules.d/z60_libsane.rules" ]; then
+		echo "Preserving user changes to /etc/udev/rules.d/40-libsane.rules ..."
+		if [ -e "/etc/udev/rules.d/40-libsane.rules" ]; then
+			mv -f "/etc/udev/rules.d/40-libsane.rules" "/etc/udev/rules.d/40-libsane.rules.dpkg-new"
+		fi
+		mv -f "/etc/udev/rules.d/z60_libsane.rules" "/etc/udev/rules.d/40-libsane.rules"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_makeshlibs
+if [ "$1" = "configure" ]; then
+	ldconfig
+fi
+# End automatically added section
+

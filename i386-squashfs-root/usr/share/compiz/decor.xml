@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <plugin useBcop="true" name="decor">
+	<short>Window Decoration</short>
+	<short xml:lang="bg">Декорация на прозореца</short>
+	<short xml:lang="bn">উইন্ডো অলঙ্করণ</short>
+	<short xml:lang="bn_IN">উইন্ডো অলঙ্করণ</short>
+	<short xml:lang="ca">Decoració de la finestra</short>
+	<short xml:lang="cs">Dekorace oken</short>
+	<short xml:lang="da">Vinduesdekoration</short>
+	<short xml:lang="de">Fensterdekoration</short>
+	<short xml:lang="el">Διακοσμησή Παραθύρου</short>
+	<short xml:lang="es">Decoración de ventanas</short>
+	<short xml:lang="eu">Leiho Dekorazioa</short>
+	<short xml:lang="fi">Ikkunan kehykset</short>
+	<short xml:lang="fr">Décoration de la fenêtre</short>
+	<short xml:lang="gl">Decoración da Fiestra</short>
+	<short xml:lang="gu">વિન્ડો શણગાર</short>
+	<short xml:lang="he">מסגור חלונות</short>
+	<short xml:lang="hu">Ablakdíszítés</short>
+	<short xml:lang="it">Decorazione finestra</short>
+	<short xml:lang="ja">ウィンドウの装飾</short>
+	<short xml:lang="ko">창 장식</short>
+	<short xml:lang="nb">Vindusdekor</short>
+	<short xml:lang="nl">Venster decoratie</short>
+	<short xml:lang="or">ଉଇଣ୍ଡୋ ଅଳଂକରଣ</short>
+	<short xml:lang="pl">Dekoracja okna</short>
+	<short xml:lang="pt">Decoração da Janela</short>
+	<short xml:lang="pt_BR">Decoração da Janela</short>
+	<short xml:lang="ro">Decorație fereastră</short>
+	<short xml:lang="ru">Оформление окна</short>
+	<short xml:lang="sk">Dekorácie okna</short>
+	<short xml:lang="sv">Fönsterram</short>
+	<short xml:lang="tr">Pencere Dekorasyonu</short>
+	<short xml:lang="uk">Оформлення вікна</short>
+	<short xml:lang="zh_CN">窗口装饰</short>
+	<short xml:lang="zh_TW">視窗裝飾</short>
+	<long>Window decorations</long>
+	<long xml:lang="bn">উইন্ডো অলঙ্করণ</long>
+	<long xml:lang="bn_IN">উইন্ডো অলঙ্করণ</long>
+	<long xml:lang="ca">Decoracions de finestres</long>
+	<long xml:lang="cs">Dekorace oken</long>
+	<long xml:lang="da">Vinduesdekorationer</long>
+	<long xml:lang="de">Fensterdekorationen</long>
+	<long xml:lang="el">Διακοσμήσεις παραθύρου</long>
+	<long xml:lang="es">La decoración de las ventanas</long>
+	<long xml:lang="eu">Leiho dekorazioak</long>
+	<long xml:lang="fi">Ikkunan kehyksen asetukset</long>
+	<long xml:lang="fr">Décorations des fenêtres</long>
+	<long xml:lang="gl">Decoracións das xanelas</long>
+	<long xml:lang="gu">વિન્ડો શણગારો</long>
+	<long xml:lang="he">מסגרות לחלונות</long>
+	<long xml:lang="hu">Ablakdíszítések</long>
+	<long xml:lang="it">Decorazioni finestra</long>
+	<long xml:lang="ja">ウィンドウを装飾</long>
+	<long xml:lang="ko">창 장식</long>
+	<long xml:lang="nb">Vindusdekorasjoner</long>
+	<long xml:lang="nl">Venster decoraties</long>
+	<long xml:lang="or">ଉଇଣ୍ଡୋ ଅଳଂକରଣଗୁଡିକ</long>
+	<long xml:lang="pl">Dekoracje okna</long>
+	<long xml:lang="pt">Decorações das janelas</long>
+	<long xml:lang="pt_BR">Decorações das janelas</long>
+	<long xml:lang="ro">Decorații fereastră</long>
+	<long xml:lang="ru">Оформление окна</long>
+	<long xml:lang="sk">Dekorácie okna</long>
+	<long xml:lang="sv">Fönsterramar</long>
+	<long xml:lang="tr">Pencere dekorasyonları</long>
+	<long xml:lang="uk">Оформлення вікон</long>
+	<long xml:lang="zh_CN">窗口装饰</long>
+	<long xml:lang="zh_TW">視窗裝飾</long>
+	<category>Effects</category>
+	<feature>decorations</feature>
+	<deps>
+	    <relation type="before">
+		<plugin>fade</plugin>
+		<plugin>cube</plugin>
+		<plugin>scale</plugin>
+		<plugin>wobbly</plugin>
+	    </relation>
+	    <relation type="after">
+		<plugin>composite</plugin>
+		<plugin>opengl</plugin>
+	    </relation>
+	</deps>
+	<options>
+	    <option type="float" name="shadow_radius">
+		<short>Shadow Radius</short>
+		<short xml:lang="bg">Радиус на сянката</short>
+		<short xml:lang="ca">Radi de l'ombra</short>
+		<short xml:lang="cs">Poloměr stínu</short>
+		<short xml:lang="da">Skyggeradius</short>
+		<short xml:lang="de">Schattenradius</short>
+		<short xml:lang="el">Ακτίνα Σκιάς</short>
+		<short xml:lang="es">Radio de la sombra</short>
+		<short xml:lang="eu">Itzalaren Erradioa</short>
+		<short xml:lang="fi">Varjon säde</short>
+		<short xml:lang="fr">Rayon de l'ombre</short>
+		<short xml:lang="gl">Radio da Sombra</short>
+		<short xml:lang="gu">પડછાયા ત્રિજ્યા</short>
+		<short xml:lang="he">רדיוס צל</short>
+		<short xml:lang="hu">Árnyék átmérője</short>
+		<short xml:lang="it">Raggio ombreggiatura</short>
+		<short xml:lang="ja">影の半径</short>
+		<short xml:lang="ko">그림자 반경</short>
+		<short xml:lang="nb">Skyggeradius</short>
+		<short xml:lang="nl">Schaduw omtrek</short>
+		<short xml:lang="or">ଛାଯା ବ୍ଯାସାର୍ଦ୍ଧ</short>
+		<short xml:lang="pl">Promień cienia</short>
+		<short xml:lang="pt">Raio da Sombra</short>
+		<short xml:lang="pt_BR">Raio da Sombra</short>
+		<short xml:lang="ro">Rază umbră</short>
+		<short xml:lang="ru">Радиус тени</short>
+		<short xml:lang="sk">Polomer tieňa</short>
+		<short xml:lang="sv">Skuggradie</short>
+		<short xml:lang="tr">Gölge Yarıçapı</short>
+		<short xml:lang="uk">Радіус тіні</short>
+		<short xml:lang="zh_CN">阴影半径</short>
+		<short xml:lang="zh_TW">陰影半徑</short>
+		<long>Drop shadow radius</long>
+		<long xml:lang="bg">Радиус на сянката</long>
+		<long xml:lang="ca">Radi de l'ombra descendent</long>
+		<long xml:lang="cs">Poloměr vrženého stínu</long>
+		<long xml:lang="da">Slagskyggeradius</long>
+		<long xml:lang="de">Radius des Schlagschattens</long>
+		<long xml:lang="el">Απόρριψη ακτίνας σκιάς</long>
+		<long xml:lang="es">Desechar radio de la sombra</long>
+		<long xml:lang="eu">Itzalaren erradio salto</long>
+		<long xml:lang="fi">Varjon säde</long>
+		<long xml:lang="fr">Rayon de l'ombre des gouttes</long>
+		<long xml:lang="gl">Radio da sombra</long>
+		<long xml:lang="gu">પડછાયા ત્રિજ્યા મૂકો</long>
+		<long xml:lang="he">רדיוס צל חלון</long>
+		<long xml:lang="hu">Árnyék átmérője</long>
+		<long xml:lang="it">Raggio ombreggiatura esterna</long>
+		<long xml:lang="ja">影の半径</long>
+		<long xml:lang="ko">그림자 반경</long>
+		<long xml:lang="nb">Radius for slippskygge</long>
+		<long xml:lang="nl">Schaduw omtrek</long>
+		<long xml:lang="or">ଛାଯା ବ୍ଯାସାର୍ଦ୍ଧ ପକାଅ</long>
+		<long xml:lang="pl">Promień cienia</long>
+		<long xml:lang="pt">Raio da sombra</long>
+		<long xml:lang="pt_BR">Raio da sombra</long>
+		<long xml:lang="ro">Rază pentru umbra lăsată</long>
+		<long xml:lang="ru">Радиус отбрасываемой тени</long>
+		<long xml:lang="sk">Polomer vrhaného tieňa</long>
+		<long xml:lang="sv">Radie för skuggkastning</long>
+		<long xml:lang="tr">Düşen gölge yarıçapı</long>
+		<long xml:lang="uk">Радіус тіні</long>
+		<long xml:lang="zh_CN">阴影半径</long>
+		<long xml:lang="zh_TW">陰影半徑</long>
+		<default>15.0</default>
+		<min>0.1</min>
+		<max>18.0</max>
+		<precision>0.1</precision>
+	    </option>
+	    <option type="float" name="shadow_opacity">
+		<short>Shadow Opacity</short>
+		<short xml:lang="bg">Прозрачност на сянката</short>
+		<short xml:lang="ca">Opacitat de l'ombra</short>
+		<short xml:lang="cs">Krytí stínu</short>
+		<short xml:lang="da">Skyggens uigennemsigtighed</short>
+		<short xml:lang="de">Schattenopazität</short>
+		<short xml:lang="el">Αδιαφάνεια Σκιάς</short>
+		<short xml:lang="es">Opacidad de la sombra</short>
+		<short xml:lang="eu">Itzalaren opakutasuna</short>
+		<short xml:lang="fi">Varjon läpinäkyvyys</short>
+		<short xml:lang="fr">Opacité de l'ombre</short>
+		<short xml:lang="gl">Opacidade da Sombra</short>
+		<short xml:lang="gu">પડછાયા અપાદર્શકતા</short>
+		<short xml:lang="he">אטימות צל</short>
+		<short xml:lang="hu">Árnyék átlátszatlansága</short>
+		<short xml:lang="it">Opacità ombreggiatura</short>
+		<short xml:lang="ja">影の不透明度</short>
+		<short xml:lang="ko">그림자 투명도</short>
+		<short xml:lang="nb">Dekkevne for skygge</short>
+		<short xml:lang="nl">Schaduw ondoorzichtigheid</short>
+		<short xml:lang="or">ଛାଯା ଅସ୍ବଚ୍ଛତା</short>
+		<short xml:lang="pl">NIeprzezroczystość cienia</short>
+		<short xml:lang="pt">Opacidade da Sombra</short>
+		<short xml:lang="pt_BR">Opacidade da Sombra</short>
+		<short xml:lang="ro">Opacitate umbră</short>
+		<short xml:lang="ru">Прозрачность тени</short>
+		<short xml:lang="sk">Krytie tieňa</short>
+		<short xml:lang="sv">Skuggopakhet</short>
+		<short xml:lang="tr">Gölge Matlığı</short>
+		<short xml:lang="uk">Прозорість тіні</short>
+		<short xml:lang="zh_CN">阴影不透明度</short>
+		<short xml:lang="zh_TW">陰影不透明度</short>
+		<long>Drop shadow opacity</long>
+		<long xml:lang="bg">Прозрачност на сянката</long>
+		<long xml:lang="ca">Opacitat de l'ombra descendent</long>
+		<long xml:lang="cs">Krytí vrženého stínu</long>
+		<long xml:lang="da">Slagskyggens uigennemsigtighed</long>
+		<long xml:lang="de">Opazität des Schlagschattens</long>
+		<long xml:lang="el">Απόρριψη αδιαφάνειας σκιάς</long>
+		<long xml:lang="es">Desechar opacidad de la sombra</long>
+		<long xml:lang="eu">Itzalaren opakutasuna salto</long>
+		<long xml:lang="fi">Varjon läpinäkyvyys</long>
+		<long xml:lang="fr">Opacité de l'ombre des gouttes</long>
+		<long xml:lang="gl">Opacidade da sombra</long>
+		<long xml:lang="gu">પડછાયા અપારદર્શકતા મૂકો</long>
+		<long xml:lang="he">שקיפות צל חלון</long>
+		<long xml:lang="hu">Árnyék átlátszatlansága</long>
+		<long xml:lang="it">Opacità ombreggiatura esterna</long>
+		<long xml:lang="ja">影の不透明度</long>
+		<long xml:lang="ko">그림자 투명도</long>
+		<long xml:lang="nb">Dekkevne for slippskygge</long>
+		<long xml:lang="nl">Slagschaduw opaciteit</long>
+		<long xml:lang="or">ଛାଯା ଅସ୍ବଚ୍ଛତା ପକାଅ</long>
+		<long xml:lang="pl">Nieprzezroczystość cienia</long>
+		<long xml:lang="pt">Opacidade da sombra</long>
+		<long xml:lang="pt_BR">Opacidade da sombra</long>
+		<long xml:lang="ro">Opacitate pentru umbra lăsată</long>
+		<long xml:lang="ru">Прозрачность отбрасываемой тени</long>
+		<long xml:lang="sk">Nepriehľadnosť vrhaného tieňa</long>
+		<long xml:lang="sv">Opakhet för skuggkastning</long>
+		<long xml:lang="tr">Düşen gölge matlığı</long>
+		<long xml:lang="uk">Прозорість тіні</long>
+		<long xml:lang="zh_CN">阴影不透明度</long>
+		<long xml:lang="zh_TW">陰影不透明度</long>
+		<default>0.5</default>
+		<min>0.01</min>
+		<max>6.0</max>
+		<precision>0.01</precision>
+	    </option>
+	    <option type="color" name="shadow_color">
+		<short>Shadow Color</short>
+		<short xml:lang="bg">Цвят на сянката</short>
+		<short xml:lang="cs">Barva stínu</short>
+		<short xml:lang="de">Schattenfarbe</short>
+		<short xml:lang="el">Χρώμα Σκιάς</short>
+		<short xml:lang="es">Color de la sombra</short>
+		<short xml:lang="eu">Itzal Kolorea</short>
+		<short xml:lang="fi">Varjon väri</short>
+		<short xml:lang="fr">Couleur de l'ombre</short>
+		<short xml:lang="gl">Cor da sombra</short>
+		<short xml:lang="gu">પડછાયા રંગ</short>
+		<short xml:lang="he">צבע הצל</short>
+		<short xml:lang="hu">Árnyék színe</short>
+		<short xml:lang="it">Colore ombreggiatura</short>
+		<short xml:lang="ja">影の色</short>
+		<short xml:lang="ko">그림자 색</short>
+		<short xml:lang="nb">Skyggefarge</short>
+		<short xml:lang="nl">Schaduw kleur</short>
+		<short xml:lang="or">ଛାଯାରଙ୍ଗ</short>
+		<short xml:lang="pl">Kolor cienia</short>
+		<short xml:lang="pt">Cor da sombra</short>
+		<short xml:lang="pt_BR">Cor da sombra</short>
+		<short xml:lang="ro">Culoare umbră</short>
+		<short xml:lang="ru">Цвет тени</short>
+		<short xml:lang="sk">Farba tieňa</short>
+		<short xml:lang="sv">Skuggfärg</short>
+		<short xml:lang="tr">Gölge Rengi</short>
+		<short xml:lang="uk">Колір тіні</short>
+		<short xml:lang="zh_CN">阴影颜色</short>
+		<short xml:lang="zh_TW">陰影顏色</short>
+		<long>Drop shadow color</long>
+		<long xml:lang="bg">Цвят на сянката</long>
+		<long xml:lang="cs">Barva vrženého stínu</long>
+		<long xml:lang="de">Farbe des Schlagschattens</long>
+		<long xml:lang="el">Απόρριψη χρώματος σκιάς</long>
+		<long xml:lang="es">Desechar color de la sombra</long>
+		<long xml:lang="eu">Itzalaren kolorea salto</long>
+		<long xml:lang="fi">Varjon väri</long>
+		<long xml:lang="fr">Couleur de l'ombre des gouttes</long>
+		<long xml:lang="gl">Cor da sombra</long>
+		<long xml:lang="gu">પડછાયા રંગ મૂકો</long>
+		<long xml:lang="he">צבע צל חלון</long>
+		<long xml:lang="hu">Árnyék színe</long>
+		<long xml:lang="it">Colore ombreggiatura esterna</long>
+		<long xml:lang="ja">影の色</long>
+		<long xml:lang="ko">그림자 색</long>
+		<long xml:lang="nb">Farge for slippskygge</long>
+		<long xml:lang="nl">Schaduw kleur</long>
+		<long xml:lang="or">ଛାଯା ରଙ୍ଗ ପକାଅ</long>
+		<long xml:lang="pl">Kolor cienia</long>
+		<long xml:lang="pt">Cor da sombra</long>
+		<long xml:lang="pt_BR">Cor da sombra</long>
+		<long xml:lang="ro">Culoare pentru umbra lăsată</long>
+		<long xml:lang="ru">Цвет отбрасываемой тени</long>
+		<long xml:lang="sk">Farba vrhaného tieňa</long>
+		<long xml:lang="sv">Färg för skuggkastning</long>
+		<long xml:lang="tr">Düşen gölge rengi</long>
+		<long xml:lang="uk">Колір тіні</long>
+		<long xml:lang="zh_CN">阴影颜色</long>
+		<long xml:lang="zh_TW">設定陰影顏色</long>
+	    </option>
+	    <option type="int" name="shadow_x_offset">
+		<short>Shadow Offset X</short>
+		<short xml:lang="bn">প্রচ্ছায়া অফসেট X</short>
+		<short xml:lang="bn_IN">প্রচ্ছায়া অফসেট X</short>
+		<short xml:lang="ca">Desplaçament en X de l'ombra</short>
+		<short xml:lang="cs">Posun stínu X</short>
+		<short xml:lang="da">Skyggeforskydning X</short>
+		<short xml:lang="de">Schattenversatz X</short>
+		<short xml:lang="el">Μετάθεση Αρχής X της Σκιάς</short>
+		<short xml:lang="es">Desplazamiento X de la sombra</short>
+		<short xml:lang="eu">Itzalaren X desplazamendua</short>
+		<short xml:lang="fi">Varjon X-poikkeama</short>
+		<short xml:lang="fr">Décalage X de l'ombre</short>
+		<short xml:lang="gl">Desprazamento X da Sombra</short>
+		<short xml:lang="gu">પડછાયા ઓફસેટ X</short>
+		<short xml:lang="he">הסטת X של הצל</short>
+		<short xml:lang="hi">छाया ऑफसेट X</short>
+		<short xml:lang="hu">Árnyék X eltolása</short>
+		<short xml:lang="it">Offset X ombreggiatura</short>
+		<short xml:lang="ja">影オフセット X 座標</short>
+		<short xml:lang="ko">그림자 가로축 여백</short>
+		<short xml:lang="nb">Skyggens X-forskyvning</short>
+		<short xml:lang="nl">Schaduw X offset</short>
+		<short xml:lang="or">ଛାଯା ଅଫ୍ ସେଟ X</short>
+		<short xml:lang="pl">Przesunięcie cienia - współrzędna X</short>
+		<short xml:lang="pt">Deslocamento X da Sombra</short>
+		<short xml:lang="pt_BR">Deslocamento X da Sombra</short>
+		<short xml:lang="ro">Decalaj X pentru umbră</short>
+		<short xml:lang="ru">Смещение тени по оси X</short>
+		<short xml:lang="sk">Posun tieňa X</short>
+		<short xml:lang="sv">Skuggposition X</short>
+		<short xml:lang="tr">Gölge Konumu X</short>
+		<short xml:lang="uk">Зсув тіні по осі X</short>
+		<short xml:lang="zh_CN">阴影X偏移</short>
+		<short xml:lang="zh_TW">陰影偏移 X 軸</short>
+		<long>Drop shadow X offset</long>
+		<long xml:lang="bg">X координати на сянката</long>
+		<long xml:lang="ca">Desplaçament en X de l'ombra descendent</long>
+		<long xml:lang="cs">Posun vrženého stínu X</long>
+		<long xml:lang="da">Slagskyggeforskydning X</long>
+		<long xml:lang="de">X-Versatz des Schlagschattens</long>
+		<long xml:lang="el">Απόρριψη μετάθεσης αρχής σκιάς Χ</long>
+		<long xml:lang="es">Desechar desplazamiento X de la sombra</long>
+		<long xml:lang="eu">Itzalaren X desplazamendua salto</long>
+		<long xml:lang="fi">Varjon X-poikkeama</long>
+		<long xml:lang="fr">Décalage X de l'ombre des gouttes</long>
+		<long xml:lang="gl">Desprazamento X da sombra</long>
+		<long xml:lang="gu">પડછાયા X ઓફસેટ મૂકો</long>
+		<long xml:lang="he">הסטת X של צל חלון</long>
+		<long xml:lang="hu">Árnyék X eltolása</long>
+		<long xml:lang="it">Offset X ombreggiatura esterna</long>
+		<long xml:lang="ja">影のオフセット X 座標</long>
+		<long xml:lang="ko">그림자 가로축 여백</long>
+		<long xml:lang="nb">Slippskyggens X-forskyvning</long>
+		<long xml:lang="nl">Slagschaduw X offset</long>
+		<long xml:lang="or">ଛାଯା X ଅଫ୍ସେଟ ପକାଅ</long>
+		<long xml:lang="pl">Przesunięcie cienia w osi X</long>
+		<long xml:lang="pt">Deslocamento X da sombra</long>
+		<long xml:lang="pt_BR">Deslocamento X da sombra</long>
+		<long xml:lang="ro">Decalaj X pentru umbra lăsată</long>
+		<long xml:lang="ru">Смещение отбрасываемой тени по оси X</long>
+		<long xml:lang="sk">Posun X vrhaného tieňa</long>
+		<long xml:lang="sv">Skuggkastning X-position</long>
+		<long xml:lang="tr">Düşen gölge Yatay konumu</long>
+		<long xml:lang="uk">Зсув тіні по осі X</long>
+		<long xml:lang="zh_CN">阴影X偏移</long>
+		<long xml:lang="zh_TW">陰影 X 軸偏移</long>
+		<default>1</default>
+		<min>-16</min>
+		<max>16</max>
+	    </option>
+	    <option type="int" name="shadow_y_offset">
+		<short>Shadow Offset Y</short>
+		<short xml:lang="bn">প্রচ্ছায়া অফসেট Y</short>
+		<short xml:lang="bn_IN">প্রচ্ছায়া অফসেট Y</short>
+		<short xml:lang="ca">Desplaçament en Y de l'ombra</short>
+		<short xml:lang="cs">Posun stínu Y</short>
+		<short xml:lang="da">Skyggeforskydning Y</short>
+		<short xml:lang="de">Schattenversatz Y</short>
+		<short xml:lang="el">Μετάθεση Αρχής Υ της Σκιάς</short>
+		<short xml:lang="es">Desplazamiento Y de la sombra</short>
+		<short xml:lang="eu">Itzalaren Y desplazamendua</short>
+		<short xml:lang="fi">Varjon Y-poikkeama</short>
+		<short xml:lang="fr">Décalage Y de l'ombre</short>
+		<short xml:lang="gl">Desprazamento Y da Sombra</short>
+		<short xml:lang="gu">પડછાયા ઓફસેટ Y</short>
+		<short xml:lang="he">הסטת Y של הצל</short>
+		<short xml:lang="hi">छाया ऑफसेट Y</short>
+		<short xml:lang="hu">Árnyék Y eltolása</short>
+		<short xml:lang="it">Offset Y ombreggiatura</short>
+		<short xml:lang="ja">影オフセット Y 座標</short>
+		<short xml:lang="ko">그림자 세로축 여백</short>
+		<short xml:lang="nb">Skyggens Y-forskyvning</short>
+		<short xml:lang="nl">Schaduw Y offset</short>
+		<short xml:lang="or">ଛାଯା ଅଫ୍ ସେଟ Y</short>
+		<short xml:lang="pl">Przesunięcie cienia - współrzędna Y</short>
+		<short xml:lang="pt">Deslocamento Y da Sombra</short>
+		<short xml:lang="pt_BR">Deslocamento Y da Sombra</short>
+		<short xml:lang="ro">Decalaj Y pentru umbră</short>
+		<short xml:lang="ru">Смещение тени по оси Y</short>
+		<short xml:lang="sk">Posun tieňa Y</short>
+		<short xml:lang="sv">Skuggposition Y</short>
+		<short xml:lang="tr">Gölge Konumu Y</short>
+		<short xml:lang="uk">Зсув тіні по осі Y</short>
+		<short xml:lang="zh_CN">阴影Y偏移</short>
+		<short xml:lang="zh_TW">陰影偏移 Y 軸</short>
+		<long>Drop shadow Y offset</long>
+		<long xml:lang="bg">Y координати на сянката</long>
+		<long xml:lang="ca">Desplaçament en Y de l'ombra descendent</long>
+		<long xml:lang="cs">Posun vrženého stínu Y</long>
+		<long xml:lang="da">Slagskyggeforskydning Y</long>
+		<long xml:lang="de">Y-Versatz des Schlagschattens</long>
+		<long xml:lang="el">Απόρριψη μετάθεσης αρχής σκιάς Υ</long>
+		<long xml:lang="es">Desechar desplazamiento Y de la sombra</long>
+		<long xml:lang="eu">Itzalaren Y desplazamendua salto</long>
+		<long xml:lang="fi">Varjon Y-poikkeama</long>
+		<long xml:lang="fr">Décalage Y de l'ombre des gouttes</long>
+		<long xml:lang="gl">Desprazamento Y da sombra</long>
+		<long xml:lang="gu">પડછાયા Y ઓફસેટ મૂકો</long>
+		<long xml:lang="he">הסטת Y של צל חלון</long>
+		<long xml:lang="hu">Árnyék Y eltolása</long>
+		<long xml:lang="it">Offset Y ombreggiatura esterna</long>
+		<long xml:lang="ja">影のオフセット Y 座標</long>
+		<long xml:lang="ko">그림자 세로축 여백</long>
+		<long xml:lang="nb">Slippskyggens Y-forskyvning</long>
+		<long xml:lang="nl">Slagschaduw Y offset</long>
+		<long xml:lang="or">ଛାଯା Y ଅଫ୍ସେଟ ପକାଅ</long>
+		<long xml:lang="pl">Przesunięcie cienia w osi Y</long>
+		<long xml:lang="pt">Deslocamento Y da sombra</long>
+		<long xml:lang="pt_BR">Deslocamento Y da sombra</long>
+		<long xml:lang="ro">Decalaj Y pentru umbra lăsată</long>
+		<long xml:lang="ru">Смещение отбрасываемой тени по оси Y</long>
+		<long xml:lang="sk">Posun Y vrhaného tieňa</long>
+		<long xml:lang="sv">Skuggkastning Y-position</long>
+		<long xml:lang="tr">Düşen gölge Dikey konumu</long>
+		<long xml:lang="uk">Зсув тіні по осі Y</long>
+		<long xml:lang="zh_CN">阴影Y偏移</long>
+		<long xml:lang="zh_TW">陰影 Y 軸偏移</long>
+		<default>5</default>
+		<min>-16</min>
+		<max>16</max>
+	    </option>
+	    <option type="string" name="command">
+		<short>Command</short>
+		<short xml:lang="bg">Команда</short>
+		<short xml:lang="ca">Ordre</short>
+		<short xml:lang="cs">Příkaz</short>
+		<short xml:lang="da">Kommando</short>
+		<short xml:lang="de">Kommando</short>
+		<short xml:lang="el">Εντολή</short>
+		<short xml:lang="es">Comando</short>
+		<short xml:lang="eu">Komandoa</short>
+		<short xml:lang="fi">Komento</short>
+		<short xml:lang="fr">Commande</short>
+		<short xml:lang="gl">Comando</short>
+		<short xml:lang="he">פקודה</short>
+		<short xml:lang="hu">Parancs</short>
+		<short xml:lang="it">Comando</short>
+		<short xml:lang="ja">コマンド</short>
+		<short xml:lang="ko">명령</short>
+		<short xml:lang="nb">Kommando</short>
+		<short xml:lang="nl">Opdracht</short>
+		<short xml:lang="or">ଆଦେଶ</short>
+		<short xml:lang="pl">Polecenie</short>
+		<short xml:lang="pt">Comando</short>
+		<short xml:lang="pt_BR">Comando</short>
+		<short xml:lang="ro">Comandă</short>
+		<short xml:lang="ru">Команда</short>
+		<short xml:lang="sk">Príkaz</short>
+		<short xml:lang="sv">Kommando</short>
+		<short xml:lang="tr">Komut</short>
+		<short xml:lang="uk">Команда</short>
+		<short xml:lang="zh_CN">命令</short>
+		<short xml:lang="zh_TW">指令</short>
+		<long>Decorator command line that is executed if no decorator is already running</long>
+		<long xml:lang="bg">команда за декоратор, която се изпълнява ако вче не върви декоратор</long>
+		<long xml:lang="bn">যদি কোন ডেকোরেটর আগে থেকে কাজ না করেন সেক্ষেত্রে যে ডেকোরেটর নির্দেশ লাইন ব্যবহৃত হবে</long>
+		<long xml:lang="bn_IN">যদি কোন ডেকোরেটর আগে থেকে কাজ না করেন সেক্ষেত্রে যে ডেকোরেটর নির্দেশ লাইন ব্যবহৃত হবে</long>
+		<long xml:lang="ca">Línia d'ordres del decorador que s'executa si no s'està executant cap decorador</long>
+		<long xml:lang="cs">Příkazová řádka programu pro dekorace, která je spuštěna, pokud ještě není spuštěn žádný program pro dekorace</long>
+		<long xml:lang="da">Dekoratørkommandolinje, som udføres, hvis der ikke allerede kører en dekoratør</long>
+		<long xml:lang="de">Decorator-Kommandozeile, die ausgeführt wird, wenn nicht bereits ein Decorator ausgeführt wird</long>
+		<long xml:lang="el">Γραμμή εντολών διακοσμητή που θα εκτελείται αν κανένας διακοσμητής δεν τρέχει ήδη</long>
+		<long xml:lang="es">Línea de comando del decorador que se ejecuta si no hay ningún decorador en ejecución</long>
+		<long xml:lang="eu">Jadanik dekoratzailerik ez badago martxan, exekutatuko den komando lerroa</long>
+		<long xml:lang="fi">Kehystyskomento, joka suoritetaan kehystimen puuttuessa</long>
+		<long xml:lang="fr">Ligne de commande du décorateur qui est exécutée si aucun décorateur ne fonctionne</long>
+		<long xml:lang="gl">Liña de comando a executar se non se está a executar ningún decorador</long>
+		<long xml:lang="gu">શણગારનાર આદેશ વાક્ય કે જે ચલાવવામાં આવે છે જો કોઈ શણગારનાર પહેલાથી ચાલી રહ્યો નહિં હોય</long>
+		<long xml:lang="he">שורת פקודה עבור צייר מסגרות שאותה יש להריץ אם שום צייר מסגרות אינו פעיל</long>
+		<long xml:lang="hi">सजावटी कमांड लाइन जो चलाया जाता है यदि कोई सजावटकर्ता पहले से नहीं चल रहा है</long>
+		<long xml:lang="hu">Díszítő parancs, amely akkor kerül végrehajtásra, ha még nem fut díszítő</long>
+		<long xml:lang="it">Riga di comando strumento di decorazione eseguita se nessuna applicazione di decorazione è in esecuzione</long>
+		<long xml:lang="ja">デコレータ未動作の場合に実行されるデコレータ起動コマンドライン</long>
+		<long xml:lang="ko">사용하고 있는 창 장식 프로그램이 없을 때 실행될 창 장식 프로그램 명령행</long>
+		<long xml:lang="nb">Kommandolinje for dekoratør som kjøres hvis ingen dekoratør allerede kjører</long>
+		<long xml:lang="nl">Decorator commandoregel die uitgevoerd wordt als er nog geen decorator draait</long>
+		<long xml:lang="or">ଅଳଂକୃତକାରୀ ଆଦେଶ ରେଖା କାର୍ୟ୍ଯକାରୀ ହୋଇଥାଏ, ୟଦି କୌଣସି ଅଳଂକୃତକାରୀ ପୂର୍ବରୁ ଚାଲୁନଥାଏ </long>
+		<long xml:lang="pa">ਸਜਾਵਟ ਕਮਾਂਡ ਲਾਇਨ, ਜੋ ਕਿ ਕਿਸੇ ਸਜਾਵਟ ਨਾ ਚੱਲਣ ਦੀ ਹਾਲਤ ਵਿੱਚ ਚਲਾਈ ਜਾਵੇ</long>
+		<long xml:lang="pl">Polecenie dekoratora wykonywane gdy dekorator nie jest uruchomiony</long>
+		<long xml:lang="pt">Linha de comando a executar se não estiver nenhum decorador a correr</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada se nenhum decorador estiver em execução</long>
+		<long xml:lang="ro">Linia de comandă pentru decorator, executată dacă niciun decorator nu rulează deja</long>
+		<long xml:lang="ru">Командная строка декоратора, которая выполняется, если декоратор еще не запущен</long>
+		<long xml:lang="sk">Príkazový riadok programu pre dekorácie, ktorý sa vykoná, pokiaľ nebude spustený žiadny program pre dekorácie</long>
+		<long xml:lang="sv">Dekorerarkommado som körs om inte någon dekorerare redan körs</long>
+		<long xml:lang="tr">Eğer hiçbir pencere dekorasyonu çalışmıyorsa çalıştırılacak dekoratör komut satırı</long>
+		<long xml:lang="uk">Команда декоратора, яка виконується, якщо декоратор ще не запущений</long>
+		<long xml:lang="zh_CN">尚无装饰程序运行时执行的装饰程序命令行</long>
+		<long xml:lang="zh_TW">如果沒有裝飾程式正在執行，則需指定要執行的視窗裝飾程式指令。</long>
+		<default>/usr/bin/compiz-decorator</default>
+	    </option>
+	    <option type="bool" name="mipmap">
+		<short>Mipmap</short>
+		<short xml:lang="bg">Mipmap</short>
+		<short xml:lang="bn">মিপম্যাপ</short>
+		<short xml:lang="bn_IN">মিপম্যাপ</short>
+		<short xml:lang="ca">Mipmap</short>
+		<short xml:lang="cs">Mipmap</short>
+		<short xml:lang="da">Mipmap</short>
+		<short xml:lang="de">Mipmaps</short>
+		<short xml:lang="el">Mipmap</short>
+		<short xml:lang="es">Mipmap</short>
+		<short xml:lang="eu">Mipmap</short>
+		<short xml:lang="fi">Mipmap</short>
+		<short xml:lang="fr">Mipmap</short>
+		<short xml:lang="gl">Mapa de Imaxe</short>
+		<short xml:lang="gu">મીપમેપ</short>
+		<short xml:lang="he">הפעלת Mipmap</short>
+		<short xml:lang="hu">MIP térkép</short>
+		<short xml:lang="it">Mipmap</short>
+		<short xml:lang="ja">ミップマップ</short>
+		<short xml:lang="ko">Mipmap</short>
+		<short xml:lang="nb">MIP-kart</short>
+		<short xml:lang="nl">Mipmap</short>
+		<short xml:lang="or">ମିପ୍ ମ୍ଯାପ</short>
+		<short xml:lang="pl">Mipmapa</short>
+		<short xml:lang="pt">Mipmap</short>
+		<short xml:lang="pt_BR">MipMap</short>
+		<short xml:lang="ro">Hartă MIP</short>
+		<short xml:lang="ru">Мипмэппинг</short>
+		<short xml:lang="sk">Mipmapy</short>
+		<short xml:lang="sl">Mini zemljevid</short>
+		<short xml:lang="sv">Mipmap</short>
+		<short xml:lang="tr">Mipmap</short>
+		<short xml:lang="uk">Mipmap</short>
+		<short xml:lang="zh_CN">Mipmap</short>
+		<short xml:lang="zh_TW">Mipmap</short>
+		<long>Allow mipmaps to be generated for decoration textures</long>
+		<long xml:lang="bn">অলঙ্করণ টেক্সচারে মিপম্যাপ তৈরী করতে দিন</long>
+		<long xml:lang="bn_IN">অলঙ্করণ টেক্সচারে মিপম্যাপ তৈরী করতে দিন</long>
+		<long xml:lang="de">Mipmaps für Fensterdekorations-Texturen generieren</long>
+		<long xml:lang="el">Επιτρέπει στα mipmaps να δημιουργούνται για υφές διακοσμήσεων</long>
+		<long xml:lang="es">Permite generar mipmaps para las texturas de decoración</long>
+		<long xml:lang="eu">Gaitu mipmaps sortzea dekorazio testurentzat</long>
+		<long xml:lang="fi">Salli mipmap kuvioiden käyttäminen kehysten tekstuureihin</long>
+		<long xml:lang="fr">Permettre la génération de mipmaps pour les textures de décoration</long>
+		<long xml:lang="gl">Permitir a xeración de mapas de imaxe para as texturas da decoración</long>
+		<long xml:lang="gu">શણગાર લખાણો માટે મીપમેપને બનાવવા માટે પરવાનગી આપો</long>
+		<long xml:lang="he">אפשר ייצור mipmap עבור טקסטורות מסגרת</long>
+		<long xml:lang="hi">सजावटी बनावट के लिए उत्पन्न करने के लिए मिपमैप स्वीकारें</long>
+		<long xml:lang="hu">MIP térképek létrehozása a díszítő textúrákhoz</long>
+		<long xml:lang="it">Consente la creazione di mipmap per le texture della decorazione</long>
+		<long xml:lang="ja">装飾テキスチャ用ミップマップの生成を許可</long>
+		<long xml:lang="ko">창 장식 텍스쳐에 mipmap 생성 허용</long>
+		<long xml:lang="nb">La MIP-kart bli laget for dekorasjonstekstur</long>
+		<long xml:lang="nl">Sta toe dat mipmaps gegenereerd worden voor decoratie texturen</long>
+		<long xml:lang="or">ଅଳଂକରଣ ଟେକ୍ସଟଚର ପାଇଁ ମିପ୍ ମ୍ଯାପଗୁଡିକୁ ଉତ୍ପାଦିତ ହେବା ସ୍ବୀକୃତିଦିଅ</long>
+		<long xml:lang="pa">ਸਜਾਵਟ ਟੈਕਸਟ ਲਈ ਤਿਆਰ ਕਰਨ ਲਈ ਮਿਪਮੈਪ ਮਨਜ਼ੂਰ</long>
+		<long xml:lang="pl">Pozwól tworzyć mipmapy dla tekstur dekoracji</long>
+		<long xml:lang="pt">Permitir a geração de mipmaps para texturas da decoração</long>
+		<long xml:lang="pt_BR">Permitir a geração de mipmaps para texturas da decoração</long>
+		<long xml:lang="ro">Permite generarea de hărți MIP pentru texturi decorative</long>
+		<long xml:lang="ru">Разрешить генерацию мипмэпов для текстур оформления</long>
+		<long xml:lang="sk">Umožniť tvorbu mipmáp pre dekoračné textúry</long>
+		<long xml:lang="sv">Tillåt mipmaps att bli genererade för dekorationstexturer</long>
+		<long xml:lang="tr">Dekorasyon dokuları için mipmaplerin yaratılmalarına izin ver</long>
+		<long xml:lang="uk">Дозволити генерацію mipmaps для текстур оформлення</long>
+		<long xml:lang="zh_CN">允许为装饰纹理生成mipmap</long>
+		<long xml:lang="zh_TW">允許裝飾紋理材質產生mipmaps</long>
+		<default>false</default>
+	    </option>
+	    <option type="match" name="decoration_match">
+		<short>Decoration windows</short>
+		<short xml:lang="bg">Прозорци с декорация</short>
+		<short xml:lang="cs">Dekorovaná okna</short>
+		<short xml:lang="de">Dekoration für Fenster</short>
+		<short xml:lang="el">Διακοσμήσεις παραθύρων</short>
+		<short xml:lang="es">Decoracion de ventanas</short>
+		<short xml:lang="eu">Dekorazio leihoak</short>
+		<short xml:lang="fi">Ikkunatyypit, joilla tulisi olla kehykset</short>
+		<short xml:lang="fr">Décoration des fenêtres</short>
+		<short xml:lang="gl">Activa a xestión da decoración das xanelas</short>
+		<short xml:lang="he">חלונות מסגרת</short>
+		<short xml:lang="hu">Ablakok díszítése</short>
+		<short xml:lang="it">Finestre da decorare</short>
+		<short xml:lang="ja">装飾適用ウィンドウ</short>
+		<short xml:lang="ko">창 장식</short>
+		<short xml:lang="nb">Dekorasjonsvinduer</short>
+		<short xml:lang="nl">Venster decoratie</short>
+		<short xml:lang="or">ଅଳଂକରଣ ଉଇଣ୍ଡୋ</short>
+		<short xml:lang="pl">Dekoracje okien</short>
+		<short xml:lang="pt">Janelas a decorar</short>
+		<short xml:lang="pt_BR">Decoração das janelas</short>
+		<short xml:lang="ro">Ferestre decorare</short>
+		<short xml:lang="ru">Декорация окон</short>
+		<short xml:lang="sk">Dekorované okná</short>
+		<short xml:lang="sv">Dekorationsfönster</short>
+		<short xml:lang="tr">Pencere dekorasyonu</short>
+		<short xml:lang="uk">Декорація вікон</short>
+		<short xml:lang="zh_CN">装饰窗口</short>
+		<short xml:lang="zh_TW">裝飾視窗</short>
+		<long>Windows that should be decorated</long>
+		<long xml:lang="bg">Прозорци, които да бъдат декорирани</long>
+		<long xml:lang="bn">যে উইন্ডোগুলি অলঙ্করণ করা হবে</long>
+		<long xml:lang="bn_IN">যে উইন্ডোগুলি অলঙ্করণ করা হবে</long>
+		<long xml:lang="cs">Typy oken, která mohou být dekorovány</long>
+		<long xml:lang="de">Fenster, die dekoriert werden sollen</long>
+		<long xml:lang="el">Παράθυρα που πρέπει να διακοσμηθούν</long>
+		<long xml:lang="es">Ventanas que deben estar decoradas</long>
+		<long xml:lang="eu">Dekoratuko diren leihoak</long>
+		<long xml:lang="fi">Ikkunatyypit, jotka tulisi kehystää</long>
+		<long xml:lang="fr">Types de fenêtres devant être décorées</long>
+		<long xml:lang="gl">Fiestras que se deben decorar</long>
+		<long xml:lang="gu">વિન્ડો કે જેને શણગાર થવો જોઈએ</long>
+		<long xml:lang="he">חלונות עבורם יש לצייר מסגרת</long>
+		<long xml:lang="hi">विंडोज़ जिसे सजाया जाना चाहिए</long>
+		<long xml:lang="hu">Díszítendő ablakok</long>
+		<long xml:lang="it">Tipi di finestre da decorare</long>
+		<long xml:lang="ja">装飾の適用対象ウィンドウ</long>
+		<long xml:lang="ko">창 장식을 사용할 창</long>
+		<long xml:lang="nb">Vinduer som skal dekoreres</long>
+		<long xml:lang="nl">Vensters met decoratie</long>
+		<long xml:lang="or">ଉଇଣ୍ଡୋ ୟାହାକି ଅଳଂକୃତ ହେବା ଉଚିତ</long>
+		<long xml:lang="pa">ਵਿੰਡੋ, ਜਿਸ ਦੀ ਸਜਾਵਟ ਕਰਨੀ ਹੈ</long>
+		<long xml:lang="pl">Typy okien, które mają być dekorowane</long>
+		<long xml:lang="pt">Janelas que devem ser decoradas</long>
+		<long xml:lang="pt_BR">Janelas que devem ser decoradas</long>
+		<long xml:lang="ro">Ferestrele ce trebuiesc decorate</long>
+		<long xml:lang="ru">Окна к которым будет применено оформление</long>
+		<long xml:lang="sk">Okná, ktoré by mali byť dekorované</long>
+		<long xml:lang="sv">Fönster som ska dekoreras</long>
+		<long xml:lang="tr">Dekorasyon kullanılması gereken pencereler</long>
+		<long xml:lang="uk">Вікна до яких буде застосовано оформлення</long>
+		<long xml:lang="zh_CN">应装饰的窗口</long>
+		<long xml:lang="zh_TW">設定哪些視窗結構應該被裝飾</long>
+		<default>any</default>
+	    </option>
+	    <option type="match" name="shadow_match">
+		<short>Shadow windows</short>
+		<short xml:lang="bg">Прозорци с сянка</short>
+		<short xml:lang="cs">Stínované okna</short>
+		<short xml:lang="de">Schatten für Fenster</short>
+		<short xml:lang="el">Παράθυρα με σκιά</short>
+		<short xml:lang="es">Sombra de la ventana</short>
+		<short xml:lang="eu">Leihoak itzaldu</short>
+		<short xml:lang="fi">Ikkunatyypit, joilla tulisi olla varjo</short>
+		<short xml:lang="fr">Ombrer les fenêtres</short>
+		<short xml:lang="gl">Fiestras con sombra</short>
+		<short xml:lang="he">חלונות צל</short>
+		<short xml:lang="hu">Ablakok árnyékolása</short>
+		<short xml:lang="it">Finestre con ombreggiatura</short>
+		<short xml:lang="ja">影を付けるウィンドウ</short>
+		<short xml:lang="ko">창 그림자</short>
+		<short xml:lang="nb">Skyggevinduer</short>
+		<short xml:lang="nl">Schaduw vensters</short>
+		<short xml:lang="or">ଛାଯା ଉଇଣ୍ଡୋ</short>
+		<short xml:lang="pl">Cienie okien</short>
+		<short xml:lang="pt">Janelas com sombra</short>
+		<short xml:lang="pt_BR">Janelas com sombra</short>
+		<short xml:lang="ro">Ferestre umbră</short>
+		<short xml:lang="ru">Тень окон</short>
+		<short xml:lang="sk">Tieňované okná</short>
+		<short xml:lang="sv">Skuggfönster</short>
+		<short xml:lang="tr">Pencereleri gölgelendir</short>
+		<short xml:lang="uk">Тінь вікон</short>
+		<short xml:lang="zh_CN">阴影窗口</short>
+		<short xml:lang="zh_TW">陰影視窗</short>
+		<long>Windows that should have a shadow</long>
+		<long xml:lang="bg">Прозорци които да имат сянка</long>
+		<long xml:lang="bn">যে উইন্ডোগুলি ছায়াযুক্ত করা হবে</long>
+		<long xml:lang="bn_IN">যে উইন্ডোগুলি ছায়াযুক্ত করা হবে</long>
+		<long xml:lang="cs">Typy oken, která mohou mít stín</long>
+		<long xml:lang="de">Fenster, um die ein Schatten gezeichnet werden soll</long>
+		<long xml:lang="el">Παράθυρα που πρέπει να έχουν σκιά</long>
+		<long xml:lang="es">Ventanas que deben tener sombra</long>
+		<long xml:lang="eu">Itzala izango duten leihoak</long>
+		<long xml:lang="fi">Ikkunatyypit, joille tulisi lisätä varjo</long>
+		<long xml:lang="fr">Types de fenêtres devant avoir une ombre</long>
+		<long xml:lang="gl">Fiestras que deben ter sombra</long>
+		<long xml:lang="gu">વિન્ડો કે જેને પડછાયો હોવો જોઈએ</long>
+		<long xml:lang="he">חלונות האמורים להטיל צל</long>
+		<long xml:lang="hi">विंडोज़ जिसे एक छाया रखना चाहिए</long>
+		<long xml:lang="hu">Árnyékolandó ablakok</long>
+		<long xml:lang="it">Tipi di finestre a cui applicare l'ombreggiatura</long>
+		<long xml:lang="ja">影を付ける対象ウィンドウ</long>
+		<long xml:lang="ko">그림자가 있어야 하는 창</long>
+		<long xml:lang="nb">Vinduer som skal ha en skygge</long>
+		<long xml:lang="nl">Vensters met schaduw</long>
+		<long xml:lang="or">ଉଇଣ୍ଡୋ ୟାହାର କି ଗୋଟିଏ ଛାଯା ରହିବା ଉଚିତ</long>
+		<long xml:lang="pa">ਵਿੰਡੋ, ਜਿਸ ਦੀ ਸ਼ੈਡੋ ਹੋਵੇ</long>
+		<long xml:lang="pl">Typy okien, które mają posiadać cień</long>
+		<long xml:lang="pt">Janelas que devem ter sombra</long>
+		<long xml:lang="pt_BR">Janelas que devem ter sombra</long>
+		<long xml:lang="ro">Ferestrele ce trebuie să aibă o umbră</long>
+		<long xml:lang="ru">Окна которые будут отбрасывать тень</long>
+		<long xml:lang="sk">Okná, ktoré by mali mať tieň</long>
+		<long xml:lang="sv">Fönster som ska ha en skugga</long>
+		<long xml:lang="tr">Gölge kullanılması gereken pencereler</long>
+		<long xml:lang="uk">Вікна які будуть відкидати тінь</long>
+		<long xml:lang="zh_CN">应有阴影的窗口</long>
+		<long xml:lang="zh_TW">設定哪些視窗結構應該擁有陰影</long>
+		<default>any</default>
+	    </option>
+	</options>
+    </plugin>
+</compiz>

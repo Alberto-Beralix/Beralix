@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-open" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="files" group="more"/>
+    <link type="guide" xref="shell-overview#files"/>
+    <desc>Dateien mit einer Anwendung öffnen, die nicht die Standardanwendung für diesen Dateityp ist. Sie können die Standardanwendung auch wechseln.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Cristopher Thomas</name>
+      <email>crisnoh@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Dateien mit anderen Anwendungen öffnen</title>
+
+<p>When you double-click a file in the <link xref="files-browse">file manager</link>, it will be opened with
+the default application for that file type. You can open it in a different
+application, search online for applications, or set the default application
+for all files of the same type.</p>
+
+<p>To open a file with an application other than the default, right-click
+the file and select the application you want from the top of the menu. If
+you don't see the application you want, click <gui>Open With Other
+Application</gui>. By default, the file manager only shows applications
+it knows can handle the file. To look through all the applications on
+your computer, click <gui>Show other applications</gui>.</p>
+
+<p>If you still can't find the application you want, you can search for
+more applications by clicking <gui>Find applications online</gui>. The
+file manager will search online for packages containing applications
+that are known to handle files of that type.</p>
+
+<section id="default">
+  <title>Ändern der Standardanwendung</title>
+  <p>Sie können die Standardanwendung für einen bestimmten Dateityp ändern. Das erlaubt Ihnen, Ihre bevorzugte Anwendung zu öffnen, wenn Sie auf die Datei doppelklicken. Sie möchten zum Beispiel, dass Ihre Lieblingsmusikwiedergabe geöffnet wird, wenn Sie auf eine MP3-Datei doppelklicken.</p>
+
+  <steps>
+    <item><p>Wählen Sie eine Datei des Typs, dessen Standardanwendung Sie wechseln möchten. Um zum Beispiel die Anwendung zu ändern, die MP3-Dateien öffnet, wählen Sie eine <file>.mp3</file>-Datei.</p></item>
+    <item><p>Klicken Sie mit der rechten Maustaste auf die Datei und wählen Sie <gui>Eigenschaften</gui>.</p></item>
+    <item><p>Wählen Sie den Reiter <gui>Öffnen mit</gui>.</p></item>
+    <item><p>Select the application you want and click <gui>Set as default</gui>.
+    By default, the file manager only shows applications it knows can handle the
+    file. To look through all the applications on your computer, click <gui>Show
+    other applications</gui>.</p>
+    <p>Wenn <gui>Weitere Anwendungen</gui> eine Anwendung enthält, die Sie manchmal verwenden, aber nicht als Vorgabe festlegen wollen, wählen Sie diese Anwendung und klicken Sie auf <gui>Hinzufügen</gui>. Dadurch wird sie zur Rubrik <gui>Empfohlene Anwendungen</gui> hinzugefügt. Sie können diese Anwendung danach verwenden, indem Sie mit der rechten Maustaste auf eine Datei klicken und sie aus der Liste auswählen.</p></item>
+  </steps>
+
+  <p>Das ändert die Standardanwendung nicht nur für die gewählte Datei, sondern für alle Dateien dieses Typs.</p>
+
+</section>
+
+</page>

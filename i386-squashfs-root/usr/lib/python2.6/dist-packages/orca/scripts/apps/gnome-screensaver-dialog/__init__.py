@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/apps/gnome-screensaver-dialog/__init__.py

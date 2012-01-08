@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="user-admin-change" xml:lang="es">
+
+  <info>
+    
+    <link type="guide" xref="user-accounts#privileges"/>
+    <link type="seealso" xref="user-admin-explain"/>
+    
+    <desc>Puede cambiar qué usuarios pueden hacer cambios en el sistema dándoles privilegios administrativos.</desc>
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Cambiar quién tiene privilegios de administrador</title>
+
+<p>Los privilegios de administrador son una manera de decidir quién puede hacer cambios a ciertas partes importantes del sistema. Puede cambiar qué usuarios tienen privilegios de administrador y cuáles no. Esto es una buena manera de mantener su sistema seguro y evitar posibles daños por cambios no autorizados.</p>
+
+<steps>
+ <item>
+  <p>Haga clic en su nombre en la <gui>barra de menús</gui> y seleccione <gui>Cuentas de usuario</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Pulse <gui>Desbloquear</gui> e introduzca su contraseña para desbloquear la configuración de la cuenta. (Para dar privilegios de administrador a un usuario, usted debe tener esos mismos privilegios.)</p>
+ </item>
+
+ <item>
+  <p>Seleccione el usuario cuyos privilegios quiere cambiar y pulse la opción junto a <gui>Tipo de cuenta</gui>.</p>
+ </item>
+ 
+ <!-- FIXME: Check that the definitions below are correct! -->
+ <item>
+  <list>
+   <item>
+    <p>Seleccione <gui>Administrador</gui> si quiere que el usuario sea capaz de realizar tareas administrativas, como instalar aplicaciones nuevas.</p>
+   </item>
+   <item>
+    <p>Seleccione <gui>Estándar</gui> si no quiere que el usuario sea capaz de realizar tareas de administrador.</p>
+   </item>
+  </list>
+ </item>
+ 
+ <item>
+  <p>Cierre la ventana de Cuentas de usuario. Los privilegios del usuario se cambiarán la próxima vez que inicie la sesión.</p>
+  </item>
+</steps>
+
+<note>
+ <p>La primera cuenta de usuario en el sistema es generalmente la que tiene privilegios de administrador. Esta es la cuenta de usuario que se creó cuando instaló por primera vez el sistema.</p>
+<p>No es deseable tener demasiados usuarios con privilegios de <gui>Administrador</gui> en un sistema.</p>
+</note>
+
+  <comment>
+   <cite date="2010-10-31" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
+   <p>Explain how admin privileges can be given to other people, or removed. Warn the reader about how it's unwise to have too many admins on a system.</p>
+  </comment>
+	
+</page>

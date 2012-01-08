@@ -1,0 +1,21 @@
+#! /bin/sh
+set -e
+
+
+
+if [ "$1" = "configure" ] && dpkg --compare-versions "$2" lt-nl 1.4.0; then
+  if pgrep ^gvfsd$ > /dev/null; then
+    cat << EOF
+
+************************* WARNING *************************
+** The gvfs protocol has changed in an incompatible way. **
+** You need to RESTART YOUR SESSION AS SOON AS POSSIBLE, **
+** otherwise your applications will start crashing.      **
+***********************************************************
+
+EOF
+  fi
+fi
+
+exit 0
+

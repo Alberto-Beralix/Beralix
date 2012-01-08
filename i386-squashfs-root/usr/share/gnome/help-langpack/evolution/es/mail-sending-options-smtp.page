@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-sending-options-smtp" xml:lang="es">
+
+  <info>
+    <desc>Opciones de envío para SMTP.</desc>
+
+    <link type="guide" xref="mail-account-manage-imap#sending-email"/>
+    <link type="guide" xref="mail-account-manage-imap-plus#sending-email"/>
+    <link type="guide" xref="mail-account-manage-local-delivery#sending-email"/>
+    <link type="guide" xref="mail-account-manage-maildir-format-directories#sending-email"/>
+    <link type="guide" xref="mail-account-manage-mh-format-directories#sending-email"/>
+    <link type="guide" xref="mail-account-manage-pop#sending-email"/>
+    <link type="guide" xref="mail-account-manage-unix-mbox-spool-directory#sending-email"/>
+    <link type="guide" xref="mail-account-manage-unix-mbox-spool-file#sending-email"/>
+    <link type="guide" xref="mail-account-manage-usenet-news#sending-email"/>
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-30" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Opciones de envío SMTP</title>
+
+<steps>
+<item><p>Introduzca la dirección de su servidor de correo para enviar correo en el campo <gui>Servidor</gui> y seleccione si el servidor requiere autenticación (introduciendo un nombre de usuario y una contraseña).</p>
+<note style="tip"><p>Los servidores de correo web gratuitos generalmente proporcionan información acerca de cuáles de estas opciones se pueden usar. Si está en un acontecimiento organizado puede que quiera contactar con el administrador de su sistema para obtener más información.</p></note>
+</item>
+<item><p>Si el servidor requiere autenticación debe proporcionar la siguiente información:</p>
+<steps>
+  <item><p>Seleccione el tipo de autenticación en la lista de Autenticación o pulse <gui>Comprobar tipos soportados</gui> para que Evolution los compruebe. Algunos servidores no soportan esto, así que pulsar este botón no garantiza que los mecanismos disponibles actualmente funcionen.</p></item>
+  <item><p>Introduzca su nombre de usuario.</p></item>
+</steps>
+</item>
+<item><p>Elija <gui>Usar conexión segura</gui> si quiere conectar de forma segura.</p></item>
+</steps>
+
+<!-- TODO:XINCLUDE: Maybe later replace this "go back" workaround by doing some content sharing with xinclude and xpointer in intro-first-run.page itself? <include href="foo.xml" xmlns="http://www.w3.org/2001/XInclude"/> See gnome-user-docs module for example usage. -->
+<p>Si ha llegado a esta página desde la página del asistente de primera ejecución, pulse <link xref="intro-first-run#account-information">aquí</link> para continuar con el siguiente paso.</p>
+
+</page>

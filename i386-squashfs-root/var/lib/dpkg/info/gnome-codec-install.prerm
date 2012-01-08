@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "remove" ] || [ "$1" = "deconfigure" ] ; then
+    update-alternatives --remove gstreamer-codec-install /usr/bin/gnome-codec-install
+fi
+
+
+# Automatically added by dh_python2:
+if which pyclean >/dev/null 2>&1; then
+	pyclean -p gnome-codec-install 
+else
+	dpkg -L gnome-codec-install | grep \.py$ | while read file
+	do
+		rm -f "${file}"[co] >/dev/null
+  	done
+fi
+
+# End automatically added section
+
+

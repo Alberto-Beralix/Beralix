@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" version="1.0 ttml/1.0" id="usage" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#play" group="one"/>
+    <link type="seealso" xref="gameplay"/>
+    <desc><app>GNOME-Tetravex</app> spielen.</desc>
+    <revision pkgversion="2.30" version="0.1" date="2009-12-17" status="draft"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <credit type="author">
+      <name>Rob Bradford</name>
+      <email>robster@debian.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+  </info>
+
+  <title><app>GNOME-Tetravex</app> spielen</title>
+
+  <section id="usage-basic">
+    <title>Grundlegende Bedienung</title>
+    <p>Das Fenster des Spiels ist in zwei Bereiche untergliedert: Rechts befinden sich die Spielsteine, die als Ausgangspunkt zum Anordnen und Verschieben auf der linken Seite zur Verfügung stehen. Jeder Spielstein wiederum ist in vier Dreiecke untergliedert, die jeweils eine Zahl enthalten.</p>
+    <p>Ziel des Spiels ist es, die Steine so anzuordnen, dass zwei gleiche Zahlen jeweils einander berühren.</p>
+    <p>Es ist nicht möglich, die Spielsteine so abzulegen, dass zwei verschiedene Zahlen einander berühren.</p>
+    <p>Das Spiel ist beendet, sobald Sie alle Spielsteine an deren richtigen Positionen abgelegt haben.</p>
+    <note>
+      <p>Wenn Sie <app>GNOME Tetravex</app> starten, beginnt das Spiel unmittelbar und die Zeit wird sofort erfasst.</p>
+    </note>
+
+  </section>
+  
+  <section id="usage-video">
+    <title>Video-Demonstration</title>
+    <p>Das kurze Video demonstriert, wie das Spiel funktioniert und welche Züge möglich sind.</p>
+    <media type="video" mime="application/ogg" src="figures/gnotravex-video.ogv">
+      <p>Demo</p>
+      <tt:tt xmlns:tt="http://www.w3.org/ns/ttml">
+        <tt:body>
+          <tt:div begin="1s" end="6s">
+            <p>Ziehen Sie Spielsteine von rechts nach links, wobei es notwendig ist, dass aneinander stoßende Kanten die gleiche Zahl und Farbe aufweisen.</p>
+          </tt:div>
+          <tt:div begin="6s" end="14s">
+            <p>Halten Sie die <key>Strg</key>-Taste gedrückt und drücken Sie auf die Pfeiltasten, um alle Spielsteine in einem Zug zu verschieben.</p>
+          </tt:div>
+          <tt:div begin="14s" end="22s">
+            <p>Fahren Sie mit dem Ziehen der Spielsteine fort, bis sie im linken Feld alle zueinander passen.</p>
+          </tt:div>
+        </tt:body>
+      </tt:tt>
+    </media>
+  </section>
+</page>

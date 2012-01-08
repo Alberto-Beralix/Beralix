@@ -1,0 +1,293 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# Copyright (C) 2010 Canonical
+#
+# Authors:
+#  Didier Roche <didrocks@ubuntu.com>
+#
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; version 3.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUTa
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+# details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+
+
+import logging
+from optparse import OptionParser, OptionGroup
+import sys
+from time import localtime, strftime
+
+import gettext
+try:
+    _ = gettext.translation('oneconf').ugettext
+except IOError:
+    from gettext import gettext as _
+    gettext.textdomain('oneconf')
+
+LOG = logging.getLogger(__name__)
+
+from oneconf.version import *
+
+SCOPE_NONE, SCOPE_ALL_PACKAGES, SCOPE_MANUAL_PACKAGES, SCOPE_HOSTS, SCOPE_HOST = range(5)
+(ACTION_NONE, ACTION_LIST, ACTION_DIFF, ACTION_UPDATE, ACTION_ASYNC_UPDATE,
+ACTION_SHARE_INVENTORY, ACTION_GET_LAST_SYNC, ACTION_STOP_SERVICE) = range(8)
+
+
+def print_packages(installed_pkg):
+
+    print "Installed package:"
+    for pkg_name in installed_pkg:
+        print pkg_name
+
+
+def print_packages_diff(packages_to_install, packages_to_remove):
+
+    print "Additional packages: (package to install)"
+    for pkg_name in packages_to_install:
+        print " %s" % pkg_name
+    print "Missing packages: (package to remove)"
+    for pkg_name in packages_to_remove:
+        print " %s" % pkg_name
+
+def print_hosts(hosts, only_current=False):
+    if len(hosts) == 1 or only_current:
+        print "Listing this host stored in OneConf:"
+    else:
+        print "Hosts stored for OneConf:"
+
+    for hostid in hosts:
+        current, name, share_inventory = hosts[hostid]
+        additional_text = ""
+        if current:
+            additional_text = "[Current]"
+        if (only_current and current) or not only_current:
+            print "ID: %s %s\n name: %s\n share inventory: %s" % (hostid, additional_text, name, share_inventory)
+
+def err_scope():
+    print _("you can't define --all-packages, --manual-packages or --hosts together.")
+    sys.exit(1)
+
+def err_action():
+    print _("you can't define --list, --diff, --update, --async-update, --share-inventory, --stop, --get-last-sync together.")
+    sys.exit(1)
+
+def option_not_compatible(options, action):
+    print _("%s isn't compatible with %s" % (options, action))
+    sys.exit(1)
+
+if __name__ == '__main__':
+    
+    # TODO: choose the future, choose argparse!
+    usage = _("usage: %prog [options]")
+    parser = OptionParser(version= "%prog " + VERSION, usage=usage)
+    parser.add_option("-d", "--diff", action="store_true",
+                      dest="action_diff",
+                      help=_("Current diff between this machine and another " \
+                             "provided by hostname/hostid"))
+    parser.add_option("-l", "--list", action="store_true",
+                      dest="action_list",
+                      help=_("List stored package (default for local hostid) or host lists"))
+    parser.add_option("--get-last-sync", action="store_true",
+                      dest="action_getlastsync",
+                      help=_("Get last sync date"))
+    parser.add_option("-u", "--update", action="store_true", dest="action_update",
+                      help=_("Update the package list in store"))
+    parser.add_option("--async-update", action="store_true",
+                      dest="action_async_update",
+                      help=_("Perform async update of the package list in store"))
+    parser.add_option("--stop", action="store_true", dest="action_stopservice",
+                      help=_("Stop oneconf service"))
+    parser.add_option("--debug", action="store_true", dest="debug",
+                      help=_("enable debug mode (use --direct)"))
+    parser.add_option("--direct", action="store_true", dest="directaccess",
+                      help=_("don't use dbus for the request"))
+    scope_group = OptionGroup(parser, "Scope of actions:", "This define the " \
+                       "scope to consider for list and diff command.")
+    scope_group.add_option("--all-packages", action="store_true",
+                      dest="scope_all_packages",
+                      help=_("get all installed packages from storage"))
+    scope_group.add_option("--manual-packages", action="store_true",
+                      dest="scope_manual_packages",
+                      help=_("get only manual installed packages from storage"))
+    scope_group.add_option("--hosts", action="store_true",
+                      dest="scope_hosts",
+                      help=_("all available hosts from storage (only with list)"))
+    scope_group.add_option("--host", action="store_true",
+                      dest="scope_host",
+                      help=_("This host (only with list)"))
+    scope_hosts = OptionGroup(parser, "Host scope:", "Thoses options " \
+                       "can't be used together and only concerns diff and " \
+                       "list actions. List hosts to get registered strings.")
+    # default is '' for dbus compatible format
+    scope_hosts.add_option("--hostname", action="store", dest="hostname",
+                      help=_("specify target host"), default='')
+    scope_hosts.add_option("--hostid", action="store", dest="hostid",
+                      help=_("specify target host"), default='')
+    scope_manage_host = OptionGroup(parser, "host management:",
+                        "Those options can't be used with anything else and are "
+                        "present to manage host parameters.")
+    scope_manage_host.add_option("--share-inventory", action="store_true",
+                      dest="share_inventory",
+                      help=_("share this inventory on the web"),
+                      default=None)
+    scope_manage_host.add_option("--hide-inventory", action="store_false",
+                      dest="share_inventory",
+                      help=_("hide this inventory on the web"),
+                      default=None)
+    parser.add_option_group(scope_group)
+    parser.add_option_group(scope_hosts)
+    parser.add_option_group(scope_manage_host)
+    (options, args) = parser.parse_args()
+
+    # set verbosity
+    if options.debug:
+        logging.basicConfig(level=logging.DEBUG)
+    else:
+        logging.basicConfig(level=logging.INFO)
+
+    if options.directaccess or options.debug:
+        LOG.debug("Direct call: only take from cache")
+        from oneconf.directconnect import DirectConnect
+        oneconf = DirectConnect()
+    else:
+        LOG.debug("Using dbus")
+        try:
+            from dbus import DBusException
+            from oneconf.dbusconnect import DbusConnect
+            oneconf = DbusConnect()
+        except DBusException, e:
+            LOG.critical("Can't connect to dbus: %s, fallback to direct connexion as a fallback:" % e)
+            from oneconf.directconnect import DirectConnect
+            oneconf = DirectConnect()
+
+    # store_const doesn't handle conflicts, so use manual triage
+    scope = SCOPE_NONE
+    if options.scope_manual_packages:
+        scope = SCOPE_MANUAL_PACKAGES
+    if options.scope_all_packages:
+        if scope != SCOPE_NONE:
+            err_scope()
+        scope = SCOPE_ALL_PACKAGES
+    if options.scope_hosts:
+        if scope != SCOPE_NONE:
+            err_scope()
+        scope = SCOPE_HOSTS
+    if options.scope_host:
+        if scope != SCOPE_NONE:
+            err_scope()
+        scope = SCOPE_HOST
+
+    # store_const doesn't handle conflicts, so use manual triage
+    action = ACTION_NONE
+    if options.action_list:
+        action = ACTION_LIST
+    if options.action_diff:
+        if action != ACTION_NONE:
+            err_action()
+        action = ACTION_DIFF
+    if options.action_update:
+        if action != ACTION_NONE:
+            err_action()
+        action = ACTION_UPDATE
+    if options.action_async_update:
+        if action != ACTION_NONE:
+            err_action()
+        action = ACTION_ASYNC_UPDATE
+    if options.share_inventory is not None: # True and False both used
+        if action != ACTION_NONE:
+            err_action()
+        action = ACTION_SHARE_INVENTORY
+    if options.action_getlastsync:
+        if action != ACTION_NONE:
+            err_action()
+        action = ACTION_GET_LAST_SYNC
+    if options.action_stopservice:
+        if action != ACTION_NONE:
+            err_action()
+        action = ACTION_STOP_SERVICE
+    if action == ACTION_NONE:
+        action = ACTION_LIST
+
+    if options.hostid and options.hostname:
+        print _("hostid and hostname can't be provided together")
+        sys.exit(1)
+
+    if action == ACTION_UPDATE:
+        if options.hostid or options.hostname:
+            print _("You can't use hostid or hostname when updating")
+            sys.exit(1)
+        if scope != SCOPE_NONE:
+            print _("You can't define --package, --host or --hosts " \
+                    "when updating")
+            sys.exit(1)
+        oneconf.update()
+
+    elif action == ACTION_ASYNC_UPDATE:
+        if options.hostid or options.hostname:
+            print _("You can't use hostid or hostname when updating")
+            sys.exit(1)
+        if scope != SCOPE_NONE:
+            print _("You can't define --package, --host or --hosts " \
+                    "when updating")
+            sys.exit(1)
+        oneconf.async_update()
+
+    elif action == ACTION_LIST:
+        if scope == SCOPE_NONE:
+            scope = SCOPE_ALL_PACKAGES
+        if scope == SCOPE_HOSTS:
+            print_hosts(oneconf.get_all_hosts())
+        if scope == SCOPE_HOST:
+            print_hosts(oneconf.get_all_hosts(), True)
+        if scope == SCOPE_MANUAL_PACKAGES:
+            installed_pkg = oneconf.get_packages(hostid=options.hostid, hostname=options.hostname, only_manual=True)            
+            print_packages(installed_pkg)
+        if scope == SCOPE_ALL_PACKAGES:
+            installed_pkg = oneconf.get_packages(hostid=options.hostid, hostname=options.hostname, only_manual=False)
+            print_packages(installed_pkg)
+
+    elif action == ACTION_DIFF:
+        if not options.hostid and not options.hostname:
+            print _("You have to provide either hostid or hostname for " \
+                    "getting a diff")
+            sys.exit(1)
+        if scope == SCOPE_NONE:
+            scope = SCOPE_ALL_PACKAGES
+        if scope == SCOPE_HOSTS:
+            option_not_compatible("--hosts", "--diff")
+        if scope == SCOPE_HOST:
+            option_not_compatible("--host", "--diff")
+        if scope == SCOPE_MANUAL_PACKAGES:
+            option_not_compatible("--manual-packages", "--diff")
+        if scope == SCOPE_ALL_PACKAGES:
+            (packages_to_install, packages_to_remove) = oneconf.diff(
+                    hostid=options.hostid, hostname=options.hostname)
+        print_packages_diff(packages_to_install, packages_to_remove)
+
+    elif action == ACTION_SHARE_INVENTORY:
+        if scope != SCOPE_NONE:
+            print _("You can't define --package, --host or --hosts " \
+                    "when changing show inventory status")
+        oneconf.set_share_inventory(options.share_inventory, options.hostid, options.hostname)
+
+    elif action == ACTION_GET_LAST_SYNC:
+        if options.hostid or options.hostname:
+            print _("You can't use hostid or hostname when changing show inventory status")
+            sys.exit(1)
+        if scope != SCOPE_NONE:
+            print _("You can't define --package, --host or --hosts " \
+                    "when changing show inventory status")
+        print oneconf.get_last_sync_date()
+
+    elif action == ACTION_STOP_SERVICE:
+        oneconf.stop_service()
+
+    sys.exit(0)
+

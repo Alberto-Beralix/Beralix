@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/Crypto/SelfTest/Random/test_rpoolcompat.py

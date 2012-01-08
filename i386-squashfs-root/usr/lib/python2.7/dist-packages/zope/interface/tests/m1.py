@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/zope/interface/tests/m1.py

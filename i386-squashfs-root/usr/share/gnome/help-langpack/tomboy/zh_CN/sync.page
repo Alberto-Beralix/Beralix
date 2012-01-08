@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="task" id="sync-notes" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#sync"/>
+    <desc>与其他计算机同步便笺。</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-05-29" status="candidate"/>
+    <credit type="author">
+      <name>Paul Cutler</name>
+      <email>pcutler@gnome.org</email>
+    </credit>    
+<!--
+    <copyright>
+      <year>2010</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+-->
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+ <title>同步您的便笺</title>
+
+ <section id="sync">
+
+	<title>手动同步便笺</title>
+	
+	<p>您可以用三种方法同步便笺：</p>
+	
+	<list type="numbered">
+	  <item><p>在一个便笺里点 <gui>工具</gui> 图标，然后选择 <gui>同步便笺</gui>。</p></item>
+	  <item><p>在 <gui>搜索全部便笺</gui> 对话框里，选择 <guiseq><gui>工具</gui><gui>同步便笺</gui></guiseq>。</p></item>
+	  <item><p>在您的面板、任务栏、浮动面板的阿帖便笺图标上点右键，然后选 <gui>同步全部便笺</gui>。</p></item>
+	</list>
+
+ </section>
+ 
+ <section id="autosync">
+ 
+ 	<title>自动同步便笺</title>
+ 	
+ 	<p>阿帖便笺可以在后台自动同步便笺，建议您在启用自动同步前，配置好如何处理便笺冲突。您可以在 <link xref="sync-setup#conflicts"/> 页，学习配置和设置同步便笺。</p>
+ 	
+ 	<p>您可以通过在面板、任务栏、浮动面板的阿帖便笺图标上点右键，然后选 <gui>首选项</gui> 来打开 <gui>阿帖便笺首选项</gui>，再选 <gui>同步便笺</gui> 标签。也可以在 <gui>搜索全部便笺</gui> 对话框里，打开 <gui>首选项</gui>，点菜单 <guiseq><gui>编辑</gui><gui>首选项</gui></guiseq>。</p>
+	
+	<p>要启用同步功能，在同步标签的底部，选中 <gui>每隔多少分钟在后台自动同步</gui> 复选框。</p>
+	
+	<p>阿帖便笺默认每隔 10 分钟同步一次。要更改同步频率，在时间框里输入一个数，或者用鼠标点击上下微调按钮(单位：分钟)。</p>
+	
+	<p>要禁用自动同步，不选中 <gui>每隔多少分钟在后台自动同步</gui> 复选框。</p>
+	
+  </section>
+
+ </page>

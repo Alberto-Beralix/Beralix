@@ -1,0 +1,15 @@
+#!/bin/sh
+
+. /lib/recovery-mode/l10n.sh
+
+if [ "$READONLY" = "true" ]; then
+  exit 1
+fi
+
+if [ "$1" = "test" ]; then
+  echo $(eval_gettext "Drop to root shell prompt with networking")
+  exit 0
+fi
+
+dhclient
+/sbin/sulogin

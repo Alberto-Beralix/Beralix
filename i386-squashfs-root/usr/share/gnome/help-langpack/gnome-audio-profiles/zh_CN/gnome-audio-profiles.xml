@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appname "gnome-audio-profiles">
+<!ENTITY app "<application>GNOME Audio Profiles</application>">
+<!ENTITY appversion "2.27.3">
+<!ENTITY manrevision "2.27.0">
+<!-- Information about the entities
+               Use the app and appname entities to specify the name of the application.
+               Use the appversion entity to specify the version of the application.
+               Use the manrevision entity to specify the revision number of this manual.
+               Use the date entity to specify the release date of this manual.
+            -->]>
+<!--
+   (Do not remove this comment block.)
+   Maintained by the GNOME Documentation Project
+   http://live.gnome.org/DocumentationProject
+   Template version: 3.0 beta
+   Template last modified 2006-11-21
+
+  -->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="zh_CN">
+  <articleinfo>
+    <title><application>GNOME 音频属性</application> 手册</title>
+    <abstract role="description">
+      <para><application>GNOME 音频属性</application>是基于 GStreamer 应用程序所用音频编码配置的集合。</para>
+    </abstract>
+
+    <copyright>
+      <year>2008-2009</year>
+      <holder>GNOME 文档项目</holder>
+    </copyright><copyright><year>2010</year><holder>Zhang Miao (mymzhang@gmail.com)</holder></copyright>
+
+    <!-- An address can be added to the publisher information. -->
+    <publisher role="maintainer">
+      <publishername>GNOME 文档项目</publishername>
+    </publisher>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <!-- The file legal.xml contains link to license for the documentation,
+         and other legal stuff such as "NO WARRANTY" statement.
+         Please do not change any of this. -->
+
+    <authorgroup>
+      <author>
+        <firstname>Marc-Andre</firstname>
+        <surname>Lureau</surname>
+        <affiliation>
+          <orgname>GNOME 项目</orgname>
+          <address> <email>marcandre.lureau@gmail.com</email> </address>
+        </affiliation>
+      </author>
+    </authorgroup>
+
+
+    <!-- According to GNU FDL, revision history is mandatory if you are -->
+    <!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+    <!-- Remember to remove the &manrevision; entity from the revision entries other
+      -->
+    <!-- than the current revision. -->
+    <!-- The revision numbering system for GNOME manuals is as follows: -->
+    <!-- * the revision number consists of two components -->
+    <!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+    <!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+    <!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+    <!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+    <!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+    <!-- to V3.0, and so on. -->
+    <revhistory>
+      <revision>
+        <revnumber>音频属性手册 2.27.0 版</revnumber>
+        <date>2009年6月</date>
+        <revdescription>
+	  <para>填充一些空白，添加截图。</para>
+	  <para>随 GNOME Media 2.27.3 发布</para>
+          <para role="author">Marc-Andre Lureau</para>
+          <para role="publisher">GNOME 文档项目</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>音频属性手册 0.1 版</revnumber>
+        <date>2008年12月</date>
+        <revdescription>
+          <para role="author">Marc-Andre Lureau</para>
+          <para role="publisher">GNOME 文档项目</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>本手册描述的是 2.27.3 版的 GNOME 音频属性。</releaseinfo>
+    <legalnotice>
+      <title>反馈</title>
+      <para>对 <application>GNOME 音频属性</application>程序或本手册报告错误或提供建议，遵循<ulink url="ghelp:user-guide?feedback-bugs" type="help">GNOME 用户指南反馈部分</ulink>中的指导。</para>
+      <!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+  </articleinfo>
+
+  <indexterm zone="index">
+    <primary>GNOME 音频属性</primary>
+  </indexterm>
+
+  <!-- ============= Document Body ============================= -->
+  <!-- ============= Introduction ============================== -->
+
+  <sect1 id="gnome-audio-profiles-introduction">
+    <title>简介</title>
+    <para><application>GNOME 音频属性</application> 允许您选择及修改预定义编码格式的列表。默认情况下， <application>GNOME 音频属性</application> 提供如下音频格式：</para>
+    <itemizedlist>
+      <listitem>
+        <para>AAC-MP4 - 有损压缩的新标准。</para>
+      </listitem>
+      <listitem>
+        <para>Ogg Vorbis - Xiph.Org 有损压缩。</para>
+      </listitem>
+      <listitem>
+        <para>Speex - 声音的 Xiph.Org 最优有损压缩格式。</para>
+      </listitem>
+      <listitem>
+        <para>FLAC - Xiph.Org 无损音频压缩格式。</para>
+      </listitem>
+      <listitem>
+        <para>MP3 - 流行的有损压缩格式。</para>
+      </listitem>
+      <listitem>
+        <para>MP2 - MPEG-1 Audio Layer II，被广泛支持。</para>
+      </listitem>
+      <listitem>
+        <para>WAV - 无损格式。</para>
+      </listitem>
+    </itemizedlist>
+
+    <note>
+      <para>某些格式可能在您所在的司法管辖范围内是非法的。</para>
+    </note>
+  </sect1>
+
+  <sect1 id="gnome-audio-profiles-usage">
+    <title>使用</title>
+    <para>使用 <application>GNOME 音频属性</application>修改预定义编码格式的列表。</para>
+
+    <sect2 id="gnome-audio-profiles-profiles-edit">
+      <title>属性选择对话框</title>
+
+      <para>会显示如下所示的窗口，在其中修改、添加或移除预定义格式。</para>
+
+      <!-- ==== Figure ==== -->
+      <figure id="gnome-audio-profiles-profiles-window">
+        <title><application>GNOME 音频首选项</application>窗口</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome-audio-profiles-profiles-window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>显示<application>GNOME 音频属性</application>主窗口。包含属性与修改选项的列表。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <!-- ==== End of Figure ==== -->
+
+      <para>选择属性中的一个，然后点击“编辑”来修改它。会显示“属性修改窗口”。</para>
+
+      <para>“删除”将会从属性列表中移除当前选定的属性。</para>
+
+      <para>To create a new profile, click "New". The "Profile
+	modification window" will be displayed.</para>
+
+    </sect2>
+
+    <sect2 id="gnome-audio-profiles-profile-edit">
+      <title>属性编辑</title>
+
+      <para><application>GNOME 音频属性</application> 允许您修改音频属性的参数。</para>
+
+      <!-- ==== Figure ==== -->
+      <figure id="gnome-audio-profiles-profile-window">
+        <title>属性更改窗口</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome-audio-profiles-profile-window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>显示<application>GNOME 音频属性</application>属性窗口。</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <!-- ==== End of Figure ==== -->
+
+      <itemizedlist>
+	<listitem>
+          <para>属性名称 - 用户友好的属性名称。</para>
+	</listitem>
+	<listitem>
+          <para>属性描述 - 此属性的详细描述。</para>
+	</listitem>
+	<listitem>
+          <para>GStreamer 管道 -  GStreamer 编码管道。</para>
+	</listitem>
+	<listitem>
+          <para>文件扩展名 － 与此属性相关的文件扩展名。</para>
+	</listitem>
+	<listitem>
+          <para>活动的 - 此属性是否列于客户端程序。</para>
+	</listitem>
+    </itemizedlist>
+
+    </sect2>
+
+  </sect1>
+
+  <!-- ============= Bugs ================================== -->
+  <!-- This section is optional and is commented out by default.
+       You can use it to describe known bugs and limitations of the
+       program if there are any - please be frank and list all
+       problems you know of.
+
+       <sect1 id="mayapp-bugs">
+         <title>Known Bugs and Limitations</title>
+         <para> </para>
+       </sect1>
+       -->
+  <!-- ============= About ================================== -->
+  <!-- This section contains info about the program (not docs), such as
+       author's name(s), web page, license, feedback address. This
+       section is optional: primary place for this info is "About.." box of
+       the program. However, if you do wish to include this info in the
+       manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="gnome-audio-profiles-about">
+    <title>关于<application>GNOME 音频属性</application></title>
+    <para>对本程序或本手册报告错误或提供建议，遵循<ulink url="ghelp:user-guide?feedback-bugs" type="help">GNOME 用户指南反馈部分</ulink>中的指导。</para>
+
+    <para>本程序是在自由软件基金会出版的 GNU 库通用公共许可证的条款下发布的；可以选择版本 2，或以后的版本(自行选择)。一份<ulink url="ghelp:lgpl" type="help">本许可证的副本</ulink>包含于本文档；另一份副本可以在本程序源代码中 COPYING 文件中找到。</para>
+
+  </sect1>
+</article>

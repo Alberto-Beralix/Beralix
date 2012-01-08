@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-replace" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#gedit-working-with-files"/>
+    <link type="seealso" xref="gedit-search-find"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <credit type="author">
+      <name>Daniel Neel</name>
+      <email>dneelyep@gmail.com</email>
+    </credit>
+  </info>
+
+  <title>Reemplazar texto</title>
+
+    <p>Editar texto puede consumir mucho tiempo. Para ahorrar tiempo <app>gedit</app> incluye una función <app>Reemplazar</app> que le ayuda a buscar y reemplazar partes de texto.</p>
+
+    <steps>
+      <title>Reemplazar texto en <app>gedit</app></title>
+      <item><p>Abra la herramienta de reemplazado pulsando en <guiseq><gui>Buscar</gui><gui>Reemplazar</gui></guiseq> o pulse <keyseq><key>Ctrl</key><key>H</key></keyseq>.</p></item>
+      <item><p>Introduzca el texto que quiere reemplazar en el campo «Buscar:».</p></item>
+      <item><p>Introduzca el nuevo texto de reemplazo en el campo «Reemplazar con:».</p></item>
+      <item>
+        <p>Una vez que haya introducido el texto original y el de reemplazo, seleccione las opciones de reemplazo que quiera:</p>
+        <list>
+          <item><p>Para reemplazar <em>sólo</em> el siguiente fragmento de texto que coincida, pulse <gui>Reemplazar</gui>.</p></item>
+          <item><p>Para reemplazar <em>todas apariciones</em> del texto buscado, pulse <gui>Reemplazar todo</gui>.</p></item>
+        </list>
+      </item>
+    </steps>
+
+    <note style="warning">
+      <p>Use la función <gui>Reemplazar todo</gui> con cuidado. <gui>Reemplazar todo</gui> se ejecuta en todo el texto del archivo y no le permite marcar partes del texto donde no se aplicará la función.</p>
+    </note>
+
+  <section>
+    <title>Más opciones</title>
+    <terms>
+      <item>
+        <title>Coincidir con capitalización</title>
+        <p>La opción <em>Coincidir con capitalización</em> le permite especificar si quiere que su búsqueda sea sensible a mayúsculas/minúsculas. Si se selecciona esta opción, las búsquedas serán sensibles a mayúsculas/minúsculas. De lo contrario no lo serán.</p>
+      </item>
+      <item>
+        <title>Coincidir sólo con la palabra completa</title>
+        <p>Use esta opción para buscar una palabra específica sin incluir partes de otras palabras. Por ejemplo, si buscó el término «por» con la opción seleccionada, se encontrará la palabra «por», pero no así las palabras <em>por</em>tal, <em>por</em>que y estu<em>por</em>.</p>
+      </item>
+      <item>
+        <title>Buscar hacia atrás</title>
+        <p>Este comando se comporta de forma idéntica al comando Buscar anterior. Seleccione esta opción si quiere pasar a través de los resultados de la búsqueda desde el final al principio.</p>
+      </item>
+      <item>
+        <title>Ajustar aproximadamente</title>
+        <p>Con la opción <app>Ajustar aproximadamente</app> activada, <app>gedit</app> reiniciará la acción de buscar/reemplazar en la parte superior del archivo, después de haber llegado al final. Esto le asegura que su acción de buscar/reemplazar se realiza en todo el archivo.</p>
+      </item>
+    </terms>
+  </section>
+</page>

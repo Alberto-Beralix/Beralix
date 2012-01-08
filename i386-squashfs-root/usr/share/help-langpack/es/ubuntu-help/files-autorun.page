@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-autorun" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="media#photos"/>
+    <link type="guide" xref="files#removable"/>
+    <link type="guide" xref="nautilus-prefs" group="last"/>
+    
+    <desc>Ejecutar aplicaciones automáticamente para CD y DVD, cámaras, reproductores de sonido y otros dispositivos y soportes.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Abrir una aplicación cuando conecte un dispositivo</title>
+
+<p>Puede hacer que se inicie una aplicación automáticamente cuando conecte un dispositivo. Por ejemplo, puede que quiera que se inicie su organizador de fotografías cuando conecte una cámara digital. También puede desactivar esta opción, para que no ocurra nada cuando conecte algo.</p>
+
+<p>Para decidir qué aplicaciones deberían iniciarse cuando conecte un dispositivo:</p>
+
+<steps>
+ <item>
+  <p>Pulse en el icono situado en el extremo derecho del <gui>panel superior</gui> y seleccione <gui>Configuración del sistema</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Open <gui>Removable Media</gui> and change the options under <gui>Select how media should be handled</gui>.</p>
+  <p>En lugar de simplemente iniciar una aplicación, también puede decidir que:</p>
+  <list>
+   <item><p>El dispositivo se mostrará en el Gestor de archivos (elija <gui>Abrir carpeta</gui>)</p></item>
+   <item><p>Se le pregunte qué abrir (<gui>Preguntar qué hacer</gui>)</p></item>
+   <item><p>No ocurra nada (<gui>No hacer nada</gui>).</p></item>
+  </list>
+ </item>
+ 
+ <item>
+  <p>La opción <gui>Software</gui> es un poco distinta a las demás - si el equipo detecta que hay software en el disco que acaba de introducir, puede intentar ejecutar ese software automáticamente si lo desea. Esta es una buena opción si quiere que una aplicación instalada en un CD se inicie sola cuando se introduzca el disco (como una presentación de diapositivas, por ejemplo).</p>
+ </item>
+ 
+ <item>
+  <p>Si no encuentra en la lista el tipo de dispositivo o soporte que desea cambiar (como discos Blu-ray o lectores de libros electrónicos), pulse en <gui>Otros soportes</gui> para obtener una lista de dispositivos más detallada.</p>
+ </item>
+</steps>
+
+<note style="tip">
+ <title>No abrir <em>ninguna</em> aplicación automáticamente</title>
+ <p>Si no quiere que se abra automáticamente ninguna aplicación, independientemente de lo que conecte, marque la opción <gui>Nunca preguntar ni iniciar programas al introducir soportes</gui> en la parte inferior de la ventana de Soportes extraíbles.</p>
+</note>
+
+</page>

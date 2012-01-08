@@ -1,0 +1,76 @@
+Backports policy for squeeze
+============================
+:toc:
+Cyril Brulebois <kibi@debian.org>
+
+
+Proposed plans
+--------------
+
+If one forgets about libraries and clients, a whole X stack boils down
+to: the server itself, input and video drivers, libdrm, and mesa.
+
+Since upgrading the server means upgrading all input and video drivers
+(more than 50 source packages), that’s certainly too much to backport,
+since we’re already trying to support `stable` (through stable
+updates), `testing`/`unstable`, and `experimental`. For example, in
+February 2011, that means `xorg-server` 1.7 in `stable`, 1.9 in
+`unstable` (and “soon” in `testing`), and 1.10 in `experimental`.
+
+So the plan is to keep `xorg-server` as it is in `squeeze` (possibly
+preparing/testing targeted fix if appropriate), and backporting
+drivers when possible. With API/ABI updates, the minimal server
+version required tend to get raised from time to time, but usually
+drivers can be built against a rather large range of server
+versions. In case a driver stop building against the server available
+in `stable`, we’ll likely stick to the highest version still building
+against it, and then tell people to upgrade the whole stack if they
+need something more recent (unless some trivial cherry-picking is
+possible, of course).
+
+The plan is to backport a few drivers on a possibly regular fashion,
+and other drivers upon request.
+
+
+Input drivers
+~~~~~~~~~~~~~
+
+ * `evdev`: Linux-only keyboard & mouse/pointer driver.
+ * `keyboard` and `mouse`: Needed for non-Linux ports.
+ * `synaptics`: Better touchpad support than `evdev`.
+
+
+Video drivers
+~~~~~~~~~~~~~
+
+ * `ati`: Drivers for ATI cards.
+ * `intel`: Driver for Intel cards.
+ * `nouveau`: Driver for NVidia cards. Not possible since upstream’s http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-nouveau.git;a=commit;h=a4d580bf05d7aac1d486e5d1ba9a2201c026e5f5[a4d580bf05].
+ * `fbdev` and `vesa`: Generic drivers.
+ * `dummy`: Dummy driver, suitable when there’s no monitor connected.
+
+.Note
+There are a few other drivers for ATI cards (`mach64`, `r128`), which
+are pulled by `ati`, but there are versions available in `squeeze`
+already, so backporting them isn’t required.
+
+
+Libraries
+~~~~~~~~~
+
+The important libraries are `libdrm` and `mesa`. The former will
+likely get pulled at some point by a driver, so a backport will be
+needed for this library. The latter is under very heavy development,
+so one may want to try a new release or a snapshot without having to
+upgrade everything to `unstable`. It’s a huge package to build, so we
+link:../howto/build-mesa.html[documented how to build it] locally. But
+there’s some hope to make some weekly or daily builds available at
+some point.
+
+
+Kernel
+~~~~~~
+
+Some of those drivers might need a more recent kernel version than
+the one in `squeeze`, but hopefully it’ll be available through
+`squeeze-backports` as well.

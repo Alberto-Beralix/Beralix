@@ -1,0 +1,11 @@
+# vim:syntax=apparmor
+# aspell permissions
+
+  # per-user settings and dictionaries
+  @{HOME}/.aspell.*.{pws,prepl} rk,
+
+  # system libraries and dictionaries
+  /usr/lib/aspell/ r,
+  /usr/lib/aspell/* r,
+  /usr/lib/aspell/*.so m,
+  /var/lib/aspell/* r,

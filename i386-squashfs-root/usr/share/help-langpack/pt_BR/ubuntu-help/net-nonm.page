@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="net-nonm" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-problem"/>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <desc>Pressione <keyseq><key>Alt</key><key>F2</key></keyseq>. Digite <input>nm-applet</input></desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Não há nenhum menu de rede no painel superior</title>
+
+  <p>Se o menu de rede desapareceu do painel superior, o seu <app>Gerenciador de Rede</app> pode não estar em execução. Para iniciá-lo novamente:</p>
+
+  <steps>
+    <item><p>Pressione <keyseq><key>Alt</key><key>F2</key></keyseq></p></item>
+    <item><p>Digite <input>nm-applet</input> e pressione <gui>Enter</gui>.</p></item>
+    <item><p>É possível que a caixa <gui>Autenticação de rede sem-fio</gui> apareça. Entre com sua senha na caixa apropriada e clique <gui>Conectar</gui>.</p></item>
+  </steps>
+
+<p>Se isso não funcionar, pode haver um problema com o Gerenciador de rede. Para verificar se é esse o caso, vá ao <link xref="unity-dash-intro">painel</link> e abra o Terminal. Digite <cmd>nm-applet</cmd>, pressione <key>Enter</key> e veja se o menu de rede aparece. Se não, você algumas mensagens de erro devem aparecer no Terminal. Elas deverão dizer o que está acontecendo de errado, mas podem ser mensagens um tanto técnicas. Se forem, peça ajuda em um fórum de apoio e faça referência a essas mensagens de erro.</p>
+
+</page>

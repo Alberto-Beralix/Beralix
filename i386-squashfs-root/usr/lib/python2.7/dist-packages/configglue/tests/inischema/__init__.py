@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/configglue/tests/inischema/__init__.py

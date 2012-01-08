@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/configglue/tests/app/test_base.py

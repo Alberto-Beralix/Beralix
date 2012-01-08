@@ -1,0 +1,1 @@
+../../../../share/pyshared/duplicity/gpg.py

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<title>Loading error</title>
+<link rel="stylesheet" href="reset.css" type="text/css" media="all"> 
+<link rel="stylesheet" href="screen.css" type="text/css" media="all"> 
+<script>
+function carry_on() {
+    // We should have been passed, to this page, the referrer, the URL they 
+    // went to in error, and the store front page, separated by :::
+    if (location.search && location.search.indexOf(":::") != -1) {
+        var parts = location.search.substr(1).split(":::");
+        if (parts.length != 3) {
+            history.go(-1);
+        }
+        var from_url = parts[0];
+        var to_url = parts[1];
+        var front_page = parts[2];
+        var combining = "&";
+        if (front_page.indexOf("?") == -1) {
+            combining = "?"
+        }
+        var go_back_url = front_page + combining + "went_to_url_in_error=" + 
+            escape(to_url) + "&came_from_url=" + escape(from_url);
+        location.href = go_back_url;
+    } else {
+        history.go(-1);
+    }
+}
+</script>
+</head>
+<body class="downloads">
+<div id="header">
+
+<div class="wrap">
+<h1 id="logo">Ubuntu One Music Store</h1>
+    
+</div><!-- close .wrap -->
+</div><!-- close #header -->
+    
+<div class="superfluous">
+<div id="content">
+<div class="access">
+   <h1>Sorry!</h1>
+<h2>An error has occurred. Please ensure that your
+computer is connected to Ubuntu One.</h2>
+<p><button onclick="carry_on()"><span>Go back</span></button></p>
+</div>
+</div>
+
+</div>
+</div>
+<div id="footer">
+<div class="wrap">
+</div>
+</div>
+</body>
+</html>

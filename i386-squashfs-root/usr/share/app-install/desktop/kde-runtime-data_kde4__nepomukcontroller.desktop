@@ -1,0 +1,18 @@
+[Desktop Entry]
+X-AppInstall-Package=kde-runtime-data
+X-AppInstall-Popcon=61
+X-AppInstall-Section=main
+
+Name=Nepomuk File Indexing Controller
+Comment=System tray icon to control the behaviour of the Nepomuk file indexer
+Icon=nepomuk
+Exec=nepomukcontroller
+Type=Application
+Categories=Qt;KDE;System;
+X-KDE-autostart-after=panel
+X-DBUS-StartupType=Unique
+X-KDE-StartupNotify=false
+X-KDE-UniqueApplet=true
+X-KDE-autostart-condition=nepomukserverrc:Basic Settings:Start Nepomuk:true
+
+X-Ubuntu-Gettext-Domain=app-install-data

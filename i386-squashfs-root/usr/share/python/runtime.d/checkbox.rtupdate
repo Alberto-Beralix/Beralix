@@ -1,0 +1,6 @@
+#! /bin/sh
+set -e
+if [ "$1" = rtupdate ]; then
+	pyclean -p checkbox /usr/share/checkbox
+	pycompile -p checkbox -V 2.6- /usr/share/checkbox
+fi

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-copy" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <desc>Copiar ou mover itens para um novo diretório.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Cristopher Thomas</name>
+      <email>crisnoh@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Copiar ou mover arquivos e pastas</title>
+
+<p>Um arquivo ou pasta pode ser copiado ou movido para uma nova localização, arrastando e soltando com o mouse, usando os comandos copiar e colar, ou usando atalhos de teclado.</p>
+<p>Por exemplo, copiar arquivos pode ser útil na criação de uma pasta que contém arquivos que se quer enviar por e-mail a um amigo ou colega de trabalho, ou quando se faz <link xref="files#backup">cópia de segurança</link> de arquivos individuais para um disco externo.</p>
+
+<steps>
+<title>Arraste arquivos para copiar ou mover</title>
+<item><p><link xref="files-browse">Abra o gerenciador de arquivos</link> na pasta que contém o item que deseja copiar.</p></item>
+<item><p>Clique em <guiseq><gui>Arquivo</gui><gui>Nova janela</gui></guiseq> (ou pressione <keyseq><key>Ctrl</key><key>N</key></keyseq>) para abrir uma segunda janela. Navegue até a pasta onde você quer mover ou copiar o item na nova janela.</p></item>
+<item><p>Clique e arrase o item de uma janela para a outra. Por padrão, arrastar um item irá <em>movê-lo</em> se o destino estiver no mesmo dispositivo (por exemplo, se ambas as pastas estiverem no mesmo disco rígido em seu computar).</p>
+  <p>Por outro lado, arrastar irá <em>copiá-lo</em> se o destino for um dispositivo diferente, como um dispositivo de armazenamento USB.</p>
+<list style="compact">
+<item><p>Para forçar o arquivo a ser copiado, mantenha pressionada a tecla <key>Ctrl</key> enquanto arrasta.</p></item>
+<item><p>Para forçar o arquivo a ser movido, mantenha pressionada a tecla <key>Shift</key> enquanto arrasta.</p></item>
+</list></item>
+</steps>
+
+<steps>
+<title>Copiar e colar arquivos</title>
+<item><p>Selecione o item que deseja copiar clicando nele uma vez.</p></item>
+<item><p>Clique em <guiseq><gui>Editar</gui><gui>Copiar</gui></guiseq>, ou pressione <keyseq><key>Ctrl</key><key>C</key></keyseq>.</p></item>
+<item><p>Navegue para outra pasta, onde você deseja colocar a cópia do item.</p></item>
+<item><p>Clique em <guiseq><gui>Editar</gui><gui>Colar</gui></guiseq> para terminar de copiar o item, ou pressione <keyseq><key>Ctrl</key><key>V</key></keyseq>. Agora haverá uma cópia do arquivo na pasta original e na outra pasta.</p></item>
+</steps>
+
+<steps>
+<title>Copie e cole os arquivos (para movê-los)</title>
+<item><p>Selecione o item que deseja mover clicando sobre ele uma vez.</p></item>
+<item><p>Clique em <guiseq><gui>Editar</gui><gui>Recortar</gui></guiseq>, ou pressione <keyseq><key>Ctrl</key><key>X</key></keyseq>.</p></item>
+<item><p>Navegue para outra pasta, onde você deseja mover o item.</p></item>
+<item><p>Clique em <guiseq><gui>Editar</gui><gui>Colar</gui></guiseq> para terminar de mover o item, ou pressione <keyseq><key>Ctrl</key><key>V</key></keyseq>. O arquivo será removido de sua pasta original e movido para a outra pasta.</p></item>
+</steps> 
+
+<note>
+ <title>Por que não consigo copiar/mover um arquivo?</title>
+ <p>Você não pode mover um arquivo para uma pasta que é <em>somente leitura</em>. Algumas pastas são somente leitura para prevenir você de alterar seus conteúdos. Você pode alterar isso <link xref="nautilus-file-properties-permissions">alterando as permissões do arquivo</link>.</p>
+</note>
+
+</page>

@@ -1,0 +1,25 @@
+#!/bin/sh -e
+
+user=$1
+language=$2
+validated_language=
+
+[ -n "$user" -a -n "$language" ] || exit 0
+
+langtoolsdir=/usr/share/language-tools
+
+if [ $language = "${language%:*}" ]; then
+    validated_language=$( $langtoolsdir/language-validate $language )
+    renewed_langlist=$( $langtoolsdir/update-langlist $validated_language $user )
+else
+    # $language contains a priority list
+    validated_language=$( $langtoolsdir/language-validate ${language%%:*} )
+    renewed_langlist=$validated_language:${language#*:}
+fi
+
+locale_name=$( $langtoolsdir/language2locale $validated_language )
+
+( $langtoolsdir/save-to-profile $user $renewed_langlist $locale_name )
+
+echo $validated_language
+

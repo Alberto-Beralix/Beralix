@@ -1,0 +1,180 @@
+plugin: shell
+name: disk/detect
+command: udev_resource | filter_templates -w "category=DISK" | awk -F': ' '$1 == "product" { print $2 }'
+description: Detects and displays disks attached to the system.
+
+plugin: local 
+name: disk/benchmarks
+requires: device.category == 'DISK'
+description: Benchmark for each disk 
+description-ast.UTF-8: Preba pa cada discu
+description-cs.UTF-8: Test výkonu jednotlivých disků
+description-da.UTF-8: Ydelsestest for hver disk
+description-de.UTF-8: Vergleichstest für jede Festplatte
+description-en_AU.UTF-8: Benchmark for each disk
+description-en_GB.UTF-8: Benchmark for each disk
+description-es.UTF-8: Prueba para cada disco
+description-gl.UTF-8: Proba para cada disco
+description-hu.UTF-8: Minden lemez tesztelése
+description-it.UTF-8: Benchmark di ciascun disco
+description-ms.UTF-8: Tanda aras untuk setiap cakera
+description-nl.UTF-8: Benchmark voor elke schrijf
+description-pt_BR.UTF-8: Fazer benchmark para cada disco
+description-ru.UTF-8: Тест производительности каждого диска
+description-sl.UTF-8: Meritve hitrosti delovanja za vsak disk
+description-sq.UTF-8: Pikët për çdo disk
+description-sr.UTF-8: Испробавање за сваки диск
+description-th.UTF-8: วัดสมรรถนะสำหรับดิสก์แต่ละอัน
+description-tr.UTF-8: Her bir disk için karşılaştırmalı değerlendirme
+description-zh_CN.UTF-8: 每个磁盘基准测试
+description-zh_TW.UTF-8: 硬碟基準測試
+command: 
+ cat <<'EOF' | run_templates -t -s 'udev_resource | filter_templates -w "category=DISK"'
+ plugin: shell
+ name: disk/benchmark_`ls /sys$path/block`
+ requires: device.path == "$path" and package.name == 'linux'
+ user: root
+ command: hdparm -tT /dev/`ls /sys$path/block` | sed 's/:.*= */ = /' | grep -v "^$"
+ description: Benchmark for $path 
+ EOF
+
+plugin: local
+name: disk/smart
+requires:
+ package.name == 'smartmontools'
+ package.name == 'linux'
+ device.category == 'DISK'
+description: SMART test
+description-ast.UTF-8: Prueba SMART
+description-cs.UTF-8: Test SMART
+description-da.UTF-8: SMART-test
+description-de.UTF-8: SMART-Test
+description-en_AU.UTF-8: SMART test
+description-en_GB.UTF-8: SMART test
+description-es.UTF-8: Prueba SMART
+description-fr.UTF-8: Test SMART
+description-gl.UTF-8: Proba SMART
+description-hu.UTF-8: SMART tesztek
+description-it.UTF-8: Test SMART
+description-ms.UTF-8: Ujian SMART
+description-nl.UTF-8: SMART test
+description-pt_BR.UTF-8: Teste do SMART
+description-ru.UTF-8: SMART-тест
+description-sl.UTF-8: Preizkus SMART
+description-sq.UTF-8: SMART test
+description-sr.UTF-8: Паметан тест
+description-th.UTF-8: ทดสอบแบบ SMART
+description-tr.UTF-8: SMART sınaması
+description-zh_CN.UTF-8: SMART 测试
+description-zh_TW.UTF-8: SMART 測試
+command:
+ cat <<'EOF' | run_templates -t -s 'udev_resource | filter_templates -w "category=DISK"'
+ plugin: shell
+ name: disk/smart_`ls /sys$path/block`
+ requires: device.path == "$path"
+ description: SMART test for $product
+ user: root
+ command: disk_smart -b /dev/`ls /sys$path/block` -s 130
+ EOF
+
+plugin: local
+name: disk/max_diskspace_used
+requires:
+ device.category == 'DISK'
+description: Maximum disk space used during a default installation test
+description-ast.UTF-8: Máximu espaciu de discu usáu nuna prueba d'instalación predeterminada
+description-cs.UTF-8: Během výchozího testu instalací bude zabrán nejvýše tento objem dat
+description-de.UTF-8: Test des maximalen Festplattenspeichers, der während einer Standardinstallation belegt wird
+description-en_AU.UTF-8: Maximum disk space used during a default installation test
+description-en_GB.UTF-8: Maximum disk space used during a default installation test
+description-es.UTF-8: Máximo espacio de disco usado durante una prueba de instalación predeterminada
+description-fr.UTF-8: Espace disque maximal utilisé lors d'un test d'installation par défaut
+description-gl.UTF-8: Máximo espazo de disco usado durante unha proba de instalación predeterminada
+description-hu.UTF-8: Az alapértelmezett telepítéskor használt legnagyobb lemezhely teszt
+description-it.UTF-8: Spazio massimo su disco usato durante un test di installazione predefinito
+description-ms.UTF-8: Ruang cakera maksimum digunakan semasa ujian pemasangan lalai
+description-nl.UTF-8: Maximale schijfruimte gebruikt tijdens een standaard installatie test
+description-pt_BR.UTF-8: Espaço máximo em disco utilizado durante uma instalação teste padrão
+description-ru.UTF-8: Максимальное использование места на диске при тесте с настройками по умолчанию
+description-sl.UTF-8: Največ porabljenega prostora med preizkusom privzete namestitve
+description-sq.UTF-8: Hapësira maksimale e diskut e përdorur gjatë testit standart të instalimit
+description-sr.UTF-8: Највећи простор диска коришћен приликом теста основне инсталације
+description-th.UTF-8: เนื่อที่ว่างสูงสุดที่ถูกใช้ระหว่างการทดสอบการติดตั้งแบบปริยาย
+description-tr.UTF-8: Öntanımlı kurulum sınaması sırasında kullanılan en fazla disk alanı
+description-zh_CN.UTF-8: 默认安装测试过程中使用的最大磁盘空间
+command:
+ cat <<'EOF' | run_templates -t -s 'udev_resource | filter_templates -w "category=DISK"'
+ plugin: shell
+ name: disk/max_diskspace_used_`ls /sys$path/block`
+ requires: device.path == "$path"
+ description: Max disk space test for $product
+ user: root
+ command: max_diskspace_used `ls /sys$path/block`
+ EOF
+
+plugin: local
+name: disk/read_performance
+requires:
+ device.category == 'DISK'
+description: Verify system storage performs at or above baseline performance
+description-ast.UTF-8: Verifica que'l rendimientu del almacenamientu del sistema, tea sobre'l rendimientu de referencia
+description-cs.UTF-8: Ověřit, zda systémová úložiště dosahují alespoň minimálního výkonu
+description-de.UTF-8: Stellen Sie sicher, dass der Systemspeicher mit oder über der Basisperformance arbeitet
+description-en_AU.UTF-8: Verify system storage performs at or above baseline performance
+description-en_GB.UTF-8: Verify system storage performs at or above baseline performance
+description-es.UTF-8: Verifica que el rendimiento del almacenamiento del sistema, esté por sobre el rendimiento de referencia
+description-gl.UTF-8: Verifica que o rendemento do almacenamento do sistema estea por enriba do rendemento de referencia.
+description-it.UTF-8: Verifica che i supporti di memorizzazione del sistema abbiano una prestazione pari o superiore a quella base
+description-ms.UTF-8: Sahkan storan sistem dilakukan pada atau diatas prestasi garis dasar
+description-nl.UTF-8: Controleer prestaties van systeemopslag op of boven de standaardprestaties
+description-pt_BR.UTF-8: Verifica a performance do sistema de armazenamento e realiza em ou acima de referência de desempenho
+description-ru.UTF-8: Проверка системных хранилищ выполняется по стандартным и повышенным условиям
+description-sl.UTF-8: Preveri, da je hitrost sistemske shrambe vsaj na najmanjšem zahtevanem nivoju.
+description-sq.UTF-8: Verifikoni që ruajtja e sistemit të performojë në bazë të parametrave apo mbi to
+description-sr.UTF-8: Проверава обављање скалдиштења система при или изнад основних перформанси
+description-tr.UTF-8: Sistem deposunun taban çizgisi başarımını veya daha fazlasını verdiğini doğrulayın
+description-zh_TW.UTF-8: 確認系統的儲存裝置的效能達到或超過一般儲存裝置基本的表現
+command:
+ cat <<'EOF' | run_templates -t -s 'udev_resource | filter_templates -w "category=DISK"'
+ plugin: shell
+ name: disk_read_performance_`ls /sys$path/block`
+ requires:
+  device.path == "$path"
+  package.name == 'linux'
+ description: Disk performance for $product
+ user: root
+ command: disk_read_performance_test `ls /sys$path/block`
+ EOF
+
+plugin: local
+name: disk/storage_devices
+requires:
+ device.category == 'DISK'
+description: Verify that storage devices, such as Fibre Channel and RAID can be detected and perform under stress.
+description-ast.UTF-8: Verifica que los dispositivos de almacenamientu, como Fibre Channel y RAID, se pueden detectar y usar baxo estrés.
+description-cs.UTF-8: Ověřit, že úložná zařízení jako Fibre Channel nebo RAID můžou být nalezena a dosahují v zátěži dostatečného výkonu
+description-de.UTF-8: Stellen Sie sicher, dass Speichergeräte, wie Faserkanäle und RAID erkannt werden und unter Belastung arbeiten können.
+description-en_AU.UTF-8: Verify that storage devices, such as Fibre Channel and RAID can be detected and perform under stress.
+description-en_GB.UTF-8: Verify that storage devices, such as Fibre Channel and RAID can be detected and perform under stress.
+description-es.UTF-8: Verifica que los dispositivos de almacenamiento, como Fibre Channel y RAID, se pueden detectar y utilizar bajo estrés.
+description-gl.UTF-8: Verifica que os dispositivos de almacenamento, como Fibre Channel e RAID, pódense detectar e empregar baixo estrés.
+description-hu.UTF-8: Ellenőrizi, hogy az egyes tárolóeszközöket, mint például a Fibre Channel-t vagy RAID-et a rendszer megfelelően érzékelte-e, illetve megfelelően működnek-e terhelés alatt.
+description-it.UTF-8: Verifica che i dispositivi di memorizzazione come Fibre Channel e RAID possano essere rilevati ed eseguiti in condizioni di stress.
+description-ms.UTF-8: Sahkan peranti storan, seperti Saluran Fiber dan RAID boleh dikesan dan berfungsi dibawah tekanan.
+description-nl.UTF-8: Controleer of opslagapparaten, zoals Fibre Chanel en RAID, gedetecteerd worden en ook onder druk blijven werken.
+description-pt_BR.UTF-8: Verifica os dispositivos de armazenamento, tais como Fibre Channel e RAID podem ser detectados e trabalhar sob pressão.
+description-ru.UTF-8: Проверить возможность обнаружения устройств хранения, таких как волоконно-оптический канал и RAID, затем выполнить стресс-тест.
+description-sl.UTF-8: Preveri, da je mogoče naprave za hranjenje podatkov, kot optični kanal in RAID polja, pravilno zaznati in da delujejo pod obremenitvijo.
+description-sr.UTF-8: Проверава да ли уређаји складиштења, као што су Канал влакна и РАИД могу бити откривени и обављени под оптерећењем.
+description-zh_TW.UTF-8: 確認儲存裝置，像是光纖通道和冗餘獨立磁碟陣列，可以被偵測且能在壓力測試下運作。
+command:
+ cat <<'EOF' | run_templates -t -s 'udev_resource | filter_templates -w "category=DISK"'
+ plugin: shell
+ name: disk/storage_device_`ls /sys$path/block`
+ user: root
+ requires:
+  device.path == "$path"
+  package.name == 'linux'
+ description: I/O stress test for $product
+ command: storage_test `ls /sys$path/block`
+ EOF

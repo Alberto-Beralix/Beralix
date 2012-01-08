@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-mobile" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net"/>
+    
+    <revision version="11.04" date="2011-04-30" status="final"/>
+
+    <credit type="author">
+      <name>Time de documentação do Ubuntu</name>
+    </credit>
+
+    <desc>Conectar à internet usando banda larga móvel</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Conectar via banda larga móvel</title>
+
+    <p><em>Banda larga móvel</em> refere-se a qualquer tipo de conexão de Internet de alta velocidade fornecida por um dispositivo externo, como um modem USB 3G ou um celular com conexão de dados HSPA/UMTS/GPRS embutida. Alguns laptops mais recentes já vem com dispositivos de banda larga móvel dentro deles.</p>
+    <p>A maioria dos dispositivos móveis de banda larga deve ser reconhecida automaticamente quando você conectá-los ao seu computador. Ubuntu vai pedir para configurar o dispositivo.</p>
+    <steps>
+        <item>
+          <p>O assistente <gui>Nova Conexão de Banda Larga Móvel</gui> abrirá automaticamente quando você conectar o dispositivo.</p>
+        </item>
+        <item>
+          <p>Clique em <gui>Avançar</gui> e digite as informações, incluindo o país em que o dispositivo de banda larga móvel foi emitido, o provedor de acesso e o tipo de conexão (por exemplo, <em>pós-pago</em> ou <em>pré-pago</em>).</p>
+        </item>
+        <item>
+          <p>Dê um nome para a sua conexão e clique em <gui>Aplicar</gui>.</p>
+        </item>
+        <item>
+          <p>A sua conexão está pronta para ser usada. Para conectar, clique no <gui>menu de rede</gui> no <gui>painel superior/gui&gt; e selecione a sua nova conexão.</gui></p>
+        </item>
+        <item>
+          <p>Para desconectar, clique no <gui>menu de rede</gui> no painel superior e clique em <gui>Desconectar</gui>.</p>
+        </item>
+    </steps>
+    <p>Se você não for solicitado para configurar o dispositivo quando você conectá-lo, ele ainda pode ser reconhecido pelo Ubuntu. Em alguns casos você pode adicionar uma conexão manualmente.</p>
+    <steps>
+    	<item>
+    	  <p>Clique no <link xref="unity-appmenu-intro">menu de rede</link> no painel superior e selecione <gui>Editar Conexões...</gui></p>
+    	</item>
+    	<item>
+    	  <p>Alterne para a aba <gui>Banda Larga Móvel</gui>.</p>
+    	</item>
+    	<item>
+    	  <p>Clique <gui>Adicionar</gui>.</p>
+    	</item>
+    	<item>
+    	  <p>Isto deverá abrir o assistente de <gui>Nova Conexão de Banda Larga Móvel</gui>. Digite os seus dados, como descrito acima.</p>
+    	</item>
+    </steps>
+
+ 
+</page>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="task" id="remove-account" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#accounts"/>
+    <desc>从 <app>Empathy</app> 中完全的删除一个账户。</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-14" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-10" status="review"/>
+    <revision pkgversion="2.28" version="0.3" date="2009-08-27" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-08-31" status="done"/>
+      -->
+    </revision>
+    <revision pkgversion="2.30" version="0.4" date="2010-04-19" status="review"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>知识共享-相同方式共享 (Creative Commons Share Alike) 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>删除账户</title>
+
+  <p>如果你不想再使用某个账户，您可以从 <app>Empathy</app> 中完全的删除这个账户。如果您将来又希望在 <app>Empathy</app> 中使用这个账户了，您可以再添加这个账户。</p>
+  
+  <steps>
+    <item>
+      <p>从 <gui>联系人列表</gui> 窗口，选择 <guiseq><gui>编辑</gui><gui>账户</gui></guiseq>，或按 <key>F4</key>。</p>
+    </item>
+    <item>
+      <p>在窗口左侧的账户列表中选择您想要删除的账户。</p>
+    </item>
+    <item>
+      <p>点击 <gui style="button">删除</gui>。</p>
+    </item>
+    <item>
+      <p>这时会弹出一个窗口来询问是否确认。点击 <gui>删除</gui> 按钮来永久的删除这个账户。</p>
+    </item>
+  </steps>
+
+  <note>
+    <p>即使删除了账户，<app>Empathy</app> 也不会删除这个账户的聊天记录。</p>
+  </note>
+
+</page>

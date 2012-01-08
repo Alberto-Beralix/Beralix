@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="sound-nosound" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="sound-broken"/>
+    
+    <desc>Verifique se ele não está mudo, se os cabos estão conectados corretamente e se a placa de som é detectada.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Não consigo ouvir nenhum som no computador</title>
+
+<p>Se você não consegue ouvir os sons em seu computador, por exemplo, quando você tenta tocar alguma música, tente estas etapas de solução de problemas para ver se você consegue corrigir o problema.</p>
+
+<section id="mute">
+ <title>Certifique-se que o som não está mudo</title>
+ <p>Clique no <gui>menu som</gui> no painel superior (parece um alto-falante) e certifique-se de que o som não está mudo ou baixo.</p>
+ <p>Alguns laptops tem interruptores ou teclas de mudo em seus teclados—tente pressionar esta tecla para retirar o mudo do som.</p>
+ <p>Você deverá também verificar se não colocou em "mudo" o aplicativo que você está usando para reproduzir áudio (p. ex. seu reprodutor de música ou seu reprodutor de vídeo). O aplicativo pode ter um botão de mudo ou de volume na sua janela principal, então verifique isso. Também, clique no menu de som no painel superior e selecione <gui>Configurações de som</gui>. Quando a janela de <gui>Som</gui> aparecer, vá para guia <gui>Aplicativos</gui> e verifique ali se o seu aplicativo não está com o som desativado (mudo).</p>
+</section>
+
+<section id="speakers">
+ <title>Verifique se os alto-falantes estão ligados ou conectados corretamente</title>
+ <p>Se o seu computador tem alto falantes externos, certifique-se que eles estão ligados e que o volume esteja alto. Certifique-se que o cabo do alto falante esteja conectado corretamente no socket de saída atrás de seu computador. Esse socket geralmente tem uma cor verde claro.</p>
+ 
+ <p>Algumas placas de som são capazes de trocar qual socket elas usam para saída (para os alto falantes) e entrada (a partir de um microfone, por exemplo). O socket de saída pode ser diferente quando rodando Linux, Windows ou Mac OS. Tente conectar o cabo do alto falante em diferentes sockets de audio no computador para ver se ele funciona.</p>
+ 
+ <p>Uma última coisa a verificar é se o cabo de áudio está seguramente conectado à parte traseira do alto-falante. Alguns alto-falantes possuem mais de uma entrada.</p>
+</section>
+
+<section id="device">
+ <title>Verifique se o dispositivo de som correto está selecionado</title>
+ <p>Alguns computadores possuem vários dispositivos de som instalados. Alguns desses são capazes de reproduzir sons, outros não são, de forma que você deve se certificar de escolher o dispositivo correto. Talvez isso requeira um pouco de tentativa e erro.</p>
+ <steps>
+  <item>
+   <p>Clique no <gui>menu de som</gui> no <gui>painel superior</gui> e clique em <gui>Configurações de som</gui>.</p>
+  </item>
+  <item>
+   <p>Na janela <gui>Som</gui> que aparece, vá até a aba <gui>hardware</gui>. Anote o dispositivo e o perfil que estão selecionados ( então você poderá retornar para as seleções padrão se as alterações não funcionarem).</p>
+  </item>
+  <item>
+   <p>Para o dispositivo selecionado, experimente trocar o perfil—reproduza um som após a troca de perfil para ver se dá certo. Talvez seja necessário varrer a lista e experimentar cada perfil.</p>
+  </item>
+  <item>
+   <p>Se isso não funcionar, você pode tentar fazer o mesmo para quaisquer outros dispositivos que estão listados.</p>
+  </item>
+  <item>
+   <p>Tente mudar a opção <gui>Conector</gui> no guia <gui>Saída</gui> também.</p>
+  </item>
+ </steps>
+</section>
+
+<section id="hardware-detected">
+ <title>Verifique se a placa de som foi detectada corretamente</title>
+ <p>Sua placa de som pode não ter sido detectada corretamente. Se isso aconteceu, o computador vai pensar que ela não é capaz de reproduzir som. Uma possível razão para a placa não estar sendo detectada corretamente é se os drivers da mesma não estão instalados.</p>
+ <steps>
+  <item>
+   <p>Vá ao <link xref="unity-dash-intro">painel</link> e abra o Terminal.</p>
+  </item>
+  <item>
+   <p>Digite <cmd>aplay -l</cmd> e pressione <key>Enter</key>.</p>
+  </item>
+  <item>
+   <p>Uma lista de dispositivos será mostrada. Se não há <gui>dispositivos de hardware para reprodução</gui>, sua placa de som não foi detectada.</p>
+  </item>
+ </steps>
+ 
+ <p>Se sua placa de som não for detectada, pode ser necessário instalar manualmente os drivers para ela. A maneira de fazer isso dependerá da placa que você tem.</p>
+ 
+ <p>Você pode ver que placa de som tem executando o comando <cmd>lspci</cmd> no <app>Terminal</app>. Você obterá resultados mais completos se executar <cmd>lspci</cmd> como <link xref="user-admin-explain">superusuário</link>; Escreva <cmd>sudo lspci</cmd> e digite sua senha. Verifique se um <em>controlador de áudio</em> ou um <em>dispositivo de áudio</em> está listado—ele deve conter o nome da marca e do modelo da placa de som. <cmd>sudo lspci -v</cmd> mostrará uma lista com mais detalhes ainda.</p>
+  
+ <p>Talvez você consiga encontrar e instalar drivers para a sua placa procurando na Internet. Senão, você pode <link xref="ubuntu-report-bug">relatar um erro</link>.</p>
+ 
+ <p>Se não conseguir drivers para a sua placa de som, você poderá preferir comprar uma nova placa. Poderá adquirir placas de som que possam ser instaladas dentro do computador ou placas USB externas.</p>
+</section>
+
+</page>

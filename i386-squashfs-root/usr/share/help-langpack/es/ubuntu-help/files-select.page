@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-select" xml:lang="es">
+  <info>
+    <link type="guide" xref="files#faq"/>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <desc>Pulse <keyseq><key>Ctrl</key><key>S</key></keyseq> para seleccionar múltiples archivos que tienen nombres similares.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Seleccionar archivos por patrones</title>
+
+  <p>Puede seleccionar archivos de una carpeta en base a un patrón sobre el nombre del archivo. Pulse <keyseq><key>Ctrl</key><key>S</key></keyseq> para abrir la ventana <gui>Seleccionar elementos que coincidan con</gui>. Teclee un patrón que tenga partes comunes de los nombres de archivos y caracteres comodín. Existen dos caracteres comodín:</p>
+
+  <list style="compact">
+    <item><p><file>*</file> coincide con cualquier número de cualquier carácter, aunque no en todos.</p></item>
+    <item><p><file>?</file> coincide exactamente con uno de cualquiera de los caracteres.</p></item>
+  </list>
+
+  <p>Por ejemplo:</p>
+
+  <list>
+    <item><p>Si tiene un documento de texto OpenDocument, un archivo PDF y una imagen, todos con el mismo nombre base <file>Factura</file>, seleccione los tres con el patrón</p>
+    <example><p><file>Factura.*</file></p></example></item>
+    
+    <item><p>Si tiene algunas fotos con nombres tales como <file>Vacaciones-001.jpg</file>, <file>Vacaciones-002.jpg</file>, <file>Vacaciones-003.jpg</file>; selecciónelas con el patrón</p>
+    <example><p><file>Vacacion-???.jpg</file></p></example></item>
+    
+    <item><p>Si tiene fotos como las anteriores pero ha editado alguna de ellas y luego ha añadido <file>editada</file> al final del nombre de archivo de la foto editada, seleccione las fotos editadas con</p>
+    <example><p><file>Vacacion-???-editada.jpg</file></p></example></item>
+  </list>
+</page>

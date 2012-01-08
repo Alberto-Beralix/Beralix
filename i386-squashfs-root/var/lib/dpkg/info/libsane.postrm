@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+# Automatically added by dh_makeshlibs
+if [ "$1" = "remove" ]; then
+	ldconfig
+fi
+# End automatically added section
+
+
+# remove directory /etc/sane.d/
+if [ "$1" = "purge" ]; then
+    echo "Removing directory /etc/sane.d/ ..."
+    rmdir --ignore-fail-on-non-empty /etc/sane.d/
+fi
+
+

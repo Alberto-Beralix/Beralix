@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.4" />
+<title>Backports policy for squeeze</title>
+<link rel="stylesheet" href="../xsf.css" type="text/css" />
+<script type="text/javascript">
+/*<![CDATA[*/
+window.onload = function(){asciidoc.footnotes(); asciidoc.toc(2);}
+/*]]>*/
+</script>
+<script type="text/javascript" src="../asciidoc-xhtml11.js"></script>
+</head>
+<body class="article">
+<div id="header">
+<h1><a href="../index.html">XSF</a> / Backports policy for squeeze</h1>
+<span id="author">Cyril Brulebois</span><br />
+<span id="email"><tt>&lt;<a href="mailto:kibi@debian.org">kibi@debian.org</a>&gt;</tt></span><br />
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_proposed_plans">Proposed plans</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>If one forgets about libraries and clients, a whole X stack boils down
+to: the server itself, input and video drivers, libdrm, and mesa.</p></div>
+<div class="paragraph"><p>Since upgrading the server means upgrading all input and video drivers
+(more than 50 source packages), that’s certainly too much to backport,
+since we’re already trying to support <tt>stable</tt> (through stable
+updates), <tt>testing</tt>/<tt>unstable</tt>, and <tt>experimental</tt>. For example, in
+February 2011, that means <tt>xorg-server</tt> 1.7 in <tt>stable</tt>, 1.9 in
+<tt>unstable</tt> (and “soon” in <tt>testing</tt>), and 1.10 in <tt>experimental</tt>.</p></div>
+<div class="paragraph"><p>So the plan is to keep <tt>xorg-server</tt> as it is in <tt>squeeze</tt> (possibly
+preparing/testing targeted fix if appropriate), and backporting
+drivers when possible. With API/ABI updates, the minimal server
+version required tend to get raised from time to time, but usually
+drivers can be built against a rather large range of server
+versions. In case a driver stop building against the server available
+in <tt>stable</tt>, we’ll likely stick to the highest version still building
+against it, and then tell people to upgrade the whole stack if they
+need something more recent (unless some trivial cherry-picking is
+possible, of course).</p></div>
+<div class="paragraph"><p>The plan is to backport a few drivers on a possibly regular fashion,
+and other drivers upon request.</p></div>
+<div class="sect2">
+<h3 id="_input_drivers">Input drivers</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<tt>evdev</tt>: Linux-only keyboard &amp; mouse/pointer driver.
+</p>
+</li>
+<li>
+<p>
+<tt>keyboard</tt> and <tt>mouse</tt>: Needed for non-Linux ports.
+</p>
+</li>
+<li>
+<p>
+<tt>synaptics</tt>: Better touchpad support than <tt>evdev</tt>.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_video_drivers">Video drivers</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<tt>ati</tt>: Drivers for ATI cards.
+</p>
+</li>
+<li>
+<p>
+<tt>intel</tt>: Driver for Intel cards.
+</p>
+</li>
+<li>
+<p>
+<tt>nouveau</tt>: Driver for NVidia cards. Not possible since upstream’s <a href="http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-nouveau.git;a=commit;h=a4d580bf05d7aac1d486e5d1ba9a2201c026e5f5">a4d580bf05</a>.
+</p>
+</li>
+<li>
+<p>
+<tt>fbdev</tt> and <tt>vesa</tt>: Generic drivers.
+</p>
+</li>
+<li>
+<p>
+<tt>dummy</tt>: Dummy driver, suitable when there’s no monitor connected.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><div class="title">Note</div><p>There are a few other drivers for ATI cards (<tt>mach64</tt>, <tt>r128</tt>), which
+are pulled by <tt>ati</tt>, but there are versions available in <tt>squeeze</tt>
+already, so backporting them isn’t required.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_libraries">Libraries</h3>
+<div class="paragraph"><p>The important libraries are <tt>libdrm</tt> and <tt>mesa</tt>. The former will
+likely get pulled at some point by a driver, so a backport will be
+needed for this library. The latter is under very heavy development,
+so one may want to try a new release or a snapshot without having to
+upgrade everything to <tt>unstable</tt>. It’s a huge package to build, so we
+<a href="../howto/build-mesa.html">documented how to build it</a> locally. But
+there’s some hope to make some weekly or daily builds available at
+some point.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_kernel">Kernel</h3>
+<div class="paragraph"><p>Some of those drivers might need a more recent kernel version than
+the one in <tt>squeeze</tt>, but hopefully it’ll be available through
+<tt>squeeze-backports</tt> as well.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2011-08-08 10:58:19 UTC
+</div>
+</div>
+</body>
+</html>

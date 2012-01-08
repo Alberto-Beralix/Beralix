@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-views" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-views"/>
+
+    <desc>Especifique a visão padrão, ordem de classificação e níveis de zoom para o gerenciador de arquivos.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Preferências de visão do gerenciador de arquivos</title>
+<p>Você pode controlar a visão padrão para novas pastas, como arquivos e pastas são classificados por padrão, nível de zoom para o ícone e visão compactas e se arquivos são exibidos na barra lateral de árvore. Em qualquer janela do gerenciador de arquivos, clique em <guiseq><gui>EditarPrefer e selecione a aba Vis.</gui></guiseq></p>
+
+<section id="default-view">
+<title>Visualização padrão</title>
+<terms>
+  <item>
+    <title><gui>Ver novas pastas usando</gui></title>
+    <p>Por padrão, novas pastas são mostradas em visão de ícone. Você pode selecionar uma visão para cada pasta enquanto navega e o gerenciador de arquivos irá lembrar qual visão você prefere para cada pasta. Mas se você usa a lista ou visão compacta frequentemente, você pode usar essas visões por padrão.</p>
+    <p>Altere a visão para uma pasta individual pelo menu <gui>Visão</gui> clicando em <gui>ícones</gui>, <gui>lista</gui> ou <gui>compacta</gui>.</p>
+  </item>
+  <item>
+    <title><gui>Organizar itens</gui></title>
+    <p>Você pode organizar os itens em sua pasta por nome, tamanho de arquivo tipo de arquivo, data da última modificação, data do último acesso ou data de exclusão. Você pode mudar a forma com que os arquivos de uma determinada pasta são classificados através do menu <guiseq><gui>Exibir</gui><gui>Organizar itens</gui></guiseq> ou clicando nos cabeçalhos de cada coluna da exibição em lista. Acesse <link xref="files-sort"/> para mais detalhes. Esse menu somente afeta a pasta atual, e o gerenciador de arquivos lembrará da sua técnica de classificação preferida para cada pasta.</p>
+    <p>Utilize a caixa de combinação <gui>Arranjar itens</gui> nas configurações para mudar a ordem padrão das novas pastas.</p>
+  </item>
+  <item>
+    <title><gui>Pastas antes de arquivos</gui></title>
+    <p>Por padrão, o gerenciador de arquivos mostrará todas as pastas antes dos arquivos. Pastas e arquivos estarão, por sua vez, classificados de acordo com o método escolhido. Se você prefere não tratar pastas diferentemente e misturá-las com os arquivos de acordo com a ordem de classificação, marque essa opção.</p>
+  </item>
+  <item>
+    <title><gui>Mostrar arquivos ocultos e de cópia de segurança</gui></title>
+    <p>O gerenciador de arquivos não mostra arquivos e pastas ocultas por padrão. Acesse <link xref="files-hidden"/> para mais informações sobre arquivos ocultos. Você pode fazer arquivos ocultos aparecerem em uma das janelas a partir do menu <gui>Ver</gui>. Se você preferir que seus arquivos ocultos sempre apareçam ou se quiser visualizar os arquivos ocultos em todas as janelas abertas do gerenciador de janelas, escolha essa opção.</p>
+  </item>
+</terms>
+</section>
+
+
+<section id="icon-view-defaults">
+<title>Padrões da visualização de ícones</title>
+  <terms>
+   <item>
+    <title><gui>Nível de zoom padrão</gui></title>
+    <p>Você pode deixar os ícones e textos maiores ou menores na exibição de ícones. Você pode fazer isso para uma pasta em particular a partir do menu <gui>Ver</gui>, e o gerenciador de arquivos lembrará de sua escolha de ampliação para cada pasta. Se você utiliza um nível de ampliação maior ou menor com frequência, você pode escolher um valor padrão nessa opção.</p>
+    <p>Na visualização de ícones, são mostradas mais ou menos legendas de acordo com o seu nível de ampliação. Acesse <link xref="nautilus-display#icon-captions"/> para mais informações.</p>
+   </item>
+   <item>
+    <title><gui>Texto ao lado dos ícones</gui></title>
+    <p>Ao escolher essa opção, nomes de arquivos e pastas aparecerão à direita dos ícones, em vez de embaixo deles. Trata-se de uma disposição mais compacta, que permite a você ver mais informações de uma vez só.</p>
+   </item>
+  </terms>
+</section>
+
+
+<section id="compact-view-defaults">
+ <title>Padrões da visualização compacta</title>
+
+  <terms>
+   <item>
+    <title><gui>Nível de zoom padrão</gui></title>
+    <p>Você pode deixar os ícones e textos maiores ou menores na visualização compacta. Você pode fazer isso para uma pasta em particular a partir do menu <gui>Ver</gui>, e o gerenciador de arquivos lembrará de sua escolha de ampliação para cada pasta. Se você utiliza um nível de ampliação maior ou menor com frequência, você pode escolher um valor padrão nessa opção.</p>
+   </item>
+   <item>
+    <title><gui>Todas as colunas tem a mesma largura.</gui></title>
+    <p>Por padrão, cada coluna da visualização compacta é tão larga quanto for necessário para caber os nomes dos itens nessa coluna. Ao escolher essa opção, todas as colunas terão a mesma largura. Isso fará arquivos e pastas com nomes mais compridos que a largura da coluna aparecerem com uma elipse (...) ao final.</p>
+   </item>
+  </terms>
+</section>
+
+
+<section id="list-view-defaults">
+ <title>Padrões da visualização em lista</title>
+  <terms>
+   <item>
+    <title><gui>Nível de zoom padrão</gui></title>
+    <p>Você pode deixar os ícones e textos maiores ou menores na exibição em lista. Você pode fazer isso para uma pasta em particular a partir do menu <gui>Ver</gui>, e o gerenciador de arquivos lembrará de sua escolha de ampliação para cada pasta. Se você utiliza um nível de ampliação maior ou menor com frequência, você pode escolher um valor padrão nessa opção.</p>
+   </item>
+  </terms>
+</section>
+
+
+<section id="tree-view-defaults">
+<title>Padrões da visualização em árvore</title>
+<p>Você pode exibir uma árvore completa de pastas na barra lateral do seu gerenciador de arquivos selecionando <guiseq><gui>Ver</gui><gui>Barra lateral</gui><gui>Árvore</gui></guiseq>.</p>
+</section>
+
+</page>

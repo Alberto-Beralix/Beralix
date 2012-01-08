@@ -1,0 +1,43 @@
+Farsight 2
+==========
+
+http://farsight.freedesktop.org/
+
+Farsight 2 is a collection of GStreamer modules and libraries for
+videoconferencing. The API is described in the documentation in the
+docs/ directory.
+
+It is distributed under the terms of the GNU Lesser General Public
+License version 2.1 or later (see the COPYING file for details).
+
+
+Requirements
+============
+
+Build time:
+ - gstreamer 0.10.33
+ - gst-plugins-base 0.10.33
+ - glib 2.26
+ - Python 2.4
+ - libnice 0.1.0
+
+For UPnP support:
+ - GUPnP-IGD
+
+For the python module:
+ - PyGObject 2.16
+ - gst-python 0.10.10
+
+Run time for the RTP plugin:
+ All of the build time requirements (except gtk-doc) plus
+ - gst-plugins-good 0.10.29
+ - gst-plugins-bad 0.10.20
+
+Run time for the MSN plugin:
+ - gst-plugins-bad 0.10.17
+
+For the GUI example:
+ - PyGTK 2.10
+
+The tests require gst-check (which requires check)
+Building the documentation requires gtk-doc 1.8

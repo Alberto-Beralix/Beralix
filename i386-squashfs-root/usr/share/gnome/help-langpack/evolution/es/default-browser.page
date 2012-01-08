@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="default-browser" xml:lang="es">
+
+  <info>
+    <desc>Cómo definir el navegador predeterminado con el que abrir los enlaces.</desc>
+    
+    <link type="guide" xref="index#common-other-problems"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-30" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+<title>Establecer el navegador predeterminado</title>
+
+<!-- For GNOME2 the steps are to define the gconf keys /desktop/gnome/url-handlers/http and /https -->
+
+<p>You can set the system-wide default browser in GNOME 3 under <guiseq><gui>Activities</gui><gui>Applications</gui><gui>System Settings</gui><gui>System</gui><gui>System Info</gui><gui>Default Applications</gui></guiseq>.</p>
+<p>Si el navegador preferido esté establecido como la aplicación predeterminada pero aún así no funciona correctamente, contacte con su distribución a través de su foto o web de seguimiento de errores.</p>
+<note><p>Los usuarios de GNOME 3 con conocimientos técnicos puede ajustar estas configuraciones definiendo manejadores de esquemas en <file>$HOME/.local/share/applications/mimeapps.list</file>.</p></note>
+</page>

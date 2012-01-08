@@ -1,0 +1,7 @@
+gnome-menus for Ubuntu
+----------------------
+
+The Ubuntu gnome-menus is patched to list the menu items using "X-KDE-SubstituteUID=true" when:
+- the user is member of the "admin" group
+- the uid=0
+- the USER_IS_ADMIN environment variable is defined

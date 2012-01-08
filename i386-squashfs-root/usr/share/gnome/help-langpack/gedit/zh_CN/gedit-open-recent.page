@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-open-recent" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="gedit-files-basic" group="fifth"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+  </info>
+
+  <title>重新打开最近使用的文件</title>
+
+  <p>默认情况下，<app>gedit</app> 提供快速访问最近使用的五个文件，用这个方法可以打开最近使用的文件：</p>
+  <list type="numbered">
+    <item><p>点击<gui>打开</gui>按钮旁边的下拉箭头按钮。</p></item>
+    <item><p><app>gedit</app> 会列出最近访问的五个文件。</p></item>
+    <item><p>选择想要打开的文件，然后就会在新标签中打开它。</p></item>
+  </list>
+
+  <note type="advanced"><p>要增加显示最近访问的文件数，您需要使用 <app>gconf-editor</app> 程序。</p>
+    <list>
+      <item><p>运行 <app>gconf-editor</app> 然后在侧栏中依次点击 <guiseq><gui>apps</gui><gui>gedit-2</gui><gui>preferences</gui><gui>ui</gui><gui>recents</gui></guiseq>。</p></item>
+      <item><p>双击旁边面板中的 <gui>max_recents</gui>，然后输入想要的数字。</p></item>
+    </list>
+  </note>
+
+</page>

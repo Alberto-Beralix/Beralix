@@ -1,0 +1,613 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="ਪਸੰਦੀਦਾ ਫੋਂਟ">
+							<longdesc>ਭਾਸ਼ਾ ਪੈਨਲ ਲਈ ਪਸੰਦੀਦਾ ਫੋਂਟ ਨਾਂ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="ਪਸੰਦੀਦਾ ਫੋਂਟ ਵਰਤੋਂ">
+							<longdesc>ਭਾਸ਼ਾ ਪੈਨਲ ਲਈ ਪਸੰਦੀਦਾ ਫੋਂਟ ਨਾਂ ਵਰਤੋਂ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="ਇੰਪੁੱਟ ਢੰਗ ਨਾਂ ਵੇਖਾਓ">
+							<longdesc>ਭਾਸ਼ਾ ਪੱਟੀ ਉੱਤੇ ਇੰਪੁੱਟ ਨਾਂ ਵੇਖੋ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="ਸਿਸਟਮ ਟਰੇਅ ਵਿੱਚ ਆਈਕਾਨ ਵੇਖਾਓ">
+							<longdesc>ਸਿਸਟਮ ਟਰੇਅ ਵਿੱਚ ਆਈਕਾਨ ਵੇਖਾਓ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="ਖੋਜ ਟੇਬਲ ਦੀ ਸਥਿਤੀ">
+							<longdesc>ਖੋਜ ਟੇਬਲ ਦੀ ਸਥਿਤੀ। 0 = ਹਰੀਜੱਟਲ, 1 =ਵਰਟੀਕਲ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="ਭਾਸ਼ਾ ਪੈਨਲ ਸਥਿਤੀ">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="ਭਾਸ਼ਾ ਪੈਨਲ ਸਥਿਤੀ">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="ਆਟੋਮੈਟਿਕ ਓਹਲੇ">
+							<longdesc>ਭਾਸ਼ਾ ਪੈਨਲ ਦਾ ਰਵੱਈਆ. 0 = ਹਮੇਸ਼ਾ ਓਹਲੇ,  1 = ਆਟੋਮੈਟਿਕ ਓਹਲੇ, 2 = ਹਮੇਸ਼ਾ ਵੇਖੋ</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="enable_by_default">
+						<local_schema short_desc="ਇੰਪੁੱਟ ਢੰਗ ਡਿਫਾਲਟ ਹੀ ਚਾਲੂ ਕਰੋ">
+							<longdesc>ਜਦੋਂ ਐਪਲੀਕੇਸ਼ਨ ਇੰਪੁੱਟ ਫੋਕਸ ਲਵੇ ਤਾਂ ਇੰਪੁੱਟ ਢੰਗ ਡਿਫਾਲਟ ਹੀ ਚਲਾਉ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_global_engine">
+						<local_schema short_desc="ਗਲੋਬਲ ਇੰਪੁੱਟ ਢੰਗ ਵਰਤੋ">
+							<longdesc>ਸਭ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਿਚਕਾਰ ਕੁਝ ਇੰਪੁੱਟ ਸਾਂਝੀ ਕਰੋ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="ਸ਼ਾਮਿਲ ਕੀਤਾ ਪਹਿਲਾਂ-ਸੋਧਿਆ ਪਾਠ">
+							<longdesc>ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਡੋ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕੀਤਾ ਪਹਿਲਾਂ-ਸੋਧਿਆ ਪਾਠ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="ਸਿਸਟਮ ਕੀਬੋਰਡ ਲੇਆਉਟ ਵਰਤੋਂ">
+							<longdesc>ਸਿਸਟਮ ਕੀਬੋਰਡ (XKB) ਲੇਆਉਟ ਵਰਤੋਂ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="ਪ੍ਰੀ-ਲੋਡ ਇੰਜਣ">
+							<longdesc>ibus ਸ਼ੁਰੂ ਹੋਣ ਸਮੇਂ ਪਹਿਲਾਂ ਲੋਡ ਕੀਤੇ ਇੰਜਣ</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="ਪਿਛਲਾ ਇੰਜਣ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ">
+								<longdesc>ਪਿਛਲਾ ਇੰਪੁੱਟ ਢੰਗ ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="ਪਿਛਲਾ ਇੰਜਣ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ">
+								<longdesc>ਪਿਛਲਾ ਇੰਪੁੱਟ ਢੰਗ ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="ਅਗਲਾ ਇੰਜਣ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ">
+								<longdesc>ਲਿਸਟ ਵਿੱਚ ਅਗਲਾ ਇੰਪੁੱਟ ਢੰਗ ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="ਅਗਲਾ ਇੰਜਣ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ">
+								<longdesc>ਲਿਸਟ ਵਿੱਚ ਅਗਲਾ ਇੰਪੁੱਟ ਢੰਗ ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="disable_unconditional">
+							<local_schema short_desc="ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ ਬੰਦ ਕਰੋ">
+								<longdesc>ਇੰਪੁੱਟ ਢੰਗ ਬੰਦ ਕਰਨ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_unconditional">
+							<local_schema short_desc="ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ ਚਾਲੂ ਕਰੋ">
+								<longdesc>ਇੰਪੁੱਟ ਢੰਗ ਚਾਲੂ ਕਰਨ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="ਟਰਿੱਗਰ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ">
+								<longdesc>ਇੰਪੁੱਟ ਢੰਗ ਬੰਦ ਕਰਨ ਜਾਂ ਚਾਲੂ ਕਰਨ ਲਈ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="ਵਾਈ-ਫਾਈ ਬਣਾਉਣਾ ਆਯੋਗ ਕਰੋ">
+						<longdesc>ਜਦੋਂ ਐਪਲਿਟ ਵਰਤਣ ਦੌਰਾਨ ਐਡ-ਹਾਕ ਨੈੱਟਵਰਕ ਬਣਾਉਣ ਨੂੰ ਆਯੋਗ ਕਰਨ ਲਈ ਸਹੀਂ ਸੈੱਟ ਕਰੋ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="ਸਟੈਂਪ">
+						<longdesc>ਪਤਾ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ ਕਿ ਸੈਟਿੰਗ ਨਵੇਂ ਵਰਜਨ ਲਈ ਮਾਈਗਰੇਟ ਕਰਨੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="ਨੈੱਟਵਰਕ ਉਪਲੱਬਧਤਾ ਸੂਚਨਾ ਨਾ ਦਿਓ">
+						<longdesc>ਜੇ ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਉਪਲੱਬਧ ਹੋਣ ਦੇ ਦੌਰਾਨ ਸੂਚਨਾਵਾਂ ਨੂੰ ਆਯੋਗ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਸੱਚ ਸੈਟ ਕਰੋ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="ਡਿਸ-ਕੁਨੈਕਟ ਹੋਣ ਲਈ ਨੋਟੀਫਿਕੇਸ਼ਨ ਆਯੋਗ ਕਰੋ">
+						<longdesc>ਜੇ ਨੈੱਟਵਰਕ ਨਾਲ ਡਿਸ-ਕੁਨੈਕਟ ਹੋਣ ਦੇ ਦੌਰਾਨ ਸੂਚਨਾਵਾਂ ਨੂੰ ਆਯੋਗ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਸੱਚ ਸੈਟ ਕਰੋ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="ਕੁਨੈਕਟ ਹੋਣ ਲਈ ਨੋਟੀਫਿਕੇਸ਼ਨ ਆਯੋਗ ਕਰੋ">
+						<longdesc>ਜੇ ਨੈੱਟਵਰਕ ਨਾਲ ਕੁਨੈਕਟ ਹੋਣ ਦੇ ਦੌਰਾਨ ਸੂਚਨਾਵਾਂ ਨੂੰ ਆਯੋਗ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਸੱਚ ਸੈਟ ਕਰੋ।</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="fade">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="visual_bell">
+									<local_schema short_desc="ਦਿੱਖ ਬਿੱਲ">
+										<longdesc>Fade effect on system beep</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="wobbly">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="focus_effect">
+									<local_schema short_desc="ਫੋਕਸ ਪਰਭਾਵ">
+										<longdesc>Focus Window Effect (0 = ਕੋਈ ਨਹੀਂ, 1 = Shiver)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_inverted">
+									<local_schema short_desc="ਉਲਟ ਕੀਤਾ ਸਨੈਪ">
+										<longdesc>ਉਲਟ ਵਿੰਡੋ ਸਨੈਪਿੰਗ</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="scale">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="show_desktop">
+									<local_schema short_desc="ਡੈਸਕਟਾਪ ਵੇਖਣ ਲਈ ਡੈਸਕਟਾਪ ਕਲਿੱਕ ਕਰੋ">
+										<longdesc>ਜਦੋਂ ਸਕੇਲ ਦੌਰਾਨ ਡੈਸਕਟਾਪ ਕਲਿੱਕ ਕੀਤਾ ਜਾਵੇ ਤਾਂ ਡੈਸਕਟਾਪ ਵੇਖੋ ਮੋਡ ਦਿਓ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="ਮਲਟੀ ਆਉਟਪੁੱਟ ਮੋਡ">
+										<longdesc>ਚੁਣੋ, ਜਿੱਥੇ ਵਿੰਡੋ ਸਕੇਲ ਕਰਨੀ ਹੈ, ਜਦੋਂ ਕਿ ਕਈ ਆਉਟਪੁੱਟ ਜੰਤਰ ਚੁਣੇ ਜਾਂਦੇ ਹਨ। (0 = ਮੌਜੂਦਾ ਆਉਟਪੁੱਟ ਜੰਤਰ ਉੱਤੇ, 1 = ਸਭ ਆਉਟਪੁੱਟ ਜੰਤਰਾਂ ਉੱਤੇ)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlay_icon">
+									<local_schema short_desc="ਓਵਰਲੇ ਆਈਕਾਨ">
+										<longdesc>ਵਿੰਡੋ ਉੱਤੇ ਇੱਕ ਆਈਕਾਨ ਰੱਖੋ, ਜਦੋਂ ਉਹ ਸਕੇਲ ਕੀਤੇ ਜਾਣ (0 = ਕੋਈ ਨਹੀਂ, 1 = ਨਿਸ਼ਾਨ, 2 = ਵੱਡਾ)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="toggle_window_shaded_key">
+									<local_schema short_desc="ਵਿੰਡੋ ਸ਼ੇਡ ਬਦਲੋ">
+										<longdesc>ਸਰਗਰਮ ਵਿੰਡੋ ਸ਼ੇਡ ਬਦਲੋ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_vertically_key">
+									<local_schema short_desc="ਵਿੰਡੋ ਵੱਧੋ-ਵੱਧ ਵਰਟੀਕਲ ਬਦਲੋ">
+										<longdesc>ਐਕਟਿਵ ਵਿੰਡੋ ਵਰਟੀਕਲ ਵੱਧੋ-ਵੱਧ ਬਦਲੋ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_horizontally_key">
+									<local_schema short_desc="ਵਿੰਡੋ ਵੱਧੋ-ਵੱਧ ਹਰੀਜ਼ਟਲ ਬਦਲੋ">
+										<longdesc>ਐਕਟਿਵ ਵਿੰਡੋ ਹਰੀਜੱਟਲ ਵੱਧੋ-ਵੱਧ ਬਦਲੋ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_button">
+									<local_schema short_desc="ਵਿੰਡੋ ਵੱਧੋ-ਵੱਧ ਬਦਲੋ">
+										<longdesc>ਐਕਟਿਵ ਵਿੰਡੋ ਵੱਧੋ-ਵੱਧ ਬਦਲੋ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_key">
+									<local_schema short_desc="ਵਿੰਡੋ ਵੱਧੋ-ਵੱਧ ਬਦਲੋ">
+										<longdesc>ਐਕਟਿਵ ਵਿੰਡੋ ਵੱਧੋ-ਵੱਧ ਬਦਲੋ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unmaximize_window_key">
+									<local_schema short_desc="ਵਿੰਡੋ ਅਣ-ਵੱਧੋ-ਵੱਧ">
+										<longdesc>ਐਕਟਿਵ ਵਿੰਡੋ ਅਣ-ਵੱਧੋ-ਵੱਧ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="ਵਿੰਡੋ ਅਧਿਕਤਮ">
+										<longdesc>ਵੱਧੋ-ਵੱਧ ਐਕਟਿਵ ਵਿੰਡੋ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_match">
+									<local_schema short_desc="ਫੋਕਸ ਤੋਂ ਬਚਾਅ ਵਿੰਡੋ">
+										<longdesc>Focus prevention windows (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise_delay">
+									<local_schema short_desc="ਆਟੋ-ਉਭਾਰਨ ਅੰਤਰਾਲ">
+										<longdesc>ਚੁਣੇ ਵਿੰਡੋ ਉਭਾਰਨ ਤੋਂ ਪਹਿਲਾਂ ਅੰਤਰਾਲ (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="ਫੋਕਸ ਲਈ ਕਲਿੱਕ ਕਰੋ">
+										<longdesc>ਵਿੰਡੋ ਲਈ ਇੰਪੁੱਟ ਫੋਕਸ ਲੈਣ ਲਈ ਕਲਿੱਕ ਕਰੋ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outputs">
+									<local_schema short_desc="ਆਉਟਪੁੱਟ">
+										<longdesc> ਆਉਟਪੁੱਟ ਜੰਤਰਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਲਈ ਲਾਈਨਾਂ ਦੀ ਲਿਸਟ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_outputs">
+									<local_schema short_desc="ਆਉਟਪੁੱਟ ਖੋਜੋ">
+										<longdesc>ਆਉਟਪੁੱਟ ਜੰਤਰਾਂ ਦੀ ਆਟੋਮੈਟਿਕ ਖੋਜ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hide_skip_taskbar_windows">
+									<local_schema short_desc="ਗ਼ੈਰ-ਟਾਸਕਬਾਰ ਵਿੰਡੋ ਓਹਲੇ">
+										<longdesc>ਜਦੋਂ ਡੈਸਕਟਾਪ ਮੋਡ ਵਿੱਚ ਜਾਣ ਲੱਗੋ ਤਾਂ ਟਾਸਕਬਾਰ ਵਿੱਚ ਨਾ ਮੌਜੂਦ ਵਿੰਡੋ ਓਹਲੇ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ignore_hints_when_maximized">
+									<local_schema short_desc="ਜਦੋਂ ਵੱਧੋ-ਵੱਧ ਹੋਵੇ ਤਾਂ ਹਿੰਟ ਅਣਡਿੱਠੇ">
+										<longdesc>ਜਦੋਂ ਵਿੰਡੋ ਵੱਧੋ-ਵੱਧ ਹੋਵੇ ਤਾਂ ਵਾਧਾ ਸਾਈਜ਼ ਅਤੇ ਅਨੁਪਾਤ ਹਿੰਟ ਅਣਡਿੱਠੇ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="audible_bell">
+									<local_schema short_desc="ਸੁਣਨਯੋਗ ਘੰਟੀ">
+										<longdesc>Audible system beep</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="opengl">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="sync_to_vblank">
+									<local_schema short_desc="VBlank ਨਾਲ ਸੈਕਰੋਨਾਈਜ਼">
+										<longdesc>ਵਰਟੀਕਲ ਝਪਕ ਪੀਰੀਅਡ ਦੌਰਾਨ ਹੀ ਸਕਰੀਨ ਅੱਪਡੇਟ ਕਰੋ</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="gnomecompat">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command_terminal_key">
+									<local_schema short_desc="ਇੱਕ ਟਰਮੀਨਲ ਖੋਲ੍ਹੋ">
+										<longdesc>ਇੱਕ ਟਰਮੀਨਲ ਖੋਲ੍ਹੋ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_window_screenshot_key">
+									<local_schema short_desc="ਇੱਕ ਵਿੰਡੋ ਦਾ ਇੱਕ ਸਕਰੀਨ-ਸ਼ਾਟ ਲਵੋ">
+										<longdesc>ਇੱਕ ਵਿੰਡੋ ਦਾ ਇੱਕ ਸਕਰੀਨ-ਸ਼ਾਟ ਲਵੋ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_window_screenshot">
+									<local_schema short_desc="ਵਿੰਡੋ ਸਕਰੀਨ-ਸ਼ਾਟ ਕਮਾਂਡ ਲਾਈਨ">
+										<longdesc>ਵਿੰਡੋ ਸਕਰੀਨ-ਸ਼ਾਟ ਕਮਾਂਡ ਲਾਈਨ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_screenshot_key">
+									<local_schema short_desc="ਇੱਕ ਸਕਰੀਨ-ਸ਼ਾਟ ਲਵੋ">
+										<longdesc>ਇੱਕ ਸਕਰੀਨ-ਸ਼ਾਟ ਲਵੋ</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="unredirect_fullscreen_windows">
+									<local_schema short_desc="ਪੂਰੀ-ਸਕਰੀਨ ਵਿੰਡੋ ਗ਼ੈਰ-ਡਿਰੈਕਸ਼ਨ">
+										<longdesc>ਪੂਰੀ ਸਕਰੀਨ ਵਿੰਡੋਜ਼ ਦੀ ਡਰਾਇੰਗ ਨੂੰ ਆਫ਼-ਸਕਰੀਨ ਪਿਕਸਮੈਪ ਨੂੰ ਰੀ-ਡਿਰੈਕਟ ਨਾ ਕਰਨ ਲਈ ਮਨਜ਼ੂਰੀ</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="annotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stroke_width">
+									<local_schema short_desc="ਸਟਰੋਕ ਚੌੜਾਈ">
+										<longdesc>ਐਨਾਟੇਸ਼ਨ ਲਈ ਸਟਰੋਕ ਚੌੜਾਈ (1.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="stroke_color">
+									<local_schema short_desc="ਐਨਾਟੇਟ ਸਟਰੋਕ ਰੰਗ">
+										<longdesc>ਐਨਾਟੇਸ਼ਨ ਸਟਰੋਕ ਰੰਗ</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="resize">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="mode">
+									<local_schema short_desc="ਡਿਫਾਲਟ ਰੀਸਾਇਜ਼ ਮੋਡ">
+										<longdesc>ਵਿੰਡੋ ਮੁੜ-ਆਕਾਰ ਕਰਨ ਦੌਰਾਨ ਵਰਤਣ ਲਈ ਡਿਫਾਲਟ ਮੋਡ (0 = ਸਧਾਰਨ, 1 = Outline, 2 = ਚਤੁਰਭੁਜ, 3 = ਖਿੱਚੋ)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="cube">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="transparent_manual_only">
+									<local_schema short_desc="ਕੇਵਲ ਮਾਊਂਸ ਘੁੰਮਾਉਣ ਨਾਲ ਹੀ ਪਾਰਦਰਸ਼ੀ">
+										<longdesc>ਘਣ ਪਾਰਦਰਸਤਾ ਤਾਂ ਹੀ ਸ਼ੁਰੂ ਕਰੋ, ਜੇ ਘੁੰਮਾਉਣਾ ਮਾਊਂਸ ਨਾਕਲ ਹੋਵੇ।</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="inactive_opacity">
+									<local_schema short_desc="ਜਦੋਂ ਨਾ ਘੁੰਮੇ ਤਾਂ ਧੁੰਦਲਾਪਨ">
+										<longdesc>ਜਦੋਂ ਘੁੰਮਦਾ ਨਾ ਹੋਵੇ ਤਾਂ ਡੈਸਕਟਾਪ ਵਿੰਡੋ ਧੁੰਦਲਾਪਨ (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_opacity">
+									<local_schema short_desc="ਘੁੰਮਾਉਣ ਦੌਰਾਨ ਧੁੰਦਲਾਪਨ">
+										<longdesc>ਡੈਸਕਟਾਪ ਵਿੰਡੋ ਦਾ ਧੁੰਦਲਾਪਨ, ਜਦੋਂ ਘੁੰਮਦਾ ਹੋਵੇ (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_end_color">
+									<local_schema short_desc="ਸਕਾਈਡੋਮੇ ਗਰੇਡੀਐਂਟ ਅੰਤ ਰੰਗ">
+										<longdesc>ਤਲ ਰੰਗ -ਸਕਾਈਡੋਮੇ ਰੋਕਣ ਲਈ-ਫਾਲਬੈਕ ਗਰੇਡੀਐਂਟ ਵਾਸਤੇ ਵਰਤਣ ਲਈ ਰੰਗ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_start_color">
+									<local_schema short_desc="ਸਕਾਈਡੋਮੇ ਗਰੇਡੀਐਂਟ ਸ਼ੁਰੂ ਰੰਗ">
+										<longdesc>ਟਾਪ ਰੰਗ -ਸਕਾਈਡੋਮੇ ਰੋਕਣ ਲਈ-ਫਾਲਬੈਕ ਗਰੇਡੀਐਂਟ ਵਾਸਤੇ ਵਰਤਣ ਲਈ ਰੰਗ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_animated">
+									<local_schema short_desc="ਸਕਾਈਡੋਮ ਐਨੀਮੇਟ">
+										<longdesc>ਜਦੋਂ ਕਿਊਬ ਘੁੰਮੇ ਤਾਂ ਸਕਾਈਡੋਮ ਐਨੀਮੇਟ ਕਰੋ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_image">
+									<local_schema short_desc="ਸਕਾਈਡੋਮ ਚਿੱਤਰ">
+										<longdesc>ਸਕਾਈਡੋਮ ਲਈ ਟੈਕਸਟ ਵਾਂਗ ਵਰਤਣ ਲਈ ਚਿੱਤਰ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome">
+									<local_schema short_desc="ਸਕਾਈਡੋਮ">
+										<longdesc>ਰੈਂਡਮ ਸਕਾਈਡੋਮ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="in">
+									<local_schema short_desc="ਕਿਊਬ ਅੰਦਰ">
+										<longdesc>ਕਿਊਬ ਅੰਦਰ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="ਮਲਟੀ ਆਉਟਪੁੱਟ ਮੋਡ">
+										<longdesc>ਚੁਣੋ ਕਿ ਘਣ ਨੂੰ ਕਿਵੇਂ ਵੇਖਾਇਆ ਜਾਵੇ, ਜਦੋਂ ਮਲਟੀਪਲ ਆਉਟਪੁੱਟ ਜੰਤਰ ਵਰਤੇ ਜਾਣ। (0 = Automatic, 1 = ਮਲਟੀਪਲ ਕਿਊਬ, 2 = One big cube)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unfold_key">
+									<local_schema short_desc="ਅਣ-ਫੋਲਡ">
+										<longdesc>ਕਿਊਬ ਅਣਫੋਲਡ</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="water">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="title_wave">
+									<local_schema short_desc="ਟਾਇਟਲ ਵੇਵ">
+										<longdesc>ਵਿੰਡੋ ਟਾਇਟਲ ਤੋਂ ਵੇਵ ਪਰਭਾਵ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="offset_scale">
+									<local_schema short_desc="ਆਫਸੈੱਟ ਸਕੇਲ">
+										<longdesc>ਪਾਣੀ ਆਫਸੈੱਟ ਸਕੇਲ (0 - 10)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="rotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="snap_top">
+									<local_schema short_desc="ਟਾਪ ਫੇਸ ਲਈ ਸਨੈਪ">
+										<longdesc>ਘਣ ਘੁੰਮਾਉਣ ਟਾਪ ਫੇਸ ਲਈ ਸਨੈਪ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_rotate">
+									<local_schema short_desc="ਘੁੰਮਾਉਣ ਉੱਤੇ ਉਭਾਰੋ">
+										<longdesc>ਜਦੋਂ ਘੁੰਮਾਈ ਜਾਵੇ ਤਾਂ ਵਿੰਡੋ ਉਭਾਰੋ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_dnd">
+									<local_schema short_desc="ਕੋਨਾ ਫਲਿਪ DnD">
+										<longdesc>ਅੱਗੇ ਵੇਖੋ-ਪੋਰਟ ਲਈ ਫਲਿਪ ਕਰੋ, ਜਦੋਂ ਕਿ ਡਰੈਗ ਕੀਤਾ ਆਬਜੈਕਟ ਸਕਰੀਨ ਕੋਨੇ ਉੱਤੇ ਜਾਵੇ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_window">
+									<local_schema short_desc="ਕੋਨਾ ਫਲਿ ਚਾਲ">
+										<longdesc>ਅੱਗੇ ਵੇਖੋ-ਪੋਰਟ ਲਈ ਫਲਿਪ ਕਰੋ, ਜਦੋਂ ਕਿ ਵਿੰਡੋ ਸਕਰੀਨ ਕੋਨੇ ਉੱਤੇ ਜਾਵੇ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_pointer">
+									<local_schema short_desc="ਕੋਨਾ ਫਲਿਪ ਪੁਆਇੰਟਰ">
+										<longdesc>ਅੱਗੇ ਵੇਖੋ-ਪੋਰਟ ਲਈ ਫਲਿਪ ਕਰੋ, ਜਦੋਂ ਕਿ ਪੁਆਇੰਟਰ ਸਕਰੀਨ ਕੋਨੇ ਉੱਤੇ ਜਾਵੇ</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="blur">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="pulse">
+									<local_schema short_desc="ਪਲਸ">
+										<longdesc>ਪਲਸ ਪਰਭਾਵ</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="place">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="multioutput_mode">
+									<local_schema short_desc="ਮਲਟੀ ਆਉਟਪੁੱਟ ਮੋਡ">
+										<longdesc>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="ਸਥਿਤੀ ਰੱਖਣ ਮੋਡ">
+										<longdesc>ਵਿੰਡੋ ਸਥਿਤੀ ਬਦਲਣ ਵਾਸਤੇ ਐਲੋਗਰਥਿਮ (0 = ਕੈਸਕੇਡ, 1 = ਸੈਂਟਰਡ, 2 = ਸਮਾਰਟ, 3 = Maximize, 4 = ਰੈਂਡਮ, 5 = Pointer)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

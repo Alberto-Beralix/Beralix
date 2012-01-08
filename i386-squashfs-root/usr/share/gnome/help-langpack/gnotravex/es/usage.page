@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" version="1.0 ttml/1.0" id="usage" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#play" group="one"/>
+    <link type="seealso" xref="gameplay"/>
+    <desc>Cómo jugar a <app>Tetravex</app>.</desc>
+    <revision pkgversion="2.30" version="0.1" date="2009-12-17" status="draft"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <credit type="author">
+      <name>Rob Bradford</name>
+      <email>robster@debian.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+  </info>
+
+  <title>Jugar a <app>Tetravex</app></title>
+
+  <section id="usage-basic">
+    <title>Uso básico</title>
+    <p>La ventana del juego se divide en dos cajas: la de la parte derecha de la ventana contiene las piezas que necesita organizar; la de la parte izquierda de la ventana es donde las piezas de la caja de la derecha se organizarán y moverán. Cada pieza se divide en cuatro pequeños triángulos que contienen un número.</p>
+    <p>La finalidad del juego es posicionar las piezas de tal forma que sólo dos números idénticos están juntos.</p>
+    <p>No es posible posicionar las piezas de tal forma que números diferentes están juntos.</p>
+    <p>La partida finaliza cuando ha posicionado todas las piezas en sus posiciones correctas.</p>
+    <note>
+      <p>Al iniciar <app>Tetravex</app> la partida comenzará inmediatamente y el cronómetro comenzará a contar.</p>
+    </note>
+
+  </section>
+  
+  <section id="usage-video">
+    <title>Videodemostración</title>
+    <p>Este pequeño vídeo muestra cómo funciona el juego y cuáles son los movimientos posibles.</p>
+    <media type="video" mime="application/ogg" src="figures/gnotravex-video.ogv">
+      <p>Demostración</p>
+      <tt:tt xmlns:tt="http://www.w3.org/ns/ttml">
+        <tt:body>
+          <tt:div begin="1s" end="6s">
+            <p>Arrastre piezas de la derecha a la izquierda, asegurándose de que sus bordes adyacentes tengan el mismo número y color.</p>
+          </tt:div>
+          <tt:div begin="6s" end="14s">
+            <p>Mantenga pulsada la tecla <key>Ctrl</key> y pulse las teclas de flechas para mover todas las piezas colocadas a la vez.</p>
+          </tt:div>
+          <tt:div begin="14s" end="22s">
+            <p>Continue arrastrando las piezas hasta que casen todas en la izquierda.</p>
+          </tt:div>
+        </tt:body>
+      </tt:tt>
+    </media>
+  </section>
+</page>

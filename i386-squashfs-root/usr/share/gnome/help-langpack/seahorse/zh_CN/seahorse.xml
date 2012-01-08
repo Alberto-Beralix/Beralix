@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.28.x">
+<!ENTITY manrevision "3.1">
+<!ENTITY date "July 2005">
+<!ENTITY app "Passwords and Keys">
+<!ENTITY daemon "<application>seahorse-daemon</application>">
+<!ENTITY project "Seahorse">
+<!ENTITY key "<glossterm>key</glossterm>">
+<!ENTITY website "http://www.gnome.org/projects/seahorse/">
+]>
+<article id="index" lang="zh_CN">
+	<articleinfo>
+		<title>Passwords and Keys Manual</title>
+		<copyright>
+			<year>2005, 2006, 2007, 2008, 2009</year>
+			<holder>Jacob Perkins and Adam Schreiber</holder>
+		</copyright><copyright><year>2010</year><holder>TeliuTe (teliute@163.com)</holder></copyright>
+		<publisher role="maintainer">
+			<publishername>Seahorse 项目</publishername>
+		</publisher>
+		<!-- link to document containig the legal notice of GNU FDL  -->
+		  <legalnotice id="legalnotice">
+	<para>对于本文档的复制、分发和/或修改必须遵循自由软件基金会 (Free Software Foundation) 发布的 GNU 自由文档许可证 (GFDL) 版本 1.1 或更高版本， 该许可证没有固定的部分、没有封面和背页文本。您可以在此<ulink type="help" url="ghelp:fdl">链接</ulink>上或在随本手册一起分发的 COPYING-DOCS 文件中找到 GFDL 的副本。</para>
+         <para>本手册是在 GFDL 许可之下分发的 GNOME 手册集合的一部分。如果想要单独分发此手册，可以在手册中添加该许可证的一份副本然后分发，如该许可证的第 6 部分所述。</para>
+
+	<para>各个公司使用的许多用于区别它们产品和服务的名称都声明为商标。在所有的 GNOME 文档以及 GNOME 文档项目的成员中，这些名称都是以全大写字母或首字母大写显示，从而表明它们是商标。</para>
+
+	<para>本文档以及文档的修改版本都是在遵循 GNU 自由文档许可证的条款下提供，这表示具有以下含义：<orderedlist>
+		<listitem>
+		  <para>文档按“原样”提供，不提供任何明示或暗示的保证，包括但不限于：文档或文档的修改版本没有适销性方面的缺陷、适合特定目的的适用性，以及没有侵权行为。您将自行承担本文档以及文档修改版本的质量、准确性以及性能方面的风险。如果任何文档或文档修改版本存在缺陷，您(而不是最初的编写者、作者或撰写人)将承担所有必需的服务、维修或更正的费用。此免责声明是本许可证的重要组成部分。如果不接受此免责声明，那么您就没有权利使用任何文档或文档的修改版本；并且</para>
+		</listitem>
+		<listitem>
+		  <para>无论在任何情况以及在任何法律理论下，本文档或文档修改版本的作者、最初的编写者、任何撰写人或任何分发者，或者任意这些方的任何提供者都不对任何人由于使用本文档或文档修改版本引起或带来的任何直接的、间接的、特殊的、偶然的或继发的损失承担任何民事(包括疏忽)、合同或其它方面的责任，这些损失包括但不限于信誉损失、工作停止、计算机失败或故障，或任何以及所有其它损失或由此引发的或与之相关的损失，即使这些方已被告知存在出现此类损失的可能性时也是如此。</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+		<authorgroup>
+			<author>
+				<firstname>Jacob</firstname>
+				<surname>Perkins</surname>
+				<affiliation>
+					<orgname>Seahorse 项目</orgname>
+					<!--
+					<address>
+						<email>jap1@users.sourceforge.net</email>
+					</address>
+					-->
+				</affiliation>
+			</author>
+			<author>
+				<firstname>Adam</firstname>
+				<surname>Schreiber</surname>
+				<affiliation>
+					<orgname>Seahorse 项目</orgname>
+					<address>
+						<email>sadam@clemson.edu</email>
+					</address>
+				</affiliation>
+			</author>
+			<author>
+				<firstname>Paul</firstname>
+				<surname>Cutler</surname>
+				<affiliation>
+					<orgname>GNOME 文档项目</orgname>
+					<address>
+						<email>pcutler@foresightlinux.org</email>
+					</address>
+				</affiliation>
+			</author>
+		</authorgroup>
+		<releaseinfo revision="2.28" role="draft">
+		</releaseinfo>
+		<publisher role="maintainer">
+			<publishername>Seahorse 项目</publishername>
+		</publisher>
+		<publisher role="maintainer">
+			<publishername>GNOME 文档项目</publishername>
+		</publisher>
+		<revhistory>
+			<revision>
+				<revnumber>Passwords and Keys Manual V2.11.0</revnumber>
+				<date>2009年5月</date>
+				<revdescription>
+					<para role="author">Paul Cutler <email>pcutler@foresightlinux.org</email></para>
+				</revdescription>	
+			</revision>
+			<revision>
+				<revnumber>Passwords and Keys Manual V0.10.1</revnumber>
+				<date>2008年8月</date>
+				<revdescription>
+					<para role="author">Adam Schreiber <email>sadam@clemson.edu</email></para>
+				</revdescription>	
+			</revision>
+			<revision>
+				<revnumber>Passwords and Keys Manual V0.9.1</revnumber>
+				<date>2006年11月</date>
+				<revdescription>
+					<para role="author">Milo Casagrande <email>milo_casagrande@yahoo.it</email></para>
+				</revdescription>	
+			</revision>
+			<revision>
+				<revnumber>Passwords and Keys Manual V0.9.0</revnumber>
+				<date>2005年7月</date>
+				<revdescription>
+					<para role="author">Adam Schreiber <email>sadam@clemson.edu</email></para>
+					<para role="publisher">Seahorse 项目</para>
+				</revdescription>
+			</revision>
+			<revision>
+				<revnumber>Passwords and Keys Manual V0.7.0</revnumber>
+				<date>2003年2月</date>
+				<revdescription>
+					<para role="author">Jacob Perkins</para>
+					<para role="publisher">Seahorse 项目</para>
+				</revdescription>
+			</revision>
+		</revhistory>
+		<releaseinfo>This manual describes version 2.28.x of Passwords and Keys</releaseinfo>
+		<legalnotice>
+			<title>反馈</title>
+			<para>To report a bug or make a suggestion regarding the
+				<application>Passwords and Keys</application> application or this manual, follow the directions in the
+				<ulink url="ghelp:gnome-feedback" type="help">Gnome Feedback Page</ulink>.
+			</para>
+		</legalnotice>
+
+		<abstract role="description">
+			<para>
+				<application>Passwords and Keys</application> is the application for managing encryption keys for the GNOME Desktop
+			</para>
+		</abstract> 		
+
+	</articleinfo>
+
+	<indexterm zone="index">
+		<primary>Seahorse</primary>
+	</indexterm>
+
+	<indexterm zone="index">
+		<primary>seahorse</primary>	
+	</indexterm>
+
+	<indexterm zone="index">
+		<primary>加密密钥</primary>
+	</indexterm>
+	
+	<!-- ============= Introduction ============================== -->
+
+  <sect1 id="introduction">
+    <title>介绍</title>
+    <para>
+      You can use <application>Passwords and Keys</application> to create and  manage <acronym>PGP</acronym> and <acronym>SSH</acronym> keys.
+    </para>
+    <para>
+      <application>Passwords and Keys</application> provides a front end to many of the features of 
+      <ulink url="http://www.gnupg.org" type="http">Gnu Privacy Guard (GPG)</ulink> and 
+      integrates with multiple components of the <ulink url="http://www.gnome.org">GNOME</ulink> desktop. 
+    </para>
+			<para>
+				With <application>Passwords and Keys</application> you can:
+				<itemizedlist>
+				
+				<listitem>
+					<para>创建和管理 PGP 和 SSH 密钥，</para>
+				</listitem>
+				<listitem>
+					<para>导入和导出 PGP、SSH 密钥，</para>
+				</listitem>
+				<listitem>
+					<para>与别人分享你的密钥，</para>
+				</listitem>
+				</itemizedlist>
+			</para>
+	</sect1>
+
+	<!-- ============= Getting Started ============================== -->
+	  
+	<sect1 id="seahorse-getting-started">
+		<title>快速入门</title>
+		<sect2 id="seahorse-start">
+			<title>Starting <application>Passwords and Keys</application></title>
+			<para>
+				You can start <application>Passwords and Keys</application> 
+				in the following ways:
+			</para>
+			<variablelist>
+				<varlistentry>
+					<term>点 <guimenu>应用程序</guimenu> 菜单</term>
+					<listitem>
+						<para>Choose
+						<menuchoice>
+							<guimenu>Accessories</guimenu>
+							<guimenuitem>Password and Keys</guimenuitem>
+						</menuchoice>.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>命令行</term>
+					<listitem>
+						<para>输入 <command>seahorse</command> 然后按 <keycap>回车键</keycap>。</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</sect2>
+
+		<sect2 id="seahorse-when-start">
+			<title>When You Start <application>Passwords and Keys</application></title>
+			<para>
+				When you start <application>Passwords and Keys</application>, the <guilabel>Password and Keys</guilabel>
+				window is displayed.
+			</para>
+			
+			<figure id="seahorse-window">
+			<title>The <application>Passwords and Keys</application> Window</title>
+			<screenshot>
+				<mediaobject>
+					<imageobject>
+					<imagedata fileref="figures/seahorse-window.png" format="PNG"/>
+					</imageobject>
+					<textobject>
+						<phrase>显示 <application>Passwords and Keys</application> 窗口。</phrase>
+					</textobject>
+				</mediaobject>
+			</screenshot>
+			</figure>
+			
+			<para>
+				The <application>Passwords and Keys</application> window contains the following elements:
+			</para>
+			
+	    <variablelist>
+		<varlistentry><term>菜单栏</term>
+		    <listitem>
+			<para>The menus on the menubar contain all of the commands that you need to perform tasks in <application>Passwords and Keys</application>.</para>
+		    </listitem>
+		</varlistentry>
+		<varlistentry><term>工具栏</term>
+		    <listitem>
+			<para>在工具栏中可以快速访问常用的命令。</para>
+		    </listitem>	
+		</varlistentry> 		
+		<varlistentry><term>密钥和密码标签</term>
+  		    <listitem>
+			<para>提供在密钥环中访问密钥和密码。</para>
+  		    </listitem>
+		</varlistentry>
+		<varlistentry><term>第一次进入的选项</term>
+  		    <listitem>
+			<para>为首次进入的用户提供快速有用的访问操作，通过它您可以：</para>
+			<itemizedlist>
+			    <listitem>
+				<para>浏览帮助，</para>
+			    </listitem>
+			    <listitem>
+				<para>导入密钥到密钥环，</para>
+			    </listitem>
+			    <listitem>
+				<para>创建新的密钥。</para>
+			    </listitem>
+			</itemizedlist>
+		    </listitem>
+		</varlistentry>
+	    </variablelist>
+	</sect2>
+    </sect1>
+	
+	<!-- ============= Creating OpenPGP Keys ============================== -->	
+
+  <sect1 id="pgp-generate">
+    <title>创建 OpenPGP 密钥</title>
+    <para>OpenPGP 是基于 <acronym>PGP</acronym> 公钥算法的非私有协议，用于加密电子邮件。它定义了加密信息、签名、私钥的标准格式，和交换公钥的证书。</para>
+    <para>公钥密码算法是包括两个密钥：一个是 <emphasis>公钥</emphasis>，您可以把它给任何交换信息的人，另一个是 <emphasis>私钥</emphasis>，必须要安全保管好。</para>
+    <para>创建 OpenPGP 密钥： <orderedlist>
+	<listitem>
+	  <para>点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>新建...</guimenuitem></menuchoice></para>
+	</listitem>
+	<listitem>
+	  <para>选择 <guilabel>PGP 密钥</guilabel>，然后点 <guibutton>继续</guibutton></para>
+	</listitem>
+	<listitem>
+	  <para>输入您的姓名（名－姓），您的电子邮箱和其他信息，您还可以指定下面的一些高级选项：</para>
+	</listitem>
+	<listitem>
+	  <para>点 <guibutton>创建</guibutton> 按钮，创建新的密钥对。</para>
+	</listitem>
+	<listitem>
+	  <para>接下来出现 <guilabel>新 PGP 密钥的密码</guilabel> 对话框，输入两遍新密钥的密码。</para>
+	</listitem>
+      </orderedlist></para>
+    <tip>
+      <para>当选择一个密码短语时，用几个简单的习惯语来生成一个强密码。密码和密码短语的主要区别在于，密码短语里可以使用空格。</para>				
+    </tip>
+    
+    <sect2 id="seahorse-pgp-advanced-mode">
+      <title>高级选项</title>
+      <para>展开 <guibutton>高级密钥选项</guibutton>，可以为密钥指定下面的选项：</para>
+      <variablelist>
+	<varlistentry>
+	  <term><guilabel>加密类型</guilabel></term>
+	  <listitem>
+	    <para>这一项指定生成密钥的加密算法。</para>
+	    <variablelist>
+	      <varlistentry>
+		<term><acronym>DSA</acronym> 算法</term>
+		<listitem>
+		  <para>这是推荐的选项，可以根据需要进行加密、解密、签名和验证。</para>
+		</listitem>
+	      </varlistentry>
+	      <varlistentry>
+		<term><acronym>DSA</acronym></term>
+		<listitem>
+		  <para>只允许签名。</para>
+		</listitem>
+	      </varlistentry>
+	      <varlistentry>
+		<term><acronym>RSA</acronym></term>
+		<listitem>
+		  <para>只允许签名。</para>
+		</listitem>
+	      </varlistentry>
+	    </variablelist>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guilabel>密钥强度（位）</guilabel></term>
+	  <listitem>
+	    <para>这是密钥的位数，位数越长将会越安全，使用一个强的密码短语。当然，用一个长的密钥将会使操作花费更多的时间，合适的值在 1024 - 4096 之间，推荐至少2048位。</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guilabel>有效期</guilabel></term>
+	  <listitem>
+	    <para>在这个期限内，密钥可以进行加密和签名操作。默认是6个月时间，到期后你可以延长有效期或者生成一个新密钥。<note>
+		<para>密钥被信任的日期，过期将签署一个新密钥。</para>
+	      </note></para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+	
+	<!-- ============= Creating SSH Keys ============================== -->	
+	
+	<sect1 id="ssh-generate">
+	<title>创建 SSH 密钥</title>
+	<para>安全 Shell(<acronym>SSH</acronym>)，是登录远程计算机并执行命令的一种方法。SSH 密钥用于基于密钥验证系统中，作为默认密码验证系统的替代。对于基于密钥验证，不需要手动输入密码来验证。</para>
+	<para>SSH 密钥制作两个密钥：一个是 <emphasis>私钥</emphasis>，必须要安全保管，另一个是 <emphasis>公钥</emphasis>，可以上传到你要访问的任何一台计算机。</para>
+    <para>创建 SSH 密钥：</para>
+    <orderedlist>
+      <listitem>
+        <para>点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>新建...</guimenuitem></menuchoice></para>
+      </listitem>
+      <listitem>
+        <para>选择 <guilabel>SSH 密钥</guilabel>，然后点 <guibutton>继续</guibutton></para>
+      </listitem>
+      <listitem>
+        <para>输入密钥的用途描述，您可以使用电子邮件地址或其他提示语，您也可以为此密钥设定以下高级选项：</para>
+      </listitem>
+      <listitem>
+        <para>点 <guibutton>仅创建密钥</guibutton> 按钮，创建新密钥，点 <guibutton>创建并设置</guibutton> 按钮，创建并设置其他计算机用它来验证。</para>
+      </listitem>
+      <listitem>
+        <para>出来一个 <guilabel>新的 SSH 密钥的密码</guilabel> 对话框，输入密码两遍。</para>
+			<tip>
+				<para>当选择一个密码短语时，用几个简单的习惯语来生成一个强密码。密码和密码短语的主要区别在于，密码短语里可以使用空格。</para>				
+			</tip>
+      </listitem>
+    </orderedlist>
+    
+
+		
+		<sect2 id="seahorse-ssh-advanced-options">
+		<title>高级选项</title>
+			<para>展开 <guilabel>密钥高级选项</guilabel>，可以为密钥指定以下选项：</para>
+		
+			<variablelist>
+			<varlistentry>
+				<term><guilabel>加密类型</guilabel></term>
+				<listitem>
+				<para>这一项指定生成密钥的加密算法。</para>
+				<variablelist>
+					<varlistentry>
+						<term><acronym>RSA</acronym></term>
+						<listitem>
+							<para>使用 <emphasis>Rivest-ShamirAdleman</emphasis> (<acronym>RSA</acronym>) 算法创建 SSH 密钥，这是首选的并且非常可靠的选择。</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><acronym>DSA</acronym></term>
+						<listitem>
+							<para>使用 <emphasis>数字签名算法</emphasis> (<acronym>DSA</acronym>) 算法创建 SSH 密钥。</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>密钥强度（位）</guilabel></term>
+				<listitem>
+				<para>这是密钥的位数，位数越长将会越安全，使用一个强的密码短语。当然，用一个长的密钥将会使操作花费更多的时间，合适的值在 1024 - 4096 之间，推荐至少2048位。</para>
+				</listitem>
+			</varlistentry>
+			</variablelist>
+		</sect2>
+	</sect1>
+	
+	<!-- ============= OpenPGP Key Properties ============================== -->	
+
+	<sect1 id="seahorse-key-properties">
+		<title>OpenPGP 密钥属性</title>
+		<para>本节的内容适用于各种 OpenPGP 密钥。</para>
+		
+		<para>查看一个 <acronym>PGP</acronym> 密钥的属性： <itemizedlist>
+			<listitem>
+				<para>从主窗口选择 <acronym>PGP</acronym> 密钥，</para>
+			</listitem>
+			<listitem>
+				<para>双击它，或者在工具栏上点 <guilabel>属性</guilabel> 按钮，</para> 
+			</listitem>
+			<listitem>
+				<para>点 <guilabel>细节</guilabel> 标签。</para>
+			</listitem>
+		</itemizedlist></para>
+
+	<sect2 id="pgp-public-key-properties">
+		<title id="pgp-private-key-properties">属性</title>
+		<para>
+		<variablelist>
+			<varlistentry>
+				<term><guilabel>指纹</guilabel></term>
+				<listitem>
+					<para>指纹是标记一个密钥的唯一的特征字符串。</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>密钥 ID</guilabel></term>
+				<listitem>
+					<para>密钥 ID 跟指纹类似，但是密钥 ID 只包含指纹的最后8个字符。绝大多数情况，用密钥 ID 就可以标识一个密钥，但是有时候也可能出现两个相同的 ID。</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>类型</guilabel></term>
+				<listitem>
+					<para>指定生成一个密钥的加密算法，DSA 密钥用于签名，ElGamal 密钥用于加密。</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>创建</guilabel></term>
+				<listitem>
+					<para>密钥的创建日期。</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>过期</guilabel></term>
+				<listitem>
+				<para>标识密钥不能再使用的日期。</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>保密强度</guilabel></term>
+				<listitem>
+					<para>标识密钥的长度位数，通常越长的密钥，安全性也越高。<note>
+							<para>长的密钥位数不足以弥补弱的密码口令。</para>
+						</note></para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+		</para>
+	</sect2>
+
+	<sect2 id="change-owner-trust">
+		<title>信任</title>
+		<para>“信任”标识您如何确保您通过个人的能力，正确把信任扩展到网络中。当您面对一个还没有签署的密钥时，这个密钥的有效性取决于你是否信任其他签署它的人。</para>
+		<itemizedlist>
+			<listitem><para><guilabel>未知</guilabel>：您跟签署人不熟悉，不能确定密钥的有效性。</para></listitem>
+			<listitem><para><guilabel>从不</guilabel>：这个人不能正确签署密钥。</para></listitem>
+			<listitem><para><guilabel>有限的</guilabel>：这个人在签署密钥时检查过照片 ID，但没有仔细审查这个 ID。</para></listitem>
+			<listitem><para><guilabel>完全</guilabel>：在签署它们之前，这个人详细审查每一项包括个人照片 ID（例如，他们仅签署的密钥确实属于这个人，要求了个人签名）。</para></listitem>
+			<listitem><para><guilabel>彻底</guilabel>：这一级别应该仅限于您自己的密钥。</para></listitem>
+		</itemizedlist>
+	</sect2>
+
+	<sect2 id="disable-key">
+		<title>启用和禁用密钥</title>
+		<para>当启用一个密钥，它可以用来进行加密操作。当禁用了一个密钥，它就不能用来加密或者验证签名。</para>
+	</sect2>
+
+	<sect2 id="change-expires">
+		<title>有效期</title>
+		<para>当一个密钥过期了，它也不能再用来执行密钥操作，延长密钥的期限可以重新启用它，一个好的方法是拥有一个不过期的主密钥和多个子密钥，由主密钥来操作和签署。</para>
+	</sect2>
+
+	<sect2 id="userid-properties">
+		<title>用户 IDs</title>
+		<para>用户 IDs 允许多个身份标识和邮箱地址用于同一个密钥。</para>
+		<para>他们通常使用下表：<programlisting>姓名(备注) &lt;邮箱地址&gt;</programlisting></para>
+			
+		<sect3 id="add-uid">
+			<title>添加用户 ID</title>
+				<para>添加用户 ID 是很有用处的，当您想把一个 ID 用于工作，另一个用于好朋友时。</para>
+				<para>向密钥中添加一个用户 ID： <itemizedlist>
+						<listitem>
+							<para>从主窗口中选择密钥，</para>
+						</listitem>
+						<listitem>
+							<para>双击它或者在工具栏上点 <guibutton>属性</guibutton> 按钮，</para>
+						</listitem>
+						<listitem>
+							<para>选择 <guilabel>名称和签名</guilabel> 标签，</para>
+						</listitem>
+						<listitem>
+							<para>点 <guibutton>添加名称</guibutton> 按钮。</para>
+						</listitem>
+					</itemizedlist></para>
+				<para>按照上面的介绍操作，您会看到一个对话框，各个文本框的介绍如下：</para>
+				<variablelist>
+					<varlistentry>
+						<term><guilabel>完整姓名</guilabel></term>
+						<listitem>
+							<para>输入您的完整姓名，如图 <programlisting>&lt;名&gt; &lt;姓&gt;</programlisting>，可选择一个中间名或首字母。</para>
+							<para>
+								<note>
+									<para>您必须在这个文本框中至少输入5个字符。</para>
+								</note> 
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><guilabel>邮箱地址</guilabel></term>
+						<listitem>
+							<para>您的邮箱地址是大多数人用来在密钥服务器上查找您的密钥，在继续前请确保其正确性。</para>
+							<para>
+								<note>
+									<para>它应该如下所示 <programlisting><replaceable>&lt;username&gt;</replaceable>@<replaceable>&lt;domainname&gt;</replaceable></programlisting></para>
+								</note>
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><guilabel>密钥注释</guilabel></term>
+						<listitem>
+							<para>注释可以用来存放您的新 ID 名称的一些额外信息，这些信息可用于在密钥服务器上的搜索。</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect3>
+		</sect2>
+
+    <sect2 id="photoid-properties">
+      <title>照片 ID</title>
+      <para>照片 ID 允许密钥所有者在密钥中添加一幅或几幅图片，这些标识可以像普通用户 ID 那样作为签名，照片 ID 必须用 JPEG 格式，推荐不大于 240x288 像素。</para>
+      <para>
+	  If the chosen image is not of the required file type or size <application>Passwords and Keys</application> 
+	  can resize and convert it on the fly from 
+	  any image format supported by the <acronym>GDK</acronym> library.
+      </para>
+    </sect2>
+		
+		<sect2 id="change-passphrase">
+			<title>更改密码</title>
+			<para>要更改密码，请按以下步骤操作： <itemizedlist>
+					<listitem>
+						<para>从主窗口中选择密钥，</para>
+					</listitem>
+					<listitem>
+						<para>双击它，或者在工具栏上点 <guilabel>属性</guilabel> 按钮，</para>
+					</listitem>
+					<listitem>
+						<para>点击 <guibutton>更改密码</guibutton> 按钮。</para>
+					</listitem>
+				</itemizedlist></para>
+			<para>输入新密码然后点 <guibutton>确定</guibutton> 按钮。</para>
+		</sect2>
+
+		<sect2 id="delete">
+			<title>删除密钥</title>
+			<para>从密钥环中删除密钥：<itemizedlist>
+				<listitem>
+					<para>从主窗口中选择密钥，</para>
+				</listitem>
+				<listitem>
+					<para>在密钥上点右键，然后选 <guilabel>删除</guilabel>，或者点菜单  <menuchoice><guimenu>编辑</guimenu><guimenuitem>删除</guimenuitem></menuchoice>。</para>
+				</listitem>
+				</itemizedlist></para>
+			<note>
+				<para>您可以删除个人密钥、信任的密钥和收集来的密钥。</para>		
+			</note> 
+		</sect2>
+	</sect1>
+	
+	<!-- ============= OpenPGP Properties ============================== -->	
+		
+	<sect1 id="subkey-properties">
+		<title>OpenPGP 子密钥属性</title>
+		<para>每个 OpenPGP 密钥有一个主密钥仅用于签名，子密钥用于加密和签名。这样一来，如果您的子密钥有问题时，您不必撤消您的主密钥。</para>
+		<variablelist>
+		<varlistentry>
+			<term><guilabel>ID</guilabel></term>
+			<listitem>
+				<para>这是子密钥的标识。</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>类型</guilabel></term>
+			<listitem>
+				<para>指定用于生成子密钥的加密算法，<acronym>DSA</acronym> 密钥仅用于签名，ElGamal 密钥用于加密，在 <acronym>RSA</acronym> 密钥用于签名或加密时。</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>创建</guilabel></term>
+			<listitem>
+				<para>密钥的创建日期。</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>过期</guilabel></term>
+			<listitem>
+				<para>标识密钥不能再使用的日期。</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>状态</guilabel></term>
+			<listitem>
+				<para>指示密钥的状态。</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>保密强度</guilabel></term>
+			<listitem>
+				<para>标明密钥的长度位数，通常越长的密钥越安全。<note>
+						<para>长的密钥位数不足以弥补弱的密码口令。</para>
+					</note></para>
+			</listitem>
+		</varlistentry>
+		</variablelist>
+		
+		<sect2 id="add-subkey">
+			<title>添加子密钥</title>
+			<para>要添加一个子密钥，在 <guilabel>子密钥</guilabel> 面板里点击 <guibutton>添加</guibutton> 按钮。</para>
+			<para>按照上面的介绍操作，您会看到一个对话框，各个文本框的介绍如下：</para>
+			<variablelist>
+			<varlistentry>
+				<term>密钥类型</term>
+				<listitem>
+					<para>指定生成子密钥的加密算法。</para>
+				<variablelist>
+				<varlistentry>
+					<term><acronym>DSA</acronym></term>
+					<listitem>
+						<para>使用 <emphasis>数字签名算法</emphasis> (<acronym>DSA</acronym>) 来创建子密钥，它仅用于签名。</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>ElGamal</term>
+					<listitem>
+						<para>使用 <emphasis>ElGamal</emphasis> 算法来创建子密钥，它仅用于加密。</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>RSA</term>
+					<listitem>
+						<para>使用 <emphasis>Rivest-Shamir Adleman</emphasis> (<acronym>RSA</acronym>) 算法创建子密钥，这个子密钥可以用于签名或加密，但您得创建两个不同的子密钥。</para>
+					</listitem>
+				</varlistentry>
+				</variablelist>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>密钥长度</term>
+				<listitem>
+					<para>标明子密钥的长度位数，通常越长的密钥越安全。</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>有效期</term>
+				<listitem>
+					<para>标明子密钥不能再使用的日期。</para>
+				</listitem>
+			</varlistentry>
+			</variablelist>
+		</sect2>
+
+		<sect2 id="change-subkey-expires">
+			<title>更改子密钥的有效期</title>
+			<para>要更改子密钥的有效期，在 <guilabel>子密钥</guilabel> 面板选中一个子密钥，然后如下操作：<itemizedlist>
+				<listitem>
+					<para>点击旁边的 <guibutton>过期</guibutton> 按钮，</para>
+				</listitem>
+				<listitem>
+					<para>在日期对话框里选择一个新的有效期，或者选中 <guilabel>永不过期</guilabel> 则一直可用。</para>
+				</listitem>
+				</itemizedlist></para>
+		</sect2>
+
+		<sect2 id="revoke-subkey">
+			<title>撤消一个子密钥</title>
+			<para>要撤消一个子密钥，在 <guilabel>子密钥</guilabel> 面板选中它，然后： <itemizedlist>
+				<listitem>
+					<para>点左边的 <guibutton>撤回</guibutton> 按钮，</para>
+				</listitem>
+				<listitem>
+					<para>选择一个撤回的原因：</para>
+					<para>
+					<variablelist>
+						<varlistentry>
+							<term>无原因</term>
+							<listitem>
+								<para>不指定撤回的原因。</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>泄露</term>
+							<listitem>
+								<para>密钥已泄露。</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>被取代</term>
+							<listitem>
+								<para>密钥被另一个所取代。</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>不使用</term>
+							<listitem>
+								<para>该密钥不再使用。</para>
+							</listitem>
+						</varlistentry>
+					</variablelist>
+					</para>
+				</listitem>
+				<listitem>
+					<para>描述为什么撤回密钥，</para>
+				</listitem>
+				<listitem>
+					<para>点击 <guibutton>撤回</guibutton> 按钮。</para>
+				</listitem>
+				</itemizedlist></para>
+			<note>
+				<para>撤消密钥将立即生效。</para>
+			</note>
+		</sect2>
+
+		<sect2 id="delete-subkey">
+			<title>删除子密钥</title>
+			<para>要删除一个子密钥，在 <guilabel>子密钥</guilabel> 面板选中它，然后： <itemizedlist>
+				<listitem>
+					<para>点击左边的 <guibutton>删除</guibutton> 按钮。</para>
+				</listitem>
+				</itemizedlist></para>
+		</sect2>
+	</sect1>
+
+	<!-- ============= SSH Key Properties ============================== -->
+
+	<sect1 id="ssh-key-properties">
+	    <title>SSH 密钥属性</title>
+	    <para>这一节的讲述适用于所有 <acronym>SSH</acronym> 密钥。</para>
+	    <para>查看 <acronym>SSH</acronym> 密钥的属性： <itemizedlist>
+			<listitem>
+				<para>在主窗口中选中一个 SSH 密钥，</para>
+			</listitem>
+			<listitem>
+				<para>双击它，或者在工具栏上点 <guilabel>属性</guilabel> 按钮，</para> 
+			</listitem>
+			<listitem>
+				<para>点 <guilabel>细节</guilabel> 标签。</para>
+			</listitem>
+		</itemizedlist></para>
+
+	<sect2 id="properties">
+		<title>属性</title>
+		<para>
+		<variablelist>
+		<varlistentry>
+			<term><guilabel>指纹</guilabel></term>
+			<listitem>
+				<para>指纹是标记一个密钥的唯一的特征字符串。</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>算法</guilabel></term>
+			<listitem>
+				<para>指出生成密钥的加密算法。</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>位置</guilabel></term>
+			<listitem>
+				<para><emphasis>私钥</emphasis> 存储的位置。</para>
+		</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>保密强度</guilabel></term>
+			<listitem>
+				<para>标识密钥的长度位数，通常越长的密钥，安全性也越高。<note>
+					<para>长的密钥位数不足以弥补弱的密码口令。</para>
+				</note></para>
+			</listitem>
+		</varlistentry>
+		</variablelist>
+		</para>
+	</sect2>
+
+	<sect2 id="delete-ssh-key">
+		<title>删除一个 SSH 密钥</title>
+		<para>删除 SSH 密钥： <itemizedlist>
+				<listitem>
+				<para>在主窗口中选中一个 <acronym>SSH</acronym> 密钥，</para>
+			</listitem>
+			<listitem>
+				<para>在密钥上点右键，然后选 <guilabel>删除</guilabel>，或者点菜单  <menuchoice><guimenu>编辑</guimenu><guimenuitem>删除</guimenuitem></menuchoice>。</para>
+			</listitem>
+			</itemizedlist></para>
+	</sect2>
+	</sect1>
+	
+	<!-- ============= Importing Keys ============================== -->	
+
+        <sect1 id="import">
+		<title>导入密钥</title>
+		<para>要导入一个密钥，点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>导入</guimenuitem></menuchoice>，然后在文件选择框里打开一个文件，这个文件至少要包含一个绑定的公钥。</para>
+		<para>
+			Importing can also be performed by pasting the keys inside <application>Passwords and Keys</application>:
+		<itemizedlist>
+		<listitem>
+			<para>选择一个 asc 文本格式文件，</para>
+		</listitem>
+		<listitem>
+			<para>复制到剪贴板，</para>
+		</listitem>
+		<listitem>
+			<para>点菜单 <menuchoice><guimenu>编辑</guimenu><guimenuitem>粘贴</guimenuitem></menuchoice>。</para>
+		</listitem>
+		</itemizedlist>
+		</para>
+	</sect1>
+	
+	<!-- ============= Exporting Keys ============================== -->	
+
+	<sect1 id="export">
+		<title>导出密钥</title>
+		<para>要导出一个密钥，在主窗口中选中它，然后点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>导出</guimenuitem></menuchoice>。</para>
+		<para>您可以用 asc 文本格式将密钥导出到剪贴板： <itemizedlist>
+			<listitem>
+				<para>在主窗口选中一个密钥，</para>
+			</listitem>
+			<listitem>
+				<para>点菜单 <menuchoice><guimenu>编辑</guimenu><guimenuitem>复制</guimenuitem></menuchoice>。</para>
+			</listitem>
+		</itemizedlist></para>
+	</sect1>
+
+	
+	<!-- ============= Signing a Key ============================== -->	
+
+	<sect1 id="sign">
+		<title>签署密钥</title>
+		<para>签署别人的密钥意味着您信任那个人，在签署之前，您应该仔细检查密钥的指纹确定密钥确实属于那个人。</para>
+		<para>签署密钥到您的密钥环： <itemizedlist>
+				<listitem>
+				<para>从 <guilabel>信任密钥</guilabel> 或 <guilabel>其他密钥</guilabel> 标签里，选择要签署的密钥，</para>
+				</listitem>
+				<listitem>
+				<para>点工具栏中的 <guibutton>签署</guibutton> 按钮，或者点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>签署密钥</guimenuitem></menuchoice>，</para>
+				</listitem>
+				<listitem>
+				<para>选择对这个密钥进行了怎样的检查，</para>
+				</listitem>
+				<listitem>
+				<para>标明这个签名是否存放到本地您的密钥环，以及签署是否可以撤消，</para>
+				</listitem>
+				<listitem>
+				<para>点击 <guibutton>签署</guibutton> 按钮。</para>
+				</listitem>
+			</itemizedlist></para>
+	</sect1>
+	
+	<!-- ============= Preferences ============================== -->	
+  
+  <sect1 id="prefs">
+    <title>首选项</title>
+    <para>
+      This section describes the preferences settable in <application>Passwords and Keys</application> by choosing 
+	<menuchoice>
+	  <guimenu>Edit</guimenu>
+	  <guimenuitem>Preferences</guimenuitem>
+	</menuchoice> from within <application>Passwords and Keys</application>.
+      </para>
+
+        <sect2 id="keyring">
+        	<title>密码密钥环</title>
+        	<sect3>
+        	    <title>创建密钥环</title>
+            	<para>要创建一个新的密钥环，点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>新建</guimenuitem></menuchoice>，然后选 <guibutton>密码密钥环</guibutton>，输入一个名称，然后按回车键。</para>
+        	</sect3>
+        	<sect3>
+        	    <title>更改密钥环密码</title>
+            	<para>要更改密钥环的解锁密码，首先选中它，然后点 <guibutton>更改解锁密码</guibutton>。出来一个对话框，提示在 <guilabel>旧密码</guilabel> 框中输入原先的密码，在 <guilabel>新密码</guilabel> 框中输入新的密码，再在 <guilabel>确认密码</guilabel> 框中再输入一遍新密码，然后点 <guibutton>更改</guibutton> 应用。如果旧密码正确，您会看到一个操作成功的提示，如果旧密码不正确，将会提示重新输入。</para>
+        	</sect3>
+        	<sect3>
+        	    <title>删除密钥环</title>
+        	    <para>要删除一个密钥环，首先选中它，然后点菜单 <menuchoice><guimenu>编辑</guimenu><guimenuitem>删除</guimenuitem></menuchoice>。</para>
+        	</sect3>
+        </sect2>
+
+    <sect2 id="key-servers">
+	<title>密钥服务器</title>
+	<para>在远程服务器上通过定期同步，来保持您的和其他人的密钥最新。同步将确保你有最近的所有密钥的签名，以使信任的网络保持最有用。</para>
+	<para>
+      	  <application>Passwords and Keys</application> provides support for HKP and LDAP keyservers.
+	</para>
+	<variablelist>
+	  <varlistentry>
+	    <term><emphasis>HKP 服务器</emphasis></term>
+	    <listitem>
+	      <para>
+		HKP keyservers are ordinary web based keyservers such as the 
+		popular <ulink url="hkp://pool.sks-keyservers.net" type="hkp">hkp://pool.sks-keyservers.net</ulink>, also accessible at
+		<ulink url="http://sks-keyservers.net" type="http">http://sks-keyservers.net</ulink>.
+	      </para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><emphasis><acronym>LDAP</acronym> 密钥服务器</emphasis></term>
+	    <listitem>
+	      <para><acronym>LDAP</acronym> 密钥服务器很少见，但它使用标准的 LDAP 协议来管理密钥。<ulink url="ldap://keyserver.pgp.com" type="ldap">ldap://keyserver.pgp.com</ulink> 是一个好的 LDAP 服务器。</para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+      </sect2>
+
+      <sect2 id="key-sharing">
+	<title>分享密钥</title>
+	<para>
+	  Key Sharing is provided by DNS-SD, also known as Bonjour or Rendevous.  
+	  Enabling key sharing will add the local <application>Passwords and Keys</application> users' public key rings 
+	  to the remote search dialog. Using these local "key servers" will most 
+	  likely be faster than accessing remote servers.
+	</para>
+      </sect2>
+  </sect1>
+  
+	<!-- ============= About ============================== -->  
+      
+    <sect1 id="about">
+    <title>About Passwords and Keys</title>
+    <para> 
+      <application>Passwords and Keys</application>, its associated plugins, the preferences applet and the panel 
+      applet are known collectively as Seahorse. Seahorse was written by Jacob Perkins. The current 
+      maintainers are Stef Walter and Adam Schreiber. This manual is by Adam Schreiber. The project's web 
+      site was designed by Jim Pharis. To find more information about Seahorse, the project , please visit 
+      the <ulink url="http://www.gnome.org/projects/seahorse/" type="http">Seahorse web page</ulink>.
+    </para>
+    <para>要报告关于此程序或使用手册中的缺陷，或者提出建议，请参照 <ulink url="ghelp:user-guide?feedback-bugs" type="help">GNOME 用户指南反馈页</ulink>。</para>
+    <para>对于本程序的分发遵循自由软件基金会(Free Software Foundation)发布的 GNU 通用公共许可证(GPL)版本第二版或（如果您愿意的话）更高版本。您可以在此 <ulink url="ghelp:gpl" type="help">链接</ulink>，或在随本程序源代码一起分发的 COPYING 文件中找到 GPL 协议的副本。</para>
+  </sect1>
+</article>

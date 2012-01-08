@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="shell-exit" xml:lang="es">
+
+  <info>
+
+    <link type="guide" xref="index" group="shell-exit"/>
+    <link type="guide" xref="shell-overview#desktop"/>
+
+    <desc>Aprenda cómo salir de su cuenta de usuario, cerrando la sesión, cambiando de usuario, etc.</desc>
+    <!-- Should this be a guide which links to other topics? -->
+    
+    <revision version="11.04" date="2011-04-30" status="review"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Cerrar la sesión, apagar o cambiar de usuario</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>More links would be good, especially in #logout. Could go final
+  as-is. Incomplete for now</p>
+</comment>
+
+<p>Cuando haya terminado de usar su equipo, puede apagar, suspender (para ahorrar energía), o dejarlo encendido y solo cerrar la sesión.</p>
+
+<section id="logout">
+<title>Cerrar la sesión o cambiar de usuario</title>
+<p>Para permitir que otros usuarios utilicen su equipo, puede salir de la sesión, o seguir conectado y solo cambiar de usuario. Si cambia de usuario, todas las aplicaciones seguirán funcionando y todo estará donde lo dejó cuando vuelva a iniciar sesión.</p>
+<p>Para salir de la sesión o cambiar de usuario, pulse en el <link xref="unity-appmenu-intro">menú de sesión</link> a la derecha del panel superior y seleccione la opción apropiada.</p>
+</section>
+
+<section id="lock-screen">
+<info>
+  <link type="seealso" xref="session-screenlocks"/>
+</info>
+<title>Bloquear la pantalla</title>
+<p>Cuando deje a su equipo solo durante un rato, debería bloquear la pantalla para evitar que otras personas tengan acceso a sus archivos y ejecuten aplicaciones. Cuando vuelva, simplemente introduciendo su contraseña volverá a su sesión. Si no bloquea la pantalla, esta se bloqueará automáticamente pasado un cierto tiempo.</p>
+
+<p>Para bloquear la pantalla, pulse en el <gui>menú de sesión</gui> del panel superior y seleccione <gui>Bloquear la pantalla</gui>.</p>
+
+<p>Cuando su pantalla está bloqueada otros usuarios pueden iniciar sesión en sus propias cuentas pulsando <gui>Cambiar de usuario</gui> en la pantalla de contraseña. Podrá volver a su escritorio cuando hayan terminado.</p>
+</section>
+
+<section id="shut-down">
+<info>
+  <link type="seealso" xref="power-suspendhibernate"/>
+</info>
+<title>Suspender, apagar o reiniciar.</title>
+
+<p>Para ahorrar energía, suspenda su equipo cuando no lo esté usando. Esto guardará su estado en la memoria de su equipo y apagará la mayoría de las funciones del mismo. Así y todo, se usará una pequeña cantidad de energía mientras esté en suspensión.</p>
+
+<p>Para suspender su equipo, pulse en el <gui>menú de sesión</gui> del panel superior y seleccione <gui>Suspender</gui>. O, si dispone de un portátil, simplemente cierre la tapa. Su equipo se suspenderá automáticamente cuando se cierre la tapa del portátil.</p>
+
+<p>Si quiere apagar completamente, o reiniciar, pulse en el <gui>menú de sesión</gui> y seleccione <gui>Apagar</gui>.</p>
+
+<note><p>Si hay otros usuarios conectados, no podrá apagar o reiniciar el equipo, porque esto cerraría sus sesiones. Si es un usuario administrativo, se le pedirá su contraseña para apagar.</p></note>
+</section>
+</page>

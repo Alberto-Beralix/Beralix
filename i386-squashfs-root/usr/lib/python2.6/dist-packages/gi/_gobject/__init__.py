@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gi/_gobject/__init__.py

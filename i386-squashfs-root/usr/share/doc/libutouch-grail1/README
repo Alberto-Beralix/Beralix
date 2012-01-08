@@ -1,0 +1,16 @@
+grail - Gesture Recognition And Instantiation Library
+
+This tree consists of an interface and tools for handling gesture
+recognition and gesture instantiation.
+
+When a multitouch gesture is performed on a device, the recognizer
+emits one or several possible gestures. Once the context of the
+gesture is known, i.e., in what window the touches land and what
+gestures the clients of that window listens to, the instantiator
+delivers the matching set of gestures.
+
+The library handles tentative getures, i.e., buffering of events for
+several alternative gestures until a match is confirmed.
+
+Enjoy,
+Henrik

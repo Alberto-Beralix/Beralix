@@ -1,0 +1,2991 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/desktop/ibus/general/preload_engines</key>
+      <applyto>/desktop/ibus/general/preload_engines</applyto>
+      <owner>ibus</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <locale name="C">
+        <short>Preload engines</short>
+	    <long>Preload engines during ibus starts up</long>
+      </locale>
+
+      <locale name="as">
+        <short>কলঘৰ আগতে তুলি লোৱা হ&apos;ব</short>
+	    <long>ibus আৰম্ভৰ আগতে কলঘৰ তুলি লওক</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>ইঞ্জিন পূর্বে লোড করা হবে</short>
+	    <long>ibus আরম্ভের সময় ইঞ্জিনগুলি পূর্বে লোড করা হবে</long>
+      </locale>
+
+      <locale name="da">
+        <short>Forindlæs motorer</short>
+	    <long>Forindlæs motorer under opstarten af IBus</long>
+      </locale>
+
+      <locale name="de">
+        <short>Engines vorladen</short>
+	    <long>Engines vorladen, während IBus startet</long>
+      </locale>
+
+      <locale name="es">
+        <short>Precargar máquinas</short>
+	    <long>Precargar los motores durante el inicio de ibus</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Précharger les moteurs</short>
+	    <long>Précharger les moteurs au démarrage d&apos;ibus</long>
+      </locale>
+
+      <locale name="gu">
+        <short>એંજિનોને ફરીથી લોડ કરો</short>
+	    <long>ibus શરૂ કરવા દરમ્યાન એંજિનોને ફરીથી લોડ કરો</long>
+      </locale>
+
+      <locale name="hi">
+        <short>पहले से लोड इंजन</short>
+	    <long>ibus आरंभन के दौरान पहले से लोड इंजन</long>
+      </locale>
+
+      <locale name="it">
+        <short>Pre-carica i motori</short>
+	    <long>Precarica i motori durante l&apos;avvio di ibus</long>
+      </locale>
+
+      <locale name="ja">
+        <short>エンジンのプリロード</short>
+	    <long>ibus の開始中にエンジンをプリロード</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಎಂಜಿನ್‌ಗಳನ್ನು ಮೊದಲೆ ಲೋಡ್ ಮಾಡು</short>
+	    <long>ibus ಆರಂಭಗೊಂಡಾಗ ಲೋಡ್ ಮಾಡಲಾದ ಎಂಜಿನ್‌ಗಳು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>엔진 미리로드</short>
+	    <long>ibus 시작 시 엔진 미리 로드  </long>
+      </locale>
+
+      <locale name="ml">
+        <short>സംവിധാനങ്ങള്‍ ലഭ്യമാക്കുക</short>
+	    <long>ibus ആരംഭിക്കുമ്പോള്‍ സംവിധാനങ്ങള്‍ ലഭ്യമാക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>प्रीलोड इंजीन्स्</short>
+	    <long>ibus सुरू होतेवेळी इंजीन आधिपासूनच लोड करा</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Engines voor-laden</short>
+	    <long>Engines voor-laden tijdens opstarten van ibus</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଯନ୍ତ୍ରକୁ ପ୍ରାକ ଧାରଣ କରନ୍ତୁ</short>
+	    <long>ibus ଆରମ୍ଭ ସମୟରେ ଯନ୍ତ୍ର ପ୍ରାକ ଧାରଣ କରନ୍ତୁ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਪ੍ਰੀ-ਲੋਡ ਇੰਜਣ</short>
+	    <long>ibus ਸ਼ੁਰੂ ਹੋਣ ਸਮੇਂ ਪਹਿਲਾਂ ਲੋਡ ਕੀਤੇ ਇੰਜਣ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Wcześniejsze wczytanie mechanizmów</short>
+	    <long>Wcześniejsze wczytanie mechanizmów podczas uruchamiania usługi iBus</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Mecanismos de carregamento</short>
+	    <long>Mecanismos de pré-carregamento durante a inicialização do ibus</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Предварительная загрузка методов ввода</short>
+	    <long>Загружать методы ввода при запуске iBus</long>
+      </locale>
+
+      <locale name="ta">
+        <short>முன்ஏற்றப்பட்ட இயந்திரங்கள்</short>
+	    <long>ibus துவங்கும் போது முன்னேற்றப்பட்ட எந்திரங்கள் </long>
+      </locale>
+
+      <locale name="te">
+        <short>ముందుగా లోడైన ఇంజన్లు</short>
+	    <long>ibus ప్రారంభమునందు ఇంజన్లు ముందుగా లోడుచేయి</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Попередньо завантажувати рушії</short>
+	    <long>Попередньо завантажувати рушії під час запуску ibus</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Nạp trước các kiểu gõ</short>
+	    <long>Nạp trước các kiểu gõ khi khởi động ibus</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>预加载引擎</short>
+	    <long>ibus启动时预加载的引擎</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>預先載入引擎</short>
+	    <long>當 ibus 啟動時預先載入引擎</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>預先載入引擎</short>
+	    <long>當 ibus 啟動時預先載入引擎</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/general/hotkey/trigger</key>
+      <applyto>/desktop/ibus/general/hotkey/trigger</applyto>
+      <owner>ibus</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[Control+space,Zenkaku_Hankaku,Alt+Kanji,Alt+grave,Hangul,Alt+Release+Alt_R]</default>
+      <locale name="C">
+        <short>Trigger shortcut keys</short>
+	    <long>The shortcut keys for turning input method on or off</long>
+      </locale>
+
+      <locale name="as">
+        <short>ট্ৰিগাৰৰ ছৰ্টকাট চাবি</short>
+	    <long>নিবেশ পদ্ধতি খোলা আৰু বন্ধ কৰাৰ বাবে প্ৰয়োজনীয় ছৰ্ট-কাট চাবি নিৰ্ধাৰণ কৰক</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>ট্রিগারের শর্টকাট-কি</short>
+	    <long>ইনপুট পদ্ধতি খোলা ও বন্ধ করার জন্য প্রয়োজনীয় শর্ট-কাট কি নির্ধারণ করুন</long>
+      </locale>
+
+      <locale name="da">
+        <short>Udløser tastaturgenveje</short>
+	    <long>Genvejstasterne for at tænde og slukke inputmetode</long>
+      </locale>
+
+      <locale name="de">
+        <short>Auslöser Tastenkombination</short>
+	    <long>Tastenkombination zum An- oder Ausschalten der Eingabemethode</long>
+      </locale>
+
+      <locale name="es">
+        <short>Activadora de los Atajos de teclado</short>
+	    <long>Atajo de teclado para encender o apagar el método de entrada</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Raccourci clavier déclencheur</short>
+	    <long>Sélection des raccourcis claviers pour activer ou désactiver les méthodes d&apos;entrées</long>
+      </locale>
+
+      <locale name="gu">
+        <short>ટ્રીગર ટૂંકાણ કીઓ</short>
+	    <long>ઇનપુટ પદ્દતિને ફેરબદલી કરવાનું ચાલુ અથવા ા બંધ કરવા માટે ટૂંકાણ કીઓ</long>
+      </locale>
+
+      <locale name="hi">
+        <short>शॉर्टकट कुंजी ट्रिगर करें</short>
+	    <long>इनपुट विधि को चालू या बंद रखने के लिए शॉर्टकट कुंजी</long>
+      </locale>
+
+      <locale name="it">
+        <short>Tasto di scelta rapida di avvio</short>
+	    <long>I tasti scorciatoia per abilitare o disabilitare i metodi di input</long>
+      </locale>
+
+      <locale name="ja">
+        <short>トリガーショートカットキー</short>
+	    <long>インプットメソッドをオン、オフするためのショートカットキーを設定します</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳನ್ನು ಟ್ರಿಗರ್ ಮಾಡು</short>
+	    <long>ಇನ್‌ಪುಟ್‌ ವಿಧಾನಗಳನ್ನು ಆಫ್ ಹಾಗು ಆನ್ ಮಾಡಲು ಶಾರ್ಟ್-ಕೀಲಿಗಳು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>트리거 단축키</short>
+	    <long>입력 방식을 활성 또는 해제하기 위한 단축키</long>
+      </locale>
+
+      <locale name="ml">
+        <short>എളുപ്പവഴികള്‍ ട്രിഗര്‍ ചെയ്യുക</short>
+	    <long>ഇന്‍പുട്ട് മെഥേഡ് ഓണ്‍ അല്ലെങ്കില്‍ ഓഫ് ചെയ്യുന്നതിനുള്ള എളുപ്പവളികള്‍ സജ്ജമാക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>शॉर्टकट किज् ट्रिगर करा</short>
+	    <long>इंपुट पद्धत सुरू किंवा बंद करण्यासाठी शार्टकट किज्</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Trigger sneltoetsen</short>
+	    <long>De sneltoetsen om invoermethode aan of uit te zetten</long>
+      </locale>
+
+      <locale name="or">
+        <short>ସଂକ୍ଷିପ୍ତ ପଥ କି&apos;ଗୁଡ଼ିକୁ ଟ୍ରିଗର କରନ୍ତୁ</short>
+	    <long>ନିବେଶ ପଦ୍ଧତିକୁ ଅନ କିମ୍ବା ଅଫ କରିବା ପାଇଁ ସକ୍ଷିପ୍ତ ପଥଗୁଡ଼ିକ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਟਰਿੱਗਰ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ</short>
+	    <long>ਇੰਪੁੱਟ ਢੰਗ ਬੰਦ ਕਰਨ ਜਾਂ ਚਾਲੂ ਕਰਨ ਲਈ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Klawisze skrótów przełącznika</short>
+	    <long>Klawisze skrótów do włączania lub wyłączania metody wprowadzania</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Realiza o trigger nas teclas de atalho</short>
+	    <long>As teclas de atalho para ligar ou desligar o método de entrada</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Сочетание клавиш для включения/выключения</short>
+	    <long>Сочетание клавиш для включения/выключения метода ввода</long>
+      </locale>
+
+      <locale name="ta">
+        <short>ட்ரிகர் குறுக்குவிசை</short>
+	    <long>உள்ளீடு முறைமை துவக்க அல்லது நிறுத்த குறுக்குவிசைகளை அமை</long>
+      </locale>
+
+      <locale name="te">
+        <short>లఘవులను నొక్కుము</short>
+	    <long>ఇన్‌పుట్ పద్ధతిని ఆన్ చేయుటకు లేదా ఆఫ్ చేయుటకు లఘువులు</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Клавіатурні скорочення-перемикачі</short>
+	    <long>Клавіатурне скорочення для вмикання і вимикання способів введення</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Phím tắt kích hoạt</short>
+	    <long>Phím tắt để bật hoặc tắt kiểu gõ</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>触发快捷键</short>
+	    <long>打开关闭输入法的快捷键</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>觸發用快捷鍵</short>
+	    <long>用來開啟或關閉輸入法的快捷鍵</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>觸發用快捷鍵</short>
+	    <long>用來開啟或關閉輸入法的快捷鍵</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/general/hotkey/enable_unconditional</key>
+      <applyto>/desktop/ibus/general/hotkey/enable_unconditional</applyto>
+      <owner>ibus</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Enable shortcut keys</short>
+	    <long>The shortcut keys for turning input method on</long>
+      </locale>
+
+      <locale name="as">
+        <short>চৰ্টকাট কিসমূহ সামৰ্থবান কৰা</short>
+	    <long>ইনপুট পদ্ধতি খুলিবলে চৰ্টকাট কিসমূহ</long>
+      </locale>
+
+      <locale name="da">
+        <short>Aktivér genvejstaster</short>
+	    <long>Genvejstasterne for at tænde inputmetode</long>
+      </locale>
+
+      <locale name="es">
+        <short>Habilitar atajos de teclado</short>
+	    <long>Los atajos de teclado para habilitar el método de entrada</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Activer les raccourcis clavier</short>
+	    <long>Les raccourcis clavier pour la méthode d&apos;entrée sont activés</long>
+      </locale>
+
+      <locale name="gu">
+        <short>ટૂંકાણ કીઓને સક્રિય કરો</short>
+	    <long>ઇનપુટ પદ્દતિને ચાલુ કરવા માટે ટૂંકાણ કીઓ</long>
+      </locale>
+
+      <locale name="hi">
+        <short>शॉर्टकट कुँजियाँ सक्रिय करें</short>
+	    <long>इनपुट विधि को चालू करने के लिए शॉर्टकट कुँजियाँ</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳನ್ನು ಶಕ್ತಗೊಳಿಸು</short>
+	    <long>ಇನ್‌ಪುಟ್ ವಿಧಾನವನ್ನು ಆನ್ ಮಾಡಲು ಬಳಸಬಹುದಾದ ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿ</long>
+      </locale>
+
+      <locale name="mr">
+        <short>शार्टकट किज् सुरू करा</short>
+	    <long>इंपुट पद्धती सुरू करण्यासाठी शार्टकट किज्</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Zet sneltoetsen aan</short>
+	    <long>De sneltoetsen om invoermethode aan te zetten</long>
+      </locale>
+
+      <locale name="or">
+        <short>ସଂକ୍ଷିପ୍ତ ପଥ କି&apos;ଗୁଡ଼ିକୁ ସକ୍ରିୟ କରନ୍ତୁ</short>
+	    <long>ନିବେଶ ପଦ୍ଧତିକୁ ଅନ କରିବା ପାଇଁ ସକ୍ଷିପ୍ତ ପଥ କି ଗୁଡ଼ିକ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ ਚਾਲੂ ਕਰੋ</short>
+	    <long>ਇੰਪੁੱਟ ਢੰਗ ਚਾਲੂ ਕਰਨ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Włącza skróty klawiszowe</short>
+	    <long>Skróty klawiszowe do włączania metody wprowadzania</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Habilitar teclas de atalho</short>
+	    <long>As teclas de atalho para ligar o método de entrada</long>
+      </locale>
+
+      <locale name="ta">
+        <short>குறுக்குவிசைக்களை செயல்படுத்து</short>
+	    <long>உள்ளீடு முறையை இயக்கும் குறுக்குவிசைகள்</long>
+      </locale>
+
+      <locale name="te">
+        <short>లఘు కీ లను చేతనంచేయి</short>
+	    <long>ఇన్‌పుట్ పద్ధతి ఆన్ చేయుటకు కీ లఘువులు</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Увімкнути клавіатурні скорочення</short>
+	    <long>Клавіатурне скорочення для вмикання способів введення</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>应用快捷键</short>
+	    <long>开启输入法的快捷键</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>啟用快捷鍵</short>
+	    <long>開啟輸入法的快捷鍵</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/general/hotkey/disable_unconditional</key>
+      <applyto>/desktop/ibus/general/hotkey/disable_unconditional</applyto>
+      <owner>ibus</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Disable shortcut keys</short>
+	    <long>The shortcut keys for turning input method off</long>
+      </locale>
+
+      <locale name="as">
+        <short>চৰ্টকাট কিসমূহ অসামৰ্থবান কৰক</short>
+	    <long>ইনপুট পদ্ধতি বন্ধ কৰিবলে চৰ্টকাট কিসমূহ</long>
+      </locale>
+
+      <locale name="da">
+        <short>Deaktivér genvejstaster</short>
+	    <long>Genvejstasterne for slukning af inputmetode</long>
+      </locale>
+
+      <locale name="es">
+        <short>Deshabilitar atajos de teclado</short>
+	    <long>Los atajos de teclado para deshabilitar el método de entrada</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Désactiver les raccourcis clavier</short>
+	    <long>Les raccourcis clavier pour la méthode d&apos;entrée sont désactivés</long>
+      </locale>
+
+      <locale name="gu">
+        <short>ટૂંકાણ કીઓને નિષ્ક્રિય કરો</short>
+	    <long>ઇનપુટ પદ્દતિને બંધ કરવા માટે ટૂંકાણ કીઓ</long>
+      </locale>
+
+      <locale name="hi">
+        <short>शॉर्टकट कुँजियाँ निष्क्रिय करें</short>
+	    <long>इनपुट विधि को बंद करने के लिए शॉर्टकट कुँजियाँ</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳನ್ನು ಅಶಕ್ತಗೊಳಿಸು</short>
+	    <long>ಇನ್‌ಪುಟ್ ವಿಧಾನವನ್ನು ಆಫ್ ಮಾಡಲು ಬಳಸಬಹುದಾದ ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿ</long>
+      </locale>
+
+      <locale name="mr">
+        <short>शार्टकट किज् बंद करा</short>
+	    <long>इंपुट पद्धती बंद करण्यासाठी शार्टकट किज्</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Zet sneltoetsen uit</short>
+	    <long>De sneltoetsen om invoermethode uit te zetten</long>
+      </locale>
+
+      <locale name="or">
+        <short>ସଂକ୍ଷିପ୍ତ ପଥ କି&apos;ଗୁଡ଼ିକୁ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ</short>
+	    <long>ନିବେଶ ପଦ୍ଧତିକୁ ଅଫ କରିବା ପାଇଁ ସକ୍ଷିପ୍ତ ପଥ କି ଗୁଡ଼ିକ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ ਬੰਦ ਕਰੋ</short>
+	    <long>ਇੰਪੁੱਟ ਢੰਗ ਬੰਦ ਕਰਨ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Wyłącza skróty klawiszowe</short>
+	    <long>Skróty klawiszowe do wyłączania metody wprowadzania</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Desabilitar teclas de atalho</short>
+	    <long>As teclas de atalho para desligar o método de entrada</long>
+      </locale>
+
+      <locale name="ta">
+        <short>குறுக்குவிசைகளை செயல்நீக்கு</short>
+	    <long>உள்ளீடு முறையை நிறுத்தும் குறுக்குவிசைகள்</long>
+      </locale>
+
+      <locale name="te">
+        <short>లఘు కీ లను అచేతనంచేయి</short>
+	    <long>ఇన్‌పుట్ పద్ధతి ఆపుటకు కీ లఘువులు</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Вимкнути клавіатурні скорочення</short>
+	    <long>Клавіатурне скорочення для вимикання способів введення</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>禁用快捷键</short>
+	    <long>关闭输入法的快捷键</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>停用快捷鍵</short>
+	    <long>關閉輸入法的快捷鍵</long>
+      </locale>
+    </schema>
+    <!-- For backward compatibility -->
+    <schema>
+      <key>/schemas/desktop/ibus/general/hotkey/next_engine</key>
+      <applyto>/desktop/ibus/general/hotkey/next_engine</applyto>
+      <owner>ibus</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[Alt+Shift_L]</default>
+      <locale name="C">
+        <short>Next engine shortcut keys</short>
+	    <long>The shortcut keys for switching to the next input method in the list</long>
+      </locale>
+
+      <locale name="as">
+        <short>পৰবৰ্তী কলঘৰৰ বাবে ছৰ্টকাট চাবি</short>
+	    <long>তালিকাত থকা পৰৱৰ্তী ইনপুট পদ্ধতিলে যাবলে চৰ্টকাট কিসমূহ</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>পরবর্তী ইঞ্জিনের জন্য শর্টকাট-কি</short>
+	    <long>তালিকায় উপস্থিত পরবর্তী ইনপুট পদ্ধতিতে পরিবর্তনের জন্য প্রযোজ্য শর্ট-কাট কি</long>
+      </locale>
+
+      <locale name="da">
+        <short>Genvejstaster for næste motor</short>
+	    <long>Genvejstasterne for at skrive til næste inputmetode i listen</long>
+      </locale>
+
+      <locale name="de">
+        <short>Nächste Engine Tastenkombination</short>
+	    <long>Tastenkombination zum Wechseln zur nächsten Eingabemethode in der Liste</long>
+      </locale>
+
+      <locale name="es">
+        <short>Atajo de teclado para el siguiente motor</short>
+	    <long>Los atajos de teclado para avanzar al siguiente método de entrada de la lista</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Raccourci clavier pour passer au moteur suivant</short>
+	    <long>Raccourci clavier pour passer à la méthode d&apos;entrée suivante de la liste</long>
+      </locale>
+
+      <locale name="gu">
+        <short>પછીની એંજિન ટૂંકાણ કીઓ</short>
+	    <long>યાદીમાં પછીની ઇનપુટ પદ્દતિને બદલવા માટે ટૂંકાણ કીઓ</long>
+      </locale>
+
+      <locale name="hi">
+        <short>अगला इंजन शॉर्टकट कुंजी</short>
+	    <long>सूची में अगली इनपुट विधि में जाने के लिए शॉर्टकट कुंजियाँ</long>
+      </locale>
+
+      <locale name="it">
+        <short>Motore dei tasti di scelta rapida successivo</short>
+	    <long>I tasti scorciatoia per passare al metodo di input successivo nell&apos;elenco</long>
+      </locale>
+
+      <locale name="ja">
+        <short>次のエンジンへのショートカットキー</short>
+	    <long>リスト中の次のインプットメソッドに切り替えるためのショートカットキー</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಮುಂದಿನ ಎಂಜಿನ್ ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳು</short>
+	    <long>ಪಟ್ಟಿಯಲ್ಲಿನ ಮುಂದಿನ ಇನ್‌ಪುಟ್ ವಿಧಾನಕ್ಕೆ ಬದಲಾಯಿಸಲು ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿಗಳು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>다음 엔진 단축키</short>
+	    <long>목록에 있는 다음 입력 방식으로 전환하기 위한 단축 키</long>
+      </locale>
+
+      <locale name="ml">
+        <short>അടുത്ത സംവിധാനത്തിനുള്ള എളുപ്പവഴികള്‍</short>
+	    <long>പട്ടികയിലുള്ള അടുത്ത ഇന്‍പുട്ട് മെഥേഡ് സംവിധാനത്തിലേക്ക് മാറ്റുന്നതിനുള്ള എളുപ്പവഴി</long>
+      </locale>
+
+      <locale name="mr">
+        <short>पुढील इंजीनचे शार्टकट किज्</short>
+	    <long>सूचीतील पुढील इंपुट पद्धत नीवडण्याकरीता वापरण्याजोगी शार्टकट किज्</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Volgende engine sneltoetsen</short>
+	    <long>De sneltoetsen voor het omschakelen naar de volgende invoermethode in de lijst</long>
+      </locale>
+
+      <locale name="or">
+        <short>ପରବର୍ତ୍ତି ଯନ୍ତ୍ର ସଂକ୍ଷିପ୍ତ ପଥ କି&apos;ଗୁଡ଼ିକ</short>
+	    <long>ତାଲିକାରେ ପରବର୍ତ୍ତୀ ନିବେଶ ପ୍ରଣାଳୀକୁ ବଦଳାଇବା ପାଇଁ ସକ୍ଷିପ୍ତ ପଥଗୁଡ଼ିକ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਅਗਲਾ ਇੰਜਣ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ</short>
+	    <long>ਲਿਸਟ ਵਿੱਚ ਅਗਲਾ ਇੰਪੁੱਟ ਢੰਗ ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Klawisze skrótów następnego mechanizmu</short>
+	    <long>Klawisze skrótu do przełączania na następną metodę wprowadzania na liście</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Próximo mecanismo de teclas de atalho</short>
+	    <long>As teclas de atalho para alteração ao próximo método de entrada na lista </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Клавиши для следующего метода ввода</short>
+	    <long>Сочетание клавиш для переключения на следующий метод ввода в списке:</long>
+      </locale>
+
+      <locale name="ta">
+        <short>அடுத்த இயந்திர குறுக்குவிசை</short>
+	    <long>பட்டியலில் அடுத்த உள்ளீடு முறைக்கு மாற்றுவதற்கான குறுக்குவழி விசைகள்</long>
+      </locale>
+
+      <locale name="te">
+        <short>తరువాతి ఇంజన్‌కు లఘువులు</short>
+	    <long>జాబితానందలి తరువాతి ఇన్పుట్ పద్ధతినకు మారుటకు లఘువులు</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Скорочення для наступного рушія</short>
+	    <long>Клавіатурні скорочення для перемикання на наступний спосіб введення у списку</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Phím tắt cho kiểu gõ kế tiếp</short>
+	    
+      </locale>
+
+      <locale name="zh_CN">
+        <short>下一个引擎快捷键</short>
+	    <long>切换下一个输入法快捷键</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>「下一個引擎」快捷鍵</short>
+	    
+      </locale>
+
+      <locale name="zh_TW">
+        <short>「下一個引擎」快捷鍵</short>
+	    <long>用來切換到清單內下一個輸入法的快捷鍵</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/desktop/ibus/general/hotkey/next_engine_in_menu</key>
+      <applyto>/desktop/ibus/general/hotkey/next_engine_in_menu</applyto>
+      <owner>ibus</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[Alt+Shift_L]</default>
+      <locale name="C">
+        <short>Next engine shortcut keys</short>
+	    <long>The shortcut keys for switching to the next input method in the list</long>
+      </locale>
+
+      <locale name="as">
+        <short>পৰবৰ্তী কলঘৰৰ বাবে ছৰ্টকাট চাবি</short>
+	    <long>তালিকাত থকা পৰৱৰ্তী ইনপুট পদ্ধতিলে যাবলে চৰ্টকাট কিসমূহ</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>পরবর্তী ইঞ্জিনের জন্য শর্টকাট-কি</short>
+	    <long>তালিকায় উপস্থিত পরবর্তী ইনপুট পদ্ধতিতে পরিবর্তনের জন্য প্রযোজ্য শর্ট-কাট কি</long>
+      </locale>
+
+      <locale name="da">
+        <short>Genvejstaster for næste motor</short>
+	    <long>Genvejstasterne for at skrive til næste inputmetode i listen</long>
+      </locale>
+
+      <locale name="de">
+        <short>Nächste Engine Tastenkombination</short>
+	    <long>Tastenkombination zum Wechseln zur nächsten Eingabemethode in der Liste</long>
+      </locale>
+
+      <locale name="es">
+        <short>Atajo de teclado para el siguiente motor</short>
+	    <long>Los atajos de teclado para avanzar al siguiente método de entrada de la lista</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Raccourci clavier pour passer au moteur suivant</short>
+	    <long>Raccourci clavier pour passer à la méthode d&apos;entrée suivante de la liste</long>
+      </locale>
+
+      <locale name="gu">
+        <short>પછીની એંજિન ટૂંકાણ કીઓ</short>
+	    <long>યાદીમાં પછીની ઇનપુટ પદ્દતિને બદલવા માટે ટૂંકાણ કીઓ</long>
+      </locale>
+
+      <locale name="hi">
+        <short>अगला इंजन शॉर्टकट कुंजी</short>
+	    <long>सूची में अगली इनपुट विधि में जाने के लिए शॉर्टकट कुंजियाँ</long>
+      </locale>
+
+      <locale name="it">
+        <short>Motore dei tasti di scelta rapida successivo</short>
+	    <long>I tasti scorciatoia per passare al metodo di input successivo nell&apos;elenco</long>
+      </locale>
+
+      <locale name="ja">
+        <short>次のエンジンへのショートカットキー</short>
+	    <long>リスト中の次のインプットメソッドに切り替えるためのショートカットキー</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಮುಂದಿನ ಎಂಜಿನ್ ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳು</short>
+	    <long>ಪಟ್ಟಿಯಲ್ಲಿನ ಮುಂದಿನ ಇನ್‌ಪುಟ್ ವಿಧಾನಕ್ಕೆ ಬದಲಾಯಿಸಲು ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿಗಳು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>다음 엔진 단축키</short>
+	    <long>목록에 있는 다음 입력 방식으로 전환하기 위한 단축 키</long>
+      </locale>
+
+      <locale name="ml">
+        <short>അടുത്ത സംവിധാനത്തിനുള്ള എളുപ്പവഴികള്‍</short>
+	    <long>പട്ടികയിലുള്ള അടുത്ത ഇന്‍പുട്ട് മെഥേഡ് സംവിധാനത്തിലേക്ക് മാറ്റുന്നതിനുള്ള എളുപ്പവഴി</long>
+      </locale>
+
+      <locale name="mr">
+        <short>पुढील इंजीनचे शार्टकट किज्</short>
+	    <long>सूचीतील पुढील इंपुट पद्धत नीवडण्याकरीता वापरण्याजोगी शार्टकट किज्</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Volgende engine sneltoetsen</short>
+	    <long>De sneltoetsen voor het omschakelen naar de volgende invoermethode in de lijst</long>
+      </locale>
+
+      <locale name="or">
+        <short>ପରବର୍ତ୍ତି ଯନ୍ତ୍ର ସଂକ୍ଷିପ୍ତ ପଥ କି&apos;ଗୁଡ଼ିକ</short>
+	    <long>ତାଲିକାରେ ପରବର୍ତ୍ତୀ ନିବେଶ ପ୍ରଣାଳୀକୁ ବଦଳାଇବା ପାଇଁ ସକ୍ଷିପ୍ତ ପଥଗୁଡ଼ିକ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਅਗਲਾ ਇੰਜਣ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ</short>
+	    <long>ਲਿਸਟ ਵਿੱਚ ਅਗਲਾ ਇੰਪੁੱਟ ਢੰਗ ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Klawisze skrótów następnego mechanizmu</short>
+	    <long>Klawisze skrótu do przełączania na następną metodę wprowadzania na liście</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Próximo mecanismo de teclas de atalho</short>
+	    <long>As teclas de atalho para alteração ao próximo método de entrada na lista </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Клавиши для следующего метода ввода</short>
+	    <long>Сочетание клавиш для переключения на следующий метод ввода в списке:</long>
+      </locale>
+
+      <locale name="ta">
+        <short>அடுத்த இயந்திர குறுக்குவிசை</short>
+	    <long>பட்டியலில் அடுத்த உள்ளீடு முறைக்கு மாற்றுவதற்கான குறுக்குவழி விசைகள்</long>
+      </locale>
+
+      <locale name="te">
+        <short>తరువాతి ఇంజన్‌కు లఘువులు</short>
+	    <long>జాబితానందలి తరువాతి ఇన్పుట్ పద్ధతినకు మారుటకు లఘువులు</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Скорочення для наступного рушія</short>
+	    <long>Клавіатурні скорочення для перемикання на наступний спосіб введення у списку</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Phím tắt cho kiểu gõ kế tiếp</short>
+	    
+      </locale>
+
+      <locale name="zh_CN">
+        <short>下一个引擎快捷键</short>
+	    <long>切换下一个输入法快捷键</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>「下一個引擎」快捷鍵</short>
+	    
+      </locale>
+
+      <locale name="zh_TW">
+        <short>「下一個引擎」快捷鍵</short>
+	    <long>用來切換到清單內下一個輸入法的快捷鍵</long>
+      </locale>
+    </schema>
+
+    <!-- For backward compatibility -->
+    <schema>
+      <key>/schemas/desktop/ibus/general/hotkey/prev_engine</key>
+      <applyto>/desktop/ibus/general/hotkey/prev_engine</applyto>
+      <owner>ibus</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Prev engine shortcut keys</short>
+	    <long>The shortcut keys for switching to the previous input method</long>
+      </locale>
+
+      <locale name="as">
+        <short>পূৰ্ববৰ্তী কলঘৰৰ ছৰ্টকাট চাবি</short>
+	    <long>তালিকাত থকা পূৰ্বৱৰ্তী ইনপুট পদ্ধতিলে যাবলে চৰ্টকাট কিসমূহ</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>পূর্ববর্তী ইঞ্জিনের শর্টকাট-কি</short>
+	    <long>তালিকায় উপস্থিত পূর্ববর্তী ইনপুট পদ্ধতিতে পরিবর্তনের জন্য প্রযোজ্য শর্ট-কাট কি</long>
+      </locale>
+
+      <locale name="da">
+        <short>Genvejstaster for forrige motor</short>
+	    <long>Genvejstasterne for at skifte til forrige inputmetode</long>
+      </locale>
+
+      <locale name="de">
+        <short>Vorherige Engine Tastenkombination</short>
+	    <long>Tastenkombination zum Wechseln zur vorherigen Eingabemethode</long>
+      </locale>
+
+      <locale name="es">
+        <short>Atajo de teclado para la máquina previa</short>
+	    <long>Los atajos de teclado para retroceder al método de entrada anterior en la lista</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Raccourci clavier pour revenir au moteur précédent</short>
+	    <long>Raccourci clavier pour revenir à la méthode d&apos;entrée précédente</long>
+      </locale>
+
+      <locale name="gu">
+        <short>પહેલાંની એંજિન ટૂંકાણ કીઓ</short>
+	    <long>યાદીમાં પહેલાંની ઇનપુટ પદ્દતિને લાવવા માટે ટૂંકાણ કીઓ</long>
+      </locale>
+
+      <locale name="hi">
+        <short>पिछला इंजन शॉर्टकट कुंजी</short>
+	    <long>सूची में पिछली इनपुट विधि में जाने के लिए शॉर्टकट कुंजियाँ</long>
+      </locale>
+
+      <locale name="it">
+        <short>Motore dei tasti di scelta rapida precedente</short>
+	    <long>I tasti scorciatoia per passare al metodo di input precedente</long>
+      </locale>
+
+      <locale name="ja">
+        <short>前のエンジンへのショートカットキー</short>
+	    <long>リスト中のひとつ前のインプットメソッドに切り替えるためのショートカットキー</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಹಿಂದಿನ ಎಂಜಿನ್ ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳು</short>
+	    <long>ಹಿಂದಿನ ಇನ್‌ಪುಟ್ ವಿಧಾನಕ್ಕೆ ಬದಲಾಯಿಸಲು ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿಗಳು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>이전 엔진 단축키</short>
+	    <long>목록에 있는 이전 입력 방식으로 전환하기 위한 단축 키</long>
+      </locale>
+
+      <locale name="ml">
+        <short>തൊട്ടു് മുമ്പുള്ള സംവിധാനത്തിനുള്ള എളുപ്പവഴികള്‍</short>
+	    <long>മുമ്പുള്ള ഇന്‍പുട്ട് മെഥേഡ് സംവിധാനത്തിലേക്ക് മാറുന്നതിനുള്ള എളുപ്പവഴി</long>
+      </locale>
+
+      <locale name="mr">
+        <short>मागील इंजीनचे शॉर्टकट किज्</short>
+	    <long>मागील इंपुट पद्धत नीवडण्याकरीता वापरण्याजोगी शार्टकट किज्</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Vorige engine sneltoetsen</short>
+	    <long>De sneltoetsen voor het omschakelen naar de vorige invoermethode</long>
+      </locale>
+
+      <locale name="or">
+        <short>ପୂର୍ବ ଯନ୍ତ୍ରର ସଂକ୍ଷିପ୍ତ ପଥ କି&apos;ଗୁଡ଼ିକ</short>
+	    <long>ତାଲିକାରେ ପୂର୍ବ ନିବେଶ ପ୍ରଣାଳୀକୁ ବଦଳାଇବା ପାଇଁ ସକ୍ଷିପ୍ତ ପଥଗୁଡ଼ିକ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਪਿਛਲਾ ਇੰਜਣ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ</short>
+	    <long>ਪਿਛਲਾ ਇੰਪੁੱਟ ਢੰਗ ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Klawisze skrótów poprzedniego mechanizmu</short>
+	    <long>Klawisze skrótu do przełączania na poprzednią metodę wprowadzania na liście</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Visualização do mecanismo das teclas de atalho </short>
+	    <long>Teclas de atalho para alteração ao método de entrada anterior</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Клавиши для предыдущего метода ввода</short>
+	    <long>Сочетание клавиш для переключения на предыдущий метод ввода в списке:</long>
+      </locale>
+
+      <locale name="ta">
+        <short>முந்தைய இயந்திர குறுக்குவிசைகள்</short>
+	    <long>முந்தைய உள்ளீடு முறைக்கு மாற்றுவதற்கான குறுக்குவழி விசைகள்</long>
+      </locale>
+
+      <locale name="te">
+        <short>మునుపటి ఇంజన్ లఘువులు</short>
+	    <long>జాబితానందలి ముందరి ఇన్‌పుట్ పద్ధతినకు మారుటకు లఘువులు</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Скорочення для попереднього рушія</short>
+	    <long>Клавіатурне скорочення для перемикання на попередній спосіб введення</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Phím tắt cho kiểu gõ trước</short>
+	    
+      </locale>
+
+      <locale name="zh_CN">
+        <short>上一个引擎快捷键</short>
+	    <long>切换上一个输入法快捷键</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>「上一個引擎」快捷鍵</short>
+	    
+      </locale>
+
+      <locale name="zh_TW">
+        <short>「上一個引擎」快捷鍵</short>
+	    <long>用來切換到清單內上一個輸入法的快捷鍵</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/desktop/ibus/general/hotkey/previous_engine</key>
+      <applyto>/desktop/ibus/general/hotkey/previous_engine</applyto>
+      <owner>ibus</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Prev engine shortcut keys</short>
+	    <long>The shortcut keys for switching to the previous input method</long>
+      </locale>
+
+      <locale name="as">
+        <short>পূৰ্ববৰ্তী কলঘৰৰ ছৰ্টকাট চাবি</short>
+	    <long>তালিকাত থকা পূৰ্বৱৰ্তী ইনপুট পদ্ধতিলে যাবলে চৰ্টকাট কিসমূহ</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>পূর্ববর্তী ইঞ্জিনের শর্টকাট-কি</short>
+	    <long>তালিকায় উপস্থিত পূর্ববর্তী ইনপুট পদ্ধতিতে পরিবর্তনের জন্য প্রযোজ্য শর্ট-কাট কি</long>
+      </locale>
+
+      <locale name="da">
+        <short>Genvejstaster for forrige motor</short>
+	    <long>Genvejstasterne for at skifte til forrige inputmetode</long>
+      </locale>
+
+      <locale name="de">
+        <short>Vorherige Engine Tastenkombination</short>
+	    <long>Tastenkombination zum Wechseln zur vorherigen Eingabemethode</long>
+      </locale>
+
+      <locale name="es">
+        <short>Atajo de teclado para la máquina previa</short>
+	    <long>Los atajos de teclado para retroceder al método de entrada anterior en la lista</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Raccourci clavier pour revenir au moteur précédent</short>
+	    <long>Raccourci clavier pour revenir à la méthode d&apos;entrée précédente</long>
+      </locale>
+
+      <locale name="gu">
+        <short>પહેલાંની એંજિન ટૂંકાણ કીઓ</short>
+	    <long>યાદીમાં પહેલાંની ઇનપુટ પદ્દતિને લાવવા માટે ટૂંકાણ કીઓ</long>
+      </locale>
+
+      <locale name="hi">
+        <short>पिछला इंजन शॉर्टकट कुंजी</short>
+	    <long>सूची में पिछली इनपुट विधि में जाने के लिए शॉर्टकट कुंजियाँ</long>
+      </locale>
+
+      <locale name="it">
+        <short>Motore dei tasti di scelta rapida precedente</short>
+	    <long>I tasti scorciatoia per passare al metodo di input precedente</long>
+      </locale>
+
+      <locale name="ja">
+        <short>前のエンジンへのショートカットキー</short>
+	    <long>リスト中のひとつ前のインプットメソッドに切り替えるためのショートカットキー</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಹಿಂದಿನ ಎಂಜಿನ್ ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳು</short>
+	    <long>ಹಿಂದಿನ ಇನ್‌ಪುಟ್ ವಿಧಾನಕ್ಕೆ ಬದಲಾಯಿಸಲು ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿಗಳು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>이전 엔진 단축키</short>
+	    <long>목록에 있는 이전 입력 방식으로 전환하기 위한 단축 키</long>
+      </locale>
+
+      <locale name="ml">
+        <short>തൊട്ടു് മുമ്പുള്ള സംവിധാനത്തിനുള്ള എളുപ്പവഴികള്‍</short>
+	    <long>മുമ്പുള്ള ഇന്‍പുട്ട് മെഥേഡ് സംവിധാനത്തിലേക്ക് മാറുന്നതിനുള്ള എളുപ്പവഴി</long>
+      </locale>
+
+      <locale name="mr">
+        <short>मागील इंजीनचे शॉर्टकट किज्</short>
+	    <long>मागील इंपुट पद्धत नीवडण्याकरीता वापरण्याजोगी शार्टकट किज्</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Vorige engine sneltoetsen</short>
+	    <long>De sneltoetsen voor het omschakelen naar de vorige invoermethode</long>
+      </locale>
+
+      <locale name="or">
+        <short>ପୂର୍ବ ଯନ୍ତ୍ରର ସଂକ୍ଷିପ୍ତ ପଥ କି&apos;ଗୁଡ଼ିକ</short>
+	    <long>ତାଲିକାରେ ପୂର୍ବ ନିବେଶ ପ୍ରଣାଳୀକୁ ବଦଳାଇବା ପାଇଁ ସକ୍ଷିପ୍ତ ପଥଗୁଡ଼ିକ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਪਿਛਲਾ ਇੰਜਣ ਸ਼ਾਰਟਕੱਟ ਕੁੰਜੀਆਂ</short>
+	    <long>ਪਿਛਲਾ ਇੰਪੁੱਟ ਢੰਗ ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ ਸਵਿੱਚਾਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Klawisze skrótów poprzedniego mechanizmu</short>
+	    <long>Klawisze skrótu do przełączania na poprzednią metodę wprowadzania na liście</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Visualização do mecanismo das teclas de atalho </short>
+	    <long>Teclas de atalho para alteração ao método de entrada anterior</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Клавиши для предыдущего метода ввода</short>
+	    <long>Сочетание клавиш для переключения на предыдущий метод ввода в списке:</long>
+      </locale>
+
+      <locale name="ta">
+        <short>முந்தைய இயந்திர குறுக்குவிசைகள்</short>
+	    <long>முந்தைய உள்ளீடு முறைக்கு மாற்றுவதற்கான குறுக்குவழி விசைகள்</long>
+      </locale>
+
+      <locale name="te">
+        <short>మునుపటి ఇంజన్ లఘువులు</short>
+	    <long>జాబితానందలి ముందరి ఇన్‌పుట్ పద్ధతినకు మారుటకు లఘువులు</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Скорочення для попереднього рушія</short>
+	    <long>Клавіатурне скорочення для перемикання на попередній спосіб введення</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Phím tắt cho kiểu gõ trước</short>
+	    
+      </locale>
+
+      <locale name="zh_CN">
+        <short>上一个引擎快捷键</short>
+	    <long>切换上一个输入法快捷键</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>「上一個引擎」快捷鍵</short>
+	    
+      </locale>
+
+      <locale name="zh_TW">
+        <short>「上一個引擎」快捷鍵</short>
+	    <long>用來切換到清單內上一個輸入法的快捷鍵</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/panel/show</key>
+      <applyto>/desktop/ibus/panel/show</applyto>
+      <owner>ibus</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Auto hide</short>
+	    <long>The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = Always show</long>
+      </locale>
+
+      <locale name="as">
+        <short>স্বয়ংক্ৰিয়ভাবে লুকাওক</short>
+	    <long>ভাষাৰ পেনেলৰ আচৰণ । ০ = তালিকাত প্ৰোথিত, ১ = স্বয়ংক্ৰিয়ভাবে লুকাওক, ২ = সদায় দেখুৱাওক</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>স্বয়ংক্রিয়ভাবে আড়াল করা হবে</short>
+	    <long>ভাষা প্রদর্শনের প্যানেলের আচরণ। 0 (০) = মেনুর মধ্যে সন্নিবেশ করা হবে, 1 (১) = স্বয়ংক্রিয়ভাবে আড়াল করা হবে, 2 (২) = সর্বদা প্রদর্শন করা হবে</long>
+      </locale>
+
+      <locale name="da">
+        <short>Skjul automatisk</short>
+	    <long>Sprogpanelets opførsel. 0 = Indlejret i menu, 1 = Skjul automatisk, 2 = Vis altid</long>
+      </locale>
+
+      <locale name="de">
+        <short>Automatisch verstecken</short>
+	    <long>Verhalten des Sprach-Panels: 0 = Im Menü einbetten, 1 = Automatisch verstecken, 2 = Immer anzeigen</long>
+      </locale>
+
+      <locale name="es">
+        <short>Auto Ocultar</short>
+	    <long>El comportamiento del panel de idioma. 0 = Incrustado en el menú, 1 = Ocultarlo automáticamente, 2 = Mostrarlo siempre</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Masquage automatique</short>
+	    <long>Sélection du comportement d&apos;affichage de la liste des candidats. 0 = Insérée dans le menu, 1 = Masquer automatiquement, 2 = Toujours afficher</long>
+      </locale>
+
+      <locale name="gu">
+        <short>આપમેળે છુપાવો</short>
+	    <long>ભાષા પેનલની વર્ણતૂક. 0 = હંમેશા છુપાવો, 1 = આપમેળે છુપાવો, 2 = હંમેશા બતાવો</long>
+      </locale>
+
+      <locale name="hi">
+        <short>स्वतः छुपाएँ</short>
+	    <long>भाषा फलक का व्यवहार. 0 = मेन्यू में अंतःस्थापित, 1 = स्वतः छिपाएँ, 2 = हमेशा दिखाएँ</long>
+      </locale>
+
+      <locale name="it">
+        <short>Nasconde automaticamente</short>
+	    <long>Il comportamento del pannello della lingua. 0 = Inserito nel menu, 1 = Nasconde automaticamente, 2 = Mostra sempre</long>
+      </locale>
+
+      <locale name="ja">
+        <short>自動的に隠す</short>
+	    <long>言語パネルの動作。0 = メニューに組み込む、1 = 自動的に隠す、2 = 常に表示</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಸ್ವಯಂ ಅಡಗಿಸುವಿಕೆ</short>
+	    <long>ಭಾಷೆಯ ಫಲಕದ ವರ್ತನೆ. 0 = ಮೆನುವಿನಲ್ಲಿ ಅಡಕಗೊಳಿಸಲಾಗಿದೆ, 1 = ಸ್ವಯಂ ಅಡಗಿಸು, 2 = ಯಾವಾಗಲೂ ತೋರಿಸು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>자동 숨기기</short>
+	    <long>언어 패널의 동작 0 = 메뉴에 포함, 1 = 자동 숨기기, 2 = 항상 표시  </long>
+      </locale>
+
+      <locale name="ml">
+        <short>സ്വയം അദൃശ്യമാക്കുക</short>
+	    <long>ഭാഷയുടെ പാനലിന്റെ രീതി. 0 = മെനുവില്‍ ഉള്‍പ്പെടുത്തുക, 1 = സ്വയം അദൃശ്യമാകുക, 2 = എപ്പോഴും കാണിക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>स्वयं लपवा</short>
+	    <long>भाषा पटलचे वर्तन. 0 = Embedded in menu, 1 = Auto hide, 2 = Always show</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Automatisch verbergen</short>
+	    <long>Het gedrag van het taal paneel. 0 = Ingebed in het menu, 1 = Automatisch verbergen, 2 = Altijd tonen</long>
+      </locale>
+
+      <locale name="or">
+        <short>ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଲୁଚାନ୍ତୁ</short>
+	    <long>ଭାଷା ତାଲିକାର ଆଚରଣ। 0 = ତାଲିକାରେ ସନ୍ନିହିତ, 1 = ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଲୁଚାନ୍ତୁ, 2 = ସର୍ବଦା ଦର୍ଶାନ୍ତୁ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਆਟੋਮੈਟਿਕ ਓਹਲੇ</short>
+	    <long>ਭਾਸ਼ਾ ਪੈਨਲ ਦਾ ਰਵੱਈਆ. 0 = ਹਮੇਸ਼ਾ ਓਹਲੇ,  1 = ਆਟੋਮੈਟਿਕ ਓਹਲੇ, 2 = ਹਮੇਸ਼ਾ ਵੇਖੋ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Automatyczne ukrywanie</short>
+	    <long>Zachowanie panela języków. 0 = osadzony w menu, 1 = automatycznie ukrywany, 2 = zawsze wyświetlany</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Ocultar Automaticamente</short>
+	    <long>O comportamento do painel de linguagem. 0 = Embutido no menu, 1 = Ocultar automaticamente, 2 = Apresentar sempre</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Автоматически скрывать</short>
+	    <long>Поведение языковой панели: 0 = встроена в меню, 1 = автоматически скрывать, 2 = всегда показывать</long>
+      </locale>
+
+      <locale name="ta">
+        <short>தானாக மறை</short>
+	    <long>மொழி பலகத்தின் பண்புகள். 0 = மெனுவில் உட்பொதியப்பட்டது, 1 = தானாக மறை, 2 = எப்போதும் காட்டு</long>
+      </locale>
+
+      <locale name="te">
+        <short>స్వయంచాలకంగా దాగిఉండు</short>
+	    <long>భాషా ప్యానల్ యొక్క ప్రవర్తన. 0 = మెనూనందు యెంబెడ్‌చేయి, 1 = స్వయంచాలకంగా మరుగునవుంచు, 2 = ఎల్లప్పుడూ చూపించు</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Автоматично ховати</short>
+	    <long>Поведінка мовної панелі. 0 = вбудувати до меню, 1 = автоматично ховати, 2 = завжди показувати</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Tự động ẩn</short>
+	    <long>Cách hiển thị thanh ngôn ngữ. 0 = Nhúng vào menu, 1 = Tự  động ẩn, 2 = Luôn hiện</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>自动隐藏</short>
+	    <long>语言栏行为。0 = 嵌入菜单，1 = 自动隐藏，2 = 总是显示。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>自動隱藏</short>
+	    <long>語言面板行為。0 = 嵌入選單內，1 = 自動隱藏，2 = 永遠顯示</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>自動隱藏</short>
+	    <long>語言面板行為。0 = 嵌入選單內，1 = 自動隱藏，2 = 永遠顯示</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/panel/x</key>
+      <applyto>/desktop/ibus/panel/x</applyto>
+      <owner>ibus</owner>
+      <type>int</type>
+      <default>-1</default>
+      <locale name="C">
+        <short>Language panel position</short>
+      </locale>
+
+      <locale name="as">
+        <short>ভাষাৰ পেনেলৰ স্থান</short>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>ভাষার প্যানেলের অবস্থান</short>
+      </locale>
+
+      <locale name="da">
+        <short>Placering for sprogpanel</short>
+      </locale>
+
+      <locale name="de">
+        <short>Position des Sprach-Panels</short>
+      </locale>
+
+      <locale name="es">
+        <short>Posición del panel de idioma</short>
+      </locale>
+
+      <locale name="fr">
+        <short>Position de la barre</short>
+      </locale>
+
+      <locale name="gu">
+        <short>ભાષા પેનલ સ્થાન</short>
+      </locale>
+
+      <locale name="hi">
+        <short>भाषा पैनल स्थिति</short>
+      </locale>
+
+      <locale name="it">
+        <short>Posizione pannello della lingua</short>
+      </locale>
+
+      <locale name="ja">
+        <short>言語パネルの位置</short>
+      </locale>
+
+      <locale name="kn">
+        <short>ಭಾಷೆಯ ಫಲಕವನ್ನು ತೋರಿಸು</short>
+      </locale>
+
+      <locale name="ko">
+        <short>언어 패널 위치</short>
+      </locale>
+
+      <locale name="ml">
+        <short>ഭാഷയുടെ പാനല്‍ സ്ഥാനം</short>
+      </locale>
+
+      <locale name="mr">
+        <short>भाषा पटलचे स्थान</short>
+      </locale>
+
+      <locale name="nl">
+        <short>Taal-paneel positie</short>
+      </locale>
+
+      <locale name="or">
+        <short>ଭାଷା ଫଳକ ଅବସ୍ଥାନ</short>
+      </locale>
+
+      <locale name="pa">
+        <short>ਭਾਸ਼ਾ ਪੈਨਲ ਸਥਿਤੀ</short>
+      </locale>
+
+      <locale name="pl">
+        <short>Pozycja panela języków</short>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Posição do Painel de Linguagem</short>
+      </locale>
+
+      <locale name="ru">
+        <short>Расположение языковой панели</short>
+      </locale>
+
+      <locale name="ta">
+        <short>மொழி பேனல் இடம்</short>
+      </locale>
+
+      <locale name="te">
+        <short>భాషా ప్యానల్ స్థానము</short>
+      </locale>
+
+      <locale name="uk">
+        <short>Розташування мовної панелі</short>
+      </locale>
+
+      <locale name="vi">
+        <short>Vị trí thanh ngôn ngữ:</short>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>语言栏位置</short>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>語言面板位置</short>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>語言面板位置</short>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/panel/y</key>
+      <applyto>/desktop/ibus/panel/y</applyto>
+      <owner>ibus</owner>
+      <type>int</type>
+      <default>-1</default>
+      <locale name="C">
+        <short>Language panel position</short>
+      </locale>
+
+      <locale name="as">
+        <short>ভাষাৰ পেনেলৰ স্থান</short>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>ভাষার প্যানেলের অবস্থান</short>
+      </locale>
+
+      <locale name="da">
+        <short>Placering for sprogpanel</short>
+      </locale>
+
+      <locale name="de">
+        <short>Position des Sprach-Panels</short>
+      </locale>
+
+      <locale name="es">
+        <short>Posición del panel de idioma</short>
+      </locale>
+
+      <locale name="fr">
+        <short>Position de la barre</short>
+      </locale>
+
+      <locale name="gu">
+        <short>ભાષા પેનલ સ્થાન</short>
+      </locale>
+
+      <locale name="hi">
+        <short>भाषा पैनल स्थिति</short>
+      </locale>
+
+      <locale name="it">
+        <short>Posizione pannello della lingua</short>
+      </locale>
+
+      <locale name="ja">
+        <short>言語パネルの位置</short>
+      </locale>
+
+      <locale name="kn">
+        <short>ಭಾಷೆಯ ಫಲಕವನ್ನು ತೋರಿಸು</short>
+      </locale>
+
+      <locale name="ko">
+        <short>언어 패널 위치</short>
+      </locale>
+
+      <locale name="ml">
+        <short>ഭാഷയുടെ പാനല്‍ സ്ഥാനം</short>
+      </locale>
+
+      <locale name="mr">
+        <short>भाषा पटलचे स्थान</short>
+      </locale>
+
+      <locale name="nl">
+        <short>Taal-paneel positie</short>
+      </locale>
+
+      <locale name="or">
+        <short>ଭାଷା ଫଳକ ଅବସ୍ଥାନ</short>
+      </locale>
+
+      <locale name="pa">
+        <short>ਭਾਸ਼ਾ ਪੈਨਲ ਸਥਿਤੀ</short>
+      </locale>
+
+      <locale name="pl">
+        <short>Pozycja panela języków</short>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Posição do Painel de Linguagem</short>
+      </locale>
+
+      <locale name="ru">
+        <short>Расположение языковой панели</short>
+      </locale>
+
+      <locale name="ta">
+        <short>மொழி பேனல் இடம்</short>
+      </locale>
+
+      <locale name="te">
+        <short>భాషా ప్యానల్ స్థానము</short>
+      </locale>
+
+      <locale name="uk">
+        <short>Розташування мовної панелі</short>
+      </locale>
+
+      <locale name="vi">
+        <short>Vị trí thanh ngôn ngữ:</short>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>语言栏位置</short>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>語言面板位置</short>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>語言面板位置</short>
+      </locale>
+    </schema>
+    <!--
+    <schema>
+      <key>/schemas/desktop/ibus/panel/position</key>
+      <applyto>/desktop/ibus/panel/position</applyto>
+      <owner>ibus</owner>
+      <type>int</type>
+      <default>3</default>
+      <locale name="C">
+        <short>Language panel position</short>
+	    <long>The position of the language panel. 0 = Top left corner, 1 = Top right corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom</long>
+      </locale>
+
+      <locale name="as">
+        <short>ভাষাৰ পেনেলৰ স্থান</short>
+	    <long>ভাষাৰ পেনেলৰ স্থান । 0 = ওপৰৰ বাওঁফালৰ কোণত, 1 = ওপৰৰ সোঁফালৰ কোণত, 2 = তলৰ বাওঁফালৰ কোণত, 3 = তলৰ সোঁফালৰ কোণত, 4 = স্বনিৰ্ধাৰিত</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>ভাষার প্যানেলের অবস্থান</short>
+	    <long>ভাষার প্যানেলের অবস্থান। 0 = উপরে বাঁদিকের কোণায়, 1 = উপরে ডানদিকের কোণায়, 2 = নীচে বাঁদিকের কোণায়, 3 = নীচে ডানদিকের কোণায়, 4 = স্বনির্ধারিত</long>
+      </locale>
+
+      <locale name="da">
+        <short>Placering for sprogpanel</short>
+	    <long>Placering af sprogpanelet. 0 = Øverste venstre hjørne, 1 = Øverste højre hjørne, 2 = Nederste venstre hjørne, 3 = Nederste højre hjørne, 4 = Brugertilpasset</long>
+      </locale>
+
+      <locale name="de">
+        <short>Position des Sprach-Panels</short>
+	    <long>Die Position des Sprach-Panels: 0 = Ecke oben links, 1 = Ecke oben rechts, 2 = Ecke unten links, 3 = Ecke unten rechts, 4 = Benutzerdefiniert</long>
+      </locale>
+
+      <locale name="es">
+        <short>Posición del panel de idioma</short>
+	    <long>La posicion el panel de idioma. 0 = esquina superior izquierda, 1 = esquina superior derecha, 2 = esquina inferior izquierda, 3 = esquina inferior derecha, 4 = personalizado</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Position de la barre</short>
+	    <long>Position de la barre de langue. 0 = Coin supérieur gauche, 1 = Coin supérieur droit, 2 = Coin inférieur gauche, 3 = Coin inférieur droit, 4 = Personnalisé</long>
+      </locale>
+
+      <locale name="gu">
+        <short>ભાષા પેનલ સ્થાન</short>
+	    <long>ભાષા પેનલનું સ્થાન. ૦ = ઉંચે ડાબી બાજુનો ખૂણો, ૧ = ઉંચે જમણી બાજુનો ખૂણો, ૨ = નીચે ડાબી બાજુનો ખૂણો,  ૩ = નીચે જમણી બાજુનો ખૂણો, ૪ = વૈવિધ્ય</long>
+      </locale>
+
+      <locale name="hi">
+        <short>भाषा पैनल स्थिति</short>
+	    <long>भाषा पटल की स्थिति. 0 = ऊपरी बायाँ कोना, 1 = ऊपरी दाहिना कोना, 2 = निचला बायां कोना, 3 = निचला दाहिना कोना, 4 = पसंदीदा</long>
+      </locale>
+
+      <locale name="it">
+        <short>Posizione pannello della lingua</short>
+	    <long>La posizione del pannello della lingua. 0 = Angolo in alto a sinistra, 1 = Angolo in alto a destra, 2 = Angolo in basso a sinistra, 3 = Angolo in basso a destra, 4 = Personalizzata</long>
+      </locale>
+
+      <locale name="ja">
+        <short>言語パネルの位置</short>
+	    <long>言語パネルの位置。0 = 左上隅、1 = 右上隅、2 = 左下隅、3 = 右下隅、4 = カスタム</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಭಾಷೆಯ ಫಲಕವನ್ನು ತೋರಿಸು</short>
+	    <long>ಭಾಷೆಯ ಫಲಕವು ಇರುವ ಸ್ಥಳ. 0 = ಮೇಲಿನ ಎಡ ಮೂಲೆ, 1 = ಮೇಲಿನ ಬಲ ಮೂಲೆ, 2 = ಕೆಳಗಿನ ಎಡ ಮೂಲೆ, 3 = ಕೆಳಗಿನ ಬಲ ಮೂಲೆ, 4 = ಇಚ್ಛೆಯ</long>
+      </locale>
+
+      <locale name="ko">
+        <short>언어 패널 위치</short>
+	    <long>언어 패널의 위치. 0 = 왼쪽 위, 1 = 오른쪽 위, 2 = 왼쪽 아래, 3 = 오른쪽 아래, 4 = 사용자 지정</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ഭാഷയുടെ പാനല്‍ സ്ഥാനം</short>
+	    <long>ഭാഷയുടെ പാനലിന്റെ സ്ഥാനം. 0 = മുകളില്‍ ഇടതു് കോണ്‍, 1 = മുകളില്‍ വലതു് കോണ്‍, 2 = താഴെ ഇടതു് കോണ്‍, 3 = താഴെ വലതു് കോണ്‍, 4 = യഥേഷ്ടം</long>
+      </locale>
+
+      <locale name="mr">
+        <short>भाषा पटलचे स्थान</short>
+	    <long>भाषा पटलाचे स्थान. 0 = Top left corner, 1 = Top right corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Taal-paneel positie</short>
+	    <long>De positie van de taal paneel. 0 = linksboven, 1 = rechtsboven, 2 = linksonder,  3 = rechtsonder, 4 = aangepast</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଭାଷା ଫଳକ ଅବସ୍ଥାନ</short>
+	    <long>ଭାଷା ଫଳକର ଅବସ୍ଥାନ। 0 = ଉପର ପାଖ ବାମ କୋଣ, 1 = ଉପର ପାଖ ଡାହାଣ କୋଣ, 2 = ତଳ ପାଖ ବାମ କୋଣ, 3 = ତଳ ପାଖ ଡ଼ାହାଣ କୋଣ, 4 = ଇଚ୍ଛାମୁତାବକ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਭਾਸ਼ਾ ਪੈਨਲ ਸਥਿਤੀ</short>
+	    <long>ਭਾਸ਼ਾ ਪੈਨਲ ਦੀ ਸਥਿਤੀ. 0 = ਉੱਪਰ ਖੱਬਾ ਕੋਨਾ, 1 = ਉੱਪਰ ਸੱਜਾ ਕੋਨਾ, 2 = ਹੇਠਾਂ ਖੱਬਾ ਕੋਨਾ, 3 = ਹੇਠਾਂ ਸੱਜਾ ਕੋਨਾ, 4 = ਪਸੰਦੀਦਾ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Pozycja panela języków</short>
+	    <long>Pozycja panela języków. 0 = górny lewy róg, 1 = górny prawy róg, 2 = dolny lewy róg, 3 = dolny prawy róg, 4 = własna</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Posição do Painel de Linguagem</short>
+	    <long>A posição do painel de linguagem. 0 = Canto esquerdo superior, 1 = Canto direito superior, 2 = canto esquerdo inferior, 3 = canto direito inferior, 4 = Padrão </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Расположение языковой панели</short>
+	    <long>Расположение языковой панели: 0 = левый верхний угол, 1 = правый верхний угол, 2 = левый нижний угол, 3 = правый нижний угол, 4 = произвольное</long>
+      </locale>
+
+      <locale name="ta">
+        <short>மொழி பேனல் இடம்</short>
+	    <long>மொழி பேனலின் இடம். 0 = மேல் இடது ஓரம், 1 = மேல் வலது ஓரம், 2 = கீழ் இடது ஓரம், 3 = கீழ் வலது ஓரம், 4 = தனிபயன்</long>
+      </locale>
+
+      <locale name="te">
+        <short>భాషా ప్యానల్ స్థానము</short>
+	    <long>భాషా ప్యానల్ యొక్క స్థానము. 0 = పై ఎడమ మూల, 1 = పై కుడి మూల, 2 = క్రింది ఎడమ మూల, 3 = క్రింది కుడి మూల, 4 = మలచుకొనిన</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Розташування мовної панелі</short>
+	    <long>Розташування мовної панелі. 0 = у верхньому лівому куті, 1 = у верхньому правому куті, 2 = у нижньому лівому куті, 3 = у нижньому правому куті, 4 = нетипове</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Vị trí thanh ngôn ngữ:</short>
+	    <long>Vị trí của thanh ngôn ngữ. 0 = góc trên bên trái, 1 = góc trên bên phải, 2 = góc dưới bên trái, 3 = góc dưới bên phái, 4 = Tùy chọn</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>语言栏位置</short>
+	    <long>语言栏位置</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>語言面板位置</short>
+	    <long>語言列的位置。0 = 左上角, 1 = 右上角, 2 = 左下角, 3 = 右下角, 4 = 自訂</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>語言面板位置</short>
+	    <long>語言列的位置。0 = 左上角, 1 = 右上角, 2 = 左下角, 3 = 右下角, 4 = 自訂</long>
+      </locale>
+    </schema>
+    -->
+    <schema>
+      <key>/schemas/desktop/ibus/panel/lookup_table_orientation</key>
+      <applyto>/desktop/ibus/panel/lookup_table_orientation</applyto>
+      <owner>ibus</owner>
+      <type>int</type>
+      <default>1</default>
+      <locale name="C">
+        <short>Orientation of lookup table</short>
+	    <long>Orientation of lookup table. 0 = Horizontal, 1 = Vertical</long>
+      </locale>
+
+      <locale name="as">
+        <short>লুক-আপ টেবুলৰ দিশ</short>
+	    <long>লুকআপ টেবুলৰ দিশ । ০ = অনুভূমিক, ১ = উলম্ব</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>লুক-আপ টেবিলের দিশা</short>
+	    <long>লুক-আপ টেবিলের দিশা। 0 (০) = অনুভুমিক, 1 (১) = উল্লম্ব</long>
+      </locale>
+
+      <locale name="da">
+        <short>Orientering af opslagstabel</short>
+	    <long>Orientering af opslagstabel. 0 = Horisontal, 1 = Vertikal</long>
+      </locale>
+
+      <locale name="de">
+        <short>Ausrichtung der Lookup-Tabelle</short>
+	    <long>Ausrichtung der Lookup-Tabelle. 0 = Horizontal, 1 = Vertikal</long>
+      </locale>
+
+      <locale name="es">
+        <short>Orientación de búsqueda en la tabla </short>
+	    <long>Orientación de la tabla de búsqueda. 0 = Horizontal, 1 = Vertical</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Orientation de la liste des candidats</short>
+	    <long>Orientation de la liste des candidats. 0 = Horizontale, 1 = Verticale</long>
+      </locale>
+
+      <locale name="gu">
+        <short>કોષ્ટકને જોવાની દિશા</short>
+	    <long>કોષ્ટકને જોવાની દિશા. 0 = આડુ, 1 = ઊભુ </long>
+      </locale>
+
+      <locale name="hi">
+        <short>लुकअप सारणी की दिशा</short>
+	    <long>सारणी देखने के लिए दिशा. 0 = क्षैतिज, 1 = लंबवत</long>
+      </locale>
+
+      <locale name="it">
+        <short>Orientamento della tabella di ricerca</short>
+	    <long>Orientamento della tabella di ricerca. 0 = Orizzontale, 1 = Verticale</long>
+      </locale>
+
+      <locale name="ja">
+        <short>検索テーブルの方位</short>
+	    <long>検索テーブルの方位。0 = 横、1 = 縦</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ನೋಡಬೇಕಿರುವ (ಲುಕ್‌ಅಪ್‌) ಕೋಷ್ಟಕದ ಹೊಂದಿಕೆ</short>
+	    <long>ನೋಡಬೇಕಿರುವ (ಲುಕ್‌ಅಪ್‌) ಕೋಷ್ಟಕದ ಹೊಂದಿಕೆ. 0 = ಅಡ್ಡಲಾಗಿ, 1 = ಲಂಬವಾಗಿ</long>
+      </locale>
+
+      <locale name="ko">
+        <short>검색 테이블의 방향  </short>
+	    <long>검색 테이블의 방향. 0 = 가로, 1 = 세로  </long>
+      </locale>
+
+      <locale name="ml">
+        <short>ലുക്കപ്പ് പട്ടികയുടെ ക്രമീകരണം</short>
+	    <long>ലുക്കപ്പ് പട്ടികയുടെ ക്രമീകരണം. 0 = നേരെയുള്ള, 1 = കുറുകയുള്ള</long>
+      </locale>
+
+      <locale name="mr">
+        <short>लुकअप टेबलचे निर्देशन</short>
+	    <long>लुकअप टेबलचे निर्देशन. 0 = Horizontal, 1 = Vertical</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Oriëntatie van opzoektabel</short>
+	    <long>Oriëntatie van opzoektabel. 0 = horizontaal, 1 = verticaal</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଅବଲୋକନ ସାରଣୀର ଅନୁସ୍ଥାପନ</short>
+	    <long>ଅବଲୋକନ ସାରଣୀର ଅନୁସ୍ଥାପନ। 0 = ଭୂ-ସମାନ୍ତର, 1 = ଭୂ-ଲମ୍ବ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਖੋਜ ਟੇਬਲ ਦੀ ਸਥਿਤੀ</short>
+	    <long>ਖੋਜ ਟੇਬਲ ਦੀ ਸਥਿਤੀ। 0 = ਹਰੀਜੱਟਲ, 1 =ਵਰਟੀਕਲ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Orientacja tablicy wyszukiwania</short>
+	    <long>Orientacja tablicy wyszukiwania. 0 = pozioma, 1 = pionowa</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Orientação da tabela de pesquisa</short>
+	    <long>Orientação da Tabela de Pesquisa. 0 = Horizontal, 1 = Vertical </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Ориентация таблицы поиска</short>
+	    <long>Ориентация таблицы: 0 = горизонтально, 1 = вертикально.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>காணும் அட்டவணையின் திசை</short>
+	    <long>காணும் அட்டவணையின் திசை. 0 = கிடைமட்டம், 1 = செங்குத்து</long>
+      </locale>
+
+      <locale name="te">
+        <short>లుకప్ పట్టిక సర్దుబాటు</short>
+	    <long>లుకప్ పట్టిక సర్దుబాటు. 0 = చదరముగా, 1 = నిలువుగా</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Орієнтація таблиці пошуку</short>
+	    <long>Орієнтація таблиці пошуку. 0 = горизонтально, 1 = вертикально</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Hướng của bảng tra cứu</short>
+	    <long>Hướng của bảng tra cứu. 0 = Ngang, 1 = Dọc</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>候选词表方向</short>
+	    <long>候选词表方向。0 = 水平，1 = 竖直。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>查選表單表排列方向</short>
+	    <long>查詢表單的排列方向。0 = 水平，1 = 垂直</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>查選表單表排列方向</short>
+	    <long>查詢表單的排列方向。0 = 水平，1 = 垂直</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/panel/show_icon_on_systray</key>
+      <applyto>/desktop/ibus/panel/show_icon_on_systray</applyto>
+      <owner>ibus</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Show icon on system tray</short>
+	    <long>Show icon on system tray</long>
+      </locale>
+
+      <locale name="as">
+        <short>প্ৰণালী ট্ৰত আইকন প্ৰদৰ্শন কৰা হ&apos;ব</short>
+	    <long>প্ৰণালী ট্ৰত আইকন প্ৰদৰ্শন কৰা হ&apos;ব</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>সিস্টেম ট্রের মধ্যে আইকন প্রদর্শন করা হবে</short>
+	    <long>সিস্টেম ট্রের মধ্যে আইকন প্রদর্শন করা হবে</long>
+      </locale>
+
+      <locale name="da">
+        <short>Vis ikon i statusfelt</short>
+	    <long>Vis ikon i statusfelt</long>
+      </locale>
+
+      <locale name="de">
+        <short>Symbol im Benachrichtigungsfeld anzeigen</short>
+	    <long>Symbol im Benachrichtigungsfeld anzeigen</long>
+      </locale>
+
+      <locale name="es">
+        <short>Mostrar un ícono en el área de notificación</short>
+	    <long>Mostrar un ícono en el área de notificación</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Afficher l&apos;icône dans la boîte à miniatures</short>
+	    <long>Afficher l&apos;icône dans la boîte à miniatures</long>
+      </locale>
+
+      <locale name="gu">
+        <short>સિસ્ટમ ટ્રે પર ચિહ્નને બતાવો</short>
+	    <long>સિસ્ટમ ટ્રે પર ચિહ્નને બતાવો</long>
+      </locale>
+
+      <locale name="hi">
+        <short>तंत्र तश्तरी पर प्रतीक दिखाएँ</short>
+	    <long>तंत्र तश्तरी पर प्रतीक दिखाएँ</long>
+      </locale>
+
+      <locale name="it">
+        <short>Mostrare l&apos;icona nell&apos;area di notifica</short>
+	    <long>Mostrare l&apos;icona nell&apos;area di notifica</long>
+      </locale>
+
+      <locale name="ja">
+        <short>システムトレイにアイコンを表示する</short>
+	    <long>システムトレイにアイコンを表示する</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ವ್ಯವಸ್ಥೆಯ ಟ್ರೇಯಲ್ಲಿ ಚಿಹ್ನೆಯನ್ನು ತೋರಿಸು</short>
+	    <long>ವ್ಯವಸ್ಥೆಯ ಟ್ರೇಯಲ್ಲಿ ಚಿಹ್ನೆಯನ್ನು ತೋರಿಸು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>시스템 트레이에 아이콘 보여주기</short>
+	    <long>시스템 트레이에 아이콘 보여주기</long>
+      </locale>
+
+      <locale name="ml">
+        <short>സിസ്റ്റം ട്രേയില്‍ ചിഹ്നം കാണിക്കുക</short>
+	    <long>സിസ്റ്റം ട്രേയില്‍ ചിഹ്നം കാണിക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>चिन्ह प्रणाली ट्रेवर दाखवा</short>
+	    <long>चिन्ह प्रणाली ट्रेवर दाखवा</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Toon icoon op systeemvak</short>
+	    <long>Toon icoon op systeemvak</long>
+      </locale>
+
+      <locale name="or">
+        <short>ତନ୍ତ୍ର ଟ୍ରେରେ ଚିତ୍ରସଂକେତଗୁଡ଼ିକୁ ଦର୍ଶାନ୍ତୁ</short>
+	    <long>ତନ୍ତ୍ର ଟ୍ରେରେ ଚିତ୍ରସଂକେତଗୁଡ଼ିକୁ ଦର୍ଶାନ୍ତୁ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਸਿਸਟਮ ਟਰੇਅ ਵਿੱਚ ਆਈਕਾਨ ਵੇਖਾਓ</short>
+	    <long>ਸਿਸਟਮ ਟਰੇਅ ਵਿੱਚ ਆਈਕਾਨ ਵੇਖਾਓ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Wyświetlanie ikony w obszarze powiadamiania</short>
+	    <long>Wyświetlanie ikony w obszarze powiadamiania</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Apresenta um ícone na bandeja do sistema</short>
+	    <long>Apresenta um ícone na bandeja do sistema</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Показать значок в области уведомлений</short>
+	    <long>Показать значок в области уведомлений</long>
+      </locale>
+
+      <locale name="ta">
+        <short>கணினி தட்டில் சின்னத்தை காட்டு</short>
+	    <long>கணினி தட்டில் சின்னத்தை காட்டு</long>
+      </locale>
+
+      <locale name="te">
+        <short>సిస్టమ్ ట్రే నందు ప్రతీకను చూపుము</short>
+	    <long>సిస్టమ్ ట్రే నందు ప్రతీకను చూపుము</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Показувати піктограму у системному лотку</short>
+	    <long>Показувати піктограму у системному лотку</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Hiển thị biểu tượng trên khay hệ thống</short>
+	    <long>Hiển thị biểu tượng trên khay hệ thống</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>在系统托盘上显示图标</short>
+	    <long>在系统托盘上显示图标</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>在系統匣內顯示圖示</short>
+	    <long>在系統匣內顯示圖示</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>在系統匣內顯示圖示</short>
+	    <long>在系統匣內顯示圖示</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/panel/show_im_name</key>
+      <applyto>/desktop/ibus/panel/show_im_name</applyto>
+      <owner>ibus</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Show input method name</short>
+	    <long>Show input method name on language bar</long>
+      </locale>
+
+      <locale name="as">
+        <short>নিবেশ পদ্ধতিৰ নাম দেখুৱাব</short>
+	    <long>ভাষাৰ বাৰত নিবেশ পদ্ধতিৰ নাম দেখুৱাব</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>ইনপুট পদ্ধতির নাম প্রদর্শন করা হবে</short>
+	    <long>ভাষার বারের মধ্যে ইনপুট পদ্ধতির নাম প্রদর্শন করা হবে</long>
+      </locale>
+
+      <locale name="ca">
+        
+	    <long>Mostra el nom del mètode d&apos;entrada a la barra d&apos;idioma</long>
+      </locale>
+
+      <locale name="da">
+        <short>Vis navn på inputmetode</short>
+	    <long>Vis navn på inputmetode i sprogpanel</long>
+      </locale>
+
+      <locale name="de">
+        <short>Name der Eingabemethode anzeigen</short>
+	    <long>Name der Eingabemethode auf Sprachleiste anzeigen</long>
+      </locale>
+
+      <locale name="es">
+        <short>Mostrar el nombre del método de entrada</short>
+	    <long>Mostrar el nombre del método de entrada en la barra de idioma</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Afficher le nom de la méthode d&apos;entrée</short>
+	    <long>Afficher le nom de la méthode d&apos;entrée sur la barre de langue</long>
+      </locale>
+
+      <locale name="gu">
+        <short>ઇનપુટ પદ્દતિ નામને બતાવો</short>
+	    <long>ભાષા પેનલ પર ઇનપુટ પદ્દતિ નામને બતાવો</long>
+      </locale>
+
+      <locale name="hi">
+        <short>इनपुट विधि नाम दिखाएँ</short>
+	    <long>भाषा पट्टी पर इनपुट विधि नाम दिखाएँ</long>
+      </locale>
+
+      <locale name="it">
+        <short>Mostra il nome del metodo di input</short>
+	    <long>Mostrare il nome del metodo di input nella barra della lingua</long>
+      </locale>
+
+      <locale name="ja">
+        <short>インプットメソッド名を表示する</short>
+	    <long>言語バーにインプットメソッド名を表示する</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಇನ್‌ಪುಟ್ ವಿಧಾನದ ಹೆಸರನ್ನು ತೋರಿಸು</short>
+	    <long>ಭಾಷೆಯ ಫಲಕದಲ್ಲಿನ ಇನ್‌ಪುಟ್ ವಿಧಾನದ ಹೆಸರನ್ನು ತೋರಿಸು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>입력 방식 이름 보여주기</short>
+	    <long>언어 도구 모음에 입력 방식 이름 보여주기</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ഇന്‍പുട്ട് മെഥേഡിന്റെ പേരു് കാണിക്കുക</short>
+	    <long>ഭാഷയുടെ പാനലില്‍ ഇന്‍പുട്ട് മെഥേഡിന്റെ പേരു് കാണിക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>इंपुट पद्धतीचे नाव दाखवा</short>
+	    <long>भाषा पट्टीवरील इंपुट पद्धतीचे नाव दाखवा</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Toon naam van invoermethode</short>
+	    <long>Toon naam van invoermethode op taalbalk</long>
+      </locale>
+
+      <locale name="or">
+        <short>ନିବେଶ ପଦ୍ଧତି ନାମ ଦର୍ଶାନ୍ତୁ</short>
+	    <long>ଭାଷା ତାଲିକା ପାଇଁ ନିବେଶ ପଦ୍ଧତି ନାମ ଦର୍ଶାନ୍ତୁ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਇੰਪੁੱਟ ਢੰਗ ਨਾਂ ਵੇਖਾਓ</short>
+	    <long>ਭਾਸ਼ਾ ਪੱਟੀ ਉੱਤੇ ਇੰਪੁੱਟ ਨਾਂ ਵੇਖੋ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Wyświetlanie nazwy metody wprowadzania</short>
+	    <long>Wyświetlanie nazwy metody wprowadzania na panelu języków</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Apresenta o nome do método de entrada</short>
+	    <long>Apresenta o nome do método de entrada na barra de linguagem</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Показывать название метода ввода</short>
+	    <long>Показывать название метода ввода на языковой панели</long>
+      </locale>
+
+      <locale name="ta">
+        <short>உள்ளீடு முறையின் பெயரை காட்டு</short>
+	    <long>மொழி பட்டையில் உள்ளீடு முறையின் பெயரை காட்டு</long>
+      </locale>
+
+      <locale name="te">
+        <short>ఇన్‌పుట్ పద్ధతి పేరును చూపించు</short>
+	    <long>భాషా పట్టీపై ఇన్‌పుట్ పద్ధతి పేరును చూపించు</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Показувати назву способу введення</short>
+	    <long>Показувати назву способу введення на мовній панелі</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Hiển thị tên kiểu gõ</short>
+	    <long>Hiển thị tên kiểu gõ trên thanh ngôn ngữ</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>在语言栏上显示输入法名字</short>
+	    <long>在语言栏上显示输入法名字</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>顯示輸入法名稱</short>
+	    <long>在語言列上顯示輸入法名稱</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>顯示輸入法名稱</short>
+	    <long>在語言列上顯示輸入法名稱</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/general/use_system_keyboard_layout</key>
+      <applyto>/desktop/ibus/general/use_system_keyboard_layout</applyto>
+      <owner>ibus</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Use system keyboard layout</short>
+	    <long>Use system keyboard (XKB) layout</long>
+      </locale>
+
+      <locale name="as">
+        <short>প্ৰণালী চাবিৰ ফলক বিন্যাস প্ৰয়োগ কৰা হ&apos;ব</short>
+	    <long>প্ৰণালী চাবিৰ ফলক (XKB) বিন্যাস প্ৰয়োগ কৰা হ&apos;ব</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>সিস্টেম কি-বোর্ড বিন্যাস প্রয়োগ করা হবে</short>
+	    <long>সিস্টেম কি-বোর্ড (XKB) বিন্যাস প্রয়োগ করা হবে</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Utilitza la disposició de teclat del sistema</short>
+	    <long>Utilitza la disposició de teclat del sistema (XKB)</long>
+      </locale>
+
+      <locale name="da">
+        <short>Brug tastaturlayout for system</short>
+	    <long>Brug systemttastaturlayout (XKB)</long>
+      </locale>
+
+      <locale name="de">
+        <short>System-Tastaturbelegung verwenden</short>
+	    <long>System-Tastatur (XKB) Belegung verwenden</long>
+      </locale>
+
+      <locale name="es">
+        <short>Usar el diseño del teclado del sistema</short>
+	    <long>Usar el diseño del teclado del sistema (XKB)</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Utiliser la disposition clavier système</short>
+	    <long>Utiliser la disposition clavier système (XKB)</long>
+      </locale>
+
+      <locale name="gu">
+        <short>સિસ્ટમ કિબોર્ડ લેઆઉટને વાપરો</short>
+	    <long>સિસ્ટમ કિબોર્ડ (XKB) લેઆઉટને વાપરો</long>
+      </locale>
+
+      <locale name="hi">
+        <short>तंत्र कुंजीपट लेआउट का प्रयोग करें</short>
+	    <long>तंत्र कुंजीपट (XKB) लेआउट का प्रयोग करें</long>
+      </locale>
+
+      <locale name="it">
+        <short>Usa la disposizione di tastiera del sistema</short>
+	    <long>Usa la disposizione di tastiera del sistema (XKB)</long>
+      </locale>
+
+      <locale name="ja">
+        <short>システムキーボードレイアウトを使用する</short>
+	    <long>システムキーボード (XKB) レイアウトを使用する</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ವ್ಯವಸ್ಥೆಯ ಕೀಲಿಮಣೆ ವಿನ್ಯಾಸವನ್ನು ಬಳಸಿ</short>
+	    <long>ವ್ಯವಸ್ಥೆಯ ಕೀಲಿಮಣೆ (XKB) ವಿನ್ಯಾಸವನ್ನು ಬಳಸಿ</long>
+      </locale>
+
+      <locale name="ko">
+        <short>시스템 키보드 레이아웃 사용  </short>
+	    <long>시스템 키보드 (XKB) 레이아웃 사용  </long>
+      </locale>
+
+      <locale name="ml">
+        <short>സിസ്റ്റം കീബോര്‍ഡ് മാതൃക ഉപയോഗിക്കുക</short>
+	    <long>സിസ്റ്റം കീബോര്‍ഡ് (XKB) മാതൃക ഉപയോഗിക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>प्रणाली कळफलक मांडणीचा वापर करा</short>
+	    <long>प्रणाली कळफलक (XKB) मांडणीचा वापर करा</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Gebruik systeem toetsenbordindeling</short>
+	    <long>Gebruik systeem toetsenbord (XKB) indeling</long>
+      </locale>
+
+      <locale name="or">
+        <short>ତନ୍ତ୍ର କିବୋର୍ଡ ବିନ୍ୟାସକୁ ବ୍ୟବହାର କରନ୍ତୁ</short>
+	    <long>ତନ୍ତ୍ର କିବୋର୍ଡ (XKB) ବିନ୍ୟାସକୁ ବ୍ୟବହାର କରନ୍ତୁ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਸਿਸਟਮ ਕੀਬੋਰਡ ਲੇਆਉਟ ਵਰਤੋਂ</short>
+	    <long>ਸਿਸਟਮ ਕੀਬੋਰਡ (XKB) ਲੇਆਉਟ ਵਰਤੋਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Użycie systemowych ustawień układu klawiatury</short>
+	    <long>Użycie systemowego układu klawiatury (XKB)</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Usa o desenho do teclado do sistema</short>
+	    <long>Usa o desenho do teclado do sistema (XKB)</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Использовать системную раскладку клавиатуры</short>
+	    <long>Использовать системную раскладку (XKB)</long>
+      </locale>
+
+      <locale name="ta">
+        <short>கணினி விசைப்பலகை அமைப்பை பயன்படுத்து</short>
+	    <long>கணினி விசைப்பலகை (XKB) அமைப்பை பயன்படுத்து</long>
+      </locale>
+
+      <locale name="te">
+        <short>సిస్టమ్ కీబోర్డు నమూనా ఉపయోగించుము</short>
+	    <long>సిస్టమ్ కీబోర్డు (XKB) నమూనా ఉపయోగించుము</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Використовувати розкладку клавіатури системи</short>
+	    <long>Використовувати розкладку клавіатури системи (XKB)</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Dùng kiểu bố trí bàn phím của hệ thống</short>
+	    <long>Dùng kiểu bố trí bàn phím hệ thống (XKB)</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>使用系统键盘布局</short>
+	    <long>使用系统键盘（XKB）布局</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>使用系統鍵盤配置</short>
+	    <long>使用系統鍵盤 (XKB) 配置</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>使用系統鍵盤配置</short>
+	    <long>使用系統鍵盤 (XKB) 配置</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/panel/use_custom_font</key>
+      <applyto>/desktop/ibus/panel/use_custom_font</applyto>
+      <owner>ibus</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Use custom font</short>
+	    <long>Use custom font name for language panel</long>
+      </locale>
+
+      <locale name="ar">
+        <short>استعمال خط مخصص</short>
+	    <long>استخدم خط مخصص في لوحة اللغة</long>
+      </locale>
+
+      <locale name="as">
+        <short>স্বনিৰ্বাচিত ফন্ট ব্যৱহাৰ কৰা হ&apos;ব</short>
+	    <long>ভাষাৰ পেনেলৰ বাবে স্বনিৰ্বাচিত ফন্টৰ নাম ব্যৱহাৰ কৰক</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>স্বনির্ধারিত ফন্ট প্রয়োগ করুন</short>
+	    <long>ভাষার প্যানেলের জন্য স্বনির্ধারিত ফন্টের নাম ব্যবহার করা হবে</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Empra un tipus de lletra personalitzat</short>
+	    <long>Empra el tipus de lletra personalitzat per al quadre d&apos;idiomes</long>
+      </locale>
+
+      <locale name="da">
+        <short>Brug tilpasset skrifttype</short>
+	    <long>Brug tilpasset skrifttypenavn til sprogpanel</long>
+      </locale>
+
+      <locale name="de">
+        <short>Benutzerdefinierte Schriftart verwenden</short>
+	    <long>Benutzerdefinierte Schriftart für Sprach-Panel verwenden</long>
+      </locale>
+
+      <locale name="es">
+        <short>Usar fuente personalizada</short>
+	    <long>Usar nombre de fuente personalizada para el panel de idioma</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Utiliser une police personnalisée :</short>
+	    <long>Utiliser une police personnalisée pour la barre de langue</long>
+      </locale>
+
+      <locale name="gu">
+        <short>વૈવિધ્ય ફોન્ટને વાપરો</short>
+	    <long>ભાષા પેનલ માટે વૈવિધેય ફોન્ટ નામ ને વાપરો</long>
+      </locale>
+
+      <locale name="hi">
+        <short>मनपसंद फ़ॉन्ट का प्रयोग करें</short>
+	    <long>भाषा पटल के लिए मनपसंद फ़ॉन्ट नाम का प्रयोग करें</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Saját betű használata</short>
+	    <long>Saját betű használata a nyelv panelen</long>
+      </locale>
+
+      <locale name="it">
+        <short>Usare carattere personalizzato</short>
+	    <long>Usa un tipo di carattere personalizzato per il pannello della lingua</long>
+      </locale>
+
+      <locale name="ja">
+        <short>カスタムフォントを使う</short>
+	    <long>言語パネル用にカスタムフォント名を使用する</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಇಚ್ಛೆಯ ಅಕ್ಷರಶೈಲಿಯನ್ನು ಬಳಸು</short>
+	    <long>ಭಾಷೆಯ ಫಲಕಕ್ಕಾಗಿ ಇಚ್ಛೆಯ ಅಕ್ಷರಶೈಲಿಯ ಹೆಸರನ್ನು ಬಳಸಿ</long>
+      </locale>
+
+      <locale name="ko">
+        <short>사용자 정의 글꼴 사용  </short>
+	    <long>언어 패널 용 사용자 정의 글꼴 이름 사용</long>
+      </locale>
+
+      <locale name="ml">
+        <short>സജ്ജമാക്കിയ അക്ഷരസഞ്ചയം ഉപയോഗിക്കുക</short>
+	    <long>ഭാഷ്ക്കുള്ള പാനലില്‍ നിങ്ങള്‍ സജ്ജമാക്കിയ അക്ഷരസഞ്ചയത്തിന്റെ പേരു് ഉപയോഗിക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>स्वपसंत फॉन्ट वापरा</short>
+	    <long>भाषा पटल करीत स्वपसंत फॉन्ट नाव वापरा</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Gebruik aangepast lettertype</short>
+	    <long>Gebruik aangepaste lettertype naam voor taal-paneel</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଇଚ୍ଛାମୁତାବକ ଅକ୍ଷରରୂପ ବ୍ୟବହାର କରନ୍ତୁ</short>
+	    <long>ଭାଷା ତାଲିକା ପାଇଁ ଇଚ୍ଛାମୁତାବକ ଅକ୍ଷରରୂପ ନାମକୁ ବ୍ୟବହାର କରନ୍ତୁ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਪਸੰਦੀਦਾ ਫੋਂਟ ਵਰਤੋਂ</short>
+	    <long>ਭਾਸ਼ਾ ਪੈਨਲ ਲਈ ਪਸੰਦੀਦਾ ਫੋਂਟ ਨਾਂ ਵਰਤੋਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Użycie własnej czcionki</short>
+	    <long>Nazwa własnej czcionki użytej w panelu języków</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Usa a fonte padrão</short>
+	    <long>Usa o nome da fonte padrão para o painel de linguagem</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Использовать свой шрифт</short>
+	    <long>Использовать свой шрифт для языковой панели</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Употреби прилагођени фонт</short>
+	    <long>Користи прилагођени фонт за језички панел</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Upotrebi prilagođeni font</short>
+	    <long>Koristi prilagođeni font za jezički panel</long>
+      </locale>
+
+      <locale name="ta">
+        <short>தனிபயன் எழுத்துருவை பயன்படுத்து</short>
+	    <long>மொழி பலகத்தில் தனிபயன் எழுத்துரு பெயர்</long>
+      </locale>
+
+      <locale name="te">
+        <short>మలచుకొనిన ఫాంటు ఉపయోగించు</short>
+	    <long>భాషా ప్యానల్ కొరకు మలచుకొనిన ఫాంట్ నామము వుపయోగించుము</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Використовувати нетиповий шрифт</short>
+	    <long>Використовувати нетиповий шрифт для мовної панелі</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Dùng phông chữ tùy biến</short>
+	    <long>Dùng phông tùy biến cho thanh ngôn ngữ</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>使用自定义字体</short>
+	    <long>语言栏是否使用自定义字体</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>使用自訂字型</short>
+	    <long>語言面板是否使用自訂字型</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>使用自訂字型</short>
+	    <long>語言面板是否使用自訂字型</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/panel/custom_font</key>
+      <applyto>/desktop/ibus/panel/custom_font</applyto>
+      <owner>ibus</owner>
+      <type>string</type>
+      <default>Sans 10</default>
+      <locale name="C">
+        <short>Custom font</short>
+	    <long>Custom font name for language panel</long>
+      </locale>
+
+      <locale name="ar">
+        
+	    <long>اسم الخط المخصص للوحة اللغة</long>
+      </locale>
+
+      <locale name="as">
+        <short>স্বনিৰ্ধাৰিত ফন্ট</short>
+	    <long>ভাষাৰ পেনেলৰ বাবে স্বনিৰ্বাচিত ফন্ট</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>স্বনির্ধারিত ফন্ট</short>
+	    <long>ভাষার প্যানেলের জন্য ব্যবহারযোগ্য স্বনির্ধারিত ফন্টের নাম</long>
+      </locale>
+
+      <locale name="ca">
+        
+	    <long>Tipus de lletra personalitzat per al quadre d&apos;idiomes</long>
+      </locale>
+
+      <locale name="da">
+        <short>Brugertilpasset skrifttype</short>
+	    <long>Tilpasset skrifttypenavn til sprogpanel</long>
+      </locale>
+
+      <locale name="de">
+        <short>Benutzerdefinierte Schriftart</short>
+	    <long>Name der benutzerdefinierten Schriftart für Sprach-Panel</long>
+      </locale>
+
+      <locale name="es">
+        <short>Fuente personalizada</short>
+	    <long>Nombre de fuente personalizado para el panel de idioma</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Police personnalisée</short>
+	    <long>Police personnalisée pour le panneau de langue</long>
+      </locale>
+
+      <locale name="gu">
+        <short>વૈવિધ્ય ફોન્ટ</short>
+	    <long>ભાષા પેનલ માટે વૈવિધ્ય ફોન્ટ નામ</long>
+      </locale>
+
+      <locale name="hi">
+        <short>मनपसंद फ़ॉन्ट</short>
+	    <long>भाषा पटल के लिए मनपसंद फ़ॉन्ट नाम</long>
+      </locale>
+
+      <locale name="hu">
+        
+	    <long>Saját betű neve a nyelv panelen</long>
+      </locale>
+
+      <locale name="it">
+        <short>Carattere personalizzato</short>
+	    <long>Nome del tipo di carattere personalizzato per il pannello della lingua</long>
+      </locale>
+
+      <locale name="ja">
+        <short>カスタムフォント</short>
+	    <long>言語パネル用のカスタムフォント名</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಇಚ್ಛೆಯ ಅಕ್ಷರಶೈಲಿ</short>
+	    <long>ಭಾಷೆಯ ಫಲಕಕ್ಕಾಗಿನ ಇಚ್ಛೆಯ ಅಕ್ಷರಶೈಲಿಯ ಹೆಸರು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>사용자 정의 글꼴</short>
+	    <long>언어 패널 용 사용자 정의 글꼴 이름</long>
+      </locale>
+
+      <locale name="ml">
+        <short>അക്ഷരസഞ്ചയം യഥേഷ്ടമാക്കുക:</short>
+	    <long>ഭാഷയുടെ പാനലിലേക്കുള്ള അക്ഷരസഞ്ചയത്തിനുള്ള പേരു് സജ്ജമാക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>मनपसंत फॉन्ट</short>
+	    <long>भाषा पटल करीता स्वपसंत फॉन्ट नाव</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Aangepaste lettertype</short>
+	    <long>Aangepaste lettertype naam voor taal-paneel</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଇଚ୍ଛାରୂପୀ ଅକ୍ଷରରୂପ</short>
+	    <long>ଭାଷା ତାଲିକା ପାଇଁ ଇଚ୍ଛାମୁତାବକ ଅକ୍ଷରରୂପ ନାମ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਪਸੰਦੀਦਾ ਫੋਂਟ</short>
+	    <long>ਭਾਸ਼ਾ ਪੈਨਲ ਲਈ ਪਸੰਦੀਦਾ ਫੋਂਟ ਨਾਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Własna czcionka</short>
+	    <long>Nazwa własnej czcionki dla panelu języków</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Fonte padrão</short>
+	    <long>Nome da fonte padrão para o painel de linguagem</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Свой шрифт</short>
+	    <long>Свой шрифт для языковой панели</long>
+      </locale>
+
+      <locale name="sr">
+        
+	    <long>Назив прилагођеног фонта за језички панел</long>
+      </locale>
+
+      <locale name="sr@latin">
+        
+	    <long>Naziv prilagođenog fonta za jezički panel</long>
+      </locale>
+
+      <locale name="ta">
+        <short>தனிபயன் எழுத்துரு</short>
+	    <long>தனிபயன் எழுத்துரு பெயர் மொழி பலகத்துக்கு</long>
+      </locale>
+
+      <locale name="te">
+        <short>మలచుకొనిన ఫాంటు</short>
+	    <long>భాష ప్యానల్ కొరకు మలచుకొనిన ఫాంటు పేరు</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Нетиповий шрифт</short>
+	    <long>Назва нетипового шрифту для мовної панелі</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Tùy biến phông</short>
+	    <long>Tùy biến phông cho thanh ngôn ngữ</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>自定义字体</short>
+	    <long>自定义语言栏字体</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>自訂字型</short>
+	    <long>為語言面板自訂字型</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>自訂字型</short>
+	    <long>為語言面板自訂字型</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/general/embed_preedit_text</key>
+      <applyto>/desktop/ibus/general/embed_preedit_text</applyto>
+      <owner>ibus</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Embed Preedit Text</short>
+	    <long>Embed Preedit Text in Application Window</long>
+      </locale>
+
+      <locale name="as">
+        <short>প্ৰিএডিট টেক্সট প্ৰোথিত কৰক</short>
+	    <long>অনুপ্ৰয়োগৰ সংযোগক্ষেত্ৰত প্ৰিএডিট টেক্সট প্ৰোথিত কৰক</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>প্রি-এডিট টেক্সট সন্নিবেশ করা হবে</short>
+	    <long>অ্যাপ্লিকেশন উইন্ডোর মধ্যে প্রি-এডিট টেক্সট সন্নিবেশ করা হবে</long>
+      </locale>
+
+      <locale name="da">
+        <short>Indbyg forudredigeret tekst</short>
+	    <long>Indlejr forudredigeret tekst i programvindue</long>
+      </locale>
+
+      <locale name="de">
+        <short>Preedit-Text einbetten</short>
+	    <long>Preedit-Text in Anwendungsfenster einbetten</long>
+      </locale>
+
+      <locale name="es">
+        <short>Insertar texto preeditado</short>
+	    <long>Insertar texto previamente editado en la ventana de la aplicación</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Insérer le texte en cours d&apos;édition</short>
+	    <long>Insérer le texte en cours d&apos;édition dans la fenêtre de l&apos;application</long>
+      </locale>
+
+      <locale name="gu">
+        <short>બેસાડેલ Preedit લખાણ</short>
+	    <long>કાર્યક્રમ વિન્ડોમાં બેસાડેલ Preedit લખાણ</long>
+      </locale>
+
+      <locale name="hi">
+        <short>पूर्वसंपादित पाठ अंतःस्थापित करें</short>
+	    <long>अनुप्रयोग विंडो में पूर्वसंपादित पाठ अंतःस्थापित करें</long>
+      </locale>
+
+      <locale name="it">
+        <short>Inserire il testo pre-modificato</short>
+	    <long>Inserire il testo pre-modificato nella finestra dell&apos;applicazione</long>
+      </locale>
+
+      <locale name="ja">
+        <short>前編集テキストを組み込む</short>
+	    <long>アプリケーションウィンドウにプリエディットテキストを組み込む</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಪೂರ್ವ-ಸಂಪಾದನಾ(ಪ್ರಿ-ಎಡಿಟ್) ಪಠ್ಯವನ್ನು ಅಡಕಗೊಳಿಸು</short>
+	    <long>ಅನ್ವಯ ವಿಂಡೊದಲ್ಲಿ ಪೂರ್ವ-ಸಂಪಾದನಾ(ಪ್ರಿ-ಎಡಿಟ್) ಪಠ್ಯವನ್ನು ಅಡಕಗೊಳಿಸು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>편집전 텍스트 포함</short>
+	    <long>어플리케이션 창에 편집전 텍스트를 포함</long>
+      </locale>
+
+      <locale name="ml">
+        <short>പ്രീഎഡിറ്റ് ടെക്സ്റ്റ് ചേര്‍ക്കുക</short>
+	    <long>പ്രയോഗത്തിനുള്ള ജാലകത്തില്‍ പ്രീഎഡിറ്റ് ടെക്സ്റ്റ് ചേര്‍ക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>प्रिएडीट मजकूर एम्बेड करा</short>
+	    <long>ऍप्लिकेशन पटलात प्रिएडीट मजकूर एम्बेड करा</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Voeg pre-edit tekst in</short>
+	    <long>Voeg pre-edit tekst in in toepassingsvenster</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଅନ୍ତସ୍ଥାପିତ ପ୍ରୀଡିତ ପାଠ୍ୟ</short>
+	    <long>ପ୍ରୟୋଗ ୱିଣ୍ଡୋରେ ଅନ୍ତସ୍ଥାପିତ ପ୍ରୀଡିତ ପାଠ୍ୟ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਸ਼ਾਮਿਲ ਕੀਤਾ ਪਹਿਲਾਂ-ਸੋਧਿਆ ਪਾਠ</short>
+	    <long>ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਡੋ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕੀਤਾ ਪਹਿਲਾਂ-ਸੋਧਿਆ ਪਾਠ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Osadzanie wcześniej wprowadzonego tekstu</short>
+	    <long>Osadzanie wcześniej wprowadzonego tekstu w oknie aplikacji</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Embutir Texto de Pré-Edição </short>
+	    <long>Embutir Texto de Pré-edição na Janela do Aplicativo</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Вставить готовый текст</short>
+	    <long>Вставить готовый текст в окно приложения</long>
+      </locale>
+
+      <locale name="ta">
+        <short>உட்பொதியப்பட்ட Preedit உரை</short>
+	    <long>பயன்பாடு சாளரத்தில் உட்பொதியப்பட்ட Preedit உரை</long>
+      </locale>
+
+      <locale name="te">
+        <short>ఎంబెడెడ్ ప్రిఎడిట్ పాఠము</short>
+	    <long>అనువర్తన విండోనందు ఎంబెడెడ్ ప్రిఎడిట్ పాఠము</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Вбудувати попередньо створений текст</short>
+	    <long>Вбудувати попередньо створений текст у вікно програми</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Nhúng văn bản tiền soạn thảo</short>
+	    <long>Nhúng văn bản tiền soạn thảo trong cửa sổ ứng dụng</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>内嵌编辑模式</short>
+	    <long>在应用程序窗口中启用内嵌编辑模式</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>內嵌編輯模式</short>
+	    <long>在應用程式視窗中內嵌編輯模式</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>內嵌編輯模式</short>
+	    <long>在應用程式視窗中內嵌編輯模式</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/general/use_global_engine</key>
+      <applyto>/desktop/ibus/general/use_global_engine</applyto>
+      <owner>ibus</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Use global input method</short>
+	    <long>Share the same input method among all applications</long>
+      </locale>
+
+      <locale name="as">
+        <short>সৰ্বব্যাপী নিবেশ পদ্ধতি ব্যৱহাৰ কৰক</short>
+	    <long>সকলো অনুপ্ৰয়োগৰ মাজত একেই নিবেশ পদ্ধতি অংশীদাৰ কৰক</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>সার্বজনীন ইনপুট পদ্ধতি </short>
+	    <long>সকল অ্যাপ্লিকেশনের মধ্যে একই ইনপুট পদ্ধতি ব্যবহার করা হবে</long>
+      </locale>
+
+      <locale name="da">
+        <short>Brug global inputmetode</short>
+	    <long>Del den samme inputmetode i alle programmer</long>
+      </locale>
+
+      <locale name="de">
+        <short>Globale Eingabemethode wählen</short>
+	    <long>Dieselbe Eingabemethode für alle Anwendungen verwenden</long>
+      </locale>
+
+      <locale name="es">
+        <short>Utilizar método de entrada global</short>
+	    <long>Compartir el mismo método de entrada con todas las aplicaciones</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Utiliser la méthode d&apos;éntrée globale</short>
+	    <long>Partager la même méthode d&apos;entrée pour toutes les applications</long>
+      </locale>
+
+      <locale name="gu">
+        <short>વૈશ્ર્વિક ઇનપુટ પદ્દતિને વાપરો</short>
+	    <long>બધા કાર્યક્રમોમાં એજ ઇનપુટ પદ્દતિને વહેંચો</long>
+      </locale>
+
+      <locale name="hi">
+        <short>लक्ष्य इनपुट विधि का प्रयोग करें</short>
+	    <long>सभी अनुप्रयोगों के बीच समान इनपुट विधि को साझा करें</long>
+      </locale>
+
+      <locale name="it">
+        <short>Usa il metodo di input globale</short>
+	    <long>Condivide lo stesso metodo di input tra le applicazioni</long>
+      </locale>
+
+      <locale name="ja">
+        <short>グローバルインプットメソッドを使用する</short>
+	    <long>すべてのアプリケーション間で同じインプットメソッドを共有する</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಜಾಗತಿಕ ಇನ್‌ಪುಟ್ ವಿಧಾನವನ್ನು ಬಳಸಿ</short>
+	    <long>ಒಂದೇ ಇನ್‌ಪುಟ್‌ ವಿಧಾನವನ್ನು ಎಲ್ಲಾ ಅನ್ವಯಗಳಲ್ಲೂ ಬಳಸು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>전역 입력 방식 사용</short>
+	    <long>모든 어플리케이션에서 동일한 입력 방식 공유</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ഗ്ലോബല്‍ ഇന്‍പുട്ട് മെഥേഡ് ഉപയോഗിക്കുക</short>
+	    <long>എല്ലാ പ്രയോഗങ്ങളിലും ഒരേ ഇന്‍പുട്ട് രീതി ഉപയോഗിക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>ग्लोबल इंपुट पद्धत नीवडा</short>
+	    <long>सर्व ऍप्लिकेशन्स् मध्ये एकसारखेच इंपुट पद्धत शेअर करा</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Gebruik globale invoermethode</short>
+	    <long>Deel dezelfde input-methode voor alle toepassingen</long>
+      </locale>
+
+      <locale name="or">
+        <short>ସର୍ବସାଧାରଣ ନିବେଶ ପ୍ରଣୀଳୀକୁ ବ୍ୟବହାର କରନ୍ତୁ</short>
+	    <long>ସମସ୍ତ ପ୍ରୟୋଗଗୁଡ଼ିକ ମଧ୍ଯରେ ଏକା ପ୍ରକାରର ନିବେଶ ପଦ୍ଧତିକୁ ସହଭାଗ କରନ୍ତୁ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਗਲੋਬਲ ਇੰਪੁੱਟ ਢੰਗ ਵਰਤੋ</short>
+	    <long>ਸਭ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਿਚਕਾਰ ਕੁਝ ਇੰਪੁੱਟ ਸਾਂਝੀ ਕਰੋ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Użycie globalnej metody wprowadzania</short>
+	    <long>Używanie tej samej metody wprowadzania we wszystkich aplikacjach</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Use o método de entrada global</short>
+	    <long>Compartilhar o mesmo método de entrada entre todos os aplicativos</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Использовать глобальный метод ввода</short>
+	    <long>Использовать один метод ввода для всех приложений</long>
+      </locale>
+
+      <locale name="ta">
+        <short>பொது உள்ளீடு முறையை பயன்படுத்து</short>
+	    <long>அனைத்து பயன்பாடுகளிலும் சில உள்ளீடு முறையை பகிரவும்</long>
+      </locale>
+
+      <locale name="te">
+        <short>గ్లోబల్ ఇన్‌పుట్ పద్ధతిని ఉపయోగించుము</short>
+	    <long>అన్ని అనువర్తనములనందు యిన్పుట్ పద్దతిని భాగస్వామ్యపరచుము</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Використовувати загальний спосіб введення</short>
+	    <long>Використовувати один спосіб введення для всіх програм</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Dùng chung kiểu gõ cho toàn hệ thống</short>
+	    <long>Chia sẻ cùng kiểu gõ cho tất cả các ứng dụng</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>使用全局输入法</short>
+	    <long>在所有应用程序中共享同一个输入法</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>使用全域輸入法</short>
+	    <long>在所有的應用程式中共享同一個輸入法</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>使用全域輸入法</short>
+	    <long>在所有的應用程式中共享同一個輸入法</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/desktop/ibus/general/enable_by_default</key>
+      <applyto>/desktop/ibus/general/enable_by_default</applyto>
+      <owner>ibus</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Enable input method by default</short>
+	    <long>Enable input method by default when the application gets input
+            focus</long>
+      </locale>
+
+      <locale name="as">
+        <short>ইনপুট পদ্ধতি অবিকল্পিতভাৱে সামৰ্থবান কৰক</short>
+	    <long>যেতিয়া অনুপ্ৰয়োগে ইনপুট ফকাচ প্ৰাপ্ত কৰে তেতিয়া অবিকল্পিতভাৱে ইনপুট পদ্ধতি সামৰ্থবান কৰা</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>ডিফল্ট অবস্থায় ইনপুট পদ্ধতি সক্রিয় করা হবে</short>
+	    <long>ইনপুট প্রাপ্ত করার উদ্দেশ্যে অ্যাপ্লিকেশনে ফোকাস করা হলে, ডিফল্ট রূপে ইনপুট পদ্ধতি সক্রিয় করা হবে</long>
+      </locale>
+
+      <locale name="da">
+        <short>Aktivér inputmetode som standard</short>
+	    <long>Aktivér inputmetoder som standard når programmerne modtaget inputfokus</long>
+      </locale>
+
+      <locale name="de">
+        <short>Eingabemethode standardmäßig aktivieren</short>
+	    <long>Eingabemethode standardmäßig aktivieren, wenn die Anwendung Eingabefokus erlangt</long>
+      </locale>
+
+      <locale name="es">
+        <short>Habilitar método de entrada en forma predeterminada</short>
+	    <long>Habilitar método de entrada en forma predeterminada cuando la aplicación en uso solicite alguno</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Par défaut, activer la méthode d&apos;entrée</short>
+	    <long>Par défaut, activer la méthode d&apos;entrée lorsque l&apos;application reçoit le focus</long>
+      </locale>
+
+      <locale name="gu">
+        <short>મૂળભૂત રીતે ઇનપુટ પદ્દતિને સક્રિય કરો</short>
+	    <long>મૂળભૂત રીતે ઇનપુટ પદ્દતિને સક્રિય કરો જ્યારે કાર્યક્રમને ઇનપુટ ફોકસ મળે છે</long>
+      </locale>
+
+      <locale name="hi">
+        <short>इनपुट विधि को तयशुदा रूप से सक्रिय करें</short>
+	    <long>जब अनुप्रयोग इनपुट फोकस पाता है तो इनपुट विधि को तयशुदा रूप से सक्रिय करें</long>
+      </locale>
+
+      <locale name="it">
+        <short>Abilita per impostazione predefinita il metodo di input</short>
+	    <long>Abilita per impostazione predefinita il metodo di input quando le applicazioni ottengono l&apos;input focus</long>
+      </locale>
+
+      <locale name="ja">
+        <short>標準でインプットメソッドを有効にする</short>
+	    <long>アプリケーションに入力フォーカスが当たったとき標準でインプットメソッドを有効にする</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಇನ್‌ಪುಟ್ ವಿಧಾನವನ್ನು ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಶಕ್ತಗೊಳಿಸು</short>
+	    <long>ಅನ್ವಯವು ಇನ್‌ಪುಟ್ ಗಮನವನ್ನು ಪಡೆದುಕೊಂಡಾಗ ಇನ್‌ಪುಟ್ ವಿಧಾನವನ್ನು ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಶಕ್ತಗೊಳಿಸು</long>
+      </locale>
+
+      <locale name="ko">
+        <short>입력기를 디폴트로 활성화</short>
+	    <long>프로그램의 입력창에 포커스가 가면 디폴트로 입력기를 활성화합니다</long>
+      </locale>
+
+      <locale name="ml">
+        <short>സ്വതവേ ഇന്‍പുട്ട് മെഥേഡ് സജ്ജമാക്കുക</short>
+	    <long>പ്രയോഗത്തിലേക്കു് ഇന്‍പുട്ട് ചെയ്യുവാന്‍ സാധിയ്ക്കുമ്പോള്‍ സ്വതവേ ഇന്‍പുട്ട് മെഥേഡ് സജ്ജമാക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>पूर्वनितर्धारीतपणे इंपुट पद्धत सुरू करा</short>
+	    <long>ऍप्लिकेशनला इंपुट फोकस प्राप्त झाल्यावर इंपुट पद्धत पूर्वनिर्धारीतपणे सुरू करा</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Zet invoer-methode standaard aan</short>
+	    <long>Zet invoer-methode standaard aan als de toepassing input focus krijgt</long>
+      </locale>
+
+      <locale name="or">
+        <short>ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଭାବରେ ନିବେଶ ପ୍ରଣାଳୀକୁ ସକ୍ରିୟ କରନ୍ତୁ</short>
+	    <long>ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଭାବରେ ନିବେଶ ପ୍ରଣାଳୀକୁ ସକ୍ରିୟ କରନ୍ତୁ ଯେତେବେଳେ ପ୍ରୟୋଗକୁ ନିବେଶ ଲକ୍ଷ୍ଯ ମିଳିଥାଏ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਇੰਪੁੱਟ ਢੰਗ ਡਿਫਾਲਟ ਹੀ ਚਾਲੂ ਕਰੋ</short>
+	    <long>ਜਦੋਂ ਐਪਲੀਕੇਸ਼ਨ ਇੰਪੁੱਟ ਫੋਕਸ ਲਵੇ ਤਾਂ ਇੰਪੁੱਟ ਢੰਗ ਡਿਫਾਲਟ ਹੀ ਚਲਾਉ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Domyślne włączanie metody wprowadzania</short>
+	    <long>Domyślne włączanie metody wprowadzania, kiedy aplikacja uzyskuje aktywność wprowadzania</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Habilitar método de entrada por padrão</short>
+	    <long>Habilitar método de entrada por padrão quando o aplicativo obtiver o foco de entradas</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Включить метод ввода по умолчанию</short>
+	    <long>Включить метод ввода по умолчанию при получении приложением фокуса ввода</long>
+      </locale>
+
+      <locale name="ta">
+        <short>முன்னிருப்பாக உள்ளீடு முறையை செயல்படுத்து</short>
+	    <long>பயன்பாடு உள்ளீடுக்கு உட்படும்போது முன்னிருப்பாக உள்ளீடு முறையை செயல்படுத்து</long>
+      </locale>
+
+      <locale name="te">
+        <short>ఇన్‌పుట్ పద్ధతిని అప్రమేయంగా చేతనముచేయుము</short>
+	    <long>అనువర్తనము ఇన్‌పుట్ ఫోకస్‌ను పొందగానే ఇన్‌పుట్ పద్ధతిని అప్రమేయంగా చేతనము చేయుము</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Типово увімкнути спосіб введення</short>
+	    <long>Типово увімкнути спосіб введення, коли програма отримує фокус введення</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>默认启动输入法</short>
+	    <long>当应用程序需要使用输入时自动启用输入法</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>預設啟用輸入法</short>
+	    <long>當應用程式取得輸入焦點時，預設將輸入法啟用</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

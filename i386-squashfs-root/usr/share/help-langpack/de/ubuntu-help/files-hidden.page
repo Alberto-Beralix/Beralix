@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="tip" id="files-hidden" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="files#faq"/>
+    <desc>Eine Datei unsichtbar machen, so dass sie in der Dateiverwaltung nicht angezeigt wird.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Eine Datei verbergen</title>
+
+<p>Sie können Dateien verbergen, indem Sie sie mit einem <key>.</key> am Anfang des Dateinamens umbenennen. Verborgene Dateien sind standardmäßig unsichtbar. Sie werden in der Dateiverwaltung nicht angezeigt, befinden sich aber immer noch im Ordner.</p>
+
+<p>So verbergen Sie eine Datei: <link xref="files-rename">Benennen Sie sie um</link> mit einem ».« am Anfang des Dateinamens. Um zum Beispiel die Datei <file>Beispiel.txt</file> zu verbergen, benennen Sie sie um zu <file>.Beispiel.txt</file>.</p>
+
+<note style="tip">
+ <p>Sie können Ordner auf die gleiche Weise verbergen wie Dateien. Benennen Sie den Ordner mit einem ».« am Anfang des Ordnernamens um.</p>
+</note>
+
+<section id="show-hidden">
+ <title>Alle verborgenen Dateien anzeigen</title>
+ <p>Wenn Sie alle verborgenen Dateien in einem Ordner anzeigen wollen, gehen Sie zu diesem Ordner und klicken Sie entweder <guiseq><gui>Ansicht</gui><gui>Verborgene Dateien anzeigen</gui></guiseq> oder drücken Sie <keyseq><key>Strg</key><key>H</key></keyseq>. Alle verborgenen Dateien werden dann gemeinsam mit den nicht verborgenen Dateien angezeigt.</p>
+ <p>Manche verborgenen Dateien haben ein ».« am Anfang ihres Namens. Andere können stattdessen ein »~« am Namensende haben (siehe <link xref="files-tilde"/>).</p>
+ <p>Um diese Dateien wieder zu verbergen, klicken Sie entweder noch einmal auf <guiseq><gui>Ansicht</gui><gui>Verborgene Dateien anzeigen</gui></guiseq> oder drücken Sie wieder <keyseq><key>Strg</key><key>H</key></keyseq>.</p>
+ <p>Verborgene Dateien  werden nur im aktuellen Fenster angezeigt, bis Sie diese Einstellung für das Fenster ausschalten. Um verborgene Dateien in allen Fenstern der Dateiverwaltung anzuzeigen, siehe <link xref="nautilus-views"/>.</p>
+</section>
+
+<section id="unhide">
+ <title>Eine Datei anzeigen</title>
+ <p>So machen Sie eine Datei wieder sichtbar: Gehen Sie zum Ordner mit der verborgenen Datei und klicken Sie auf <guiseq><gui>Ansicht</gui><gui>Verborgene Dateien anzeigen</gui></guiseq>. Suchen Sie sich dann die verborgene Datei heraus und benennen Sie sie so um, dass sie kein ».« mehr am Anfang des Dateinamens hat.</p>
+ <p>Um zum Beispiel eine Datei namens <file>.Beispiel.txt</file> wieder sichtbar zu machen, müssten Sie sie zu <file>Beispiel.txt</file> umbenennen.</p>
+ <p>Sobald Sie die Datei umbenannt haben, können Sie entweder auf <guiseq><gui>Ansicht</gui><gui>Verborgene Dateien anzeigen</gui></guiseq> klicken oder <keyseq><key>Strg</key><key>H</key></keyseq> drücken, um die verborgenen Dateien wieder anzuzeigen.</p>
+</section>
+
+</page>

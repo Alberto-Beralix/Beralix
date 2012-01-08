@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/papyon/service/description/RSI/DeleteMessages.py

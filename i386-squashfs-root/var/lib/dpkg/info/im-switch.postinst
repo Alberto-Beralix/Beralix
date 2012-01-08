@@ -1,0 +1,62 @@
+#!/bin/sh
+set -e
+
+ua_inst () {
+	update-alternatives \
+        --install /etc/X11/xinit/xinput.d/$1 xinput-$1 \
+        /etc/X11/xinit/xinput.d/$2 $3 ;
+}
+
+# fix for 90im-switch -> 80im-switch transition. (After 1.13)
+# If old version exists, clean it up. 
+
+if [ -f /etc/X11/Xsession.d/90im-switch ]; then
+    case `md5sum /etc/X11/Xsession.d/90im-switch|sed 's/ .*$//'` in
+	# md5sum for previous releases
+	0555954437ad61fe51850fae0a89378d |\
+        58e24e5a127a953e05a0bed82b943700 |\
+	cb724d4db7f531b50c218007a2b9d7f2 |\
+	fac350767f9316f0ceb65b7da9638f5f |\
+	9711c96cdaf57a74f36793c30e964537 |\
+	012637550e0bfbdf83f703474acccea2 |\
+	acb685ae9264be3fc1800f98a70b12bb )
+    rm -f /etc/X11/Xsession.d/90im-switch
+    ;;
+    * )
+    echo You have customized /etc/X11/Xsession.d/90im-switch file
+    echo with its md5sum = `md5sum /etc/X11/Xsession.d/90im-switch|sed 's/ .*$//'`.
+    echo Please remove it or move it up to 80im-switch.
+    ;;
+    esac
+fi
+
+
+case "$1" in
+    configure)
+        # Set up default
+        ua_inst all_ALL default  10
+        ua_inst all_ALL default-xim  0
+        ua_inst lo_TH lo-gtk  10
+        ua_inst all_ALL none  0
+        ua_inst th_TH th-xim  20
+        ua_inst th_TH th-gtk  10
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# Automatically added by dh_installmenu
+if [ "$1" = "configure" ] && [ -x "`which update-menus 2>/dev/null`" ]; then
+	update-menus
+fi
+# End automatically added section
+
+
+exit 0

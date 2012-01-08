@@ -1,0 +1,170 @@
+#!/usr/bin/python
+# Copyright (C) 2009-2011 Canonical
+#
+# Authors:
+#  Michael Vogt
+#
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; version 3.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+# details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+
+# take time stamp as early as python allows this
+import time
+time_entering_main = time.time()
+
+
+# NOTE: although Decimal is not used in this file, we need to import it here to
+#       work around bug LP: #607705
+from decimal import Decimal
+
+# thread init is also required otherwise both gst and webkit are unhappy
+
+from gi.repository import GObject
+GObject.threads_init()
+from gi.repository import Gtk
+
+import gettext
+import glob
+import logging
+import os
+import time
+import sys
+
+from softwarecenter.enums import *
+from softwarecenter.paths import XAPIAN_BASE_PATH
+from softwarecenter.utils import ExecutionTime
+from softwarecenter.version import *
+
+import softwarecenter.log
+import softwarecenter.paths
+
+from optparse import OptionParser
+
+# Enable Xapian's CJK tokenizer (see LP: #745243)
+os.environ['XAPIAN_CJK_NGRAM'] = '1'
+
+if __name__ == "__main__":
+
+    parser = OptionParser("usage: %prog [options] [package-name | apturl | deb-file]", 
+                          version="%prog "+VERSION)
+    parser.add_option("--debug", action="store_true",
+                      help="enable debug mode", default=False)
+    parser.add_option("--debug-filter", 
+                      help="show only specific messages. supported currently: "
+                           "'softwarecenter.performance'")
+    parser.add_option("--force-rtl", action="store_true",
+                      help="force rtl mode (useful for debugging)", 
+                      default=False)
+    parser.add_option("--display-navlog", action="store_true",
+                      help="display a navigation history log (useful for debugging)", 
+                      default=False)
+    # FIXME:  REMOVE THIS option once launchpad integration is enabled
+    #         by default
+    parser.add_option("--enable-lp", action="store_true",
+                      help="enable launchpad integration (for development use)", 
+                      default=False)
+    parser.add_option("--disable-buy", action="store_true",
+                      help="disable support to buy software",
+                      default=False)
+    parser.add_option("--disable-apt-xapian-index", action="store_true",
+                      help="disable support for apt-xapian-index (technical items)",
+                      default=False)
+    parser.add_option("--measure-startup-time", action="store_true",
+                      help="open and wait until the window is visible, then close, only useful for profiling",
+                      default=False)
+    parser.add_option("--dummy-backend", action="store_true",
+                      help="run with a dummy backend, this will not actually install or remove anything and is useful for testing",
+                      default=False)
+    parser.add_option("--packagekit-backend", action="store_true",
+                      help="use PackageKit backend (experimental)", 
+                      default=False)
+
+    (options, args) = parser.parse_args()
+
+    # statup time measure implies "performance" in debug filters
+    if options.measure_startup_time:
+        options.debug_filter = "performance"
+    
+    if options.debug_filter:
+        softwarecenter.log.add_filters_from_string(options.debug_filter)
+        # implies general debug
+        options.debug = True
+        
+    if options.debug:
+        softwarecenter.log.root.setLevel(level=logging.DEBUG)
+    else:
+        softwarecenter.log.root.setLevel(level=logging.INFO)
+    
+    # packagekit
+    if options.packagekit_backend:
+        softwarecenter.enums.USE_PACKAGEKIT_BACKEND = True
+        logging.info("Using PackageKit backend")
+
+    # dummy backend
+    if options.dummy_backend:
+        import atexit
+        from softwarecenter.testutils import start_dummy_backend, stop_dummy_backend
+        start_dummy_backend()
+        atexit.register(stop_dummy_backend)
+
+    # override text direction for testing purposes
+    if options.force_rtl:
+        Gtk.Widget.set_default_direction(Gtk.TextDirection.RTL)
+
+    # we are running in a local checkout, make life as easy as possible
+    # for this
+    if os.path.exists("./data/ui/gtk3/SoftwareCenter.ui"):
+        logging.getLogger("softwarecenter").info("Using data (UI, xapian) from current dir")
+        # set pythonpath for the various helpers
+        if os.environ.get("PYTHONPATH",""):
+            os.environ["PYTHONPATH"]=os.path.abspath(".") + ":" + os.environ.get("PYTHONPATH","")
+        else:
+            os.environ["PYTHONPATH"]=os.path.abspath(".")
+        datadir = "./data"
+        xapian_base_path = datadir
+        # set new global datadir
+        softwarecenter.paths.datadir = datadir
+        # also alter the app-install path
+        path =  "%s/desktop/software-center.menu" % softwarecenter.paths.APP_INSTALL_PATH
+        if not os.path.exists(path):
+            softwarecenter.paths.APP_INSTALL_PATH = './build/share/app-install'
+            logging.warn("using local APP_INSTALL_PATH: %s" % softwarecenter.paths.APP_INSTALL_PATH)
+    else:
+        datadir = softwarecenter.paths.datadir
+        xapian_base_path = XAPIAN_BASE_PATH
+
+    # ensure we can actually run
+    Gtk.init_check(sys.argv)
+
+    # create the app
+    from softwarecenter.ui.gtk3.app import SoftwareCenterAppGtk3
+    with ExecutionTime("create SoftwareCenterApp"):
+        app = SoftwareCenterAppGtk3(datadir, xapian_base_path, options, args)
+
+    # DEBUG/PROFILE mode 
+    if options.measure_startup_time:
+        with ExecutionTime("show() & gtk events until visible"):
+#            app.window_main.show_all()
+            while Gtk.events_pending():
+                # test visible area
+                if (app.window_main.flags() & Gtk.VISIBLE and
+                    app.available_pane.searchentry.flags() & Gtk.VISIBLE and
+                    app.available_pane.back_forward.flags() & Gtk.VISIBLE):
+                    break
+                Gtk.main_iteration()
+        time_to_visible = time.time() - time_entering_main
+        print(time_to_visible)
+        sys.exit(0)
+
+    # run it normally
+    app.run(args)
+

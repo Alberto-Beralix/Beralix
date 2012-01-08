@@ -1,0 +1,330 @@
+=head1 NAME
+
+Pango::FontDescription - Pango object to represent a description of a font
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----Pango::FontDescription
+
+
+
+=cut
+
+=for object Pango::FontDescription - Pango object to represent a description of a font
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 fontdescription = Pango::FontDescription-E<gt>B<new> 
+
+=head2 $desc-E<gt>B<set_absolute_size> ($size)
+
+=over
+
+=item * $size (double) 
+
+=back
+
+Since: pango 1.8
+
+=head2 boolean = $desc-E<gt>B<better_match> ($old_match, $new_match)
+
+=over
+
+=item * $old_match (Pango::FontDescription or undef) 
+
+=item * $new_match (Pango::FontDescription) 
+
+=back
+
+=head2 boolean = $desc1-E<gt>B<equal> ($desc2)
+
+=over
+
+=item * $desc2 (Pango::FontDescription) 
+
+=back
+
+=head2 string = $desc-E<gt>B<get_family> 
+
+=head2 $desc-E<gt>B<set_family> ($family)
+
+=over
+
+=item * $family (string) 
+
+=back
+
+=head2 $desc-E<gt>B<set_family_static> ($family)
+
+=over
+
+=item * $family (string) 
+
+=back
+
+=head2 fontdescription = Pango::FontDescription-E<gt>B<from_string> ($str)
+
+=over
+
+=item * $str (string) 
+
+=back
+
+=head2 gravity = $desc-E<gt>B<get_gravity> 
+
+Since: pango 1.16
+
+=head2 $desc-E<gt>B<set_gravity> ($gravity)
+
+=over
+
+=item * $gravity (Pango::Gravity) 
+
+=back
+
+Since: pango 1.16
+
+=head2 integer = $desc-E<gt>B<hash> 
+
+=head2 $desc-E<gt>B<merge> ($desc_to_merge, $replace_existing)
+
+=over
+
+=item * $desc_to_merge (Pango::FontDescription) 
+
+=item * $replace_existing (boolean) 
+
+=back
+
+=head2 $desc-E<gt>B<merge_static> ($desc_to_merge, $replace_existing)
+
+=over
+
+=item * $desc_to_merge (Pango::FontDescription) 
+
+=item * $replace_existing (boolean) 
+
+=back
+
+=head2 fontmask = $desc-E<gt>B<get_set_fields> 
+
+=head2 integer = $desc-E<gt>B<get_size> 
+
+=head2 boolean = $desc-E<gt>B<get_size_is_absolute> 
+
+Since: pango 1.8
+
+=head2 $desc-E<gt>B<set_size> ($size)
+
+=over
+
+=item * $size (integer) 
+
+=back
+
+=head2 stretch = $desc-E<gt>B<get_stretch> 
+
+=head2 $desc-E<gt>B<set_stretch> ($stretch)
+
+=over
+
+=item * $stretch (Pango::Stretch) 
+
+=back
+
+=head2 style = $desc-E<gt>B<get_style> 
+
+=head2 $desc-E<gt>B<set_style> ($style)
+
+=over
+
+=item * $style (Pango::Style) 
+
+=back
+
+=head2 string = $desc-E<gt>B<to_filename> 
+
+=head2 string = $desc-E<gt>B<to_string> 
+
+=head2 $desc-E<gt>B<unset_fields> ($to_unset)
+
+=over
+
+=item * $to_unset (Pango::FontMask) 
+
+=back
+
+=head2 variant = $desc-E<gt>B<get_variant> 
+
+=head2 $desc-E<gt>B<set_variant> ($variant)
+
+=over
+
+=item * $variant (Pango::Variant) 
+
+=back
+
+=head2 weight = $desc-E<gt>B<get_weight> 
+
+=head2 $desc-E<gt>B<set_weight> ($weight)
+
+=over
+
+=item * $weight (Pango::Weight) 
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags Pango::FontMask
+
+=over
+
+=item * 'family' / 'PANGO_FONT_MASK_FAMILY'
+
+=item * 'style' / 'PANGO_FONT_MASK_STYLE'
+
+=item * 'variant' / 'PANGO_FONT_MASK_VARIANT'
+
+=item * 'weight' / 'PANGO_FONT_MASK_WEIGHT'
+
+=item * 'stretch' / 'PANGO_FONT_MASK_STRETCH'
+
+=item * 'size' / 'PANGO_FONT_MASK_SIZE'
+
+=item * 'gravity' / 'PANGO_FONT_MASK_GRAVITY'
+
+=back
+
+
+=head2 enum Pango::Gravity
+
+=over
+
+=item * 'south' / 'PANGO_GRAVITY_SOUTH'
+
+=item * 'east' / 'PANGO_GRAVITY_EAST'
+
+=item * 'north' / 'PANGO_GRAVITY_NORTH'
+
+=item * 'west' / 'PANGO_GRAVITY_WEST'
+
+=item * 'auto' / 'PANGO_GRAVITY_AUTO'
+
+=back
+
+
+=head2 enum Pango::Stretch
+
+=over
+
+=item * 'ultra-condensed' / 'PANGO_STRETCH_ULTRA_CONDENSED'
+
+=item * 'extra-condensed' / 'PANGO_STRETCH_EXTRA_CONDENSED'
+
+=item * 'condensed' / 'PANGO_STRETCH_CONDENSED'
+
+=item * 'semi-condensed' / 'PANGO_STRETCH_SEMI_CONDENSED'
+
+=item * 'normal' / 'PANGO_STRETCH_NORMAL'
+
+=item * 'semi-expanded' / 'PANGO_STRETCH_SEMI_EXPANDED'
+
+=item * 'expanded' / 'PANGO_STRETCH_EXPANDED'
+
+=item * 'extra-expanded' / 'PANGO_STRETCH_EXTRA_EXPANDED'
+
+=item * 'ultra-expanded' / 'PANGO_STRETCH_ULTRA_EXPANDED'
+
+=back
+
+
+=head2 enum Pango::Style
+
+=over
+
+=item * 'normal' / 'PANGO_STYLE_NORMAL'
+
+=item * 'oblique' / 'PANGO_STYLE_OBLIQUE'
+
+=item * 'italic' / 'PANGO_STYLE_ITALIC'
+
+=back
+
+
+=head2 enum Pango::Variant
+
+=over
+
+=item * 'normal' / 'PANGO_VARIANT_NORMAL'
+
+=item * 'small-caps' / 'PANGO_VARIANT_SMALL_CAPS'
+
+=back
+
+
+=head2 enum Pango::Weight
+
+=over
+
+=item * 'thin' / 'PANGO_WEIGHT_THIN'
+
+=item * 'ultralight' / 'PANGO_WEIGHT_ULTRALIGHT'
+
+=item * 'light' / 'PANGO_WEIGHT_LIGHT'
+
+=item * 'book' / 'PANGO_WEIGHT_BOOK'
+
+=item * 'normal' / 'PANGO_WEIGHT_NORMAL'
+
+=item * 'medium' / 'PANGO_WEIGHT_MEDIUM'
+
+=item * 'semibold' / 'PANGO_WEIGHT_SEMIBOLD'
+
+=item * 'bold' / 'PANGO_WEIGHT_BOLD'
+
+=item * 'ultrabold' / 'PANGO_WEIGHT_ULTRABOLD'
+
+=item * 'heavy' / 'PANGO_WEIGHT_HEAVY'
+
+=item * 'ultraheavy' / 'PANGO_WEIGHT_ULTRAHEAVY'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Boxed>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

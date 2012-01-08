@@ -1,0 +1,55 @@
+#!/bin/sh
+set -e
+
+# Automatically added by dh_installudev
+if [ "$1" = configure ]; then
+	if [ -e "/etc/udev/rules.d/z60_libgphoto2-2.rules" ]; then
+		echo "Preserving user changes to /etc/udev/rules.d/40-libgphoto2-2.rules ..."
+		if [ -e "/etc/udev/rules.d/40-libgphoto2-2.rules" ]; then
+			mv -f "/etc/udev/rules.d/40-libgphoto2-2.rules" "/etc/udev/rules.d/40-libgphoto2-2.rules.dpkg-new"
+		fi
+		mv -f "/etc/udev/rules.d/z60_libgphoto2-2.rules" "/etc/udev/rules.d/40-libgphoto2-2.rules"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_makeshlibs
+if [ "$1" = "configure" ]; then
+	ldconfig
+fi
+# End automatically added section
+
+
+PACKAGE="libgphoto2"
+
+case "$1" in
+    configure)
+	# remove old fdi files
+	rm -f /usr/share/hal/fdi/information/10freedesktop/10-camera-$PACKAGE.fdi
+	rm -f /usr/share/hal/fdi/information/20thirdparty/$PACKAGE.fdi
+	rm -f /usr/share/hal/fdi/information/10freedesktop/10-camera-$PACKAGE-device.fdi
+
+	# properly remove old config files
+	for f in \
+		/etc/udev/$PACKAGE.rules \
+		/etc/udev/rules.d/025_libgphoto2.rules \
+		/etc/hotplug/usb/$PACKAGE.usermap \
+		/etc/udev/libgphoto2_generic_ptp_support.rules \
+		/etc/udev/rules.d/025_$PACKAGE.rules \
+		/etc/udev/rules.d/020_libgphoto2_generic-ptp_support.rules
+	do
+		dpkg-maintscript-helper rm_conffile $f 2.4.10.1-5 -- "$@"
+	done
+	;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac
+
+
+exit 0
+

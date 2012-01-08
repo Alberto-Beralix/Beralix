@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_chat" xml:lang="es">
+  <info>
+    <link type="guide" xref="preferences#application"/>
+    <title type="sort">3. Chat</title>
+    <title type="link">Chat</title>
+    <desc>Configurar el soporte de <app>Orca</app> IM e IRC</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Preferencias del chat</title>
+  <media type="image" mime="image/png" src="figures/preferences_chat.png"/>
+  <p>Las siguientes opciones le permiten personalizar cómo se comporta <app>Orca</app> cuando proporciona acceso a la mensajería instantánea y a clientes de IRC.</p>
+  <section>
+    <title>Leer el nombre de la sala de chat</title>
+    <p>Si está casilla está marcada, <app>Orca</app> antepondrá a los mensajes entrantes el nombre de la sala o del amigo del que provienen, a menos que provengan de la conversación que tiene el foco actualmente.</p>
+    <p>Valor predeterminado: no marcado</p>
+  </section>
+  <section>
+    <title>Anunciar cuando sus amigos están tecleando</title>
+    <p>Si esta casilla está marcada, y <app>Orca</app> tiene suficiente información para identificar que su amigo está escribiendo, <app>Orca</app> anunciará su estado de escritura.</p>
+    <p>Valor predeterminado: no marcado</p>
+  </section>
+  <section>
+    <title>Proporcionar históricos de mensajes específicos de cada sala de chat</title>
+    <p>Si esta casilla está marcada, los comandos de <app>Orca</app> para revisar mensajes recientes sólo se aplicarán a la conversación que actualmente tiene el foco. Si no, el histórico contendrá los mensajes más recientes, independientemente de qué conversación provienen.</p>
+    <p>Valor predeterminado: no marcado</p>
+  </section>
+  <section>
+    <title>Leer los mensajes de</title>
+    <p>Este grupo de botones de radio le permite controlar bajo qué circunstancias <app>Orca</app> le presenta un mensaje. Sus opciones son:</p>
+    <list>
+      <item>
+        <p><gui>Todos los canales</gui></p>
+      </item>
+      <item>
+        <p><gui>Un canal sólo si su ventana está activa</gui></p>
+      </item>
+      <item>
+        <p><gui>Todos los canales cuando cualquier ventana de chat está activa</gui></p>
+      </item>
+    </list>
+    <p>Valor predeterminado: todos los canales</p>
+  </section>
+</page>

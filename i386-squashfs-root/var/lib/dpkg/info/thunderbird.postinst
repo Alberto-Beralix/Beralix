@@ -1,0 +1,34 @@
+#!/bin/sh
+
+set -e
+
+MOZ_APP_NAME=thunderbird
+
+# Move a conffile without triggering a dpkg question
+mv_conffile() {
+    local OLDCONFFILE="$1"
+    local NEWCONFFILE="$2"
+
+    [ -e "$OLDCONFFILE" ] || return 0
+
+    echo "Preserving user changes to $NEWCONFFILE ..."
+    mv -f "$NEWCONFFILE" "$NEWCONFFILE".dpkg-new
+    mv -f "$OLDCONFFILE" "$NEWCONFFILE"
+}
+
+case "$1" in
+configure)
+    # What we want to do here is migrate this conffile when:
+    # 1) Upgrading from any version older than Oneiric. Note, as all releases will track the
+    #    the latest Thunderbird version in the future, we can't just simply compare package
+    #    versions
+    # 2) Upgrading from any version older than Thunderbird 5.0~b1 in Oneiric
+    PREV_MAJOR_UBUNTU_VER=`echo "$2" | sed 's/.*ubuntu\(.*\)/\1/' | sed 's/\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\(.*\)/\2/'`
+    PREV_MINOR_UBUNTU_VER=`echo "$2" | sed 's/.*ubuntu\(.*\)/\1/' | sed 's/\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\(.*\)/\3/'`
+    if dpkg --compare-versions "$2" lt "5.0~b1" || \
+       ([ "x$PREV_MAJOR_UBUNTU_VER" != "x" ] && [ "x$PREV_MINOR_UBUNTU_VER" != "x" ] && [ "$PREV_MAJOR_UBUNTU_VER" -lt "11" ] && [ "$PREV_MINOR_UBUNTU_VER" -lt "10" ]); then
+        mv_conffile "/etc/${MOZ_APP_NAME}/pref/thunderbird.js" "/etc/${MOZ_APP_NAME}/syspref.js"
+    fi
+esac
+
+

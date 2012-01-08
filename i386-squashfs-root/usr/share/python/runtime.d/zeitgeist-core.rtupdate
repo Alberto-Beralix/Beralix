@@ -1,0 +1,6 @@
+#! /bin/sh
+set -e
+if [ "$1" = rtupdate ]; then
+	pyclean -p zeitgeist-core /usr/share/zeitgeist
+	pycompile -p zeitgeist-core -V 2.5- /usr/share/zeitgeist
+fi

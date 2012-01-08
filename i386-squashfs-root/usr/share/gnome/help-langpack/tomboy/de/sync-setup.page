@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="task" id="sync-setup" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#sync"/>
+    <desc>Tomboy konfigurieren, um Ihre Notizen abzugleichen.</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-05-29" status="candidate"/>
+    <credit type="author">
+      <name>Paul Cutler</name>
+      <email>pcutler@gnome.org</email>
+    </credit>    
+<!--
+    <copyright>
+      <year>2010</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+-->
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+ <title>Abgleich konfigurieren und einstellen</title>
+
+ <section id="enablesync">
+
+	<title>Abgleich aktivieren</title>
+	
+	<p><app>Tomboy</app> kann Ihre Notizen auf mehreren Rechnern abgleichen. So wird eine Sicherheitskopie Ihrer Notizen auf anderen Rechnern ermöglicht und es können Notizen gemeinsam auf mehreren Rechnern verwendet werden, so dass Sie stets Zugriff auf Ihre Notizen haben.</p>
+	
+	<p>Um den Abgleich zu aktivieren, öffnen Sie die <gui>Tomboy-Einstellungen</gui> durch einen Klick mit der rechten Maustaste auf das Tomboy-Symbol in Ihrem Panel, Ihrer Taskbar oder Ihrem Dock und wählen Sie <gui>Einstellungen</gui>. Wählen Sie anschließend den Reiter <gui>Abgleich</gui>. Sie können die <gui>Tomboy-Einstellungen</gui> auch aus dem Dialog <gui>Alle Notizen durchsuchen</gui> heraus öffnen. Wählen Sie hierzu <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq>.</p>
+
+ </section>
+
+ <section id="conflict">
+
+	<title>Notizkonflikt lösen</title>
+	
+	<p>Sie können das voreingestellte Verhalten von Tomboy für den Fall festlegen, dass eine Notiz im Konflikt steht. Dies kann geschehen, wenn Notizen nicht regelmäßig abgeglichen werden.</p>
+	
+	<p>Klicken Sie im Dialog <gui>Einstellungen</gui> auf den Reiter <gui>Abgleichen</gui> und dann auf den Knopf <gui>Erweitert</gui>. Sie können nun zwischen drei Möglichkeiten als Voreinstellung wählen, wie Konflikte gelöst werden sollen:</p>
+	
+	<list>
+		<item><p><gui>Immer fragen, was zu tun ist.</gui> Dies ist die voreingestellte Wahl. Wenn Tomboy auf einen Konflikt stößt, so wird Tomboy Sie immer fragen, ob Sie die lokale Notiz umbenennen möchten oder durch die auf dem Server gespeicherte Version ersetzen wollen.</p></item>
+		<item><p><gui>Meine lokale Notiz umbenennen.</gui> Wenn diese Option gewählt ist, so wird Tomboy automatisch die Notiz durch die Kopie des entfernten Rechners ersetzen und die Notiz auf Ihrem Rechner umbenennen. Dadurch wird Ihnen der Inhalt Ihrer Notiz nicht verloren gehen.</p>
+		</item>
+		
+		<item><p><gui>Meine lokale Notiz mit derjenigen des Servers ersetzen.</gui>. Wenn diese Option gewählt ist, so wird Tomboy beim Abgleichen Ihre Notiz überschreiben und durch eine Kopie des entfernten Rechners ersetzen.</p></item>
+		
+		<note style="warning">
+		<p>Automatisches Überschreiben der Notiz ist unwiderruflich. Ihre lokale Notiz wird durch die des entfernten Rechners ersetzt und Sie werden Ihre vor dem Abgleich gespeicherten Informationen verlieren.</p>
+		</note>
+		
+	</list>
+		
+
+ </section> 
+ 
+  <section id="webdav">
+
+	<title>Abgleich mittels WebDav konfigurieren</title>
+	
+	<p>Um Ihre Notizen mit einem WebDAV-Server abzugleichen, müssen Sie das wdfs FUSE-Dateisystem installiert haben. Befolgen Sie die Anweisungen Ihres Betriebssystems, um FUSE für Ihr Benutzerkonto einzurichten. Es muss auch der GNOME-Schlüsselbund installiert sein.</p>
+	
+	<p>Wählen Sie <gui>WebDAV</gui> aus der Auswahlliste <gui>Service</gui>. Geben Sie die Verbindungsinformationen Ihres Servers ein, und wählen Sie dann <gui>Speichern</gui>. Sie können nun Ihre Notizen abgleichen.</p>
+
+ </section>
+ 
+  <section id="ssh">
+
+	<title>Abgleich mittels SSH konfigurieren</title>
+	
+	<p>Um Ihre Notizen mit einem SSH-Server abzugleichen, müssen Sie das FUSE-Dateisystem installiert haben, das auch <app>sshfs</app> genannt wird. Befolgen Sie den Anweisungen Ihres Betriebssystems, um FUSE für Ihr Benutzerkonto einzurichten. Sie benötigen auch einen SSH-Schlüssel für Ihr Benutzerkonto auf dem SSH-Server, welches durch die Anwendung <app>Seahorse</app> bereitgestellt werden kann, welche auch unter dem Namen <app>Passwörter und Verschlüsselung</app> bekannt ist.</p>
+	
+	<p>Es wird empfohlen, dass ein dritter Rechner oder Server als Gegenstelle zum Speichern der abgeglichenen Notizen verwendet wird, welche zwischen mehreren Rechnern abgeglichen werden sollen.</p>
+
+	<p>Öffnen Sie <app>Passwörter und Verschlüsselung</app> im Menü <guiseq><gui>System</gui><gui>Einstellungen</gui><gui>Passwörter und Verschlüsselung</gui></guiseq>. Klicken Sie auf Ihren Schlüssel und wählen Sie im Menü <guiseq><gui>Entfernt</gui><gui>Schlüssel für Secure Shell konfigurieren</gui></guiseq> und geben Sie unter <gui>Rechnername</gui> den Domänennamen oder die IP-Adresse des Rechners ein, mit dem Sie abgleichen möchten. Geben Sie den Benutzernamen des entfertnen Rechners unter <gui>Anmeldename:</gui> ein und klicken Sie auf <gui>Einrichten</gui>. Geben Sie auf Nachfrage Ihr Passwort ein, um die Einrichtung Ihres Schlüssels abzuschließen.</p>
+	
+	<p>Wählen Sie in Tomboy <gui>SSH</gui> in der Auswahlliste <gui>Service</gui>. Vervollständigen Sie die Verbindungsinformationen Ihres Servers und klicken Sie auf <gui>Speichern</gui>. Der <gui>Ordnerpfad</gui> ist optional, sollte aber auf einen leeren Ordner verweisen. Sie können nun Ihre Notizen abgleichen.</p>
+
+ </section>
+
+ <section id="local">
+
+	<title>Abgleich in einen lokalen Ordner konfigurieren</title>
+	
+	<p>Sie können Ihre Notizen mit einem lokalen Ordner abgleichen, wenn dieser für Ihre anderen Systeme zugänglich ist, bzw. ein lokaler Einhängepunkt für ein entferntes Laufwerk ist.</p>
+
+	<p>Wählen Sie <gui>Lokaler Ordner</gui> in der Auswahlliste <gui>Service</gui>. Legen Sie dann den gewünschten <gui>Ordnerpfad</gui> für den Abgleich fest und klicken Sie dann auf <gui>Speichern</gui>. Sie können nun Ihre Notizen abgleichen.</p>
+
+ </section>
+ 
+ </page>

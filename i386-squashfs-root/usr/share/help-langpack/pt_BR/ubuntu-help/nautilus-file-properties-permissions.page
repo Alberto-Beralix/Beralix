@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="nautilus-file-properties-permissions" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files#faq"/>
+    <link type="seealso" xref="nautilus-file-properties-basic"/>
+
+    <desc>Controla quem pode visualizar e editar seus arquivos e pastas.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+  <title>Configurar permissões de arquivos</title>
+
+  <p>Você pode usar as permissões de arquivo para controlar quem pode visualizar e editar os arquivos dos quais você é proprietário. Para visualizar e definir as permissões de um arquivo, dê um clique com o botão direito nele e selecione <gui>Propriedades</gui>, depois selecione a aba <gui>Permissões</gui>.</p>
+
+  <p>Veja <link xref="#files"/> e <link xref="#folders"/> abaixo para detalhes dos tipos de permissões que você pode definir.</p>
+
+  <section id="files">
+    <title>Arquívos</title>
+
+    <p>Você pode definir permissões para o proprietário do arquivo, o proprietário do grupo e todos os usuários do sistema. Para seus arquivos, você é o proprietário e você pode dar a você mesmo permissão de somente leitura ou leitura e escrita. Defina um arquivo como somente leitura se você não quiser alterá-lo acidentalmente.</p>
+
+    <p>Todo usuário no seu computador pertence a um grupo. Em computadores de casa, é comum que cada usuário tenha seu próprio grupo e permissões de grupo não são usadas com frequência. Em ambientes corporativos, grupos são usados algumas vezes para departamentos ou projetos. Assim como tem um dono, cada arquivo pertence a um grupo. Você pode definir o grupo do arquivo e controlar as permissões para todos os usuários naquele grupo. Você só pode definir o grupo do arquivo para um grupo ao qual você pertence.</p>
+
+    <p>Você também pode definir permissões para outros usuários que não são o proprietário e aqueles no grupo do arquivo.</p>
+
+    <p>Se o arquivo é um programa, como um script, você deve selecionar <gui>Permitir execução do arquivo como um programa</gui> para executá-lo. Mesmo com essa opção selecionada, o gerenciador de arquivos ainda pode abrir o arquivo em uma aplicação ou perguntar o que deve ser feito. Veja <link xref="nautilus-behavior#executable"/> para mais informações.</p>
+  </section>
+
+  <section id="folders">
+    <title>Pastas</title>
+    <p>Você pode definir permissões em pastar para o proprietário, grupo e outros usuários. Veja os detalhes das permissões de arquivos  acima para uma explicação de proprietários, grupos e outros usuários.</p>
+    <p>As permissões que você pode definir para uma pasta são diferentes daquelas que você pode definir para um arquivo.</p>
+    <terms>
+      <item>
+        <title><gui>Nenhum</gui></title>
+        <p>O usuário não vai nem mesmo ser capaz de ver quais arquivos estão na pasta.</p>
+      </item>
+      <item>
+        <title><gui>Apenas listar arquivos</gui></title>
+        <p>O usuário será capaz de ver os arquivos que estão na pasta, mas não será capaz de abrir, ciar ou excluir arquivos.</p>
+      </item>
+      <item>
+        <title><gui>Acessar arquivos</gui></title>
+        <p>O usuário será capaz de abrir arquivos na pasta (desde que ele tenha permissão para fazer isso no arquivo em particular), mas não será capaz de criar novos arquivos ou excluir arquivos.</p>
+      </item>
+      <item>
+        <title><gui>Criar e excluir arquivos</gui></title>
+        <p>O usuário terá acesso total à pasta, incluindo abrir, criar e excluir arquivos.</p>
+      </item>
+    </terms>
+
+    <p>Você também pode definir rapidamente as permissões para todos os arquivos na pasta usando as listas suspensas <gui>Acesso do arquivo</gui> e a opção <gui>Executar</gui>. Deixe as listas suspensas como <gui>---</gui> para nenhuma alteração ou a caixa de seleção <gui>Executar</gui> em estado indeterminado (uma linha horizontal sobre ela).</p>
+    <p>Se você clicar em <gui>Aplicar permissões aos anexos</gui>, o gerenciador de arquivos irá ajustar as permissões de leitura, escrita e execução dos anexos nas opções <gui>Acesso ao arquivo</gui> e <gui>Executar</gui> que você definir. Ele também irá alterar as permissões de anexos para corresponder às permissões da pasta. Permissões para anexos são aplicadas para arquivos em subpastas, bem como para qualquer profundidade.</p>
+  </section>
+
+</page>

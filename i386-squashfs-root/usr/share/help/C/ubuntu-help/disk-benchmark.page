@@ -1,0 +1,61 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="disk-benchmark">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    
+    <credit type="author">
+      <name>GNOME Documentation Team</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Natalia Ruz Leiva</name>
+      <email>nruz@alumnos.inf.utfsm.cl</email>
+    </credit>
+    <credit type="author">
+      <name>Steven Richards</name>
+      <email>steven.richardspc@gmail.com</email>
+    </credit>
+
+    <desc>You can run benchmarks on your hard disk to check how fast it is.</desc>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  </info>
+
+<title>Test the performance of your hard disk</title>
+
+<p>To test the performance of the hard disk, go to the <link xref="unity-dash-intro">dash</link> and
+open the <app>Disk Utility</app>.</p>
+
+<p>To run a benchmark in <gui>Disk Utility</gui>:</p>
+
+  <steps>
+    <item><p>Click on the hard disk in the <gui>Storage Devices</gui> list. Information will appear
+about the disk and its status under <gui>Drive</gui>.</p></item>
+    <item><p>Choose <gui>Benchmark</gui>.</p></item>
+    <item>
+     <p>Click <gui>Start Read-Only Benchmark</gui> or <gui>Start Read/Write Benchmark</gui>.</p>
+     <p>The read-only benchmark will only test how fast data can be read off the disk. The read/write
+benchmark will also test how fast data can be put onto the disk, so it will take longer to complete.</p>
+    </item>
+  </steps>
+
+<p>When the test is finished, the results will appear on the graph. These results tell you how fast
+files were read or written, and how long it took. The time is measured in Milliseconds (ms) and
+data transfer speed is measured in Megabytes per Second (MB/s).</p>
+
+<p>After the test is finished, the following statistics will be listed below the graph:</p>
+
+  <list>
+    <item><p>Minimum Read Rate in Megabytes per Second</p></item>
+    <item><p>Maximum Read Rate in Megabytes per Second</p></item>
+    <item><p>Average Read Rate in Megabytes per Second</p></item>
+    <item><p>Last Benchmark in Seconds</p></item>
+    <item><p>Minimum Write Rate in Megabytes per Second</p></item>
+    <item><p>Maximum Write Rate in Megabytes per Second</p></item>
+    <item><p>Average Write Rate in Megabytes per Second</p></item>
+    <item><p>Average Access Time in Milliseconds</p></item>
+  </list>
+
+</page>

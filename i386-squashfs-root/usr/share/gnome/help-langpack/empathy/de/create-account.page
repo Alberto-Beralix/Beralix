@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="task" id="create-account" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#accounts"/>
+    <link type="seealso" xref="add-account"/>
+    <desc>Ein Konto bei einem der unterstützten Nachrichtendienste registrieren.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-21" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-07" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-02" status="done"/>
+      -->
+    </revision>
+    <revision pkgversion="2.30" version="0.3" date="2010-04-19" status="review"/>
+    <revision pkgversion="2.30" version="0.4" date="2010-10-01" status="review"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Ein neues Konto registrieren</title>
+
+  <p>Für die meisten Kontentypen ist es erforderlich, dass Sie ein Konto bei einem Dienstanbieter erstellen, bevor Sie sich über Sofortnachrichten-Anwendungen wie <gui>Empathy</gui> verbinden können. Für einige Kontenanbieter können Sie <gui>Empathy</gui> verwenden, um ein neues Konto zu registrieren, unter Anwendung der gleichen Schritte wie für das <link xref="add-account">Hinzufügen eines Kontos</link>.</p>
+
+  <p>Diese Seite stellt für die verschiedenen Kontentypen Informationen über das Anlegen eines neuen Kontos bereit. Sie sollten von Ihrem Dienstanbieter eine Anmeldekennung und ein Passwort sowie eventuelle zusätzliche Informationen erhalten haben, die Sie zum Verbinden mit <gui>Empathy</gui> benötigen.</p>
+  
+  <section id="facebook">
+    <title>Facebook</title>
+    <p>Facebook ist eines der am meisten genutzten sozialen Netzwerke. Den Benutzern wird die Erstellung eines eigenen Profils und die Kommunikation mit ihren Freunden ermöglicht.</p>
+    <p>Um Facebook zur Unterhaltung mit Ihren Freunden nutzen zu können, müssen Sie ein neues Konto auf folgender Webseite erstellen: <link href="http://www.facebook.com">www.facebook.com</link>.</p>
+  </section>
+
+  <section id="jabber">
+    <title>Jabber</title>
+
+    <p>Jabber ist ein offenes Sofortnachrichtensystem. Wie E-Mail, erlaubt Jabber die Wahl Ihres Konto-Dienstanbieters und die Kommunikation mit anderen Jabber-Benutzern, unabhängig von deren Konto-Dienstanbietern.</p>
+
+    <p>Es wird nötig sein, dass Sie ein neues Konto bei einem Jabber-Dienstanbieter anlegen. Es gibt zahlreiche freie Jabber-Dienstanbieter, einer der populärsten ist <link href="http://register.jabber.org/">Jabber.org</link>.</p>
+
+    <note>
+      <p>Falls Sie Google Mail oder Google Talk benutzen, haben Sie bereits ein Jabber-Konto. Google Talk ist ein Jabber-Dienst. Verwenden Sie einfach Ihre Google Mail-Adresse und Ihr Passwort in <app>Empathy</app> für die Verbindung.</p>
+    </note>
+  </section>
+
+  <section id="salut">
+    <title>Personen in der Nähe</title>
+
+    <p>Sie müssen kein Konto bei einem Dienstanbieter anlegen, um dieses Funktionsmerkmal nutzen zu können. Dieser Dienst ist immer dann verfügbar, wenn Sie mit einem lokalen Netzwerk verbunden sind, zum Beispiel einem drahtlosen Zugangspunkt (Hotspot). Andere Benutzer, die diesen Dienst nutzen, werden im Netzwerk automatisch gefunden.</p>
+
+    <p>Weitere Informationen finden Sie in <link xref="salut-protocol"/>.</p>
+  </section>
+
+  <section id="sip-services">
+    <title>SIP</title>
+
+    <p>SIP ist ein offenes System für Audio- und Video-Unterhaltungen übar das Internet. Sie müssen ein SIP-Konto bei einem Dienstanbieter erstellen. Unabhängig davon, welchen Dienstanbieter Ihre Kontakte nutzen, können Sie mit allen anderen SIP-Benutzern kommunizieren.</p>
+
+    <note style="warning">
+      <p>Wegen technischer Unterschiede funktioniert <link href="https://www.ekiga.net/index.php?page=register">Ekiga.net</link> derzeit nicht mit <app>Empathy</app>.</p>
+    </note>
+
+    <p>Einige SIP-Dienste ermöglichen es, von Ihrem Rechner aus gewöhnliche Telefone anzurufen. Im Allgemeinen werden Sie sich hierfür an einem zu bezahlenden Dienst registrieren müssen.</p>
+  </section>
+
+  <section id="irc">
+    <title>IRC</title>
+
+    <p>Sie müssen kein Konto registrieren, um das IRC zu benutzen. Obgleich Sie beim Hinzufügen eines IRC-Kontos in <app>Empathy</app> einen Spitznamen angeben, wird dieser Spitzname zwar jedes Mal bei einem Verbindungsaufbau festgelegt. Falls aber ein anderer Benutzer diesen Spitznamen verwendet, müssen Sie einen neuen wählen.</p>
+
+    <p>Einige IRC-Netzwerke verwenden einen Dienst namens NickServ, um Benutzern zu ermöglichen, ihre Spitznamen zu schützen. Weitere Informationen finden Sie in <link xref="irc-nick-password"/>.</p>
+
+    <p>Einige IRC-Server sind passwortgeschützt. Sie müssen das Passwort kennen, um eine Verbindung zu diesen Servern herzustellen. Im Allgemeinen sind dies private IRC-Netzwerke.</p>
+  </section>
+
+  <section id="proprietary-services">
+    <title>Proprietäre Dienste</title>
+
+    <p>Es gibt zahlreiche proprietäre Sofortnachrichtendienste, die von verschiedenen Unternehmen oder Organisationen entwickelt wurden. <app>Empathy</app> ermöglicht Ihnen für die populärsten dieser Dienste die Verbindung zu einem vorhandenen Konto. Um ein Konto bei einem dieser Dienste anzulegen, besuchen Sie bitte die Webseite des jeweiligen Anbieters. Bestätigen Sie dort die Nutzungsbedingungen.</p>
+
+    <list>
+      <item>
+        <p>
+          <link href="http://dashboard.aim.com/aim">AIM</link>
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://www.icq.com/register/">ICQ</link>
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://accountservices.passport.net">MSN</link>
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://login.yahoo.com/config/login">Yahoo!</link>
+        </p>
+      </item>
+    </list>
+  </section>
+
+</page>

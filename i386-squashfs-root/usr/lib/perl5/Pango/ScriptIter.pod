@@ -1,0 +1,69 @@
+=head1 NAME
+
+Pango::ScriptIter - used to break a string of Unicode into runs by text
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----Pango::ScriptIter
+
+
+
+=cut
+
+=for object Pango::ScriptIter - used to break a string of Unicode into runs by text
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 scriptiter = Pango::ScriptIter-E<gt>B<new> ($text)
+
+=over
+
+=item * $text (string) 
+
+=back
+
+Since: pango 1.4
+
+=head2 boolean = $iter-E<gt>B<next> 
+
+Since: pango 1.4
+
+=head2 list = $iter-E<gt>B<get_range> 
+
+
+Returns the bounds and the script for the region pointed to by I<$iter>.
+
+
+Since: pango 1.4
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Boxed>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="disk-format" xml:lang="de">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    
+    <credit type="author">
+      <name>GNOME-Dokumentationsteam</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <desc>Entferne alle Dateien und Ordner auf der externen Festplatte oder des USB-Sticks durch Formatieren.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Alles von einem Wechseldatenträger löschen</title>
+
+<p>If you have a removable disk, like a USB memory stick or an external hard 
+disk, you may sometimes wish to completely remove all of its files and 
+folders. You can do this by <em>formatting</em> the disk - this deletes all 
+of the files on the disk and leaves it empty.</p>
+
+<steps>
+ <title>Formatieren eines Wechseldatenträgers</title>
+ <item><p>Open the <app>Disk Utility</app> application from the <gui>Dash</gui>.</p></item>
+ <item><p>Select the disk you want to wipe from the <gui>Storage Devices</gui> list.</p>
+  <note style="warning"><p>Stellen Sie unbedingt sicher, dass Sie das richtige Medium gewählt haben! Falls Sie das falsche gewählt haben, werden alle Dateien auf diesem Medium gelöscht!</p></note></item>
+ <item><p>In the Volumes section, click <gui>Unmount Volume</gui>. Then click <gui>Format Volume</gui>.</p></item>
+ <item><p>In the window that pops up, choose a file system <gui>Type</gui> for the disk.</p>
+  <p>If you use the disk on Windows and Mac OS computers in addition to Linux computers, choose <gui>FAT</gui>. If you only use it on Windows, <gui>NTFS</gui> may be a better option. A brief description of the <gui>file system type</gui> will be presented as a label.</p></item>
+ <item><p>Give the disk a name and click <gui>Format</gui> to begin wiping the disk.</p></item>
+ <item><p>Once the formatting has finished, <gui>safely remove</gui> the disk. It should now be blank and ready to use again.</p></item>
+</steps>
+
+<note style="warning">
+ <title>Das Formatieren einer Festplatte entfernt die Dateien nicht sicher.</title>
+ <p>Formatting a disk is not a completely secure way of wiping all of its 
+data. A formatted disk will not appear to have files on it, but it is 
+possible that special recovery software could retrieve the files. If you 
+need to securely delete the files, you will need to use a command-line 
+utility, such as <app>shred</app>.</p>
+</note>
+
+</page>

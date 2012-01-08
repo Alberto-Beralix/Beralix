@@ -1,0 +1,22 @@
+[Desktop Entry]
+X-AppInstall-Package=docbook2odf
+X-AppInstall-Popcon=34
+X-AppInstall-Section=universe
+
+Encoding=UTF-8
+Name=docbook2odf
+MimeType=application/docbook+xml;
+Exec=docbook2odf --force --input-file  %f
+Type=Application
+Terminal=false
+NoDisplay=true
+ServiceTypes=text/docbook
+Actions=docbook2odf
+
+[Desktop Action docbook2odf]
+Name=Convert to OpenDocument
+Icon=odf
+Exec=docbook2odf --force --input-file %U
+
+
+X-Ubuntu-Gettext-Domain=app-install-data

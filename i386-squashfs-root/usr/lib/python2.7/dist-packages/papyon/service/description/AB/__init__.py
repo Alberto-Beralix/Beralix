@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/papyon/service/description/AB/__init__.py

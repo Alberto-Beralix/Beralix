@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="intro-main-window" xml:lang="es">
+
+  <info>
+    <desc>Una explicación de las áreas mostradas en la ventana de Evolution.</desc>
+
+    <link type="guide" xref="index#getting-started"/>
+    <link type="seealso" xref="calendar-layout"/>
+    <link type="seealso" xref="mail-layout-changing"/>
+
+    <revision pkgversion="3.1.5" version="0.4" date="2011-08-25" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Barbara M. Tobias</name>
+      <email>barbtobias09@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/ui-intro.html.en -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>La ventana principal de <em>Evolution</em></title>
+
+<!-- This section fixes https://bugzilla.gnome.org/show_bug.cgi?id=657028 -->
+<p>Evolution provides functionality for E-Mail, Calendar, Contacts, Tasks, and Memos. You can switch to another functionality by using the "Switcher" buttons in the lower left corner. Depending on the displayed functionality also the displayed elements in the window differ.</p>
+
+<section id="e-mail">
+<title>Correo-e</title>
+
+<media type="image" src="./figures/window-overview-layers.png" width="600">
+  <p>La ventana principal de correo de Evolution</p>
+</media>
+
+<p>Elementos correspondientes en la ventana principal de correo:</p>
+<table frame="all" rules="all">
+  <tr>
+    <td colspan="2"><p><media type="image" mime="image/png" src="./figures/color-c4a000.png" width="10"/> Barra de menú</p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><media type="image" mime="image/png" src="./figures/color-ce5c00.png" width="10"/> Barra de herramientas</p></td>
+  </tr>
+  <tr>
+    <td rowspan="2"><p><media type="image" mime="image/png" src="./figures/color-8f5902.png" width="10"/> Lista de carpetas</p></td>
+    <td><p><media type="image" mime="image/png" src="./figures/color-4e9a06.png" width="10"/> Barra de búsqueda</p></td>
+  </tr>
+  <tr>
+    <td><p><media type="image" mime="image/png" src="./figures/color-204a87.png" width="10"/> Lista de mensajes</p></td>
+  </tr>
+  <tr>
+    <td><p><media type="image" mime="image/png" src="./figures/color-a40000.png" width="10"/> Selector</p></td>
+    <td><p><media type="image" mime="image/png" src="./figures/color-5c3566.png" width="10"/> Panel de vista previa</p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><media type="image" mime="image/png" src="./figures/color-2e3436.png" width="10"/> Barra de estado</p></td>
+  </tr>
+</table>
+
+<terms>
+<item>
+<title>Lista de carpetas</title>
+<p>La lista de carpetas le proporciona una lista de las carpetas disponibles para cada cuenta. Para ver el contenido de una carpeta, pulse el nombre de la carpeta y el contenido se mostrará en la lista de correo-e.</p>
+<note style="tip"><p>Para obtener información adicional consulte <link xref="mail-folders">Usar carpetas</link>.</p></note>
+</item>
+<item>
+<title>Lista de mensajes</title>
+<p>La lista de mensajes muestra todos los mensajes leídos y sin leer que tiene en la carpeta seleccionada. Para ver un correo-e en el panel de vista previa, pulse en correo-e en la lista de mensajes.</p>
+</item>
+<item>
+<title>Selector</title>
+<p>El selector en la parte inferior de la barra lateral le permite cambiar entre las herramientas de Evolution: correo, contactos, calendarios, notas y tareas.</p><p>Para obtener más información consulte <link xref="change-switcher-appearance">Cambiar la apariencia del selector</link>.</p>
+<note style="tip"><p>Puede desactivar la lista de carpetas y la barra lateral del selector cambiando <guiseq><gui>Ver</gui><gui>Distribución</gui><gui>Mostrar barra lateral</gui></guiseq>.</p></note>
+</item>
+<item>
+<title>Panel de vista previa</title>
+<p>El panel de vista previa muestra el mensaje actualmente seleccionado en la lista de mensajes.</p>
+<note style="tip"><p>Puede desactivar el panel de vista previa cambiando <guiseq><gui>Ver</gui><gui>Vista previa</gui><gui>Mostrar vista previa del correo</gui></guiseq>.</p></note>
+</item>
+</terms>
+</section>
+
+<section id="calendar">
+<title>Calendario</title>
+<p>Elementos en la ventana principal del calendario:</p>
+<table frame="all" rules="all">
+  <tr>
+    <td colspan="3"><p><media type="image" src="./figures/color-c4a000.png" width="10"/> Barra de menú</p></td>
+  </tr>
+  <tr>
+    <td colspan="3"><p><media type="image" src="./figures/color-ce5c00.png" width="10"/> Barra de herramientas</p></td>
+  </tr>
+  <tr>
+    <td rowspan="2"><p><media type="image" src="./figures/color-8f5902.png" width="10"/> Lista de calendarios</p></td>
+    <td colspan="2"><p><media type="image" src="./figures/color-4e9a06.png" width="10"/> Barra de búsqueda</p></td>
+  </tr>
+  <tr>
+    <td rowspan="3"><p><media type="image" src="./figures/color-204a87.png" width="10"/> Lista de citas</p></td>
+    <td><p>Lista de tareas</p></td>
+  </tr>
+  <tr>
+    <td><p>Panel del mes</p></td>
+    <td rowspan="2"><p>Lista de notas</p></td>
+  </tr>
+  <tr>
+    <td><p><media type="image" src="./figures/color-a40000.png" width="10"/> Selector</p></td>
+  </tr>
+  <tr>
+    <td colspan="3"><p><media type="image" src="./figures/color-2e3436.png" width="10"/> Barra de estado</p></td>
+  </tr>
+</table>
+<terms>
+<item>
+<title>Lista de citas</title>
+<p>La lista de citas muestra todas sus citas programadas en el espacio de tiempo seleccionado.</p>
+</item>
+<item>
+<title>Panel del mes</title>
+<p>En el panel del mes se muestra una pequeña vista mensual de su calendario. Para ver más meses arrastre hacia la derecha el borde. Puede seleccionar un rango de días en el panel del mes para mostrar un rango de días en la lista de citas.</p>
+</item>
+<item>
+<title>Lista de tareas y notas</title>
+<p>Para su comodidad, las tareas y las notas se muestran y no están asociadas con ninguna cita. Use el <gui>Selector</gui> para ir a sus ventanas principales.</p>
+</item>
+</terms>
+
+</section>
+
+<section id="contacts">
+<title>Contactos</title>
+<p>Elementos en la ventana principal de contactos:</p>
+<table frame="all" rules="all">
+  <tr>
+    <td colspan="2"><p><media type="image" src="./figures/color-c4a000.png" width="10"/> Barra de menú</p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><media type="image" src="./figures/color-ce5c00.png" width="10"/> Barra de herramientas</p></td>
+  </tr>
+  <tr>
+    <td rowspan="2"><p><media type="image" src="./figures/color-8f5902.png" width="10"/> Lista de libretas de direcciones</p></td>
+    <td><p><media type="image" src="./figures/color-4e9a06.png" width="10"/> Barra de búsqueda</p></td>
+  </tr>
+  <tr>
+    <td><p><media type="image" src="./figures/color-204a87.png" width="10"/> Lista de contactos</p></td>
+  </tr>
+  <tr>
+    <td><p><media type="image" src="./figures/color-a40000.png" width="10"/> Selector</p></td>
+    <td><p><media type="image" src="./figures/color-5c3566.png" width="10"/> Vista previa del contacto</p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><media type="image" src="./figures/color-2e3436.png" width="10"/> Barra de estado</p></td>
+  </tr>
+</table>
+<note style="tip"><p>Puede desactivar la vista previa de los contactos cambiando <guiseq><gui>Ver</gui><gui>Vista previa</gui><gui>Vista previa de contactos</gui></guiseq>.</p></note>
+</section>
+</page>

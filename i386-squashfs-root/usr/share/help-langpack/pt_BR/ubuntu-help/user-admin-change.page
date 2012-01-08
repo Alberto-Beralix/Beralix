@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="user-admin-change" xml:lang="pt-BR">
+
+  <info>
+    
+    <link type="guide" xref="user-accounts#privileges"/>
+    <link type="seealso" xref="user-admin-explain"/>
+    
+    <desc>Você pode alterar quais usuários estão autorizados a fazer alterações no sistema, dando-lhes privilégios administrativos.</desc>
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Alterar quem tem privilégios adminitrativos</title>
+
+<p>Privilégios administrativos são uma forma de decidir quem pode fazer alterações em partes importantes do sistema. Você pode mudar quais usuários tenham privilégios administrativos e quais não. Eles são uma boa maneira de manter seu sistema seguro e prevenir alterações potencialmente prejudiciais não autorizadas.</p>
+
+<steps>
+ <item>
+  <p>Clique no seu nome na <gui>barra do menu</gui> e selecione <gui>Contas de usuários</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Clique em <gui>Desbloquear</gui> e digite sua senha para desbloquear as configurações da conta. (Para dar uma privilégios de administrador ao usuário, você deve ter privilégios de administrador.)</p>
+ </item>
+
+ <item>
+  <p>Selecione o usuário cujos privilégios você quer modificar e então na opção próxima a <gui>Tipo de Conta</gui>.</p>
+ </item>
+ 
+ <!-- FIXME: Check that the definitions below are correct! -->
+ <item>
+  <list>
+   <item>
+    <p>Escolha <gui>Administrador</gui> se você quer que o usuário seja capaz de executar tarefas administrativas, como instalação de novos aplicativos.</p>
+   </item>
+   <item>
+    <p>Escolha <gui>Padrão</gui> se você não quer que o usuário seja capaz de realizar tarefas administrativas.</p>
+   </item>
+  </list>
+ </item>
+ 
+ <item>
+  <p>Feche a janela Contas de Usuário. Os privilégios do usuário serão alterados na próxima vez que eles entrarem.</p>
+  </item>
+</steps>
+
+<note>
+ <p>A primeira conta de usuário no sistema tem privilégios administrativos. Essa é a conta que foi criada quando você instalou o sistema.</p>
+<p>Não é recomendado ter muitos usuários com privilégios <gui>Administratorgui&gt; em um sistema.</gui></p>
+</note>
+
+  <comment>
+   <cite date="2010-10-31" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
+   <p>Explain how admin privileges can be given to other people, or removed. Warn the reader about how it's unwise to have too many admins on a system.</p>
+  </comment>
+	
+</page>

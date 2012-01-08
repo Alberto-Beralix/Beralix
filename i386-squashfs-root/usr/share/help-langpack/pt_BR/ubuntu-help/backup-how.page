@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="backup-how" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="backup-why"/>
+    <desc>Use o Déjà Dup (ou alguma outra aplicação de cópia de segurança) para fazer cópias de seu valiosos arquivos e configurações para se proteger contra perdas.</desc>
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <credit>
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Como fazer cópias de segurança</title>
+
+<p>A maneira mais fácil de fazer cópias de segurança de seus arquivos e configurações e deixar que uma aplicação de cópia de segurança gerencie o processo para você. Inúmeras aplicações de cópia de segurança estão disponíveis, como por exemplo  <link href="apt:deja-dup">Déjà Dup</link>.</p>
+
+<p>A ajuda para seu aplicativo de cópia de segurança escolhido o guiará através da configuração de suas preferências para a cópia de segurança, bem como a forma de restaurar os dados se algo der errado.</p>
+
+<p>Uma opção alternativa é apenas <link xref="files-copy">copiar seus arquivos</link> para um local seguro, como um disco rígido externo, outro computador na rede ou um dispositivoUSB. Seus <link xref="backup-thinkabout">arquivos pessoais</link> e as configurações estão normalmente na sua pasta pessoal, então você pode copiá-los de lá.</p>
+   
+<p>A quantidade de dados que você pode fazer a cópia de segurança é limitada pelo tamanho do dispositivo de armazenamento. Se você tem o espaço em seu dispositivo de cópia de segurança, o melhor é o cópia da pasta pessoal inteira com as seguintes exceções:</p>
+
+<list>
+ <item><p>Os arquivos que você tenha copiado de um CD, DVD ou outra mídia removível, uma vez que seria mais rápido copiá-los novamente a que restaurá-los a partir de cópia de segurança.</p></item>
+ <item><p>Os arquivos que você pode gerar com facilidade. Por exemplo, PDFs que podem ser gerados a partir de arquivos TeX, ou arquivos de objeto que podem ser feitos com o utilitário make. Basta garantir que seja feita a cópia de segurança do arquivo fonte.</p></item>
+ <item><p>Seus arquivos descartados, que poderão ser encontrados em <cmd>~/.local/share/Trash</cmd> (o diretório da Lixeira).</p></item>
+</list>
+
+</page>

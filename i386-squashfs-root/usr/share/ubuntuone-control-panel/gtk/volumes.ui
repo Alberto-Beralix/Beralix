@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.22"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkAlignment" id="itself">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkScrolledWindow" id="scrolledwindow1">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="hscrollbar_policy">automatic</property>
+        <property name="vscrollbar_policy">automatic</property>
+        <property name="shadow_type">in</property>
+        <child>
+          <object class="GtkTreeView" id="volumes_view">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="model">volumes_store</property>
+            <property name="rules_hint">True</property>
+            <property name="tooltip_column">0</property>
+            <signal name="row-activated" handler="on_volumes_view_row_activated" swapped="no"/>
+            <child>
+              <object class="GtkTreeViewColumn" id="treeviewcolumn2">
+                <property name="resizable">True</property>
+                <property name="sizing">autosize</property>
+                <property name="expand">True</property>
+                <child>
+                  <object class="GtkCellRendererPixbuf" id="cellrendererpixbuf1"/>
+                  <attributes>
+                    <attribute name="sensitive">1</attribute>
+                    <attribute name="icon-name">2</attribute>
+                    <attribute name="stock-size">5</attribute>
+                  </attributes>
+                </child>
+                <child>
+                  <object class="GtkCellRendererText" id="text_renderer">
+                    <property name="ellipsize">end</property>
+                    <property name="width_chars">80</property>
+                  </object>
+                  <attributes>
+                    <attribute name="markup">0</attribute>
+                    <attribute name="text">0</attribute>
+                  </attributes>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkTreeViewColumn" id="treeviewcolumn3">
+                <property name="sizing">autosize</property>
+                <property name="title" translatable="yes">Sync locally?</property>
+                <child>
+                  <object class="GtkCellRendererToggle" id="cellrenderertoggle1">
+                    <property name="indicator_size">15</property>
+                    <signal name="toggled" handler="on_subscribed_toggled" swapped="no"/>
+                  </object>
+                  <attributes>
+                    <attribute name="sensitive">4</attribute>
+                    <attribute name="visible">3</attribute>
+                    <attribute name="active">1</attribute>
+                  </attributes>
+                </child>
+                <child>
+                  <object class="GtkCellRendererText" id="cellrenderertext1">
+                    <property name="visible">False</property>
+                  </object>
+                  <attributes>
+                    <attribute name="text">6</attribute>
+                  </attributes>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkTreeStore" id="volumes_store">
+    <columns>
+      <!-- column-name description -->
+      <column type="gchararray"/>
+      <!-- column-name subscribed -->
+      <column type="gboolean"/>
+      <!-- column-name icon-name -->
+      <column type="gchararray"/>
+      <!-- column-name subscribed-visible -->
+      <column type="gboolean"/>
+      <!-- column-name subscribed-sensitive -->
+      <column type="gboolean"/>
+      <!-- column-name icon-size -->
+      <column type="gint"/>
+      <!-- column-name identifier -->
+      <column type="gchararray"/>
+      <!-- column-name path -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+</interface>

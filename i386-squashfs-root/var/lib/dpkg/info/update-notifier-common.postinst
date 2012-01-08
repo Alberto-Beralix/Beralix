@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+# fixup /var/crash permissions (#449739)
+if [ "$1" = configure ] && dpkg --compare-versions "$2" le-nl "0.89"; then
+    if [ -d /var/crash ] && [ "$(stat -L -c '%a' /var/crash)" = "755" ]; then
+        chmod 1777 /var/crash
+    fi
+fi
+
+# Remove update-motd cpu-checker script
+if [ "$1" = configure ] && dpkg --compare-versions "$2" le-nl "0.110.1ubuntu1"; then
+    rm -f /etc/update-motd.d/20-cpu-checker
+fi
+
+

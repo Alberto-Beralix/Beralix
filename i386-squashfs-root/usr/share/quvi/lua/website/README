@@ -1,0 +1,134 @@
+
+1. Foreword
+===========
+
+This directory contains the website scripts quvi uses to parse the video
+links. Should video link parsing ever break (and they will eventually),
+these are the scripts that one should take a look at first.
+
+These scripts are written in Lua. If you are new to Lua,
+<http://www.lua.org/pil/> is a good place to start.
+
+
+1.1. Notes
+----------
+
+See quvi/ subdir for additional scripts that can be used in your
+scripts. You can find plenty of examples in the website scripts.
+
+You may need to unescape URLs from time to time. The "quvi" object
+(described below) previously contained a function `quvi.unescape' which
+could be used to do this. This function was removed in 0.2.14 and as
+of 0.2.14 you can do the following in your scripts instead:
+
+  local U = require 'quvi/util'
+  local s = U.unescape(url)
+
+
+2. Structure of an quvi website script
+======================================
+
+Each website script must contain the following functions:
+  * ident
+  * parse
+
+
+2.1. function ident (self)
+------------------------------
+
+quvi calls this function to check if the script can handle
+the user specified video page URL.
+
+Parameters:
+  * self (table)
+    - page_url (string)   -- User specified video page URL
+    - script_dir (string) -- Path to the directory containing this script
+
+Returns:
+  * A table containing the following details
+
+    * domain (string)
+      - Identifies the script, essentially a pattern
+      - Used to match the user specified video page URL
+      - Should cover any additional TLDs and website domain  names
+      - Examples: youtube.com, video.google.
+
+    * formats (string)
+      - Array of available video format IDs (e.g. "default|best|hq|hd")
+      - Specify at least 'default' in this
+      - Append 'best' to the list only if there are more than one format
+        IDs and the script contains an algorithm for this purpose
+
+    * categories (number)
+      - Bit pattern defining which categories this script belongs to
+      - See quvi/const.lua for the available category bits (e.g. proto_*)
+      - You can also use bit_or of quvi/bit.lua for multi-categorization
+      - Most scripts usually set this to proto_http
+
+    * handles (boolean)
+      - Whether this script can handle the user specified video page URL
+
+
+2.2. function parse (self)
+---------------------------
+
+quvi calls this function to fetch and parse the user specified URL.
+This function looks typically very different for each website. Compare
+buzzhumor.lua and youtube.lua for an example of this.
+
+The "parse" function is expected set the following details:
+  * host_id (string)
+  * title (string)
+  * id (string)
+  * url (array of strings)
+  * redirect_url (string) [see notes below]
+
+Optional details (set if available):
+  * thumbnail_url (string)
+  * duration (numeric)
+
+Each of these belong to the `self' table passed to the function
+as a parameter. e.g. self.host_id = 'youtube' or self.id = '1234'
+
+Parameters:
+  * quvi sets the following table keys before it runs the script
+    - page_url (string)         -- User specified video page URL
+    - requested_format (string) -- User requested video format ID
+    - script_dir (string)       -- Path to the directory containing this script
+
+Returns:
+  * The updated `self' table
+
+Notes:
+  * "redirect_url", special field, if set (default:empty):
+    - Follow to a new location (of redirect_url)
+    - Replaces the original user defined "page_url" (set by quvi_parse)
+    - See academicearth.lua script for an example
+
+
+3. Exposed C functions
+======================
+
+quvi exposes the following C functions to the website scripts. Each of
+these are in the "quvi" object, e.g. quvi.fetch.
+
+
+3.1. Function: string quvi.fetch (url, options)
+--------------------------------------------------------------
+
+Fetches data from the specified URL.
+
+Parameters:
+  * url (string)                - URL to fetch
+  * options (table)             - Additional options* [optional]
+
+options:
+  * fetch_type       (string)   ("page"|"config"|"playlist") =page
+  * arbitrary_cookie (string)   e.g. "foo=1;bar=2"
+  * user_agent       (string)   e.g. "foo/0.1"
+
+arbitrary_cookie value is passed (as it is) to libcurl, see:
+  http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCOOKIE
+
+Returns:
+  * Fetched data

@@ -1,0 +1,19 @@
+[Desktop Entry]
+X-AppInstall-Package=gnome-color-manager
+X-AppInstall-Popcon=952
+X-AppInstall-Section=universe
+
+Name=ICC Profile Installer
+Comment=Install ICC profiles
+Categories=System;
+Exec=/usr/bin/gcm-import %F
+Terminal=false
+Type=Application
+Icon=application-vnd.iccprofile
+StartupNotify=true
+NoDisplay=true
+MimeType=application/vnd.iccprofile;
+
+
+
+X-Ubuntu-Gettext-Domain=app-install-data

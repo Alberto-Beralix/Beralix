@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="disk-benchmark" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    
+    <credit type="author">
+      <name>Equipe de Documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Natalia Ruz Leiva</name>
+      <email>nruz@alumnos.inf.utfsm.cl</email>
+    </credit>
+    <credit type="author">
+      <name>Steven Richards</name>
+      <email>steven.richardspc@gmail.com</email>
+    </credit>
+
+    <desc>Você poderá executar benchmarks no seu disco rígido para verificar o quão rápido ele é.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Testar a performance do seu disco rígido</title>
+
+<p>Para testar o desempenho do seu disco rígido, vá ao <link xref="unity-dash-intro">painel</link> e abra o <app>Utilitário de unidades</app>.</p>
+
+<p>Para executar um benchmark no <gui>Utilitário de unidades</gui>:</p>
+
+  <steps>
+    <item><p>Clique no disco rígido na lista <gui>Dispositivos de armazenamento</gui>. Informações sobre o disco aparecerão e seu estado abaixo de <gui>Drive</gui>.</p></item>
+    <item><p>Escolha <gui>Benchmark</gui>.</p></item>
+    <item>
+     <p>Clique em  <gui>Inicia benchmark de apenas leitura</gui> ou <gui>Inicia benchmark de leitura/escrita</gui>.</p>
+     <p>O benchmark de somente leitura somente testará a velocidade de leitura do disco. O benchmark de leitura/escrita irá testar também a velocidade que dados podem ser colocados no disco, por isso ele demora mais para completar.</p>
+    </item>
+  </steps>
+
+<p>Quando o teste terminar, os resultados aparecerão no gráfico. Esses resultados irão lhe dizer a velocidade que os arquivos foram lidos ou escritos e quanto tempo levou. O tempo é medido em milissegundos (ms) e a velocidade de transferência dos dados é medida em megabytes por segundo (MB/s).</p>
+
+<p>Depois de terminado o teste, as estatísticas a seguir serão listadas abaixo do gráfico:</p>
+
+  <list>
+    <item><p>Taxa de leitura mínima em megabytes por segundo</p></item>
+    <item><p>Taxa de leitura máxima em megabytes por segundo</p></item>
+    <item><p>Taxa de transferência média em megabytes por segundo</p></item>
+    <item><p>Último benchmark em segundos</p></item>
+    <item><p>Taxa de escrita mínima em megabytes por segundo</p></item>
+    <item><p>Taxa de escrita máxima em megabytes por segundo</p></item>
+    <item><p>Taxa de escrita média em megabytes por segundo</p></item>
+    <item><p>Tempo de acesso médio em milissegundos</p></item>
+  </list>
+
+</page>

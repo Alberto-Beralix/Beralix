@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/google/protobuf/internal/python_message.py

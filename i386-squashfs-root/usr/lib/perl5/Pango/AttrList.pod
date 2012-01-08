@@ -1,0 +1,131 @@
+=head1 NAME
+
+Pango::AttrList - holds attributes that apply to a section of text
+
+=cut
+
+=for position DESCRIPTION
+
+=head1 DESCRIPTION
+
+Pango::AttrList is a collection of Pango::Attributes.  These
+attributes annotate text with styles.
+
+=cut
+
+
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----Pango::AttrList
+
+
+
+=cut
+
+=for object Pango::AttrList - holds attributes that apply to a section of text
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 attrlist = Pango::AttrList-E<gt>B<new> 
+
+=head2 $list-E<gt>B<change> ($attr)
+
+=over
+
+=item * $attr (Pango::Attribute) 
+
+=back
+
+=head2 attrlist or undef = $list-E<gt>B<filter> ($func, $data=undef)
+
+=over
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+Since: pango 1.2
+
+=head2 $list-E<gt>B<insert> ($attr)
+
+=over
+
+=item * $attr (Pango::Attribute) 
+
+=back
+
+=head2 $list-E<gt>B<insert_before> ($attr)
+
+=over
+
+=item * $attr (Pango::Attribute) 
+
+=back
+
+=head2 attriterator = $list-E<gt>B<get_iterator> 
+
+=head2 ($attr_list, $text, $accel_char) = Pango->B<parse_markup> ($markup_text, $accel_marker)
+
+=over
+
+=item * $markup_text (string) 
+
+=item * $accel_marker (character) 
+
+=back
+
+Parses marked-up text to create a plaintext string and an attribute list.
+
+If I<$accel_marker> is supplied and nonzero, the given character will mark the
+character following it as an accelerator.  For example, the accel marker might
+be an ampersand or underscore.  All characters marked as an acclerator will
+receive a PANGO_UNDERLINE_LOW attribute, and the first character so marked will
+be returned in I<$accel_char>.  Two I<$accel_marker> characters following each
+other reduce to a single literal I<$accel_marker> character.
+
+May croak with a L<Glib::Error> in $@ on failure.
+
+=head2 $list-E<gt>B<splice> ($other, $pos, $len)
+
+=over
+
+=item * $other (Pango::AttrList) 
+
+=item * $pos (integer) 
+
+=item * $len (integer) 
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Boxed>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/lazr/restfulclient/tests/__init__.py

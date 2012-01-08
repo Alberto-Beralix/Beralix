@@ -1,0 +1,203 @@
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_general">
+  <info>
+    <title type="sort">1. General</title>
+    <title type="link">General</title>
+    <desc>
+      Configuring <app>Orca</app>'s fundamental behaviors
+    </desc>
+    <link type="guide" xref="preferences#orca" />
+    <link type="next" xref="preferences_speech" />
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+  <title>General Preferences</title>
+  <section id="keyboardlayout">
+    <info>
+      <desc>
+        Preferences dialog box option to select which <app>Orca</app> keyboard
+        layout to use, desktop or laptop.
+      </desc>
+    </info>
+    <title>Keyboard Layout</title>
+    <media type="image" mime="image/png" src="figures/preferences_keyboard_layout.png"/>
+    <p>
+      The <gui>keyboard layout</gui> radio button group allows you to specify if
+      you will be working on a desktop (i.e. with a numeric keypad) or laptop
+      keyboard. Which layout you choose will determine both the <key>Orca
+      Modifier</key> as well as a number of keyboard shortcuts for performing
+      <app>Orca</app> commands.</p>
+    <p>
+      Default value: <gui>Desktop</gui>
+    </p>
+  </section>
+  <section id="quitorca">
+    <info>
+      <desc>
+        Preferences dialog box option to quit <app>Orca</app> without
+        presenting a confirmation dialog.
+      </desc>
+    </info>
+    <title>Quit Orca Without Confirmation</title>
+      <media type="image" mime="image/png" src="figures/preferences_quit_Orca_without_confirmation.png"/>
+      <p>
+        Normally, when you quit <app>Orca</app>, a confirmation dialog will
+        appear asking you if you do indeed wish to quit <app>Orca</app>.
+        Checking the <gui>Quit Orca without confirmation</gui> checkbox
+        prevents this confirmation window from appearing.
+    </p>
+    <p>
+      Default value: not checked
+    </p>
+  </section>
+  <section id="presenttooltips">
+    <info>
+      <desc>
+        Preferences dialog box option to enable presentation of tooltips which
+        appear as the result of mouse hovering.
+      </desc>
+    </info>
+    <title>Present Tooltips</title>
+    <media type="image" mime="image/png" src="figures/preferences_present_tooltips.png"/>
+    <p>
+      When checked, this option will tell <app>Orca</app> to present information
+      about tooltips when they appear as the result of mouse hovering. Specific
+      actions to force tooltips to appear, such as pressing <keyseq>
+      <key>Ctrl</key><key>F1</key></keyseq> when an object has focus, will
+      always result in tooltips being presented, regardless of this setting.
+    </p>
+    <p>
+      Default value: not checked
+    </p>
+  </section>
+  <section id="showmainwindow">
+    <info>
+      <desc>
+        Preferences dialog box option for showing or hiding the <app>Orca</app>
+        main window.
+      </desc>
+    </info>
+    <title>Show Orca Main Window</title>
+    <media type="image" mime="image/png" src="figures/preferences_show_Orca_main_window.png"/>
+    <figure>
+      <title>
+        The Orca Main Window
+      </title>
+      <media type="image" mime="image/png" src="figures/main_window.png"/>
+      <desc>
+        <app>Orca</app>'s main window provides you with a graphical way to
+        display the <link xref="preferences">Orca Preferences</link> dialog,
+        access help content, bring up the About dialog, and quit <app>Orca</app>.
+      </desc>
+    </figure>
+    <p>
+      Many users do not like the <app>Orca</app> main window because it shows
+      up in the window manager's Tab order when you press <keyseq>
+      <key>Alt</key><key>Tab</key></keyseq> to switch windows. By unchecking
+      the <gui>Show <app>Orca</app> main window</gui> checkbox, you can tell
+      <app>Orca</app> to not show <app>Orca</app>'s main window.
+    </p>
+    <p>
+      Default value: checked
+    </p>
+  </section>
+  <section id="autolaunch">
+    <info>
+      <desc>
+        Preferences dialog box option to cause <app>Orca</app> to automatically
+        start when you log in.
+      </desc>
+    </info>
+    <title>Start Orca When You Login</title>
+    <media type="image" mime="image/png" src="figures/preferences_start_Orca_when_you_login.png"/>
+    <p>
+      When checked, this option will tell the system to automatically launch
+      <app>Orca</app> when you log in.
+    </p>
+    <p>
+      Default value: not checked
+    </p>
+  </section>
+  <section id="objectundermouse">
+    <info>
+      <desc>
+        Preferences dialog box option to enable presentation of the object
+        under the mouse pointer.
+      </desc>
+    </info>
+    <title>Speak Object Under Mouse</title>
+    <media type="image" mime="image/png" src="figures/preferences_speak_object_under_mouse.png"/>
+    <p>
+      When checked, this option will tell <app>Orca</app> to present
+      information about the object under the mouse pointer as you move
+      it around the screen using <app>Orca</app>'s
+      <link xref="howto_mouse_review">Mouse Review</link> feature.
+    </p>
+    <p>
+      Default value: not checked
+    </p>
+  </section>
+  <section id="timeanddate">
+    <info>
+      <desc>
+        Preferences dialog box options for customizing the time and date
+        formats used by <app>Orca</app>.
+      </desc>
+    </info>
+    <title>Time Format and Date Format</title>
+    <media type="image" mime="image/png" src="figures/preferences_date_and_time.png"/>
+    <p>
+      The <gui>Time Format</gui> and <gui>Date Format</gui> combo boxes allow
+      you to specify how <app>Orca</app> will speak and braille the time and the
+      date.
+    </p>
+    <p>
+      Default value: use the system locale's format for each
+    </p>
+  </section>
+  <section id="profiles">
+    <info>
+      <desc>
+        Preferences dialog box options for managing settings profiles.
+      </desc>
+    </info>
+    <title>Profiles</title>
+    <media type="image" mime="image/png" src="figures/preferences_profiles.png"/>
+    <p>
+      The <gui>Profiles</gui> group of controls, which appear at the bottom
+      of the <gui>General</gui> page, make it possible for you to maintain
+      and use multiple configurations. 
+    </p>
+   <list>
+      <item>
+        <p>
+          The <gui>Active Profile</gui> combo box displays the current profile
+          and allows you to select a different profile to load.
+        </p>
+      </item>
+      <item>
+        <p>
+          The <gui>Load</gui> button will cause <app>Orca</app> to load the
+          profile indicated in the <gui>Active Profile</gui> combo box.
+        </p>
+      </item>
+      <item>
+        <p>
+          The <gui>Save As</gui> button allows you to save the current set of
+          options from the preferences dialog box to a named profile.
+        </p>
+      </item>
+      <item>
+        <p>
+          The <gui>Start-up Profile</gui> combo box allows you to select the
+          profile which should be automatically loaded each time you launch
+          <app>Orca</app>.
+        </p>
+      </item>
+    </list>
+  </section>
+</page>

@@ -1,0 +1,656 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/open_effects</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/open_effects</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[animation:Glide 2,animation:None,animation:Fade]</default>
+      <locale name="C">
+        <short>Open Effect</short>
+        <long>The animation effect shown when creating a window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/open_durations</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/open_durations</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[120,80,80]</default>
+      <locale name="C">
+        <short>Duration</short>
+        <long>Animation duration in milliseconds for open effect.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/open_matches</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/open_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[((type=Normal | Unknown) | name=sun-awt-X11-XFramePeer | name=sun-awt-X11-XDialogPeer) &amp; !(role=toolTipTip | role=qtooltip_label) &amp; !(type=Normal &amp; override_redirect=1) &amp; !(name=gnome-screensaver),(type=Menu | PopupMenu | DropdownMenu | Combo | Dialog | ModalDialog | Normal),(type=Tooltip | Notification | Utility) &amp; !(name=compiz) &amp; !(title=notify-osd)]</default>
+      <locale name="C">
+        <short>Window Match</short>
+        <long>The windows that will be animated.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/open_options</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/open_options</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[,,]</default>
+      <locale name="C">
+        <short>Options</short>
+        <long>Comma separated list of option value assignments to override effect settings, e.g.: fire_color=#0080ffff, fire_particles=700, fire_smoke=1</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/open_random_effects</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/open_random_effects</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Pool</short>
+        <long>Pool of effects to be chosen from if Random effect is selected. Click reset to use all effects.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/close_effects</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/close_effects</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[animation:Glide 2,animation:Fade,animation:None]</default>
+      <locale name="C">
+        <short>Close Effect</short>
+        <long>The animation effect shown when closing a window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/close_durations</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/close_durations</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[120,80,50]</default>
+      <locale name="C">
+        <short>Duration</short>
+        <long>Animation duration in milliseconds for close effect.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/close_matches</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/close_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[((type=Normal | Unknown) | name=sun-awt-X11-XFramePeer | name=sun-awt-X11-XDialogPeer) &amp; !(role=toolTipTip | role=qtooltip_label) &amp; !(type=Normal &amp; override_redirect=1) &amp; !(name=gnome-screensaver) &amp; !(name=gnome-screenshot),(type=Menu | PopupMenu | DropdownMenu | Combo | Dialog | ModalDialog | Normal),(type=Tooltip | Notification | Utility) &amp; !(name=compiz) &amp; !(title=notify-osd)]</default>
+      <locale name="C">
+        <short>Window Match</short>
+        <long>The windows that will be animated.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/close_options</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/close_options</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[,,]</default>
+      <locale name="C">
+        <short>Options</short>
+        <long>Comma separated list of option value assignments to override effect settings, e.g.: fire_color=#0080ffff, fire_particles=700, fire_smoke=1</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/close_random_effects</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/close_random_effects</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Pool</short>
+        <long>Pool of effects to be chosen from if Random effect is selected. Click reset to use all effects.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/minimize_effects</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/minimize_effects</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[animation:Zoom]</default>
+      <locale name="C">
+        <short>Minimize Effect</short>
+        <long>The animation effect shown when minimizing a window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/minimize_durations</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/minimize_durations</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[220]</default>
+      <locale name="C">
+        <short>Duration</short>
+        <long>Animation duration in milliseconds for minimize effect.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/minimize_matches</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/minimize_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[(type=Normal | Dialog | ModalDialog | Unknown)]</default>
+      <locale name="C">
+        <short>Window Match</short>
+        <long>The windows that will be animated.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/minimize_options</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/minimize_options</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Options</short>
+        <long>Comma separated list of option value assignments to override effect settings, e.g.: fire_color=#0080ffff, fire_particles=700, fire_smoke=1</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/minimize_random_effects</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/minimize_random_effects</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Pool</short>
+        <long>Pool of effects to be chosen from if Random effect is selected. Click reset to use all effects.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/shade_effects</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/shade_effects</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[animation:Roll Up]</default>
+      <locale name="C">
+        <short>Shade Effect</short>
+        <long>The animation effect shown when shading a window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/shade_durations</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/shade_durations</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[300]</default>
+      <locale name="C">
+        <short>Duration</short>
+        <long>Animation duration in milliseconds for shade effect.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/shade_matches</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/shade_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[(type=Normal | Dialog | ModalDialog | Utility | Unknown)]</default>
+      <locale name="C">
+        <short>Window Match</short>
+        <long>Window that should animate with this effect when shaded.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/shade_options</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/shade_options</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Options</short>
+        <long>Comma separated list of option value assignments to override effect settings, e.g.: fire_color=#0080ffff, fire_particles=700, fire_smoke=1</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/shade_random_effects</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/shade_random_effects</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Pool</short>
+        <long>Pool of effects to be chosen from if Random effect is selected. Click reset to use all effects.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/focus_effects</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/focus_effects</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[animation:Fade]</default>
+      <locale name="C">
+        <short>Focus Effect</short>
+        <long>The animation effect shown when focusing a window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/focus_durations</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/focus_durations</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[150]</default>
+      <locale name="C">
+        <short>Duration</short>
+        <long>Animation duration in milliseconds for focus effect.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/focus_matches</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/focus_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[(type=Normal | Dialog | ModalDialog | Utility | Unknown) &amp; !(name=compiz)]</default>
+      <locale name="C">
+        <short>Window Match</short>
+        <long>Window that should animate with this effect when focused.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/focus_options</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/focus_options</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Options</short>
+        <long>Comma separated list of option value assignments to override effect settings, e.g.: fire_color=#0080ffff, fire_particles=700, fire_smoke=1</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/all_random</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/all_random</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Random Animations For All Events</short>
+        <long>All effects are chosen randomly, ignoring the selected effect. If None is selected for an event, that event won't be animated.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/time_step</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/time_step</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>16</default>
+      <locale name="C">
+        <short>Animation Time Step</short>
+        <long>The amount of time in milliseconds between each render of the animation. The higher the number, the jerkier the movements become. (1 - 400)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/curved_fold_amp_mult</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/curved_fold_amp_mult</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.0</default>
+      <locale name="C">
+        <short>Amplitude Multiplier</short>
+        <long>Fold amplitude (size) is multiplied by this number. Negative values fold outward. (-1.5 - 2)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/curved_fold_zoom_to_taskbar</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/curved_fold_zoom_to_taskbar</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Zoom to TaskBar on Minimize</short>
+        <long>Whether the window should zoom to taskbar when minimized with Curved Fold effect.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/dodge_mode</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/dodge_mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <locale name="C">
+        <short>Mode</short>
+        <long>Fixed Clicked Window: The window that is clicked on will stay fixed. All Moving: The clicked window will do a dodging action as well. (0 = Fixed Clicked Window, 1 = All Moving)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/dodge_gap_ratio</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/dodge_gap_ratio</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.5</default>
+      <locale name="C">
+        <short>Gap Ratio</short>
+        <long>Ratio of gaps between dodge start times to focus duration. (0 - 1)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/dream_zoom_to_taskbar</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/dream_zoom_to_taskbar</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Zoom to TaskBar on Minimize</short>
+        <long>Whether the window should zoom to taskbar when minimized with Dream effect.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/glide1_away_position</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/glide1_away_position</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1</default>
+      <locale name="C">
+        <short>Away Position</short>
+        <long>Closeness of window to camera at the end of the animation (1.0: Close to camera, -2.0: Away from camera). (-2 - 1)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/glide1_away_angle</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/glide1_away_angle</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Away Angle</short>
+        <long>Angle of window at the end of the animation. (-540 - 540)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/glide1_zoom_to_taskbar</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/glide1_zoom_to_taskbar</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Zoom to TaskBar on Minimize</short>
+        <long>Whether the window should zoom to taskbar when minimized with Glide 1 effect.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/glide2_away_position</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/glide2_away_position</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>-0.1</default>
+      <locale name="C">
+        <short>Away Position</short>
+        <long>Closeness of window to camera at the end of the animation (1.0: Close to camera, -2.0: Away from camera). (-2 - 1)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/glide2_away_angle</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/glide2_away_angle</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Away Angle</short>
+        <long>Angle of window at the end of the animation. (-540 - 540)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/glide2_zoom_to_taskbar</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/glide2_zoom_to_taskbar</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Zoom to TaskBar on Minimize</short>
+        <long>Whether the window should zoom to taskbar when minimized with Glide 2 effect.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/horizontal_folds_amp_mult</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/horizontal_folds_amp_mult</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.0</default>
+      <locale name="C">
+        <short>Amplitude Multiplier</short>
+        <long>Fold amplitude (size) is multiplied by this number. Negative values fold outward. (-1 - 3)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/horizontal_folds_num_folds</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/horizontal_folds_num_folds</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>3</default>
+      <locale name="C">
+        <short>Number of Horizontal Folds</short>
+        <long>The number of horizontal folds that occur in the Horizontal Fold animation. (1 - 50)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/horizontal_folds_zoom_to_taskbar</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/horizontal_folds_zoom_to_taskbar</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Zoom to TaskBar on Minimize</short>
+        <long>Whether the window should zoom to taskbar when minimized with Horizontal Folds effect.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_moving_end</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_moving_end</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Open/Close Moving End</short>
+        <long>On open/close, move magic lamp ending point with the mouse pointer.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_grid_res</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_grid_res</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <locale name="C">
+        <short>Grid Y Resolution</short>
+        <long>Vertex grid resolution for Magic Lamp (Y dimension only). This is the number of points used to define the curves. The higher the number, the smoother the curves. However there will be a loss of performance (CPU usage increases). (2 - 200)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_open_start_width</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_open_start_width</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>30</default>
+      <locale name="C">
+        <short>Open Start Width</short>
+        <long>Starting width of open effect and ending width of close effect for Magic Lamp. (0 - 500)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_moving_end</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_moving_end</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Open/Close Moving End</short>
+        <long>On open/close, move magic lamp ending point with the mouse pointer.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_grid_res</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_grid_res</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>100</default>
+      <locale name="C">
+        <short>Grid Y Resolution</short>
+        <long>Vertex grid resolution for Magic Lamp Wavy (Y dimension only). This is the number of points used to define the curves. The higher the number, the smoother the curves. However there will be a loss of performance (CPU usage increases). (4 - 200)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_max_waves</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_max_waves</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>3</default>
+      <locale name="C">
+        <short>Max Waves</short>
+        <long>The maximum number of waves for Magic Lamp Wavy. (1 - 20)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_amp_min</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_amp_min</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>200</default>
+      <locale name="C">
+        <short>Min Wave Amplitude</short>
+        <long>The minimum wave amplitude (size of the waves) Magic Lamp Wavy will have. (200 - 2000)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_amp_max</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_amp_max</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>300</default>
+      <locale name="C">
+        <short>Max Wave Amplitude</short>
+        <long>The maximum wave amplitude (size of the waves) Magic Lamp Wavy will have. (200 - 2000)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_open_start_width</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/magic_lamp_wavy_open_start_width</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>30</default>
+      <locale name="C">
+        <short>Open Start Width</short>
+        <long>Starting width of open effect and ending width of close effect for Magic Lamp Wavy. (0 - 500)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/rollup_fixed_interior</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/rollup_fixed_interior</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Fixed Interior</short>
+        <long>Fixed window interior during the Rollup animation.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/sidekick_num_rotations</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/sidekick_num_rotations</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.5</default>
+      <locale name="C">
+        <short>Number of Rotations</short>
+        <long>Number of rotations for Sidekick (plus or minus 10% for randomness). (0 - 5)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/sidekick_springiness</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/sidekick_springiness</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.0</default>
+      <locale name="C">
+        <short>Springiness</short>
+        <long>How spring-like the Sidekick animation should be. (0 - 1)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/sidekick_zoom_from_center</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/sidekick_zoom_from_center</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Zoom from Center</short>
+        <long>Zoom from center when playing the Sidekick animation. (0 = Off, 1 = Minimize/Unminimize Only, 2 = Open/Close Only, 3 = On)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/wave_width</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/wave_width</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.7</default>
+      <locale name="C">
+        <short>Wave Width</short>
+        <long>The width of the wave relative to the window height. (0.02 - 3)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/wave_amp_mult</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/wave_amp_mult</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.0</default>
+      <locale name="C">
+        <short>Wave Amplitude Multiplier</short>
+        <long>Wave amplitude (size) is multiplied by this number. Negative values fold outward. (-20 - 20)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/zoom_from_center</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/zoom_from_center</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Zoom from Center</short>
+        <long>Zoom from center when playing the Zoom animation. (0 = Off, 1 = Minimize/Unminimize Only, 2 = Open/Close Only, 3 = On)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/animation/screen0/options/zoom_springiness</key>
+      <applyto>/apps/compiz-1/plugins/animation/screen0/options/zoom_springiness</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.08</default>
+      <locale name="C">
+        <short>Springiness</short>
+        <long>How spring-like the Zoom animation should be. (0 - 1)</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

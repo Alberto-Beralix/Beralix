@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/papyon/gnet/message/HTTP.py

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-list" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-list"/>
+
+    <desc>Controla quais informações são exibidas nas colunas na visão de lista.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Preferências das colunas da lista do gerenciador de arquivos</title>
+
+<p>Há 12 colunas de informações que você pode exibir na visão de lista do gerenciador de arquivo. Clique em <guiseq><gui>Editar</gui><gui>Preferências</gui></guiseq> e selecione a aba <gui>Colunas da lista</gui> para selecionar quais colunas estarão visíveis.</p>
+
+<note style="tip">
+<p>Use os botões <gui>Subir</gui> e <gui>Descer</gui> para escolher a ordem na qual as colunas selecionadas aparecerão.</p>
+</note>
+<terms>
+ <item>
+  <title><gui>Nome</gui></title>
+  <p>O nome de pastas e arquivos na pasta a ser visualizada.</p>
+ </item>
+ <item>
+  <title><gui>Tamanho</gui></title>
+  <p>O tamanho de uma pasta é dada pelo número de itens contidos na pasta. O tamanho de um arquivo é dada por bytes, KB ou MB.</p>
+ </item>
+ <item>
+  <title><gui>Digite</gui></title>
+  <p>Exibido como pasta ou um arquivo do tipo documento PDF, imagem JPEG, áudio MP3 e muito mais.</p>
+ </item>
+ <item>
+  <title><gui>Data da modificação</gui></title>
+  <p>Retorna a data e hora da última vez que o arquivo foi modificado.</p>
+    
+ </item>
+ <item>
+  <title><gui>Data de acesso</gui></title>
+  <p>Retorna a data e hora da última vez que o arquivo foi acessado.</p>
+ </item>
+ <item>
+  <title><gui>Grupo</gui></title>
+  <p>O grupo ao qual o arquivo pertence. Nos meus computadores de casa, cada usuário está no seu próprio grupo. Grupos são usados algumas vezes em ambientes corporativos, onde usuários podem estar em grupos de acordo com o departamento ou projeto.</p>
+ </item>
+ <item>
+  <title><gui>Local</gui></title>
+  <p>O caminho para a localização do arquivo.</p>
+ </item>
+ <item>
+  <title><gui>Tipo MIME</gui></title>
+  <p>Exibe o tipo MIME do item.</p>
+ </item>
+    
+  <item>
+  <title><gui>Permissões</gui></title>
+  <p>Exibe as permissões de acesso do arquivo, como por exemplo <gui>drwxrw-r--</gui></p>
+  <list>
+   <item>
+    <p>O primeiro caractere <gui>-</gui> é o tipo do arquivo. <gui>-</gui> significa arquivo regular e <gui>d</gui> significa diretório (pasta).</p>
+   </item>
+   <item>
+     <p>Os próximos três caracteres <gui>rwx</gui> especificam permissões para o usuário que é proprietário do arquivo.</p>
+   </item>
+   <item>
+     <p>Os próximos três <gui>rw-</gui> especificam permissões para todos os membros do grupo que são proprietários do arquivo.</p>
+   </item>
+   <item>
+    <p>Os últimos três caracteres na coluna <gui>r--</gui> especificam permissões para todos os outros usuários do sistema.</p>
+   </item>
+  </list>
+  <p>Cada caractere têm os seguintes significados:</p>
+  <list>
+    <item><p>r : Permissão de leitura.</p></item>
+    <item><p>w : Permissão de escrita.</p></item>
+    <item><p>x : Permissão de execução.</p></item>
+    <item><p>- : Sem permissão.</p></item>
+    </list>
+
+ </item>
+ <item>
+  <title><gui>Permissões em octal</gui></title>
+  <p>Exibe as permissões de arquivo em notação octal, com prefixo '40' para pastas e '100' para arquivos. Nos últimos três dígitos, cada dígito representa classe de usuário, classe de grupo e outros usuários, respectivamente.</p>
+  <list>
+    <item><p>Ler adiciona 4 ao total de cada um dos últimos três dígitos.</p></item>
+    <item><p>Escrever adiciona 2 ao total.</p></item>
+    <item><p>Executar adiciona 1 ao total.</p></item>
+  </list>
+ </item>
+ <item>
+  <title><gui>Proprietário</gui></title>
+  <p>O nome do usuário que é proprietário da pasta ou arquivo.</p>
+ </item>
+
+ <item>
+  <title><gui>Contexto SELinux</gui></title>
+  <p>Exibe o contexto SELinux do arquivo, se aplicável.</p>
+ </item>
+</terms>
+
+
+</page>

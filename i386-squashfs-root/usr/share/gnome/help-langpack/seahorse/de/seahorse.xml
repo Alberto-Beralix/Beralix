@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.28.x">
+<!ENTITY manrevision "3.1">
+<!ENTITY date "July 2005">
+<!ENTITY app "Passwords and Keys">
+<!ENTITY daemon "<application>seahorse-daemon</application>">
+<!ENTITY project "Seahorse">
+<!ENTITY key "<glossterm>key</glossterm>">
+<!ENTITY website "http://www.gnome.org/projects/seahorse/">
+]>
+<article id="index" lang="de">
+	<articleinfo>
+		<title>»Passwörter und Verschlüsselung«-Handbuch</title>
+		<copyright>
+			<year>2005, 2006, 2007, 2008, 2009</year>
+			<holder>Jacob Perkins und Adam Schreiber</holder>
+		</copyright><copyright><year>2008-2011</year><holder>Mario Blättermann (mariobl@freenet.de)</holder></copyright>
+		<publisher role="maintainer">
+			<publishername>Seahorse-Projekt</publishername>
+		</publisher>
+		<!-- link to document containig the legal notice of GNU FDL  -->
+		  <legalnotice id="legalnotice">
+	<para>Das vorliegende Dokument kann gemäß den Bedingungen der GNU Free Documentation License (GFDL), Version 1.1 oder jeder späteren, von der Free Software Foundation veröffentlichten Version ohne unveränderbare Abschnitte sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem <ulink type="help" url="ghelp:fdl">Link</ulink> oder in der mit diesem Handbuch gelieferten Datei COPYING-DOCS.</para>
+         <para>Dieses Handbuch ist Teil einer Sammlung von GNOME-Handbüchern, die unter der GFDL veröffentlicht werden. Wenn Sie dieses Handbuch getrennt von der Sammlung weiterverbreiten möchten, können Sie das tun, indem Sie eine Kopie der Lizenz zum Handbuch hinzufügen, wie es in Abschnitt 6 der Lizenz beschrieben ist.</para>
+
+	<para>Viele der Namen, die von Unternehmen verwendet werden, um ihre Produkte und Dienstleistungen von anderen zu unterscheiden, sind eingetragene Warenzeichen. An den Stellen, an denen diese Namen in einer GNOME-Dokumentation erscheinen, werden die Namen in Großbuchstaben oder mit einem großen Anfangsbuchstaben geschrieben, wenn das GNOME-Dokumentationsprojekt auf diese Warenzeichen hingewiesen wird.</para>
+
+	<para>DAS DOKUMENT UND VERÄNDERTE FASSUNGEN DES DOKUMENTS WERDEN UNTER DEN BEDINGUNGEN DER GNU FREE DOCUMENTATION LICENSE ZUR VERFÜGUNG GESTELLT MIT DEM WEITERGEHENDEN VERSTÄNDNIS, DASS: <orderedlist>
+		<listitem>
+		  <para>DIESES DOKUMENT WIRD »WIE VORLIEGEND« GELIEFERT, OHNE GARANTIEN IRGENDEINER ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES BEZIEHT SICH AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT ODER VERÄNDERTE FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR EINEN BESTIMMTEN ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER VERLETZT. DAS VOLLE RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER VERÄNDERTE FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE EIN DOKUMENT ODER EINE VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART BEINHALTEN, TRAGEN SIE (NICHT DER URSPRUNGSAUTOR, DER AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR NOTWENDIGE DIENSTLEISTUNGEN, REPARATUREN ODER FEHLERKORREKTUREN. DIESER HAFTUNGSAUSSCHLUSS IST EIN ESSENZIELLER TEIL DIESER LIZENZ. DIE VERWENDUNG EINES DOKUMENTS ODER EINER VERÄNDERTEN VERSION DES DOKUMENTS IST NICHT GESTATTET AUßER UNTER BEACHTUNG DIESES HAFTUNGSAUSSCHLUSSES UND</para>
+		</listitem>
+		<listitem>
+		  <para>UNTER KEINEN UMSTÄNDEN UND AUF BASIS KEINER RECHTSGRUNDLAGE, EGAL OB DURCH UNERLAUBTEN HANDLUNGEN (EINSCHLIEßLICH FAHRLÄSSIGKEIT), VERTRAG ODER ANDERWEITIG KANN DER AUTOR, URSPRUNGSAUTOR, EIN MITWIRKENDER ODER EIN VERTRIEBSPARTNER DIESES DOKUMENTS ODER EINER VERÄNDERTEN FASSUNG DES DOKUMENTS ODER EIN ZULIEFERER EINER DIESER PARTEIEN, HAFTBAR GEMACHT WERDEN FÜR DIREKTE, INDIREKTE, SPEZIELLE, VERSEHENTLICHE ODER FOLGESCHÄDEN JEGLICHER ART, EINSCHLIEßLICH UND OHNE EINSCHRÄNKUNGEN SCHÄDEN DURCH VERLUST VON KULANZ, ARBEITSAUSFALL, COMPUTERVERSAGEN ODER COMPUTERFEHLFUNKTIONEN ODER ALLE ANDEREN SCHÄDEN ODER VERLUSTE, DIE SICH AUS ODER IN VERBINDUNG MIT DER VERWENDUNG DES DOKUMENTS UND VERÄNDERTER FASSUNGEN DES DOKUMENTS ERGEBEN, AUCH WENN DIE OBEN GENANNTEN PARTEIEN ÜBER DIE MÖGLICHKEIT SOLCHER SCHÄDEN INFORMIERT WAREN.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+		<authorgroup>
+			<author>
+				<firstname>Jacob</firstname>
+				<surname>Perkins</surname>
+				<affiliation>
+					<orgname>Seahorse-Projekt</orgname>
+					<!--
+					<address>
+						<email>jap1@users.sourceforge.net</email>
+					</address>
+					-->
+				</affiliation>
+			</author>
+			<author>
+				<firstname>Adam</firstname>
+				<surname>Schreiber</surname>
+				<affiliation>
+					<orgname>Seahorse-Projekt</orgname>
+					<address>
+						<email>sadam@clemson.edu</email>
+					</address>
+				</affiliation>
+			</author>
+			<author>
+				<firstname>Paul</firstname>
+				<surname>Cutler</surname>
+				<affiliation>
+					<orgname>GNOME-Dokumentationsprojekt</orgname>
+					<address>
+						<email>pcutler@foresightlinux.org</email>
+					</address>
+				</affiliation>
+			</author>
+		</authorgroup>
+		<releaseinfo revision="2.28" role="draft">
+		</releaseinfo>
+		<publisher role="maintainer">
+			<publishername>Seahorse-Projekt</publishername>
+		</publisher>
+		<publisher role="maintainer">
+			<publishername>GNOME-Dokumentationsprojekt</publishername>
+		</publisher>
+		<revhistory>
+			<revision>
+				<revnumber>»Passwörter und Verschlüsselung«-Handbuch V2.11.0</revnumber>
+				<date>Mai 2009</date>
+				<revdescription>
+					<para role="author">Paul Cutler <email>pcutler@foresightlinux.org</email></para>
+				</revdescription>	
+			</revision>
+			<revision>
+				<revnumber>»Passwörter und Verschlüsselung«-Handbuch V0.10.1</revnumber>
+				<date>August 2008</date>
+				<revdescription>
+					<para role="author">Adam Schreiber <email>sadam@clemson.edu</email></para>
+				</revdescription>	
+			</revision>
+			<revision>
+				<revnumber>»Passwörter und Verschlüsselung«-Handbuch V0.9.1</revnumber>
+				<date>November 2006</date>
+				<revdescription>
+					<para role="author">Milo Casagrande <email>milo_casagrande@yahoo.it</email></para>
+				</revdescription>	
+			</revision>
+			<revision>
+				<revnumber>»Passwörter und Verschlüsselung«-Handbuch V0.9.0</revnumber>
+				<date>Juli 2005</date>
+				<revdescription>
+					<para role="author">Adam Schreiber <email>sadam@clemson.edu</email></para>
+					<para role="publisher">Seahorse-Projekt</para>
+				</revdescription>
+			</revision>
+			<revision>
+				<revnumber>»Passwörter und Verschlüsselung«-Handbuch V0.7.0</revnumber>
+				<date>Februar 2003</date>
+				<revdescription>
+					<para role="author">Jacob Perkins</para>
+					<para role="publisher">Seahorse-Projekt</para>
+				</revdescription>
+			</revision>
+		</revhistory>
+		<releaseinfo>Dieses Handbuch beschreibt Version 2.28.x von »Passwörter und Verschlüsselung«</releaseinfo>
+		<legalnotice>
+			<title>Rückmeldungen</title>
+			<para>Um einen Fehler zu melden oder einen Vorschlag zur Anwendung <application>Passwörter und Verschlüsselung</application> oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen auf der <ulink url="ghelp:gnome-feedback" type="help">GNOME-Seite für Rückmeldungen</ulink>.</para>
+		</legalnotice>
+
+		<abstract role="description">
+			<para><application>Passwörter und Verschlüsselung</application> ist die Anwendung zum Verwalten von Verschlüsselungen für den GNOME-Desktop</para>
+		</abstract> 		
+
+	</articleinfo>
+
+	<indexterm zone="index">
+		<primary>Seahorse</primary>
+	</indexterm>
+
+	<indexterm zone="index">
+		<primary>seahorse</primary>	
+	</indexterm>
+
+	<indexterm zone="index">
+		<primary>Verschlüsselungen</primary>
+	</indexterm>
+	
+	<!-- ============= Introduction ============================== -->
+
+  <sect1 id="introduction">
+    <title>Einführung</title>
+    <para>Sie können <application>Passwörter und Verschlüsselung</application> zum Erzeugen und Verwalten von <acronym>PGP</acronym>- und <acronym>SSH</acronym>-Schlüsseln verwenden.</para>
+    <para><application>Passwörter und Verschlüsselung</application> stellt eine grafische Benutzeroberfläche für viele Funktionen des <ulink url="http://www.gnupg.org" type="http">Gnu Privacy Guard (GPG)</ulink> zur Verfügung. Das Programm kann in mehrere Komponenten des <ulink url="http://www.gnome.org">GNOME</ulink>-Desktops integriert werden.</para>
+			<para>Mit <application>Passwörter und Verschlüsselung</application> können Sie: <itemizedlist>
+				
+				<listitem>
+					<para>PGP- und SSH-Schlüssel erzeugen und verwalten,</para>
+				</listitem>
+				<listitem>
+					<para>PGP- und SSH-Schlüssel exportieren und importieren,</para>
+				</listitem>
+				<listitem>
+					<para>Ihre Schlüssel für Andere freigeben,</para>
+				</listitem>
+				</itemizedlist></para>
+	</sect1>
+
+	<!-- ============= Getting Started ============================== -->
+	  
+	<sect1 id="seahorse-getting-started">
+		<title>Erste Schritte</title>
+		<sect2 id="seahorse-start">
+			<title>Starten von <application>Passwörter und Verschlüsselung</application></title>
+			<para>Sie können <application>Passwörter und Verschlüsselung</application> auf folgende Arten starten:</para>
+			<variablelist>
+				<varlistentry>
+					<term>Menü <guimenu>Anwendungen</guimenu></term>
+					<listitem>
+						<para>Wählen Sie <menuchoice><guimenu>Werkzeuge</guimenu><guimenuitem>Passwörter und Verschlüsselung</guimenuitem></menuchoice>.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Befehlszeile</term>
+					<listitem>
+						<para>Geben Sie den Befehl <command>seahorse</command> ein und drücken Sie dann <keycap>Enter</keycap>.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</sect2>
+
+		<sect2 id="seahorse-when-start">
+			<title>Beim Start von <application>Passwörter und Verschlüsselung</application></title>
+			<para>Wenn Sie <application>Passwörter und Verschlüsselung</application> starten, wird das <guilabel>Passwörter und Verschlüsselung</guilabel>-Fenster angezeigt.</para>
+			
+			<figure id="seahorse-window">
+			<title>Das <application>Passwörter und Verschlüsselung</application>-Fenster</title>
+			<screenshot>
+				<mediaobject>
+					<imageobject>
+					<imagedata fileref="figures/seahorse-window.png" format="PNG"/>
+					</imageobject>
+					<textobject>
+						<phrase>Zeigt das <application>Passwörter und Verschlüsselung</application>-Fenster.</phrase>
+					</textobject>
+				</mediaobject>
+			</screenshot>
+			</figure>
+			
+			<para>Das <application>Passwörter und Verschlüsselung</application>-Fenster enthält die folgenden Elemente:</para>
+			
+	    <variablelist>
+		<varlistentry><term>Menüleiste</term>
+		    <listitem>
+			<para>Die Menüs in der Menüleiste enthalten alle Befehle, die Sie für die Ausführung von Aktionen in <application>Passwörter und Verschlüsselung</application> benötigen.</para>
+		    </listitem>
+		</varlistentry>
+		<varlistentry><term>Werkzeugleiste</term>
+		    <listitem>
+			<para>Verwenden Sie die Werkzeugleiste zum schnellen Zugriff auf häufig benutzte Befehle.</para>
+		    </listitem>	
+		</varlistentry> 		
+		<varlistentry><term>Reiter »Schlüssel« und »Passwörter«</term>
+  		    <listitem>
+			<para>Ermöglichen den Zugriff auf die Schlüssel und die Passwörter im Schlüsselbund.</para>
+  		    </listitem>
+		</varlistentry>
+		<varlistentry><term>Erstmalige Optionen</term>
+  		    <listitem>
+			<para>Bietet schnellen Zugriff auf nützliche Aktionen für Erstanwender. Von hier aus können Sie:</para>
+			<itemizedlist>
+			    <listitem>
+				<para>das Hilfesystem durchsuchen,</para>
+			    </listitem>
+			    <listitem>
+				<para>Schlüssel in den Schlüsselbund importieren,</para>
+			    </listitem>
+			    <listitem>
+				<para>neue Schlüssel erzeugen.</para>
+			    </listitem>
+			</itemizedlist>
+		    </listitem>
+		</varlistentry>
+	    </variablelist>
+	</sect2>
+    </sect1>
+	
+	<!-- ============= Creating OpenPGP Keys ============================== -->	
+
+  <sect1 id="pgp-generate">
+    <title>Erzeugen von OpenPGP-Schlüsseln</title>
+    <para>OpenPGP ist ein offenes Protokoll zur Verschlüsselung von E-Mails mit einem öffentlichen Schlüssel, dessen Kryptografie auf <acronym>PGP</acronym> basiert. In diesem Protokoll werden Standardformate für verschlüsselte Nachrichten, Unterschriften und geheime Schlüssel definiert. Es ist für den Austausch öffentlicher Schlüssel zertifiziert.</para>
+    <para>Die Kryptografie öffentlicher Schlüssel ist ein Konzept, welches die Nutzung zweier Schlüssel beinhaltet: einen <emphasis>öffentlichen Schlüssel</emphasis>, den Sie an jeden Ihrer Kommunikationspartner weitergeben können, sowie einen <emphasis>geheimen Schlüssel</emphasis>, der rein privat ist und geheimgehalten werden muss.</para>
+    <para>So erzeugen Sie OpenPGP-Schlüssel: <orderedlist>
+	<listitem>
+	  <para>Wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Neu</guimenuitem></menuchoice>.</para>
+	</listitem>
+	<listitem>
+	  <para>Wählen Sie <guilabel>PGP-Schlüssel</guilabel> und klicken Sie auf <guibutton>Weiter</guibutton></para>
+	</listitem>
+	<listitem>
+	  <para>Geben Sie Ihren vollen Namen (Vorname - Nachname), Ihre E-Mail-Adresse und eventuell zusätzliche Informationen ein. Sie können auch erweiterte Optionen für den Schlüssel eingeben. Siehe unten.</para>
+	</listitem>
+	<listitem>
+	  <para>Klicken Sie auf <guibutton>Erzeugen</guibutton>, um ein neues Schlüsselpaar zu erzeugen.</para>
+	</listitem>
+	<listitem>
+	  <para>Das Dialogfenster <guilabel>Kennwort des neuen PGP-Schlüssels</guilabel> wird geöffnet. Geben Sie das Kennwort für Ihren neuen Schlüssel zweimal ein.</para>
+	</listitem>
+      </orderedlist></para>
+    <tip>
+      <para>Gehen sie beim Wählen eines Kennworts ähnlich vor wie beim Erzeugen eines starken Passworts. Der wichtigste Unterschied zwischen einem Passwort und einem Kennwort besteht darin, dass in einem Kennwort auch Leerzeichen gültige Zeichen sind.</para>				
+    </tip>
+    
+    <sect2 id="seahorse-pgp-advanced-mode">
+      <title>Erweiterte Einstellungen</title>
+      <para>Öffnen Sie den Bereich <guibutton>Erweiterte Optionen</guibutton>, um folgende Optionen für den neuen Schlüssel zu wählen:</para>
+      <variablelist>
+	<varlistentry>
+	  <term><guilabel>Verschlüsselungs-Typ</guilabel></term>
+	  <listitem>
+	    <para>Dieses Feld bezeichnet die Verschlüsselungsalgorithmen, die beim Erzeugen Ihrer Schlüssel benutzt werden.</para>
+	    <variablelist>
+	      <varlistentry>
+		<term><acronym>DSA</acronym> ElGamal</term>
+		<listitem>
+		  <para>Dies ist die bevorzugte Wahl, weil damit Verschlüsseln, Entschlüsseln, Signieren und Überprüfen möglich sind.</para>
+		</listitem>
+	      </varlistentry>
+	      <varlistentry>
+		<term><acronym>DSA</acronym></term>
+		<listitem>
+		  <para>Erlaubt nur das Signieren.</para>
+		</listitem>
+	      </varlistentry>
+	      <varlistentry>
+		<term><acronym>RSA</acronym></term>
+		<listitem>
+		  <para>Erlaubt nur das Signieren.</para>
+		</listitem>
+	      </varlistentry>
+	    </variablelist>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guilabel>Schlüssellänge (Bit)</guilabel></term>
+	  <listitem>
+	    <para>Dies bezeichnet die Länge des Schlüssels in Bit. Je länger der Schlüssel ist, umso sicherer ist er auch, vorausgesetzt, Sie verwenden ein sicheres Kennwort. Andererseits wird das Ausführen von Operationen mit einem längeren Schlüssel mehr Zeit in Anspruch nehmen als mit einem kürzeren Schlüssel. Schlüssellängen zwischen 1024 und 4096 Bit werden akzeptiert, jedoch sind mindestens 2048 Bit zu empfehlen.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guilabel>Ablaufdatum</guilabel></term>
+	  <listitem>
+	    <para>Dies bezeichnet das Datum, bis zu welchem der Schlüssel für Verschlüsselungen oder Signaturen genutzt werden kann. Sechs Monate sind hierfür ein vernünftiger Wert. Nach dem Ende dieser Zeitspanne können Sie entweder das Ablaufdatum ändern oder einen neuen Schlüssel oder Unterschlüssel erzeugen. <note>
+		<para>Signieren Sie Ihren neuen Schlüssel mit Ihrem alten Schlüssel, bevor er verfällt, um den Status Ihrer Vertrauenswürdigkeit zu bewahren.</para>
+	      </note></para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+	
+	<!-- ============= Creating SSH Keys ============================== -->	
+	
+	<sect1 id="ssh-generate">
+	<title>Erzeugen von Secure-Shell-Schlüsseln</title>
+	<para>Die »Secure Shell« (<acronym>SSH</acronym>) bietet eine Möglichkeit, sich an einem entfernten Computer anzumelden, um dort Befehle auszuführen. SSH-Schlüssel werden in schlüsselbasierten Authentifizierungssystemen als Alternative zur standardmäßigen Authentifizierung mittels Passwort verwendet. Durch die schlüsselbasierte Authentifizierung ist es nicht notwendig, ein Passwort per Hand einzugeben.</para>
+	<para>Secure-Shell-Schlüssel bestehen aus zwei Schlüsseln: einem <emphasis>geheimen Schlüssel</emphasis>, der geheimgehalten werden muss, und einem <emphasis>öffentlichen Schlüssel</emphasis>, der zu jedem Computer übertragen werden kann, auf den Sie zugreifen wollen.</para>
+    <para>So erzeugen Sie einen SSH-Schlüssel.</para>
+    <orderedlist>
+      <listitem>
+        <para>Wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Neu</guimenuitem></menuchoice>.</para>
+      </listitem>
+      <listitem>
+        <para>Wählen Sie <guilabel>SSH-Schlüssel</guilabel> und klicken Sie dann auf <guibutton>Weiter</guibutton>.</para>
+      </listitem>
+      <listitem>
+        <para>Geben Sie eine Beschreibung des Verwendungszwecks ein. Sie können Ihre E-Mail-Adresse oder etwas Ähnliches als Gedankenstütze verwenden. Außerdem können Sie erweiterte Optionen für den Schlüssel eingeben. Siehe unten.</para>
+      </listitem>
+      <listitem>
+        <para>Klicken Sie auf <guibutton>Lediglich Schlüssel erzeugen</guibutton>, um einen neuen Schlüssel zu erzeugen, oder auf <guibutton>Erstellen und Einrichten</guibutton>, um den Schlüssel zu erzeugen und ihn für die Authentifizierung auf einem anderen Computer einzurichten.</para>
+      </listitem>
+      <listitem>
+        <para>Das Dialogfenster <guilabel>Kennwort des neuen SSH-Schlüssels</guilabel> wird geöffnet. Geben Sie das Kennwort für Ihren neuen Schlüssel zweimal ein.</para>
+			<tip>
+				<para>Gehen sie beim Wählen eines Kennworts ähnlich vor wie beim Erzeugen eines starken Passworts. Der wichtigste Unterschied zwischen einem Passwort und einem Kennwort besteht darin, dass in einem Kennwort auch Leerzeichen gültige Zeichen sind.</para>				
+			</tip>
+      </listitem>
+    </orderedlist>
+    
+
+		
+		<sect2 id="seahorse-ssh-advanced-options">
+		<title>Erweiterte Einstellungen</title>
+			<para>Klappen Sie den Abschnitt <guilabel>Erweiterte Optionen</guilabel> aus, um folgende Optionen für einen neuen Schlüssel zu wählen.</para>
+		
+			<variablelist>
+			<varlistentry>
+				<term><guilabel>Verschlüsselungs-Typ</guilabel></term>
+				<listitem>
+				<para>In diesem Feld legen Sie den Verschlüsselungsalgorithmus zur Erzeugung Ihres Schlüssels fest.</para>
+				<variablelist>
+					<varlistentry>
+						<term><acronym>RSA</acronym></term>
+						<listitem>
+							<para>Verwendet den <emphasis>Rivest-ShamirAdleman</emphasis>-Algorithmus (<acronym>RSA</acronym>) zur Erzeugung des SSH-Schlüssels. Dies sollten Sie aus Sicherheitsgründen bevorzugen.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><acronym>DSA</acronym></term>
+						<listitem>
+							<para>Verwendet den <emphasis>Digital Signature Algorithm</emphasis>-Algorithmus (<acronym>DSA</acronym>) zur Erzeugung des SSH-Schlüssels.</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>Schlüssellänge (Bit)</guilabel></term>
+				<listitem>
+				<para>Dies bezeichnet die Länge des Schlüssels in Bit. Je länger der Schlüssel ist, umso sicherer ist er auch, vorausgesetzt, Sie verwenden ein sicheres Kennwort. Andererseits wird das Ausführen von Operationen mit einem längeren Schlüssel mehr Zeit in Anspruch nehmen als mit einem kürzeren Schlüssel. Schlüssellängen zwischen 1024 und 4096 Bit werden akzeptiert, jedoch sind mindestens 2048 Bit zu empfehlen.</para>
+				</listitem>
+			</varlistentry>
+			</variablelist>
+		</sect2>
+	</sect1>
+	
+	<!-- ============= OpenPGP Key Properties ============================== -->	
+
+	<sect1 id="seahorse-key-properties">
+		<title>Eigenschaften von OpenPGP-Schlüsseln</title>
+		<para>Die Beschreibungen in diesem Abschnitt werden allen OpenPGP-Schlüsseln zugeordnet.</para>
+		
+		<para>So zeigen Sie die Eigenschaften eines <acronym>PGP</acronym>-Schlüssels an: <itemizedlist>
+			<listitem>
+				<para>Wählen Sie den <acronym>PGP</acronym>-Schlüssel im Hauptfenster.</para>
+			</listitem>
+			<listitem>
+				<para>Doppelklicken Sie darauf oder wählen Sie <guilabel>Eigenschaften</guilabel> in der Werkzeugleiste.</para> 
+			</listitem>
+			<listitem>
+				<para>Wählen Sie den Reiter <guilabel>Details</guilabel>.</para>
+			</listitem>
+		</itemizedlist></para>
+
+	<sect2 id="pgp-public-key-properties">
+		<title id="pgp-private-key-properties">Eigenschaften</title>
+		<para>
+		<variablelist>
+			<varlistentry>
+				<term><guilabel>Fingerabdruck</guilabel></term>
+				<listitem>
+					<para>Der Fingerabdruck ist eine einzigartige Zeichenkette, die einen Schlüssel exakt identifiziert.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>Schlüsselkennung</guilabel></term>
+				<listitem>
+					<para>Die Schlüsselkennung entspricht dem Fingerabdruck, wobei die Schlüsselkennung lediglich die letzten 8 Zeichen des Fingerabdrucks enthält. Meist ist es möglich, einen Schlüssel nur über diese Schlüsselkennung zu identifizieren, doch gelegentlich haben auch zwei Schlüssel die gleiche Kennung.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>Typ</guilabel></term>
+				<listitem>
+					<para>Legt den zur Erzeugung eines Schlüssels verwendeten Algorithmus fest. DSA-Schlüssel können lediglich signieren, ElGamal-Schlüssel werden zur Verschlüsselung verwendet.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>Erzeugt</guilabel></term>
+				<listitem>
+					<para>Bezeichnet das Erzeugungsdatum des Schlüssels.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>Läuft ab</guilabel></term>
+				<listitem>
+				<para>Gibt das Datum an, ab dem der Schlüssel nicht mehr verwendet werden kann.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><guilabel>Länge</guilabel></term>
+				<listitem>
+					<para>Bezeichnet die Schlüssellänge in bit. Vereinfacht ausgedrückt, je länger der Schlüssel ist, umso mehr Sicherheit bietet er. <note>
+							<para>Ein langer Schlüssel allein reicht nicht aus, wenn das Kennwort zu schwach ist.</para>
+						</note></para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+		</para>
+	</sect2>
+
+	<sect2 id="change-owner-trust">
+		<title>Vertrauen</title>
+		<para>Die Vertrauenswürdigkeit zeigt an, wie Sie eine Person bezüglich ihrer Verlässlichkeit einschätzen. Wenn Ihnen ein Schlüssel begegnet, den Sie nicht selbst signiert haben, wird die Gültigkeit des Schlüssels von dieser Person anhand der bisher gesammelten Signaturen sowie Ihrer Einschätzung der Vertrauenswürdigkeit der Ersteller dieser Signaturen eingestuft. Per Vorgabe erfordert ein unbekannter Schlüssel mindestens drei Signaturen geringfügiger Vertrauenswürdigkeit oder eine Signatur, der Sie absolut vertrauen.</para>
+		<itemizedlist>
+			<listitem><para><guilabel>Unbekannt</guilabel>: Sie können die Fähigkeiten der Person zum korrekten Signieren von Schlüsseln nicht einschätzen.</para></listitem>
+			<listitem><para><guilabel>Nie</guilabel>: Diese Person kann Schlüssel nicht korrekt signieren.</para></listitem>
+			<listitem><para><guilabel>Geringfügig</guilabel>: Diese Person überprüft zwar die Foto-Kennung vor dem Signieren eines Schlüssels, aber überprüft nicht notwendigerweise die Kennung genauer.</para></listitem>
+			<listitem><para><guilabel>Vollkommen</guilabel>: Diese Person prüft genauestens die Foto-Kennung jeder Person vor der Bestätigung. Das bedeutet, dass beispielsweise nur Schlüssel bestätigt werden, die mit Sicherheit der Person gehören, die um Bestätigung bittet.</para></listitem>
+			<listitem><para><guilabel>Absolut</guilabel>: Diese Stufe der Vertrauenswürdigkeit sollte ausschließlich Ihren eigenen Schlüsseln zugeordnet werden..</para></listitem>
+		</itemizedlist>
+	</sect2>
+
+	<sect2 id="disable-key">
+		<title>Aktivieren und Deaktivieren von Schlüsseln</title>
+		<para>Wenn ein Schlüssel aktiviert ist, kann er zur Ausführung von Verschlüsselungen verwendet werden. Wenn ein Schlüssel deaktiviert ist, kann er nicht zum Verschlüsseln oder zur Überprüfung von Signaturen verwendet werden.</para>
+	</sect2>
+
+	<sect2 id="change-expires">
+		<title>Ablaufdatum</title>
+		<para>Ein Schlüssel kann, nachdem er abgelaufen ist, nicht mehr für Verschlüsselungen verwendet werden. Das Ändern des Ablaufdatums auf einen zukünftigen Zeitpunkt stellt dessen Gültigkeit wieder her. In der Praxis ist es empfehlenswert, einen Hauptschlüssel zu haben, der niemals verfällt, sowie mehrere Unterschlüssel, die mit dem Hauptschlüssel signiert wurden. </para>
+	</sect2>
+
+	<sect2 id="userid-properties">
+		<title>Benutzerkennungen</title>
+		<para>Benutzerkennungen erlauben die Verwendung mehrerer Identitäten und E-Mail-Adressen mit dem gleichen Schlüssel.</para>
+		<para>Üblicherweise wird folgende Form verwendet: <programlisting>Name (Kommentar) &lt;E-Mail-Adresse&gt;</programlisting></para>
+			
+		<sect3 id="add-uid">
+			<title>Hinzufügen einer Benutzerkennung</title>
+				<para>Hinzufügen einer Benutzerkennung ist nützlich, wenn Sie eine Identität für Ihre Arbeit und eine weitere für Ihre Freunde nutzen wollen.</para>
+				<para>So fügen Sie eine Benutzerkennung zu einem Schlüssel hinzu. <itemizedlist>
+						<listitem>
+							<para>Wählen Sie einen Schlüssel im Hauptfenster aus,</para>
+						</listitem>
+						<listitem>
+							<para>doppelklicken Sie darauf oder wählen Sie <guibutton>Eigenschaften</guibutton> in der Werkzeugleiste.</para>
+						</listitem>
+						<listitem>
+							<para>Wählen Sie den Reiter <guilabel>Namen und Signaturen</guilabel> aus.</para>
+						</listitem>
+						<listitem>
+							<para>Klicken Sie auf <guibutton>Name hinzufügen</guibutton>.</para>
+						</listitem>
+					</itemizedlist></para>
+				<para>Wenn Sie die oben stehenden Anweisungen befolgt haben, wird ein Eingabedialog angezeigt. Die Eingabefelder werden unten detailliert beschrieben.</para>
+				<variablelist>
+					<varlistentry>
+						<term><guilabel>Vollständiger Name</guilabel></term>
+						<listitem>
+							<para>Geben Sie Ihren vollen Namen in der Form <programlisting>&lt;Vorname&gt; &lt;Nachname&gt;</programlisting> ein. Wahlweise können Sie einen zweiten Vornamen oder dessen Anfangsbuchstaben eingeben.</para>
+							<para>
+								<note>
+									<para>In dieses Feld müssen Sie mindestens 5 Zeichen eingeben.</para>
+								</note> 
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><guilabel>E-Mail-Adresse</guilabel></term>
+						<listitem>
+							<para>Auf Schlüsselservern oder bei anderen Schlüsselanbietern wird meist anhand Ihrer E-Mail-Adresse nach Ihrem Schlüssel gesucht. Stellen Sie zunächst sicher, dass diese korrekt eingegeben wurde. </para>
+							<para>
+								<note>
+									<para>Die E-Mail-Adresse sollte dieser Form folgen: <programlisting><replaceable>&lt;Benutzername&gt;</replaceable>@<replaceable>&lt;Domainname&gt;</replaceable></programlisting></para>
+								</note>
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><guilabel>Optionaler Kommentar, der den Schlüssel beschreibt</guilabel></term>
+						<listitem>
+							<para>Das Kommentarfeld kann für eine zusätzlich im Namen Ihrer neuen Kennung anzuzeigende Information verwendet werden. Diese Information steht auch bei Suchvorgängen auf Schlüsselservern zur Verfügung.</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect3>
+		</sect2>
+
+    <sect2 id="photoid-properties">
+      <title>Foto-Kennungen</title>
+      <para>Foto-Kennungen erlauben dem Eigentümer eines Schlüssels, ein oder mehrere Bilder von sich selbst in diesen Schlüssel einzubetten. Diese Kennungen können ebenso wie gewöhnliche Benutzerkennungen signiert werden. Ein Foto muss im JPEG-Format vorliegen und sollte nicht größer als 240 mal 288 Pixel sein.</para>
+      <para>Falls das gewählte Bild nicht im erforderlichen Dateityp oder der korrekten Größe vorliegt, kann <application>Passwörter und Verschlüsselung</application> das benötigte Bild direkt aus jedem von der <acronym>GDK</acronym>-Bibliothek unterstützten Format erzeugen.</para>
+    </sect2>
+		
+		<sect2 id="change-passphrase">
+			<title>Kennwort ändern</title>
+			<para>So ändern Sie das Kennwort eines Schlüssels. <itemizedlist>
+					<listitem>
+						<para>Wählen Sie einen Schlüssel im Hauptfenster aus,</para>
+					</listitem>
+					<listitem>
+						<para>Doppelklicken Sie darauf oder wählen Sie <guilabel>Eigenschaften</guilabel> in der Werkzeugleiste.</para>
+					</listitem>
+					<listitem>
+						<para>klicken Sie auf <guibutton>Kennwort ändern</guibutton>.</para>
+					</listitem>
+				</itemizedlist></para>
+			<para>Geben Sie ein neues Kennwort ein und klicken Sie auf <guibutton>OK</guibutton>.</para>
+		</sect2>
+
+		<sect2 id="delete">
+			<title>Entfernen eines Schlüssels</title>
+			<para>So entfernen Sie einen Schlüssel aus Ihrem Schlüsselbund: <itemizedlist>
+				<listitem>
+					<para>Wählen Sie einen Schlüssel im Hauptfenster aus,</para>
+				</listitem>
+				<listitem>
+					<para>Klicken Sie mit der rechten Maustaste darauf und wählen Sie <guilabel>Schlüssel löschen</guilabel> oder wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Schlüssel löschen</guimenuitem></menuchoice>.</para>
+				</listitem>
+				</itemizedlist></para>
+			<note>
+				<para>Sie können Ihre eigenen Schlüssel, vertrauenswürdige Schlüssel und gesammelte Schlüssel entfernen.</para>		
+			</note> 
+		</sect2>
+	</sect1>
+	
+	<!-- ============= OpenPGP Properties ============================== -->	
+		
+	<sect1 id="subkey-properties">
+		<title>Eigenschaften eines OpenPGP-Unterschlüssels</title>
+		<para>Jeder OpenPGP-Schlüssel hat einen einzelnen Hauptschlüssel, der nur zum Signieren verwendet werden kann. Unterschlüssel können dagegen sowohl zum Verschlüsseln als auch zum Signieren verewendet werden. Deshalb brauchen Sie Ihren Hauptschlüssel nicht zu widerrufen, falls Ihr Unterschlüssel gefährdet ist.</para>
+		<variablelist>
+		<varlistentry>
+			<term><guilabel>ID</guilabel></term>
+			<listitem>
+				<para>Dies ist die Kennung des Unterschlüssels.</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Typ</guilabel></term>
+			<listitem>
+				<para>Legt den zur Erzeugung eines Unterschlüssels verwendeten Algorithmus fest. <acronym>DSA</acronym>-Schlüssel können lediglich signieren, ElGamal-Schlüssel werden zur Verschlüsselung verwendet und <acronym>RSA</acronym>-Schlüssel können sowohl signieren als auch verschlüsseln.</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Erzeugt</guilabel></term>
+			<listitem>
+				<para>Bezeichnet das Erzeugungsdatum des Schlüssels.</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Läuft ab</guilabel></term>
+			<listitem>
+				<para>Gibt das Datum an, ab dem der Schlüssel nicht mehr verwendet werden kann.</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Status</guilabel></term>
+			<listitem>
+				<para>Gibt den Status des Schlüssels an.</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Länge</guilabel></term>
+			<listitem>
+				<para>Gibt die Länge des Schlüssels in Bit an. Allgemein steigt die Sicherheit eines Schlüssels mit dessen Länge. <note>
+						<para>Ein langer Schlüssel allein reicht nicht aus, wenn das Kennwort zu schwach ist.</para>
+					</note></para>
+			</listitem>
+		</varlistentry>
+		</variablelist>
+		
+		<sect2 id="add-subkey">
+			<title>Hinzufügen eines Unterschlüssels</title>
+			<para>Zum Hinzufügen eines Unterschlüssels zu einem Schlüssel klicken Sie im Abschnitt <guilabel>Unterschlüssel</guilabel> auf <guibutton>Hinzufügen</guibutton>.</para>
+			<para>Wenn Sie die oben stehenden Anweisungen befolgt haben, wird ein Eingabedialog angezeigt. Die Eingabefelder werden unten detailliert beschrieben.</para>
+			<variablelist>
+			<varlistentry>
+				<term>Schlüssel-Typ</term>
+				<listitem>
+					<para>Bezeichnet den Verschlüsselungs-Algorithmus zum Erzeugen eines Unterschlüssels.</para>
+				<variablelist>
+				<varlistentry>
+					<term><acronym>DSA</acronym></term>
+					<listitem>
+						<para>Verwendet den <emphasis>Digital Signature Algorithm</emphasis> (<acronym>DSA</acronym>) zur Erzeugung des Unterschlüssels. Dieser Schlüssel kann nur zum Signieren verwendet werden.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>ElGamal</term>
+					<listitem>
+						<para>Verwendet den <emphasis>ElGamal</emphasis>-Algorithmus zur Erzeugung des Unterschlüssels. Dieser Schlüssel kann nur zum Verschlüsseln verwendet werden.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>RSA</term>
+					<listitem>
+						<para>Verwendet den <emphasis>Rivest-Shamir Adleman</emphasis>-Algorithmus (<acronym>RSA</acronym>) zur Erzeugung des Unterschlüssels. Dieser Schlüssel kann sowohl signieren als auch verschlüsseln, allerdings müssen dafür zwei verschiedene Unterschlüssel erzeugt werden.</para>
+					</listitem>
+				</varlistentry>
+				</variablelist>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Schlüssellänge</term>
+				<listitem>
+					<para>Bezeichnet die Länge des Schlüssel in Bit. Allgemein lässt sich sagen: Je länger der Schlüssel, desto sicherer ist er.</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>Ablaufdatum</term>
+				<listitem>
+					<para>Legt das Datum fest, ab dem der Unterschlüssel nicht mehr benutzt werden kann.</para>
+				</listitem>
+			</varlistentry>
+			</variablelist>
+		</sect2>
+
+		<sect2 id="change-subkey-expires">
+			<title>Ändern des Abalufdatums eines Unterschlüssels</title>
+			<para>Um das Ablaufdatum eines Unterschlüssels zu ändern, wählen Sie den Unterschlüssel im Abschnitt <guilabel>Unterschlüssel</guilabel>, und dann: <itemizedlist>
+				<listitem>
+					<para>Klicken Sie auf die Schaltfläche <guibutton>Expire</guibutton> an der linken Seite.</para>
+				</listitem>
+				<listitem>
+					<para>Im Datum-Dialog wählen Sie das neue Ablaufdatum oder wählen <guilabel>Läuft nie ab</guilabel>, um kein Ablaufdatum zu bestimmen.</para>
+				</listitem>
+				</itemizedlist></para>
+		</sect2>
+
+		<sect2 id="revoke-subkey">
+			<title>Widerrufen eines Unterschlüssels</title>
+			<para>Um einen Unterschlüssel zu widerrufen, wählen Sie den Unterschlüssel im Abschnitt <guilabel>Unterschlüssel</guilabel>, und dann: <itemizedlist>
+				<listitem>
+					<para>Klicken Sie auf <guibutton>Widerrufen</guibutton> an der linken Seite.</para>
+				</listitem>
+				<listitem>
+					<para>Wählen Sie einen Grund, warum Sie den Unterschlüssel widerrufen. </para>
+					<para>
+					<variablelist>
+						<varlistentry>
+							<term>Kein Grund</term>
+							<listitem>
+								<para>Es gibt keinen bestimmten Grund, weswegen Sie den Schlüssel widerrufen.</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Unsicher</term>
+							<listitem>
+								<para>Schlüssel ist nicht mehr sicher.</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Ersetzt</term>
+							<listitem>
+								<para>Der Schlüssel wurde durch einen anderen ersetzt.</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Nicht verwendet</term>
+							<listitem>
+								<para>Der Schlüssel wird nicht mehr benutzt.</para>
+							</listitem>
+						</varlistentry>
+					</variablelist>
+					</para>
+				</listitem>
+				<listitem>
+					<para>Geben Sie eine Beschreibung ein, warum Sie den Schlüssel widerrufen,</para>
+				</listitem>
+				<listitem>
+					<para>Klicken Sie auf <guibutton>Widerrufen</guibutton>.</para>
+				</listitem>
+				</itemizedlist></para>
+			<note>
+				<para>Der Widerruf des Schlüssels wird unmittelbar ausgeführt.</para>
+			</note>
+		</sect2>
+
+		<sect2 id="delete-subkey">
+			<title>Entfernen eines Unterschlüssels</title>
+			<para>Um einen Unterschlüssel zu entfernen, wählen Sie diesen im Abschnitt <guilabel>Unterschlüssel</guilabel> aus, und dann: <itemizedlist>
+				<listitem>
+					<para>Klicken Sie auf die Schaltfläche <guibutton>Löschen</guibutton> an der linken Seite.</para>
+				</listitem>
+				</itemizedlist></para>
+		</sect2>
+	</sect1>
+
+	<!-- ============= SSH Key Properties ============================== -->
+
+	<sect1 id="ssh-key-properties">
+	    <title>Eigenschaften von SSH-Schlüsseln</title>
+	    <para>Die Beschreibungen in diesem Abschnitt werden allen <acronym>SSH</acronym>-Schlüsseln zugeordnet.</para>
+	    <para>So zeigen Sie die Eigenschaften eines <acronym>SSH</acronym>-Schlüssels an. <itemizedlist>
+			<listitem>
+				<para>Wählen Sie den Secure-Shell-Schlüssel im Hauptfenster aus,</para>
+			</listitem>
+			<listitem>
+				<para>Doppelklicken Sie darauf oder wählen Sie <guilabel>Eigenschaften</guilabel> in der Werkzeugleiste.</para> 
+			</listitem>
+			<listitem>
+				<para>Wählen Sie den Reiter <guilabel>Details</guilabel>.</para>
+			</listitem>
+		</itemizedlist></para>
+
+	<sect2 id="properties">
+		<title>Eigenschaften</title>
+		<para>
+		<variablelist>
+		<varlistentry>
+			<term><guilabel>Fingerabdruck</guilabel></term>
+			<listitem>
+				<para>Der Fingerabdruck ist eine einzigartige Zeichenkette, die einen Schlüssel exakt identifiziert.</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Algorithmus</guilabel></term>
+			<listitem>
+				<para>Legt den beim Erzeugen eines Schlüssels verwendeten Verschlüsselungsalgorithmus fest.</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Ort</guilabel></term>
+			<listitem>
+				<para>Dies bezeichnet den Speicherort des <emphasis>geheimen Schlüssels</emphasis>.</para>
+		</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Länge</guilabel></term>
+			<listitem>
+				<para>Bezeichnet die Schlüssellänge in bit. Vereinfacht ausgedrückt, je länger der Schlüssel ist, umso mehr Sicherheit bietet er. <note>
+					<para>Ein langer Schlüssel allein reicht nicht aus, wenn das Kennwort zu schwach ist.</para>
+				</note></para>
+			</listitem>
+		</varlistentry>
+		</variablelist>
+		</para>
+	</sect2>
+
+	<sect2 id="delete-ssh-key">
+		<title>Entfernen eines SSH-Schlüssels</title>
+		<para>So entfernen Sie einen Secure-Shell-Schlüssel. <itemizedlist>
+				<listitem>
+				<para>Wählen Sie den <acronym>SSH</acronym>-Schlüssel im Hauptfenster aus.</para>
+			</listitem>
+			<listitem>
+				<para>Klicken Sie mit der rechten Maustaste darauf und wählen Sie <guilabel>Schlüssel löschen</guilabel> oder wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Schlüssel löschen</guimenuitem></menuchoice>.</para>
+			</listitem>
+			</itemizedlist></para>
+	</sect2>
+	</sect1>
+	
+	<!-- ============= Importing Keys ============================== -->	
+
+        <sect1 id="import">
+		<title>Importieren von Schlüsseln</title>
+		<para>Um Schlüssel zu importieren, wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Importieren</guimenuitem></menuchoice> und wählen im Dateidialog mindestens eine ASCII-Datei aus, die einen eingebetteten öffentlichen Schlüssel enthält.</para>
+		<para>Importieren von Schlüsseln kann auch durch Einfügen der Schlüssel in <application>Passwörter und Verschlüsselung</application> ausgeführt werden: <itemizedlist>
+		<listitem>
+			<para>Wählen Sie einen ASCII-Text mit einem eingebetteten öffentlichen Schlüssel aus,</para>
+		</listitem>
+		<listitem>
+			<para>kopieren Sie die Auswahl in die Zwischenablage,</para>
+		</listitem>
+		<listitem>
+			<para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Schlüssel einfügen</guimenuitem></menuchoice>.</para>
+		</listitem>
+		</itemizedlist></para>
+	</sect1>
+	
+	<!-- ============= Exporting Keys ============================== -->	
+
+	<sect1 id="export">
+		<title>Exportieren von Schlüsseln</title>
+		<para>Um Schlüssel zu exportieren, wählen Sie die Schlüssel im Hauptfenster aus und wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Exportieren</guimenuitem></menuchoice>.</para>
+		<para>Sie können auch in einen ASCII-Text eingebettete Schlüssel in die Zwischenablage exportieren: <itemizedlist>
+			<listitem>
+				<para>Wählen Sie die Schlüssel im Hauptfenster aus,</para>
+			</listitem>
+			<listitem>
+				<para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Schlüssel kopieren</guimenuitem></menuchoice>.</para>
+			</listitem>
+		</itemizedlist></para>
+	</sect1>
+
+	
+	<!-- ============= Signing a Key ============================== -->	
+
+	<sect1 id="sign">
+		<title>Signieren eines Schlüssels</title>
+		<para>Das Signieren eines Schlüssels einer anderen Person bedeutet einen Vertrauensbeweis gegenüber dieser Person. Bevor Sie dies tun, sollten Sie sorgfältig den Fingerabdruck des Schlüssels prüfen, um sichergehen zu können, dass der Schlüssel wirklich dieser Person zuzuordnen ist.</para>
+		<para>So signieren Sie einen Schlüssel in Ihrem Schlüsselbund: <itemizedlist>
+				<listitem>
+				<para>Wählen Sie den Schlüssel, den Sie signieren wollen, in den Reitern <guilabel>Vertrauenswürdige Schlüssel</guilabel> oder <guilabel>Gesammelte Schlüssel</guilabel> aus,</para>
+				</listitem>
+				<listitem>
+				<para>Wählen Sie <guibutton>Signieren</guibutton> in der Werkzeugleiste oder <menuchoice><guimenu>Datei</guimenu><guimenuitem>Signieren</guimenuitem></menuchoice>,</para>
+				</listitem>
+				<listitem>
+				<para>Wählen Sie aus, wie sorgfältig Sie den Schlüssel überprüft haben.</para>
+				</listitem>
+				<listitem>
+				<para>Legt fest, ob die Signatur zu Ihrem lokalen Schlüsselbund gehören soll, und ob die Signatur widerrufen werden kann,</para>
+				</listitem>
+				<listitem>
+				<para>Klicken Sie auf <guibutton>Signieren</guibutton>.</para>
+				</listitem>
+			</itemizedlist></para>
+	</sect1>
+	
+	<!-- ============= Preferences ============================== -->	
+  
+  <sect1 id="prefs">
+    <title>Einstellungen</title>
+    <para>Dieser Abschnitt beschreibt die durch Auswahl von <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Einstellungen</guimenuitem></menuchoice> in <application>Passwörter und Verschlüsselung</application> verfügbaren Einstellmöglichkeiten.</para>
+
+        <sect2 id="keyring">
+        	<title>Passwort-Schüsselbünde</title>
+        	<sect3>
+        	    <title>Erzeugen von Schlüsselbünden</title>
+            	<para>Um einen neuen Schlüsselbund anzulegen, wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Importieren</guimenuitem></menuchoice> und wählen dann <guibutton>Passwort-Schlüsselbund</guibutton>. Geben Sie einen Namen für den neuen Schlüsselbund ein und drücken Sie die <keycap>Eingabetaste</keycap>.</para>
+        	</sect3>
+        	<sect3>
+        	    <title>Ändern der Passwörter von Schlüsselbünden</title>
+            	<para>Um das Passwort zum Entsperren des Schlüsselbunds zu ändern, wählen Sie zuerst den gewünschten Schlüsselbund aus und klicken dann auf <guibutton>Passwort zum Entsperren ändern</guibutton>. Sie werden aufgefordert, das alte Passwort in das Texteingabefeld <guilabel>Altes Passwort</guilabel> einzugeben. Danach werden Sie aufgefordert, das neue Passwort in das Texteingabefeld <guilabel>Neues Passwort</guilabel> einzugeben, sowie die Eingabe im Texteingabefeld <guilabel>Passwort bestätigen</guilabel> zu bestätigen. Um die Änderungen anzuwenden, klicken Sie auf <guibutton>Ändern</guibutton>. Wenn die Eingabe des alten Passworts korrekt war, erhalten Sie eine Statusnachricht, dass die Aktion erfolgreich war. Falls das alte Passwort nicht korrekt eingegeben wurde, werden Sie um dessen Überprüfung gebeten.</para>
+        	</sect3>
+        	<sect3>
+        	    <title>Entfernen von Schlüsselbünden</title>
+        	    <para>Um einen Schlüsselbund zu entfernen, wählen Sie zunächst den entsprechenden Schlüsselbund aus und wählen Sie anschließend <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Löschen</guimenuitem></menuchoice>.</para>
+        	</sect3>
+        </sect2>
+
+    <sect2 id="key-servers">
+	<title>Schlüssel-Server</title>
+	<para>Halten Sie Ihre eigenen Schlüssel und die Schlüssel Anderer auf dem aktuellen Stand, indem Sie die Schlüssel regelmäßig mit entfernten Schlüsselservern abgleichen. Das Abgleichen stellt sicher, dass Sie über die neuesten Signaturen Ihrer eigenen Schlüssel verfügen und dadurch aus den Ihnen erwiesenen Vertrauensbeweisen den größtmöglichen Nutzen ziehen.</para>
+	<para><application>Passwörter und Verschlüsselung</application> unterstützt HKP- und LDAP-Schlüsselserver.</para>
+	<variablelist>
+	  <varlistentry>
+	    <term><emphasis>HKP-Server</emphasis></term>
+	    <listitem>
+	      <para>HKP-Schlüsselserver sind normale webbasierte Schlüsselserver, wie beispielsweise der populäre <ulink url="hkp://pool.sks-keyservers.net" type="hkp">hkp://pool.sks-keyservers.net</ulink>, der auch über <ulink url="http://sks-keyservers.net" type="http">http://sks-keyservers.net</ulink> erreichbar ist.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><emphasis><acronym>LDAP</acronym> Schlüsselserver</emphasis></term>
+	    <listitem>
+	      <para><acronym>LDAP</acronym>-Schlüsselserver sind weniger gebräuchlich, aber verwenden das Standard-LDAP-Protokoll, um Schlüssel zur Verfügung zu stellen. <ulink url="ldap://keyserver.pgp.com" type="ldap">ldap://keyserver.pgp.com</ulink> ist ein empfehlenswerter LDAP-Server.</para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+      </sect2>
+
+      <sect2 id="key-sharing">
+	<title>Schlüsselfreigabe</title>
+	<para>Die Schlüsselfreigabe erfolgt mittels DNS-SD, auch als Bonjour oder Rendezvous bekannt. Die Aktivierung der Schlüsselfreigabe fügt den öffentlichen Schlüsselbund des lokalen Benutzers von <application>Passwörter und Verschlüsselung</application> zum entfernten Suchdialog hinzu. Der Zugriff auf solche lokalen »Schlüsselserver« ist meist schneller als auf entfernte Server.</para>
+      </sect2>
+  </sect1>
+  
+	<!-- ============= About ============================== -->  
+      
+    <sect1 id="about">
+    <title>Info zu »Passwörter und Verschlüsselung«</title>
+    <para><application>Passwörter und Verschlüsselung</application>, die zugehörigen Anwendungs-Plugins, das Einstellungs-Applet sowie das Panel-Applet werden unter dem Namen Seahorse zusammengefasst. Seahorse wurde von Jacob Perkins geschrieben. Die gegenwärtigen Hauptentwickler sind Stef Walter und Adam Schreiber. Dieses Handbuch stammt von Adam Schreiber. Die Website des Projekts wurde von Jim Pharis entworfen. Für weitere Informationen über das Seahorse-Projekt besuchen Sie bitte die <ulink url="http://www.gnome.org/projects/seahorse/" type="http">Seahorse-Website</ulink>.</para>
+    <para>Um Fehler zu melden oder einen Vorschlag zu dieser Anwendung oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen im <ulink url="ghelp:usr-guide?feedback-bugs" type="help">GNOME-Benutzerhandbuch</ulink>.</para>
+    <para>Dieses Programm ist freie Software. Sie können es unter den Bedingungen der <citetitle>GNU General Public License</citetitle>, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 2 der Lizenz oder (nach Ihrer Option) jeder späteren Version. Eine <ulink url="ghelp:gpl" type="help">Kopie dieser Lizenz</ulink> ist in dieser Dokumentation enthalten, eine weitere in der Datei COPYING, die im Quellcode dieses Programms enthalten ist.</para>
+  </sect1>
+</article>

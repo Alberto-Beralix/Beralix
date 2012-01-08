@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="backup-how" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="backup-why"/>
+    <desc>Verwenden Sie Déjà Dup (oder eine andere Anwendung zur Datensicherung), um Kopien Ihrer wertvollen Dateien und Einstellungen zu erstellen und vor Verlust zu schützen.</desc>
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <credit>
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Eine Sicherung erstellen</title>
+
+<p>Der einfachste Weg der Sicherung Ihrer Dateien und Einstellungen ist es, den Prozess der Datensicherung einer Datensicherungsanwendung zu überlassen. Es gibt verschiedene Datensicherungsanwendungen, ein Beispiel ist <link href="apt:deja-dup">Déjà Dup</link>.</p>
+
+<p>Die Hilfefunktion der von Ihnen ausgewählten Anwendung zur Datensicherung unterstützt Sie sowohl dabei, Ihre Einstellungen für die Datensicherung auszuwählen als auch bei der Wiederherstellung Ihrer Daten, falls etwas schief gehen sollte.</p>
+
+<p>Eine Alternative ist es, <link xref="files-copy">Ihre Dateien einfach zu einem sicheren Ort zu kopieren</link>, wie zum Beispiel eine externe Festplatte, einen anderen Rechner im Netzwerk oder ein USB-Laufwerk. Ihre <link xref="backup-thinkabout">persönlichen Dateien</link> und Einstellungen liegen normalerweise in Ihrem Heimverzeichnis, so dass Sie sie einfach von dort kopieren können.</p>
+   
+<p>Die mögliche zu sichernde Datenmenge wird durch die Größe des Speichergerätes beschränkt. Falls genügend Platz zur Verfügung steht, ist es am besten, den gesamten persönlichen Ordner zu sichern, mit folgenden Ausnahmen:</p>
+
+<list>
+ <item><p>Dateien, die Sie von einer CD, DVD oder einem anderen Wechselmedium kopiert haben, da es schneller geht, diese neu zu kopieren als sie aus der Datensicherung wiederherzustellen.</p></item>
+ <item><p>Dateien die Sie einfach wiederherstellen können. Zum Beispiel PDF-Dateien, welche aus TeX-Dateien erstellt werden können, oder Objektdateien, welche mit Hilfe der Make-Werkzeuge erstellt werden können. Stellen Sie nur sicher, dass die Quellen gesichert sind.</p></item>
+ <item><p>Ihre gelöschten Dateien, welche unter <cmd>~/.local/share/Trash</cmd> (dem Mülleimer) gefunden werden können.</p></item>
+</list>
+
+</page>

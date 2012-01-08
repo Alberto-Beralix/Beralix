@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-display" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-display"/>
+
+    <desc>Controlar las leyendas de los iconos y el formato de fecha usado por el gestor de archivos.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Preferencias de la vista del gestor de archivos</title>
+
+<p>Puede controlar varios aspectos relativos a cómo visualiza los archivos el gestor de archivos, incluyendo las leyendas de debajo de los iconos y cómo se formatean las fechas. En cualquier ventana del gestor de archivos, pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y seleccione la pestaña <gui>Visualización</gui>.</p>
+
+<section id="icon-captions">
+  <title>Títulos de iconos</title>
+  <media type="image" src="figures/nautilus-icons.png" width="250" height="110" style="floatend floatright">
+    <p>Iconos del gestor de archivos con títulos</p>
+  </media>
+  <p>Cuando se utiliza la vista de iconos, puede optar por tener información adicional acerca de los archivos y carpetas mostrando una leyenda debajo de cada icono. Esto es útil, por ejemplo, si a menudo necesita ver que es propietario de un archivo o cuándo fue modificado por última vez.</p>
+  <p>A medida que aumente el nivel de ampliación de una carpeta  (en el menú <gui>Ver</gui>), el gestor de archivos le mostrará cada vez más información en las leyendas. Puede elegir hasta tres cosas que mostrar en las leyendas. La primera se mostrará en la mayoría de los niveles de ampliación. La última se mostrará solo en tamaños muy grandes.</p>
+  <p>La información que se puede mostrar en las leyendas de los iconos es la misma que las columnas que pueden aparecer en la vista de lista. Consulte <link xref="nautilus-list"/> para más información.</p>
+  <note><p>Si tiene una ventana del gestor de archivos abierta, puede tener que recargarla para que el cambio en los títulos de los iconos tenga efecto. Pulse <guiseq><gui>Ver</gui><gui>Recargar</gui></guiseq> o pulse <keyseq><key>Ctrl</key><key>R</key></keyseq>.</p></note>
+</section>
+
+<section id="date">
+  <title>Formato de fecha</title>
+  <p>La hora de acceso y modificación de los archivos se puede visualizar en los textos de los iconos o en las columnas de la vista de lista. Puede elegir el formato de fecha que sea más fácil desde la lista desplegable <gui>Formato</gui>. Los formatos disponibles incluyen un formato detallado, que se puede escribir a mano, un formato estándar internacional, y un formato que utiliza frases relativas como <em>hoy</em> y <em>ayer</em>. La lista desplegable muestra los formatos con ejemplos, al mostrar la fecha y hora actuales en ese formato.</p>
+</section>
+
+
+</page>

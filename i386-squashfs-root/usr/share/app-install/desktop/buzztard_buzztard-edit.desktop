@@ -1,0 +1,20 @@
+[Desktop Entry]
+X-AppInstall-Package=buzztard
+X-AppInstall-Popcon=60
+X-AppInstall-Section=universe
+
+Version=0.5.0
+Encoding=UTF-8
+Type=Application
+Name=Buzztard Music Editor
+Comment=Edit buzztard song files
+TryExec=buzztard-edit
+Exec=buzztard-edit --command=load --input-file=%f
+Terminal=false
+Icon=_usr_share_buzztard_pixmaps_buzztard
+DocPath=buzztard/buzztard.xml
+Categories=GNOME;GTK;AudioVideo;Audio;Sequencer
+MimeType=audio/x-bzt;audio/x-bzt-xml
+
+
+X-Ubuntu-Gettext-Domain=app-install-data

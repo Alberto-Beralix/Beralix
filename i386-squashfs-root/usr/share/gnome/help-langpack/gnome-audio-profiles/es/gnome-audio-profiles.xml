@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appname "gnome-audio-profiles">
+<!ENTITY app "<application>GNOME Audio Profiles</application>">
+<!ENTITY appversion "2.27.3">
+<!ENTITY manrevision "2.27.0">
+<!-- Information about the entities
+               Use the app and appname entities to specify the name of the application.
+               Use the appversion entity to specify the version of the application.
+               Use the manrevision entity to specify the revision number of this manual.
+               Use the date entity to specify the release date of this manual.
+            -->]>
+<!--
+   (Do not remove this comment block.)
+   Maintained by the GNOME Documentation Project
+   http://live.gnome.org/DocumentationProject
+   Template version: 3.0 beta
+   Template last modified 2006-11-21
+
+  -->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="es">
+  <articleinfo>
+    <title>Manual de <application>Perfiles de sonido de GNOME</application></title>
+    <abstract role="description">
+      <para>Los <application>Perfiles de sonido de GNOME</application> son un conjunto de configuraciones de sonido para las aplicaciones basadas en GStreamer.</para>
+    </abstract>
+
+    <copyright>
+      <year>2008-2009</year>
+      <holder>Proyecto de documentación de GNOME</holder>
+    </copyright><copyright><year>2009, 2010</year><holder>Jorge González (jorgegonz@svn.gnome.org)</holder></copyright>
+
+    <!-- An address can be added to the publisher information. -->
+    <publisher role="maintainer">
+      <publishername>Proyecto de documentación de GNOME</publishername>
+    </publisher>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <!-- The file legal.xml contains link to license for the documentation,
+         and other legal stuff such as "NO WARRANTY" statement.
+         Please do not change any of this. -->
+
+    <authorgroup>
+      <author>
+        <firstname>Marc-Andre</firstname>
+        <surname>Lureau</surname>
+        <affiliation>
+          <orgname>Proyecto GNOME</orgname>
+          <address> <email>marcandre.lureau@gmail.com</email> </address>
+        </affiliation>
+      </author>
+    </authorgroup>
+
+
+    <!-- According to GNU FDL, revision history is mandatory if you are -->
+    <!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+    <!-- Remember to remove the &manrevision; entity from the revision entries other
+      -->
+    <!-- than the current revision. -->
+    <!-- The revision numbering system for GNOME manuals is as follows: -->
+    <!-- * the revision number consists of two components -->
+    <!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+    <!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+    <!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+    <!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+    <!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+    <!-- to V3.0, and so on. -->
+    <revhistory>
+      <revision>
+        <revnumber>Manual de los Perfiles de sonido V2.27.0</revnumber>
+        <date>Junio de 2009</date>
+        <revdescription>
+	  <para>Rellenar algunos espacios vacíos, añadir capturas de pantalla.</para>
+	  <para>Publicado con GNOME Media 2.27.3</para>
+          <para role="author">Marc-Andre Lureau</para>
+          <para role="publisher">Proyecto de documentación de GNOME</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>Manual de los Perfiles de sonido V0.1</revnumber>
+        <date>Diciembre de 2008</date>
+        <revdescription>
+          <para role="author">Marc-Andre Lureau</para>
+          <para role="publisher">Proyecto de documentación de GNOME</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>Este manual describe la versión 2.27.3 de los Perfiles de sonido de GNOME.</releaseinfo>
+    <legalnotice>
+      <title>Comentarios</title>
+      <para>Para informar de un fallo, o hacer alguna sugerencia concerniente la aplicación <application>Perfiles de sonido de GNOME</application> o este manual, siga las indicaciones en la <ulink url="ghelp:user-guide?feedback-bugs" type="help">Página de comentarios de GNOME</ulink>.</para>
+      <!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+  </articleinfo>
+
+  <indexterm zone="index">
+    <primary>Perfiles de sonido de GNOME</primary>
+  </indexterm>
+
+  <!-- ============= Document Body ============================= -->
+  <!-- ============= Introduction ============================== -->
+
+  <sect1 id="gnome-audio-profiles-introduction">
+    <title>Introducción</title>
+    <para>Los <application>Perfiles de sonido de GNOME</application> le permiten seleccionar y modificar una lista de formatos de codificación predefinidos. De forma predeterminada los <application>Perfiles de sonido de GNOME</application> proporcionan los siguientes formatos de sonido:</para>
+    <itemizedlist>
+      <listitem>
+        <para>AAC-MP4: el nuevo estándar de compresión con pérdida.</para>
+      </listitem>
+      <listitem>
+        <para>Ogg Vorbis: compresión con pérdida de Xiph.Org.</para>
+      </listitem>
+      <listitem>
+        <para>Speex: compresión con pérdida de Xiph.Org optimizada para voz.</para>
+      </listitem>
+      <listitem>
+        <para>FLAC: compresión sin pérdida de Xiph.Org.</para>
+      </listitem>
+      <listitem>
+        <para>MP3: el popular formato de compresión con pérdida.</para>
+      </listitem>
+      <listitem>
+        <para>MP2: sonido MPEG-1 Layer II, ampliamente soportado.</para>
+      </listitem>
+      <listitem>
+        <para>WAV: sin pérdida.</para>
+      </listitem>
+    </itemizedlist>
+
+    <note>
+      <para>Algunos formatos pueden ser ilegales en su jurisdicción.</para>
+    </note>
+  </sect1>
+
+  <sect1 id="gnome-audio-profiles-usage">
+    <title>Uso</title>
+    <para>Use los <application>Perfiles de sonido de GNOME</application> para modificar una lista de formatos de codificación predefinidos.</para>
+
+    <sect2 id="gnome-audio-profiles-profiles-edit">
+      <title>Diálogo de selección del perfil</title>
+
+      <para>La siguiente ventana se muestra para modificar, añadir o quitar los formatos predefinidos.</para>
+
+      <!-- ==== Figure ==== -->
+      <figure id="gnome-audio-profiles-profiles-window">
+        <title>Ventana de los <application>Perfiles de sonido de GNOME</application></title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome-audio-profiles-profiles-window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Muestra la ventana principal de <application>Perfiles de sonido de GNOME</application>. Contiene una lista de perfiles y las opciones de modificación.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <!-- ==== End of Figure ==== -->
+
+      <para>Seleccione uno de los perfiles y pulse «Editar» para modificarlo. Se mostrará la «Ventana de modificación de perfil».</para>
+
+      <para>«Borrar» quitará de la lista de perfiles el perfil actualmente seleccionado.</para>
+
+      <para>Para crear un perfil nuevo pulse «Nuevo». Se mostrará la «Ventana de modificación del perfil».</para>
+
+    </sect2>
+
+    <sect2 id="gnome-audio-profiles-profile-edit">
+      <title>Editar perfiles</title>
+
+      <para>Los <application>Perfiles de sonido de GNOME</application> le permiten modificar los parámetros de un perfil de sonido.</para>
+
+      <!-- ==== Figure ==== -->
+      <figure id="gnome-audio-profiles-profile-window">
+        <title>Ventana de modificación de perfiles</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome-audio-profiles-profile-window.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+              <phrase>Muestra la ventana de perfil de <application>Perfiles de sonido de GNOME</application>.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+      <!-- ==== End of Figure ==== -->
+
+      <itemizedlist>
+	<listitem>
+          <para>Nombre del perfil: nombre amigable del perfil.</para>
+	</listitem>
+	<listitem>
+          <para>Descripción del perfil: descripción larga de este perfil.</para>
+	</listitem>
+	<listitem>
+          <para>Tubería GStreamer: la tubería de codificación de GStreamer.</para>
+	</listitem>
+	<listitem>
+          <para>Extensión de archivo: la extensión de archivo asociada con este perfil.</para>
+	</listitem>
+	<listitem>
+          <para>Activo: indica si este perfil está listado en la aplicación cliente.</para>
+	</listitem>
+    </itemizedlist>
+
+    </sect2>
+
+  </sect1>
+
+  <!-- ============= Bugs ================================== -->
+  <!-- This section is optional and is commented out by default.
+       You can use it to describe known bugs and limitations of the
+       program if there are any - please be frank and list all
+       problems you know of.
+
+       <sect1 id="mayapp-bugs">
+         <title>Known Bugs and Limitations</title>
+         <para> </para>
+       </sect1>
+       -->
+  <!-- ============= About ================================== -->
+  <!-- This section contains info about the program (not docs), such as
+       author's name(s), web page, license, feedback address. This
+       section is optional: primary place for this info is "About.." box of
+       the program. However, if you do wish to include this info in the
+       manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="gnome-audio-profiles-about">
+    <title>Acerca de los <application>Perfiles de sonido de GNOME</application></title>
+    <para>Para informar de un fallo, o hacer alguna sugerencia concerniente a esta aplicación o este manual, siga las indicaciones en la <ulink url="ghelp:user-guide?feedback-bugs" type="help">Página de comentarios de la Guía del usuario de GNOME</ulink>.</para>
+
+    <para>Este programa se distribuye bajo los términos de la Licencia Pública General GNU tal como la publica la Free Software Foundation; en cualquiera de las versiones 2 de la Licencia o (a su elección) cualquier versión posterior. Se incluye una <ulink url="ghelp:lgpl" type="help">copia de esta licencia</ulink> en esta documentación; puede encontrar otra copia en en el archivo COPYING incluido con el código fuente de este programa.</para>
+
+  </sect1>
+</article>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-copy" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <desc>Copiar o mover elementos a una carpeta nueva.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Cristopher Thomas</name>
+      <email>crisnoh@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Copiar o mover archivos y carpetas</title>
+
+<p>Es posible copiar o mover un archivo o carpeta en una nueva ubicación arrastrándolo y soltándolo con el ratón, usando las órdenes de copiar y pegar, o mediante combinaciones de teclas.</p>
+<p>Por ejemplo, copiar archivos puede resultar útil cuando se crea una carpeta que contiene archivos que va a enviar por correo electrónico a un amigo o compañero de trabajo, o cuando va a <link xref="files#backup">respaldar</link> archivos individuales en un disco externo.</p>
+
+<steps>
+<title>Arrastrar archivos para copiarlos o moverlos</title>
+<item><p><link xref="files-browse">Abra el gestor de archivos</link> en la carpeta que contenga el elemento que quiere copiar.</p></item>
+<item><p>Pulse <guiseq><gui>Archivo</gui><gui>Ventana nueva</gui></guiseq> (o pulse <keyseq><key>Ctrl</key><key>N</key></keyseq>) para abrir una segunda ventana. En esa ventana nueva, navegue hasta la carpeta a donde desea copiar o mover el elemento.</p></item>
+<item><p>Pulse y arrastre el elemento de una ventana a la otra. De forma predeterminada, al arrastrar y soltar un elemento <em>se moverá</em> si el destino está en el mismo dispositivo (p.ej. si ambas carpetas están en el mismo disco duro de su equipo).</p>
+  <p>En cambio, al arrastrar y soltar un elemento <em>se copiará</em> si el destino está en un dispositivo distinto, como un dispositivo de almacenamiento USB. Puede cambiar este comportamiento:</p>
+<list style="compact">
+<item><p>Para obligar a que se copie el archivo, mantenga pulsada la tecla <key>Ctrl</key> mientras lo arrastra.</p></item>
+<item><p>Para obligar a que se mueva el archivo, mantenga pulsada la tecla <key>Mayús</key> mientras lo arrastra.</p></item>
+</list></item>
+</steps>
+
+<steps>
+<title>Copiar y pegar archivos</title>
+<item><p>Seleccione un elemento que quiera copiar, pulsando en él una vez.</p></item>
+<item><p>Pulse <guiseq><gui>Editar</gui><gui>Copiar</gui></guiseq>, o <keyseq><key>Ctrl</key><key>C</key></keyseq>.</p></item>
+<item><p>Vaya a otra carpeta donde quiera poner la copia del elemento.</p></item>
+<item><p>Pulse <guiseq><gui>Editar</gui><gui>Pegar</gui></guiseq> para finalizar la copia del archivo, o pulse <keyseq><key>Ctrl</key><key>V</key></keyseq>. Ahora habrá una copia del archivo en la carpeta original y otra en la otra carpeta.</p></item>
+</steps>
+
+<steps>
+<title>Cortar y pegar archivos (para moverlos)</title>
+<item><p>Seleccione el elemento que desea mover pulsándolo una sola vez.</p></item>
+<item><p>Pulse <guiseq><gui>Editar</gui><gui>Cortar</gui></guiseq>, o <keyseq><key>Ctrl</key><key>X</key></keyseq>.</p></item>
+<item><p>Vaya a otra carpeta donde quiera mover el elemento.</p></item>
+<item><p>Pulse <guiseq><gui>Editar</gui><gui>Pegar</gui></guiseq> para finalizar la operación de mover el archivo, o pulse <keyseq><key>Ctrl</key><key>V</key></keyseq>. El archivo se sacará de su carpeta original y se moverá a la otra carpeta.</p></item>
+</steps> 
+
+<note>
+ <title>¿Por qué no puedo cortar/mover un archivo?</title>
+ <p>No puede copiar o mover un archivo en una carpeta de <em>solo lectura</em>. Algunas carpetas son de solo lectura para impedirle que pueda hacer cambios en su contenido. Puede hacer que deje de ser de solo lectura <link xref="nautilus-file-properties-permissions">cambiando los permisos de archivo</link>.</p>
+</note>
+
+</page>

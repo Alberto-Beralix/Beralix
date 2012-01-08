@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="look-display-fuzzy" xml:lang="es">
+
+  <info>
+   <link type="guide" xref="hardware-problems-graphics"/>
+   <desc>La resolución de la pantalla puede estar incorrectamente ajustada.</desc>	
+   <revision version="11.04" date="2011-04-24" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Natalia Ruz Leiva</name>
+      <email>nruz@alumnos.inf.utfsm.cl</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Por qué parece que lo que hay en mi pantalla está difuso o pixelado?</title>
+
+<p>Esto puede suceder porque la resolución de pantalla que ha definido no es la más adecuado para su pantalla.</p>
+
+<p>Para resolver esto, pulse el icono de la derecha del panel y vaya a <gui>Configuración de sistema</gui>. En la sección de Hardware, seleccione <gui>Pantallas</gui>. Intente algunas de las opciones de <gui>Resolución</gui> y observe cual hace que la pantalla se vea mejor.</p>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Would like a little more explanation on native resolution, which
+  is generally only applicable on LCDs. There's a stub for using two
+  monitors. Link from section below when it's added.</p>
+</comment>
+
+<section id="multihead">
+ <title>Cuando hay varios monitores conectados</title>
+ 
+ <p>Si tiene dos pantallas conectadas al equipo (por ejemplo, un monitor normal y un proyector), estas podrían tener una resolución diferente. Sin embargo, la tarjeta gráfica del equipo solo puede visualizar la pantalla en una única resolución cada vez, por lo que al menos una de las pantallas podría verse borrosa.</p>
+ 
+ <p>Es posible hacer que las dos pantallas tengan distinta resolución, pero entonces no podrá visualizar lo mismo en ambas pantallas simultáneamente. En efecto, tendría dos pantallas independientes conectadas al mismo tiempo. Puede mover ventanas de una pantalla a la otra, pero no podrá mostrar la misma ventana en ambas pantallas a la vez.</p>
+ 
+ <p>Para configurar las pantallas, para que cada una tenga su propia resolución:</p>
+ 
+ <steps>
+  <item>
+   <p>Click the icon at the very right of the panel and select <gui>System Settings</gui>. Open <gui>Displays</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Desmarque <gui>Pantallas en espejo</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Seleccione cada pantalla por turnos de la caja gris en la parte superior de la ventana de <gui>Monitores</gui>. Cambie la <gui>Resolución</gui> hasta que la pantalla se vea bien.</p>
+  </item>
+ </steps>
+
+</section>
+
+</page>

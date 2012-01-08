@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="sync-addins-sync" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="addins#manage"/>
+    <desc>启用额外的方法来与其他设备同步便笺。</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-05-29" status="candidate"/>
+    <credit type="author">
+      <name>Paul Cutler</name>
+      <email>pcutler@gnome.org</email>
+    </credit>    
+<!--
+    <copyright>
+      <year>2010</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+-->
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+ <title>同步扩展</title>
+
+	<p>同步扩展允许您选择不同的方法和位置来同步阿帖便笺，更多配置同步的相关信息，请访问 <link xref="sync-notes"/> 帮助页面。</p>
+
+
+<section id="local">
+  <title>本地文件夹同步服务</title>
+  <p>本地文件夹同步服务默认默认已经启用，允许便笺同步到您计算机上的其他文件夹。这有助于创建一个便笺备份。</p>
+</section>
+
+<section id="ssh">
+  <title>SSH 同步服务</title>
+  <p>SSH 同步服务允许您通过 SSH 协议与其他计算机同步便笺，这个插件默认是禁用的，您可以通过安装 <em>sshfs</em> 来让它在您的 Linux 发行版工作，这超出了此帮助文档的讲述范围。</p>
+</section>
+
+<section id="webdav">
+  <title>WebDav 同步服务</title>
+  <p>WebDav 同步服务扩展默认已经启用，允许您与一个 WebDav 远程服务器同步便笺。您需要安装 <em>wdfs FUSE 文件系统</em> 以便它能在您的 Linux 发行版工作，这超出了此帮助文档的讲述范围。</p>
+</section>
+
+<section id="webservice">
+  <title>Web 同步服务</title>
+  <p>Web 同步服务扩展允许您与一个远程服务器或服务同步便笺，比如 Tomboy Online。在写这个文档时，Tomboy Online 服务还未运行。</p>
+</section>
+
+ </page>

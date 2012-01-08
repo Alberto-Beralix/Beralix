@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-reading-keyboard-shortcuts" xml:lang="zh_CN">
+
+  <info>
+    <desc>Keyboard shortcuts that can save you some time when reading mail.</desc>
+
+    <link type="guide" xref="index#mail-basic"/>
+<!-- TODO:POST-3-2: maybe introduce keyboard shortcuts guide xref covering any shortcuts in all modules, covering http://library.gnome.org/users/evolution/2.32/quickref-mail.html.en ? -->
+
+    <revision pkgversion="3.1.5" version="0.2" date="2011-07-29" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-read.html.en -->
+ </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Using shortcut keys to read mail</title>
+
+<section id="view-email">
+<title>Viewing an email</title>
+<p>In the Mail window you read a message by selecting it in the message list. If you would like to see the message in its own window, either double-click it, press <key>Enter</key>, or press <keyseq><key>Ctrl</key><key>O</key></keyseq>.</p>
+</section>
+
+<section id="inside-message">
+<title>Navigating in a message</title>
+<p>To read mail with the keyboard, you can click the <key>Spacebar</key> to page down and press <key>Backspace</key> to page up while reading an email. Ensure that you use the keys when the message list is focused.</p>
+</section>
+
+<section id="inside-folder">
+<title>Navigating in a folder in the message list</title>
+<p>Navigate in the message list by using the arrow keys on the keyboard.</p>
+</section>
+
+<section id="inside-folder-unread">
+<title>Navigating in a folder's unread mail in the message list</title>
+<p>To go to the next or previous unread messages, press the period (<key>.</key>) or comma (<key>,</key>) keys. On some keyboards, these keys are also marked with the <key>&gt;</key> and <key>&lt;</key> symbols, which is a convenient way to remember that they move you forward and backward in your message list. You can also use the right square bracket (<key>]</key>) for the next unread message, and the left square bracket (<key>[</key>) for the previous unread message.</p>
+</section>
+
+<section id="unread-across-folders">
+<title>Navigating in unread mail across folders</title>
+
+<p>You can easily read the unread messages in all the mail folders by using the <key>Spacebar</key>.</p>
+
+<p>When you are in the Mail window, the Spacebar has the following behavior:</p>
+<list>
+<item><p>当您第一次按下空格键时，会跳至下一封未读邮件。</p></item>
+<item><p>If the message is more than one screen long, the Spacebar works as <key>Page Down</key>.</p></item>
+<item><p>如果您在到达页面底部时，按下空格键能跳至下一封未读邮件。</p></item>
+<item><p>如果邮箱中没有未读邮件，按下空格键跳至下一个文件夹中的未读邮件。</p></item>
+<item><p>如果新邮件到达若干个文件夹，按下空格键能在不同文件夹之间跳转。这样您可以直接跳至其他文件夹中的未读邮件而无须用鼠标点击文件夹。</p></item>
+</list>
+</section>
+
+</page>

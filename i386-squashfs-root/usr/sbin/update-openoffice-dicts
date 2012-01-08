@@ -1,0 +1,35 @@
+#!/usr/bin/perl -w
+
+# This file is mostly a no-op
+
+#print STDERR "update-openoffice-dicts: This script does nothing.\n"
+
+1;
+
+__END__
+
+=head1 NAME
+
+update-openoffice-dicts - Obsolete script for backwards compatibility
+
+=head1 SYNOPSIS
+
+update-openoffice-dicts
+
+=head1 DESCRIPTION
+
+This is script is currently a no-op. myspell dictionaries calling it
+and using F<installdeb-myspell> should be rebuilt with
+dictionaries-common.dev (>= 1.10.5) to stop this script being called.
+
+=head1 AUTHORS
+
+Rene Engelhard, Agustin Martin Domingo
+
+=cut
+
+# Local Variables:
+#  perl-indent-level: 2
+# End:
+
+#  LocalWords:  openoffice myspell dicts

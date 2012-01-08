@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-filters-not-working" xml:lang="es">
+
+  <info>
+    <desc>Solucionar problems con los filtros de correo que no ordenan ni organizan el correo como se espera.</desc>
+    
+    <link type="guide" xref="index#common-mail-problems"/>
+    <link type="seealso" xref="mail-filters"/>
+
+    <revision pkgversion="3.1.5" version="0.2" date="2011-08-25" status="draft"/>
+    <credit type="author">
+      <name>April Gonzales</name>
+      <email>loonycookie@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Los filtros de correo no funcionan</title>
+<p>Probablemente sus filtros de correo están funcionando, no obstante pueden estar ordenados de una forma no eficiente. Esto hará que sus filtros se ejecuten lentamente, de tal forma que parece que no funcionan.</p>
+
+<note>
+<p>Note que el orden de los filtros es muy importante. Se aplican sobre el correo original en secuencia, como una receta.</p>
+<p>Si su primer filtro tiene una regla <gui>Parar de procesar</gui>, entonces todos los mensajes de correo que coincidan con este filtro ignorarán los siguientes filtros.</p>
+<p>When you move a message to another folder, "moving" actually means appending a copy of the message to the destination folder and marking the original message for deletion. So any subsequent filter rules will be applied to the original message that is now marked for deletion. Therefore moving a message should usually appear last in a sequence of filter rules.</p>
+<p>Para comprobar las reglas y su orden en un filtro ya existente, revise sus acciones en la sección <gui>Después</gui> <link xref="mail-filters#editing">editando el filtro</link>.</p>
+</note>
+
+<p>Another thing you have to keep in mind is that filters depend on the "new" flag that is set when a particular email message is initially fetched from the server. If you use another email client aside from Evolution, your filters may not work automatically.</p>
+
+<note>
+<p>Aplicar la regla <gui>Parar de procesar</gui> sobre un mensaje de correo hará que todos los sucesivos filtors ignoren ese correo.</p>
+
+<!--<item><p>TODO: "flag" is a technical term, and might need explanation. A link to a glossary item, or a "what is a flag?" topic would suffice, like for example: For more information on flags, please see <link href="link to guide">this page</link></p></item>  -->
+</note>
+
+</page>

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "purge" ]; then
+    APP_PROFILE="usr.bin.firefox"
+    rm -f /etc/apparmor.d/force-complain/$APP_PROFILE || true
+    rm -f /etc/apparmor.d/disable/$APP_PROFILE || true
+    rm -f /etc/apparmor.d/local/$APP_PROFILE || true
+    rm -f "/etc/apparmor.d/abstractions/ubuntu-browsers.d/firefox" || true
+    rmdir /etc/apparmor.d/local 2>/dev/null || true
+fi
+
+# Automatically added by dh_installmenu
+if [ -x "`which update-menus 2>/dev/null`" ]; then update-menus ; fi
+# End automatically added section
+

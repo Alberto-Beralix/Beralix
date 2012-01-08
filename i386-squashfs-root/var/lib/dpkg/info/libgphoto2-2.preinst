@@ -1,0 +1,43 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+	install|upgrade)
+		# properly remove old config files
+		for f in \
+			/etc/udev/$PACKAGE.rules \
+			/etc/udev/rules.d/025_libgphoto2.rules \
+			/etc/hotplug/usb/$PACKAGE.usermap \
+			/etc/udev/libgphoto2_generic_ptp_support.rules \
+			/etc/udev/rules.d/025_$PACKAGE.rules \
+			/etc/udev/rules.d/020_libgphoto2_generic-ptp_support.rules
+		do
+			dpkg-maintscript-helper rm_conffile $f 2.4.10.1-5 -- "$@"
+		done
+	;;
+
+	abort-upgrade)
+	;;
+
+	*)
+		echo "preinst called with unknown argument \`$1'" >&2
+		exit 1
+	;;
+
+esac
+
+# Automatically added by dh_installudev
+if [ "$1" = install ] || [ "$1" = upgrade ]; then
+	if [ -e "/etc/udev/rules.d/z60_libgphoto2-2.rules" ]; then
+		if [ "`md5sum \"/etc/udev/rules.d/z60_libgphoto2-2.rules\" | sed -e \"s/ .*//\"`" = \
+		     "`dpkg-query -W -f='${Conffiles}' libgphoto2-2 | sed -n -e \"\\\\' /etc/udev/rules.d/z60_libgphoto2-2.rules '{s/ obsolete$//;s/.* //p}\"`" ]
+		then
+			rm -f "/etc/udev/rules.d/z60_libgphoto2-2.rules"
+		fi
+	fi
+fi
+# End automatically added section
+
+
+exit 0

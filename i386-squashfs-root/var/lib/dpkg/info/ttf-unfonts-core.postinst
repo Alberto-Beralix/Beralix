@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdefoma
+FILE='/etc/defoma/hints/ttf-unfonts-core.hints'
+if [ "$1" = configure ]; then
+	if [ -x "`which defoma-font 2>/dev/null`" ]; then
+		defoma-font reregister-all $FILE
+	fi
+fi
+# End automatically added section

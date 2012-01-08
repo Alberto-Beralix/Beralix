@@ -1,0 +1,1 @@
+../../../linux-headers-3.0.0-12/include/linux/spinlock_api_smp.h

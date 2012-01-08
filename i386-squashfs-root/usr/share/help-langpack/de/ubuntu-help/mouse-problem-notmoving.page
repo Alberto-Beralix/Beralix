@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="mouse-problem-notmoving" xml:lang="de">
+<info>
+    <link type="guide" xref="mouse#problems"/>
+    <desc>Überprüfen Ihrer Maus, falls diese nicht funktioniert.</desc>
+    
+    <revision version="11.04" date="2011-04-28" status="final"/>
+    <credit type="author">
+        <name>Phil Bull</name>
+        <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+</info>
+
+<title>Der Mauszeiger bewegt sich nicht</title>
+
+<links type="section"/>
+
+<section id="plugged-in">
+ <title>Überprüfen Sie, ob die Maus angeschlossen ist</title>
+ <p>Wenn Sie eine kabelgebundene Maus haben, vergewissern Sie sich, dass sie fest an Ihren Rechner angeschlossen ist.</p>
+ <p>Falls es eine USB-Maus ist (mit einem rechtwinkeligen Stecker), versuchen Sie sie an einen anderen USB-Anschluss anzuschließen. Falls es sich um eine PS/2-Maus (mit einem kleinen, runden Stecker mit sechs Pins) handelt, vergewissern Sie sich, dass sie am grünen Mausanschluss angesteckt ist und nicht am lilafarbenen Tastaturanschluss. Sie müssen den Rechner möglicherweise neu starten, wenn sie nicht angeschlossen war.</p>
+</section>
+
+<section id="connected">
+ <title>Überprüfen Sie, ob die Maus von Ihrem Rechner erkannt worden ist</title>
+ <steps>
+  <item>
+  <p>Gehen Sie in das <link xref="unity-dash-intro">Dash</link> und öffnen Sie ein <app>Terminal</app>.</p></item>
+  <item>
+   <p>Geben Sie beim »Prompt« (dem $) im Terminalfenster <cmd>xsetpointer -l | grep Pointer</cmd> ein, genau so, wie es hier erscheint, und drücken Sie die <key>Eingabetaste</key>.</p>
+  </item>
+  <item>
+   <p>Eine kurze Liste von Mausgeräten wird erscheinen. Überprüfen Sie, ob mindestens einer der Einträge <sys>[XExtensionPointer]</sys> daneben stehen hat und ob einer der <sys>[XExtensionPointer]</sys>-Einträge den Namen der Maus links stehen hat.</p>
+  </item>
+  <item><p>Wenn kein Eintrag besteht, der den Namen der Maus gefolgt von <sys>[XExtensionPointer]</sys> aufweist, dann wurde die Maus von Ihrem Rechner nicht erkannt. Wenn der Eintrag existiert, wurde Ihre Maus von Ihrem Rechner erkannt. In diesem Fall sollten Sie überprüfen, ob die Maus <link xref="#plugged-in">angeschlossen</link> und in <link xref="#broken">funktionsfähigem Zustand</link> ist.</p></item>
+ </steps>
+
+ <p>Falls Ihre Maus einen seriellen Anschluss (RS-232) hat, müssen Sie möglicherweise einige zusätzliche Schritte unternehmen, um Sie zum Laufen zu bringen. Die Schritte hängen vermutlich von Marke und Modell Ihrer Maus ab.</p>
+ 
+ <p>Probleme mit der Mauserkennung können kompliziert zu lösen sein. Fragen Sie nach Support bei Ihrer Distribution oder Ihrem Händler, wenn Sie glauben, dass Ihre Maus nicht richtig erkannt wurde.</p>
+ 
+ <comment>
+ <cite date="2009-09-11">Phil Bull</cite>
+  <p>
+  Should provide some useful advice rather than just saying "you might need to 
+  perform extra steps".
+  </p>
+ </comment>
+</section>
+
+<section id="broken">
+ <title>Überprüfen, ob die Maus defekt ist</title>
+ <p>Schließen Sie die Maus an einen anderen Rechner an und überprüfen Sie, ob sie funktioniert.</p>
+ 
+ <p>Wenn die Maus eine optische oder Lasermaus ist, sollte ein Licht an der Unterseite der Maus leuchten, wenn Sie eingeschaltet ist. Wenn kein Licht da ist, überprüfen Sie, ob die Maus eingeschaltet ist. Wenn sie es ist und noch immer kein Licht zu sehen ist, ist die Maus vermutlich defekt.</p>
+</section>
+
+<section id="wireless-mice">
+ <title>Überprüfen kabelloser Mäuse</title>
+ 
+ <list>
+  <item>
+   <p>Klicken Sie auf eine Maustaste und überprüfen Sie, ob sich der Mauszeiger nun bewegt. Manche kabellose Mäuse gehen in einen Schlafmodus, um Strom zu sparen, und reagieren eventuell erst, wenn Sie auf eine Maustaste klicken.</p>
+  </item>
+  <item>
+   <p>Überprüfen Sie, ob der Akku der Maus geladen ist.</p>
+  </item>
+  <item>
+   <p>Vergewissern Sie sich, dass der Empfänger fest an den Rechner angeschlossen ist.</p>
+  </item>
+  <item>
+   <p>Falls Ihre Maus und der Empfänger auf unterschiedlichen Frequenzen betrieben werden können, vergewissern Sie sich, dass beide dieselbe Frequenz benutzen.</p>
+  </item>
+  <item>
+   <p>Möglicherweise müssen Sie eine Taste auf der Maus, am Empfänger oder an beiden drücken, um eine Verbindung herzustellen. Die Bedienungsanleitung Ihrer Maus sollte dies genauer erläutern, wenn das der Fall ist.</p>
+  </item>
+ </list>
+
+ <p>Die meisten Funkmäuse sollten automatisch funktionieren, sobald Sie sie an Ihrem Rechner anschließen. Falls Sie eine Bluetooth- oder Infrarotmaus haben, müssen Sie eventuell einige zusätzliche Schritte vornehmen, um sie zum Laufen zu bringen. Die Schritte können von Marke und Modell Ihrer Maus abhängen.</p>
+
+<comment>
+ <cite date="2009-09-11">Phil Bull</cite>
+ <p>Should provide some useful advice rather than just saying "you might need to perform extra steps".</p>
+</comment>
+</section>
+
+</page>

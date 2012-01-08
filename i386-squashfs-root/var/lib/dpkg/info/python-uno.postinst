@@ -1,0 +1,19 @@
+#! /bin/sh -e
+
+case "$1" in
+    configure)
+	docdir=/usr/share/doc/python-uno
+	if [ -d $docdir ] && [ ! -h $docdir ]; then
+	    rm -rf $docdir
+	    ln -s uno-libs3 $docdir
+	fi
+esac
+
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p python-uno 
+fi
+
+# End automatically added section
+

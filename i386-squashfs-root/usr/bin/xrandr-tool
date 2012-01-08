@@ -1,0 +1,48 @@
+#!/usr/bin/python
+
+import sys
+import re
+import subprocess
+
+if __name__ == "__main__":
+    # TODO: optparse
+    if len(sys.argv) < 2:
+        print "Usage:  xrandr-tool <command>"
+        print
+        print "Commands:"
+        print "  outputs"
+        print "  current-resolution [output-name]"
+        print "  resolutions [output-name]"
+        sys.exit(1)
+
+    command = sys.argv[1]
+    output_name = None
+    if len(sys.argv) > 2:
+        output_name = sys.argv[2]
+
+    re_output = re.compile("^(.*) (?:disconnected|connected) (.*)")
+    re_res    = re.compile("^   (\d+x\d+) *(.*)")
+
+    # The results from xrandr are given in terms of the available display devices.
+    # One device can have zero or more associated modes.  Unfortunately xrandr
+    # indicates this through indentation and is kinda wordy, so we have to keep
+    # track of the context we see mode names in as we parse the results.
+    process = subprocess.Popen(['xrandr'], stdout=subprocess.PIPE)
+    xrandr_stdout, xrandr_stderr = process.communicate()
+    current_output_name = None
+    for line in xrandr_stdout.split("\n"):
+        m = re_output.match(line)
+        if m:
+            current_output_name = m.group(1)
+            if command == "outputs":
+                print current_output_name
+
+        if "resolution" in command:
+            m = re_res.match(line)
+            if m and current_output_name == output_name:
+                res = m.group(1)
+                if command == "current-resolution":
+                    if line.find('*') != -1:
+                        print res
+                else:
+                    print res

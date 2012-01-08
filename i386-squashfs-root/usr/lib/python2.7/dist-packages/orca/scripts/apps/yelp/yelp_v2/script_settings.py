@@ -1,0 +1,1 @@
+../../../../../../../../share/pyshared/orca/scripts/apps/yelp/yelp_v2/script_settings.py

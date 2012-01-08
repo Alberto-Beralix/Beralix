@@ -1,0 +1,26 @@
+#!/bin/sh
+
+set -e
+
+LIBSUFFIX=li
+PLATFORMID=linux_x86
+
+
+if [ "$1" = "configure" ]; then
+		dpkg-trigger /usr/lib/libreoffice/basis3.4/registered-components
+fi
+
+
+
+#! /bin/sh -e
+
+case "$1" in
+    configure)
+	docdir=/usr/share/doc/libreoffice-core
+	if [ -d $docdir ] && [ ! -h $docdir ]; then
+	    rm -rf $docdir
+	    ln -s uno-libs3 $docdir
+	fi
+esac
+
+

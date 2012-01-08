@@ -1,0 +1,15 @@
+# vim:syntax=apparmor
+#
+# abstraction for allowing console email clients in Ubuntu. These will
+# typically also need a terminal, so when using this abstraction, should also
+# do something like:
+#
+# #include <abstractions/ubuntu-gnome-terminal>
+#
+
+  /usr/bin/alpine PUx,
+  /usr/bin/citadel PUx,
+  /usr/bin/cone PUx,
+  /usr/bin/elmo PUx,
+  /usr/bin/mutt PUx,
+

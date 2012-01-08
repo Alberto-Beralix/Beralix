@@ -1,0 +1,1 @@
+/etc/xul-ext/ubufox.js

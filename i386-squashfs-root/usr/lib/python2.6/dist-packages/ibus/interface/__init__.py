@@ -1,0 +1,1 @@
+../../../../../share/pyshared/ibus/interface/__init__.py

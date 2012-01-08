@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="prob-conn-neterror" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="prob-conn"/>
+    <desc>Aparecerá el mensaje de error «<gui>Error de red</gui>» en la ventana principal.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-17" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-14" status="review"/>
+    <revision pkgversion="2.28" version="0.3" date="2010-02-16" status="review"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>Obtengo un mensaje que muestra «Error de red»</title>
+
+  <comment>
+    <cite date="2009-08-27">shaunm</cite>
+    <p>Empathy ya no le permite crear una cuenta de IRC sin un apodo válido. Se ha quitado el enlace de guía. Quitar el texto.</p>
+  </comment>
+
+  <p>Este tipo de mensaje sucede cuando <app>Empathy</app> no se puede comunicar con el servicio de mensajería instantánea por alguna razón.</p>
+  <p>Este tipo de error también sucede cuando intenta usar una cuenta de IRC sin haber configurado el apodo.</p>
+
+  <steps>
+    <item>
+      <p>Asegúrese de que está conectado a Internet o a una red de área local.</p>
+    </item>
+    <item>
+      <p>Pulse el icono <media type="image" mime="image/png" src="figures/gtk-edit.png">Editar</media> en el mensaje de error.</p>
+    </item>
+    <item>
+      <list>
+        <item>
+          <p>Expanda la sección <gui>Avanzadas</gui> y asegúrese de que los detalles son correctos. Debería poder encontrar estos detalles en la página web del servicio de mensajería.</p>
+        </item>
+<!--
+        <item>
+          <p>
+            In the case of an IRC account, type your nickname in the <gui>Nickname</gui>
+            text box.
+          </p>
+        </item>
+-->        
+      </list>
+    </item>
+    <item>
+      <p>Deseleccione la casilla de verificación <gui>Activada</gui> y después selecciónela de nuevo para intentar reconectar con el servicio.</p>
+    </item>
+  </steps>
+  
+  <section id="prob-conn-neterror-proxy">
+    <title>Soporte de proxy</title>
+    <p>Por el momento <app>Empathy</app> no se puede configurar para que funcione con un proxy.</p>
+  </section>
+
+</page>

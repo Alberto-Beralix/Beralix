@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.4">
+<!ENTITY date "October 2005">
+<!ENTITY app "System Log Viewer">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="es">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Manual del visor de Registros de actividad del sistema</title>
+
+    <abstract role="description">
+      <para>El visor de Registros de actividad del sistema es un visor gráfico para ver y monitorizar los archivos de registro del sistema.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2003</year> 
+      <holder>Sun Microsystems</holder> 
+    </copyright> 
+    <copyright> 
+      <year>2000</year> 
+      <holder>Judith Samson</holder> 
+    </copyright><copyright><year>2005, 2009</year><holder>Jorge González (jorgegonz@svn.gnome.org)</holder></copyright><copyright><year>2006</year><holder>Francisco Javier F. Serrador (serrador@openshine.com)</holder></copyright> 
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <publisher> 
+      <publishername>Proyecto de documentación de GNOME</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Se otorga permiso para copiar, distribuir y/o modificar este documento bajo los términos de la Licencia de Documentación Libre de GNU, Versión 1.1 o cualquier otra versión posterior publicada por la Free Software Foundation; sin Secciones Invariantes ni Textos de Cubierta Delantera ni Textos de Cubierta Trasera. Puede encontrar una copia de la licencia GFDL en este <ulink type="help" url="ghelp:fdl">enlace</ulink> o en el archivo COPYING-DOCS distribuido con este manual.</para>
+         <para>Este manual es parte de una colección de manuales de GNOME distribuido bajo la GFDL. Si quiere distribuir este manual por separado de la colección, puede hacerlo añadiendo una copia de la licencia al manual, tal como se describe en la sección 6 de la licencia.</para>
+
+	<para>Muchos de los nombres usados por compañías para distinguir sus productos y servicios son mencionados como marcas comerciales. Donde esos nombres aparezcan en cualquier documentación de GNOME, y los miembros del Proyecto de Documentación de GNOME están al corriente de esas marcas comerciales, entonces los nombres se pondrán en mayúsculas o con la inicial en mayúsculas.</para>
+
+	<para>ESTE DOCUMENTO Y LAS VERSIONES MODIFICADAS DEL MISMO SE PROPORCIONAN SEGÚN LAS CONDICIONES ESTABLECIDAS EN LA LICENCIA DE DOCUMENTACIÓN LIBRE DE GNU (GFDL) Y TENIENDO EN CUENTA QUE: <orderedlist>
+		<listitem>
+		  <para>EL DOCUMENTO SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, NI EXPLÍCITA NI IMPLÍCITA INCLUYENDO, SIN LIMITACIÓN, GARANTÍA DE QUE EL DOCUMENTO O VERSIÓN MODIFICADA DE ÉSTE CAREZCA DE DEFECTOS COMERCIALES, SEA ADECUADO A UN FIN CONCRETO O INCUMPLA ALGUNA NORMATIVA. TODO EL RIESGO RELATIVO A LA CALIDAD, PRECISIÓN Y UTILIDAD DEL DOCUMENTO O SU VERSIÓN MODIFICADA RECAE EN USTED. SI CUALQUIER DOCUMENTO O VERSIÓN MODIFICADA DE AQUÉL RESULTARA DEFECTUOSO EN CUALQUIER ASPECTO, USTED (Y NO EL REDACTOR INICIAL, AUTOR O CONTRIBUYENTE) ASUMIRÁ LOS COSTES DE TODA REPARACIÓN, MANTENIMIENTO O CORRECCIÓN NECESARIOS. ESTA RENUNCIA DE GARANTÍA ES UNA PARTE ESENCIAL DE ESTA LICENCIA. NO SE AUTORIZA EL USO DE NINGÚN DOCUMENTO NI VERSIÓN MODIFICADA DE ÉSTE POR EL PRESENTE, SALVO DENTRO DEL CUMPLIMIENTO DE LA RENUNCIA;Y</para>
+		</listitem>
+		<listitem>
+		  <para>BAJO NINGUNA CIRCUNSTANCIA NI BAJO NINGUNA TEORÍA LEGAL, SEA POR ERROR (INCLUYENDO NEGLIGENCIA), CONTRATO O DE ALGÚN OTRO MODO, EL AUTOR, EL ESCRITOR INICIAL, CUALQUIER CONTRIBUIDOR, O CUALQUIER DISTRIBUIDOR DEL DOCUMENTO O VERSIÓN MODIFICADA DEL DOCUMENTO, O CUALQUIER PROVEEDOR DE CUALQUIERA DE ESAS PARTES, SERÁ RESPONSABLE ANTE NINGUNA PERSONA POR NINGÚN DAÑO DIRECTO, INDIRECTO, ESPECIAL, INCIDENTAL O DERIVADO DE NINGÚN TIPO, INCLUYENDO, SIN LIMITACIÓN DAÑOS POR PÉRDIDA DE MERCANCÍAS, PARO TÉCNICO, FALLO INFORMÁTICO O MAL FUNCIONAMIENTO O CUALQUIER OTRO POSIBLE DAÑO O PÉRDIDAS DERIVADAS O RELACIONADAS CON EL USO DEL DOCUMENTO O SUS VERSIONES MODIFICADAS, AUNQUE DICHA PARTE HAYA SIDO INFORMADA DE LA POSIBILIDAD DE QUE SE PRODUJESEN DICHOS DAÑOS.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+   <authorgroup> 
+   <author> 
+		<firstname>Sun</firstname> 
+		<surname>Equipo de documentación de GNOME</surname> 
+		<affiliation> 
+	  	<orgname>Sun Microsystems</orgname> 
+	  	<address> <email>gdocteam@sun.com</email> </address> 
+		</affiliation> 
+   </author> 
+
+   <author> 
+		<firstname>Judith</firstname> 
+		<surname>Samson</surname> 
+		<affiliation> 
+	  	<orgname>Proyecto de documentación de GNOME</orgname> 
+	  	<address> <email>judith@samsonsource.com</email> </address> 
+		</affiliation> 
+   </author> 
+   
+    <author> 
+		<firstname>Paul</firstname> 
+		<surname>Cutler</surname> 
+		<affiliation> 
+	  	<orgname>Equipo de documentación de GNOME</orgname> 
+	  	<address> <email>pcutler@gnome.org</email> </address> 
+		</affiliation> 
+   </author> 
+
+   <author role="maintainer">
+   	<firstname>Vincent</firstname>
+	<surname>Noel</surname>
+	<affiliation>
+	  <address><email>vincent.noel@gmail.com</email></address>
+	</affiliation>
+   </author>
+      
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+   <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  	<orgname>Latin Translation Team</orgname> 
+	  	<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+   </othercredit>
+-->
+    </authorgroup>
+
+    <revhistory>
+            <revision> 
+		<revnumber>Manual del visor de registros del sistema V2.5</revnumber> 
+		<date>Octubre de 2009</date> 
+		<revdescription> 
+	  		<para role="author">Paul Cutler <email>pcutler@gnome.org</email></para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+		</revdescription> 
+      </revision>
+      <revision> 
+		<revnumber>Manual del visor de registros del sistema V2.4</revnumber> 
+		<date>Octubre de 2005</date> 
+		<revdescription> 
+	  		<para role="author">Vincent Noel <email>vincent.noel@gmail.com</email></para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+		</revdescription> 
+      </revision>
+      <revision> 
+		<revnumber>Manual del visor de registros del sistema V2.3</revnumber> 
+		<date>Octubre de 2003</date> 
+		<revdescription> 
+	  		<para role="author">Equipo de documentación de GNOME de Sun  <email>gdocteam@sun.com</email></para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+		</revdescription> 
+      </revision>
+      <revision> 
+		<revnumber>Manual del visor de registros del sistema V2.2</revnumber> 
+		<date>Agosto de 2002</date> 
+		<revdescription> 
+	  		<para role="author">Equipo de documentación de GNOME de Sun  <email>gdocteam@sun.com</email></para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+		</revdescription> 
+      </revision>
+      <revision> 
+		<revnumber>Manual del visor de registros del sistema V2.1</revnumber> 
+		<date>Julio de 2002</date> 
+		<revdescription> 
+	  		<para role="author">Equipo de documentación de GNOME de Sun  <email>gdocteam@sun.com</email></para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+		</revdescription> 
+      </revision>
+      <revision> 
+		<revnumber>Manual del visor de registros del sistema V2.0</revnumber> 
+		<date>Mayo de 2002</date> 
+		<revdescription> 
+	  		<para role="author">Equipo de documentación de GNOME de Sun  <email>gdocteam@sun.com</email></para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+		</revdescription> 
+      </revision> 
+      <revision> 
+		<revnumber>Manual del visor de registros</revnumber> 
+		<date>2000</date> 
+		<revdescription> 
+	  		<para role="author">Judith Samson <email>judith@samsonsource.com</email></para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Este manual describe la versión 2.12 del Visor de registros del sistema.</releaseinfo> 
+    <legalnotice> 
+      <title>Comentarios</title> 
+      <para>Para informar de un fallo, o hacer alguna sugerencia concerniente al Visor de registros del sistema o este manual, siga las indicaciones en la <ulink url="ghelp:gnome-feedback" type="help">Página de contacto de GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>Visor de registros del sistema</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="syslog-introduction"> 
+    <title>Introducción</title> 
+
+      <para><application>Visor de registros del sistema</application> es un visor gráfico, con menús que puede usar para ver y monitorizar los archivos de registro del sistema. El <application>Visor de registros del sistema</application> viene con unas pocas funciones que le pueden ayudar a gestionar sus registros, incluyendo un monitor de registros y un visor de estadísticas de registros.</para>
+
+      <para>El <application>Visor de registros del sistema</application> es útil si es nuevo en la administración de sistemas porque proporciona una manera de ver sus registros más amigable y fácil que un simple visor de texto. También es útil para los administradores con mas experiencia, debido a que contiene un calendario para ayudarle a localizar tendencias y perseguir problemas, así como un monitor que le permite vigilar continuamente los registros cruciales.</para>
+
+      <warning><para><application>Visor de registros del sistema</application> es útil sólo para aquellos que tengan acceso a los registros del sistema, lo que generalmente requiere acceso como administrador.</para></warning>
+
+  </sect1>
+
+  <sect1 id="syslog-getting-started">
+    <title>Iniciando</title> 
+
+    <para>Puede iniciar el<application>Visor de registros del sistema</application> de las siguientes formas:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Menú <guimenu>Aplicaciones</guimenu></term>
+    		<listitem>
+    		<para>Elija <menuchoice><guisubmenu>Herramientas del sistema</guisubmenu><guimenuitem>Visor de archivos de sucesos</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Línea de comandos</term>
+    		<listitem>
+    		<para>Teclee <command>gnome-system-log</command>, y pulse <keycap>Intro</keycap>.</para>
+    		<para> 		 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+
+    <para>Cuando inicie el <application>Visor de registros del sistema</application>, se mostrará la siguiente ventana.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="syslog-fig"> 
+	<title>Ventana del «Visor de registros del sistema»</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/syslog_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Muestra la ventana principal del Visor de registros del sistema. Contiene la barra de menú, el área de visualización, barras de desplazamiento y barra de estado.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+    <para>La primera vez que inicia el <application>Visor de registros del sistema</application>, la aplicación muestra varios archivos de registro por omisión (como <filename>/car/log/messages</filename>). Los registros abiertos se listan en el lado izquierdo de la ventana de la aplicación. El registro seleccionado en esta lista se muestra en el área principal de la ventana de la aplicación.</para>
+
+      <para>Por omisión, el <application>Visor de registros del sistema</application> monitoriza cada registro abierto, y cualquier cambio aparece automáticamente en la ventana principal. Vea la <xref linkend="syslog-monitor"/> para más información.</para>
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="syslog-usage"> 
+    <title>Uso</title>
+
+    <sect2 id="syslog-open">
+    	<title>Para ver un registro</title>
+    	<para>Para ver un registro elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Abrir</guimenuitem></menuchoice>. En el diálogo <guilabel>Abrir registro</guilabel>, seleccione el archivo que quiera abrir, después pulse <guibutton>Abrir</guibutton>.Use las barras de desplazamiento para moverse por el registro.</para>
+
+        <para>Puede abrir tantos registros como quiera. El <application>Visor de registros del sistema</application> muestra un registro cada vez en la ventana del <application>Visor de registros del sistema</application>. Los registros abiertos se muestran en el lado izquierdo de la ventana de aplicaciones. El registro seleccionado en esta lista se muestra en el área principal de la ventana de aplicaciones. Para mostrar otro registro ya abierto en el <application>Visor de registros del sistema</application>, selecciónelo en la lista de registros.</para>
+
+        <para>Note que el <application>Visor de registros del sistema</application> también le permite abrir registros comprimidos (cuyos nombres de archivo terminan en «.gz»).</para>
+    </sect2>
+
+    <sect2 id="syslog-selection">
+    <title>Para copiar líneas de registros al portapapeles</title>
+    <para>Para copiar una o más líneas al portapapeles, tan sólo seleccione las líneas en el área principal y elija la opción de menú  <menuchoice><guimenu>Editar</guimenu><guimenuitem>Copiar</guimenuitem></menuchoice>. Si quiere copiar el registro entero al portapapeles, selecciónelo por completo usando la opción de menú <menuchoice><guimenu>Editar</guimenu><guimenuitem>Seleccionar todo</guimenuitem></menuchoice>, después elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Copiar</guimenuitem></menuchoice>.</para>
+    </sect2>
+
+    <sect2 id="syslog-hide-sidebar">
+    <title>Para ocultar la barra lateral</title>
+    <para>Para ocultar la barra lateral de la izquierda, que contiene la lista de registros y el calendario, tan sólo seleccione la opción de menú <menuchoice><guimenu>Ver</guimenu><guimenuitem>Panel lateral</guimenuitem></menuchoice>.</para>
+    </sect2>
+    
+    <sect2 id="syslog-monitor">
+    	<title>Para monitorizar registros</title>
+    	<para>Puede usar el <application>Visor de registros del sistema</application> para monitorizar registros. Por omisión, todos los registros abiertos en el <application>Visor de registros del sistema</application> se monitorizan. Si se añaden líneas nuevas a un registro monitorizado por el <application>Visor de registros del sistema</application>, el nombre del registro aparecerá en negrita en la lista de registros. Si el registro está actualmente mostrado en el área principal, las líneas nuevas aparecerán automáticamente al final del registro, y después de cinco segundos, el nombre del registro volverá a ponerse normal en la lista.</para>
+
+    </sect2>
+    
+    <sect2 id="syslog-stats">
+    	<title>Para ver la información del registro</title>
+    	<para>La información del registro se muestra generalmente en la barra de estado, incluyendo:</para> 
+    	<itemizedlist>
+    		<listitem><para>Número de líneas en el registro.</para>
+    		</listitem>
+    		<listitem><para>Tamaño del registro en bytes.</para>
+    		</listitem>
+    		<listitem><para>Fecha en que se modificó el registro por última vez.</para>
+    		</listitem>
+    	</itemizedlist> 
+        <para>La barra de estado se puede mostrar u ocultar usando la opción <menuchoice><guimenu>Ver</guimenu><guimenuitem>Barra de estado</guimenuitem></menuchoice>.</para>
+    </sect2>
+    
+    <sect2 id="syslog-close">
+    	<title>Para cerrar un registro</title>
+    	<para>Para cerrar un registro, elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Cerrar</guimenuitem></menuchoice>.</para>
+    </sect2>
+    
+    <sect2 id="syslog-exit">
+    	<title>Para salir del visor de registros</title>
+    	<para>Para salir del  <application>Visor de registros del sistema</application>, elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Salir</guimenuitem></menuchoice>.</para>
+    </sect2>
+ 
+  </sect1>
+
+</article>

@@ -1,0 +1,1 @@
+../../../../../share/pyshared/ibus/interface/iibus.py

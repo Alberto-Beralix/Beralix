@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_structural_navigation" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#reading"/>
+    <link type="next" xref="howto_tables"/>
+    <title type="sort">3. Navegación estructural</title>
+    <desc>Moverse por las cabeceras y otros elementos</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Navegación estructural</title>
+  <p>La característica Navegación Estructural de <app>Orca</app> le permite navegar entre los elementos de un documento. Entre los tipos de elementos por los cuales puede navegar se incluyen:</p>
+  <list>
+    <item><p>Cabeceras y otros bloques de texto</p></item>
+    <item><p>Controles de formularios</p></item>
+    <item><p>Enlaces</p></item>
+    <item><p>Listas y elementos de listas</p></item>
+    <item><p>Marcadores, separadores y anclas</p></item>
+    <item><p>Tablas y celdas de tablas</p></item>
+  </list>
+  <p>Puede encontrar una lista completa de elementos individuales y sus asociaciones de teclas en los <link xref="commands_structural_navigation">comandos de navegación estructural</link>.</p>
+  <section id="applications">
+      <title>Aplicaciones soportadas</title>
+      <p>Actualmente, la navegación estructural está completamente implementada en el contenido web, incluyendo el contenido de ayuda que está leyendo ahora. El soporte de navegación estructural de<app>Orca</app> para celdas de tablas también se ha implementado en <app>OpenOffice Writer</app> y en <app>LibreOffice Writer</app>. Implementar el resto de objetos de navegación estructural en estos paquetes de oficina requiere que sus respectivos desarrolladores realicen cambios. Implementar cualquier característica de navegación estructural en <app>Evince</app> requerirá un esfuerzo similar por parte de sus desarrolladores.</p>
+      <note style="tip">
+        <title>No olvide activar la navegación estructural.</title>
+        <p>Dependiendo de dónde se encuentre, puede ser necesario activar explícitamente la navegación estructural antes de que pueda usarla.</p>
+      </note>
+      <section id="toggling_required">
+        <title>Cuándo es necesario activar la navegación estructural</title>
+        <p>En las páginas web, generalmente no es necesario activar la navegación estructural dado que su interacción con el documento consiste principalmente en leer su contenido. De este modo, no hay ninguna duda respecto a si la «H» que acaba de pulsar tuvo la intención de ser un comando de escritura o un comando de navegación.</p>
+        <p>Por otro lado, en los documentos editables, como aquellos encontrados en <app>OpenOffice</app> y <app>LibreOffice</app>, es mucho más difícil para <app>Orca</app> predecir con exactitud lo que espera que ocurra como resultado de pulsar «H». Por lo tanto, antes de que pueda usar cualquier comando de navegación estructural en un documento editable, primero debe activar la navegación estructural pulsando el <keyseq><key>Modificador de Orca</key><key>Z</key></keyseq>. Cuando haya terminado de navegar y esté listo para reanudar la lectura, pulse el <keyseq><key>Modificador de Orca</key><key>Z</key></keyseq> nuevamente para desactivar la navegación estructural.</p>
+      </section>
+  </section>
+  <section id="settings">
+    <title>Configuración disponible</title>
+    <p>Además de los comandos mencionados anteriormente, <app>Orca</app> tiene varias opciones configurables disponibles específicamente para aplicaciones en las que hay soporte de navegación estructural.</p>
+    <steps>
+      <title>Configurar la navegación estructural</title>
+      <item>
+        <p>Dé el foco a una aplicación para la que <app>Orca</app> tiene soporte de navegación estructural.</p>
+      </item>
+      <item>
+        <p>Entre en el cuadro de diálogo de <link xref="preferences">preferencias de Orca</link> para la aplicación actual pulsando: <keyseq><key>Ctrl</key><key>Modificador de Orca</key><key>Espacio</key></keyseq></p>
+      </item>
+      <item>
+        <p>Navegue hasta la última página del cuadro de diálogo cuyo nombre debería ser el nombre de su aplicación actual.</p>
+      </item>
+      <item>
+        <p>Examine y cambie la configuración como considere conveniente.</p>
+      </item>
+      <item>
+        <p>Pulse el botón <gui>Aceptar</gui>.</p>
+      </item>
+    </steps>
+  </section>
+</page>

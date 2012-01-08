@@ -1,0 +1,1 @@
+../../../../../share/pyshared/keyring/tests/test_cli.py

@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=com.ubuntu.DeviceDriver
+Exec=/bin/sh -c '. /etc/environment; export http_proxy https_proxy ftp_proxy; exec /usr/share/jockey/jockey-backend --debug -l /var/log/jockey.log'
+User=root

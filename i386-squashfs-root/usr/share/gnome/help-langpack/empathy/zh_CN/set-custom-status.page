@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="set-custom-status" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#accounts"/>
+    <link type="seealso" xref="change-status"/>
+	  <link type="seealso" xref="status-icons"/>
+    <desc>为您的状态添加、编辑或删除个人消息。</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-30" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-10" status="review"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>知识共享-相同方式共享 (Creative Commons Share Alike) 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>设置一个自定义消息</title>
+
+  <p>有时您也许想要为您的状态设置一个自定义消息，例如，让别人知道您可能在一段时间内不在。</p>
+  <p>可以根据不同的状态来设置自定义消息。</p>
+
+  <steps>
+    <item>
+      <p>从 <gui>联系人列表</gui> 窗口，点击顶部的下拉菜单。</p>
+    </item>
+    <item>
+      <p>选择您希望添加到定制消息的状态。您必须选择一个标明是 <gui>自定义消息</gui> 的标签。</p>
+    </item>
+    <item>
+      <p>在窗口顶部的文本框中输入您的自定义消息，然后按<key>回车键</key>来设定这个消息。</p>
+    </item>
+    <item>
+      <p>如果您希望设置自定义消息为喜好，那么可以保存下来以方便以后使用，在您撰写您的自定义消息的文本框的右侧有一个小星星，点击它就可以保存。</p>
+      <p>如果您不这么做，那么下回您使用 <app>Empathy</app> 的时候，这个自定义消息就不会再出现。它只保留到当前会话结束。</p>
+    </item>
+  </steps>
+
+  <section id="edit-custom">
+
+  <title>编辑、删除和添加自定义消息</title>
+
+  <steps>
+    <item>
+     <p>从 <gui>联系人列表</gui> 窗口，点击顶部的下拉菜单。</p>
+    </item>
+    <item>
+      <p>选择 <gui>编辑自定义消息</gui></p>
+    </item>
+	  <item>
+	    <list>
+	      <item>
+	        <p>要编辑自定义消息：</p>
+	        <steps>
+	          <item>
+	            <p>从 <gui>已保存的自定义状态</gui> 框中，选择您想要编辑的状态消息，然后双击它。</p>
+            </item>
+            <item>
+              <p>输入新的自定义消息并且按<key>回车键</key>来修改它。</p>
+            </item>
+          </steps>
+        </item>
+        <item>
+          <p>要删除自定义消息：</p>
+          <steps>
+            <item>
+              <p>从 <gui>已保存的自定义状态</gui> 框中，选择您想要删除的状态消息。</p>
+            </item>
+            <item>
+              <p>点击 <gui>删除</gui> 按钮。</p>
+            </item>
+          </steps>
+        </item>
+        <item>
+          <p>要添加一条新的自定义消息，从 <gui>添加新自定义状态</gui> 部分：</p>
+          <steps>
+            <item>
+              <p>点击下拉菜单来选择您想要设定自定义消息的状态。</p>
+            </item>
+            <item>
+              <p>点击文本框，输入新的自定义消息。</p>
+            </item>
+            <item>
+              <p>点击 <gui>添加</gui> 来添加新消息到已保存的的自定义消息列表中。</p>
+            </item>
+          </steps>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>当这些做完后，点击 <gui>关闭</gui>。</p>
+    </item>
+  </steps>
+
+  <note style="tip">
+    <p>当你编辑或添加新自定义消息的时候，它不会被设为当前状态消息。您需要从 <gui>联系人列表</gui>窗口中选中它。</p>
+  </note>
+
+  </section>
+
+</page>

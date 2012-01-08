@@ -1,0 +1,17 @@
+[Desktop Entry]
+X-AppInstall-Package=grsync
+X-AppInstall-Popcon=1256
+X-AppInstall-Section=universe
+
+Version=1.0
+Encoding=UTF-8
+Name=Grsync
+Terminal=false
+Type=Application
+MimeType=application/x-grsync-session;
+Categories=Application;System;
+Comment=Synchronize files with rsync
+Exec=/usr/bin/grsync -i %f
+Icon=grsync
+
+X-Ubuntu-Gettext-Domain=app-install-data

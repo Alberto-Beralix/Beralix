@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-composer-message-templates" xml:lang="zh_CN">
+
+  <info>
+ <desc>Message templates to reuse in the composer.</desc>
+
+ <link type="guide" xref="index#mail-composing-advanced"/>
+
+ <revision pkgversion="2.32.2" version="0.1" date="2011-07-21" status="stub"/>
+ <credit type="author">
+   <name>Andre Klapper</name>
+   <email>ak-47@gmx.net</email>
+ </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/b1dlaazl.html.en -->
+ </credit>
+ <license>
+   <p>Creative Commons Share Alike 3.0</p>
+ </license> 
+
+  </info>
+
+<title>Message Templates</title>
+<p>A message template is a standard message that you can use at any time to send mail with the same pattern.</p>
+<p>To enable the Message Template Plugin, click <guiseq><gui>Edit</gui><gui>Plugins</gui></guiseq> and enable <gui>Templates</gui>.</p>
+
+<!-- TODO: Check correctness of all these steps in 3.1. --> 
+<!-- TODO:POST-3-2: Split this into subpages maybe, and turn this into a guide page! -->
+
+<section id="create">
+<title>Creating a Message Template from an existing Message</title>
+<steps>
+  <item><p>选择消息。</p></item>
+  <item><p>Right-click the message and choose <gui>Move to folder</gui> or <gui>Copy to folder</gui>.</p></item>
+  <item><p>Select the <gui>Templates</gui> folder under <gui>On This Computer</gui>.</p></item>
+</steps>
+<p>You can also edit an existing message and save it as a template:</p>
+<steps>
+  <item><p>Open the message and click <gui>Reply</gui>.</p></item>
+  <item><p>根据您的需要编辑邮件内容或地址。</p></item>
+  <item><p>Select <guiseq><gui>File</gui><gui>Save as Template</gui></guiseq>.</p></item>
+ </steps>
+</section>
+
+<section id="save">
+ <title>将新邮件保存为模板</title>
+ <steps>
+  <item>
+<p>Click <gui>New</gui> and enter in the composer window what you need for the template.</p>
+  </item>
+  <item>
+<p>Select <guiseq><gui>File</gui><gui>Save as Template</gui></guiseq>.</p>
+  </item>
+ </steps>
+</section>
+
+<section id="reply">
+ <title>使用模板回复</title>
+ <steps>
+  <item>
+<p>Right-click the message you are replying to, then click <gui>Templates</gui>.</p>
+<p>This option lists all the message templates in the <gui>Templates</gui> folder.</p>
+  </item>
+  <item>
+<p>Select the message template of your choice. Make changes if required in the email composer window that will open.</p>
+  </item>
+  <item>
+<p>Click <gui>Send</gui>.</p>
+<p>当您选择了一个模板用于回复时，回复的主题已经写好了。</p>
+  </item>
+ </steps>
+</section>
+
+<section id="configure">	
+<title>配置消息模板</title>
+<steps>
+<item><p>Select <guiseq><gui>Edit</gui><gui>Plugins</gui></guiseq>.</p></item>
+<item><p>Click <gui>Templates</gui>.</p></item>
+<item><p>Click the <gui>Configuration</gui> tab.</p></item>
+<item><p>You can add, edit or remove the key-value pairs. You can specify any number of key-value pairs.</p></item>
+</steps>
+ <p>在任何模板中，所有出现关键字的地方会被它所对应的值代替。例如，如果您在设置了关键字为“经理”，值为“哈里”，那么邮件中所有出现“经理”的地方都会被“哈里”代替。</p>
+ <p>Assume that you have 1000 message templates with your current manager's name in them. When the current manager is replaced by a new one, it is not easy for you to manually replace the manager's name in all the 1000 messages. If the messages have a $Manager key value, you can reset the value in the Configuration tab of this plugin.</p>
+ <p>默认情况下，整个环境变量会被作为一个关键字-值对来对待。每出现一个环境变量就会被它所对应的值所代替。例如，模板中有$PATH时，当使用模板时就会被它的值代替。</p>
+ <p>关键字-值的替换过程根据下列优先级进行：</p>
+ <steps>
+  <item>
+<p>关键字会被它在模板插件中配置的值所替换。</p>
+  </item>
+  <item>
+<p>如果该关键字在配置中找不到，则会被环境变量所对应的值替换。</p>
+  </item>
+  <item>
+<p>如果该关键字既不是环境变量，也没有进行配置，则不会发生任何替换。</p>
+  </item>
+ </steps>
+</section>
+
+</page>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="video-sending" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="media#videos"/>
+    
+    <desc>Prüfen Sie, ob die richtigen Codecs installiert sind.</desc>
+    
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Andere Leute können meine Videos nicht abspielen</title>
+
+<p>Wenn Sie ein Video auf Ihrem Linux-Rechner erstellen und es einem Windows- oder Mac OS-Benutzer schicken, werden diese vielleicht Probleme haben, Ihr Video abzuspielen.</p>
+
+<p>Um ihr Video abspielen zu können, muss die Person das richtige <em>Codec</em> installiert haben. Ein Codec ist ein Programm, das weiß, wie ihr Video abgespielt werden kann. Es gibt viele verschiedene Videoformate und jedes benötigt ein anderes Codec, um abgespielt werden zu können.</p>
+
+<p>Sie können das Format Ihres Videos herausfinden, indem Sie in der <link xref="files-browse">Dateiverwaltung</link> mit der rechten Maustaste darauf klicken und <gui>Eigenschaften</gui> auswählen. Wechseln Sie zum Reiter <gui>Audio/Video</gui> und sehen Sie nach, welches <gui>Codec</gui> unter <gui>Video</gui> aufgeführt wird.</p>
+
+<p>Fragen Sie die Person, die Wiedergabeprobleme hat, ob die richtigen Codecs installiert sind. Hilfreich ist hier eine Websuche nach dem Namen des Codecs und dem Namen des verwendeten Wiedergabeprogramms. Wenn Ihr Video beispielsweise im <em>Theora</em>-Format vorliegt und jemand dieses Video mit dem Windows Media Player wiedergeben will, suchen Sie nach »theora windows media player«. Oft ist es möglich, den entsprechenden Codec kostenlos herunterzuladen, falls dieser nicht installiert ist.</p>
+
+<p>Falls der richtige Codec nicht gefunden werden kann, versuchen Sie den </p>
+
+<note>
+ <p>Allerdings gibt es noch weitere Fehlerquellen, welche die Wiedergabe des Videos verhindern können. Das Video könnte bei der Übertragung zum Empfänger beschädigt worden sein, da manchmal das Kopieren von großen Dateien nicht fehlerfrei geschieht. Weiterhin könnte es Probleme mit dem Wiedergabeprogramm selbst geben, oder das Video könnte nicht sauber erzeugt worden sein, zum Beispiel könnten Fehler beim Speichern des Videos aufgetreten sein.</p>
+</note>
+	
+</page>

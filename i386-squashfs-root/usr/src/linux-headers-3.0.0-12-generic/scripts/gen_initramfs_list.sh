@@ -1,0 +1,1 @@
+../../linux-headers-3.0.0-12/scripts/gen_initramfs_list.sh

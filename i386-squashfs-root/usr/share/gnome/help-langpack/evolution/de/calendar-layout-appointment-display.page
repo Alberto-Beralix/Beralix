@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="calendar-layout-appointment-display" xml:lang="de">
+
+  <info>
+    <desc>Define the displaying of appointments in the calendar.</desc>
+    
+    <link type="guide" xref="calendar-layout"/>
+
+    <revision pkgversion="3.0.2" version="0.3" date="2011-08-25" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/config-prefs-cal.html.en#bshpsxa -->
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Appearance of Appointments</title>
+
+<!-- TODO:POST-3-2: Just listing the partially busted UI options (also see calendar-layout-general-formatting) here is very poor and not task-oriented, but that's it for the time being. Better ideas welcome. -->
+
+<!-- TODO: Recheck once https://bugzilla.gnome.org/show_bug.cgi?id=657233 is fixed, as the current UI is a huge mess. -->
+
+<p>The following calendar-related options are available under <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Calendar and Tasks</gui><gui>Display</gui></guiseq>.</p>
+
+<section id="general">
+<title>Allgemein</title>
+<list>
+<item><p>Zeitunterteilungen:</p>
+<p>Bestimmt die Zeitabschnitte, die als dünne Linien in der Tagesansicht im Kalender dargestellt werden.</p></item>
+<item><p>Endzeiten von Terminen in Wochen- und Monatsansicht anzeigen:</p>
+<p>Falls Platz vorhanden ist, stellt Evolution die Endzeiten in der Wochen- und Monatsansicht für jeden Termin dar.</p></item>
+<item><p>Wochenende in Monatsansicht komprimieren:</p>
+<p>Wählen Sie diese Option, wenn Wochenenden als eine Box in der Monatsansicht dargestellt werden sollen.</p></item>
+<item><p>Wochennummern anzeigen:</p>
+<p>Zeigt die Wochennummer neben der jeweiligen Woche im kleinen Kalender in der Seitenleiste an.</p></item>
+<item><p>Show recurring events in italic in bottom left calendar</p></item>
+<item><p>Monatsansicht wochenweise durchblättern</p></item>
+</list>
+</section>
+
+<section id="date-time">
+<title>Format von Datum/Zeit</title>
+<p>You can change the format of the <gui>Date</gui> column by setting your preferred format.</p>
+<p>The placeholders in the format expression are strftime formats. For a complete list of available strftime formats, run <code>date --help</code> in a terminal window.</p>
+</section>
+
+</page>

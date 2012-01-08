@@ -1,0 +1,54 @@
+The following is a list of known places for possible improvement to
+the GMime library. This list of tasks in no way indicates priority,
+that is to say that there is no rhyme or reason to the order that the
+tasks are presented in.
+
+
+- make thread-safe? some stuff already is, like the gmime-iconv code
+and some of the other charset stuff. Streams and other objects,
+however, are not. How can I do this...? And is it really needed?
+
+- Possibly make the GMime parser incremental.
+
+- modify address parser:
+
+<charles> on usenet it's not uncommon to have header like "From: Joe Bob"
+<charles> where people use no address at all to avoid spammers
+<fejj> ok
+<charles> It would be nice if internet-address handled this
+<charles> have ->name == "Joe Bob" and ->value.addr == NULL
+<fejj> oh, so only support writing them? ah, that should be easy
+<charles> It looks like the else clause on line 582 is where a "Joe Bob" string fails
+<fejj> I was pondering how I could possibly parse that as a name :)
+<charles> No, I am asking about parsing
+<fejj> oh
+<charles> It would be nice for internet_address_parse_string() to return an 
+InternetAddress with a name of "Joe Bob" and a NULL addr
+<fejj> ah, okay
+<fejj> I guess I can do that
+<fejj> I'll have to modify my internet_address_to_string code to handle that too
+<fejj> but that should be easy
+
+- S/MIMEv3: http://www.ietf.org/html.charters/smime-charter.html
+
+
+
+
+Ideas for GMime "3.0"
+=====================
+
+- Add internet_address_new_name_static() which would take static
+  strings (e.g. strings which should not be free'd on destroy) so that
+  apps can save string memory by reusing strings.
+
+- GMimeStream's should take GError args so apps don't have to rely on
+  errno (really needed for apps that implement ssl streams or other
+  stream types which might not map well to libc's errno values)
+
+- GMimeParser should also take a GError arg and/or return int error
+  codes.
+
+
+
+All questions and comments should be directed toward the author,
+Jeffrey Stedfast <fejj@gnome.org>

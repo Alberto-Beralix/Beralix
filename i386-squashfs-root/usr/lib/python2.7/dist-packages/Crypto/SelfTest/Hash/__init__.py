@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/Crypto/SelfTest/Hash/__init__.py

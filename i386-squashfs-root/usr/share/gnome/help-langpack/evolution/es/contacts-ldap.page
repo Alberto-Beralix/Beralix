@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="contacts-ldap" xml:lang="es">
+
+  <info>
+    <desc>Usar libretas de direcciones compartidas en una red local.</desc>
+    
+    <link type="guide" xref="contacts-using-several-addressbooks"/>
+
+    <revision pkgversion="3.1.5" version="0.3" date="2011-07-28" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-contact-sharing.html.en and http://library.gnome.org/users/evolution/2.32/config-prefs-contact.html.en#bxmw6w5 -->
+ </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+<title>Añadir acceso LDAP</title>
+
+<p>El protocolo LDAP se creó para permitir a los usuarios compartir información de contactos en red, mediante accesos compartidos a un directorio central. LDAP permite a una empresa mantener un conjunto de información de contactos. Muchas empresas mantienen una libreta de direcciones LDAP para todos sus empleados o para sus clientes.</p>
+
+<section id="add-ldap-addressbook">
+<title>Añadir una libreta de direcciones LDAP</title>
+
+<steps>
+<item><p>Pulse <guiseq><gui>Archivo</gui><gui>Nuevo</gui><gui>Libreta de direcciones</gui></guiseq>.</p></item>
+<item><p>En la pestaña <gui>General</gui> seleccione el tipo de <gui>En servidores LDAP</gui></p></item>
+<item><p>Introduzca el nombre que quiera.</p></item>
+<item><p>Introduzca la dirección del servidor, el número del puerto (el número predeterminado es 3899 y si quiere conectar de forma segura.</p></item>
+<item><p>Defina el método de registro y su nombre de usuario.</p></item>
+<item><p>Pulse <gui style="button">Aplicar</gui>.</p></item>
+<item><p>En la pestaña <gui>Detalles</gui> puede definir los siguientes ajustes:</p>
+<list>
+ <item><p>Base de búsqueda: la base de búsqueda es el punto de partida usado para las búsquedas en directorios. Consulte a su administrador para obtener información acerca de la configuración adecuada.</p></item>
+ <item><p>Rango de búsqueda: es la extensión de una búsqueda dada. Están disponibles las siguientes:</p>
+  <list>
+  <item><p>Una: busca dentro de la raíz y un nivel de subdirectorios debajo.</p></item>
+  <item><p>Sub: busca dentro de la búsqueda base y en todas las entradas bajo ésta.</p></item>
+  </list>
+ </item>
+ <item><p>Filtro de búsqueda: se puede establecer aquí el filtro de búsqueda para todas las consultas LDAP. Por ejemplo:</p>
+  <list>
+  <item><p><code>ObjectClass=*</code>: lista todos los objetos del servidor.</p></item>
+  <item><p><code>ObjectClass=User</code>: solo lista los usuarios.</p></item>
+  <item><p><code>Filter (|(ObjectClass=User)(ObjectClass=groupOfNames))</code>: obtiene los objetos de listas de usuario y contactos.</p></item>
+  <item><p><code>(&amp;(mail=*)(ObjectClass=*))</code>: lista los objetos asociados con las direcciones de correo electrónico.</p></item>
+  </list>
+ </item>
+ <item><p>Tiempo de expiración (minutos): es el tiempo de espera máximo de Evolution para descargar los datos del servidor, antes de abandonar.</p></item>
+ <item><p>Límite de descarga: el número máximo de resultados para una búsqueda dada. Muchos servidores no aceptan enviar más de 500 respuestas, pero puede fijar un número inferior para reducir el volumen de descargas, en caso de búsquedas muy amplias.</p></item>
+</list>
+</item>
+</steps>
+
+<note><p>Si no está seguro acerca de algunos ajutes, pregunta al administrador de su sistema.</p></note>
+
+</section>
+
+<section id="ldap-vs-local-addressbooks">
+<title>Diferencias con las libretas de direcciones locales</title>
+
+<p>Las libretas de direcciones LDAP funcionan igual que las libretas de direcciones locales en su equipo, con las siguientes excepciones:</p>
+<list>
+<item><p>Las carpetas de red sólo están disponibles cuando se conecta a la red. Si usa un equipo portátil o una conexión telefónica, conviene hacer una copia de la carpeta de red o colocar en caché algún directorio de red. Para ello, arrastre los contactos deseados dentro de la lista de contactos local.</p></item>
+<item><p>También puede marcar la carpeta de red para su uso desconectado. Para marcar la carpeta, pulse con el botón derecho sobre la carpeta, después pulse Propiedades y seleccione Copiar el contenido de la carpeta localmente para operación desconectada.</p></item>
+<item><p>Para prevenir exceso de tráfico en la red, Evolution no descarga los datos del servidor LDAP de una forma normal al iniciarse.</p></item>
+<item><p>Dependiendo de la configuración de su servidor, quizá no pueda editar todos los campos de un contacto almacenado en un servidor LDAP. Algunos servidores prohíben algunas modificaciones y otros usan una menor cantidad de campos de la que Evolution proporciona. Compruebe con su administrador de su sistema si necesita una configuración diferente.</p></item>
+</list>
+</section>
+
+</page>

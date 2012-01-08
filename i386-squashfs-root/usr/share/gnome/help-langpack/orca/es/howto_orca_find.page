@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_orca_find" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#reviewing"/>
+    <link type="next" xref="howto_mouse_review"/>
+    <title type="sort">3. Búsqueda de Orca</title>
+    <desc>Buscar objetos de una ventana</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Búsqueda de Orca</title>
+  <p>La característica «Buscar» de <app>Orca</app> es una búsqueda en el modo de <link xref="howto_flat_review">Revisión</link> diseñada para ayudarle a localizar rápidamente los objetos visibles en pantalla que están dentro de la ventana actual.</p>
+  <note style="tip">
+    <title>Activar la búsqueda de Orca</title>
+      <p>Para abrir el diálogo <gui>Buscar</gui> de Orca, use el siguiente comando basado en la <link xref="howto_keyboard_layout">distribución de teclado</link> elegida.</p>
+      <list>
+        <item>
+          <p>Sobremesa: <keyseq><key>TN Supr</key></keyseq></p>
+        </item>
+        <item>
+          <p>Portátil: <keyseq><key>Modificador de Orca</key><key>[</key></keyseq></p>
+        </item>
+      </list>
+      <p>Para acceder a una lista de otras tareas que puede realizar, consulte los <link xref="commands_find">comandos de la búsqueda de Orca</link></p>
+  </note>
+  <p>Cuando active la búsqueda de Orca, se situará en un cuadro de diálogo.</p>
+    <figure>
+      <title>Diálogo «Buscar» de <app>Orca</app>:</title>
+      <media type="image" mime="image/png" src="figures/orca_find.png"/>
+    </figure>
+  <p>Aquí puede especificar los siguientes elementos:</p>
+  <list>
+    <item>
+      <p>El texto que buscar</p>
+    </item>
+    <item>
+      <p>La ubicación desde donde comienza la búsqueda, que puede ser la ubicación actual o la parte superior de la ventana</p>
+      <p>Valor predeterminado de <gui>Empezar en</gui>: <gui>Posición actual</gui></p>
+    </item>
+    <item>
+      <p>Indica si se debe tener en cuenta la capitalización al buscar coincidencias</p>
+      <p>Valor predeterminado de <gui>Coincidir con mayúsculas</gui>: no seleccionado</p>
+    </item>
+    <item>
+      <p>Indica si se deben limitar o no las coincidencias a aquellas que contengan la palabra o frase completa</p>
+      <p>Valor predeterminado de <gui>Coincidir sólo con la palabra entera</gui>: no seleccionado</p>
+    </item>
+    <item>
+      <p>Indica si «Buscar» debe buscar hacia abajo y/o a la derecha o arriba y/o a la izquierda para la siguiente coincidencia</p>
+      <p>Valor predeterminado de <gui>Buscar hacia atrás</gui>: no seleccionado</p>
+    </item>
+    <item>
+      <p>Indica si «Buscar» deber saltar al inicio/final de la ventana si no existe ninguna coincidencia desde la posición de inicio, en la dirección de búsqueda.</p>
+      <p>Valor predeterminado de <gui>Salto</gui>: seleccionado</p>
+    </item>
+  </list>
+  <p>Una vez que haya realizado una búsqueda puede buscar rápidamente la siguiente o anterior coincidencia sin tener que volver a la cuadro de diálogo de búsqueda de Orca.</p>
+  <p>Puesto que se trata de una característica de la <link xref="howto_flat_review">revisión</link>, cuando se encuentre una coincidencia, se activará automáticamente la «Revisión» y el elemento o texto coincidente se convertirá en el elemento de revisión actual. Tenga en cuenta que no se modificará el foco de la aplicación, ni tampoco se reposicionará el cursor. Si necesita realizar ambas operaciones, consulte los <link xref="commands_mouse">comandos de Orca relacionados con el ratón/puntero</link>.</p>
+</page>

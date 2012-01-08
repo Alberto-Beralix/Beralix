@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="disk-partitions" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    
+    <credit type="author">
+      <name>Equipe de Documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+   
+    <desc>Entenda o que são volumes e partições e use o utilitário de discos para gerenciá-los.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Gerenciar volumes e partições</title>
+
+<p>A palavra <em>volume</em> é usada para descrever um dispositivo de armazenamento, como um disco rígido. Ela pode também se referir a uma <em>parte</em> do dispositivo de armazenamento, porque você pode dividir o armazenamento em pedaços. O computador faz esse armazenamento acessível pelo seu sistema de arquivos em um processo denominado <em>montagem</em>. Volumes montados podem ser discos rígidos, unidades USB, DVD-RWs, cartões SD e outras mídias. Se o volume está atualmente montado, você poderá ler (e possivelmente gravar) arquivos nele.</p>
+
+<p>Frequentemente, um volume montado é chamado de <em>partição</em>, apesar de não serem necessariamente a mesma coisa. Uma "partição" se refere a uma área <em>física</em> de armazenamento em uma única unidade de disco. Uma vez que a partição tenha sido montada, ela pode ser referida como um volume porque você pode acessar os arquivos nela. Você pode pensar nos volumes como "frentes de loja" rotuladas, que dão acesso às funcionais "salas de estoque" das partições e unidades.</p>
+
+<section id="manage">
+ <title>Visualizar e gerenciar volumes e partições utilizando o utilitário de discos</title>
+ <p>Você pode verificar e modificar os volumes de armazenamento do seu computados como o utilitário de discos.</p>
+<steps>
+ <item>
+  <p>Abra a visão geral <gui>Atividades</gui> e inicie o <app>Utilitário de discos</app>.</p>
+ </item>
+ <item>
+  <p>No painel designado <gui>Dispositivos de armazenamento</gui>, você encontrará discos rígidos, unidades de CD/DVD e outraos dispositivos físicos. Clique no dispositivo que você quer inspecionar.</p>
+ </item>
+ <item>
+ <p>No painel da direita, a área rotulada <gui>Volumes</gui> fornece um detalhamento visual dos volumes e partições presentes no dispositivo selecionado. Ele também contém uma variedades de ferramentas usadas para gerenciar esses volumes.</p>
+ <p>Tome cuidado: é possível apagar completamente os dados no seu disco com esses utilitários.</p>
+</item>
+</steps>
+
+<p>Seu computador provavelmente tem pelo menos uma partição <em>primária</em> e uma única partição de <em>memória virtual</em> ('swap'). A partição de memória virtual é usada pelo sistema operacional para gerenciamento de memória, e raramente está montada. A partição primária contém seu sistema operacional, aplicativos, configurações e arquivos pessoais. Esses arquivos podem também estar distribuídos entre várias partições por segurança ou conveniência.</p>
+
+<p>Uma partição primária deve conter informações que o seu computador utiliza para iniciar ou <em>inicializar</em>. Por isso é chamada às vezes partição de inicialização, ou volume de inicialização. Para determinar se um volume é inicializável, observe os <gui>Rótulos da partição</gui> no utilitário de discos. Mídias externas como unidades USB e CDs podem também conter um volume inicializável.</p>
+
+</section>
+
+</page>

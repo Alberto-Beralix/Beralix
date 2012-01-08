@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_profiles" xml:lang="de">
+  <info>
+    <link type="guide" xref="index#getting_started"/>
+    <link type="next" xref="howto_documents"/>
+    <title type="sort">9. Profile</title>
+    <desc>Verwalten mehrerer Konfigurationen</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+  <title>Profile</title>
+  <p>
+    Orca's profiles allow you to save and load multiple configurations so
+    that you can quickly access the settings you need.
+  </p>
+  <figure>
+    <title>Verwalten mehrerer Konfigurationen</title>
+    <desc>
+      These options appear at the bottom of the <gui>General</gui> page of the
+      <app>Orca</app> preferences dialog.
+    </desc>
+    <media type="image" mime="image/png" src="figures/preferences_profiles.png"/>
+  </figure>
+  <steps>
+    <title>Speichern eines neuen Profils</title>
+    <item>
+      <p>
+        Get into the <link xref="preferences">Orca Preferences</link> dialog box.
+      </p>
+    </item>
+    <item>
+      <p>Ändern Sie die Einstellungen nach Belieben.</p>
+    </item>
+    <item>
+      <p>
+        On the <gui>General</gui> page, press the <gui>Save As</gui> button.
+      </p>
+    </item>
+    <item>
+      <p>
+        Type the new profile name in the resulting <gui>Save Profile As</gui>
+        dialog box.
+      </p>
+      <p>
+        <media type="image" mime="image/png" src="figures/profiles_save_as.png"/>
+      </p>
+    </item>
+    <item>
+      <p>
+        Press the <gui>OK</gui> button in the <gui>Save Profile As</gui>
+        dialog box.
+      </p>
+    </item>
+  </steps>
+  <steps>
+    <title>Laden eines vorhandenen Profils</title>
+    <item>
+      <p>
+        Get into the <link xref="preferences">Orca Preferences</link> dialog box.
+      </p>
+    </item>
+    <item>
+      <p>
+        On the <gui>General</gui> page, select the profile to load from the
+        <gui>Active Profile</gui> combo box.
+      </p>
+    </item>
+    <item>
+      <p>Klicken Sie auf <gui>Laden</gui>.</p>
+    </item>
+    <item>
+      <p>
+        You will be asked to confirm. Press the <gui>Yes</gui> button.
+      </p>
+      <p>
+        <media type="image" mime="image/png" src="figures/profiles_load.png"/>
+      </p>
+    </item>
+    <item>
+      <p>Klicken Sie auf <gui>OK</gui>.</p>
+    </item>
+  </steps>
+  <steps>
+    <title>Ändern eines vorhandenen Profils</title>
+    <item>
+      <p>
+        Follow the steps described above to load the profile you wish to change.
+      </p>
+    </item>
+    <item>
+      <p>Befolgen Sie die oben beschriebenen Schritte zum Speichern eines neuen Profils.</p>
+    </item>
+    <item>
+      <p>
+        When prompted for the new profile name, type the same name as current
+        profile. When you press the <gui>OK</gui> button, you will be told there
+        is a name conflict.
+      </p>
+      <p>
+        <media type="image" mime="image/png" src="figures/profiles_conflict.png"/>
+      </p>
+    </item>
+    <item>
+      <p>
+        Press the <gui>Yes</gui> button to confirm you wish to overwrite the
+        existing profile with the new settings.
+      </p>
+    </item>
+  </steps>
+  <steps>
+    <title>Changing the <gui>Start-up Profile</gui></title>
+    <item>
+      <p>
+        Get into the <link xref="preferences">Orca Preferences</link> dialog box.
+      </p>
+    </item>
+    <item>
+      <p>
+        On the <gui>General</gui> page, select the profile to load from the
+        <gui>Start-up Profile</gui> combo box.
+      </p>
+    </item>
+    <item>
+      <p>Klicken Sie auf <gui>OK</gui>. Wenn Sie <app>Orca</app> das nächste Mal starten, wird das neu ausgewählte Profil verwendet.</p>
+    </item>
+  </steps>
+</page>

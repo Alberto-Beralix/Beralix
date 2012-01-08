@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<compiz>
+    <plugin name="expo" useBcop="true">
+	<short>Expo</short>
+	<long>Expo Plugin</long>
+	<category>Desktop</category>
+	<deps>
+	    <requirement>
+		<plugin>opengl</plugin>
+	    </requirement>
+	    <relation type="after">
+		<plugin>composite</plugin>
+		<plugin>opengl</plugin>
+		<plugin>decor</plugin>
+		<plugin>cube</plugin>
+		<plugin>cubeaddon</plugin>
+		<plugin>wobbly</plugin>
+		<plugin>animation</plugin>
+		<plugin>wallpaper</plugin>
+		<plugin>imgpng</plugin>
+	    </relation>
+	</deps>
+	<options>
+	    <group>
+		<short>Bindings</short>
+		<option name="expo_key" type="key">
+		    <short>Expo key</short>
+		    <long>Engage wall expo mode key binding</long>
+		    <default>&lt;Super&gt;s</default>
+		</option>
+		<option name="expo_button" type="button">
+		    <short>Expo button</short>
+		    <long>Engage wall expo mode button binding</long>
+		    <default></default>
+		</option>
+		<option name="expo_edge" type="edge">
+		    <short>Expo edge</short>
+		    <long>Engage wall expo mode edge binding</long>
+		</option>
+		<option name="double_click_time" type="int">
+		    <short>Double click time</short>
+		    <long>Timeframe to execute a double click</long>
+		    <default>500</default>
+		    <min>50</min>
+		    <max>2000</max>
+		</option>
+		<option name="dnd_button" type="button">
+		    <short>Drag&amp;drop</short>
+		    <long>Button binding for drag &amp; drop of windows</long>
+		    <default>Button1</default>
+		    <passive_grab>false</passive_grab>
+		    <internal/>
+		</option>
+		<option name="exit_button" type="button">
+		    <short>Exit expo</short>
+		    <long>Button binding to exit expo</long>
+		    <default>Button3</default>
+		    <passive_grab>false</passive_grab>
+		    <internal/>
+		</option>
+		<option name="next_vp_button" type="button">
+		    <short>Next viewport</short>
+		    <long>Button binding to switch to next viewport in expo</long>
+		    <default>Button5</default>
+		    <passive_grab>false</passive_grab>
+		    <internal/>
+		</option>
+		<option name="prev_vp_button" type="button">
+		    <short>Previous viewport</short>
+		    <long>Button binding to switch to next viewport in expo</long>
+		    <default>Button4</default>
+		    <passive_grab>false</passive_grab>
+		    <internal/>
+		</option>
+	    </group>
+	    <group>
+		<short>Behaviour</short>
+		<option name="zoom_time" type="float">
+		    <short>Zoom time</short>
+		    <long>Duration of the zoomout animation</long>
+		    <default>0.3</default>
+		    <min>0.1</min>
+		    <max>5.0</max>
+		    <precision>0.1</precision>
+		</option>
+		<option name="expo_immediate_move" type="bool">
+		    <short>Immediate moves</short>
+		    <long>Selects if windows movements in expo mode should be immediate - this among other things disables wobbliness</long>
+		    <default>false</default>
+		</option>
+		<option name="expo_animation" type="int">
+		    <short>Expo Animation</short>
+		    <long>Animation used when switching to expo mode</long>
+		    <default>0</default>
+		    <min>0</min>
+		    <max>2</max>
+		    <desc>
+			<value>0</value>
+			<name>Zoom</name>
+		    </desc>
+		    <desc>
+			<value>1</value>
+			<name>Fade + Zoom</name>
+		    </desc>
+		    <desc>
+			<value>2</value>
+			<name>Vortex</name>
+		    </desc>
+		</option>
+	    </group>
+	    <group>
+		<short>Appearance</short>
+		<option name="deform" type="int">
+		    <short>Deformation</short>
+		    <long>Deformation of the expo wall</long>
+		    <default>0</default>
+		    <min>0</min>
+		    <max>2</max>
+		    <desc>
+			<value>0</value>
+			<name>None</name>
+		    </desc>
+		    <desc>
+			<value>1</value>
+			<name>Tilt</name>
+		    </desc>
+		    <desc>
+			<value>2</value>
+			<name>Curve</name>
+		    </desc>
+		</option>
+		<option name="x_offset" type="int">
+		    <short>X Space</short>
+		    <long> Left Side screen space of expo in pixels</long>
+		    <min>-1680</min>
+		    <max>1680</max>
+		    <default>64</default>
+                </option>
+		<option name="y_offset" type="int">
+		    <short>Y Space</short>
+		    <long> Top Side screen space of expo in pixels</long>
+		    <min>-100</min>
+		    <max>100</max>
+		    <default>24</default>
+                </option>
+		<option name="distance" type="float">
+		    <short>Distance</short>
+		    <long>Distance of the expo wall</long>
+		    <default>0.005</default>
+		    <min>0.0</min>
+		    <max>1.0</max>
+		    <precision>0.01</precision>
+		</option>
+		<option name="vp_distance" type="float">
+		    <short>Viewport distance</short>
+		    <long>Distance between viewports</long>
+		    <default>0.2</default>
+		    <min>0.0</min>
+		    <max>1.0</max>
+		    <precision>0.01</precision>
+		</option>
+		<option name="aspect_ratio" type="float">
+		    <short>Aspect Ratio</short>
+		    <long>Expo mode aspect ratio</long>
+		    <default>1.0</default>
+		    <min>0.0</min>
+		    <max>1.0</max>
+		    <precision>0.1</precision>
+		</option>
+		<option name="curve" type="float">
+		    <short>Curve strength</short>
+		    <long>Strength of the deformation in curve mode</long>
+		    <default>0.50</default>
+		    <min>0.0</min>
+		    <max>1.0</max>
+		    <precision>0.01</precision>
+		</option>
+		<option name="hide_docks" type="bool">
+		    <short>Hide panels/docks in expo</short>
+		    <long>Hide panels/docks in expo.</long>
+		    <default>false</default>
+		</option>
+		<option name="mipmaps" type="bool">
+		    <short>Mipmaps</short>
+		    <long>Generate mipmaps in expo mode</long>
+		    <default>false</default>
+		</option>
+		<option name="multioutput_mode" type="int">
+		    <short>Multi Output Mode</short>
+		    <long>Selects how the expo wall is displayed if multiple output devices are used.</long>
+		    <min>0</min>
+		    <max>1</max>
+		    <default>0</default>
+		    <desc>
+			<value>0</value>
+			<name>One big wall</name>
+		    </desc>
+		    <desc>
+			<value>1</value>
+			<name>One wall per output</name>
+		    </desc>
+		</option>
+		<subgroup>
+		    <short>Inactive viewports</short>
+		    <option name="vp_brightness" type="float">
+			<short>Brightness</short>
+			<long>Inactive viewport brightness.</long>
+			<default>40.0</default>
+			<min>0.0</min>
+			<max>100.0</max>
+			<precision>0.1</precision>
+		    </option>
+		    <option name="vp_saturation" type="float">
+			<short>Saturation</short>
+			<long>Inactive viewport saturation.</long>
+			<default>40.0</default>
+			<min>0.0</min>
+			<max>100.0</max>
+			<precision>0.1</precision>
+		    </option>
+		    <option name="selected_color" type="color">
+			<short>Selected Color</short>
+			<long>Color to use when highlighting the selected viewport</long>
+			<default>
+			    <red>0xfbfb</red>
+			    <green>0x8b8b</green>
+			    <blue>0x0</blue>
+			    <alpha>0xffff</alpha>
+			</default>
+		    </option>
+		</subgroup>
+		<subgroup>
+		    <short>Reflection</short>
+		    <option name="reflection" type="bool">
+			<short>Reflection</short>
+			<long>Show a reflection of the viewports on the ground</long>
+			<default>false</default>
+		    </option>
+		    <option name="ground_color1" type="color">
+			<short>Ground color(near)</short>
+			<long>Color of the ground (near).</long>
+			<default>
+			    <red>0xb333</red>
+			    <green>0xb333</green>
+			    <blue>0xb333</blue>
+			    <alpha>0xcccc</alpha>
+			</default>
+		    </option>
+		    <option name="ground_color2" type="color">
+			<short>Ground color(far)</short>
+			<long>Color of the ground (far).</long>
+			<default>
+			    <red>0xb333</red>
+			    <green>0xb333</green>
+			    <blue>0xb333</blue>
+			    <alpha>0x0000</alpha>
+			</default>
+		    </option>
+		    <option name="ground_size" type="float">
+			<short>Reflection ground size</short>
+			<long>Reflection ground size.</long>
+			<default>0.5</default>
+			<min>0.0</min>
+			<max>1.0</max>
+			<precision>0.01</precision>
+		    </option>
+		    <option name="scale_factor" type="float">
+			<short>Reflection Scale</short>
+			<long>Scale factor of the expo wall reflection</long>
+			<default>1.0</default>
+			<min>0.0</min>
+			<max>2.0</max>
+			<precision>0.01</precision>
+		    </option>
+		</subgroup>
+	    </group>
+	</options>
+    </plugin>
+</compiz>

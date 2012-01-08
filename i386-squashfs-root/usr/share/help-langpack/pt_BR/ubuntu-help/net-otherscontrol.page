@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="net-otherscontrol" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-problem"/>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>Você precisa desmarcar a opção <gui>Disponível para todos os usuários</gui> nas definições da conexão.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Outros usuários não podem controlar as conexões de rede</title>
+
+<p>Se você puder editar uma conexão de rede mas outros usuários em seus computador não puderem, você deve ter configurado a conexão como <gui>disponível para todos os usuários</gui>. Isso significa que todo o mundo em seu computador pode <em>conectar-se</em> usando essa conexão, mas somente usuários <link xref="user-admin-explain">com direitos de administrador</link> podem mexer nas configurações.</p>
+
+<p>A razão disso é que, já que todos são afetados se as configurações são alteradas, somente usuários altamente confiáveis (administradores) devem ter permissão de modificar a conexão.</p>
+
+<p>Se outros usuários realmente necessitarem ser capazes de modificar a conexão por conta própria, faça que a conexão <em>não</em> esteja disponível para todos no computador. Dessa forma, cada um será capaz de administrar as próprias configurações de conexão em vez de depender de um só conjunto de configurações compartilhada entre todos.</p>
+
+<steps>
+ <title>Faça isso para que assim a conexão não seja compartilhada mais</title>
+ <item>
+  <p>Clique no <gui>menu de rede</gui> no painel superior e clique em <gui>Editar conexões</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Escolha a conexão que deseja que todos sejam capazes de administrar por conta própria. Clique para selecioná-la e depois em <gui>Editar</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Você terá que entrar com a senha de administrador para alterar a conexão. Somente administradores podem fazer isso.</p>
+ </item>
+ 
+ <item>
+  <p>Desmarque a opção <gui>Disponível para todos os usuários</gui> e clique em <gui>Salvar</gui>. Agora os demais usuários do computador serão capazes de administrar a conexão.</p>
+ </item>
+</steps>
+
+</page>

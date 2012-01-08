@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-autorun" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="media#photos"/>
+    <link type="guide" xref="files#removable"/>
+    <link type="guide" xref="nautilus-prefs" group="last"/>
+    
+    <desc>Anwendungen für CDs und DVDs, Kameras, Audio-Abspielgeräte und weitere Geräte und Medien automatisch starten.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Eine Anwendung öffnen, wenn ein Gerät angeschlossen wird</title>
+
+<p>Sie können eine Anwendung automatisch starten lassen, wenn Sie ein Gerät anschließen. Sie könnten zum Beispiel wollen, dass Ihre Fotoverwaltung geöffnet wird, wenn Sie eine Digitalkamera anschließen. Sie können das aber auch abstellen, so dass nichts weiter passiert, wenn Sie ein Gerät anschließen.</p>
+
+<p>So legen Sie fest, welche Anwendung geöffnet wird, wenn verschiedene Geräte angeschlossen werden:</p>
+
+<steps>
+ <item>
+  <p>Click the icon at the very right of the <gui>top panel</gui> and select <gui>System Settings</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Open <gui>Removable Media</gui> and change the options under <gui>Select how media should be handled</gui>.</p>
+  <p>Anstelle eine Anwendung einfach automatisch starten zu lassen, können Sie Folgendes einstellen:</p>
+  <list>
+   <item><p>The device will be shown in the File Manager (choose <gui>Open folder</gui>)</p></item>
+   <item><p>You will be asked what to open (<gui>Ask what to do</gui>)</p></item>
+   <item><p>Nichts soll passieren (<gui>Nichts tun</gui>).</p></item>
+  </list>
+ </item>
+ 
+ <item>
+  <p>Die Einstellung unter <gui>Software</gui> unterscheidet sich etwas von den anderen – wenn der Rechner feststellt, dass sich auf dem angeschlossenen Medium Software befindet, kann er versuchen, diese Software zu starten, sofern Sie das wollen. Das ist sinnvoll, wenn Sie eine Anwendung auf einer CD installiert haben und sie starten wollen, sobald die CD eingelegt wird (zum Beispiel eine Diaschau).</p>
+ </item>
+ 
+ <item>
+  <p>If you don't see the device or media type that you want to change in the list (such as Blu-ray discs or E-book readers), click <gui>Other Media</gui> to see a more detailed list of devices.</p>
+ </item>
+</steps>
+
+<note style="tip">
+ <title><em>Keine einzige</em> Anwendung automatisch öffnen</title>
+ <p>Wenn Sie wollen, dass keine einzige Anwendung automatisch geöffnet wird, egal welches Gerät Sie anschließen, kreuzen Sie <gui>Beim Einlegen von Datenträgern nie nachfragen oder Programme starten</gui> am unteren Ende des Wechselmedien-Fensters an.</p>
+</note>
+
+</page>

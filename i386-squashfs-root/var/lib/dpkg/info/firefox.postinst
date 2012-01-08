@@ -1,0 +1,149 @@
+#!/bin/sh
+
+set -e
+
+MOZ_LIBDIR=/usr/lib/firefox-7.0.1
+MOZ_APP_NAME=firefox
+
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] ; then
+    if [ `dpkg-divert --truename /usr/bin/$MOZ_APP_NAME` != "/usr/bin/$MOZ_APP_NAME" ] ; then
+        # Ubuntuzilla has trashed this install. Grrrrrrrrrr!
+        BROKEN=1
+    else
+        BROKEN=0
+    fi
+
+    if [ ! -x /usr/bin/$MOZ_APP_NAME ] && [ "$BROKEN" = "1" ] ; then
+        echo "***Your system has been left in a broken state by a third party package***"
+        echo "This is usually caused by installing packages from Ubuntuzilla. Fixing this now"
+        dpkg-divert --rename --remove /usr/bin/$MOZ_APP_NAME
+        # Yay! We are sane again now \o/
+        BROKEN=0
+    fi
+
+    if [ "$BROKEN" = "0" ] ; then
+        update-alternatives --install /usr/bin/gnome-www-browser \
+            gnome-www-browser /usr/bin/$MOZ_APP_NAME 40
+
+        update-alternatives --install /usr/bin/x-www-browser \
+            x-www-browser /usr/bin/$MOZ_APP_NAME 40
+    else
+        PACKAGE=`dpkg-divert --listpackage /usr/bin/$MOZ_APP_NAME`
+        if [ "$PACKAGE" = "LOCAL" ] ; then
+            echo "/usr/bin/$MOZ_APP_NAME has been diverted by a third party package which didn't specify"
+            echo "a package name to dpkg-divert. This is usually as a result of installing unsupported"
+            echo "packages from Ubuntuzilla."
+            echo "***This is a BUG. Please report this bug to the vendor of the third party package you installed***"
+        else
+            echo "/usr/bin/$MOZ_APP_NAME has been diverted by $PACKAGE"
+        fi
+    fi
+
+    #
+    # AppArmor
+    #
+    APP_PROFILE="/etc/apparmor.d/usr.bin.$MOZ_APP_NAME"
+    if [ -f "$APP_PROFILE" ]; then
+	 if [ -e /etc/lsb-release ] ; then
+            ubuntu_version=`grep ^DISTRIB_RELEASE /etc/lsb-release | cut -d= -f2 | cut -d '.' -f-2 | tr -d '.'`
+        else
+            ubuntu_version=`lsb_release -rs | cut -d '.' -f-2 | tr -d '.'`
+        fi
+
+        # Setup the extra include files for Ubuntu 10.10 and higher
+        if [ "$ubuntu_version" -ge '1010' ]; then
+            # Add the local/ include
+            LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.bin.$MOZ_APP_NAME"
+            test -e "$LOCAL_APP_PROFILE" || {
+                tmp=`mktemp`
+                cat <<EOM > "$tmp"
+# Site-specific additions and overrides for usr.bin.firefox.
+# For more details, please see /etc/apparmor.d/local/README.
+EOM
+                mkdir `dirname $LOCAL_APP_PROFILE` 2>/dev/null || true
+                mv -f "$tmp" "$LOCAL_APP_PROFILE"
+                chmod 644 "$LOCAL_APP_PROFILE"
+            }
+
+            # Add the addons include
+            ADDONS_APP_PROFILE="/etc/apparmor.d/abstractions/ubuntu-browsers.d/$MOZ_APP_NAME"
+            test -e "$ADDONS_APP_PROFILE" || {
+                tmp=`mktemp`
+                cat <<EOM > "$tmp"
+# This file is updated by 'aa-update-browser' and may be overwritten on
+# upgrades.
+#
+# For site-specific adjustments, please see /etc/apparmor.d/local/<binary>
+
+#include <abstractions/ubuntu-browsers.d/plugins-common>
+#include <abstractions/ubuntu-browsers.d/mailto>
+#include <abstractions/ubuntu-browsers.d/multimedia>
+#include <abstractions/ubuntu-browsers.d/productivity>
+#include <abstractions/ubuntu-browsers.d/java>
+#include <abstractions/ubuntu-browsers.d/kde>
+#include <abstractions/ubuntu-browsers.d/text-editors>
+#include <abstractions/ubuntu-browsers.d/ubuntu-integration>
+#include <abstractions/ubuntu-browsers.d/user-files>
+EOM
+                mkdir -p `dirname $ADDONS_APP_PROFILE` 2>/dev/null || true
+                mv -f "$tmp" "$ADDONS_APP_PROFILE"
+                chmod 644 "$ADDONS_APP_PROFILE"
+            }
+        fi
+
+        # Reload AppArmor profile
+        DISABLE_APP_PROFILE="/etc/apparmor.d/disable/usr.bin.$MOZ_APP_NAME"
+        if [ ! -f "$DISABLE_APP_PROFILE" ] && aa-status --enabled 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+    #
+    # End AppArmor
+    #
+fi
+
+# Move a conffile without triggering a dpkg question
+mv_conffile() {
+    local OLDCONFFILE="$1"
+    local NEWCONFFILE="$2"
+
+    [ -e "$OLDCONFFILE" ] || return 0
+
+    echo "Preserving user changes to $NEWCONFFILE ..."
+    mv -f "$NEWCONFFILE" "$NEWCONFFILE".dpkg-new
+    mv -f "$OLDCONFFILE" "$NEWCONFFILE"
+}
+
+case "$1" in
+configure)
+    # What we want to do here is migrate this conffile when:
+    # 1) Upgrading from any version older than Natty. Note, as all releases will track the
+    #    the latest Firefox version in the future, we can't just simply compare package
+    #    versions
+    # 2) Upgrading from any version older than Firefox 5.0~b2+build1+nobinonly-0ubuntu3 in Oneiric
+    PREV_MAJOR_UBUNTU_VER=`echo "$2" | sed 's/.*ubuntu\(.*\)/\1/' | sed 's/\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\(.*\)/\2/'`
+    if dpkg --compare-versions "$2" le "5.0~b2+build1+nobinonly-0ubuntu2" || \
+       ([ "x$PREV_MAJOR_UBUNTU_VER" != "x" ] && [ "$PREV_MAJOR_UBUNTU_VER" -lt "11" ]); then
+        mv_conffile "/etc/${MOZ_APP_NAME}/pref/firefox.js" "/etc/${MOZ_APP_NAME}/syspref.js"
+    fi
+
+    if [ -d $MOZ_LIBDIR/distribution ] && [ ! -h $MOZ_LIBDIR/distribution ]; then
+        rmdir --ignore-fail-on-non-empty $MOZ_LIBDIR/distribution
+    fi
+    if [ ! -e $MOZ_LIBDIR/distribution ]; then
+        ln -s /usr/lib/firefox-addons/distribution $MOZ_LIBDIR/distribution
+    fi
+esac
+
+echo "Please restart all running instances of $MOZ_APP_NAME, or you will experience problems."
+
+if [ -d /var/run ] ; then
+    touch /var/run/$MOZ_APP_NAME-restart-required
+fi
+
+# Automatically added by dh_installmenu
+if [ "$1" = "configure" ] && [ -x "`which update-menus 2>/dev/null`" ]; then
+	update-menus
+fi
+# End automatically added section
+

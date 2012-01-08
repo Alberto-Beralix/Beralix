@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="score" xml:lang="pt_BR">
+      
+  <info>
+    <link type="guide" xref="index#play"/>
+    <link type="seealso" xref="history"/>
+    <desc>Como os pontos dos jogadores são calculados.</desc>
+    <revision pkgversion="2.30" version="0.1" date="2010-01-22" status="draft"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+  <title>Pontos e tempos de jogos</title>
+  <p>
+    If you answer a puzzle incorrectly, you will not get any score for it.
+  </p>
+  <p>
+    If you answer a puzzle correctly, you will get a score which depends on the time
+    taken to resolve the problem and whether you used the tip during the game.
+  </p>
+  <p>
+    The following table summarizes the different game durations (in seconds) based
+    on the difficulty level.
+  </p>
+  <table frame="all" rules="all">
+    <tr>
+      <td><p/></td>
+      <td><p>Fácil</p></td>
+      <td><p>Médio</p></td>
+      <td><p>Mestre</p></td>
+    </tr>
+    <tr>
+      <td><p>Quebra cabeças lógicos</p></td>
+      <td><p>156</p></td>
+      <td><p>120</p></td>
+      <td><p>110</p></td>
+    </tr>
+    <tr>
+      <td><p>Calculo mental</p></td>
+      <td><p>78</p></td>
+      <td><p>60</p></td>
+      <td><p>55</p></td>
+    </tr>
+    <tr>
+      <td><p>Treino de memória</p></td>
+      <td><p>39</p></td>
+      <td><p>30</p></td>
+      <td><p>27</p></td>
+    </tr>
+    <tr>
+      <td><p>Analogias verbais</p></td>
+      <td><p>39</p></td>
+      <td><p>30</p></td>
+      <td><p>27</p></td>
+    </tr>
+  </table>
+  <p>
+    With the expected time for the chosen difficulty level and the time you
+    take to complete the game, the following logic is applied:
+  </p>
+  <list>
+    <item>
+      <p>
+        If you take less than the time expected to complete the game, you score 10 points.
+      </p>
+    </item>
+    <item>
+      <p>
+        If you take more than the time expected to complete the game, you score 8 points.
+      </p>
+    </item>
+    <item>
+      <p>
+        If you take more than 2x the time expected to complete the game,
+        you score 7 points.
+      </p>
+    </item>
+    <item>
+      <p>
+        If you take more than 3x the time expected to complete the game,
+        you score 6 points.
+      </p>
+    </item>
+    <item>
+      <p>
+        If you use a tip, you score only the 80% of the original score.
+      </p>
+    </item>
+  </list>
+  
+  <section id="computing-scores">
+    <title>Computando os totais</title>
+    <p>
+      <app>gbrainy</app> keeps track of the different games types played. To compute
+      the final score of every set of game types it sums all the results of the 
+      same game types played and then applies a factor based on: the logarithm of 
+      10 for the easy level; on the logarithm of 20 for the medium level; and 
+      on the logarithm of 30 for the master level.
+    </p>
+	  <p>
+	    This means that when playing at medium difficulty level, to get a score of 
+	    100 points you need to score 10 points on at least 20 games of every game type played.
+	  </p>
+	  <p>
+	    This may sound challenging, but it allows players to compare game scores from 
+	    different sessions (in the player's game history) and allows better tracking of
+	    the progression of the player through all of the games played.
+	  </p>
+  </section>
+</page>

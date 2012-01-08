@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-postr" xml:lang="de">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>Sie müssen den Flickr-Uploader installieren, um Fotos zu den Flickr-Fotoalben senden zu können.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+
+  </info>
+
+<title>Hochladen von Fotos zu <app>Flickr</app></title>
+
+<p><em>Flickr</em> ist ein Bilderdienst, über den Sie Bilder online für andere Benutzer freigeben können. Sie können Bilder direkt aus dem Bildbetrachter zu Flickr hochladen.</p>
+
+<p>Um den <app>Flickr-Uploader</app> verwenden zu können, müssen Sie <app>Postr</app> über die <app>Paketverwaltung</app> Ihrer Distribution installieren. Sobald dies erledigt ist, können Sie Fotos zu Flickr hochladen:</p>
+
+<steps>
+ <item>
+  <p>Wenn Sie zum ersten Mal ein Foto hochladen, bittet Sie der <app>Flickr-Uploader</app> um die Anmeldung bei Flickr. In der Webseite werden Sie darum gebeten, <app>Postr</app> den Zugriff auf Ihr Konto zu ermöglichen.</p>
+ </item>
+ <item>
+  <p>Zurück im Bildbetrachter, wählen Sie <guiseq><gui>Bild</gui><gui>Öffnen mit</gui><gui>Flickr-Uploader</gui></guiseq>.</p>
+ </item>
+ <item>
+  <p>Klicken Sie auf <gui>Hochladen</gui>.</p>
+ </item>
+</steps>
+
+<section id="tools-plugin">
+ <title>Menüeintrag <gui>Werkzeuge</gui> hinzufügen</title>
+ <p>Sie können einen Schnellzugriff für das Hochladen von Bildern zu Flickr einrichten</p>
+ <p>Stellen Sie hierzu sicher, dass <link xref="plugins">eog-plugins</link> installiert ist. Wählen Sie <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq>, öffnen Sie den Reiter <gui>Plugins</gui> und aktivieren Sie <gui>Zu Flickr hochladen</gui>.</p>
+ <p>Dadurch erhalten Sie einen praktischen Menüeintrag <guiseq><gui>Werkzeuge</gui><gui>Hochladen zu Flickr</gui></guiseq>.</p>
+ <media type="image" src="figures/plugin-tools-flickr.png" style="floatright"/>
+</section>
+
+</page>

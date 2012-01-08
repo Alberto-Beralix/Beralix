@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/apps/rhythmbox/__init__.py

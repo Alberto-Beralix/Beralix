@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="disk-check" xml:lang="es">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    
+    <credit type="author">
+      <name>Equipo de documentación GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Natalia Ruz Leiva</name>
+      <email>nruz@alumnos.inf.utfsm.cl</email>
+    </credit>
+
+    <desc>Puede probar su disco duro para buscar problemas y asegurarse de que está sano.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Comprobar los problemas del disco duro</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Rewrite steps to use common simple form in 3.0.1</p>
+</comment>
+<section id="disk-status">
+ <title>comprobar el disco duro</title>
+  <p>Los discos duros incluyen una herramienta de auto diagnóstico llamada <app>SMART</app> (Self-Monitoring, Analysis, and Reporting Technology o Tecnología de auto diagnóstico, análisis e informes), que comprueba de forma continua el disco en busca de problemas potenciales. SMART también le advierte si el disco está a punto de fallar, ayudándole a evitar la pérdida de valiosos datos.</p>
+
+  <p>Aunque SMART funciona automáticamente, también puede comprobar el estado de su disco ejecutando  la aplicación <app>Utilidad de disco</app>:</p>
+
+<steps>
+  <title>Compruebe el estado de su disco usando la aplicación «Utilidad de disco»</title>
+     <item><p>Abra la aplicación <app>Utilidad de disco</app> desde el <gui>Tablero</gui>.</p></item>
+     <item><p>Seleccione el disco que quiere comprobar desde la lista <gui>Dispositivos de almacenamiento </gui> . La información y el estado del disco aparecerá bajo <gui>Unidad</gui>.</p></item>
+     <item><p><gui>Estado SMART</gui> debería decir «El disco está sano».</p></item> 
+     <item><p>Click the <gui>SMART Data</gui> button to view more drive 
+information, or to run a self-test.</p></item>
+</steps>
+
+</section>
+
+<section id="disk-not-healthy">
+ <title>¿Qué pasa si el disco no está sano?</title>
+ <p>Incluso aunque el <gui>Estado de SMART</gui>indique que el disco <em>no se encuentra</em> en buen estado, puede que no haya razón para alarmarse. De todas formas prepare una <link xref="backup-why">copia de respaldo</link> para prevenir la pérdida de datos.</p>
+
+ <p>Si el estado dice «Pre-fail», el disco está razonablemente sano pero se han detectado signos de desgaste, lo que significa que podría fallar en un futuro cercano. Si su disco duro (o equipo) tiene unos cuantos años de antigüedad, es probable que vea este mensaje en algunas de las comprobaciones de salud. Debería <link xref="backup-how">hacer una copia de seguridad de sus archivos importantes con regularidad</link> y comprobar periódicamente el estado del disco para ver si empeora.</p>
+
+ <p>Si empeora,  puede llevar el equipo/disco duro a un profesional para su diagnóstico o reparación.</p>
+
+</section>
+
+</page>

@@ -1,0 +1,71 @@
+=head1 NAME
+
+Pango::FontMap - an object that represents the set of fonts available for a particular rendering system
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Pango::FontMap
+
+
+
+=cut
+
+=for object Pango::FontMap - an object that represents the set of fonts available for a particular rendering system
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 list = $fontmap-E<gt>B<list_families> 
+
+=head2 font or undef = $fontmap-E<gt>B<load_font> ($context, $desc)
+
+=over
+
+=item * $context (Pango::Context) 
+
+=item * $desc (Pango::FontDescription) 
+
+=back
+
+=head2 fontset or undef = $fontmap-E<gt>B<load_fontset> ($context, $desc, $language)
+
+=over
+
+=item * $context (Pango::Context) 
+
+=item * $desc (Pango::FontDescription) 
+
+=item * $language (Pango::Language) 
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

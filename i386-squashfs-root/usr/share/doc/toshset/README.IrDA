@@ -1,0 +1,77 @@
+toshsat1800-irdasetup
+
+Version 0.2 2002/04/07 15:42
+
+Description:
+
+IrDA configurator for laptops with ALI1533 bridge (LPC47N227 SuperIO), smc-ircc
+and not initializing BIOS (tested on Toshiba Satellite 1800-514) to be
+used with Linux kernel.
+Copyright (C) 2002, Daniele Peri <peri@csai.unipa.it>
+
+http://lancelot.csai.unipa.it/~peri/toshsat1800-irdasetup.tgz
+
+Problem:
+
+Toshiba Satellite 1800 laptops are provided with a SMCS LPC47N227 SuperIO chip which is IrDA SIR/FIR capable. The chip is connected through an ALI1533 PCI-ISA bridge. The IrDA subsystem of the SuperIO chip is supported by the smc-ircc Linux kernel module. Unfortunately the BIOS neither configurates the SuperIO chip IrDA subsystem (SIR port, FIR port, dma, irq, IrDA mode, power) nor sets the PCI-ISA bridge to decode any usable port.
+Linux kernel is thus prevented to detect the second UART making impossible to use it in SIR mode. For the same reason, the FIR mode smc-ircc is able to detect the SuperIO chip but, once found the IrDA subsystem unconfigured, fails to install.
+
+Solution:
+
+toshsat1800-irdasetup sets SIR and FIR ioport addresses, DMA and IRQ of the SuperIO chip IrDA subsystem then powers on the second UART. It also configures the PCI-ISA bridge to decode SIR and FIR ports. All this configuration work should be rather done into the kernel but it was more practical and safe to make a small testing tool of it. It can be probably extended to include configuration kludges for other similar SuperIO and ISA bridge combination.
+Testing was carried on a Toshiba Satellite 1800-514 with Linux kernel 2.4.17.
+I hope this work could be helpful, it was quite funny to do it however.
+
+Compilation (Requires pci-utils):
+
+	$ cd toshsat1800-irdasetup/
+	$ make
+
+Usage:
+
+Run it as root:
+	$ ./toshsat1800-irdasetup
+
+then you can install the smc-ircc module:
+	$ modprobe smc-ircc
+
+I've noticed that the smc-ircc needs parameters ircc_sir and ircc_fir to be specified. So you'd probably add:
+
+	options smc-ircc ircc_dma=3 ircc_irq=7 ircc_cfg=0x2e ircc_sir=0x2e8 ircc_fir=0x2f8
+
+to /etc/modules.conf
+
+You may also want to add a line like:
+
+	pre-install smc-ircc /usr/local/sbin/toshsat1800-smcinit
+
+to /etc/modules.conf in order to obtain full automatic IrDA setup.
+You'll need to execute:
+
+	$ depmod -a
+
+after modifying /etc/modules.conf to make changes effective.
+
+Default values works for Toshiba Satellite 1800 though any configuration value can be changed through options. So far I've discovered how to enable decoding of the following usable ports: 0x2e8, 0x2f8, 0x130, 0x178.
+The list of all options is obtaineable through:
+
+	$ toshsat1800-irdasetup --help
+
+
+Appendix:
+
+Ericsson T39m. Setting up an Ircomm link with this phone requires to explicitly reduce the maximum speed to 115200:
+
+	$ echo 115200 > /proc/sys/net/irda/max_baud_rate
+
+Disclaimer:
+This software is experimental. Use it at your own risk.
+
+Credits:
+
+* SMSC for the downloadable datasheets
+* Paul Hampson for its Linux IrDA mailing list messages.
+
+To do:
+
+* Add more ALI1533 usable ports

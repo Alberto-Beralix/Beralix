@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/apps/gnome-terminal/script.py

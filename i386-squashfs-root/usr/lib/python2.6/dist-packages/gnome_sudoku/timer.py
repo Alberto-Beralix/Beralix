@@ -1,0 +1,1 @@
+../../../../share/pyshared/gnome_sudoku/timer.py

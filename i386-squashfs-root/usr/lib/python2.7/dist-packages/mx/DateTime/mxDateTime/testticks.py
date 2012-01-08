@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/mx/DateTime/mxDateTime/testticks.py

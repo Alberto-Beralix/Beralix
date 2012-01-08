@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "2.28">
+<!ENTITY app "<application>gnome-bluetooth</application>">
+<!ENTITY appname "gnome-bluetooth">
+<!ENTITY legal SYSTEM "legal.xml">
+]>
+<article id="index" lang="zh_CN">
+    <articleinfo>
+        <title>gnome-bluetooth 手册</title>
+        <copyright>
+            <year>2009</year>
+            <holder>Baptiste Mille-Mathias</holder>
+        </copyright><copyright><year>2009</year><holder>Zhang Miao (mymzhang@gmail.com)</holder></copyright><copyright><year>2010</year><holder>TeliuTe (teliute@163.com)</holder></copyright>
+        
+           <legalnotice id="legalnotice">
+         <para>对于本文档的复制、分发和/或修改必须遵循自由软件基金会 (Free Software Foundation) 发布的 GNU 自由文档许可证 (GFDL) 版本 1.1 或更高版本，该许可证没有固定的部分、没有封面和背页文本。您可以在此<ulink type="help" url="ghelp:fdl">link</ulink>上或在随本手册一起分发的 COPYING-DOCS 文件中找到 GFDL 的副本。</para>
+          <para>本手册是在 GFDL 许可之下分发的 GNOME 手册集合的一部分。如果想要单独分发此手册，可以在手册中添加该许可证的一份副本然后分发，如该许可证的第 6 部分所述。</para>
+ 
+         <para>各个公司使用的许多用于区别它们产品和服务的名称都声明为商标。在所有的 GNOME 文档以及 GNOME 文档项目的成员中，这些名称都是以全大写字母或首字母大写显示，从而表明它们是商标。</para>
+ 
+         <para>本文档以及文档的修改版本都是在遵循 GNU 自由文档许可证的条款下提供，这表示具有以下含义：<orderedlist>
+                 <listitem>
+                   <para>文档按“原样”提供，不提供任何明示或暗示的保证，包括但不限于：文档或文档的修改版本没有适销性方面的缺陷、适合特定目的的适用性，以及没有侵权行为。您将自行承担本文档以及文档修改版本的质量、准确性以及性能方面的风险。如果任何文档或文档修改版本存在缺陷，您(而不是最初的编写者、作者或撰写人)将承担所有必需的服务、维修或更正的费用。此免责声明是本许可证的重要组成部分。如果不接受此免责声明，那么您就没有权利使用任何文档或文档的修改版本；并且无论在任何情况以及在任何法律理论下，本文档或文档修改版本的作者、最初的编写者、任何撰写人或任何分发者，或者任意这些方的任何提供者都不对任何人由于使用本文档或文档修改版本引起或带来的任何直接的、间接的、特殊的、偶然的或继发的损失承担任何民事(包括疏忽)、合同或其它方面的责任，这些损失包括但不限于信誉损失、工作停止、计算机失败或故障，或任何以及所有其它损失或由此引发的或与之相关的损失，即使这些方已被告知存在出现此类损失的可能性时也是如此。</para>
+                 </listitem>
+           </orderedlist></para>
+   </legalnotice>
+ 
+
+        <authorgroup>
+            <author role="maintainer">
+                <firstname>Baptiste</firstname>
+                <surname>Mille-Mathias</surname>
+                <affiliation>
+                    <orgname>GNOME 文档项目</orgname>
+                    <address>
+                        <email>baptiste.millemathias@gmail.com</email>
+                    </address>
+                </affiliation>
+            </author>
+        </authorgroup>
+        
+        <!-- According to GNU FDL, revision history is mandatory if you are -->
+        <!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+        <revhistory>
+            <revision>
+                <revnumber>1.0</revnumber>
+                <date>2009年3月</date>
+                <revdescription>
+                    <para role="author">Baptiste Mille-Mathias <email>baptiste.millemathias@gmail.com</email></para>
+                </revdescription>
+            </revision>
+            <!-- Uncomment for future revision
+		<revision>
+		  <revnumber>1.1</revnumber>
+		  <date>March 2009</date>
+		  <revdescription>
+			 <para role="author">Baptiste Mille-Mathias
+			     <email>baptiste.millemathias@gmail.com</email></para>
+		  </revdescription>
+		</revision>
+		-->
+        </revhistory>
+        <releaseinfo>本手册叙述的是 2.28 版的 gnome-bluetooth。</releaseinfo>
+        <legalnotice>
+            <title>反馈</title>
+            <para>要报告关于<application>gnome-bluetooth</application>应用程序或本手册缺陷或提供建议，请按照 <ulink url="ghelp:user-guide?feedback-bugs" type="help">GNOME 反馈页面 </ulink>中的指导。</para>
+        </legalnotice>
+        <abstract role="description">
+            <para><application>gnome-bluetooth</application>是 GNOME 桌面的管理蓝牙设备的应用程序。</para>
+        </abstract>
+    </articleinfo>
+    <indexterm>
+        <primary>gnome-bluetooth</primary>
+    </indexterm>
+    <indexterm>
+        <primary>蓝牙</primary>
+    </indexterm>
+    <indexterm>
+        <primary>通信</primary>
+    </indexterm>
+    
+    <sect1 id="gnome-bluetooth-intro">
+        <title>简介</title>
+        <para><application>gnome-bluetooth</application> 是一个在 GNOME 桌面下管理蓝牙的应用程序。<itemizedlist>
+                <listitem>
+                    <para><application>gnome-bluetooth</application> 允许发送文件到您的蓝牙设备或浏览其内容。</para>
+                </listitem>
+                <listitem>
+                    <para>连接到您的设备，例如头戴式耳机或音频网关。</para>
+                </listitem>
+                <listitem>
+                    <para>您可以添加或删除蓝牙设备，或者管理它们的权限。</para>
+                </listitem>
+            </itemizedlist></para>
+    </sect1>
+    
+    <sect1 id="gnome-bluetooth-applet">
+        <title>蓝牙小程序</title>
+        
+        <para>此小程序可以在提示托盘小程序中找到，该提示小程序允许您进行快速存取的一系列特性，如发送文件，或管理设备。</para>
+        <figure id="gnome-bluetooth-applet-notification">
+            <title>在提示托盘中的蓝牙小程序图标</title>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="figures/bluetooth-applet.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </figure>
+        
+        <sect2 id="gnome-bluetooth-applet-start">
+            <title>启动蓝牙小程序</title>
+            
+            <para><application>gnome-bluetooth</application> 小程序会在您登入会话时自动启动，并可以在通知区域找到它的图标。要手动载入此小程序，打开菜单 <menuchoice><guimenu>应用程序</guimenu><guimenu>附件</guimenu><guimenu>终端</guimenu></menuchoice> ，并键入 <command>bluetooth-applet</command>。</para>
+            <para>要阻止桌面上此小程序的载入，打开 <menuchoice><guimenu>系统</guimenu><guimenu>首选项</guimenu><guimenu>会话</guimenu></menuchoice> 菜单，然后禁用 <guilabel>蓝牙管理器</guilabel> 项。</para>
+        </sect2>
+        <sect2 id="gnome-bluetooh-applet-power">
+            <title>停用蓝牙适配器</title>
+            <para>禁用蓝牙适配器将会停止所有当前和将发生的通信。禁用蓝牙适配器可以节省笔记本电池的电能，所以它会增加自主性，当您不使用它时禁用您的蓝牙设备是一个好的主意。</para>
+            <para>点击此小程序的图标，然后选择<menuchoice><guimenu>关闭蓝牙设备</guimenu></menuchoice>，提示图标将会变成灰色。</para>
+        </sect2>
+
+        <sect2 id="gnome-bluetooth-applet-sending">
+            <title>发送文件到蓝牙设备</title>
+	    <para>选择此菜单以发送文件到设备；将会出现一个文件选择器，在其中选择要发送的文件，和要将文件发送到的目标设备。</para>
+        </sect2>
+        
+        <sect2 id="gnome-bluetooth-applet-browsing">
+            <title>浏览蓝牙设备</title>
+            <para>选择此菜单以在文件管理器中直接浏览设备文件系统</para>
+        </sect2>
+
+	<sect2 id="gnome-bluetooth-applet-devices">
+	    <title>上次使用的设备</title>
+	    <para>此部分显示您可以连接到的配对设备。</para>
+	    <para>要连接到此设备，点击它的名字，它会被加粗以指示已连接。</para>
+	</sect2>
+        
+        <sect2 id="gnome-bluetooth-applet-setup">
+            <title>添加新设备</title>
+            
+            <para>要添加一个新设备(由适配器与设备的配对组成)，点击小程序图标，选择<guimenu>设置新设备...</guimenu>。一个图形化助手将会帮助您设置您的设备。</para>
+            
+            <note>
+                <para>在开始此过程之前，不要忘记将远程设备设置为可发现模式，否则向导将不能找到它。</para>
+            </note>
+            
+            <para>此向导会显示在周边已经找到的可发现设备。您可以通过选择要查找的设备类型来过滤设备列表。</para>
+            
+            <figure id="gnome-bluetooth-wizard-img">
+                <title>设备搜索向导</title>
+                <screenshot>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="figures/bluetooth-wizard.png" format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </figure>
+            
+            <para>如果设备有硬编码的识别码，在新对话框中选择<guibutton>识别码选项...</guibutton>，并选择要用的识别码。</para>
+            <para>选择 <guibutton>前进</guibutton>进入配对步骤；如果您已经在先前的步骤中定义了固定的识别码，配对会自动完成，否则会在设备中给你显示一个需要输入的验证码，请在您的设备中键入。一旦完成，设备与适配器将会配对完毕。</para>
+        </sect2>
+
+        <sect2 id="gnome-bluetooth-applet-preferences">
+            <title>首选项</title>
+            
+            <para>点击小程序图标，然后选择<menuchoice><guilabel>首选项</guilabel></menuchoice>，会出现首选项设置对话框。</para>
+            <para>更多关于首选项的信息，参见<xref linkend="gnome-bluetooth-preferences"/>部分</para>
+        </sect2>
+    </sect1>
+    
+    <sect1 id="gnome-bluetooth-preferences">
+        <title>首选项</title>
+        <para><application>gnome-bluetooth</application>首选项对话框允许您管理各种蓝牙设备或更改蓝牙适配器的属性。</para>
+        
+        <figure id="gnome-bluetooth-prefs-img">
+            <title>首选项对话框</title>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="figures/bluetooth-properties.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </figure>
+            
+	<sect2 id="gnome-bluetooth-prefs-adapter-discover">
+	    <title>可发现</title>
+	    
+	    <para>当适配器设置为<guilabel>可发现</guilabel>时，周边的任何蓝牙设备将能看见它，并能请求配对。</para>
+	    <important>
+		<para>如同其他网络设备，蓝牙亦有安全风险，所以设置适配器为不可发现是一件不错的选择，以限制被入侵的风险。</para>
+	    </important>
+	    <para>仅当您计划与其他设备配对时，设置设备为可发现是有用的。一旦完成，您可以取消勾选<guilabel>可发现</guilabel>。</para>
+	    <note>
+		<para>当您的设备为不可发现时，与已经配对的蓝牙设备之间通信仍是允许的。</para>
+	    </note>
+	</sect2>
+	
+	<sect2 id="gnome-bluetooth-prefs-adapter-name">
+	    <title>适配器友好名称</title>
+	    <para>友好名称是标志每个蓝牙设备所用地址的别名，这样以便记忆。</para>
+	    <para>默认情况下，适配器的友好名称为<envar>HOSTNAME</envar>-0  (在这里 <envar>HOSTNAME</envar> 是您的计算机的名字)，要改变它，编辑文本项，并设置您想要的名字。改变将会立即生效。</para>
+	</sect2>
+	
+	<sect2 id="gnome-bluetooth-prefs-adapter-devices">
+	    <title>已知设备</title>
+	    <para><guilabel>已知设备</guilabel> 列出配对的蓝牙设备，并允许您对它们进行管理，如删除它们，连接它们，或添加新的设备。<itemizedlist>
+		    <listitem>
+			<para>设置新设备，如同<xref linkend="gnome-bluetooth-applet-setup"/>中的描述</para>
+		    </listitem>
+		    <listitem>
+			<para>连接/断开一个设备。</para>
+		    </listitem>
+		    <listitem>
+			<para>设备删除。删除将会阻止适配器与设备之间的配对，并且不允许它们之间的任何通信。如果您需要传输文件，您需要再次将它们配对。</para>
+		    </listitem>
+		</itemizedlist></para>
+	</sect2>
+	
+	<sect2 id="gnome-bluetooth-prefs-show-icon">
+	    <title>显示蓝牙设备</title>
+	    <para>您可以显示或隐藏面板上的蓝牙图标，更多面板小程序特性请参阅：<xref linkend="gnome-bluetooth-applet"/>。</para>
+	    
+	    <important>
+		<para>如果您禁用了面板上的图标，只有很有限的操作继续可用。</para>
+	    </important>
+	</sect2>
+
+	<sect2 id="gnome-bluetooth-prefs-receive">
+	    <title>接收文件</title>
+	    
+	    <para>点击 <guilabel>接收文件</guilabel> 按钮，将出现 <guilabel>个人文件共享首选项</guilabel> 对话框，您可以在这儿配置蓝牙文件接收和共享。</para>
+	    <important>
+		<para>该特性不是由 <application>gnome-bluetooth</application> 提供，必须安装 <application>gnome-user-share</application> 后才能使用。</para>
+		<para>更多资料请阅读 <ulink type="help" url="ghelp:gnome-user-share">个人文件共享手册</ulink>: <ulink type="help" url="ghelp:gnome-user-share#gnome-user-share-bluetooth-receiving">接收文件</ulink> 和 <ulink type="help" url="ghelp:gnome-user-share#gnome-user-share-enabling-bluetooth">共享</ulink>。</para>
+	    </important>
+	</sect2>
+    </sect1>
+
+    <sect1 id="gnome-bluetooth-FAQ">
+        <title>常见问题</title>
+        <qandaset>
+            <qandaentry>
+                <question>
+                    <para>我没有在我的电脑上看见如何用<application>gnome-bluetooth</application>接收文件，我眼神不好吗？</para>
+                </question>
+                <answer>
+                    <para>文件接收没有在<application>gnome-bluetooth</application>中执行，而是在<application>gnome-user-share</application>中，所以您必须安装此应用程序以通过蓝牙接收文件。在 <xref linkend="gnome-bluetooth-prefs-receive"/> 的按钮说明里，它只是配置对话框的一个启动器。</para>
+                </answer>
+            </qandaentry>
+            <qandaentry>
+                <question>
+                    <para>我发现了<application>gnome-bluetooth</application>中的一个缺陷，应该怎么做？</para>
+                </question>
+                <answer>
+                    <para>您应该将缺陷报告提交到<ulink url="http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-bluetooth"/>。</para>
+                </answer>
+            </qandaentry>
+            <!--
+	  <qandaentry>
+	      <question>
+		  <para></para>
+	      </question>
+	      <answer>
+		  <para></para>
+	      </answer>
+	  </qandaentry>-->
+        </qandaset>
+    </sect1>
+    
+    
+</article>

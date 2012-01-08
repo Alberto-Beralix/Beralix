@@ -1,0 +1,23 @@
+#!/bin/sh
+
+DESCRIPTION="Workload to impose a 100% busy loop on a CPU"
+
+case $1 in
+    info)    echo $DESCRIPTION ;;
+    depends)                   ;;
+    check)                     ;;
+    setup)                     ;;
+    once)    NOOP=1            ;;
+    run)
+        echo $$
+        while :
+        do
+            NOOP=1
+        done
+        ;;
+    *)
+        echo $DESCRIPTION
+        echo
+        echo "Usage: $0 {info|depends|setup|check|once|run}"
+        exit 1
+esac

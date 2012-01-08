@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_notifications" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#reviewing"/>
+    <link type="next" xref="howto_bookmarks"/>
+    <title type="sort">5. Notificaciones</title>
+    <desc>Leer los mensajes recibidos anteriormente</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Notificaciones</title>
+  <p>El escritorio GNOME incluye un «área de notificación» que las aplicaciones pueden usar para mostrar información al usuario. Los ejemplos de notificaciones incluyen mensajes entrantes de chat, los detalles de la canción que su reproductor multimedia está empezando a reproducir y advertencias de que el nivel de su batería es bajo.</p>
+  <p>Puesto que las notificaciones tienen como objetivo mostrar información a los usuarios sin interrumpir lo que estos están haciendo, estos mensajes tienden a aparecer y desaparecer de manera relativamente rápida. Además, no se pueden enfocar. Aunque <app>Orca</app> mostrará estos mensajes a medida que se reciban, es demasiado fácil interrumpir los anuncios de <app>Orca</app> de manera accidental al continuar escribiendo o cambiando el foco. Por esta razón, <app>Orca</app> tiene tres comandos que puede usar para acceder a los mensajes de notificación mostrados anteriormente:</p>
+  <list>
+    <item>
+      <p>Presentar el último (el más reciente) mensaje de notificación</p>
+    </item>
+    <item>
+      <p>Presentar el mensaje anterior de notificación</p>
+    </item>
+    <item>
+      <p>Presentar una lista de todos los mensajes de notificación</p>
+    </item>
+  </list>
+  <p>Los dos primeros comandos están diseñados principalmente para acceder rápidamente a un mensaje que acaba de recibir. El último comando es el más potente, puesto que almacena su historial de mensajes de notificación.</p>
+  <p>Cuando introduzca la lista de mensajes de notificación, se le dirá el tamaño de la lista y se le mostrarán las siguientes opciones:</p>
+  <list>
+    <item><p>Pulse «H» para obtener ayuda</p></item>
+    <item><p>Use las teclas «Arriba», «Abajo», «Inicio» o «Fin» para navegar en la lista.</p></item>
+    <item><p>Pulse «Escape» para salir.</p></item>
+    <item><p>Pulse «Espacio» para repetir el último mensaje leído.</p></item>
+    <item><p>Pulse un dígito para leer un mensaje específico.</p></item>
+  </list>
+  <p>Tenga en cuenta que el último mensaje recibido está en la parte superior de la lista.</p>
+  <p>Todos los comandos de <app>Orca</app> que sirven para revisar las notificaciones no están asociados de manera predeterminada. Puede asociar cualquiera o todos ellos al acceso directo o accesos directos que elija. La manera de realizar esta operación se describe en la <link xref="howto_key_bindings">introducción a las asociaciones de teclas</link>.</p>
+</page>

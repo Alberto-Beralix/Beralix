@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/apps/notification-daemon/script.py

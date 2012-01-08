@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installudev
+if [ "$1" = install ] || [ "$1" = upgrade ]; then
+	if [ -e "/etc/udev/rules.d/z60_xserver-xorg-video-intel.rules" ]; then
+		if [ "`md5sum \"/etc/udev/rules.d/z60_xserver-xorg-video-intel.rules\" | sed -e \"s/ .*//\"`" = \
+		     "`dpkg-query -W -f='${Conffiles}' xserver-xorg-video-intel | sed -n -e \"\\\\' /etc/udev/rules.d/z60_xserver-xorg-video-intel.rules '{s/ obsolete$//;s/.* //p}\"`" ]
+		then
+			rm -f "/etc/udev/rules.d/z60_xserver-xorg-video-intel.rules"
+		fi
+	fi
+fi
+# End automatically added section

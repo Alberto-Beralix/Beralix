@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unitydialog/screen0/options/alpha</key>
+      <applyto>/apps/compiz-1/plugins/unitydialog/screen0/options/alpha</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.75</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Alpha</short>
+        <long>What dimming alpha to use (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unitydialog/screen0/options/fade_time</key>
+      <applyto>/apps/compiz-1/plugins/unitydialog/screen0/options/fade_time</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>300</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Fade Time</short>
+        <long>How long the fade should take (ms) ( - )</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

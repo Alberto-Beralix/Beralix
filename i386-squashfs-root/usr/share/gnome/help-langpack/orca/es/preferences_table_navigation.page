@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_table_navigation" xml:lang="es">
+  <info>
+    <link type="guide" xref="preferences#application"/>
+    <link type="next" xref="preferences_chat"/>
+    <link type="seealso" xref="commands_structural_navigation"/>
+    <link type="seealso" xref="commands_table"/>
+    <title type="sort">2. Navegación por tablas</title>
+    <title type="link">Navegación por tablas</title>
+    <desc>Configurar la navegación de <app>Orca</app> dentro de las tablas</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Preferencias de la navegación por tablas</title>
+  <media type="image" mime="image/png" src="figures/preferences_table_navigation.png"/>
+  <p>La siguiente opción le permite personalizar cómo se comporta <app>Orca</app> cuando navega dentro de una tabla en aplicaciones habilitadas para <link xref="howto_structural_navigation">navegación-estructural</link>.</p>
+  <section>
+    <title>Leer las coordenadas de una celda</title>
+    <p>Si esta casilla está marcada, <app>Orca</app> anunciará las coordenadas de cada celda a la que navegue.</p>
+    <p>Valor predeterminado: marcado</p>
+  </section>
+  <section>
+    <title>Leer celdas dentro de otra celda</title>
+    <p>Si esta casilla está marcada, <app>Orca</app> anunciará cuántas filas y/o columnas abarca una celda cuando ésta abarque más de una.</p>
+    <p>Valor predeterminado: marcado</p>
+  </section>
+  <section>
+    <title>Anunciar la cabecera de una celda</title>
+    <p>Si esta casilla está marcada, <app>Orca</app> anunciará los cambios en la cabecera si se pueden determinar las cabeceras para la celda actual.</p>
+    <p>Valor predeterminado: marcado</p>
+  </section>
+  <section>
+    <title>Saltar celdas en blanco</title>
+    <p>Si esta casilla está marcada, <app>Orca</app> se saltará las celdas en blanco cuando utilice los comandos de navegación estructural por tablas de <app>Orca</app> para acceder a la tabla.</p>
+    <p>Valor predeterminado: no marcado</p>
+  </section>
+</page>

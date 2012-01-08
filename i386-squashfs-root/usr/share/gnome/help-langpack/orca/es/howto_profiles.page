@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_profiles" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#getting_started"/>
+    <link type="next" xref="howto_documents"/>
+    <title type="sort">9. Perfiles</title>
+    <desc>Mantener varias configuraciones</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Perfiles</title>
+  <p>Los perfiles de Orca le permiten guardar y cargar varias configuraciones, por lo que puede acceder rápidamente a la configuración que necesite.</p>
+  <figure>
+    <title>Mantener varias configuraciones</title>
+    <desc>Esta opciones aparecen en la parte inferior de la página <gui>General</gui> del diálogo de preferencias de <app>Orca</app>.</desc>
+    <media type="image" mime="image/png" src="figures/preferences_profiles.png"/>
+  </figure>
+  <steps>
+    <title>Guardar un perfil nuevo</title>
+    <item>
+      <p>Entre en el cuadro de diálogo de <link xref="preferences">preferencias de Orca</link>.</p>
+    </item>
+    <item>
+      <p>Cambie la configuración que quiera.</p>
+    </item>
+    <item>
+      <p>En la página <gui>General</gui> pulse el botón <gui>Guardar como</gui>.</p>
+    </item>
+    <item>
+      <p>Escriba el nombre del perfil nuevo en el cuadro de diálogo <gui>Guardar perfil como</gui> resultante.</p>
+      <p>
+        <media type="image" mime="image/png" src="figures/profiles_save_as.png"/>
+      </p>
+    </item>
+    <item>
+      <p>Pulse el botón <gui>Aceptar</gui> en el cuadro de diálogo <gui>Guardar perfil como</gui>.</p>
+    </item>
+  </steps>
+  <steps>
+    <title>Cargar un perfil existente</title>
+    <item>
+      <p>Entre en el cuadro de diálogo de <link xref="preferences">preferencias de Orca</link>.</p>
+    </item>
+    <item>
+      <p>En la página <gui>General</gui>, seleccione el perfil que cargar desde el cuadro combinado <gui>Perfil activo</gui>.</p>
+    </item>
+    <item>
+      <p>Pulse el botón <gui>Cargar</gui>.</p>
+    </item>
+    <item>
+      <p>Se le pedirá que confirme. Pulse el botón <gui>Sí</gui>.</p>
+      <p>
+        <media type="image" mime="image/png" src="figures/profiles_load.png"/>
+      </p>
+    </item>
+    <item>
+      <p>Pulse el botón <gui>Aceptar</gui>.</p>
+    </item>
+  </steps>
+  <steps>
+    <title>Cambiar un perfil existente</title>
+    <item>
+      <p>Siga los pasos descritos anteriormente para cargar el perfil que quiere cambiar.</p>
+    </item>
+    <item>
+      <p>Siga los pasos descritos anteriormente para guardar un perfil nuevo.</p>
+    </item>
+    <item>
+      <p>Cuando se le pida el nombre del perfil nuevo, escriba el mismo nombre del perfil actual. Cuando pulse el botón <gui>Aceptar</gui>, se le dirá que hay un conflicto de nombres.</p>
+      <p>
+        <media type="image" mime="image/png" src="figures/profiles_conflict.png"/>
+      </p>
+    </item>
+    <item>
+      <p>Pulse el botón <gui>Sí</gui> para confirmar que quiere sobreescribir el perfil existente con la nueva configuración.</p>
+    </item>
+  </steps>
+  <steps>
+    <title>Cambiar el <gui>Perfil inicial</gui></title>
+    <item>
+      <p>Entre en el cuadro de diálogo de <link xref="preferences">preferencias de Orca</link>.</p>
+    </item>
+    <item>
+      <p>En la página <gui>General</gui>, seleccione el perfil que cargar desde el cuadro combinado <gui>Perfil inicial</gui>.</p>
+    </item>
+    <item>
+      <p>Pulse el botón <gui>Aceptar</gui>. La próxima vez que ejecute <app>Orca</app>, se usará el perfil recientemente seleccionado.</p>
+    </item>
+  </steps>
+</page>

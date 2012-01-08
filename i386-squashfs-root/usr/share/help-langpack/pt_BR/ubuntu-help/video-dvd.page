@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="video-dvd" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="media#videos"/>
+    
+    <desc>Voce pode não ter os codecs corretos instalados ou o DVD pode ser da região errada.</desc>
+    
+    <revision version="11.04" date="2011-04-06" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Por que os DVDs não funcionarão?</title>
+
+<p>Se voce inserir um DVD no seu computador a ele não tocar, você pode não ter os "cocedcs" de DVD instalados ou o DVD pode ser de uma "região" diferente.</p>
+
+<section id="codecs">
+ <title>Instalando o codec correto para assistir DVD</title>
+ <p>Para tocar DVDs, você precisa ter o <em>codecs</em> correto instalado. Um codec é um software que permite aplicações entender o formato de um vídeo ou de um áudio. Se você tentar tocar um DVD e não tiver o codec apropriado instalado, o programa que está tentando ler o DVD deverá informá-lo sobre isso e talvez oferecer uma opção para instalar o codec apropriado.</p>
+ <p>DVDs também são "protegidos contra cópia" utilizando um sistema chamado CSS. Isso previne que você copie DVDs, mas isso também o priva de assisti-lo a não ser que você tenha algum <link xref="video-dvd-restricted">software extra</link> para manipular a proteção de cópia.</p>
+</section>
+
+<section id="region">
+ <title>Verificando a região do DVD</title>
+ <p>Os DVDs tem um "código de região", que informa qual região do mundo você será capaz de assisti-lo. Os tocadores de DVD só podem passar DVDs da mesma região que eles foram programados. Por exemplo, se você tem um tocador de DVD da região 1, você somente poderá assistir DVDs da América do Norte.</p>
+ <p>Se as regiões do DVD do seu computador e do DVD não forem iguais, você não será capaz de assistir ao DVD. Muitas vezes é possível trocar a região utilizada pelo tocador de DVD, mas você só poderá fazer isso poucas vezes antes que ele trave em uma única região permanentemente.</p>
+ <p>Para trocar a região do DVD do seu computador, use <link href="apt:regionset">define região</link>.</p>
+</section>
+	
+</page>

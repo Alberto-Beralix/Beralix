@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="disk-partitions" xml:lang="es">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    
+    <credit type="author">
+      <name>Equipo de documentación GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+   
+    <desc>Comprenda lo que son volúmenes y particiones y utilice la utilidad de disco para gestionarlas.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Gestionar volúmenes y particiones</title>
+
+<p>The word <em>volume</em> is used to describe a storage device, like a hard disk. It can also refer to a <em>part</em> of the storage on that device, because you can split the storage up into chunks. The computer makes this storage accessible via your file system in a process referred to as <em>mounting</em>. Mounted volumes may be hard drives, USB drives, DVD-RWs, SD cards, and other media. If a volume is currently mounted, you can read (and possibly write) files on it.</p>
+
+<p>Often, a mounted volume is called a <em>partition</em>, though they are not necessarily the same thing. A “partition” refers to a <em>physical</em> area of storage on a single disk drive. Once a partition has been mounted, it can be referred to as a volume because you can access the files on it. You can think of volumes as the labeled, accessible “storefronts” to the functional “back rooms” of partitions and drives.</p>
+
+<section id="manage">
+ <title>Ver y gestionar volúmenes y particiones usando la utilidad de disco</title>
+ <p>Puede comprobar y modificar sus volúmenes de almacenamiento del equipo con la utilidad de disco.</p>
+<steps>
+ <item>
+  <p>Open the <gui>Activities</gui> overview and start the <app>Disk Utility</app>.</p>
+ </item>
+ <item>
+  <p>En el panel denominado <gui>Dispositivos de almacenamiento</gui>, encontrará discos duros, unidades de CD/DVD y otros dispositivos físicos. Pulse en el dispositivo que quiera inspeccionar.</p>
+ </item>
+ <item>
+ <p> In the right pane, the area labeled <gui>Volumes</gui> provides a visual breakdown of the volumes and partitions present on the selected device. It also contains a variety of tools used to manage these volumes.</p>
+ <p>Tenga cuidado: es posible borrar completamente los datos de su disco usando estas utilidades.</p>
+</item>
+</steps>
+
+<p>Su equipo muy probablemente tenga al menos una partición <em>primaria</em> y una sola partición <em>de intercambio</em>. El sistema operativo usa la partición de intercambio para la gestión de la memoria y normalmente no se monta. La partición primaria contiene el sistema operativo, programas, preferencias y archivo personales. Estos archivos también se pueden distribuir entre diferentes particiones por seguridad o conveniencia.</p>
+
+<p>One primary partition must contain information that your computer uses to start up, or <em>boot</em>. For this reason it is sometimes called a boot partition, or boot volume. To determine if a volume is bootable, look at its <gui>Partition Flags</gui> in the disk utility. External media such as USB drives and CDs may also contain a bootable volume.</p>
+
+</section>
+
+</page>

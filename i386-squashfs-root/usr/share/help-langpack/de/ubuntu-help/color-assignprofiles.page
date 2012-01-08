@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-assignprofiles" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="color"/>
+    <link type="seealso" xref="color-whatisprofile"/>
+    <link type="seealso" xref="color-why-calibrate"/>
+    <desc>Sehen Sie unter <guiseq><gui>Systemeinstellungen</gui><gui>Farbe</gui></guiseq> nach, um diese Einstellung zu ändern.</desc>
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Wie ordne ich Geräten Profile zu?</title>
+
+  <p>Öffnen Sie <guiseq><gui>Systemeinstellungen</gui><gui>Farbe</gui></guiseq> und klicken Sie auf das Gerät, dem Sie ein Profil hinzufügen möchten.</p>
+  <p>Durch einen Klick auf <gui>Profil hinzufügen</gui> können Sie ein bestehendes Profil auswählen oder eine neue Datei importieren.</p>
+  <p>
+    Each device can have multiple profiles assigned to it, but only one
+    profile can be the <em>default</em> profile.
+    The default profile is used when there is no extra information to
+    allow the profile to be chosen automatically.
+    An example of this automatic selection would be if one profile was
+    created for glossy paper and another plain paper.
+  </p>
+
+  <figure>
+    <desc>You can make a profile default by changing it with the radio button.</desc>
+    <media type="image" mime="image/png" src="figures/color-profile-default.png"/>
+  </figure>
+
+  <p>
+    If calibration hardware is connected the <gui>Calibrate...</gui>
+    button will create a new profile.
+  </p>
+
+</page>

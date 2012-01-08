@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-mobile" xml:lang="es">
+  <info>
+    <link type="guide" xref="net"/>
+    
+    <revision version="11.04" date="2011-04-30" status="final"/>
+
+    <credit type="author">
+      <name>Equipo de documentación de Ubuntu</name>
+    </credit>
+
+    <desc>Conectarse a Internet usando banda ancha móvil</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Conectarse por banda ancha móvil</title>
+
+    <p><em>Banda ancha móvil</em> se refiere a todo tipo de conexión a Internet de alta velocidad proporcionada por dispositivos externos como un lápiz USB 3G o un teléfono móvil con conexión de datos HSPA/UMTS/GPRS integrado. Algunos portátiles ya incorporan dispositivos de banda ancha móvil.</p>
+    <p>La mayoría de los dispositivos de banda ancha móvil deberían ser reconocidos automáticamente cuando los conecta a su equipo. Ubuntu le solicitará configurar el dispositivo.</p>
+    <steps>
+        <item>
+          <p>El asistente de <guilabel>Conexión de banda ancha móvil</guilabel> se abrirá automáticamente cuando conecte el dispositivo.</p>
+        </item>
+        <item>
+          <p>Pulse <gui>Adelante</gui> e introduzca sus detalles, incluyendo el país donde compró su dispositivo de banda ancha móvil, el proveedor de la red y el tipo de conexión  (por ejemplo, <em>contrato</em> or <em>prepago</em>).</p>
+        </item>
+        <item>
+          <p>Asigne un nombre a la conexión y pulse <gui>Aplicar</gui>.</p>
+        </item>
+        <item>
+          <p>Su conexión ya está lista para su uso. Para conectarse, abra el <gui>menú de red</gui> en el <gui>panel superior</gui> y seleccione su conexión nueva.</p>
+        </item>
+        <item>
+          <p>Para desconectarse, pulse el <gui>menú de red</gui> del panel superior y pulse en <gui>Desconectar</gui>.</p>
+        </item>
+    </steps>
+    <p>Si no se le pide que configure el dispositivo cuando lo conecte, todavía es posible hacer que Ubuntu lo reconozca. En tal caso, puede añadir la conexión manualmente.</p>
+    <steps>
+    	<item>
+    	  <p>Pulse en el <link xref="unity-appmenu-intro">menú de red</link> del panel superior y seleccione <gui>Editar las conexiones...</gui></p>
+    	</item>
+    	<item>
+    	  <p>Vaya a la pestaña <gui>Banda ancha móvil</gui>.</p>
+    	</item>
+    	<item>
+    	  <p>Pulse <gui>Añadir</gui>.</p>
+    	</item>
+    	<item>
+    	  <p>Esto debería abrir el asistente <guilabel>Nueva conexión de banda ancha móvil</guilabel>. Introduzca sus datos como se describe arriba.</p>
+    	</item>
+    </steps>
+
+ 
+</page>

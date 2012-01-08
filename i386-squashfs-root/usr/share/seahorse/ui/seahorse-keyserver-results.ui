@@ -1,0 +1,43 @@
+<ui>
+	<menubar>
+		<menu name="File" action="file-menu">
+			<menuitem action="key-import-keyring"/>
+			<menuitem action="file-export"/>
+			<separator/>
+			<placeholder name="FileCommands">
+				<menuitem action="show-properties"/>
+			</placeholder>
+			<separator/>
+			<menuitem action="app-close"/>
+		</menu>
+		<menu name="Edit" action="edit-menu">
+			<menuitem action="edit-export-clipboard"/>
+		</menu>
+		<menu name="Remote" action="remote-menu">
+			<menuitem action="remote-find"/>
+		</menu>
+		<menu name="Help" action="help-menu">
+			<menuitem action="help-show"/>
+<!--		<menuitem action="app-about"/> -->
+		</menu> 
+
+	</menubar>
+  
+	<toolbar name="MainToolbar">
+		<placeholder name="ToolItems">
+			<toolitem action="key-import-keyring"/>
+			<toolitem action="file-export"/>
+			<toolitem action="show-properties"/>
+		</placeholder>
+	</toolbar>
+
+	<popup name="KeyPopup">
+		<menuitem action="edit-export-clipboard"/>
+		<separator/>
+		<menuitem action="key-import-keyring"/>
+		<menuitem action="file-export"/>
+		<separator/>		
+		<menuitem action="show-properties"/>
+	</popup>
+	
+</ui>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="tasks" id="prev-conv" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#text-conv"/>
+    <desc>浏览或搜索您之前的会话。</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-17" status="stub"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-31" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-08-31" status="done"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <license>
+      <p>知识共享-相同方式共享 (Creative Commons Share Alike) 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>查看之前的会话</title>
+
+  <comment>
+    <cite date="2009-08-31">Shaun McCance</cite>
+    <p>Highlighting text is quirky:
+    <link href="http://bugzilla.gnome.org/show_bug.cgi?id=593733">#593733</link>.
+    If there's an actual highlighting going on, independent of the selection
+    (like in yellow or something), we can use the term "highlight".  Otherwise
+    we need to use the term "select".  Watch that bug.</p>
+  </comment>
+
+  <p><app>Empathy</app> 自动保存您和联系人的所有文字会话。您可以<link xref="#search">搜索之前全部的会话</link>或者根据联系人和日期<link xref="#browse">浏览之前的会话。</link></p>
+
+  <note>
+    <p>您不需要连接到网络来查看和搜索您之前的会话。</p>
+  </note>
+
+  <section id="search" style="task">
+  <title>搜索之前的会话</title>
+
+  <p>您可以在之前的所有会话中进行全文搜索。</p>
+
+  <steps>
+    <item>
+      <p>从<gui>联系人列表</gui>窗口，选择<guiseq><gui>查看</gui><gui>以前的会话</gui></guiseq>。或者可以按<key>F3</key>键。</p>
+    </item>
+    <item>
+      <p>选择<gui>搜索</gui>标签。</p>
+    </item>
+    <item>
+      <p>In the <gui>For</gui> field, type the text you want to search for.
+      Click <gui>Find</gui> or press <key>Enter</key>.</p>
+    </item>
+    <item>
+      <p>任何符合搜索项的会话都会显示在搜索域下面的列表中。会话默认安装时间排序。</p>
+    </item>
+    <item>
+      <p>Click on a conversation to view it.  <app>Empathy</app> will select the text
+      in the conversation that matched your search terms.</p>
+    </item>
+  </steps>
+  </section>
+
+  <section id="browse" style="task">
+  <title>浏览之前的会话</title>
+
+  <p>您可以按时间顺序浏览之前和联系人或在聊天室中的会话。</p>
+
+  <steps>
+    <item>
+      <p>从<gui>联系人列表</gui>窗口，选择<guiseq><gui>查看</gui><gui>以前的会话</gui></guiseq>。或者可以按<key>F3</key>键。</p>
+    </item>
+    <item>
+      <p>选择<gui>会话</gui>标签。</p>
+    </item>
+    <item>
+      <p>Select an account from the drop-down list in the top left.  A list of
+      contacts and chat room for that account will be shown below.</p>
+    </item>
+    <item>
+      <p>Select a contact or chat room to view your previous conversations from.
+      By default the most recent conversation will be shown.</p>
+    </item>
+    <item>
+      <p>You can browse your conversations by date.  Days on which you had a conversation
+      with the selected contact will be shown in bold text.  Click a date to select it.
+      Click the arrows next to the month and year to browse earlier dates.</p>
+    </item>
+  </steps>
+
+  <p>You can search for text in the displayed conversation by typing into the
+  search field at the top.  The matching text will be highlighted.</p>
+
+  <note style="tip">
+    <p>You can quickly view the previous conversations with one of your contacts
+    from the <gui>Contact List</gui> window.  Simply right click the contact and
+    choose <gui>View Previous Conversations</gui>.  The <gui>Previous
+    Conversations</gui> window will open with that contact already selected.</p>
+  </note>
+    
+  </section>
+
+</page>

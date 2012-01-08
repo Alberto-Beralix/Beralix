@@ -1,0 +1,59 @@
+#!/bin/bash
+
+if [ ! -x "$(which whiptail)" ]; then
+  echo "Couldn't find whiptail, starting root shell instead of recovery menu."
+  sulogin
+  clear
+  exit
+fi
+
+# include gettext stuff
+. /lib/recovery-mode/l10n.sh
+
+# main
+menu_text=$(eval_gettext "Recovery Menu (limited read-only menu)")
+READONLY=true
+export READONLY
+
+while true; do
+  unset items
+
+  items[c++]="resume"
+  items[c++]=$(eval_gettext "   Resume normal boot")
+
+  for i in /lib/recovery-mode/options/*; do
+    if [ -x "$i" ]; then
+      name="`"$i" test`"
+      if [ $? -eq 0 ]; then
+        items[c++]="`basename "$i"`"
+        items[c++]="   $name"
+      fi
+    fi
+  done
+
+  choice="$(whiptail --menu "$menu_text" 15 70 6 \
+                             "${items[@]}" \
+                             3>&1 1>&2 2>&3 3>&-)"
+
+  if [ $? -ne 0 ]; then
+    choice="resume"
+  fi
+
+  if [ "$choice" = "resume" ]; then
+    clear
+    exit
+  fi
+
+  "/lib/recovery-mode/options/$choice"
+  retval=$?
+
+  if [ "$choice" = "remount" ] || [ "$choice" = "fsck" ]; then
+    menu_text=$(eval_gettext "Recovery Menu")
+    READONLY=false
+  fi
+
+  if [ "$retval" -eq 42 ]; then
+    clear
+    exit 0
+  fi
+done

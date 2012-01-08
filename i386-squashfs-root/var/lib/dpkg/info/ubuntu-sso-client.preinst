@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+LASTVERSION="0.99.4-0ubuntu1"
+
+pkill -HUP -f ubuntu-sso-login || true
+
+dpkg-maintscript-helper rm_conffile \
+/etc/xdg/ubuntu-sso/oauth_registration.d/ubuntuone "$LASTVERSION" -- "$@"
+
+dpkg-maintscript-helper rm_conffile \
+/etc/xdg/ubuntu-sso/oauth_urls "$LASTVERSION" -- "$@"
+
+

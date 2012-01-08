@@ -1,0 +1,38 @@
+[Desktop Entry]
+X-AppInstall-Package=kshutdown
+X-AppInstall-Popcon=114
+X-AppInstall-Section=universe
+
+Version=1.0
+# Encoding=UTF-8
+
+Name=KShutdown
+
+Comment=An advanced shut down utility
+
+# TODO: Imported from KShutdown 1.0.x; please update and uncomment
+#Comment[cs]=Vypínací utilita pro KDE
+#Comment[de]=Erweitertes Herunterfahren für KDE
+#Comment[el]=Ένα εργαλείο τερματισμού για το KDE
+#Comment[fr]=Utilitaire de gestion d'arrêt pour KDE
+#Comment[it]=Una utilit�KDE per lo spegnimento del sistema
+
+
+# visible in the menu instead of "KShutdown"
+GenericName=System Shut Down Utility
+
+# TODO: Imported from KShutdown 1.0.x; please update and uncomment
+#GenericName[cs]=Časované vypnutí
+#GenericName[fr]=Gestionnaire d'arrêt du système
+
+
+Exec=kshutdown
+Icon=kshutdown
+Type=Application
+
+# DOC: http://api.kde.org/4.x-api/kdelibs-apidocs/kdecore/html/classKAboutData.html
+X-DBUS-ServiceName=net.sf.kshutdown
+# DOC: http://standards.freedesktop.org/menu-spec/latest/apa.html
+Categories=Utility;
+
+X-Ubuntu-Gettext-Domain=app-install-data

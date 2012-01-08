@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+	<enum id="org.gnome.totem.plugins.jamendo.Format">
+		<value value="0" nick="ogg"/>
+		<value value="1" nick="mp3"/>
+	</enum>
+
+	<schema path="/org/gnome/Totem/jamendo/" id="org.gnome.totem.plugins.jamendo" gettext-domain="totem">
+		<key type="u" name="num-per-page">
+			<default>10</default>
+			<summary>Number of results per page</summary>
+			<description>The number of Jamendo search results to display in each page of results.</description>
+		</key>
+		<key name="format" enum="org.gnome.totem.plugins.jamendo.Format">
+			<default>'ogg'</default>
+			<summary>Audio format to download from Jamendo</summary>
+			<description>The preferred audio format to download tracks from Jamendo in.</description>
+		</key>
+	</schema>
+</schemalist>

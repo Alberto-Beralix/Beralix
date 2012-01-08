@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/papyon/service/description/SchematizedStore/__init__.py

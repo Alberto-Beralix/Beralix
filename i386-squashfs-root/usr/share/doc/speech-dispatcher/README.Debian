@@ -1,0 +1,32 @@
+* Using Speech Dispatcher with Festival
+
+It is recommended to run Speech Dispatcher with Festival, since Festival is the
+speech synthesizer providing most functionality together with Speech
+Dispatcher.  If you want to use Speech Dispatcher with Festival, please install
+the speech-dispatcher-festival package and read its README.Debian.
+
+* Using Speech Dispatcher with ALSA or OSS
+
+When Speech Dispatcher is used with direct sound output to ALSA or OSS (on the
+contrary to using a sound server, e.g. PulseAudio) and your audio device is not
+set up to allow concurrent access, Speech Dispatcher may block all your audio
+output.  For this reason the default Speech Dispatcher configuration comes with
+PulseAudio as the only audio output.  If you don't want to use PulseAudio for
+Speech Dispatcher audio output, change AudioOutputMethod option in your Speech
+Dispatcher configuration (either /etc/speech-dispatcher/speechd.conf or
+~/.speech-dispatcher/speechd.conf) accordingly and restart your Speech
+Dispatcher processes.
+
+* System wide startup
+
+If you want to run Speech Dispatcher as a system wide process, set RUN option
+in /etc/default/speech-dispatcher to `yes', and set the SPEECHD_SOCKET environment
+variable to /var/run/speech-dispatcher/speechd.sock before starting clients.
+
+* Log file permissions
+
+Please note all Speech Dispatcher log files can reveal your user interactions
+and texts you read through Speech Dispatcher, among others.  For this reason,
+the /var/log/speech-dispatcher/ directory is world-unreadable by default.
+
+ -- Milan Zamazal <pdm@debian.org>, Fri, 02 Jul 2010

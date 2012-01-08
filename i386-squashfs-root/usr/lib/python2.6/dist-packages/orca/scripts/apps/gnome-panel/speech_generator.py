@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/apps/gnome-panel/speech_generator.py

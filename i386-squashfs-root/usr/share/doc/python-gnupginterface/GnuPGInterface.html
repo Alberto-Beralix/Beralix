@@ -1,0 +1,581 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module GnuPGInterface</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>GnuPGInterface</strong></big></big> (version 0.3.2)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/build/buildd/gnupginterface-0.3.2/GnuPGInterface.py">/build/buildd/gnupginterface-0.3.2/GnuPGInterface.py</a></font></td></tr></table>
+    <p><tt>Interface&nbsp;to&nbsp;GNU&nbsp;Privacy&nbsp;Guard&nbsp;(<a href="#GnuPG">GnuPG</a>)<br>
+&nbsp;<br>
+<a href="#GnuPGInterface">GnuPGInterface</a>&nbsp;is&nbsp;a&nbsp;Python&nbsp;module&nbsp;to&nbsp;interface&nbsp;with&nbsp;<a href="#GnuPG">GnuPG</a>.<br>
+It&nbsp;concentrates&nbsp;on&nbsp;interacting&nbsp;with&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;via&nbsp;filehandles,<br>
+providing&nbsp;access&nbsp;to&nbsp;control&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;via&nbsp;versatile&nbsp;and&nbsp;extensible&nbsp;means.<br>
+&nbsp;<br>
+This&nbsp;module&nbsp;is&nbsp;based&nbsp;on&nbsp;<a href="#GnuPG">GnuPG</a>::Interface,&nbsp;a&nbsp;Perl&nbsp;module&nbsp;by&nbsp;the&nbsp;same&nbsp;author.<br>
+&nbsp;<br>
+Normally,&nbsp;using&nbsp;this&nbsp;module&nbsp;will&nbsp;involve&nbsp;creating&nbsp;a<br>
+<a href="#GnuPG">GnuPG</a>&nbsp;object,&nbsp;setting&nbsp;some&nbsp;options&nbsp;in&nbsp;it's&nbsp;'options'&nbsp;data&nbsp;member<br>
+(which&nbsp;is&nbsp;of&nbsp;type&nbsp;<a href="#Options">Options</a>),&nbsp;creating&nbsp;some&nbsp;pipes<br>
+to&nbsp;talk&nbsp;with&nbsp;<a href="#GnuPG">GnuPG</a>,&nbsp;and&nbsp;then&nbsp;calling&nbsp;the&nbsp;run()&nbsp;method,&nbsp;which&nbsp;will<br>
+connect&nbsp;those&nbsp;pipes&nbsp;to&nbsp;the&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;process.&nbsp;run()&nbsp;returns&nbsp;a<br>
+<a href="#Process">Process</a>&nbsp;object,&nbsp;which&nbsp;contains&nbsp;the&nbsp;filehandles&nbsp;to&nbsp;talk&nbsp;to&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;with.<br>
+&nbsp;<br>
+Example&nbsp;code:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;import&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a><br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;plaintext&nbsp;&nbsp;=&nbsp;"Three&nbsp;blind&nbsp;mice"<br>
+&gt;&gt;&gt;&nbsp;passphrase&nbsp;=&nbsp;"This&nbsp;is&nbsp;the&nbsp;passphrase"<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;gnupg&nbsp;=&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a>.<a href="#GnuPG">GnuPG</a>()<br>
+&gt;&gt;&gt;&nbsp;gnupg.options.armor&nbsp;=&nbsp;1<br>
+&gt;&gt;&gt;&nbsp;gnupg.options.meta_interactive&nbsp;=&nbsp;0<br>
+&gt;&gt;&gt;&nbsp;gnupg.options.extra_args.append('--no-secmem-warning')<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;Normally&nbsp;we&nbsp;might&nbsp;specify&nbsp;something&nbsp;in<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;gnupg.options.recipients,&nbsp;like<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;gnupg.options.recipients&nbsp;=&nbsp;[&nbsp;'0xABCD1234',&nbsp;'bob@foo.bar'&nbsp;]<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;but&nbsp;since&nbsp;we're&nbsp;doing&nbsp;symmetric-only&nbsp;encryption,&nbsp;it's&nbsp;not&nbsp;needed.<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;If&nbsp;you&nbsp;are&nbsp;doing&nbsp;standard,&nbsp;public-key&nbsp;encryption,&nbsp;using<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;--encrypt,&nbsp;you&nbsp;will&nbsp;need&nbsp;to&nbsp;specify&nbsp;recipients&nbsp;before<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;calling&nbsp;gnupg.run()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;First&nbsp;we'll&nbsp;encrypt&nbsp;the&nbsp;test_text&nbsp;input&nbsp;symmetrically<br>
+&gt;&gt;&gt;&nbsp;p1&nbsp;=&nbsp;gnupg.run(['--symmetric'],<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;create_fhs=['stdin',&nbsp;'stdout',&nbsp;'passphrase'])<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;p1.handles['passphrase'].write(passphrase)<br>
+&gt;&gt;&gt;&nbsp;p1.handles['passphrase'].close()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;p1.handles['stdin'].write(plaintext)<br>
+&gt;&gt;&gt;&nbsp;p1.handles['stdin'].close()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;ciphertext&nbsp;=&nbsp;p1.handles['stdout'].read()<br>
+&gt;&gt;&gt;&nbsp;p1.handles['stdout'].close()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;process&nbsp;cleanup<br>
+&gt;&gt;&gt;&nbsp;p1.wait()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;Now&nbsp;we'll&nbsp;decrypt&nbsp;what&nbsp;we&nbsp;just&nbsp;encrypted&nbsp;it,<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;using&nbsp;the&nbsp;convience&nbsp;method&nbsp;to&nbsp;get&nbsp;the<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;passphrase&nbsp;to&nbsp;<a href="#GnuPG">GnuPG</a><br>
+&gt;&gt;&gt;&nbsp;gnupg.passphrase&nbsp;=&nbsp;passphrase<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;p2&nbsp;=&nbsp;gnupg.run(['--decrypt'],&nbsp;create_fhs=['stdin',&nbsp;'stdout'])<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;p2.handles['stdin'].write(ciphertext)<br>
+&gt;&gt;&gt;&nbsp;p2.handles['stdin'].close()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;decrypted_plaintext&nbsp;=&nbsp;p2.handles['stdout'].read()<br>
+&gt;&gt;&gt;&nbsp;p2.handles['stdout'].close()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;process&nbsp;cleanup<br>
+&gt;&gt;&gt;&nbsp;p2.wait()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;Our&nbsp;decrypted&nbsp;plaintext:<br>
+&gt;&gt;&gt;&nbsp;decrypted_plaintext<br>
+'Three&nbsp;blind&nbsp;mice'<br>
+&gt;&gt;&gt;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;...and&nbsp;see&nbsp;it's&nbsp;the&nbsp;same&nbsp;as&nbsp;what&nbsp;we&nbsp;orignally&nbsp;encrypted<br>
+&gt;&gt;&gt;&nbsp;assert&nbsp;decrypted_plaintext&nbsp;==&nbsp;plaintext,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<a href="#GnuPG">GnuPG</a>&nbsp;decrypted&nbsp;output&nbsp;does&nbsp;not&nbsp;match&nbsp;original&nbsp;input"<br>
+&gt;&gt;&gt;<br>
+&gt;&gt;&gt;<br>
+&gt;&gt;&gt;&nbsp;##################################################<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;Now&nbsp;let's&nbsp;trying&nbsp;using&nbsp;run()'s&nbsp;attach_fhs&nbsp;paramter<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;we're&nbsp;assuming&nbsp;we're&nbsp;running&nbsp;on&nbsp;a&nbsp;unix...<br>
+&gt;&gt;&gt;&nbsp;input&nbsp;=&nbsp;open('/etc/motd')<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;p1&nbsp;=&nbsp;gnupg.run(['--symmetric'],&nbsp;create_fhs=['stdout'],<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;attach_fhs={'stdin':&nbsp;input})<br>
+&gt;&gt;&gt;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;will&nbsp;read&nbsp;the&nbsp;stdin&nbsp;from&nbsp;/etc/motd<br>
+&gt;&gt;&gt;&nbsp;ciphertext&nbsp;=&nbsp;p1.handles['stdout'].read()<br>
+&gt;&gt;&gt;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;process&nbsp;cleanup<br>
+&gt;&gt;&gt;&nbsp;p1.wait()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;Now&nbsp;let's&nbsp;run&nbsp;the&nbsp;output&nbsp;through&nbsp;<a href="#GnuPG">GnuPG</a><br>
+&gt;&gt;&gt;&nbsp;#&nbsp;We'll&nbsp;write&nbsp;the&nbsp;output&nbsp;to&nbsp;a&nbsp;temporary&nbsp;file,<br>
+&gt;&gt;&gt;&nbsp;import&nbsp;tempfile<br>
+&gt;&gt;&gt;&nbsp;temp&nbsp;=&nbsp;tempfile.TemporaryFile()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;p2&nbsp;=&nbsp;gnupg.run(['--decrypt'],&nbsp;create_fhs=['stdin'],<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;attach_fhs={'stdout':&nbsp;temp})<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;give&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;our&nbsp;encrypted&nbsp;stuff&nbsp;from&nbsp;the&nbsp;first&nbsp;run<br>
+&gt;&gt;&gt;&nbsp;p2.handles['stdin'].write(ciphertext)<br>
+&gt;&gt;&gt;&nbsp;p2.handles['stdin'].close()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;process&nbsp;cleanup<br>
+&gt;&gt;&gt;&nbsp;p2.wait()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;rewind&nbsp;the&nbsp;tempfile&nbsp;and&nbsp;see&nbsp;what&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;gave&nbsp;us<br>
+&gt;&gt;&gt;&nbsp;temp.seek(0)<br>
+&gt;&gt;&gt;&nbsp;decrypted_plaintext&nbsp;=&nbsp;temp.read()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;compare&nbsp;what&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;decrypted&nbsp;with&nbsp;our&nbsp;original&nbsp;input<br>
+&gt;&gt;&gt;&nbsp;input.seek(0)<br>
+&gt;&gt;&gt;&nbsp;input_data&nbsp;=&nbsp;input.read()<br>
+&gt;&gt;&gt;<br>
+&gt;&gt;&gt;&nbsp;assert&nbsp;decrypted_plaintext&nbsp;==&nbsp;input_data,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<a href="#GnuPG">GnuPG</a>&nbsp;decrypted&nbsp;output&nbsp;does&nbsp;not&nbsp;match&nbsp;original&nbsp;input"<br>
+&nbsp;<br>
+To&nbsp;do&nbsp;things&nbsp;like&nbsp;public-key&nbsp;encryption,&nbsp;simply&nbsp;pass&nbsp;do&nbsp;something<br>
+like:<br>
+&nbsp;<br>
+gnupg.passphrase&nbsp;=&nbsp;'My&nbsp;passphrase'<br>
+gnupg.options.recipients&nbsp;=&nbsp;[&nbsp;'bob@foobar.com'&nbsp;]<br>
+gnupg.run(&nbsp;['--sign',&nbsp;'--encrypt'],&nbsp;create_fhs=...,&nbsp;attach_fhs=...)<br>
+&nbsp;<br>
+Here&nbsp;is&nbsp;an&nbsp;example&nbsp;of&nbsp;subclassing&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a>.<a href="#GnuPG">GnuPG</a>,<br>
+so&nbsp;that&nbsp;it&nbsp;has&nbsp;an&nbsp;encrypt_string()&nbsp;method&nbsp;that&nbsp;returns<br>
+ciphertext.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;import&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a><br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;class&nbsp;MyGnuPG(<a href="#GnuPGInterface">GnuPGInterface</a>.<a href="#GnuPG">GnuPG</a>):<br>
+...<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;__init__(self):<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a>.<a href="#GnuPG">GnuPG</a>.__init__(self)<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setup_my_options()<br>
+...<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;setup_my_options(self):<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<strong>options</strong>.armor&nbsp;=&nbsp;1<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<strong>options</strong>.meta_interactive&nbsp;=&nbsp;0<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<strong>options</strong>.extra_args.append('--no-secmem-warning')<br>
+...<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;encrypt_string(self,&nbsp;string,&nbsp;recipients):<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gnupg.options.recipients&nbsp;=&nbsp;recipients&nbsp;&nbsp;&nbsp;#&nbsp;a&nbsp;list!<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proc&nbsp;=&nbsp;gnupg.run(['--encrypt'],&nbsp;create_fhs=['stdin',&nbsp;'stdout'])<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proc.handles['stdin'].write(string)<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proc.handles['stdin'].close()<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output&nbsp;=&nbsp;proc.handles['stdout'].read()<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proc.handles['stdout'].close()<br>
+...<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proc.wait()<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;output<br>
+...<br>
+&gt;&gt;&gt;&nbsp;gnupg&nbsp;=&nbsp;MyGnuPG()<br>
+&gt;&gt;&gt;&nbsp;ciphertext&nbsp;=&nbsp;gnupg.encrypt_string("The&nbsp;secret",&nbsp;['0x260C4FA3'])<br>
+&gt;&gt;&gt;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;just&nbsp;a&nbsp;small&nbsp;sanity&nbsp;test&nbsp;here&nbsp;for&nbsp;doctest<br>
+&gt;&gt;&gt;&nbsp;import&nbsp;types<br>
+&gt;&gt;&gt;&nbsp;assert&nbsp;isinstance(ciphertext,&nbsp;types.StringType),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"What&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;gave&nbsp;back&nbsp;is&nbsp;not&nbsp;a&nbsp;string!"<br>
+&nbsp;<br>
+Here&nbsp;is&nbsp;an&nbsp;example&nbsp;of&nbsp;generating&nbsp;a&nbsp;key:<br>
+&gt;&gt;&gt;&nbsp;import&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a><br>
+&gt;&gt;&gt;&nbsp;gnupg&nbsp;=&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a>.<a href="#GnuPG">GnuPG</a>()<br>
+&gt;&gt;&gt;&nbsp;gnupg.options.meta_interactive&nbsp;=&nbsp;0<br>
+&gt;&gt;&gt;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;We&nbsp;will&nbsp;be&nbsp;creative&nbsp;and&nbsp;use&nbsp;the&nbsp;logger&nbsp;filehandle&nbsp;to&nbsp;capture<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;what&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;says&nbsp;this&nbsp;time,&nbsp;instead&nbsp;stderr;&nbsp;no&nbsp;stdout&nbsp;to&nbsp;listen&nbsp;to,<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;but&nbsp;we&nbsp;capture&nbsp;logger&nbsp;to&nbsp;surpress&nbsp;the&nbsp;dry-run&nbsp;command.<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;We&nbsp;also&nbsp;have&nbsp;to&nbsp;capture&nbsp;stdout&nbsp;since&nbsp;otherwise&nbsp;doctest&nbsp;complains;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;Normally&nbsp;you&nbsp;can&nbsp;let&nbsp;stdout&nbsp;through&nbsp;when&nbsp;generating&nbsp;a&nbsp;key.<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;proc&nbsp;=&nbsp;gnupg.run(['--gen-key'],&nbsp;create_fhs=['stdin',&nbsp;'stdout',<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'logger'])<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;proc.handles['stdin'].write('''Key-Type:&nbsp;DSA<br>
+...&nbsp;Key-Length:&nbsp;1024<br>
+...&nbsp;#&nbsp;We&nbsp;are&nbsp;only&nbsp;testing&nbsp;syntax&nbsp;this&nbsp;time,&nbsp;so&nbsp;dry-run<br>
+...&nbsp;%dry-run<br>
+...&nbsp;Subkey-Type:&nbsp;ELG-E<br>
+...&nbsp;Subkey-Length:&nbsp;1024<br>
+...&nbsp;Name-Real:&nbsp;Joe&nbsp;Tester<br>
+...&nbsp;Name-Comment:&nbsp;with&nbsp;stupid&nbsp;passphrase<br>
+...&nbsp;Name-Email:&nbsp;joe@foo.bar<br>
+...&nbsp;Expire-Date:&nbsp;2y<br>
+...&nbsp;Passphrase:&nbsp;abc<br>
+...&nbsp;%pubring&nbsp;foo.pub<br>
+...&nbsp;%secring&nbsp;foo.sec<br>
+...&nbsp;''')<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;proc.handles['stdin'].close()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;report&nbsp;=&nbsp;proc.handles['logger'].read()<br>
+&gt;&gt;&gt;&nbsp;proc.handles['logger'].close()<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;proc.wait()<br>
+&nbsp;<br>
+&nbsp;<br>
+COPYRIGHT:<br>
+&nbsp;<br>
+Copyright&nbsp;(C)&nbsp;2001&nbsp;&nbsp;Frank&nbsp;J.&nbsp;Tobin,&nbsp;ftobin@neverending.org<br>
+&nbsp;<br>
+LICENSE:<br>
+&nbsp;<br>
+This&nbsp;library&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or<br>
+modify&nbsp;it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;Lesser&nbsp;General&nbsp;Public<br>
+License&nbsp;as&nbsp;published&nbsp;by&nbsp;the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either<br>
+version&nbsp;2.1&nbsp;of&nbsp;the&nbsp;License,&nbsp;or&nbsp;(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.<br>
+&nbsp;<br>
+This&nbsp;library&nbsp;is&nbsp;distributed&nbsp;in&nbsp;the&nbsp;hope&nbsp;that&nbsp;it&nbsp;will&nbsp;be&nbsp;useful,<br>
+but&nbsp;WITHOUT&nbsp;ANY&nbsp;WARRANTY;&nbsp;without&nbsp;even&nbsp;the&nbsp;implied&nbsp;warranty&nbsp;of<br>
+MERCHANTABILITY&nbsp;or&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE.&nbsp;&nbsp;See&nbsp;the&nbsp;GNU<br>
+Lesser&nbsp;General&nbsp;Public&nbsp;License&nbsp;for&nbsp;more&nbsp;details.<br>
+&nbsp;<br>
+You&nbsp;should&nbsp;have&nbsp;received&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;GNU&nbsp;Lesser&nbsp;General&nbsp;Public<br>
+License&nbsp;along&nbsp;with&nbsp;this&nbsp;library;&nbsp;if&nbsp;not,&nbsp;write&nbsp;to&nbsp;the&nbsp;Free&nbsp;Software<br>
+Foundation,&nbsp;Inc.,&nbsp;59&nbsp;Temple&nbsp;Place,&nbsp;Suite&nbsp;330,&nbsp;Boston,&nbsp;MA&nbsp;&nbsp;02111-1307&nbsp;&nbsp;USA<br>
+or&nbsp;see&nbsp;<a href="http://www.gnu.org/copyleft/lesser.html">http://www.gnu.org/copyleft/lesser.html</a></tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="fcntl.html">fcntl</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="GnuPGInterface.html#GnuPG">GnuPG</a>
+</font></dt><dt><font face="helvetica, arial"><a href="GnuPGInterface.html#Options">Options</a>
+</font></dt><dt><font face="helvetica, arial"><a href="GnuPGInterface.html#Pipe">Pipe</a>
+</font></dt><dt><font face="helvetica, arial"><a href="GnuPGInterface.html#Process">Process</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GnuPG">class <strong>GnuPG</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Class&nbsp;instances&nbsp;represent&nbsp;<a href="#GnuPG">GnuPG</a>.<br>
+&nbsp;<br>
+Instance&nbsp;attributes&nbsp;of&nbsp;a&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;object&nbsp;are:<br>
+&nbsp;<br>
+*&nbsp;call&nbsp;--&nbsp;string&nbsp;to&nbsp;call&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;with.&nbsp;&nbsp;Defaults&nbsp;to&nbsp;"gpg"<br>
+&nbsp;<br>
+*&nbsp;passphrase&nbsp;--&nbsp;Since&nbsp;it&nbsp;is&nbsp;a&nbsp;common&nbsp;operation<br>
+&nbsp;&nbsp;to&nbsp;pass&nbsp;in&nbsp;a&nbsp;passphrase&nbsp;to&nbsp;<a href="#GnuPG">GnuPG</a>,<br>
+&nbsp;&nbsp;and&nbsp;working&nbsp;with&nbsp;the&nbsp;passphrase&nbsp;filehandle&nbsp;mechanism&nbsp;directly<br>
+&nbsp;&nbsp;can&nbsp;be&nbsp;mundane,&nbsp;if&nbsp;set,&nbsp;the&nbsp;passphrase&nbsp;attribute<br>
+&nbsp;&nbsp;works&nbsp;in&nbsp;a&nbsp;special&nbsp;manner.&nbsp;&nbsp;If&nbsp;the&nbsp;passphrase&nbsp;attribute&nbsp;is&nbsp;set,&nbsp;<br>
+&nbsp;&nbsp;and&nbsp;no&nbsp;passphrase&nbsp;file&nbsp;object&nbsp;is&nbsp;sent&nbsp;in&nbsp;to&nbsp;<a href="#GnuPG-run">run</a>(),<br>
+&nbsp;&nbsp;then&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;instnace&nbsp;will&nbsp;take&nbsp;care&nbsp;of&nbsp;sending&nbsp;the&nbsp;passphrase&nbsp;to<br>
+&nbsp;&nbsp;<a href="#GnuPG">GnuPG</a>,&nbsp;the&nbsp;executable&nbsp;instead&nbsp;of&nbsp;having&nbsp;the&nbsp;user&nbsp;sent&nbsp;it&nbsp;in&nbsp;manually.<br>
+&nbsp;&nbsp;<br>
+*&nbsp;options&nbsp;--&nbsp;Object&nbsp;of&nbsp;type&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a>.<a href="#Options">Options</a>.&nbsp;<br>
+&nbsp;&nbsp;Attribute-setting&nbsp;in&nbsp;options&nbsp;determines<br>
+&nbsp;&nbsp;the&nbsp;command-line&nbsp;options&nbsp;used&nbsp;when&nbsp;calling&nbsp;<a href="#GnuPG">GnuPG</a>.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GnuPG-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="GnuPG-run"><strong>run</strong></a>(self, gnupg_commands, args<font color="#909090">=None</font>, create_fhs<font color="#909090">=None</font>, attach_fhs<font color="#909090">=None</font>)</dt><dd><tt>Calls&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;with&nbsp;the&nbsp;list&nbsp;of&nbsp;string&nbsp;commands&nbsp;gnupg_commands,<br>
+complete&nbsp;with&nbsp;prefixing&nbsp;dashes.<br>
+For&nbsp;example,&nbsp;gnupg_commands&nbsp;could&nbsp;be<br>
+'["--sign",&nbsp;"--encrypt"]'<br>
+Returns&nbsp;a&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a>.<a href="#Process">Process</a>&nbsp;object.<br>
+&nbsp;<br>
+args&nbsp;is&nbsp;an&nbsp;optional&nbsp;list&nbsp;of&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;command&nbsp;arguments&nbsp;(not&nbsp;options),<br>
+such&nbsp;as&nbsp;keyID's&nbsp;to&nbsp;export,&nbsp;filenames&nbsp;to&nbsp;process,&nbsp;etc.<br>
+&nbsp;<br>
+create_fhs&nbsp;is&nbsp;an&nbsp;optional&nbsp;list&nbsp;of&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;filehandle<br>
+names&nbsp;that&nbsp;will&nbsp;be&nbsp;set&nbsp;as&nbsp;keys&nbsp;of&nbsp;the&nbsp;returned&nbsp;<a href="#Process">Process</a>&nbsp;object's<br>
+'handles'&nbsp;attribute.&nbsp;&nbsp;The&nbsp;generated&nbsp;filehandles&nbsp;can&nbsp;be&nbsp;used<br>
+to&nbsp;communicate&nbsp;with&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;via&nbsp;standard&nbsp;input,&nbsp;standard&nbsp;output,<br>
+the&nbsp;status-fd,&nbsp;passphrase-fd,&nbsp;etc.<br>
+&nbsp;<br>
+Valid&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;filehandle&nbsp;names&nbsp;are:<br>
+&nbsp;&nbsp;*&nbsp;stdin<br>
+&nbsp;&nbsp;*&nbsp;stdout<br>
+&nbsp;&nbsp;*&nbsp;stderr<br>
+&nbsp;&nbsp;*&nbsp;status<br>
+&nbsp;&nbsp;*&nbsp;passphase<br>
+&nbsp;&nbsp;*&nbsp;command<br>
+&nbsp;&nbsp;*&nbsp;logger<br>
+&nbsp;<br>
+The&nbsp;purpose&nbsp;of&nbsp;each&nbsp;filehandle&nbsp;is&nbsp;described&nbsp;in&nbsp;the&nbsp;<a href="#GnuPG">GnuPG</a><br>
+documentation.<br>
+&nbsp;<br>
+attach_fhs&nbsp;is&nbsp;an&nbsp;optional&nbsp;dictionary&nbsp;with&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;filehandle<br>
+names&nbsp;mapping&nbsp;to&nbsp;opened&nbsp;files.&nbsp;&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;will&nbsp;read&nbsp;or&nbsp;write<br>
+to&nbsp;the&nbsp;file&nbsp;accordingly.&nbsp;&nbsp;For&nbsp;example,&nbsp;if&nbsp;'my_file'&nbsp;is&nbsp;an<br>
+opened&nbsp;file&nbsp;and&nbsp;'attach_fhs[stdin]&nbsp;is&nbsp;my_file',&nbsp;then&nbsp;<a href="#GnuPG">GnuPG</a><br>
+will&nbsp;read&nbsp;its&nbsp;standard&nbsp;input&nbsp;from&nbsp;my_file.&nbsp;This&nbsp;is&nbsp;useful<br>
+if&nbsp;you&nbsp;want&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;to&nbsp;read/write&nbsp;to/from&nbsp;an&nbsp;existing&nbsp;file.<br>
+For&nbsp;instance:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;=&nbsp;open("encrypted.gpg")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gnupg.<a href="#GnuPG-run">run</a>(["--decrypt"],&nbsp;attach_fhs={'stdin':&nbsp;f})<br>
+&nbsp;<br>
+Using&nbsp;attach_fhs&nbsp;also&nbsp;helps&nbsp;avoid&nbsp;system&nbsp;buffering<br>
+issues&nbsp;that&nbsp;can&nbsp;arise&nbsp;when&nbsp;using&nbsp;create_fhs,&nbsp;which<br>
+can&nbsp;cause&nbsp;the&nbsp;process&nbsp;to&nbsp;deadlock.<br>
+&nbsp;<br>
+If&nbsp;not&nbsp;mentioned&nbsp;in&nbsp;create_fhs&nbsp;or&nbsp;attach_fhs,<br>
+<a href="#GnuPG">GnuPG</a>&nbsp;filehandles&nbsp;which&nbsp;are&nbsp;a&nbsp;std*&nbsp;(stdin,&nbsp;stdout,&nbsp;stderr)<br>
+are&nbsp;defaulted&nbsp;to&nbsp;the&nbsp;running&nbsp;process'&nbsp;version&nbsp;of&nbsp;handle.<br>
+Otherwise,&nbsp;that&nbsp;type&nbsp;of&nbsp;handle&nbsp;is&nbsp;simply&nbsp;not&nbsp;used&nbsp;when&nbsp;calling&nbsp;<a href="#GnuPG">GnuPG</a>.<br>
+For&nbsp;example,&nbsp;if&nbsp;you&nbsp;do&nbsp;not&nbsp;care&nbsp;about&nbsp;getting&nbsp;data&nbsp;from&nbsp;<a href="#GnuPG">GnuPG</a>'s<br>
+status&nbsp;filehandle,&nbsp;simply&nbsp;do&nbsp;not&nbsp;specify&nbsp;it.<br>
+&nbsp;<br>
+<a href="#GnuPG-run">run</a>()&nbsp;returns&nbsp;a&nbsp;<a href="#Process">Process</a>()&nbsp;object&nbsp;which&nbsp;has&nbsp;a&nbsp;'handles'<br>
+which&nbsp;is&nbsp;a&nbsp;dictionary&nbsp;mapping&nbsp;from&nbsp;the&nbsp;handle&nbsp;name<br>
+(such&nbsp;as&nbsp;'stdin'&nbsp;or&nbsp;'stdout')&nbsp;to&nbsp;the&nbsp;respective<br>
+newly-created&nbsp;FileObject&nbsp;connected&nbsp;to&nbsp;the&nbsp;running&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;process.<br>
+For&nbsp;instance,&nbsp;if&nbsp;the&nbsp;call&nbsp;was<br>
+&nbsp;<br>
+&nbsp;&nbsp;process&nbsp;=&nbsp;gnupg.<a href="#GnuPG-run">run</a>(["--decrypt"],&nbsp;stdin=1)<br>
+&nbsp;&nbsp;<br>
+after&nbsp;run&nbsp;returns&nbsp;'process.handles["stdin"]'<br>
+is&nbsp;a&nbsp;FileObject&nbsp;connected&nbsp;to&nbsp;<a href="#GnuPG">GnuPG</a>'s&nbsp;standard&nbsp;input,<br>
+and&nbsp;can&nbsp;be&nbsp;written&nbsp;to.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><strong>GnuPGInterface</strong> = <a name="GnuPGInterface">class GnuPG</a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Class&nbsp;instances&nbsp;represent&nbsp;<a href="#GnuPG">GnuPG</a>.<br>
+&nbsp;<br>
+Instance&nbsp;attributes&nbsp;of&nbsp;a&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;object&nbsp;are:<br>
+&nbsp;<br>
+*&nbsp;call&nbsp;--&nbsp;string&nbsp;to&nbsp;call&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;with.&nbsp;&nbsp;Defaults&nbsp;to&nbsp;"gpg"<br>
+&nbsp;<br>
+*&nbsp;passphrase&nbsp;--&nbsp;Since&nbsp;it&nbsp;is&nbsp;a&nbsp;common&nbsp;operation<br>
+&nbsp;&nbsp;to&nbsp;pass&nbsp;in&nbsp;a&nbsp;passphrase&nbsp;to&nbsp;<a href="#GnuPG">GnuPG</a>,<br>
+&nbsp;&nbsp;and&nbsp;working&nbsp;with&nbsp;the&nbsp;passphrase&nbsp;filehandle&nbsp;mechanism&nbsp;directly<br>
+&nbsp;&nbsp;can&nbsp;be&nbsp;mundane,&nbsp;if&nbsp;set,&nbsp;the&nbsp;passphrase&nbsp;attribute<br>
+&nbsp;&nbsp;works&nbsp;in&nbsp;a&nbsp;special&nbsp;manner.&nbsp;&nbsp;If&nbsp;the&nbsp;passphrase&nbsp;attribute&nbsp;is&nbsp;set,&nbsp;<br>
+&nbsp;&nbsp;and&nbsp;no&nbsp;passphrase&nbsp;file&nbsp;object&nbsp;is&nbsp;sent&nbsp;in&nbsp;to&nbsp;<a href="#GnuPGInterface-run">run</a>(),<br>
+&nbsp;&nbsp;then&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;instnace&nbsp;will&nbsp;take&nbsp;care&nbsp;of&nbsp;sending&nbsp;the&nbsp;passphrase&nbsp;to<br>
+&nbsp;&nbsp;<a href="#GnuPG">GnuPG</a>,&nbsp;the&nbsp;executable&nbsp;instead&nbsp;of&nbsp;having&nbsp;the&nbsp;user&nbsp;sent&nbsp;it&nbsp;in&nbsp;manually.<br>
+&nbsp;&nbsp;<br>
+*&nbsp;options&nbsp;--&nbsp;Object&nbsp;of&nbsp;type&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a>.<a href="#Options">Options</a>.&nbsp;<br>
+&nbsp;&nbsp;Attribute-setting&nbsp;in&nbsp;options&nbsp;determines<br>
+&nbsp;&nbsp;the&nbsp;command-line&nbsp;options&nbsp;used&nbsp;when&nbsp;calling&nbsp;<a href="#GnuPG">GnuPG</a>.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GnuPG-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="GnuPG-run"><strong>run</strong></a>(self, gnupg_commands, args<font color="#909090">=None</font>, create_fhs<font color="#909090">=None</font>, attach_fhs<font color="#909090">=None</font>)</dt><dd><tt>Calls&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;with&nbsp;the&nbsp;list&nbsp;of&nbsp;string&nbsp;commands&nbsp;gnupg_commands,<br>
+complete&nbsp;with&nbsp;prefixing&nbsp;dashes.<br>
+For&nbsp;example,&nbsp;gnupg_commands&nbsp;could&nbsp;be<br>
+'["--sign",&nbsp;"--encrypt"]'<br>
+Returns&nbsp;a&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a>.<a href="#Process">Process</a>&nbsp;object.<br>
+&nbsp;<br>
+args&nbsp;is&nbsp;an&nbsp;optional&nbsp;list&nbsp;of&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;command&nbsp;arguments&nbsp;(not&nbsp;options),<br>
+such&nbsp;as&nbsp;keyID's&nbsp;to&nbsp;export,&nbsp;filenames&nbsp;to&nbsp;process,&nbsp;etc.<br>
+&nbsp;<br>
+create_fhs&nbsp;is&nbsp;an&nbsp;optional&nbsp;list&nbsp;of&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;filehandle<br>
+names&nbsp;that&nbsp;will&nbsp;be&nbsp;set&nbsp;as&nbsp;keys&nbsp;of&nbsp;the&nbsp;returned&nbsp;<a href="#Process">Process</a>&nbsp;object's<br>
+'handles'&nbsp;attribute.&nbsp;&nbsp;The&nbsp;generated&nbsp;filehandles&nbsp;can&nbsp;be&nbsp;used<br>
+to&nbsp;communicate&nbsp;with&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;via&nbsp;standard&nbsp;input,&nbsp;standard&nbsp;output,<br>
+the&nbsp;status-fd,&nbsp;passphrase-fd,&nbsp;etc.<br>
+&nbsp;<br>
+Valid&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;filehandle&nbsp;names&nbsp;are:<br>
+&nbsp;&nbsp;*&nbsp;stdin<br>
+&nbsp;&nbsp;*&nbsp;stdout<br>
+&nbsp;&nbsp;*&nbsp;stderr<br>
+&nbsp;&nbsp;*&nbsp;status<br>
+&nbsp;&nbsp;*&nbsp;passphase<br>
+&nbsp;&nbsp;*&nbsp;command<br>
+&nbsp;&nbsp;*&nbsp;logger<br>
+&nbsp;<br>
+The&nbsp;purpose&nbsp;of&nbsp;each&nbsp;filehandle&nbsp;is&nbsp;described&nbsp;in&nbsp;the&nbsp;<a href="#GnuPG">GnuPG</a><br>
+documentation.<br>
+&nbsp;<br>
+attach_fhs&nbsp;is&nbsp;an&nbsp;optional&nbsp;dictionary&nbsp;with&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;filehandle<br>
+names&nbsp;mapping&nbsp;to&nbsp;opened&nbsp;files.&nbsp;&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;will&nbsp;read&nbsp;or&nbsp;write<br>
+to&nbsp;the&nbsp;file&nbsp;accordingly.&nbsp;&nbsp;For&nbsp;example,&nbsp;if&nbsp;'my_file'&nbsp;is&nbsp;an<br>
+opened&nbsp;file&nbsp;and&nbsp;'attach_fhs[stdin]&nbsp;is&nbsp;my_file',&nbsp;then&nbsp;<a href="#GnuPG">GnuPG</a><br>
+will&nbsp;read&nbsp;its&nbsp;standard&nbsp;input&nbsp;from&nbsp;my_file.&nbsp;This&nbsp;is&nbsp;useful<br>
+if&nbsp;you&nbsp;want&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;to&nbsp;read/write&nbsp;to/from&nbsp;an&nbsp;existing&nbsp;file.<br>
+For&nbsp;instance:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;=&nbsp;open("encrypted.gpg")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gnupg.<a href="#GnuPGInterface-run">run</a>(["--decrypt"],&nbsp;attach_fhs={'stdin':&nbsp;f})<br>
+&nbsp;<br>
+Using&nbsp;attach_fhs&nbsp;also&nbsp;helps&nbsp;avoid&nbsp;system&nbsp;buffering<br>
+issues&nbsp;that&nbsp;can&nbsp;arise&nbsp;when&nbsp;using&nbsp;create_fhs,&nbsp;which<br>
+can&nbsp;cause&nbsp;the&nbsp;process&nbsp;to&nbsp;deadlock.<br>
+&nbsp;<br>
+If&nbsp;not&nbsp;mentioned&nbsp;in&nbsp;create_fhs&nbsp;or&nbsp;attach_fhs,<br>
+<a href="#GnuPG">GnuPG</a>&nbsp;filehandles&nbsp;which&nbsp;are&nbsp;a&nbsp;std*&nbsp;(stdin,&nbsp;stdout,&nbsp;stderr)<br>
+are&nbsp;defaulted&nbsp;to&nbsp;the&nbsp;running&nbsp;process'&nbsp;version&nbsp;of&nbsp;handle.<br>
+Otherwise,&nbsp;that&nbsp;type&nbsp;of&nbsp;handle&nbsp;is&nbsp;simply&nbsp;not&nbsp;used&nbsp;when&nbsp;calling&nbsp;<a href="#GnuPG">GnuPG</a>.<br>
+For&nbsp;example,&nbsp;if&nbsp;you&nbsp;do&nbsp;not&nbsp;care&nbsp;about&nbsp;getting&nbsp;data&nbsp;from&nbsp;<a href="#GnuPG">GnuPG</a>'s<br>
+status&nbsp;filehandle,&nbsp;simply&nbsp;do&nbsp;not&nbsp;specify&nbsp;it.<br>
+&nbsp;<br>
+<a href="#GnuPGInterface-run">run</a>()&nbsp;returns&nbsp;a&nbsp;<a href="#Process">Process</a>()&nbsp;object&nbsp;which&nbsp;has&nbsp;a&nbsp;'handles'<br>
+which&nbsp;is&nbsp;a&nbsp;dictionary&nbsp;mapping&nbsp;from&nbsp;the&nbsp;handle&nbsp;name<br>
+(such&nbsp;as&nbsp;'stdin'&nbsp;or&nbsp;'stdout')&nbsp;to&nbsp;the&nbsp;respective<br>
+newly-created&nbsp;FileObject&nbsp;connected&nbsp;to&nbsp;the&nbsp;running&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;process.<br>
+For&nbsp;instance,&nbsp;if&nbsp;the&nbsp;call&nbsp;was<br>
+&nbsp;<br>
+&nbsp;&nbsp;process&nbsp;=&nbsp;gnupg.<a href="#GnuPGInterface-run">run</a>(["--decrypt"],&nbsp;stdin=1)<br>
+&nbsp;&nbsp;<br>
+after&nbsp;run&nbsp;returns&nbsp;'process.handles["stdin"]'<br>
+is&nbsp;a&nbsp;FileObject&nbsp;connected&nbsp;to&nbsp;<a href="#GnuPG">GnuPG</a>'s&nbsp;standard&nbsp;input,<br>
+and&nbsp;can&nbsp;be&nbsp;written&nbsp;to.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Options">class <strong>Options</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Objects&nbsp;of&nbsp;this&nbsp;class&nbsp;encompass&nbsp;options&nbsp;passed&nbsp;to&nbsp;<a href="#GnuPG">GnuPG</a>.<br>
+This&nbsp;class&nbsp;is&nbsp;responsible&nbsp;for&nbsp;determining&nbsp;command-line&nbsp;arguments<br>
+which&nbsp;are&nbsp;based&nbsp;on&nbsp;options.&nbsp;&nbsp;It&nbsp;can&nbsp;be&nbsp;said&nbsp;that&nbsp;a&nbsp;<a href="#GnuPG">GnuPG</a><br>
+object&nbsp;has-a&nbsp;<a href="#Options">Options</a>&nbsp;object&nbsp;in&nbsp;its&nbsp;options&nbsp;attribute.<br>
+&nbsp;<br>
+Attributes&nbsp;which&nbsp;correlate&nbsp;directly&nbsp;to&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;options:<br>
+&nbsp;<br>
+Each&nbsp;option&nbsp;here&nbsp;defaults&nbsp;to&nbsp;false&nbsp;or&nbsp;None,&nbsp;and&nbsp;is&nbsp;described&nbsp;in<br>
+<a href="#GnuPG">GnuPG</a>&nbsp;documentation.<br>
+&nbsp;<br>
+Booleans&nbsp;(set&nbsp;these&nbsp;attributes&nbsp;to&nbsp;booleans)<br>
+&nbsp;<br>
+&nbsp;&nbsp;*&nbsp;armor<br>
+&nbsp;&nbsp;*&nbsp;no_greeting<br>
+&nbsp;&nbsp;*&nbsp;no_verbose<br>
+&nbsp;&nbsp;*&nbsp;quiet<br>
+&nbsp;&nbsp;*&nbsp;batch<br>
+&nbsp;&nbsp;*&nbsp;always_trust<br>
+&nbsp;&nbsp;*&nbsp;rfc1991<br>
+&nbsp;&nbsp;*&nbsp;openpgp<br>
+&nbsp;&nbsp;*&nbsp;force_v3_sigs<br>
+&nbsp;&nbsp;*&nbsp;no_options<br>
+&nbsp;&nbsp;*&nbsp;textmode<br>
+&nbsp;<br>
+Strings&nbsp;(set&nbsp;these&nbsp;attributes&nbsp;to&nbsp;strings)<br>
+&nbsp;<br>
+&nbsp;&nbsp;*&nbsp;homedir<br>
+&nbsp;&nbsp;*&nbsp;default_key<br>
+&nbsp;&nbsp;*&nbsp;comment<br>
+&nbsp;&nbsp;*&nbsp;compress_algo<br>
+&nbsp;&nbsp;*&nbsp;options<br>
+&nbsp;<br>
+Lists&nbsp;(set&nbsp;these&nbsp;attributes&nbsp;to&nbsp;lists)<br>
+&nbsp;<br>
+&nbsp;&nbsp;*&nbsp;recipients&nbsp;&nbsp;(***NOTE***&nbsp;plural&nbsp;of&nbsp;'recipient')<br>
+&nbsp;&nbsp;*&nbsp;encrypt_to<br>
+&nbsp;<br>
+Meta&nbsp;options<br>
+&nbsp;<br>
+Meta&nbsp;options&nbsp;are&nbsp;options&nbsp;provided&nbsp;by&nbsp;this&nbsp;module&nbsp;that&nbsp;do<br>
+not&nbsp;correlate&nbsp;directly&nbsp;to&nbsp;any&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;option&nbsp;by&nbsp;name,<br>
+but&nbsp;are&nbsp;rather&nbsp;bundle&nbsp;of&nbsp;options&nbsp;used&nbsp;to&nbsp;accomplish<br>
+a&nbsp;specific&nbsp;goal,&nbsp;such&nbsp;as&nbsp;obtaining&nbsp;compatibility&nbsp;with&nbsp;PGP&nbsp;5.<br>
+The&nbsp;actual&nbsp;arguments&nbsp;each&nbsp;of&nbsp;these&nbsp;reflects&nbsp;may&nbsp;change&nbsp;with&nbsp;time.&nbsp;&nbsp;Each<br>
+defaults&nbsp;to&nbsp;false&nbsp;unless&nbsp;otherwise&nbsp;specified.<br>
+&nbsp;<br>
+meta_pgp_5_compatible&nbsp;--&nbsp;If&nbsp;true,&nbsp;arguments&nbsp;are&nbsp;generated&nbsp;to&nbsp;try<br>
+to&nbsp;be&nbsp;compatible&nbsp;with&nbsp;PGP&nbsp;5.x.<br>
+&nbsp;&nbsp;<br>
+meta_pgp_2_compatible&nbsp;--&nbsp;If&nbsp;true,&nbsp;arguments&nbsp;are&nbsp;generated&nbsp;to&nbsp;try<br>
+to&nbsp;be&nbsp;compatible&nbsp;with&nbsp;PGP&nbsp;2.x.<br>
+&nbsp;<br>
+meta_interactive&nbsp;--&nbsp;If&nbsp;false,&nbsp;arguments&nbsp;are&nbsp;generated&nbsp;to&nbsp;try&nbsp;to<br>
+help&nbsp;the&nbsp;using&nbsp;program&nbsp;use&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;in&nbsp;a&nbsp;non-interactive<br>
+environment,&nbsp;such&nbsp;as&nbsp;CGI&nbsp;scripts.&nbsp;&nbsp;Default&nbsp;is&nbsp;true.<br>
+&nbsp;<br>
+extra_args&nbsp;--&nbsp;Extra&nbsp;option&nbsp;arguments&nbsp;may&nbsp;be&nbsp;passed&nbsp;in<br>
+via&nbsp;the&nbsp;attribute&nbsp;extra_args,&nbsp;a&nbsp;list.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;import&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a><br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;gnupg&nbsp;=&nbsp;<a href="#GnuPGInterface">GnuPGInterface</a>.<a href="#GnuPG">GnuPG</a>()<br>
+&gt;&gt;&gt;&nbsp;gnupg.options.armor&nbsp;=&nbsp;1<br>
+&gt;&gt;&gt;&nbsp;gnupg.options.recipients&nbsp;=&nbsp;['Alice',&nbsp;'Bob']<br>
+&gt;&gt;&gt;&nbsp;gnupg.options.extra_args&nbsp;=&nbsp;['--no-secmem-warning']<br>
+&gt;&gt;&gt;&nbsp;<br>
+&gt;&gt;&gt;&nbsp;#&nbsp;no&nbsp;need&nbsp;for&nbsp;users&nbsp;to&nbsp;call&nbsp;this&nbsp;normally;&nbsp;just&nbsp;for&nbsp;show&nbsp;here<br>
+&gt;&gt;&gt;&nbsp;gnupg.options.<a href="#Options-get_args">get_args</a>()<br>
+['--armor',&nbsp;'--recipient',&nbsp;'Alice',&nbsp;'--recipient',&nbsp;'Bob',&nbsp;'--no-secmem-warning']<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Options-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Options-get_args"><strong>get_args</strong></a>(self)</dt><dd><tt>Generate&nbsp;a&nbsp;list&nbsp;of&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;arguments&nbsp;based&nbsp;upon&nbsp;attributes.</tt></dd></dl>
+
+<dl><dt><a name="Options-get_meta_args"><strong>get_meta_args</strong></a>(self)</dt><dd><tt>Get&nbsp;a&nbsp;list&nbsp;of&nbsp;generated&nbsp;meta-arguments</tt></dd></dl>
+
+<dl><dt><a name="Options-get_standard_args"><strong>get_standard_args</strong></a>(self)</dt><dd><tt>Generate&nbsp;a&nbsp;list&nbsp;of&nbsp;standard,&nbsp;non-meta&nbsp;or&nbsp;extra&nbsp;arguments</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Pipe">class <strong>Pipe</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>simple&nbsp;struct&nbsp;holding&nbsp;stuff&nbsp;about&nbsp;pipes&nbsp;we&nbsp;use<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Pipe-__init__"><strong>__init__</strong></a>(self, parent, child, direct)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Process">class <strong>Process</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Objects&nbsp;of&nbsp;this&nbsp;class&nbsp;encompass&nbsp;properties&nbsp;of&nbsp;a&nbsp;<a href="#GnuPG">GnuPG</a><br>
+process&nbsp;spawned&nbsp;by&nbsp;<a href="#GnuPG">GnuPG</a>.run().<br>
+&nbsp;<br>
+#&nbsp;gnupg&nbsp;is&nbsp;a&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;object<br>
+process&nbsp;=&nbsp;gnupg.run(&nbsp;[&nbsp;'--decrypt'&nbsp;],&nbsp;stdout&nbsp;=&nbsp;1&nbsp;)<br>
+out&nbsp;=&nbsp;process.handles['stdout'].read()<br>
+...<br>
+os.waitpid(&nbsp;process.pid,&nbsp;0&nbsp;)<br>
+&nbsp;<br>
+Data&nbsp;Attributes<br>
+&nbsp;<br>
+handles&nbsp;--&nbsp;This&nbsp;is&nbsp;a&nbsp;map&nbsp;of&nbsp;filehandle-names&nbsp;to<br>
+the&nbsp;file&nbsp;handles,&nbsp;if&nbsp;any,&nbsp;that&nbsp;were&nbsp;requested&nbsp;via&nbsp;run()&nbsp;and&nbsp;hence<br>
+are&nbsp;connected&nbsp;to&nbsp;the&nbsp;running&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;process.&nbsp;&nbsp;Valid&nbsp;names<br>
+of&nbsp;this&nbsp;map&nbsp;are&nbsp;only&nbsp;those&nbsp;handles&nbsp;that&nbsp;were&nbsp;requested.<br>
+&nbsp;&nbsp;<br>
+pid&nbsp;--&nbsp;The&nbsp;PID&nbsp;of&nbsp;the&nbsp;spawned&nbsp;<a href="#GnuPG">GnuPG</a>&nbsp;process.<br>
+Useful&nbsp;to&nbsp;know,&nbsp;since&nbsp;once&nbsp;should&nbsp;call<br>
+os.waitpid()&nbsp;to&nbsp;clean&nbsp;up&nbsp;the&nbsp;process,&nbsp;especially<br>
+if&nbsp;multiple&nbsp;calls&nbsp;are&nbsp;made&nbsp;to&nbsp;run().<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Process-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Process-wait"><strong>wait</strong></a>(self)</dt><dd><tt>Wait&nbsp;on&nbsp;the&nbsp;process&nbsp;to&nbsp;exit,&nbsp;allowing&nbsp;for&nbsp;child&nbsp;cleanup.<br>
+Will&nbsp;raise&nbsp;an&nbsp;IOError&nbsp;if&nbsp;the&nbsp;process&nbsp;exits&nbsp;non-zero.</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__author__</strong> = 'Frank J. Tobin, ftobin@neverending.org'<br>
+<strong>__revision__</strong> = '$Id: GnuPGInterface.py,v 1.22 2002/01/11 20:22:04 ftobin Exp $'<br>
+<strong>__version__</strong> = '0.3.2'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Frank&nbsp;J.&nbsp;Tobin,&nbsp;ftobin@neverending.org</td></tr></table>
+</body></html>

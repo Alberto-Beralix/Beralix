@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-list" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-list"/>
+
+    <desc>Controlar qué información se visualiza en columnas en la vista de lista.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Preferencias de las columnas en la lista del gestor de archivos</title>
+
+<p>Hay doce columnas de información que puede visualizar en la vista de lista del gestor de archivos. Pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y seleccione la pestaña <gui>Columnas de la lista</gui> para seleccionar qué columnas quiere que sean visibles.</p>
+
+<note style="tip">
+<p>Use los botones <gui>Subir</gui> y <gui>Bajar</gui> para seleccionar el orden en el que aparecerán las columnas seleccionadas.</p>
+</note>
+<terms>
+ <item>
+  <title><gui>Nombre</gui></title>
+  <p>El nombre de las carpetas y archivos en la carpeta que se está visualizando.</p>
+ </item>
+ <item>
+  <title><gui>Tamaño</gui></title>
+  <p>El tamaño de una carpeta viene dado por el número de elementos que contiene dicha carpeta. El tamaño de un archivo viene dado en bytes, KiB o MiB.</p>
+ </item>
+ <item>
+  <title><gui>Tipo</gui></title>
+  <p>Visualizado como carpeta, o tipo de archivo como documento PDF, imagen JPEG, sonido MP3, etcétera.</p>
+ </item>
+ <item>
+  <title><gui>Fecha de modificación</gui></title>
+  <p>Da la fecha y hora de la última vez que se modificó el archivo.</p>
+    
+ </item>
+ <item>
+  <title><gui>Fecha de acceso</gui></title>
+  <p>Da la fecha y hora de la última vez que se accedió al archivo.</p>
+ </item>
+ <item>
+  <title><gui>Group</gui></title>
+  <p>El grupo al que pertenece el archivo. En equipos domésticos, cada usuario pertenece a su propio grupo. Los grupos se usan a veces en entornos empresariales, donde los usuarios pueden pertenecer a ciertos grupos en función de su departamento o proyecto.</p>
+ </item>
+ <item>
+  <title><gui>Ubicación</gui></title>
+  <p>La ruta a la ubicación del archivo.</p>
+ </item>
+ <item>
+  <title><gui>Tipo MIME</gui></title>
+  <p>Muestra el tipo MIME del elemento.</p>
+ </item>
+    
+  <item>
+  <title><gui>Permisos</gui></title>
+  <p>Muestra los permisos de acceso del archivo. Ej. <gui>drwxrw-r--</gui></p>
+  <list>
+   <item>
+    <p>El primer carácter <gui>-</gui> es el tipo de archivo. <gui>-</gui> significa archivo normal y <gui>d</gui> significa directorio (carpeta).</p>
+   </item>
+   <item>
+     <p>Los tres caracteres siguientes <gui>rwx</gui> especifican los permisos para el usuario propietario del archivo.</p>
+   </item>
+   <item>
+     <p>Los tres siguientes <gui>rw-</gui> especifican los permisos para todos los miembros del grupo al que pertenece el archivo.</p>
+   </item>
+   <item>
+    <p>Los tres últimos caracteres de la columna <gui>r--</gui> especifican los permisos para todos los demás usuarios del sistema.</p>
+   </item>
+  </list>
+  <p>Cada carácter tiene el siguiente significado:</p>
+  <list>
+    <item><p>r : permiso de lectura.</p></item>
+    <item><p>w : permiso de escritura.</p></item>
+    <item><p>x : permiso de ejecución.</p></item>
+    <item><p>- : sin permiso.</p></item>
+    </list>
+
+ </item>
+ <item>
+  <title><gui>Permisos octales</gui></title>
+  <p>Visualiza los permisos de archivos en notación octal anteponiéndole «40» para carpetas y «100» para archivos. En los últimos tres dígitos, cada dígito representa los permisos del usuario, del grupo y del resto de usuarios, respectivamente.</p>
+  <list>
+    <item><p>El permiso de lectura añade 4 al total de cada uno de los tres últimos dígitos.</p></item>
+    <item><p>El permiso de escritura añade 2 al total.</p></item>
+    <item><p>El permiso de ejecución añade 1 al total.</p></item>
+  </list>
+ </item>
+ <item>
+  <title><gui>Propietario</gui></title>
+  <p>El nombre del usuario propietario de la carpeta o archivo.</p>
+ </item>
+
+ <item>
+  <title><gui>Contexto SELinux</gui></title>
+  <p>Mostrar el Contexto SELinux del archivo, en su caso.</p>
+ </item>
+</terms>
+
+
+</page>

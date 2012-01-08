@@ -1,0 +1,23 @@
+[Desktop Entry]
+X-AppInstall-Package=guymager
+X-AppInstall-Popcon=13
+X-AppInstall-Section=universe
+
+# Guymager 
+# The format of this file is specified at
+# http://freedesktop.org/Standards/desktop-entry-spec
+# The entries are in the order they are listed in version 1.0
+Type=Application
+Version=1.0
+Name=Guymager
+GenericName=Imager
+Comment=Fast forensic imager
+Icon=guymager_128
+TryExec=guymager
+Exec=gksudo guymager
+Terminal=false
+# Categorie entry according to version 1.0 of
+# http://www.freedesktop.org/wiki/Specifications/menu-spec
+Categories=Qt;System
+
+X-Ubuntu-Gettext-Domain=app-install-data

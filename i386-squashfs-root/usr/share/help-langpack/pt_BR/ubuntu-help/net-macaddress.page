@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="tip" id="net-macaddress" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-general"/>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <desc>O código exclusivo atribuído ao dispositivo de rede.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>O que é o endereço MAC?</title>
+
+  <p>Um <em>endereço MAC</em> é o código único que é assinado pelo fabricante para uma peça de hardware de rede (como uma placa sem fio ou um placa ethernet). <em>MAC</em> significa <em>Controle de acesso ao meio</em> e cada código destina-se a ser único para um dispositivo particular.</p>
+
+  <p>Um endereço MAC consiste em seis grupos de dois caracteres, separados por dois pontos. <code>00:1B:44:11:3A:B7</code> é um exemplo de endereço MAC.</p>
+
+  <p>Para identificar o endereço MAC de seu próprio equipamento de rede.</p>
+  <steps>
+    <item><p>Clique no <gui>indicador de rede</gui> na barra superior.</p></item>
+    <item><p>Selecione <gui>Informações da Conexão</gui>.</p></item>
+    <item><p>Seu endereço MAC será mostrado no <gui>Endereço de Hardware</gui>.</p></item>
+  </steps>  
+    
+  <note><p>Na prática, você pode precisar <link xref="net-editcon">modificar ou fazer um "spoof" em um endereço MAC</link>. Por examplo, alguns fornecedores de serviços pela Internet podem requisitar um endereço MAC específico para ser usado no serviço. Se a placa de rede parar de funcionar e você precisar trocar a placa de rede, o serviço não funcionará mais. Nesses casos, você precisará mudar (spoof) o endereço MAC.</p></note>
+
+</page>

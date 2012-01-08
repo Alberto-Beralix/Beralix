@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-error-folder-mismatch" xml:lang="es">
+
+  <info>
+    <desc>Qué hacer cuando se muestra este error.</desc>
+    
+    <link type="guide" xref="index#common-mail-problems"/>
+
+    <revision pkgversion="3.1.5" version="0.4" date="2011-07-28" status="final"/>
+    <credit type="author">
+      <name>April Gonzales</name>
+      <email>loonycookie@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Mensaje de error «El resumen y la carpeta no coinciden» después de sincronizar las carpetas</title>
+
+<p>If the error message: <gui>Error while Expunging folder. Error storing `~/.local/share/evolution/mail/local/Inbox (mbox)': Summary and folder mismatch, even after a sync.</gui> pops up, perform the following steps:</p>
+
+<note><p>Estos pasos se aplican en las versiones 3.0 y 3.2. Tenga en cuenta que la ubicación de los archivos de Evolution en las versiones 2.30 y 2.32 son diferentes (<file>~/.evolution/mail/local/</file> en lugar de <file>~/.local/share/evolution/mail/local/</file>).</p></note>
+
+<list>
+<item><p>Open the Terminal application (category <gui>System Tools</gui>) and type in the command <code>evolution --force-shutdown</code>. This command stops Evolution and all the processes related to it.</p></item>
+<item><p>Quite los archivos que terminan en:</p>
+ <list>
+  <item><p><file>.ev-summary</file></p></item>
+  <item><p><file>.ibex.index</file></p></item>
+ </list>
+ <p>To do this, navigate to the hidden directory <file>~/.local/share/evolution/mail/local/</file> and locate the specified files. You can do this in the GNOME File Manager (Nautilus) by either showing hidden files, or by entering the directory via <guiseq><gui>Go</gui><gui>Location...</gui></guiseq> from the menu bar.</p>
+</item>
+
+<item><p>Reinicie Evolution. Note que reiniciar la aplicación puede llevar algún tiempo ya que se necesita reconstruir los índices eliminados en el paso anterior.</p></item>
+</list>
+
+<note>
+<p>Al realizar esta operación puede que pierda algunas de sus etiquetas.</p>
+</note>
+
+<note>
+<p>This problem is expected to be fixed in version 3.0 according to the corresponding <link href="https://bugzilla.gnome.org/show_bug.cgi?id=550414">bug report</link>. Please add a comment if this is not the case.</p> <!-- TODO:POST-3-2: Remove from docs once really fixed -->
+</note>
+
+</page>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="commands_reading" xml:lang="es">
+  <info>
+    <link type="next" xref="commands_structural_navigation"/>
+    <link type="guide" xref="commands#reading_documents"/>
+    <link type="seealso" xref="howto_documents"/>
+    <link type="seealso" xref="howto_text_attributes"/>
+    <link type="seealso" xref="howto_whereami"/>
+    <title type="sort">1. Lectura</title>
+    <title type="link">Lectura</title>
+    <desc>Comandos para acceder a documentos de texto</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Comandos de lectura</title>
+  <p>Además de los comandos de navegación del cursor que forman parte de GNOME, <app>Orca</app> proporciona varios comandos que puede usar para leer un documento.</p>
+  <note style="tip">
+    <p>En las listas que se muestran a continuación, observará varias referencias a «TN». Todas las teclas «TN» se ubican en el teclado numérico. También notará que hay diferentes pulsaciones de teclas dependiendo de si está usando un ordenador de escritorio o un portátil, o para ser más preciso, si está usando la distribución de escritorio de <app>Orca</app> o su distribución de portátil. Para obtener más información, consulte el tema <link xref="howto_keyboard_layout">distribución del teclado</link>.</p>
+  </note>
+  <section id="flat_review">
+    <title>Leer su ubicación actual</title>
+    <p>Los siguientes <link xref="commands_flat_review">comandos de Revisión</link> de <app>Orca</app> se pueden usar para leer su ubicación actual.</p>
+    <list>
+      <item>
+        <p>Leer la línea actual:</p>
+        <list>
+          <item>
+            <p>Sobremesa: <keyseq><key>TN 8</key></keyseq></p>
+          </item>
+          <item>
+            <p>Portátil: <keyseq><key>Modificador de Orca</key><key>I</key></keyseq></p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Leer la palabra actual:</p>
+        <list>
+          <item>
+            <p>Sobremesa: <keyseq><key>TN 5</key></keyseq></p>
+          </item>
+          <item>
+            <p>Portátil: <keyseq><key>Modificador de Orca</key><key>K</key></keyseq></p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Deletrear la palabra actual:</p>
+        <list>
+          <item>
+            <p>Sobremesa: <keyseq><key>TN 5</key></keyseq> (doble pulsación)</p>
+          </item>
+          <item>
+            <p>Portátil: <keyseq><key>Modificador de Orca</key><key>K</key></keyseq> (doble pulsación)</p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Deletrear fonéticamente la palabra actual:</p>
+        <list>
+          <item>
+            <p>Sobremesa: <keyseq><key>TN 5</key></keyseq> (triple pulsación)</p>
+          </item>
+          <item>
+            <p>Portátil: <keyseq><key>Modificador de Orca</key><key>K</key></keyseq> (triple pulsación)</p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Leer el carácter actual:</p>
+        <list>
+          <item>
+            <p>Portátil: <keyseq><key>TN 2</key></keyseq></p>
+          </item>
+          <item>
+            <p>Portátil: <keyseq><key>Modificador de Orca</key><key>,</key></keyseq></p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Leer fonéticamente el carácter actual:</p>
+        <list>
+          <item>
+            <p>Sobremesa: <keyseq><key>TN 2</key></keyseq> (doble pulsación)</p>
+          </item>
+          <item>
+            <p>Portátil: <keyseq><key>Modificador de Orca</key><key>,</key></keyseq> (doble pulsación)</p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Leer el valor unicode del carácter actual:</p>
+        <list>
+          <item>
+            <p>Sobremesa: <keyseq><key>TN 2</key></keyseq> (triple pulsación)</p>
+          </item>
+          <item>
+            <p>Portátil: <keyseq><key>Modificador de Orca</key><key>,</key></keyseq> (triple pulsación)</p>
+          </item>
+        </list>
+      </item>
+    </list>
+  </section>
+  <section id="say_all">
+    <title>Leer todo</title>
+    <p>El comando Leer todo de Orca hará que <app>Orca</app> lea todo el documento comenzando desde su ubicación actual.</p>
+    <list>
+      <item>
+        <p>Sobremesa: <key>TN +</key></p>
+      </item>
+      <item>
+        <p>Portátil: <keyseq><key>Modificador de Orca</key><key>;</key></keyseq></p>
+      </item>
+    </list>
+  </section>
+  <section id="attributes_and_selection">
+    <title>Atributos del texto y texto seleccionado</title>
+    <p>Orca ha dedicado un comando para obtener los atributos del texto en la ubicación del cursor. Además, si usa los comandos «Dónde estoy» de <app>Orca</app> desde un objeto de texto en el que se ha seleccionado texto, <app>Orca</app> hablará el texto seleccionado.</p>
+    <list>
+      <item>
+        <p>Presentar los atributos del texto: <keyseq><key>Modificador de Orca</key><key>F</key></keyseq></p>
+      </item>
+      <item>
+        <p>Realizar el «dónde estoy» básico:</p>
+        <list>
+          <item>
+            <p>Sobremesa: <key>TN Intro</key></p>
+          </item>
+          <item>
+            <p>Portátil: <keyseq><key>Modificador de Orca</key><key>Intro</key></keyseq></p>
+          </item>
+        </list>
+    </item>
+    <item>
+      <p>Realizar el «dónde estoy» detallado:</p>
+      <list>
+        <item>
+          <p>Sobremesa: <key>TN Intro</key> (doble pulsación)</p>
+        </item>
+        <item>
+          <p>Portátil: <keyseq><key>Modificador de Orca</key><key>Intro</key></keyseq> (doble pulsación)</p>
+        </item>
+      </list>
+    </item>
+  </list>
+</section>
+</page>

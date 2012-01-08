@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="question" id="power-suspendhibernate" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="power"/>
+    
+    <desc>Bereitschaft versetzt den Rechner in einen Schlafmodus, im Ruhezustand werden Ihre Dateien gespeichert, die Stromversorgung aber komplett ausgeschaltet.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>What happens when I suspend or hibernate the computer?</title>
+
+<comment>
+  <cite date="2011-05-30">shaunm</cite>
+  <p>I would like a better explanation of what "saved to disk" means. As written,
+  it could be confused with open files being saved, which they aren't. Also, with
+  GNOME 3, we barely expose hibernate. It's in the power settings, but nothing
+  does it by default. Restructure prose to reflect that.</p>
+  <p>This page stays incomplete until this is dealt with.</p>
+</comment>
+
+<p>Wenn Sie den Rechner in <em>Bereitschaft</em> versetzen, schicken Sie ihn in einen Schlafmodus. Alle Ihre Anwendungen und Dokumente bleiben geöffnet, aber der Bildschirm und andere Teile des Rechners werden ausgeschaltet, um Strom zu sparen. Der Rechner ist aber immer noch eingeschaltet und verbraucht ein klein wenig Strom. Sie können ihn durch einen Tastendruck oder Mausklick aufwecken. Falls das nicht funktioniert, versuchen Sie die Ein-/Ausschalttaste zu betätigen.</p>
+
+<p>Wenn Sie den Rechner in den <em>Ruhezustand</em> versetzen, bleiben alle Ihre Anwendungen und Dokumente geöffnet (genau genommen werden sie auf der Festplatte zwischengespeichert) und der Rechner schaltet sich vollständig aus, so dass er keinen Strom mehr verbraucht. Der Ruhezustand ist wie ein Ausschalten, aber Ihre Anwendungen und Dokumente sind immer noch geöffnet, wenn Sie den Rechner wieder einschalten.</p>
+
+<p>Manche Rechner haben mangelhafte Hardwareunterstützung, was dazu führt, dass sie unter Umständen <link xref="power-suspendfail">nicht fehlerfrei in Bereitschaft oder in den Ruhezustand versetzt</link> werden können. Es ist eine gute Idee, Bereitschaft/Ruhezustand auf Ihrem Rechner auf ihre Funktionsfähigkeit hin zu überprüfen.</p>
+
+<note style="important">
+ <title>Speichern Sie immer Ihre Arbeit, bevor Sie den Rechner in Bereitschaft/in den Ruhezustand versetzen.</title>
+ <p>Sie sollten Ihre Arbeit speichern, bevor Sie den Rechner in Bereitschaft/Ruhezustand versetzen, für den Fall, dass etwas schiefgeht und ihre offenen Anwendungen und Dokumente nicht wiederhergestellt werden können, wenn Sie den Rechner wieder einschalten.</p>
+</note>
+
+</page>

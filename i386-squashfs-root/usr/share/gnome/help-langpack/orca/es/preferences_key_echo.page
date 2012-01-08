@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_key_echo" xml:lang="es">
+  <info>
+    <title type="link">Eco de teclas</title>
+    <title type="sort">4. Eco de teclas</title>
+    <desc>Configurar lo que se habla al escribir</desc>
+    <link type="guide" xref="preferences#orca"/>
+    <link type="next" xref="preferences_key_bindings"/>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Preferencias del eco de teclas</title>
+  <section id="keyecho">
+    <title>Activar eco de teclas</title>
+    <media type="image" mime="image/png" src="figures/preferences_key_echo.png"/>
+    <p>La configuración del eco de teclas de Orca controla lo que sucede cada vez que pulsa una tecla. Para activar el eco de teclas, marque la casilla «Activar eco de teclas». Al hacerlo, se activan algunas casillas adicionales mediante las que puede elegir exactamente qué de qué teclas se debe hacer eco y de cuáles no para ajustarse mejor a sus necesidades.</p>
+    <p>Valor predeterminado: marcado</p>  
+    <section>
+      <title>Activar teclas alfanuméricas y de puntuación</title>
+      <p>Esta opción controla si las teclas <key>a</key>, <key>b</key>, <key>c</key>, <key>;</key>, <key>?</key>, etcétera se deben hablar o no cuando se pulsan.</p>
+      <p>Valor predeterminado: marcado</p>
+    </section>
+    <section>
+      <title>Activar teclas modificadoras</title>
+      <p>Esta opción controla si las teclas <key>Shift</key>, <key>Ctrl</key>, <key>Alt</key> y <key>Windows</key>, etcétera se deben hablar o no cuando se pulsan.</p>
+      <p>Valor predeterminado: marcado</p>
+    </section>
+    <section>
+      <title>Activar teclas de bloqueo</title>
+      <p>Esta opción controla si las teclas <key>Bloq Mayús</key>, <key>Bloq Despl</key>, y <key>Bloq Num</key>, etcétera se deben hablar o no cuando se pulsan.</p>
+      <p>Valor predeterminado: marcado</p>
+    </section>
+    <section>
+      <title>Activar teclas de función</title>
+      <p>Esta opción controla si las teclas <key>F1</key> hasta <key>F12</key> se deben hablar o no cuando se pulsan.</p>
+      <p>Valor predeterminado: marcado</p>
+    </section>
+    <section>
+      <title>Activar teclas de acción</title>
+      <p>Esta opción controla si las teclas <key>Retroceso</key>, <key>Supr </key>, <key>Intro</key>, <key>Esc</key>, <key>Tab</key>, <key>Re Pág</key>, <key>Av Pág</key>, <key>Inicio</key>, y <key>Fin</key>, etcétera se deben hablar o no cuando se pulsan.</p>
+      <p>Valor predeterminado: marcado</p>
+    </section>
+    <section>
+      <title>Activar teclas de navegación</title>
+      <p>Esta opción controla si se deben leer las teclas <key>Izquierda</key>, <key>Derecha</key>, <key>Arriba</key>, y <key>Abajo</key> cuando al pulsarlas. Esta opción también se aplica a cualquier combinación de teclas en la que se pulse el <key>Modificador de Orca</key>, por ejemplo cuando se usa la revisión.</p>
+      <p>Valor predeterminado: no marcado</p>
+    </section>
+    <section>
+      <title>Activar teclas diacríticas no espaciadas</title>
+      <p>Esta opción controla si las «teclas muertas» usadas para generar letras acentuadas se deben hablar o no cuando se pulsan.</p>
+      <p>Valor predeterminado: no marcado</p>
+    </section>
+  </section>
+  <section id="characterecho">
+    <title>Activar eco por carácter</title>
+    <media type="image" mime="image/png" src="figures/preferences_character_echo.png"/>
+    <p>Activar esta opción provoca que Orca haga eco del carácter que acaba de escribir.</p>
+    <p>Aunque el eco por carácter es bastante similar al eco de teclas alfanuméricas y de puntuación, hay diferencias importantes, especialmente en lo que respecta a las letras acentuadas y otros símbolos para los que no hay una tecla dedicada:</p>
+    <list>
+      <item>
+        <p>El eco de teclas hace que <app>Orca</app> anuncie qué tecla acaba de <em>pulsar</em>.</p>
+      </item>
+      <item>
+        <p>El eco de carácter hace que <app>Orca</app> anuncie qué es lo que se acaba de <em>insertar</em>.</p>
+      </item>
+    </list>
+    <p>Por ello, para tener caracteres acentuados hablados según los escribe, debe activar el eco de carácter.</p>
+    <p>Valor predeterminado: no marcado</p>
+    <note style="tip">
+      <title>Activar el eco de tecla y el eco de carácter</title>
+      <p>Si quiere eco de teclas y pulsa con frecuencia teclas con tilde, considere activar ambos. La lógica de echo de carácter de <app>Orca</app> intenta filtrar los caracteres que se hablan como resultado del eco de teclas, minimizando la posibilidad de «hablar dos veces» según escribe.</p>
+    </note>
+  </section>
+  <section id="wordandsentenceecho">
+    <title>Activar eco por palabras y activar eco por sentencias</title>
+    <media type="image" mime="image/png" src="figures/preferences_word_and_sentence_echo.png"/>
+    <p>Marcar la casilla de verificación <gui>Activar eco por palabras</gui> hace que <app>Orca</app> lea la palabra que acaba de escribir. De forma similar, marcando la casilla de verificación <gui>Activar eco por frases</gui> hace que <app>Orca</app> lea la frase que acaba de escribir.</p>
+    <p>Valor predeterminado: no marcado</p>
+  </section>
+</page>

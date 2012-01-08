@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="look-display-fuzzy" xml:lang="de">
+
+  <info>
+   <link type="guide" xref="hardware-problems-graphics"/>
+   <desc>Die Bildschirmauflösung könnte falsch eingestellt sein.</desc>	
+   <revision version="11.04" date="2011-04-24" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Natalia Ruz Leiva</name>
+      <email>nruz@alumnos.inf.utfsm.cl</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Warum ist das Bild auf meinem Bildschirm unscharf/verpixelt?</title>
+
+<p>Das kann passieren, wenn die Bildschirmauflösung, die Sie eingestellt haben, für Ihren Bildschirm ungeeignet ist.</p>
+
+<p>To solve this, click the icon at the very right of the panel and go to <gui>System Settings</gui>. In the Hardware section, choose <gui>Displays</gui>. Try some of the <gui>Resolution</gui> options and set the one that makes the screen look better.</p>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Would like a little more explanation on native resolution, which
+  is generally only applicable on LCDs. There's a stub for using two
+  monitors. Link from section below when it's added.</p>
+</comment>
+
+<section id="multihead">
+ <title>Bei mehreren angeschlossenen Bildschirmen</title>
+ 
+ <p>Wenn Sie zwei Bildschirme am Rechner angeschlossen haben (zum Beispiel einen normalen Monitor und einen Projektor), können die Bildschirme unterschiedliche Auflösungen haben. Die Grafikkarte des Rechners kann aber jeweils nur eine Auflösung zur Verfügung stellen, wodurch zumindest einer der Bildschirme verschwommen aussehen kann.</p>
+ 
+ <p>Sie können für die zwei Bildschirme unterschiedliche Auflösungen einstellen, werden dann aber nicht auf beiden Bildschirmen gleichzeitig dasselbe darstellen können. Sie haben also zwei voneinander unabhängige Bildschirme gleichzeitig angeschlossen. Sie können Fenster von einem Bildschirm zum anderen verschieben, aber Sie können nicht dasselbe Fenster gleichzeitig auf beiden Bildschirmen darstellen.</p>
+ 
+ <p>To set up the displays so that they each have their own resolution:</p>
+ 
+ <steps>
+  <item>
+   <p>Click the icon at the very right of the panel and select <gui>System Settings</gui>. Open <gui>Displays</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Deaktivieren Sie <gui>Bildschirme spiegeln</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Select each display in turn from the gray box at the top of the <gui>Displays</gui> window. Change the <gui>Resolution</gui> until that display looks right.</p>
+  </item>
+ </steps>
+
+</section>
+
+</page>

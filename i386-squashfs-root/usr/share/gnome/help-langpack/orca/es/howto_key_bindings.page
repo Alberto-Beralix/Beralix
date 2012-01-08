@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_key_bindings" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#getting_started"/>
+    <link type="next" xref="howto_profiles"/>
+  <title type="sort">8. Asociaciones de teclas</title>
+  <desc>Comandos de asociación, reasociación y desasociación</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Asociaciones de teclas</title>
+  <p>Orca tiene muchos comandos, algunos de los cuales están asociados a una pulsación de tecla y otros no están asociados. Puede asociar, reasociar y desasociar los comandos de <app>Orca</app> realizando los siguientes pasos.</p>
+  <steps>
+    <title>Asociar un comando no asociado</title>
+    <item>
+      <p>Entre en el diálogo de <link xref="preferences">Preferencias de Orca</link> pulsando <keyseq><key>Modificador de Orca</key><key>Espacio</key></keyseq>.</p>
+    </item>
+    <item>
+      <p>Vaya a la página <gui>Asociaciones de teclas</gui>.</p>
+    </item>
+    <item>
+      <p>Vaya a la celda que contiene el comando al cual quiere asignar una pulsación de tecla.</p>
+    </item>
+    <item>
+      <p>Pulse una vez a la derecha. Esto situará el foco en la columna <gui>Asociación de teclas</gui>. Pulse <key>Intro</key>.</p>
+    </item>
+    <item>
+      <p>Pulse la combinación de teclas que quiere.</p></item>
+    <item>
+      <p>Pulse <key>Intro</key> para confirmar la nueva combinación. La nueva pulsación de tecla se guardará y la casilla de verificación en la última columna (la columna <gui>Modificado</gui>) indicará que se ha modificado la asociación de teclas.</p>
+    </item>
+    <item>
+      <p>Pulse el botón <gui>Aplicar</gui>.</p>
+    </item>
+  </steps>
+  <steps>
+    <title>Cambiar las asociaciones existentes</title>
+    <item>
+      <p>Entre en el diálogo de <link xref="preferences">Preferencias de Orca</link> pulsando <keyseq><key>Modificador de Orca</key><key>Espacio</key></keyseq>.</p>
+    </item>
+    <item>
+      <p>Vaya a la página <gui>Asociaciones de teclas</gui>.</p>
+    </item>
+    <item>
+      <p>Vaya a la celda que contiene la asociación que quiere cambiar y pulse <key>Intro</key>.</p>
+    </item>
+    <item>
+        <p>Pulse la combinación de teclas que quiere.</p>
+    </item>
+    <item>
+      <p>Pulse <key>Intro</key> para confirmar la nueva combinación. La nueva pulsación de tecla se guardará y la casilla de verificación en la última columna (la columna <gui>Modificado</gui>) indicará que se ha modificado la asociación de teclas.</p>
+    </item>
+    <item>
+      <p>Pulse el botón <gui>Aplicar</gui>.</p>
+    </item>
+  </steps>
+  <steps>
+    <title>Restaurar las asociaciones originales</title>
+    <item>
+      <p>Entre en el diálogo de <link xref="preferences">Preferencias de Orca</link> pulsando <keyseq><key>Modificador de Orca</key><key>Espacio</key></keyseq>.</p>
+    </item>
+    <item>
+      <p>Vaya a la página <gui>Asociaciones de teclas</gui>.</p>
+    </item>
+    <item>
+      <p>Vaya a la columna modificada que está vinculada con la asociación de teclas.</p>
+    </item>
+    <item>
+      <p>Desmarque la casilla de verificación pulsando <key>Espacio</key>.</p>
+    </item>
+    <item>
+      <p>Pulse el botón <gui>Aplicar</gui>.</p>
+    </item>
+  </steps>
+  <steps>
+    <title>Desasociar comandos asociados</title>
+    <item>
+      <p>Entre en el diálogo de <link xref="preferences">Preferencias de Orca</link> pulsando <keyseq><key>Modificador de Orca</key><key>Espacio</key></keyseq>.</p>
+    </item>
+    <item>
+      <p>Vaya a la página <gui>Asociaciones de teclas</gui>.</p>
+    </item>
+    <item>
+      <p>Vaya a la celda que contiene la asociación que quiere eliminar y pulse <key>Intro</key>.</p>
+    </item>
+    <item>
+      <p>Cuando se le pida la asociación de teclas nueva, pulse <key>Supr</key> o <key>Retroceso</key>. Se le dirá que el atajo de teclado se ha quitado.</p>
+    </item>
+    <item>
+      <p>Pulse <key>Intro</key> para confirmar.</p>
+    </item>
+    <item>
+      <p>Pulse el botón <gui>Aplicar</gui>.</p>
+    </item>
+  </steps>
+</page>

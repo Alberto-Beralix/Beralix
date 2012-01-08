@@ -1,0 +1,19 @@
+[Desktop Entry]
+X-AppInstall-Package=bittornado-gui
+X-AppInstall-Popcon=216
+X-AppInstall-Section=universe
+
+Version=0.3.10
+Name=Bittornado Client
+GenericName=Bittorrent Client
+X-MultipleArgs=false
+Exec=/usr/bin/btdownloadgui.bittornado
+X-test=test -n "$DISPLAY"
+Type=Application
+Icon=bittornado
+MimeType=application/x-bittorrent;
+NoDisplay=false
+Categories=GNOME;Network;FileTransfer;P2P;
+Terminal=false
+
+X-Ubuntu-Gettext-Domain=app-install-data

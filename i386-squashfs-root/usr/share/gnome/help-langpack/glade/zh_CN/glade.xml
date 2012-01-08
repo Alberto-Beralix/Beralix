@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "3.1.0">
+<!ENTITY manrevision "3.0">
+<!ENTITY app "Glade">
+]>
+<!-- 
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<article id="index" lang="zh_CN">
+
+  <articleinfo> 
+    <title>Glade 界面设计器手册</title> 
+      
+    <abstract role="description"><para>Glade 是 GTK+ 应用程序的一个图形界面设计器。</para>
+    </abstract>
+
+    <copyright> 
+      <year>2006</year> 
+      <holder>Vincent Geddes</holder> 
+    </copyright>
+    <copyright> 
+      <year>2004</year>
+      <year>2003</year>
+      <holder>Sun Microsystems</holder> 
+    </copyright> 
+    <copyright> 
+      <year>2002</year><year>2000</year> 
+      <holder>Michael Vance</holder> 
+    </copyright><copyright><year>2009, 2010.</year><holder>YunQiang Su (wzssyqa@gmail.com)</holder></copyright> 
+
+    <publisher> 
+      <publishername>GNOME 文档项目</publishername> 
+    </publisher> 
+
+   <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Vincent</firstname> 
+	<surname>Geddes</surname> 
+	<affiliation> 
+	  <orgname>GNOME 文档项目</orgname>
+	  <address><email>vincent.geddes@gmail.com</email></address>
+	</affiliation>
+      </author> 
+      <author> 
+        <firstname>Sun</firstname> 
+        <surname>GNOME 文档团队</surname> 
+        <affiliation> 
+          <orgname>Sun Microsystems</orgname> 
+        </affiliation> 
+       </author> 
+       <author> 
+         <firstname>Michael</firstname> 
+         <surname>Vance</surname> 
+         <affiliation> 
+           <orgname>GNOME 文档项目</orgname> 
+           </affiliation> 
+       </author> 
+    </authorgroup>
+
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+-->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->  
+    <revhistory>
+        <revision> 
+		<revnumber>Glade 手册 3.0 版</revnumber> 
+		<date>2006年12月5日</date>
+		<revdescription> 
+	  		<para role="author">Vincent Geddes</para>
+	  		<para role="publisher">GNOME 文档项目</para>
+		</revdescription> 
+        </revision>
+        <revision> 
+                <revnumber>Glade 手册 2.1 版</revnumber> 
+                <date>2004年6月17日</date> 
+                <revdescription> 
+                        <para role="author">Sun GNOME 文档团队</para>
+                        <para role="publisher">GNOME 文档项目</para>
+                </revdescription> 
+        </revision>
+        <revision> 
+                <revnumber>Glade 用户手册 2.0 版</revnumber> 
+                <date>2004年2月25日</date> 
+                <revdescription> 
+                        <para role="author">Sun GNOME 文档团队</para>
+                        <para role="publisher">GNOME 文档项目</para>
+                </revdescription> 
+        </revision>             
+        <revision> 
+                <revnumber>Glade 用户手册 1.2 版</revnumber> 
+                <date>2004年2月10日</date> 
+                <revdescription> 
+                        <para role="author">Sun GNOME 文档团队</para>
+                        <para role="publisher">GNOME 文档项目</para>
+                </revdescription> 
+        </revision>  
+        <revision> 
+                <revnumber>Glade 用户手册 1.1 版</revnumber> 
+                <date>2002年5月30日</date> 
+                <revdescription> 
+                        <para role="author">Michael Vance</para>
+                        <para role="publisher">GNOME 文档项目</para>
+                </revdescription> 
+        </revision> 
+        <revision> 
+                <revnumber>Glade 用户手册 1.0 版</revnumber> 
+                <date>2000年5月11日</date> 
+                <revdescription> 
+                        <para role="author">Michael Vance</para>
+                        <para role="publisher">GNOME 文档项目</para>
+                </revdescription> 
+        </revision> 
+    </revhistory> 
+
+    <releaseinfo>本手册描述了 3.1.0 版的 Glade。</releaseinfo> 
+    <legalnotice> 
+      <title>反馈</title> 
+      <para>报告一个错误或者一个关于 Glade 程序以及本文档的建议，请看 <ulink url="ghelp:gnome-feedback" type="help">GNOME Feedback Page</ulink>。</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+    <indexterm><primary>glade</primary></indexterm>
+    <indexterm><primary>用户界面设计器</primary></indexterm>
+
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="introduction"> 
+    <title>导言</title> 
+
+    <para>Glade 界面设计器是您可以创建和编辑 <application>GTK+</application> 应用程序的用户界面设计。</para>
+
+    <para>GTK+ 库提供了一个用户界面的积木扩展集，比如文本框、对话框的标签、数字输入框、复选框和菜单。这些积木被叫做 <emphasis>widgets</emphasis>。您可以使用 Glade 将 widget 放置在一个图形界面中。Glade 允许您修改这些 widget 的布局和属性。您也可以使用 Glade 添加 widget 和程序源代码之间的联系。</para>
+
+    <para>Glade 设计的用户界面保存在 XML 格式，使其可以容易的与外部工具集成。可以使用 <application>libglade</application> 库从 XML 描述动态的创建图形用户界面。</para>
+
+  </sect1>
+
+  <sect1 id="getting-started"> 
+    <title>开始</title> 
+
+    <sect2 id="glade-start">
+    <title>启动 <application>Glade</application></title>
+    <para>可以按如下方法启动 <application>Glade</application>：</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term><guimenu>应用程序</guimenu> 菜单</term>
+    		<listitem>
+    		<para>选择 <menuchoice><guisubmenu>编程</guisubmenu><guimenuitem>Glade 界面设计大师</guimenuitem></menuchoice>。</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>命令行</term>
+    		<listitem>
+    		<para>要从命令行启动 <application>Glade</application>，输入如下命名然后按 <keycap>Return</keycap>：<command>glade-3</command></para>	 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+    </sect2>
+
+    <sect2 id="glade-when-start">
+    <title>启动 <application>Glade</application> 时</title>
+    <para>启动 <application>Glade</application> 时，将显示下列窗口。</para>
+
+        <figure id="main-window-fig"> 
+          <title><application>Glade</application> 窗口</title> 
+            <screenshot> 
+              <mediaobject>
+                <imageobject><imagedata fileref="figures/main-window.png" format="PNG"/></imageobject>
+                <textobject><phrase>显示 <application>Glade</application> 窗口</phrase></textobject> 
+              </mediaobject> 
+            </screenshot> 
+        </figure>
+        
+        <para><application>Glade</application> 包含如下元素：</para>
+
+        <variablelist>
+          <varlistentry> <term>菜单栏</term>
+            <listitem>
+            <para>菜单栏上的菜单包括所有你使用 <application>Glade</application> 要用到的命令。</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>工具栏</term>
+            <listitem>
+            <para>工具栏包括了你可以从菜单栏里找到的命令中的一部分。</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>设计区</term>
+            <listitem>
+            <para>设计区是可以可视化设计用户界面的地方。</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>构件库</term>
+            <listitem>
+            <para>构件库包含了可以用来构建用户界面的 widgets。</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>检查器</term>
+            <listitem>
+            <para>检查器显示工程中控件的信息。</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>属性编辑器</term>
+            <listitem>
+            <para>属性编辑器是用来处理控件的属性以及添加和源代码之间联系的。</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>状态栏</term>
+            <listitem>
+            <para>状态栏显示关于当前 <application>Glade</application> 活动的信息，以及关于菜单条目的语境信息。</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+
+    </sect2>
+  </sect1>
+
+  <sect1 id="working-with-projects"> 
+         <title>使用工程</title> 
+  
+ 
+<!-- To Create a New Project  -->
+	 <sect2 id="glade-create-new-project"> 
+		<title>新建一个工程</title>
+		<para>创建一个新工程，选择 <menuchoice><guimenu>文件</guimenu><guimenuitem>新建</guimenuitem></menuchoice>。程序将在 <application>Glade</application> 窗口显示一个空工程。</para>
+	 </sect2>
+
+	 <sect2 id="glade-open-project"> 
+		<title>打开一个工程</title>
+		<para>打开一个已有的工程，选择 <menuchoice><guimenu>文件</guimenu><guimenuitem>打开</guimenuitem></menuchoice>。程序将在 <application>Glade</application> 窗口显示这个工程。</para>
+	 </sect2>
+
+<!-- To Save a Project -->
+	 <sect2 id="glade-save-project"> 
+		<title>保存当前工程</title>
+		<para>您可以按以下方法保存工程：</para>
+		<itemizedlist> 
+		  <listitem><para>将改动保存到已有的工程文件，选择 <menuchoice><guimenu>文件</guimenu><guimenuitem>保存</guimenuitem></menuchoice></para>
+		  </listitem>
+		  <listitem><para>保存新工程文件或者将已有的工程文件保存为新的文件名，选择 <menuchoice><guimenu>文件</guimenu><guimenuitem>另存为</guimenuitem></menuchoice>。在 <guilabel>另存为</guilabel>对话框中输入工程文件名，然后点击 <guibutton>保存</guibutton>。</para>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+  </sect1>
+
+
+  <sect1 id="working-with-widgets"> 
+         <title>使用构件</title>
+         <sect2 id="select-widgets-palette">
+                <title>从构件库选择控件</title>
+                <para>您可以使用如下方法使用构件库：</para>
+                <variablelist> 
+                  <varlistentry> 
+                         <term>选择模式</term> 
+                         <listitem>
+                                <para>要使用选择模式，在 <guilabel>选择器</guilabel> 箭头上单击。指针变为箭头以表明选择模式已启用。这种模式中，使用鼠标来选择你的工程中的构件。可以使用 <guilabel>属性</guilabel> 窗口编辑构件的属性。</para>
+<para>您也可以使用构件的右键菜单选择一个构件。在构件上右击来打开构件快捷菜单。</para><para>您可以从 <guilabel>构件库</guilabel> 向您的工程添加多个指定类型的构件，方法是选择构件时按住 <keycap>Control</keycap>。您需要点击 <guilabel>选择器</guilabel> 箭头或 <guilabel>构件库</guilabel> 中的其它构件来返回正常模式。</para>
+                         </listitem> 
+                  </varlistentry> 
+                </variablelist> 
+                <variablelist> 
+                  <varlistentry> 
+                         <term>构件定位模式</term> 
+                         <listitem> 
+                                <para>要使用构件定位模式，在 <guilabel>构件库</guilabel> 窗口中选择一个构件。选择多数的构件时，指针变为指针加交叉。您可以然后在容器、顶级构件等中放置构件。放置构件之后，模式返回选择模式。</para>
+                         </listitem> 
+                  </varlistentry> 
+                </variablelist> 
+                <variablelist> 
+                  <varlistentry> 
+                         <term>顶层模式</term> 
+                         <listitem> 
+                                <para>要使用顶层模式，从 <application>构件库</application> 窗口中选择一个定义为顶层的控件。从 <guilabel>构件库</guilabel> 选择一个顶层模式的控件时，这个控件立即表现在您的桌面上，可以随后编辑这个控件。选择一个顶层控件之后，返回至选择模式。</para>
+                         </listitem> 
+                  </varlistentry> 
+                </variablelist> 
+         </sect2>
+<sect2 id="organize-widgets">
+<title>在工程中组织控件</title>
+<para>在工程中，请使用构件容器或 boxes 来布局和组织控件。在 <guilabel>构件库</guilabel>窗口中可以选择如下的控件容器：</para>
+<itemizedlist>
+<listitem><para>Horizontal Box</para>
+</listitem><listitem><para>Vertical Box</para></listitem>
+<listitem><para>Table</para></listitem>
+<listitem><para>Fixed Positions</para></listitem>
+<listitem><para>Horizontal Button Box</para></listitem>
+<listitem><para>Vertical Button Box</para></listitem>
+<listitem><para>Horizontal Panes</para></listitem>
+<listitem><para>Vertical Panes</para></listitem>
+<listitem><para>Notebook</para></listitem>
+<listitem><para>Frame</para></listitem>
+<listitem><para>Scrolled Window</para></listitem>
+<listitem><para>Viewport</para></listitem>
+</itemizedlist>
+<para>可以通过巧妙使用 boxes 创建复杂的布局结构。当创建水平和竖直 boxes 时， <application>Glade</application> 询问初始创建的行数和列数，而且行和列稍候也可以容易地添加和删除。</para>
+<para>创建了所有需要的 boxes 之后，可以向 boxes 中添加特定的控件如 labels, buttons 以及更多的复杂的控件。注意，<application>Glade</application> 打包控件到布局中，这减少了很多乏味的工作。使用 boxes 允许在本地化时窗口调整大小以容纳不同的语言的不同大小的标签。</para></sect2>
+         <sect2 id="place-widgets-clipboard"> 
+                <title>放置一个控件到剪切板</title> 
+                <para>从父构建移动一个控件到剪切板上，选择这个控件，然后选择  <menuchoice><guimenu>编辑</guimenu><guisubmenu>剪切</guisubmenu></menuchoice></para>
+         </sect2> 
+         <sect2 id="copy-widget-clipboard"> 
+                <title>复制一个控件到剪切板</title> 
+                <para>复制控件到剪切板，选择  <menuchoice><guimenu>编辑</guimenu><guisubmenu>复制</guisubmenu></menuchoice>。原来的控件仍然附着在父控件上。</para>
+         </sect2> 
+         <sect2 id="paste-widget-clipboard"> 
+                <title>从剪切板粘贴控件到您的工程</title> 
+                <para>从剪切板粘贴控件到您的工程，选择 <menuchoice><guimenu>编辑</guimenu><guisubmenu>粘贴</guisubmenu></menuchoice></para><para>在 <application>Glade</application> 中，每个控件都必须有一个独特的名字。如果您剪切了一个控件，然后又将其粘贴到您的工程中，这个控件和其子控件将保持它们原来的名字。如果是复制控件，或多次粘贴同一控件到您的工程中，<application>Glade</application>将为复制的控件产生新名字。</para>
+         </sect2> 
+         <sect2 id="delete-widget"> 
+                <title>删除控件</title> 
+                <para>要直接从父控件中删除一个控件，而不把它移动到剪切板，选中这个控件，然后选择 <menuchoice><guimenu>E编辑</guimenu><guisubmenu>删除</guisubmenu></menuchoice>。</para>
+                 
+         </sect2> 
+         
+         <sect2 id="edit-widget"> 
+                <title>更改控件属性</title> 
+                <para>属性编辑器是用来编辑选中控件的属性的。要更改一个控件的属性，选中一个控件然后在属性窗口的属性域中输入合适的值。</para>
+                
+                
+         </sect2> 
+  </sect1>
+  
+<sect1 id="about"> 
+    <title>关于 Glade</title> 
+    <para>Glade 由 Glade 开发者和 GNOME 社区志愿者维护。要获取更多信息，请访问 <ulink url="http://glade.gnome.org" type="http">Glade Web site</ulink>。</para>
+    <para>报告关于本程序和本手册的bug或建议，您可以使用 <ulink url="http://bugzilla.gnome.org/enter_bug.cgi?product=glade3" type="http">bugzilla</ulink>。</para>
+
+    <para>关于 Glade 的另外一个好的消息源是 Glade <ulink url="http://lists.ximian.com/mailman/listinfo/glade-users" type="http">用户</ulink> 和 <ulink url="http://lists.ximian.com/mailman/listinfo/glade-devel" type="http">开发者</ulink> 邮件列表。除了订阅，你可能也行浏览列表归档，可以通过相同的链接访问。</para>
+
+    <para>本程序是在自由软件基金会发布的通用公共许可证下发布的，或者是第二版，或者(由您的选择)更新的版本。可以从 <ulink url="ghelp:gpl" type="help">link</ulink> 找到这个许可证的一个副本，也可以从本程序的源代码的 COPYING 文件中找到。</para>
+  </sect1> 
+
+</article>

@@ -1,0 +1,60 @@
+plugin: shell
+name: camera/detect
+requires:
+ package.name == 'xawtv'
+ device.category == 'CAPTURE'
+command: camera_test -t detect
+description: Automated test case that attempts to detect a camera
+description-cs.UTF-8: Automatický test, který se snaží vyhledat kameru
+description-de.UTF-8: Automatisierter Test, welcher versucht, eine Kamera zu erkennen.
+description-en_AU.UTF-8: Automated test case that attempts to detect a camera
+description-en_GB.UTF-8: Automated test case that attempts to detect a camera
+description-es.UTF-8: Prueba automatizada que intenta detectar una cámara
+description-gl.UTF-8: Proba automatizada que tenta detectar unha cámara
+description-hu.UTF-8: Az automatikus teszt megkísérli felismerni a webkameráját
+description-it.UTF-8: Caso di test automatico che prova a rilevare una webcam
+description-nl.UTF-8: Geautomatiseerde testcase om een camera te detecteren
+description-pt_BR.UTF-8: Caso de Teste automático que tenta detectar uma câmera
+description-ru.UTF-8: Автоматизированный тест обнаружения камеры
+description-sl.UTF-8: Samodejni preizkusni primer, ki poizkuša zaznati kamero
+description-tr.UTF-8: Kamera tespit etmeye çalışacak otomatik test durumu
+
+plugin: manual
+name: camera/display
+depends: camera/detect
+requires: 
+ package.name == 'python-gst0.10'
+ device.category == 'CAPTURE'
+command: camera_test -t display
+description:
+ Select Test to display a video capture from the camera
+ .
+ Did you see the video capture?
+
+plugin: manual
+name: camera/still
+depends: camera/detect
+requires:
+ package.name == 'python-gst0.10'
+ package.name == 'eog'
+ package.name == 'xawtv'
+ device.category == 'CAPTURE'
+command: camera_test -t still
+description:
+ Select Test to display a still image from the camera
+ .
+ Did you see the image?
+
+plugin: manual
+name: camera/video
+depends: camera/detect
+requires:
+ package.name == 'python-gst0.10'
+ package.name == 'totem'
+ device.category == 'CAPTURE'
+command: camera_test -t video
+description:
+ Select Test to capture video to a file and open it in totem.
+ Please make sure that both audio and video is captured.
+ .
+ Did you see/hear the capture?

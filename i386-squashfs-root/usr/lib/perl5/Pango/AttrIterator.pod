@@ -1,0 +1,127 @@
+=head1 NAME
+
+Pango::AttrIterator - used to represent iterators through Pango::AttrLists
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----Pango::AttrIterator
+
+
+
+=cut
+
+=for object Pango::AttrIterator - used to represent iterators through Pango::AttrLists
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 list = $iterator-E<gt>B<get_attrs> 
+
+Since: pango 1.2
+
+=head2 ($desc, $lang, $extra_attrs) = $iterator->B<get_font>
+
+
+
+=head2 attribute or undef = $iterator-E<gt>B<get> ($type)
+
+=over
+
+=item * $type (Pango::AttrType) 
+
+=back
+
+=head2 boolean = $iterator-E<gt>B<next> 
+
+=head2 (start, end) = $iterator-E<gt>B<range> 
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Pango::AttrType
+
+=over
+
+=item * 'invalid' / 'PANGO_ATTR_INVALID'
+
+=item * 'language' / 'PANGO_ATTR_LANGUAGE'
+
+=item * 'family' / 'PANGO_ATTR_FAMILY'
+
+=item * 'style' / 'PANGO_ATTR_STYLE'
+
+=item * 'weight' / 'PANGO_ATTR_WEIGHT'
+
+=item * 'variant' / 'PANGO_ATTR_VARIANT'
+
+=item * 'stretch' / 'PANGO_ATTR_STRETCH'
+
+=item * 'size' / 'PANGO_ATTR_SIZE'
+
+=item * 'font-desc' / 'PANGO_ATTR_FONT_DESC'
+
+=item * 'foreground' / 'PANGO_ATTR_FOREGROUND'
+
+=item * 'background' / 'PANGO_ATTR_BACKGROUND'
+
+=item * 'underline' / 'PANGO_ATTR_UNDERLINE'
+
+=item * 'strikethrough' / 'PANGO_ATTR_STRIKETHROUGH'
+
+=item * 'rise' / 'PANGO_ATTR_RISE'
+
+=item * 'shape' / 'PANGO_ATTR_SHAPE'
+
+=item * 'scale' / 'PANGO_ATTR_SCALE'
+
+=item * 'fallback' / 'PANGO_ATTR_FALLBACK'
+
+=item * 'letter-spacing' / 'PANGO_ATTR_LETTER_SPACING'
+
+=item * 'underline-color' / 'PANGO_ATTR_UNDERLINE_COLOR'
+
+=item * 'strikethrough-color' / 'PANGO_ATTR_STRIKETHROUGH_COLOR'
+
+=item * 'absolute-size' / 'PANGO_ATTR_ABSOLUTE_SIZE'
+
+=item * 'gravity' / 'PANGO_ATTR_GRAVITY'
+
+=item * 'gravity-hint' / 'PANGO_ATTR_GRAVITY_HINT'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Boxed>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

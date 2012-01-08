@@ -1,0 +1,38 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="gedit-plugins-sort">
+
+<info>
+  <link type="guide" xref="gedit-plugin-guide#gedit-default-plugins"/>
+  <revision pkgversion="3.2" version="1.0" date="2011-08-17" status="candidate"/>
+  <credit type="author">
+    <name>Daniel Neel</name>
+    <email>dneelyep@gmail.com</email>
+  </credit>
+  <credit type="author">
+    <name>Jim Campbell</name>
+    <email>jwcampbell@gmail.com</email>
+  </credit>
+  <desc>Sort lines of text into alphabetical order</desc>
+</info>
+
+<title>Sort</title>
+
+<p>The Sort plugin arranges selected lines of text into alphabetical order.</p>
+
+<note style="warning"><p>You cannot use the <gui>Undo</gui> feature to correct a <gui>Sort</gui> operation, so we recommend that you save the file immediately before performing the sort. If you make a mistake with the sort, you can revert to the previously-saved version of the file by selecting <guiseq><gui>File</gui><gui>Revert</gui></guiseq>.</p></note>
+
+<p>To enable the <app>Sort</app> plugin, select <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Plugins</gui><gui>Sort</gui></guiseq>.</p>
+
+<p>After you have enabled the <gui>Sort</gui> plugin, use it by selecting the lines of text you want to sort, and then clicking <guiseq><gui>Edit</gui><gui>Sort</gui></guiseq>.</p>
+
+<p>The Sort dialog will open, allowing you to choose between several sorting options:</p>
+<list>
+<item><p><em>Reverse order</em> will arrange the text in reverse alphabetical order.</p></item>
+<item><p><em>Remove duplicates</em> will remove duplicate values from the list.</p></item>
+<item><p><em>Ignore case</em> will ignore case sensitivity.</p></item>
+<item><p>To have the sort ignore the characters at the start of the lines, set the first character that should be used for sorting in the <em>Start at</em> column spin box.</p></item>
+</list>
+<p>To perform the sort operation, click <gui>Sort</gui>.</p>     				
+
+</page>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="prob-conn-name" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="prob-conn"/>
+    <link type="guide" xref="irc-manage#problems"/>
+    <link type="seealso" xref="account-irc"/>
+    <title type="link" role="error-msg">«Nombre en uso»</title>
+    <desc>Aparecen en la ventana principal un mensaje de error que dice «<gui>Nombre en uso</gui>».</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-07-26" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-14" status="review"/>
+    <revision pkgversion="2.30" version="0.3" date="2010-02-16" status="review"/>    
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>Obtengo un mensaje de error que muestra «Nombre en uso»</title>
+
+  <p>Este tipo de error sucede cuando intenta conectarse a su cuenta de IRC y está usando un apodo que ya está usando otra persona en esa red en particular.</p>
+
+  <steps>
+    <item>
+      <p>Pulse el icono <media type="image" mime="image/png" src="figures/gtk-edit.png">Editar</media> en el mensaje de error.</p>
+    </item>
+    <item>
+      <list>
+        <item>
+          <p>En la caja de texto <gui>Apodo</gui> escriba un apodo nuevo.</p>
+        </item>
+        <item>
+          <p>Si ha registrado ese apodo en la red que está usando, establezca la contraseña para ese apodo. Para obtener más información consulte la <link xref="irc-nick-password"/>.</p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>Deseleccione la casilla de verificación <gui>Activada</gui> junto al nombre de su cuenta y después selecciónela de nuevo para intentar reconectar con el servicio.</p>
+    </item>
+  </steps>
+
+</page>

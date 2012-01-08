@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# Author: Yann Dirson <dirson@debian.org>
+# License: GPL
+
+datafile=/var/log/popularity-contest
+
+if [ ! -e $datafile ] ; then
+    echo "warning: Missing required file $datafile."
+    echo "info:    Run 'popularity-contest > $datafile' to generate it."
+    exit 1
+fi
+
+grep '<OLD>' $datafile | cut -d' ' -f3 |
+  xargs apt-cache -o 'APT::Cache::AllVersions=0' show |
+  grep -E '^(Package|Installed-Size): ' |
+  perl -ne 'if (/^Package: (.*)/) { $p = $1 };  if (/^Installed-Size: (.*)/) { print "$1 $p\n"; $p = 'BUG' }' |
+  sort -rn

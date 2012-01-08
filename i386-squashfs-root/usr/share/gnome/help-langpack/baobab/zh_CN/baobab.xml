@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.15">
+<!ENTITY manrevision "1.0">
+<!ENTITY date "April 2006">
+<!ENTITY app "Disk Usage Analyzer">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="zh_CN">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>磁盘使用分析器手册</title>
+
+    <abstract role="description">
+      <para>磁盘使用情况分析器是一个图形化界面、菜单模式的查看器，您可以用它来查看和监测您的磁盘使用情况以及文件夹结构。</para>
+    </abstract>
+
+    <copyright> 
+      <year>2006</year> 
+      <holder>Fabio Marzocca</holder> 
+    </copyright><copyright><year>2009.</year><holder>TeliuTe (teliute@163.com)</holder></copyright> 
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <publisher> 
+      <publishername>GNOME 文档项目</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>对于本文档的复制、分发和/或修改必须遵循自由软件基金会 (Free Software Foundation) 发布的 GNU 自由文档许可证 (GFDL) 版本 1.1 或更高版本， 该许可证没有固定的部分、没有封面和背页文本。您可以在此<ulink type="help" url="ghelp:fdl">链接</ulink>上或在随本手册一起分发的 COPYING-DOCS 文件中找到 GFDL 的副本。</para>
+         <para>本手册是在 GFDL 许可之下分发的 GNOME 手册集合的一部分。如果想要单独分发此手册，可以在手册中添加该许可证的一份副本然后分发，如该许可证的第 6 部分所述。</para>
+
+	<para>各个公司使用的许多用于区别它们产品和服务的名称都声明为商标。在所有的 GNOME 文档以及 GNOME 文档项目的成员中，这些名称都是以全大写字母或首字母大写显示，从而表明它们是商标。</para>
+
+	<para>本文档以及文档的修改版本都是在遵循 GNU 自由文档许可证的条款下提供，这表示具有以下含义：<orderedlist>
+		<listitem>
+		  <para>文档按“原样”提供，不提供任何明示或暗示的保证，包括但不限于：文档或文档的修改版本没有适销性方面的缺陷、适合特定目的的适用性，以及没有侵权行为。您将自行承担本文档以及文档修改版本的质量、准确性以及性能方面的风险。如果任何文档或文档修改版本存在缺陷，您(而不是最初的编写者、作者或撰写人)将承担所有必需的服务、维修或更正的费用。此免责声明是本许可证的重要组成部分。如果不接受此免责声明，那么您就没有权利使用任何文档或文档的修改版本；并且</para>
+		</listitem>
+		<listitem>
+		  <para>无论在任何情况以及在任何法律理论下，本文档或文档修改版本的作者、最初的编写者、任何撰写人或任何分发者，或者任意这些方的任何提供者都不对任何人由于使用本文档或文档修改版本引起或带来的任何直接的、间接的、特殊的、偶然的或继发的损失承担任何民事(包括疏忽)、合同或其它方面的责任，这些损失包括但不限于信誉损失、工作停止、计算机失败或故障，或任何以及所有其它损失或由此引发的或与之相关的损失，即使这些方已被告知存在出现此类损失的可能性时也是如此。</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+   <authorgroup> 
+   <author> 
+		<firstname>Fabio</firstname> 
+		<surname>Marzocca</surname> 
+		<affiliation> 
+	  	<orgname>GNOME 文档项目</orgname> 
+	  	<address> <email>thesaltydog@gmail.com</email> </address> 
+		</affiliation> 
+   </author> 
+
+   <author role="maintainer">
+   	<firstname>Fabio</firstname>
+	<surname>Marzocca</surname>
+	<affiliation>
+	  <address><email>thesaltydog@gmail.com</email></address>
+	</affiliation>
+   </author>
+      
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+   <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  	<orgname>Latin Translation Team</orgname> 
+	  	<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+   </othercredit>
+-->
+    </authorgroup>
+
+	<releaseinfo revision="2.30" role="review">
+	</releaseinfo>
+
+    <revhistory>
+      <revision> 
+		<revnumber>磁盘使用情况分析器手册 V1.0</revnumber> 
+		<date>2006年4月</date> 
+		<revdescription> 
+	  		<para role="author">Emmanuele Bassi <email>ebassi@gmail.com</email></para>
+	  		<para role="publisher">GNOME 文档项目</para>
+		</revdescription> 
+      </revision>
+    </revhistory> 
+
+    <releaseinfo>本手册讲述的是磁盘使用情况分析器 2.15 版。</releaseinfo> 
+    
+    <legalnotice> 
+      <title>反馈</title> 
+      <para>要报告关于磁盘使用情况分析器程序，或使用手册中的缺陷，或者提出建议，请参照 <ulink url="ghelp:gnome-feedback" type="help">GNOME 反馈页</ulink> 上的指导。</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>磁盘使用情况分析器</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="baobab-introduction"> 
+    <title>介绍</title> 
+
+      <para><application>磁盘使用情况分析器</application> 是一个图形化界面、菜单模式的应用程序，用来分析 GNOME 环境下磁盘的使用情况。<application>磁盘使用情况分析器</application> 可以很方便地扫描整个文件系统，或者是用户指定的文件夹(本地或远程)。</para>
+       <para>它还可以实时侦测您主目录的变化，甚至是挂载或卸载设备。<application>磁盘使用情况分析器</application> 也为美国选择的文件夹，提供了一个完整的树形图形化窗口。</para>
+
+  </sect1>
+
+<!-- ================ Getting Started ================================ -->
+	<sect1 id="baobab-getting-started">
+	<title>快速入门</title>
+
+    <para>有三种方法启动 <application>磁盘使用情况分析器</application>：</para>
+	 <itemizedlist>
+    <listitem><para>点菜单 <menuchoice><guimenu>应用程序</guimenu><guimenuitem>附件</guimenuitem></menuchoice>；</para>
+    		</listitem>
+    <listitem><para>在终端窗口里；</para>
+    		</listitem>
+    <listitem><para>从 Nautilus 文件管理器的 “用...打开”；</para>
+    		</listitem>
+    </itemizedlist> 
+
+
+<para>如果您想从终端里启动 <application>磁盘使用情况分析器</application>，只需输入：</para> 
+  
+<para><command>baobab &lt;full_path_to_a_directory&gt;</command>，然后按一下 <keycap>回车键</keycap>。</para>  
+<para/> 
+	<para>如果从菜单启动，那么 <application>磁盘使用情况分析器</application> 会处于就绪状态，等待用户的进一步操作。</para> 
+    <para>当您从菜单启动 <application>磁盘使用情况分析器</application>，会出来一个下面的窗口。</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="baobab-fig"> 
+	<title>磁盘使用情况分析器窗口</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>显示磁盘使用情况分析器主窗口，包含菜单栏、显示区域、滚动条和状态栏。</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+<para>用户可以进行：</para>
+	<itemizedlist>
+    <listitem><para>开始一次完整的文件系统扫描；</para>
+    		</listitem>
+    <listitem><para>选择一个本地文件夹进行扫描</para>
+    		</listitem>
+    <listitem><para>选择一个远程服务器和文件夹进行扫描</para>
+    		</listitem>
+    <listitem><para>设置首选项</para>
+    		</listitem>
+	</itemizedlist>
+
+
+</sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="baobab-usage"> 
+    <title>用法</title>
+
+    <sect2 id="baobab-fullscan">
+      <title>完整扫描文件系统</title>
+        <para>要运行扫描整个文件系统，点菜单 <menuchoice><guimenu>分析</guimenu><guimenuitem>扫描文件系统</guimenuitem></menuchoice>，或者点工具栏上的 <guibutton>扫描文件系统</guibutton> 按钮。</para>
+
+	<para>当扫描进程结束后，您将看到您文件系统的完整树形图，像一个挨一个的条形图。</para>    
+
+    <!-- ==== Figure ==== -->
+      <figure id="baobab-fullscan-fig"> 
+	<title>磁盘进行完整文件系统扫描</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_fullscan.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>显示完整文件系统扫描的磁盘使用情况分析窗口。包含菜单栏、显示区域、滚动条和状态栏。</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+    
+    	<note><para>当您运行完整文件系统扫描时，<application>磁盘使用情况分析器</application> 窗口将显示文件系统里，各个目录树的扫描进度。如果挂载了大的分区，它也会被扫描。</para></note>
+    
+    <para><application>磁盘使用情况分析器</application> 将显示目录树分配的空间。这意味着显示的大小是实际占用的空间，而不是实际的目录大小。如果您想查看实际文件大小，不选中 <menuchoice><guimenu>查看</guimenu><guimenuitem>分配空间</guimenuitem></menuchoice> 菜单项。</para>
+    
+    <warning><para><application>磁盘使用情况分析器</application> 不计算 /proc 文件夹，也不计算非关联的“文本”格式文件，因此，符号链接、字符块、设备块将不算在目录大小中。</para></warning>
+   
+    <para>对于硬链接用不同的方法来处理：第一个硬链接当作普通文件计算，接下来的子链接到相同节点设备不计算在总量中，但会高亮显示在右边的窗口的列里。</para>
+        </sect2>
+	
+	<sect2 id="baobab-folderscan">
+      <title>单个文件夹扫描</title>
+
+    <para>要运行单个文件夹扫描，点菜单 <menuchoice><guimenu>分析</guimenu><guimenuitem>扫描文件夹...</guimenuitem></menuchoice>，或者点工具栏上的 <guibutton>扫描文件夹</guibutton> 按钮。</para>
+
+	</sect2>
+
+	<sect2 id="baobab-remotescan">
+      <title>远程扫描</title>
+      
+      <para>如果您需要扫描一个远程服务器目录，只需点工具栏上的 <guibutton>扫描远程文件夹</guibutton> 按钮，或者点菜单 <menuchoice><guimenu>分析r</guimenu><guimenuitem>扫描远程文件夹</guimenuitem></menuchoice>，您将看到一个对话框。<application>磁盘使用情况分析器</application> 可以通过 ssh、ftp、smb、http 和 https 连接到服务器上。</para>
+ 
+     <!-- ==== Figure ==== -->
+      <figure id="baobab-remote-fig"> 
+        <title>磁盘使用分析器的远程文件夹扫描</title> 
+		<screenshot> 
+	 	 <mediaobject> 
+	  	  <imageobject>
+	   	 <imagedata fileref="figures/baobab_remote.png" format="PNG"/> 
+	   	 </imageobject>
+	   	 <textobject> 
+	    	  <phrase>显示磁盘使用分析器的远程文件夹扫描对话框窗口。</phrase> 
+	   	 </textobject> 
+	 	 </mediaobject> 
+		</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+   
+	</sect2> 
+
+  </sect1>
+
+
+<!-- ============= Preferences =============================== -->
+  <sect1 id="baobab-preferences">
+    <title>首选项</title>
+    
+    <para>要更改 <application>磁盘使用情况分析器</application> 的选项，点菜单 <menuchoice><guimenu>编辑</guimenu><guimenuitem>首选项</guimenuitem></menuchoice>。</para>
+ 
+   <!-- ==== Figure ==== -->
+      <figure id="baobab-preferences-fig"> 
+      	<title>显示磁盘使用分析器的首选项窗口</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_prefs.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>首选项窗口</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+  
+  <sect2 id="baobab-scan-preferences">
+      <title>选择要扫描的设备</title>
+  <para>首选项窗口的第一部分，列出了所有检测到的挂载设备。点击分区前面的复选框，来设定在文件系统的扫描时，包含/不包含这个分区。</para>
+  <note><para>挂载到“/”上的设备不能在扫描时排除。</para></note>
+  </sect2>
+ 
+   <sect2 id="baobab-monitor-preferences">
+      <title>允许监视主目录</title>
+      <para>选中此项，<application>磁盘使用分析器</application> 将不断监视主目录里的更改，并在文件添加或删除时警告用户。</para>  
+   </sect2>  
+	</sect1>
+<!-- ================ Treemaps ================================ -->
+
+  <sect1 id="baobab-treemaps"> 
+  <title>树形图</title>
+
+    <para><guilabel>树形图</guilabel> 概念由 Ben Shneiderman 在90年代发展。请阅读他的 <ulink type="http" url="http://www.cs.umd.edu/hcil/treemap-history/index.shtml">透视树形图</ulink>。</para>
+    
+       <!-- ==== Figure ==== -->
+      <figure id="baobab-treemap-fig"> 
+        <title>磁盘使用分析器的树形图窗口</title>
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_treemaps.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>树形图原理。显示 2 个树形图</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+  
+    
+    <para>图中显示了一个树映像图原理。每个节点(显示在叉树图中)有一个名字(字母)和关联数(一个数字)。叶片多少可以作为文件的实例，没有叶片的节点数是它的孩子的数。</para> 
+    
+    <para>树映像图是通过递归划分一个初始的矩形。每个子矩形的大小对应节点的大小。子矩形的方向交替每个级别：第一个水平，下一个是垂直，等等。结果，最初的矩形被划分成各个小矩形，每个矩形的大小对应于叶片的大小。树的结构也形成一个树形图，显示为它的结果。颜色和注解可以给出叶片额外的信息。</para>
+
+	<note><para>当文件大小作为重要的特性来显示的时候，树映像图是非常有效的。</para></note>
+  </sect1>
+  <!-- ================ Ringschart ================================ -->
+
+  <sect1 id="baobab-ringschart"> 
+  <title>环形图</title>
+
+    <para><guilabel>环形图</guilabel> 是一个用颜色块来呈现磁盘使用情况。当启动应用程序时，它会用下图的样式来提示文件系统的使用情况：</para>
+
+    <!-- ==== Figure ==== -->
+    <figure id="baobab-filesystem_scan"> 
+      <title>磁盘使用分析器显示文件系统使用情况的一个环形图</title>
+      <screenshot> 
+	<mediaobject> 
+	  <imageobject>
+	    <imagedata fileref="figures/baobab_ringschart1.png" format="PNG"/> 
+	  </imageobject>
+	  <textobject> 
+	    <phrase>启动程序后，它会显示文件系统的使用情况。图像显示在右边。</phrase> 
+	  </textobject> 
+	</mediaobject> 
+      </screenshot> 
+    </figure>
+    <!-- ==== End of Figure ==== -->
+
+    <para>当您运行扫描文件夹，子目录的树会被创建列在左边。每一行包含有关名称、占用空间(百分比和用KB、MB或GB)以及项目数(添加的文件和文件夹)的信息。当进程结束时，<guilabel>环形图</guilabel> 绘制在右边。如果您在完成之前就停止进程，只有那些计算了的文件夹部分会显示。</para>
+
+
+    <!-- ==== Figure ==== -->
+    <figure id="baobab-folder_scan"> 
+      <title>磁盘使用分析器显示一个文件夹的使用情况环形图</title>
+      <screenshot> 
+	<mediaobject> 
+	  <imageobject>
+	    <imagedata fileref="figures/baobab_ringschart2.png" format="PNG"/> 
+	  </imageobject>
+	  <textobject> 
+	    <phrase>扫描一个文件夹后</phrase> 
+	  </textobject> 
+	</mediaobject> 
+      </screenshot> 
+    </figure>
+    <!-- ==== End of Figure ==== -->
+    
+    <para><guilabel>环形图</guilabel> 是一组嵌套的圆环，围绕着一个中心圆，这个中心圆代表这些文件夹的根目录(也就是说，这个是用户选择的要扫描的文件夹)。每个圆环代表一个级别的树的一部分。因此，例如根文件夹的一级子目录会显示在最里面的环，它的子目录文件夹再套在它的外面。各个子目录文件夹显示一段圆环，圆环的扇面角度大小，代表文件夹内容的多少，各个部分用不同的颜色来表示，以便于观察。可以做到五级；万一第五级还包括更多的子目录，这种情况将用黑色边缘的圆环段来表示。当选中一个没有子目录的文件夹时，它将成为根目录，仅仅显示中心的圆环。当鼠标指针移到一个圆环上时，它会高亮显示并且浮动提示文件夹名称和大小。如果还有子目录文件夹，会出来一个小的灰色提示，指示它们的文件名。为了防止重叠，可能不会显示所有的子文件夹名称。</para>
+
+    <para>您可以在左边列表里选择各个行(也可以展开那些子目录文件夹)。图像会变成您选中的文件夹，选中的文件夹会作为根目录。您也可以在图像上点击 <guilabel>圆环</guilabel> 来显示这个文件夹。如果您用左键点击，您会把根目录设为这个文件夹。如果您用中键点击(不管您在 <guilabel>圆环</guilabel> 的什么位置上)，您将回到上一次相反的操作，回到上一级。</para>
+
+    <para>子文件夹在它父目录里所占的百分比，与它自身大小以及其父目录的大小成比例。。这很好理解，一个文件夹的大小是等于或小于它父目录的大小。虽然图像中仅仅显示目录文件夹，文件也被计算到文件夹所占的空间里了。</para>
+  </sect1>
+</article>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="music-player-notrecognized" xml:lang="es">
+  <info>
+    <link type="guide" xref="media#music"/>
+    <link type="seealso" xref="music-player-newipod"/>
+    
+    <revision version="11.04" date="2011-04-30" status="final"/>
+ 
+    <credit type="author">
+      <name>Equipo de documentación GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <desc>Añadir un archivo <input>.is_audio_player</input> para decirle a su equipo que es un reproductor de sonido.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Por qué no se reconoce mi reproductor de audio cuando lo conecto?</title>
+
+<p>Si conecta un reproductor de sonido (reproductor MP3, etc.) al equipo pero no puede verlo en su aplicación de organización musical, puede que no se haya reconocido correctamente como reproductor de sonido.</p>
+
+<p>Try unplugging the player and then plugging it in again. If that doesn't help, <link xref="files-browse">open the file manager</link>. You should see the player listed under <gui>Devices</gui> in the sidebar - click it to open the folder for the audio player. Now, click <guiseq><gui>File</gui><gui>New Document</gui><gui>Empty Document</gui></guiseq>, type <input>.is_audio_player</input> and press <key>Enter</key> (the period and underscores are important, and it should be all lower-case). This file tells your computer to recognize the device as an audio player.</p>
+
+<p>Now, find the audio player in the file manager sidebar and eject it (right-click and click <gui>Eject</gui>). Unplug it, then plug it back in. This time it should have been recognized as an audio player by your music organizer. If not, try closing the music organizer and then re-opening it.</p>
+
+<note>
+ <p>Estas instrucciones no funcionan con iPods y algunos otros reproductores de sonido. En cambio, deberían funcionar si su reproductor es un dispositivo <em>de almacenamiento masivo USB</em>; en el manual del dispositivo debería decir si lo es.</p>
+</note>
+
+<note>
+ <p>When you look in the audio player folder again, you won't see the <input>.is_audio_player</input> file. This is because the period in the file's name tells the file manager to hide the file. You can check that it is still there by clicking <guiseq><gui>View</gui><gui>Show Hidden Files</gui></guiseq>.</p>
+</note>
+
+</page>

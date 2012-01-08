@@ -1,0 +1,1 @@
+../../../../share/pyshared/ibus/panel.py

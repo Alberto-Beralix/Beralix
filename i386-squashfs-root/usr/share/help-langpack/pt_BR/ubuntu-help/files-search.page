@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="files-search" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <link type="guide" xref="shell-overview#files"/>
+    
+    <desc>Localize arquivos baseados no nome do arquivo e tipo. Salve suas pesquisas para uso posterior.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Procurar por arquivos</title>
+  
+  <p>Você pode procurar por arquivos baseados no seu nome ou tipo de arquivo diretamente no gerenciador de arquivos. Você pode até salvar pesquisas comuns, e eles aparecerão como pastas especiais na sua pasta pessoal.</p>
+
+  <links type="topic" style="linklist">
+    <title>Outros aplicativos de pesquisa</title>
+    <!-- This is an extension point where search apps can add
+    their own topics. It's empty by default. -->
+  </links>
+
+  <steps>
+    <title>Pesquisa</title>
+    <item><p><link xref="files-browse">Abrir o gerenciador de arquivos</link></p></item>
+    <item><p>Se você sabe que os arquivos que você deseja estão em uma pasta específica, vá para a pasta.</p></item>
+    <item><p>Clique em <gui>Pesquisargui&gt; na barra de ferramentas, ou pressione Ctrlkey&gt;Fkey&gt;keyseq&gt;.</gui></p></item>
+    <item><p>Digite uma palavra ou palavras que você sabe que aparecem no nome do arquivo e pressione enter. Por exemplo, se você nomear todas suas faturas com a palavra "Fatura", digite <input>faturainput&gt;. As palavras s</input></p></item>
+    <item><p>Você pode restringir os resultados, selecionando uma pasta diferente, a partir de <gui>local</gui>. Ou clique em <gui>Localização</gui> e selecione <gui>Tipo de Arquivo</gui> a partir da lista suspensa para limitar seus resultados com base no tipo de arquivo. Clique no botão <gui>+</gui> para adicionar vários filtros se você quiser estreitar com base na localização e tipo de arquivo. Quando você fizer alterações, clique em <gui>Atualizar</gui> para pesquisar novamente.</p></item>
+    <item><p>Você pode abrir, copiar, apagar ou trabalhar com seus arquivos a partir dos resultados de busca, como faria de qualquer pasta no gerenciador de arquivos.</p></item>
+    <item><p>Clique em <gui>Pesquisargui&gt; na barra de ferramentas novamente para sair da pesquisa e retornar </gui></p></item>
+  </steps>
+
+  <p>Se você executar certas pesquisas, muitas vezes, você pode salvá-los para acessá-los rapidamente.</p>
+
+  <steps>
+    <title>Salvar uma pesquisa</title>
+    <item><p>Iniciar uma pesquisa como acima.</p></item>
+    <item><p>Quando estiver satisfeito com os parâmetros da pesquisa, clique em <guiseq><gui>Arquivo</gui><gui>Salvar pesquisa como</gui></guiseq>.</p></item>
+    <item><p>Dê a pesquisa um nome e clique em <gui>Salvar</gui>. Se preferir, selecione uma pasta diferente para salvar a pesquisa. Quando você visualizar a pasta, você verá a sua busca salva como um ícone de pasta laranja com uma lupa sobre ele.</p></item>
+  </steps>
+</page>

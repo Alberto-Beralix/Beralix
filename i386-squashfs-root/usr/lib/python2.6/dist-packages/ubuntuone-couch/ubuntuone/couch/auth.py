@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/ubuntuone-couch/ubuntuone/couch/auth.py

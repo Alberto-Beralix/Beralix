@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-encryption-gpg-create-key" xml:lang="es">
+
+  <info>
+    <desc>Firmar o cifrarlos correos que envía usando GPG.</desc>
+
+    <link type="guide" xref="mail-encryption#gpg"/>
+
+    <revision pkgversion="2.32.1" version="0.2" date="2011-07-27" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/encryption.html.en#encryption-keygen -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Crear una clave GPG</title>
+
+<note><p>Estos pasos son muy técnicos. Se recomienda, para el usuario medio de hoy en día, usar la aplicación Seahorse para gestionar claves GPG.</p></note>
+<!-- TODO:POST-3-2: Update and rewrite using Seahorse. Needs a complete rewrite once https://bugzilla.gnome.org/show_bug.cgi?id=508744 is fixed. -->
+
+<p>Antes de que pueda obtener o enviar correo cifrado con GPG debe generar sus claves pública y privada con GPG.</p>
+<steps>
+<item><p>Abra una terminal e introduzca <command>gpg --gen-key</command>.</p></item>
+<item><p>Seleccione un algoritmo, después pulse Intro.</p></item>
+<item><p>Seleccione una longitud de clave, después pulse Intro.</p></item>
+<item><p>Introduzca el tiempo para la cual su clave deberá ser válida.</p></item>
+<item><p>Escriba su nombre real, después pulse Intro.</p></item>
+<item><p>Escriba su dirección de correo-e, después pulse Intro.</p></item>
+<item><p>(Opcional) Escriba un comentario, después pulse Intro.</p></item>
+<item><p>Compruebe el ID de usuario que ha seleccionado. Si es correcto pulse O.</p></item>
+<item><p>Escriba una frase de paso, después pulse Intro.</p></item>
+<item><p>Mueva su ratón aleatoriamente para generar las claves.</p></item>
+</steps>
+
+<p>Después de que se hayan generado estas claves, puede ver su información introduciendo <command>gpg --list-keys</command>. Debería ver algo similar a esto: <code> /home/usuario/.gnupg/pubring.gpg ----------------------------  pub 1024D/32j38dk2 2001-06-20 usuario &lt;usuario@ejemplo.com&gt;  sub 1024g/289sklj3 2011-06-20 [expires: 2012-11-14]</code></p>
+<p>GPG creates one list, or keyring, for your public keys and one for your private keys. All the public keys you know are stored in the file <file>~/.gnupg/pubring.gpg</file>. If you want to give other people your key, send them that file.</p>
+<p>Si quiere puede subir sus claves a un servidor de claves:</p>
+<steps>
+<item><p>Compruebe su identificador de clave pública con <code>gpg --list-keys</code>. Es la cadena que está detrás de <code>1024D</code> en la línea que empieza con <code>pub</code>. En este ejemplo es <code>32j38dk2</code>.</p></item>
+<item><p>Enter the command <code>gpg --send-keys --keyserver wwwkeys.pgp.net 32j38dk2</code>. Substitute your key ID for <code>32j38dk2</code>. You need your password to do this.</p></item>
+</steps>
+
+<p>Los servidores de claves almacenan sus claves públicas para que sus amigos puedan descifrar sus mensajes. Si opta por no usar un servidor de claves, entonces puede enviarlas manualmente, incluyéndola en el adjunto con la firma, o publicándola en su propia página web. Sin embargo es más fácil publicarla de una vez y permitir a los demás descargarlas desde un servidor central cuando ellos quieran.</p>
+<p>If you don't have a key to unlock or encrypt a message, you can set your encryption tool to look it up automatically. If it cannot find the key, an error message appears.</p>
+
+</page>

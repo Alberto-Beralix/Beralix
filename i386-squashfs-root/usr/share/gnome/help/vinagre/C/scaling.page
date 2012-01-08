@@ -1,0 +1,49 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="scaling">
+
+  <info>
+    <link type="guide" xref="index#options"/>
+    <desc>Scale the remote desktop to fit the display area.</desc>
+    <credit type="author">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@googlemail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+  <title>Scale the remote desktop</title>
+
+  <p>Some protocols have an option to scale the remote desktop to fit your
+  display area.</p>
+
+  <steps>
+    <item>
+      <p>Choose <guiseq><gui>View</gui><gui>Scaling</gui></guiseq>, or click the
+      <gui>Scaling</gui> toolbar button.</p>
+    </item>
+    <item>
+      <p>Select <guiseq><gui>View</gui><gui>Keep Aspect Ratio</gui></guiseq> if
+      you want to constrain the aspect ratio of the remote desktop inside the
+      display area, or deselect the option to stretch the remote desktop to fill
+      the available space.</p>
+      <note>
+        <p>This option can be toggled only if <gui>Scaling</gui> has already
+        been enabled.</p>
+      </note>
+    </item>
+  </steps>
+
+  <figure>
+    <title>Unscaled desktop</title>
+    <media type="image" mime="image/png" src="figures/vinagre-no-scaling.png"/>
+  </figure>
+
+  <figure>
+    <title>Scaled desktop</title>
+    <media type="image" mime="image/png" src="figures/vinagre-scaling.png"/>
+  </figure>
+
+</page>

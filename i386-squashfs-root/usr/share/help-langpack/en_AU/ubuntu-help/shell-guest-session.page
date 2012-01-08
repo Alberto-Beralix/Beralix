@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="shell-guest-session" xml:lang="en-AU">
+
+  <info>
+    <link type="guide" xref="shell-overview#desktop"/>
+    <link type="guide" xref="user-accounts#manage"/>
+
+    <desc>Let a friend or colleague borrow your computer in a secure manner.</desc>
+    <revision version="11.04" date="2011-04-06" status="final"/>
+    <credit type="author">
+      <name>Gunnar Hjalmarsson</name>
+      <email>ubuntu@gunnar.cc</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Launch a restricted guest session</title>
+
+<section id="restricted">
+<title>Temporary session with restricted privileges</title>
+
+<p>Once in a while a friend, family member, or colleague may want to borrow your computer.
+The Ubuntu <app>Guest Session</app> feature provides a convenient way, with a high level
+of security, to lend your computer to someone else. The feature is available to any regular
+user when logged in.</p>
+
+<p>To launch a guest session, click your name in the <gui>menu bar</gui> and select <gui>Guest Session</gui>. This will lock the screen for your own session and start the guest session. A guest cannot view the home folders of other users, and by default any saved data or changed settings will be removed/reset at logout. It means that each session starts with a fresh environment, unaffected by what previous guests did.</p>
+
+</section>
+
+<section id="customize">
+<title>Customization</title>
+
+<p>The tutorial <link href="http://ubuntuforums.org/showthread.php?t=1566078">Customize
+Guest Session</link> shows some ways to customize the appearance and behavior.</p>
+
+</section>
+
+</page>

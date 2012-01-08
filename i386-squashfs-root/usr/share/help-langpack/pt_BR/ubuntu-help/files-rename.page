@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-rename" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <desc>Alterar nome de um arquivo ou pasta.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Renomear um arquivo ou pasta</title>
+
+  <steps>
+    <item><p><link xref="files-browse">Abrir o gerenciador de arquivos</link>.</p></item>
+    <item><p>Clique com o cotão direito do mouse sobre um arquivo ou pasta e selecione <gui>Renomear</gui>, ou selecione o arquivo e pressione <key>F2</key>.</p></item>
+    <item><p>Digite o novo nome e pressione <key>Enter</key>.</p></item>
+  </steps>
+
+  <p>Você também pode renomear um arquivo a partir de sua janela de <link xref="nautilus-file-properties-basic">prpriedades</link>.</p>
+
+  <p>Quando você renomeia um arquivo, apenas a primeira parte do nome do arquivo é selecionada, a extensão do arquivo (a parte depois do ".") não é selecionada. A extensão normalmente denota qual o tipo do arquivo (por exemplo, <file>arquivo.pdf</file> é um documento PDF) e, geralmente, você não quer mudá-la. Se precisar mudar a extensão também, selecione-a com o mouse ou pressione <keyseq><key>Ctrl</key><key>A</key></keyseq> para selecionar o nome do arquivo por inteiro.</p>
+
+  <section id="valid-chars">
+    <title>Caracteres válidos para nomes de arquivos</title>
+    <p>Você pode usar qualquer caractere no nome do arquivo, exceto o caractere <key>/</key>. Entretanto, alguns dispositivos usam um <em>sistema de arquivos</em> que impõem mais restrições aos nomes de arquivos. Por exemplo, pendrives normalmente são formatados com o sistema de arquivos <em>FAT32</em>. Nesses dispositivos, ou se você pensa em compartilhar arquivos com pessoas que usam outro sistema operacional, evite os seguintes caracteres: <key>|</key>, <key>\</key>, <key>?</key>, <key>*</key>, <key>&lt;</key>, <key>"</key>, <key>:</key>, <key>&gt;</key>, <key>/</key>.</p>
+
+    <note style="warning">
+    <p>Se você nomear um arquivo com um <key>.</key> como primeiro caractere, o arquivo ficará <link xref="files-hidden">oculto</link>.</p>
+    </note>
+  </section>
+
+  <section id="common-probs">
+    <title>Problemas comuns</title>
+    <terms>
+      <item>
+        <title>O nome já está em uso</title>
+        <p>Você não pode ter dois arquivos ou pastas com o mesmo nome numa mesma pasta. O gerenciado de arquivo não permitirá que você renomeie um arquivo para um nome que já existe na pasta em que está trabalhando.</p>
+        <p>Nomes de arquivos e pastas fazem distinção entre maiúsculo e minúsculo. Por exemplo, <file>Arquivo.txt</file> e <file>arquivo.txt</file> são nomes diferentes. Apesar de permitido, nem sempre isso é uma boa ideia.</p>
+      </item>
+      <item>
+        <title>O nome do arquivo é muito longo</title>
+        <p>Em alguns sistemas, nomes de arquivos não podem ter mais que 255 caracteres nos nomes. Use um nome menor.</p>
+      </item>
+      <item>
+        <title>A opção para renomear está acizentada</title>
+        <p>Se <gui>Renomear</gui> estiver acinzentado, você não tem permissão para renomear o arquivo. Geralmente, se você não tem permissão para renomear um arquivo você não deve renomeá-lo. Veja <link xref="nautilus-file-properties-permissions"/>.</p>
+      </item>
+    </terms>
+  </section>
+</page>

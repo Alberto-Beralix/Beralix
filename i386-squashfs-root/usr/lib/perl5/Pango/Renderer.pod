@@ -1,0 +1,231 @@
+=head1 NAME
+
+Pango::Renderer - a base class for pango rendering
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Pango::Renderer
+
+
+
+=cut
+
+=for object Pango::Renderer - a base class for pango rendering
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 $renderer-E<gt>B<activate> 
+
+Since: pango 1.8
+
+=head2 color or undef = $renderer-E<gt>B<get_color> ($part)
+
+=over
+
+=item * $part (Pango::RenderPart) 
+
+=back
+
+Since: pango 1.8
+
+=head2 $renderer-E<gt>B<set_color> ($part, $color)
+
+=over
+
+=item * $part (Pango::RenderPart) 
+
+=item * $color (Pango::Color or undef) 
+
+=back
+
+Since: pango 1.8
+
+=head2 $renderer-E<gt>B<deactivate> 
+
+Since: pango 1.8
+
+=head2 $renderer-E<gt>B<draw_error_underline> ($x, $y, $width, $height)
+
+=over
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=item * $width (integer) 
+
+=item * $height (integer) 
+
+=back
+
+Since: pango 1.8
+
+=head2 $renderer-E<gt>B<draw_glyph> ($font, $glyph, $x, $y)
+
+=over
+
+=item * $font (Pango::Font) 
+
+=item * $glyph (integer) 
+
+=item * $x (double) 
+
+=item * $y (double) 
+
+=back
+
+Since: pango 1.8
+
+=head2 $renderer-E<gt>B<draw_layout> ($layout, $x, $y)
+
+=over
+
+=item * $layout (Pango::Layout) 
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=back
+
+Since: pango 1.8
+
+=head2 $renderer-E<gt>B<draw_layout_line> ($line, $x, $y)
+
+=over
+
+=item * $line (Pango::LayoutLine) 
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=back
+
+Since: pango 1.8
+
+=head2 $renderer-E<gt>B<draw_rectangle> ($part, $x, $y, $width, $height)
+
+=over
+
+=item * $part (Pango::RenderPart) 
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=item * $width (integer) 
+
+=item * $height (integer) 
+
+=back
+
+Since: pango 1.8
+
+=head2 $renderer-E<gt>B<draw_trapezoid> ($part, $y1_, $x11, $x21, $y2, $x12, $x22)
+
+=over
+
+=item * $part (Pango::RenderPart) 
+
+=item * $y1_ (double) 
+
+=item * $x11 (double) 
+
+=item * $x21 (double) 
+
+=item * $y2 (double) 
+
+=item * $x12 (double) 
+
+=item * $x22 (double) 
+
+=back
+
+Since: pango 1.8
+
+=head2 layout = $renderer-E<gt>B<get_layout> 
+
+Since: pango 1.20
+
+=head2 layoutline = $renderer-E<gt>B<get_layout_line> 
+
+Since: pango 1.20
+
+=head2 matrix or undef = $renderer-E<gt>B<get_matrix> 
+
+Since: pango 1.8
+
+=head2 $renderer-E<gt>B<set_matrix> ($matrix)
+
+=over
+
+=item * $matrix (Pango::Matrix or undef) 
+
+=back
+
+Since: pango 1.8
+
+=head2 $renderer-E<gt>B<part_changed> ($part)
+
+=over
+
+=item * $part (Pango::RenderPart) 
+
+=back
+
+Since: pango 1.8
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Pango::RenderPart
+
+=over
+
+=item * 'foreground' / 'PANGO_RENDER_PART_FOREGROUND'
+
+=item * 'background' / 'PANGO_RENDER_PART_BACKGROUND'
+
+=item * 'underline' / 'PANGO_RENDER_PART_UNDERLINE'
+
+=item * 'strikethrough' / 'PANGO_RENDER_PART_STRIKETHROUGH'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

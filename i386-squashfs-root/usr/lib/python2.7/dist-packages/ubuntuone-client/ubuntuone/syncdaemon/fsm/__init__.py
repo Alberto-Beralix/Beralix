@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/ubuntuone-client/ubuntuone/syncdaemon/fsm/__init__.py

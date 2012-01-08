@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-wireless-troubleshooting-hardware-check" xml:lang="es">
+  <info>
+    <link type="next" xref="net-wireless-troubleshooting-device-drivers"/>
+
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+
+    <credit type="author">
+      <name>Contribuyentes al wiki de documentación de Ubuntu</name>
+    </credit>
+
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <desc>Resolución de problemas al conectarse a una red inalámbrica.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Comprobar su hardware</title>
+
+  <p>Mire si su equipo reconoce su adaptador inalámbrico.</p>
+  <steps>
+   <item><p>Abra una venta de <app>terminal</app> y teclee <cmd>sudo lshw -C network</cmd>.</p>
+    <p>Si no obtiene respuesta, puede que tenga que instalar el programa <app>lshw</app> en su equipo; puede instalarlo tecleando <code>sudo apt-get install lshw</code> en un terminal.</p></item>
+   <item><p>Lea la salida de la orden, y compruebe la sección sobre la interfaz inalámbrica (<em>Wireless interface</em>). Si su adaptador inalámbrico ha sido detectado, la salida tendrá un aspecto similar a este:</p>
+   <example>
+   <code><![CDATA[*-network
+       description: Wireless interface
+       product: PRO/Wireless 3945ABG [Golan] Network Connection
+       vendor: Intel Corporation
+       physical id: 0
+       bus info: pci@0000:03:00.0
+       logical name: wlan0
+       version: 02
+       serial: 00:1b:77:11:5a:a7
+       width: 32 bits
+       clock: 33MHz
+       capabilities: pm msi pciexpress bus_master cap_list ethernet physical wireless
+       configuration: broadcast=yes driver=iwl3945 driverversion=2.6.38.2-9.fc15.i686
+       firmware=15.32.2.9 ip=192.168.1.42 latency=0 link=yes multicast=yes
+       wireless=IEEE 802.11abg
+       resources: irq:46 memory:edf00000-edf00fff]]></code>
+   </example>
+</item>
+  </steps>
+  <p>Si aparece un dispositivo inalámbrico, continúe en la <link xref="net-wireless-troubleshooting-device-drivers">página de controladores de dispositivo</link>.</p>
+  <p>Si no aparece ningún dispositivo inalámbrico, los pasos siguientes le ayudarán a localizar la información de su hardware.</p>
+
+   <section id="net-wireless-hardware-check2">
+    <title>Comprobaciones adicionales del hardware inalámbrico</title>
+  <p>Como la orden anterior no encuentra su adaptador inalámbrico, necesitará llevar a cabo más pasos para asegurarse de que su equipo reconoce su adaptador.</p>
+  <p>Estos pasos dependen del tipo de dispositivo que esté usando. Consulte la sección correspondiente al tipo de dispositivo inalámbrico que esté usando en su equipo: PCI (interno), USB o PCMCIA.</p>
+  <note><p>Los adaptadores PCI internos son los más comunes, y se encuentran en portátiles fabricados desde hace algunos años. Los adaptadores PCMCIA son adaptadores externos de tipo tarjeta y más comunes en portátiles antiguos.</p></note>
+      <section id="net-wireless-hardware-pcicheck">
+        <title>Comprobar un dispositivo PCI (interno)</title>
+      <p>Para comprobar si su equipo puede reconocer su adaptador inalámbrico PCI, teclee <cmd>sudo lspci</cmd> en un terminal. El terminal mostrará una lista de los dispositivos PCI que haya encontrado en su equipo.</p>
+      <p>Aunque puede resultar un poco difícil de leer, busque el nombre y el número de modelo de su adaptador inalámbrico. Este es un ejemplo del aspecto que puede tener el listado de dispositivos PCI:</p>
+      <example>
+        <p><code><![CDATA[Network controller: Intel Corporation PRO/Wireless 3945ABG [Golan] Network Connection]]></code></p>
+      </example>
+      <p>Si la orden anterior reconoció su dispositivo, ¡genial! Continúe en la página de <link xref="net-wireless-troubleshooting-device-drivers">controladores de dispositivos</link>. Si la orden anterior no mostró ninguna salida relacionada con su adaptador inalámbrico, consulte las instrucciones que encontrará al final de esta página.</p>
+      </section>
+      <section id="net-wireless-hard-ware-usbcheck">
+        <title>Comprobar un dispositivo USB</title>
+      <p>Para comprobar si su equipo reconoce su adaptador inalámbrico USB, teclee <cmd>sudo lsusb</cmd> en una ventana de terminal. El terminal mostrará una lista con los dispositivos USB que haya encontrado en su equipo.</p>
+     <p>Aunque puede resultar un poco difícil de leer, busque el nombre y el número de modelo de su adaptador inalámbrico USB. Este es un ejemplo del aspecto que puede tener la salida de la orden <cmd>lsusb</cmd>:</p>
+     <example>
+        <p><code>Bus 005 Device 009: ID 12d1:140b Huawei Technologies Co., Ltd. EC1260 Wireless Data Modem HSD USB Card</code></p>
+     </example>
+     <p>Si la orden anterior reconoció su dispositivo, ¡genial! Continúe en la página de <link xref="net-wireless-troubleshooting-device-drivers">controladores de dispositivos</link>. Si la orden anterior no mostró ninguna salida relacionada con su adaptador inalámbrico, consulte las instrucciones que encontrará al final de esta página.</p>
+      </section>
+      <section id="net-wireless-hard-ware-pcmciacheck">
+        <title>Comprobar un dispositivo PCMCIA</title>
+      <p>Para comprobar si su equipo reconoce su adaptador PCMCIA, siga los pasos siguientes:</p>
+        <steps>
+          <item><p>Arranque su equipo <em>sin</em> conectar el adaptador inalámbrico.</p></item>
+          <item><p>Inicie una sesión cuando se lo pida (si es que lo hace)</p></item>
+          <item><p>Cuando se cargue el escritorio, abra una ventana de terminal y teclee la orden siguiente:</p>
+                   <p><cmd>sudo tail -f /var/log/messages</cmd></p></item>
+          <item><p>Inserte su adaptador inalámbrico en una ranura libre.</p></item>
+          <item><p>Repita la orden anterior, y observe la diferencia entre las dos.</p></item>
+  </steps>
+
+      <p>Si la orden anterior reconoce su dispositivo, ¡genial! Continúe en la página de <link xref="net-wireless-troubleshooting-device-drivers">controladores de dispositivo</link>.</p>
+
+   <note><p>Si ninguna de las órdenes anteriores reconoce su dispositivo, puede significar que su dispositivo no está funcionando, o que no es compatible con su sistema operativo.</p>
+   <p>Para recibir más ayuda, envíe un mensaje a un foro de usuarios correspondiente con su sistema operativo (p. ej. Fedora, OpenSUSE o Ubuntu, etc.) o envíe un mensaje a una lista de correo apropiada.</p></note>
+   <links type="series"/>
+   </section>
+   </section>
+</page>

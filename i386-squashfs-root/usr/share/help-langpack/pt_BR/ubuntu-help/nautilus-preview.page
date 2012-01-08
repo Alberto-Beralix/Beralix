@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-preview" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-preview"/>
+
+    <desc>Controle quando miniaturas e prévias são utilizadas para arquivos.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Configurações de prévia do gerenciador de arquivos</title>
+
+<p>O gerenciador de arquivos cria miniaturas para pré-visualizar arquivos de imagem e vídeo, e também pode pré-visualizar arquivos de texto e de som. Pré-visualizações também podem ser lentas para arquivos grandes ou em redes, então você pode controlar quando a pré-visualização é feita. Em qualquer janela do gerenciador de arquivos, clique em <guiseq><gui>Editar</gui><gui>Preferências</gui></guiseq> e selecione a aba <gui>Visualização</gui>.</p>
+
+<p>Por padrão, todas as prévias são somente criadas para arquivos localizados em seu computador ou em drives externos conectados a ele. O gerenciador de arquivos pode <link xref="nautilus-connect">navegar por arquivos em outros computadores</link> dentro de uma rede local ou na internet. Se você navega por arquivos em uma rede local com frequência e essa rede tiver uma alta largura de banda, você talvez queira definir algumas ou todas as opções de prévias como <gui>Sempre</gui>.</p>
+
+<terms>
+  <item>
+    <title><gui>Arquivos de texto</gui></title>
+    <p>O ícone de arquivos de texto puros parecem um pedaço de papel com um texto dentro. O gerenciador de arquivos extrai automaticamente as primeiras linhas de texto do arquivo e as mostra no ícone. Você pode ligar ou desligar esse recurso, ou ligá-lo somente para arquivos em seu computador e em drives externos locais.</p>
+  </item>
+  <item>
+    <title><gui>Outros arquivos pré-visualizáveis</gui></title>
+    <p>O gerenciador de arquivos pode criar miniaturas para imagens, vídeos, arquivos PDF e vários  outros tipos de arquivos. Aplicativos com tipos de arquivo personalizados podem oferecer suporte a miniatura aos arquivos que eles criam. Você pode habilitar ou desabilitar esse recurso  ou habilitá-lo apenas para arquivos no seu computador e drives em locais externos. Você pode também permitir somente que miniaturas sejam criadas para arquivos abaixo de um certo tamanho.</p>
+  </item>
+  <item>
+    <title><gui>Arquivos de som</gui></title>
+    <p>Você pode <link xref="files-preview-music">pré-visualizar música e outros arquivos de som</link> passando o mouse sobre o arquivo. Você pode ativar ou desativar essa função ou ativar somente no seu computador e em drives locais externos.</p>
+  </item>
+  <item>
+    <title><gui>Pastas</gui></title>
+    <p>Se você mostrar o tamanho dos arquivos nas <link xref="nautilus-list">colunas da visão de lista</link> ou <link xref="nautilus-display#icon-captions">legendas dos ícones</link>, pastas serão mostradas com uma contagem de quantos arquivos e pastas eles contêm. Contar itens em uma pasta pode ser demorado, especialmente para pastas muito grandes ou na rede. Você pode ativar ou desativar essa função ou ativar somente para arquivos no seu computador e em drives locais externos.</p>
+  </item>
+</terms>
+</page>

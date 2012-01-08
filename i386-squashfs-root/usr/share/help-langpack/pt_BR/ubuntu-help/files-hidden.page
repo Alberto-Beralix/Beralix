@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="tip" id="files-hidden" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files#faq"/>
+    <desc>Torne um arquivo oculto, então você não pode vê-lo no gerenciador de arquivos.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Ocultar um arquivo</title>
+
+<p>Você pode ocultar arquivos ao renomeá-los com um <key>.</key> no início de seus nomes. Arquivos ocultos são invisíveis por padrão; eles não são exibidos no gerenciador de arquivos, mas continuam lá na pasta.</p>
+
+<p>Para ocultar um arquivo <link xref="files-rename">renomeie-o</link> com um "." no começo do nome. Por exemplo, para ocultar o arquivo <file>exemplo.txt</file>, você deve renomeá-lo para <file>.exemplo.txt</file>.</p>
+
+<note style="tip">
+ <p>Você pode ocultar pastas do mesmo jeito que você pode ocultar arquivos. Renomeie a pasta com um "." no começo do seu nome.</p>
+</note>
+
+<section id="show-hidden">
+ <title>Mostrar todos os arquivos ocultos</title>
+ <p>Se você quiser ver todos os arquivos ocultos em uma pasta, vá até a pasta e clique em <guiseq><gui>Ver</gui><gui>Mostrar arquivos ocultos</gui></guiseq>. Todos os arquivos ocultos serão mostrados junto com os arquivos que não estavam ocultos.</p>
+ <p>Alguns arquivos ocultos terão um "." no início do nome. Outros poderão ter um "~" no final do nome como alternativa (veja <link xref="files-tilde"/>).</p>
+ <p>Para ocultar esses arquivos novamente, clique em <guiseq><gui>Exibir</gui><gui>Mostrar arquivos ocultos</gui></guiseq> ou pressione <keyseq><key>Ctrl</key><key>H</key></keyseq> novamente.</p>
+ <p>Arquivos ocultos somente serão mostrados na janela atual até que você desative a opção para aquela janela. Para mostrar arquivos ocultos em todas as janelas do gerenciador de arquivos, veja <link xref="nautilus-views"/>.</p>
+</section>
+
+<section id="unhide">
+ <title>Desocultar um arquivo</title>
+ <p>Para desocultar um arquivo, vá até a pasta que contém o arquivo oculto e clique em <guiseq><gui>Ver</gui><gui>Mostrar arquivos ocultos</gui></guiseq>. Depois procure o arquivo oculto e o renomeie para que ele não tenha um "." na frente do nome.</p>
+ <p>Por exemplo, para desocultar um arquivo chamado <file>.exemplo.txt</file>, você deve renomeá-lo para <file>examplo.txt</file>.</p>
+ <p>Depois de renomear o arquivo você pode clicar em <guiseq><gui>Ver</gui><gui>Mostrar arquivos ocultos</gui></guiseq> ou pressionar <keyseq><key>Ctrl</key><key>H</key></keyseq> para ocultar qualquer outro arquivo oculto outra vez.</p>
+</section>
+
+</page>

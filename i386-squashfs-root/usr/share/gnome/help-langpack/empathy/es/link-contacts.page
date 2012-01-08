@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="link-contacts" xml:lang="es">
+      
+  <info>
+    <link type="guide" xref="index#contacts"/>
+    <link type="seealso" xref="send-message"/>
+    <link type="seealso" xref="audio-call"/>
+    <link type="seealso" xref="video-call"/>
+    <desc>Unir y separar diferentes contactos en uno solo.</desc>
+    <revision pkgversion="2.32" version="0.1" date="2010-09-06" status="draft"/>
+    <revision pkgversion="2.32" version="0.2" date="2010-09-09" status="review"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+
+  <title>Combinar y separar contactos</title>
+  <p>Si uno o más de sus contactos tiene múltiples cuentas con diferentes servicios de mensajería, puede combinar esos contactos en uno solo.</p>
+  <p>Al contacto resultante se le llama <em>metacontacto</em>: un contacto compuesto de diferentes contactos simples.</p>
+  <p>Si tiene un contacto Juan Pérez que usa tres servicios de mensajería de contactos como:</p>
+  <list>
+    <item>
+      <p>juan@facebook</p>
+    </item>
+    <item>
+      <p>juan.perez@gmail</p>
+    </item>
+    <item>
+      <p>juan_perez@hotmail</p>
+    </item>
+  </list>
+  <p>Puede combinar estos contactos en un solo Juan Pérez.</p>
+  
+  <section id="linking">
+    <title>Combinar contactos</title>
+    <steps>
+      <item>
+        <p>Desde la ventana <gui>Lista de contactos</gui> pulse con el botón derecho uno de los contactos que tiene diferentes cuentas y seleccione <gui style="menuitem">Enlazar contactos...</gui>.</p>
+      </item>
+      <item>
+        <p>Desde el panel izquierdo, en la ventana <gui>Enlazar contatos</gui>, seleccione los contactos que quiere combinar.</p>
+      </item>
+      <item>
+        <p>Pulse <gui style="button">Enlazar</gui>.</p>
+      </item>
+    </steps>
+    <note>
+      <p>Cuando se ha creado un metacontacto, el contacto predeterminado que se usará para tener una conversación al pulsar dos veces sobre él, es el último contacto con presencia en línea.</p>
+    </note>
+  </section>
+  
+  <section id="unlinkg">
+    <title>Separar contactos</title>
+    <steps>
+      <item>
+        <p>Desde la ventana <gui>Lista de contactos</gui> pulse con el botón derecho del ratón para separar, y seleccione <gui style="menuitem">Enlazar contactos...</gui>.</p>
+      </item>
+      <item>
+        <p>Pulse <gui style="button">Desenlazar</gui>.</p>
+      </item>
+    </steps>
+  </section>
+</page>

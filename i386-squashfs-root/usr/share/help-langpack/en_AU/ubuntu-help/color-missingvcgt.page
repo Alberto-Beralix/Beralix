@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-missingvcgt" xml:lang="en-AU">
+
+  <info>
+    <link type="guide" xref="color#problems"/>
+    <link type="seealso" xref="color-gettingprofiles"/>
+    <desc>Whole-screen colour correction modifies all the screen colours on all windows.</desc>
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Missing information for whole-screen colour correction?</title>
+  <p>Unfortunately, many vendor-supplied ICC profiles do not include the information required for whole-screen colour correction. These profiles can still be useful for applications that can do colour compensation, but you will not see all the colours of your screen change.</p>
+  <p>In order to create a display profile, which includes both calibration and characterisation data, you will need to use a special colour measuring instruments called a colorimeter or a spectrometer.</p>
+
+</page>

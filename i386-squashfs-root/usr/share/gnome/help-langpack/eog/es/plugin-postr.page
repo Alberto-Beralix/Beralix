@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="plugin-postr" xml:lang="es">
+
+  <info>
+   <link type="guide" xref="index#plugins"/>
+   <desc>Debe instalar el Cargador para Flickr para poder enviar fotos a los álbumes de fotografías en línea de Flickr.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Compartir Igual 3.0</p>
+   </license>
+
+  </info>
+
+<title>Subir fotos a <app>Flickr</app></title>
+
+<p><em>Flickr</em> es un servicio de álbumes de fotos que le permite compartir imágenes en línea con gente. Puede subir directamente fotos a Flickr desde el Visor de imágenes.</p>
+
+<p>Para poder usar el <app>Cargador para Flickr</app> debe instalar <app>Postr</app> usando el <app>gestor de paquetes</app> de su distribución GNU/Linux. Una vez que lo haya instalado podrá subir fotos a Flickr:</p>
+
+<steps>
+ <item>
+  <p>La primera vez que suba una foto, el <app>Cargador para Flickr</app> le pedirá que inicie sesión en Flickr. El sitio web le pedirá que autorize a <app>Postr</app> para acceder a su cuenta.</p>
+ </item>
+ <item>
+  <p>De vuelta en el Visor de imágenes, pulse <guiseq><gui>Imagen</gui><gui>Abrir con</gui><gui>Cargador para Flickr</gui></guiseq>.</p>
+ </item>
+ <item>
+  <p>Pulse <gui>Subir</gui>.</p>
+ </item>
+</steps>
+
+<section id="tools-plugin">
+ <title>Añadir un elemento de menú <gui>Herramientas</gui></title>
+ <p>También puede añadir un botón para subir imágenes a Flickr.</p>
+ <p>Para ello, asegúrese de que <sys>eog-plugins</sys> está instalado. Después, pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y vaya a la pestaña <gui>Complementos</gui> y marque <gui>Cargador para Flickr</gui>.</p>
+ <p>Esto le proporcionará el elemento de menú <guiseq><gui>Herramientas</gui><gui>Subir a Flickr...</gui></guiseq>.</p>
+ <media type="image" src="figures/plugin-tools-flickr.png" style="floatright"/>
+</section>
+
+</page>

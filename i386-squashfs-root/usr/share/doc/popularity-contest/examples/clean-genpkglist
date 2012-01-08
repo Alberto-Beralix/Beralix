@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# Author: Alain Schroeder
+# Date:   2005-07-09
+# Modified by Petter Reinholdtsen 2005-07-15
+
+tempname=`tempfile`
+temp2=`tempfile`
+resultfile=packages
+
+archs="alpha arm hppa i386 ia64 m68k mips mipsel powerpc s390 sparc"
+mirror="http://ftp.fi.debian.org/debian"
+
+for i in $archs; do
+        wget "$mirror/dists/Debian3.1r0/main/binary-${i}/Packages.gz" -O "$tempname"
+        zcat $tempname | grep "^Package: " | sed -e 's/^Package: //' >> $temp2
+done
+
+sort -u $temp2 > $resultfile
+
+rm $tempname $temp2;

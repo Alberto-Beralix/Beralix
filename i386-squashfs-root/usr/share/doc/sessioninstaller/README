@@ -1,0 +1,65 @@
+INTRODUCTION
+
+Sessioninstaller allows applications to easily install additional software 
+(e.g. extensions or GSreamer codecs), to uninstall files and to perform simple
+software status queries by implementing the distribution neutral D-Bus session
+interface of PackageKit.
+
+The whole process of confirmation, error reporting and progress notification
+is handled by sessioninstaller.
+
+The reference implementation of the D-Bus interface can be found in 
+gnome-packagekit. It was also adpoted by KPackageKit.
+
+In contrast to gnome-packagekit and KPackageKit it doesn't use the PackageKit
+daemon for querying and installation, but instead makes use of APT and 
+aptdaemon (alternatively synaptic can be used).
+
+
+CONTACT
+
+The project is hosted at Launchpad: https://www.launchpad.net/sessioninstaller
+
+The source code is maintained in a bzr branch: bzr branch lp:sessioninstaller
+
+Bugs can be reported at the project home page.
+
+Feel free to contact me if you have got any questions, suggestions or comments.
+My email address is devel AT glatzor DOT de.
+
+
+STATUS
+
+The following list shows the implementation status of each interface method.
+
+ * org.freedesktop.PackageKit.Query:
+
+   - IsInstalled: Fully supported
+
+   - SearchFile: Only allows to search for installed files by default, but can
+     make use of apt-file to search for not installed files
+ 
+ * org.freedesktop.PackageKit.Modify:
+
+   - InstallPackageFile: Works with aptdaemon backend. Problem with handling
+     multiple files.
+
+   - InstallProvideFiles: Not supported. Could be implemented using apt-file.
+
+   - InstallCatalogs: Only supports catalogs which use InstallPackages
+
+   - InstallPackageNames: Fully supported.
+
+   - InstallMimeTypes: Fully supported. Requires appinstall-data.
+
+   - InstallFontConfigResources: Not supported. There in't any package font
+     mapping available in Debian and Ubuntu.
+
+   - InstallGStreamerResources: Fully supported.
+
+   - InstallPrinterDrivers: Not supported.
+
+   - RemovePackageByFiles: Fully supported.
+
+The interaction mode which allows to hide certain confirmations and dialogs
+is not supported. Currently sessioninstaller will always show all dialogs.

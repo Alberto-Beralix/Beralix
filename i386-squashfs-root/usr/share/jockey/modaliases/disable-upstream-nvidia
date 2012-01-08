@@ -1,0 +1,6 @@
+# the nvidia modules have catch-all modaliases, which is wrong; kill
+# them off here, and use the linux-restricted-modules overrides files
+# instead (which are evaluated later than this file)
+reset nvidia
+reset nvidia_new
+reset nvidia_legacy

@@ -1,0 +1,1 @@
+../../../../../../../../share/pyshared/papyon/service/AddressBook/scenario/contacts/allow_contact.py

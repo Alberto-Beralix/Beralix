@@ -1,0 +1,18 @@
+# KDE Config File
+[Desktop Entry]
+X-AppInstall-Package=kget
+X-AppInstall-Popcon=2214
+X-AppInstall-Section=main
+
+Type=Application
+Exec=kget -caption "%c" %i %U
+Icon=kget
+Terminal=false
+MimeType=application/metalink+xml;application/x-bittorrent;
+Name=KGet
+GenericName=Download Manager
+Categories=Qt;KDE;Network;FileTransfer;
+X-DBUS-ServiceType=Unique
+X-DocPath=kget/index.html
+
+X-Ubuntu-Gettext-Domain=app-install-data

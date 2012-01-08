@@ -1,0 +1,14 @@
+#!/bin/sh 
+set -e
+
+if [ "$1" = install ] || [ "$1" = upgrade ]; then
+	if [ -e "/etc/modprobe.d/toshset" ]; then
+		if [ "`md5sum \"/etc/modprobe.d/toshset\" | sed -e \"s/ .*//\"`" = \
+			"`dpkg-query -W -f='${Conffiles}' toshset | sed -n -e \"\\\\' /etc/modprobe.d/toshset's/.* //p\"`" ]
+		then
+			rm -f /etc/modprobe.d/toshset
+		fi
+	fi
+fi
+
+

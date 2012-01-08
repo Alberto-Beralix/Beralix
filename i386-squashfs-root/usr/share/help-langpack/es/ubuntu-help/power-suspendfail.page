@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="power-suspendfail" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="power#problems"/>
+    <link type="guide" xref="hardware-problems-graphics"/>
+    
+    <desc>Algunos componentes hardware del equipo causan problemas al suspender/hibernar.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Por qué mi equipo no reacciona después de haberlo enviado a dormir?</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Marked incomplete as of 2011-04-04. Marking final for 3.0. Revisit for 3.2</p>
+</comment>
+
+<p>Si suspende o hiberna su equipo y luego tratar de despertarlo o volver a encenderlo, es posible que no funcione como esperaba. Esto podría ser debido a que su hardware no permite suspender/hibernar.</p>
+
+<section id="wakeup">
+ <title>Mi equipo está dormido y no puedo despertarlo</title>
+ <p>Si pone su equipo a dormir (suspender) y luego presiona una tecla o pulsa con su ratón, debería despertarse y mostrar una pantalla preguntando por su contraseña. Si esto no ocurre, pruebe a pulsar el botón de encendido (no lo mantenga presionado, púlselo solo una vez y suéltelo).</p>
+ <p>Si esto no funciona, asegúrese de que el monitor de su equipo está encendido e intente pulsar una tecla nuevamente.</p>
+ <p>Como último recurso, apague el equipo manteniendo presionado el botón de encendido por 5 a 10 segundos. Al hacerlo perderá sus trabajos sin guardar. Sin embargo, luego podrá encender el equipo nuevamente.</p>
+ <p>Si esto ocurre siempre que pone su equipo a dormir, puede que la suspensión no funcione en su hardware.</p>
+</section>
+
+<section id="hibernate">
+ <title>Ninguno de mis programas/documentos está abierto cuando enciendo mi equipo nuevamente</title>
+ <p>Si hiberna su equipo y al encenderlo de nuevo, ninguno de sus documentos o aplicaciones están abiertas, es probable que no hiberne correctamente. A veces esto ocurre debido a un problema menor, y el equipo será capaz de hibernar correctamente la próxima vez que lo haga. También podría suceder, ya que hubiera instalado una actualización de software que requiera que el equipo se reinicie, en este caso, el equipo puede haber cerrado en lugar de hibernar.</p>
+ 
+ <p>También es posible que el equipo no sea capaz de hibernar porque el hardware no lo permita. Esto puede ser debido, por ejemplo, a un problema con los controladores de Linux para su hardware. Puede probar esto hibernando de nuevo y ver si funciona la segunda vez. Si no es así, probablemente sea un problema con los controladores de su equipo.</p>
+</section>
+
+<section id="hardware">
+ <title>Mi conexión inalámbrica (u otro hardware) no funciona cuando mi equipo despierta</title>
+ <p>Si pone su equipo en suspensión o hibernación y luego lo vuelve a reanudar, es posible que su conexión a Internet, su ratón o algún otro dispositivo deje de funcionar correctamente. Esto puede deberse a que el controlador del dispositivo no admita correctamente la suspensión o hibernación. Esto es un <link xref="hardware-driver">problema del controlador</link> y no del dispositivo en sí.</p>
+ <p>Si el dispositivo tiene algún interruptor de encendido, pruebe a apagarlo y volverlo a encender. En muchas ocasiones, el dispositivo volverá a funcionar de nuevo. Si se conecta mediante un cable USB o similar, desconéctelo y vuélvalo a conectar, a ver si funciona.</p>
+ <p>Si no se puede apagar o desenchufar el dispositivo, o si esto no funciona, es posible que deba reiniciar el equipo para que el dispositivo comience a funcionar de nuevo.</p>
+</section>
+
+</page>

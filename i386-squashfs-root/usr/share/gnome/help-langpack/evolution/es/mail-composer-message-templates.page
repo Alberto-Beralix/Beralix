@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-composer-message-templates" xml:lang="es">
+
+  <info>
+ <desc>Plantillas de correos para reusar en el editor.</desc>
+
+ <link type="guide" xref="index#mail-composing-advanced"/>
+
+ <revision pkgversion="2.32.2" version="0.1" date="2011-07-21" status="stub"/>
+ <credit type="author">
+   <name>Andre Klapper</name>
+   <email>ak-47@gmx.net</email>
+ </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/b1dlaazl.html.en -->
+ </credit>
+ <license>
+   <p>Creative Commons Compartir Igual 3.0</p>
+ </license> 
+
+  </info>
+
+<title>Plantillas de correo</title>
+<p>Una plantilla de mensaje es un mensaje estándar que puede usar en cualquier momento para enviar correos con el mismo patrón.</p>
+<p>Para activar el complemento de plantillas de correo pulse <guiseq><gui>Editar</gui><gui>Complementos</gui></guiseq> y actíve <gui>Plantillas</gui>.</p>
+
+<!-- TODO: Check correctness of all these steps in 3.1. --> 
+<!-- TODO:POST-3-2: Split this into subpages maybe, and turn this into a guide page! -->
+
+<section id="create">
+<title>Crear una plantilla de correo desde un mensaje existente</title>
+<steps>
+  <item><p>Seleccione el mensaje.</p></item>
+  <item><p>Pulse con el botón derecho del ratón y seleccione <gui>Mover a la carpeta</gui> o <gui>Copiar a la carpeta</gui>.</p></item>
+  <item><p>Seleccione la carpeta <gui>Plantillas</gui> bajo <gui>En este equipo</gui>.</p></item>
+</steps>
+<p>También puede editar un correo existente y guardarlo como una plantilla:</p>
+<steps>
+  <item><p>Abra el correo y pulse <gui>Responder</gui>.</p></item>
+  <item><p>Edite el cuerpo del mensaje o las direcciones de acuerdo con sus necesidades.</p></item>
+  <item><p>Seleccione <guiseq><gui>Archivo</gui><gui>Guardar como plantilla</gui></guiseq>.</p></item>
+ </steps>
+</section>
+
+<section id="save">
+ <title>Guardar un mensaje nuevo como plantilla</title>
+ <steps>
+  <item>
+<p>Pulse <gui>Nuevo</gui> para entrar en la ventana del editor que necesita para la plantilla.</p>
+  </item>
+  <item>
+<p>Seleccione <guiseq><gui>Archivo</gui><gui>Guardar como plantilla</gui></guiseq>.</p>
+  </item>
+ </steps>
+</section>
+
+<section id="reply">
+ <title>Usar una plantilla de mensaje como respuesta</title>
+ <steps>
+  <item>
+<p>Pulse con el botón derecho del ratón sobre el correo al que está respondiendo, después pulse <gui>Plantillas</gui>.</p>
+<p>Esta opción lista todas las plantillas de mensajes en la carpeta <gui>Plantillas</gui>.</p>
+  </item>
+  <item>
+<p>Seleccione un mensaje de plantilla a su elección. Realice los cambios que quiera en la ventana del editor de mensajes que se abrirá.</p>
+  </item>
+  <item>
+<p>Pulse <gui>Enviar</gui>.</p>
+<p>Al seleccionar una plantilla de mensaje para responder, el asunto de la respuesta se mantiene.</p>
+  </item>
+ </steps>
+</section>
+
+<section id="configure">	
+<title>Configurar plantillas de mensajes</title>
+<steps>
+<item><p>Seleccione <guiseq><gui>Editar</gui><gui>Complementos</gui></guiseq>.</p></item>
+<item><p>Pulse <gui>Plantilas</gui>.</p></item>
+<item><p>Pulse la pestaña <gui>Configuración</gui>.</p></item>
+<item><p>Puede añadir, editar o quitar los pares de claves y valores. Puede especificar cualquier número de pares de claves y valores.</p></item>
+</steps>
+ <p>La aparición de la cada $key en cualquier plantilla se reemplaza con el valor que tiene en la configuración. Por ejemplo, si establece la clave a Director y el valor a Tomás, cualquier aparición de $Director se reemplaza con Tomás en el mensaje.</p>
+ <p>Asuma que tiene 1.000 plantillas de mensajes con el nombre actual de su jefe como referencia en ellas. Cuando el jefe actual cambia, no es fácil reemplazar manualmente el nombre del jefe en las 1.000 plantillas. Si los mensajes tienen un valor de clave $Jefe, puede cambiar el valor en la pestaña Configuración de este complemento.</p>
+ <p>De forma predeterminada todas las variables de entorno se usan como pares de claves-valores. Una aparición de $env_variable se reemplaza por el valor que lleva. Por ejemplo, una aparición de $PATH en su plantilla se reemplaza por su valor al usar la plantilla.</p>
+ <p>El proceso de reemplazo usa el siguiente orden de precedencia:</p>
+ <steps>
+  <item>
+<p>$key se reemplaza por el valor ajustado para ello en la pestaña Configuración del complemento Plantillas.</p>
+  </item>
+  <item>
+<p>Si no se encuentra la clave, se reemplaza con el valor de su variable de entorno.</p>
+  </item>
+  <item>
+<p>Si la clave no es una opción de configuración ni una variable de entorno, entonces no se hacen cambios.</p>
+  </item>
+ </steps>
+</section>
+
+</page>

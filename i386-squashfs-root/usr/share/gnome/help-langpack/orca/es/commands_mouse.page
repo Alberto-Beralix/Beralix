@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="commands_mouse" xml:lang="es">
+  <info>
+    <link type="next" xref="commands_bookmarks"/>
+    <link type="guide" xref="commands#reviewing_screen_contents"/>
+    <title type="sort">3. Relacionado con el ratón/puntero</title>
+    <title type="link">relacionado con ratón/puntero</title>
+    <link type="seealso" xref="howto_flat_review"/>
+    <link type="seealso" xref="howto_mouse_review"/>
+    <desc>Comandos para manipular el puntero</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Comandos relacionados con el ratón/puntero</title>
+  <p><app>Orca</app> proporciona varios comandos que se pueden usar para manipular el puntero del ratón y leer el contenido bajo este. Todos los comandos están «asociados» a pulsaciones de teclas con una excepción: alternar el modo de revisión del ratón. Consulte <link xref="howto_key_bindings">Modificar asociaciones de teclas</link> para obtener más información sobre cómo asociar este comando a una pulsación de tecla.</p>
+  <note style="tip">
+    <p>En la lista que se muestra a continuación, observará varias referencias a «TN». Todas las teclas «TN» se ubican en el teclado numérico. También notará que hay diferentes pulsaciones de teclas dependiendo de si está usando un ordenador de escritorio o un portátil o, para ser más preciso, si está usando la distribución de escritorio de <app>Orca</app> o su distribución de portátil. Para obtener más información, consulte el tema <link xref="howto_keyboard_layout">distribución del teclado</link>.</p>
+  </note>
+  <list>
+    <item>
+      <p>Pulsar con el botón izquierdo en el elemento actual:</p>
+      <list>
+        <item><p>Sobremesa: <keyseq><key>TN /</key></keyseq></p></item>
+        <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>7</key></keyseq></p></item>
+      </list>
+    </item>
+    <item>
+      <p>Pulsar con el botón derecho en el elemento actual:</p>
+      <list>
+        <item><p>Portátil: <keyseq><key>TN *</key></keyseq></p></item>
+        <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>8</key></keyseq></p></item>
+      </list>
+    </item>
+    <item>
+      <p>Posicionar el puntero en el elemento actual:</p>
+      <list>
+        <item><p>Sobremesa: <keyseq><key>Modificador de Orca</key><key>TN /</key></keyseq></p></item>
+        <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>9</key></keyseq></p></item>
+      </list>
+    </item>
+    <item>
+      <p>Mueva el foco dentro o fuera de la cobertura actual del ratón (sólo páginas web):</p>
+      <list>
+        <item><p>Sobremesa: <keyseq><key>Modificador de Orca</key><key>TN *</key></keyseq></p></item>
+        <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>0</key></keyseq></p></item>
+      </list>
+    </item>
+    <item>
+      <p>Activar/desactivar el modo de revisión del ratón: (sin asociar)</p>
+    </item>
+  </list>
+</page>

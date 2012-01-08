@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="commands_structural_navigation" xml:lang="es">
+  <info>
+    <link type="next" xref="commands_table"/>
+    <link type="guide" xref="commands#reading_documents"/>
+    <link type="seealso" xref="howto_forms"/>
+    <title type="sort">2. Navegación estructural</title>
+    <title type="link">Navegación estructural</title>
+    <desc>Comandos para navegar entre elementos</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Comandos de navegación estructural</title>
+  <p>Los siguientes comandos se pueden usar para navegar por cabeceras, enlaces y otros elementos encontrados en aplicaciones para las que <app>Orca</app> proporciona soporte de navegación estructural.</p>
+  <list>
+    <item>
+      <p>Activar/desactivar las teclas de navegación estructural: <keyseq><key>Modificador de Orca</key><key>Z</key></keyseq></p>
+    </item>
+  </list>
+  <section id="headings">
+    <title>Cabeceras</title>
+      <list>
+        <item>
+          <p>Cabecera siguiente y anterior: <keyseq><key>H</key></keyseq> y <keyseq><key>Mayús</key><key>H</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Cabecera siguiente y anterior de nivel 1: <keyseq><key>1</key></keyseq> y <keyseq><key>Mayús</key><key>1</key></keyseq></p>
+        </item>
+        <item>
+          <p>Cabecera siguiente y anterior de nivel 2: <keyseq><key>2</key></keyseq> y <keyseq><key>Mayús</key><key>2</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Cabecera siguiente y anterior de nivel 3: <keyseq><key>3</key></keyseq> y <keyseq><key>Mayús</key><key>3</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Cabecera siguiente y anterior de nivel 4: <keyseq><key>4</key></keyseq> y <keyseq><key>Mayús</key><key>4</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Cabecera siguiente y anterior de nivel 5: <keyseq><key>5</key></keyseq> y <keyseq><key>Mayús</key><key>5</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Cabecera siguiente y anterior de nivel 6: <keyseq><key>6</key></keyseq> y <keyseq><key>Mayús</key><key>6</key></keyseq></p>
+        </item> 
+      </list>
+    </section>
+    <section id="forms">
+      <title>Formularios</title>
+      <list>
+        <item>
+          <p>Campo del formulario anterior y siguiente: <keyseq><key>Modificador de Orca</key><key>Tab</key></keyseq> y <keyseq><key>Modificador de Orca</key><key>Mayús</key><key>Tab</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Botón anterior y siguiente: <keyseq><key>B</key></keyseq> y <keyseq><key>Mayús</key><key>B</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Cuadro combinado anterior y siguiente: <keyseq><key>C</key></keyseq> y <keyseq><key>Mayús</key><key>C</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Entrada anterior y siguiente: <keyseq><key>E</key></keyseq> y <keyseq><key>Mayús</key><key>E</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Botón de radio anterior y siguiente: <keyseq><key>R</key></keyseq> y <keyseq><key>Mayús</key><key>R</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Casilla anterior y siguiente: <keyseq><key>X</key></keyseq> y <keyseq><key>Mayús</key><key>X</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Objeto anterior y siguiente (salir del campo): <keyseq><key>Modificador de Orca</key><key>Derecha</key></keyseq> y <keyseq><key>Modificador de Orca</key><key>Izquierda</key></keyseq></p>
+        </item> 
+      </list>
+    </section>
+    <section id="links">
+    <title>Enlaces</title>
+      <list>
+        <item>
+          <p>Enlace no visitado anterior y siguiente: <keyseq><key>U</key></keyseq> y <keyseq><key>Mayús</key><key>U</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Enlace visitado anterior y siguiente: <keyseq><key>V</key></keyseq> y <keyseq><key>Mayús</key><key>V</key></keyseq></p>
+        </item> 
+      </list>
+    </section>
+    <section id="lists">
+      <title>Listas</title>
+      <list>
+        <item>
+          <p>Lista anterior y siguiente: <keyseq><key>L</key></keyseq> y <keyseq><key>Mayús</key><key>L</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Elemento en la lista anterior y siguiente: <keyseq><key>I</key></keyseq> y <keyseq><key>Mayús</key><key>I</key></keyseq></p>
+        </item> 
+      </list>
+    </section>
+    <section id="tables">
+      <title>Tablas</title>
+      <list>
+        <item>
+          <p>Tabla anterior y siguiente: <keyseq><key>T</key></keyseq> y <keyseq><key>Mayús</key><key>T</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Celda a la izquierda: <keyseq><key>Alt</key><key>Mayús</key><key>Izquierda</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Celda a la derecha: <keyseq><key>Alt</key><key>Mayús</key><key>Derecha</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Celda superior: <keyseq><key>Alt</key><key>Mayús</key><key>Arriba</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Celda inferior: <keyseq><key>Alt</key><key>Mayús</key><key>Abajo</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Primera celda en la tabla: <keyseq><key>Alt</key><key>Mayús</key><key>Inicio</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Última celda en la tabla: <keyseq><key>Alt</key><key>Mayús</key><key>Fin</key></keyseq></p>
+        </item> 
+      </list>
+    </section>
+    <section id="text_blocks">
+      <title>Bloques de texto</title>
+      <list>
+        <item>
+          <p>Párrafo anterior y siguiente: <keyseq><key>P</key></keyseq> y <keyseq><key>Mayús</key><key>P</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Cita anterior y siguiente: <keyseq><key>Q</key></keyseq> y <keyseq><key>Mayús</key><key>Q</key></keyseq></p>
+        </item> 
+        <item>
+          <p>«Objeto grande» anterior y siguiente: <keyseq><key>O</key></keyseq> y <keyseq><key>Mayús</key><key>O</key></keyseq></p>
+        </item> 
+       </list>
+    </section>
+    <section id="other">
+      <title>Otros elementos</title>
+      <list>
+        <item>
+          <p>Punto de referencia anterior y siguiente: <keyseq><key>M</key></keyseq> y <keyseq><key>Mayús</key><key>M</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Separador anterior y siguiente: <keyseq><key>S</key></keyseq> y <keyseq><key>Mayús</key><key>S</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Ancla anterior y siguiente: <keyseq><key>A</key></keyseq> y <keyseq><key>Mayús</key><key>A</key></keyseq></p>
+        </item> 
+      </list>
+    </section>
+</page>

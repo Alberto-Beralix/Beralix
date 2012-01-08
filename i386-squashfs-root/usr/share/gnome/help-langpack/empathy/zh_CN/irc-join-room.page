@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallrd.org/experimental/" type="topic" style="task" id="irc-join-room" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="irc-manage#manage" group="one"/>
+    <desc>加入一个 IRC 频道。</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-07-26" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-14" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-08-31" status="done"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>知识共享-相同方式共享 (Creative Commons Share Alike) 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>加入一个 IRC 聊天室</title>
+
+  <p>You can join IRC chat rooms (also known as IRC channels) on any IRC network you’re
+  connected to.  To connect to an IRC network, see <link xref="add-account"/> and
+  <link xref="account-irc"/>.</p>
+
+  <steps>
+    <item>
+      <p>
+        From the <gui>Contact List</gui> window, choose
+        <guiseq><gui>Room</gui><gui>Join</gui></guiseq>.
+      </p>
+    </item>
+    <item>
+      <p>
+        From the <gui>Account</gui> drop-down list, select the IRC account that
+        corresponds to the network you want to use.
+      </p>
+    </item>
+    <item>
+      <p>
+        In the <gui>Room</gui> text box, type the name of the channel you want to
+        join. IRC channel names start with the hash character (<sys>#</sys>).
+      </p>
+    </item>
+    <item>
+      <p>点击<gui>加入</gui>来进入房间。</p>
+    </item>
+  </steps>
+
+  <note style="tip">
+    <p>要加入多个房间，您需要对每个房间重复上面的步骤。</p>
+  </note>
+</page>

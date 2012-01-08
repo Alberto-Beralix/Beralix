@@ -1,0 +1,14 @@
+# This evil type, which I have made up, catches files coming in via Samba, when
+# the Windows client is configured to print to the PostScript counterpart to
+# your non-PostScript printer (in my case, I have a Hewlett-Packard LaserJet 5P
+# and configure Windows to use the "HP LaserJet 5P/5MP PostScript" driver so
+# that it will send PostScript straight on rather than convert it to PCL before
+# sending it -- useful to print to files and so on.).  I do not know what
+# combinations produce the finest output.  See the conversion script
+# samba-ps-to-ps for more information.
+
+# The MIME type used here must sort alphbetically before application/postscript
+# (CUPS has a dozen manuals, and this information seemed available only in a
+# comment in mime.types!).  If this were a real MIME type, I think it would be
+# non-conformant.
+application/a-x-postscript-with-pjl-header	string(78,"%!PS-Adobe-")

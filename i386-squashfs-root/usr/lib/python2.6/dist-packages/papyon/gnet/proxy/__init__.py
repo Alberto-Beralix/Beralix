@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/papyon/gnet/proxy/__init__.py

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="task" id="create-account" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#accounts"/>
+    <link type="seealso" xref="add-account"/>
+    <desc>Registre una cuenta con uno de los servicios de mensajería soportados.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-21" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-07" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-02" status="done"/>
+      -->
+    </revision>
+    <revision pkgversion="2.30" version="0.3" date="2010-04-19" status="review"/>
+    <revision pkgversion="2.30" version="0.4" date="2010-10-01" status="review"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Registrar una cuenta nueva</title>
+
+  <p>Muchos tipos de cuenta requieren que cree una cuenta con un proveedor de cuentas antes de poder conectarse y usar aplicaciones de mensajería instantánea como <app>Empathy</app>. Con algunos proveedores de cuentas puede usar <app>Empathy</app> para registrar una cuenta nueva, usando los mismos pasos que seguiría en <link xref="add-account">añadir una cuenta</link>.</p>
+
+  <p>Esta página proporciona información acerca de crear una cuenta nueva para varios tipos de cuenta. Su proveedor de cuentas debería proporcionarle un ID de inicio de sesión y una contraseña, así como otra información adicional que puede necesitar para conectarse con <app>Empathy</app>.</p>
+  
+  <section id="facebook">
+    <title>Facebook</title>
+    <p>Facebook es una de las redes sociales más usadas. Permite a los usuarios crear su propio perfil y comunicarse con sus amigos.</p>
+    <p>Para usar Facebook para comunicarse con sus amigos necesita crear una cuenta nueva desde el sitio web: <link href="http://www.facebook.com">www.facebook.com</link>.</p>
+  </section>
+
+  <section id="jabber">
+    <title>Jabber</title>
+
+    <p>Jabber es un sistema de mensajería instantánea abierto. Como el correo-e, Jabber le permite elegir su proveedor de la cuenta y comunicarse con otros usuarios de Jabber, independientemente del proveedor de la cuenta.</p>
+
+    <p>Deberá crear una cuenta nueva con un proveedor Jabber. Existen muchos proveedores libres; un proveedor popular es <link href="http://register.jabber.org/">Jabber.org</link>.</p>
+
+    <note>
+      <p>Si usa Google Mail o Google Talk ya tiene una cuenta Jabber. Talk es un servicio Jabber. Simplemente use en <app>Empathy</app> su dirección de Google Mail y su contraseña para conectarse.</p>
+    </note>
+  </section>
+
+  <section id="salut">
+    <title>Gente cerca</title>
+
+    <p>Para usar esta característica no necesita crear una cuenta con un proveedor de servicios. Este servicio funciona siempre que esté conectado a una red local, tal como un punto inalámbrico. Automáticamente encuentra otros usuarios en la red que estén usando este servicio.</p>
+
+    <p>Para obtener más información consulte la <link xref="salut-protocol"/>.</p>
+  </section>
+
+  <section id="sip-services">
+    <title>SIP</title>
+
+    <p>SIP es un sistema abierto que permite a los usuarios realizar conversaciones de sonido y vídeo en Internet. Debe crear una cuenta con un proveedor SIP. Puede comunicarse con todos los usuarios SIP, independientemente del proveedor SIP que usen.</p>
+
+    <note style="warning">
+      <p>Debido a algunas diferencias, actualmente el servicio libre <link href="https://www.ekiga.net/index.php?page=register">Ekiga.net</link> no funciona con <app>Empathy</app>.</p>
+    </note>
+
+    <p>Algunos proveedores SIP le permiten llamar a teléfonos normales desde su equipo. Generalmente deberá suscribirse a un servicio de pago para usar esta característica.</p>
+  </section>
+
+  <section id="irc">
+    <title>IRC</title>
+
+    <p>No necesita registrar una cuenta para usar el IRC. Aunque especifique un apodo al añadir una cuenta IRC en <app>Empathy</app>, este apodo sólo se establece cada vez que se conecta. Si otro usuario está usando el nombre, deberá elegir un apodo nuevo.</p>
+
+    <p>Algunas redes IRC usan un servicio llamado NickServ para permitir a los usuarios proteger sus apodos. Para obtener más información consulte la <link xref="irc-nick-password"/>.</p>
+
+    <p>Algunos servidores de IRC están protegidos con contraseña. Necesitará conocer la contraseña para conectarse a esos servidores. Generalmente son redes de IRC privadas.</p>
+  </section>
+
+  <section id="proprietary-services">
+    <title>Servicios propietarios</title>
+
+    <p>Existen muchos servicios propietarios de mensajería instantánea desarrollados por diferentes empresas u organizaciones. <app>Empathy</app> le permite conectarse a una cuenta existente de los servicios más populares. Para crear una cuenta nueva con uno de esos servicios deberá visitar el servicio web del sitio y aceptar los términos de uso.</p>
+
+    <list>
+      <item>
+        <p>
+          <link href="http://dashboard.aim.com/aim">AIM</link>
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://www.icq.com/register/">ICQ</link>
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://accountservices.passport.net">MSN</link>
+        </p>
+      </item>
+      <item>
+        <p>
+          <link href="https://login.yahoo.com/config/login">Yahoo!</link>
+        </p>
+      </item>
+    </list>
+  </section>
+
+</page>

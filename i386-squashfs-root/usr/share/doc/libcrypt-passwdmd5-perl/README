@@ -1,0 +1,80 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+
+Crypt::PasswdMD5
+================
+
+This  code  provides  various  crypt()-compatible  interfaces  to  the
+MD5-based crypt() function found in  various *nixes. It's based on the
+implementation  found  on FreeBSD  2.2.[56]-RELEASE  and contains  the
+following license in it:
+
+"THE BEER-WARE LICENSE" (Revision 42):
+<phk@login.dknet.dk>  wrote this  file.  As  long as  you  retain this
+notice you can  do whatever you want with this stuff.  If we meet some
+day, and you  think this stuff is worth  it, you can buy me  a beer in
+return.  Poul-Henning Kamp
+
+To install, follow the standard CPAN recipe of:
+
+$ perl Makefile.PL
+$ make
+$ make test
+
+If all tests pass, then do
+
+$ make install
+
+You can see the documentation by issuing the following command at a
+nearby shell
+
+$ perldoc Crypt::PasswdMD5
+
+Bug  reports  are  welcome. Please  do  not  forget  to tell  me  what
+version/platform are you running this code on. Providing a small piece
+of  code that  shows the  bug helps  me a  lot in  sorting it  out and
+possibly in writting more tests for the distribution.
+
+Report your bugs to me (luismunoz@cpan.org).
+
+SECURITY CONSIDERATIONS
+
+I  have  no control  on  the machanisms  involved  in  the storage  or
+transport  of this distribution.  This means  that I  cannot guarantee
+that  the distribution  you have  in your  hands is  indeed,  the same
+distribution I packed and uploaded.
+
+Along the distribution file, you should have a file with the extension
+".asc".   This  contains a  GPG  "detached  signature"  that makes  it
+impossible for anybody to alter  this distribution.  If security is of
+any concern to you, by all means verify the signature of this file and
+contact the author if any discrepancy is detected.
+
+You can find more information about this at the following URL
+
+             http://mipagina.cantv.net/lem/gpg/
+
+This  information includes  the correct  keys,  fingerprints, etc.Note
+that this README file should also be signed.
+
+LICENSE AND WARRANTY
+
+This software is (c) Luis E. Muñoz.  It can be used under the terms of
+the perl artistic license provided  that proper credit for the work of
+the  author is  preserved in  the form  of this  copyright  notice and
+license for this module.
+
+No warranty of any kind is  expressed or implied. This code might make
+your computer go up in a puff of black smoke.
+
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.1 (Darwin)
+
+iD8DBQFAMfZ75w8l7DtKgo8RAl9UAJwJGs/TzD73jx2rcutD30KXHOJQ9ACdFE3Q
+ZqgVAcK1TfgVsmoxw6RJCaE=
+=ND10
+-----END PGP SIGNATURE-----
+
+$Id: README,v 1.2 2004/02/17 11:10:43 lem Exp $

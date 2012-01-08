@@ -1,0 +1,254 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>install-docs reference</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+
+<!-- INDEX BEGIN -->
+<div name="index">
+<p><a name="__index__"></a></p>
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#actions">ACTIONS</a></li>
+	<li><a href="#compatibility_issues">COMPATIBILITY ISSUES</a></li>
+	<li><a href="#files">FILES</a></li>
+	<li><a href="#bugs">BUGS</a></li>
+	<li><a href="#see_also">SEE ALSO</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+</ul>
+
+<hr name="index" />
+</div>
+<!-- INDEX END -->
+
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>install-docs - manage online Debian documentation</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+ install-docs [options] -i,--install | -r,--remove | -c,--check file [ file ... ]</pre>
+<pre>
+ install-docs [options] -I,--install-all | -C,--install-changed | -R,--remove-all</pre>
+<pre>
+ install-docs [options] -s,--status docid [ docid ... ]</pre>
+<pre>
+ install-docs [options] --dump-db dbname</pre>
+<pre>
+ install-docs -h,--help | -V,--version</pre>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p><strong>install-docs</strong> is a tool allow Debian package maintainers to register
+documentation to various documentation systems.  It currently supports
+<strong>dhelp</strong>,  <strong>dwww</strong>, <strong>doc-central</strong>, and <strong>scrollkeeper</strong> browsers.</p>
+<p>This manual page provides a quick synopsis of <strong>install-docs</strong> usage.
+Full documentation can be found in the documentation, including a
+description of the control file syntax and grammar.</p>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="v_verbose" class="item"><strong>-v</strong>, <strong>--verbose</strong></a></strong></dt>
+
+<dd>
+<p>Operate verbosely.</p>
+</dd>
+<dt><strong><a name="d_debug" class="item"><strong>-d</strong>, <strong>--debug</strong></a></strong></dt>
+
+<dd>
+<p>Print some debugging information.</p>
+</dd>
+<dt><strong><a name="no_update_menus" class="item"><strong>--no-update-menus</strong></a></strong></dt>
+
+<dd>
+<p>Inhibit running <em>dwww-build-menu(8)</em>, <em>dhelp_parse(8)</em>,
+and <em>scrollkeeper-update(8)</em>.</p>
+</dd>
+<dt><strong><a name="rootdir_dir" class="item"><strong>--rootdir</strong> <em>dir</em></a></strong></dt>
+
+<dd>
+<p>Set the root directory to <em>dir</em> instead of `<em>/</em>'. Useful and valid only with
+the <strong>--check</strong> action.</p>
+</dd>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="actions">ACTIONS</a></h1>
+<p>Below is list of possible actions <strong>install-docs</strong> could handle. There can be only one action
+option passed to install-docs, moreover the action with its arguments must be the last option
+passed.</p>
+<p>Each <em>file</em> argument should be the full path for the doc-base control file (i.e.
+`/usr/share/doc-base/some_file' or `/etc/doc-base/documents/some_file'), and each
+<em>docid</em> should be the document identifier
+(Document identifiers are set in the `Document' field of the control file, and usually
+correspond to the package name.)</p>
+<p>If <em>file</em> or <em>docid</em> equals `<strong>-</strong>' (the minus sign), the list of
+arguments is read from the standard input (each file name or document id in separate line).</p>
+<dl>
+<dt><strong><a name="i_file_file_install_file_file" class="item"><strong>-i</strong> <em>file</em> [<em>file</em> ...],  <strong>--install</strong> <em>file</em> [<em>file</em> ...]</a></strong></dt>
+
+<dd>
+<p>Install the documentation described by the control file <em>file</em>.</p>
+</dd>
+<dt><strong><a name="r_file_file_remove_file_file" class="item"><strong>-r</strong> <em>file</em> [<em>file</em> ...],  <strong>--remove</strong> <em>file</em> [<em>file</em> ...]</a></strong></dt>
+
+<dd>
+<p>Remove the documentation identified by the control file
+<em>file</em>.</p>
+</dd>
+<dt><strong><a name="c_file_file_check_file_file" class="item"><strong>-c</strong> <em>file</em> [<em>file</em> ...],  <strong>--check</strong> <em>file</em> [<em>file</em> ...]</a></strong></dt>
+
+<dd>
+<p>Check the control file <em>file</em> and display number of possible problems found.
+Use with <em>--verbose</em> to get the actual locations of errors and warnings.
+If <em>--rootdir</em> was also given, its argument will be prepended to names of the files
+given if the `Files' and `Index' fields of the <em>file</em>.</p>
+</dd>
+<dt><strong><a name="r_remove_all" class="item"><strong>-R</strong>,  <strong>--remove-all</strong></a></strong></dt>
+
+<dd>
+<p>De-register all registered documents.</p>
+</dd>
+<dt><strong><a name="i_install_all" class="item"><strong>-I</strong>, <strong>--install-all</strong></a></strong></dt>
+
+<dd>
+<p>(Re)register all documents from <em class="file">/usr/share/doc-base</em> and <em class="file">/etc/doc-base/documents</em>.</p>
+</dd>
+<dt><strong><a name="c_install_changed" class="item"><strong>-C</strong>, <strong>--install-changed</strong></a></strong></dt>
+
+<dd>
+<p>Compare contents of <em class="file">/usr/share/doc-base</em> and <em class="file">/etc/doc-base/documents</em> directories
+with registered documents database and de-register any files that are missing and
+(re)register only changed or new files.</p>
+</dd>
+<dt><strong><a name="s_docid_docid_status_docid_docid" class="item"><strong>-s</strong> <em>docid</em> [<em>docid</em> ...], <strong>--status</strong> <em>docid</em> [<em>docid</em> ...]</a></strong></dt>
+
+<dd>
+<p>Display the status of the document identifier <em>docid</em>.</p>
+</dd>
+<dt><strong><a name="l_docid_docid_listfiles_docid_docid" class="item"><strong>-L</strong> <em>docid</em> [<em>docid</em> ...], <strong>--listfiles</strong> <em>docid</em> [<em>docid</em> ...]</a></strong></dt>
+
+<dd>
+<p>Deprecated option. Does nothing.</p>
+</dd>
+<dt><strong><a name="dump_db_dbname" class="item"><strong>--dump-db</strong> <em>dbname</em></a></strong></dt>
+
+<dd>
+<p>Dumps contents of internal databases, for debugging purposes. <em>dbname</em> can be either <strong>files.db</strong> or
+<strong>status.db</strong>.</p>
+</dd>
+<dt><strong><a name="h_help" class="item"><strong>-h</strong>, <strong>--help</strong></a></strong></dt>
+
+<dd>
+<p>Show a short help message.</p>
+</dd>
+<dt><strong><a name="v_version" class="item"><strong>-V</strong>, <strong>--version</strong></a></strong></dt>
+
+<dd>
+<p>Display version information.</p>
+</dd>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="compatibility_issues">COMPATIBILITY ISSUES</a></h1>
+<p>The following features were added in version 0.8.4,
+please make sure to add proper
+`<em>Conflicts</em>' or `<em>Depends</em>' lines if you would like to use them in your package's scripts:</p>
+<ul>
+<li>
+<p>support for passing more than one argument to the <strong>-i</strong> and <strong>-r</strong> actions,</p>
+</li>
+<li>
+<p>reading arguments from the standard input,</p>
+</li>
+<li>
+<p><strong>-I</strong>,<strong>--install-all</strong>, <strong>-R</strong>, <strong>---remove-all</strong>, <strong>-c</strong>, <strong>--check</strong> actions,</p>
+</li>
+<li>
+<p><strong>-d</strong>, <strong>--debug</strong>, <strong>-h</strong>, <strong>--help</strong> options.</p>
+</li>
+</ul>
+<p>The <strong>-C</strong>, <strong>--install-changed</strong>, <strong>--dump-db</strong>, <strong>-V</strong>, <strong>--version</strong> options were added in 0.8.12.</p>
+<p>
+</p>
+<hr />
+<h1><a name="files">FILES</a></h1>
+<dl>
+<dt><strong><a name="usr_share_doc_base" class="item"><em class="file">/usr/share/doc-base/</em></a></strong></dt>
+
+<dd>
+<p>The location of doc-base control files provided by various packages.</p>
+</dd>
+<dt><strong><a name="etc_doc_base_documents" class="item"><em class="file">/etc/doc-base/documents/</em></a></strong></dt>
+
+<dd>
+<p>The location of doc-base control files provided by local administrator.</p>
+</dd>
+<dt><strong><a name="var_lib_doc_base_info_documents" class="item"><em class="file">/var/lib/doc-base/info/documents/</em></a></strong></dt>
+
+<dd>
+<p>The location of registered control files.</p>
+</dd>
+<dt><strong><a name="var_lib_doc_base_info_status_db" class="item"><em class="file">/var/lib/doc-base/info/status.db</em></a></strong></dt>
+
+<dd>
+<p>Statuses of registered documents.</p>
+</dd>
+<dt><strong><a name="var_lib_doc_base_info_files_db" class="item"><em class="file">/var/lib/doc-base/info/files.db</em></a></strong></dt>
+
+<dd>
+<p>Timestamps and documents ids of registered doc-base files.</p>
+</dd>
+<dt><strong><a name="var_lib_doc_base_omf" class="item"><em class="file">/var/lib/doc-base/omf/</em></a></strong></dt>
+
+<dd>
+<p>The location of generated scrollkeeper OMF files.
+Note: <em class="file">/usr/share/omf/doc-base</em> should be a symbolic link pointing to the directory.</p>
+</dd>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="bugs">BUGS</a></h1>
+<p>See <a href="http://bugs.debian.org/doc-base">http://bugs.debian.org/doc-base</a>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="see_also">SEE ALSO</a></h1>
+<p><code>dhelp(1)</code>, <code>doccentral(1)</code>, <code>dwww(7)</code>, <code>scrollkeeper(7)</code>,
+Debian doc-base Manual <em class="file">/usr/share/doc/doc-base/doc-base.html/index.html</em></p>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>This program was originally written by Christian Schwarz
+&lt;<a href="mailto:schwarz@debian.org">schwarz@debian.org</a>&gt;, for the Debian GNU/Linux system, and the
+next maintainer was Adam Di Carlo &lt;<a href="mailto:aph@debian.org">aph@debian.org</a>&gt;.
+Robert Luberda &lt;<a href="mailto:robert@debian.org">robert@debian.org</a>&gt; is currently maintaining and extending it.</p>
+<p>This software was meant to be for the benefit of the entire Debian
+user and developer community.  If you are interested in being involved
+with this software, please join the mailing list
+&lt;<a href="mailto:debian-doc@lists.debian.org">debian-doc@lists.debian.org</a>&gt;.</p>
+
+</body>
+
+</html>

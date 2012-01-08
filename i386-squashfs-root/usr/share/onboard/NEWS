@@ -1,0 +1,99 @@
+Version 0.95.1
+--------------
+
+    * Don't crash when the icon fails to load.
+    * Construct GtkAdjustments before the objects they are referenced in. Works
+      around regression caused by 
+      https://bugzilla.gnome.org/show_bug.cgi?id=576492
+    * Update README about themes and macros
+    * Import translations from launchpad on 25th June 2011
+
+Version 0.95.0
+--------------
+
+    * Add support for themes supporting gradients, color schemes, round
+      corners, fonts, font styles, ... (partially Alan Bells; LP: #713466)
+    * Themes available:
+         - Ambiance (LP: #768583, Alan Bells design for Ubuntu 11.04)
+         - Blackboard
+         - Classic Onboard
+         - Darkroom
+         - Droid
+    * Use the theme for color information; not anymore the layout file
+    * Add theming to cli parameters
+    * Add configuration file for distributions to control default appearance
+    * Add possibility to name each snippet button according to its content
+    * Some cosmetic improvements by Gerd Kohlberger
+    * Move user settings from .sok to .onboard directory
+    * Rename layout files according to convention <layout name>-<pane name>.svg
+    * Make capitalisation of the name of Onboard consistent (LP: #524297)
+    * Fix and improve the "Personalize current layout" fonctionality
+    * Improve handling of deleted and invalid layout filenames
+    * Bring the height of the scan layout in line with the other layouts
+    * Fix memory leak (LP: #732179)
+    * Fix the close function of the status icon (LP: #718458)
+    * Improve mouse button emulation by increasing click polling (LP: #731642)
+    * Fix loading of default layout (LP: #769104)
+    * Import community translations from launchpad on 21st June 2011)
+    * Replace the word "Settings" with "Preferences" already used in Onboard
+    * Fix some usage of the ellipsis symbol
+    * Reduce the number of layout updates
+    
+
+Version 0.94.0
+--------------
+
+    * Make onboard follow keyboard layout changes (LP: 526791, LP: 65626)
+    * Save onboard geometry on quit instead on configure-events (LP: #596248)
+    * Improve handling of missing dependency for the clicks (LP: #524148):
+        - Use soname instead of linker for libXi in X11.py
+        - Add dependency on libxi6 to break package build if necessary
+        - Get current version of soname for libx11 from environment
+        - Respect DISPLAY environment variable in KeyboardGTK.py
+        - Add debian/README.source with info about libxi6 and libx11
+    * Do not crash if icon of IconPalette is missing (LP: #538109)
+    * Fix Menu key, Delete key and Insert key
+    * Qualify the import of our X11 module
+    * Make strings in X11 module translatable
+    * Some cleanup by remove trailing spaces
+
+Version 0.93.0
+------------
+
+    * Add option to make onboard appear when unlocking the screen
+    * Add possibility to do a middle click/right click by doing a left click
+    * Fix for the translations (LP: #452897)
+    * Replace with-keyword for compatibility with python < 2.6 (LP: #460389)
+    * Do not launch settings dialog under GDM (LP: #440371)
+    * Minimize to IconPalette if running under GDM, instead of disappearing
+    * Fix capitalisation of the word GNOME (LP: #495526)
+    * Check against version of auto module and not against version of package
+    * Make it compatible to DistUtilsExtra.auto >= 2.10
+    * Adjust permissions and fix typo (LP: #461491)
+    * Fix long description in schemas file
+    * Fix keysym of Del key
+    * Fix taskbar icon visibility (LP: #456178)
+
+Version 0.92.0
+------------
+
+    New release including
+     - More complete i18n.
+     - Improved rendering of the labels on keys.
+     - The option to minimize to a floating icon.
+     - A couple of new keyboard layouts.
+
+Version 0.91.2
+--------------
+
+    Bugfix release.
+
+Version 0.91.1
+--------------
+
+    Typo fix release.
+
+Version 0.91
+--------------
+
+    Release.

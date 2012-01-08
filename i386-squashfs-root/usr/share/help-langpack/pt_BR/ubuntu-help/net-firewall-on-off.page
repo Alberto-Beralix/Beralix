@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-firewall-on-off" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="net-security"/>
+    <desc>Você pode controlar os programas que estão acessíveis pela rede.</desc>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+    <credit type="author">
+      <name>Paul W. Frields</name>
+      <email>stickster@gmail.com</email>
+    </credit>
+    <credit>
+      <name>Jeremy Bicha</name>
+      <email>jbicha@ubun</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Habilitação e bloqueio de acesso de firewall</title>
+
+  <p>O Ubuntu vem equipado com o <app>Firewall descomplicado</app> (<app>ufw</app>), mas o firewall não está habilitado por padrão. Porque o Ubuntu não tem qualquer serviço de rede aberto (exceto infraestrutura de rede básica) na instalação padrão, um firewall não é necessário para bloquear tentativas de entrada de conexões maliciosas.</p>
+
+  <p>Para mais informações sobre como usar o ufw, veja a <link href="https://wiki.ubuntu.com/UncomplicatedFirewall">documentação online</link>.</p>
+
+<section id="ufw-enable">
+ <title>Liga ou desliga o firewall</title>
+  <p>Para ligar o firewall, entre com <cmd>sudo ufw enable</cmd> em um terminal. Para desligar o ufw, entre com <cmd>sudo ufw disable</cmd>.</p>
+</section>
+
+<section id="ufw-filter">
+ <title>Permitir ou bloquear a atividade de rede específica</title>
+  <p>Muitos programas são construídos para oferecer serviços de rede. Por exemplo, você pode compartilhar conteúdo ou deixar que alguém veja sua área de trabalho remotamente. Dependendo que quais programas adicionais você instale, você poderá precisar ajustar o firewall para permitir que esses serviços funcionem como deveriam. O UfW vem com um conjunto de regras pré-configuradas. Por exemplo, para permitir conexões <app>SSP</app>, digite <cmd>sudo ufw allow ssh</cmd> em um terminal. Para bloquear o SSH, digite <cmd>sudo ufw block ssh</cmd>.</p>
+  <p>Cada programa que provê serviços usa uma <em>porta de rede</em> específica. Para habilitar acesso aos serviços desses programas, talvez seja necessário permitir acesso a essa porta no firewall. Para permitir conexões na porta 53, digite <cmd>sudo ufw allow 53</cmd> em um terminal. Para bloquear a porta 53, digite <cmd>sudo ufw block 53</cmd>.</p>
+  <p>Para verificar o estado atual do ufw, entre com <cmd>sudo ufw status</cmd> em um terminal.</p>
+</section>
+
+<section id="gufw">
+ <title>Use o ufw sem um terminal</title>
+  <p>Você poderá instalar também o <app>gufw</app> caso prefira configurar o firewall sem usar um terminal. Para instalá-lo, clique <link href="apt:gufw">neste link</link>.</p>
+  <p>Você pode lançar esse programa procurando por <app>Configurações de Firewall</app> no <gui>Painel</gui>. Esse programa não precisa ficar aberto para que o firewall funcione.</p>
+</section>
+
+</page>

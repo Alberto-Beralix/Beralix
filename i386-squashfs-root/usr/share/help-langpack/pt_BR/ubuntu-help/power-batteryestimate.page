@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="power-batteryestimate" xml:lang="pt-BR">
+
+  <info>
+  
+    <link type="guide" xref="power#battery"/>
+    
+    <desc>A carga da bateria que é mostrada é somente uma estimativa.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Ele diz X minutos de bateria restando, mas isso não é verdade</title>
+
+<p>Quando você verificar a vida útil restante da bateria, você pode perceber que o <em>tempo restante</em> que ele relata é diferente de quanto tempo a bateria <em>realmente</em> tem. Isso é porque a quantidade de vida útil restante da bateria pode ser somente estimada. As estimativas devem melhorar com o tempo, no entanto.</p>
+
+<p>A fim de estimar a vida útil restante da bateria, um número de fatores deve ser levado em conta. Um é a quantidade de energia atualmente sendo usada pelo computador: consumo de energia varia dependendo da quantidade de programas abertos, quais dispositivos estão conectados e se você está executando alguma tarefa intensiva (como assistindo um DVD ou convertendo arquivos de música, por exemplo). Isso altera de momento a momento e é difícil de prever.</p>
+
+<p>Um outro fator é como a bateria descarrega. Algumas baterias perdem carga mais rápido a medida que esvaziam. Sem conhecimento preciso de como a bateria descarrega, somente uma estimativa grosseira da vida útil restante da bateria pode ser feita.</p>
+
+<p>Enquanto a bateria descarrega, o gerenciador de energia irá entender as propriedades de descarregamento e irá aprender como fazer estimativas melhores de vida útil da bateria. Ele nunca será completamente preciso, no entanto.</p>
+
+<note>
+ <p>Se você receber estimativas de vida útil da bateria ridículas (como centenas de dias!), o gerenciador de energia provavelmente tem algum dado, que é necessário para fazer uma estimativa mais sensível, faltando.</p>
+ <p>Se você desconectar a energia e executar o laptop na bateria por um tempo, depois conectar e deixar carregar de novo, o gerenciador de energia deve ser capaz de recuperar o dado que precisa.</p>
+</note>
+
+</page>

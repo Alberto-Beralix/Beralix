@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/configglue/tests/inischema/test_attributed.py

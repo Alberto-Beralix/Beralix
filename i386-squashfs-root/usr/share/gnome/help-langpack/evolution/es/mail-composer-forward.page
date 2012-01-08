@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-composer-forward" xml:lang="es">
+
+  <info>
+    <desc>Reenvía a alguien el mensaje seleccionado.</desc>
+    
+    <link type="guide" xref="index#mail-composing"/>
+
+    <revision pkgversion="3.1.5" version="0.3" date="2011-07-27" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-send.html.en#usage-mail-getnsend-fwd -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+<title>Reenviar un mensaje</title>
+
+<p>Cuando recibe un correo, puede reenviarlo a otros individuos o grupos que puedan estar interesados.</p>
+<p>You can forward a message as an attachment to a new message (this is the default setting, see <link xref="#default-settings">Default settings</link>), inline (in your message without the &gt; character before each line), or quoted (with &gt; character before each line).</p>
+<p>Attachment forwarding is best if you want to send the full, unaltered message to someone else. Inline or Quoted forwarding is best if you want to send portions of a message, or if you have a large number of comments on different sections of the message you are forwarding.</p>
+
+<p>Para reenviar un mensaje que está leyendo:</p>
+<steps>
+<item><p>Click <guiseq><gui>Message</gui><gui>Forward</gui></guiseq>, the <gui>Forward</gui> button in the toolbar, or press <keyseq><key>Ctrl</key><key>F</key></keyseq> to use the default forwarding method. In case you want to use a different forward method, click <guiseq><gui>Message</gui><gui>Forward as</gui></guiseq> or the small dropdown arrow next to the <gui>Forward</gui> button in the toolbar to choose the method.</p></item>
+<item><p>Seleccione un destinatario para el mensaje. El asunto ya está introducido, aunque puede cambiarlo si quiere.</p></item>
+<item><p>Añada sus comentarios en el correo en el campo de texto.</p></item>
+<item><p>Pulse <gui style="button">Enviar</gui> o <keyseq><key>Ctrl</key><key>Intro</key></keyseq>.</p></item>
+</steps>
+
+<p>Los adjuntos de un mensaje que está reenviado se reenvían sólo cuando envía el mensaje original como un adjunto. Los mensajes incluidos no reenvían ningún adjunto.</p>
+
+<section id="default-settings">
+<title>Ajustes predeterminados</title>
+<p>La configuración predeterminada para responder y reenviar se puede cambiar en <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Preferencias del editor</gui><gui>General</gui><gui>Respuestas y reenvíos</gui><gui>Estilo de reenvío</gui></guiseq>.</p>
+</section>
+
+</page>

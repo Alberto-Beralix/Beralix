@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-removedrive" xml:lang="de">
+  <info>
+    <link type="guide" xref="files#removable"/>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <desc>Hängen oder werfen Sie einen USB-Speicherstick, eine CD, DVD oder ein anderes Gerät aus.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Ein externes Laufwerk sicher entfernen</title>
+
+  <p>Wenn Sie ein externes Speichergerät wie einen USB-Stick verwenden, sollten Sie es sicher entfernen, bevor Sie es ausstecken. Wenn Sie es einfach nur ausstecken, riskieren Sie, dass Sie das Gerät gerade in dem Moment entfernen, in dem eine Anwendung darauf zugreift, wodurch einige Ihrer Dateien verloren gehen oder zerstört werden könnten. Wenn Sie einen optischen Datenträger wie eine CD oder DVD verwenden, können Sie dieselben Schritte befolgen, um die CD/DVD aus dem Laufwerk auszuwerfen.</p>
+
+  <steps>
+    <item><p><link xref="files-browse">Öffnen Sie die Dateiverwaltung</link>.</p></item>
+    <item><p>Locate the device in the sidebar. It should have a small
+    eject icon next to the name. Click the eject icon to safely
+    remove or eject the device.</p></item>
+  </steps>
+
+  <p>Alternatively, you can right-click the device and select either
+  <gui>Eject</gui> or <gui>Safely Remove Drive</gui>. USB drives can't
+  be physically ejected, so for these devices, there is no difference
+  between <gui>Eject</gui> and <gui>Safely Remove Drive</gui>.</p>
+
+  <p>If you have any files stored on the device open in any applications, you
+  will not be able to safely remove the device. You will be prompted with a
+  window telling you that "the volume is busy", and listing all the open files
+  on the device. Once you close all the files on the device, the device
+  will automatically be safely removed (so you can unplug or eject it).</p>
+
+  <p>Sie können auch <gui>Trotzdem aushängen</gui> wählen, um das Gerät zu entfernen, ohne die Dateien zu schließen. Dies kann zu Fehlern in den Anwendungen führen, die diese Dateien geöffnet haben.</p>
+
+  <p>Wenn Sie eine der Dateien nicht schließen können, zum Beispiel weil die Anwendung, die die Datei verwendet, blockiert ist, können Sie mit der rechten Maustaste auf die Datei im Fenster <gui>Laufwerk ist in Verwendung</gui> klicken und <gui>Prozess beenden</gui> wählen. Das erzwingt ein Beenden der gesamten blockierten Anwendung, wodurch weitere Dateien geschlossen werden könnten, die von dieser Anwendung offen gehalten wurden.</p>
+</page>

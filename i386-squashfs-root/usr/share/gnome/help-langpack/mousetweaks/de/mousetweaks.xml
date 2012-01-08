@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "2.24.0">
+<!ENTITY manrevision "0.2">
+<!ENTITY date "October 2007">
+<!ENTITY app "Mousetweaks">
+<!ENTITY application "<application>&app;</application>">
+<!ENTITY legal SYSTEM "legal.xml">
+]>
+<article id="index" lang="de">
+  <articleinfo>
+    <title>Mousetweaks-Handbuch</title>
+
+    <abstract role="description">
+      <para><application>Mousetweaks</application> stellt Verbesserungen der Barrierefreiheit der Maus auf dem GNOME-Desktop bereit.</para>
+    </abstract>
+
+    <copyright>
+      <year>2007 - 2010</year>
+
+      <holder>Francesco Fumanti</holder>
+    </copyright><copyright><year>2009, 2010</year><holder>Mario Blättermann (mariobl@gnome.org)</holder></copyright>
+
+    
+<legalnotice id="legalnotice">
+  <para>Das vorliegende Dokument kann gemäß den Bedingungen der GNU Free Documentation License (GFDL), Version 1.3 oder jeder späteren, von der Free Software Foundation veröffentlichten Version ohne unveränderbare Abschnitte sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem <ulink type="http" url="http://www.gnu.org/licenses/fdl-1.3.txt">Link</ulink> oder im Basisordner des Mousetweaks-Quellpakets.</para>
+
+  <para>Dieses Handbuch ist Teil einer Sammlung von GNOME-Handbüchern, die unter der GFDL veröffentlicht werden. Wenn Sie dieses Handbuch getrennt von der Sammlung weiterverbreiten möchten, können Sie das tun, indem Sie eine Kopie der Lizenz zum Handbuch hinzufügen, wie es in Abschnitt 6 der Lizenz beschrieben ist.</para>
+
+  <para>Viele der Namen, die von Unternehmen verwendet werden, um ihre Produkte und Dienstleistungen von anderen zu unterscheiden, sind eingetragene Warenzeichen. An den Stellen, an denen diese Namen in einer GNOME-Dokumentation erscheinen, werden die Namen in Großbuchstaben oder mit einem großen Anfangsbuchstaben geschrieben, wenn das GNOME-Dokumentationsprojekt auf diese Warenzeichen hingewiesen wird.</para>
+
+  <para>DAS DOKUMENT UND VERÄNDERTE FASSUNGEN DES DOKUMENTS WERDEN UNTER DEN BEDINGUNGEN DER GNU FREE DOCUMENTATION LICENSE ZUR VERFÜGUNG GESTELLT MIT DEM WEITERGEHENDEN VERSTÄNDNIS, DASS: <orderedlist>
+      <listitem>
+        <para>DIESES DOKUMENT WIRD »WIE VORLIEGEND« GELIEFERT, OHNE GARANTIEN IRGENDEINER ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES BEZIEHT SICH AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT ODER VERÄNDERTE FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR EINEN BESTIMMTEN ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER VERLETZT. DAS VOLLE RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER VERÄNDERTE FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE EIN DOKUMENT ODER EINE VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART BEINHALTEN, TRAGEN SIE (NICHT DER URSPRUNGSAUTOR, DER AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR NOTWENDIGE DIENSTLEISTUNGEN, REPARATUREN ODER FEHLERKORREKTUREN. DIESER HAFTUNGSAUSSCHLUSS IST EIN ESSENZIELLER TEIL DIESER LIZENZ. DIE VERWENDUNG EINES DOKUMENTS ODER EINER VERÄNDERTEN VERSION DES DOKUMENTS IST NICHT GESTATTET AUßER UNTER BEACHTUNG DIESES HAFTUNGSAUSSCHLUSSES UND</para>
+      </listitem>
+
+      <listitem>
+        <para>UNTER KEINEN UMSTÄNDEN UND AUF BASIS KEINER RECHTSGRUNDLAGE, EGAL OB DURCH UNERLAUBTEN HANDLUNGEN (EINSCHLIEßLICH FAHRLÄSSIGKEIT), VERTRAG ODER ANDERWEITIG KANN DER AUTOR, URSPRUNGSAUTOR, EIN MITWIRKENDER ODER EIN VERTRIEBSPARTNER DIESES DOKUMENTS ODER EINER VERÄNDERTEN FASSUNG DES DOKUMENTS ODER EIN ZULIEFERER EINER DIESER PARTEIEN, HAFTBAR GEMACHT WERDEN FÜR DIREKTE, INDIREKTE, SPEZIELLE, VERSEHENTLICHE ODER FOLGESCHÄDEN JEGLICHER ART, EINSCHLIEßLICH UND OHNE EINSCHRÄNKUNGEN SCHÄDEN DURCH VERLUST VON KULANZ, ARBEITSAUSFALL, COMPUTERVERSAGEN ODER COMPUTERFEHLFUNKTIONEN ODER ALLE ANDEREN SCHÄDEN ODER VERLUSTE, DIE SICH AUS ODER IN VERBINDUNG MIT DER VERWENDUNG DES DOKUMENTS UND VERÄNDERTER FASSUNGEN DES DOKUMENTS ERGEBEN, AUCH WENN DIE OBEN GENANNTEN PARTEIEN ÜBER DIE MÖGLICHKEIT SOLCHER SCHÄDEN INFORMIERT WAREN.</para>
+      </listitem>
+    </orderedlist></para>
+</legalnotice>
+
+
+    <authorgroup>
+      <author role="maintainer">
+        <firstname>Francesco</firstname>
+
+        <surname>Fumanti</surname>
+
+        <affiliation>
+          <address><email>frfumanti@svn.gnome.org</email> </address>
+        </affiliation>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>Version 2.32</revnumber>
+
+        <date>August 2010</date>
+
+        <revdescription>
+          <para role="author">Der Inhalt des Handbuchs wurde an die Änderungen in Mousetweaks für GNOME 2.32 angepasst. <email>Francesco Fumanti frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Version 2.30</revnumber>
+
+        <date>März 2010</date>
+
+        <revdescription>
+          <para role="author">Der Inhalt des Handbuchs wurde an die Änderungen in Mousetweaks für GNOME 2.30 angepasst. <email>Francesco Fumanti frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Version 2.28</revnumber>
+
+        <date>September 2009</date>
+
+        <revdescription>
+          <para role="author">Der Inhalt des Handbuchs wurde an die Änderungen in Mousetweaks für GNOME 2.28 angepasst. <email>Francesco Fumanti frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Version 2.25.90</revnumber>
+
+        <date>2. Februar 2009</date>
+
+        <revdescription>
+          <para role="author">Dieses Handbuch wurde überarbeitet, um die Änderungen in Mousetweaks für GNOME 2.26 zu berücksichtigen. Weiterhin wurde die Lizenz dieses Handbuchs in die GFDL 1.3 geändert. <email>Francesco Fumanti frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Version 2.24</revnumber>
+
+        <date>Juli 2008</date>
+
+        <revdescription>
+          <para role="author">Der Inhalt des Handbuchs wurde an die Änderungen in Mousetweaks für die verbesserte Integration in GNOME 2.24 angepasst. <email>Francesco Fumanti frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Version 2.21.5</revnumber>
+
+        <date>Januar 2008</date>
+
+        <revdescription>
+          <para role="author">Der Inhalt des Handbuchs wurde an die Änderungen in Mousetweaks für die Integration in GNOME 2.22 angepasst. Francesco Fumanti <email>frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Version 0.2</revnumber>
+
+        <date>November 2007</date>
+
+        <revdescription>
+          <para role="author">Der Inhalt des Handbuchs wurde an das Standardthema »Clearlooks« des GNOME-Desktops angepasst. Diese Version wird mit Mousetweaks 0.2.6 ausgeliefert. Francesco Fumanti <email>francesco.fumanti@gmx.net</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Version 0.1</revnumber>
+
+        <date>Oktober 2007</date>
+
+        <revdescription>
+          <para role="author">Erste Version des Handbuchs. Francesco Fumanti <email>francesco.fumanti@gmx.net</email></para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>Dieses Handbuch beschreibt die durch Mousetweaks bereitgestellten Barrierefreiheits-Werkzeuge sowie die grafischen Oberflächen, bestehend aus dem Reiter »Barrierefreiheit« des Einstellungsdialogs für die Maus und den beiden Panel-Applets.</releaseinfo>
+
+    <contrib>Um einen Fehler zu melden oder einen Vorschlag zur Mousetweaks-Anwendung oder zu diesem Handbuch zu machen, benutzen Sie bitte das Bugzilla-Fehlererfassungssystem von GNOME.</contrib>
+
+    <legalnotice>
+      <title>Rückmeldungen</title>
+
+      <para>Um einen Fehler zu melden oder einen Vorschlag zum <application>Mousetweaks-Modul</application> (d.h. zur Barrierefreiheit der Maus), dessen Benutzeroberfläche oder zu dessen Handbuch zu machen, benutzen Sie bitte  das <ulink type="http" url="http://bugzilla.gnome.org/">Bugzilla-Fehlererfassungssystem</ulink> von GNOME.</para>
+    </legalnotice>
+  </articleinfo>
+
+  <indexterm zone="index">
+    <primary>Mousetweaks</primary>
+  </indexterm>
+
+  <indexterm zone="index">
+    <primary>mousetweaks</primary>
+  </indexterm>
+
+  <sect1 id="mouse-a11y-introduction">
+    <title>Einführung</title>
+
+    <para><application>Mousetweaks</application> stellt Verbesserungen der Barrierefreiheit der Maus auf dem GNOME-Desktop bereit. Im Einzelnen stehen dem Benutzer folgende Funktionen zur Verfügung:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Der simulierte Kontextklick ermöglicht Benutzern die Ausführung eines Kontextklicks (Menüklicks) durch Gedrückthalten der primären Maustaste, ohne dass der Mauszeiger bewegt wird.</para>
+      </listitem>
+
+      <listitem>
+        <para>Der verzögerte Klick ermöglicht Benutzern die Ausführung verschiedener Klicks, ohne eine  <hardware>Hardware-Taste</hardware> zu drücken.</para>
+      </listitem>
+
+      <listitem>
+        <para>Das Einfangen des Mauszeigers ermöglicht es Benutzern, den Mauszeiger in einem festgelegten Bereich des Panels zu sperren, bis ihn der Benutzer durch ein vorher festgelegtes Tastenkürzel oder eine Bedienung einer Maustaste entsperrt.</para>
+      </listitem>
+    </itemizedlist>
+
+    <note>
+      <para>Seit Version 2.31.3 ist Mousetweaks nicht mehr vom Barrierefeiheits-Framework AT-SPI abhängig.</para>
+    </note>
+  </sect1>
+
+  <sect1 id="mouse-a11y-how-to-start-features">
+    <title>Starten der Funktionen</title>
+
+    <para>Der simulierte Kontextklick und der verzögerte Klick sind vom Mousetweaks-Prozess abhängig. Das Applet zum Einfangen des Mauszeigers hängt vom GNOME-Panel ab. Daher gibt es auch verschiedene Wege, diese zu starten.</para>
+
+    <sect2 id="mouse-a11y-start-ssc">
+      <title>Starten der Funktion des simulierten Kontextklicks</title>
+
+      <para>Sie können den simulierten Kontextklick auf zwei verschiedene Arten starten:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>in der grafischen Oberfläche</para>
+        </listitem>
+
+        <listitem>
+          <para>über die Befehlszeile</para>
+        </listitem>
+      </itemizedlist>
+
+      <sect3 id="mouse-a11y-start-ssc-by-gui">
+        <title>Start über die grafische Oberfläche</title>
+
+        <para>Die grafische Benutzeroberfläche zum Starten des simulierten Kontextklicks finden Sie im Reiter »Barrierefreiheit« des Maus-Einstellungswerkzeugs. Um dieses zu öffnen, wählen Sie das Menü  <menuchoice><guimenu>System</guimenu><guisubmenu>Einstellungen</guisubmenu><guimenuitem>Kontrollzentrum</guimenuitem></menuchoice>, woraufhin das GNOME-Kontrollzentrum geöffnet wird. Klicken Sie im Kontrollzentrum auf »Maus«. Das Maus-Einstellungswerkzeug wird geöffnet, in dessen Reiter »Barrierefreiheit« folgende Einstellungen möglich sind:</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-tab.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Das Maus-Einstellungswerkzeug</para>
+          </textobject>
+        </mediaobject>
+
+        <para>Um die Funktion des simulierten Kontextklicks zu starten, aktivieren Sie das folgende Ankreuzfeld:</para>
+
+        <para><quote>Kontextklick durch Gedrückthalten der ersten Taste auslösen</quote></para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-ssc-checkbox.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Das Ankreuzfeld des simulierten Kontextklicks</para>
+          </textobject>
+        </mediaobject>
+      </sect3>
+
+      <sect3 id="mouse-a11y-start-ssc-by-cli">
+        <title>Start über die Befehlszeile</title>
+
+        <para>Um den simulierten Kontextklick in einer Befehlszeile zu starten, öffnen Sie ein <application>Terminal</application> und geben Sie Folgendes ein:</para>
+
+        <para><command>mousetweaks <parameter>--ssc</parameter></command></para>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-start-dwell">
+      <title>Starten der Funktion des verzögerten Klicks</title>
+
+      <para>Sie können die Funktion des verzögerten Klicks auf drei verschiedene Arten starten:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>im Reiter »Barrierefreiheit« des Einstellungsdialogs für die Maus</para>
+        </listitem>
+
+        <listitem>
+          <para>über die Befehlszeile</para>
+        </listitem>
+
+        <listitem>
+          <para>mit dem Knopf »Aktivieren/Deaktivieren« im Panel-Applet »Verzögerter Klick«</para>
+        </listitem>
+      </itemizedlist>
+
+      <sect3 id="mouse-a11y-start-dwell-by-gui">
+        <title>Starten im Reiter »Barrierefreiheit« des Maus-Einstellungswerkzeugs</title>
+
+        <para>Die grafische Benutzeroberfläche zum Starten des verzögerten Klicks finden Sie im Reiter »Barrierefreiheit« des Maus-Einstellungswerkzeugs. Um dieses zu öffnen, wählen Sie das Menü  <menuchoice><guimenu>System</guimenu><guisubmenu>Einstellungen</guisubmenu><guimenuitem>Kontrollzentrum</guimenuitem></menuchoice>, woraufhin das GNOME-Kontrollzentrum geöffnet wird. Klicken Sie im Kontrollzentrum auf »Maus«. Das Maus-Einstellungswerkzeug wird geöffnet, in dessen Reiter »Barrierefreiheit« folgende Einstellungen möglich sind:</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-tab.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Das Maus-Einstellungswerkzeug</para>
+          </textobject>
+        </mediaobject>
+
+        <para>Um die Funktion des verzögerten Klicks zu starten, aktivieren Sie folgendes Ankreuzfeld:</para>
+
+        <para><quote>Klick ausführen, wenn sich der Mauszeiger nicht mehr bewegt</quote></para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-checkbox.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Das Ankreuzfeld zum Starten des verzögerten Klicks</para>
+          </textobject>
+        </mediaobject>
+      </sect3>
+
+      <sect3 id="mouse-a11y-start-dwell-by-cli">
+        <title>Start über die Befehlszeile</title>
+
+        <para>Um den simulierten Kontextklick in einer Befehlszeile zu starten und damit das Klick-Typ-Fenster anzuzeigen, öffnen Sie ein <application>Terminal</application> und geben Sie Folgendes ein:</para>
+
+        <para><command>mousetweaks <parameter>--dwell --show-ctw</parameter></command></para>
+
+        <note>
+          <para>Die Startparameter --login und --daemonize wurden hinzugefügt, um GDM zu ermöglichen, Mousetweaks zu starten und zu beenden. Der erstgenannte Parameter deaktiviert die Überprüfung auf das Hilfstechnologie-Framework beim Start von Mousetweaks. Wenn der zweite Parameter nicht übergeben wird, dann behält Mousetweaks die beim Starten erhaltene Prozesskennung. Dadurch erhält GDM die Möglichkeit, Mousetweaks anhand dieser Prozesskennung zu beenden.</para>
+        </note>
+      </sect3>
+
+      <sect3 id="mouse-a11y-start-dwell-by-panel-applet">
+        <title>Start mit dem Knopf Aktivieren/Deaktivieren des Panel-Applets »Verzögerter Klick«</title>
+
+        <para>Es ist möglich, den verzögerten Klick durch einfaches Verweilen mit dem Mauszeiger auf dem Maus-Symbol des Panel-Applets »Verzögerter Klick« zu starten. Dieses Maus-Symbol stellt die Verzögerungszeit dar, indem sich der Rahmen mit einer anderen Farbe füllt. Wenn der Rahmen vollständig gefüllt ist, dann zeigt der Knopf den aktiven Status an und der verzögerte Klick wird gestartet.</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-click-type-applet.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Das Klicktyp-Applet rechts neben den GNOME-Menüs</para>
+          </textobject>
+        </mediaobject>
+
+        <note>
+          <para>Anweisungen zur Installation des Applets »Verzögerter Klick« auf dem GNOME-Panel finden Sie in <link linkend="mouse-a11y-start-pointer-capture">Starten der Funktion zum Einfangen des Mauszeigers</link>, wo Sie eine Anleitung zum Hinzufügen des Applets zum Einfangen des Mauszeigers finden. Die Vorgehensweise zum Hinzufügen des Applets »Verzögerter Klick« ist ähnlich.</para>
+        </note>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-start-pointer-capture">
+      <title>Starten der Funktion zum Einfangen des Mauszeigers</title>
+
+      <para>Das Applet zum Einfangen des Mauszeiger ist ein Panel-Applet, daher folgt seine Startmethode den vom GNOME-Panel vorgegebenen Regeln. Um die Funktion zum Einfangen des Mauszeigers zu starten, müssen Sie das Applet lediglich zum Panel hinzufügen, und es wird automatisch gestartet.</para>
+
+      <para>Um es zum Panel hinzuzufügen, gehen Sie genauso vor wie mit jedem anderen Panel-Applet: Führen Sie einen Kontextklick auf einer freien Stelle des Panels aus, um das Kontextmenü zu öffnen und wählen Sie <guimenuitem>Zum Panel hinzufügen</guimenuitem>. Daraufhin wird ein Fenster geöffnet, das alle auf dem GNOME-Panel installierbaren Applets anzeigt.</para>
+
+      <para>Durch einen Doppelklick auf den Eintrag <guilabel>Mauszeiger einfangen</guilabel> im Fenster »Zum Panel hinzufügen« wird dieses Applet zum Panel hinzugefügt. Es ist aktiv, bis es wieder aus dem GNOME-Panel entfernt wird.</para>
+    </sect2>
+  </sect1>
+
+  <sect1 id="mouse-a11y-how-to-stop-features">
+    <title>Beenden der Funktionen</title>
+
+    <para>Analog zum Starten der Funktionen hängt das Beenden der Funktionen vom Funktionsmerkmal ab, das Sie beenden wollen.</para>
+
+    <sect2 id="mouse-a11y-stop-ssc">
+      <title>Beenden des simulierten Kontextklicks</title>
+
+      <para>Sie haben zwei verschiedene Möglichkeiten, den simulierten Kontextklick zu beenden:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Durch Entfernen der Markierung aus dem entsprechenden Ankreuzfeld im Einstellungswerkzeug von <application>Mousetweaks</application>.</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-ssc-checkbox.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Ankreuzfeld zum Starten des simulierten Kontextklicks</para>
+            </textobject>
+          </mediaobject>
+
+          <para>Um den Ort dieses Ankreuzfeldes zu finden,  ziehen Sie <link linkend="mouse-a11y-start-ssc-by-gui">Start des simulierten Kontextklicks in der grafischen Oberfläche</link> zu Rate.</para>
+        </listitem>
+
+        <listitem>
+          <para>Durch Eingabe des folgenden Befehls in einer Befehlszeile:</para>
+
+          <para><command>mousetweaks</command>
+          <parameter>--shutdown</parameter></para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+
+    <sect2 id="mouse-a11y-stop-dwell">
+      <title>Beenden des verzögerten Mausklicks</title>
+
+      <para>Sie haben drei verschiedene Möglichkeiten, den verzögerten Klick zu beenden:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Durch Entfernen der Markierung aus dem entsprechenden Ankreuzfeld im Einstellungswerkzeug von <application>Mousetweaks</application>.</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-checkbox.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Ankreuzfeld zum Starten des »tastenlosen Klicks«</para>
+            </textobject>
+          </mediaobject>
+
+          <para>Um den Ort des Ankreuzfeldes zu finden, ziehen Sie <link linkend="mouse-a11y-start-dwell-by-gui">Starten des verzögerten Klicks über die grafische Oberfläche</link> zu Rate.</para>
+        </listitem>
+
+        <listitem>
+          <para>Durch Eingabe des folgenden Befehls in einer Befehlszeile:</para>
+
+          <para><command>mousetweaks</command>
+          <parameter>--shutdown</parameter></para>
+        </listitem>
+
+        <listitem>
+          <para>Falls das Applet »Verzögerter Klick« auf dem GNOME-Panel installiert ist, kann der verzögerte Klick durch Verschieben des Mauszeigers über den Knopf »Aktivieren/Deaktivieren« abgeschaltet werden.</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-click-type-applet.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Das Klicktyp-Applet rechts neben den GNOME-Menüs</para>
+            </textobject>
+          </mediaobject>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+
+    <sect2 id="mouse-a11y-stop-pointer-capture">
+      <title>Beenden der Funktion zum Einfangen des Mauszeigers</title>
+
+      <para>Die Funktion zum Einfangen des Mauszeigers ist ein Panel-Applet. Um es zu beenden, müssen Sie es in der gleichen Art und Weise aus dem Panel entfernen, wie Sie es von anderen Applets her kennen. Klicken Sie mit der rechten Maustaste auf den Anfasser des Applets und wählen Sie <guimenuitem>Aus dem Panel entfernen</guimenuitem> im Kontextmenü.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-context-menu.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>Der Mauszeiger-Einfangbereich (grün) mit seinem Kontextmenü</para>
+        </textobject>
+      </mediaobject>
+
+      <tip>
+        <para>Wenn Sie das voreingestellte GNOME-Thema verwenden, wird der Anfasser des Applets zum Einfangen des Mauszeigers durch zwei senkrechte punktierte Linien links vom Applet dargestellt.</para>
+      </tip>
+    </sect2>
+  </sect1>
+
+  <sect1 id="mouse-a11y-functions-description">
+    <title>Beschreibung der Funktionen</title>
+
+    <para>Mousetweaks bietet dem Benutzer drei Funktionen bezüglich der Barrierefreiheit der Maus. In diesem Abschnitt finden Sie die Beschreibung der drei Funktionen: <itemizedlist>
+        <listitem>
+          <para><xref linkend="mouse-a11y-ssc-description"/></para>
+        </listitem>
+
+        <listitem>
+          <para><xref linkend="mouse-a11y-dwell-description"/></para>
+        </listitem>
+
+        <listitem>
+          <para><xref linkend="mouse-a11y-pointer-capture-description"/></para>
+        </listitem>
+      </itemizedlist></para>
+
+    <sect2 id="mouse-a11y-ssc-description">
+      <title>Beschreibung des simulierten Kontextklicks</title>
+
+      <para>Wenn der Benutzer diese Funktion aktiviert, ist er in der Lage, Kontextklicks mit der <mousebutton>primären Maustaste</mousebutton> auszuführen. Dies ist insbesondere für Benutzer nützlich, deren Gerät nur über eine einzige <mousebutton>Maustaste</mousebutton> verfügt.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-ssc-delay-slider.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>Einstellungen bezüglich des simulierten Kontextklicks</para>
+        </textobject>
+      </mediaobject>
+
+      <sect3 id="mouse-a11y-ssc-usage">
+        <title>Wie funktioniert es?</title>
+
+        <para>Nehmen wir an, der Benutzer hat den simulierten Kontextklick aktiviert.</para>
+
+        <para>Um einen simulierten Kontextklick auszuführen, müssen Sie die <mousebutton>primäre Maustaste</mousebutton> gedrückt halten, ohne die Maus für eine bestimmte Zeitspanne zu bewegen. Diese Zeitspanne wird mit dem Schieberegler für die Verzögerung des simulierten Kontextklicks festgelegt. Während Sie die <mousebutton>primäre Maustaste</mousebutton> gedrückt halten, wird der Mauszeiger in einer anderen Farbe dargestellt, um den Benutzer über die verstreichende Zeit zu informieren.</para>
+
+        <para>Falls der Benutzer die <mousebutton>primäre Maustaste</mousebutton> loslässt, bevor der Mauszeiger vollständig die Farbe gewechselt hat, empfängt das System lediglich die Meldung, dass die <mousebutton>primäre Maustaste</mousebutton> gedrückt und wieder losgelassen wurde.</para>
+
+        <para>Falls der Benutzer die <mousebutton>primäre Maustaste</mousebutton> loslässt, nachdem der Mauszeiger vollständig die Farbe gewechselt hat, folgt den Ereignissen der <mousebutton>primären Maustaste</mousebutton> ein Klick der <mousebutton>sekundären Maustaste</mousebutton>. Faktisch löst <application>Mousetweaks</application> diesen simulierten Klick der <mousebutton>sekundären Maustaste</mousebutton> aus, sobald der Benutzer die <mousebutton>primäre Maustaste</mousebutton> loslässt.</para>
+
+        <para>Die vorangegengenen Beschreibungen gehen davon aus, dass zwischen dem Drücken und Loslassen der <mousebutton>primären Maustaste</mousebutton> der Mauszeiger nicht bewegt wird. Falls der Zeiger doch bewegt wird, bevor die <mousebutton>primäre Maustaste</mousebutton> losgelassen wird, dann wird kein simulierter Kontextklick ausgelöst. Daher muss der Benutzer nur die Maus bewegen, bevor er die <mousebutton>primäre Maustaste</mousebutton> loslässt, um den eingeleiteten Kontextklick abzubrechen.</para>
+
+        <para>Weiterhin verhält es sich durch die Tatsache, dass dem simulierten Kontextklick unmittelbar ein primärer Klick vorausgeht, etwas anders als erwartet, wenn der vorausgehende Klick einen Einfluss auf das Objekt hat, das den simulierten Kontextklick empfangen soll. Bitte werfen Sie einen Blick in den Abschnitt zu den <link linkend="mouse-a11y-ssc-pecularities">Unterschieden zum normalen Kontextklick</link> für weitere Details.</para>
+      </sect3>
+
+      <sect3>
+        <title id="mouse-a11y-ssc-delay">Der Schieberegler für die Verzögerung</title>
+
+        <para>Wie lange der Benutzer die <mousebutton>primäre Maustaste</mousebutton> gedrückt halten muss, wird durch den Schieberegler <guilabel>Verzögerung</guilabel> unterhalb des Ankreuzfeldes zur Aktivierung festgelegt. Durch Verschieben des Reglers können Sie die gewünschte Verzögerung bestimmen.</para>
+      </sect3>
+
+      <sect3>
+        <title id="mouse-a11y-ssc-motion-treshold">Bewegungsschwellwert</title>
+
+        <para>Benutzer, denen es schwerfällt, den Mauszeiger ruhig zu halten, können des Schieberegler »Schwellenwert der Bewegung« des verzögerten Klicks verwenden. Diese Einstellung sorgt dafür, dass Mousetweaks geringfügige Mausbewegungen nicht beachtet, so dass der simulierte Kontextklick ausgeführt wird, auch wenn der Zeit nicht vollkommen ruhig steht. Schauen Sie in den Abschnitt <link linkend="mouse-a11y-dwell-motion-treshold">Bewegungsschwellwert-Schieberegler des verzögerten Klicks</link> für weitere Informationen.</para>
+
+        <note>
+          <para>Der unter der Funktion <guilabel>Verzögerter Klick</guilabel> angezeigte Schieberegler beeinflusst auch den <guilabel>Simulierten Kontextklick</guilabel>, und zwar auch dann, wenn der <guilabel>Verzögerte Klick</guilabel> nicht aktiviert ist.</para>
+        </note>
+      </sect3>
+
+      <sect3 id="mouse-a11y-ssc-pecularities">
+        <title>Unterschiede zum normalen Kontextklick</title>
+
+        <para>Weil der simulierte Kontextklick nicht in der Lage ist, das Mausereignis <mousebutton>Maustaste gedrückt</mousebutton> vom Ereignis <mousebutton>primäre Taste gedrückt</mousebutton> des Benutzers zu unterscheiden, wird der primäre Klick vor dem von <application>Mousetweaks</application> ausgelösten Kontextklick ausgeführt. Daher verhält sich der simulierte Kontextklick etwas anders als ein gewöhnlicher Kontextklick, wobei letzterem normalerweise nicht unmittelbar ein Klick der <mousebutton>primären Maustaste</mousebutton> vorausgeht. Zum Beispiel:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Es ist nicht möglich, einen Kontextklick für mehrere Objekte auszuführen, weil der primäre Klick geschieht, bevor der Kontextklick die Auswahl der Objekte umkehrt.</para>
+          </listitem>
+
+          <listitem>
+            <para>Beim Ausführen eines simulierten Kontextklicks auf einer Webseite öffnet der primäre Klick, welcher dem simulierten Kontextklick vorausgeht, bereits die verknüpfte Webseite, bevor der simulierte Kontextklick eine reale Chance hat, das Kontextmenü des Verweises zu öffnen.</para>
+
+            <tip>
+              <para>Das Kontextmenü eines Verweises auf einer Webseite kann dadurch geöffnet werden, dass Sie einen simulierten Kontextklick ausführen, während Sie die Strg-Taste gedrückt halten. Dies funktioniert, weil die verknüpfte Webseite in einem neuen Reiter geöffnet wird, wenn die Verknüpfung einen primären Klick in Verbindung mit einer gedrückten Strg-Taste empfängt. Dies passiert als Nebeneffekt ebenfalls, wenn Sie das Kontextmenü eines Verweises durch den simulierten Kontextklick in Verbindung mit gedrückter Strg-Taste öffnen.</para>
+
+              <para>In jedem Fall muss der Browser so eingestellt werden, dass beim Öffnen eines neuen Reiters nicht automatisch in diesen Reiter gewechselt wird. Ansonsten würde die Seite mit dem Verweis verschwinden, wenn der neue Reiter sichtbar wird, und mit ihr das aufgerufene Kontexmenü.</para>
+            </tip>
+          </listitem>
+
+          <listitem>
+            <para>Wenn der simulierte Kontextklick auf dem Müll-Symbol im Panel ausgeführt wird, dann wird nicht nur das Kontextmenü angezeigt, sondern auch der Müll-Ordner geöffnet. Ersteres wird durch den Kontextklick selbst hervorgerufen, das letztere durch den primären Klick vor dem Kontextklick.</para>
+          </listitem>
+        </itemizedlist>
+
+        <note>
+          <para>Es ist nicht möglich, eine Liste aller möglichen Verhaltensweisen aufzustellen, weil dies von der Reaktion der Anwendung beim Empfang des nach dem primären Klicks ausgeführten Kontextklicks abhängt.</para>
+        </note>
+
+        <para>Andererseits ist es nicht möglich, die <mousebutton>primäre Maustaste</mousebutton> längere Zeit ohne weitere Aktion gedrückt zu halten, ohne dass der Kontextklick ausgelöst wird, es sei denn der Mauszeiger wird vor dem Loslassen der <mousebutton>primären Maustaste</mousebutton> bewegt. Das könnte für einige Benutzer unerwartete Folgen haben. Zum Beispiel:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Wenn Sie die primäre Maustaste länger als die festgelegte Verzögerungszeit auf einem Pfeil eines Rollbalkens gedrückt halten, springt der Rollbalken nach unten. Dabei handelt es sich um das normale Verhalten bei einem Kontextklick auf den Pfeil eines Rollbalkens.</para>
+
+            <tip>
+              <para>Um zu verhindern, dass der Rollbalken nach unten springt, bewegen Sie einfach den Mauszeiger ein wenig weg vom Pfeil des Rollbalkens, bevor Sie die <mousebutton>primäre Maustaste</mousebutton> loslassen. Durch dieses Verfahren wird der eingeleitete Kontextklick abgebrochen.</para>
+            </tip>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-dwell-description">
+      <title>Beschreibung des verzögerten Mausklicks</title>
+
+      <para>Es gibt Benutzer, die nicht imstande sind, eine Hardware-Taste zu drücken. Durch Aktivieren des <guilabel>Verzögerten Klicks</guilabel> können sie die verschiedenen Bedienungen der Maustaste ausführen, ohne irgendeine Maustaste zu drücken. Die möglichen Klicks sind: einfacher primärer Klick, Doppelklick, Klick zum Ziehen und Ablegen und Kontextklick.</para>
+
+      <note>
+        <para>Wenn der verzögerte Klick aktiviert ist, sind die <mousebutton>Maustasten</mousebutton> weiterhin benutzbar. Es ist möglich, mit den <mousebutton>Maustasten</mousebutton> Klicks auszuführen. Wenn der Benutzer einen Klick mit einer <mousebutton>Maustaste</mousebutton> ausführt, während die Reaktionszeit des verzögerten Klicks abläuft, wird der verzögerte Klick angehalten und nicht ausgelöst. Um erneut einen verzögerten Klick auszuführen, muss der Benutzer wiederum die Maus bewegen und anhalten, wie für einen verzögerten Klick üblich.</para>
+      </note>
+
+      <sect3 id="mouse-a11y-dwell-usage">
+        <title>Wie funktioniert es?</title>
+
+        <para>Jedesmal wenn der Mauszeiger nicht mehr bewegt wird, wird ein verzögerter Klick eingeleitet. Um das dem Benutzer zu verdeutlichen, stellt Mousetweaks den Mauszeiger in einer anderen Farbe dar, wobei die Zeitspanne abzulaufen beginnt, bevor die Klick-Vervollständigung geschieht.</para>
+
+        <para>Wie der Klick vervollständigt wird und wie der Klick-Typ ausgewählt wird, hängt von dem vom Benutzer ausgewählten Verzögerungsmodus ab. Die zwei möglichen Modi sind:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Klicktyp im Voraus auswählen</para>
+          </listitem>
+
+          <listitem>
+            <para>Klicktyp mit Mausgesten auswählen</para>
+          </listitem>
+        </itemizedlist>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-mode-choice.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Radioknöpfe zur Auswahl des Modus des verzögerten Klicks</para>
+          </textobject>
+        </mediaobject>
+
+        <para>Um den Modus auszuwählen, muss der Benutzer den entsprechenden Radioknopf anklicken.</para>
+
+        <sect4 id="mouse-a11y-dwell-mode-ctw">
+          <title>Automatische Vervollständigung des Klicks bei im Voraus ausgewählten Klicktyp</title>
+
+          <para>Dieser Modus ist aktiv, wenn der Benutzer <guilabel>Klicktyp im Voraus auswählen</guilabel> auswählt. Nachdem die Maus für die mit dem Schieberegler <guilabel>Verzögerung</guilabel> Zeitspanne nicht bewegt wurde. Das System führt automatisch den im hier angezeigten Klicktyp-Fenster ausgewählten Klicktyp aus:</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-click-type-window.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Das Fenster des Klick-Typs</para>
+            </textobject>
+          </mediaobject>
+
+          <para>Um das <guimenu>Klickyp-Fenster</guimenu> auf dem Bildschirm anzuzeigen, muss der Benutzer das Ankreuzfeld <guilabel>Klicktyp-Fenster anzeigen</guilabel> aktivieren:</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-ctw-checkbox.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Ankreuzfeld zum Anzeigen des Klicktyp-Fensters</para>
+            </textobject>
+          </mediaobject>
+
+          <para>Wenn der Klick ausgeführt wurde, wird der einfache Klicktyp wiederhergestellt. Um einen anderen Klicktyp zu wählen, muss der Benutzer einen automatischen Klick auf den <guibutton>Knopf</guibutton> im <guilabel>Klicktyp-Fenster</guilabel> ausführen, der sich auf den gewünschten Klicktyp bezieht.</para>
+
+          <para>Anstelle des Klicktyp-Fensters könnten einige Benutzer vielleicht das Panel-Applet <guilabel>Verzögerter Klick</guilabel> bevorzugen, das einige Vorzüge bietet:</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-click-type-applet.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Das Klicktyp-Applet rechts neben den GNOME-Menüs</para>
+            </textobject>
+          </mediaobject>
+
+          <para>Bei der Verwendung des Applets <guilabel>Verzögerter Klick</guilabel>: <itemizedlist>
+              <listitem>
+                <para>Der Benutzer benötigt das <guilabel>Klickyp-Fenster</guilabel> nicht, das vielleicht andere Fenster auf dem Desktop verdecken könnte.</para>
+              </listitem>
+
+              <listitem>
+                <para>Der Benutzer hat eine direkte Möglichkeit, den verzögerten Klick mit dem Knopf <guilabel>Aktiviert/Deaktiviert</guilabel> des <guilabel>Verzögerter Klick</guilabel>-Applets zu starten oder zu beenden. Dies ist insbesondere nützlich, wenn die Verzögerung für kurze Zeit abgeschaltet werden soll, um einen Text zu lesen, ohne dass der verzögerte Klick in Aktion tritt.</para>
+              </listitem>
+            </itemizedlist></para>
+
+          <para>Um das Applet <guilabel>Verzögerter Klick</guilabel> zum GNOME-Panel hinzuzufügen, folgen Sie der üblichen Vorgehensweise zum Hinzufügen von Applets. Ein Beispiel hierzu finden Sie im Abschnitt <link linkend="mouse-a11y-start-pointer-capture">Starten der Funktion zum Einfangen des Mauszeigers</link>.</para>
+
+          <para>Das <guilabel>Klicktyp-Fenster</guilabel> und das Applet <guilabel>Verzögerter Klick</guilabel> können gleichzeitig oder auch unabhängig voneinander verwendet werden.</para>
+        </sect4>
+
+        <sect4 id="mouse-a11y-dwell-mode-gestures">
+          <title>Vervollständigung des Klicks und Auswahl des Klicktyps durch Mausgesten</title>
+
+          <para>Dieser Modus ist aktiv, wenn der Benutzer <guilabel>Klicktyp mit Mausgesten auswählen</guilabel> ausgewählt hat. Nachdem die Maus für die mit dem <link linkend="mouse-a11y-dwell-delay">Verzögerungs-Schieberegler</link> eingestellte Zeitspanne bewegungslos ist, wird die Form des Mauszeigers für kurze Zeit verändert, nennen wir diese Form die Gesten-Form: </para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Wenn der Benutzer den Mauszeiger bewegt, während dieser die Gesten-Form anzeigt, wird ein Klick auf die Stelle ausgeführt, wo der Zeiger sich zuletzt bewegungslos befand. Letzendlich kehrt der Mauszeiger zu seiner normalen Form zurück. Der ausgeführte Klicktyp hängt von der Bewegungsrichtung der Maus ab. Während der Bewegung des Mauszeigers wird eine Linie gezeichnet, die der Bewegung folgt, um dies dem Benutzer zu verdeutlichen.</para>
+            </listitem>
+
+            <listitem>
+              <para>Falls der Benutzer den Mauszeiger bewegungslos hält, bis dieser zu seiner normalen Form zurückkehrt, kann die Maus wieder bewegt werden, ohne dass ein Klick ausgeführt wird. Der nächste verzögerte Klick kann an der nächsten Stelle ausgeführt werden, an der der Mauszeiger stehenbleibt.</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>Es ist möglich, den Klicktyp durch die Bewegungsrichtung zu bestimmen, und zwar durch eines der vier verfügbaren <guimenu>Kontextmenüs</guimenu>:</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-gesture-mapping.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Konfigurationsoptionen zur Zuordnung des Klicktyps zur Bewegungsrichtung</para>
+            </textobject>
+          </mediaobject>
+
+          <para>In jedem der <guimenu>Kontextmenüs</guimenu> gibt es auch einen Eintrag namens <guimenuitem>Deaktiviert</guimenuitem>. Der Benutzer kann dies auswählen, falls er keine Klicktypen automatisch ausführen lassen will. Dies ist insbesondere dann interessant, wenn ein Benutzer nur Schwierigkeiten mit bestimmten Klicktypen hat.</para>
+        </sect4>
+      </sect3>
+
+      <sect3>
+        <title id="mouse-a11y-dwell-delay">Einstellen der Zeit für den verzögerten Klick</title>
+
+        <para>Mit dem Schieberegler <guilabel>Verzögerung</guilabel> kann der Benutzer einstellen, wie lange der Mauszeiger bewegungslos bleiben muss, bevor der Klick eingeleitet wird.</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-delay-slider.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Verzögerungs-Schieberegler des verzögerten Klicks</para>
+          </textobject>
+        </mediaobject>
+
+        <note>
+          <para>Die Verzögerungszeit ist nur wirksam im Zusammenhang mit dem verzögerten Klick.</para>
+        </note>
+      </sect3>
+
+      <sect3 id="mouse-a11y-dwell-motion-treshold">
+        <title>Einstellen des Bewegungsschwellwerts</title>
+
+        <para>Für Benutzer, die den Mauszeiger nur schwer ruhig halten können, ist der Schieberegler <guilabel>Bewegungstoleranz</guilabel> gedacht.</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-motion-treshold.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Schieberegler für die Bewegungstoleranz des verzögerten Klicks</para>
+          </textobject>
+        </mediaobject>
+
+        <para>Wenn der Schieberegler auf einen niedrigen Wert eingestellt ist, werden auch geringfügige Mausbewegungen berücksichtigt. Bei einem höheren Wert muss der Zeiger einen längeren Weg zurücklegen, bevor dies als Bewegung erkannt wird.</para>
+
+        <note>
+          <para>Die Einstellung der Bewegungstoleranz beeinflusst auch den <guilabel>Simulierten Kontextklick</guilabel>, und zwar auch dann, wenn der <guilabel>Verzögerte Klick</guilabel> nicht aktiviert ist.</para>
+        </note>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-pointer-capture-description">
+      <title>Sperren des Mauszeigers</title>
+
+      <para>Es gibt Benutzer, die ihr Zeigegerät nicht nur für den Rechner verwenden. Diese Benutzer würden es begrüßen, wenn es einen Weg gäbe, den Mauszeiger in einem bestimmten Bereich des Bildschirms festzusetzen, so dass das Zeigegerät für andere Aufgaben zur Verfügung steht.</para>
+
+      <para>Das Applet <guilabel>Mauszeiger einfangen</guilabel> erstellt einen Bereich auf dem Panel, in dem der Benutzer den Mauszeiger sperren kann, bis er durch eine bestimmte Aktion wieder entsperrt wird.</para>
+
+      <note>
+        <para>In <link linkend="mouse-a11y-start-pointer-capture">Starten der Funktion zum Einfangen des Mauszeigers</link> finden Sie Anweisungen, wie Sie das Applet <guilabel>Mauszeiger einfangen</guilabel> zum GNOME-Panel hinzufügen können.</para>
+      </note>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-context-menu.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>Der Mauszeiger-Einfangbereich (grün) mit seinem Kontextmenü</para>
+        </textobject>
+
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-locked.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>Der Einfangbereich, während der Mauszeiger eingefangen ist</para>
+        </textobject>
+      </mediaobject>
+
+      <para>Wenn Sie im Kontextmenü des Applets <guilabel>Mauszeiger einfangen</guilabel> den Eintrag <guimenu>Einstellungen</guimenu> wählen, wird das Fenster mit den verfügbaren Optionen des Applets <guilabel>Mauszeiger einfangen</guilabel> angezeigt:</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-preferences.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>Einstellungen des Applets »Mauszeiger einfangen«</para>
+        </textobject>
+      </mediaobject>
+
+      <para>Das <guilabel>Einstellungsfenster</guilabel> des Applets <guilabel>Mauszeiger einfangen</guilabel> besteht aus drei Abschnitten:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Im Abschnitt <guilabel>Mauszeiger einfangen</guilabel> kann Benutzer angeben, unter welchen Umständen der Mauszeiger eingefangen wird, wenn er in den Einfangbereich verschoben wird. Beispiel: Wenn die Strg-Taste hier aktiviert ist, dann wird der Mauszeiger eingefangen, sobald er in den Einfangbereich gerät und der Benutzer die Strg-Taste drückt. Wenn keine Auslösetaste angegeben und die Maustaste auf 0 gesetzt wird, muss der Zeiger nur in den Einfangbereich verschoben werden, um ihn zu sperren.</para>
+
+          <para>Es ist auch möglich, eine Kombination aus Auslösetasten und Maustasten festzulegen.</para>
+        </listitem>
+
+        <listitem>
+          <para>Im Abschnitt <guilabel>Mauszeiger freigeben</guilabel> kann der Benutzer festlegen, welche Auslösetaste oder welche Maustaste den Zeiger wieder freigibt.</para>
+
+          <para>Es ist auch möglich, eine Kombination aus Auslösetasten und Maustasten festzulegen.</para>
+        </listitem>
+
+        <listitem>
+          <para>Im Abschnitt <guilabel>Größe des Einfangbereiches</guilabel> kann der Benutzer die Breite des Einfangbereiches im Panel festlegen.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+
+  <sect1 id="mouse-a11y-about">
+    <title>Über <application>Mousetweaks</application></title>
+
+    <sect2>
+      <title>Autoren und Webseite</title>
+
+      <para><application>Mousetweaks</application> basiert auf der bei Launchpad veröffentlichten <ulink type="https" url="https://wiki.ubuntu.com/Accessibility/Specs/MouseTweaks">Spezifikation</ulink>. Es wurde von Gerd Kohlberger ( <email>gerdk@svn.gnome.org</email> ) implementiert, Francesco Fumanti ( <email>frfumanti@svn.gnome.org</email> ) half bei Tests und Logistik.</para>
+
+      <para>Weitere Informationen über Mousetweaks finden Sie bei <ulink type="https" url="https://launchpad.net/mousetweaks">Launchpad</ulink> und <ulink url="http://live.gnome.org//Mousetweaks/Home">GNOME Live</ulink>.</para>
+    </sect2>
+
+    <sect2>
+      <title>Rückmeldungen</title>
+
+      <para>Um einen Fehler zu melden oder einen Vorschlag zum <application>Mousetweaks-Modul</application>, dessen Benutzeroberfläche oder zu dessen Handbuch zu machen, benutzen Sie bitte  das <ulink type="http" url="http://bugzilla.gnome.org/">Bugzilla-Fehlererfassungssystem</ulink> von GNOME. Falls es dabei sich um die grafische Oberfläche des Reiters »Barrierefreiheit« des Maus-Einstellungswerkzeugs handelt, melden Sie den Fehler im Modul gnome-control-center, ansonsten im Mousetweaks-Modul.</para>
+    </sect2>
+
+    <sect2>
+      <title>Lizenz</title>
+
+      <para>Dieses Programm ist freie Software, Sie können sie weitergeben und/oder verändern solange Sie sich an die Regeln der GNU General Public License halten, so wie sie von der Free Software Foundation festgelegt wurden; entweder in Version 3 der Lizenz oder (nach Ihrem Ermessen) in jeder folgenden Lizenz. Eine Kopie dieser Lizenz finden Sie unter diesem <ulink type="http" url="http://www.gnu.org/licenses/gpl-3.0.txt">Link</ulink> oder in der Datei COPYING.GPL, die mit dem Quellcode dieses Programms geliefert wird.</para>
+
+      <para>Das vorliegende Dokument kann gemäß den Bedingungen der GNU Free Documentation License (GFDL), Version 1.3 oder jeder späteren, von der Free Software Foundation veröffentlichten Version ohne unveränderbare Abschnitte sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem <ulink type="http" url="http://www.gnu.org/licenses/fdl-1.3.txt">Link</ulink> oder in der mit dem Quellcode dieses Programms gelieferten Datei COPYING.FDL.</para>
+    </sect2>
+  </sect1>
+</article>

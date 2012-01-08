@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-wireless-connect" xml:lang="es">
+  <info>
+    <link type="guide" xref="net-wireless" group="#first"/>
+    <link type="seealso" xref="net-wireless-hidden"/>
+    <link type="seealso" xref="net-wireless-troubleshooting"/>
+    
+    <revision version="11.04" date="2011-04-10" status="final"/>
+
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <credit type="author">
+      <name>Equipo de documentación de Ubuntu</name>
+    </credit>
+
+    <desc>Conectarse a Internet - de forma inalámbrica.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Conectar con una red inalámbrica</title>
+
+<p>If you have a wireless-enabled computer, you can connect to a wireless network that is within range to get access to the internet, view shared files on the network, and so on.</p>
+
+<steps>
+  <item><p>Si su equipo tiene un interruptor hardware para la conectividad inalámbrica, asegúrese de que está encendido.</p></item>
+  <item><p>Pulse en el <gui>menú de red</gui> del <gui>panel superior</gui> y localice la red que desea.</p>
+    <steps>
+      <item><p>Seleccione el nombre de su red inalámbrica.</p></item>
+      <item><p>If the name of your wireless network isn't in the list, click <gui>More Networks</gui> to see if the network is further down the list. If you still don't see the network, you may be out of range or the network <link xref="net-wireless-hidden">might be hidden</link>.</p></item>
+    </steps>
+  </item>
+  <item><p>If the network is protected by a password (<link xref="net-wireless-wepwpa">encryption key</link>), enter the password when prompted and click <gui>Connect</gui>.</p>
+  <p>If you do not know the key, it may be written on the underside of the wireless router or base station, in its instruction manual, or you may have to ask the person who administers the wireless network.</p></item>
+  <item><p>El icono de red cambiará su apariencia según el equipo intente conectarse a la red.</p></item>
+  <item>
+   <p>If the connection is successful, the icon will change to a dot with several bars above it. More bars indicate a stronger connection to the network. If there aren't many bars, the connection is weak and might not be very reliable.</p>
+  </item>
+</steps>
+
+<p>If the connection is not successful, you <link xref="net-passwordok-noconnect">may be asked for your password again</link> or it might just tell you that the connection has been disconnected. There are a number of things that could have caused this to happen - you could have entered the wrong password, the wireless signal could be too weak, or your computer's wireless card might have a problem, for example. See <link xref="net-wireless-troubleshooting"/> for more help.</p>
+
+<p>A stronger connection to a wireless network does not necessarily mean that you have a faster internet connection, or that you will have faster download speeds. The wireless connection connects your computer to the <em>device which provides the internet connection</em> (like a router or modem), but the two connections are actually different, and so will run at different speeds.</p>
+
+<note><p>Conectarse a una red inalámbrica es fácil en la mayoría de los casos, pero a veces puede haber problemas.</p>
+<p>Si experimenta algún problema con el acceso a su red, consulte algunos de los otros temas de ayuda relacionados con redes pulsando en uno de los enlaces «Vea también» al final de esta página.</p></note>
+
+</page>

@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/papyon/service/ContentRoaming/scenario/base.py

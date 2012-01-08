@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+bansheedir=${libdir}/banshee
+Libraries=${bansheedir}/Banshee.CollectionIndexer.dll
+
+Name: Banshee Collection Indexer Helper
+Description: A library for applications to bundle to easily consume the Banshee Collection Indexer
+Version: 2.2.0
+Requires: dbus-sharp-1.0
+Libs: -r:${Libraries}
+

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="commands_flat_review" xml:lang="de">
+  <info>
+    <link type="next" xref="commands_find"/>
+    <link type="guide" xref="commands#reviewing_screen_contents"/>
+    <link type="seealso" xref="howto_flat_review"/>
+    <title type="sort">1. Übersicht</title>
+    <title type="link">Übersicht</title>
+    <desc>
+      Commands for spatially reviewing windows
+    </desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+  <title>Befehle der Übersicht</title>
+  <p>
+    Orca's <link xref="howto_flat_review">Flat Review</link> commands are
+    designed for spatially reviewing elements displayed on the screen. They
+    also provide a means for reading the current line, word, and character
+    when navigating in the text of a document.
+  </p>
+  <section id="line">
+    <title>Befehle für zeilenweises Vorlesen</title>
+    <list>
+      <item>
+        <p>Erste Zeile (die Heimposition):</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>Orca-Zusatztaste</key><key>7 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>Strg</key><key>U</key></keyseq></p></item>
+        </list>
+      </item>
+      <item>
+        <p>Vorherige Zeile:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>7 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>U</key></keyseq></p></item>
+        </list>
+      </item>
+      <item>
+        <p>Aktuelle Zeile:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>8 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>I</key></keyseq></p></item>
+        </list>
+      </item>
+        <item><p>A</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>8 (Nmblck)</key></keyseq> (Doppelklick)</p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>I</key></keyseq> (Doppelklick)</p></item>
+        </list>
+      </item>
+      <item><p>Die aktuelle Zeile phonetisch buchstabieren:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>6 (Nmblck)</key></keyseq> (Dreifach-Klick)</p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>I</key></keyseq> (Dreifach-Klick)</p></item>
+        </list>
+      </item>
+      <item><p>Nächste Zeile:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>9 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>O</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Letzte Zeile (die Endposition):</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>Orca-Zusatztaste</key><key>9 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>Strg</key><key>O</key></keyseq></p></item>
+        </list>
+      </item>
+    </list>
+  </section>
+  <section id="word">
+    <title>Befehle für wortweises Vorlesen</title>
+    <list>
+      <item><p>Wort darüber:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>Orca-Zusatztaste</key><key>4 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>Strg</key><key>J</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Vorheriges Wort:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>4 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>J</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Momentanes Wort:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>5 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>K</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Das aktuelle Wort buchstabieren:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>5 (Nmblck)</key></keyseq> (Doppelklick)</p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>K</key></keyseq> (Doppelklick)</p></item>
+        </list>
+      </item>
+      <item><p>Das aktuelle Wort phonetisch buchstabieren:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>5 (Nmblck)</key></keyseq> (Dreifach-Klick)</p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>K</key></keyseq> (Dreifach-Klick)</p></item>
+        </list>
+      </item>
+      <item><p>Nächstes Wort:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>6 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>L</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Wort darunter:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>Orca-Zusatztaste</key><key>6 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>Strg</key><key>L</key></keyseq></p></item>
+        </list>
+      </item>
+    </list>
+  </section>
+  <section id="character">
+    <title>Befehle für zeichenweises Vorlesen</title>
+    <list>
+      <item><p>Vorheriges Zeichen:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>1 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>M</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Aktuelles Zeichen:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>2 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>,</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Das aktuelle Zeichen phonetisch vorlesen:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>2 (Nmblck)</key></keyseq> (Doppelklick)</p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>,</key></keyseq> (Doppelklick)</p></item>
+        </list>
+      </item>
+      <item><p>Den Unicode-Wert des aktuellen Zeichens vorlesen:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>2 (Nmblck)</key></keyseq> (Dreifach-Klick)</p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>,</key></keyseq> (Dreifach-Klick)</p></item>
+        </list>
+      </item>
+      <item><p>Nächstes Zeichen:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>3 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>Punkt</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Letztes Zeichen in der aktuellen Zeile:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>Orca-Zusatztaste</key><key>1 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>Strg</key><key>M</key></keyseq></p></item>
+        </list>
+      </item>
+    </list>
+  </section>
+  <section id="other">
+    <title>Zusätzliche Befehle</title>
+    <list>
+      <item><p>Toggle flat review (refreshes the flat review context):</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>Orca-Zusatztaste</key><key>Minus (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>P</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Review current item/widget:</p>
+        <list>
+          <item><p>Desktop: <keyseq><key>Orca-Zusatztaste</key><key>5 (Nmblck)</key></keyseq></p></item>
+          <item><p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>Strg</key><key>K</key></keyseq></p></item>
+        </list>
+      </item>
+    </list>
+  </section>
+</page>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="calendar-layout-appointment-display" xml:lang="es">
+
+  <info>
+    <desc>Definir el mostrado de citas en el calendario.</desc>
+    
+    <link type="guide" xref="calendar-layout"/>
+
+    <revision pkgversion="3.0.2" version="0.3" date="2011-08-25" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/config-prefs-cal.html.en#bshpsxa -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+<title>Apariencia de las citas</title>
+
+<!-- TODO:POST-3-2: Just listing the partially busted UI options (also see calendar-layout-general-formatting) here is very poor and not task-oriented, but that's it for the time being. Better ideas welcome. -->
+
+<!-- TODO: Recheck once https://bugzilla.gnome.org/show_bug.cgi?id=657233 is fixed, as the current UI is a huge mess. -->
+
+<p>Las siguientes opciones relacionadas con el calendario están disponibles bajo <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Calendario y tareas</gui><gui>Mostrar</gui></guiseq>.</p>
+
+<section id="general">
+<title>General</title>
+<list>
+<item><p>Divisiones de horas:</p>
+<p>Establece el incremento de tiempo mostrado como líneas finas en la vista diaria del calendario.</p></item>
+<item><p>Mostrar la hora del final de las citas en las vistas semanales y mensuales:</p>
+<p>Si hay espacio suficiente, el cliente Evolution mostrará las horas finales en las vistas semanales y mensajes para cada cita.</p></item>
+<item><p>Comprimir fines de semana en la vista mensual:</p>
+<p>Seleccione esta opción para mostrar los fines de semana en una caja en lugar de dos en la vista mensual.</p></item>
+<item><p>Muestra los números de las semanas:</p>
+<p>Muestra los números de la semana junto a las respectivas semanas en el calendario.</p></item>
+<item><p>Mostrar acontecimientos recurrentes en cursiva en el calendario inferior izquierdo</p></item>
+<item><p>Desplazar la vista mensual una semana</p></item>
+</list>
+</section>
+
+<section id="date-time">
+<title>Formato de la fecha y hora</title>
+<p>Puede cambiar el formato de la columna <gui>Fecha</gui> configurando su formato preferido.</p>
+<p>Los marcadores de posición en la expresión de formato son formatos de strftime. Para obtener una lista completa de formatos de strftime, ejecute <code>date --help</code> en una ventana de la terminal.</p>
+</section>
+
+</page>

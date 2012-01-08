@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-wireless-troubleshooting-device-drivers" xml:lang="en-AU">
+  <info>
+    <link type="guide" xref="net-wireless-troubleshooting"/>
+    <revision version="11.04" date="2011-05-04" status="review"/>
+    <credit type="author">
+      <name>Contributors to the Ubuntu documentation wiki</name>
+    </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <desc>Troubleshoot your connection to a wireless network.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Check your device drivers</title>
+
+<section id="net-wireless-driver-check">
+  <title>Check for automatically loaded drivers</title>
+
+  <p>
+    Your device may already be supported with a preinstalled driver. To check if a driver was
+    automatically loaded, run <cmd>sudo lshw -C network</cmd>. Look in the line that
+    begins with <gui>configuration:</gui> for the word <em>driver</em>. If this exists, a
+    driver has already been installed and loaded.
+  </p>
+  <p>
+    If you are not running the most recent kernel, update your system first. Drivers,
+    especially wireless, are constantly being added and modified. You can do this by clicking
+    on the <link xref="unity-appmenu-intro">session menu</link> and selecting <gui>System
+    Settings</gui>. In the System section, click <gui>Update Manager</gui>.
+  </p>
+</section>
+
+<section id="net-wireless-native-driver">
+  <title>Find additional Linux drivers</title>
+  <p>You can check for additional Linux drivers in the following locations:</p>
+  <list>
+    <item>
+      <p>
+        Check for a driver by clicking the <link xref="unity-appmenu-intro">session menu</link>
+  and selecting <gui>System Settings</gui>. In the Hardware section, click
+  <gui>Additional Drivers</gui>. Wait a moment for Ubuntu to update its database.
+      </p>
+      <p>
+        Many of the drivers found in <app>Additional Drivers</app> are proprietary and the source
+        code isn't freely available. Therefore, Linux community developers are unable to fix any
+        security or functionality problems in the driver. These drivers also cannot be installed
+        automatically as part of Ubuntu. If you are willing to accept this limitation, activate
+        the driver.
+      </p>
+    </item>
+    <item>
+      <p>Search your card manufacturer's website for a Linux driver.</p>
+    </item>
+  </list>
+</section>
+
+<section id="net-wireless-ndiswrapper">
+  <title>Use Ndiswrapper for cards without a Linux driver</title>
+  <p>
+    If you find your card does not have a Linux driver you could try <app>ndiswrapper</app>.
+  </p>
+  <list>
+    <item>
+      <p>
+        Check the <link href="http://sourceforge.net/apps/mediawiki/ndiswrapper/">device database</link>
+        to see if your card is supported by ndiswrapper.
+      </p>
+    </item>
+    <item>
+      <p>
+        Full information on ndiswrapper kept on
+        <link href="https://help.ubuntu.com/community/WifiDocs/Driver/Ndiswrapper">this page</link>
+        including troubleshooting help specific to ndiswrapper.
+      </p>
+    </item>
+  </list>
+</section>
+
+<section id="net-wireless-driver-check2">
+  <title>Check Driver</title>
+  <p>
+      If you ran <cmd>lshw -C network</cmd> and saw a driver bound to the device then let's test to make sure it's communicating with the kernel. You can also go back to the
+      <link xref="net-wireless-troubleshooting-initial-check">Initial Check page</link>
+      to check for any signs of connectivity.
+  </p>
+  <list type="numbered">
+    <item>
+      <p>
+        Run <cmd>sudo lsmod</cmd> to see if the driver is loaded. Look for the driver name
+        that was listed in the "configuration" line output of lshw.
+      </p>
+      <list>
+        <item>
+          <p>
+            If you did not see the driver module in the list then use <cmd>sudo modprobe</cmd> to load it.
+          </p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>
+        Run <cmd>sudo iwconfig</cmd>. If you see output like in the example in the command section then the driver is at least identifying the device as a wireless device to the kernel.
+      </p>
+    </item>
+    <item>
+      <p>
+          Run the command <cmd>sudo iwlist scan</cmd> to scan for a wireless access point. If
+          an access point is identified, the card is probably working properly as it can
+          complete a wireless interface task.
+      </p>
+    </item>
+  </list>
+
+  <note>
+    <p>
+      To find more information about all the commands used in this guide, click
+      <link href="https://help.ubuntu.com/community/WifiDocs/WirelessTroubleShootingGuide/Commands">here</link>.
+    </p>
+  </note>
+
+</section>
+
+<links type="series"/>
+</page>

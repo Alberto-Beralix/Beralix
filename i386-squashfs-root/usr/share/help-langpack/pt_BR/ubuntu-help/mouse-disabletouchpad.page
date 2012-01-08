@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="mouse-disabletouchpad" xml:lang="pt-BR">
+<info>
+    <link type="guide" xref="mouse"/>
+    <link type="seealso" xref="mouse-mousekeys"/>
+    
+    <desc>Desligue o touchpad enquanto digita para prevenir cliques acidentais.</desc>
+    
+    <revision version="11.04" date="2011-04-28" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+</info>
+
+<title>Desabilitar o touchpad enquanto digita</title>
+
+<p>Touchpads nos laptops frequentemente estão localizados onde você descansa seu pulso enquanto digita, o que pode algumas vezes causa cliques acidentais enquanto você digita. Você pode desabilitar o touchpad enquanto digita. Ele só vai funcionar de novo um pequeno tempo depois da sua última tecla pressionada.</p>
+
+<steps>
+  <item><p>Clique no ícone bem à direita do <gui>painel superior</gui> e selecione <gui>Configurações do sistema</gui>.</p></item>
+  <item><p>Clique em <gui>Mouse e Touchpad</gui>.</p></item>
+  <item><p>Alterne para a aba <gui>Touchpad</gui> e selecione <gui>Desabilitar touchpad enquanto digita</gui>.</p></item>
+</steps>
+
+<comment>
+  <cite date="2011-04-03">Shaun McCance</cite>
+  <p>I repurposed this page. It used to just be how to disable your
+  touchpad entirely. Phil had some instructions on how to do this
+  in gconf-editor, as well as how to trigger an auto-disable when
+  you plugged in your mouse. GConf instructions are outdated for
+  GNOME 3. We could resurrect and make current the old stuff, but
+  as maybe a tip or advanced topics. Check git history.</p>
+</comment>
+
+</page>

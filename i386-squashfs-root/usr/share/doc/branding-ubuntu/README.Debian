@@ -1,0 +1,6 @@
+branding-ubuntu for Debian
+--------------------------
+
+The intended standard format for this package is to simply replace artwork in /usr/share/foo/bar with new artwork in this package, installed to /usr/share/branding/foo/bar. Programs using this artwork will need to be modified to test for /usr/share/branding/foo/bar existence and fall back to the unbranded version.
+
+ -- Scott Ritchie <scott@open-vote.org>  Wed, 03 Jun 2009 10:48:48 -0700

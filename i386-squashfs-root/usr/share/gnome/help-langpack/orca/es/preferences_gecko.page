@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_gecko" xml:lang="es">
+  <info>
+    <link type="guide" xref="preferences#application"/>
+    <link type="next" xref="preferences_table_navigation"/>
+    <title type="sort">1. Navegación Gecko</title>
+    <title type="link">Navegación Gecko</title>
+    <desc>Configurar el soporte de <app>Orca</app> para <app>Firefox</app> y <app>Thunderbird</app></desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Preferencias de la navegación Gecko</title>
+  <section id="page_navigation">
+    <title>Navegación por páginas</title>
+    <media type="image" mime="image/png" src="figures/preferences_gecko_page_navigation.png"/>
+    <p>El grupo de controles <gui>Navegación por páginas</gui> le permite personalizar cómo se presenta <app>Orca</app>, y le permite interactuar con el texto y otros contenidos.</p>
+    <section>
+      <title>Usar la navegación de cursor de Orca</title>
+      <p>Esta casilla activa o desactiva la navegación de cursor de <app>Orca</app>. Cuando está activada, <app>Orca</app> toma el control del cursor a mientras se mueve por una página; cuando está desactivada, la navegación del cursor nativa de Gecko está activa.</p>
+      <p>Valor predeterminado: marcado</p>
+      <note style="tip">
+        <title>Esta configuración se puede cambiar al vuelo</title>
+        <p>Para cambiar esta configuración al vuelo sin guardarla, use <keyseq><key>Modificador de Orca</key><key>F12</key></keyseq>.</p>
+       </note>
+    </section>
+    <section>
+      <title>Usar la navegación estructural de Orca</title>
+      <p>Esta opción activa o desactiva la <link xref="howto_structural_navigation">navegación estructura</link> de <app>Orca</app>. La navegación estructural le permite navegar por elementos como cabeceras, enlaces y campos de formularios.</p>
+      <p>Valor predeterminado: marcado</p>
+      <note style="tip">
+        <title>Esta configuración se puede cambiar al vuelo</title>
+        <p>Para cambiar esta configuración al vuelo sin guardarla, use <keyseq><key>Modificador de Orca</key><key>Z</key></keyseq>.</p>
+       </note>
+    </section>
+    <section>
+      <title>Dar el foco a los objetos cuando se navega</title>
+      <p>Si esta casilla está marcada, <app>Orca</app> llevará a cabo una captura explícita del foco al navegar usando la navegación de cursor de <app>Orca</app>. Esto era necesario hacerlo en versiones más antiguas de <app>Firefox</app> y <app>Thunderbird</app>.</p>
+      <p>Valor predeterminado: no marcado</p>
+    </section>
+    <section>
+      <title>Posicionar el cursor al principio de línea cuando se navega verticalmente</title>
+      <p>Si esta casilla está marcada, <app>Orca</app> moverá siempre el cursor al comienzo de la línea cuando <app>Orca</app> está controlando el cursor y pulse flecha arriba o flecha abajo para leer la línea anterior o siguiente. Si esta casilla no está marcada, <app>Orca</app> tratará de mantener el cursor en la misma posición horizontal mientras navega arriba o abajo.</p>
+      <p>Valor predeterminado: no marcado</p>
+    </section>
+  </section>
+  <section id="find_options">
+    <title>Opciones de búsqueda</title>
+    <media type="image" mime="image/png" src="figures/preferences_gecko_find_options.png"/>
+    <p>El grupo de controles <gui>Opciones de búsqueda</gui> hace posible que personalice cómo <app>Orca</app> presenta los resultados de una búsqueda llevada a cabo usando la funcionalidad de búsqueda de la aplicación.</p>
+    <section>
+      <title>Hablar resultados durante la búsqueda</title>
+      <p>Si esta casilla está marcada, <app>Orca</app> leerá la línea que coincida con su búsqueda actual.</p>
+      <p>Valor predeterminado: marcado</p>
+    </section>
+    <section>
+      <title>Hablar solamente las líneas modificadas durante la búsqueda</title>
+      <p>Si esta casilla de verificación está marcada, <app>Orca</app> no presentará la línea coincidente si es la misma línea que para la coincidencia anterior. Esta opción está diseñada para evitar «charlatanería» en una línea con múltiples coincidencias de la cadena que está buscando.</p>
+      <p>Valor predeterminado: no marcado</p>
+    </section>
+    <section>
+      <title>Longitud mínima del texto coincidente</title>
+      <p>Este botón contador editable es donde puede especificar el número de caracteres que deben coincidir al menos antes que <app>Orca</app> anuncie la línea coincidente. Esta opción también está diseñada para prevenir «ruido» ya que al principio cuando comienza a teclear la cadena de búsqueda hay muchas coincidencias.</p>
+      <p>Valor predeterminado: 4</p>
+    </section>
+  </section>
+</page>

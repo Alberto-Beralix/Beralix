@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="power-lowpower" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="power#battery"/>
+    <desc>Das vollständige Entladen schädigt den Akku.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Warum wird mein Rechner abgeschaltet oder in den Ruhezustand versetzt, wenn ich den Deckel schließe?</title>
+
+<p>Wenn der Akkuladestand zu niedrig ist, wechselt Ihr Rechner automatisch in den Ruhezustand (das heißt, alle geöffneten Dokumente und Anwendungen werden gespeichert und der Rechner wird heruntergefahren). Dadurch wird verhindert, dass der Akku vollständig entladen wird, was ihn schädigen könnte. Würde der Akku sich einfach komplett entladen, hätte der Rechner nicht genug Zeit ordnungsgemäß herunterzufahren.</p>
+
+<p>You can change what happens when the battery level gets too low by clicking the <gui>battery menu</gui> in the <gui>menu bar</gui> and selecting <gui>Power Settings</gui>. Look at the <gui>When power is critically low</gui> setting. You can choose for the computer to hibernate or shut down; if you choose shut down, your applications and documents <em>will not</em> be saved before the computer turns off.</p>
+
+<p>Einige Rechner haben Probleme mit dem Ruhezustand und können die zuvor geöffneten Anwendungen und Dokumente nach dem erneuten Einschalten eventuell nicht wieder öffnen. In diesem Fall kann es vorkommen, dass Sie einen Teil Ihrer Arbeit verlieren, wenn Sie diese nicht gespeichert haben, bevor der Rechner in den Ruhezustand versetzt wurde. Allerdings können Sie vielleicht diese <link xref="power-suspendfail">Probleme mit dem Ruhezustand beheben</link>.</p>
+
+</page>

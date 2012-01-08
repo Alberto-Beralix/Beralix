@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-receiving-options-imap-plus" xml:lang="es">
+
+  <info>
+    <desc>Opciones de recepción para cuentas IMAP+.</desc>
+
+    <link type="guide" xref="mail-receiving-options#common-server-types"/>
+    <link type="guide" xref="mail-account-manage-imap-plus#receiving-email"/>
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-30" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mainwindow-starting.html.en#bstggh0 -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Opciones de recepción IMAP+</title>
+
+<section id="receiving-email">
+<title>Recepción de correo</title>
+
+<p>On the <gui>Receiving Email</gui> page (accessible via <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Accounts</gui><gui style="button">Edit</gui><gui>Receiving Email</gui></guiseq>):</p>
+
+<list>
+<item><p>Introduzca la dirección del servidor de correo electrónico en el campo <gui>Servidor</gui> e introduzca su nombre de usuario para ese servidor.</p></item>
+<item><p>Seleccione su quiere usar una conexión segura (SSL o TLS).</p><p>Debería activar esta opción si su servidor la soporta.</p>
+<note style="tip"><p>Los servidores de correo web gratuitos generalmente proporcionan información acerca de cuáles de estas opciones se pueden usar. Si está en un acontecimiento organizado puede que quiera contactar con el administrador de su sistema para obtener más información.</p></note></item>
+<item><p>Seleccione el tipo de autenticación en la lista de Autenticación o pulse <gui style="button">Comprobar tipos soportados</gui> para que Evolution compruebe qué tipos están soportados. Algunos servidores no informan de qué mecanismos de autenticación soportan esto, así que pulsar este botón no garantiza que los mecanismos disponibles actualmente funcionen.</p></item>
+<item><p>Marque si quiere que Evolution recuerde su contraseña.</p></item>
+</list>
+
+</section>
+
+<section id="receiving-options">
+<title>Opciones de recepción</title>
+
+<p>On the <gui>Receiving Options</gui> page (accessible via <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Accounts</gui><gui style="button">Edit</gui><gui>Receiving Options</gui></guiseq>):</p>
+
+<list>
+<item><p>Si quiere que Evolution compruebe automáticamente si hay correo nuevo, seleccione la opción <gui>Comprobar si hay mensajes nuevos cada ... minutos</gui> y seleccione la frecuencia en minutos.</p></item>
+<item><p>Seleccione «Usar resincronización rápida si el servidor lo soporta» <link href="http://tools.ietf.org/html/rfc5162">Extensiones IMAP4 para resincronización rápida de buzón de correo</link>.</p></item>
+<item><p>También puede definir si Evolution debe comprobar si existe correo nuevo en todas sus carpetas o solo en las carpetas suscritas.</p></item>
+<item><p>Seleccione si quiere que Evolution use comandos personalizados para conectarse al servidor IMAP.</p></item>
+<item><p>Seleccione si quiere que Evolution sólo muestre las <link xref="mail-imap-subscriptions">carpetas suscritas</link>.</p></item>
+<item><p>Marque si quiere que Evolution no haga caso de los espacios de nombres de carpetas suministrados por el servidor.</p></item>
+</list>
+
+</section>
+
+<section id="return-to-assistant-bottom-link">
+<!-- TODO:XINCLUDE: Maybe later replace this "go back" workaround by doing some content sharing with xinclude and xpointer in intro-first-run.page itself? <include href="foo.xml" xmlns="http://www.w3.org/2001/XInclude"/> See gnome-user-docs module for example usage. -->
+<p>Si ha llegado a esta página desde la página del asistente de primera ejecución, pulse <link xref="intro-first-run#sending">aquí</link> para continuar con el siguiente paso.</p>
+</section>
+</page>

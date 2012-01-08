@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "3.1.0">
+<!ENTITY manrevision "3.0">
+<!ENTITY app "Glade">
+]>
+<!-- 
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<article id="index" lang="pt_BR">
+
+  <articleinfo> 
+    <title>Manual do Construtor de Interfaces Glade</title> 
+      
+    <abstract role="description"><para>Glade é um construtor de interfaces de usuário para aplicações GTK+.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2006</year> 
+      <holder>Vincent Geddes</holder> 
+    </copyright>
+    <copyright> 
+      <year>2004</year>
+      <year>2003</year>
+      <holder>Sun Microsystems</holder> 
+    </copyright> 
+    <copyright> 
+      <year>2002</year><year>2000</year> 
+      <holder>Michael Vance</holder> 
+    </copyright><copyright><year>2007</year><holder>Joao Emanuel (joaoemanuel1981@gmail.com)</holder></copyright> 
+
+    <publisher> 
+      <publishername>Projeto de Documentação do GNOME</publishername> 
+    </publisher> 
+
+   <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Vincent</firstname> 
+	<surname>Geddes</surname> 
+	<affiliation> 
+	  <orgname>Projeto de Documentação do GNOME</orgname>
+	  <address><email>vincent.geddes@gmail.com</email></address>
+	</affiliation>
+      </author> 
+      <author> 
+        <firstname>Sun</firstname> 
+        <surname>Time de Documentação do GNOME</surname> 
+        <affiliation> 
+          <orgname>Sun Microsystems</orgname> 
+        </affiliation> 
+       </author> 
+       <author> 
+         <firstname>Michael</firstname> 
+         <surname>Vance</surname> 
+         <affiliation> 
+           <orgname>Projeto de Documentação do GNOME</orgname> 
+           </affiliation> 
+       </author> 
+    </authorgroup>
+
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+-->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->  
+    <revhistory>
+        <revision> 
+		<revnumber>Manual do Glade 3.0</revnumber> 
+		<date>5 de dezembro de 2006</date>
+		<revdescription> 
+	  		<para role="author">Vincent Geddes</para>
+	  		<para role="publisher">Projeto de Documentação do GNOME</para>
+		</revdescription> 
+        </revision>
+        <revision> 
+                <revnumber>Manual do Glade 2.1;</revnumber> 
+                <date>17 de junho de 2004</date> 
+                <revdescription> 
+                        <para role="author">Time de Documentação do GNOME da SUN</para>
+                        <para role="publisher">Projeto de Documentação do GNOME</para>
+                </revdescription> 
+        </revision>
+        <revision> 
+                <revnumber>Manual do Usuário do Glade 2.0</revnumber> 
+                <date>25 de fevereiro de 2004</date> 
+                <revdescription> 
+                        <para role="author">Time de Documentação do GNOME da SUN</para>
+                        <para role="publisher">Projeto de Documentação do GNOME</para>
+                </revdescription> 
+        </revision>             
+        <revision> 
+                <revnumber>Manual do Usuário do Glade 1.2</revnumber> 
+                <date>10 de fevereiro de 2004</date> 
+                <revdescription> 
+                        <para role="author">Time de Documentação do GNOME da SUN</para>
+                        <para role="publisher">Projeto de Documentação do GNOME</para>
+                </revdescription> 
+        </revision>  
+        <revision> 
+                <revnumber>Manual do Usuário do Glade 1.1</revnumber> 
+                <date>30 de março de 2002</date> 
+                <revdescription> 
+                        <para role="author">Michael Vance</para>
+                        <para role="publisher">Projeto de Documentação do GNOME</para>
+                </revdescription> 
+        </revision> 
+        <revision> 
+                <revnumber>Manual do Usuário do Glade 1.0</revnumber> 
+                <date>11 de maio de 2000</date> 
+                <revdescription> 
+                        <para role="author">Michael Vance</para>
+                        <para role="publisher">Projeto de Documentação do GNOME</para>
+                </revdescription> 
+        </revision> 
+    </revhistory> 
+
+    <releaseinfo>Este manual descreve a versão 3.1.0 do Glade.</releaseinfo> 
+    <legalnotice> 
+      <title>Feedback</title> 
+      <para>Para relatar um erro ou fazer uma sugestão sobre a aplicação Glade ou seu manual, siga os passos na <ulink url="ghelp:gnome-feedback" type="help">Página de Feedback do GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+    <indexterm><primary>glade</primary></indexterm>
+    <indexterm><primary>construtor de interfaces do usuário</primary></indexterm>
+
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="introduction"> 
+    <title>Introdução</title> 
+
+    <para>O construtor de interfaces <application>Glade</application> lhe permite criar e a editar projetos de interfaces de usuário para aplicações <application>GTK+</application>.</para>
+
+    <para>A biblioteca GTK+ fornece uma coleção extensa de blocos de construção de interface de usuário tal como caixas de texto, rótulos de diálogos, entradas numéricas, caixas de verificação e menus. Estes blocos de construção são chamados <emphasis>widgets</emphasis> ("controles"). Você pode usar o Glade para trocar widgets em uma GUI. O Glade lhe permite modificar o layout e as propriedades destes widgets. Você também pode usar o Glade para adicionar conexões entre widgets e o código fonte da aplicação.</para>
+
+    <para>As interfaces de usuário projetadas no Glade são armazenadas em um formato XML, possibilitando fácil integração com ferramentas externas. Você pode usar a biblioteca <application>libglade</application> para criar GUIs dinamicamente a partir da descrição XML.</para>
+
+  </sect1>
+
+  <sect1 id="getting-started"> 
+    <title>Iniciando</title> 
+
+    <sect2 id="glade-start">
+    <title>Para Iniciar o <application>Glade</application></title>
+    <para>Você pode iniciar o <application>Glade</application> das seguintes maneiras:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Menu <guimenu>Aplicações</guimenu></term>
+    		<listitem>
+    		<para>Escolha <menuchoice><guisubmenu>Programação</guisubmenu><guimenuitem>Construtor de Interfaces Glade</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Linha de comando</term>
+    		<listitem>
+    		<para>Para iniciar o <application>Glade</application> a partir da linha de comando, digite o seguinte comando, então pressione <keycap>Enter</keycap>: <command>glade-3</command></para>	 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+    </sect2>
+
+    <sect2 id="glade-when-start">
+    <title>Quando Você Iniciar o <application>Glade</application></title>
+    <para>Quando você iniciar o <application>Glade</application>, a seguinte janela será mostrada.</para>
+
+        <figure id="main-window-fig"> 
+          <title>Janela do <application>Glade</application></title> 
+            <screenshot> 
+              <mediaobject>
+                <imageobject><imagedata fileref="figures/main-window.png" format="PNG"/></imageobject>
+                <textobject><phrase>Shows the<application>Glade</application> window.</phrase></textobject> 
+              </mediaobject> 
+            </screenshot> 
+        </figure>
+        
+        <para>A janela do <application>Glade</application> contém os seguintes elementos:</para>
+
+        <variablelist>
+          <varlistentry> <term>Barra de Menus</term>
+            <listitem>
+            <para>Os menus na barra de menus contém todos os comandos que você precisa para trabalhar com arquivos no <application>Glade</application>.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>Barra de Ferramentas</term>
+            <listitem>
+            <para>A barra de ferramentas contém um subconjunto de comandos que você pode acessar a partir da barra de menus.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>Área de Projeto</term>
+            <listitem>
+            <para>A área de projeto é onde uma interface de usuário pode ser editada visualmente.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>Paleta</term>
+            <listitem>
+            <para>A paleta contém os widgets que podem ser usados para construir uma interface de usuário.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>Inspetor</term>
+            <listitem>
+            <para>O inspetor mostra informações sobre os widgets em um projeto.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>Editor de Propriedades</term>
+            <listitem>
+            <para>O editor de propriedades é usado para manipular as propriedades dos widgets, bem como adicionar conexões para o código fonte.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry> <term>Barra de Status</term>
+            <listitem>
+            <para>A barra de status mostra informações sobre atividade do <application>Glade</application> atual e informação contextual sobre o menu de itens.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+
+    </sect2>
+  </sect1>
+
+  <sect1 id="working-with-projects"> 
+         <title>Trabalhando com Projetos</title> 
+  
+ 
+<!-- To Create a New Project  -->
+	 <sect2 id="glade-create-new-project"> 
+		<title>Criando um Novo Projeto</title>
+		<para>Para criar um novo projeto, escolha <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Novo</guimenuitem></menuchoice>. A aplicação mostra um novo projeto em branco na janela do <application>Glade</application>.</para>
+	 </sect2>
+
+	 <sect2 id="glade-open-project"> 
+		<title>Abrindo um Projeto</title>
+		<para>Para abrir um projeto que já existe, escolha <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Abrir</guimenuitem></menuchoice>. A aplicação mostra o projeto na janela do <application>Glade</application>.</para>
+	 </sect2>
+
+<!-- To Save a Project -->
+	 <sect2 id="glade-save-project"> 
+		<title>Salvando um Projeto</title>
+		<para>Você pode salvar projetos nas seguintes maneiras:</para>
+		<itemizedlist> 
+		  <listitem><para>Para salvar mudanças em um arquivo de projeto que já existe, escolha <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Salvar</guimenuitem></menuchoice>.</para>
+		  </listitem>
+		  <listitem><para>Para salvar um arquivo de novo projeto ou para salvar um arquivo de projeto que já existe com um novo nome, escolha <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Salvar Como</guimenuitem></menuchoice>. Entre com um nome para o arquivo de projeto no diálogo <guilabel>Salvar Como</guilabel>, então clique em <guibutton>Salvar</guibutton>.</para>
+		  </listitem>
+		</itemizedlist>
+	 </sect2>
+  </sect1>
+
+
+  <sect1 id="working-with-widgets"> 
+         <title>Trabalhando com Widgets</title>
+         <sect2 id="select-widgets-palette">
+                <title>Para Selecionar Widgets a Partir da Janela de Paletas</title>
+                <para>Você pode trabalha com os widgets na janela de <guilabel>Paletas</guilabel> nas seguintes maneiras:</para>
+                <variablelist> 
+                  <varlistentry> 
+                         <term>Modo de seleção</term> 
+                         <listitem>
+                                <para>Para usar modo de seleção, clique na seta <guilabel>Seletor</guilabel>. O ponteiro muda para uma seta para indicar que modo de seleção está ativo. Neste modo, você usa o mouse para selecionar widgets em seu projeto. Você pode então usar a janela <guilabel>Propriedades</guilabel> para editar as propriedades dos widgets.</para>
+<para>Você pode também usar o menu de contexto widget para selecionar um widget. Clique com o botão direito em um widget para abrir o menu de contexto widget.</para><para>Você pode adicionar múltiplos widgets de um tipo específico a partir da <guilabel>Paleta</guilabel> para seu projeto pressionando a tecla <keycap>Control</keycap> quando você for selecionar um widget. Você precisa clicar na seta do <guilabel>Seletor</guilabel> ou um outro widget na <guilabel>Paleta</guilabel> para retornar ao modo normal.</para>
+                         </listitem> 
+                  </varlistentry> 
+                </variablelist> 
+                <variablelist> 
+                  <varlistentry> 
+                         <term>Modo de posicionamento do widget</term> 
+                         <listitem> 
+                                <para>Para usar o modo de colocação do widget, selecione um widget na janela <guilabel>Paleta</guilabel>. Quando você seleciona vários widgets, o ponteiro muda para um ponteiro com uma cruz. Você pode então colocar o widget dentro de containers, widgets de nível acima e outros. Depois que você coloca o widget, o modo retorna para o modo de seleção.</para>
+                         </listitem> 
+                  </varlistentry> 
+                </variablelist> 
+                <variablelist> 
+                  <varlistentry> 
+                         <term>Modo de posicionamento do nível superior</term> 
+                         <listitem> 
+                                <para>Para usar o modo de colocação de nível superior, selecione um determinado widget de nível superior na janela <application>Paleta</application>. Quando você seleciona um widget de nível superior na janela <guilabel>Paleta</guilabel>, o widget aparece imediatamente na sua área de trabalho. Você pode então editar o widget. Depois que você seleciona um widget de nível superior, o modo retorna para o modo de seleção.</para>
+                         </listitem> 
+                  </varlistentry> 
+                </variablelist> 
+         </sect2>
+<sect2 id="organize-widgets">
+<title>Para Organizar Widgets em Seu Projeto</title>
+<para>Você usa containers de widget, ou caixas, para widgets de layout e de organização em sua janela de projeto. Pode escolher os seguintes containers da janela <guilabel>Paleta</guilabel>:</para>
+<itemizedlist>
+<listitem><para>Caixa Horizontal</para>
+</listitem><listitem><para>Caixa Vertical</para></listitem>
+<listitem><para>Tabela</para></listitem>
+<listitem><para>Posições Fixadas</para></listitem>
+<listitem><para>Caixa de Botões Horizontal</para></listitem>
+<listitem><para>Caixa de Botões Vertical</para></listitem>
+<listitem><para>Painéis Horizontais</para></listitem>
+<listitem><para>Painéis Verticais</para></listitem>
+<listitem><para>Caderno</para></listitem>
+<listitem><para>Moldura</para></listitem>
+<listitem><para>Janela de Rolagem</para></listitem>
+<listitem><para>Porta de Visualização</para></listitem>
+</itemizedlist>
+<para>Você pode aninhar caixas para criar estruturas de layout complexo. Quando você cria caixas horizontais e verticais, o <application>Glade</application> pergunta a você quantas colunas ou linhas a serem criadas inicialmente, no entanto colunas e linhas podem ser facilmente adicionadas ou apagadas mais tarde.</para>
+<para>Quando você criar todas as caixas que pediu, pode adicionar widgets específicos como etiquetas, botões e mais widgets complicados dentro das caixas. Observe que o <application>Glade</application> empacota widgets dentro do layout e com isso elimina um bocado de trabalho tedioso. O uso de caixas possibilita que janelas mudem de tamanho para acomodar diferentes tamanhos de etiquetas em diferentes línguas que a aplicação é localizada.</para></sect2>
+         <sect2 id="place-widgets-clipboard"> 
+                <title>Posicionar um Widget na Área de Transferência</title> 
+                <para>Para remover um widget a partir de um pai e trocar o widget na área de transferência, selecione o widget e então escolha <menuchoice><guimenu>Editar</guimenu><guisubmenu>Recortar</guisubmenu></menuchoice>.</para>
+         </sect2> 
+         <sect2 id="copy-widget-clipboard"> 
+                <title>Para Copiar um Widget para a Área de Transferência</title> 
+                <para>Para copiar um widget para área de transferência, selecione o widget e então escolha <menuchoice><guimenu>Editar</guimenu><guisubmenu>Copiar</guisubmenu></menuchoice>. O widget original fica anexado ao pai.</para>
+         </sect2> 
+         <sect2 id="paste-widget-clipboard"> 
+                <title>Para Colar um Widget da Área de Transferência no Seu Projeto</title> 
+                <para>Para colar um widget que já existe na área de transferência em seu projeto, escolha <menuchoice><guimenu>Editar</guimenu><guisubmenu>Colar</guisubmenu></menuchoice>.</para><para>Todos widgets devem ter um nome único dentro do <application>Glade</application>. Se você cortar um widget e colar o widget dentro do seu projeto, então o widget e todos os widgets filhos manterão seus nomes originais. Se você copiar um widget ou colar várias vezes o widget dentro do seu projeto, então o <application>Glade</application> gera novos nomes para as cópias do widget.</para>
+         </sect2> 
+         <sect2 id="delete-widget"> 
+                <title>Para Excluir um Widget</title> 
+                <para>Para apagar um widget a partir do pai sem mover o widget para área de transferência, selecione o widget e então escolha <menuchoice><guimenu>Editar</guimenu><guisubmenu>Excluir</guisubmenu></menuchoice>.</para>
+                 
+         </sect2> 
+         
+         <sect2 id="edit-widget"> 
+                <title>Para Mudar uma Propriedade de um Widget</title> 
+                <para>O editor de propriedades é usado para editar as propriedades de um widget selecionado. Para mudar a uma propriedade de um widget, selecione o widget e então entre com um valor para a propriedade em um dos campos de propriedade da janela de Propriedades.</para>
+                
+                
+         </sect2> 
+  </sect1>
+  
+<sect1 id="about"> 
+    <title>Sobre o Glade</title> 
+    <para>Glade é mantido pelos voluntários da comunidade GNOME e dos desenvolvedores do Glade. Para encontrar mais informações sobre o Glade, por favor visite o <ulink url="http://glade.gnome.org" type="http">Web site do Glade</ulink>.</para>
+    <para>Para relatar um erro ou fazer uma sugestão em relação a esta aplicação ou a este manual, você pode enviar usando <ulink url="http://bugzilla.gnome.org/enter_bug.cgi?product=glade3" type="http">bugzilla</ulink>.</para>
+
+    <para>Outra fonte excelente de informação são as listas de discussão dos <ulink url="http://lists.ximian.com/mailman/listinfo/glade-users" type="http">usuários</ulink> e dos <ulink url="http://lists.ximian.com/mailman/listinfo/glade-devel" type="http">desenvolvedores</ulink> do Glade. Além de assinar as listas de discussão, você também pode navegar pelo histórico as mesmas, que está disponível pelos mesmos links.</para>
+
+    <para>Este programa é distribuído de acordo com os termos da Licença Pública Geral GNU publicada pela Fundação Free Software; ou a versão 2 da Licença ou (por sua opção) qualquer versão mais recente. Uma cópia desta licença pode ser encontrada neste <ulink url="ghelp:gpl" type="help">link</ulink> ou no arquivo COPYING incluído com o código fonte deste programa.</para>
+  </sect1> 
+
+</article>

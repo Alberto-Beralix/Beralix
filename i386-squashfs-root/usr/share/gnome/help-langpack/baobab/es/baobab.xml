@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.15">
+<!ENTITY manrevision "1.0">
+<!ENTITY date "April 2006">
+<!ENTITY app "Disk Usage Analyzer">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="es">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Manual del Analizador de uso del disco</title>
+
+    <abstract role="description">
+      <para>El Analizador de uso del disco es un visor gráfico, basado en menús que se puede usar para ver y monitorizar el uso del disco y la estructura de carpetas.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2006</year> 
+      <holder>Fabio Marzocca</holder> 
+    </copyright><copyright><year>2007-2008.</year><holder>Jorge González (jorgegonz@svn.gnome.org)</holder></copyright><copyright><year>2006.</year><holder>Montse Fernández Dopacio (mfernandez@igalia.com)</holder></copyright> 
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <publisher> 
+      <publishername>Proyecto de documentación de GNOME</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Se permite copiar, distribuir y/o modificar este documento bajo los términos de la GNU Free Documentation License (GFDL), Versión 1.1 o por alguna de las últimas versiones publicadas por la Free Software Foundation sin Secciones Invariantes, sin Portada, y sin Contraportada. Se puede copiar de la GFDL a este <ulink type="help" url="ghelp:fdl">enlace</ulink> o en el archivo COPYING-DOCS distribuida con este manual.</para>
+         <para>Este manual es parte de una colección de manuales de GNOME distribuidos bajo la GFDL. Si se quiere distribuir este manual separadamente de la colección, se puede hacer solamente añadiendo una copia de licencia del manual, como la descrita en la sección 6 de la licencia.</para>
+
+	<para>Muchos de los nombres utilizados por compañías para distribuir sus productos y servicios son declarados como marcas registradas. Cuando estos nombres aparecen en cualquier documentación de GNOME, y los miembros de Documentación de Proyecto GNOME son conscientes de estas marcas registradas, entonces estos nombres están en letras mayúsculas o empiezan por letra mayúscula.</para>
+
+	<para>LA DOCUMENTACIÓN Y VERSIONES MODIFICADAS DEL DOCUMENTO SON PROPORCIONADAS BAJO LOS TÉRMINOS DE LA GNU FREE DOCUMENTATION LICENSE ENTENDIENDO QUE: <orderedlist>
+		<listitem>
+		  <para>EL DOCUMENTO SE ENTREGA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, NI EXPLÍCITA NI IMPLÍCITA INCLUYENDO, SIN LIMITACIÓN, GARANTÍA DE QUE EL DOCUMENTO O VERSIÓN MODIFICADA DE ÉSTE CAREZCA DE DEFECTOS EN EL MOMENTO DE SU VENTA, SEA ADECUADO A UN FIN CONCRETO O INCUMPLA ALGUNA NORMATIVA. TODO EL RIESGO RELATIVO A LA CALIDAD, PRECISIÓN Y UTILIDAD DEL DOCUMENTO O SU VERSIÓN MODIFICADA RECAE EN USTED. SI CUALQUIER DOCUMENTO O VERSIÓN MODIFICADA DE AQUÉL RESULTARA DEFECTUOSO EN CUALQUIER ASPECTO, USTED (Y NO EL REDACTOR INICIAL, AUTOR O AUTOR DE APORTACIONES) ASUMIRÁ LOS COSTES DE TODA REPARACIÓN, MANTENIMIENTO O CORRECCIÓN NECESARIOS. ESTA EXENCIÓN DE RESPONSABILIDAD SOBRE LA GARANTÍA ES UNA PARTE ESENCIAL DE ESTA LICENCIA. NO SE AUTORIZA EL USO DE NINGÚN DOCUMENTO NI VERSIÓN MODIFICADA DE ÉSTE POR EL PRESENTE, SALVO DENTRO DEL CUMPLIMIENTO DE LA EXENCIÓN DE RESPONSABILIDAD;Y</para>
+		</listitem>
+		<listitem>
+		  <para>EN NINGUNA CIRCUNSTANCIA NI BAJO NINGUNA TEORÍA LEGAL, SEA POR ERROR (INCLUYENDO NEGLIGENCIA) CONTRATO O DOCUMENTO DE OTRO TIPO, EL AUTOR, EL ESCRITOR INICIAL, EL AUTOR DE APORTACIONES NI NINGÚN DISTRIBUIDOR DEL DOCUMENTO O VERSIÓN MODIFICADA DEL DOCUMENTO, NI NINGÚN PROVEEDOR DE NINGUNA DE ESAS PARTES, SERÁ RESPONSABLE ANTE NINGUNA PERSONA POR NINGÚN DAÑO DIRECTO, INDIRECTO, ESPECIAL, INCIDENTAL O DERIVADO DE NINGÚN TIPO, INCLUYENDO, SIN LIMITACIÓN DAÑOS POR PÉRDIDA DE FONDO DE COMERCIO, PARO TÉCNICO, FALLO INFORMÁTICO O AVERÍA O CUALQUIER OTRO POSIBLE DAÑO O AVERÍA DERIVADO O RELACIONADO CON EL USO DEL DOCUMENTO O SUS VERSIONES MODIFICADAS, AUNQUE DICHA PARTE HAYA SIDO INFORMADA DE LA POSIBILIDAD DE QUE SE PRODUJESEN ESOS DAÑOS.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+   <authorgroup> 
+   <author> 
+		<firstname>Fabio</firstname> 
+		<surname>Marzocca</surname> 
+		<affiliation> 
+	  	<orgname>Proyecto de documentación de GNOME</orgname> 
+	  	<address> <email>thesaltydog@gmail.com</email> </address> 
+		</affiliation> 
+   </author> 
+
+   <author role="maintainer">
+   	<firstname>Fabio</firstname>
+	<surname>Marzocca</surname>
+	<affiliation>
+	  <address><email>thesaltydog@gmail.com</email></address>
+	</affiliation>
+   </author>
+      
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+   <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  	<orgname>Latin Translation Team</orgname> 
+	  	<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+   </othercredit>
+-->
+    </authorgroup>
+
+	<releaseinfo revision="2.30" role="review">
+	</releaseinfo>
+
+    <revhistory>
+      <revision> 
+		<revnumber>Manual del Analizador de uso del disco 1.0</revnumber> 
+		<date>Abril 2006</date> 
+		<revdescription> 
+	  		<para role="author">Emmanuele Bassi <email>ebassi@gmail.com</email></para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+		</revdescription> 
+      </revision>
+    </revhistory> 
+
+    <releaseinfo>Este manual describe la versión 2.15 del Analizador de uso del disco.</releaseinfo> 
+    
+    <legalnotice> 
+      <title>Comentarios</title> 
+      <para>Para informar de un fallo o hacer una sugerencia respecto a la aplicación del Analizador de uso del disco o de este manual, sigue las direcciones en la <ulink url="ghelp:gnome-feedback" type="help"> Página de comentarios de GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>Analizador de uso del disco</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="baobab-introduction"> 
+    <title>Introducción</title> 
+
+      <para>El <application>Analizador de uso del disco</application> es una aplicación gráfica basada en menús para analizar el uso del disco en cualquier entorno GNOME. El <application>Analizador de uso del disco</application> puede analizar fácilmente tanto el árbol del sistema de archivos completo, como una rama específica del directorio solicitada por el usuario (local o remota).</para>
+       <para>También detecta en tiempo real cualquier cambio hecho en su carpeta personal así como el montaje/desmontaje de cualquier dispositivo. El <application>Analizador de uso del disco</application> además proporciona un gráfico de mapa de árbol a ventana completa para cada carpeta seleccionada.</para>
+
+  </sect1>
+
+<!-- ================ Getting Started ================================ -->
+	<sect1 id="baobab-getting-started">
+	<title>Primeros Pasos</title>
+
+    <para>El <application>Analizador de uso del disco</application> puede iniciarse de tres maneras:</para>
+	 <itemizedlist>
+    <listitem><para>desde el menú de GNOME <menuchoice><guimenu>Aplicaciones</guimenu><guimenuitem>Accesorios</guimenuitem></menuchoice>;</para>
+    		</listitem>
+    <listitem><para>desde un terminal;</para>
+    		</listitem>
+    <listitem><para>desde Nautilus «Abrir con...»;</para>
+    		</listitem>
+    </itemizedlist> 
+
+
+<para>Si deseas iniciar el <application>Analizador de uso del disco</application>desde un terminal, simplemente teclee:</para> 
+  
+<para><command>baobab &lt;ruta_completa_al_directorio&gt;</command>, entonces pulse <keycap>Intro</keycap>.</para>  
+<para/> 
+	<para>Si se lanza desde el menú de GNOME, el <application>Analizador de uso del disco</application> arranca y continúa en estado de espera, esperando por una acción del usuario.</para> 
+    <para>Cuando se inicia el <application>Analizador de uso del disco</application> desde el Menú de GNOME, se muestra la siguiente ventana.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="baobab-fig"> 
+	<title>Ventana del Analizador de uso del disco</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Muestra la ventana principal del Analizador de uso del disco. Contiene la barra de menú, el área de visualización, las barras de desplazamiento y la barra de estado.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+<para>El usuario puede entonces:</para>
+	<itemizedlist>
+    <listitem><para>empieza a analizar un sistema de archivos completo;</para>
+    		</listitem>
+    <listitem><para>selecciona una rama local específica del directorio para analizar</para>
+    		</listitem>
+    <listitem><para>selecciona un servidor remoto y una carpeta para analizar</para>
+    		</listitem>
+    <listitem><para>establecer preferencias</para>
+    		</listitem>
+	</itemizedlist>
+
+
+</sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="baobab-usage"> 
+    <title>Uso</title>
+
+    <sect2 id="baobab-fullscan">
+      <title>Análisis completo del sistema de archivos</title>
+        <para>Para iniciar un análisis completo del sistema de archivos selecciona <menuchoice><guimenu>Analizador</guimenu><guimenuitem>Analizar sistema de archivos</guimenuitem></menuchoice> desde el menú, o presione el botón <guibutton>Sistema de archivos</guibutton> de la barra de herramientas.</para>
+
+	<para>Cuando el proceso de análisis termine, se obtendrá todo el árbol del sistema de archivos, como el de la Figura siguiente.</para>    
+
+    <!-- ==== Figure ==== -->
+      <figure id="baobab-fullscan-fig"> 
+	<title>Análisis completo del sistema de archivos del Analizador de uso del disco</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_fullscan.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Muestra la ventana principal del análisis completo del sistema de archivos del Analizador de uso del disco. Contiene una barra de menús, un área de visualización, barra de desplazamiento, y una barra de estados.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+    
+    	<note><para>Cuando tú ejecutas un análisis del sistema de archivos completo , la ventana <application>Analizador de uso del disco</application> comenzará a dibujar el árbol tan pronto como el hilo empiece a analizar el sistema de archivos. Si una partición grande se monta en el sistema de archivos, ésta se analizará también.</para></note>
+    
+    <para>El <application>Analizador de uso del disco</application> mostrará los tamaños en el árbol de directorios como espacio asignado. Esto significa que el tamaño mostrado se refiere al tamaño real de uso del disco y no al tamaño aparente del directorio. Si quiere ver el tamaño aparente del archivo, desmarque <menuchoice><guimenu>Espacio asignado</guimenu></menuchoice>.</para>
+    
+    <warning><para>El <application>Analizador de uso del disco</application> no contará el directorio /proc, ni cualquier tamaño de archivo que no esté relacionado con un archivo «plano», por lo que enlaces simbólicos y dispositivos de carácter o bloque no serán parte del tamaño del directorio.</para></warning>
+   
+    <para>Los enlaces duros son gestionados de una forma diferente: el primer enlace duro se cuenta como un archivo normal, mientras que los subsiguientes enlaces al mismo inodo del dispositivo no se cuentan en el total, pero se resaltan en la columna de la derecha de la ventana.</para>
+        </sect2>
+	
+	<sect2 id="baobab-folderscan">
+      <title>Analizar una sola carpeta</title>
+
+    <para>Para iniciar un análisis de un sola carpeta seleccionar <menuchoice><guimenu>Analizador</guimenu><guimenuitem>Analizar archivo seleccionado</guimenuitem></menuchoice> desde el menú, o presionar <guibutton>Archivo</guibutton> en la barra de herramientas.</para>
+
+	</sect2>
+
+	<sect2 id="baobab-remotescan">
+      <title>Análisis remoto</title>
+      
+      <para>Si necesita analizar una carpeta en un servidor remoto, simplemente pulse sobre el icono de la barra de herramientas <guibutton>Red</guibutton>o selecciona<menuchoice><guimenu>Analizador</guimenu><guimenuitem>Análisis de carpeta remota</guimenuitem></menuchoice>desde el menú y se mostrará el siguiente cuadro de diálogo. El<application>Analizador de uso del disco</application> puede conectarse a un servidor a través de SSH, FTP, SMB, HTTP y HTTPS.</para>
+ 
+     <!-- ==== Figure ==== -->
+      <figure id="baobab-remote-fig"> 
+        <title>Análisis la carpeta remota del Analizador de uso del disco </title> 
+		<screenshot> 
+	 	 <mediaobject> 
+	  	  <imageobject>
+	   	 <imagedata fileref="figures/baobab_remote.png" format="PNG"/> 
+	   	 </imageobject>
+	   	 <textobject> 
+	    	  <phrase>Muestra una ventana de diálogo de la carpeta remota del Analizador de uso del disco.</phrase> 
+	   	 </textobject> 
+	 	 </mediaobject> 
+		</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+   
+	</sect2> 
+
+  </sect1>
+
+
+<!-- ============= Preferences =============================== -->
+  <sect1 id="baobab-preferences">
+    <title>Preferencias</title>
+    
+    <para>Para cambiar la aplicación de preferencias <application>Analizador de uso del disco</application>, elige <menuchoice><guimenu>Editar</guimenu><guimenuitem>Preferencias</guimenuitem></menuchoice>.</para>
+ 
+   <!-- ==== Figure ==== -->
+      <figure id="baobab-preferences-fig"> 
+      	<title>Ventana de preferencias del Analizador de uso del disco</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_prefs.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Ventana de preferencias</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+  
+  <sect2 id="baobab-scan-preferences">
+      <title>Seleccionar dispositivos a analizar</title>
+  <para>En la primera parte de la ventana de Preferencias , todos los dispositivos montados detectados son listados. Pulse en el caja de verificación para incluir/excluir la partición en las operaciones de sistema de archivos analizados.</para>
+  <note><para>El dispositivo montado en «/» no puede ser excluido del análisis.</para></note>
+  </sect2>
+ 
+   <sect2 id="baobab-monitor-preferences">
+      <title>Habilitar la monitorización de la carpeta personal</title>
+      <para>Si esta opción está marcada, el <application>Analizador de uso del disco</application> monitorizará constantemente cualquier cambio externo de la carpeta personal y alertará al usuario si un archivo se añade o elimina.</para>  
+   </sect2>  
+	</sect1>
+<!-- ================ Treemaps ================================ -->
+
+  <sect1 id="baobab-treemaps"> 
+  <title>Mapas de árbol</title>
+
+    <para>Los conceptos relativos al <guilabel>Mapa de árbol</guilabel> han sido desarrollados por Ben Shneiderman en los años 90. Lea su <ulink type="http" url="http://www.cs.umd.edu/hcil/treemap-history/index.shtml">visión sobre los mapas de árbol</ulink>.</para>
+    
+       <!-- ==== Figure ==== -->
+      <figure id="baobab-treemap-fig"> 
+        <title>Ventana del mapa de árbol del Analizador de uso del disco</title>
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_treemaps.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Teoría de mapa de árbol. Muestra 2 diagramas de mapa en árbol</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+  
+    
+    <para>La figura muestra un ejemplo de la teoría de los mapas de árbol. Cada nodo (como el mostrado en el diagrama de árbol) tiene un nombre (una letra) y un tamaño asociado (un número). El tamaño de las hojas puede representarse por ejemplo por el tamaño individual de los archivos, el tamaño de los nodos no-hoja es la suma del tamaño de sus hijos.</para> 
+    
+    <para>El mapa de árbol se construye por medio de la subdivisión recursiva del rectángulo inicial. El tamaño de cada sub-rectángulo se corresponde con el tamaño del nodo. La dirección de las subdivisiones alternativas por niveles: primero horizontalmente, después verticalmente, etcétera. Como resultado, el rectángulo inicial se parte en rectángulos más pequeños, de tal modo que el tamaño de cada rectángulo refleja el tamaño de la hoja. La estructura del árbol también se refleja en el mapa de árbol, como resultado de su construcción. El color y las anotaciones pueden ser usadas para dar información adicional sobre las hojas.</para>
+
+	<note><para>Los mapas de árbol son muy efectivos cuando el tamaño es la característica más importante a ser mostrada.</para></note>
+  </sect1>
+  <!-- ================ Ringschart ================================ -->
+
+  <sect1 id="baobab-ringschart"> 
+  <title>Gráfico de anillo</title>
+
+    <para>El <guilabel>gráfico de anillo</guilabel> es una representación gráfica del uso del disco que hace una carpeta concreta. Al lanzar la aplicación se notificará el uso del sistema de archivos como se puede ver en la siguiente figura:</para>
+
+    <!-- ==== Figure ==== -->
+    <figure id="baobab-filesystem_scan"> 
+      <title>El Analizador del uso del disco mostrando un gráfico de anillo con el uso del sistema de archivos</title>
+      <screenshot> 
+	<mediaobject> 
+	  <imageobject>
+	    <imagedata fileref="figures/baobab_ringschart1.png" format="PNG"/> 
+	  </imageobject>
+	  <textobject> 
+	    <phrase>Después de lanzar la aplicación se muestra el uso del sistema de archivos. Una representación gráfica a la derecha.</phrase> 
+	  </textobject> 
+	</mediaobject> 
+      </screenshot> 
+    </figure>
+    <!-- ==== End of Figure ==== -->
+
+    <para>Cuando comienza a analizar una carpeta, se crea el árbol de subcarpetas y se lista en la parte izquierda. Cada fila contiene información para el nombre, cuánto espacio ocupa (porcentaje y tamaño en KiB, MiB o GiB) y el número de elementos (incluyendo archivos y directorios). Cuando este proceso termina, se dibuja el <guilabel>gráfico de anillo</guilabel> en la parte derecha. Si para antes de que se haya completado, sólo se mostrará una representación parcial basada en los directorios cuyo uso se computó.</para>
+
+
+    <!-- ==== Figure ==== -->
+    <figure id="baobab-folder_scan"> 
+      <title>El Analizador del uso del disco mostrando un gráfico de anillo con el uso de una carpeta</title>
+      <screenshot> 
+	<mediaobject> 
+	  <imageobject>
+	    <imagedata fileref="figures/baobab_ringschart2.png" format="PNG"/> 
+	  </imageobject>
+	  <textobject> 
+	    <phrase>Después de analizar una carpeta.</phrase> 
+	  </textobject> 
+	</mediaobject> 
+      </screenshot> 
+    </figure>
+    <!-- ==== End of Figure ==== -->
+    
+    <para>El <guilabel>gráfico de anillo</guilabel> está compuesto por un conjunto de anillos concéntricos alrededor de un círculo central. Éste círculo simboliza la carpeta raíz del árbol parcial (esto es, la carpeta que el usuario ha seleccionado para analizar). Cada anillo representa un nivel en el árbol parcial, de tal forma que las subcarpetas de la carpeta raíz se representarán en el primer anillo y los niveles más profundos en el árbol correspondiente a los anillos exteriores en el gráfico. Cada subcarpeta se representa por un sector del anillo, su ángulo es proporcional al tamaño del contenido de su carpeta y está pintado de un color diferente para facilitar la visualización. Se pueden dibujar hasta cinco niveles; en caso de que una carpeta en el último nivel contenga más subcareptas, esta situación se avisará con la presencia de una curva negra junto al borde del sector de esa carpeta. Cuando una carpeta sin subcarpetas se selecciona para ser la raíz del árbol parcial, sólo se dibujará el círculo interior. Cuando el puntero del ratón se posiciona sobre una de las carpetas del gráfico, éste se resaltará y aparecerá información contextual acerca de su nombre y tamaño. Si hay alguna subcarpeta aparecerá una pequeña ayuda contextual en gris indicando sus nombres. Para evitar solapamientos, es posible que no se muestren los nombres de todas las subcarpetas.</para>
+
+    <para>Puede moverse arriba y abajo de las filas de la lista (opcionalmente puede expandir aquellas con subcarpetas), la representación gráfica cambiará para mostrar la carpeta seleccionada como la raíz del árbol parcial que representar. También se puede navegar por las carpetas desde el <guilabel>gráfico de anillo</guilabel> en si. Si pulsa con el botón izquierdo del ratón dentro de una carpeta, se moverá dentro de ella haciendo que la raíz del gráfico sea dicha carpeta. Si pulsa con el botón del medio (no importa dónde siempre que pulse dentro del marco del <guilabel>gráfico de anillo</guilabel>) obtendrá el comportamiento opuesto, irá hacia atrás un paso en la jerarquía.</para>
+
+    <para>El porcentaje del radio del padre que usa una carpeta dada es directamente proporcional a la relación entre su propio tamaño y el de su padre. Es fácil entender que el tamaño de una carpeta es igual o menor que el de su padre. Aunque sólo se muestran directorios en esta representación gráfica, los archivos se tienen en cuenta para calcular la cantidad de espacio que ocupan las carpetas.</para>
+  </sect1>
+</article>

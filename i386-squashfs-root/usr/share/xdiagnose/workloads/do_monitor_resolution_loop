@@ -1,0 +1,48 @@
+#!/bin/bash
+
+DESCRIPTION="Uses RANDR to rotate/reflect screen"
+
+PREREQS=""
+DEPENDS=""
+
+CYCLE_DELAY=${CYCLE_DELAY:-12}
+
+OUTPUT_NAME="TODO"
+ORIGINAL_STATE=$(xrandr)
+# TODO: Need a function which takes an xrandr snapshot as input, parses
+#       it, and then invokes the respective xrandr options to put it
+#       back to that state.
+
+workload() {
+    for mode in $(xrandr-tool resolutions $OUTPUT_NAME); do
+        echo $mode
+        xrandr --output ${OUTPUT_NAME} --mode $mode
+        sleep 3
+    done
+    sleep ${CYCLE_DELAY}
+}
+
+case $1 in
+    info)
+        echo $DESCRIPTION
+        echo $PREREQS
+        ;;
+    depends) echo $DEPENDS     ;;
+    check)                     ;;
+    setup)                     ;;
+    once)    workload          ;;
+    run)
+        echo $$
+        while :
+        do
+            workload
+        done
+        ;;
+    *)
+        echo $DESCRIPTION
+        echo
+        echo $PREREQS
+        echo
+        echo "Usage: $0 {info|depends|setup|check|once|run} [VIDEO]"
+        exit 1
+esac

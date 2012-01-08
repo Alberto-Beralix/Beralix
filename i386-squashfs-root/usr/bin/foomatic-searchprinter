@@ -1,0 +1,93 @@
+#!/usr/bin/perl
+# -*- Perl -*-
+
+#
+# This script searches for printers in the database. You can give the
+# printer manufacturer and model names or the IEEE-1284 device ID of
+# the printer. You will get one or more results sorted by how well they
+# match. Exact metch of the model-identifying parts of the IEEE-1284 device ID
+# counts highest. Run "foomatic-addpjloptions -h" to get help.
+#
+ 
+#
+# Till Kamppeter (till.kamppeter@gmx.net)
+#
+# Copyright 2007 Till Kamppeter
+#
+# This software may be freely redistributed under the terms of the GNU
+# General Public License (http://www.gnu.org/).
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+ 
+use strict;
+use FileHandle;
+
+sub usage(){
+    print STDERR <<EOF;
+Usage: foomatic-searchprinter [-mM] [-dD] <search term>
+       foomatic-searchprinter -h
+
+   <search term>: Manufacturer/model, separated by a space or a '|',
+                  IEEE-1284 device ID, manufacturer, model, Foomatic
+		  printer ID, or parts of any of the mentioned items
+
+   -mM            Search mode:
+                  M = 0: Match everything (default)
+                  M = 1: No matches on only the manufacturer
+                  M = 2: No matches on only the manufacturer or only the model
+                  M = 3: Exact matches of device ID, make/model, or Foomatic ID
+                         plus matches of the page description language in the
+			 device ID to appropriate "Generic" printers
+                  M = 4: Exact matches of device ID, make/model, or Foomatic ID
+                         only
+    
+   -dD            Display results
+                  D = 0: Everything
+		  D = 1: Only best match class (default)
+		  D = 2: Only best match
+
+   -h             This help message
+
+EOF
+
+    exit(1);
+}
+
+# Read command line options
+use Getopt::Std;
+# Help
+my $opt = {};
+getopts("m:d:h",$opt) || usage();
+
+# Show usage info
+if ($opt->{h}) {
+    usage();
+}
+
+# Options
+my $mode = 0;
+if (defined($opt->{m})) {
+    $mode = $opt->{m};
+    usage() if ($mode < 0) || ($mode > 4);
+}
+
+my $output = 1;
+if (defined($opt->{d})) {
+    $output = $opt->{d};
+    usage() if ($output < 0) || ($output > 2);
+}
+
+
+# Search term
+my $searchterm = join(' ', @ARGV);
+usage() if !$searchterm;
+
+use Foomatic::Defaults;
+use Foomatic::DB;
+
+my $db = new Foomatic::DB;
+
+print join("\n", $db->find_printer($searchterm, $mode, $output)) . "\n";

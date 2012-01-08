@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-filters-not-working" xml:lang="en_GB">
+
+  <info>
+    <desc>Fix problems with mail filters that do not sort and organize mail as expected.</desc>
+    
+    <link type="guide" xref="index#common-mail-problems"/>
+    <link type="seealso" xref="mail-filters"/>
+
+    <revision pkgversion="3.1.5" version="0.2" date="2011-08-25" status="draft"/>
+    <credit type="author">
+      <name>April Gonzales</name>
+      <email>loonycookie@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Mail filters are not working</title>
+<p>Your mail filters are probably working, however, they could be ordered in an inefficient way. This will make your filters run slowly, so it may seem like they are not working.</p>
+
+<note>
+<p>Note that the order of filters is very important. They are applied to the original message in sequence, like a recipe.</p>
+<p>If your first filter has a <gui>Stop Processing</gui> rule, then all the email messages that match this filter will ignore all the succeeding filters.</p>
+<p>When you move a message to another folder, "moving" actually means appending a copy of the message to the destination folder and marking the original message for deletion. So any subsequent filter rules will be applied to the original message that is now marked for deletion. Therefore moving a message should usually appear last in a sequence of filter rules.</p>
+<p>To check the rules and their order of an existing filter, review its actions in the <gui>Then</gui> section by <link xref="mail-filters#editing">editing the filter</link>.</p>
+</note>
+
+<p>Another thing you have to keep in mind is that filters depend on the "new" flag that is set when a particular email message is initially fetched from the server. If you use another email client aside from Evolution, your filters may not work automatically.</p>
+
+<note>
+<p>Applying the <gui>Stop Processing</gui> rule to an email message will cause all succeeding filters to ignore that message.</p>
+
+<!--<item><p>TODO: "flag" is a technical term, and might need explanation. A link to a glossary item, or a "what is a flag?" topic would suffice, like for example: For more information on flags, please see <link href="link to guide">this page</link></p></item>  -->
+</note>
+
+</page>

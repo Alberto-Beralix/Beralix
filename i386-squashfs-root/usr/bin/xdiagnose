@@ -1,0 +1,60 @@
+#!/usr/bin/python
+# -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
+#
+# Copyright (C) 2010 Bryce Harrington bryce@canonical.com
+# This program is free software: you can redistribute it and/or modify it 
+# under the terms of the GNU General Public License version 3, as published 
+# by the Free Software Foundation.
+# 
+# This program is distributed in the hope that it will be useful, but 
+# WITHOUT ANY WARRANTY; without even the implied warranties of 
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR 
+# PURPOSE.  See the GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License along 
+# with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import sys
+import os
+import logging
+
+import gettext
+from gettext import gettext as _
+gettext.textdomain('xdiagnose')
+
+# Add project root directory (enable symlink, and trunk execution).
+PROJECT_ROOT_DIRECTORY = os.path.abspath(
+    os.path.dirname(os.path.dirname(os.path.realpath(sys.argv[0]))))
+
+if (os.path.exists(os.path.join(PROJECT_ROOT_DIRECTORY, 'xdiagnose'))
+    and PROJECT_ROOT_DIRECTORY not in sys.path):
+    sys.path.insert(0, PROJECT_ROOT_DIRECTORY)
+    os.putenv('PYTHONPATH', PROJECT_ROOT_DIRECTORY) # for subprocesses
+
+from xdiagnose.XDiagnoseApplet import XDiagnoseApplet
+
+from xdiagnose import utils
+
+if __name__ == "__main__":
+    import optparse
+    parser = optparse.OptionParser(version="%prog %ver")
+    parser.add_option(
+        "-v", "--verbose", action="store_true", dest="verbose",
+        help=_("Show debug messages"))
+    (options, args) = parser.parse_args()
+
+    # Set the logging level to show debug messages.
+    if options.verbose:
+        logging.basicConfig(level=logging.DEBUG)
+        logging.debug('logging enabled')
+
+    # xdiagnose requires Gtk and thus needs X
+    if not utils.X_is_running():
+        sys.stderr.write("Could not open X display\n")
+        sys.exit(1)
+
+    # Run the application.
+    app = XDiagnoseApplet()
+    while app.is_running:
+        app.run()
+

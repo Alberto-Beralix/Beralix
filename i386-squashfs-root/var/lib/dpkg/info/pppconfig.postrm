@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# $Id: postrm,v 1.1.1.1 2004/05/07 03:12:59 john Exp $
+
+# Postrm for pppconfig by John Hasler 1999-2003
+# Any possessor of a copy of this program may treat it as if it
+# were in the public domain.  I waive all rights.
+
+set -e
+
+if [ "$1" = "purge" ] ; then
+        rm -rf /var/lib/pppconfig
+	rm -rf /etc/ppp/resolv
+	rm -rf /var/cache/pppconfig
+	rm -rf /var/cache/pppconfig/resolv*
+	rm -rf /var/cache/pppconfig/0dns*
+	rmdir /var/cache/pppconfig || true
+        update-rc.d dns-clean remove > /dev/null
+fi
+if [ -x "`which update-menus`" ] ; then
+        update-menus
+fi
+
+
+exit 0

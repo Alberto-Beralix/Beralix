@@ -1,0 +1,74 @@
+#!/usr/bin/python
+# (c) Zygmunt Krynicki 2005, 2006, 2007, 2008
+# Licensed under GPL, see COPYING for the whole text
+
+from __future__ import absolute_import
+
+
+__version__ = "0.2.44"
+BUG_REPORT_URL = "https://bugs.launchpad.net/command-not-found/+filebug"
+
+try:
+    import gettext
+    import locale
+    import sys
+    from optparse import OptionParser
+
+    from CommandNotFound.util import crash_guard
+    from CommandNotFound import CommandNotFound
+except KeyboardInterrupt:
+    sys.exit(127)
+
+
+def enable_i18n():
+    cnf = gettext.translation("command-not-found", fallback=True)
+    cnf.install(unicode=True)
+
+
+def fix_sys_argv(encoding=None):
+    """
+    Fix sys.argv to have only unicode strings, not binary strings.
+    This is required by various places where such argument might be
+    automatically coerced to unicode string for formatting
+    """
+    if encoding is None:
+        encoding = locale.getpreferredencoding()
+    sys.argv = [arg.decode(encoding) for arg in sys.argv]
+
+
+class LocaleOptionParser(OptionParser):
+    """
+    OptionParser is broken as its implementation of _get_encoding() uses
+    sys.getdefaultencoding() which is ascii, what it should be using is
+    locale.getpreferredencoding() which returns value based on LC_CTYPE (most
+    likely) and allows for UTF-8 encoding to be used.
+    """
+    def _get_encoding(self, file):
+        encoding = getattr(file, "encoding", None)
+        if not encoding:
+            encoding = locale.getpreferredencoding()
+        return encoding
+
+
+def main():
+    enable_i18n()
+    fix_sys_argv()
+    parser = LocaleOptionParser(
+        version=__version__,
+        usage=_("%prog [options] <command-name>"))
+    parser.add_option('-d', '--data-dir', action='store',
+                      default="/usr/share/command-not-found",
+                      help=_("use this path to locate data fields"))
+    parser.add_option('--ignore-installed', '--ignore-installed',
+                      action='store_true',  default=False,
+                      help=_("ignore local binaries and display the available packages"))
+    (options, args) = parser.parse_args()
+    if len(args) == 1:
+        cnf = CommandNotFound(options.data_dir)
+        # Note: we need to encode program name to utf-8 as gdbm does not seem
+        # to handle unicode strings.
+        if not cnf.advise(args[0].encode('utf-8'), options.ignore_installed):
+            print >>sys.stderr, _("%s: command not found") % args[0]
+
+if __name__ == "__main__":
+    crash_guard(main, BUG_REPORT_URL, __version__)

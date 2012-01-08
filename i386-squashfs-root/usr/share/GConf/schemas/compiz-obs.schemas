@@ -1,0 +1,866 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_increase_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_increase_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Increase Opacity</short>
+        <long>Opacity Increase</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_increase_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_increase_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Button4</default>
+      <locale name="C">
+        <short>Increase Opacity</short>
+        <long>Opacity Increase</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_decrease_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_decrease_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Decrease Opacity</short>
+        <long>Opacity Decrease</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_decrease_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_decrease_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Button5</default>
+      <locale name="C">
+        <short>Decrease Opacity</short>
+        <long>Opacity Decrease</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_step</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_step</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>5</default>
+      <locale name="C">
+        <short>Step</short>
+        <long>Opacity Step (1 - 10)</long>
+      </locale>
+      <locale name="bg">
+        <short>Стъпка</short>
+        <long>Opacity Step (1 - 10)</long>
+      </locale>
+      <locale name="el">
+        <short>Βήμα</short>
+        <long>Βήμα Αδιαφάνειας (1 - 10)</long>
+      </locale>
+      <locale name="es">
+        <short>Paso</short>
+        <long>Paso de opacidad (1 - 10)</long>
+      </locale>
+      <locale name="eu">
+        <short>Pausoa</short>
+        <long>Opakotasun pausoa (1 - 10)</long>
+      </locale>
+      <locale name="fi">
+        <short>Askel</short>
+        <long>Peittävyyden säädön askel (1 - 10)</long>
+      </locale>
+      <locale name="fr">
+        <short>Incrément</short>
+        <long>Incrément d'opacité (1 - 10)</long>
+      </locale>
+      <locale name="gl">
+        <short>Salto</short>
+        <long>Etapa de Opacidade (1 - 10)</long>
+      </locale>
+      <locale name="he">
+        <short>דרגת שינוי</short>
+        <long>דרגת שינוי אטימות (1 - 10)</long>
+      </locale>
+      <locale name="hu">
+        <short>Lépésköz</short>
+        <long>Átlátszatlanság mértéke (1 - 10)</long>
+      </locale>
+      <locale name="it">
+        <short>Passo</short>
+        <long>Passo opacità (1 - 10)</long>
+      </locale>
+      <locale name="ja">
+        <short>変化刻み</short>
+        <long>不透明度の変化刻み (1 - 10)</long>
+      </locale>
+      <locale name="ko">
+        <short>단계</short>
+        <long>투명도 단계 (1 - 10)</long>
+      </locale>
+      <locale name="pl">
+        <short>Krok zmiany</short>
+        <long>Krok zmiany nieprzezroczystości (1 - 10)</long>
+      </locale>
+      <locale name="pt">
+        <short>Incremento</short>
+        <long>Etapa de Opacidade (1 - 10)</long>
+      </locale>
+      <locale name="ru">
+        <short>Шаг</short>
+        <long>Шаг прозрачности (1 - 10)</long>
+      </locale>
+      <locale name="uk">
+        <short>Крок</short>
+        <long>Крок прозорості (1 - 10)</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>调整步长</short>
+        <long>不透明度步长 (1 - 10)</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>幅度</short>
+        <long>不透明度幅度 (1 - 10)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_matches</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Windows</short>
+        <long>Windows that should have a different opacity by default</long>
+      </locale>
+      <locale name="el">
+        <short>Παράθυρα</short>
+        <long>Παράθυρα που πρέπει να έχουν διαφορετική διαφάνεια εξ' ορισμού</long>
+      </locale>
+      <locale name="es">
+        <short>Ventanas</short>
+        <long>Ventanas que deberían tener una opacidad diferente por defecto</long>
+      </locale>
+      <locale name="eu">
+        <short>Leihoak</short>
+        <long>Opakutasun lehenetsi ezberdina izan behar duten leihoak</long>
+      </locale>
+      <locale name="fi">
+        <short>Ikkunat</short>
+        <long>Ikkunat joilla tulisi oletuksena olla eriävä peittävyys</long>
+      </locale>
+      <locale name="fr">
+        <short>Fenêtres</short>
+        <long>Fenêtres devant avoir une opacité différente par défaut</long>
+      </locale>
+      <locale name="gl">
+        <short>Fiestras</short>
+        <long>Fiestras que deben ter unha opacidade diferente por omisión</long>
+      </locale>
+      <locale name="he">
+        <short>חלונות</short>
+        <long>חלונות בעלי אטימות שונה כברירת מחדל</long>
+      </locale>
+      <locale name="hu">
+        <short>Ablakok</short>
+        <long>Alapértelmezettől eltérő átlátszatlansággal rendelkező ablakok</long>
+      </locale>
+      <locale name="it">
+        <short>Finestre</short>
+        <long>Finestre che dovrebbero avere una opacità diversa in modo predefinito</long>
+      </locale>
+      <locale name="ja">
+        <short>ウィンドウ</short>
+        <long>デフォルトで他と異なる不透明度を持たせるウィンドウ</long>
+      </locale>
+      <locale name="ko">
+        <short>창</short>
+        <long>기본적으로 다른 투명도를 갖는 창</long>
+      </locale>
+      <locale name="pl">
+        <short>Okna</short>
+        <long>Typy okien, które powinny domyślnie mieć inną nieprzezroczystość</long>
+      </locale>
+      <locale name="pt">
+        <short>Janelas</short>
+        <long>Janelas que devem ter uma opacidade diferente por omissão</long>
+      </locale>
+      <locale name="ru">
+        <short>Окна</short>
+        <long>Окна, которые должны иметь отличную(другую) прозрачность по умолчанию</long>
+      </locale>
+      <locale name="uk">
+        <short>Вікна</short>
+        <long>Вікна, які повинні мати іншу яскравість за замовчуванням</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>窗口</short>
+        <long>默认使用另一不透明度设置的窗口</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>何種視窗</short>
+        <long>預設視窗應該有一個不同的不透明度</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/opacity_values</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/opacity_values</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[90]</default>
+      <locale name="C">
+        <short>Window values</short>
+        <long>Opacity values for windows</long>
+      </locale>
+      <locale name="el">
+        <short>Τιμές παραθύρου</short>
+        <long>Τιμές αδιαφάνειας παραθύρων</long>
+      </locale>
+      <locale name="es">
+        <short>Valores de las ventanas</short>
+        <long>Opacidad de las ventanas</long>
+      </locale>
+      <locale name="eu">
+        <short>Leihoaren balioak</short>
+        <long>Opakutasun balioa leihoentzat</long>
+      </locale>
+      <locale name="fi">
+        <short>Ikkunoiden arvot</short>
+        <long>Peittävyysarvot ikkunoille</long>
+      </locale>
+      <locale name="fr">
+        <short>Valeurs des fenêtres</short>
+        <long>Valeurs d'opacité des fenêtres</long>
+      </locale>
+      <locale name="gl">
+        <short>Valores das xanelas</short>
+        <long>Valores de opacidade para as xanelas</long>
+      </locale>
+      <locale name="he">
+        <short>ערכי חלונות</short>
+        <long>ערכי אטימות לחלונות</long>
+      </locale>
+      <locale name="hu">
+        <short>Ablak tulajdonságok</short>
+        <long>Ablakok átlátszatlansága</long>
+      </locale>
+      <locale name="it">
+        <short>Valori finestra</short>
+        <long>Valori di opacità per le finestre</long>
+      </locale>
+      <locale name="ja">
+        <short>ウィンドウの値</short>
+        <long>ウィンドウの不透明度</long>
+      </locale>
+      <locale name="ko">
+        <short>정도</short>
+        <long>창이 투명한 정도</long>
+      </locale>
+      <locale name="pl">
+        <short>Wartości dla okien</short>
+        <long>Poziom nieprzezroczystości okien</long>
+      </locale>
+      <locale name="pt">
+        <short>Valores para a janela</short>
+        <long>Valores de opacidade para janelas</long>
+      </locale>
+      <locale name="ru">
+        <short>Значения для окна</short>
+        <long>Значение прозрачности для окон</long>
+      </locale>
+      <locale name="uk">
+        <short>Значення для вікна</short>
+        <long>Значення прозорості для вікон</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>窗口值</short>
+        <long>窗口的不透明度数值</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>幅度數值</short>
+        <long>視窗的不透明度</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_increase_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_increase_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Increase Brightness</short>
+        <long>Brightness Increase</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_increase_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_increase_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Increase Brightness</short>
+        <long>Brightness Increase</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_decrease_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_decrease_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Decrease Brightness</short>
+        <long>Brightness Decrease</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_decrease_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_decrease_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Decrease Brightness</short>
+        <long>Brightness Decrease</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_step</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_step</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>5</default>
+      <locale name="C">
+        <short>Step</short>
+        <long>Brightness Step (1 - 10)</long>
+      </locale>
+      <locale name="bg">
+        <short>Стъпка</short>
+        <long>Brightness Step (1 - 10)</long>
+      </locale>
+      <locale name="el">
+        <short>Βήμα</short>
+        <long>Βήμα Φωτεινότητας (1 - 10)</long>
+      </locale>
+      <locale name="es">
+        <short>Paso</short>
+        <long>Paso de brillo (1 - 10)</long>
+      </locale>
+      <locale name="eu">
+        <short>Pausoa</short>
+        <long>Distira pausoa (1 - 10)</long>
+      </locale>
+      <locale name="fi">
+        <short>Askel</short>
+        <long>Kirkkauden säädön askel (1 - 10)</long>
+      </locale>
+      <locale name="fr">
+        <short>Incrément</short>
+        <long>Incrément de luminosité (1 - 10)</long>
+      </locale>
+      <locale name="gl">
+        <short>Salto</short>
+        <long>Salto no Brillo (1 - 10)</long>
+      </locale>
+      <locale name="he">
+        <short>דרגת שינוי</short>
+        <long>דרגת שינוי בהירות (1 - 10)</long>
+      </locale>
+      <locale name="hu">
+        <short>Lépésköz</short>
+        <long>Fényerő lépésköz (1 - 10)</long>
+      </locale>
+      <locale name="it">
+        <short>Passo</short>
+        <long>Passo luminosità (1 - 10)</long>
+      </locale>
+      <locale name="ja">
+        <short>変化刻み</short>
+        <long>明度の変化刻み (1 - 10)</long>
+      </locale>
+      <locale name="ko">
+        <short>단계</short>
+        <long>밝기 단계 (1 - 10)</long>
+      </locale>
+      <locale name="pl">
+        <short>Krok zmiany</short>
+        <long>Krok zmiany jasności (1 - 10)</long>
+      </locale>
+      <locale name="pt">
+        <short>Incremento</short>
+        <long>Incremento Brilho (1 - 10)</long>
+      </locale>
+      <locale name="ru">
+        <short>Шаг</short>
+        <long>Шаг изменения яркости (1 - 10)</long>
+      </locale>
+      <locale name="uk">
+        <short>Крок</short>
+        <long>Крок зміни яскравості (1 - 10)</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>调整步长</short>
+        <long>调整步幅 (1 - 10)</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>幅度</short>
+        <long>亮度幅度 (1 - 10)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_matches</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Windows</short>
+        <long>Windows that should have a different brightness by default</long>
+      </locale>
+      <locale name="el">
+        <short>Παράθυρα</short>
+        <long>Παράθυρα που πρέπει να έχουν διαφορετική φωτεινότητα εξ' ορισμού</long>
+      </locale>
+      <locale name="es">
+        <short>Ventanas</short>
+        <long>Ventanas que deberían tener un brillo diferente por defecto</long>
+      </locale>
+      <locale name="eu">
+        <short>Leihoak</short>
+        <long>Distira lehenetsi ezberdina izan behar duten leihoak</long>
+      </locale>
+      <locale name="fi">
+        <short>Ikkunat</short>
+        <long>Ikkunat joilla tulisi oletuksena olla eriävä kirkkaus</long>
+      </locale>
+      <locale name="fr">
+        <short>Fenêtres</short>
+        <long>Fenêtres devant avoir une luminosité différente par défaut</long>
+      </locale>
+      <locale name="gl">
+        <short>Fiestras</short>
+        <long>Fiestras que deben ter un brillo diferente por omisión</long>
+      </locale>
+      <locale name="he">
+        <short>חלונות</short>
+        <long>חלונות בעלי בהירות שונה כברירת מחדל</long>
+      </locale>
+      <locale name="hu">
+        <short>Ablakok</short>
+        <long>Alapértelmezettől eltérő fényerővel rendelkező ablakok</long>
+      </locale>
+      <locale name="it">
+        <short>Finestre</short>
+        <long>Finestre che dovrebbero avere una luminosità diversa in modo predefinito</long>
+      </locale>
+      <locale name="ja">
+        <short>ウィンドウ</short>
+        <long>デフォルトで他と異なる明度を持たせるウィンドウ</long>
+      </locale>
+      <locale name="ko">
+        <short>창</short>
+        <long>기본적으로 다른 밝기를 갖는 창</long>
+      </locale>
+      <locale name="pl">
+        <short>Okna</short>
+        <long>Typy okien, które powinny domyślnie mieć inną jasność</long>
+      </locale>
+      <locale name="pt">
+        <short>Janelas</short>
+        <long>Janelas que devem ter um brilho diferente por omissão</long>
+      </locale>
+      <locale name="ru">
+        <short>Окна</short>
+        <long>Окна, которые должны иметь отличную(другую) яркость по умолчанию</long>
+      </locale>
+      <locale name="uk">
+        <short>Вікна</short>
+        <long>Вікна, які повинні мати іншу яскравість за замовчуванням</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>窗口</short>
+        <long>默认使用另一亮度设置的窗口</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>何種視窗</short>
+        <long>預設視窗應該有一個不同的亮度</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/brightness_values</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/brightness_values</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[90]</default>
+      <locale name="C">
+        <short>Window values</short>
+        <long>Brightness values for windows</long>
+      </locale>
+      <locale name="el">
+        <short>Τιμές παραθύρου</short>
+        <long>Τιμές φωτεινότητας παραθύρων</long>
+      </locale>
+      <locale name="es">
+        <short>Valores de las ventanas</short>
+        <long>Brillo de las ventanas</long>
+      </locale>
+      <locale name="eu">
+        <short>Leihoaren balioak</short>
+        <long>Distira balioak leihoentzat</long>
+      </locale>
+      <locale name="fi">
+        <short>Ikkunoiden arvot</short>
+        <long>Kirkkausarvot ikkunoille</long>
+      </locale>
+      <locale name="fr">
+        <short>Valeurs des fenêtres</short>
+        <long>Valeur de la luminosité des fenêtres</long>
+      </locale>
+      <locale name="gl">
+        <short>Valores das xanelas</short>
+        <long>Valores de Brillo para as xanelas</long>
+      </locale>
+      <locale name="he">
+        <short>ערכי חלונות</short>
+        <long>ערכי בהירות לחלונות</long>
+      </locale>
+      <locale name="hu">
+        <short>Ablak tulajdonságok</short>
+        <long>Fényerő értéke ablakokhoz</long>
+      </locale>
+      <locale name="it">
+        <short>Valori finestra</short>
+        <long>Valori di luminosità per le finestre</long>
+      </locale>
+      <locale name="ja">
+        <short>ウィンドウの値</short>
+        <long>ウィンドウに適用する明度</long>
+      </locale>
+      <locale name="ko">
+        <short>정도</short>
+        <long>창의 밝은 정도</long>
+      </locale>
+      <locale name="pl">
+        <short>Wartości dla okien</short>
+        <long>Wartości jasności dla okien</long>
+      </locale>
+      <locale name="pt">
+        <short>Valores para a janela</short>
+        <long>Valores de brilho para janelas</long>
+      </locale>
+      <locale name="ru">
+        <short>Значения для окна</short>
+        <long>Значение яркости для окон</long>
+      </locale>
+      <locale name="uk">
+        <short>Значення для вікна</short>
+        <long>Значення яскравості для вікон</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>窗口值</short>
+        <long>窗口亮度</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>幅度數值</short>
+        <long>視窗的亮度值</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_increase_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_increase_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Increase Saturation</short>
+        <long>Saturation Increase</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_increase_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_increase_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Increase Saturation</short>
+        <long>Saturation Increase</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_decrease_key</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_decrease_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Decrease Saturation</short>
+        <long>Saturation Decrease</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_decrease_button</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_decrease_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Decrease Saturation</short>
+        <long>Saturation Decrease</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_step</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_step</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>5</default>
+      <locale name="C">
+        <short>Step</short>
+        <long>Saturation Step (1 - 10)</long>
+      </locale>
+      <locale name="bg">
+        <short>Стъпка</short>
+        <long>Saturation Step (1 - 10)</long>
+      </locale>
+      <locale name="el">
+        <short>Βήμα</short>
+        <long>Βήμα Κορεσμού (1 - 10)</long>
+      </locale>
+      <locale name="es">
+        <short>Paso</short>
+        <long>Paso de saturación (1 - 10)</long>
+      </locale>
+      <locale name="eu">
+        <short>Pausoa</short>
+        <long>Saturazio pausoa (1 - 10)</long>
+      </locale>
+      <locale name="fi">
+        <short>Askel</short>
+        <long>Kylläisyyden säädön askel (1 - 10)</long>
+      </locale>
+      <locale name="fr">
+        <short>Incrément</short>
+        <long>Incrément de la saturation (1 - 10)</long>
+      </locale>
+      <locale name="gl">
+        <short>Salto</short>
+        <long>Salto na Saturación (1 - 10)</long>
+      </locale>
+      <locale name="he">
+        <short>דרגת שינוי</short>
+        <long>דרגת שינוי רווייה (1 - 10)</long>
+      </locale>
+      <locale name="hu">
+        <short>Lépésköz</short>
+        <long>Telítettség változásának lépésköze (1 - 10)</long>
+      </locale>
+      <locale name="it">
+        <short>Passo</short>
+        <long>Passo saturazione (1 - 10)</long>
+      </locale>
+      <locale name="ja">
+        <short>変化刻み</short>
+        <long>彩度の変化刻み (1 - 10)</long>
+      </locale>
+      <locale name="ko">
+        <short>단계</short>
+        <long>채도 단계 (1 - 10)</long>
+      </locale>
+      <locale name="pl">
+        <short>Krok zmiany</short>
+        <long>Krok zmiany nasycenia  (1 - 10)</long>
+      </locale>
+      <locale name="pt">
+        <short>Incremento</short>
+        <long>Incremento Saturação (1 - 10)</long>
+      </locale>
+      <locale name="ru">
+        <short>Шаг</short>
+        <long>Шаг изменения насыщенности (1 - 10)</long>
+      </locale>
+      <locale name="uk">
+        <short>Крок</short>
+        <long>Крок зміни насиченості (1 - 10)</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>调整步长</short>
+        <long>饱和度步长 (1 - 10)</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>幅度</short>
+        <long>飽和度幅度 (1 - 10)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_matches</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Windows</short>
+        <long>Windows that should have a different saturation by default</long>
+      </locale>
+      <locale name="el">
+        <short>Παράθυρα</short>
+        <long>Παράθυρα που πρέπει να έχουν διαφορετικό κορεσμό εξ' ορισμού</long>
+      </locale>
+      <locale name="es">
+        <short>Ventanas</short>
+        <long>Ventanas que deberían tener una saturación diferente por defecto</long>
+      </locale>
+      <locale name="eu">
+        <short>Leihoak</short>
+        <long>Saturazio lehenetsi ezberdina izan behar duten leihoak</long>
+      </locale>
+      <locale name="fi">
+        <short>Ikkunat</short>
+        <long>Ikkunat joilla tulisi oletuksena olla eriävä värikylläisyys</long>
+      </locale>
+      <locale name="fr">
+        <short>Fenêtres</short>
+        <long>Fenêtres devant avoir une saturation différente par défaut</long>
+      </locale>
+      <locale name="gl">
+        <short>Fiestras</short>
+        <long>Fiestras que deben ter unha saturación diferente por omisión</long>
+      </locale>
+      <locale name="he">
+        <short>חלונות</short>
+        <long>חלונות בעלי רוויה שונה כברירת מחדל</long>
+      </locale>
+      <locale name="hu">
+        <short>Ablakok</short>
+        <long>Alapértelmezettől eltérő színtelítettséggel rendelkező ablakok</long>
+      </locale>
+      <locale name="it">
+        <short>Finestre</short>
+        <long>Finestre che dovrebbero avere una saturazione diversa in modo predefinito</long>
+      </locale>
+      <locale name="ja">
+        <short>ウィンドウ</short>
+        <long>デフォルトで他と異なる彩度を持たせるウィンドウ</long>
+      </locale>
+      <locale name="ko">
+        <short>창</short>
+        <long>기본적으로 다른 채도를 갖는 창</long>
+      </locale>
+      <locale name="pl">
+        <short>Okna</short>
+        <long>Typy okien, które powinny domyślnie mieć inne nasycenie</long>
+      </locale>
+      <locale name="pt">
+        <short>Janelas</short>
+        <long>Janelas que devem ter uma saturação diferente por omissão</long>
+      </locale>
+      <locale name="ru">
+        <short>Окна</short>
+        <long>Окна, которые должны иметь отличную(другую) насыщенность по умолчанию</long>
+      </locale>
+      <locale name="uk">
+        <short>Вікна</short>
+        <long>Вікна, які повинні мати іншу яскравість за замовчуванням</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>窗口</short>
+        <long>默认使用另一饱和度的窗口</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>何種視窗</short>
+        <long>預設視窗應該有一個不同的飽和度</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/obs/screen0/options/saturation_values</key>
+      <applyto>/apps/compiz-1/plugins/obs/screen0/options/saturation_values</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[90]</default>
+      <locale name="C">
+        <short>Window values</short>
+        <long>Saturation values for windows</long>
+      </locale>
+      <locale name="el">
+        <short>Τιμές παραθύρου</short>
+        <long>Τιμές κορεσμού παραθύρων</long>
+      </locale>
+      <locale name="es">
+        <short>Valores de las ventanas</short>
+        <long>Saturación de las ventanas</long>
+      </locale>
+      <locale name="eu">
+        <short>Leihoaren balioak</short>
+        <long>Saturazio balioa leihoentzat</long>
+      </locale>
+      <locale name="fi">
+        <short>Ikkunoiden arvot</short>
+        <long>Kylläisyysarvot ikkunoille</long>
+      </locale>
+      <locale name="fr">
+        <short>Valeurs des fenêtres</short>
+        <long>Valeurs de saturation des fenêtres</long>
+      </locale>
+      <locale name="gl">
+        <short>Valores das xanelas</short>
+        <long>Valores de saturación para as xanelas</long>
+      </locale>
+      <locale name="he">
+        <short>ערכי חלונות</short>
+        <long>ערכי רוויה לחלונות</long>
+      </locale>
+      <locale name="hu">
+        <short>Ablak tulajdonságok</short>
+        <long>Ablakok színtelítettsége</long>
+      </locale>
+      <locale name="it">
+        <short>Valori finestra</short>
+        <long>Valori di saturazione per le finestre</long>
+      </locale>
+      <locale name="ja">
+        <short>ウィンドウの値</short>
+        <long>ウィンドウに適用する彩度</long>
+      </locale>
+      <locale name="ko">
+        <short>정도</short>
+        <long>창의 채도 정도</long>
+      </locale>
+      <locale name="pl">
+        <short>Wartości dla okien</short>
+        <long>Wartości nasycenia dla okien</long>
+      </locale>
+      <locale name="pt">
+        <short>Valores para a janela</short>
+        <long>Valores de saturação para janelas</long>
+      </locale>
+      <locale name="ru">
+        <short>Значения для окна</short>
+        <long>Значения насыщенности для окон</long>
+      </locale>
+      <locale name="uk">
+        <short>Значення для вікна</short>
+        <long>Значення насиченості для вікон</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>窗口值</short>
+        <long>窗口的饱和度数值</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>幅度數值</short>
+        <long>視窗的飽和度</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

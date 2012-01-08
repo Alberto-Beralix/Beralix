@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="power-batterywindows" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="power#battery"/>
+    <desc>Optimierungen des Herstellers und abweichende Schätzungen der Akkulaufzeit können dieses Problem verursachen.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Warum hält mein Akku nicht so lange wie unter Windows/Mac OS?</title>
+
+<p>Einige Rechner scheinen kürzere Akkulaufzeiten aufzuweisen, wenn darauf Linux statt Windows oder Mac OS ausgeführt wird. Ein Grund dafür ist spezielle Software für Windows/Mac OS, die von Rechnerherstellern installiert wird, um verschiedene Hardware-/Software-Einstellung des vorliegenden Rechnermodells zu optimieren. Diese Anpassungen sind oft sehr speziell und eventuell nicht schriftlich festgehalten und können daher nur schwer in Linux integriert werden.</p>
+
+<p>Leider gibt es keine einfache Möglichkeit, diese Optimierungen selbst anzuwenden, ohne sie genau zu kennen. Allerdings könnten einige <link xref="power-batterylife">einfache Energiesparfunktionen</link> nützlich sein. Verfügt Ihr Rechner über einen <link xref="power-batteryslow">geschwindigkeitsvariablen Prozessor</link>, könnte eine Anpassung der Einstellungen dieses Prozessors ebenfalls helfen.</p>
+
+<p>Ein weiterer möglicher Grund der Abweichung ist, dass sich die Methode zur Bestimmung der Akkulaufzeit in Linux von der in Windows/Mac OS unterscheidet. Die eigentliche Akkulaufzeit kann die gleiche sein, aber die verschiedenen Methoden liefern unterschiedliche Schätzungen. Werfen Sie einen Blick auf <link xref="power-batteryestimate"/> für weitere Informationen.</p>
+	
+</page>

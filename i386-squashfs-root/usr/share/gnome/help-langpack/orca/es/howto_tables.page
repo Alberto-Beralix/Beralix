@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_tables" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#reading"/>
+    <link type="next" xref="howto_forms"/>
+    <title type="sort">4. Tablas</title>
+    <desc>Navegar y establecer cabeceras dinámicas</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Tablas</title>
+  <p><app>Orca</app> proporciona varias características específicamente diseñadas para mejorar el acceso a las tablas encontradas en páginas web y otros documentos: celda configurable frente a lectura de fila, <link xref="howto_structural_navigation">navegación estructural</link> y cabeceras dinámicas.</p>
+  <section id="cell_row">
+    <title>Celda frente a Lectura de fila</title>
+    <p>Considere el proceso de examinar la lista de mensajes en su bandeja de entrada. Para que Orca anuncie el remitente, asunto, fecha y la presencia de adjuntos necesitará que <app>Orca</app> lea la fila. Por otro lado, cuando se navega entre filas de una hoja de cálculo, puede que no desee escuchar la fila completa, aunque únicamente sea porque hay demasiadas celdas en cada fila. En ese caso, querrá que <app>Orca</app> sólo lea la celda que tiene el foco. Ocurren situaciones similares en las tablas de documento.</p>
+    <p><app>Orca</app> le permite personalizar si sólo se debería leer la celda, o si se debería leer la fila completa. Puede configurar esta preferencia de Orca así como aplicación por aplicación. Las instrucciones para realizar estas operaciones se describen en la guía sobre <link xref="preferences">diálogos de preferencias de <app>Orca</app></link>. La configuración se puede encontrar en el <gui>grupo de botones de radio</gui>de las filas de tabla en la <link xref="preferences_speech"><gui>página de</gui> Voz</link>.</p>
+    <p>Además, hay un comando de <app>Orca</app> que le permite cambiar esta configuración al vuelo: <keyseq><key>Modificador de Orca</key><key>F11</key></keyseq>.</p>
+  </section>
+  <section id="structural_navigation">
+    <title>Navegación estructural</title>
+    <p><link xref="commands_structural_navigation#tables">los comandos de navegación estructural</link> de <app>Orca</app> hacen posible localizar rápidamente las tablas, saltar inmediatamente a la primera o última celda de una tabla y pasar a la siguiente celda en cualquier dirección.</p>
+    <p>A medida que navegue entre las tablas y al interior de éstas usando la navegación estructural, <app>Orca</app> anunciará detalles adicionales para ayudarle a entender su posición, tales como las dimensiones de la tabla que acaba de ingresar y el hecho de que ha alcanzado el límite de la tabla en la dirección que se está moviendo.</p>
+    <p>Además, <app>Orca</app> proporciona <link xref="preferences_table_navigation">opciones de presentación</link> configurables que funcionan en conjunto con la navegación estructural y le permiten controlar si se presentan las coordenadas de celda, si se indican las celdas dentro de otra celda y si se anuncian o no las cabeceras de celda.</p>
+    <note style="tip">
+      <title>No olvide activar la navegación estructural.</title>
+      <p>Dependiendo de donde se encuentre, puede ser necesario activar explícitamente la navegación estructural antes de que pueda usarla. Para obtener más información, lea <link type="seealso" xref="howto_structural_navigation#toggling_required">cuándo es necesario activar la navegación estructural</link>.</p>
+    </note>
+  </section>
+  <section id="dynamic_headers">
+    <title>Cabeceras dinámicas</title>
+    <p>Muchas de las tablas que encontrará durante la lectura tienen celdas que funcionan como cabeceras para una fila o columna. No resulta fácil decir si el creador de esa tabla marcó correctamente aquellas celdas como cabeceras o no. En muchos casos, el texto simplemente se formateó para ser más grande y/o en negrita. Incluso si la tabla se ha marcado correctamente, nada garantiza que la aplicación o el kit de herramientas expongan ese texto como información de cabecera a las tecnologías de asistencia. El soporte de cabeceras dinámicas de <app>Orca</app> hace posible superar estos desafíos.</p>
+    <steps>
+      <title>Configurar las cabeceras de las columnas</title>
+      <item>
+        <p>Muévase a la fila que contiene todas las cabeceras de las columnas.</p>
+      </item>
+      <item>
+        <p>Pulse <keyseq><key>Modificador de Orca</key><key>R</key></keyseq> para indicar a <app>Orca</app> que la fila actual es la que tiene las cabeceras.</p>
+      </item>
+    </steps>
+    <steps>
+      <title>Configurar las cabeceras de las filas</title>
+      <item>
+        <p>Muévase a la columna que contiene las cabeceras de las filas.</p>
+      </item>
+      <item>
+        <p>Pulse <keyseq><key>Modificador de Orca</key><key>C</key></keyseq> para indicar a <app>Orca</app> que la columna actual es la que tiene las cabeceras.</p>
+      </item>
+    </steps>
+    <p>Una vez configuradas las cabeceras de las columnas o las cabeceras de las filas, notará que a medida que navegue entre las celdas, <app>Orca</app> presentará todas las cabeceras que hayan cambiado. O dicho de otro modo, <app>Orca</app> no presentará la cabecera de la columna una y otra vez a medida que se desplace hacia arriba o abajo dentro de la columna actual. Asimismo, no presentará la cabecera de la fila una y otra vez a medida que se desplace hacia la izquierda o derecha dentro de la fila actual. Sin embargo, si cambia las filas y hay nuevas cabeceras de fila, se presentará la cabecera asociada a la nueva fila, y si cambia las columnas y hay nuevas cabeceras de columna, se presentará la cabecera asociada a la nueva columna.</p>
+    <p>Para borrar las cabeceras, simplemente pulse dos veces el comando que usaba para configurarlas. De este modo, al pulsar dos veces el<keyseq><key>Modificador de Orca</key><key>R</key></keyseq> se indica a <app>Orca</app> que no hay cabeceras de columna. Al pulsar dos veces el <keyseq><key>Modificador de Orca</key><key>C</key></keyseq> se indica a <app>Orca</app> que no hay cabeceras de fila.</p>
+  </section>
+</page>

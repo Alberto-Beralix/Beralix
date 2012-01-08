@@ -1,0 +1,20 @@
+plugin: shell
+name: apport-directory
+requires: package.name == 'apport'
+command: ! test -d /var/crash || test $(find /var/crash -type f | wc -l) -eq 0
+description: Test that the /var/crash directory doesn't contain anything.
+description-cs.UTF-8: Ověřte, zda je adresář /var/crash prázdný.
+description-de.UTF-8: Stellen Sie sicher, dass das Verzeichnis /var/crash leer ist.
+description-en_AU.UTF-8: Test that the /var/crash directory doesn't contain anything.
+description-en_GB.UTF-8: Test that the /var/crash directory doesn't contain anything.
+description-es.UTF-8: Compruebe que el directorio /var/crash no contiene nada.
+description-fr.UTF-8: Teste que le dossier /var/crash est vide.
+description-gl.UTF-8: Compruebe que o cartafol /var/crash non contienen nada.
+description-hu.UTF-8: Teszt, hogy a  /var/crash mappa tartalmaz-e valamit.
+description-it.UTF-8: Verifica che la directory /var/crash non contenga nulla.
+description-nl.UTF-8: Test dat de map /var/crash niets bevat.
+description-pt_BR.UTF-8: Testar se o diretório /var/crash não contém nada.
+description-ru.UTF-8: Убедитесь, что каталог /var/crash пуст.
+description-sl.UTF-8: Preizkus, da mapa /var/crash ne vsebuje ničesar.
+description-tr.UTF-8: /var/crash dizininin hiçbir şey içermediğini sına.
+description-zh_CN.UTF-8: 检查 /var/crash 目录是否为空

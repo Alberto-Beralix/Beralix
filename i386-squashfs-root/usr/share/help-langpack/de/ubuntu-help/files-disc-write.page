@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-disc-write" xml:lang="de">
+  <info>
+    <link type="guide" xref="files" group="more"/>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+
+    <credit type="author">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
+    </credit>
+
+    <desc>Brennen Sie Dateien und Dokumente auf eine leere CD oder DVD mit einem CD/DVD-Brennprogramm.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Dateien auf eine CD oder DVD schreiben</title>
+
+  <p>The <gui>CD/DVD Creator</gui> in the file manager makes it easy to transfer files to other computers or perform <link xref="backup-why">backups</link> by putting files onto a blank disc. To write files to a CD or DVD:</p>
+
+  <steps>
+    <item><p>Legen Sie ein leeres Medium in Ihren CD/DVD-Brenner.</p></item>
+    <item>
+     <p>In the <gui>Blank CD/DVD-R Disc</gui> window that appears, select <gui>CD/DVD Creator</gui> and click <gui>OK</gui>. The <gui>CD/DVD Creator Folder</gui> window will open.</p>
+     <p>(You can also click on <gui>Blank CD/DVD-R Disc</gui> under <gui>Devices</gui> in the file manager sidebar.)</p>
+    </item>
+    <item><p>Geben Sie im Feld <gui>CD/DVD-Name</gui> einen Namen für das Medium ein.</p></item>
+    <item><p>Drag or <link xref="files-copy">copy</link> the desired files into the window.</p></item>
+    <item>
+     <p>Nehmen Sie bei <gui>Wählen Sie die zu beschreibende CD/DVD aus</gui> das leere Medium.</p>
+     <p>(Sie könnten stattdessen <gui>Abbilddatei</gui> wählen. Das würde die Dateien in ein <em>CD/DVD-Abbild</em> legen, das auf Ihrem Rechner gespeichert wird. Sie können dann das Abbild zu einem späteren Zeitpunkt auf ein leeres Medium brennen.)</p>
+    </item>
+    <item><p>Klicken Sie auf <gui>Eigenschaften</gui>, wenn Sie die Brenngeschwindigkeit, den Ort für die temporären Dateien und andere Einstellungen anpassen wollen. Die Standardeinstellungen sollten aber passen.</p></item>
+    <item>
+     <p>Klicken Sie auf den <gui>Brennen</gui>-Knopf, um die Aufnahme zu starten.</p>
+     <p>Wenn <gui>Mehrere Kopien brennen</gui> ausgewählt ist, werden Sie zum Einlegen zusätzlicher Medien aufgefordert.</p>
+    </item>
+    <item><p>Wenn der Brennvorgang abgeschlossen ist, wird die CD/DVD automatisch ausgeworfen. Wählen Sie <gui>Weitere Kopien erstellen</gui> oder <gui>Schließen</gui>, um den Brennvorgang zu beenden.</p></item>
+  </steps>
+
+<note><p>For more advanced CD/DVD burning projects, try <app>Brasero</app>.</p>
+<p>Wenn Sie Hilfe zu Brasero benötigen, lesen Sie bitte das <link href="ghelp:brasero">Benutzerhandbuch</link>.</p></note>
+
+<section id="problem">
+ <title>Das Medium wurde nicht korrekt gebrannt!</title>
+ <p>Sometimes, discs aren't burned correctly and you won't be able to see the files you put onto the disc when you insert it into a computer.</p>
+
+ <p>Versuchen Sie in diesem Fall die CD/DVD noch einmal zu brennen, aber diesmal mit einer geringeren Brenngeschwindigkeit, zum Beispiel 12x statt 48x. Das Brennen ist bei niedrigeren Geschwindigkeiten zuverlässiger. Sie können die Brenngeschwindigkeit wählen, indem Sie den Knopf <gui>Eigenschaften</gui> im Fenster <gui>CD/DVD-Ersteller-Ordner</gui> anklicken.</p>
+</section>
+
+</page>

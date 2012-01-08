@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="commands_controlling_orca" xml:lang="de">
+  <info>
+    <link type="next" xref="commands_where_am_i"/>
+    <link type="guide" xref="commands#getting_started"/>
+    <title type="sort">1. Steuerung und Bedienung von Orca</title>
+    <title type="link">Steuerung und Bedienung von Orca</title>
+    <desc>Befehle zum Interagieren mit <app>Orca</app></desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+  <title type="link">Steuerung und Bedienung von Orca</title>
+  <section id="controlling">
+    <title>Befehle zur Steuerung von <app>Orca</app></title>
+    <p>
+      The following commands can be used to get into <app>Orca</app>'s
+      Preferences dialogs, quit <app>Orca</app>, and bypass <app>Orca</app>
+      commands to avoid shortcut conflicts within the application being accessed.
+    </p>
+    <list>
+      <item>
+        <p>Orcas <link xref="preferences">Einstellungen</link>-Dialog: <keyseq><key>Orca-Zusatztaste</key><key>Leertaste</key></keyseq>.</p>
+      </item>
+      <item>
+        <p>Orcas Einstellungen-Dialog für die fokussierte Anwendung: <keyseq><key>Strg</key><key>Orca-Zusatztaste</key><key>Leertaste</key></keyseq>.</p>
+      </item>
+      <item>
+        <p><app>Orca</app> beenden: <keyseq><key>Orca-Zusatztaste</key><key>Q</key></keyseq></p>
+      </item>
+      <item>
+        <p>
+          Pass the next command on to the current application:
+          <keyseq><key>Orca Modifier</key><key>BackSpace</key></keyseq>
+        </p>
+      </item>
+    </list>
+  </section>
+  <section id="learning">
+    <title>Befehle zum Erlernen der Bedienung von <app>Orca</app></title>
+    <p>
+      Orca has two modes for learning more about <app>Orca</app>'s commands:
+      Learn Mode and List Shortcuts Mode. In Learn Mode, <app>Orca</app> will
+      announce each keystroke you pressed along with any associated
+      <app>Orca</app> command that keystroke is bound to. List Shortcuts Mode
+      provides you with a list of all the <app>Orca</app> commands you can use.
+    </p>
+    <list>
+      <item>
+        <p>Starten Sie den Lernmodus: <keyseq><key>Orca-Zusatztaste</key><key>H</key></keyseq></p>
+      </item>
+      <item>
+        <p>
+          Enter list shortcuts mode:
+         <keyseq><key>Orca Modifier</key><key>H</key></keyseq> (double-clicked)
+        </p>
+      </item>
+      <item>
+        <p>Beenden Sie jeden Modus: <keyseq><key>Orca-Zusatztaste</key><key>Esc</key></keyseq></p>
+      </item>
+    </list>
+  </section>
+</page>

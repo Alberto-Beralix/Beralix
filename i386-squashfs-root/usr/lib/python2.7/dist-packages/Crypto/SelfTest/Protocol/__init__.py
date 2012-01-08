@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/Crypto/SelfTest/Protocol/__init__.py

@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+bansheedir=${libdir}/banshee
+
+Name: Banshee NowPlaying
+Description: Now Playing extension source for Banshee
+Version: 2.2.0
+Libs: -r:${bansheedir}/Extensions/Banshee.NowPlaying.dll
+

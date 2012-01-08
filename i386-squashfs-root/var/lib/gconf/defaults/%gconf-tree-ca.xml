@@ -1,0 +1,1089 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema>
+							<longdesc>Tipus de lletra personalitzat per al quadre d&apos;idiomes</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="Empra un tipus de lletra personalitzat">
+							<longdesc>Empra el tipus de lletra personalitzat per al quadre d&apos;idiomes</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema>
+							<longdesc>Mostra el nom del mètode d&apos;entrada a la barra d&apos;idioma</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="Utilitza la disposició de teclat del sistema">
+							<longdesc>Utilitza la disposició de teclat del sistema (XKB)</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="Inhabilita la creació de connexions Wi-Fi">
+						<longdesc>Establiu-ho a «TRUE» (cert) per inhabilitar la creació de xarxes ad hoc en utilitzar la miniaplicació.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="Segell">
+						<longdesc>S&apos;utilitza per determinar si cal migrar els paràmetres a una versió nova.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="No mostris les notificacions de xarxes disponibles">
+						<longdesc>Establiu-ho a «TRUE» (cert) per inhabilitar les notificacions quan hi hagi disponibles xarxes sense fil.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="Inhabilita les notificacions de desconnexió">
+						<longdesc>Establiu-ho a «TRUE» (cert) per inhabilitar les notificacions en desconnectar-se d&apos;una xarxa.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="Inhabilita les notificacions de connexió">
+						<longdesc>Establiu-ho a «TRUE» (cert) per inhabilitar les notificacions en connectar-se a una xarxa.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="fade">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="fullscreen_visual_bell">
+									<local_schema short_desc="Campana visual a pantalla completa">
+										<longdesc>Efecte d&apos;esvaïment a pantalla completa amb avís sonor del sistema</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="visual_bell">
+									<local_schema short_desc="Campana visual">
+										<longdesc>Efecte d&apos;esvaïment amb avís sonor del sistema</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_speed">
+									<local_schema short_desc="Velocitat d&apos;esvaïment">
+										<longdesc>Window fade speed (0.1 - 25.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="wobbly">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="maximize_effect">
+									<local_schema short_desc="Efecte de maximitzar">
+										<longdesc>Efecte de tremolor en maximitzar i desmaximitzar finestres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_effect">
+									<local_schema short_desc="Passa el focus a l&apos;efecte">
+										<longdesc>Passa el focus a l&apos;efecte de finestra (0 = Cap, 1 = Estremeix)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_effect">
+									<local_schema short_desc="Assigna l&apos;efecte">
+										<longdesc>Assigna l&apos;efecte de la finestra (0 = Cap, 1 = Estremeix)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="min_grid_size">
+									<local_schema short_desc="Mida mínima de la graella">
+										<longdesc>Mida mínima de la graella del vèrtex (4 - 128)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grid_resolution">
+									<local_schema short_desc="Resolució de la graella">
+										<longdesc>Resolució de la graella del vèrtex (1 - 64)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spring_k">
+									<local_schema short_desc="Constant elàstica">
+										<longdesc>Constant elàstica (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="friction">
+									<local_schema short_desc="Fricció">
+										<longdesc>Fricció d&apos;elasticitat (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shiver">
+									<local_schema short_desc="Estremeix">
+										<longdesc>Fes estremir la finestra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_inverted">
+									<local_schema short_desc="Ajustament invertit">
+										<longdesc>Ajustament de finestres invertit</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_key">
+									<local_schema short_desc="Ajusta les finestres">
+										<longdesc>Commuta l&apos;ajustament de finestres</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="scale">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_output_key">
+									<local_schema short_desc="Inicia el seleccionador per a les finestres de la sortida actual">
+										<longdesc>Dissenya i inicia la transformació de les finestres de la sortida actual</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_button">
+									<local_schema short_desc="Inicia el seleccionador per a les finestres de la sortida actual">
+										<longdesc>Dissenya i inicia la transformació de les finestres de la sortida actual</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_edge">
+									<local_schema short_desc="Inicia el seleccionador per a les finestres de la sortida actual">
+										<longdesc>Dissenya i inicia la transformació de les finestres de la sortida actual</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_key">
+									<local_schema short_desc="Inicia el seleccionador per a un grup de finestres">
+										<longdesc>Dissenya i inicia la transformació del grup de finestres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_button">
+									<local_schema short_desc="Inicia el seleccionador per a un grup de finestres">
+										<longdesc>Dissenya i inicia la transformació del grup de finestres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_edge">
+									<local_schema short_desc="Inicia el seleccionador per a un grup de finestres">
+										<longdesc>Dissenya i inicia la transformació del grup de finestres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_key">
+									<local_schema short_desc="Inicia el seleccionador per a totes les finestres">
+										<longdesc>Dissenya i inicia la transformació de totes les finestres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_button">
+									<local_schema short_desc="Inicia el seleccionador per a totes les finestres">
+										<longdesc>Dissenya i inicia la transformació de totes les finestres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_edge">
+									<local_schema short_desc="Inicia el seleccionador per a totes les finestres">
+										<longdesc>Dissenya i inicia la transformació de totes les finestres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Inicia el seleccionador de finestres">
+										<longdesc>Dissenya i inicia la transformació de les finestres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Inicia el seleccionador de finestres">
+										<longdesc>Dissenya i inicia la transformació de les finestres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_edge">
+									<local_schema short_desc="Inicia el seleccionador de finestres">
+										<longdesc>Dissenya i inicia la transformació de les finestres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlay_icon">
+									<local_schema short_desc="Superposa la icona">
+										<longdesc>Superposa una icona a les finestres un cop se n&apos;ha canviat la mida (0 = Cap, 1 = Distintiu, 2 = Gran)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Opacitat">
+										<longdesc>Quantitat d&apos;opacitat en percentatge (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="darken_back">
+									<local_schema short_desc="Enfosqueix el fons">
+										<longdesc>Enfosqueix el fons en canviar la mida de les finestres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Etapa">
+										<longdesc>Canvia la mida de l&apos;etapa (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Velocitat">
+										<longdesc>Canvia la velocitat (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spacing">
+									<local_schema short_desc="Espaiat">
+										<longdesc>Espai entre finestres (0 - 250)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="number_of_desktops">
+									<local_schema short_desc="Nombre d&apos;escriptoris">
+										<longdesc>Number of virtual desktops (1 - 36)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="vsize">
+									<local_schema short_desc="Mida virtual vertical">
+										<longdesc>Screen size multiplier for vertical virtual size (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hsize">
+									<local_schema short_desc="Mida virtual horitzontal">
+										<longdesc>Screen size multiplier for horizontal virtual size (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_shaded_key">
+									<local_schema short_desc="Commuta la finestra ombrejada">
+										<longdesc>Commuta la finestra activa ombrejada</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_vertically_key">
+									<local_schema short_desc="Commuta la finestra maximitzada verticalment">
+										<longdesc>Commuta la finestra activa maximitzada verticalment</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_horizontally_key">
+									<local_schema short_desc="Commuta la finestra maximitzada horitzontalment">
+										<longdesc>Commuta la finestra activa maximitzada horitzontalment</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_button">
+									<local_schema short_desc="Commuta la finestra maximitzada">
+										<longdesc>Commuta la finestra activa maximitzada</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_key">
+									<local_schema short_desc="Commuta la finestra maximitzada">
+										<longdesc>Commuta la finestra activa maximitzada</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_button">
+									<local_schema short_desc="Menú de la finestra">
+										<longdesc>Window menu button binding</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_key">
+									<local_schema short_desc="Menú de la finestra">
+										<longdesc>Window menu key binding</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_vertically_key">
+									<local_schema short_desc="Maximitza la finestra verticalment">
+										<longdesc>Maximitza la finestra activa verticalment</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_horizontally_key">
+									<local_schema short_desc="Maximitza la finestra horitzontalment">
+										<longdesc>Maximitza la finestra activa horitzontalment</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unmaximize_window_key">
+									<local_schema short_desc="Desmaximitza la finestra">
+										<longdesc>Desmaximitza la finestra activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="Maximitza la finestra">
+										<longdesc>Maximitza la finestra activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_button">
+									<local_schema short_desc="Minimitza la finestra">
+										<longdesc>Minimitza la finestra activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_key">
+									<local_schema short_desc="Minimitza la finestra">
+										<longdesc>Minimitza la finestra activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_button">
+									<local_schema short_desc="Abaixa la finestra">
+										<longdesc>Abaixa la finestra per sota de les altres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_key">
+									<local_schema short_desc="Abaixa la finestra">
+										<longdesc>Abaixa la finestra per sota de les altres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_button">
+									<local_schema short_desc="Eleva la finestra">
+										<longdesc>Eleva la finestra per damunt de les altres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_key">
+									<local_schema short_desc="Eleva la finestra">
+										<longdesc>Eleva la finestra per damunt de les altres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_button">
+									<local_schema short_desc="Tanca la finestra">
+										<longdesc>Tanca la finestra activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_key">
+									<local_schema short_desc="Tanca la finestra">
+										<longdesc>Tanca la finestra activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise_delay">
+									<local_schema short_desc="Retard de l&apos;elevació automàtica">
+										<longdesc>Interval before raising selected windows (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise">
+									<local_schema short_desc="Elevació automàtica">
+										<longdesc>Eleva les finestres seleccionades un cop transcorregut l&apos;interval</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_click">
+									<local_schema short_desc="Eleva en fer clic">
+										<longdesc>Eleva les finestres en fer clic</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="Feu clic per a passar el focus">
+										<longdesc>En fer clic a la finestra, aquesta rep el focus d&apos;entrada</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outputs">
+									<local_schema short_desc="Sortides">
+										<longdesc>Llista de cadenes que descriuen els dispositius de sortida</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_outputs">
+									<local_schema short_desc="Detecta les sortides">
+										<longdesc>Detecció automàtica dels dispositius de sortida</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="default_icon">
+									<local_schema short_desc="Icona per defecte">
+										<longdesc>Imatge d&apos;icona de finestra per defecte</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hide_skip_taskbar_windows">
+									<local_schema short_desc="Oculta les finestres ignorades de la barra de tasques">
+										<longdesc>Oculta les finestres que no es troben a la barra de tasques en accedir al mode d&apos;escriptori de visualització</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ignore_hints_when_maximized">
+									<local_schema short_desc="Ignora els suggeriments quan està maximitzada">
+										<longdesc>Ignora els suggeriments d&apos;increment de mida i aspecte quan la finestra es troba maximitzada</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="audible_bell">
+									<local_schema short_desc="Avís sonor">
+										<longdesc>Avís sonor del sistema</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_plugins">
+									<local_schema short_desc="Connectors actius">
+										<longdesc>Llista dels connectors actius actualment</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="opengl">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="sync_to_vblank">
+									<local_schema short_desc="Sincronitza amb enfosquiment vertical">
+										<longdesc>Només actualitza la pantalla durant els períodes d&apos;enfosquiment vertical</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lighting">
+									<local_schema short_desc="Il·luminació">
+										<longdesc>Utilitza llum de difusió en transformar la pantalla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="texture_filter">
+									<local_schema short_desc="Filtre de textura">
+										<longdesc>Texture filtering (0 = Ràpid, 1 = Bo, 2 = Millor)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="gnomecompat">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command_window_screenshot_key">
+									<local_schema short_desc="Fes una captura de pantalla d&apos;una finestra">
+										<longdesc>Fes una captura de pantalla d&apos;una finestra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_window_screenshot">
+									<local_schema short_desc="Línia d&apos;ordres de captura de pantalla de finestra">
+										<longdesc>Línia d&apos;ordres de captura de pantalla de finestra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_screenshot_key">
+									<local_schema short_desc="Fes una captura de pantalla">
+										<longdesc>Fes una captura de pantalla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_screenshot">
+									<local_schema short_desc="Línia d&apos;ordres de captura de pantalla">
+										<longdesc>Línia d&apos;ordres de captura de pantalla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_key">
+									<local_schema short_desc="Diàleg d&apos;execució">
+										<longdesc>Mostra el diàleg d&apos;execució de l&apos;aplicació</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="main_menu_key">
+									<local_schema short_desc="Mostra el menú principal">
+										<longdesc>Mostra el menú principal</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="screenshot">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_button">
+									<local_schema short_desc="Inicia">
+										<longdesc>Initiate rectangle screenshot</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="unredirect_fullscreen_windows">
+									<local_schema short_desc="No redirigeixis les finestres a pantalla completa">
+										<longdesc>Permet que la representació de finestres a pantalla completa no es redirigeixi cap a mapes de píxels fora de la pantalla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="refresh_rate">
+									<local_schema short_desc="Freqüència d&apos;actualització">
+										<longdesc>The rate at which the screen is redrawn (times/second) (1 - 200)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_refresh_rate">
+									<local_schema short_desc="Detecta la freqüència d&apos;actualització">
+										<longdesc>Detecció automàtica de la freqüència d&apos;actualització</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="slow_animations_key">
+									<local_schema short_desc="Animacions lentes">
+										<longdesc>Commuta l&apos;ús d&apos;animacions lentes</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="annotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stroke_width">
+									<local_schema short_desc="Ample d´accident">
+										<longdesc>Ample d´accident per anotacions (1.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="stroke_color">
+									<local_schema short_desc="Anotar color de accident">
+										<longdesc>Color d´accident per anotacions</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_button">
+									<local_schema short_desc="Borra">
+										<longdesc>Borra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_key">
+									<local_schema short_desc="Borra">
+										<longdesc>Borra</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="decor">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Allow mipmaps to be generated for decoration textures</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command">
+									<local_schema short_desc="Ordre">
+										<longdesc>Línia d&apos;ordres del decorador que s&apos;executa si no s&apos;està executant cap decorador</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_y_offset">
+									<local_schema short_desc="Desplaçament en Y de l&apos;ombra">
+										<longdesc>Desplaçament en Y de l&apos;ombra descendent (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_x_offset">
+									<local_schema short_desc="Desplaçament en X de l&apos;ombra">
+										<longdesc>Desplaçament en X de l&apos;ombra descendent (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_opacity">
+									<local_schema short_desc="Opacitat de l&apos;ombra">
+										<longdesc>Opacitat de l&apos;ombra descendent (0.01 - 6.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_radius">
+									<local_schema short_desc="Radi de l&apos;ombra">
+										<longdesc>Radi de l&apos;ombra descendent (0.1 - 18.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="zoom">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="timestep">
+									<local_schema short_desc="Etapa">
+										<longdesc>Zoom Timestep (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Velocitat">
+										<longdesc>Zoom Speed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Inicia">
+										<longdesc>Zoom In</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="resize">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_key">
+									<local_schema short_desc="Inicia el canvi de mida de la finestra">
+										<longdesc>Comença el canvi de mida de la finestra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Inicia el canvi de mida de la finestra">
+										<longdesc>Comença el canvi de mida de la finestra</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="cube">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="skydome_gradient_end_color">
+									<local_schema short_desc="Color final del degradat de la cúpula">
+										<longdesc>Color que s&apos;utilitzarà com a color inferior del degradat alternatiu de la cúpula</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_start_color">
+									<local_schema short_desc="Color inicial del degradat de la cúpula">
+										<longdesc>Color que s&apos;utilitzarà com color superior del degradat alternatiu de la cúpula</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_animated">
+									<local_schema short_desc="Cúpula animada">
+										<longdesc>Representació animada de la cúpula en girar el cub</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_image">
+									<local_schema short_desc="Imatge de la cúpula">
+										<longdesc>Imatge que s&apos;utilitzarà com a textura per a la cúpula</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome">
+									<local_schema short_desc="Cúpula">
+										<longdesc>Renderitza la cúpula</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Etapa">
+										<longdesc>Etapa de plegament (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Velocitat">
+										<longdesc>Velocitat de plegament (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Acceleració">
+										<longdesc>Acceleració de plegament (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="in">
+									<local_schema short_desc="Interior del cub">
+										<longdesc>Interior del cub</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Genera mipmaps sempre que sigui possible per a un canvi de mida de millor qualitat</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unfold_key">
+									<local_schema short_desc="Desplega">
+										<longdesc>Desplega el cub</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="water">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="title_wave">
+									<local_schema short_desc="Títol en onada">
+										<longdesc>Efecte d&apos;onada del títol de la finestra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rain_delay">
+									<local_schema short_desc="Retard de pluja">
+										<longdesc>Retard (en ms) entre cada gota de pluja (1 - 3600000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="offset_scale">
+									<local_schema short_desc="Escala de desplaçament">
+										<longdesc>Escala de desplaçament d&apos;aigua (0 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_wiper_key">
+									<local_schema short_desc="Commuta l&apos;eixugaparabrises">
+										<longdesc>Commuta l&apos;efecte de l&apos;eixugaparabrises</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_rain_key">
+									<local_schema short_desc="Commuta la pluja">
+										<longdesc>Commuta l&apos;efecte de pluja</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Inicia">
+										<longdesc>Habilita els efectes d&apos;aigua del punter</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="rotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="rotate_flip_right_edge">
+									<local_schema short_desc="Gira i inverteix cap a la dreta">
+										<longdesc>Inverteix cap a l&apos;àrea de visualització dreta i deforma el punter</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_left_edge">
+									<local_schema short_desc="Gira i inverteix cap a l&apos;esquerra">
+										<longdesc>Inverteix cap a l&apos;àrea de visualització esquerra i deforma el punter</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_key">
+									<local_schema short_desc="Gira cap a">
+										<longdesc>Gira cap a l&apos;àrea de visualització</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_button">
+									<local_schema short_desc="Gira cap a la dreta amb la finestra">
+										<longdesc>Rotate right and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_key">
+									<local_schema short_desc="Gira cap a la dreta amb la finestra">
+										<longdesc>Rotate right and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_button">
+									<local_schema short_desc="Gira cap a l&apos;esquerra amb la finestra">
+										<longdesc>Rotate left and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_key">
+									<local_schema short_desc="Gira cap a l&apos;esquerra amb la finestra">
+										<longdesc>Rotate left and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_button">
+									<local_schema short_desc="Gira cap a la dreta">
+										<longdesc>Gira cap a la dreta</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_key">
+									<local_schema short_desc="Gira cap a la dreta">
+										<longdesc>Gira cap a la dreta</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_button">
+									<local_schema short_desc="Gira cap a l&apos;esquerra">
+										<longdesc>Gira cap a l&apos;esquerra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_key">
+									<local_schema short_desc="Gira cap a l&apos;esquerra">
+										<longdesc>Gira cap a l&apos;esquerra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Inicia">
+										<longdesc>Inicia el gir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Etapa">
+										<longdesc>Etapa del gir (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Velocitat">
+										<longdesc>Velocitat del gir (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Acceleració">
+										<longdesc>Acceleració de gir (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sensitivity">
+									<local_schema short_desc="Sensibilitat del punter">
+										<longdesc>Sensibilitat del moviment del punter (0.01 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="flip_time">
+									<local_schema short_desc="Temps d&apos;inversió">
+										<longdesc>Temps d&apos;espera abans d&apos;invertir l&apos;àrea de visualització (0 - 1000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Zoom">
+										<longdesc>Rotation Zoom (0.0 - 2.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_top">
+									<local_schema short_desc="Desplaça a la cara superior">
+										<longdesc>Desplaça el gir del cub a la cara superior</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="invert_y">
+									<local_schema short_desc="Punter inverteix Y">
+										<longdesc>Inverteix l&apos;eix Y per al moviment del punter</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_dnd">
+									<local_schema short_desc="DnD d&apos;inversió de vora">
+										<longdesc>Inverteix cap a la propera àrea de visualització en arrossegar l&apos;objecte cap a la vora de la pantalla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_window">
+									<local_schema short_desc="Moviment d&apos;inversió de vora">
+										<longdesc>Inverteix cap a la propera àrea de visualització en moure la finestra cap a la vora de la pantalla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_pointer">
+									<local_schema short_desc="Punter d&apos;inversió de vora">
+										<longdesc>Inverteix cap a la propera àrea de visualització en moure el punter cap a la vora de la pantalla</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="blur">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="pulse">
+									<local_schema short_desc="Pulsa">
+										<longdesc>Pulse effect</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="switcher">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="minimized">
+									<local_schema short_desc="Minimitzades">
+										<longdesc>Mostra les finestres minimitzades</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="icon">
+									<local_schema short_desc="Icona">
+										<longdesc>Mostra la icona al costat de la miniatura</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Zoom">
+										<longdesc>Distància a la qual s&apos;haurà d&apos;allunyar el zoom de l&apos;escriptori mentre es canvia de finestra (0 - 5)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="bring_to_front">
+									<local_schema short_desc="Porta endavant">
+										<longdesc>Porta la finestra seleccionada endavant</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Opacitat">
+										<longdesc>Quantitat d&apos;opacitat en percentatge (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness">
+									<local_schema short_desc="Brillantor">
+										<longdesc>Quantitat de brillantor en percentatge (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="Saturació">
+										<longdesc>Quantitat de saturació en percentatge (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Genera mipmaps sempre que sigui possible per a un canvi de mida de millor qualitat</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Etapa">
+										<longdesc>Etapa del canviador (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Velocitat">
+										<longdesc>Velocitat del canviador (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_key">
+									<local_schema short_desc="Finestra anterior">
+										<longdesc>Fes sortir el canviador si no està visible i selecciona la finestra anterior</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_button">
+									<local_schema short_desc="Finestra anterior">
+										<longdesc>Fes sortir el canviador si no està visible i selecciona la finestra anterior</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_key">
+									<local_schema short_desc="Finestra següent">
+										<longdesc>Fa sortir el canviador si no està visible i selecciona la finestra següent</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_button">
+									<local_schema short_desc="Finestra següent">
+										<longdesc>Fa sortir el canviador si no està visible i selecciona la finestra següent</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="move">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="snapoff_maximized">
+									<local_schema short_desc="Separa les finestres maximitzades">
+										<longdesc>Separa i desmaximitza les finestres maximitzades en arrossegar</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="constrain_y">
+									<local_schema short_desc="Restringeix Y">
+										<longdesc>Restringeix la coordenada Y a l&apos;àrea de l&apos;espai de treball</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Opacitat">
+										<longdesc>Nivell d&apos;opacitat de les finestres en moviment (1 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Inicia el moviment de la finestra">
+										<longdesc>Comença el moviment de la finestra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Inicia el moviment de la finestra">
+										<longdesc>Comença el moviment de la finestra</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="place">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="workarounds">
+									<local_schema short_desc="Solucions alternatives">
+										<longdesc>Solucions alternatives de disposició de finestres</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="clone">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_button">
+									<local_schema short_desc="Inicia">
+										<longdesc>Initiate clone selection</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

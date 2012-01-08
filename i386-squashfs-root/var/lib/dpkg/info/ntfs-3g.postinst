@@ -1,0 +1,54 @@
+#!/bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+case "${1}" in
+	configure)
+		db_get ntfs-3g/setuid-root
+		_SETUID_ROOT="${RET}" # boolean
+
+		db_stop
+
+		case "${_SETUID_ROOT}" in
+			true)
+				_MODE="4755"
+				;;
+
+			false)
+				_MODE="0755"
+				;;
+		esac
+
+		if [ -x /usr/sbin/dpkg-statoverride ] && \
+		   ! /usr/sbin/dpkg-statoverride --list /bin/ntfs-3g >/dev/null
+		then
+			chown root:root /bin/ntfs-3g
+			chmod ${_MODE} /bin/ntfs-3g
+		fi
+
+		if [ -x /usr/sbin/update-initramfs ]
+		then
+			update-initramfs -u
+		fi
+		;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+
+		;;
+
+	*)
+		echo "postinst called with unknown argument \`${1}'" >&2
+		exit 1
+		;;
+esac
+
+# Automatically added by dh_makeshlibs
+if [ "$1" = "configure" ]; then
+	ldconfig
+fi
+# End automatically added section
+
+
+exit 0

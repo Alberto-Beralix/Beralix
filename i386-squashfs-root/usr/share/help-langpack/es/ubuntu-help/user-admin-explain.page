@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="tip" id="user-admin-explain" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="user-accounts#privileges"/>
+    
+    <desc>Necesita privilegios de administrador para cambiar partes importantes de su sistema.</desc>
+    
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Cómo funcionan los privilegios de administrador?</title>
+
+<p>De la misma manera que tiene los archivos que <em>usted</em> crea, su equipo también tiene un número de archivos que necesita el sistema para trabajar adecuadamente. Si estos importantes <em>archivos del sistema</em> se cambian incorrectamente, esto puede causar varios tipos de problemas y es por esto que están protegidos de los cambios de manera predeterminada. Ciertas aplicaciones también modifican partes importantes del sistema y por eso también están protegidas</p>
+
+<p>La manera en la que están protegidos es permitiendo solo a los usuarios con <em>privilegios administrativos</em> cambiar los archivos o usar las aplicaciones, En el uso diario, no necesitará cambiar ningún archivo de sistema o usar estas aplicaciones, así que de manera predeterminada no tendrá privilegios administrativos.</p>
+
+<p>A veces es necesario utilizar estas aplicaciones, por lo que puede obtener temporalmente privilegios de administrador para poder realizar los cambios. Si una aplicación necesita privilegios de administrador, se le pedirá su contraseña. Por ejemplo, si desea instalar un nuevo software, el instalador de software (gestor de paquetes) le pedirá su contraseña de administrador para que pueda añadir la nueva aplicación al sistema. Una vez que haya terminado, sus privilegios de administrador se le quitarán de nuevo.</p>
+
+<p>Los privilegios de administración se asocian a su cuenta de usuario. Algunos usuarios pueden tener privilegios de administración y otros no. Sin estos privilegios, no podrá instalar software, por ejemplo. Algunas cuentas de usuario (por ejemplo, la cuenta «root») tienen privilegios de administración permanentes. No es recomendable utilizar los privilegios de administración en todo momento, ya que podría cambiar por accidente un archivo importante y estropear el funcionamiento del sistema.</p>
+
+<p>En resumen, los privilegios de administrador le permiten cambiar partes importantes de su sistema cuando lo necesite, pero le impiden hacerlo accidentalmente.</p>
+
+<note>
+ <title>¿Qué significa «superusuario»?</title>
+ <p>Un usuario con privilegios de administrador a veces se denomina <em>superusuario</em>. Esto se debe simplemente a que el usuario tiene más privilegios que los usuarios normales. Puede ver a la gente discutir sobre <cmd>su</cmd> y <cmd>sudo</cmd>, que son programas para darle temporalmente privilegios de «superusuario» (administrador).</p>
+</note>
+
+<section id="advantages">
+ <title>¿Por qué son útiles los privilegios de administrador?</title>
+ <p>Exigir a los usuarios tener privilegios de administrador antes de realizar cambios importantes del sistema es útil, porque ayuda a evitar que su sistema se rompa, de manera intencionada o no.</p>
+ <p>Si tuviera privilegios de administrador todo el tiempo, podría cambiar accidentalmente un archivo importante, o ejecutar una aplicación que cambia algo importante por error. Tener privilegios de administrador de manera temporal, cuando los necesita,  reduce el riesgo de que sucedan estos errores.</p>
+ <p>Solo se debe permitir a algunos usuarios de confianza tener privilegios de administrador. Esto impide que otros usuarios puedan jugar con el equipo y hacer cosas como la desinstalación de aplicaciones que usted necesita, la instalación de aplicaciones que no desea, o cambiar los archivos importantes. Esto es útil desde el punto de vista de la seguridad.</p>
+</section>
+
+</page>

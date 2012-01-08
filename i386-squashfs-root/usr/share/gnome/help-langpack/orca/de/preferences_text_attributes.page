@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_text_attributes" xml:lang="de">
+  <info>
+    <link type="guide" xref="preferences#orca"/>
+    <link type="next" xref="preferences_gecko"/>
+    <link type="seealso" xref="howto_text_attributes"/>
+    <title type="sort">8. Textattribute</title>
+    <title type="link">Textattribute</title>
+    <desc>Festlegen, welche Formatierungen vorgelesen werden</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+  <title>Einstellungen für Textattribute</title>
+  <p>Der Begriff »Textattribute« bezieht sich auf alle Formatierungen von Schrift, Stil, Anordnung und anderen im Bezug auf einen Buchstaben oder eine Gruppe von Buchstaben. Die Seite <gui>Textattribute</gui> von <app>Orca</app> ermöglicht es einzustellen, welche Textattribute <app>Orca</app> vorlesen soll, in welcher Reihenfolge vorgelesen werden soll, und welche <app>Orca</app> als Braille ausgeben soll.</p>
+  <section id="table">
+    <title>Die Tabelle der Textattribute</title>
+    <media type="image" mime="image/png" src="figures/preferences_text_attributes_table.png"/>
+    <p>In der Tabelle der Textattribute legen Sie fest, welche Attribute unter welchen Bedingungen vorgelesen werden sollen oder nicht. Jede Zeile besteht aus vier Spalten.</p>
+    <list>
+      <item>
+        <p><gui>Attributname</gui>: Der Name des Textattributs.</p>
+      </item>
+      <item>
+        <p><gui>Vorlesen</gui>: Wählen Sie dieses Ankreuzfeld aus, wenn <app>Orca</app> dieses Attribut bei Drücken von <keyseq><key>Orca</key><key>F</key></keyseq> vorlesen soll.</p>
+      </item>
+      <item>
+        <p><gui>Markierung in Braille</gui>: Wählen Sie dieses Ankreuzfeld aus, wenn <app>Orca</app> dieses Attribut in der Braille-Anzeige unterstreichen soll.</p>
+      </item>
+      <item>
+        <p><gui>Darstellen außer</gui>: Dieses editierbare Feld ermöglicht es Ihnen anzugeben, wann ein aktiviertes Attribut zu ignorieren ist.</p>
+        <p>Zum Beispiel hat das Textattribut »Unterstreichen» die Voreinstellung »keiner«. Demnach informiert <app>Orca</app> über unterstrichenen Text, wenn dieser tatsächlich unterstrichen ist. Wenn das Attribut stets vorgelesen werden soll, unabhängig davon, ob der Text unterstrichen ist, so muss die Spalte <gui>Darstellen außer</gui> für »Unterstreichen« abgewählt sein. Zusätzlich sollten Sie sicher sein, dass die Spalte <gui>Vorlesen</gui> für »Unterstreichen« ausgewählt ist.</p>
+      </item>
+    </list>
+  </section>
+  <section id="reset">
+     <title>Änderungen rückgängig machen</title>
+     <p>Unter der Liste der Textattribute gibt es einen Zurücksetzen-Knopf (<keyseq><key>Alt</key><key>R</key></keyseq>), welcher die Werte in der Tabelle auf die ursprünglichen zurücksetzt, als der Dialog zuerst angezeigt wurde.</p>
+  </section>
+  <section id="rearranging">
+    <title>So passen Sie die Darstellungsreihenfolge an</title>
+    <figure>
+      <title>Einstellungen zum Anpassen der Darstellungsreihenfolge</title>
+      <desc>Wenn Sie anfangs die Seite mit den Textattributen anzeigen, werden alle Ihre aktivierten Attribute oben in der Tabelle in der Reihenfolge dargestellt, wie sie vorgelesen werden. Mit vier Knöpfen kann die Reihenfolge der Präsentation angepasst werden.</desc>
+      <media type="image" mime="image/png" src="figures/preferences_text_attributes_rearranging.png"/>
+    </figure>
+    <list>
+      <item>
+        <p><gui>An den Anfang verschieben</gui> (<keyseq><key>Alt</key><key>T</key></keyseq>): Das ausgewählte Attribut an den Anfang der Liste verschieben.</p>
+      </item>
+      <item>
+        <p><gui>Nach oben verschieben</gui> (<keyseq><key>Alt</key><key>T</key></keyseq>): Das ausgewählte Attribut eine Zeile nach oben verschieben.</p>
+      </item>
+      <item>
+        <p><gui>Nach unten verschieben</gui> (<keyseq><key>Alt</key><key>T</key></keyseq>): Das ausgewählte Attribut eine Zeile nach unten verschieben.</p>
+      </item>
+      <item>
+        <p><gui>Ans Ende verschieben</gui> (<keyseq><key>Alt</key><key>T</key></keyseq>): Das ausgewählte Attribut ans Ende der Liste verschieben.</p>
+      </item>
+    </list>
+  </section>
+  <section id="braille_indicator">
+    <title>Braille-Anzeige</title>
+    <figure>
+      <title>Optionen zur Konfiguration der Unterstreichung von Formatierungen im Braille</title>
+      <desc>
+        Beneath the push buttons is the <gui>Braille Indicator</gui> group
+        of radio buttons. Here you can select the cell or cells to be used
+        to indicate text which has at least one of the specified attributes.
+      </desc>
+      <media type="image" mime="image/png" src="figures/preferences_text_attributes_braille.png"/>
+    </figure>
+    <list>
+      <item>
+        <p><gui>Keine</gui>: Keine Textattribute im Braille unterstreichen (Voreinstellung)</p>
+      </item>
+      <item>
+        <p><gui>Punkt 7</gui>: Textattribute nur mit Punkt 7 unterstreichen</p>
+      </item>
+      <item>
+        <p><gui>Punkt 8</gui>: Textattribute nur mit Punkt 8 unterstreichen</p>
+      </item>
+      <item>
+        <p><gui>Punkte 7 und 8</gui>: Textattribute nur mit jeweils Punkt 7 und 8 unterstreichen</p>
+      </item>
+    </list>
+  </section>
+</page>

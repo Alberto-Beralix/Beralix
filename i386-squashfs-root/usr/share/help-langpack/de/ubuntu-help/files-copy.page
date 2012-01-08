@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-copy" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <desc>Objekte in einen neuen Ordner kopieren oder verschieben.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Cristopher Thomas</name>
+      <email>crisnoh@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Dateien und Ordner kopieren oder verschieben</title>
+
+<p>Dateien oder Ordner können kopiert oder an einen neuen Ort verschoben werden, indem Sie sie mit der Maus ziehen und ablegen, die Kopieren- und Einfügen-Befehle verwenden oder Tastenkombinationen benutzen.</p>
+<p>
+As an example, copying files can be useful when creating a folder which contains files to email to a friend or coworker, or when <link xref="files#backup">backing up</link> individual files to an external disk.
+</p>
+
+<steps>
+<title>Ziehen von Dateien zum Kopieren oder Verschieben</title>
+<item><p><link xref="files-browse">Open the file manager</link> to the folder containing the item you want to copy.</p></item>
+<item><p>Click <guiseq><gui>File</gui><gui>New Window</gui></guiseq> (or press <keyseq><key>Ctrl</key><key>N</key></keyseq>) to open a second window. Navigate to the folder where you want to move or copy the item in the new window.</p></item>
+<item><p>Click and drag the item from one window to another. By default, dragging an item will <em>move it</em> if the destination is on the same device (i.e. if both folders are on the same hard disk on your computer).</p>
+  <p>Dragging will <em>copy it</em> if the destination is on a difference device, such as a USB storage device, however. You can override this:</p>
+<list style="compact">
+<item><p>To force the file to be copied, hold down the <key>Ctrl</key> key while dragging.</p></item>
+<item><p>To force the file to be moved, hold down the <key>Shift</key> key while dragging.</p></item>
+</list></item>
+</steps>
+
+<steps>
+<title>Kopieren und Einfügen von Dateien</title>
+<item><p>Select the item you want to copy by clicking on it once.</p></item>
+<item><p>Klicken Sie auf <guiseq><gui>Bearbeiten</gui><gui>Kopieren</gui></guiseq> oder drücken Sie <keyseq><key>Strg</key><key>C</key></keyseq>.</p></item>
+<item><p>Navigate to another folder, where you want to put the copy of the item.</p></item>
+<item><p>Click <guiseq><gui>Edit</gui><gui>Paste</gui></guiseq> to finish copying the item, or press <keyseq><key>Ctrl</key><key>V</key></keyseq>. There will now be a copy of the file in the original folder and the other folder.</p></item>
+</steps>
+
+<steps>
+<title>Ausschneiden und Einfügen von Dateien (um sie zu verschieben)</title>
+<item><p>Select the item you want to move by clicking on it once.</p></item>
+<item><p>Klicken Sie auf <guiseq><gui>Bearbeiten</gui><gui>Ausschneiden</gui></guiseq> oder drücken Sie <keyseq><key>Strg</key><key>X</key></keyseq>.</p></item>
+<item><p>Navigate to another folder, where you want to move the item.</p></item>
+<item><p>Click <guiseq><gui>Edit</gui><gui>Paste</gui></guiseq> to finish moving the item, or press <keyseq><key>Ctrl</key><key>V</key></keyseq>. The file will be taken out of its original folder and moved to the other folder.</p></item>
+</steps> 
+
+<note>
+ <title>Warum kann ich eine Datei nicht kopieren oder verschieben?</title>
+ <p>Sie können eine Datei nicht in einen Ordner kopieren oder verschieben, der <em>nur lesbar</em> ist. Manche Ordner sind nur lesbar, um Sie an einem Manipulieren seiner Inhalte zu hindern. Sie können ändern, dass dieser Ordner nur lesbar ist, indem Sie die <link xref="nautilus-file-properties-permissions">Zugriffsrechte ändern</link>.</p>
+</note>
+
+</page>

@@ -1,0 +1,1752 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="Slå av oppretting av WiFi">
+						<longdesc>Sett til TRUE for å slå av oppretting av ad-hoc nettverk når panelprogrammet brukes.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="Stempel">
+						<longdesc>Brukes til å bestemme om innstillingene skal migreres til en ny versjon.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="Slå av varsling om tilgjengelige nettverk">
+						<longdesc>Sett denne til TRUE for å slå av varsling når trådløse nettverk er tilgjengelige.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="Slå av varsling om frakobling">
+						<longdesc>Sett denne til TRUE for å slå av varsling ved frakobling fra et nettverk.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="Slå av varsling om tilkobling">
+						<longdesc>Sett denne til TRUE For å slå av varsling ved tilkobling til et nettverk.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="fade">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="fullscreen_visual_bell">
+									<local_schema short_desc="Visuell bjelle i fullskjerm">
+										<longdesc>Fullskjerms toningseffekt ved systempip</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="visual_bell">
+									<local_schema short_desc="Visuell bjelle">
+										<longdesc>Toningseffekt ved systempip</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Ton vinduer">
+										<longdesc>Vinduer som skal tones (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_time">
+									<local_schema short_desc="Uttoningstid">
+										<longdesc>Window fade time (in ms) in &quot;Constant time&quot; mode (1 - 5000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_speed">
+									<local_schema short_desc="Toningshastighet">
+										<longdesc>Window fade speed (0.1 - 25.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="wobbly">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="maximize_effect">
+									<local_schema short_desc="Maksimeringseffekt">
+										<longdesc>Ustødighetseffekt når vinduer maksimeres og avmaksimeres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="move_window_match">
+									<local_schema short_desc="Flytt vinduer">
+										<longdesc>Vinduer som skal være ustødige når de flyttes (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grab_window_match">
+									<local_schema short_desc="Grip vinduer">
+										<longdesc>Vinduer som skal være ustødige når de gripes (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_window_match">
+									<local_schema short_desc="Fokuser vinduer">
+										<longdesc>Vinduer som skal være ustødige når de fokuseres (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_window_match">
+									<local_schema short_desc="Kartlegg vinduer">
+										<longdesc>Vinduer som skal være ustødige når de kartlegges (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_effect">
+									<local_schema short_desc="Fokuseffekt">
+										<longdesc>Fokuseffekt for vindu (0 = Ingen, 1 = Skjelv)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_effect">
+									<local_schema short_desc="Kartleggingseffekt">
+										<longdesc>Kartleggingseffekt for vinduer (0 = Ingen, 1 = Skjelv)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="min_grid_size">
+									<local_schema short_desc="Minimumsstørrelse for rutenett">
+										<longdesc>Minimums størrelse for rutenett-vertex (4 - 128)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grid_resolution">
+									<local_schema short_desc="Oppløsning for rutenett">
+										<longdesc>Oppløsning for rutenett-vertex (1 - 64)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spring_k">
+									<local_schema short_desc="K for fjær">
+										<longdesc>Fjæringskonstant (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="friction">
+									<local_schema short_desc="Friksjon">
+										<longdesc>Fjæringsfriksjon (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shiver">
+									<local_schema short_desc="Skjelv">
+										<longdesc>La vindu skjelve</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_inverted">
+									<local_schema short_desc="Smekk omvendt">
+										<longdesc>Omvendt vindussmekking</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_key">
+									<local_schema short_desc="Smekk vinduer">
+										<longdesc>Skru av/på vindussmekking</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="scale">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="show_desktop">
+									<local_schema short_desc="Klikk skrivebord for å vise skrivebord">
+										<longdesc>Start Visskrivebord-modus når skrivebord klikkes mens skalering pågår</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_key">
+									<local_schema short_desc="Begynn vindusplukker for vinduer på denne skjermen">
+										<longdesc>Utform og start omdanning av vinduer på denne skjermen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_button">
+									<local_schema short_desc="Begynn vindusplukker for vinduer på denne skjermen">
+										<longdesc>Utform og start omdanning av vinduer på denne skjermen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_edge">
+									<local_schema short_desc="Begynn vindusplukker for vinduer på denne skjermen">
+										<longdesc>Utform og start omdanning av vinduer på denne skjermen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_key">
+									<local_schema short_desc="Begynn vindusplukker for vindusgruppen">
+										<longdesc>Utform og start omdanning av vindusgruppe</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_button">
+									<local_schema short_desc="Begynn vindusplukker for vindusgruppen">
+										<longdesc>Utform og start omdanning av vindusgruppe</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_edge">
+									<local_schema short_desc="Begynn vindusplukker for vindusgruppen">
+										<longdesc>Utform og start omdanning av vindusgruppe</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_key">
+									<local_schema short_desc="Begynn vindusplukker for alle vinduer">
+										<longdesc>Utform og start omdanning av alle vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_button">
+									<local_schema short_desc="Begynn vindusplukker for alle vinduer">
+										<longdesc>Utform og start omdanning av alle vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_edge">
+									<local_schema short_desc="Begynn vindusplukker for alle vinduer">
+										<longdesc>Utform og start omdanning av alle vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Begynn vindusplukker">
+										<longdesc>Utform og start omdanning av vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Begynn vindusplukker">
+										<longdesc>Utform og start omdanning av vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_edge">
+									<local_schema short_desc="Begynn vindusplukker">
+										<longdesc>Utform og start omdanning av vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Flerskjermsmodus">
+										<longdesc>Velge hvor vinduene skaleres hvis flere skjermenheter brukes. (0 = På nåværende skjermenhet, 1 = På alle skjermenheter)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Skaler vinduer">
+										<longdesc>Vinduer som skal skaleres i skalermodus (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlay_icon">
+									<local_schema short_desc="Ikon for overlapp">
+										<longdesc>Legg et ikon på vinduer når de skaleres (0 = Ingen, 1 = Logo, 2 = Stor)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Dekkevne">
+										<longdesc>Dekkevne i prosent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="darken_back">
+									<local_schema short_desc="Gjør bakgrunn mørkere">
+										<longdesc>Gjør bakgrunn mørkere når vinduer skaleres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Tidsskritt">
+										<longdesc>Tidsskritt for skalering (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hastighet">
+										<longdesc>Skaleringshastighet (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spacing">
+									<local_schema short_desc="Mellomrom">
+										<longdesc>Mellomrom mellom vinduer (0 - 250)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="number_of_desktops">
+									<local_schema short_desc="Antall skrivebord">
+										<longdesc>Antall viruelle skrivebord (1 - 36)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="vsize">
+									<local_schema short_desc="Vertikal virtuell størrelse">
+										<longdesc>Multiplikator for skjermstørrelse for vertikal virtuell størrelse (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hsize">
+									<local_schema short_desc="Horisontal virtuell størrelse">
+										<longdesc>Multiplikator for skjermstørrelse for horisontal virtuell størrelse (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_shaded_key">
+									<local_schema short_desc="Skru av/på rull opp/ ned vindu">
+										<longdesc>Skru av/på rull opp/ned vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_vertically_key">
+									<local_schema short_desc="Skru av/på vertikalt maksimert vindu">
+										<longdesc>Skru av/på vertikalt maksimert aktivt vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_horizontally_key">
+									<local_schema short_desc="Skru av/på horisontalt maksimert vindu">
+										<longdesc>Skru av/på horisontalt maksimert aktivt vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_button">
+									<local_schema short_desc="Skru av/på maksimert vindu">
+										<longdesc>Skru av/på maksimert aktivt vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_key">
+									<local_schema short_desc="Skru av/på maksimert vindu">
+										<longdesc>Skru av/på maksimert aktivt vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_edge">
+									<local_schema short_desc="Vis skrivebord">
+										<longdesc>Skjul alle vinduer og fokuser på skrivebordet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_key">
+									<local_schema short_desc="Vis skrivebord">
+										<longdesc>Skjul alle vinduer og fokuser på skrivebordet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_button">
+									<local_schema short_desc="Vindusmeny">
+										<longdesc>Snarvei for vindusmeny</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_key">
+									<local_schema short_desc="Vindusmeny">
+										<longdesc>Hurtigtast for vindusmeny</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_vertically_key">
+									<local_schema short_desc="Maksimer vindu vertikalt">
+										<longdesc>Maksimer aktivt vindu vertikalt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_horizontally_key">
+									<local_schema short_desc="Maksimer vindu horisontalt">
+										<longdesc>Maksimer aktivt vindu horisontalt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unmaximize_window_key">
+									<local_schema short_desc="Avmaksimer vindu">
+										<longdesc>Avmaksimer aktivt vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="Maksimer vindu">
+										<longdesc>Maksimer aktivt vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_button">
+									<local_schema short_desc="Minimer vindu">
+										<longdesc>Minimer aktivt vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_key">
+									<local_schema short_desc="Minimer vindu">
+										<longdesc>Minimer aktivt vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_button">
+									<local_schema short_desc="Senk vindu">
+										<longdesc>Senk vindu under andre vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_key">
+									<local_schema short_desc="Senk vindu">
+										<longdesc>Senk vindu under andre vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_button">
+									<local_schema short_desc="Hev vindu">
+										<longdesc>Hev vindu over andre vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_key">
+									<local_schema short_desc="Hev vindu">
+										<longdesc>Hev vindu over andre vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_button">
+									<local_schema short_desc="Lukk vindu">
+										<longdesc>Lukk aktivt vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_key">
+									<local_schema short_desc="Lukk vindu">
+										<longdesc>Lukk aktivt vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_match">
+									<local_schema short_desc="Fokusunngående vinduer">
+										<longdesc>Fokusunngående vinduer (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_level">
+									<local_schema short_desc="Fokusunngående nivå">
+										<longdesc>Level of focus stealing prevention (0 = Off, 1 = Low, 2 = Normal, 3 = Høy, 4 = Very High)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise_delay">
+									<local_schema short_desc="Forsinkelse for auto-hev">
+										<longdesc>Intervall før valgte vinduer heves (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise">
+									<local_schema short_desc="Auto-hev">
+										<longdesc>Hev valgt vindu etter intervall</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_click">
+									<local_schema short_desc="Hev ved klikk">
+										<longdesc>Hev vinduer når de klikkes</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="Klikk for fokus">
+										<longdesc>Klikk på vindu flytter inndatafokus til det</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outputs">
+									<local_schema short_desc="Utdata">
+										<longdesc>Liste over strenger som beskriver skjermenheter</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_outputs">
+									<local_schema short_desc="Gjenkjenn utdata">
+										<longdesc>Automatisk gjenkjennelse av skjermenheter</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlapping_outputs">
+									<local_schema short_desc="Overlappende utdata-håndtering">
+										<longdesc>Hvilken av de overlappende utdata-enhetene skal foretrekkes (0 = Smartmodus, 1 = Foretrekk større utdata, 2 = Foretrekk mindre utdata)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="default_icon">
+									<local_schema short_desc="Standardikon">
+										<longdesc>Standard bilde for vindusikon</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ping_delay">
+									<local_schema short_desc="Ping-forsinkelse">
+										<longdesc>Intervall mellom ping-beskjeder (1000 - 30000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_delay">
+									<local_schema short_desc="Forsinkelse for kantutløsning">
+										<longdesc>Varigheten musepekeren må hvile i en skjermkant før en kanthendelse utføres. (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hide_skip_taskbar_windows">
+									<local_schema short_desc="Skjul vinduer som hopper over oppgavelinjen">
+										<longdesc>Skjul vinduer som ikke er i oppgavelinjen når Visskrivebord-modus startes</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ignore_hints_when_maximized">
+									<local_schema short_desc="Ignorer hint når maksimert">
+										<longdesc>Ignorer størrelsesøkning- og forholdshint når vinduet er maksimert</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="audible_bell">
+									<local_schema short_desc="Hørbar bjelle">
+										<longdesc>Hørbart systempip</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_plugins">
+									<local_schema short_desc="Aktive tillegg">
+										<longdesc>Liste over aktive tillegg nå</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="opengl">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="sync_to_vblank">
+									<local_schema short_desc="Synkroniser til VBlank">
+										<longdesc>Bare utfør skjermoppdateringer ved vertikale blankingsperioder</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lighting">
+									<local_schema short_desc="Lyn">
+										<longdesc>Bruk diffust lys når skjermen omdannes</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="texture_filter">
+									<local_schema short_desc="Teksturfilter">
+										<longdesc>Teksturfiltrering (0 = Rask, 1 = God, 2 = Beste)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="gnomecompat">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command_terminal_key">
+									<local_schema short_desc="Åpne en terminal">
+										<longdesc>Åpne en terminal</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_terminal">
+									<local_schema short_desc="Kommandolinje for terminal">
+										<longdesc>Kommandolinje for terminal</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_window_screenshot_key">
+									<local_schema short_desc="Ta et skjermbilde av et vindu">
+										<longdesc>Ta et skjermbilde av et vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_window_screenshot">
+									<local_schema short_desc="Kommandolinje for skjermbilde av vindu">
+										<longdesc>Kommandolinje for skjermbilde av vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_screenshot_key">
+									<local_schema short_desc="Ta et skjermbilde">
+										<longdesc>Ta et skjermbilde</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_screenshot">
+									<local_schema short_desc="Kommandolinje for skjermbilde">
+										<longdesc>Kommandolinje for skjermbilde</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_key">
+									<local_schema short_desc="Kjør-dialog">
+										<longdesc>Vis &quot;Kjør program&quot;-dialog</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="main_menu_key">
+									<local_schema short_desc="Vis hovedmeny">
+										<longdesc>Vis hovedmenyen</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="screenshot">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="launch_app">
+									<local_schema short_desc="Kjør program">
+										<longdesc>Åpne skjermbilde automatisk med dette programmet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="directory">
+									<local_schema short_desc="Katalog">
+										<longdesc>Put screenshot images in this directory. If empty, the desktop directory will be used.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Begynn">
+										<longdesc>Begynn rektangulært skjermbilde</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="unredirect_fullscreen_windows">
+									<local_schema short_desc="Ikke-videresend vinduer i fullskjerm">
+										<longdesc>Tilatt tegning av fullskjermvinduer å ikke bli omdirigert til bilder utenfor skjermen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="refresh_rate">
+									<local_schema short_desc="Oppfriskingsrate">
+										<longdesc>Hastigheten for omtegning av skjermen (ganger/sekund) (1 - 200)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_refresh_rate">
+									<local_schema short_desc="Gjenkjenn oppfriskingshastighet">
+										<longdesc>Automatisk gjenkjennelse av oppdateringshastighet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="slow_animations_key">
+									<local_schema short_desc="Trege animasjoner">
+										<longdesc>Skru av/på bruk av trege animasjoner</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="annotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stroke_width">
+									<local_schema short_desc="Bestrykningsbredde">
+										<longdesc>Bestrykningsbredde for påførte elementer (1.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="stroke_color">
+									<local_schema short_desc="Bestrykningsfarge for Påfør">
+										<longdesc>Bestrykningsfarge for påførte elementer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="Fyllfarge for Påfør">
+										<longdesc>Fyllfarge for påførte elementer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_button">
+									<local_schema short_desc="Rens">
+										<longdesc>Rens</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_key">
+									<local_schema short_desc="Rens">
+										<longdesc>Rens</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="decor">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="shadow_match">
+									<local_schema short_desc="Skyggevinduer">
+										<longdesc>Vinduer som skal ha en skygge (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="decoration_match">
+									<local_schema short_desc="Dekorasjonsvinduer">
+										<longdesc>Vinduer som skal dekoreres (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="MIP-kart">
+										<longdesc>La MIP-kart bli laget for dekorasjonstekstur</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command">
+									<local_schema short_desc="Kommando">
+										<longdesc>Kommandolinje for dekoratør som kjøres hvis ingen dekoratør allerede kjører</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_y_offset">
+									<local_schema short_desc="Skyggens Y-forskyvning">
+										<longdesc>Slippskyggens Y-forskyvning (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_x_offset">
+									<local_schema short_desc="Skyggens X-forskyvning">
+										<longdesc>Slippskyggens X-forskyvning (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_color">
+									<local_schema short_desc="Skyggefarge">
+										<longdesc>Farge for slippskygge</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_opacity">
+									<local_schema short_desc="Dekkevne for skygge">
+										<longdesc>Dekkevne for slippskygge (0.01 - 6.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_radius">
+									<local_schema short_desc="Skyggeradius">
+										<longdesc>Radius for slippskygge (0.1 - 18.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="zoom">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="timestep">
+									<local_schema short_desc="Tidsskritt">
+										<longdesc>Zoom Timestep (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hastighet">
+										<longdesc>Zoom Speed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Begynn">
+										<longdesc>Zoom In</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="commands">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command11_edge">
+									<local_schema short_desc="Kjør kommando 11">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_edge">
+									<local_schema short_desc="Kjør kommando 10">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_edge">
+									<local_schema short_desc="Kjør kommando 9">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_edge">
+									<local_schema short_desc="Kjør kommando 8">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_edge">
+									<local_schema short_desc="Kjør kommando 7">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_edge">
+									<local_schema short_desc="Kjør kommando 6">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_edge">
+									<local_schema short_desc="Kjør kommando 5">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_edge">
+									<local_schema short_desc="Kjør kommando 4">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_edge">
+									<local_schema short_desc="Kjør kommando 3">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_edge">
+									<local_schema short_desc="Kjør kommando 2">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_edge">
+									<local_schema short_desc="Kjør kommando 1">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_button">
+									<local_schema short_desc="Kjør kommando 11">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_button">
+									<local_schema short_desc="Kjør kommando 10">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_button">
+									<local_schema short_desc="Kjør kommando 9">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_button">
+									<local_schema short_desc="Kjør kommando 8">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_button">
+									<local_schema short_desc="Kjør kommando 7">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_button">
+									<local_schema short_desc="Kjør kommando 6">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_button">
+									<local_schema short_desc="Kjør kommando 5">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_button">
+									<local_schema short_desc="Kjør kommando 4">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_button">
+									<local_schema short_desc="Kjør kommando 3">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_button">
+									<local_schema short_desc="Kjør kommando 2">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_button">
+									<local_schema short_desc="Kjør kommando 1">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_key">
+									<local_schema short_desc="Kjør kommando 11">
+										<longdesc>En hurtigtast som, når innhentet, vil kjøre konsollkommandoen identifisert som kommando11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_key">
+									<local_schema short_desc="Kjør kommando 10">
+										<longdesc>En hurtigtast som, når innhentet, vil kjøre konsollkommandoen identifisert som kommando10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_key">
+									<local_schema short_desc="Kjør kommando 9">
+										<longdesc>En hurtigtast som, når innhentet, vil kjøre konsollkommandoen identifisert som kommando9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_key">
+									<local_schema short_desc="Kjør kommando 8">
+										<longdesc>En hurtigtast som, når innhentet, vil kjøre konsollkommandoen identifisert som kommando8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_key">
+									<local_schema short_desc="Kjør kommando 7">
+										<longdesc>En hurtigtast som, når innhentet, vil kjøre konsollkommandoen identifisert som kommando7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_key">
+									<local_schema short_desc="Kjør kommando 6">
+										<longdesc>En hurtigtast som, når innhentet, vil kjøre konsollkommandoen identifisert som kommando6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_key">
+									<local_schema short_desc="Kjør kommando 5">
+										<longdesc>En hurtigtast som, når innhentet, vil kjøre konsollkommandoen identifisert som kommando5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_key">
+									<local_schema short_desc="Kjør kommando 4">
+										<longdesc>En hurtigtast som, når innhentet, vil kjøre konsollkommandoen identifisert som kommando4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_key">
+									<local_schema short_desc="Kjør kommando 3">
+										<longdesc>En hurtigtast som, når innhentet, vil kjøre konsollkommandoen identifisert som kommando3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_key">
+									<local_schema short_desc="Kjør kommando 2">
+										<longdesc>En hurtigtast som, når innhentet, vil kjøre konsollkommandoen identifisert som kommando2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_key">
+									<local_schema short_desc="Kjør kommando 1">
+										<longdesc>En hurtigtast som, når innhentet, vil kjøre konsollkommandoen identifisert som kommando1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command11">
+									<local_schema short_desc="Kommandolinje 11">
+										<longdesc>Kommandolinje som skal kjøres i konsoll når kjør_kommando11 blir innhentet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command10">
+									<local_schema short_desc="Kommandolinje 10">
+										<longdesc>Kommandolinje som skal kjøres i konsoll når kjør_kommando10 blir innhentet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command9">
+									<local_schema short_desc="Kommandolinje 9">
+										<longdesc>Kommandolinje som skal kjøres i konsoll når kjør_kommando9 blir innhentet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command8">
+									<local_schema short_desc="Kommandolinje 8">
+										<longdesc>Kommandolinje som skal kjøres i konsoll når kjør_kommando8 blir innhentet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command7">
+									<local_schema short_desc="Kommandolinje 7">
+										<longdesc>Kommandolinje som skal kjøres i konsoll når kjør_kommando7 blir innhentet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command6">
+									<local_schema short_desc="Kommandolinje 6">
+										<longdesc>Kommandolinje som skal kjøres i konsoll når kjør_kommando6 blir innhentet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command5">
+									<local_schema short_desc="Kommandolinje 5">
+										<longdesc>Kommandolinje som skal kjøres i konsoll når kjør_kommando5 blir innhentet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command4">
+									<local_schema short_desc="Kommandolinje 4">
+										<longdesc>Kommandolinje som skal kjøres i konsoll når kjør_kommando4 blir innhentet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command3">
+									<local_schema short_desc="Kommandolinje 3">
+										<longdesc>Kommandolinje som skal kjøres i konsoll når kjør_kommando3 blir innhentet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command2">
+									<local_schema short_desc="Kommandolinje 2">
+										<longdesc>Kommandolinje som skal kjøres i konsoll når kjør_kommando2 blir innhentet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command1">
+									<local_schema short_desc="Kommandolinje 1">
+										<longdesc>Kommandolinje som skal kjøres i konsoll når kjør_kommando1 blir innhentet</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="resize">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stretch_match">
+									<local_schema short_desc="Strekk-størrelsesendring av vinduer">
+										<longdesc>Vinduer som skal endre størrelse ved strekking (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rectangle_match">
+									<local_schema short_desc="Rektangulær størrelsesendring av vinduer">
+										<longdesc>Vinduer som skal endre størrelse rektangulært (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outline_match">
+									<local_schema short_desc="Omriss-størrelsesendring av vinduer">
+										<longdesc>Vinduer som skal endre størrelse med omriss (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="normal_match">
+									<local_schema short_desc="Normal størrelsesemdring av vinduer">
+										<longdesc>Vinduer som skal endre størrelse på normalt vis (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="Fyllfarge">
+										<longdesc>Fyllfarge brukt for omriss og rektangel ved gjør-om-størrelse-modus</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="border_color">
+									<local_schema short_desc="Kantfarge">
+										<longdesc>Kantfarge brukt for omriss og rektangel ved gjør-om-størrelse-modus</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="Standardmodus for størrelsesendring">
+										<longdesc>Standard modus som brukes for størrelsesendring av vinduer (0 = Normal, 1 = Omriss, 2 = Rektangulær, 3 = Strekk)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Begynn størrelsesendring av vindu">
+										<longdesc>Begynn å endre størrelse på vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Begynn størrelsesendring av vindu">
+										<longdesc>Begynn å endre størrelse på vindu</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="cube">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="transparent_manual_only">
+									<local_schema short_desc="Gjennomsiktighet kun ved muserotasjon">
+										<longdesc>Starter gjennomsiktighet for kube kun hvis rotasjonen er drevet av mus</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="inactive_opacity">
+									<local_schema short_desc="Dekkevne når det ikke roteres">
+										<longdesc>Skrivebordsvinduenes dekkevne når det ikke roteres (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_opacity">
+									<local_schema short_desc="Dekkevne ved rotasjon">
+										<longdesc>Skrivebordsvinduenes dekkevne ved rotasjon (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_end_color">
+									<local_schema short_desc="Sluttfarge for himmelkuppelens fargeovergang">
+										<longdesc>Farge som skal brukes til bunnens fargestans av alternativet for fargeovergangen for himmelkuppel</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_start_color">
+									<local_schema short_desc="Startfarge for himmelkuppelens fargeovergang">
+										<longdesc>Farge som skal brukes til toppens fargestans av alternativet for fargeovergangen for himmelkuppelen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_animated">
+									<local_schema short_desc="Animer himmelkuppel">
+										<longdesc>Animer himmelkuppel når kuben roteres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_image">
+									<local_schema short_desc="Bilde for himmelkuppel">
+										<longdesc>Bilde å bruke som tekstur for himmelkuppelen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome">
+									<local_schema short_desc="Himmelkuppel">
+										<longdesc>Gjengi himmelkuppel</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Tidsskritt">
+										<longdesc>Tidsskritt for bretting (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hastighet">
+										<longdesc>Brettehastighet (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Akselerasjon">
+										<longdesc>Akselerasjon for bretting (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="in">
+									<local_schema short_desc="Innsiden av kuben">
+										<longdesc>Innsiden av kuben</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Flerskjermsmodus">
+										<longdesc>Velger hvordan kuben vises hvis flere skjermenheter brukes. (0 = Automatisk, 1 = Flere kuber, 2 = One big cube)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="MIP-kart">
+										<longdesc>Lag MIP-kart når det er mulig, for skalering med høyere kvalitet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unfold_key">
+									<local_schema short_desc="Brett ut">
+										<longdesc>Brett ut kuben</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="water">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="title_wave">
+									<local_schema short_desc="Tittelbølge">
+										<longdesc>Bølgeeffekt fra vindustittel</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rain_delay">
+									<local_schema short_desc="Forsinkelse for regn">
+										<longdesc>Forsinkelse (i ms) mellom regndråper (1 - 3600000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="offset_scale">
+									<local_schema short_desc="Skaleringsforskyvning">
+										<longdesc>Skaleringsforskyvning for vann (0 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_wiper_key">
+									<local_schema short_desc="Skru av/på vindusvisker">
+										<longdesc>Skru av/på vindusviskereffekten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_rain_key">
+									<local_schema short_desc="Skru av/på regn">
+										<longdesc>Skru av/på regneffekten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Begynn">
+										<longdesc>Bruk vanneffekter for musepeker</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="rotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="rotate_to_12_window_key">
+									<local_schema short_desc="Roter til ansikt 12 med vindu">
+										<longdesc>Roter til ansikt 12 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_window_key">
+									<local_schema short_desc="Roter til ansikt 11 med vindu">
+										<longdesc>Roter til ansikt 11 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_window_key">
+									<local_schema short_desc="Roter til ansikt 10 med vindu">
+										<longdesc>Roter til ansikt 10 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_window_key">
+									<local_schema short_desc="Roter til ansikt 9 med vindu">
+										<longdesc>Roter til ansikt 9 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_window_key">
+									<local_schema short_desc="Roter til ansikt 8 med vindu">
+										<longdesc>Roter til ansikt 8 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_window_key">
+									<local_schema short_desc="Roter til ansikt 7 med vindu">
+										<longdesc>Roter til ansikt 7 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_window_key">
+									<local_schema short_desc="Roter til ansikt 6 med vindu">
+										<longdesc>Roter til ansikt 6 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_window_key">
+									<local_schema short_desc="Roter til ansikt 5 med vindu">
+										<longdesc>Roter til ansikt 5 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_window_key">
+									<local_schema short_desc="Roter til ansikt 4 med vindu">
+										<longdesc>Roter til ansikt 4 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_window_key">
+									<local_schema short_desc="Roter til ansikt 3 med vindu">
+										<longdesc>Roter til ansikt 3 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_window_key">
+									<local_schema short_desc="Roter til ansikt 2 med vindu">
+										<longdesc>Roter til ansikt 2 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_window_key">
+									<local_schema short_desc="Roter til ansikt 1 med vindu">
+										<longdesc>Roter til ansikt 1 og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_12_key">
+									<local_schema short_desc="Roter til ansikt 12">
+										<longdesc>Roter til ansikt 12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_key">
+									<local_schema short_desc="Roter til ansikt 11">
+										<longdesc>Roter til ansikt 11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_key">
+									<local_schema short_desc="Roter til ansikt 10">
+										<longdesc>Roter til ansikt 10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_key">
+									<local_schema short_desc="Roter til ansikt 9">
+										<longdesc>Roter til ansikt 9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_key">
+									<local_schema short_desc="Roter til ansikt 8">
+										<longdesc>Roter til ansikt 8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_key">
+									<local_schema short_desc="Roter til ansikt 7">
+										<longdesc>Roter til ansikt 7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_key">
+									<local_schema short_desc="Roter til ansikt 6">
+										<longdesc>Roter til ansikt 6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_key">
+									<local_schema short_desc="Roter til ansikt 5">
+										<longdesc>Roter til ansikt 5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_key">
+									<local_schema short_desc="Roter til ansikt 4">
+										<longdesc>Roter til ansikt 4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_key">
+									<local_schema short_desc="Roter til ansikt 3">
+										<longdesc>Roter til ansikt 3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_key">
+									<local_schema short_desc="Roter til ansikt 2">
+										<longdesc>Roter til ansikt 2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_key">
+									<local_schema short_desc="Roter til ansikt 1">
+										<longdesc>Roter til ansikt 1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_right_edge">
+									<local_schema short_desc="Roter bytt høyre">
+										<longdesc>Bytt til høyre arbeidsområde og &apos;warp&apos; musepeker</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_left_edge">
+									<local_schema short_desc="Roter bytt venstre">
+										<longdesc>Bytt til venstre arbeidsområde og &apos;warp&apos; musepeker</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_window_key">
+									<local_schema short_desc="Roter vindu">
+										<longdesc>Roter med vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_key">
+									<local_schema short_desc="Roter til">
+										<longdesc>Roter til arbeidsområde</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_button">
+									<local_schema short_desc="Roter høyre med vindu">
+										<longdesc>Roter høyre og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_key">
+									<local_schema short_desc="Roter høyre med vindu">
+										<longdesc>Roter høyre og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_button">
+									<local_schema short_desc="Roter venstre med vindu">
+										<longdesc>Roter venstre og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_key">
+									<local_schema short_desc="Roter venstre med vindu">
+										<longdesc>Roter venstre og trekk aktivt vindu med</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_button">
+									<local_schema short_desc="Roter høyre">
+										<longdesc>Roter høyre</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_key">
+									<local_schema short_desc="Roter høyre">
+										<longdesc>Roter høyre</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_button">
+									<local_schema short_desc="Roter venstre">
+										<longdesc>Roter venstre</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_key">
+									<local_schema short_desc="Roter venstre">
+										<longdesc>Roter venstre</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Begynn">
+										<longdesc>Begynn rotasjon</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Tidsskritt">
+										<longdesc>Tidsskritt for rotasjon (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hastighet">
+										<longdesc>Rotasjonshastighet (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Akselerasjon">
+										<longdesc>Akselerasjon for rotasjon (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sensitivity">
+									<local_schema short_desc="Følsomhet for musepeker">
+										<longdesc>Følsomhet for musepekers bevegelse (0.01 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="flip_time">
+									<local_schema short_desc="Byttetid">
+										<longdesc>Tidsavbrudd før arbeidsområde byttes (0 - 1000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Forstørr">
+										<longdesc>Rotasjonsforstørrelse (0.0 - 2.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_bottom">
+									<local_schema short_desc="Smekk til bunn">
+										<longdesc>Smekk kuberotasjon til bunnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_top">
+									<local_schema short_desc="Smekk til topp">
+										<longdesc>Smekk kuberotasjon til toppen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="invert_y">
+									<local_schema short_desc="Musepeker inverter Y">
+										<longdesc>inverter Y-akse for musebevegelse</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_rotate">
+									<local_schema short_desc="Hev ved rotasjon">
+										<longdesc>Hev vindu ved rotasjon</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_dnd">
+									<local_schema short_desc="Kantbytt dra-og-slipp">
+										<longdesc>Bytt til neste arbeidsområde når objekter dras til skjermkanten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_window">
+									<local_schema short_desc="Kantbytt flytt">
+										<longdesc>Bytt til neste arbeidsområde når vinduer flyttes til skjermkanten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_pointer">
+									<local_schema short_desc="Kantbytt peker">
+										<longdesc>Bytt til neste arbeidsområde når musepekeren flyttes til skjermkanten</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="blur">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="independent_tex">
+									<local_schema short_desc="Uavhengig teksturhenting">
+										<longdesc>Bruk de tilgjengelige teksturenhetene for å gjøre så mange uavhengige teksturhentinger som mulig.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="occlusion">
+									<local_schema short_desc="Tilstopping for tilsløring">
+										<longdesc>Slå av tilsløring av skjermområder som er dekket av andre vinduer.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="Metning for tilsløring">
+										<longdesc>Metning for tilsløring (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap_lod">
+									<local_schema short_desc="MIP-kart detaljnivå">
+										<longdesc>Detaljnivå for MIP-kart (0.1 - 5.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_strength">
+									<local_schema short_desc="Gaussisk styrke">
+										<longdesc>Gaussisk styrke (0.0 - 1.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_radius">
+									<local_schema short_desc="Gaussisk radius">
+										<longdesc>Gaussisk radius (1 - 15)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="filter">
+									<local_schema short_desc="Tilsløringsfilter">
+										<longdesc>Filtermetode brukt for tilsløring (0 = 4x bilineær, 1 = Gaussisk, 2 = MIP-kart)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur">
+									<local_schema short_desc="Alfatilslør">
+										<longdesc>Tilslør bak gjennomsiktige deler av vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur_match">
+									<local_schema short_desc="Alfatilslørte vinduer">
+										<longdesc>Vinduer som skal bruke alfatilsløring som standard (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur">
+									<local_schema short_desc="Fokustilsløring">
+										<longdesc>Tilslør vinduer som ikke har fokus</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur_match">
+									<local_schema short_desc="Fokustilslør vinduer">
+										<longdesc>Vinduer som skal påvirkes av fokustilsløring (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="blur_speed">
+									<local_schema short_desc="Hastighet for tilsløring">
+										<longdesc>Hastighet for vindutilsløring (0.1 - 10.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="pulse">
+									<local_schema short_desc="Puls">
+										<longdesc>Pulseffekt</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="switcher">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="auto_rotate">
+									<local_schema short_desc="Autoroter">
+										<longdesc>Roter til det valgte vinduent mens skifting</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimized">
+									<local_schema short_desc="Minimert">
+										<longdesc>Vis minimerte vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="icon">
+									<local_schema short_desc="Ikon">
+										<longdesc>Vis ikon ved siden av miniatyr</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Forstørr">
+										<longdesc>Hvos mye skrivebordet skal forminskes ved vindusbytte (0 - 5)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="bring_to_front">
+									<local_schema short_desc="Hent til front">
+										<longdesc>Hent valgte vinduer til fornt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Dekkevne">
+										<longdesc>Dekkevne i prosent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness">
+									<local_schema short_desc="Skarphet">
+										<longdesc>Mengde skarphet i prosent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="Metning">
+										<longdesc>Mengde metning i prosent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="MIP-kart">
+										<longdesc>Lag MIP-kart når det er mulig, for skalering med høyere kvalitet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Vinduer i skifteren">
+										<longdesc>Vinduer som skal vises i skifteren (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Tidsskritt">
+										<longdesc>Tisskritt for skifter (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hastighet">
+										<longdesc>Hastighet for skifter (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_key">
+									<local_schema short_desc="Forrige vindu (ikke sprett-opp)">
+										<longdesc>Velg forrige vindu uten å vise oppsprettsvinduet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_button">
+									<local_schema short_desc="Forrige vindu (ikke sprett-opp)">
+										<longdesc>Velg forrige vindu uten å vise oppsprettsvinduet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_key">
+									<local_schema short_desc="Neste vindu (ikke sprett-opp)">
+										<longdesc>Velg neste vindu uten å vise oppsprettsvinduet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_button">
+									<local_schema short_desc="Neste vindu (ikke sprett-opp)">
+										<longdesc>Velg neste vindu uten å vise oppsprettsvinduet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_key">
+									<local_schema short_desc="Forrige vindu (alle vinduer)">
+										<longdesc>Sprett opp skifter hvis ikke synlig og velg forrige vindu blant alle vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_button">
+									<local_schema short_desc="Forrige vindu (alle vinduer)">
+										<longdesc>Sprett opp skifter hvis ikke synlig og velg forrige vindu blant alle vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_key">
+									<local_schema short_desc="Neste vindu (alle vinduer)">
+										<longdesc>Sprett opp skifter hvis ikke synlig og velg neste vindu blant alle vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_button">
+									<local_schema short_desc="Neste vindu (alle vinduer)">
+										<longdesc>Sprett opp skifter hvis ikke synlig og velg neste vindu blant alle vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_key">
+									<local_schema short_desc="Forrige vindu">
+										<longdesc>Sprett opp skifter hvis ikke synlig og velg forrige vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_button">
+									<local_schema short_desc="Forrige vindu">
+										<longdesc>Sprett opp skifter hvis ikke synlig og velg forrige vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_key">
+									<local_schema short_desc="Neste vindu">
+										<longdesc>Sprett opp skifter hvis ikke synlig og velg neste vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_button">
+									<local_schema short_desc="Neste vindu">
+										<longdesc>Sprett opp skifter hvis ikke synlig og velg neste vindu</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="move">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="lazy_positioning">
+									<local_schema short_desc="Lat posisjonering">
+										<longdesc>Ikke oppdater vindusposisjonen på tjenerside før vinduene er ferdig med flytting</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snapoff_maximized">
+									<local_schema short_desc="Smekk av maksimerte vinduer">
+										<longdesc>Smekk av og automatisk avmaksimer maksimerte vinduer når de trekkes</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="constrain_y">
+									<local_schema short_desc="Hold tilbake Y">
+										<longdesc>Hold tilbake Y-koordinat til arbeidsområde</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Dekkevne">
+										<longdesc>Dekkevnenivå for bevegende vinduer (1 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Begynn vindusflytting">
+										<longdesc>Begynn å bevege vindu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Begynn vindusflytting">
+										<longdesc>Begynn å bevege vindu</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="place">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="viewport_y_values">
+									<local_schema short_desc="Y-posisjoner på arbeidsområde">
+										<longdesc>Vertikale posisjoner på arbeidsområde</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_x_values">
+									<local_schema short_desc="X-posisjoner på arbeidsområde">
+										<longdesc>Horisontale posisjoner på arbeidsområde</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_matches">
+									<local_schema short_desc="Arbeidsområde-plasserte vinduer">
+										<longdesc>Vinduer som skal plasseres i spesifikke arbeidsområder som standard</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_y_values">
+									<local_schema short_desc="Y-posisjoner">
+										<longdesc>Verdier for Y-posisjon</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_x_values">
+									<local_schema short_desc="X-posisjoner">
+										<longdesc>Verdier for X-posisjon</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_matches">
+									<local_schema short_desc="Posisjonerte vinduer">
+										<longdesc>Vinduer som skal posisjoneres som standard</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Flerskjermsmodus">
+										<longdesc>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="Plasseringsmodus">
+										<longdesc>Algoritme som brukes for plassering av vinduer (0 = Tett-i-tett, 1 = Sentrert, 2 = Smart, 3 = Maksimer, 4 = Tilfeldig, 5 = Pointer)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="workarounds">
+									<local_schema short_desc="Omveier">
+										<longdesc>Omveier for vindusplassering</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="clone">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_button">
+									<local_schema short_desc="Begynn">
+										<longdesc>Begynn klonseleksjon</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

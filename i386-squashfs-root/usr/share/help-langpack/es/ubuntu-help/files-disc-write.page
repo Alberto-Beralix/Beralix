@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-disc-write" xml:lang="es">
+  <info>
+    <link type="guide" xref="files" group="more"/>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+
+    <credit type="author">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
+    </credit>
+
+    <desc>Poner archivos y documentos en un CD o DVD vacío usando una grabadora de CD/DVD.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Escribir archivo en un CD o DVD</title>
+
+  <p>El <gui>Creador de CD/DVD</gui> del gestor de archivos facilita el traspaso de archivos a otros equipos y la realización de <link xref="backup-why">copias de seguridad</link> poniendo archivos en un disco vacío. Para escribir archivos en un CD o DVD:</p>
+
+  <steps>
+    <item><p>Coloque un disco vacío dentro de una unidad grabadora de CD/DVD.</p></item>
+    <item>
+     <p>En la ventana <gui>Disco CD/DVD-R vacío</gui> que aparece, seleccione <gui>Creador de CD/DVD</gui> y pulse <gui>Aceptar</gui>. Se abrirá la ventana de la <gui>carpeta del Creador de CD/DVD</gui>.</p>
+     <p>(You can also click on <gui>Blank CD/DVD-R Disc</gui> under <gui>Devices</gui> in the file manager sidebar.)</p>
+    </item>
+    <item><p>En el campo <gui>Nombre del disco</gui>, teclee un nombre para el disco.</p></item>
+    <item><p>Arrastre o <link xref="files-copy">copie</link> en la ventana los archivos que quiera.</p></item>
+    <item>
+     <p>En <gui>Seleccione un disco en el que grabar</gui>, seleccione el disco vacío.</p>
+     <p>(También puede elegir <gui>&gt;Archivo de imagen</gui>. Esto pondrá los archivos en una <em>imagen de disco</em>, que se guardará en su equipo. Más tarde podrá grabar esa imagen en un disco vacío.)</p>
+    </item>
+    <item><p>Pulse en <gui>Propiedades</gui> si desea ajustar la velocidad de grabación, la ubicación de los archivos temporales y otras opciones. Las opciones predeterminadas deberían valer.</p></item>
+    <item>
+     <p>Pulse el botón <gui>Grabar</gui> para comenzar la grabación.</p>
+     <p>Si selecciona <gui>Grabar varias copias</gui>, se le pedirá que introduzca más discos.</p>
+    </item>
+    <item><p>Cuando se haya grabado el disco por completo, se expulsará automáticamente. Seleccione <gui>Hacer más copias</gui> o <gui>Cerrar</gui> para salir.</p></item>
+  </steps>
+
+<note><p>Para proyectos más avanzados de grabación de CD/DVD, pruebe <app>Brasero</app>.</p>
+<p>Para obtener ayuda sobre el uso de Brasero, lea la <link href="ghelp:brasero">guía del usuario</link>.</p></note>
+
+<section id="problem">
+ <title>El disco no se grabó correctamente</title>
+ <p>A veces, los discos no se graban correctamente y no podrá ver los archivos que puso en el disco cuando lo introduzca en un equipo.</p>
+
+ <p>En este caso, pruebe a grabar de nuevo el disco usando una velocidad de grabación más lenta; p.ej. 12x en lugar de 48x. Grabar a velocidades más lentas es más fiable. También puede seleccionar la velocidad pulsando en el botón <gui>Propiedades</gui> de la ventana <gui>Carpeta del Creador de CD/DVD</gui>.</p>
+</section>
+
+</page>

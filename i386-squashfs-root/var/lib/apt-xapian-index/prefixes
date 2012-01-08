@@ -1,0 +1,24 @@
+# This file contains the information about keyword prefixes used in the
+# APT Xapian index.
+#
+# Xapian allows to prefix some terms so they can be told apart from
+# normal keywords: this is used for example with Debtags tags, and
+# stemmed forms.
+#
+# This file lists terms with their index prefix, their queryparser
+# prefix, whether queryparser should treat it as boolean or
+# probabilistic and a short description.
+
+XD	-	-	# Marker to indicate that the package contains .desktop files
+XDF	-	-	# File name of the .desktop file
+XDT	-	bool	# Categories from .desktop files
+XRB	relbre:	bool	# Relation: breaks
+XRC	relcon:	bool	# Relation: conflicts
+XRD	reldep:	bool	# Relation: depends
+XRE	relenh:	bool	# Relation: ehnances
+XRP	relpre:	bool	# Relation: pre-depends
+XRR	relrec:	bool	# Relation: recommends
+XRS	relsug:	bool	# Relation: suggests
+XS	sec:	bool	# Package section
+XT	tag:	bool	# Debtags tag
+Z	-	-	# Stemmed forms of keywords

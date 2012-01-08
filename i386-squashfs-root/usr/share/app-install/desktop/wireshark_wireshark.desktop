@@ -1,0 +1,25 @@
+[Desktop Entry]
+X-AppInstall-Package=wireshark
+X-AppInstall-Popcon=3394
+X-AppInstall-Section=universe
+
+# $Id: wireshark.desktop 37116 2011-05-13 06:55:11Z guy $
+# The format of this file is specified at
+# http://freedesktop.org/Standards/desktop-entry-spec
+# The entries are in the order they are listed in version 1.0
+Type=Application
+Version=1.0
+Name=Wireshark
+GenericName=Network Analyzer
+Comment=Network traffic analyzer
+Icon=hi48-app-wireshark
+TryExec=wireshark
+Exec=wireshark
+Terminal=false
+MimeType=application/vnd.tcpdump.pcap;
+# Categorie entry according to version 1.0 of
+# http://www.freedesktop.org/wiki/Specifications/menu-spec
+Categories=GNOME;Network;
+Encoding=UTF-8
+
+X-Ubuntu-Gettext-Domain=app-install-data

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="concept" id="status-icons" xml:lang="de">
+
+  <info>
+    <desc>Erläuterung der verschiedenen Status und deren Symbole.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-07-18" status="stub"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-07-21" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-14" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-01" status="done"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>Typen des Anwesenheitsstatus und Symbole</title>
+
+  <terms>
+    <item>
+      <title><media type="image" mime="image/png" src="figures/available.png">Symbol »Verfügbar«</media>
+      <gui>Verfügbar</gui></title>
+      <p>Verwenden Sie den Status <em>Verfügbar</em>, wenn Sie sich an Ihrem Rechner befinden und somit Unterhaltungen mit Ihren Kontakten führen können. Sie können für diesen Status eine benutzerdefinierte Nachricht festlegen.</p>
+    </item>
+    <item>
+      <title><media type="image" mime="image/png" src="figures/busy.png">Symbol »Beschäftigt«</media>
+      <gui>Beschäftigt</gui></title>
+      <p>Verwenden Sie den Status <em>Beschäftigt</em>, wenn Sie Ihre Kontakte darüber informieren wollen, dass Sie gerade keine Unterhaltung wünschen. Diese können Sie trotzdem noch kontaktieren, beispielsweise in dringenden Fällen. Per Vorgabe zeigt <app>Empathy</app> keine einblendenden Benachrichtigungen an oder spielt Klänge ab, wenn Sie beschäftigt sind. Sie können für diesen Status eine benutzerdefinierte Nachricht festlegen.</p>
+    </item>
+    <item>
+      <title><media type="image" mime="image/png" src="figures/away.png">Symbol »Abwesend«</media>
+      <gui>Abwesend</gui></title>
+      <p>Verwenden Sie den Status <em>Beschäftigt</em>, wenn Sie sich von Ihrem Rechner entfernen. <app>Empathy</app> setzt Ihren Status automatisch auf abwesend, wenn Sie Ihren Rechner für einen gewissen Zeitraum nicht bedienen oder wenn der Bildschirmschoner eingeschaltet ist. <app>Empathy</app> zeigt keine einblendenden Benachrichtigungen an oder spielt Klänge ab, wenn Sie abwesend sind. Sie können für diesen Status eine benutzerdefinierte Nachricht festlegen.</p>
+    </item>
+    <item>
+      <title><media type="image" mime="image/png" src="figures/offline.png">Symbol »Abgemeldet«</media>
+      <gui>Unsichtbar</gui></title>
+      <p>Wenn Sie Ihren Status auf <em>Unsichtbar</em> setzen, erscheinen Sie für Ihre Kontakte als abgemeldet. Sie sind noch immer mit Ihren Kontakten verbunden. Sie sehen deren Status und können Unterhaltungen mit Ihnen beginnen.</p>
+    </item>
+    <item>
+      <title><media type="image" mime="image/png" src="figures/offline.png">Symbol »Abgemeldet«</media>
+      <gui>Abgemeldet</gui></title>
+      <p>Wenn Sie Ihren Status auf <em>Abgemeldet</em> setzen, werden alle Verbindungen zu Ihren Kontakten getrennt.</p>
+    </item>
+  </terms>
+
+</page>

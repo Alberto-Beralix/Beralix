@@ -1,0 +1,32 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="gedit-undo-recent-action">
+
+  <info>
+    <link type="guide" xref="index#gedit-working-with-files"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <credit type="author">
+      <name>Daniel Neel</name>
+      <email>dneelyep@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+  </info>
+
+  <title>Undo a recent action</title>
+
+  <!-- TODO: Maybe include a note about how gedit undoes sequences of "similar" actions, rather than every individual keystroke? For example, whole words are deleted rather than letters.
+I think we should also include a note about how many "undo's" you can do, and that you can't
+undo something once you've saved the file.-->
+  <p>We all make mistakes. Even <app>gedit</app> users make mistakes. Fortunately, <app>gedit</app> can help you recover from mistakes. To undo an action in <app>gedit</app>, press <keyseq><key>Ctrl</key><key>Z</key></keyseq>, or click <guiseq><gui>Edit</gui><gui>Undo</gui></guiseq>.</p>
+
+  <p><app>gedit</app> will undo one action every time you press <keyseq><key>Ctrl</key><key>Z</key></keyseq> or select <guiseq><gui>Edit</gui><gui>Undo</gui></guiseq>.</p>
+
+</page>

@@ -1,0 +1,1 @@
+../../../../share/pyshared/keyring/core.py

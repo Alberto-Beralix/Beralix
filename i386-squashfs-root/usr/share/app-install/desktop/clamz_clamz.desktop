@@ -1,0 +1,15 @@
+[Desktop Entry]
+X-AppInstall-Package=clamz
+X-AppInstall-Popcon=67
+X-AppInstall-Section=universe
+
+Name=Clamz MP3 Downloader (command-line)
+Comment=Download MP3 files from AmazonMP3.com
+Exec=clamz "--default-output-dir=\\${XDG_MUSIC_DIR:-\\$HOME/Music}/\\${album_artist}/\\${album}"
+Terminal=true
+Type=Application
+Categories=Network;
+MimeType=audio/x-amzxml;
+NoDisplay=true
+
+X-Ubuntu-Gettext-Domain=app-install-data

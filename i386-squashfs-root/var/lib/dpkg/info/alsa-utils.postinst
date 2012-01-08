@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  configure)
+	if [ ! -z $2 ]; then
+	  if dpkg --compare-versions $2 lt 1.0.24.2-0ubuntu1 ; then
+	    if test -f /etc/init/alsa-mixer-save.conf; then
+	      rm /etc/init/alsa-mixer-save.conf
+	    fi
+	  fi
+	fi
+
+	# Rename /etc/modprobe.d/sound
+	S="/etc/modprobe.d/sound"
+	if [ -f "$S" ]
+	  then mv "$S" "$S.conf"
+	fi
+	;;
+  abort-upgrade|abort-remove|abort-deconfigure)
+	# Nothing to do because we didn't take any action in the prerm
+	;;
+  *)
+	echo "postinst called with unknown argument \`$1'" >&2
+	exit 1
+	;;
+esac
+
+

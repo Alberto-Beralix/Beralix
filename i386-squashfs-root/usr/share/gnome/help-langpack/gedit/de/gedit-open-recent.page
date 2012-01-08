@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-open-recent" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="gedit-files-basic" group="fifth"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+  </info>
+
+  <title>Erneutes Öffnen einer bereits verwendeten Datei</title>
+
+  <p>Als Vorgabe ermöglicht <app>gedit</app> einfachen Zugriff auf die fünf am häufigsten verwendeten Dateien. Um eine solche Datei zu öffnen, führen Sie die folgenden Schritte aus:</p>
+  <list type="numbered">
+    <item><p>Klicken Sie auf den nach unten weisenden Pfeil rechts vom <gui>Öffnen</gui>-Knopf.</p></item>
+    <item><p><app>gedit</app> zeigt daraufhin eine Liste der fünf am häufigsten verwendeten Dateien an.</p></item>
+    <item><p>Wählen Sie die gewünschte Datei aus, und sie wird im nächsten verfügbaren Reiter geöffnet.</p></item>
+  </list>
+
+  <note type="advanced"><p>Um die Anzahl der von <app>gedit</app> angezeigten am meisten verwendeten Dateien anzupassen, benötigen Sie <app>gconf-editor</app>.</p>
+    <list>
+      <item><p>Starten Sie <app>gconf-editor</app> und wählen Sie <guiseq><gui>apps</gui><gui>gedit-2</gui><gui>preferences</gui><gui>ui</gui><gui>recents</gui></guiseq>.</p></item>
+      <item><p>Doppelklicken Sie auf die Zahl neben <gui>max_recents</gui> und ändern Sie die Zahl auf den gewünschten Wert.</p></item>
+    </list>
+  </note>
+
+</page>

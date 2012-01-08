@@ -1,0 +1,16 @@
+[Desktop Entry]
+X-AppInstall-Package=gtkorphan
+X-AppInstall-Popcon=835
+X-AppInstall-Section=universe
+
+Encoding=UTF-8
+Name=Remove orphaned packages
+Comment=A graphical tool to find and remove orphaned libraries
+Exec=su-to-root -X -c gtkorphan
+Icon=_usr_share_pixmaps_gtkorphan
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Application;System;Settings;
+
+X-Ubuntu-Gettext-Domain=app-install-data

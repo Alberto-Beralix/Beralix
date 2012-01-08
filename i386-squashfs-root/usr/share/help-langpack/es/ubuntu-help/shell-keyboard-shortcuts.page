@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="tip" id="shell-keyboard-shortcuts" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="tips"/>
+    <link type="guide" xref="shell-overview"/>
+    <link type="seealso" xref="windows-key"/>
+    
+    <desc>Moverse por el escritorio usando el teclado.</desc>
+    
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Proyecto de documentación de Ubuntu</name>
+      <email>ubuntu-doc@lists.ubuntu.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Combinaciones de teclas</title>
+
+<table rules="rows" frame="top bottom">
+<title>Usar el Tablero y el Lanzador</title>
+  <tr>
+    <td><p>Pulsar y soltar la tecla <link xref="windows-key"><key>Meta</key></link></p></td>
+    <td><p>Abre el <gui>Tablero</gui>. Pulse otra vez para cerrarlo.</p></td>
+  </tr>
+  <tr>
+    <td><p/></td>
+    <td><p>El Tablero se abre con el foco puesto en la barra de búsqueda para buscar aplicaciones y archivos. Usando las flechas del cursor podrá navegador por los resultados; use la tecla <key>Entrar</key> para iniciar.</p></td>
+  </tr>
+  <tr>
+    <td><p>Pulsar y mantener pulsada la tecla <link xref="windows-key"><key>Meta</key></link></p></td>
+    <td><p>Muestra el <gui>lanzador</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>1</key></keyseq></p></td>
+    <td><p>Inicia el primer elemento del lanzador o pasa a él si ya se estaba ejecutando. Si además se pulsa la tecla <key>Mayús</key>, se abrirá una ventana nueva.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>2</key></keyseq></p></td>
+    <td><p>Inicia el segundo elemento del lanzador o pasa a él si ya se estaba ejecutando. Este patrón continua hasta <keyseq><key>Meta</key><key>0</key></keyseq> que abre el décimo elemento.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F1</key></keyseq></p></td>
+    <td><p>Abre el lanzador. Use las teclas de las flechas del cursor para navegar y <key>Entrar</key> para iniciar una aplicación o pasarse a ella.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F2</key></keyseq></p></td>
+    <td><p>Abre el Tablero en un modo especial para ejecutar las órdenes que teclee. Pulse <key>Entrar</key> para ejecutar la orden actual. También puede usar las flechas del cursor para seleccionar una orden distinta y <key>Entrar</key> para ejecutarlo.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>A</key></keyseq></p></td>
+    <td><p>Abre la<gui>lupa de aplicaciones</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>F</key></keyseq></p></td>
+    <td><p>Abre la <gui>lupa de archivos y carpetas</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>T</key></keyseq></p></td>
+    <td><p>Abre la <gui>Papelera</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>T</key></keyseq></p></td>
+    <td><p>Abre el <app>Terminal</app>.</p></td>
+  </tr>
+  <tr>
+    <td><p><key>Alt</key></p></td>
+    <td><p>Muestra el <gui>menú de aplicaciones</gui>. <keyseq><key>Alt</key><key>F</key></keyseq> abre el menú de <gui>archivos</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><key>F10</key></p></td>
+    <td><p>Abre el menú. Use las teclas de flechas del cursor para navegar. También puede acceder a los <link xref="unity-appmenu-intro">menús indicatores</link>.</p></td>
+  </tr>
+</table>
+
+<table rules="rows" frame="top bottom">
+<title>Cómo moverse en el escritorio</title>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F4</key></keyseq></p></td>
+    <td><p>Cierra la ventana actual.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F10</key></keyseq></p></td>
+    <td><p>Maximiza la ventana actual. Si la ventana ya estaba maximizada, la devuelve a su tamaño original.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>Tab</key></keyseq></p></td>
+    <td><p><link xref="shell-windows-switching">Cambio rápido entre ventanas.</link> Mantenga pulsada <key>Mayús</key> para tener un orden inverso.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>D</key></keyseq></p></td>
+    <td><p>Oculta todas las ventanas y muestra el escritorio. Pulse de nuevo las teclas para restaurar sus ventanas.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>S</key></keyseq></p></td>
+    <td><p>Activar el cambiador de espacios de trabajo. Muestra una panorámica de todos los <link xref="shell-workspaces">espacios de trabajo</link>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>W</key></keyseq></p></td>
+    <td><p>Activa el modo «Expo». Muestra todas las ventanas de todos los espacios de trabajo.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Mayús</key><key>Alt</key><key>↑</key></keyseq></p></td>
+    <td><p>Activa el modo «Expo». Muestra todas las ventanas del espacio de trabajo actual.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Teclas de flecha</key></keyseq></p></td>
+    <td><p><link xref="shell-workspaces-switch">Cambiar entre áreas de trabajo.</link></p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Mayús</key><key>Teclas de flecha</key></keyseq></p></td>
+    <td><p><link xref="shell-workspaces-movewindow">Mueve la ventana actual a otro espacio de trabajo.</link></p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>L</key></keyseq></p></td>
+    <td><p><link xref="shell-exit#lock-screen">Bloquear la pantalla.</link></p></td>
+  </tr>
+</table>
+
+<table rules="rows" frame="top bottom">
+<title>Combinaciones de teclas de edición más comunes</title>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>A</key></keyseq></p></td>
+    <td><p>Seleccionar todo el texto o todos los elementos en una lista.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>X</key></keyseq></p></td>
+    <td><p>Cortar (quitar) el texto o los elementos seleccionados y colocarlo en el escritorio.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq></p></td>
+    <td><p>Copiar el texto o los elementos seleccionados al portapapeles.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>V</key></keyseq></p></td>
+    <td><p>Pega el contenido del portapapeles.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Z</key></keyseq></p></td>
+    <td><p>Deshace la última acción.</p></td>
+  </tr>
+</table>
+
+<table rules="rows" frame="top bottom">
+<title>Capturar la pantalla</title>
+  <tr>
+    <td><p><key>Imprimir pantalla</key></p></td>
+    <td><p>Capturar la pantalla.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>Imprimir pantalla</key></keyseq></p></td>
+    <td><p>Toma una captura de la ventana activa.</p></td>
+  </tr>
+</table>
+
+  <comment>
+    <cite date="2011-04-24">jbicha</cite>
+    <p>Compiz has even more <link href="http://wiki.compiz.org/CommonKeyboardShortcuts">
+keyboard shortcuts</link>.</p>
+  </comment>
+
+</page>

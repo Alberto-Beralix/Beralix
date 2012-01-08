@@ -1,0 +1,1 @@
+../../../../share/pyshared/speechd/client.py

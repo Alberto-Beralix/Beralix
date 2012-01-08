@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_whereami" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#reviewing"/>
+    <link type="next" xref="howto_flat_review"/>
+    <title type="sort">1. ¿Dónde estoy?</title>
+    <desc>Aprender sobre su ubicación</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>¿Dónde estoy?</title>
+  <p>Además de los comandos especializados para leer la barra de título y la barra de estado, Orca proporciona dos comandos ¿Dónde estoy? sensibles al contexto: ¿Dónde estoy? básico y ¿Dónde estoy? detallado. ¿Dónde estoy? básico se aplica a todos los objetos. ¿Dónde estoy? detallado se aplica sólo a aquellos objetos para los cuales existe una gran cantidad de información que podría desear saber, pero que probablemente no querrá saber todo el tiempo.</p>
+  <p>La mejor manera de familiarizarse con lo que presentará ¿Dónde estoy? es probando los <link xref="commands_where_am_i">comandos ¿Dónde estoy?</link>. Sin embargo, para que tenga una idea más clara de la naturaleza sensible al contexto de la característica ¿Dónde estoy? de <app>Orca</app>, considere lo siguiente:</p>
+  <p>Se le dirá, para la mayoría de widgets, la etiqueta y/o el nombre, el tipo o el rol del widget y el mnemónico y/o tecla aceleradora si existe. Además:</p>
+  <list>
+    <item>
+      <p>Si el widget es texto y ejecuta un ¿Dónde estoy? básico, se le dirá la línea actual si no se selecciona texto. Si se selecciona texto, sin embargo, un ¿Dónde estoy? básico le dirá qué texto se ha seleccionado. Un ¿Dónde estoy? detallado en el texto también incluirá los atributos de texto.</p>
+    </item>
+    <item>
+      <p>Si se puede marcar el widget, como en el caso de casillas de verificación y botones de radio, se incluirá el estado marcado.</p>
+    </item>
+    <item>
+      <p>Si el widget es una lista o un objeto de tipo lista, como un cuadro combinado, un grupo de botones de radio, o una lista de pestañas de página, se incluirá la posición del elemento actual.</p>
+    </item>
+    <item>
+      <p>Si el widget es jerárquico, como un árbol, y está en un nodo expandible, se le dirá si ese nodo es expandible o no. Y si es expandible, también se le dirá cuántos hijos contiene. Además, se proporcionará el nivel de anidamiento.</p>
+    </item>
+    <item>
+      <p>Si el widget es una barra de progreso o un deslizador, se le dirá el porcentaje actual.</p>
+    </item>
+    <item>
+      <p>Si el widget es un icono dentro de un grupo de iconos, un ¿Dónde estoy? básico incluirá el objeto que esté explorando, el elemento sobre el cual esté situado y el número de elementos seleccionados. En un ¿Dónde estoy? detallado, también se le dirá qué elementos están seleccionados.</p>
+    </item>
+    <item>
+      <p>Si está sobre un enlace, se incluirá el tipo de enlace (mismo sitio, diferente sitio, enlace FTP, etc.).</p>
+    </item>
+    <item>
+      <p>Si está en una celda de la tabla, se incluirán las coordenadas de esa celda y de las cabeceras.</p>
+    </item>
+  </list>
+  <p>Y así sucesivamente. Nuevamente, el objetivo de la característica ¿Dónde estoy? de <app>Orca</app> es proporcionarle la información que probablemente más le interesa saber acerca del objeto que está explorando actualmente. Para probar ¿Dónde estoy?, consulte la lista de <link xref="commands_where_am_i">comandos ¿Dónde estoy?</link>.</p>
+</page>

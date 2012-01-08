@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/session/screen0/options/save_legacy</key>
+      <applyto>/apps/compiz-1/plugins/session/screen0/options/save_legacy</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Save Legacy Apps</short>
+        <long>Also try to save and restore legacy apps that don't support the X session management protocol. This setting only should be used in KDE, as only KDE's session manager also saves those applications.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/session/screen0/options/ignore_match</key>
+      <applyto>/apps/compiz-1/plugins/session/screen0/options/ignore_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <locale name="C">
+        <short>Windows to ignore</short>
+        <long>Matching windows will not be handled by the session plugin (match)</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

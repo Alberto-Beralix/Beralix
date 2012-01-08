@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-disc-write" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="files" group="more"/>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+
+    <credit type="author">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
+    </credit>
+
+    <desc>Coloque os arquivos e documentos em um CD ou DVD virgem usando um gravador de CD/DVD.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Gravar arquivos em um CD ou DVD</title>
+
+  <p>O <gui>Criador de CD/DVD</gui> no gerenciador de arquivos facilita a transferência de arquivos para outros computadores ou a criação de <link xref="backup-why">cópias de segurança</link> ao colocar arquivos em um disco virgem. Para gravar arquivos em um CD ou DVD:</p>
+
+  <steps>
+    <item><p>Coloque um disco vazio dentro do seu drive gravável de CD/DVD.</p></item>
+    <item>
+     <p>Na janela <gui>Disco CD/DVD-R vazio</gui> que aparecer, escolha <gui>Criador de CD/DVD</gui> e clique em <gui>Ok</gui>. A janela <gui>Pasta do criador de CD/DVD</gui> aparecerá.</p>
+     <p>(Você pode também clicar em <gui>Disco de CD/DVD-R em branco</gui> abaixo de <gui>Dispositivos</gui> no gerenciador de arquivos da barra lateral.</p>
+    </item>
+    <item><p>No campo <gui>Nome do disco</gui>, digite um nome para o disco.</p></item>
+    <item><p>Arraste ou <link xref="files-copy">copie</link> os arquivos desejados para a janela.</p></item>
+    <item>
+     <p>Em <gui>Selecione um disco para gravar</gui>, escolha o disco virgem.</p>
+     <p>(você também pode escolher <gui>Arquivo de imagem</gui>. Isso colocará os arquivos em uma <em>imagem de disco</em>, que ficará gravada em seu computador. Você poderá, então, queimar essa imagem em um disco virgem posteriormente)</p>
+    </item>
+    <item><p>Clique em <gui>Propriedades</gui> se você quiser ajustar a velocidade da gravação, a localização dos arquivos temporários, e outras opções. As opções padrão devem ser boas.</p></item>
+    <item>
+     <p>Clique no botão <gui>Gravar</gui> para iniciar a gravação.</p>
+     <p>Se <gui>Queimar diversas cópias</gui> estiver marcado, lhe serão solicitados discos adicionais.</p>
+    </item>
+    <item><p>Quando a gravação do disco for concluída, ele será ejetado automaticamente. Escolha <gui>Fazer mais cópias </gui> ou <gui>Fechar</gui> para sair.</p></item>
+  </steps>
+
+<note><p>Para projetos de gravação de CD/DVD mais avançados, teste o <app>Brasero</app>.</p>
+<p>Para ajudar com a utilização do Brasero, leia o <link href="ghelp:brasero">guia do usuário</link>.</p></note>
+
+<section id="problem">
+ <title>O disco não foi gravado corretamente!</title>
+ <p>Às vezes, os discos não são gravados corretamente e você não será capaz de ver os arquivos que você colocou no disco quando você inseri-lo em um computador.</p>
+
+ <p>Nesse caso, experimente queimar o disco novamente mas use uma velocidade de gravação menor, por exemplo 12x em vez de 48x. Gravar em velocidades menores é mais confiável. Você pode escolher a velocidade clicando no botão <gui>Propriedades</gui> da janela <gui>Pasta do criador de CD/DVD</gui></p>
+</section>
+
+</page>

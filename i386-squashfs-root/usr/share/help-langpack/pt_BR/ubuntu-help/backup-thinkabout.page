@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="backup-thinkabout" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files#backup"/>
+    <desc>Uma lista de pastas onde você pode encontrar documentos, arquivos e configurações que você pode querer fazer cópias de segurança.</desc>
+    
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Onde posso encontrar os arquivos que desejo fazer cópia de segurança?</title>
+
+<p>Decidindo de quais arquivos fazer cópia de segurança e descobrindo onde todos eles estão é o passo mais difícil ao tentar executar uma cópia de segurança. Abaixo está uma lista de onde a maioria de seus arquivos importantes devem estar, portanto você pode encontrá-los mais facilmente.</p>
+<terms>
+
+<item>
+   <title>Seus arquivos e configurações pessoais</title>
+<p>Esses são, usualmente, armazenados em sua pasta Home (<cmd>/home/seu_nome</cmd>). Eles podem estar em sub-pastas como Desktop, Documentos, Fotos, Música, Vídeos e/ou .evolution (para e_mails). Se sua mídia de armazenamento têm espaço suficiente, considere fazer cópias de segurança toda a pasta <cmd>/home</cmd>. Essa é a maneira mais simples.</p>
+
+<p>Se você não é capaz de fazer cópias de segurança de todo o <cmd>/home</cmd>, veja abaixo uma lista de sub-pastas da pasta <cmd>/home</cmd> para checar por arquivos importantes.</p>
+<note>
+<list>
+<item><p><cmd>~/</cmd> representa a sua pasta pessoal <cmd>/home/seu_nome</cmd></p></item>
+
+ <item><p>Qualquer nome de arquivo ou pasta que inicie com um ponto é oculto por padrão. Para ver arquivos ocultos, clique em <guiseq><gui>ver</gui><gui>mostrar arquivos ocultos</gui></guiseq> ou pressione <keyseq><key>Ctrl</key><key>H</key></keyseq>.</p></item>
+</list>
+</note>
+</item>
+</terms>
+
+<table shade="rows">
+  <tr>
+    <td><p>Seus arquivos pessoais</p></td><td><p><cmd>~/</cmd>, <cmd>~/Área de Trabalho</cmd>, <cmd>~/Documentos</cmd>, <cmd>~/Imagens</cmd>, <cmd>~/Música</cmd>, <cmd>Vídeos</cmd> e outros</p></td> <td><p>Contém arquivos que você criou ativamente.</p></td>
+
+  </tr>
+  <tr>
+    <td><p>Suas configurações pessoais</p></td> <td><p><cmd>~/.config</cmd>, <cmd>~/.gconf</cmd>, <cmd>~/.local</cmd></p></td>
+    <td><p>Contém configurações que você definiu para a sua área de trabalho e alguns aplicativos.</p></td>
+  </tr>
+  <tr>
+    <td><p>Configurações do sistema</p></td> <td><p><cmd>/etc</cmd> localizado no Sistema de Arquivo fora da sua pasta Pessoal.</p></td>
+    <td><p>Suas configurações de sistema. Em geral, você não precisa sair de sua pasta pessoal.</p></td>
+  </tr>
+
+</table>
+
+</page>

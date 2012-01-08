@@ -1,0 +1,9 @@
+# vim:syntax=apparmor
+
+  # Apache
+  network inet stream,
+  /usr/share/apache2/** r,
+
+  # changehat itself
+  /proc/*/attr/current                        w,
+

@@ -1,0 +1,33 @@
+#!/bin/sh -e
+
+case "$1" in
+    configure)
+        if [ -e /etc/lsb-release ]; then
+            MD5SUM=`md5sum /etc/lsb-release | cut -d" " -f1`
+            if [ "$MD5SUM" = "b5bfe10d9b02fb4e4a45337d1c4d88ab" ]; then
+                rm -f /etc/lsb-release
+            fi
+        fi
+        # remove python-support bits which were installed in intermediate
+        # karmic versions; this can be dropped in lucid+1; LP #418017
+        if dpkg --compare-versions "$2" le-nl 4.0-0ubuntu7; then
+            rm -f /usr/lib/pymodules/python2.6/lsb_release.py
+        fi
+        ;;
+esac
+
+
+# Automatically added by dh_python3:
+if which py3compile >/dev/null 2>&1; then
+	py3compile -p lsb-release 
+fi
+
+# End automatically added section
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p lsb-release 
+fi
+
+# End automatically added section
+

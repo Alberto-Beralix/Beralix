@@ -1,0 +1,8 @@
+SUBSYSTEM!="sound", GOTO="sound_end"
+ACTION!="change", GOTO="sound_end"
+KERNEL!="card*", GOTO="sound_end"
+
+ATTRS{id}=="SDP4430|Panda", RUN+="/usr/bin/alsaucm set _verb HiFi"
+ATTRS{id}=="SDP4430|Panda", RUN+="/usr/bin/alsaucm set _verb Record"
+
+LABEL="sound_end"

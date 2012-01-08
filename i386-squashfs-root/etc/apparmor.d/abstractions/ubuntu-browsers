@@ -1,0 +1,34 @@
+# vim:syntax=apparmor
+#
+# abstraction for allowing access to graphical browsers in Ubuntu
+#
+
+  /usr/bin/arora PUx,
+  /usr/bin/conkeror PUx,
+  /usr/bin/dillo PUx,
+  /usr/bin/Dooble PUx,
+  /usr/bin/epiphany PUx,
+  /usr/bin/epiphany-browser PUx,
+  /usr/bin/epiphany-webkit PUx,
+  /usr/lib/fennec-*/fennec PUx,
+  /usr/bin/galeon PUx,
+  /usr/bin/kazehakase PUx,
+  /usr/bin/konqueror PUx,
+  /usr/bin/midori PUx,
+  /usr/bin/netsurf PUx,
+  /usr/bin/prism PUx,
+  /usr/bin/rekonq PUx,
+  /usr/bin/seamonkey PUx,
+  /usr/bin/sensible-browser Pixr,
+
+  /usr/bin/chromium-browser PUx,
+  /usr/lib/chromium-browser/chromium-browser PUx,
+
+  # this should cover all firefox browsers and versions (including shiretoko
+  # and abrowser)
+  /usr/lib/firefox-*/firefox.sh PUx,
+
+  # some unpackaged, but popular browsers
+  /usr/lib/icecat-*/icecat PUx,
+  /usr/bin/opera PUx,
+  /opt/google/chrome/google-chrome PUx,

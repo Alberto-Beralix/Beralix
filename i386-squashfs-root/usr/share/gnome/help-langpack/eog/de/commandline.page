@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="commandline" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <title type="sort">Befehlszeile</title>
+    <desc>Der Befehl <cmd>eog</cmd> kann eine beliebige Anzahl von Bildern in verschiedenen Modi öffnen.</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Die Befehlszeile</title>
+
+<p>Um den <app>Bildbetrachter</app> in einem <app>Terminal</app> zu starten, geben Sie den Befehl <cmd>eog</cmd> ein.</p>
+<p>Sie können eine bestimmte Datei öffnen, indem Sie den Dateinamen nach dem <cmd>eog</cmd>-Befehl eingeben:</p>
+<screen>eog bild.jpeg</screen>
+<p>Sie können mehrere Bilder öffnen, indem Sie deren Dateinamen nach dem <cmd>eog</cmd>-Befehl eingeben, getrennt durch Leerzeichen:</p>
+<screen>eog bild1.jpeg bild2.jpeg</screen>
+
+<p>Um alle in einer Instanz geöffneten Bilder zu sehen, können Sie <link xref="view#image-gallery">die Bildersammlung durchsuchen</link>.</p>
+<section id="fullscreen">
+    <title>Öffnen eines Bildes im Vollbildmodus</title>
+    <screen>eog --fullscreen bild.jpeg</screen>
+</section>
+<section id="slide-show">
+    <title>Bilder im Diaschau-Modus öffnen</title>
+    <screen>eog --slide-show Bilder/</screen>
+</section>
+<section id="disable-gallery">
+    <title>Bild ohne Anzeige der Bildersammlung öffnen</title>
+    <screen>eog --disable-gallery bild.jpeg</screen>
+</section>
+<section id="new-instance">
+    <title>Bild in einer neuen Instanz öffnen</title>
+    <screen>eog --new-instance bild.jpeg</screen>
+</section>
+</page>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="question" id="power-closelid" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="power"/>
+    <link type="seealso" xref="power-suspendfail"/>
+    
+    <desc>Laptops suspendem quando você fecha a tampa, a fim de economizar energia.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Por que meu computador desliga quando eu fecho a tampa?</title>
+
+<p>Quando você fecha a tampa do seu laptop, seu computador irá <em>suspender</em> a fim de economizar energia. Isso significa que o computador não está realmente desligado - ele apenas foi dormir. Você pode acordá-lo levantando a tampa. Se isso não o acordar, tente clicar com o mouse ou pressionar uma tecla. Se isso ainda não funcionar, pressione o botão liga-desliga.</p>
+
+<p>Alguns computadores não são capazes de suspender devidamente, normalmente porque o hardware deles não é completamente suportado pelo sistema operacional (e.g. os drivers Linux estão incompletos). Nesse caso, você pode perceber que você não é capaz de acordar seu computador depois que você fechou a tampa. Você pode tentar <link xref="power-suspendfail">corrigir o problema com o suspender</link> ou você pode prevenir que o computador tente suspender quando você fechar a tampa.</p>
+
+<section id="nosuspend">
+ <title>O computador sai do modo de suspensão quando ele é fechado.</title>
+ <p>Se você não quer que o computador entre em modo de suspensão quando você o fecha, você pode mudar as configurações para esse comportamento. Para configurar tela preta, ao invés de suspensão, quando ele é fechado:</p>
+ <note style="warning">
+   <p>Tenha muito cuidado se você alterar essa configuração. Alguns notebooks podem superaquecer, se forem deixados em execução com a tampa fechada, especialmente se eles estão em um lugar confinado como uma mochila.</p>
+ </note>
+ <steps>
+   <item>
+     <p>Abra o aplicativo <app>Terminal</app> a partir do <gui>Painel</gui>.</p>
+   </item>
+   <item>
+     <p>Para alterar a configuração usada quando estiver utilizando a bateria, digite este comando e pressione a tecla <key>Enter</key>:</p>
+     <screen>gsettings set org.gnome.settings-daemon.plugin.power tampa-close-bateria-action em branco</screen>
+   </item>
+   <item>
+     <p>Para alterar a configuração usada quando estiver utilizando corrente alternada, digite este comando e pressione a tecla <key>Enter</key>:</p>
+     <screen>gsettings set org.gnome.settings-daemon.plugin.power lid-close-ac-action em branco</screen>
+   </item>
+ </steps>
+ <p>Existem outras configurações disponíveis além de "em branco", como "nada", que faz com que o computador não faça nada.</p>
+</section>
+
+</page>

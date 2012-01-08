@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/apps/pidgin/__init__.py

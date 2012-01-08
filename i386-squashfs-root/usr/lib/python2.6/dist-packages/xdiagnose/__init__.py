@@ -1,0 +1,1 @@
+../../../../share/pyshared/xdiagnose/__init__.py

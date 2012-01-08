@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/toolkits/WebKitGtk/speech_generator.py

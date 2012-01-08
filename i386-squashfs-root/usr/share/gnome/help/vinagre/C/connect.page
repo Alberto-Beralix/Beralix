@@ -1,0 +1,72 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="connect">
+
+  <info>
+    <link type="guide" xref="index#connections"/>
+    <title type="sort">1</title>
+    <desc>Establish a connection to another computer on your local network.</desc>
+    <credit type="author">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@googlemail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+  <title>Establish a connection</title>
+
+  <p>You can connect to other computers on your local network using
+  <app>Vinagre</app>.</p>
+
+  <steps>
+    <item>
+      <p>Choose <guiseq><gui>Remote</gui><gui>Connect</gui></guiseq>.</p>
+      <figure>
+        <title>Connect dialog</title>
+        <media type="image" mime="image/png" src="figures/vinagre-connect-dialog.png"/>
+      </figure>
+    </item>
+    <item>
+      <p>Choose the <gui>Protocol</gui> and the <gui>Host</gui> for the
+      connection.</p>
+      <note>
+        <p>Some protocols allow you to see all available computers on your
+        local network by clicking the <gui>Find</gui> button. Without
+        <app>Avahi</app> support, this button will not be displayed.</p>
+      </note>
+    </item>
+    <item>
+      <p>Select the options which you want enabled when the connection is
+      made. Options will vary depending on the protocol you use.</p>
+    </item>
+    <item>
+      <p>Click the <gui>Connect</gui> button.</p>
+      <note>
+	<p>At this point, the remote desktop may need to confirm the
+	connection. If this is the case, the viewer may remain black until the
+	connection is confirmed.</p>
+      </note>
+      <note>
+        <p>Some computers may require a secure connection: an authentication
+        dialog will be displayed, asking for the credentials. The type of
+        credentials depend on the remote host, it may be a password and a
+        username. If you select <gui>Remember this credential</gui>,
+        <app>Vinagre</app> will store the information using
+        <app>GNOME Keyring</app>.</p>
+      </note>
+    <figure>
+      <title>Authentication dialog</title>
+      <media type="image" mime="image/png" src="figures/vinagre-auth-needed.png"/>
+    </figure>
+    </item>
+  </steps>
+
+  <p>If the connection has been used previously, you can also access it
+  through <guiseq><gui>Remote</gui><gui>Recent Connections</gui></guiseq>.</p>
+
+  <p>To close a connection, choose <guiseq><gui>Remote</gui>
+  <gui>Close</gui></guiseq> or click the <gui>Close</gui> button.</p>
+
+</page>

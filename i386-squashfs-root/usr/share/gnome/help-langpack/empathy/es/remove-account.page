@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="task" id="remove-account" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#accounts"/>
+    <desc>Quitar completamente una cuenta en <app>Empathy</app>.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-14" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-10" status="review"/>
+    <revision pkgversion="2.28" version="0.3" date="2009-08-27" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-08-31" status="done"/>
+      -->
+    </revision>
+    <revision pkgversion="2.30" version="0.4" date="2010-04-19" status="review"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Quitar una cuenta</title>
+
+  <p>Puede quitar completamente una cuenta de <app>Empathy</app> si no quiere seguir usándola. Si quiere usar de nuevo la cuenta en <app>Empathy</app> en el futuro, deberá añadir los detalles de la cuenta de nuevo.</p>
+  
+  <steps>
+    <item>
+      <p>Desde la ventana <gui>Lista de contactos</gui> elija <guiseq><gui>Editar</gui><gui>Cuentas</gui></guiseq> o pulse <key>F4</key>.</p>
+    </item>
+    <item>
+      <p>Seleccione la cuenta que quiere quitar de la lista de cuentas en la parte izquierda de la ventana.</p>
+    </item>
+    <item>
+      <p>Pulse <gui style="button">Quitar</gui>.</p>
+    </item>
+    <item>
+      <p>Se mostrará un diálogo preguntando por una confirmación. Pulse el botón <gui>Quitar</gui> para quitar la cuenta permanentemente.</p>
+    </item>
+  </steps>
+
+  <note>
+    <p>Incluso después de quitar una cuenta, <app>Empathy</app> no borra su histórico de conversaciones para esa cuenta.</p>
+  </note>
+
+</page>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-wireless-troubleshooting-device-drivers" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-wireless-troubleshooting"/>
+    <revision version="11.04" date="2011-05-04" status="review"/>
+    <credit type="author">
+      <name>Contribuidores da wiki de documentação do Ubuntu</name>
+    </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <desc>Solucionar problemas de conexão para uma rede sem fio.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Verifique seus drivers de dispositivo</title>
+
+<section id="net-wireless-driver-check">
+  <title>Verifique por drivers carregados automaticamente</title>
+
+  <p>Se dispositivo pode já ser suportado com um driver pré-instalado. Para verificar se um driver foi automaticamente carregado, execute <cmd>sudo lshw -C network</cmd>. Procure na linha que começa com <gui>configuração: </gui> pela palavra <em>driver</em>. Se isso existir, um driver já foi instalado e carregado.</p>
+  <p>Se você não estiver executando o kernel mais recente, atualize seu sistema primeiro. Drivers, especialmente sem fio, são constantemente adicionados e modificados. Você pode fazer isso clicando no <link xref="unity-appmenu-intro">menu sessão</link> e selecionando <gui>Configurações do sistema</gui>. Na seção Sistema, clique em <gui>Gerenciador de atualizações</gui>.</p>
+</section>
+
+<section id="net-wireless-native-driver">
+  <title>Encontre drivers Linux adicionais</title>
+  <p>Você pode verificar por drivers Linux adicionais nas seguintes localizações:</p>
+  <list>
+    <item>
+      <p>Verifique um driver clicando no <link xref="unity-appmenu-intro">menu de sessão</link> e escolhendo <gui>Configurações de sistema</gui>. Na seção de hardware, clique em <gui>Drivers adicionais</gui>. Aguarde um momento enquanto o Ubuntu atualiza sua base de dados.</p>
+      <p>Muitos dos drivers encontrados em <app>Drivers adicionais</app> são proprietários e seu código-fonte não está disponível gratuitamente. Consequentemente, desenvolvedores da comunidade Linux são incapazes de consertar quaisquer problemas de segurança ou funcionalidade no driver. Esses drivers também não podem ser instalados automaticamente com o Ubuntu. Se você estiver disposto a aceitar essa limitação, ative esse driver.</p>
+    </item>
+    <item>
+      <p>Procure o site da fabricante da sua placa por um driver Linux.</p>
+    </item>
+  </list>
+</section>
+
+<section id="net-wireless-ndiswrapper">
+  <title>Use Ndiswrapper para placas sem um driver Linux</title>
+  <p>Se você achar que sua placa não tem um driver Linux, você pode tentar <app>ndiswrapper</app>.</p>
+  <list>
+    <item>
+      <p>Verifique a <link href="http://sourceforge.net/apps/mediawiki/ndiswrapper/">base de dados de dispositivos</link> para ver se sua placa é suportada pelo ndiswrapper.</p>
+    </item>
+    <item>
+      <p>Informações completas no ndiswrapper mantidas <link href="https://help.ubuntu.com/community/WifiDocs/Driver/Ndiswrapper">nesta página</link>, inclusive solução de problemas específicos do ndiswrapper.</p>
+    </item>
+  </list>
+</section>
+
+<section id="net-wireless-driver-check2">
+  <title>Verificar driver</title>
+  <p>Se você rodou <cmd>lshw -C network</cmd> e viu um driver ligado ao dispositivo, então vamos testar para ter certeza de que ele está se comunicando com o núcleo. Você também pode voltar à <link xref="net-wireless-troubleshooting-initial-check">Página inicial de verificação</link> para procurar por sinais de conectividade.</p>
+  <list type="numbered">
+    <item>
+      <p>Execute <cmd>sudo lsmod</cmd> para ver se o driver foi carregado. Procure pelo nome do driver listado na linha "configuração" da saída do lshw.</p>
+      <list>
+        <item>
+          <p>Se você não ver o módulo do driver na lista, então use <cmd>sudo modprobe</cmd> para carregá-lo.</p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>Execute <cmd>sudo iwconfig</cmd>. Se você vir uma saída parecida com a do exemplo na seção de comando, então o driver ao menos está identificando o dispositivo como um dispositivo sem-fio junto ao núcleo.</p>
+    </item>
+    <item>
+      <p>Execute o comando <cmd>sudo iwlist scan</cmd> para procurar por um ponto de acesso sem-fio. Se um ponto de acesso for identificado, a placa provavelmente está funcionando adequadamente, pois ela pode completar uma tarefa de interface sem-fio.</p>
+    </item>
+  </list>
+
+  <note>
+    <p>Para aprender mais sobre todos os comandos usados neste guia, clique <link href="https://help.ubuntu.com/community/WifiDocs/WirelessTroubleShootingGuide/Commands">aqui</link>.</p>
+  </note>
+
+</section>
+
+<links type="series"/>
+</page>

@@ -1,0 +1,1 @@
+../../../../../../../../share/pyshared/papyon/service/AddressBook/scenario/contacts/mobile_contact_add.py

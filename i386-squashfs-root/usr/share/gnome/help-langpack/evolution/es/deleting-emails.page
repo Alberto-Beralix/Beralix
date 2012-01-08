@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="deleting-emails" xml:lang="es">
+
+  <info>
+    <desc>Eliminando correos o adjuntos para reducir el tamaño del buzón de correo.</desc>
+    
+    <link type="guide" xref="deleting-to-free-disk-space"/>
+    <link type="seealso" xref="mail-moving-emails"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-08-01" status="final"/>
+    <credit type="author">
+      <name>April Gonzales</name>
+      <email>loonycookie@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Eliminar permanentemente correos o adjuntos</title>
+
+<section id="emails">
+<title>Correos-e</title>
+<p>Evolution elimina correos electrónicos en servidores IMAP <em>marcándolos</em> para su eliminación; el espacio no se libera hasta que <em>purga</em> los correos marcados.</p>
+
+<p>Para purgar una carpeta específica, vaya a <guiseq><gui>Carpeta</gui><gui>Purgar</gui></guiseq> o pulse <keyseq><key>Ctrl</key><key>E</key></keyseq>. Para purgar todas las carpetas, vaya a <guiseq><gui>Archivo</gui><gui>Vaciar papelera</gui></guiseq>. Esto también se aplica a otros tipos de cuentas.</p>
+</section>
+
+<section id="attachments">
+<title>Adjuntos</title>
+<p>Para eliminar los adjuntos de un correo, seleccione el mensaje y pulse <guiseq><gui>Mensaje</gui><gui>Quitar adjuntos</gui></guiseq>.</p>
+</section>
+</page>

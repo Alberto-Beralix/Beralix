@@ -1,0 +1,1 @@
+../../../../../share/pyshared/oneconf/networksync/infraclient_fake.py

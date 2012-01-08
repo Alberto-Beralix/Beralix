@@ -1,0 +1,42 @@
+GNOME Utilities - "Of the Girl"
+===============================================================================
+Version: 3.0.0
+
+GNOME Utilities for the GNOME 3.0 Desktop contains the following -
+
+	gnome-system-log	[logview]
+	gnome-search-tool	[gseachtool]
+	gnome-dictionary	[gnome-dictionary]
+	gnome-screenshot	[gnome-screenshot]
+	baobab                  [baobab]
+	font-viewer             [font-viewer]
+
+Requirements -
+
+	intltool	>= 0.40.0
+	gnome-common	>= 2.3.0
+	glib		>= 2.28.0
+	gtk+            >= 3.0.3
+	libgtop         >= 2.12.0
+	gconf
+        libcanberra-gtk3 >= 0.4
+
+
+The following configure flags can be used -
+
+  --enable-zlib                   Enable ZLib support for Logview [default=yes]
+  --with-grep                     Specify the path to the grep
+                                  command [default=find it ourselves]
+  --enable-debug                  Enable debug messages [default=no]
+
+Installation -
+
+See the file 'INSTALL'
+
+How to report bugs -
+
+See the file 'BUGS'
+
+How to contribute -
+
+See the file 'HACKING'

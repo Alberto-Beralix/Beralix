@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="import-apps-outlook" xml:lang="es">
+
+  <info>
+    <desc>Importar datos desde otro Microsoft Outlook.</desc>
+    
+    <link type="guide" xref="import-data#import-from-apps"/>
+
+    <revision pkgversion="3.0.2" version="0.5" date="2011-09-02" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/outlook-migration-mail.html.en -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+  <title>Outlook</title>
+<!-- "Import data and settings from older programs" cannot recognize Outlook, as there obviously is no default storage location for Outlook *under Linux* -->
+
+<p>These steps refer to locally stored data such as POP accounts. For remote data (like IMAP) this is not necessary, since the data is still on the server and does not need to be manually transfered. You can set up the corresponding account in Evolution and the data will be downloaded.</p>
+
+<section id="prerequisites">
+<title>Prerequisitos bajo Windows</title>
+<p>Primero, mientras usa Microsoft Windows, prepare sus mensajes para importarlos:</p>
+<steps>
+<item><p>Busque sus archivos de Outlook (generalmente tienen una terminación <file>.pst</file> o <file>.ost</file>):</p>
+<table frame="all" rules="all">
+  <tr>
+    <td/><td><p>Windows 7, Windows Vista</p></td><td><p>Windows XP</p></td>
+  </tr>
+  <tr>
+    <td><p>Outlook 2010</p></td><td><p><file>C:\Users\username\My Documents\Outlook Files</file></p></td><td><p><file>C:\Documents and Settings\nombre_de_usuario\My Documents\Outlook Files</file></p></td>
+  </tr>
+  <tr>
+    <td><p> Outlook 2007 y anteriores</p></td><td><p><file>C:\Users\nombre_de_usuario\AppData\Local\Microsoft\Outlook</file></p></td><td><p><file>C:\Documents and Settings\nombre_de_usuario\AppData\Local\Microsoft\Outlook</file></p></td>
+  </tr>
+</table>
+<p>(Reemplace «nombre_de_usuario» por su nombre de usuario.)</p>
+</item>
+<!-- File locations taken from http://support.microsoft.com/kb/2291280 and http://answers.microsoft.com/en-us/windows/forum/windows_7-files/where-is-location-of-outlookpst-file-in-windows-7/3a4c03c3-e8ad-4912-9e37-f1c62057d1f9 -->
+<item><p>Copie los archivos de Outlook al sistema o a la partición en la que esté instalado Evolution.</p>
+<p>Probablemente su disco duro está en formato NTFS algunos sistemas Linux no pueden leer sin software adicional. Quizá encuentre más fácil copiar las carpetas de correo a una unidad diferente o grabar un CD.</p></item>
+</steps>
+</section>
+
+<section id="importing">
+<title>Importar en Evolution</title>
+<steps>
+<item><p>Dependiendo de su último paso, conecte el disco o la unidad USB con los datos y espere hasta que se abra la ventana del gestor de archivos o monte su unidad Windows.</p></item>
+<item><p>Copie todos los archivos de correo en su carpeta personal o cualquier otro lugar conveniente.</p></item>
+<item><p>Inicie Evolution.</p></item>
+<item><p>opcionalmente, seleccione <guiseq><gui>Archivo</gui><gui>Nuevo</gui><gui>Carpeta de correo</gui></guiseq> para crear las <link xref="mail-folders">carpetas</link> que quiera.</p></item>
+
+<item><p>Pulse <guiseq><gui>Archivo</gui><gui>Importar</gui></guiseq>.</p></item>
+<item><p>En la pestaña <gui>Tipo de importador</gui> pulse <gui>Importar un único archivo</gui>.</p></item>
+<item><p>Seleccione el archivo de carpetas personales de Outlook (.pst) que quiere importar.</p><p>Se determinará automáticamente el tipo de archivo.</p>
+<note style="tip"><p>If the option to import Outlook personal folders (.pst files) is not available under <guiseq><gui>File</gui><gui>Import</gui><gui>Import single file</gui><gui>File type</gui></guiseq>, your distribution might have not enabled this functionality.</p></note>
+</item>
+<item><p>Elija el destino (ej. la carpeta en Evolution) para los datos importados.</p></item>
+<item><p>Repita los pasos de importación hasta que haya importado todos sus datos.</p></item>
+</steps>
+
+</section>
+
+</page>

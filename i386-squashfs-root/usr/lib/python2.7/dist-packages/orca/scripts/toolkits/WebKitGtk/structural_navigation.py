@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/toolkits/WebKitGtk/structural_navigation.py

@@ -1,0 +1,34 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure)
+    
+# create colord group if it isn't already there
+	if ! getent group colord >/dev/null; then
+            addgroup --quiet --system colord
+	fi
+
+# create the scanner group if it isn't already there
+	if ! getent group scanner >/dev/null; then
+	    addgroup --quiet --system scanner
+	fi
+
+# create colord user if it isn't already there
+	if ! getent passwd colord >/dev/null; then
+            adduser --system --ingroup colord --home /var/lib/colord colord \
+		--gecos "colord colour management daemon"
+	    # Add colord user to scanner group
+	    adduser --quiet colord scanner
+	fi
+
+# ensure /var/lib/colord has appropriate permissions
+	chown -R colord:colord /var/lib/colord
+
+	;;
+esac	
+
+
+
+exit 0

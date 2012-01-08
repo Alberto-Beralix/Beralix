@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "2.26">
+<!ENTITY app "gnome-user-share">
+]>
+<article id="index" lang="de">
+  <articleinfo>
+	 <title>»Persönliche Dateifreigabe«-Handbuch</title>
+	 <copyright>
+		<year>2009</year>
+		<holder>Red Hat, Inc.</holder>
+         </copyright><copyright><year>2009, 2010</year><holder>Mario Blättermann (mariobl@gnome.org)</holder></copyright>
+
+	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+	 <authorgroup>
+           <author role="maintainer">
+             <firstname>Matthias</firstname>
+             <surname>Clasen</surname>
+           </author>
+	 </authorgroup>
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+	 <revhistory>
+		<revision>
+		  <revnumber>1.0</revnumber>
+		  <date>2009</date>
+		  <revdescription>
+			 <para role="author">Matthias Clasen <email>mclasen@redhat.com</email></para>
+		  </revdescription>
+		</revision>
+	 </revhistory>
+	 <releaseinfo>Dieses Handbuch beschreibt Version 2.26 der <application>Persönlichen Dateifreigabe</application>.</releaseinfo>
+	 <legalnotice>
+		<title>Rückmeldungen</title>
+		<para>Um Fehler zu melden oder einen Vorschlag zur Anwendung <application>Persönliche Dateifreigabe</application> oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen im <ulink url="ghelp:user-guide?feedback-bugs" type="help">Abschnitt Rückmeldungen des Benutzerhandbuchs</ulink>."</para>
+	 </legalnotice>
+    <abstract role="description">
+      <para>Die <application>Persönliche Dateifreigabe</application> ist ein Sitzungsdienst, der das einfache Freigeben von Dateien zur Nutzung auf mehreren Rechnern ermöglicht.</para>
+    </abstract>
+  </articleinfo>
+  <indexterm><primary>gnome-user-share</primary></indexterm>
+  <indexterm><primary>Dateifreigabe</primary></indexterm>
+  <indexterm><primary>Freigabe</primary></indexterm>
+
+  <sect1 id="gnome-user-share-intro">
+	 <title>Einführung</title>
+	 <para>Die <application>Persönliche Dateifreigabe</application> ist ein Sitzungsdienst, der den Inhalt des Ordners <filename>Öffentlich</filename> in Ihrem persönlichen Ordner exportiert, so dass Rechner im gleichen lokalen Netzwerk leicht darauf zugreifen können. Auf den anderen Rechnern erscheint der freigegebene Ordner mit einem Namen wie <guilabel>Öffentliche Dateien von <replaceable>Benutzer</replaceable></guilabel> im Netzwerkfenster von <application>Nautilus</application>, wobei <replaceable>Benutzer</replaceable> durch Ihren Benutzernamen ersetzt wird.</para>
+	 <para>Die <application>Persönliche Dateifreigabe</application> benutzt zur Freigabe des Ordners <filename>Öffentlich</filename> einen WebDAV-Server und veröffentlicht die Freigabe im lokalen Netzwerk unter Verwendung von mDNS.</para>
+         <para>Zusätzlich kann die <application>Persönliche Dateifreigabe</application> die freigegebenen Dateien mittels ObexFTP über Bluetooth veröffentlichen. Der Empfang von zu Ihrem Rechner per Bluetooth über ObexPush gesendeten Dateien ist ebenfalls möglich.</para>
+  </sect1>
+
+  <sect1 id="gnome-user-share-getting-started">
+    <title>Erste Schritte</title>
+
+    <sect2 id="gnome-user-share-start">
+       <title>Persönliche Dateifreigabe starten</title>
+
+       <para>Der Dienst zur <application>Persönliche Dateifreigabe</application> wird normalerweise bereits durch <application>gnome-session</application> nach Ihrer Anmeldung gestartet. Sie können dies ändern, indem Sie <menuchoice><guimenu>Einstellungen</guimenu><guimenu>Startprogramme</guimenu></menuchoice> im Menü  <guimenu>System</guimenu> öffnen. Ändern Sie hier den Eintrag »Benutzerfreigabe« in der Liste der Startprogramme.</para>
+
+       <para>Um verschiedene Aspekte der Dateifreigabe anzupassen, verwenden Sie die Einstellungen. Diese finden Sie im Menü <guimenu>System</guimenu> unter <menuchoice><guimenu>Einstellungen</guimenu><guimenu>Persönliche Dateifreigabe</guimenu></menuchoice>.</para>
+       <figure id="file-sharing-preferences">
+         <title>Einstellungen zur Freigabe persönlicher Dateien</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/file-sharing-preferences.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+ 
+     </sect2>
+     <sect2 id="gnome-user-share-enabling-sharing">
+       <title>Aktivieren der Dateifreigabe über das Netzwerk</title>
+       <para>Öffnen Sie die Einstellungen im Menü <guimenu>System</guimenu> unter <menuchoice><guimenu>Einstellungen</guimenu><guimenu>Persönliche Dateifreigabe</guimenu></menuchoice>.</para>
+       <figure id="sharing-over-the-network">
+         <title>Dateifreigabe über das Netzwerk</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/sharing-over-the-network.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>Um die Dateifreigabe über WebDAV zu aktivieren, verwenden Sie das Ankreuzfeld <guilabel>Öffentlichen Ordner im Netzwerk freigeben</guilabel>. Wenn die Dateifreigabe aktiviert ist, erlaubt die Kontrolle des Passwortschutzes die Festlegung eines Passworts, dessen Eingabe vor dem Zugriff eines anderen Benutzers auf die freigegebenen Dateien erforderlich ist. <note><para>Einige Firewall-Konfigurationen auf dem lokalen Rechner könnten Probleme sowohl bei der Anzeige als auch beim Zugriff auf die freigegebenen Dateien verursachen. Fragen Sie Ihren Systemverwalter nach Einzelheiten hierzu.</para></note><itemizedlist>
+           <listitem>
+              <para>Wählen Sie <guilabel>Niemals</guilabel>, um jedem das Lesen oder Schreiben von Dateien im öffentlichen Ordner zu erlauben.</para>
+           </listitem>
+           <listitem>
+              <para>Wählen Sie <guilabel>Immer</guilabel>, um festzulegen, dass zum Lesen oder Schreiben von Dateien im öffentlichen Ordner das Passwort erforderlich ist.</para>
+           </listitem>
+           <listitem>
+              <para>Wählen Sie <guilabel>Beim Schreiben von Dateien</guilabel>, um jedem das Lesen von Dateien im öffentlichen Ordner zu erlauben. Für das Schreiben von Dateien ist in diesem Fall das Passwort erforderlich.</para>
+           </listitem>
+         </itemizedlist><note><para>Wenn Sie ein Passwort festlegen, müssen Sie dieses Passwort an alle Benutzer weitergeben, die Zugriff auf Ihre freigegebenen Dateien erhalten sollen. Es ist ratsam, hierfür ein Passwort zu verwenden, dass sich von Ihren anderen Passwörtern unterscheidet.</para></note></para>  
+     </sect2>
+
+     <sect2 id="gnome-user-share-enabling-bluetooth">
+       <title>Aktivieren der Dateifreigabe über Bluetooth</title>
+       <para>Öffnen Sie die Einstellungen im Menü <guimenu>System</guimenu> unter <menuchoice><guimenu>Einstellungen</guimenu><guimenu>Persönliche Dateifreigabe</guimenu></menuchoice>.</para>
+       <figure id="sharing-over-bluetooth">
+         <title>Dateifreigabe über Bluetooth</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/sharing-over-bluetooth.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>Um die Dateifreigabe über Bluetooth zu ermöglichen, verwenden Sie das Ankreuzfeld <guilabel>Öffentlichen Ordner über Bluetooth freigeben</guilabel>. Um das Löschen von Dateien durch entfernte Bluetooth-Geräte in Ihrem öffentlichen Ordner zu ermöglichen, verwenden Sie das Ankreuzfeld <guilabel>Entfernten Geräten das Löschen von Dateien erlauben</guilabel>. Sollen Bluetooth-Geräte auf Ihre freigegebenen Dateien zugreifen, auch wenn sie nicht vertrauenswürdig mit Ihrem Rechner verbunden sind, verwenden Sie das Ankreuzfeld <guilabel>Das Verbinden entfernter Geräte mit diesem Computer voraussetzen</guilabel>. <note><para>Wenn Sie nicht vertrauenswürdig verbundenen Geräten den Zugriff auf Ihre freigegebenen Dateien erlauben, könnte irgend jemand mit einem Bluetooth-aktivierte Mobiltelefon, der sich im Bereich Ihres Rechners befindet, auf Ihre freigegebenen Dateien zugreifen und diese eventuell auch verändern.</para></note></para>
+     </sect2>
+
+     <sect2 id="gnome-user-share-bluetooth-receiving">
+       <title>Empfangen von Dateien über Bluetooth</title>
+       <para>Öffnen Sie die Einstellungen im Menü <guimenu>System</guimenu> unter <menuchoice><guimenu>Einstellungen</guimenu><guimenu>Persönliche Dateifreigabe</guimenu></menuchoice>.</para>
+       <figure id="receiving-over-bluetooth">
+         <title>Empfangen von Dateien über Bluetooth</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/receiving-over-bluetooth.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>Um entfernten Bluetooth-Geräten das Senden von Dateien zu Ihrem Rechner zu erlauben, verwenden Sie das Ankreuzfeld <guilabel>Dateien im Download-Ordner über Bluetooth empfangen</guilabel>. Empfangene Dateien werden daraufhin im Ordner <filename>Downloads</filename> in Ihrem persönlichen Ordner gespeichert. Wenn der Dateiempfang aktiviert ist, ermöglicht Ihnen die Auswahl von <guilabel>Dateien akzeptieren</guilabel>, welchen entfernten Geräten das Senden von Dateien erlaubt werden soll. <itemizedlist>
+            <listitem>
+              <para>Wählen Sie <guilabel>Immer</guilabel>, um jedem entfernten Gerät das Senden von Dateien zu erlauben.</para>
+            </listitem>
+            <listitem>
+              <para>Wählen Sie <guilabel>Nur für verbundene Geräte</guilabel>, um Dateien nur von verbundenen Geräten zu akzeptieren.</para>
+            </listitem>
+            <listitem>
+              <para>Wählen Sie <guilabel>Nur für verbundene und vertrauenswürdige Geräte</guilabel>, um Dateien nur von vertrauenswürdig verbundenen Geräten zu akzeptieren. <note><para>Geräte können im Abschnitt <guilabel>Bekannte Geräte</guilabel> der <application>Bluetooth-Einstellungen</application> als vertrauenswürdig markiert werden.</para></note></para>
+            </listitem>
+          </itemizedlist></para>
+        <para>Verwenden Sie das Ankreuzfeld <guilabel>Über empfangene Dateien benachrichtigen</guilabel>, um festzulegen, ob Sie beim Empfang von Dateien über Bluetooth benachrichtigt werden wollen.</para>
+     </sect2>
+  </sect1>
+
+</article>

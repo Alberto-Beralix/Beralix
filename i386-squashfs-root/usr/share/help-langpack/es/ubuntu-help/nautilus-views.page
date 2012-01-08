@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-views" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-views"/>
+
+    <desc>Especificar la vista predeterminada, la ordenación y los niveles de ampliación para el gestor de archivos.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Preferencias de la vista del gestor de archivos</title>
+<p>Puede controlar la vista predeterminada para las nuevas carpetas, cómo se ordenarán los archivos y carpetas de forma predeterminada, el nivel de ampliación en las vistas compacta y de iconos, y si se mostrarán los archivos en la barra lateral de árbol. En cualquier ventana del gestor de archivos, pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y seleccione la pestaña <gui>Vistas</gui>.</p>
+
+<section id="default-view">
+<title>Vista predeterminada</title>
+<terms>
+  <item>
+    <title><gui>Ver las carpetas nuevas usando</gui></title>
+    <p>De forma predeterminada, las carpetas nuevas se muestran en la vista de iconos. Puede seleccionar una vista para cada carpeta cuando navega y el gestor de archivos recordará que considera que prefiere para cada carpeta. Pero si utiliza a menudo la lista o la vista compacta, puede utilizar estas vistas por defecto.</p>
+    <p>Cambie la vista de una carpeta individual en el menú <gui>Ver</gui> pulsando en <gui>Iconos</gui>, <gui>Lista</gui> o <gui>Compacta</gui>.</p>
+  </item>
+  <item>
+    <title><gui>Organizar los elementos</gui></title>
+    <p>Puede organizar los elementos de su carpeta por nombre, tamaño de archivo, tipo de archivo, cuándo se modificaron por última vez, cuándo se accedió a ellos por última vez o cuándo se tiraron a la papelera. Puede cambiar cómo se ordenan los archivos en una carpeta concreta usando el menú <guiseq><gui>Ver</gui><gui>Organizar los elementos</gui></guiseq>, o pulsando en las cabeceras de las columnas mostradas en la vista de lista. Consulte <link xref="files-sort"/> para más información. Este menú solo afecta a la carpeta actual, y el gestor de archivos recordará sus preferencias de ordenación para cada carpeta.</p>
+    <p>Use la lista desplegable <gui>Organizar los elementos</gui> en las preferencias para cambiar el orden predeterminado a usar en las nuevas carpetas.</p>
+  </item>
+  <item>
+    <title><gui>Colocar carpetas antes que archivos</gui></title>
+    <p>De forma predeterminada, el gestor de archivos mostrará todas las carpetas antes que los archivos. A su vez, las carpetas y los archivos por separado se organizarán en función del criterio de ordenación seleccionado. Si usted no desea tratar a las carpetas de forma especial y quiere tenerlas mezcladas con los archivos según el criterio de ordenación, seleccione esta opción.</p>
+  </item>
+  <item>
+    <title><gui>Mostrar archivos ocultos y de respaldo</gui></title>
+    <p>El gestor de archivos no muestra los archivos ocultos o carpetas de manera predeterminada. Vea <link xref="files-hidden"/> para obtener información sobre los archivos ocultos. Puede mostrar archivos ocultos en una ventana individual del menú <gui>Ver</gui>. Si prefiere mostrar siempre los archivos ocultos, o si desea ver los archivos ocultos en todas las ventanas del gestor de archivos abiertos, seleccione esta opción.</p>
+  </item>
+</terms>
+</section>
+
+
+<section id="icon-view-defaults">
+<title>Vista de icono predeterminada</title>
+  <terms>
+   <item>
+    <title><gui>Nivel de ampliación predeterminado:</gui></title>
+    <p>Puede hacer los iconos y el texto más grande o más pequeña en la vista de iconos. Puede hacer esto en una carpeta individual del menú <gui>Vista</gui> y el gestor de archivos recordará su elección para cada carpeta. Si utiliza con frecuencia un mayor o menor nivel de ampliación, puede establecer el valor predeterminado de esta opción.</p>
+    <p>En la vista de iconos, se mostrará más o menos leyendas informativas en función de su nivel de ampliación. Consulte <link xref="nautilus-display#icon-captions"/> para más información.</p>
+   </item>
+   <item>
+    <title><gui>Texto junto a los iconos</gui></title>
+    <p>Al seleccionar esta opción, aparecerán los nombres de los archivos y carpetas a la derecha de los iconos, en lugar de bajo estos. Esta es una distribución más compacta que le permite ver más información a la vez.</p>
+   </item>
+  </terms>
+</section>
+
+
+<section id="compact-view-defaults">
+ <title>Valores predeterminados de la vista compacta</title>
+
+  <terms>
+   <item>
+    <title><gui>Nivel de ampliación predeterminado:</gui></title>
+    <p>Puede hacer que los iconos y los textos sean más grandes o más pequeños en la vista compacta. Puede hacerlo en una carpeta individual desde el menú <gui>Ver</gui>, y el gestor de archivos recordará el nivel de aumento que usted haya seleccionado para cada carpeta. Si suele usar con frecuencia un determinado nivel de aumento más grande o más pequeño, puede establecer el nivel predeterminado con esta opción.</p>
+   </item>
+   <item>
+    <title><gui>Todas las columnas tienen la misma anchura</gui></title>
+    <p>De forma predeterminada, cada columna de la vista compacta es tan ancha como necesite para que quepan los nombres de los elementos en esa columna. Al seleccionar esta opción, conseguirá que todas las columnas tengan la misma anchura. Esto hará que los archivos y carpetas que tengan nombres más grandes que el ancho de la columna se muestren con puntos suspensivos (...) al final.</p>
+   </item>
+  </terms>
+</section>
+
+
+<section id="list-view-defaults">
+ <title>Valores predeterminados de la vista de lista</title>
+  <terms>
+   <item>
+    <title><gui>Nivel de ampliación predeterminado:</gui></title>
+    <p>Puede hacer que los iconos y los textos sean más grandes o más pequeños en la vista de lista. Puede hacerlo en una carpeta individual desde el menú <gui>Ver</gui>, y el gestor de archivos recordará el nivel de aumento que usted haya seleccionado para cada carpeta. Si suele usar con frecuencia un determinado nivel de aumento más grande o más pequeño, puede establecer el nivel predeterminado con esta opción.</p>
+   </item>
+  </terms>
+</section>
+
+
+<section id="tree-view-defaults">
+<title>Valores predeterminados de la vista de árbol</title>
+<p>Puede mostrar un árbol de carpetas completo en la barra lateral de su gestor de archivos seleccionando <guiseq><gui>Ver</gui><gui>Barra lateral</gui><gui>Árbol</gui></guiseq>. De manera predeterminada, la barra lateral en árbol solo muestra carpetas. Si además quiere ver los archivos en la barra lateral, desactive <gui>Mostrar solo carpetas</gui>.</p>
+</section>
+
+</page>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-calibrate-camera" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="color#calibration"/>
+    <link type="seealso" xref="color-calibrationtargets"/>
+    <link type="seealso" xref="color-calibrate-printer"/>
+    <link type="seealso" xref="color-calibrate-scanner"/>
+    <link type="seealso" xref="color-calibrate-screen"/>
+    <desc>Das Kalibrieren Ihrer Kamera ist wichtig, um richtige Farben zu erhalten.</desc>
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Wie kalibriere ich meine Kamera?</title>
+
+  <p>
+    Camera devices are calibrated by taking a photograph of a target
+    under the desired lighting conditions.
+    By converting the RAW file to a TIFF file, it can be used to
+    calibrate the camera device in the color control panel.
+  </p>
+
+  <note style="tip">
+    <p>
+      The resulting profile is only valid under the lighting condition
+      that you aquired the original image from.
+      This means you might need to profile several times for
+      <em>studio</em>, <em>bright sunlight</em> and <em>cloudy</em>
+      lighting conditions.
+    </p>
+  </note>
+
+</page>

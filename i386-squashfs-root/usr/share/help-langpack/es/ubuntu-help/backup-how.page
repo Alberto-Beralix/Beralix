@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="backup-how" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="backup-why"/>
+    <desc>Use Déjà Dup (u otra aplicación de copias de seguridad) para hacer copias de sus archivos valiosos y de sus preferencias para evitar pérdidas.</desc>
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <credit>
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Cómo hacer copias de respaldo</title>
+
+<p>La forma más sencilla de hacer  copias de seguridad de archivos y  configuración es dejar que una aplicación de copia de seguridad  gestione el proceso. Hay disponibles un buen número de aplicaciones de copia de seguridad, por ejemplo <link href="apt:deja-dup">Deja Dup</link>.</p>
+
+<p>La ayuda para la aplicación de copia de seguridad elegida le guiará mientras establece sus preferencias de copia de seguridad, así como al restaurar sus datos si algo va mal.</p>
+
+<p>Una opción alternativa consiste, simplemente, en <link xref="files-copy">copiar sus archivos</link> en un lugar seguro, como un disco duro externo, otro equipo de la red, o una unidad USB. Sus <link xref="backup-thinkabout">archivos personales</link> y preferencias suelen estar en su carpeta personal, por lo que puede copiarlos de ahí.</p>
+   
+<p>La cantidad de datos que puede respaldar está limitado por el tamaño del dispositivo de almacenamiento. Si tiene espacio suficiente en su dispositivo de respaldo, es mejor copiar la carpeta personal completa con las siguientes excepciones:</p>
+
+<list>
+ <item><p>Archivos que haya copiado a un CD, DVD un otro soporte extraíble, ya que podría ser más rápido copiarlos de nuevo que restaurarlos de la copia de seguridad.</p></item>
+ <item><p>Archivos que se puedan regenerar fácilmente. Por ejemplo, archivos PDF que se generen a partir de archivos TeX, o archivos objeto que puedan crearse con la utilidad Make. Simplemente asegúrese de que respalda las fuentes.</p></item>
+ <item><p>Sus archivos descartados, se pueden encontrar en <cmd>~/.local/share/Trash</cmd> (la carpeta de la Papelera).</p></item>
+</list>
+
+</page>

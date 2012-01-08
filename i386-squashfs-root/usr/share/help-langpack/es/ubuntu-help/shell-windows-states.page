@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="shell-windows-states" xml:lang="es">
+
+  <info>
+
+    <link type="guide" xref="shell-windows#working-with-windows"/>
+
+    <desc>Restaurar, redimensionar, organizar y ocultar.</desc>
+    
+    <revision version="11.04" date="2011-04-30" status="review"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Operaciones de ventanas y modos</title>
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Make more task-based. Maybe split up. Overview doesn't seem
+  as useful as it could be. Revisit hide/minimize terminology.
+  3.0.1.</p>
+</comment>
+<p>Las ventanas trabajan de manera parecida a como lo hacen en otros sistemas operativos.</p>
+
+<comment><p>Briefly explain the different window states that exist and how you can use and recognize those states. Discuss interesting ways of arranging windows (i.e. if there is a "Tile" option or something like that). Mention, in passing, how you can move and resize windows in multiple ways.</p></comment>
+
+<section id="min-rest-close">
+<title>Minimizar, restaurar y cerrar</title>
+
+<terms>
+
+  <item>
+    <title>Minimizar</title>
+    <p>Para minimizar una ventana, puede:</p>
+    <list>
+      <item>
+       <p>Pulse el botón que se parece a un signo menos «-» en la<gui>barra de menús</gui> de la aplicación. Si la aplicación está maximizada (ocupando toda su pantalla), la barra de menús aparecerá en el borde superior de la pantalla. En caso contrario, el botón de minimizar aparecerá en el borde superior de la ventana de la aplicación.</p>
+       <note>
+         <p>Cuando se minimiza una aplicación, la ventana de la aplicación «desaparece» dentro del <gui>lanzador</gui>. La aplicación puede recuperarse abriendo el <gui>lanzador</gui> y pulsando sobre el icono de esa aplicación, o pulsando <keyseq><key>Alt</key><key>Tab</key></keyseq> para pasar por todas sus aplicaciones abiertas.</p>
+       </note>
+      </item>
+    </list>
+  </item>
+
+    <item>
+    <title>Cerrar</title>
+    <p>Para cerrar la ventana:</p>
+     <list>
+      <item>
+       <p>Haga clic en la <gui>x</gui> situada en la esquina superior izquierda de la ventana o</p>
+      </item>
+      <item>
+       <p>Pulse <keyseq><key>Alt</key><key>F4</key></keyseq>, o</p>
+      </item>
+      <item>
+       <p>Pulse <keyseq><key>Alt</key><key>Espacio</key></keyseq> para mostrar el menú de la ventana. Entonces pulse <key>c</key>.</p>
+      </item>
+    </list>
+  </item>
+</terms>
+</section>
+
+<section id="resize">
+<title>Redimensionar una ventana</title>
+
+<note style="important">
+ <p>Para redimensionar una ventana, su ventana primero tiene que estar <em>desmaximizada</em>.</p>
+</note>
+<p>La forma más sencilla de cambiar el tamaño de su ventana en dirección horizontal o vertical es mover el puntero del ratón hasta la esquina superior izquierda de la ventana hasta que se convierta en un «puntero de esquina». Cuando se convierte en un puntero de esquina, pulse+mantenga+arrastre para cambiar el tamaño de la ventana en cualquier dirección.</p>
+
+<p>También puede cambiar el tamaño solo en la dirección horizontal, moviendo el puntero del ratón a la parte izquierda de la ventana hasta que se convierta en un «puntero de lateral». Cuando se convierta en un «puntero lateral pulse+mantenga+arrastre para cambiar el tamaño de la ventana en la dirección horizontal.</p>
+
+<p>Para redimensionar en la dirección vertical, mueva el puntero del ratón a la parte superior o inferior de la ventana hasta que se convierta en un «puntero superior» o «puntero inferior», respectivamente. Cuando lo haga, pulse+mantenga+arrastre para cambiar el tamaño de la ventana en la dirección vertical.</p>
+</section>
+
+<section id="arrange">
+<title>Formas de organizar ventanas en su área de trabajo</title>
+<p>Puede colocar dos ventanas una al lado de la otra automáticamente. Mantenga pulsada la tecla <key>Alt</key> mientras pulsa sobre una ventana y la arrastra hacia la izquierda hasta que el cursor toque el lado izquierdo de la pantalla. Se iluminará la mitad izquierda de la pantalla. Suelte el botón y la ventana ocupará justo la mitad de su pantalla automáticamente. Haga lo mismo con la otra ventana, pero arrastrándola hacia la derecha.</p>
+</section>
+
+</page>

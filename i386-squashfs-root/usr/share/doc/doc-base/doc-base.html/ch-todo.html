@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<html>
+
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+
+<title>Debian doc-base Manual - TODO List</title>
+
+<link href="index.html" rel="start">
+<link href="ch-informations.html" rel="prev">
+<link href="index.html" rel="next">
+<link href="index.html#contents" rel="contents">
+<link href="index.html#copyright" rel="copyright">
+<link href="ch-about.html" rel="chapter" title="1 About doc-base">
+<link href="ch-interface.html" rel="chapter" title="2 The packages interface">
+<link href="ch-informations.html" rel="chapter" title="3 Getting information about installed documents">
+<link href="ch-todo.html" rel="chapter" title="4 TODO List">
+<link href="ch-interface.html#s2.1" rel="section" title="2.1 Introduction">
+<link href="ch-interface.html#s-document_ids" rel="section" title="2.2 Document IDs">
+<link href="ch-interface.html#s-control_files" rel="section" title="2.3 Control Files">
+<link href="ch-interface.html#s-registering_documents" rel="section" title="2.4 Registering Documents With doc-base">
+<link href="ch-interface.html#s2.5" rel="section" title="2.5 doc-base 0.8.x features and incompatibilities">
+<link href="ch-interface.html#s-checking_syntax" rel="section" title="2.6 Checking Syntax of Control Files">
+<link href="ch-todo.html#s4.1" rel="section" title="4.1 Roadmap for 0.9.* releases">
+<link href="ch-todo.html#s4.2" rel="section" title="4.2 Old TODO entries">
+<link href="ch-interface.html#s2.3.1" rel="subsection" title="2.3.1 Example">
+<link href="ch-interface.html#s2.3.2" rel="subsection" title="2.3.2 Syntax of the control file">
+<link href="ch-interface.html#s-main_section" rel="subsection" title="2.3.2.1 The main section">
+<link href="ch-interface.html#s-format_sections" rel="subsection" title="2.3.2.2 Format sections">
+<link href="ch-interface.html#s-section_field" rel="subsection" title="2.3.3 The section field">
+<link href="ch-interface.html#s2.5.1" rel="subsection" title="2.5.1 Splitting control files over multiple binary packages">
+<link href="ch-interface.html#s2.5.2" rel="subsection" title="2.5.2 Registering local documents">
+<link href="ch-interface.html#s2.5.3" rel="subsection" title="2.5.3 dpkg triggers">
+
+</head>
+
+<body>
+
+<p><a name="ch-todo"></a></p>
+<hr>
+
+<p>
+[ <a href="ch-informations.html">previous</a> ]
+[ <a href="index.html#contents">Contents</a> ]
+[ <a href="ch-about.html">1</a> ]
+[ <a href="ch-interface.html">2</a> ]
+[ <a href="ch-informations.html">3</a> ]
+[ 4 ]
+[ <a href="index.html">next</a> ]
+</p>
+
+<hr>
+
+<h1>
+Debian <code>doc-base</code> Manual
+<br>Chapter 4 - TODO List
+</h1>
+
+<hr>
+
+<h2><a name="s4.1"></a>4.1 Roadmap for 0.9.* releases</h2>
+<ul>
+<li>
+<p>
+Internationalisation and po-debconf support.  Unfortunately this would require
+merging <em>Abstract</em> and <em>Title</em> fields into one
+<em>Description</em> field.  See <code><a
+href="http://bugs.debian.org/171373">Bug#171363</a></code>, <code><a
+href="http://bugs.debian.org/171375">Bug#171375</a></code>, and <code><a
+href="http://bugs.debian.org/171378">Bug#171378</a></code>.
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Introduce some new fields, like <em>Package</em> (<code><a
+href="http://bugs.debian.org/71955">Bug#71955</a></code>), or <em>SortSkip</em>
+(<code><a href="http://bugs.debian.org/187590">Bug#187590</a></code>).
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Possibly allow documents to appear in multiple sections, see <code><a
+href="http://bugs.debian.org/cgi-bin/bugreport.cgi?msg=54;bug=109431">Steve M.
+Robbins' mail</a></code>.
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Possibly index documentation with swish++ that could be used by frontends like
+<code>dhelp</code> or <code>dwww</code>.
+</p>
+</li>
+</ul>
+
+<hr>
+
+<h2><a name="s4.2"></a>4.2 Old TODO entries</h2>
+<ul>
+<li>
+<p>
+Policy: document the <code>doc-base</code> document registration file format
+separately (or SUBDOC it) as a proposed Debian documentation system policy.
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Policy: define a first-cut standard as the document hierarchy.
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Documentation update: show clean and minimal use of <code>install-docs</code>
+from maintainer script.
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+It is <em>extremely</em> difficult to deal coherently with a misnamed control
+file, or a mismatch between a control file and the document field.  This hit me
+in the transition between <code>doc-base</code> 0.4 to 0.5 (in 0.4 I had added,
+in a file install-docs-man, a document ID named install-doc-man).  Something
+needs to be done about that.
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+Automated format conversion, including user preferences.  (For example, convert
+texinfo source to GNU info or PostScript, optionally compress or remove HTML
+manuals which are also available in GNU info format, etc.  etc.)
+</p>
+</li>
+</ul>
+
+<hr>
+
+<p>
+[ <a href="ch-informations.html">previous</a> ]
+[ <a href="index.html#contents">Contents</a> ]
+[ <a href="ch-about.html">1</a> ]
+[ <a href="ch-interface.html">2</a> ]
+[ <a href="ch-informations.html">3</a> ]
+[ 4 ]
+[ <a href="index.html">next</a> ]
+</p>
+
+<hr>
+
+<p>
+Debian <code>doc-base</code> Manual
+</p>
+
+<address>
+ver. 0.10.2, 01 July, 2011<br>
+<br>
+Christian Schwarz <code><a href="mailto:schwarz@debian.org">schwarz@debian.org</a></code><br>
+Adam Di Carlo <code><a href="mailto:aph@debian.org">aph@debian.org</a></code><br>
+Robert Luberda <code><a href="mailto:robert@debian.org">robert@debian.org</a></code><br>
+<br>
+</address>
+<hr>
+
+</body>
+
+</html>
+

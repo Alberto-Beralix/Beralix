@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="shell-windows-states" xml:lang="pt-BR">
+
+  <info>
+
+    <link type="guide" xref="shell-windows#working-with-windows"/>
+
+    <desc>Restaurar, redimensionar, rearranjar e esconder.</desc>
+    
+    <revision version="11.04" date="2011-04-30" status="review"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Modos e operações de janela</title>
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Make more task-based. Maybe split up. Overview doesn't seem
+  as useful as it could be. Revisit hide/minimize terminology.
+  3.0.1.</p>
+</comment>
+<p>As janelas funcionam de uma maneira muito semelhante às janelas de outros sistemas operacionais.</p>
+
+<comment><p>Briefly explain the different window states that exist and how you can use and recognize those states. Discuss interesting ways of arranging windows (i.e. if there is a "Tile" option or something like that). Mention, in passing, how you can move and resize windows in multiple ways.</p></comment>
+
+<section id="min-rest-close">
+<title>Minimizar, restaurar e fechar</title>
+
+<terms>
+
+  <item>
+    <title>Minimizar</title>
+    <p>Para minimizar uma janela, você pode:</p>
+    <list>
+      <item>
+       <p>Pressione o botão que parece um sinal de menos na <gui>barra e menu</gui> do aplicativo. Se o aplicativo estiver maximizado, tomando todo o espaço da tela, a barra de menu aparecerá bem ao topo da tela. Senão, o botão de minimizar aparecerá no topo da janela do aplicativo.</p>
+       <note>
+         <p>Ao minimizar um aplicativo, a janela desse aplicativo "desaparece" dentro do <gui>lançador</gui>. O aplicativo pode ser recuperado abrindo-se o <gui>lançador</gui> e clicando no ícone do aplicativo ou pressionando-se <keyseq><key>Alt</key><key>tab</key></keyseq> para alternar entre os aplicativos abertos.</p>
+       </note>
+      </item>
+    </list>
+  </item>
+
+    <item>
+    <title>Fechar</title>
+    <p>Para fechar a janela:</p>
+     <list>
+      <item>
+       <p>Clique em <gui>x</gui> no canto superior esquerdo da janela, ou</p>
+      </item>
+      <item>
+       <p>Pressione <keyseq><key>Alt</key><key>F4</key></keyseq>, ou</p>
+      </item>
+      <item>
+       <p>Pressione <keyseq><key>Alt</key><key>Espaço</key></keyseq> para visualizar o menu de janelas. Então, pressione <key>c</key>.</p>
+      </item>
+    </list>
+  </item>
+</terms>
+</section>
+
+<section id="resize">
+<title>Redimensionar uma janela</title>
+
+<note style="important">
+ <p>Para redimencionar uma janela, sua janela necessita primeiro <em>desfazer a maximização</em>.</p>
+</note>
+<p>A forma mais simples de redimensionar sua janela na direção horizontal ou vertical consiste em mover o ponteiro do mouse até o canto superior esquerdo da janela até que ele se transforme em um "ponteiro de canto". Quando isso acontecer, clique e arraste para redimensionar a janela em qualquer direção.</p>
+
+<p>Você também pode redimensionar somente na direção horizontal movendo o ponteiro do mouse para o lado esquerdo da janela até que ele se transforme em um "ponteiro de lateral". Quando isso acontecer, clique e arraste para redimensionar a janela na direção horizontal.</p>
+
+<p>Para redimensionar na direção vertical, mova o ponteiro do mouse até o topo ou base da janela até que ele se transforme em um "ponteiro de topo" ou "ponteiro de base", respectivamente. Quando isso acontecer, clique e arraste para redimensionar a janela na direção vertical.</p>
+</section>
+
+<section id="arrange">
+<title>Formas de organizar as janelas em seu espaço de trabalho</title>
+<p>Você pode colocar duas janelas lado a lado automaticamente. Pressione <key>Alt</key> + clique e arraste uma janela para a esquerda até que o ponteiro do mouse toque o canto esquerdo da tela. A metade esquerda da tela ganhará então um destaque. Solte o botão do mouse e a janela deverá ocupar exatamente metade da sua tela. Faça o mesmo para a outra janela, arrastando-a para o lado direito.</p>
+</section>
+
+</page>

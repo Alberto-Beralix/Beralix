@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/ubuntuone-control-panel/ubuntuone/controlpanel/gui/__init__.py

@@ -1,0 +1,49 @@
+#!/bin/bash
+
+DESCRIPTION="Uses RANDR to disable/enable video outputs"
+
+PREREQS=""
+DEPENDS=""
+
+CYCLE_DELAY=${CYCLE_DELAY:-5}
+
+OUTPUT_NAME=$(xrandr | grep ' connected ' | cut -d' ' -f1 | head -n 1)
+
+ORIGINAL_STATE=$(xrandr)
+# TODO: When the output is restored, it comes back mirrored even though
+#       it might have originally been extended.  Need a function which
+#       takes an xrandr snapshot as input, parses it, and then invokes
+#       the respective xrandr options to put it back to that state.
+
+workload() {
+    echo $OUTPUT_NAME
+    xrandr --output ${OUTPUT_NAME} --off
+    sleep 1
+    xrandr --output ${OUTPUT_NAME} --auto
+    sleep ${CYCLE_DELAY}
+}
+
+case $1 in
+    info)
+        echo $DESCRIPTION
+        echo $PREREQS
+        ;;
+    depends) echo $DEPENDS     ;;
+    check)                     ;;
+    setup)                     ;;
+    once)    workload          ;;
+    run)
+        echo $$
+        while :
+        do
+            workload
+        done
+        ;;
+    *)
+        echo $DESCRIPTION
+        echo
+        echo $PREREQS
+        echo
+        echo "Usage: $0 {info|depends|setup|check|once|run} [VIDEO]"
+        exit 1
+esac

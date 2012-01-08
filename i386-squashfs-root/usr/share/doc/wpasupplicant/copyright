@@ -1,0 +1,140 @@
+Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
+Name: wpa_supplicant
+Maintainer: Jouni Malinen <j@w1.fi>
+Source: http://w1.fi/wpa_supplicant/
+
+Files: debian/*
+Copyright: 2004-2006, Kyle McMartin <kyle@debian.org>
+           2006-2008, Reinhard Tartler <siretart@tauware.de>
+           2006-2010, Kel Modderman <kel@otaku42.de>
+           2010, Stefan Lippers-Hollmann <s.l-h@gmx.de>
+License: BSD | GPL-2
+
+Files: *
+Copyright: 2002-2010, Jouni Malinen <j@w1.fi> and contributors
+License: BSD | GPL-2
+
+Files: src/common/wireless_copy.h
+Copyright: 1997-2005, Jean Tourrilhes <jt@hpl.hp.com>
+License: BSD | GPL-2
+
+Files: src/drivers/driver_atmel.c
+Copyright: 2000-2005, ATMEL Corporation
+           2004-2007, Jouni Malinen <j@w1.fi>
+License: BSD | GPL-2
+
+Files: src/drivers/driver_broadcom.c
+Copyright: 2004, Nikki Chumkov <nikki@gattaca.ru>
+           2004, Jouni Malinen <j@w1.fi>
+License: BSD | GPL-2
+
+Files: src/drivers/driver_bsd.c
+Copyright: 2004, Sam Leffler <sam@errno.com>
+           2004, 2Wire, Inc
+License: BSD | GPL-2
+
+Files: src/drivers/driver_ipw.c
+Copyright: 2005, Zhu Yi <yi.zhu@intel.com>
+           2004, Lubomir Gelo <lgelo@cnc.sk>
+           2003-2004, Jouni Malinen <j@w1.fi>
+License: BSD | GPL-2
+
+Files: src/drivers/driver_madwifi.c
+Copyright: 2004, Sam Leffler <sam@errno.com>
+           2004, Video54 Technologies
+           2004-2007, Jouni Malinen <j@w1.fi>
+License: BSD | GPL-2
+
+Files: src/drivers/driver_ndiswrapper.c
+Copyright: 2004-2006, Giridhar Pemmasani <giri@lmc.cs.sunysb.edu>
+           2004-2006, Jouni Malinen <j@w1.fi>
+License: BSD | GPL-2
+
+Files: src/drivers/driver_ralink.*
+Copyright: 2003-2006, Jouni Malinen <j@w1.fi>
+           2007, Snowpin Lee <snowpin_lee@ralinktech.com.tw>
+License: BSD | GPL-2
+
+Files: src/drivers/driver_roboswitch.*
+Copyright: 2008-2009 Jouke Witteveen
+License: BSD | GPL-2
+
+Files: src/l2_packet/l2_packet_freebsd.c
+Copyright: 2003-2005, Jouni Malinen <j@w1.fi>
+           2005, Sam Leffler <sam@errno.com>
+License: BSD | GPL-2
+
+Files: src/drivers/radiotap.c
+Copyright: 2007, Andy Green <andy@warmcat.com>
+License: BSD | GPL-2
+
+Files: src/drivers/radiotap.h
+Copyright: 2003-2004, David Young
+License: BSD
+
+Files: src/wps/httpread.*
+Copyright: 2008, Ted Merrill, Atheros Communications
+License: BSD | GPL-2
+
+Files: wpa_supplicant/dbus/*
+Copyright: 2006, Dan Williams <dcbw@redhat.com> and Red Hat, Inc.
+License: BSD | GPL-2
+
+Files: wpa_supplicant/mlme.*
+Copyright: 2003-2007, Jouni Malinen <j@w1.fi>
+           2003-2004, Instant802 Networks, Inc.
+           2005-2006, Devicescape Software, Inc.
+License: BSD | GPL-2
+
+License: GPL-2
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 2 as
+ published by the Free Software Foundation.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian GNU/Linux systems, the complete text of the GNU General Public
+ License version 2 can be found in `/usr/share/common-licenses/GPL-2'.
+ .
+ Note that this distribution of hostapd comes with configuration options that
+ link it to the OpenSSL library. The OpenSSL license is GPL-incompatible,
+ therefore in this distribution only the BSD license applies.
+
+License: BSD
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ .
+ 3. Neither the name(s) of the above-listed copyright holder(s) nor the
+    names of its contributors may be used to endorse or promote products
+    derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Note that this distribution of hostapd comes with configuration options that
+link it to the OpenSSL library. The OpenSSL license is GPL-incompatible,
+therefore in this distribution only the BSD license applies.

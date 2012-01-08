@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/apps/Mozilla/__init__.py

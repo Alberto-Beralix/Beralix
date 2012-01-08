@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-wireless-troubleshooting-device-drivers" xml:lang="es">
+  <info>
+    <link type="guide" xref="net-wireless-troubleshooting"/>
+    <revision version="11.04" date="2011-05-04" status="review"/>
+    <credit type="author">
+      <name>Contribuyentes al wiki de documentación de Ubuntu</name>
+    </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <desc>Resolución de problemas al conectarse a una red inalámbrica.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Compruebe sus controladores de dispositivos</title>
+
+<section id="net-wireless-driver-check">
+  <title>Buscar nuevos controladores de hardware</title>
+
+  <p>Su dispositivo puede estar soportado con un controlador preinstalado. Para comprobar si un controlador se cargó automáticamente, ejecute <cmd>sudo lshw -C network</cmd>. Mire en la línea que comienza con <gui>configuration:</gui> la palabra <em>driver</em>. Si existe es que ya está cargado e instalado un controlador.</p>
+  <p>Si no está ejecutando el núcleo más reciente, actualice en primer lugar su núcleo. los controladores, especialmente inalámbricos, se añaden y modifican constantemente. Puede hacerlo pulsndo en <link xref="unity-appmenu-intro">menú de sesión</link>y seleccionando <gui>Configuración de sistema</gui>. En la sección Sistema, pulse en <gui>Gestor de actualizaciones</gui>.</p>
+</section>
+
+<section id="net-wireless-native-driver">
+  <title>Buscar controladores adicionales de Linux</title>
+  <p>Puede buscar controladores Linux adicionales en las siguientes ubicaciones:</p>
+  <list>
+    <item>
+      <p>Compruebe un controlador pulsando en <link xref="unity-appmenu-intro">menú de sesión</link> y seleccionando <gui>Configuración de sistema</gui>.En la sección Hardware, pulse en <gui>Controladores adicionales</gui>. Espere un momento a que Ubuntu actualice su base de datos.</p>
+      <p>Varios de los controladores localizados en <app>controladores adicionales</app> son propietarios y el código fuente no está disponible gratuitamente. Por lo tanto, los desarrolladores de la comunidad Linux no pueden reparar cualquier problema de seguridad o funcionalidad en el controlador. Estos controladores no se pueden instalar automáticamente como parte de Ubuntu. Si está dispuesto a aceptar esta limitación, active el controlador.</p>
+    </item>
+    <item>
+      <p>Busque el sitio web del fabricante de su tarjeta para el controlador de Linux.</p>
+    </item>
+  </list>
+</section>
+
+<section id="net-wireless-ndiswrapper">
+  <title>Usar Ndiswrapper para tarjetas sin un controlador Linux</title>
+  <p>Si encuentra que su tarjeta no tiene un controlador Linux lo puede intentar con <app>ndiswrapper</app>.</p>
+  <list>
+    <item>
+      <p>Compruebe la <link href="http://sourceforge.net/apps/mediawiki/ndiswrapper/">base de datos</link> para ver si su tarjeta está soportada por ndiswrapper.</p>
+    </item>
+    <item>
+      <p>Información completa sobre ndiswrapper en <link href="https://help.ubuntu.com/community/WifiDocs/Driver/Ndiswrapper">esta página</link> incluyendo ayuda específica sobre solución de problemas de ndiswrapper.</p>
+    </item>
+  </list>
+</section>
+
+<section id="net-wireless-driver-check2">
+  <title>Comprobar controlador</title>
+  <p>Si ejecuta <cmd>lshw -C network</cmd> y ve un controlador asociado al dispositivo entonces compruébelo para asegurar que se está comunicando con el núcleo. Puede además ir hacia atrás a  la <link xref="net-wireless-troubleshooting-initial-check">página de comprobación Inicial</link> para comprobar cualquier signo de conectividad.</p>
+  <list type="numbered">
+    <item>
+      <p>Ejecute <cmd>sudo lsmod</cmd> para ver si el controlador está cargado. Mire el nombre del controlador que se lista en la línea de «configuración» de la salida de lshw.</p>
+      <list>
+        <item>
+          <p>SI no vio el módulo de controlador en la lista, use <cmd>sudo modprobe</cmd> para cargarlo.</p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>Ejecute <cmd>sudo iwconfig</cmd>. Si  ve una salida como en el ejemplo de la sección de comandos y luego el controlador al menos identifica el dispositivo como un dispositivo en el núcleo.</p>
+    </item>
+    <item>
+      <p>Ejecute la orden <cmd>sudo iwlist scan</cmd> para buscar un punto de acceso inalámbrico. Si se identifica un punto de acceso, la tarjeta probablemente esté funcionando correctamente ya que puede completar una tarea de interfaz inalámbrica.</p>
+    </item>
+  </list>
+
+  <note>
+    <p>Para buscar más información sobre las órdenes usadas en esta guía, pulse <link href="https://help.ubuntu.com/community/WifiDocs/WirelessTroubleShootingGuide/Commands">aquí</link>.</p>
+  </note>
+
+</section>
+
+<links type="series"/>
+</page>

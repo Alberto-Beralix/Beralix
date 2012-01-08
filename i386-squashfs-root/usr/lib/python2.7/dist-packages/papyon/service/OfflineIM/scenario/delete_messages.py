@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/papyon/service/OfflineIM/scenario/delete_messages.py

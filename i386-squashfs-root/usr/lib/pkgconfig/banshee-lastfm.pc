@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+bansheedir=${libdir}/banshee
+
+Name: Banshee Last.fm
+Description: Last.fm libraries for the Banshee Media Framework
+Version: 2.2.0
+Requires: banshee-mono-media banshee-hyena
+Libs: -r:System -r:Mono.Posix -r:ICSharpCode.SharpZipLib -r:${bansheedir}/Lastfm.dll
+

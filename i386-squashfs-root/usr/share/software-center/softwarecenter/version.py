@@ -1,0 +1,5 @@
+
+VERSION='5.0.1.4'
+CODENAME='oneiric'
+DISTRO='Ubuntu'
+RELEASE='11.10'

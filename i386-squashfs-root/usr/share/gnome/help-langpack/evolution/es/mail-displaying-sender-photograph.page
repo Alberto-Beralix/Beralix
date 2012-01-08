@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-displaying-sender-photograph" xml:lang="es">
+
+  <info>
+    <desc>Mostrar la foto del remitente en el panel de lectura de mensajes.</desc>
+
+    <link type="guide" xref="mail-displaying-message"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-30" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/config-prefs-mail.html.en#mail-prefs-headers -->
+ </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Photograph Message Headers</title>
+
+<!-- TODO: Check and describe whether this requires enabling <guiseq><gui>Edit</gui><gui>Plugins</gui><gui>Face</gui></guiseq>! -->
+ 
+<p>Se puede mostrar la fotografía del remitente en la parte derecha de la vista previa del correo, si el remitente está en alguna de sus libretas de direcciones y tiene una fotografía.</p>
+
+<p>Para activar esta característica, seleccione <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Opciones de correo</gui><gui>Cabeceras</gui><gui>Mostrar la foto del remitente en la vista preliminar del mensaje</gui></guiseq>.</p>
+
+<p>By default only local address books are used for searching the photograph as accessing remote address books can cause delays. You can disable this by deselecting the option <gui>Search for sender photograph only in local address books</gui>.</p>
+
+<p>Se usará siempre la primera coincidencia si existen múltiples coincidencias para un contacto.</p>
+</page>

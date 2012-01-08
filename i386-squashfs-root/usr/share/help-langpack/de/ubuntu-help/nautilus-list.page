@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-list" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-list"/>
+
+    <desc>Anzeige von Informationen in den Spalten der Listenansicht.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Einstellungen für die Spalten in der Dateiverwaltung</title>
+
+<p>Es können bis zu 12 Informationsspalten in der Listenansicht der Dateiverwaltung angezeigt werden. Klicken Sie auf <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq> und wählen Sie den Reiter <gui>Listenspalten</gui>, um festzulegen, welche Spalten sichtbar sein sollen.</p>
+
+<note style="tip">
+<p>Verwenden Sie die Knöpfe <gui>Raufschieben</gui> und <gui>Runterschieben</gui>, um die Reihenfolge festzulegen, in der die gewählten Spalten erscheinen.</p>
+</note>
+<terms>
+ <item>
+  <title><gui>Name</gui></title>
+  <p>Der Name der Ordner und Dateien im gezeigten Ordner.</p>
+ </item>
+ <item>
+  <title><gui>Größe</gui></title>
+  <p>Die Größe eines Ordners wird als Anzahl der Objekte in diesem Ordner angegeben. Die Größe einer Datei wird in Bytes, kB oder MB angegeben.</p>
+ </item>
+ <item>
+  <title><gui>Typ</gui></title>
+  <p>Dargestellt als ein Ordner oder als ein Dateityp, wie etwa ein PDF-Dokument, JPEG-Bild, MP3 und andere.</p>
+ </item>
+ <item>
+  <title><gui>Änderungsdatum</gui></title>
+  <p>Gibt das Datum und die Zeit an, wann die Datei zum letzten Mal geändert wurde.</p>
+    
+ </item>
+ <item>
+  <title><gui>Zugriffsdatum</gui></title>
+  <p>Gibt das Datum und die Zeit an, wann auf die Datei zum letzten Mal zugegriffen wurde.</p>
+ </item>
+ <item>
+  <title><gui>Gruppe</gui></title>
+  <p>Die Gruppe, die die Datei besitzt. Auf vielen Privatrechnern ist jeder Benutzer in einer eigenen Gruppe. Gruppen werden auch manchmal in Unternehmen verwendet, wo Benutzer je nach Abteilung oder Projekt zu eigenen Gruppen gehören.</p>
+ </item>
+ <item>
+  <title><gui>Ort</gui></title>
+  <p>Der Pfad zum Ort der Datei.</p>
+ </item>
+ <item>
+  <title><gui>MIME-Typ</gui></title>
+  <p>Zeigt den MIME-Typ des Objekts an.</p>
+ </item>
+    
+  <item>
+  <title><gui>Zugriffsrechte</gui></title>
+  <p>Zeigt die Zugriffsrechte an, z.B. <gui>drwxrw-r--</gui></p>
+  <list>
+   <item>
+    <p>Das erste Zeichen <gui>-</gui> ist der Dateityp. <gui>-</gui> bedeutet normale Datei und <gui>d</gui> bedeutet Ordner.</p>
+   </item>
+   <item>
+     <p>Die nächsten drei Zeichen <gui>rwx</gui> legen die Zugriffsrechte des Benutzers fest, der die Datei besitzt.</p>
+   </item>
+   <item>
+     <p>Die nächsten drei <gui>rw-</gui> legen die Zugriffsrechte für alle Mitglieder der Gruppe fest, die die Datei besitzt.</p>
+   </item>
+   <item>
+    <p>Die letzten drei Zeichen der Spalte <gui>r--</gui> legen die Zugriffsrechte für alle anderen Benutzer des Systems fest.</p>
+   </item>
+  </list>
+  <p>Die Zeichen haben folgende Bedeutungen:</p>
+  <list>
+    <item><p>r : Leserechte.</p></item>
+    <item><p>w : Schreibrechte.</p></item>
+    <item><p>x : Ausführungsrechte.</p></item>
+    <item><p>- : Keine Rechte.</p></item>
+    </list>
+
+ </item>
+ <item>
+  <title><gui>Oktale Zugriffsrechte</gui></title>
+  <p>Zeigt die Zugriffsrechte in oktaler Notation an, mit vorangestellten »40« für Ordner und »100« für Dateien. Die letzten drei Ziffern repräsentieren jeweils den Besitzer, die Gruppe und die anderen Benutzer.</p>
+  <list>
+    <item><p>Bei Leserechten wird 4 dazugezählt, jeweils für die letzten drei Ziffern.</p></item>
+    <item><p>Bei Schreibrechten wird 2 dazugezählt.</p></item>
+    <item><p>Bei Ausführungsrechten wird 1 dazugezählt.</p></item>
+  </list>
+ </item>
+ <item>
+  <title><gui>Besitzer</gui></title>
+  <p>Der Name des Benutzers, dem die Datei oder der Ordner gehört.</p>
+ </item>
+
+ <item>
+  <title><gui>SELinux-Kontext</gui></title>
+  <p>Zeigt den SELinux-Kontext der Datei an, falls verfügbar.</p>
+ </item>
+</terms>
+
+
+</page>

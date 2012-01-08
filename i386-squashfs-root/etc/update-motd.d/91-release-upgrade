@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ -x /usr/lib/update-manager/release-upgrade-motd ]; then
+    exec /usr/lib/update-manager/release-upgrade-motd
+fi

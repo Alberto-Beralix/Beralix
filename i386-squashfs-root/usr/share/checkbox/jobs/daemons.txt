@@ -1,0 +1,210 @@
+plugin: shell
+name: atd
+requires: package.name == 'at'
+command: pgrep -f '/usr/sbin/atd' >/dev/null
+description: Test if the atd daemon is running when the package is installed.
+description-cs.UTF-8: Zkontrolovat, zda běží démon apt, pokud je balíček nainstalován
+description-de.UTF-8: Test, ob der atd-Dienst ausgeführt wird, wenn das Paket installiert ist.
+description-en_AU.UTF-8: Test if the atd daemon is running when the package is installed.
+description-en_GB.UTF-8: Test if the atd daemon is running when the package is installed.
+description-es.UTF-8: Prueba si el demonio de atd está ejecutándose cuando el paquete está instalado.
+description-gl.UTF-8: Proba se o daemon de atd está executándose cando o paquete está instalado.
+description-hu.UTF-8: Tesztelje, hogy az atd daemon fut-e csomag telepítése után.
+description-it.UTF-8: Verifica se il demone atd è in esecuzione quando il pacchetto viene installato.
+description-nl.UTF-8: Test of de ATD-daemon draait als het pakket is geïnstalleerd.
+description-pt_BR.UTF-8: Testar se o atd daemon está sendo executado quando o pacote é instalado.
+description-ru.UTF-8: Проверить, если служба atd выполняется, когда пакет установлен.
+description-sl.UTF-8: Preizkusite, če se ozadnji program atd izvaja med nameščanjem paketa.
+description-tr.UTF-8: Paket yüklendiğinde atd hizmetinin çalışıp çalışmadığını denetleyin.
+
+plugin: shell
+name: cron
+requires: package.name == 'cron'
+command: pgrep -f '/usr/sbin/cron' >/dev/null
+description: Test if the cron daemon is running when the package is installed.
+description-cs.UTF-8: Zkontrolovat, zda běží démon cron, pokud je balíček nainstalován
+description-de.UTF-8: Test, ob der cron-Dienst ausgeführt wird, wenn das Paket installiert ist.
+description-en_AU.UTF-8: Test if the cron daemon is running when the package is installed.
+description-en_GB.UTF-8: Test if the cron daemon is running when the package is installed.
+description-es.UTF-8: Prueba si el demonio de cron está ejecutándose cuando el paquete está instalado.
+description-gl.UTF-8: Proba se o daemon de cron está executándose cando o paquete está instaldo.
+description-hu.UTF-8: Tesztelje, hogy a cron daemon fut-e csomag telepítése után.
+description-it.UTF-8: Verifica se il demone cron è in esecuzione quando il pacchetto viene installato.
+description-nl.UTF-8: Test of de cron-daemon actief is wanneer het pakket is geïnstalleerd.
+description-pt_BR.UTF-8: Testar se o cron daemon está sendo executado quando o pacote estiver instalado.
+description-ru.UTF-8: Проверить, если служба cron выполняется, когда пакет установлен.
+description-sl.UTF-8: Preizkusite, če se ozadnji program cron izvaja med nameščanjem paketa.
+description-tr.UTF-8: Paket yüklendiğinde cron hizmetinin çalışıp çalışmadığını denetleyin.
+
+plugin: shell
+name: cupsd
+requires: package.name == 'cupsys'
+command: pgrep -f '/usr/sbin/cupsd' >/dev/null
+description: Test if the cupsd daemon is running when the package is installed.
+description-cs.UTF-8: Zkontrolovat, zda běží démon cupsd, pokud je balíček nainstalován
+description-de.UTF-8: Test, ob der cupsd-Dienst ausgeführt wird, wenn das Paket installiert ist.
+description-en_AU.UTF-8: Test if the cupsd daemon is running when the package is installed.
+description-en_GB.UTF-8: Test if the cupsd daemon is running when the package is installed.
+description-es.UTF-8: Prueba si el demonio de cupsd está ejecutándose cuando el paquete está instalado.
+description-gl.UTF-8: Proba se o daemon de cupsd está executándose cando o paquete está instalado.
+description-hu.UTF-8: Tesztelje, hogy a cupsd daemon fut-e csomag telepítése után.
+description-it.UTF-8: Verifica se il demone cupsd è in esecuzione quando il pacchetto viene installato.
+description-nl.UTF-8: Test of de cupsd-daemon actief is wanneer het pakket is geïnstalleerd.
+description-pt_BR.UTF-8: Testa se o daemon cupsd está sendo executado quando o pacote é instalado.
+description-ru.UTF-8: Проверить, если служба cupsd выполняется, когда пакет установлен.
+description-sl.UTF-8: Preizkusi, če se ozadnji program cupsd izvaja medtem ko se paket namešča.
+description-tr.UTF-8: Paket yüklendiğinde cupsd hizmetinin çalışıp çalışmadığını denetleyin.
+
+plugin: shell
+name: getty
+requires: package.name == 'util-linux'
+command: pgrep -f '/sbin/getty' >/dev/null
+description: Test if the getty daemon is running when the package is installed.
+description-cs.UTF-8: Zkontrolovat, zda běží démon getty, pokud je balíček nainstalován
+description-de.UTF-8: Test, ob der getty-Dienst ausgeführt wird, wenn das Paket installiert ist.
+description-en_AU.UTF-8: Test if the getty daemon is running when the package is installed.
+description-en_GB.UTF-8: Test if the getty daemon is running when the package is installed.
+description-es.UTF-8: Prueba si el demonio de getty está ejecutándose cuando el paquete está instalado.
+description-gl.UTF-8: Proba se o daemon de getty está executándose cando o paquete está instalado.
+description-hu.UTF-8: Tesztelje, hogy a getty daemon fut-e csomag telepítése után.
+description-it.UTF-8: Verifica se il demone getty è in esecuzione quando il pacchetto viene installato.
+description-nl.UTF-8: Test of de getty-daemon actief is wanneer het pakket is geïnstalleerd.
+description-pt_BR.UTF-8: Testar se o getty daemon está sendo executado quando o pacote estiver instalado.
+description-ru.UTF-8: Проверить, если служба getty выполняется, когда пакет установлен.
+description-sl.UTF-8: Preizkusite, če se ozadnji program getty opravilo izvaja med nameščanjem paketa.
+description-tr.UTF-8: Paket yüklendiğinde getty hizmetinin çalışıp çalışmadığını denetleyin.
+
+plugin: shell
+name: init
+requires: package.name == 'upstart'
+command: pgrep -f '/sbin/init' >/dev/null
+description: Test if the init daemon is running when the package is installed.
+description-cs.UTF-8: Zkontrolovat, zda běží démon init, pokud je balíček nainstalován
+description-de.UTF-8: Test, ob der init-Dienst ausgeführt wird, wenn das Paket installiert ist.
+description-en_AU.UTF-8: Test if the init daemon is running when the package is installed.
+description-en_GB.UTF-8: Test if the init daemon is running when the package is installed.
+description-es.UTF-8: Prueba si el demonio de init está ejecutándose cuando el paquete está instalado.
+description-gl.UTF-8: Proba se o daemon de init está executándose cando o paquete está instalado.
+description-hu.UTF-8: Tesztelje, hogy az init daemon fut-e csomag telepítése után.
+description-it.UTF-8: Verifica se il demone init è in esecuzione quando il pacchetto viene installato.
+description-nl.UTF-8: Test of de init-daemon actief is wanneer het pakket is geïnstalleerd.
+description-pt_BR.UTF-8: Testar se o init daemon está sendo executado quando o pacote estiver instalado.
+description-ru.UTF-8: Проверить, если служба init выполняется, когда пакет установлен.
+description-sl.UTF-8: Preizkusite, če se ozadnji program init izvaja med nameščanjem paketa.
+description-tr.UTF-8: Paket yüklendiğinde init hizmetinin çalışıp çalışmadığını denetleyin.
+
+plugin: shell
+name: klogd
+requires: package.name == 'klogd'
+command: pgrep -f '/sbin/klogd' >/dev/null
+description: Test if the klogd daemon is running when the package is installed.
+description-cs.UTF-8: Zkontrolovat, zda běží démon klogd, pokud je balíček nainstalován
+description-de.UTF-8: Test, ob der klogd-Dienst ausgeführt wird, wenn das Paket installiert ist.
+description-en_AU.UTF-8: Test if the klogd daemon is running when the package is installed.
+description-en_GB.UTF-8: Test if the klogd daemon is running when the package is installed.
+description-es.UTF-8: Prueba si el demonio de klogd está ejecutándose cuando el paquete está instalado.
+description-gl.UTF-8: Proba se o daemon de klogd está executándose cando o paquete está instalado.
+description-hu.UTF-8: Tesztelje, hogy a klogd daemon fut-e csomag telepítése után.
+description-it.UTF-8: Verifica se il demone klogd è in esecuzione quando il pacchetto viene installato.
+description-nl.UTF-8: Test of de klogd-daemon actief is wanneer het pakket is geïnstalleerd.
+description-pt_BR.UTF-8: Testar se o klogd daemon está sendo executado quando o pacote estiver instalado.
+description-ru.UTF-8: Проверить, если служба klogd выполняется, когда пакет установлен.
+description-sl.UTF-8: Preizkusi če se klogd opravilo izvaja, med nameščanjem paketa.
+description-tr.UTF-8: Paket yüklendiğinde klogd hizmetinin çalışıp çalışmadığını denetleyin.
+
+plugin: shell
+name: nmbd
+requires: package.name == 'samba'
+command: pgrep -f '/usr/sbin/nmbd' >/dev/null
+description: Test if the nmbd daemon is running when the package is installed.
+description-cs.UTF-8: Zkontrolovat, zda běží démon nmbd, pokud je balíček nainstalován
+description-de.UTF-8: Test, ob der nmbd-Dienst ausgeführt wird, wenn das Paket installiert ist.
+description-en_AU.UTF-8: Test if the nmbd daemon is running when the package is installed.
+description-en_GB.UTF-8: Test if the nmbd daemon is running when the package is installed.
+description-es.UTF-8: Prueba si el demonio de nmb está ejecutándose cuando el paquete está instalado.
+description-gl.UTF-8: Proba se o daemon de nmb está executándose cando o paquete está instalado.
+description-hu.UTF-8: Tesztelje, hogy az nmdb daemon fut-e csomag telepítése után.
+description-it.UTF-8: Verifica se il demone nmbd è in esecuzione quando il pacchetto viene installato.
+description-nl.UTF-8: Test of de nmbd-daemon actief is wanneer het pakket is geïnstalleerd.
+description-pt_BR.UTF-8: Testar se o nmbd daemon está sendo executado quando o pacote estiver instalado.
+description-ru.UTF-8: Проверить, если служба nmbd выполняется, когда пакет установлен.
+description-sl.UTF-8: Preizkusi, če se ozadnji program nmbd izvaja med nameščanjem paketa.
+description-tr.UTF-8: Paket yüklendiğinde nmbd hizmetinin çalışıp çalışmadığını denetleyin.
+
+plugin: shell
+name: smbd
+requires: package.name == 'samba'
+command: pgrep -f '/usr/sbin/smbd' >/dev/null
+description: Test if the smbd daemon is running when the package is installed.
+description-cs.UTF-8: Zkontrolovat, zda běží démon smbd, pokud je balíček nainstalován
+description-de.UTF-8: Test, ob der smdb-Dienst ausgeführt wird, wenn das Paket installiert ist.
+description-en_AU.UTF-8: Test if the smbd daemon is running when the package is installed.
+description-en_GB.UTF-8: Test if the smbd daemon is running when the package is installed.
+description-es.UTF-8: Prueba si el demonio de smbd está ejecutándose cuando el paquete está instalado.
+description-gl.UTF-8: Proba se o daemon de smbd está executándose cando o paquete está instalado.
+description-hu.UTF-8: Tesztelje, hogy az smbd daemon fut-e csomag telepítése után.
+description-it.UTF-8: Verifica se il demone smbd è in esecuzione quando il pacchetto viene installato.
+description-nl.UTF-8: Test of de smbd-daemon actief is wanneer het pakket is geïnstalleerd.
+description-pt_BR.UTF-8: Testar se o smbd daemon está sendo executado quando o pacote estiver instalado.
+description-ru.UTF-8: Проверить, если служба smbd выполняется, когда пакет установлен.
+description-sl.UTF-8: Preizkusi, če se ozadnji program smbd izvaja medtem nameščanjem paketa.
+description-tr.UTF-8: Paket yüklendiğinde smbd hizmetinin çalışıp çalışmadığını denetleyin.
+
+plugin: shell
+name: syslogd
+requires: package.name == 'syslogd'
+command: pgrep -f '/sbin/syslogd' >/dev/null
+description: Test if the syslogd daemon is running when the package is installed.
+description-cs.UTF-8: Zkontrolovat, zda běží démon syslogd, pokud je balíček nainstalován
+description-de.UTF-8: Test, ob der syslogd-Dienst ausgeführt wird, wenn das Paket installiert ist.
+description-en_AU.UTF-8: Test if the syslogd daemon is running when the package is installed.
+description-en_GB.UTF-8: Test if the syslogd daemon is running when the package is installed.
+description-es.UTF-8: Prueba si el demonio de syslog está ejecutándose cuando el paquete está instalado.
+description-gl.UTF-8: Proba se o daemon de syslog está executándose cando o paquete está instalado.
+description-hu.UTF-8: Tesztelje, hogy a syslogd daemon fut-e csomag telepítése után.
+description-it.UTF-8: Verifica se il demone syslogd è in esecuzione quando il pacchetto viene installato.
+description-nl.UTF-8: Test of de syslogd-daemon actief is wanneer het pakket is geïnstalleerd.
+description-pt_BR.UTF-8: Testar se o syslogd daemon está sendo executado quando o pacote estiver instalado.
+description-ru.UTF-8: Проверить, если служба syslogd выполняется, когда пакет установлен.
+description-sl.UTF-8: Preizkusi, če se ozadnji program syslogd izvaja medtem ko se paket namešča.
+description-tr.UTF-8: Paket yüklendiğinde syslogd hizmetinin çalışıp çalışmadığını denetleyin.
+
+plugin: shell
+name: udevd
+requires:
+ package.name == 'udevd'
+ package.name == 'linux'
+command: pgrep -f '/sbin/udevd' >/dev/null
+description: Test if the udevd daemon is running when the package is installed.
+description-cs.UTF-8: Zkontrolovat, zda běží démon udevd, pokud je balíček nainstalován
+description-de.UTF-8: Test, ob der udevd-Dienst ausgeführt wird, wenn das Paket installiert ist.
+description-en_AU.UTF-8: Test if the udevd daemon is running when the package is installed.
+description-en_GB.UTF-8: Test if the udevd daemon is running when the package is installed.
+description-es.UTF-8: Prueba si el demonio de udevd está ejecutándose cuando el paquete está instalado.
+description-gl.UTF-8: Proba se o daemon de udevd está executándose cando o paquete está instalado.
+description-hu.UTF-8: Tesztelje, hogy az udevd daemon fut-e csomag telepítése után.
+description-it.UTF-8: Verifica se il demone udevd è in esecuzione quando il pacchetto viene installato.
+description-nl.UTF-8: Test of de udevd-daemon actief is wanneer het pakket is geïnstalleerd.
+description-pt_BR.UTF-8: Testar se o udevd daemon está sendo executado quando o pacote estiver instalado.
+description-ru.UTF-8: Проверить, если служба udevd выполняется, когда пакет установлен.
+description-sl.UTF-8: Preizkusi. če se ozadrnji program udevd izvaja med nameščanjem paketa.
+description-tr.UTF-8: Paket yüklendiğinde udevd hizmetinin çalışıp çalışmadığını denetleyin.
+
+plugin: shell
+name: winbindd
+requires: package.name == 'winbind'
+command: pgrep -f '/usr/sbin/winbindd' >/dev/null
+description: Test if the winbindd daemon is running when the package is installed.
+description-cs.UTF-8: Zkontrolovat, zda běží démon winbindd, pokud je balíček nainstalován
+description-de.UTF-8: Test, ob der winbindd-Dienst ausgeführt wird, wenn das Paket installiert ist.
+description-en_AU.UTF-8: Test if the winbindd daemon is running when the package is installed.
+description-en_GB.UTF-8: Test if the winbindd daemon is running when the package is installed.
+description-es.UTF-8: Prueba si el demonio de winbindd está ejecutándose cuando el paquete está instalado.
+description-gl.UTF-8: Proba se o daemon de winbindd está executándose cando o paquete está instalado.
+description-hu.UTF-8: Tesztelje, hogy a winbindd daemon fut-e csomag telepítése után.
+description-it.UTF-8: Verifica se il demone winbindd è in esecuzione quando il pacchetto viene installato.
+description-nl.UTF-8: Test of de winbindd-daemon actief is wanneer het pakket is geïnstalleerd.
+description-pt_BR.UTF-8: Testar se o winbindd daemon está sendo executado quando o pacote estiver instalado.
+description-ru.UTF-8: Проверить, если служба winbindd выполняется, когда пакет установлен.
+description-sl.UTF-8: Preizkusi, če se ozadnji program winbindd izvaja med nameščanjem paketa.
+description-tr.UTF-8: Paket yüklendiğinde winbindd hizmetinin çalışıp çalışmadığını denetleyin.

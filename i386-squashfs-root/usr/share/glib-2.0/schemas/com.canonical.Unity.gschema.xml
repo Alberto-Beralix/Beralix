@@ -1,0 +1,62 @@
+<schemalist>
+  <enum id="form-factor-enum">
+    <value nick="Automatic" value="0" />
+    <value nick="Desktop" value="1" />
+    <value nick="Netbook" value="2" />
+  </enum>
+  <enum id="home-expanded-enum">
+    <value nick="Not Expanded" value="0" />
+    <value nick="Expanded" value="1" />
+  </enum>
+
+  <schema path="/desktop/unity/" id="com.canonical.Unity" gettext-domain="unity">
+    <key enum="form-factor-enum" name="form-factor">
+      <default>"Automatic"</default>
+      <summary>The form factor Unity should target.</summary>
+      <description>The form factor chosen will affect the size and appearance of the Dash, Launcher and also the Window Management behaviour.</description>
+    </key>
+    <key enum="home-expanded-enum" name="home-expanded">
+      <default>"Expanded"</default>
+      <summary>Whether the home screen should be expanded.</summary>
+      <description>Whether the home screen should be expanded.</description>
+    </key>
+  </schema>
+	<schema path="/desktop/unity/launcher/" id="com.canonical.Unity.Launcher" gettext-domain="unity">
+    <key type="as" name="favorites">
+      <default>[ 'ubiquity-gtkui.desktop', 'nautilus-home.desktop', 'firefox.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'libreoffice-impress.desktop', 'ubuntu-software-center.desktop', 'ubuntuone-installer.desktop', 'gnome-control-center.desktop' ]</default>
+      <summary>List of desktop file ids for favorites on the launcher.</summary>
+      <description>These applications are shown in the Launcher by default.</description>
+    </key>
+    <key type="s" name="favorite-migration">
+      <default>''</default>
+      <summary>Version of last migration done</summary>
+      <description>This is a detection key for the favorite migration script to know whether the needed migration is done or not.</description>
+    </key>
+    <key type="b" name="shows-on-edge">
+      <default>true</default>
+      <summary>Launcher should show on mouse touching left edge.</summary>
+      <description>Launcher should show on mouse touching left edge of screen.</description>
+    </key>
+  </schema>
+	<schema path="/desktop/unity/panel/" id="com.canonical.Unity.Panel" gettext-domain="unity">
+    <key type="as" name="systray-whitelist">
+      <default>[ 'JavaEmbeddedFrame', 'Wine', 'scp-dbus-service', 'Update-notifier' ]</default>
+      <summary>List of client names, resource classes or wm classes to allow in the Panel's systray implementation.</summary>
+      <description>"" (empty) will not allow any tray icons, "all" will allow all tray icons, otherwise there will be an attempt to match each icon to a value here.</description>
+    </key>
+  </schema>
+  <schema path="/desktop/unity/devices/" id="com.canonical.Unity.Devices" gettext-domain="unity">
+    <key type="as" name="favorites">
+        <default>[]</default>
+        <summary>List of device uuid for favorites on the launcher.</summary>
+        <description>These devices are shown in the Launcher by default.</description>
+    </key>
+    </schema>
+  <schema path="/desktop/unity/runner/" id="com.canonical.Unity.Runner" gettext-domain="unity">
+    <key type="as" name="history">
+        <default>[]</default>
+        <summary>History of Alt + F2 command</summary>
+        <description>Key for storing the history of the Alt + F2 command.  </description>
+    </key>
+  </schema>
+</schemalist>

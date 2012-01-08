@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" id="audio-video" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#audio-video"/>
+    <desc>Informationen über die Möglichkeiten für Audio- und Video-Unterhaltungen.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-02" status="draft"/>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-14" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-04" status="done"/>
+      -->
+    </revision>
+    <revision pkgversion="2.30" version="0.2" date="2010-02-14" status="review"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Audio- und Video-Unterstützung</title>
+
+  <p>Sie können Audio- und Video-Unterhaltungen nur mit Kontakten führen, die ebenfalls eine Anwendung benutzen, die dieses Funktionsmerkmal unterstützt. Wenn Ihre Kontakte Audio- oder Video-Unterhaltungen unterstützen, werden neben deren Namen in der Kontaktliste folgende Symbole angezeigt:</p>
+
+  <table frame="all" rules="cols rowgroups" shade="rows">
+    <thead>
+      <tr>
+        <td>
+          <p>Symbol</p>
+        </td>
+        <td>
+          <p>Beschreibung</p>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        <p>
+          <media type="image" mime="image/png" src="figures/audio-input-microphone.png">Symbol für Audio-Unterhaltung</media>
+        </p>
+      </td>
+      <td>
+        <p>Der Kontakt kann eine Audio-Unterhaltung führen.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <media type="image" mime="image/png" src="figures/camera-web.png">Symbol für Video-Unterhaltung</media>
+        </p>
+      </td>
+      <td>
+        <p>Der Kontakt kann eine Video-Unterhaltung führen.</p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  
+  <note>
+    <p>Um eine Audio-Unterhaltung führen zu können, benötigen Sie eine von Ihrem Betriebssystem unterstützte Soundkarte sowie ein funktionierendes Mikrofon.</p>
+    <p>Um eine Video-Unterhaltung führen zu können, benötigen Sie eine von Ihrem Betriebssystem unterstützte Webcam sowie ein funktionierendes Mikrofon.</p>
+  </note>
+
+  <section id="services">
+  
+  <title>Unterstützte Kontentypen</title>
+
+  <p>Sie können nur mit denjenigen Konten Audio- oder Video-Unterhaltungen führen, welche die entsprechenden Dienste unterstützen. In der folgenden Tabelle wird für jeden Kontentyp aufgelistet, ob Audio und Video unterstützt werden.</p>
+
+  <note>
+    <p>Kontentypen werden durch Plugins bereitgestellt. Auf Ihrem System könnten nicht alle der folgenden Typen verfügbar sein, oder die bei Ihnen verfügbaren Typen sind hier nicht aufgelistet. Durch aktualisierte Plugins könnte es möglich sein, dass hier als nicht unterstützte Typen aufgelistete Konten dennoch Audio- und Video-Unterhaltungen ermöglichen.</p>
+  </note>
+
+  <comment>
+    <cite date="2009-09-04">Shaun McCance</cite>
+    <p>I'd like to do tables like this using nothing for No and ✔ for Yes, but we need to look at the accessibility impact. I've <link href="http://mail.gnome.org/archives/gnome-doc-list/2009-September/msg00006.html">asked the accessibility team</link> for input.</p>
+  </comment>
+
+  <comment>
+    <cite date="2009-09-04">Shaun McCance</cite>
+    <p>There's recent work on telepathy-butterfly and papyon to support audio and video for MSN. It might be released in time for 2.28, but since it doesn't follow the Gnome release schedule, I can't be sure. If it looks like it's going to ship, let's mark it Yes.</p>
+  </comment>
+  
+  <table frame="all" rules="rowgroups colgroups" shade="rows">
+    <colgroup><col/></colgroup><colgroup><col/><col/></colgroup>
+    <thead>
+      <tr>
+        <td><p>Dienst</p></td>
+        <td><p>Audio</p></td>
+        <td><p>Video</p></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p>AIM</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>Facebook-Unterhaltung</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>gadugadu</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>Google Talk</p></td>
+        <td><p>Ja</p></td>
+        <td><p>Ja</p></td>
+      </tr>
+      <tr>
+        <td><p>Groupwise</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>ICQ</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>IRC</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>Jabber</p></td>
+        <td><p>Ja</p></td>
+        <td><p>Ja</p></td>
+      </tr>
+      <tr>
+        <td><p>MSN</p></td>
+        <td><p>Ja</p></td>
+        <td><p>Ja</p></td>
+      </tr>
+      <tr>
+        <td><p>myspace</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>qq</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>Personen in der Nähe</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>gleichzeitig</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>silc</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>SIP</p></td>
+        <td><p>Ja</p></td>
+        <td><p>Ja</p></td>
+      </tr>
+      <tr>
+        <td><p>Yahoo!</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+      <tr>
+        <td><p>zephyr</p></td>
+        <td><p>Nein</p></td>
+        <td><p>Nein</p></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  </section>
+
+</page>

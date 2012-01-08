@@ -1,0 +1,14 @@
+[Desktop Entry]
+X-AppInstall-Package=rootstock-gtk
+X-AppInstall-Popcon=8
+X-AppInstall-Section=universe
+
+Version=1.0
+Type=Application
+Terminal=false
+Icon=rootstock_64
+Exec=su-to-root -X --preserve-env --description /usr/share/applications/rootstock.desktop -c rootstock-gtk
+Name=RootStock
+Categories=System;Settings;GTK;HardwareSettings;
+
+X-Ubuntu-Gettext-Domain=app-install-data

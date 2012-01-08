@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="problem" id="bluetooth-problem-connecting" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="hardware-problems-bluetooth"/>
+    <link type="guide" xref="bluetooth"/>
+    <link type="seealso" xref="hardware-driver"/>
+    
+    <desc>Puede que el adaptador esté apagado o que no tenga controladores, o puede que tenga desactivado el Bluetooth o que esté bloqueado.</desc>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Por qué no puedo conectar mi dispositivo Bluetooth?</title>
+
+<p>Hay varias razones por las que es posible que no pueda conectarse a un dispositivo Bluetooth (como un teléfono o unos auriculares):</p>
+
+<list>
+ <item>
+  <p>Conexión bloqueada o sin confianza</p>
+  <p>Algunos dispositivos Bluetooth bloquean las conexiones de manera predeterminada o requieren que se les cambie la configuración para permitir las conexiones. Asegúrese de que su dispositivo permite las conexiones.</p>
+ </item>
+ 
+ <item>
+  <p>Hardware Bluetooth no reconocido</p>
+  <p>Es posible que su equipo no haya reconocido su adaptador Bluetooth. Esto puede deberse a que no tenga instalados los controladores para su adaptador. Algunos adaptadores Bluetooth no funcionan con Linux, y por tanto no le será posible conseguir los controladores apropiados para ellos. En tal caso, probablemente tendrá que conseguir otro adaptador Bluetooth diferente.</p>
+ </item>
+ 
+ <item>
+  <p>Adaptador no encendido</p>
+  <p>Asegúrese de que su adaptador Bluetooth está activado. Pulse en el <gui>menú Bluetooth</gui> del <gui>panel superior</gui> y compruebe que no está desactivado.</p>
+ </item>
+ 
+ <item>
+  <p>Conexión del dispositivo Bluetooth apagada</p>
+  <p>Compruebe que el dispositivo al que está intentando conectarse tiene activado el Bluetooth. Por ejemplo, si está intentando conectarse a un móvil, compruebe que no está en modo avión.</p>
+ </item>
+
+ <item>
+  <p>No hay un adaptador Bluetooth en su equipo</p>
+  <p>Algunos equipos no tienen adaptadores de Bluetooth. Puede comprar un adaptador si quiere usar Bluetooth.</p>
+ </item>
+</list>
+
+</page>

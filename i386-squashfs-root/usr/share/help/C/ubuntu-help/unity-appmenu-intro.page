@@ -1,0 +1,80 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="unity-appmenu-intro">
+  <info>
+    <link type="guide" xref="index" group="unity-appmenu-intro"/>
+    <revision version="11.04" date="2011-04-20" status="final"/>
+
+    <credit type="author">
+      <name>Ubuntu Documentation Team</name>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  </info>
+  <title>Manage apps &amp; settings with Indicator Menus</title>
+
+  <comment>
+    <p><link href="http://askubuntu.com/questions/30334/list-of-application-indicators">additional indicators</link></p>
+  </comment>
+
+  <p>Ubuntu has many different <em>indicator menus</em> on the right side of the panel. 
+    The indicator menus are a place where you can check and modify the state of your computer and applications.
+    Some indicator menus you will see are:</p>
+
+  <list>
+
+    <item>
+      <p><em>Messaging menu</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/24/indicator-messages.svg">Message icon</media></p>
+      <p>Easily launch and receive incoming notifications from messaging applications including email, social networking, and Internet chat.</p>
+    </item>
+
+    <item>
+      <p><em>Battery menu</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/24/battery-100.svg">Battery icon</media></p>
+      <p>Check your laptop battery's charging status. This menu is hidden is not
+       shown if a battery is not detected.</p>
+    </item>
+
+    <item>
+      <p><em>Bluetooth menu</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/24/bluetooth-active.svg">Bluetooth icon</media></p>
+      <p>Send or receive files by <link xref="bluetooth">Bluetooth</link>. This menu is not shown if a supported Bluetooth device is not detected.</p>
+    </item>
+
+    <item>
+      <p><em>Network menu</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/24/network-offline.svg">Offline network icon</media></p>
+      <p>Connect to <link xref="net-wired-connect">wired</link>, <link xref="net-wireless-connect">wireless</link>, <link xref="net-mobile">mobile</link>, and <link xref="net-vpn-connect">VPN</link> networks.</p>
+    </item>
+
+    <item>
+      <p><em>Sound menu</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/24/audio-volume-high-panel.svg">Volume icon</media></p>
+      <p>Set the <link xref="sound-volume">volume</link>, configure sound <link xref="media">settings</link>, and control media players like <app>Banshee</app>.</p>
+    </item>
+
+    <item>
+      <p><em>Clock</em></p>
+      <p>Access the current time and date.</p>
+    </item>
+      <comment>
+      Appointments from your <link href="ghelp:evolution?usage-calendar">Evolution calendar</link>  will also display here.
+      </comment>
+
+    <item>
+      <p><em>User menu</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/stock/22/stock_person-panel.svg">User offline icon</media></p>
+      <p>Change your password, language settings or login picture. Quickly switch
+        between user accounts without logging out.</p>
+    </item>
+
+    <item>
+      <p><em>System menu</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/22/system-devices-panel.svg">Power cog icon</media></p>
+      <p>Access <link xref="prefs">system settings</link>. Lock screen, log out, suspend, restart or shutdown your computer.</p>
+    </item>
+
+  </list>
+
+<note><p>Some of the icons used by the indicator menus change according to the status of the application.</p></note>
+<p>Other programs such as <app>Tomboy</app> or <app>Transmission</app> can also add indicator menus to the panel.</p>
+
+  <comment>
+    <cite date="2011-02-22" href="https://ubuntuaccessibility.wordpress.com/2011/02/22/indicators-and-accessibility/">Penelope Stowe</cite>
+    <p>Indicators and Accessibility</p>
+  </comment>
+
+</page>

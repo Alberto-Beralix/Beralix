@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="task" id="sync-setup" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#sync"/>
+    <desc>配置便笺同步</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-05-29" status="candidate"/>
+    <credit type="author">
+      <name>Paul Cutler</name>
+      <email>pcutler@gnome.org</email>
+    </credit>    
+<!--
+    <copyright>
+      <year>2010</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+-->
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+ <title>配置同步选项</title>
+
+ <section id="enablesync">
+
+	<title>启用同步</title>
+	
+	<p><app>阿帖便笺</app>能够在多台计算机之间同步你的便笺，这样您就能够在其他计算机上备份您的便笺，或在不同电脑之间分享，让您总是可以访问到您的便笺。 </p>
+	
+	<p>您可以通过在面板、任务栏、浮动面板的阿帖便笺图标上点右键，然后选 <gui>首选项</gui> 来打开 <gui>阿帖便笺首选项</gui>，再选 <gui>同步便笺</gui> 标签。也可以在 <gui>搜索全部便笺</gui> 对话框里，打开 <gui>首选项</gui>，点菜单 <guiseq><gui>编辑</gui><gui>首选项</gui></guiseq>。</p>
+
+ </section>
+
+ <section id="conflict">
+
+	<title>管理便笺冲突</title>
+	
+	<p>您可以设置出现便笺冲突时，阿帖便笺默认的操作，这一般用于便笺需要定期同步的情况下。</p>
+	
+	<p>您可以在 <gui>首选项</gui> 对话框中，点 <gui>高级</gui> 按钮，从三个选项中选择一个默认的冲突处理选项。</p>
+	
+	<list>
+		<item><p><gui>总是询问该怎么做。</gui>这是默认的选项，当阿帖便笺发现冲突时，总是提示您是否重命名本地便笺，或者用服务器上的便笺替换本地便笺。</p></item>
+		<item><p><gui>重命名我的本地便笺。</gui>选中此项，便笺将自动从远程计算机复制一份便笺替换本地的，而将本地便笺重命名，这样您就不会丢失您的便笺信息。</p>
+		</item>
+		
+		<item><p><gui>用服务器上的便笺更新我的本地便笺。</gui>选中此项，当您同步便笺时，总是从远程计算机上的便笺替换本地便笺。</p></item>
+		
+		<note style="warning">
+		<p>便笺的替换是永久性的，您本地的便笺将会被远程计算机的便笺所替换，同步前该便笺中存放的信息将会丢失。</p>
+		</note>
+		
+	</list>
+		
+
+ </section> 
+ 
+  <section id="webdav">
+
+	<title>配置 WebDav 同步</title>
+	
+	<p>要想使用 WebDAV 同步便签，您需要在系统中安装 wdfs FUSE 文件系统，在安装过程中，系统将会为用户设置 FUSE，您还需要安装 GNOME Keyring 密钥程序。</p>
+	
+	<p>在 <gui>服务</gui> 下拉列表中选择 <gui>WebDAV</gui>，输入服务器的连接信息，然后点 <gui>保存</gui> 按钮，然后就可以使用便笺同步功能了。</p>
+
+ </section>
+ 
+  <section id="ssh">
+
+	<title>配置 SSH 同步</title>
+	
+	<p>要使用 SSH 服务来同步便笺，您需要安装 FUSE 文件系统，也叫 <app>ssfs</app>。在安装过程中，系统将会为用户设置 FUSE，您还需要 SSH 服务器的 SSH 密钥，此密钥可以由 <app>GNOME Seahorse</app>提供，也称为<app>密码和加密密钥</app>程序。</p>
+	
+	<p>推荐使用第三方计算机或服务器作为远程计算机来存放需要在多台计算机之间同步的便笺。</p>
+
+	<p>点菜单 <guiseq><gui>应用程序</gui><gui>附件</gui><gui>密码和加密密钥 </gui></guiseq>，打开<app>密码和加密密钥</app>程序，点击您的密钥，然后点菜单 <guiseq><gui>远程</gui><gui>为 SSH 配置密钥</gui></guiseq>，然后在<gui>计算机名</gui>中输入您想同步的计算机域名或 IP 地址，在<gui>登录名:</gui>中输入访问远程计算机的用户名，然后 点<gui>设定</gui>，出来提示时，输入密码然后完成密钥的设置。</p>
+	
+	<p>在阿帖便笺中，在<gui>服务</gui>下拉列表中，选择<gui>SSH</gui>，输入服务器的连接信息，然后点<gui>保存</gui>按钮。如果要设置 <gui>文件夹路径</gui>，应该选择一个空文件夹，然后就可以使用便笺同步功能了。</p>
+
+ </section>
+
+ <section id="local">
+
+	<title>配置便笺同步到本地文件夹</title>
+	
+	<p>如果您的一个文件夹在您其他系统中也可以使用，或者这个文件夹是挂载到了一个远程服务器上，可能您想把便笺同步到这个文件夹中。</p>
+
+	<p>在<gui>服务</gui>下拉列表中，选择本地文件夹选项，在<gui>文件夹路径</gui>中选择想要的文件夹，然后点<gui>保存</gui>按钮，然后就可以使用便笺同步功能了。</p>
+
+ </section>
+ 
+ </page>

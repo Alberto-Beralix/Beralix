@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-wireless-troubleshooting-initial-check" xml:lang="de">
+  <info>
+    <link type="guide" xref="net-wireless-troubleshooting"/>
+    <link type="next" xref="net-wireless-troubleshooting-hardware-info"/>
+
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+
+    <credit type="author">
+      <name>Mitwirkende im Dokumentations-Wiki von Ubuntu</name>
+    </credit>
+
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <desc>Fehlerbeseitigung Ihrer Verbindung mit einem drahtlosen Netzwerk.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Eine Eingangsüberprüfung durchführen</title>
+
+<p>Our first step will be to verify some basic network connectivity information.</p>
+<steps>
+   <item><p>Stellen Sie sicher, dass Ihr Laptop nicht über ein <em>Kabel</em> mit dem Internet verbunden ist.</p></item>
+   <item><p>If you have an external wireless adapter (such as a wireless-USB adapter, or a PCMCIA card), make sure that it is inserted into the proper slot on your computer.</p></item>
+   <item><p>If your wireless card is <em>inside</em> your computer, make sure that your wireless adapter switch is turned on.</p></item>
+   <item><p>Click the <gui>network menu</gui> on the top panel and make sure that the <gui>Enable Wireless</gui> setting is checked.</p></item>
+   <item><p>Open a <app>terminal</app> window (such as <app>gnome-terminal</app>), and enter the following command:</p>
+  <p><cmd>nm-tool</cmd></p></item>
+</steps>
+
+   <p>The <app>nm-tool</app> program will display information about your network hardware and connection status. If output from the wireless connection section contains the text, <code>State: Connected</code>, it means that your wireless adapter is working and it is connected to your wireless router.</p>
+
+  <p>If you are connected to your wireless router, but you still cannot access the internet, your router may not be set up correctly, or your Internet Service Provider (ISP) may be experiencing some technical problems. Review your router and ISP setup guides, or contact your ISP for support.</p>
+  <p>If the output from the <cmd>nm-tool</cmd> command did not indicate that you were connected to the network, proceed to the <link xref="net-wireless-troubleshooting-hardware-info">next portion</link> of the troubleshooting guide.</p>
+
+<links type="series"/>
+</page>

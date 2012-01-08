@@ -1,0 +1,96 @@
+#!/bin/sh -e
+
+test $DEBIAN_SCRIPT_DEBUG && set -v -x
+  
+
+case "$1" in
+  configure|upgrade)
+  
+  # Create fuse group.  If the group does not exist, then it's also highly
+  # unlikely that /etc/fuse.conf exists with local modifications, so only in
+  # this case do we set the ownership of that file.  LP: #679792
+  if ! getent group fuse >/dev/null; then
+    echo "creating fuse group and modifying ownership of /etc/fuse.conf..."
+    addgroup --system fuse
+    chmod 0640 /etc/fuse.conf
+    chown root:fuse /etc/fuse.conf
+  fi
+ 
+  # Detect if udev is active
+  udev=0
+  if [ -d /dev/.udev/ ]; then
+  	udev=1
+  fi
+  # Create device node with the right perms
+  if [ ${udev} -eq 0 ]; then
+    if [ -x /sbin/MAKEDEV ]; then
+      # Call makedev and fix perms
+      cd /dev && MAKEDEV fuse
+      chgrp fuse /dev/fuse
+    else
+      echo "MAKEDEV not installed, skipping device node creation."
+    fi
+  else
+  	# Udev is active, nothing to do.
+	echo "udev active, skipping device node creation."
+	# Debian bug #473545
+	# Udev rules says "fuse" group, however this group doesn't exist in
+	# base system, so the node is root:root.
+	# Once fuse-utils is installed the group exists and udev will set proper
+	# group. The bug may come from udev, or base system, which use a group
+	# that doens't exist. For now, let's workaround this issue here.
+	# Follow-up for #473545
+	# A hack has been added to initscript for the first time installation
+	# if you don't have fuse kernel module already loaded
+	# Moreover we need to reload udev before chgrp, otherwise fuse group
+	# is not known
+	# only reload udev if the upstart job exists
+	[ ! -f /etc/init/udev.conf ] || reload udev || true
+	test -e /dev/fuse && chgrp fuse /dev/fuse || true
+  fi
+
+  test -f /etc/default/fuse-utils && rm -f /etc/default/fuse-utils
+  
+  # LP: #697792
+  #chown root:fuse /etc/fuse.conf
+  #chmod 0640 /etc/fuse.conf
+
+  if ! grep -qw fuse /proc/filesystems; then
+    # try to load the module
+    lsmod | grep -q fuse > /dev/null 2>&1 || modprobe fuse > /dev/null 2>&1 || echo "Unable to load fuse module, but continuing anyway; please reboot to enable fuse"
+
+    # and make sure it's there after next reboot
+    #grep fuse /etc/modules > /dev/null 2>&1 || echo "fuse" >> /etc/modules
+  fi
+
+  # Remove from /etc/modules
+  sed -i -e '/^\s*fuse\s*$/d' /etc/modules
+
+  if type update-initramfs >/dev/null 2>&1; then
+    update-initramfs -u
+  fi
+  ;;
+
+  abort-upgrade|abort-remove|abort-deconfigure)
+  ;;
+
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2
+    exit 1
+  ;;
+esac
+
+# Automatically added by dh_installudev
+if [ "$1" = configure ]; then
+	if [ -e "/etc/udev/rules.d/z60_fuse-utils.rules" ]; then
+		echo "Preserving user changes to /etc/udev/rules.d/40-fuse-utils.rules ..."
+		if [ -e "/etc/udev/rules.d/40-fuse-utils.rules" ]; then
+			mv -f "/etc/udev/rules.d/40-fuse-utils.rules" "/etc/udev/rules.d/40-fuse-utils.rules.dpkg-new"
+		fi
+		mv -f "/etc/udev/rules.d/z60_fuse-utils.rules" "/etc/udev/rules.d/40-fuse-utils.rules"
+	fi
+fi
+# End automatically added section
+
+
+exit 0

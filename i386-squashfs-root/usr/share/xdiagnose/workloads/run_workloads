@@ -1,0 +1,74 @@
+#!/usr/bin/env python
+
+import sys
+import apt
+import subprocess
+import signal
+import time
+
+# TODO: Depends on whether xdiagnose has been installed
+#workloads_dir = '/usr/share/xdiagnose/workloads'
+workloads_dir = '.'
+
+workloads = [
+    'do_video_loop'
+    ]
+
+# TODO: Trap ^C and do cleanup if its hit
+# TODO: Start up multiple workloads simultaneously
+
+def signal_handler(signal, frame):
+    print "Ctrl-C hit"
+    sys.exit(0)
+signal.signal(signal.SIGINT, signal_handler)
+
+def check_dependencies():
+    dependencies_unmet = []
+    for script in workloads:
+        exe = "%s/%s depends" %(workloads_dir, script)
+        print exe
+        p = subprocess.Popen([exe], shell=True,
+                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        (stdout, stderr) = p.communicate()
+        depends = stdout.strip().split()
+        for package in depends:
+            print "  ", package
+
+            progress = apt.progress.base.OpProgress()
+            cache = apt.apt_pkg.Cache(progress)
+            sources = apt.apt_pkg.SourceRecords()
+            pkg = None
+            if package in cache:
+                pkg = cache[package]
+            elif sources.lookup(package):
+                source = sources.get(package)
+                # TODO: Is it installed?
+                for binary_package in source.binaries:
+                    if binary_package in cache:
+                        pkg = cache[package]
+            if pkg is None:
+                sys.stderr.write("Error: Couldn't find package %s\n" %(package))
+                dependencies_unmet.append(package)
+            elif pkg.current_state != apt.apt_pkg.CURSTATE_INSTALLED:
+                dependencies_unmet.append(package)
+
+    return dependencies_unmet
+
+dependencies_unmet = check_dependencies():
+if len(dependencies_unmet)>0:
+    sys.stderr.write("Error: Unmet dependencies\n")
+    for dep in dependencies_unmet:
+        sys.stderr.write("  %s\n" %(dep))
+    sys.exit(1)
+
+for script in workloads:
+    exe = "%s/%s depends" %(workloads_dir, script)
+    print exe
+    # TODO: Hang onto processes
+    p = subprocess.Popen([exe], shell=True,
+                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    (stdout, stderr) = p.communicate()
+    print "'%s'" %(stdout.strip())
+
+# TODO: Wait on child processes to complete
+time.sleep(200)

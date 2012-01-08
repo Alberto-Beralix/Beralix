@@ -1,0 +1,4236 @@
+Name: adduser/homedir-permission
+Template: adduser/homedir-permission
+Value: true
+Owners: adduser
+
+Name: apparmor/homedirs
+Template: apparmor/homedirs
+Value: 
+Owners: apparmor
+
+Name: apt-setup/backports
+Template: apt-setup/backports
+Owners: ubiquity
+
+Name: apt-setup/cdrom/failed
+Template: apt-setup/cdrom/failed
+Owners: ubiquity
+
+Name: apt-setup/cdrom/media-change
+Template: apt-setup/cdrom/media-change
+Owners: ubiquity
+
+Name: apt-setup/cdrom/set-double
+Template: apt-setup/cdrom/set-double
+Owners: ubiquity
+
+Name: apt-setup/cdrom/set-failed
+Template: apt-setup/cdrom/set-failed
+Owners: ubiquity
+
+Name: apt-setup/cdrom/set-first
+Template: apt-setup/cdrom/set-first
+Owners: ubiquity
+
+Name: apt-setup/cdrom/set-next
+Template: apt-setup/cdrom/set-next
+Owners: ubiquity
+
+Name: apt-setup/contrib
+Template: apt-setup/contrib
+Owners: ubiquity
+
+Name: apt-setup/extras
+Template: apt-setup/extras
+Owners: ubiquity
+
+Name: apt-setup/mirror/error
+Template: apt-setup/mirror/error
+Owners: ubiquity
+
+Name: apt-setup/multiarch
+Template: apt-setup/multiarch
+Owners: ubiquity
+
+Name: apt-setup/multiverse
+Template: apt-setup/multiverse
+Owners: ubiquity
+
+Name: apt-setup/no_mirror
+Template: apt-setup/no_mirror
+Owners: ubiquity
+
+Name: apt-setup/non-free
+Template: apt-setup/non-free
+Owners: ubiquity
+
+Name: apt-setup/partner
+Template: apt-setup/partner
+Owners: ubiquity
+
+Name: apt-setup/progress/cdrom
+Template: apt-setup/progress/cdrom
+Owners: ubiquity
+
+Name: apt-setup/progress/fallback
+Template: apt-setup/progress/fallback
+Owners: ubiquity
+
+Name: apt-setup/progress/local
+Template: apt-setup/progress/local
+Owners: ubiquity
+
+Name: apt-setup/progress/mirror
+Template: apt-setup/progress/mirror
+Owners: ubiquity
+
+Name: apt-setup/progress/security
+Template: apt-setup/progress/security
+Owners: ubiquity
+
+Name: apt-setup/progress/title
+Template: apt-setup/progress/title
+Owners: ubiquity
+
+Name: apt-setup/progress/volatile
+Template: apt-setup/progress/volatile
+Owners: ubiquity
+
+Name: apt-setup/proposed
+Template: apt-setup/proposed
+Owners: ubiquity
+
+Name: apt-setup/restricted
+Template: apt-setup/restricted
+Owners: ubiquity
+
+Name: apt-setup/security_host
+Template: apt-setup/security_host
+Owners: ubiquity
+
+Name: apt-setup/security_path
+Template: apt-setup/security_path
+Owners: ubiquity
+
+Name: apt-setup/service-failed
+Template: apt-setup/service-failed
+Owners: ubiquity
+
+Name: apt-setup/services-select
+Template: apt-setup/services-select
+Owners: ubiquity
+
+Name: apt-setup/services-select-ubuntu
+Template: apt-setup/services-select-ubuntu
+Owners: ubiquity
+
+Name: apt-setup/universe
+Template: apt-setup/universe
+Owners: ubiquity
+
+Name: apt-setup/use/cd
+Template: apt-setup/use/cd
+Owners: ubiquity
+
+Name: apt-setup/use/cd-note
+Template: apt-setup/use/cd-note
+Owners: ubiquity
+
+Name: apt-setup/use/cd-set1
+Template: apt-setup/use/cd-set1
+Owners: ubiquity
+
+Name: apt-setup/use/cd-set2
+Template: apt-setup/use/cd-set2
+Owners: ubiquity
+
+Name: apt-setup/use/dvd
+Template: apt-setup/use/dvd
+Owners: ubiquity
+
+Name: apt-setup/use/inet1
+Template: apt-setup/use/inet1
+Owners: ubiquity
+
+Name: apt-setup/use/inet2
+Template: apt-setup/use/inet2
+Owners: ubiquity
+
+Name: apt-setup/use/netinst
+Template: apt-setup/use/netinst
+Owners: ubiquity
+
+Name: apt-setup/use/netinst_old
+Template: apt-setup/use/netinst_old
+Owners: ubiquity
+
+Name: apt-setup/use_mirror
+Template: apt-setup/use_mirror
+Owners: ubiquity
+
+Name: apt-setup/volatile_host
+Template: apt-setup/volatile_host
+Owners: ubiquity
+
+Name: auto-install/defaultroot
+Template: auto-install/defaultroot
+Owners: ubiquity
+
+Name: auto-install/enable
+Template: auto-install/enable
+Owners: ubiquity
+
+Name: babelbox/info
+Template: babelbox/info
+Owners: ubiquity
+
+Name: base-installer/kernel/linux/link_in_boot
+Template: base-installer/kernel/linux/link_in_boot
+Owners: ubiquity
+
+Name: ca-certificates/enable_crts
+Template: ca-certificates/enable_crts
+Value: brasil.gov.br/brasil.gov.br.crt, cacert.org/cacert.org.crt, debconf.org/ca.crt, gouv.fr/cert_igca_dsa.crt, gouv.fr/cert_igca_rsa.crt, mozilla/ACEDICOM_Root.crt, mozilla/AC_Raíz_Certicámara_S.A..crt, mozilla/AOL_Time_Warner_Root_Certification_Authority_1.crt, mozilla/AOL_Time_Warner_Root_Certification_Authority_2.crt, mozilla/AddTrust_External_Root.crt, mozilla/AddTrust_Low-Value_Services_Root.crt, mozilla/AddTrust_Public_Services_Root.crt, mozilla/AddTrust_Qualified_Certificates_Root.crt, mozilla/America_Online_Root_Certification_Authority_1.crt, mozilla/America_Online_Root_Certification_Authority_2.crt, mozilla/ApplicationCA_-_Japanese_Government.crt, mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt, mozilla/Baltimore_CyberTrust_Root.crt, mozilla/Buypass_Class_2_CA_1.crt, mozilla/Buypass_Class_3_CA_1.crt, mozilla/CA_Disig.crt, mozilla/CNNIC_ROOT.crt, mozilla/COMODO_Certification_Authority.crt, mozilla/COMODO_ECC_Certification_Authority.crt, mozilla/Camerfirma_Chambers_of_Commerce_Root.crt, mozilla/Camerfirma_Global_Chambersign_Root.crt, mozilla/Certigna.crt, mozilla/Certplus_Class_2_Primary_CA.crt, mozilla/Certum_Root_CA.crt, mozilla/Chambers_of_Commerce_Root_-_2008.crt, mozilla/ComSign_CA.crt, mozilla/ComSign_Secured_CA.crt, mozilla/Comodo_AAA_Services_root.crt, mozilla/Comodo_Secure_Services_root.crt, mozilla/Comodo_Trusted_Services_root.crt, mozilla/Cybertrust_Global_Root.crt, mozilla/DST_ACES_CA_X6.crt, mozilla/DST_Root_CA_X3.crt, mozilla/Deutsche_Telekom_Root_CA_2.crt, mozilla/DigiCert_Assured_ID_Root_CA.crt, mozilla/DigiCert_Global_Root_CA.crt, mozilla/DigiCert_High_Assurance_EV_Root_CA.crt, mozilla/Digital_Signature_Trust_Co._Global_CA_1.crt, mozilla/Digital_Signature_Trust_Co._Global_CA_3.crt, mozilla/E-Guven_Kok_Elektronik_Sertifika_Hizmet_Saglayicisi.crt, mozilla/EBG_Elektronik_Sertifika_Hizmet_Sağlayıcısı.crt, mozilla/Entrust.net_Premium_2048_Secure_Server_CA.crt, mozilla/Entrust.net_Secure_Server_CA.crt, mozilla/Entrust_Root_Certification_Authority.crt, mozilla/Equifax_Secure_CA.crt, mozilla/Equifax_Secure_Global_eBusiness_CA.crt, mozilla/Equifax_Secure_eBusiness_CA_1.crt, mozilla/Equifax_Secure_eBusiness_CA_2.crt, mozilla/Firmaprofesional_Root_CA.crt, mozilla/GTE_CyberTrust_Global_Root.crt, mozilla/GeoTrust_Global_CA.crt, mozilla/GeoTrust_Global_CA_2.crt, mozilla/GeoTrust_Primary_Certification_Authority.crt, mozilla/GeoTrust_Primary_Certification_Authority_-_G2.crt, mozilla/GeoTrust_Primary_Certification_Authority_-_G3.crt, mozilla/GeoTrust_Universal_CA.crt, mozilla/GeoTrust_Universal_CA_2.crt, mozilla/GlobalSign_Root_CA.crt, mozilla/GlobalSign_Root_CA_-_R2.crt, mozilla/GlobalSign_Root_CA_-_R3.crt, mozilla/Global_Chambersign_Root_-_2008.crt, mozilla/Go_Daddy_Class_2_CA.crt, mozilla/Hongkong_Post_Root_CA_1.crt, mozilla/IGC_A.crt, mozilla/Izenpe.com.crt, mozilla/Juur-SK.crt, mozilla/Microsec_e-Szigno_Root_CA.crt, mozilla/Microsec_e-Szigno_Root_CA_2009.crt, mozilla/NetLock_Arany_=Class_Gold=_Főtanúsítvány.crt, mozilla/NetLock_Business_=Class_B=_Root.crt, mozilla/NetLock_Express_=Class_C=_Root.crt, mozilla/NetLock_Notary_=Class_A=_Root.crt, mozilla/NetLock_Qualified_=Class_QA=_Root.crt, mozilla/Network_Solutions_Certificate_Authority.crt, mozilla/OISTE_WISeKey_Global_Root_GA_CA.crt, mozilla/QuoVadis_Root_CA.crt, mozilla/QuoVadis_Root_CA_2.crt, mozilla/QuoVadis_Root_CA_3.crt, mozilla/RSA_Root_Certificate_1.crt, mozilla/RSA_Security_2048_v3.crt, mozilla/S-TRUST_Authentication_and_Encryption_Root_CA_2005_PN.crt, mozilla/SecureSign_RootCA11.crt, mozilla/SecureTrust_CA.crt, mozilla/Secure_Global_CA.crt, mozilla/Security_Communication_EV_RootCA1.crt, mozilla/Security_Communication_Root_CA.crt, mozilla/Sonera_Class_1_Root_CA.crt, mozilla/Sonera_Class_2_Root_CA.crt, mozilla/Staat_der_Nederlanden_Root_CA.crt, mozilla/Staat_der_Nederlanden_Root_CA_-_G2.crt, mozilla/Starfield_Class_2_CA.crt, mozilla/StartCom_Certification_Authority.crt, mozilla/SwissSign_Gold_CA_-_G2.crt, mozilla/SwissSign_Platinum_CA_-_G2.crt, mozilla/SwissSign_Silver_CA_-_G2.crt, mozilla/Swisscom_Root_CA_1.crt, mozilla/TC_TrustCenter_Class_2_CA_II.crt, mozilla/TC_TrustCenter_Class_3_CA_II.crt, mozilla/TC_TrustCenter_Universal_CA_I.crt, mozilla/TC_TrustCenter_Universal_CA_III.crt, mozilla/TC_TrustCenter__Germany__Class_2_CA.crt, mozilla/TC_TrustCenter__Germany__Class_3_CA.crt, mozilla/TDC_Internet_Root_CA.crt, mozilla/TDC_OCES_Root_CA.crt, mozilla/TURKTRUST_Certificate_Services_Provider_Root_1.crt, mozilla/TURKTRUST_Certificate_Services_Provider_Root_2.crt, mozilla/Taiwan_GRCA.crt, mozilla/Thawte_Personal_Freemail_CA.crt, mozilla/Thawte_Premium_Server_CA.crt, mozilla/Thawte_Server_CA.crt, mozilla/Thawte_Time_Stamping_CA.crt, mozilla/TÜBİTAK_UEKAE_Kök_Sertifika_Hizmet_Sağlayıcısı_-_Sürüm_3.crt, mozilla/UTN_DATACorp_SGC_Root_CA.crt, mozilla/UTN_USERFirst_Email_Root_CA.crt, mozilla/UTN_USERFirst_Hardware_Root_CA.crt, mozilla/ValiCert_Class_1_VA.crt, mozilla/ValiCert_Class_2_VA.crt, mozilla/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.crt, mozilla/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.crt, mozilla/VeriSign_Universal_Root_Certification_Authority.crt, mozilla/Verisign_Class_1_Public_Primary_Certification_Authority.crt, mozilla/Verisign_Class_1_Public_Primary_Certification_Authority_-_G2.crt, mozilla/Verisign_Class_1_Public_Primary_Certification_Authority_-_G3.crt, mozilla/Verisign_Class_2_Public_Primary_Certification_Authority.crt, mozilla/Verisign_Class_2_Public_Primary_Certification_Authority_-_G2.crt, mozilla/Verisign_Class_2_Public_Primary_Certification_Authority_-_G3.crt, mozilla/Verisign_Class_3_Public_Primary_Certification_Authority.crt, mozilla/Verisign_Class_3_Public_Primary_Certification_Authority_-_G2.crt, mozilla/Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.crt, mozilla/Verisign_Class_4_Public_Primary_Certification_Authority_-_G2.crt, mozilla/Verisign_Class_4_Public_Primary_Certification_Authority_-_G3.crt, mozilla/Visa_eCommerce_Root.crt, mozilla/WellsSecure_Public_Root_Certificate_Authority.crt, mozilla/Wells_Fargo_Root_CA.crt, mozilla/XRamp_Global_CA_Root.crt, mozilla/certSIGN_ROOT_CA.crt, mozilla/ePKI_Root_Certification_Authority.crt, mozilla/thawte_Primary_Root_CA.crt, mozilla/thawte_Primary_Root_CA_-_G2.crt, mozilla/thawte_Primary_Root_CA_-_G3.crt, signet.pl/signet_ca1_pem.crt, signet.pl/signet_ca2_pem.crt, signet.pl/signet_ca3_pem.crt, signet.pl/signet_ocspklasa2_pem.crt, signet.pl/signet_ocspklasa3_pem.crt, signet.pl/signet_pca2_pem.crt, signet.pl/signet_pca3_pem.crt, signet.pl/signet_rootca_pem.crt, signet.pl/signet_tsa1_pem.crt, spi-inc.org/spi-ca-2003.crt, spi-inc.org/spi-cacert-2008.crt
+Owners: ca-certificates
+Variables:
+ enable_crts = brasil.gov.br/brasil.gov.br.crt, cacert.org/cacert.org.crt, debconf.org/ca.crt, gouv.fr/cert_igca_dsa.crt, gouv.fr/cert_igca_rsa.crt, mozilla/ACEDICOM_Root.crt, mozilla/AC_Raíz_Certicámara_S.A..crt, mozilla/AOL_Time_Warner_Root_Certification_Authority_1.crt, mozilla/AOL_Time_Warner_Root_Certification_Authority_2.crt, mozilla/AddTrust_External_Root.crt, mozilla/AddTrust_Low-Value_Services_Root.crt, mozilla/AddTrust_Public_Services_Root.crt, mozilla/AddTrust_Qualified_Certificates_Root.crt, mozilla/America_Online_Root_Certification_Authority_1.crt, mozilla/America_Online_Root_Certification_Authority_2.crt, mozilla/ApplicationCA_-_Japanese_Government.crt, mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt, mozilla/Baltimore_CyberTrust_Root.crt, mozilla/Buypass_Class_2_CA_1.crt, mozilla/Buypass_Class_3_CA_1.crt, mozilla/CA_Disig.crt, mozilla/CNNIC_ROOT.crt, mozilla/COMODO_Certification_Authority.crt, mozilla/COMODO_ECC_Certification_Authority.crt, mozilla/Camerfirma_Chambers_of_Commerce_Root.crt, mozilla/Camerfirma_Global_Chambersign_Root.crt, mozilla/Certigna.crt, mozilla/Certplus_Class_2_Primary_CA.crt, mozilla/Certum_Root_CA.crt, mozilla/Chambers_of_Commerce_Root_-_2008.crt, mozilla/ComSign_CA.crt, mozilla/ComSign_Secured_CA.crt, mozilla/Comodo_AAA_Services_root.crt, mozilla/Comodo_Secure_Services_root.crt, mozilla/Comodo_Trusted_Services_root.crt, mozilla/Cybertrust_Global_Root.crt, mozilla/DST_ACES_CA_X6.crt, mozilla/DST_Root_CA_X3.crt, mozilla/Deutsche_Telekom_Root_CA_2.crt, mozilla/DigiCert_Assured_ID_Root_CA.crt, mozilla/DigiCert_Global_Root_CA.crt, mozilla/DigiCert_High_Assurance_EV_Root_CA.crt, mozilla/Digital_Signature_Trust_Co._Global_CA_1.crt, mozilla/Digital_Signature_Trust_Co._Global_CA_3.crt, mozilla/E-Guven_Kok_Elektronik_Sertifika_Hizmet_Saglayicisi.crt, mozilla/EBG_Elektronik_Sertifika_Hizmet_Sağlayıcısı.crt, mozilla/Entrust.net_Premium_2048_Secure_Server_CA.crt, mozilla/Entrust.net_Secure_Server_CA.crt, mozilla/Entrust_Root_Certification_Authority.crt, mozilla/Equifax_Secure_CA.crt, mozilla/Equifax_Secure_Global_eBusiness_CA.crt, mozilla/Equifax_Secure_eBusiness_CA_1.crt, mozilla/Equifax_Secure_eBusiness_CA_2.crt, mozilla/Firmaprofesional_Root_CA.crt, mozilla/GTE_CyberTrust_Global_Root.crt, mozilla/GeoTrust_Global_CA.crt, mozilla/GeoTrust_Global_CA_2.crt, mozilla/GeoTrust_Primary_Certification_Authority.crt, mozilla/GeoTrust_Primary_Certification_Authority_-_G2.crt, mozilla/GeoTrust_Primary_Certification_Authority_-_G3.crt, mozilla/GeoTrust_Universal_CA.crt, mozilla/GeoTrust_Universal_CA_2.crt, mozilla/GlobalSign_Root_CA.crt, mozilla/GlobalSign_Root_CA_-_R2.crt, mozilla/GlobalSign_Root_CA_-_R3.crt, mozilla/Global_Chambersign_Root_-_2008.crt, mozilla/Go_Daddy_Class_2_CA.crt, mozilla/Hongkong_Post_Root_CA_1.crt, mozilla/IGC_A.crt, mozilla/Izenpe.com.crt, mozilla/Juur-SK.crt, mozilla/Microsec_e-Szigno_Root_CA.crt, mozilla/Microsec_e-Szigno_Root_CA_2009.crt, mozilla/NetLock_Arany_=Class_Gold=_Főtanúsítvány.crt, mozilla/NetLock_Business_=Class_B=_Root.crt, mozilla/NetLock_Express_=Class_C=_Root.crt, mozilla/NetLock_Notary_=Class_A=_Root.crt, mozilla/NetLock_Qualified_=Class_QA=_Root.crt, mozilla/Network_Solutions_Certificate_Authority.crt, mozilla/OISTE_WISeKey_Global_Root_GA_CA.crt, mozilla/QuoVadis_Root_CA.crt, mozilla/QuoVadis_Root_CA_2.crt, mozilla/QuoVadis_Root_CA_3.crt, mozilla/RSA_Root_Certificate_1.crt, mozilla/RSA_Security_2048_v3.crt, mozilla/S-TRUST_Authentication_and_Encryption_Root_CA_2005_PN.crt, mozilla/SecureSign_RootCA11.crt, mozilla/SecureTrust_CA.crt, mozilla/Secure_Global_CA.crt, mozilla/Security_Communication_EV_RootCA1.crt, mozilla/Security_Communication_Root_CA.crt, mozilla/Sonera_Class_1_Root_CA.crt, mozilla/Sonera_Class_2_Root_CA.crt, mozilla/Staat_der_Nederlanden_Root_CA.crt, mozilla/Staat_der_Nederlanden_Root_CA_-_G2.crt, mozilla/Starfield_Class_2_CA.crt, mozilla/StartCom_Certification_Authority.crt, mozilla/SwissSign_Gold_CA_-_G2.crt, mozilla/SwissSign_Platinum_CA_-_G2.crt, mozilla/SwissSign_Silver_CA_-_G2.crt, mozilla/Swisscom_Root_CA_1.crt, mozilla/TC_TrustCenter_Class_2_CA_II.crt, mozilla/TC_TrustCenter_Class_3_CA_II.crt, mozilla/TC_TrustCenter_Universal_CA_I.crt, mozilla/TC_TrustCenter_Universal_CA_III.crt, mozilla/TC_TrustCenter__Germany__Class_2_CA.crt, mozilla/TC_TrustCenter__Germany__Class_3_CA.crt, mozilla/TDC_Internet_Root_CA.crt, mozilla/TDC_OCES_Root_CA.crt, mozilla/TURKTRUST_Certificate_Services_Provider_Root_1.crt, mozilla/TURKTRUST_Certificate_Services_Provider_Root_2.crt, mozilla/Taiwan_GRCA.crt, mozilla/Thawte_Personal_Freemail_CA.crt, mozilla/Thawte_Premium_Server_CA.crt, mozilla/Thawte_Server_CA.crt, mozilla/Thawte_Time_Stamping_CA.crt, mozilla/TÜBİTAK_UEKAE_Kök_Sertifika_Hizmet_Sağlayıcısı_-_Sürüm_3.crt, mozilla/UTN_DATACorp_SGC_Root_CA.crt, mozilla/UTN_USERFirst_Email_Root_CA.crt, mozilla/UTN_USERFirst_Hardware_Root_CA.crt, mozilla/ValiCert_Class_1_VA.crt, mozilla/ValiCert_Class_2_VA.crt, mozilla/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.crt, mozilla/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.crt, mozilla/VeriSign_Universal_Root_Certification_Authority.crt, mozilla/Verisign_Class_1_Public_Primary_Certification_Authority.crt, mozilla/Verisign_Class_1_Public_Primary_Certification_Authority_-_G2.crt, mozilla/Verisign_Class_1_Public_Primary_Certification_Authority_-_G3.crt, mozilla/Verisign_Class_2_Public_Primary_Certification_Authority.crt, mozilla/Verisign_Class_2_Public_Primary_Certification_Authority_-_G2.crt, mozilla/Verisign_Class_2_Public_Primary_Certification_Authority_-_G3.crt, mozilla/Verisign_Class_3_Public_Primary_Certification_Authority.crt, mozilla/Verisign_Class_3_Public_Primary_Certification_Authority_-_G2.crt, mozilla/Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.crt, mozilla/Verisign_Class_4_Public_Primary_Certification_Authority_-_G2.crt, mozilla/Verisign_Class_4_Public_Primary_Certification_Authority_-_G3.crt, mozilla/Visa_eCommerce_Root.crt, mozilla/WellsSecure_Public_Root_Certificate_Authority.crt, mozilla/Wells_Fargo_Root_CA.crt, mozilla/XRamp_Global_CA_Root.crt, mozilla/certSIGN_ROOT_CA.crt, mozilla/ePKI_Root_Certification_Authority.crt, mozilla/thawte_Primary_Root_CA.crt, mozilla/thawte_Primary_Root_CA_-_G2.crt, mozilla/thawte_Primary_Root_CA_-_G3.crt, signet.pl/signet_ca1_pem.crt, signet.pl/signet_ca2_pem.crt, signet.pl/signet_ca3_pem.crt, signet.pl/signet_ocspklasa2_pem.crt, signet.pl/signet_ocspklasa3_pem.crt, signet.pl/signet_pca2_pem.crt, signet.pl/signet_pca3_pem.crt, signet.pl/signet_rootca_pem.crt, signet.pl/signet_tsa1_pem.crt, spi-inc.org/spi-ca-2003.crt, spi-inc.org/spi-cacert-2008.crt
+
+Name: ca-certificates/new_crts
+Template: ca-certificates/new_crts
+Owners: ca-certificates
+Variables:
+ new_crts = 
+
+Name: ca-certificates/title
+Template: ca-certificates/title
+Owners: ca-certificates
+
+Name: ca-certificates/trust_new_crts
+Template: ca-certificates/trust_new_crts
+Value: yes
+Owners: ca-certificates
+
+Name: checkbox/plugins/apport_prompt/default_enabled
+Template: checkbox/plugins/apport_prompt/default_enabled
+Value: 
+Owners: checkbox
+
+Name: checkbox/plugins/apport_prompt/default_package
+Template: checkbox/plugins/apport_prompt/default_package
+Value: 
+Owners: checkbox
+
+Name: checkbox/plugins/jobs_info/blacklist
+Template: checkbox/plugins/jobs_info/blacklist
+Value: 
+Owners: checkbox
+
+Name: checkbox/plugins/jobs_info/whitelist
+Template: checkbox/plugins/jobs_info/whitelist
+Value: 
+Owners: checkbox
+
+Name: checkbox/plugins/launchpad_exchange/transport_url
+Template: checkbox/plugins/launchpad_exchange/transport_url
+Value: https://launchpad.net/+hwdb/+submit
+Owners: checkbox
+
+Name: checkbox/plugins/launchpad_prompt/email
+Template: checkbox/plugins/launchpad_prompt/email
+Value: 
+Owners: checkbox
+
+Name: checkbox/plugins/proxy_info/http_proxy
+Template: checkbox/plugins/proxy_info/http_proxy
+Value: 
+Owners: checkbox
+
+Name: checkbox/plugins/proxy_info/https_proxy
+Template: checkbox/plugins/proxy_info/https_proxy
+Value: 
+Owners: checkbox
+
+Name: clock-setup/hwclock-wait
+Template: clock-setup/hwclock-wait
+Owners: ubiquity
+
+Name: clock-setup/ntp
+Template: clock-setup/ntp
+Owners: ubiquity
+
+Name: clock-setup/ntp-server
+Template: clock-setup/ntp-server
+Owners: ubiquity
+
+Name: clock-setup/progress/hwclock
+Template: clock-setup/progress/hwclock
+Owners: ubiquity
+
+Name: clock-setup/progress/ntp
+Template: clock-setup/progress/ntp
+Owners: ubiquity
+
+Name: clock-setup/progress/title
+Template: clock-setup/progress/title
+Owners: ubiquity
+
+Name: clock-setup/system-time-changed
+Template: clock-setup/system-time-changed
+Owners: ubiquity
+
+Name: clock-setup/utc
+Template: clock-setup/utc
+Owners: ubiquity
+
+Name: clock-setup/utc-auto
+Template: clock-setup/utc-auto
+Owners: ubiquity
+
+Name: console-setup/ask_detect
+Template: console-setup/ask_detect
+Owners: keyboard-configuration
+
+Name: console-setup/charmap47
+Template: console-setup/charmap47
+Value: UTF-8
+Owners: console-setup
+Variables:
+ CHOICES = ARMSCII-8, CP1251, CP1255, CP1256, GEORGIAN-ACADEMY, GEORGIAN-PS, IBM1133, ISIRI-3342, ISO-8859-1, ISO-8859-10, ISO-8859-11, ISO-8859-13, ISO-8859-14, ISO-8859-15, ISO-8859-16, ISO-8859-2, ISO-8859-3, ISO-8859-4, ISO-8859-5, ISO-8859-6, ISO-8859-7, ISO-8859-8, ISO-8859-9, KOI8-R, KOI8-U, TIS-620, UTF-8, VISCII
+
+Name: console-setup/codeset47
+Template: console-setup/codeset47
+Value: . Combined - Latin; Slavic Cyrillic; Greek
+Owners: console-setup
+Flags: seen
+
+Name: console-setup/codesetcode
+Template: console-setup/codesetcode
+Value: Uni2
+Owners: console-setup
+
+Name: console-setup/detect
+Template: console-setup/detect
+Owners: keyboard-configuration
+
+Name: console-setup/detected
+Template: console-setup/detected
+Owners: keyboard-configuration
+
+Name: console-setup/fontface47
+Template: console-setup/fontface47
+Value: Fixed
+Owners: console-setup
+Variables:
+ CHOICES = Fixed, Terminus, TerminusBold, TerminusBoldVGA, VGA, Do not change the boot/kernel font
+
+Name: console-setup/fontsize
+Template: console-setup/fontsize
+Value: 16
+Owners: console-setup
+
+Name: console-setup/fontsize-fb47
+Template: console-setup/fontsize-fb47
+Value: 16
+Owners: console-setup
+
+Name: console-setup/fontsize-text47
+Template: console-setup/fontsize-text47
+Value: 16
+Owners: console-setup
+Variables:
+ CHOICES = 13, 14, 15, 16, 18
+
+Name: console-setup/store_defaults_in_debconf_db
+Template: console-setup/store_defaults_in_debconf_db
+Value: true
+Owners: console-setup
+
+Name: console-setup/use_system_font
+Template: console-setup/use_system_font
+Owners: console-setup
+
+Name: cups-bsd/setuplpd
+Template: cups-bsd/setuplpd
+Value: false
+Owners: cups-bsd
+
+Name: cupsys/backend
+Template: cupsys/backend
+Value: ipp, lpd, parallel, serial, socket, usb, snmp, dnssd
+Owners: cups
+
+Name: cupsys/raw-print
+Template: cupsys/raw-print
+Value: true
+Owners: cups
+
+Name: dash/sh
+Template: dash/sh
+Value: true
+Owners: dash
+Flags: seen
+
+Name: debconf-apt-progress/info
+Template: debconf-apt-progress/info
+Owners: debconf
+
+Name: debconf-apt-progress/media-change
+Template: debconf-apt-progress/media-change
+Owners: debconf
+
+Name: debconf-apt-progress/preparing
+Template: debconf-apt-progress/preparing
+Owners: debconf
+
+Name: debconf-apt-progress/title
+Template: debconf-apt-progress/title
+Owners: debconf
+
+Name: debconf/frontend
+Template: debconf/frontend
+Value: Dialog
+Owners: debconf
+
+Name: debconf/priority
+Template: debconf/priority
+Value: high
+Owners: debconf
+
+Name: debian-installer/add-kernel-opts
+Template: debian-installer/add-kernel-opts
+Owners: ubiquity
+
+Name: debian-installer/apt-setup-udeb/title
+Template: debian-installer/apt-setup-udeb/title
+Owners: ubiquity
+
+Name: debian-installer/bootstrap-base/title
+Template: debian-installer/bootstrap-base/title
+Owners: ubiquity
+
+Name: debian-installer/choose-mirror/title
+Template: debian-installer/choose-mirror/title
+Owners: ubiquity
+
+Name: debian-installer/clock-setup/title
+Template: debian-installer/clock-setup/title
+Owners: ubiquity
+
+Name: debian-installer/console-setup-udeb/title
+Template: debian-installer/console-setup-udeb/title
+Owners: keyboard-configuration
+
+Name: debian-installer/consoledisplay
+Template: debian-installer/consoledisplay
+Owners: ubiquity
+
+Name: debian-installer/country
+Template: debian-installer/country
+Owners: ubiquity
+
+Name: debian-installer/di-utils-exit-installer/title
+Template: debian-installer/di-utils-exit-installer/title
+Owners: ubiquity
+
+Name: debian-installer/di-utils-reboot/title
+Template: debian-installer/di-utils-reboot/title
+Owners: ubiquity
+
+Name: debian-installer/di-utils-shell/title
+Template: debian-installer/di-utils-shell/title
+Owners: ubiquity
+
+Name: debian-installer/disk-detect/title
+Template: debian-installer/disk-detect/title
+Owners: ubiquity
+
+Name: debian-installer/driver-injection-disk-detect/title
+Template: debian-installer/driver-injection-disk-detect/title
+Owners: ubiquity
+
+Name: debian-installer/dummy
+Template: debian-installer/dummy
+Owners: ubiquity
+
+Name: debian-installer/ethdetect/title
+Template: debian-installer/ethdetect/title
+Owners: ubiquity
+
+Name: debian-installer/file-preseed/title
+Template: debian-installer/file-preseed/title
+Owners: ubiquity
+
+Name: debian-installer/framebuffer
+Template: debian-installer/framebuffer
+Owners: ubiquity
+
+Name: debian-installer/grub-installer/title
+Template: debian-installer/grub-installer/title
+Owners: ubiquity
+
+Name: debian-installer/language
+Template: debian-installer/language
+Owners: ubiquity
+
+Name: debian-installer/locale
+Template: debian-installer/locale
+Owners: ubiquity
+
+Name: debian-installer/localechooser/title
+Template: debian-installer/localechooser/title
+Owners: ubiquity
+
+Name: debian-installer/netcfg-static/title
+Template: debian-installer/netcfg-static/title
+Owners: ubiquity
+
+Name: debian-installer/netcfg/title
+Template: debian-installer/netcfg/title
+Owners: ubiquity
+
+Name: debian-installer/network-preseed/title
+Template: debian-installer/network-preseed/title
+Owners: ubiquity
+
+Name: debian-installer/partman-base/title
+Template: debian-installer/partman-base/title
+Owners: ubiquity
+
+Name: debian-installer/shell-plugin
+Template: debian-installer/shell-plugin
+Owners: ubiquity
+
+Name: debian-installer/shell-plugin-default-title
+Template: debian-installer/shell-plugin-default-title
+Owners: ubiquity
+
+Name: debian-installer/terminal-plugin-unavailable
+Template: debian-installer/terminal-plugin-unavailable
+Owners: ubiquity
+
+Name: debian-installer/user-setup-udeb/title
+Template: debian-installer/user-setup-udeb/title
+Owners: ubiquity, user-setup
+
+Name: debian-installer/workaround-gtk
+Template: debian-installer/workaround-gtk
+Owners: ubiquity
+
+Name: di-utils-reboot/really_reboot
+Template: di-utils-reboot/really_reboot
+Owners: ubiquity
+
+Name: di-utils-shell/do-shell
+Template: di-utils-shell/do-shell
+Owners: ubiquity
+
+Name: dictionaries-common/default-ispell
+Template: dictionaries-common/default-ispell
+Owners: dictionaries-common
+
+Name: dictionaries-common/default-wordlist
+Template: dictionaries-common/default-wordlist
+Value: american (American English)
+Owners: dictionaries-common
+Variables:
+ choices = american (American English)
+ echoices = american (American English)
+
+Name: dictionaries-common/invalid_debconf_value
+Template: dictionaries-common/invalid_debconf_value
+Owners: dictionaries-common
+
+Name: dictionaries-common/ispell-autobuildhash-message
+Template: dictionaries-common/ispell-autobuildhash-message
+Owners: dictionaries-common
+
+Name: dictionaries-common/move_old_usr_dict
+Template: dictionaries-common/move_old_usr_dict
+Owners: dictionaries-common
+
+Name: dictionaries-common/old_wordlist_link
+Template: dictionaries-common/old_wordlist_link
+Owners: dictionaries-common
+
+Name: dictionaries-common/remove_old_usr_dict_link
+Template: dictionaries-common/remove_old_usr_dict_link
+Value: false
+Owners: dictionaries-common
+
+Name: dictionaries-common/selecting_ispell_wordlist_default
+Template: dictionaries-common/selecting_ispell_wordlist_default
+Owners: dictionaries-common
+
+Name: disk-detect/activate_dmraid
+Template: disk-detect/activate_dmraid
+Owners: ubiquity
+
+Name: disk-detect/cannot_find
+Template: disk-detect/cannot_find
+Owners: ubiquity
+
+Name: disk-detect/detect_progress_title
+Template: disk-detect/detect_progress_title
+Owners: ubiquity
+
+Name: disk-detect/iscsi_choice
+Template: disk-detect/iscsi_choice
+Owners: ubiquity
+
+Name: disk-detect/module_select
+Template: disk-detect/module_select
+Owners: ubiquity
+
+Name: disk-detect/multipath/enable
+Template: disk-detect/multipath/enable
+Owners: ubiquity
+
+Name: driver-injection-disk/load
+Template: driver-injection-disk/load
+Owners: ubiquity
+
+Name: ethdetect/cannot_find
+Template: ethdetect/cannot_find
+Owners: ubiquity
+
+Name: ethdetect/detect_progress_title
+Template: ethdetect/detect_progress_title
+Owners: ubiquity
+
+Name: ethdetect/module_select
+Template: ethdetect/module_select
+Owners: ubiquity
+
+Name: ethdetect/prompt_missing_firmware
+Template: ethdetect/prompt_missing_firmware
+Owners: ubiquity
+
+Name: ethdetect/use_firewire_ethernet
+Template: ethdetect/use_firewire_ethernet
+Owners: ubiquity
+
+Name: finish-install/progress/apt-cdrom-setup
+Template: finish-install/progress/apt-cdrom-setup
+Owners: ubiquity
+
+Name: finish-install/progress/clock-setup
+Template: finish-install/progress/clock-setup
+Owners: ubiquity
+
+Name: finish-install/progress/localechooser
+Template: finish-install/progress/localechooser
+Owners: ubiquity
+
+Name: finish-install/progress/migration-assistant
+Template: finish-install/progress/migration-assistant
+Owners: ubiquity
+
+Name: finish-install/progress/tzsetup
+Template: finish-install/progress/tzsetup
+Owners: ubiquity
+
+Name: finish-install/progress/user-setup
+Template: finish-install/progress/user-setup
+Owners: ubiquity, user-setup
+
+Name: foomatic-filters/config_parsed
+Template: foomatic-filters/config_parsed
+Value: true
+Owners: foomatic-filters
+
+Name: foomatic-filters/custom_textfilter
+Template: foomatic-filters/custom_textfilter
+Owners: foomatic-filters
+
+Name: foomatic-filters/filter_debug
+Template: foomatic-filters/filter_debug
+Value: false
+Owners: foomatic-filters
+
+Name: foomatic-filters/ps_accounting
+Template: foomatic-filters/ps_accounting
+Value: true
+Owners: foomatic-filters
+
+Name: foomatic-filters/spooler
+Template: foomatic-filters/spooler
+Value: cups
+Owners: foomatic-filters
+
+Name: foomatic-filters/textfilter
+Template: foomatic-filters/textfilter
+Value: Automagic
+Owners: foomatic-filters
+
+Name: foomatic-filters/title
+Template: foomatic-filters/title
+Owners: foomatic-filters
+
+Name: glibc/disable-screensaver
+Template: glibc/disable-screensaver
+Owners: libc6, libc6:i386
+
+Name: glibc/restart-failed
+Template: glibc/restart-failed
+Owners: libc6, libc6:i386
+
+Name: glibc/restart-services
+Template: glibc/restart-services
+Owners: libc6, libc6:i386
+
+Name: glibc/upgrade
+Template: glibc/upgrade
+Owners: libc6, libc6:i386
+
+Name: grub-installer/apt-install-failed
+Template: grub-installer/apt-install-failed
+Owners: ubiquity
+
+Name: grub-installer/bootdev
+Template: grub-installer/bootdev
+Owners: ubiquity
+
+Name: grub-installer/bootdev_directory
+Template: grub-installer/bootdev_directory
+Owners: ubiquity
+
+Name: grub-installer/grub-install-failed
+Template: grub-installer/grub-install-failed
+Owners: ubiquity
+
+Name: grub-installer/grub2_instead_of_grub_legacy
+Template: grub-installer/grub2_instead_of_grub_legacy
+Owners: ubiquity
+
+Name: grub-installer/grub_not_mature_on_this_platform
+Template: grub-installer/grub_not_mature_on_this_platform
+Owners: ubiquity
+
+Name: grub-installer/make_active
+Template: grub-installer/make_active
+Owners: ubiquity
+
+Name: grub-installer/multipath
+Template: grub-installer/multipath
+Owners: ubiquity
+
+Name: grub-installer/multipath-error
+Template: grub-installer/multipath-error
+Owners: ubiquity
+
+Name: grub-installer/only_debian
+Template: grub-installer/only_debian
+Owners: ubiquity
+
+Name: grub-installer/password-mismatch
+Template: grub-installer/password-mismatch
+Owners: ubiquity
+
+Name: grub-installer/progress/step_bootdev
+Template: grub-installer/progress/step_bootdev
+Owners: ubiquity
+
+Name: grub-installer/progress/step_config_loader
+Template: grub-installer/progress/step_config_loader
+Owners: ubiquity
+
+Name: grub-installer/progress/step_install
+Template: grub-installer/progress/step_install
+Owners: ubiquity
+
+Name: grub-installer/progress/step_install_loader
+Template: grub-installer/progress/step_install_loader
+Owners: ubiquity
+
+Name: grub-installer/progress/step_os-probe
+Template: grub-installer/progress/step_os-probe
+Owners: ubiquity
+
+Name: grub-installer/progress/step_update_etc
+Template: grub-installer/progress/step_update_etc
+Owners: ubiquity
+
+Name: grub-installer/progress/title
+Template: grub-installer/progress/title
+Owners: ubiquity
+
+Name: grub-installer/sataraid
+Template: grub-installer/sataraid
+Owners: ubiquity
+
+Name: grub-installer/sataraid-error
+Template: grub-installer/sataraid-error
+Owners: ubiquity
+
+Name: grub-installer/skip
+Template: grub-installer/skip
+Owners: ubiquity
+
+Name: grub-installer/timeout
+Template: grub-installer/timeout
+Owners: ubiquity
+
+Name: grub-installer/update-grub-failed
+Template: grub-installer/update-grub-failed
+Owners: ubiquity
+
+Name: grub-installer/with_other_os
+Template: grub-installer/with_other_os
+Owners: ubiquity
+
+Name: grub-pc/chainload_from_menu.lst
+Template: grub-pc/chainload_from_menu.lst
+Owners: grub-pc
+
+Name: grub-pc/disk_description
+Template: grub-pc/disk_description
+Owners: grub-pc
+
+Name: grub-pc/hidden_timeout
+Template: grub-pc/hidden_timeout
+Owners: grub-pc
+
+Name: grub-pc/install_devices
+Template: grub-pc/install_devices
+Value: 
+Owners: grub-pc
+Variables:
+ CHOICES = 
+ RAW_CHOICES = 
+
+Name: grub-pc/install_devices_disks_changed
+Template: grub-pc/install_devices_disks_changed
+Owners: grub-pc
+
+Name: grub-pc/install_devices_empty
+Template: grub-pc/install_devices_empty
+Owners: grub-pc
+
+Name: grub-pc/install_devices_failed
+Template: grub-pc/install_devices_failed
+Owners: grub-pc
+
+Name: grub-pc/install_devices_failed_upgrade
+Template: grub-pc/install_devices_failed_upgrade
+Owners: grub-pc
+
+Name: grub-pc/kopt_extracted
+Template: grub-pc/kopt_extracted
+Owners: grub-pc
+
+Name: grub-pc/mixed_legacy_and_grub2
+Template: grub-pc/mixed_legacy_and_grub2
+Owners: grub-pc
+
+Name: grub-pc/partition_description
+Template: grub-pc/partition_description
+Owners: grub-pc
+
+Name: grub-pc/postrm_purge_boot_grub
+Template: grub-pc/postrm_purge_boot_grub
+Owners: grub-pc
+
+Name: grub-pc/timeout
+Template: grub-pc/timeout
+Owners: grub-pc
+
+Name: grub2/device_map_regenerated
+Template: grub2/device_map_regenerated
+Owners: grub-pc
+
+Name: grub2/kfreebsd_cmdline
+Template: grub2/kfreebsd_cmdline
+Owners: grub-pc
+
+Name: grub2/kfreebsd_cmdline_default
+Template: grub2/kfreebsd_cmdline_default
+Owners: grub-pc
+
+Name: grub2/linux_cmdline
+Template: grub2/linux_cmdline
+Value: 
+Owners: grub-pc
+
+Name: grub2/linux_cmdline_default
+Template: grub2/linux_cmdline_default
+Value: quiet splash
+Owners: grub-pc
+
+Name: hw-detect/detect_progress_step
+Template: hw-detect/detect_progress_step
+Owners: ubiquity
+
+Name: hw-detect/hardware_init_step
+Template: hw-detect/hardware_init_step
+Owners: ubiquity
+
+Name: hw-detect/load-ide
+Template: hw-detect/load-ide
+Owners: ubiquity
+
+Name: hw-detect/load_firmware
+Template: hw-detect/load_firmware
+Owners: ubiquity
+
+Name: hw-detect/load_media
+Template: hw-detect/load_media
+Owners: ubiquity
+
+Name: hw-detect/load_progress_step
+Template: hw-detect/load_progress_step
+Owners: ubiquity
+
+Name: hw-detect/modprobe_error
+Template: hw-detect/modprobe_error
+Owners: ubiquity
+
+Name: hw-detect/pcmcia_resources
+Template: hw-detect/pcmcia_resources
+Owners: ubiquity
+
+Name: hw-detect/pcmcia_step
+Template: hw-detect/pcmcia_step
+Owners: ubiquity
+
+Name: hw-detect/retry_params
+Template: hw-detect/retry_params
+Owners: ubiquity
+
+Name: hw-detect/select_modules
+Template: hw-detect/select_modules
+Owners: ubiquity
+
+Name: hw-detect/start_pcmcia
+Template: hw-detect/start_pcmcia
+Owners: ubiquity
+
+Name: irqbalance/enable
+Template: irqbalance/enable
+Value: true
+Owners: irqbalance
+
+Name: irqbalance/oneshot
+Template: irqbalance/oneshot
+Value: false
+Owners: irqbalance
+
+Name: keyboard-configuration/altgr
+Template: keyboard-configuration/altgr
+Value: The default for the keyboard layout
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/compose
+Template: keyboard-configuration/compose
+Value: No compose key
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/ctrl_alt_bksp
+Template: keyboard-configuration/ctrl_alt_bksp
+Value: false
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/layout
+Template: keyboard-configuration/layout
+Value: English (US)
+Owners: keyboard-configuration
+Flags: seen
+Variables:
+ CHOICES = Afghani, Albanian, Amharic, Arabic, Arabic (Morocco), Arabic (Syria), Armenian, Azerbaijani, Bambara, Belarusian, Belgian, Bengali, Bosnian, Braille, Bulgarian, Burmese, Catalan, Chinese, Croatian, Czech, Danish, Dhivehi, Dutch, Dzongkha, English (Cameroon), English (Ghana), English (Nigeria), English (South Africa), English (UK), English (US), Esperanto, Estonian, Faroese, Filipino, Finnish, French, French (Canada), French (Democratic Republic of the Congo), French (Guinea), Georgian, German, German (Austria), German (Switzerland), Greek, Hebrew, Hungarian, Icelandic, Indian, Iraqi, Irish, Italian, Japanese, Japanese (PC-98xx Series), Kazakh, Khmer (Cambodia), Korean, Kyrgyz, Lao, Latvian, Lithuanian, Macedonian, Maltese, Maori, Mongolian, Montenegrin, Nepali, Norwegian, Persian, Polish, Portuguese, Portuguese (Brazil), Romanian, Russian, Serbian, Sinhala, Slovak, Slovenian, Spanish, Spanish (Latin American), Swahili (Kenya), Swahili (Tanzania), Swedish, Taiwanese, Tajik, Thai, Tswana, Turkish, Turkmen, Ukrainian, Urdu (Pakistan), Uzbek, Vietnamese, Wolof
+
+Name: keyboard-configuration/layoutcode
+Template: keyboard-configuration/layoutcode
+Value: us
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/model
+Template: keyboard-configuration/model
+Value: Generic 105-key (Intl) PC
+Owners: keyboard-configuration
+Variables:
+ CHOICES = A4Tech KB-21, A4Tech KBS-8, A4Tech Wireless Desktop RFKB-23, Acer AirKey V, Acer C300, Acer Ferrari 4000, Acer Laptop, Advance Scorpius KI, Amiga, Apple, Apple Aluminium Keyboard (ANSI), Apple Aluminium Keyboard (ISO), Apple Aluminium Keyboard (JIS), Apple Laptop, Asus Laptop, Atari TT, Azona RF2300 wireless Internet Keyboard, BTC 5090, BTC 5113RF Multimedia, BTC 5126T, BTC 6301URF, BTC 9000, BTC 9000A, BTC 9001AH, BTC 9019U, BTC 9116U Mini Wireless Internet and Gaming, BenQ X-Touch, BenQ X-Touch 730, BenQ X-Touch 800, Brother Internet Keyboard, Cherry B.UNLIMITED, Cherry Blue Line CyBo@rd, Cherry Blue Line CyBo@rd (alternate option), Cherry CyBo@rd USB-Hub, Cherry CyMotion Expert, Cherry CyMotion Master Linux, Cherry CyMotion Master XPress, Chicony Internet Keyboard, Chicony KB-9885, Chicony KU-0108, Chicony KU-0420, Classmate PC, Compaq Easy Access Keyboard, Compaq Internet Keyboard (13 keys), Compaq Internet Keyboard (18 keys), Compaq Internet Keyboard (7 keys), Compaq iPaq Keyboard, Creative Desktop Wireless 7000, DTK2000, Dell, Dell 101-key PC, Dell Laptop/notebook Inspiron 6xxx/8xxx, Dell Laptop/notebook Precision M series, Dell Latitude series laptop, Dell Precision M65, Dell SK-8125, Dell SK-8135, Dell USB Multimedia Keyboard, Dexxa Wireless Desktop Keyboard, Diamond 9801 / 9802 series, Do not configure keyboard; keep kernel keymap, Ennyah DKB-1008, Everex STEPnote, FL90, Fujitsu-Siemens Computers AMILO laptop, Generic 101-key PC, Generic 102-key (Intl) PC, Generic 104-key PC, Generic 105-key (Intl) PC, Genius Comfy KB-12e, Genius Comfy KB-16M / Genius MM Keyboard KWD-910, Genius Comfy KB-21e-Scroll, Genius KB-19e NB, Genius KKB-2050HS, Gyration, HTC Dream, Happy Hacking Keyboard, Happy Hacking Keyboard for Mac, Hewlett-Packard Internet Keyboard, Hewlett-Packard Mini 110 Notebook, Hewlett-Packard Omnibook 500 FA, Hewlett-Packard Omnibook 5xx, Hewlett-Packard Omnibook 6000/6100, Hewlett-Packard Omnibook XE3 GC, Hewlett-Packard Omnibook XE3 GF, Hewlett-Packard Omnibook XT1000, Hewlett-Packard Pavilion ZT11xx, Hewlett-Packard Pavilion dv5, Hewlett-Packard SK-250x Multimedia Keyboard, Hewlett-Packard nx9020, Honeywell Euroboard, Htc Dream phone, IBM Rapid Access, IBM Rapid Access II, IBM Space Saver, IBM ThinkPad 560Z/600/600E/A22E, IBM ThinkPad R60/T60/R61/T61, IBM ThinkPad Z60m/Z60t/Z61m/Z61t, Intelligent Keyboard K04, Keytronic FlexPro, Kinesis, Laptop/notebook Compaq (eg. Armada) Laptop Keyboard, Laptop/notebook Compaq (eg. Presario) Internet Keyboard, Laptop/notebook eMachines m68xx, Logitech Access Keyboard, Logitech Cordless Desktop, Logitech Cordless Desktop (alternate option), Logitech Cordless Desktop EX110, Logitech Cordless Desktop LX-300, Logitech Cordless Desktop Navigator, Logitech Cordless Desktop Optical, Logitech Cordless Desktop Pro (alternate option 2), Logitech Cordless Desktop iTouch, Logitech Cordless Freedom/Desktop Navigator, Logitech G15 extra keys via G15daemon, Logitech Generic Keyboard, Logitech Internet 350 Keyboard, Logitech Internet Keyboard, Logitech Internet Navigator Keyboard, Logitech Media Elite Keyboard, Logitech Ultra-X Cordless Media Desktop Keyboard, Logitech Ultra-X Keyboard, Logitech diNovo Edge Keyboard, Logitech diNovo Keyboard, Logitech iTouch, Logitech iTouch Cordless Keyboard (model Y-RB6), Logitech iTouch Internet Navigator Keyboard SE, Logitech iTouch Internet Navigator Keyboard SE (USB), MacBook/MacBook Pro, MacBook/MacBook Pro (Intl), Macintosh, Macintosh Old, Memorex MX1998, Memorex MX2500 EZ-Access Keyboard, Memorex MX2750, Microsoft Comfort Curve Keyboard 2000, Microsoft Internet Keyboard, Microsoft Internet Keyboard Pro\, Swedish, Microsoft Natural, Microsoft Natural Keyboard Elite, Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro, Microsoft Natural Keyboard Pro OEM, Microsoft Natural Keyboard Pro USB / Microsoft Internet Keyboard Pro, Microsoft Natural Wireless Ergonomic Keyboard 4000, Microsoft Natural Wireless Ergonomic Keyboard 7000, Microsoft Office Keyboard, Microsoft Wireless Multimedia Keyboard 1.0A, Northgate OmniKey 101, OLPC, Ortek MCK-800 MM/Internet keyboard, PC-98xx Series, Propeller Voyager (KTEZ-1000), QTronix Scorpius 98N+, SILVERCREST Multimedia Wireless Keyboard, SK-1300, SK-2500, SK-6200, SK-7100, SVEN Ergonomic 2500, SVEN Slim 303, Samsung SDM 4500P, Samsung SDM 4510P, Sanwa Supply SKB-KG3, Sun Type 4, Sun Type 5, Sun Type 5/6, Super Power Multimedia Keyboard, Symplon PaceBook (tablet PC), Targa Visionary 811, Toshiba Satellite S3000, Trust Direct Access Keyboard, Trust Slimline, Trust Wireless Keyboard Classic, TypeMatrix EZ-Reach 2020, TypeMatrix EZ-Reach 2030 PS2, TypeMatrix EZ-Reach 2030 USB, TypeMatrix EZ-Reach 2030 USB (102/105:EU mode), TypeMatrix EZ-Reach 2030 USB (106:JP mode), Unitek KB-1925, ViewSonic KU-306 Internet Keyboard, Winbook Model XP5, Yahoo! Internet Keyboard
+
+Name: keyboard-configuration/modelcode
+Template: keyboard-configuration/modelcode
+Value: pc105
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/optionscode
+Template: keyboard-configuration/optionscode
+Value: 
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/other
+Template: keyboard-configuration/other
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/store_defaults_in_debconf_db
+Template: keyboard-configuration/store_defaults_in_debconf_db
+Value: true
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/switch
+Template: keyboard-configuration/switch
+Value: No temporary switch
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/toggle
+Template: keyboard-configuration/toggle
+Value: No toggling
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/unsupported_config_layout
+Template: keyboard-configuration/unsupported_config_layout
+Value: true
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/unsupported_config_options
+Template: keyboard-configuration/unsupported_config_options
+Value: true
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/unsupported_layout
+Template: keyboard-configuration/unsupported_layout
+Value: true
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/unsupported_options
+Template: keyboard-configuration/unsupported_options
+Value: true
+Owners: keyboard-configuration
+
+Name: keyboard-configuration/variant
+Template: keyboard-configuration/variant
+Value: English (US)
+Owners: keyboard-configuration
+Flags: seen
+Variables:
+ CHOICES = English (US), English (US) - Cherokee, English (US) - English (Colemak), English (US) - English (Dvorak alternative international no dead keys), English (US) - English (Dvorak international with dead keys), English (US) - English (Dvorak), English (US) - English (Macintosh), English (US) - English (US\, alternative international), English (US) - English (US\, international with dead keys), English (US) - English (US\, with euro on 5), English (US) - English (classic Dvorak), English (US) - English (international AltGr dead keys), English (US) - English (layout toggle on multiply/divide key), English (US) - English (left handed Dvorak), English (US) - English (programmer Dvorak), English (US) - English (right handed Dvorak), English (US) - Russian (US\, phonetic), English (US) - Serbo-Croatian (US)
+
+Name: keyboard-configuration/variantcode
+Template: keyboard-configuration/variantcode
+Value: 
+Owners: keyboard-configuration
+
+Name: libpam-modules/disable-screensaver
+Template: libpam-modules/disable-screensaver
+Owners: libpam-modules
+
+Name: libpam-runtime/conflicts
+Template: libpam-runtime/conflicts
+Owners: libpam-runtime
+
+Name: libpam-runtime/no_profiles_chosen
+Template: libpam-runtime/no_profiles_chosen
+Owners: libpam-runtime
+
+Name: libpam-runtime/override
+Template: libpam-runtime/override
+Value: false
+Owners: libpam-runtime
+
+Name: libpam-runtime/profiles
+Template: libpam-runtime/profiles
+Value: unix, gnome-keyring, ecryptfs-utils, consolekit, capability
+Owners: libpam-runtime
+Variables:
+ profile_names = unix, gnome-keyring, ecryptfs-utils, consolekit, capability
+ profiles = Unix authentication, GNOME Keyring Daemon - Login keyring management, eCryptfs Key/Mount Management, ConsoleKit Session Management, Inheritable Capabilities Management
+
+Name: libpam0g/restart-failed
+Template: libpam0g/restart-failed
+Owners: libpam0g:i386
+
+Name: libpam0g/restart-services
+Template: libpam0g/restart-services
+Owners: libpam0g:i386
+
+Name: libpam0g/xdm-needs-restart
+Template: libpam0g/xdm-needs-restart
+Owners: libpam0g:i386
+
+Name: libpaper/defaultpaper
+Template: libpaper/defaultpaper
+Value: a4
+Owners: libpaper1
+
+Name: libslp1/multicast
+Template: libslp1/multicast
+Owners: libslp1
+
+Name: libslp1/multicast-route
+Template: libslp1/multicast-route
+Owners: libslp1
+
+Name: libssl1.0.0/restart-failed
+Template: libssl1.0.0/restart-failed
+Owners: libssl1.0.0:i386
+
+Name: libssl1.0.0/restart-services
+Template: libssl1.0.0/restart-services
+Owners: libssl1.0.0:i386
+
+Name: linux-sound-base/sound_system
+Template: linux-sound-base/sound_system
+Value: ALSA
+Owners: linux-sound-base
+
+Name: localechooser/continentlist
+Template: localechooser/continentlist
+Owners: ubiquity
+
+Name: localechooser/countrylist/Africa
+Template: localechooser/countrylist/Africa
+Owners: ubiquity
+
+Name: localechooser/countrylist/Antarctica
+Template: localechooser/countrylist/Antarctica
+Owners: ubiquity
+
+Name: localechooser/countrylist/Asia
+Template: localechooser/countrylist/Asia
+Owners: ubiquity
+
+Name: localechooser/countrylist/Atlantic_Ocean
+Template: localechooser/countrylist/Atlantic_Ocean
+Owners: ubiquity
+
+Name: localechooser/countrylist/Caribbean
+Template: localechooser/countrylist/Caribbean
+Owners: ubiquity
+
+Name: localechooser/countrylist/Central_America
+Template: localechooser/countrylist/Central_America
+Owners: ubiquity
+
+Name: localechooser/countrylist/Europe
+Template: localechooser/countrylist/Europe
+Owners: ubiquity
+
+Name: localechooser/countrylist/Indian_Ocean
+Template: localechooser/countrylist/Indian_Ocean
+Owners: ubiquity
+
+Name: localechooser/countrylist/North_America
+Template: localechooser/countrylist/North_America
+Owners: ubiquity
+
+Name: localechooser/countrylist/Oceania
+Template: localechooser/countrylist/Oceania
+Owners: ubiquity
+
+Name: localechooser/countrylist/South_America
+Template: localechooser/countrylist/South_America
+Owners: ubiquity
+
+Name: localechooser/countrylist/other
+Template: localechooser/countrylist/other
+Owners: ubiquity
+
+Name: localechooser/help/locale
+Template: localechooser/help/locale
+Owners: ubiquity
+
+Name: localechooser/languagelist
+Template: localechooser/languagelist
+Owners: ubiquity
+
+Name: localechooser/preferred-locale
+Template: localechooser/preferred-locale
+Owners: ubiquity
+
+Name: localechooser/shortlist/ar
+Template: localechooser/shortlist/ar
+Owners: ubiquity
+
+Name: localechooser/shortlist/bn
+Template: localechooser/shortlist/bn
+Owners: ubiquity
+
+Name: localechooser/shortlist/ca
+Template: localechooser/shortlist/ca
+Owners: ubiquity
+
+Name: localechooser/shortlist/de
+Template: localechooser/shortlist/de
+Owners: ubiquity
+
+Name: localechooser/shortlist/el
+Template: localechooser/shortlist/el
+Owners: ubiquity
+
+Name: localechooser/shortlist/en
+Template: localechooser/shortlist/en
+Owners: ubiquity
+
+Name: localechooser/shortlist/es
+Template: localechooser/shortlist/es
+Owners: ubiquity
+
+Name: localechooser/shortlist/eu
+Template: localechooser/shortlist/eu
+Owners: ubiquity
+
+Name: localechooser/shortlist/fr
+Template: localechooser/shortlist/fr
+Owners: ubiquity
+
+Name: localechooser/shortlist/it
+Template: localechooser/shortlist/it
+Owners: ubiquity
+
+Name: localechooser/shortlist/nl
+Template: localechooser/shortlist/nl
+Owners: ubiquity
+
+Name: localechooser/shortlist/pa
+Template: localechooser/shortlist/pa
+Owners: ubiquity
+
+Name: localechooser/shortlist/pt
+Template: localechooser/shortlist/pt
+Owners: ubiquity
+
+Name: localechooser/shortlist/pt_BR
+Template: localechooser/shortlist/pt_BR
+Owners: ubiquity
+
+Name: localechooser/shortlist/ru
+Template: localechooser/shortlist/ru
+Owners: ubiquity
+
+Name: localechooser/shortlist/sq
+Template: localechooser/shortlist/sq
+Owners: ubiquity
+
+Name: localechooser/shortlist/sr
+Template: localechooser/shortlist/sr
+Owners: ubiquity
+
+Name: localechooser/shortlist/sv
+Template: localechooser/shortlist/sv
+Owners: ubiquity
+
+Name: localechooser/shortlist/tr
+Template: localechooser/shortlist/tr
+Owners: ubiquity
+
+Name: localechooser/shortlist/zh_CN
+Template: localechooser/shortlist/zh_CN
+Owners: ubiquity
+
+Name: localechooser/shortlist/zh_TW
+Template: localechooser/shortlist/zh_TW
+Owners: ubiquity
+
+Name: localechooser/supported-locales
+Template: localechooser/supported-locales
+Owners: ubiquity
+
+Name: localechooser/text/country/1/continent
+Template: localechooser/text/country/1/continent
+Owners: ubiquity
+
+Name: localechooser/text/country/1/country
+Template: localechooser/text/country/1/country
+Owners: ubiquity
+
+Name: localechooser/text/country/2
+Template: localechooser/text/country/2
+Owners: ubiquity
+
+Name: localechooser/text/country/3/continent
+Template: localechooser/text/country/3/continent
+Owners: ubiquity
+
+Name: localechooser/text/country/3/country
+Template: localechooser/text/country/3/country
+Owners: ubiquity
+
+Name: localechooser/text/country/3/shortlist
+Template: localechooser/text/country/3/shortlist
+Owners: ubiquity
+
+Name: localechooser/text/preferred-locale/multi
+Template: localechooser/text/preferred-locale/multi
+Owners: ubiquity
+
+Name: localechooser/text/preferred-locale/none
+Template: localechooser/text/preferred-locale/none
+Owners: ubiquity
+
+Name: localechooser/title/language
+Template: localechooser/title/language
+Owners: ubiquity
+
+Name: localechooser/title/locale
+Template: localechooser/title/locale
+Owners: ubiquity
+
+Name: localechooser/title/location
+Template: localechooser/title/location
+Owners: ubiquity
+
+Name: localechooser/translation/no-select
+Template: localechooser/translation/no-select
+Owners: ubiquity
+
+Name: localechooser/translation/none-yet
+Template: localechooser/translation/none-yet
+Owners: ubiquity
+
+Name: localechooser/translation/text/abort
+Template: localechooser/translation/text/abort
+Owners: ubiquity
+
+Name: localechooser/translation/text/maybe-abort
+Template: localechooser/translation/text/maybe-abort
+Owners: ubiquity
+
+Name: localechooser/translation/text/warn_exceptions
+Template: localechooser/translation/text/warn_exceptions
+Owners: ubiquity
+
+Name: localechooser/translation/text/warn_incomplete
+Template: localechooser/translation/text/warn_incomplete
+Owners: ubiquity
+
+Name: localechooser/translation/text/warn_mostly-ok
+Template: localechooser/translation/text/warn_mostly-ok
+Owners: ubiquity
+
+Name: localechooser/translation/text/warn_normal-ok
+Template: localechooser/translation/text/warn_normal-ok
+Owners: ubiquity
+
+Name: localechooser/translation/text/warn_partial
+Template: localechooser/translation/text/warn_partial
+Owners: ubiquity
+
+Name: localechooser/translation/warn-light
+Template: localechooser/translation/warn-light
+Owners: ubiquity
+
+Name: localechooser/translation/warn-severe
+Template: localechooser/translation/warn-severe
+Owners: ubiquity
+
+Name: make-ssl-cert/hostname
+Template: make-ssl-cert/hostname
+Owners: ssl-cert
+
+Name: make-ssl-cert/title
+Template: make-ssl-cert/title
+Owners: ssl-cert
+
+Name: make-ssl-cert/vulnerable_prng
+Template: make-ssl-cert/vulnerable_prng
+Owners: ssl-cert
+
+Name: man-db/auto-update
+Template: man-db/auto-update
+Owners: man-db
+
+Name: man-db/install-setuid
+Template: man-db/install-setuid
+Value: false
+Owners: man-db
+
+Name: migration-assistant/failed-unmount
+Template: migration-assistant/failed-unmount
+Owners: ubiquity
+
+Name: migration-assistant/fullname
+Template: migration-assistant/fullname
+Owners: ubiquity
+
+Name: migration-assistant/items
+Template: migration-assistant/items
+Owners: ubiquity
+
+Name: migration-assistant/partitions
+Template: migration-assistant/partitions
+Owners: ubiquity
+
+Name: migration-assistant/password-empty
+Template: migration-assistant/password-empty
+Owners: ubiquity
+
+Name: migration-assistant/password-mismatch
+Template: migration-assistant/password-mismatch
+Owners: ubiquity
+
+Name: migration-assistant/user
+Template: migration-assistant/user
+Owners: ubiquity
+
+Name: migration-assistant/username-bad
+Template: migration-assistant/username-bad
+Owners: ubiquity
+
+Name: migration-assistant/username-reserved
+Template: migration-assistant/username-reserved
+Owners: ubiquity
+
+Name: migration-assistant/users
+Template: migration-assistant/users
+Owners: ubiquity
+
+Name: mirror/bad
+Template: mirror/bad
+Owners: ubiquity
+
+Name: mirror/checking_download
+Template: mirror/checking_download
+Owners: ubiquity
+
+Name: mirror/checking_title
+Template: mirror/checking_title
+Owners: ubiquity
+
+Name: mirror/codename
+Template: mirror/codename
+Owners: ubiquity
+
+Name: mirror/country
+Template: mirror/country
+Owners: ubiquity
+
+Name: mirror/ftp/directory
+Template: mirror/ftp/directory
+Owners: ubiquity
+
+Name: mirror/ftp/hostname
+Template: mirror/ftp/hostname
+Owners: ubiquity
+
+Name: mirror/ftp/proxy
+Template: mirror/ftp/proxy
+Owners: ubiquity
+
+Name: mirror/http/countries
+Template: mirror/http/countries
+Owners: ubiquity
+
+Name: mirror/http/directory
+Template: mirror/http/directory
+Owners: ubiquity
+
+Name: mirror/http/hostname
+Template: mirror/http/hostname
+Owners: ubiquity
+
+Name: mirror/http/mirror
+Template: mirror/http/mirror
+Owners: ubiquity
+
+Name: mirror/http/proxy
+Template: mirror/http/proxy
+Owners: ubiquity
+
+Name: mirror/no-default
+Template: mirror/no-default
+Owners: ubiquity
+
+Name: mirror/noarch
+Template: mirror/noarch
+Owners: ubiquity
+
+Name: mirror/protocol
+Template: mirror/protocol
+Owners: ubiquity
+
+Name: mirror/suite
+Template: mirror/suite
+Owners: ubiquity
+
+Name: mirror/suites/oldstable
+Template: mirror/suites/oldstable
+Owners: ubiquity
+
+Name: mirror/suites/stable
+Template: mirror/suites/stable
+Owners: ubiquity
+
+Name: mirror/suites/testing
+Template: mirror/suites/testing
+Owners: ubiquity
+
+Name: mirror/suites/unstable
+Template: mirror/suites/unstable
+Owners: ubiquity
+
+Name: netcfg/bad_ipaddress
+Template: netcfg/bad_ipaddress
+Owners: ubiquity
+
+Name: netcfg/choose_interface
+Template: netcfg/choose_interface
+Owners: ubiquity
+
+Name: netcfg/confirm_static
+Template: netcfg/confirm_static
+Owners: ubiquity
+
+Name: netcfg/dhcp_failed
+Template: netcfg/dhcp_failed
+Owners: ubiquity
+
+Name: netcfg/dhcp_hostname
+Template: netcfg/dhcp_hostname
+Owners: ubiquity
+
+Name: netcfg/dhcp_ntp_servers
+Template: netcfg/dhcp_ntp_servers
+Owners: ubiquity
+
+Name: netcfg/dhcp_options
+Template: netcfg/dhcp_options
+Owners: ubiquity
+
+Name: netcfg/dhcp_progress
+Template: netcfg/dhcp_progress
+Owners: ubiquity
+
+Name: netcfg/dhcp_progress_note
+Template: netcfg/dhcp_progress_note
+Owners: ubiquity
+
+Name: netcfg/dhcp_success_note
+Template: netcfg/dhcp_success_note
+Owners: ubiquity
+
+Name: netcfg/dhcp_timeout
+Template: netcfg/dhcp_timeout
+Owners: ubiquity
+
+Name: netcfg/dhcpv6_progress
+Template: netcfg/dhcpv6_progress
+Owners: ubiquity
+
+Name: netcfg/dhcpv6_timeout
+Template: netcfg/dhcpv6_timeout
+Owners: ubiquity
+
+Name: netcfg/disable_dhcp
+Template: netcfg/disable_dhcp
+Owners: ubiquity
+
+Name: netcfg/enable
+Template: netcfg/enable
+Owners: ubiquity
+
+Name: netcfg/error
+Template: netcfg/error
+Owners: ubiquity
+
+Name: netcfg/gateway_unreachable
+Template: netcfg/gateway_unreachable
+Owners: ubiquity
+
+Name: netcfg/get_domain
+Template: netcfg/get_domain
+Owners: ubiquity
+
+Name: netcfg/get_gateway
+Template: netcfg/get_gateway
+Owners: ubiquity
+
+Name: netcfg/get_hostname
+Template: netcfg/get_hostname
+Owners: ubiquity
+
+Name: netcfg/get_ipaddress
+Template: netcfg/get_ipaddress
+Owners: ubiquity
+
+Name: netcfg/get_nameservers
+Template: netcfg/get_nameservers
+Owners: ubiquity
+
+Name: netcfg/get_netmask
+Template: netcfg/get_netmask
+Owners: ubiquity
+
+Name: netcfg/get_pointopoint
+Template: netcfg/get_pointopoint
+Owners: ubiquity
+
+Name: netcfg/internal-arc
+Template: netcfg/internal-arc
+Owners: ubiquity
+
+Name: netcfg/internal-ctc
+Template: netcfg/internal-ctc
+Owners: ubiquity
+
+Name: netcfg/internal-escon
+Template: netcfg/internal-escon
+Owners: ubiquity
+
+Name: netcfg/internal-eth
+Template: netcfg/internal-eth
+Owners: ubiquity
+
+Name: netcfg/internal-hsi
+Template: netcfg/internal-hsi
+Owners: ubiquity
+
+Name: netcfg/internal-ippp
+Template: netcfg/internal-ippp
+Owners: ubiquity
+
+Name: netcfg/internal-iucv
+Template: netcfg/internal-iucv
+Owners: ubiquity
+
+Name: netcfg/internal-none
+Template: netcfg/internal-none
+Owners: ubiquity
+
+Name: netcfg/internal-plip
+Template: netcfg/internal-plip
+Owners: ubiquity
+
+Name: netcfg/internal-ppp
+Template: netcfg/internal-ppp
+Owners: ubiquity
+
+Name: netcfg/internal-sit
+Template: netcfg/internal-sit
+Owners: ubiquity
+
+Name: netcfg/internal-slip
+Template: netcfg/internal-slip
+Owners: ubiquity
+
+Name: netcfg/internal-tr
+Template: netcfg/internal-tr
+Owners: ubiquity
+
+Name: netcfg/internal-unknown-iface
+Template: netcfg/internal-unknown-iface
+Owners: ubiquity
+
+Name: netcfg/internal-usb
+Template: netcfg/internal-usb
+Owners: ubiquity
+
+Name: netcfg/internal-wifi
+Template: netcfg/internal-wifi
+Owners: ubiquity
+
+Name: netcfg/internal-wifireconf
+Template: netcfg/internal-wifireconf
+Owners: ubiquity
+
+Name: netcfg/internal-wireless
+Template: netcfg/internal-wireless
+Owners: ubiquity
+
+Name: netcfg/invalid_essid
+Template: netcfg/invalid_essid
+Owners: ubiquity
+
+Name: netcfg/invalid_hostname
+Template: netcfg/invalid_hostname
+Owners: ubiquity
+
+Name: netcfg/invalid_pass
+Template: netcfg/invalid_pass
+Owners: ubiquity
+
+Name: netcfg/invalid_wep
+Template: netcfg/invalid_wep
+Owners: ubiquity
+
+Name: netcfg/ipv6_config_flags_wait_title
+Template: netcfg/ipv6_config_flags_wait_title
+Owners: ubiquity
+
+Name: netcfg/ipv6_link_local_wait_title
+Template: netcfg/ipv6_link_local_wait_title
+Owners: ubiquity
+
+Name: netcfg/kill_switch_enabled
+Template: netcfg/kill_switch_enabled
+Owners: ubiquity
+
+Name: netcfg/link_detect_progress
+Template: netcfg/link_detect_progress
+Owners: ubiquity
+
+Name: netcfg/network-manager
+Template: netcfg/network-manager
+Owners: ubiquity
+
+Name: netcfg/no_default_route
+Template: netcfg/no_default_route
+Owners: ubiquity
+
+Name: netcfg/no_dhcp_client
+Template: netcfg/no_dhcp_client
+Owners: ubiquity
+
+Name: netcfg/no_interfaces
+Template: netcfg/no_interfaces
+Owners: ubiquity
+
+Name: netcfg/no_ipv6_pointopoint
+Template: netcfg/no_ipv6_pointopoint
+Owners: ubiquity
+
+Name: netcfg/slaac_wait_title
+Template: netcfg/slaac_wait_title
+Owners: ubiquity
+
+Name: netcfg/use_autoconfig
+Template: netcfg/use_autoconfig
+Owners: ubiquity
+
+Name: netcfg/wifi_progress_info
+Template: netcfg/wifi_progress_info
+Owners: ubiquity
+
+Name: netcfg/wifi_progress_title
+Template: netcfg/wifi_progress_title
+Owners: ubiquity
+
+Name: netcfg/wireless_adhoc_managed
+Template: netcfg/wireless_adhoc_managed
+Owners: ubiquity
+
+Name: netcfg/wireless_essid
+Template: netcfg/wireless_essid
+Owners: ubiquity
+
+Name: netcfg/wireless_essid_again
+Template: netcfg/wireless_essid_again
+Owners: ubiquity
+
+Name: netcfg/wireless_security_type
+Template: netcfg/wireless_security_type
+Owners: ubiquity
+
+Name: netcfg/wireless_wep
+Template: netcfg/wireless_wep
+Owners: ubiquity
+
+Name: netcfg/wireless_wpa
+Template: netcfg/wireless_wpa
+Owners: ubiquity
+
+Name: netcfg/wpa_progress
+Template: netcfg/wpa_progress
+Owners: ubiquity
+
+Name: netcfg/wpa_progress_note
+Template: netcfg/wpa_progress_note
+Owners: ubiquity
+
+Name: netcfg/wpa_success_note
+Template: netcfg/wpa_success_note
+Owners: ubiquity
+
+Name: netcfg/wpa_supplicant_failed
+Template: netcfg/wpa_supplicant_failed
+Owners: ubiquity
+
+Name: ntfs-3g/setuid-root
+Template: ntfs-3g/setuid-root
+Value: false
+Owners: ntfs-3g
+
+Name: nvidia-common/obsolete-driver
+Template: nvidia-common/obsolete-driver
+Owners: nvidia-common
+
+Name: partman-auto-loop/unclean_host
+Template: partman-auto-loop/unclean_host
+Owners: ubiquity
+
+Name: partman-auto-loop/unclean_ntfs
+Template: partman-auto-loop/unclean_ntfs
+Owners: ubiquity
+
+Name: partman-auto/automatically_partition
+Template: partman-auto/automatically_partition
+Owners: ubiquity
+
+Name: partman-auto/autopartitioning_failed
+Template: partman-auto/autopartitioning_failed
+Owners: ubiquity
+
+Name: partman-auto/choose_recipe
+Template: partman-auto/choose_recipe
+Owners: ubiquity
+
+Name: partman-auto/disk
+Template: partman-auto/disk
+Owners: ubiquity
+
+Name: partman-auto/expert_recipe
+Template: partman-auto/expert_recipe
+Owners: ubiquity
+
+Name: partman-auto/expert_recipe_file
+Template: partman-auto/expert_recipe_file
+Owners: ubiquity
+
+Name: partman-auto/init_automatically_partition
+Template: partman-auto/init_automatically_partition
+Owners: ubiquity
+
+Name: partman-auto/method
+Template: partman-auto/method
+Owners: ubiquity
+
+Name: partman-auto/no_recipe
+Template: partman-auto/no_recipe
+Owners: ubiquity
+
+Name: partman-auto/progress/info
+Template: partman-auto/progress/info
+Owners: ubiquity
+
+Name: partman-auto/progress/title
+Template: partman-auto/progress/title
+Owners: ubiquity
+
+Name: partman-auto/resize_insufficient_space
+Template: partman-auto/resize_insufficient_space
+Owners: ubiquity
+
+Name: partman-auto/select_disk
+Template: partman-auto/select_disk
+Owners: ubiquity
+
+Name: partman-auto/select_disks
+Template: partman-auto/select_disks
+Owners: ubiquity
+
+Name: partman-auto/text/atomic_scheme
+Template: partman-auto/text/atomic_scheme
+Owners: ubiquity
+
+Name: partman-auto/text/auto_free_space
+Template: partman-auto/text/auto_free_space
+Owners: ubiquity
+
+Name: partman-auto/text/automatically_partition
+Template: partman-auto/text/automatically_partition
+Owners: ubiquity
+
+Name: partman-auto/text/custom_partitioning
+Template: partman-auto/text/custom_partitioning
+Owners: ubiquity
+
+Name: partman-auto/text/home_scheme
+Template: partman-auto/text/home_scheme
+Owners: ubiquity
+
+Name: partman-auto/text/multi_scheme
+Template: partman-auto/text/multi_scheme
+Owners: ubiquity
+
+Name: partman-auto/text/replace
+Template: partman-auto/text/replace
+Owners: ubiquity
+
+Name: partman-auto/text/resize_use_free
+Template: partman-auto/text/resize_use_free
+Owners: ubiquity
+
+Name: partman-auto/text/reuse
+Template: partman-auto/text/reuse
+Owners: ubiquity
+
+Name: partman-auto/text/small_disk
+Template: partman-auto/text/small_disk
+Owners: ubiquity
+
+Name: partman-auto/text/use_biggest_free
+Template: partman-auto/text/use_biggest_free
+Owners: ubiquity
+
+Name: partman-auto/text/use_device
+Template: partman-auto/text/use_device
+Owners: ubiquity
+
+Name: partman-auto/unusable_space
+Template: partman-auto/unusable_space
+Owners: ubiquity
+
+Name: partman-base/devicelocked
+Template: partman-base/devicelocked
+Owners: ubiquity
+
+Name: partman-base/partlocked
+Template: partman-base/partlocked
+Owners: ubiquity
+
+Name: partman-basicfilesystems/bad_mountpoint
+Template: partman-basicfilesystems/bad_mountpoint
+Owners: ubiquity
+
+Name: partman-basicfilesystems/check_failed
+Template: partman-basicfilesystems/check_failed
+Owners: ubiquity
+
+Name: partman-basicfilesystems/choose_label
+Template: partman-basicfilesystems/choose_label
+Owners: ubiquity
+
+Name: partman-basicfilesystems/create_failed
+Template: partman-basicfilesystems/create_failed
+Owners: ubiquity
+
+Name: partman-basicfilesystems/create_swap_failed
+Template: partman-basicfilesystems/create_swap_failed
+Owners: ubiquity
+
+Name: partman-basicfilesystems/fat_mountpoint
+Template: partman-basicfilesystems/fat_mountpoint
+Owners: ubiquity
+
+Name: partman-basicfilesystems/mountoptions
+Template: partman-basicfilesystems/mountoptions
+Owners: ubiquity
+
+Name: partman-basicfilesystems/mountpoint
+Template: partman-basicfilesystems/mountpoint
+Owners: ubiquity
+
+Name: partman-basicfilesystems/mountpoint_manual
+Template: partman-basicfilesystems/mountpoint_manual
+Owners: ubiquity
+
+Name: partman-basicfilesystems/no_mount_point
+Template: partman-basicfilesystems/no_mount_point
+Owners: ubiquity
+
+Name: partman-basicfilesystems/no_swap
+Template: partman-basicfilesystems/no_swap
+Owners: ubiquity
+
+Name: partman-basicfilesystems/posix_filesystem_required
+Template: partman-basicfilesystems/posix_filesystem_required
+Owners: ubiquity
+
+Name: partman-basicfilesystems/progress_checking
+Template: partman-basicfilesystems/progress_checking
+Owners: ubiquity
+
+Name: partman-basicfilesystems/progress_formatting
+Template: partman-basicfilesystems/progress_formatting
+Owners: ubiquity
+
+Name: partman-basicfilesystems/progress_formatting_mountable
+Template: partman-basicfilesystems/progress_formatting_mountable
+Owners: ubiquity
+
+Name: partman-basicfilesystems/progress_swap_checking
+Template: partman-basicfilesystems/progress_swap_checking
+Owners: ubiquity
+
+Name: partman-basicfilesystems/progress_swap_formatting
+Template: partman-basicfilesystems/progress_swap_formatting
+Owners: ubiquity
+
+Name: partman-basicfilesystems/specify_reserved
+Template: partman-basicfilesystems/specify_reserved
+Owners: ubiquity
+
+Name: partman-basicfilesystems/specify_usage
+Template: partman-basicfilesystems/specify_usage
+Owners: ubiquity
+
+Name: partman-basicfilesystems/swap_check_failed
+Template: partman-basicfilesystems/swap_check_failed
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/acls
+Template: partman-basicfilesystems/text/acls
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/format_swap
+Template: partman-basicfilesystems/text/format_swap
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/grpquota
+Template: partman-basicfilesystems/text/grpquota
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/no
+Template: partman-basicfilesystems/text/no
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/no_mountpoint
+Template: partman-basicfilesystems/text/no_mountpoint
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/noatime
+Template: partman-basicfilesystems/text/noatime
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/nodev
+Template: partman-basicfilesystems/text/nodev
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/noexec
+Template: partman-basicfilesystems/text/noexec
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/none
+Template: partman-basicfilesystems/text/none
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/nosuid
+Template: partman-basicfilesystems/text/nosuid
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/notail
+Template: partman-basicfilesystems/text/notail
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/options
+Template: partman-basicfilesystems/text/options
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/quiet
+Template: partman-basicfilesystems/text/quiet
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/relatime
+Template: partman-basicfilesystems/text/relatime
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/reserved_for_root
+Template: partman-basicfilesystems/text/reserved_for_root
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/ro
+Template: partman-basicfilesystems/text/ro
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/shortnames
+Template: partman-basicfilesystems/text/shortnames
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/specify_label
+Template: partman-basicfilesystems/text/specify_label
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/specify_mountpoint
+Template: partman-basicfilesystems/text/specify_mountpoint
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/sync
+Template: partman-basicfilesystems/text/sync
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/typical_usage
+Template: partman-basicfilesystems/text/typical_usage
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/usage
+Template: partman-basicfilesystems/text/usage
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/user_xattr
+Template: partman-basicfilesystems/text/user_xattr
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/usrquota
+Template: partman-basicfilesystems/text/usrquota
+Owners: ubiquity
+
+Name: partman-basicfilesystems/text/yes
+Template: partman-basicfilesystems/text/yes
+Owners: ubiquity
+
+Name: partman-basicmethods/method_only
+Template: partman-basicmethods/method_only
+Owners: ubiquity
+
+Name: partman-basicmethods/text/dont_use
+Template: partman-basicmethods/text/dont_use
+Owners: ubiquity
+
+Name: partman-basicmethods/text/format
+Template: partman-basicmethods/text/format
+Owners: ubiquity
+
+Name: partman-basicmethods/text/no_dont_format
+Template: partman-basicmethods/text/no_dont_format
+Owners: ubiquity
+
+Name: partman-basicmethods/text/yes_format
+Template: partman-basicmethods/text/yes_format
+Owners: ubiquity
+
+Name: partman-btrfs/btrfs_boot
+Template: partman-btrfs/btrfs_boot
+Owners: ubiquity
+
+Name: partman-btrfs/btrfs_root
+Template: partman-btrfs/btrfs_root
+Owners: ubiquity
+
+Name: partman-btrfs/text/btrfs
+Template: partman-btrfs/text/btrfs
+Owners: ubiquity
+
+Name: partman-efi/no_efi
+Template: partman-efi/no_efi
+Owners: ubiquity
+
+Name: partman-efi/text/efi
+Template: partman-efi/text/efi
+Owners: ubiquity
+
+Name: partman-ext3/bad_alignment
+Template: partman-ext3/bad_alignment
+Owners: ubiquity
+
+Name: partman-ext3/boot_not_bootable
+Template: partman-ext3/boot_not_bootable
+Owners: ubiquity
+
+Name: partman-ext3/boot_not_ext2_or_ext3
+Template: partman-ext3/boot_not_ext2_or_ext3
+Owners: ubiquity
+
+Name: partman-ext3/lazy_itable_init
+Template: partman-ext3/lazy_itable_init
+Owners: ubiquity
+
+Name: partman-ext3/text/ext3
+Template: partman-ext3/text/ext3
+Owners: ubiquity
+
+Name: partman-ext3/text/ext4
+Template: partman-ext3/text/ext4
+Owners: ubiquity
+
+Name: partman-jfs/jfs_boot
+Template: partman-jfs/jfs_boot
+Owners: ubiquity
+
+Name: partman-jfs/jfs_root
+Template: partman-jfs/jfs_root
+Owners: ubiquity
+
+Name: partman-jfs/text/jfs
+Template: partman-jfs/text/jfs
+Owners: ubiquity
+
+Name: partman-partitioning/bad_new_partition_size
+Template: partman-partitioning/bad_new_partition_size
+Owners: ubiquity
+
+Name: partman-partitioning/bad_new_size
+Template: partman-partitioning/bad_new_size
+Owners: ubiquity
+
+Name: partman-partitioning/big_new_size
+Template: partman-partitioning/big_new_size
+Owners: ubiquity
+
+Name: partman-partitioning/bootable_logical
+Template: partman-partitioning/bootable_logical
+Owners: ubiquity
+
+Name: partman-partitioning/choose_label
+Template: partman-partitioning/choose_label
+Owners: ubiquity
+
+Name: partman-partitioning/confirm_copy
+Template: partman-partitioning/confirm_copy
+Owners: ubiquity
+
+Name: partman-partitioning/confirm_new_label
+Template: partman-partitioning/confirm_new_label
+Owners: ubiquity
+
+Name: partman-partitioning/confirm_resize
+Template: partman-partitioning/confirm_resize
+Owners: ubiquity
+
+Name: partman-partitioning/confirm_write_new_label
+Template: partman-partitioning/confirm_write_new_label
+Owners: ubiquity
+
+Name: partman-partitioning/copy_commit_failed
+Template: partman-partitioning/copy_commit_failed
+Owners: ubiquity
+
+Name: partman-partitioning/impossible_resize
+Template: partman-partitioning/impossible_resize
+Owners: ubiquity
+
+Name: partman-partitioning/new_partition_place
+Template: partman-partitioning/new_partition_place
+Owners: ubiquity
+
+Name: partman-partitioning/new_partition_size
+Template: partman-partitioning/new_partition_size
+Owners: ubiquity
+
+Name: partman-partitioning/new_partition_type
+Template: partman-partitioning/new_partition_type
+Owners: ubiquity
+
+Name: partman-partitioning/new_size
+Template: partman-partitioning/new_size
+Owners: ubiquity
+
+Name: partman-partitioning/new_size_commit_failed
+Template: partman-partitioning/new_size_commit_failed
+Owners: ubiquity
+
+Name: partman-partitioning/new_state
+Template: partman-partitioning/new_state
+Owners: ubiquity
+
+Name: partman-partitioning/progress_copying
+Template: partman-partitioning/progress_copying
+Owners: ubiquity
+
+Name: partman-partitioning/progress_resizing
+Template: partman-partitioning/progress_resizing
+Owners: ubiquity
+
+Name: partman-partitioning/set_flags
+Template: partman-partitioning/set_flags
+Owners: ubiquity
+
+Name: partman-partitioning/set_name
+Template: partman-partitioning/set_name
+Owners: ubiquity
+
+Name: partman-partitioning/small_new_size
+Template: partman-partitioning/small_new_size
+Owners: ubiquity
+
+Name: partman-partitioning/source_partition
+Template: partman-partitioning/source_partition
+Owners: ubiquity
+
+Name: partman-partitioning/text/bootable
+Template: partman-partitioning/text/bootable
+Owners: ubiquity
+
+Name: partman-partitioning/text/copy
+Template: partman-partitioning/text/copy
+Owners: ubiquity
+
+Name: partman-partitioning/text/delete
+Template: partman-partitioning/text/delete
+Owners: ubiquity
+
+Name: partman-partitioning/text/label
+Template: partman-partitioning/text/label
+Owners: ubiquity
+
+Name: partman-partitioning/text/new
+Template: partman-partitioning/text/new
+Owners: ubiquity
+
+Name: partman-partitioning/text/off
+Template: partman-partitioning/text/off
+Owners: ubiquity
+
+Name: partman-partitioning/text/on
+Template: partman-partitioning/text/on
+Owners: ubiquity
+
+Name: partman-partitioning/text/resize
+Template: partman-partitioning/text/resize
+Owners: ubiquity
+
+Name: partman-partitioning/text/set_flags
+Template: partman-partitioning/text/set_flags
+Owners: ubiquity
+
+Name: partman-partitioning/text/set_name
+Template: partman-partitioning/text/set_name
+Owners: ubiquity
+
+Name: partman-partitioning/unknown_label
+Template: partman-partitioning/unknown_label
+Owners: ubiquity
+
+Name: partman-partitioning/unsupported_label
+Template: partman-partitioning/unsupported_label
+Owners: ubiquity
+
+Name: partman-reiserfs/text/reiserfs
+Template: partman-reiserfs/text/reiserfs
+Owners: ubiquity
+
+Name: partman-target/arch_help/i386/generic
+Template: partman-target/arch_help/i386/generic
+Owners: ubiquity
+
+Name: partman-target/arch_help/ia64
+Template: partman-target/arch_help/ia64
+Owners: ubiquity
+
+Name: partman-target/arch_help/powerpc/powermac_newworld
+Template: partman-target/arch_help/powerpc/powermac_newworld
+Owners: ubiquity
+
+Name: partman-target/choose_method
+Template: partman-target/choose_method
+Owners: ubiquity
+
+Name: partman-target/clear_partitions_failed
+Template: partman-target/clear_partitions_failed
+Owners: ubiquity
+
+Name: partman-target/clear_partitions_progress
+Template: partman-target/clear_partitions_progress
+Owners: ubiquity
+
+Name: partman-target/help
+Template: partman-target/help
+Owners: ubiquity
+
+Name: partman-target/mount_failed
+Template: partman-target/mount_failed
+Owners: ubiquity
+
+Name: partman-target/must_be_on_root
+Template: partman-target/must_be_on_root
+Owners: ubiquity
+
+Name: partman-target/no_root
+Template: partman-target/no_root
+Owners: ubiquity
+
+Name: partman-target/same_label
+Template: partman-target/same_label
+Owners: ubiquity
+
+Name: partman-target/same_mountpoint
+Template: partman-target/same_mountpoint
+Owners: ubiquity
+
+Name: partman-target/text/get_help
+Template: partman-target/text/get_help
+Owners: ubiquity
+
+Name: partman-target/text/method
+Template: partman-target/text/method
+Owners: ubiquity
+
+Name: partman-xfs/text/xfs
+Template: partman-xfs/text/xfs
+Owners: ubiquity
+
+Name: partman/active_partition
+Template: partman/active_partition
+Owners: ubiquity
+
+Name: partman/alignment
+Template: partman/alignment
+Owners: ubiquity
+
+Name: partman/automount
+Template: partman/automount
+Owners: ubiquity
+
+Name: partman/boot_not_first_partition
+Template: partman/boot_not_first_partition
+Owners: ubiquity
+
+Name: partman/choose_partition
+Template: partman/choose_partition
+Owners: ubiquity
+
+Name: partman/confirm
+Template: partman/confirm
+Owners: ubiquity
+
+Name: partman/confirm_nochanges
+Template: partman/confirm_nochanges
+Owners: ubiquity
+
+Name: partman/confirm_nooverwrite
+Template: partman/confirm_nooverwrite
+Owners: ubiquity
+
+Name: partman/default_filesystem
+Template: partman/default_filesystem
+Owners: ubiquity
+
+Name: partman/early_command
+Template: partman/early_command
+Owners: ubiquity
+
+Name: partman/exception_handler
+Template: partman/exception_handler
+Owners: ubiquity
+
+Name: partman/exception_handler_note
+Template: partman/exception_handler_note
+Owners: ubiquity
+
+Name: partman/filesystem_long/btrfs
+Template: partman/filesystem_long/btrfs
+Owners: ubiquity
+
+Name: partman/filesystem_long/ext2
+Template: partman/filesystem_long/ext2
+Owners: ubiquity
+
+Name: partman/filesystem_long/ext3
+Template: partman/filesystem_long/ext3
+Owners: ubiquity
+
+Name: partman/filesystem_long/ext4
+Template: partman/filesystem_long/ext4
+Owners: ubiquity
+
+Name: partman/filesystem_long/fat16
+Template: partman/filesystem_long/fat16
+Owners: ubiquity
+
+Name: partman/filesystem_long/fat32
+Template: partman/filesystem_long/fat32
+Owners: ubiquity
+
+Name: partman/filesystem_long/jfs
+Template: partman/filesystem_long/jfs
+Owners: ubiquity
+
+Name: partman/filesystem_long/linux-swap
+Template: partman/filesystem_long/linux-swap
+Owners: ubiquity
+
+Name: partman/filesystem_long/reiserfs
+Template: partman/filesystem_long/reiserfs
+Owners: ubiquity
+
+Name: partman/filesystem_long/xfs
+Template: partman/filesystem_long/xfs
+Owners: ubiquity
+
+Name: partman/filesystem_short/btrfs
+Template: partman/filesystem_short/btrfs
+Owners: ubiquity
+
+Name: partman/filesystem_short/efi
+Template: partman/filesystem_short/efi
+Owners: ubiquity
+
+Name: partman/filesystem_short/ext2
+Template: partman/filesystem_short/ext2
+Owners: ubiquity
+
+Name: partman/filesystem_short/ext3
+Template: partman/filesystem_short/ext3
+Owners: ubiquity
+
+Name: partman/filesystem_short/ext4
+Template: partman/filesystem_short/ext4
+Owners: ubiquity
+
+Name: partman/filesystem_short/fat16
+Template: partman/filesystem_short/fat16
+Owners: ubiquity
+
+Name: partman/filesystem_short/fat32
+Template: partman/filesystem_short/fat32
+Owners: ubiquity
+
+Name: partman/filesystem_short/jfs
+Template: partman/filesystem_short/jfs
+Owners: ubiquity
+
+Name: partman/filesystem_short/linux-swap
+Template: partman/filesystem_short/linux-swap
+Owners: ubiquity
+
+Name: partman/filesystem_short/reiserfs
+Template: partman/filesystem_short/reiserfs
+Owners: ubiquity
+
+Name: partman/filesystem_short/xfs
+Template: partman/filesystem_short/xfs
+Owners: ubiquity
+
+Name: partman/filter_mounted
+Template: partman/filter_mounted
+Owners: ubiquity
+
+Name: partman/free_space
+Template: partman/free_space
+Owners: ubiquity
+
+Name: partman/installation_medium_mounted
+Template: partman/installation_medium_mounted
+Owners: ubiquity
+
+Name: partman/method_long/biosgrub
+Template: partman/method_long/biosgrub
+Owners: ubiquity
+
+Name: partman/method_long/dont_use
+Template: partman/method_long/dont_use
+Owners: ubiquity
+
+Name: partman/method_long/efi
+Template: partman/method_long/efi
+Owners: ubiquity
+
+Name: partman/method_long/format
+Template: partman/method_long/format
+Owners: ubiquity
+
+Name: partman/method_long/keep
+Template: partman/method_long/keep
+Owners: ubiquity
+
+Name: partman/method_long/swap
+Template: partman/method_long/swap
+Owners: ubiquity
+
+Name: partman/method_short/biosgrub
+Template: partman/method_short/biosgrub
+Owners: ubiquity
+
+Name: partman/method_short/dont_use
+Template: partman/method_short/dont_use
+Owners: ubiquity
+
+Name: partman/method_short/efi
+Template: partman/method_short/efi
+Owners: ubiquity
+
+Name: partman/method_short/format
+Template: partman/method_short/format
+Owners: ubiquity
+
+Name: partman/method_short/keep
+Template: partman/method_short/keep
+Owners: ubiquity
+
+Name: partman/method_short/swap
+Template: partman/method_short/swap
+Owners: ubiquity
+
+Name: partman/mount_style
+Template: partman/mount_style
+Owners: ubiquity
+
+Name: partman/progress/init/fallback
+Template: partman/progress/init/fallback
+Owners: ubiquity
+
+Name: partman/progress/init/parted
+Template: partman/progress/init/parted
+Owners: ubiquity
+
+Name: partman/progress/init/title
+Template: partman/progress/init/title
+Owners: ubiquity
+
+Name: partman/progress/init/update_partitions
+Template: partman/progress/init/update_partitions
+Owners: ubiquity
+
+Name: partman/show_free_chs
+Template: partman/show_free_chs
+Owners: ubiquity
+
+Name: partman/show_partition_chs
+Template: partman/show_partition_chs
+Owners: ubiquity
+
+Name: partman/storage_device
+Template: partman/storage_device
+Owners: ubiquity
+
+Name: partman/text/ata_disk
+Template: partman/text/ata_disk
+Owners: ubiquity
+
+Name: partman/text/ata_partition
+Template: partman/text/ata_partition
+Owners: ubiquity
+
+Name: partman/text/cancel_menu
+Template: partman/text/cancel_menu
+Owners: ubiquity
+
+Name: partman/text/confirm_item
+Template: partman/text/confirm_item
+Owners: ubiquity
+
+Name: partman/text/confirm_item_header
+Template: partman/text/confirm_item_header
+Owners: ubiquity
+
+Name: partman/text/confirm_partitem_header
+Template: partman/text/confirm_partitem_header
+Owners: ubiquity
+
+Name: partman/text/confirm_unpartitioned_item
+Template: partman/text/confirm_unpartitioned_item
+Owners: ubiquity
+
+Name: partman/text/dasd_disk
+Template: partman/text/dasd_disk
+Owners: ubiquity
+
+Name: partman/text/dasd_partition
+Template: partman/text/dasd_partition
+Owners: ubiquity
+
+Name: partman/text/destroyed
+Template: partman/text/destroyed
+Owners: ubiquity
+
+Name: partman/text/dmcrypt_volume
+Template: partman/text/dmcrypt_volume
+Owners: ubiquity
+
+Name: partman/text/dmraid_part
+Template: partman/text/dmraid_part
+Owners: ubiquity
+
+Name: partman/text/dmraid_volume
+Template: partman/text/dmraid_volume
+Owners: ubiquity
+
+Name: partman/text/dump_partition_info
+Template: partman/text/dump_partition_info
+Owners: ubiquity
+
+Name: partman/text/end_the_partitioning
+Template: partman/text/end_the_partitioning
+Owners: ubiquity
+
+Name: partman/text/finished_with_partition
+Template: partman/text/finished_with_partition
+Owners: ubiquity
+
+Name: partman/text/formatting
+Template: partman/text/formatting
+Owners: ubiquity
+
+Name: partman/text/free_space
+Template: partman/text/free_space
+Owners: ubiquity
+
+Name: partman/text/ide_master_disk
+Template: partman/text/ide_master_disk
+Owners: ubiquity
+
+Name: partman/text/ide_master_partition
+Template: partman/text/ide_master_partition
+Owners: ubiquity
+
+Name: partman/text/ide_slave_disk
+Template: partman/text/ide_slave_disk
+Owners: ubiquity
+
+Name: partman/text/ide_slave_partition
+Template: partman/text/ide_slave_partition
+Owners: ubiquity
+
+Name: partman/text/logical
+Template: partman/text/logical
+Owners: ubiquity
+
+Name: partman/text/loopback
+Template: partman/text/loopback
+Owners: ubiquity
+
+Name: partman/text/lvm_lv
+Template: partman/text/lvm_lv
+Owners: ubiquity
+
+Name: partman/text/mmc_disk
+Template: partman/text/mmc_disk
+Owners: ubiquity
+
+Name: partman/text/mmc_partition
+Template: partman/text/mmc_partition
+Owners: ubiquity
+
+Name: partman/text/multipath
+Template: partman/text/multipath
+Owners: ubiquity
+
+Name: partman/text/multipath_partition
+Template: partman/text/multipath_partition
+Owners: ubiquity
+
+Name: partman/text/none_detected
+Template: partman/text/none_detected
+Owners: ubiquity
+
+Name: partman/text/number
+Template: partman/text/number
+Owners: ubiquity
+
+Name: partman/text/please_wait
+Template: partman/text/please_wait
+Owners: ubiquity
+
+Name: partman/text/pri/log
+Template: partman/text/pri/log
+Owners: ubiquity
+
+Name: partman/text/primary
+Template: partman/text/primary
+Owners: ubiquity
+
+Name: partman/text/processing
+Template: partman/text/processing
+Owners: ubiquity
+
+Name: partman/text/raid_device
+Template: partman/text/raid_device
+Owners: ubiquity
+
+Name: partman/text/scsi_disk
+Template: partman/text/scsi_disk
+Owners: ubiquity
+
+Name: partman/text/scsi_partition
+Template: partman/text/scsi_partition
+Owners: ubiquity
+
+Name: partman/text/scsi_simple_disk
+Template: partman/text/scsi_simple_disk
+Owners: ubiquity
+
+Name: partman/text/scsi_simple_partition
+Template: partman/text/scsi_simple_partition
+Owners: ubiquity
+
+Name: partman/text/show_chs
+Template: partman/text/show_chs
+Owners: ubiquity
+
+Name: partman/text/show_chs_free
+Template: partman/text/show_chs_free
+Owners: ubiquity
+
+Name: partman/text/text_template
+Template: partman/text/text_template
+Owners: ubiquity
+
+Name: partman/text/there_is_detected
+Template: partman/text/there_is_detected
+Owners: ubiquity
+
+Name: partman/text/undo_everything
+Template: partman/text/undo_everything
+Owners: ubiquity
+
+Name: partman/text/unusable
+Template: partman/text/unusable
+Owners: ubiquity
+
+Name: partman/text/virtual_disk
+Template: partman/text/virtual_disk
+Owners: ubiquity
+
+Name: partman/text/virtual_partition
+Template: partman/text/virtual_partition
+Owners: ubiquity
+
+Name: partman/text/zfs_volume
+Template: partman/text/zfs_volume
+Owners: ubiquity
+
+Name: partman/unmount_active
+Template: partman/unmount_active
+Owners: ubiquity
+
+Name: passwd/auto-login
+Template: passwd/auto-login
+Owners: ubiquity, user-setup
+
+Name: passwd/auto-login-backup
+Template: passwd/auto-login-backup
+Owners: ubiquity, user-setup
+
+Name: passwd/make-user
+Template: passwd/make-user
+Owners: ubiquity, user-setup
+
+Name: passwd/root-login
+Template: passwd/root-login
+Owners: ubiquity, user-setup
+
+Name: passwd/shadow
+Template: passwd/shadow
+Owners: ubiquity, user-setup
+
+Name: passwd/user-default-groups
+Template: passwd/user-default-groups
+Owners: ubiquity, user-setup
+
+Name: passwd/user-fullname
+Template: passwd/user-fullname
+Owners: ubiquity, user-setup
+
+Name: passwd/user-uid
+Template: passwd/user-uid
+Owners: ubiquity, user-setup
+
+Name: passwd/username
+Template: passwd/username
+Owners: ubiquity, user-setup
+
+Name: passwd/username-bad
+Template: passwd/username-bad
+Owners: ubiquity, user-setup
+
+Name: passwd/username-reserved
+Template: passwd/username-reserved
+Owners: ubiquity, user-setup
+
+Name: pkgsel/ignore-incomplete-language-support
+Template: pkgsel/ignore-incomplete-language-support
+Owners: ubiquity
+
+Name: pkgsel/language-pack-patterns
+Template: pkgsel/language-pack-patterns
+Owners: ubiquity
+
+Name: pnm2ppa/create_magicfilter
+Template: pnm2ppa/create_magicfilter
+Value: false
+Owners: pnm2ppa
+
+Name: pnm2ppa/printer_model
+Template: pnm2ppa/printer_model
+Value: 710
+Owners: pnm2ppa
+
+Name: pnm2ppa/use_debconf
+Template: pnm2ppa/use_debconf
+Value: true
+Owners: pnm2ppa
+
+Name: popularity-contest/participate
+Template: popularity-contest/participate
+Value: false
+Owners: popularity-contest
+
+Name: popularity-contest/submiturls
+Template: popularity-contest/submiturls
+Owners: popularity-contest
+
+Name: preseed/boot_command
+Template: preseed/boot_command
+Owners: ubiquity
+
+Name: preseed/command_failed
+Template: preseed/command_failed
+Owners: ubiquity
+
+Name: preseed/early_command
+Template: preseed/early_command
+Owners: ubiquity
+
+Name: preseed/file
+Template: preseed/file
+Owners: ubiquity
+
+Name: preseed/file/checksum
+Template: preseed/file/checksum
+Owners: ubiquity
+
+Name: preseed/include
+Template: preseed/include
+Owners: ubiquity
+
+Name: preseed/include/checksum
+Template: preseed/include/checksum
+Owners: ubiquity
+
+Name: preseed/include_command
+Template: preseed/include_command
+Owners: ubiquity
+
+Name: preseed/interactive
+Template: preseed/interactive
+Owners: ubiquity
+
+Name: preseed/late_command
+Template: preseed/late_command
+Owners: ubiquity
+
+Name: preseed/load_error
+Template: preseed/load_error
+Owners: ubiquity
+
+Name: preseed/retrieve_error
+Template: preseed/retrieve_error
+Owners: ubiquity
+
+Name: preseed/run
+Template: preseed/run
+Owners: ubiquity
+
+Name: preseed/url
+Template: preseed/url
+Owners: ubiquity
+
+Name: preseed/url/checksum
+Template: preseed/url/checksum
+Owners: ubiquity
+
+Name: rescue/menu/grub-reinstall
+Template: rescue/menu/grub-reinstall
+Owners: ubiquity
+
+Name: samba-common/dhcp
+Template: samba-common/dhcp
+Value: false
+Owners: samba-common
+
+Name: samba-common/do_debconf
+Template: samba-common/do_debconf
+Value: true
+Owners: samba-common
+
+Name: samba-common/encrypt_passwords
+Template: samba-common/encrypt_passwords
+Value: true
+Owners: samba-common
+
+Name: samba-common/title
+Template: samba-common/title
+Owners: samba-common
+
+Name: samba-common/workgroup
+Template: samba-common/workgroup
+Value: WORKGROUP
+Owners: samba-common
+
+Name: sane-utils/saned_run
+Template: sane-utils/saned_run
+Value: false
+Owners: sane-utils
+
+Name: shared/default-x-display-manager
+Template: shared/default-x-display-manager
+Value: lightdm
+Owners: lightdm
+Variables:
+ choices = lightdm
+
+Name: shared/memtest86-run-lilo
+Template: shared/memtest86-run-lilo
+Value: false
+Owners: memtest86+
+
+Name: shared/packages-wordlist
+Template: shared/packages-wordlist
+Owners: wamerican
+
+Name: sysv-rc/convert-legacy
+Template: sysv-rc/convert-legacy
+Owners: sysv-rc
+
+Name: sysv-rc/unable-to-convert
+Template: sysv-rc/unable-to-convert
+Owners: sysv-rc
+
+Name: time/zone
+Template: time/zone
+Owners: ubiquity
+
+Name: tzdata/Areas
+Template: tzdata/Areas
+Value: Etc
+Owners: tzdata
+Flags: seen
+
+Name: tzdata/Zones/Africa
+Template: tzdata/Zones/Africa
+Owners: tzdata
+
+Name: tzdata/Zones/America
+Template: tzdata/Zones/America
+Owners: tzdata
+
+Name: tzdata/Zones/Antarctica
+Template: tzdata/Zones/Antarctica
+Owners: tzdata
+
+Name: tzdata/Zones/Arctic
+Template: tzdata/Zones/Arctic
+Owners: tzdata
+
+Name: tzdata/Zones/Asia
+Template: tzdata/Zones/Asia
+Owners: tzdata
+
+Name: tzdata/Zones/Atlantic
+Template: tzdata/Zones/Atlantic
+Owners: tzdata
+
+Name: tzdata/Zones/Australia
+Template: tzdata/Zones/Australia
+Owners: tzdata
+
+Name: tzdata/Zones/Etc
+Template: tzdata/Zones/Etc
+Value: UTC
+Owners: tzdata
+Flags: seen
+
+Name: tzdata/Zones/Europe
+Template: tzdata/Zones/Europe
+Owners: tzdata
+
+Name: tzdata/Zones/Indian
+Template: tzdata/Zones/Indian
+Owners: tzdata
+
+Name: tzdata/Zones/Pacific
+Template: tzdata/Zones/Pacific
+Owners: tzdata
+
+Name: tzdata/Zones/SystemV
+Template: tzdata/Zones/SystemV
+Owners: tzdata
+
+Name: tzdata/Zones/US
+Template: tzdata/Zones/US
+Owners: tzdata
+
+Name: tzsetup/country/AQ
+Template: tzsetup/country/AQ
+Owners: ubiquity
+
+Name: tzsetup/country/AU
+Template: tzsetup/country/AU
+Owners: ubiquity
+
+Name: tzsetup/country/BR
+Template: tzsetup/country/BR
+Owners: ubiquity
+
+Name: tzsetup/country/CA
+Template: tzsetup/country/CA
+Owners: ubiquity
+
+Name: tzsetup/country/CD
+Template: tzsetup/country/CD
+Owners: ubiquity
+
+Name: tzsetup/country/CL
+Template: tzsetup/country/CL
+Owners: ubiquity
+
+Name: tzsetup/country/EC
+Template: tzsetup/country/EC
+Owners: ubiquity
+
+Name: tzsetup/country/ES
+Template: tzsetup/country/ES
+Owners: ubiquity
+
+Name: tzsetup/country/FM
+Template: tzsetup/country/FM
+Owners: ubiquity
+
+Name: tzsetup/country/GL
+Template: tzsetup/country/GL
+Owners: ubiquity
+
+Name: tzsetup/country/ID
+Template: tzsetup/country/ID
+Owners: ubiquity
+
+Name: tzsetup/country/KI
+Template: tzsetup/country/KI
+Owners: ubiquity
+
+Name: tzsetup/country/KZ
+Template: tzsetup/country/KZ
+Owners: ubiquity
+
+Name: tzsetup/country/MN
+Template: tzsetup/country/MN
+Owners: ubiquity
+
+Name: tzsetup/country/MX
+Template: tzsetup/country/MX
+Owners: ubiquity
+
+Name: tzsetup/country/NZ
+Template: tzsetup/country/NZ
+Owners: ubiquity
+
+Name: tzsetup/country/PF
+Template: tzsetup/country/PF
+Owners: ubiquity
+
+Name: tzsetup/country/PS
+Template: tzsetup/country/PS
+Owners: ubiquity
+
+Name: tzsetup/country/PT
+Template: tzsetup/country/PT
+Owners: ubiquity
+
+Name: tzsetup/country/RU
+Template: tzsetup/country/RU
+Owners: ubiquity
+
+Name: tzsetup/country/UM
+Template: tzsetup/country/UM
+Owners: ubiquity
+
+Name: tzsetup/country/US
+Template: tzsetup/country/US
+Owners: ubiquity
+
+Name: tzsetup/detected
+Template: tzsetup/detected
+Owners: ubiquity
+
+Name: tzsetup/geoip_server
+Template: tzsetup/geoip_server
+Owners: ubiquity
+
+Name: tzsetup/select_all
+Template: tzsetup/select_all
+Owners: ubiquity
+
+Name: tzsetup/selected
+Template: tzsetup/selected
+Owners: ubiquity
+
+Name: ubiquity/automation_failure_command
+Template: ubiquity/automation_failure_command
+Owners: ubiquity
+
+Name: ubiquity/custom_title_text
+Template: ubiquity/custom_title_text
+Owners: ubiquity
+
+Name: ubiquity/download_updates
+Template: ubiquity/download_updates
+Owners: ubiquity
+
+Name: ubiquity/failure_command
+Template: ubiquity/failure_command
+Owners: ubiquity
+
+Name: ubiquity/finished_restart_only
+Template: ubiquity/finished_restart_only
+Owners: ubiquity
+
+Name: ubiquity/force_failsafe_graphics
+Template: ubiquity/force_failsafe_graphics
+Owners: ubiquity
+
+Name: ubiquity/imported/12-hour
+Template: ubiquity/imported/12-hour
+Owners: ubiquity
+
+Name: ubiquity/imported/24-hour
+Template: ubiquity/imported/24-hour
+Owners: ubiquity
+
+Name: ubiquity/imported/cancel
+Template: ubiquity/imported/cancel
+Owners: ubiquity
+
+Name: ubiquity/imported/close
+Template: ubiquity/imported/close
+Owners: ubiquity
+
+Name: ubiquity/imported/default-ltr
+Template: ubiquity/imported/default-ltr
+Owners: ubiquity
+
+Name: ubiquity/imported/go-back
+Template: ubiquity/imported/go-back
+Owners: ubiquity
+
+Name: ubiquity/imported/no
+Template: ubiquity/imported/no
+Owners: ubiquity
+
+Name: ubiquity/imported/ok
+Template: ubiquity/imported/ok
+Owners: ubiquity
+
+Name: ubiquity/imported/quit
+Template: ubiquity/imported/quit
+Owners: ubiquity
+
+Name: ubiquity/imported/time-format
+Template: ubiquity/imported/time-format
+Owners: ubiquity
+
+Name: ubiquity/imported/yes
+Template: ubiquity/imported/yes
+Owners: ubiquity
+
+Name: ubiquity/install/apt
+Template: ubiquity/install/apt
+Owners: ubiquity
+
+Name: ubiquity/install/apt_clone_restore
+Template: ubiquity/install/apt_clone_restore
+Owners: ubiquity
+
+Name: ubiquity/install/apt_clone_save
+Template: ubiquity/install/apt_clone_save
+Owners: ubiquity
+
+Name: ubiquity/install/apt_error_install
+Template: ubiquity/install/apt_error_install
+Owners: ubiquity
+
+Name: ubiquity/install/apt_error_remove
+Template: ubiquity/install/apt_error_remove
+Owners: ubiquity
+
+Name: ubiquity/install/apt_indices
+Template: ubiquity/install/apt_indices
+Owners: ubiquity
+
+Name: ubiquity/install/apt_indices_starting
+Template: ubiquity/install/apt_indices_starting
+Owners: ubiquity
+
+Name: ubiquity/install/apt_info
+Template: ubiquity/install/apt_info
+Owners: ubiquity
+
+Name: ubiquity/install/blacklist
+Template: ubiquity/install/blacklist
+Owners: ubiquity
+
+Name: ubiquity/install/bootloader
+Template: ubiquity/install/bootloader
+Owners: ubiquity
+
+Name: ubiquity/install/broken_apt_clone
+Template: ubiquity/install/broken_apt_clone
+Owners: ubiquity
+
+Name: ubiquity/install/broken_install
+Template: ubiquity/install/broken_install
+Owners: ubiquity
+
+Name: ubiquity/install/broken_migration
+Template: ubiquity/install/broken_migration
+Owners: ubiquity
+
+Name: ubiquity/install/broken_network_copy
+Template: ubiquity/install/broken_network_copy
+Owners: ubiquity
+
+Name: ubiquity/install/broken_remove
+Template: ubiquity/install/broken_remove
+Owners: ubiquity
+
+Name: ubiquity/install/checking
+Template: ubiquity/install/checking
+Owners: ubiquity
+
+Name: ubiquity/install/copying
+Template: ubiquity/install/copying
+Owners: ubiquity
+
+Name: ubiquity/install/copying_error/cd_fault
+Template: ubiquity/install/copying_error/cd_fault
+Owners: ubiquity
+
+Name: ubiquity/install/copying_error/cd_hd_fault
+Template: ubiquity/install/copying_error/cd_hd_fault
+Owners: ubiquity
+
+Name: ubiquity/install/copying_error/hd_fault
+Template: ubiquity/install/copying_error/hd_fault
+Owners: ubiquity
+
+Name: ubiquity/install/copying_error/md5
+Template: ubiquity/install/copying_error/md5
+Owners: ubiquity
+
+Name: ubiquity/install/copying_error/no_space
+Template: ubiquity/install/copying_error/no_space
+Owners: ubiquity
+
+Name: ubiquity/install/copying_minute
+Template: ubiquity/install/copying_minute
+Owners: ubiquity
+
+Name: ubiquity/install/fetch_remove
+Template: ubiquity/install/fetch_remove
+Owners: ubiquity
+
+Name: ubiquity/install/filesystem-images
+Template: ubiquity/install/filesystem-images
+Owners: ubiquity
+
+Name: ubiquity/install/find_installables
+Template: ubiquity/install/find_installables
+Owners: ubiquity
+
+Name: ubiquity/install/find_removables
+Template: ubiquity/install/find_removables
+Owners: ubiquity
+
+Name: ubiquity/install/generate-blacklist
+Template: ubiquity/install/generate-blacklist
+Owners: ubiquity
+
+Name: ubiquity/install/hardware
+Template: ubiquity/install/hardware
+Owners: ubiquity
+
+Name: ubiquity/install/installing
+Template: ubiquity/install/installing
+Owners: ubiquity
+
+Name: ubiquity/install/keyboard
+Template: ubiquity/install/keyboard
+Owners: ubiquity
+
+Name: ubiquity/install/locales
+Template: ubiquity/install/locales
+Owners: ubiquity
+
+Name: ubiquity/install/log_files
+Template: ubiquity/install/log_files
+Owners: ubiquity
+
+Name: ubiquity/install/md5_check
+Template: ubiquity/install/md5_check
+Owners: ubiquity
+
+Name: ubiquity/install/migrationassistant
+Template: ubiquity/install/migrationassistant
+Owners: ubiquity
+
+Name: ubiquity/install/mounting_source
+Template: ubiquity/install/mounting_source
+Owners: ubiquity
+
+Name: ubiquity/install/network
+Template: ubiquity/install/network
+Owners: ubiquity
+
+Name: ubiquity/install/new-bootdev
+Template: ubiquity/install/new-bootdev
+Owners: ubiquity
+
+Name: ubiquity/install/nonfree
+Template: ubiquity/install/nonfree
+Owners: ubiquity
+
+Name: ubiquity/install/removing
+Template: ubiquity/install/removing
+Owners: ubiquity
+
+Name: ubiquity/install/success_command
+Template: ubiquity/install/success_command
+Owners: ubiquity
+
+Name: ubiquity/install/target_hooks
+Template: ubiquity/install/target_hooks
+Owners: ubiquity
+
+Name: ubiquity/install/timezone
+Template: ubiquity/install/timezone
+Owners: ubiquity
+
+Name: ubiquity/install/title
+Template: ubiquity/install/title
+Owners: ubiquity
+
+Name: ubiquity/install/user
+Template: ubiquity/install/user
+Owners: ubiquity
+
+Name: ubiquity/install/waiting
+Template: ubiquity/install/waiting
+Owners: ubiquity
+
+Name: ubiquity/install_bootloader
+Template: ubiquity/install_bootloader
+Owners: ubiquity
+
+Name: ubiquity/install_failed
+Template: ubiquity/install_failed
+Owners: ubiquity
+
+Name: ubiquity/install_failed_reboot
+Template: ubiquity/install_failed_reboot
+Owners: ubiquity
+
+Name: ubiquity/keep-installed
+Template: ubiquity/keep-installed
+Owners: ubiquity
+
+Name: ubiquity/langpacks/packages
+Template: ubiquity/langpacks/packages
+Owners: ubiquity
+
+Name: ubiquity/langpacks/title
+Template: ubiquity/langpacks/title
+Owners: ubiquity
+
+Name: ubiquity/nonfree_package
+Template: ubiquity/nonfree_package
+Owners: ubiquity
+
+Name: ubiquity/online
+Template: ubiquity/online
+Owners: ubiquity
+
+Name: ubiquity/only-show-installable-languages
+Template: ubiquity/only-show-installable-languages
+Owners: ubiquity
+
+Name: ubiquity/partition-too-small
+Template: ubiquity/partition-too-small
+Owners: ubiquity
+
+Name: ubiquity/partitioner/advanced
+Template: ubiquity/partitioner/advanced
+Owners: ubiquity
+
+Name: ubiquity/partitioner/heading_dual
+Template: ubiquity/partitioner/heading_dual
+Owners: ubiquity
+
+Name: ubiquity/partitioner/heading_multiple
+Template: ubiquity/partitioner/heading_multiple
+Owners: ubiquity
+
+Name: ubiquity/partitioner/heading_no_detected
+Template: ubiquity/partitioner/heading_no_detected
+Owners: ubiquity
+
+Name: ubiquity/partitioner/heading_one
+Template: ubiquity/partitioner/heading_one
+Owners: ubiquity
+
+Name: ubiquity/partitioner/multiple_os_format
+Template: ubiquity/partitioner/multiple_os_format
+Owners: ubiquity
+
+Name: ubiquity/partitioner/multiple_os_resize
+Template: ubiquity/partitioner/multiple_os_resize
+Owners: ubiquity
+
+Name: ubiquity/partitioner/no_systems_format
+Template: ubiquity/partitioner/no_systems_format
+Owners: ubiquity
+
+Name: ubiquity/partitioner/single_os_replace
+Template: ubiquity/partitioner/single_os_replace
+Owners: ubiquity
+
+Name: ubiquity/partitioner/single_os_resize
+Template: ubiquity/partitioner/single_os_resize
+Owners: ubiquity
+
+Name: ubiquity/partitioner/ubuntu_and_os_format
+Template: ubiquity/partitioner/ubuntu_and_os_format
+Owners: ubiquity
+
+Name: ubiquity/partitioner/ubuntu_format
+Template: ubiquity/partitioner/ubuntu_format
+Owners: ubiquity
+
+Name: ubiquity/partitioner/ubuntu_inside
+Template: ubiquity/partitioner/ubuntu_inside
+Owners: ubiquity
+
+Name: ubiquity/partitioner/ubuntu_reinstall
+Template: ubiquity/partitioner/ubuntu_reinstall
+Owners: ubiquity
+
+Name: ubiquity/partitioner/ubuntu_resize
+Template: ubiquity/partitioner/ubuntu_resize
+Owners: ubiquity
+
+Name: ubiquity/partitioner/ubuntu_upgrade
+Template: ubiquity/partitioner/ubuntu_upgrade
+Owners: ubiquity
+
+Name: ubiquity/partman-confirm
+Template: ubiquity/partman-confirm
+Owners: ubiquity
+
+Name: ubiquity/partman-failed-unmount
+Template: ubiquity/partman-failed-unmount
+Owners: ubiquity
+
+Name: ubiquity/partman-rebuild-cache
+Template: ubiquity/partman-rebuild-cache
+Owners: ubiquity
+
+Name: ubiquity/partman-skip-unmount
+Template: ubiquity/partman-skip-unmount
+Owners: ubiquity
+
+Name: ubiquity/partman-system-unformatted
+Template: ubiquity/partman-system-unformatted
+Owners: ubiquity
+
+Name: ubiquity/poweroff
+Template: ubiquity/poweroff
+Owners: ubiquity
+
+Name: ubiquity/reboot
+Template: ubiquity/reboot
+Owners: ubiquity
+
+Name: ubiquity/reboot_on_failure
+Template: ubiquity/reboot_on_failure
+Owners: ubiquity
+
+Name: ubiquity/run-ma-again
+Template: ubiquity/run-ma-again
+Owners: ubiquity
+
+Name: ubiquity/show_alpha_warning
+Template: ubiquity/show_alpha_warning
+Owners: ubiquity
+
+Name: ubiquity/show_shutdown_button
+Template: ubiquity/show_shutdown_button
+Owners: ubiquity
+
+Name: ubiquity/success_command
+Template: ubiquity/success_command
+Owners: ubiquity
+
+Name: ubiquity/text/CD
+Template: ubiquity/text/CD
+Owners: ubiquity
+
+Name: ubiquity/text/USB
+Template: ubiquity/text/USB
+Owners: ubiquity
+
+Name: ubiquity/text/abort_label
+Template: ubiquity/text/abort_label
+Owners: ubiquity
+
+Name: ubiquity/text/alpha_warning_label
+Template: ubiquity/text/alpha_warning_label
+Owners: ubiquity
+
+Name: ubiquity/text/apt_progress
+Template: ubiquity/text/apt_progress
+Owners: ubiquity
+
+Name: ubiquity/text/apt_progress_cps
+Template: ubiquity/text/apt_progress_cps
+Owners: ubiquity
+
+Name: ubiquity/text/bootloader_fail_dialog
+Template: ubiquity/text/bootloader_fail_dialog
+Owners: ubiquity
+
+Name: ubiquity/text/bootloader_fail_proceed
+Template: ubiquity/text/bootloader_fail_proceed
+Owners: ubiquity
+
+Name: ubiquity/text/bootloader_fail_title
+Template: ubiquity/text/bootloader_fail_title
+Owners: ubiquity
+
+Name: ubiquity/text/bootloader_group_label
+Template: ubiquity/text/bootloader_group_label
+Owners: ubiquity
+
+Name: ubiquity/text/breadcrumb_install
+Template: ubiquity/text/breadcrumb_install
+Owners: ubiquity
+
+Name: ubiquity/text/breadcrumb_keyboard
+Template: ubiquity/text/breadcrumb_keyboard
+Owners: ubiquity
+
+Name: ubiquity/text/breadcrumb_language
+Template: ubiquity/text/breadcrumb_language
+Owners: ubiquity
+
+Name: ubiquity/text/breadcrumb_partition
+Template: ubiquity/text/breadcrumb_partition
+Owners: ubiquity
+
+Name: ubiquity/text/breadcrumb_prepare
+Template: ubiquity/text/breadcrumb_prepare
+Owners: ubiquity
+
+Name: ubiquity/text/breadcrumb_timezone
+Template: ubiquity/text/breadcrumb_timezone
+Owners: ubiquity
+
+Name: ubiquity/text/breadcrumb_user
+Template: ubiquity/text/breadcrumb_user
+Owners: ubiquity
+
+Name: ubiquity/text/checking_for_installer_updates
+Template: ubiquity/text/checking_for_installer_updates
+Owners: ubiquity
+
+Name: ubiquity/text/connect
+Template: ubiquity/text/connect
+Owners: ubiquity
+
+Name: ubiquity/text/continue
+Template: ubiquity/text/continue
+Owners: ubiquity
+
+Name: ubiquity/text/crash_dialog
+Template: ubiquity/text/crash_dialog
+Owners: ubiquity
+
+Name: ubiquity/text/crash_heading_label
+Template: ubiquity/text/crash_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/crash_text_label
+Template: ubiquity/text/crash_text_label
+Owners: ubiquity
+
+Name: ubiquity/text/custom_partitioning_desc
+Template: ubiquity/text/custom_partitioning_desc
+Owners: ubiquity
+
+Name: ubiquity/text/custom_partitioning_title
+Template: ubiquity/text/custom_partitioning_title
+Owners: ubiquity
+
+Name: ubiquity/text/deduce_layout
+Template: ubiquity/text/deduce_layout
+Owners: ubiquity
+
+Name: ubiquity/text/error_updating_installer
+Template: ubiquity/text/error_updating_installer
+Owners: ubiquity
+
+Name: ubiquity/text/finished_dialog
+Template: ubiquity/text/finished_dialog
+Owners: ubiquity
+
+Name: ubiquity/text/finished_label
+Template: ubiquity/text/finished_label
+Owners: ubiquity
+
+Name: ubiquity/text/fullname_inactive_label
+Template: ubiquity/text/fullname_inactive_label
+Owners: ubiquity
+
+Name: ubiquity/text/fullname_label
+Template: ubiquity/text/fullname_label
+Owners: ubiquity
+
+Name: ubiquity/text/go_back
+Template: ubiquity/text/go_back
+Owners: ubiquity
+
+Name: ubiquity/text/grub_fail_option
+Template: ubiquity/text/grub_fail_option
+Owners: ubiquity
+
+Name: ubiquity/text/grub_new_device
+Template: ubiquity/text/grub_new_device
+Owners: ubiquity
+
+Name: ubiquity/text/grub_no_new_device
+Template: ubiquity/text/grub_no_new_device
+Owners: ubiquity
+
+Name: ubiquity/text/hostname_extra_label
+Template: ubiquity/text/hostname_extra_label
+Owners: ubiquity
+
+Name: ubiquity/text/hostname_label
+Template: ubiquity/text/hostname_label
+Owners: ubiquity
+
+Name: ubiquity/text/install_button
+Template: ubiquity/text/install_button
+Owners: ubiquity
+
+Name: ubiquity/text/install_process_label
+Template: ubiquity/text/install_process_label
+Owners: ubiquity
+
+Name: ubiquity/text/install_ubuntu
+Template: ubiquity/text/install_ubuntu
+Owners: ubiquity
+
+Name: ubiquity/text/installing_update
+Template: ubiquity/text/installing_update
+Owners: ubiquity
+
+Name: ubiquity/text/keyboard_comment_label
+Template: ubiquity/text/keyboard_comment_label
+Owners: ubiquity
+
+Name: ubiquity/text/keyboard_heading_label
+Template: ubiquity/text/keyboard_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/keyboard_image_label
+Template: ubiquity/text/keyboard_image_label
+Owners: ubiquity
+
+Name: ubiquity/text/keyboard_layout_label
+Template: ubiquity/text/keyboard_layout_label
+Owners: ubiquity
+
+Name: ubiquity/text/keyboard_query_present
+Template: ubiquity/text/keyboard_query_present
+Owners: ubiquity
+
+Name: ubiquity/text/keyboard_query_press
+Template: ubiquity/text/keyboard_query_press
+Owners: ubiquity
+
+Name: ubiquity/text/keyboard_query_title
+Template: ubiquity/text/keyboard_query_title
+Owners: ubiquity
+
+Name: ubiquity/text/keyboard_test_label
+Template: ubiquity/text/keyboard_test_label
+Owners: ubiquity
+
+Name: ubiquity/text/keyboard_variant_label
+Template: ubiquity/text/keyboard_variant_label
+Owners: ubiquity
+
+Name: ubiquity/text/language_heading_label
+Template: ubiquity/text/language_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/live_installer
+Template: ubiquity/text/live_installer
+Owners: ubiquity
+
+Name: ubiquity/text/login_auto
+Template: ubiquity/text/login_auto
+Owners: ubiquity
+
+Name: ubiquity/text/login_encrypt
+Template: ubiquity/text/login_encrypt
+Owners: ubiquity
+
+Name: ubiquity/text/login_pass
+Template: ubiquity/text/login_pass
+Owners: ubiquity
+
+Name: ubiquity/text/ma_text_label
+Template: ubiquity/text/ma_text_label
+Owners: ubiquity
+
+Name: ubiquity/text/network_heading_label
+Template: ubiquity/text/network_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/next
+Template: ubiquity/text/next
+Owners: ubiquity
+
+Name: ubiquity/text/oem_config_title
+Template: ubiquity/text/oem_config_title
+Owners: ubiquity
+
+Name: ubiquity/text/oem_id_label
+Template: ubiquity/text/oem_id_label
+Owners: ubiquity
+
+Name: ubiquity/text/oem_user_config_title
+Template: ubiquity/text/oem_user_config_title
+Owners: ubiquity
+
+Name: ubiquity/text/part_advanced_heading_label
+Template: ubiquity/text/part_advanced_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/part_advanced_recalculating_label
+Template: ubiquity/text/part_advanced_recalculating_label
+Owners: ubiquity
+
+Name: ubiquity/text/part_auto_allocate_entire_label
+Template: ubiquity/text/part_auto_allocate_entire_label
+Owners: ubiquity
+
+Name: ubiquity/text/part_auto_allocate_label
+Template: ubiquity/text/part_auto_allocate_label
+Owners: ubiquity
+
+Name: ubiquity/text/part_auto_deleted_label
+Template: ubiquity/text/part_auto_deleted_label
+Owners: ubiquity
+
+Name: ubiquity/text/part_auto_deleted_label_one
+Template: ubiquity/text/part_auto_deleted_label_one
+Owners: ubiquity
+
+Name: ubiquity/text/part_auto_files
+Template: ubiquity/text/part_auto_files
+Owners: ubiquity
+
+Name: ubiquity/text/part_auto_heading_label
+Template: ubiquity/text/part_auto_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/part_auto_hidden_label
+Template: ubiquity/text/part_auto_hidden_label
+Owners: ubiquity
+
+Name: ubiquity/text/part_auto_hidden_label_one
+Template: ubiquity/text/part_auto_hidden_label_one
+Owners: ubiquity
+
+Name: ubiquity/text/part_auto_select_drive_label
+Template: ubiquity/text/part_auto_select_drive_label
+Owners: ubiquity
+
+Name: ubiquity/text/part_auto_split_largest_partition
+Template: ubiquity/text/part_auto_split_largest_partition
+Owners: ubiquity
+
+Name: ubiquity/text/partition_button_delete
+Template: ubiquity/text/partition_button_delete
+Owners: ubiquity
+
+Name: ubiquity/text/partition_button_edit
+Template: ubiquity/text/partition_button_edit
+Owners: ubiquity
+
+Name: ubiquity/text/partition_button_new
+Template: ubiquity/text/partition_button_new
+Owners: ubiquity
+
+Name: ubiquity/text/partition_button_new_label
+Template: ubiquity/text/partition_button_new_label
+Owners: ubiquity
+
+Name: ubiquity/text/partition_button_undo
+Template: ubiquity/text/partition_button_undo
+Owners: ubiquity
+
+Name: ubiquity/text/partition_column_device
+Template: ubiquity/text/partition_column_device
+Owners: ubiquity
+
+Name: ubiquity/text/partition_column_format
+Template: ubiquity/text/partition_column_format
+Owners: ubiquity
+
+Name: ubiquity/text/partition_column_mountpoint
+Template: ubiquity/text/partition_column_mountpoint
+Owners: ubiquity
+
+Name: ubiquity/text/partition_column_size
+Template: ubiquity/text/partition_column_size
+Owners: ubiquity
+
+Name: ubiquity/text/partition_column_type
+Template: ubiquity/text/partition_column_type
+Owners: ubiquity
+
+Name: ubiquity/text/partition_column_used
+Template: ubiquity/text/partition_column_used
+Owners: ubiquity
+
+Name: ubiquity/text/partition_create_dialog
+Template: ubiquity/text/partition_create_dialog
+Owners: ubiquity
+
+Name: ubiquity/text/partition_create_place_beginning
+Template: ubiquity/text/partition_create_place_beginning
+Owners: ubiquity
+
+Name: ubiquity/text/partition_create_place_end
+Template: ubiquity/text/partition_create_place_end
+Owners: ubiquity
+
+Name: ubiquity/text/partition_create_size_label
+Template: ubiquity/text/partition_create_size_label
+Owners: ubiquity
+
+Name: ubiquity/text/partition_create_type_logical
+Template: ubiquity/text/partition_create_type_logical
+Owners: ubiquity
+
+Name: ubiquity/text/partition_create_type_primary
+Template: ubiquity/text/partition_create_type_primary
+Owners: ubiquity
+
+Name: ubiquity/text/partition_edit_dialog
+Template: ubiquity/text/partition_edit_dialog
+Owners: ubiquity
+
+Name: ubiquity/text/partition_edit_heading_label
+Template: ubiquity/text/partition_edit_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/partition_edit_size_label
+Template: ubiquity/text/partition_edit_size_label
+Owners: ubiquity
+
+Name: ubiquity/text/partition_free_space
+Template: ubiquity/text/partition_free_space
+Owners: ubiquity
+
+Name: ubiquity/text/partition_used_unknown
+Template: ubiquity/text/partition_used_unknown
+Owners: ubiquity
+
+Name: ubiquity/text/password/fair
+Template: ubiquity/text/password/fair
+Owners: ubiquity
+
+Name: ubiquity/text/password/good
+Template: ubiquity/text/password/good
+Owners: ubiquity
+
+Name: ubiquity/text/password/strong
+Template: ubiquity/text/password/strong
+Owners: ubiquity
+
+Name: ubiquity/text/password/too_short
+Template: ubiquity/text/password/too_short
+Owners: ubiquity
+
+Name: ubiquity/text/password/weak
+Template: ubiquity/text/password/weak
+Owners: ubiquity
+
+Name: ubiquity/text/password_again_inactive_label
+Template: ubiquity/text/password_again_inactive_label
+Owners: ubiquity
+
+Name: ubiquity/text/password_debug_warning_label
+Template: ubiquity/text/password_debug_warning_label
+Owners: ubiquity
+
+Name: ubiquity/text/password_inactive_label
+Template: ubiquity/text/password_inactive_label
+Owners: ubiquity
+
+Name: ubiquity/text/password_label
+Template: ubiquity/text/password_label
+Owners: ubiquity
+
+Name: ubiquity/text/password_mismatch
+Template: ubiquity/text/password_mismatch
+Owners: ubiquity
+
+Name: ubiquity/text/prepare_best_results
+Template: ubiquity/text/prepare_best_results
+Owners: ubiquity
+
+Name: ubiquity/text/prepare_download_updates
+Template: ubiquity/text/prepare_download_updates
+Owners: ubiquity
+
+Name: ubiquity/text/prepare_foss_disclaimer
+Template: ubiquity/text/prepare_foss_disclaimer
+Owners: ubiquity
+
+Name: ubiquity/text/prepare_foss_disclaimer_extra_label
+Template: ubiquity/text/prepare_foss_disclaimer_extra_label
+Owners: ubiquity
+
+Name: ubiquity/text/prepare_heading_label
+Template: ubiquity/text/prepare_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/prepare_network_connection
+Template: ubiquity/text/prepare_network_connection
+Owners: ubiquity
+
+Name: ubiquity/text/prepare_nonfree_software
+Template: ubiquity/text/prepare_nonfree_software
+Owners: ubiquity
+
+Name: ubiquity/text/prepare_power_source
+Template: ubiquity/text/prepare_power_source
+Owners: ubiquity
+
+Name: ubiquity/text/prepare_sufficient_space
+Template: ubiquity/text/prepare_sufficient_space
+Owners: ubiquity
+
+Name: ubiquity/text/progress_cancel_button
+Template: ubiquity/text/progress_cancel_button
+Owners: ubiquity
+
+Name: ubiquity/text/quit_button
+Template: ubiquity/text/quit_button
+Owners: ubiquity
+
+Name: ubiquity/text/reading_package_information
+Template: ubiquity/text/reading_package_information
+Owners: ubiquity
+
+Name: ubiquity/text/reboot_button
+Template: ubiquity/text/reboot_button
+Owners: ubiquity
+
+Name: ubiquity/text/release_notes_label
+Template: ubiquity/text/release_notes_label
+Owners: ubiquity
+
+Name: ubiquity/text/release_notes_only
+Template: ubiquity/text/release_notes_only
+Owners: ubiquity
+
+Name: ubiquity/text/restart_to_continue
+Template: ubiquity/text/restart_to_continue
+Owners: ubiquity
+
+Name: ubiquity/text/select_language_label
+Template: ubiquity/text/select_language_label
+Owners: ubiquity
+
+Name: ubiquity/text/select_language_oem_user_label
+Template: ubiquity/text/select_language_oem_user_label
+Owners: ubiquity
+
+Name: ubiquity/text/shutdown_button
+Template: ubiquity/text/shutdown_button
+Owners: ubiquity
+
+Name: ubiquity/text/skip_label
+Template: ubiquity/text/skip_label
+Owners: ubiquity
+
+Name: ubiquity/text/stop
+Template: ubiquity/text/stop
+Owners: ubiquity
+
+Name: ubiquity/text/tasks_heading_label
+Template: ubiquity/text/tasks_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/timezone_city_entry_inactive_label
+Template: ubiquity/text/timezone_city_entry_inactive_label
+Owners: ubiquity
+
+Name: ubiquity/text/timezone_city_label
+Template: ubiquity/text/timezone_city_label
+Owners: ubiquity
+
+Name: ubiquity/text/timezone_comment_label
+Template: ubiquity/text/timezone_comment_label
+Owners: ubiquity
+
+Name: ubiquity/text/timezone_heading_label
+Template: ubiquity/text/timezone_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/timezone_zone_label
+Template: ubiquity/text/timezone_zone_label
+Owners: ubiquity
+
+Name: ubiquity/text/try_install_text_label
+Template: ubiquity/text/try_install_text_label
+Owners: ubiquity
+
+Name: ubiquity/text/try_ubuntu
+Template: ubiquity/text/try_ubuntu
+Owners: ubiquity
+
+Name: ubiquity/text/update_installer_only
+Template: ubiquity/text/update_installer_only
+Owners: ubiquity
+
+Name: ubiquity/text/updating_package_information
+Template: ubiquity/text/updating_package_information
+Owners: ubiquity
+
+Name: ubiquity/text/userinfo_heading_label
+Template: ubiquity/text/userinfo_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/username_inactive_label
+Template: ubiquity/text/username_inactive_label
+Owners: ubiquity
+
+Name: ubiquity/text/username_label
+Template: ubiquity/text/username_label
+Owners: ubiquity
+
+Name: ubiquity/text/verified_password_label
+Template: ubiquity/text/verified_password_label
+Owners: ubiquity
+
+Name: ubiquity/text/warning_dialog
+Template: ubiquity/text/warning_dialog
+Owners: ubiquity
+
+Name: ubiquity/text/warning_dialog_label
+Template: ubiquity/text/warning_dialog_label
+Owners: ubiquity
+
+Name: ubiquity/text/warning_heading_label
+Template: ubiquity/text/warning_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/webcam_heading
+Template: ubiquity/text/webcam_heading
+Owners: ubiquity
+
+Name: ubiquity/text/webcam_heading_label
+Template: ubiquity/text/webcam_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/welcome_heading_label
+Template: ubiquity/text/welcome_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/wireless_heading_label
+Template: ubiquity/text/wireless_heading_label
+Owners: ubiquity
+
+Name: ubiquity/text/wireless_section_label
+Template: ubiquity/text/wireless_section_label
+Owners: ubiquity
+
+Name: ubiquity/use_nonfree
+Template: ubiquity/use_nonfree
+Owners: ubiquity
+
+Name: ucf/changeprompt
+Template: ucf/changeprompt
+Owners: ucf
+
+Name: ucf/changeprompt_threeway
+Template: ucf/changeprompt_threeway
+Owners: ucf
+
+Name: ucf/conflicts_found
+Template: ucf/conflicts_found
+Owners: ucf
+
+Name: ucf/show_diff
+Template: ucf/show_diff
+Owners: ucf
+
+Name: ucf/title
+Template: ucf/title
+Owners: ucf
+
+Name: ufw/allow_custom_ports
+Template: ufw/allow_custom_ports
+Owners: ufw
+
+Name: ufw/allow_known_ports
+Template: ufw/allow_known_ports
+Owners: ufw
+
+Name: ufw/enable
+Template: ufw/enable
+Value: false
+Owners: ufw
+
+Name: ufw/existing_configuration
+Template: ufw/existing_configuration
+Owners: ufw
+
+Name: unattended-upgrades/enable_auto_updates
+Template: unattended-upgrades/enable_auto_updates
+Value: false
+Owners: unattended-upgrades
+
+Name: update-inetd/ask-disable-entries
+Template: update-inetd/ask-disable-entries
+Owners: update-inetd
+
+Name: update-inetd/ask-entry-present
+Template: update-inetd/ask-entry-present
+Owners: update-inetd
+
+Name: update-inetd/ask-remove-entries
+Template: update-inetd/ask-remove-entries
+Owners: update-inetd
+
+Name: update-inetd/ask-several-entries
+Template: update-inetd/ask-several-entries
+Owners: update-inetd
+
+Name: update-inetd/title
+Template: update-inetd/title
+Owners: update-inetd
+
+Name: user-setup/allow-password-empty
+Template: user-setup/allow-password-empty
+Owners: ubiquity, user-setup
+
+Name: user-setup/allow-password-weak
+Template: user-setup/allow-password-weak
+Owners: ubiquity, user-setup
+
+Name: user-setup/encrypt-home
+Template: user-setup/encrypt-home
+Owners: ubiquity, user-setup
+
+Name: user-setup/encrypt-home-failed
+Template: user-setup/encrypt-home-failed
+Owners: ubiquity, user-setup
+
+Name: user-setup/force-encrypt-home
+Template: user-setup/force-encrypt-home
+Owners: ubiquity, user-setup
+
+Name: user-setup/password-empty
+Template: user-setup/password-empty
+Owners: ubiquity, user-setup
+
+Name: user-setup/password-mismatch
+Template: user-setup/password-mismatch
+Owners: ubiquity, user-setup
+
+Name: user-setup/password-weak
+Template: user-setup/password-weak
+Owners: ubiquity, user-setup
+
+Name: user-setup/progress/wipe-swap
+Template: user-setup/progress/wipe-swap
+Owners: ubiquity, user-setup
+
+Name: wamerican/languages
+Template: wamerican/languages
+Owners: wamerican
+
+Name: x-ttcidfont-conf/tt_backend
+Template: x-ttcidfont-conf/tt_backend
+Value: freetype
+Owners: x-ttcidfont-conf
+
+Name: x-ttcidfont-conf/xtt_vl
+Template: x-ttcidfont-conf/xtt_vl
+Owners: x-ttcidfont-conf
+
+Name: x11-common/xwrapper/actual_allowed_users
+Template: x11-common/xwrapper/actual_allowed_users
+Value: console
+Owners: x11-common
+
+Name: x11-common/xwrapper/allowed_users
+Template: x11-common/xwrapper/allowed_users
+Value: Console Users Only
+Owners: x11-common
+

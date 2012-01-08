@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="hardware-driver" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="hardware" group="more"/>
+    
+    <desc>Un controlador de hardware/dispositivo es aquello que permite a su equipo usar dispositivos que están conectados a él.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Qué es un controlador?</title>
+
+<p>Devices are the physical "parts" of your computer. They may be <em>external</em> like printers and monitor or <em>internal</em> like graphics and audio cards.</p>
+
+<p>Para que su equipo pueda usar estos dispositivos, necesita saber cómo comunicarse con ellos. Esto lo hace un elemento software denominado <em>controlador del dispositivo</em>.</p>
+
+<p>Cuando conecta un dispositivo a su equipo, este debe tener instalado el controlador correcto para que el dispositivo funcione. Por ejemplo, si conecta una impresora pero no están disponibles los controladores adecuados, no podrá usar esa impresora. Generalmente, cada marca y modelo de dispositivo tiene sus propios controladores, por lo que no podrá usar el controlador de un dispositivo para hacer que funcione otro dispositivo distinto.</p>
+
+<p>En GNU/Linux, los controladores para la mayoría de los dispositivos se instalan de manera predeterminada, así que todo debería funcionar nada más conectarlo. Es posible que necesite instalar el controlador manualmente, o puede que ni siquiera esté disponible.</p>
+
+<p>Además, algunos controladores están incompletos o no funcionan correctamente. Por ejemplo, es posible que su impresora no pueda imprimir a doble cara, pero por lo demás es completamente funcional.</p>
+
+</page>

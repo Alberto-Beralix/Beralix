@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/ubuntu-sso-client/ubuntu_sso/gtk/__init__.py

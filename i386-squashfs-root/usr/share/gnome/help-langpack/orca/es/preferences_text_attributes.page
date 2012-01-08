@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_text_attributes" xml:lang="es">
+  <info>
+    <link type="guide" xref="preferences#orca"/>
+    <link type="next" xref="preferences_gecko"/>
+    <link type="seealso" xref="howto_text_attributes"/>
+    <title type="sort">8. Atributos de texto</title>
+    <title type="link">Atributos de texto</title>
+    <desc>Configurar qué formateo se presenta</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Preferencias de los atributos de texto</title>
+  <p>El término «atributos de texto» hace referencia a la fuente, estilo, alineación y otro formato asociado a un carácter o serie de caracteres dados. La página <gui>Atributos de texto</gui> de <app>Orca</app> le permite personalizar qué atributos de texto presentará <app>Orca</app> por voz, junto al orden en que se deben presentar, y cuáles de ellos indicará <app>Orca</app> en braille.</p>
+  <section id="table">
+    <title>La tabla de atributos de texto</title>
+    <media type="image" mime="image/png" src="figures/preferences_text_attributes_table.png"/>
+    <p>La tabla de atributos de texto es donde se especifica qué atributos se presentarán y cuáles no y bajo qué condiciones. Cada fila consiste en cuatro columnas.</p>
+    <list>
+      <item>
+        <p><gui>Nombre de atributo</gui>: el nombre del atributo de texto.</p>
+      </item>
+      <item>
+        <p><gui>Hablar</gui>: marque esta casilla si quiere que <app>Orca</app> hable este atributo cuando pulse <keyseq><key>Orca</key><key>F</key></keyseq>.</p>
+      </item>
+      <item>
+        <p><gui>Marcar en braille</gui>: marque esta casilla si quiere que <app>Orca</app> subraye este atributo en su línea braille.</p>
+      </item>
+      <item>
+        <p><gui>Presentar a menos que</gui>: éste campo editable le permite especificar cuándo un atributo activo no es de interés.</p>
+        <p>Por ejemplo, el atributo «subrayado» tiene un valor predeterminado de «none». Esto hace que <app>Orca</app> le informe acerca del texto subrayado siempre y cuando el texto esté actualmente subrayado. Si quiere que este atributo se hable siempre independientemente de que el texto esté subrayado o no, entonces el atributo debería estar marcado y el valor de <gui>Presentar a menos que</gui> en blanco. Además, debería asegurarse de que la columna <gui>Hablar</gui> para el subrayado está marcada.</p>
+      </item>
+    </list>
+  </section>
+  <section id="reset">
+     <title>Deshaciendo cambios</title>
+     <p>Bajo la lista de atributos de texto, hay un botón «Restablecer» (<keyseq><key>Alt</key><key>R</key></keyseq>) que restaurará los valores de la tabla a los que eran cuando el diálogo se mostró por primera vez.</p>
+  </section>
+  <section id="rearranging">
+    <title>Reorganizando el orden de presentación</title>
+    <figure>
+      <title>Opciones para controlar el orden en que se presentan los atributos</title>
+      <desc>Cuando muestra la página de atributos de texto inicialmente, todos sus atributos marcados se ponen al principio de la lista. Se dan en el orden en que se hablarán. Hay cuatro botones que se pueden usar para reorganizar el orden de presentación.</desc>
+      <media type="image" mime="image/png" src="figures/preferences_text_attributes_rearranging.png"/>
+    </figure>
+    <list>
+      <item>
+        <p><gui>Mover al principio</gui> (<keyseq><key>Alt</key><key>P</key></keyseq>): mueve el atributo seleccionado al principio de la lista.</p>
+      </item>
+      <item>
+        <p><gui>Mover uno arriba</gui> (<keyseq><key>Alt</key><key>R</key></keyseq>): mueve el atributo seleccionado una fila arriba.</p>
+      </item>
+      <item>
+        <p><gui>Mover uno abajo</gui> (<keyseq><key>Alt</key><key>A</key></keyseq>): mueve el atributo seleccionado una fila abajo.</p>
+      </item>
+      <item>
+        <p><gui>Mover al final</gui> (<keyseq><key>Alt</key><key>F</key></keyseq>): mueve el atributo seleccionado al final de la lista.</p>
+      </item>
+    </list>
+  </section>
+  <section id="braille_indicator">
+    <title>Indicador braille</title>
+    <figure>
+      <title>Opciones para configurar el «subrayado» braille para el formato</title>
+      <desc>Debajo de los botones está el grupo de botones de radio <gui>Indicador Braille</gui>. Aquí puede seleccionar la celda o celdas que se usarán para indicar el texto tenga que al menos uno de los atributos especificados.</desc>
+      <media type="image" mime="image/png" src="figures/preferences_text_attributes_braille.png"/>
+    </figure>
+    <list>
+      <item>
+        <p><gui>Ninguno</gui>: no subrayar los atributos de texto en braille (predeterminado)</p>
+      </item>
+      <item>
+        <p><gui>Punto 7</gui>: subrayar los atributos de texto solamente con el punto 7</p>
+      </item>
+      <item>
+        <p><gui>Punto 8</gui>: subrayar los atributos de texto solamente con el punto 8</p>
+      </item>
+      <item>
+        <p><gui>Puntos 7 y 8</gui>: subrayar los atributos de texto con ambos puntos 7 y puntos 8</p>
+      </item>
+    </list>
+  </section>
+</page>

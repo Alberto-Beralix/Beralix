@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-delete" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <link type="seealso" xref="files-recover"/>
+    <desc>Entfernen Sie Dateien oder Ordner, die Sie nicht mehr benötigen.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Cristopher Thomas</name>
+      <email>crisnoh@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Dateien und Ordner löschen</title>
+
+<p>Falls Sie eine Datei oder einen Ordner nicht mehr benötigen, können Sie sie löschen.</p>
+
+<p>
+When you delete an item it is moved to the Trash folder, where it is stored
+until you empty the trash.  Items stored in the Trash folder can be
+<link xref="files-recover">restored to their original location</link>
+if you decide you need them, or if they were accidentally deleted.
+</p>
+
+<steps>
+  <item><p>Wählen Sie die zu löschende Datei aus, indem Sie einmalig darauf klicken.</p></item>
+  <item><p>Press <key>Delete</key> on your keyboard.
+  Alternatively, drag the item to the <gui>Trash</gui> in the sidebar.</p></item>
+</steps>
+
+<p>To delete files permanently, and to free up disk space on your
+computer, you need to empty the trash. To empty the trash, right-click
+<gui>Trash</gui> in the sidebar and select <gui>Empty Trash</gui>.
+Alternatively, you can permanently delete individual items in the
+trash by navigating to the trash from the sidebar or the
+<gui>Go</gui> menu. Select files you want to delete permanently and press
+<key>Delete</key> on your keyboard, or
+right-click and select <gui>Delete Permanently</gui>.</p>
+
+<note><p>Deleted files on a <link xref="files#removable">removable device</link>
+may not be visible on other operating systems, such Windows or Mac OS. The
+files are still there, and will be available when you plug the device
+back into your computer.</p></note>
+
+<section id="permanent">
+ <title>Eine Datei dauerhaft löschen</title>
+<p>Sie können ein Objekt unmittelbar dauerhaft löschen, ohne es zuerst in den Müll zu werfen.</p>
+
+<steps>
+  <item><p>Wählen Sie das zu löschende Objekt aus.</p></item>
+  <item><p>Halten Sie die <gui>Umschalttaste</gui> gedrückt und drücken Sie dann die Taste <key>Entf</key> auf Ihrer Tastatur.</p></item>
+  <item><p>Da Sie dies nicht rückgängig machen können, werden Sie um Bestätigung gebeten, dass die Datei oder der Ordner gelöscht werden soll.</p></item>
+</steps>
+
+<p>Wenn Sie häufig Dateien löschen müssen, ohne den Müll zu verwenden (etwa weil Sie oft mit sensiblen Daten arbeiten), können Sie einen <gui>Löschen</gui>-Eintrag zum Kontextmenü für Dateien und Ordner hinzufügen. Klicken Sie <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq> und wählen Sie den Reiter <gui>Verhalten</gui>. Wählen Sie <gui>Einen Löschbefehl bereitstellen, der den Müll umgeht</gui>.</p>
+
+</section>
+</page>

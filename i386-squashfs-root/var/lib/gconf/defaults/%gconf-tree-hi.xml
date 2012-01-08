@@ -1,0 +1,761 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="मनपसंद फ़ॉन्ट">
+							<longdesc>भाषा पटल के लिए मनपसंद फ़ॉन्ट नाम</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="मनपसंद फ़ॉन्ट का प्रयोग करें">
+							<longdesc>भाषा पटल के लिए मनपसंद फ़ॉन्ट नाम का प्रयोग करें</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="इनपुट विधि नाम दिखाएँ">
+							<longdesc>भाषा पट्टी पर इनपुट विधि नाम दिखाएँ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="तंत्र तश्तरी पर प्रतीक दिखाएँ">
+							<longdesc>तंत्र तश्तरी पर प्रतीक दिखाएँ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="लुकअप सारणी की दिशा">
+							<longdesc>सारणी देखने के लिए दिशा. 0 = क्षैतिज, 1 = लंबवत</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="भाषा पैनल स्थिति">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="भाषा पैनल स्थिति">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="स्वतः छुपाएँ">
+							<longdesc>भाषा फलक का व्यवहार. 0 = मेन्यू में अंतःस्थापित, 1 = स्वतः छिपाएँ, 2 = हमेशा दिखाएँ</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="enable_by_default">
+						<local_schema short_desc="इनपुट विधि को तयशुदा रूप से सक्रिय करें">
+							<longdesc>जब अनुप्रयोग इनपुट फोकस पाता है तो इनपुट विधि को तयशुदा रूप से सक्रिय करें</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_global_engine">
+						<local_schema short_desc="लक्ष्य इनपुट विधि का प्रयोग करें">
+							<longdesc>सभी अनुप्रयोगों के बीच समान इनपुट विधि को साझा करें</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="पूर्वसंपादित पाठ अंतःस्थापित करें">
+							<longdesc>अनुप्रयोग विंडो में पूर्वसंपादित पाठ अंतःस्थापित करें</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="तंत्र कुंजीपट लेआउट का प्रयोग करें">
+							<longdesc>तंत्र कुंजीपट (XKB) लेआउट का प्रयोग करें</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="पहले से लोड इंजन">
+							<longdesc>ibus आरंभन के दौरान पहले से लोड इंजन</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="पिछला इंजन शॉर्टकट कुंजी">
+								<longdesc>सूची में पिछली इनपुट विधि में जाने के लिए शॉर्टकट कुंजियाँ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="पिछला इंजन शॉर्टकट कुंजी">
+								<longdesc>सूची में पिछली इनपुट विधि में जाने के लिए शॉर्टकट कुंजियाँ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="अगला इंजन शॉर्टकट कुंजी">
+								<longdesc>सूची में अगली इनपुट विधि में जाने के लिए शॉर्टकट कुंजियाँ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="अगला इंजन शॉर्टकट कुंजी">
+								<longdesc>सूची में अगली इनपुट विधि में जाने के लिए शॉर्टकट कुंजियाँ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="disable_unconditional">
+							<local_schema short_desc="शॉर्टकट कुँजियाँ निष्क्रिय करें">
+								<longdesc>इनपुट विधि को बंद करने के लिए शॉर्टकट कुँजियाँ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_unconditional">
+							<local_schema short_desc="शॉर्टकट कुँजियाँ सक्रिय करें">
+								<longdesc>इनपुट विधि को चालू करने के लिए शॉर्टकट कुँजियाँ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="शॉर्टकट कुंजी ट्रिगर करें">
+								<longdesc>इनपुट विधि को चालू या बंद रखने के लिए शॉर्टकट कुंजी</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="WiFi निर्माण निष्क्रिय करें">
+						<longdesc>इसे सही पर सेट करें एप्लेट के उपयोग के दौरान तदर्थ संजाल जब संजाल से कनेक्ट कर रहा हो.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="स्टैम्प">
+						<longdesc>निर्धारित करने के लिए प्रयुक्त कि क्या सेटिंग को नए संस्करण में उत्प्रवासित करना चाहिए.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="संडाल उपलब्ध अधिसूचना दबाएँ">
+						<longdesc>सूचना निष्क्रिय करने के लिए इसे सही पर सेट करें जब बेतार संजाल उफलब्ध है.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="डिसकनेक्टेज सूचना निष्क्रिय करें">
+						<longdesc>सूचना निष्क्रिय करने के लिए इसे सही पर सेट करें जब संजाल से डिसकनेक्ट कर रहा हो.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="कनेक्शन सूचना निष्क्रिय करें">
+						<longdesc>इसे सही पर सेट करें सूचना निष्क्रिय करने के लिए जब संजाल से कनेक्ट कर रहा हो.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="fade">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="fullscreen_visual_bell">
+									<local_schema short_desc="पूर्ण स्क्रीन दृश्य बेल">
+										<longdesc>सिस्टम बीप पर पूर्ण स्क्रीन फेड प्रभाव</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="visual_bell">
+									<local_schema short_desc="दृश्य बेल">
+										<longdesc>Fade effect on system beep</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="wobbly">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="focus_effect">
+									<local_schema short_desc="प्रभाव फोकस करें">
+										<longdesc>Focus Window Effect (0 = कुछ नहीं, 1 = भुरभुरा)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shiver">
+									<local_schema short_desc="भुरभुरा">
+										<longdesc>Make window shiver</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_inverted">
+									<local_schema short_desc="स्नैप उलटें">
+										<longdesc>उलट विंडो स्नैपिंग</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="scale">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="show_desktop">
+									<local_schema short_desc="डेस्कटॉप दिखाने के लिए डेस्कटॉप क्लिक करें">
+										<longdesc>डेस्कटॉप प्रदर्शन मोड दाखिल करें जब डेस्कटॉप मापक के दौरान क्लिक किया जाता है</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_key">
+									<local_schema short_desc="मौज़ूदा आउटपुट पर विंडो के लिए विंडो चयनक आरंभ करें">
+										<longdesc>अभिन्यास और मौजूदा आउटपुट पर विंडोज बदलना आरंभ करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_button">
+									<local_schema short_desc="मौज़ूदा आउटपुट पर विंडो के लिए विंडो चयनक आरंभ करें">
+										<longdesc>अभिन्यास और मौजूदा आउटपुट पर विंडोज बदलना आरंभ करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_edge">
+									<local_schema short_desc="मौज़ूदा आउटपुट पर विंडो के लिए विंडो चयनक आरंभ करें">
+										<longdesc>अभिन्यास और मौजूदा आउटपुट पर विंडोज बदलना आरंभ करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_key">
+									<local_schema short_desc="विंडो समूह के लिए विंडो चयनक आरंभ करें">
+										<longdesc>अभिन्यास और विंडो समूह को रूपांतरित करना आरंभ करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_button">
+									<local_schema short_desc="विंडो समूह के लिए विंडो चयनक आरंभ करें">
+										<longdesc>अभिन्यास और विंडो समूह को रूपांतरित करना आरंभ करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_edge">
+									<local_schema short_desc="विंडो समूह के लिए विंडो चयनक आरंभ करें">
+										<longdesc>अभिन्यास और विंडो समूह को रूपांतरित करना आरंभ करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_key">
+									<local_schema short_desc="सभी विंडोज़ के लिए विंडो चयनक आरंभ करें">
+										<longdesc>अभिन्यास और सभी विंडोज को बदलना आरंभ करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_button">
+									<local_schema short_desc="सभी विंडोज़ के लिए विंडो चयनक आरंभ करें">
+										<longdesc>अभिन्यास और सभी विंडोज को बदलना आरंभ करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_edge">
+									<local_schema short_desc="सभी विंडोज़ के लिए विंडो चयनक आरंभ करें">
+										<longdesc>अभिन्यास और सभी विंडोज को बदलना आरंभ करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="मल्टी आउटपुट प्रकार">
+										<longdesc>चुनें कि कहां विंडो को स्केल किया जाता है यदि बहुल आउटपुट डिवायस प्रयोग किया जाता है. (0 = मौजूदा आउटपुट डिवायस पर, 1 = सभी आउटपुट डिवायस पर)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlay_icon">
+									<local_schema short_desc="प्रतीक ढ़कें">
+										<longdesc>विंडो पर प्रतीक को ढ़कें जब वे स्केल किये जाते हैं (0 = कुछ नहीं, 1 = प्रतीक, 2 = बड़ा)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="toggle_window_shaded_key">
+									<local_schema short_desc="विंडो छायांकित रूप में टॉगल करें">
+										<longdesc>सक्रिय विंडो छायांकित रूप में टॉगल करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_vertically_key">
+									<local_schema short_desc="विंडो अधिकतम पर लंबवत रूप से टॉगल करें">
+										<longdesc>सक्रिय विंडो अधिकतम रूप में लंवबत प्रकार से टॉगल करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_horizontally_key">
+									<local_schema short_desc="विंडो अधिकतम पर क्षैतिज रूप से टॉगल करें">
+										<longdesc>सक्रिय विंडो अधिकतम रूप में क्षैतिज प्रकार से टॉगल करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_button">
+									<local_schema short_desc="विंडो अधिकतम पर टॉगल करें">
+										<longdesc>सक्रिय विंडो अधिकतम रूप में टॉगल करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_key">
+									<local_schema short_desc="विंडो अधिकतम पर टॉगल करें">
+										<longdesc>सक्रिय विंडो अधिकतम रूप में टॉगल करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_vertically_key">
+									<local_schema short_desc="विंडो लंबवत रूप से अधिकतम करें">
+										<longdesc>सक्रिय विंडो लंबवत रूप से अधिकतम करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_horizontally_key">
+									<local_schema short_desc="विंडो क्षैतिज रूप से अधिकतम करें">
+										<longdesc>सक्रिय विंडो क्षैतिज रूप से अधिकतम करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unmaximize_window_key">
+									<local_schema short_desc="विंडो अधिकतम खत्म करें">
+										<longdesc>सक्रिय विंडो अधिकतम खत्म करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="विंडो अधिकतम करें">
+										<longdesc>सक्रिय विंडो अधिकतम करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_button">
+									<local_schema short_desc="विंडो न्यूनतम करें">
+										<longdesc>सक्रिय विंडो न्यूनतम करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_key">
+									<local_schema short_desc="विंडो न्यूनतम करें">
+										<longdesc>सक्रिय विंडो न्यूनतम करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_match">
+									<local_schema short_desc="फोकस बचाव विंडोज़">
+										<longdesc>Focus prevention windows (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise_delay">
+									<local_schema short_desc="स्वचालित उठान विलंब">
+										<longdesc>चयनित विंडो को बढ़ाने के पहले अंतराल (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="फोकस में क्लिक करें">
+										<longdesc>विंडो पर क्लिक करना इनपुट फोकस को इसपर खिसकाता है</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outputs">
+									<local_schema short_desc="आउटपुट">
+										<longdesc>आउटपुट डिवायस को वर्णन करते स्ट्रिंग की सूची</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_outputs">
+									<local_schema short_desc="आउटपुट जांचें">
+										<longdesc>आउटपुट डिवायस की स्वचालित जांच</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hide_skip_taskbar_windows">
+									<local_schema short_desc="स्किप टास्कबार विंडोज़ छिपायें">
+										<longdesc>जब दाखिल होने पर डेस्कटॉप मोड दिखाता है टास्कबार में विंडो छिपाएं</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ignore_hints_when_maximized">
+									<local_schema short_desc="अधिकतम करने पर संकेत नजरअंदाज करें">
+										<longdesc>विंडो के अधिकतम किए जाने पर आकार बढ़त और पहलू संकेत नजरअंदाज करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="audible_bell">
+									<local_schema short_desc="सुनने योग्य घंटी">
+										<longdesc>Audible system beep</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="opengl">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="sync_to_vblank">
+									<local_schema short_desc="VBlank में तुल्यकालित करें">
+										<longdesc>लंबवत रिक्ति अवधि के दौरान सिर्फ स्क्रीन अद्यतन निष्पादित करें</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="gnomecompat">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command_terminal_key">
+									<local_schema short_desc="टर्मिनल खोलें">
+										<longdesc>टर्मिनल खोलें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_window_screenshot_key">
+									<local_schema short_desc="विंडो का स्क्रीनशॉट लें">
+										<longdesc>विंडो का स्क्रीनशॉट लें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_window_screenshot">
+									<local_schema short_desc="विंडो स्क्रीनशॉट कमांड लाइन">
+										<longdesc>विंडो स्क्रीनशॉट कमांड लाइन</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_screenshot_key">
+									<local_schema short_desc="स्क्रीनशॉट का चित्र लें">
+										<longdesc>स्क्रीनशॉट का चित्र लें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="main_menu_key">
+									<local_schema short_desc="दिखाएँ मुख्य मेनू">
+										<longdesc>मुख्य मेनू दिखाएँ</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="screenshot">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="launch_app">
+									<local_schema short_desc="अनुप्रयोग लांच करें">
+										<longdesc>इस अनुप्रयोग में स्वतः स्क्रीनशॉट खोलें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="directory">
+									<local_schema short_desc="निर्देशिका">
+										<longdesc>Put screenshot images in this directory. If empty, the desktop directory will be used.</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="unredirect_fullscreen_windows">
+									<local_schema short_desc="पूर्ण स्क्रीन विंडोज़ को पुनर्निर्देशित मत करें">
+										<longdesc>ऑफस्क्रीन पिक्समैप में फिर नहीं निर्देशित किए जाने के लिए पूर्णस्क्रीण विंडो के आरेख को स्वीकृति दें</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="annotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stroke_width">
+									<local_schema short_desc="स्ट्रोक चौड़ाई">
+										<longdesc>व्याख्या के लिए स्ट्रोक चौड़ाई (1.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="stroke_color">
+									<local_schema short_desc="स्ट्रोक रंग की व्याख्या करें">
+										<longdesc>व्याख्या के लिए स्ट्रोक रंग</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_button">
+									<local_schema short_desc="साफ करें">
+										<longdesc>साफ करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_key">
+									<local_schema short_desc="साफ करें">
+										<longdesc>साफ करें</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="decor">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="shadow_y_offset">
+									<local_schema short_desc="छाया ऑफसेट Y">
+										<longdesc>Drop shadow Y offset (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_x_offset">
+									<local_schema short_desc="छाया ऑफसेट X">
+										<longdesc>Drop shadow X offset (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="resize">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="mode">
+									<local_schema short_desc="मूलभूत आकार बदलाव प्रकार">
+										<longdesc>विंडो पुनः आकार के लिए प्रयुक्त मूलभूत विधि (0 = सामान्य, 1 = Outline, 2 = आयत, 3 = विस्तार)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="cube">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="transparent_manual_only">
+									<local_schema short_desc="पारदर्शिता सिर्फ माउस घुमाव पर">
+										<longdesc>घन पारदर्शिता आरंभ करता है सिर्फ तभी जब घुमाव माउस परिचालित है.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="inactive_opacity">
+									<local_schema short_desc="नहीं घुमाव के दौरान अपारदर्शिता">
+										<longdesc>नहीं घुमाव के दौरान डेस्कटॉप विंडो की अपारदर्शिता (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_opacity">
+									<local_schema short_desc="घुमाव के दौरान अपारदर्शिता">
+										<longdesc>घुमाव के दौरान डेस्कटॉप विंडो की अपारदर्शिता (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_end_color">
+									<local_schema short_desc="झुकाव ढाल अंत रंग">
+										<longdesc>स्काइडोम फालबैक ढ़ाल के तलवर्ती रंग स्टॉप के लिए प्रयोग का रंग</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_start_color">
+									<local_schema short_desc="स्काइडोम ढाल प्रारंभ रंग">
+										<longdesc>स्काइडोम फालबैक ढ़ाल के शीर्ष रंग स्टॉप के लिए प्रयोग का रंग</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_animated">
+									<local_schema short_desc="स्काइडोम एनिमेट करें">
+										<longdesc>स्काइडोम एनीमेट करें जब घन को घुमाया जा रहा है</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="in">
+									<local_schema short_desc="भीतरी घन">
+										<longdesc>भीतरी घन</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="मल्टी आउटपुट प्रकार">
+										<longdesc>चुनता है कि कैसे घन प्रदर्शित होता है यदि बहुल आउटपुट डिवायस प्रयुक्त होता है. (0 = Automatic, 1 = बहुमुखी घन, 2 = One big cube)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unfold_key">
+									<local_schema short_desc="खोलें">
+										<longdesc>घन खोलें</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="water">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="title_wave">
+									<local_schema short_desc="शीर्षक तरंग">
+										<longdesc>विंडो शीर्षक से लहर प्रभाव</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="offset_scale">
+									<local_schema short_desc="ऑफसेट मापक">
+										<longdesc>जल ऑफसेट स्केल (0 - 10)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="rotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="rotate_flip_right_edge">
+									<local_schema short_desc="घुमाएँ झटकें दाहिना">
+										<longdesc>दायाँ व्यूपोर्ट में झटकें और संकेतक लपेटें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_left_edge">
+									<local_schema short_desc="झटका बायाँ घुमाएँ">
+										<longdesc>बायें व्यूपोर्ट में जाएं और संकेतक लपेटें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="ज़ूम">
+										<longdesc>Rotation Zoom (0.0 - 2.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_top">
+									<local_schema short_desc="ऊपरी मुखरे में स्नैप लें">
+										<longdesc>ऊपरी मुखरे में घन घुमाव स्नैप करें</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_rotate">
+									<local_schema short_desc="घुमाव पर उठाएं">
+										<longdesc>विंडो को घुमाने के दौरान उठाएं</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_dnd">
+									<local_schema short_desc="किनारा झटका DnD">
+										<longdesc>अगला व्यूपोर्ट में झटकें जब स्क्रीन किनारा में वस्तु खींच रहा है</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_window">
+									<local_schema short_desc="किनारा झटका हटाएं">
+										<longdesc>अगला व्यूपोर्ट में झटकें जब स्क्रीन किनारा में विंडो खिसका रहा है</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_pointer">
+									<local_schema short_desc="किनारा झटका सूचक">
+										<longdesc>अगला व्यूपोर्ट में झटकें जब संकेतक को स्क्रीन किनारा में खिसका रहा है</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="blur">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="gaussian_strength">
+									<local_schema short_desc="गॉसियन शक्ति">
+										<longdesc>गॉसियन शक्ति (0.0 - 1.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_radius">
+									<local_schema short_desc="गॉसियन त्रिज्या">
+										<longdesc>गॉसियन त्रिज्या (1 - 15)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="pulse">
+									<local_schema short_desc="पल्स">
+										<longdesc>पल्स प्रभाव</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="switcher">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="zoom">
+									<local_schema short_desc="ज़ूम">
+										<longdesc>दूरी डेस्कटॉप को जूम आउट किया जाना चाहिए जब विंडो में स्विच कर रहे हों (0 - 5)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="place">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="multioutput_mode">
+									<local_schema short_desc="मल्टी आउटपुट प्रकार">
+										<longdesc>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="नियोजन प्रकार">
+										<longdesc>विंडो स्थापन के लिए प्रयोग के लिए अलगोरिथम (0 = प्रपाती, 1 = केंद्रित, 2 = स्मार्ट, 3 = Maximize, 4 = क्रमहीन, 5 = Pointer)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

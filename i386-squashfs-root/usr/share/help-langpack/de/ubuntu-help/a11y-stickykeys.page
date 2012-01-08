@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task a11y" id="a11y-stickykeys" xml:lang="de">
+  <info>
+    <link type="guide" xref="a11y#mobility" group="keyboard"/>
+    <link type="guide" xref="keyboard"/>
+
+    <revision date="2011-04-06" status="outdated"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>Tastenkombinationen Taste für Taste tippen, statt alle Tasten gleichzeitig gedrückt halten zu müssen.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Klebrige Tasten aktivieren</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Turn on from the keyboard?! How do I turn these features on from
+  the keyboard then? Used to be there were odd shortcuts. I think
+  5x Shift turned one of them on. Fix for 3.2</p>
+</comment>
+
+<p><em>Klebrige Tasten</em> erlaubt es Ihnen, Tastenkombinationen Taste für Taste einzugeben, anstatt alle Tasten gleichzeitig drücken zu müssen. Zum Beispiel wechselt die Tastenkombination <keyseq><key>Alt</key><key>Tabulator</key></keyseq> zwischen Fenstern. Ohne eingeschaltete klebrige Tasten müssten Sie beide Tasten gleichzeitig gedrückt halten; mit eingeschalteten klebrigen Tasten würden Sie <key>Alt</key> drücken und dann <key>Tabulator</key>, um dasselbe zu erreichen.</p>
+
+<p>Sie möchten vielleicht klebrige Tasten einschalten, wenn es Ihnen schwerfällt, mehrere Tasten gleichzeitig gedrückt zu halten.</p>
+
+<steps>
+  <item><p>Klicken Sie auf das Symbol ganz rechts im <gui>Panel</gui> und wählen Sie <gui>Systemeinstellungen</gui>.</p></item>
+  <item><p>Klicken Sie auf <gui>Barrierefreiheit</gui>.</p></item>
+  <item><p>Wählen Sie den Reiter <gui>Texteingabe</gui>.</p></item>
+  <item><p>Wählen Sie <gui>Barrierefreiheitsfunktionen mit der Tastatur aktivieren</gui>.</p></item>
+  <item><p>Schalten Sie <gui>Klebrige Tasten</gui> ein.</p></item>
+</steps>
+
+<note style="tip"><p>Sie können diese Funktion über das <link xref="a11y-icon">Barrierefreiheitsmenü</link> schnell ein- und ausschalten.</p></note>
+
+
+<p>Wenn Sie zwei Tasten gleichzeitig drücken, können Sie klebrige Tasten kurzfristig ausschalten, um eine Tastenkombination auf die »übliche« Art und Weise einzugeben.</p>
+<p>Wenn Sie etwa klebrige Tasten aktiviert haben, aber <key>Alt</key> und <key>Tabulator</key> gleichzeitig drücken, würde klebrige Tasten nicht darauf warten, dass Sie eine weitere Taste drücken, wenn Sie diese Option eingeschaltet hatten. Es <em>würde</em> aber warten, wenn Sie nur eine Taste gedrückt hätten. Dies ist nützlich, wenn Sie zwar einige Tastenkombinationen drücken können (zum Beispiel solche, deren Tasten nahe beieinander liegen), aber andere nicht.</p>
+<p>Wählen Sie <gui>Deaktivieren, wenn zwei Tasten zusammen gedrückt werden</gui>, um das einzuschalten.</p>
+
+<p>Sie können den Rechner einen Signalton ausgeben lassen, wenn Sie mit klebrigen Tasten eine Tastenkombination eingeben. Das ist nützlich, wenn Sie informiert werden wollen, dass eine klebrige Taste eine Tastenkombination zur Eingabe erwartet, so dass die nächste gedrückte Taste als Teil einer Tastenkombination gewertet wird. Wählen Sie <gui>Signalton ausgeben, wenn eine Zusatztaste gedrückt wird</gui>, um diese Funktion zu aktivieren.</p>
+
+</page>

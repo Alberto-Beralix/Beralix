@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-plugins-install" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="gedit-plugin-guide#gedit-additional-plugins"/>
+    <revision pkgversion="3.2" version="1.0" date="2011-08-17" status="candidate"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <revision pkgversion="3.0" version="0.9" date="2011-03-35" status="review"/>
+    <credit type="author">
+      <name>Daniel Neel</name>
+      <email>dneelyep@gmail.com</email>
+    </credit>
+    <desc>Algunos complementos de gedit pueden necesitar instalación manual. Aquí se explica cómo instalarlos.</desc>
+  </info>
+
+  <title>Complementos adicionales de gedit</title>
+
+  <p>Instalar complementos de terceras partes le da una funcionalidad que no está incluida de manera predeterminada en <app>gedit</app>. <link href="http://live.gnome.org/Gedit/Plugins#third_party">Aquí</link> se mantiene una lista en línea de complementos de terceras partes.</p>
+
+  <section id="gedit-plugins-install-download">
+    <title>Obtenerlo</title>
+    <p>El primer paso para instalar un complemento en <app>gedit</app> es obtenerlo. Los complementos de terceras partes a menudo se obtendrán desde la página web del complemento. Consulte la documentación del complemento para obtener información sobe cómo obtenerlo; las instrucciones pueden variar dependiendo del complemento.</p>
+  </section>
+
+  <section id="gedit-plugins-install-install">
+    <title>Instalar</title>
+    <!-- Are all plugins released as tarballs? If so, this section should focus on extracting the tarball into the proper directory. If not, it should focus on copying the files into the proper directory, to avoid confusion. Or maybe it would be better to focus solely on copying the files into the directory, as this applies for both a tarball and any other set of files. -->
+    <p>Después de obtener el complemento que quiere instalar, deberá instalarlo.</p>
+    <steps>
+      <title>Instalar un complemento</title>
+      <item><p>Localice los archivos del complemento que instalar.</p></item>
+      <item>
+        <p>Instalar los archivos del complemento:</p>
+        <list>
+          <item><p>Copie el complemento en <file>/home/<var>username</var>/.local/share/gedit/plugins</file></p></item>
+        </list>
+      </item>
+    </steps>
+    <p>Después de mover el complemento a la carpeta correcta, aparecerá en el menú «Preferencias» (<guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Complementos</gui></guiseq>). Desde aquí, necesita activar el complemento para poder usarlo.</p>
+
+    <note style="tip">
+      <p>Deberá mostrar los archivos ocultos para ver la carpeta <file>.local</file>. Para mostrar los archivos ocultos, pulse <guiseq><gui>Ver</gui><gui>Mostrar archivos ocultos</gui></guiseq> o pulse <keyseq><key>Ctrl</key><key>H</key></keyseq>.</p>
+    </note>
+
+    <note style="important">
+      <p>Si la carpeta <file>.local/share/gedit/plugins/</file> no está presente en su sistema, deberá crearla.</p>
+    </note>
+  </section>
+
+</page>

@@ -1,0 +1,33 @@
+PyPAM -- Python bindings for PAM
+====================================
+
+Author: Rob Riggs <rob@pangalactic.org>
+Sponsor: tummy.com, Ltd. <http://www.tummy.com/>
+
+This is a set of Python bindings for the PAM libraries. This package
+requires Python-1.5.2 or later. You can find an SRPM at these locations:
+
+  ftp://ftp.pangalactic.org/pub/tummy/
+
+You will need PAM 0.64 or later to compile and use this module.
+
+For some simple examples of its use, look in the examples directory.
+
+Compilation and Installation
+====================================
+
+I use RPM, so all that is needed is to unpack the SRPM and then a  "rpm -bb
+/usr/src/redhat/SPECS/PyPAM.spec".
+
+If you received this as a tarball, try "rpm -ta PyPAM.tar.gz" instead.
+
+If you really enjoy doing things the hard way, try the following:
+  ./configure
+  make
+  make install
+
+Contacting the Author
+====================================
+
+You can reach me via email at <rob@pangalactic.org>.
+

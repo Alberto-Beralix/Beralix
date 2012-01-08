@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="தனிபயன் எழுத்துரு">
+							<longdesc>தனிபயன் எழுத்துரு பெயர் மொழி பலகத்துக்கு</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="தனிபயன் எழுத்துருவை பயன்படுத்து">
+							<longdesc>மொழி பலகத்தில் தனிபயன் எழுத்துரு பெயர்</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="உள்ளீடு முறையின் பெயரை காட்டு">
+							<longdesc>மொழி பட்டையில் உள்ளீடு முறையின் பெயரை காட்டு</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="கணினி தட்டில் சின்னத்தை காட்டு">
+							<longdesc>கணினி தட்டில் சின்னத்தை காட்டு</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="காணும் அட்டவணையின் திசை">
+							<longdesc>காணும் அட்டவணையின் திசை. 0 = கிடைமட்டம், 1 = செங்குத்து</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="மொழி பேனல் இடம்">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="மொழி பேனல் இடம்">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="தானாக மறை">
+							<longdesc>மொழி பலகத்தின் பண்புகள். 0 = மெனுவில் உட்பொதியப்பட்டது, 1 = தானாக மறை, 2 = எப்போதும் காட்டு</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="enable_by_default">
+						<local_schema short_desc="முன்னிருப்பாக உள்ளீடு முறையை செயல்படுத்து">
+							<longdesc>பயன்பாடு உள்ளீடுக்கு உட்படும்போது முன்னிருப்பாக உள்ளீடு முறையை செயல்படுத்து</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_global_engine">
+						<local_schema short_desc="பொது உள்ளீடு முறையை பயன்படுத்து">
+							<longdesc>அனைத்து பயன்பாடுகளிலும் சில உள்ளீடு முறையை பகிரவும்</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="உட்பொதியப்பட்ட Preedit உரை">
+							<longdesc>பயன்பாடு சாளரத்தில் உட்பொதியப்பட்ட Preedit உரை</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="கணினி விசைப்பலகை அமைப்பை பயன்படுத்து">
+							<longdesc>கணினி விசைப்பலகை (XKB) அமைப்பை பயன்படுத்து</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="முன்ஏற்றப்பட்ட இயந்திரங்கள்">
+							<longdesc>ibus துவங்கும் போது முன்னேற்றப்பட்ட எந்திரங்கள் </longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="முந்தைய இயந்திர குறுக்குவிசைகள்">
+								<longdesc>முந்தைய உள்ளீடு முறைக்கு மாற்றுவதற்கான குறுக்குவழி விசைகள்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="முந்தைய இயந்திர குறுக்குவிசைகள்">
+								<longdesc>முந்தைய உள்ளீடு முறைக்கு மாற்றுவதற்கான குறுக்குவழி விசைகள்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="அடுத்த இயந்திர குறுக்குவிசை">
+								<longdesc>பட்டியலில் அடுத்த உள்ளீடு முறைக்கு மாற்றுவதற்கான குறுக்குவழி விசைகள்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="அடுத்த இயந்திர குறுக்குவிசை">
+								<longdesc>பட்டியலில் அடுத்த உள்ளீடு முறைக்கு மாற்றுவதற்கான குறுக்குவழி விசைகள்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="disable_unconditional">
+							<local_schema short_desc="குறுக்குவிசைகளை செயல்நீக்கு">
+								<longdesc>உள்ளீடு முறையை நிறுத்தும் குறுக்குவிசைகள்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_unconditional">
+							<local_schema short_desc="குறுக்குவிசைக்களை செயல்படுத்து">
+								<longdesc>உள்ளீடு முறையை இயக்கும் குறுக்குவிசைகள்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="ட்ரிகர் குறுக்குவிசை">
+								<longdesc>உள்ளீடு முறைமை துவக்க அல்லது நிறுத்த குறுக்குவிசைகளை அமை</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="செயல்நீக்க WiFiஐ உருவாக்கு">
+						<longdesc>அப்லெட்டைப் பயன்படுத்தும் போது சரி என்பதற்கு செயல்நீக்க உருவாக்கமான  adhoc பிணையங்களை அமைக்கவும்.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="முத்திரை">
+						<longdesc>Used to determine whether settings should be migrated to a new version.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="கிடைக்கக்கூடிய அறிவிப்புகளின் பிணையத்தை குறைக்கிறது">
+						<longdesc>Set this to TRUE to disable notifications when wireless networks are available.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="செயல்படுத்தாத இணைக்கப்படாத அறிவிப்புகள்">
+						<longdesc>Set this to TRUE to disable notifications when disconnecting from a network.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="செயல்படுத்தாத இணைக்கப்பட்ட அறிவிப்புகள்">
+						<longdesc>Set this to TRUE to disable notifications when connecting to a network.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

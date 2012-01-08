@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-plugins-tag-list" xml:lang="zh_CN">
+
+<info>
+  <link type="guide" xref="gedit-plugin-guide#gedit-default-plugins"/>
+  <revision pkgversion="3.2" version="1.0" date="2011-08-15" status="candidate"/>
+  <credit type="author">
+    <name>Daniel Neel</name>
+    <email>dneelyep@gmail.com</email>
+  </credit>
+  <credit type="author">
+    <name>Jim Campbell</name>
+    <email>jwcampbell@gmail.com</email>
+  </credit>
+  <desc>在文档中，插入标记符号、字符串和特殊字符</desc>
+</info>
+
+<title>Tag list</title>
+
+  <p><app>标记列表</app> 插件允许您从侧面板中，插入普通的标记和特殊的字符。默认情况，此插件可以插入 HTML、XHTML、XSLT、XUL 和 LaTeX 的标记和特殊字符。</p>
+
+  <section id="using-tag-list">
+    <title>使用标记列表插件</title>
+
+      <p>要使用 <app>标记列表</app> 插件，首先要启用此插件，然后在侧边栏底部选择标签列表按钮。</p>
+
+    <section id="enable-tag-list-plugin">
+        <title>启用插件</title>
+<p>你可以点菜单 <guiseq><gui>编辑</gui><gui>首选项</gui><gui>插件</gui><gui>标记列表</gui></guiseq> 启用此插件，然后点菜单 <guiseq><gui>查看</gui><gui>侧边栏</gui></guiseq>，或者按 <key>F9</key> 键。</p>
+
+<p>侧边栏默认显示的是打开的文档，要查看和使用<app>标记列表</app>，需要在侧边栏底部点击一个“+”图标，大致样式如下图：</p>
+
+    <p>
+      <media type="image" mime="image/png" src="figures/gedit-side-pane3.png"/>
+    </p>
+    </section>
+    <section id="inserting-tags">
+      <title>插入标记或特殊字符</title>
+
+  <p><app>标记列表</app>中，使用下拉列表来选择不同类型的标记符号，例如，里面有一个 <gui>HTML-标记</gui>。</p>
+
+  <p>要插入一个标记，请按下面的步骤操作：</p>
+
+<list type="numbered">
+<item><p>把鼠标指针定位想要插入标记符号或特殊字符的位置。</p></item>
+<item><p>从侧边栏顶部的下拉列表中，选择想要使用的标记类型。</p></item>
+<item><p>向下滚动列表查找所需的标记或字符。</p></item>
+<item><p>双击列表中的标记名称。</p></item>
+</list>
+
+<p>您选中的标记或特殊符号将显示在文档中。</p>
+    </section>
+  </section>
+<section id="tag-list-tips">
+  <title>标记列表小提示</title>
+<note style="tip"><p>您也可以按<key>回车键</key>或 <keyseq><key>Shift</key><key>回车键</key></keyseq>来插入标记符号。</p> 
+ <p>按 <key>回车键</key> 将在光标位置插入标记符号，然后焦点留在文档中，按 <keyseq><key>Shift</key><key>回车键</key></keyseq> 在光标位置插入标记符号，而焦点仍然在 <app>标记列表</app>。</p></note>
+
+<note style="tip"><p>您可以点击侧栏底部的<gui>预览</gui>标签，预先查看一下要插入的标记和特殊字符。</p></note>
+  </section>
+</page>

@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="maximize_window_vertically_key">
+									<local_schema short_desc="Maksimiziraj prozor vertikalno">
+										<longdesc>Maksimiziraj prozor vertikalno</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_horizontally_key">
+									<local_schema short_desc="Maksimiziraj prozor horizontalno">
+										<longdesc>Maksimiziraj aktivni prozor horizontalno</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="Maksimiziraj prozor">
+										<longdesc>Maksimiziraj aktivni prozor</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_button">
+									<local_schema short_desc="Minimiziraj prozor">
+										<longdesc>Minimiziraj aktivni prozor</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_key">
+									<local_schema short_desc="Minimiziraj prozor">
+										<longdesc>Minimiziraj aktivni prozor</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_button">
+									<local_schema short_desc="Spusti prozor">
+										<longdesc>Lower window beneath other windows</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_key">
+									<local_schema short_desc="Spusti prozor">
+										<longdesc>Lower window beneath other windows</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="Klikni za fokusiranje">
+										<longdesc>Click on window moves input focus to it</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="detect_refresh_rate">
+									<local_schema short_desc="Detektiraj osvjezavanje">
+										<longdesc>Automatska detekcija osvjezavanja</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="annotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="clear_button">
+									<local_schema short_desc="Izbrisi">
+										<longdesc>Izbrisi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_key">
+									<local_schema short_desc="Izbrisi">
+										<longdesc>Izbrisi</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="blur">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="alpha_blur">
+									<local_schema short_desc="Alpha mutnost">
+										<longdesc>Blur behind translucent parts of windows</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

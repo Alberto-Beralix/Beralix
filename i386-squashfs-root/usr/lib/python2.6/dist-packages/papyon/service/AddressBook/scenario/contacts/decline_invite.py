@@ -1,0 +1,1 @@
+../../../../../../../../share/pyshared/papyon/service/AddressBook/scenario/contacts/decline_invite.py

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-firewall-on-off" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="net-security"/>
+    <desc>Puede controlar qué programas son accesible en la red.</desc>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+    <credit type="author">
+      <name>Paul W. Frields</name>
+      <email>stickster@gmail.com</email>
+    </credit>
+    <credit>
+      <name>Jeremy Bicha</name>
+      <email>jbicha@ubun</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Activar y bloquear el acceso al cortafuegos</title>
+
+  <p>Ubuntu incorpora el <app>Cortafuegos sin complicaciones («Uncomplicated Firewall»)</app> (<app>ufw</app>) pero no viene activado de forma predeterminada. Como Ubuntu no trae ningún servicio de red abierto (excepto para la infraestructura básica de red) en la instalación predeterminada, no se necesita ningún cortafuegos para bloquear intentos de conexiones maliciosas entrantes.</p>
+
+  <p>Para tener más información sobre el uso de ufw, consulte la <link href="https://wiki.ubuntu.com/UncomplicatedFirewall">documentación en línea</link>.</p>
+
+<section id="ufw-enable">
+ <title>Activar o desactivar el cortafuegos</title>
+  <p>Para activar el cortafuegos, teclee <cmd>sudo ufw enable</cmd> en un terminal. Para desactivar ufw, teclee <cmd>sudo ufw disable</cmd>.</p>
+</section>
+
+<section id="ufw-filter">
+ <title>Permitir o denegar cierta actividad de red</title>
+  <p>Muchos programas están diseñados para ofrecer servicios de red. Por ejemplo, puede compartir contenidos, o permitir que alguien vea su escritorio de forma remota. Dependiendo de los programas que instale, es posible que tenga que ajustar el cortafuegos para permitir que esos programas funcionen según lo previsto. Ufw ya trae varias reglas predefinidas. Por ejemplo, para permitir conexiones <app>SSH</app>, introduzca <cmd>sudo ufw allow ssh</cmd> en un terminal. Para bloquear el SSH, introduzca <cmd>sudo ufw block ssh</cmd>.</p>
+  <p>Todo programa que proporciona servicios usa un <em>puerto de red</em> específico. Para permitir el acceso a los servicios de ese programa, tiene que permitir el acceso a su puerto asignado en el cortafuegos. Para permitir conexiones al puerto 53, introduzca <cmd>sudo ufw allow 53</cmd> en un terminal. Para bloquear el puerto 53, introduzca <cmd>sudo ufw block 53</cmd>.</p>
+  <p>Para comprobar el estado actual de ufw, teclee <cmd>sudo ufw status</cmd> en un terminal.</p>
+</section>
+
+<section id="gufw">
+ <title>Usar ufw sin un terminal</title>
+  <p>También puede instalar <app>gufw</app> si prefiere configurar el cortafuegos sin usar el terminal. Para instalarlo, pulse en <link href="apt:gufw">este enlace</link>.</p>
+  <p>Podrá lanzar este programa buscando <app>Configuración del cortafuegos</app> en el <gui>Tablero</gui>. El programa no necesita estar abierto para que funcione el cortafuegos.</p>
+</section>
+
+</page>

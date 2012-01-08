@@ -1,0 +1,8 @@
+[Geoclue Provider]
+Name=Ubuntu GeoIP
+Service=org.freedesktop.Geoclue.Providers.UbuntuGeoIP
+Path=/org/freedesktop/Geoclue/Providers/UbuntuGeoIP
+Interfaces=org.freedesktop.Geoclue.Position;org.freedesktop.Geoclue.Address
+Provides=ProvidesCacheableOnConnection
+Accuracy=Locality
+Requires=RequiresNetwork

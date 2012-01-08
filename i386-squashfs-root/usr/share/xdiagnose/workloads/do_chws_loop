@@ -1,0 +1,54 @@
+#!/bin/bash
+
+DESCRIPTION="Workload that switches workspaces"
+
+PREREQS=""
+DEPENDS="wmctrl"
+
+CYCLE_DELAY=${CYCLE_DELAY:-3}
+
+check() {
+    which wmctrl > /dev/null
+    if [ $? -ne 0 ]; then
+        return 1
+    fi
+    return 0
+}
+
+workload() {
+    INFO=$(wmctrl -d)
+    WORKAREA_WIDTH=$(echo "${INFO}"| awk '{sub(/x[0-9]+/, "", $9); print $9}')
+    WORKAREA_HEIGHT=$(echo "${INFO}"| awk '{sub(/[0-9]+x/, "", $9); print $9}')
+    FULLSCREEN=${WORKAREA_WIDTH}x${WORKAREA_HEIGHT}
+    NUM_WORKSPACES=$(echo "${INFO}" | wc -l)
+
+    for WS in $(seq 1 $NUM_WORKSPACES); do
+        wmctrl -o $(($WORKAREA_WIDTH * $WS)),0
+        sleep $CYCLE_DELAY
+    done
+}
+
+case $1 in
+    info)
+        echo $DESCRIPTION
+        echo $PREREQS
+        ;;
+    depends) echo $DEPENDS     ;;
+    check)   check             ;;
+    setup)                     ;;
+    once)    workload          ;;
+    run)
+        echo $$
+        while :
+        do
+            workload
+        done
+        ;;
+    *)
+        echo $DESCRIPTION
+        echo
+        echo $PREREQS
+        echo
+        echo "Usage: $0 {info|depends|setup|check|once|run} [VIDEO]"
+        exit 1
+esac

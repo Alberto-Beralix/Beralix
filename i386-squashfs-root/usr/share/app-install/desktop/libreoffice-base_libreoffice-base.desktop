@@ -1,0 +1,24 @@
+[Desktop Entry]
+X-AppInstall-Package=libreoffice-base
+X-AppInstall-Popcon=20884
+X-AppInstall-Section=main
+
+Version=1.0
+Terminal=false
+Icon=libreoffice34-base
+Type=Application
+Categories=Office;
+Exec=libreoffice --base %U
+MimeType=application/vnd.oasis.opendocument.database;application/vnd.sun.xml.base;
+Name=LibreOffice Base
+GenericName=Database Development
+Comment=Manage databases, create queries and reports to track and manage your information by using Base.
+InitialPreference=5
+X-Ayatana-Desktop-Shortcuts=New
+[New Shortcut Group]
+Name=New Database
+Exec=libreoffice -base %U
+TargetEnvironment=Unity
+X-KDE-Protocols=file,http,smb,ftp,webdav
+
+X-Ubuntu-Gettext-Domain=app-install-data

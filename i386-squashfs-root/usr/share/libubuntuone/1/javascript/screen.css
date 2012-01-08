@@ -1,0 +1,336 @@
+/* copied from original html */
+
+#downloads {
+    padding: 0;
+    margin: 0;
+}
+#downloads li {
+    overflow: hidden; /* enclose floats */
+    zoom: 1; /* hasLayout in IE */
+    border-bottom: 1px dotted black;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li .metadata {
+    float: left;
+    width: 450px;
+}
+
+.progress .progress-bar {
+    float: right;
+    width: 154px;
+    height: 13px;
+    background: url(img/progress-bar-background.png) no-repeat left;
+}
+
+.progress .progress-bar .gradient {
+    height: 13px;
+    background: url(img/gradient.png) no-repeat left;
+    -webkit-transition: width 2s linear; 
+    /* 2s should be the same as the Rhythmbox update interval */
+}
+.progress .progress-string {
+    float: right;
+    clear: right;
+}
+
+.progress .progress-complete {
+    background: url(img/musicstore-complete-tick.png) no-repeat right;
+    padding-right: 28px;
+    -webkit-transition: opacity 0.5s linear;
+    height: 20px;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+/* originating with this file */
+
+body {
+    font-family: "bitstream vera sans", "dejavu sans", verdana, sans-serif;
+    margin: 0 auto;
+    font-size: 11px;
+    line-height: 14px;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 730px;
+}
+
+#header {
+    background: url(img/header_background.png) repeat-x;
+    height: 86px;
+    min-width: 550px;
+    margin-bottom: 0;
+    margin-top: -50px;
+    }
+
+#header ul {padding: 0; margin: 0;}
+#header ul li {display: inline; margin: 0; padding: 0;}
+
+#header ul#home_nav {float: left;}
+
+ul#home_nav li a {
+    display: block;
+    float: left;
+    text-indent: -9999px;
+    width: 26px;
+    height: 41px;
+}
+
+ul#home_nav li.back a {
+    background: url(img/menu.png) no-repeat; 
+    background-position: 0 0;
+}
+
+ul#home_nav li.back a:hover {
+    background: url(img/menu.png) no-repeat;
+    background-position: 0 -41px;
+
+}
+
+ul#home_nav li.home a {
+    width: 42px;
+    background: url(img/menu.png) no-repeat; 
+    background-position: -26px 0;
+}
+
+ul#home_nav li.home a:hover {
+    width: 42px;
+    background: url(img/menu.png) no-repeat; 
+    background-position: -26px -41px;
+}
+
+#header ul#nav {
+    float: right;
+    background: url(img/menu.png) no-repeat;
+    background-position: top right;
+    padding-right: 38px;    
+}
+
+#nav li a {
+    float: left;
+    display: block;
+    text-indent: -9999px;
+    height: 41px;
+}
+
+#nav li.new a {
+    width: 57px;
+    background: #000 url(img/menu.png) no-repeat;
+    background-position: -320px 0;
+}
+
+#nav li.new a:hover {
+    background: #000 url(img/menu.png) no-repeat;
+    background-position: -320px -41px;;
+}
+
+#nav li.just_added a {
+    width: 90px;
+    background: url(img/menu.png) no-repeat;
+    background-position: -377px 0;
+}
+
+#nav li.just_added a:hover {
+    background: url(img/menu.png) no-repeat;
+    background-position: -377px -41px;
+}
+
+#nav li.browse a {
+    width: 69px;
+    background: url(img/menu.png) no-repeat;
+    background-position: -467px 0;
+}
+
+#nav li.browse a:hover {
+    background: url(img/menu.png) no-repeat;
+    background-position: -467px -41px;
+}
+
+#nav li.downloads a {
+    width: 109px;
+    background: url(img/menu.png) no-repeat;
+    background-position: -536px 0;
+}
+
+body.downloads #nav li.downloads a:hover, #nav li.downloads a:hover {
+    background: url(img/menu.png) no-repeat;
+    background-position: -536px -41px;
+}
+
+body.downloads #nav li.downloads a {
+    background: url(img/menu.png) no-repeat;
+    background-position: -536px -82px;
+}
+
+#nav li.basket a {
+    width: 65px;
+    background: url(img/menu.png) no-repeat;
+    background-position: -645px 0;
+}
+
+#nav li.basket a:hover {
+    background: url(img/menu.png) no-repeat;
+    background-position: -645px -41px;
+}
+
+#nav li.help a {
+    width: 52px;
+    background: url(img/menu.png) no-repeat;
+    background-position: -710px 0;
+    }
+
+#nav li.help a:hover {
+    background: url(img/menu.png) no-repeat;
+    background-position: -710px -41px;
+    }
+
+.navish {overflow: auto;}
+
+h1#logo {
+    margin-top: 60px;
+    display: block;
+    text-indent: -9999px;
+    background: url(img/logo.png) no-repeat;
+    width: 190px;
+    height: 15px;
+    float: left;
+}
+
+#header form {
+    float: right;
+    margin-top: 10px;
+}
+
+#content {
+    margin: 0 auto;
+    width: 760px;
+    background: url(img/content_top.png) no-repeat;
+    min-height: 300px;
+    text-align: left;
+    padding-top: 25px;
+}
+
+.access {
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 130px;
+    }
+
+#content .access h1 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 15px;
+    margin-bottom: 10px;
+    }
+
+#content .access h2 {
+    font-weight: normal;
+    font-size: 13px;
+    margin: 0;
+    margin-bottom: 20px;
+    }
+
+#content h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 25px;
+    margin-left: 15px;
+}
+
+.progress {
+    text-align: right;
+    float: right;
+    width: 280px;
+}
+
+ul.downloading {
+    color: #8f8f8f;
+    border-top: 1px dotted #999999;
+    border-bottom: 1px dotted #999999;
+    margin-left: 15px;
+}
+
+ul.downloading li {
+    border-bottom: 1px dotted #d6d6d6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: auto;
+}
+
+ul.downloading li.last {
+    border-bottom: none;
+}
+
+
+.superfluous {
+    background: url(img/downloads_background.png) repeat-x 50% 100%;
+    padding-bottom: 100px;
+}
+
+
+#footer {
+    background: url(img/superfluous-bubbles.png) no-repeat 380px 0%;
+    margin: 0 auto;
+    margin-top: -75px;
+    width: 750px;
+    padding-top: 100px;
+}
+
+button#music-search {
+    background: url(img/search.png) no-repeat;
+    text-indent: -9999px;
+    width: 77px;
+    height: 22px;
+    border: 0;
+}
+
+
+.progress p, .progress .progress-string {padding-right: 3px;}
+
+p.copyright {color: #8f8f8f; margin-bottom: 8px;}
+
+#pagination {
+    overflow: hidden; /* enclose floats */
+    zoom: 1;
+}
+#pagination #count {
+    float: left;
+}
+#pagination #pages {
+    float: right;
+}
+#pagination #pages a {
+    text-decoration: none;
+    margin: 4px;
+    color: #8f8f8f; 
+}
+#pagination #pages a.current {
+    color: #f58027;
+}
+
+button {
+    background: url(img/button-left.png) no-repeat left;
+    border: 0;
+    padding: 0;
+    padding-left: 7px;
+    display: inline-block;
+    text-align: center;
+    }
+
+
+button span {
+    background: url(img/button-right.png) no-repeat right;
+    display: block; 
+    white-space: nowrap; 
+    color: white;
+    font-size: 12px; 
+    padding: 4px 24px 3px 15px;
+    margin-left: 1px;
+    }

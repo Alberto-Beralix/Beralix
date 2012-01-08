@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="അക്ഷരസഞ്ചയം യഥേഷ്ടമാക്കുക:">
+							<longdesc>ഭാഷയുടെ പാനലിലേക്കുള്ള അക്ഷരസഞ്ചയത്തിനുള്ള പേരു് സജ്ജമാക്കുക</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="സജ്ജമാക്കിയ അക്ഷരസഞ്ചയം ഉപയോഗിക്കുക">
+							<longdesc>ഭാഷ്ക്കുള്ള പാനലില്‍ നിങ്ങള്‍ സജ്ജമാക്കിയ അക്ഷരസഞ്ചയത്തിന്റെ പേരു് ഉപയോഗിക്കുക</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="ഇന്‍പുട്ട് മെഥേഡിന്റെ പേരു് കാണിക്കുക">
+							<longdesc>ഭാഷയുടെ പാനലില്‍ ഇന്‍പുട്ട് മെഥേഡിന്റെ പേരു് കാണിക്കുക</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="സിസ്റ്റം ട്രേയില്‍ ചിഹ്നം കാണിക്കുക">
+							<longdesc>സിസ്റ്റം ട്രേയില്‍ ചിഹ്നം കാണിക്കുക</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="ലുക്കപ്പ് പട്ടികയുടെ ക്രമീകരണം">
+							<longdesc>ലുക്കപ്പ് പട്ടികയുടെ ക്രമീകരണം. 0 = നേരെയുള്ള, 1 = കുറുകയുള്ള</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="ഭാഷയുടെ പാനല്‍ സ്ഥാനം">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="ഭാഷയുടെ പാനല്‍ സ്ഥാനം">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="സ്വയം അദൃശ്യമാക്കുക">
+							<longdesc>ഭാഷയുടെ പാനലിന്റെ രീതി. 0 = മെനുവില്‍ ഉള്‍പ്പെടുത്തുക, 1 = സ്വയം അദൃശ്യമാകുക, 2 = എപ്പോഴും കാണിക്കുക</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="enable_by_default">
+						<local_schema short_desc="സ്വതവേ ഇന്‍പുട്ട് മെഥേഡ് സജ്ജമാക്കുക">
+							<longdesc>പ്രയോഗത്തിലേക്കു് ഇന്‍പുട്ട് ചെയ്യുവാന്‍ സാധിയ്ക്കുമ്പോള്‍ സ്വതവേ ഇന്‍പുട്ട് മെഥേഡ് സജ്ജമാക്കുക</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_global_engine">
+						<local_schema short_desc="ഗ്ലോബല്‍ ഇന്‍പുട്ട് മെഥേഡ് ഉപയോഗിക്കുക">
+							<longdesc>എല്ലാ പ്രയോഗങ്ങളിലും ഒരേ ഇന്‍പുട്ട് രീതി ഉപയോഗിക്കുക</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="പ്രീഎഡിറ്റ് ടെക്സ്റ്റ് ചേര്‍ക്കുക">
+							<longdesc>പ്രയോഗത്തിനുള്ള ജാലകത്തില്‍ പ്രീഎഡിറ്റ് ടെക്സ്റ്റ് ചേര്‍ക്കുക</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="സിസ്റ്റം കീബോര്‍ഡ് മാതൃക ഉപയോഗിക്കുക">
+							<longdesc>സിസ്റ്റം കീബോര്‍ഡ് (XKB) മാതൃക ഉപയോഗിക്കുക</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="സംവിധാനങ്ങള്‍ ലഭ്യമാക്കുക">
+							<longdesc>ibus ആരംഭിക്കുമ്പോള്‍ സംവിധാനങ്ങള്‍ ലഭ്യമാക്കുക</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="തൊട്ടു് മുമ്പുള്ള സംവിധാനത്തിനുള്ള എളുപ്പവഴികള്‍">
+								<longdesc>മുമ്പുള്ള ഇന്‍പുട്ട് മെഥേഡ് സംവിധാനത്തിലേക്ക് മാറുന്നതിനുള്ള എളുപ്പവഴി</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="തൊട്ടു് മുമ്പുള്ള സംവിധാനത്തിനുള്ള എളുപ്പവഴികള്‍">
+								<longdesc>മുമ്പുള്ള ഇന്‍പുട്ട് മെഥേഡ് സംവിധാനത്തിലേക്ക് മാറുന്നതിനുള്ള എളുപ്പവഴി</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="അടുത്ത സംവിധാനത്തിനുള്ള എളുപ്പവഴികള്‍">
+								<longdesc>പട്ടികയിലുള്ള അടുത്ത ഇന്‍പുട്ട് മെഥേഡ് സംവിധാനത്തിലേക്ക് മാറ്റുന്നതിനുള്ള എളുപ്പവഴി</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="അടുത്ത സംവിധാനത്തിനുള്ള എളുപ്പവഴികള്‍">
+								<longdesc>പട്ടികയിലുള്ള അടുത്ത ഇന്‍പുട്ട് മെഥേഡ് സംവിധാനത്തിലേക്ക് മാറ്റുന്നതിനുള്ള എളുപ്പവഴി</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="എളുപ്പവഴികള്‍ ട്രിഗര്‍ ചെയ്യുക">
+								<longdesc>ഇന്‍പുട്ട് മെഥേഡ് ഓണ്‍ അല്ലെങ്കില്‍ ഓഫ് ചെയ്യുന്നതിനുള്ള എളുപ്പവളികള്‍ സജ്ജമാക്കുക</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="വൈഫൈ ഉണ്ടാക്കുന്നതു് പ്രവര്‍ത്തന രഹിതമാക്കുക">
+						<longdesc>ആപ്ലെറ്റ് ഉപയോഗിക്കുമ്പോള്‍, ആഡ്ഹോക് നെറ്റ്‌വര്‍ക്കുകള്‍ തയ്യാറാക്കുന്നതു് പ്രവര്‍ത്തന രഹിതമാക്കുന്നതിനായി ഇതു് TRUE ആക്കുക.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="സ്റ്റാമ്പ്">
+						<longdesc>സജ്ജീകരണങ്ങള്‍ പുതിയ പതിപ്പില്‍ നീക്കേണ്ടതുണ്ടോ എന്നു് നിശ്ചയിക്കുന്നതിനായി ഉപയോഗിക്കുന്നു.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="ലഭ്യമായ വയര്‍ലെസ് നെറ്റ്‌വര്‍ക്കുകള്‍ ഇല്ലാതാക്കുക">
+						<longdesc>വയര്‍ലെസ് നെറ്റ്‌വര്‍ക്കുകള്‍ ലഭ്യമാകുമ്പോള്‍, അറിയിപ്പുകള്‍ പ്രവര്‍ത്തന രഹിതമാക്കുന്നതിനായി ഇതു് TRUE ആക്കുക.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="കണക്ട് നഷ്ടപ്പെട്ടതിനുള്ള അറിയിപ്പുകള്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക">
+						<longdesc>ഒരു നെറ്റ്‌വര്‍ക്കില്‍ നിന്നും വിഛേദിക്കുമ്പോള്‍, അറിയിപ്പുകള്‍ പ്രവര്‍ത്തന രഹിതമാക്കുന്നതിനായി ഇതു് TRUE ആക്കുക.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="കണക്ട് ചെയ്തതിനുള്ള അറിയിപ്പുകള്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക">
+						<longdesc>ഒരു നെറ്റ്‌വര്‍ക്കിലേക്കു് കണക്ട് ചെയ്യുമ്പോള്‍, അറിയിപ്പുകള്‍ പ്രവര്‍ത്തന രഹിതമാക്കുന്നതിനായി ഇതു് TRUE ആക്കുക.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

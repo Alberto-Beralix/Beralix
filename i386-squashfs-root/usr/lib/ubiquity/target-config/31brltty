@@ -1,0 +1,16 @@
+#! /bin/sh
+set -e
+
+[ ! -f /etc/default/brltty ] || . /etc/default/brltty
+
+if egrep -q 'braille=ask|brltty' /proc/cmdline && [ -f /etc/brltty.conf ] && \
+   [ -e /target/etc/default/brltty ] && [ "$RUN_BRLTTY" = yes ]; then
+	mkdir -p /target/etc/default
+	if [ -e /target/etc/brltty.conf ]; then
+		mv /target/etc/brltty.conf /target/etc/brltty.conf.orig
+	fi
+	cp -a /etc/brltty.conf /target/etc/brltty.conf
+	sed -i -e 's/^RUN_BRLTTY=.*/RUN_BRLTTY=yes/' /target/etc/default/brltty
+fi
+
+exit 0

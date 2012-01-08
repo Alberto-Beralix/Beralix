@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-adhoc" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-wireless"/>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>Você pode conectar computadores juntos para formar uma rede sem fio <em>ad-hoc</em>.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Conecte-se diretamente a outro computador com uma conexão sem fio</title>
+
+<p>Você pode conectar computadores entre si, formando uma rede sem-fio <em>ad-hoc</em>. Isso é útil se a um de seus computadores estiver conectada uma impressora que você deseja compartilhar.</p>
+
+<p>Com uma (<em>infraestrutura de</em>) rede sem fio normal, você poderia conectar ambos os computadores a uma rede sem fio pela base da estação ou roteador sem fio. Se você não tem uma base de estação, uma rede ad-hoc ainda permitirá que você conecte os computadores entre si.</p>
+
+<p>Para configurar uma rede sem fio ad-hoc:</p>
+<steps>
+ <item>
+  <p>E um dos computadores, clique no <gui>menu de rede</gui> no painel superior e selecione <gui>Editar conexões</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Vá à aba <gui>Sem fio</gui> e clique em <gui>Adicionar</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Na janela que aparecer, escolha um nome para a rede sem fio e depois olhe a aba <gui>Sem fio</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Escolha um <gui>SSID</gui>. Esse é o nome da rede que outras pessoas poderão ver.</p>
+ </item>
+ 
+ <item>
+  <p>Altere o <gui>Modo</gui> para <gui>Ad-hoc</gui> e deixe as outras configurações nos padrões. Clique em <gui>Salvar</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>No outro computador, clique no <gui>indicador de rede</gui> na barra superior e procure pela rede com o SSID que você escolheu. Ela pode levar um minuto ou dois para aparecer na lista.</p>
+  <p>Clique no nome da sua rede ad-hoc para conectar-se a ela. Uma vez conectado, você será capaz de acessar compartilhamentos de rede e assim por diante, da mesma maneira que você poderia se ambos os computadores estivesse conectados a uma rede sem fio convencional.</p>
+ </item>
+</steps>
+
+<p>Essas instruções serão diferentes se um dos computadores não estiver executando Linux. Você pode achar mais fácil configurar a rede ad-hoc no computador com Linux e conectar a ela usando o outro computador.</p>
+
+<p>Observe também que algumas placas de rede sem fio não suportam redes ad-hoc, então você não será capaz de usá-las para criar uma rede ad-hoc.</p>
+
+<section id="security">
+ <title>Protegendo uma rede ad-hoc</title>
+ <p>Qualquer um na área será capaz de se conectar à sua rede ad-hoc, então ela não é muito segura. Você pode adicionar uma <link xref="net-wireless-wepwpa">senha WEP/WPA</link> à rede para protegê-la de acesso não autorizado.</p>
+ 
+ <p>Para adicionar uma senha:</p>
+ 
+ <steps>
+  <item>
+   <p>Clique no <gui>menu de rede</gui> no painel superior e clique em <gui>Editar conexões</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Vá até a aba <gui>Sem fio</gui>, selecione a rede sem fio ad-hoc e clique em <gui>Editar</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Vá até a aba <gui>Segurança sem fio</gui> e altere a <gui>Segurança</gui> de <gui>Nenhum</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Escolha sua própria senha e depois clique em <gui>Salvar</gui>. Os outros computadores conectados à conexão ad-hoc terão que reconectar e você terá que entrar com a senha em cada um deles.</p>
+  </item>
+ </steps>
+</section>
+
+</page>

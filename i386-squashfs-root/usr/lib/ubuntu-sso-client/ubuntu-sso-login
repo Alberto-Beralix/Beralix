@@ -1,0 +1,101 @@
+#!/usr/bin/python
+
+# ubuntu-sso-login - Client side log-in utility for Ubuntu One
+#
+# Author: Rodney Dawes <rodney.dawes@canonical.com>
+# Author: Natalia B. Bidart <natalia.bidart@canonical.com>
+#
+# Copyright 2009-2010 Canonical Ltd.
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 3, as published
+# by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranties of
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+# PURPOSE.  See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+"""Run the dbus service for UserManagement and ApplicationCredentials."""
+
+# Invalid name "ubuntu-sso-login", pylint: disable=C0103
+
+# import decimal even if we don't need it, pylint: disable=W0611
+import decimal
+# This is a workaround for LP: #467397. Some module in our depency chain sets
+# the locale and imports decimal, and that generates the following trace:
+# Traceback (most recent call last):
+#   File "/usr/lib/ubuntu-sso-client/ubuntu-sso-login", line 33
+#     from ubuntu_sso.main import SSOLogin, SSOCredentials
+#   File "/usr/lib/pymodules/python2.6/ubuntu_sso/main.py", line 42
+#     from lazr.restfulclient.resource import ServiceRoot
+#   File "/usr/lib/python2.6/dist-packages/lazr/restfulclient/resource.py",
+# line 34
+#     import simplejson
+#   File "/usr/lib/pymodules/python2.6/simplejson/__init__.py", line 109
+#     from decimal import Decimal
+#   File "/usr/lib/python2.6/decimal.py", line 3649, in <module>
+#     val = globals()[globalname]
+# KeyError: 'ROUND_CEiLiNG'
+
+import signal
+import sys
+
+import dbus.mainloop.glib
+import dbus.service
+import gtk
+
+from dbus.mainloop.glib import DBusGMainLoop
+
+from ubuntu_sso import (DBUS_BUS_NAME, DBUS_ACCOUNT_PATH, DBUS_CRED_PATH,
+    DBUS_CREDENTIALS_PATH)
+from ubuntu_sso.main import SSOLogin, SSOCredentials, CredentialsManagement
+
+from ubuntu_sso.logger import setup_logging
+
+# Invalid name "ubuntu-sso-login"
+# pylint: disable=C0103
+
+
+logger = setup_logging("ubuntu-sso-login")
+dbus.mainloop.glib.threads_init()
+gtk.gdk.threads_init()
+DBusGMainLoop(set_as_default=True)
+
+
+def sighup_handler(*a, **kw):
+    """Stop the service."""
+    # This handler may be called in any thread, so is not thread safe.
+    # See the link below for info:
+    # www.listware.net/201004/gtk-devel-list/115067-unix-signals-in-glib.html
+    #
+    # gtk.main_quit and the logger methods are safe to be called from any
+    # thread. Just don't call other random stuff here.
+    logger.info("Stoping Ubuntu SSO login manager since SIGHUP was received.")
+    gtk.main_quit()
+
+
+if __name__ == "__main__":
+    # Register DBus service for making sure we run only one instance
+    bus = dbus.SessionBus()
+    name = bus.request_name(DBUS_BUS_NAME,
+                            dbus.bus.NAME_FLAG_DO_NOT_QUEUE)
+    if name == dbus.bus.REQUEST_NAME_REPLY_EXISTS:
+        logger.error("Ubuntu SSO login manager already running, quitting.")
+        sys.exit(0)
+
+    logger.debug("Hooking up SIGHUP with handler %r.", sighup_handler)
+    signal.signal(signal.SIGHUP, sighup_handler)
+
+    logger.info("Starting Ubuntu SSO login manager for bus %r.", DBUS_BUS_NAME)
+    bus_name = dbus.service.BusName(DBUS_BUS_NAME, bus=dbus.SessionBus())
+    SSOLogin(bus_name, object_path=DBUS_ACCOUNT_PATH)
+    SSOCredentials(bus_name, object_path=DBUS_CRED_PATH)
+    CredentialsManagement(timeout_func=gtk.timeout_add,
+                          shutdown_func=gtk.main_quit,
+                          bus_name=bus_name, object_path=DBUS_CREDENTIALS_PATH)
+
+    gtk.main()

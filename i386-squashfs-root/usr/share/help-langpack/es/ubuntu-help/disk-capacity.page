@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="disk-capacity" xml:lang="es">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    
+    <credit type="author">
+      <name>Equipo de documentación GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Natalia Ruz Leiva</name>
+      <email>nruz@alumnos.inf.utfsm.cl</email>
+    </credit>
+
+    <desc>Con el <gui>Analizador de uso de disco</gui> o el <gui>Monitor del sistema</gui>.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Comprobar cuánto espacio de disco hay disponible</title>
+<p>Puede comprobar el espacio de disco libre usando <gui>Analizador de uso del disco</gui> y <app>Monitor de sistema</app>.</p>
+<section id="disk-usage-analyzer"><title>Comrpuebe con el Analizador de uso de disco</title>
+<p>Para comprobar el espacio de disco libre y la capacidad use el <app>Analizador de uso de disco</app>:</p>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Rewrite steps to use common simple form in 3.0.1</p>
+</comment>
+
+<steps>
+     <item><p>Open the <app>Disk Usage Analyzer</app> application from the <gui>Dash</gui>.</p></item>
+     <item><p>La ventana del «Analizador de uso de disco»  muestra la capacidad total del sistema de almacenamiento de archivos y el total de espacio usado.</p><p>(You can click on <gui>View as Rings Chart</gui> to change the display to <gui>View as Treemap Chart</gui>).</p></item> 
+    <item><p>Click <gui>Scan Home</gui> if you want to check how much disk space is left inside the Home folder or click <gui>Scan filesystem</gui> icon if you want to check how much disk space is left inside the '/' (Root) folder. In both cases, the location of the files and other options like Usage, Size and Contents will be presented. You can change the order of the details and view the files in order of file size.</p></item>
+    <item><p>Click the <gui>Scan a folder</gui> icon if you want to scan disk space inside specific folder or click <gui>Scan a remote folder</gui> if you want to scan disk space inside remote folder.</p></item>
+    <item><p>Pulse en <gui>Parar </gui> o <gui>Actualizar</gui> cuando necesite cancelar o actualizar la exploración.</p></item>
+  </steps>
+
+
+<note style="tip"><p>El <gui>Analizador de uso de disco</gui> también puede ejecutarse pulsando <keyseq><key>Alt</key><key>F2</key></keyseq>, tecleando «baobab» (sin las comillas) y presionando <key>Intro</key>.</p></note>
+
+</section>
+
+<section id="system-monitor"><title>Comprobar con el monitor de sistema</title>
+
+<p>Para comprobar el espacio libre y la capacidad de disco con el <app>Monitor de sistema</app>:</p>
+<steps>
+    <item><p>Abra la aplicación <app>Monitor de sistema</app> desde el <gui>Tablero</gui>.</p></item>
+    <item><p>Seleccione la pestaña <gui>Sistemas de archivo</gui> para ver las particiones del sistema y el uso del espacio en disco Total, Libre, Disponible y Usado.</p></item>
+</steps>
+</section>
+<section id="disk-full"><title>¿Qué pasa si el disco está demasiado lleno?</title>
+<p>Si el disco está muy lleno, puede:</p>
+   <list>
+       <item><p>Eliminar archivos que no son importante o que no va a usar más.</p></item>
+       <item><p>Haga <link xref="backup-why">copias de seguridad</link> de los archivos importantes que no vaya a necesitar por un tiempo y bórrelos del disco duro.</p></item>
+   </list>
+</section>
+
+</page>

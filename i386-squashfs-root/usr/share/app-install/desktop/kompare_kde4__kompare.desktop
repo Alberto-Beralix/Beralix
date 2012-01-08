@@ -1,0 +1,19 @@
+# KDE Config File
+[Desktop Entry]
+X-AppInstall-Package=kompare
+X-AppInstall-Popcon=1060
+X-AppInstall-Section=main
+
+Type=Application
+Name=Kompare
+GenericName=Diff/Patch Frontend
+MimeType=text/x-patch;
+Exec=kompare -caption "%c" -o %U
+Icon=kompare
+X-DocPath=kompare/index.html
+Terminal=false
+X-DBUS-StartupType=Multi
+Categories=Qt;KDE;Development;
+InitialPreference=10
+
+X-Ubuntu-Gettext-Domain=app-install-data

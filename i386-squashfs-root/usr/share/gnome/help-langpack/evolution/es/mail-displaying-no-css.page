@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-displaying-no-css" xml:lang="es">
+
+  <info>
+    <desc>Al recibir un correo parece extraño o difícil de leer.</desc>
+    
+    <link type="guide" xref="index#common-mail-problems"/>
+    <link type="seealso" xref="mail-displaying-message"/>
+
+    <revision pkgversion="3.2.0" version="0.2" date="2011-09-07" status="draft"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+<title>Los correos en HTML no se muestran correctamente</title>
+
+<p>If an HTML message is not correctly displayed in Evolution it might be that the formatting of the message is specified as <link href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</link>. CSS is currently not supported by gtkhtml (the part that is used to display HTML).</p>
+<p>Esto probablemente se solucione en la versión 3.4.</p>
+<p>For developers only: In future versions, Evolution will use WebKit instead of gtkhtml for displaying HTML. There is a branch named "<link href="http://git.gnome.org/browse/evolution?h=webkit">webkit</link>" in Evolution's code repository to test.</p>
+
+<note style="tip"><p>Consulte <link xref="mail-displaying-character-encodings">Codificación y conjuntos de caracteres</link> cuando tenga problemas con caracteres que faltan.</p></note>
+
+</page>

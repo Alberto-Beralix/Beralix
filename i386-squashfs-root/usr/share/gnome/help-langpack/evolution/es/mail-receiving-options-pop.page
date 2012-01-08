@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-receiving-options-pop" xml:lang="es">
+
+  <info>
+    <desc>Opciones de recepción para cuentas POP.</desc>
+
+    <link type="guide" xref="mail-receiving-options#common-server-types"/>
+    <link type="guide" xref="mail-account-manage-pop#receiving-email"/>
+    <revision pkgversion="3.1.5" version="0.4" date="2011-08-24" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Barbara Tobias</name>
+      <email>barbtobias09@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mainwindow-starting.html.en -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Opciones de recepción POP</title>
+
+<section id="receiving-email">
+<title>Recepción de correo</title>
+
+<p>On the <gui>Receiving Email</gui> page (accessible via <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Accounts</gui><gui style="button">Edit</gui><gui>Receiving Email</gui></guiseq>):</p>
+
+<list>
+<item><p>Introduzca la dirección del servidor de correo electrónico en el campo <gui>Servidor</gui> e introduzca su nombre de usuario para ese servidor.</p></item>
+<item><p>Seleccione su quiere usar una conexión segura (SSL o TLS).</p><p>Debería activar esta opción si su servidor la soporta.</p>
+<note style="tip"><p>Los servidores de correo web gratuitos generalmente proporcionan información acerca de cuáles de estas opciones se pueden usar. Si está en un acontecimiento organizado puede que quiera contactar con el administrador de su sistema para obtener más información.</p></note></item>
+<item><p>Seleccione el tipo de autenticación en la lista de Autenticación o pulse <gui style="button">Comprobar tipos soportados</gui> para que Evolution compruebe qué tipos están soportados. Algunos servidores no informan de qué mecanismos de autenticación soportan esto, así que pulsar este botón no garantiza que los mecanismos disponibles actualmente funcionen.</p>
+<note style="tip"><p>Los servidores de correo web gratuitos generalmente proporcionan información acerca de cuáles de estas opciones se pueden usar. Si está en un acontecimiento organizado puede que quiera contactar con el administrador de su sistema para obtener más información.</p></note></item>
+<item><p>Marque si quiere que Evolution recuerde su contraseña.</p></item>
+</list>
+
+</section>
+
+<section id="receiving-options">
+<title>Opciones de recepción</title>
+
+<p>On the <gui>Receiving Options</gui> page (accessible via <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Accounts</gui><gui style="button">Edit</gui><gui>Receiving Options</gui></guiseq>):</p>
+
+<list>
+<item><p>Si quiere que Evolution compruebe automáticamente si hay correo nuevo, seleccione la opción <gui>Comprobar si hay mensajes nuevos cada ... minutos</gui> y seleccione la frecuencia en minutos.</p></item>
+<item><p>If you want the messages to remain on the server for a period of time, click the <gui>Leave messages on server</gui> option and the <gui>Delete after ... days</gui> option and select the number of days to allow messages to remain on the server.</p></item>
+<item><p>The option <gui>Disable support for all POP3 extensions</gui> is only useful when accessing old or misconfigured mail servers. <link href="https://tools.ietf.org/html/rfc2449">POP3 extensions</link> provide enhanced functionality, however only some servers support them. In case of problems with receiving mail, enabling this setting might help.</p></item>
+</list>
+
+</section>
+
+<section id="return-to-assistant-bottom-link">
+<!-- TODO:XINCLUDE: Maybe later replace this "go back" workaround by doing some content sharing with xinclude and xpointer in intro-first-run.page itself? <include href="foo.xml" xmlns="http://www.w3.org/2001/XInclude"/> See gnome-user-docs module for example usage. -->
+<p>Si ha llegado a esta página desde la página del asistente de primera ejecución, pulse <link xref="intro-first-run#sending">aquí</link> para continuar con el siguiente paso.</p>
+</section>
+</page>

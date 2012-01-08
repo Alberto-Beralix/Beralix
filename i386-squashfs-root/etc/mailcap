@@ -1,0 +1,141 @@
+###############################################################################
+#
+#  MIME types and programs that process those types
+#
+#  Much of this file is generated automatically by the program "update-mime".
+#  Please see the "update-mime" man page for more information.
+#
+#  Users can add their own rules if they wish by creating a ".mailcap"
+#  file in their home directory.  Entries included there will take
+#  precedence over those listed here.
+#
+###############################################################################
+
+
+###############################################################################
+#
+#  User section follows:  Any entries included in this section will take
+#  precedence over those created by "update-mime".  DO NOT CHANGE the
+#  "User Section Begins" and "User Section Ends" lines, or anything outside
+#  of this section!
+#
+
+# ----- User Section Begins ----- #
+# -----  User Section Ends  ----- #
+
+###############################################################################
+
+application/vnd.oasis.opendocument.chart; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; print=soffice -no-oosplash --calc -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Chart"; nametemplate=%s.odc
+application/vnd.oasis.opendocument.spreadsheet; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; print=soffice -no-oosplash --calc -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Spreadsheet"; nametemplate=%s.ods
+application/vnd.oasis.opendocument.spreadsheet-template; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; print=soffice -no-oosplash --calc -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Spreadsheet Template"; nametemplate=%s.ots
+application/vnd.oasis.opendocument.graphics; soffice -no-oosplash --draw '%s'; edit=soffice -no-oosplash --draw '%s'; print=soffice -no-oosplash --draw -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Drawing"; nametemplate=%s.odg
+application/vnd.oasis.opendocument.graphics-template; soffice -no-oosplash --draw '%s'; edit=soffice -no-oosplash --draw '%s'; print=soffice -no-oosplash --draw -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Drawing Template"; nametemplate=%s.otg
+application/vnd.oasis.opendocument.presentation; soffice -no-oosplash --impress '%s'; edit=soffice -no-oosplash --impress '%s'; print=soffice -no-oosplash --impress -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Presentation"; nametemplate=%s.odp
+application/vnd.oasis.opendocument.presentation-template; soffice -no-oosplash --impress '%s'; edit=soffice -no-oosplash --impress '%s'; print=soffice -no-oosplash --impress -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Presentation Template"; nametemplate=%s.otp
+application/vnd.oasis.opendocument.formula; soffice -no-oosplash --math '%s'; edit=soffice -no-oosplash --math '%s'; print=soffice -no-oosplash --math -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Formula"; nametemplate=%s.odf
+application/vnd.oasis.opendocument.text; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; print=soffice -no-oosplash --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Text Document"; nametemplate=%s.odt
+application/vnd.oasis.opendocument.text-master; soffice -no-oosplash --global '%s'; edit=soffice -no-oosplash --writer '%s'; print=soffice -no-oosplash --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Master Document"; nametemplate=%s.odm
+application/vnd.oasis.opendocument.text-template; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; print=soffice -no-oosplash --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Text Document Template"; nametemplate=%s.ott
+application/vnd.oasis.opendocument.text-web; soffice -no-oosplash --web '%s'; edit=soffice -no-oosplash --web '%s'; print=soffice -no-oosplash --web -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument HTML Document Template"; nametemplate=%s.oth
+text/plain; less '%s'; needsterminal
+application/vnd.sun.xml.calc; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Spreadsheet"; nametemplate=%s.sxc
+application/vnd.sun.xml.calc.template; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Spreadsheet Template"; nametemplate=%s.stc
+application/vnd.sun.xml.draw; soffice -no-oosplash --draw '%s'; edit=soffice -no-oosplash --draw '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Drawing"; nametemplate=%s.sxd
+application/vnd.sun.xml.draw.template; soffice -no-oosplash --draw '%s'; edit=soffice -no-oosplash --draw '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Drawing Template"; nametemplate=%s.std
+application/vnd.sun.xml.impress; soffice -no-oosplash --impress '%s'; edit=soffice -no-oosplash --impress '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Presentation"; nametemplate=%s.sxi
+application/vnd.sun.xml.impress.template; soffice -no-oosplash --impress '%s'; edit=soffice -no-oosplash --impress '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Presentation Template"; nametemplate=%s.sti
+application/vnd.sun.xml.math; soffice -no-oosplash --math '%s'; edit=soffice -no-oosplash --math '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Formula"; nametemplate=%s.sxm
+application/vnd.sun.xml.writer; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; description="OpenOffice.org Text Document"; nametemplate=%s.sxw
+application/vnd.sun.xml.writer.global; soffice -no-oosplash --global '%s'; edit=soffice -no-oosplash --writer '%s'; description="OpenOffice.org Master Document"; nametemplate=%s.sxg
+application/vnd.sun.xml.writer.template; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; description="OpenOffice.org Text Document Template"; nametemplate=%s.stw
+text/html; /usr/bin/sensible-browser '%s'; description=HTML Text; nametemplate=%s.html
+application/x-7z-compressed; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-7z-compressed-tar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-ace; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /usr/bin/unace
+application/x-alz; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /usr/bin/unalz
+application/x-ar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /usr/bin/ar
+application/x-arj; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-bzip; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-bzip1; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-bzip-compressed-tar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-bzip1-compressed-tar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-cabinet; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-cbr; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /usr/bin/unrar -o -x /usr/bin/rar
+application/x-cbz; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-cd-image; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-compress; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-compressed-tar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-cpio; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /bin/cpio
+application/x-deb; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-ear; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-gtar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-gzip; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-gzpostscript; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-jar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /usr/bin/zip -o -x /usr/bin/zip
+application/x-java-archive; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /usr/bin/zip -o -x /usr/bin/zip
+application/x-lha; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /usr/bin/lha
+application/x-lhz; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /usr/bin/lhz
+application/x-lrzip; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-lrzip-compressed-tar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-lzip; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-lzip-compressed-tar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-lzma; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-lzma-compressed-tar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-lzop; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /bin/lzop
+application/x-lzop-compressed-tar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /bin/lzop
+application/x-ms-dos-executable; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-ms-wim; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-rar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-rar-compressed; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-rpm; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /usr/bin/rpm
+application/x-rzip; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /usr/bin/rzip
+application/x-stuffit; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-tar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-tarz; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-war; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-xz; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-xz-compressed-tar; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-zip; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-zip-compressed; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-zoo; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY" -a -x /usr/bin/zoo
+application/zip; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+multipart/x-zip; /usr/bin/file-roller '%s'; test=test -n "$DISPLAY"
+application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
+application/x-tar; /bin/tar tvf -; print=/bin/tar tvf - | print text/plain:-; copiousoutput
+application/x-gtar; /bin/tar tvzf -; print=/bin/tar tvzf - | print text/plain:-; copiousoutput
+application/x-bittorrent; transmission-gtk '%s'; description="GTK-based BitTorrent client"; test=test -n "$DISPLAY"
+application/zip; unzip -l '%s'; nametemplate=%s.zip; copiousoutput
+text/plain; more '%s'; needsterminal
+text/plain; view '%s'; edit=vim '%s'; compose=vim '%s'; needsterminal
+text/csv; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="CSV Document"; nametemplate=%s.csv
+text/spreadsheet; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="Spreadsheet Interchange Document"; nametemplate=%s.slk
+application/x-quattropro; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="Quattro Pro 6 for Windows Spreadsheet"; nametemplate=%s.wb2
+application/x-dbf; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="xBase Document"; nametemplate=%s.dbf
+application/vnd.ms-excel.sheet.macroEnabled.12; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet with Macros Enabled"; nametemplate=%s.xlsm
+application/vnd.ms-excel.template.macroEnabled.12; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet Template with Macros Enabled"; nametemplate=%s.xltm
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet"; nametemplate=%s.xlsx
+application/vnd.openxmlformats-officedocument.spreadsheetml.template; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet Template"; nametemplate=%s.xltx
+application/vnd.lotus-1-2-3; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="Lotus 1-2-3 spreadsheet"; nametemplate=%s.123
+application/vnd.ms-excel; soffice -no-oosplash --calc '%s'; edit=soffice -no-oosplash --calc '%s'; test=test -n "$DISPLAY"; description="Microsoft Excel Document"; nametemplate=%s.xls
+application/vnd.ms-powerpoint.presentation.macroEnabled.12; soffice -no-oosplash --impress '%s'; edit=soffice -no-oosplash --impress '%s'; test=test -n "$DISPLAY"; description="Office Open XML Presentation with Macros Enabled"; nametemplate=%s.pptm
+application/vnd.ms-powerpoint.slideshow.macroEnabled.12; soffice -no-oosplash --impress '%s'; edit=soffice -no-oosplash --impress '%s'; test=test -n "$DISPLAY"; description="Office Open XML Presentation Slide Show with Macros Enabled"; nametemplate=%s.ppsm
+application/vnd.ms-powerpoint.template.macroEnabled.12; soffice -no-oosplash --impress '%s'; edit=soffice -no-oosplash --impress '%s'; test=test -n "$DISPLAY"; description="Office Open XML Presentation Template with Macros Enabled"; nametemplate=%s.potm
+application/vnd.openxmlformats-officedocument.presentationml.presentation; soffice -no-oosplash --impress '%s'; edit=soffice -no-oosplash --impress '%s'; test=test -n "$DISPLAY"; description="Office Open XML Presentation"; nametemplate=%s.pptx
+application/vnd.openxmlformats-officedocument.presentationml.slideshow; soffice -no-oosplash --impress '%s'; edit=soffice -no-oosplash --impress '%s'; test=test -n "$DISPLAY"; description="Office Open XML Presentation Slide Show"; nametemplate=%s.ppsx
+application/vnd.openxmlformats-officedocument.presentationml.template; soffice -no-oosplash --impress '%s'; edit=soffice -no-oosplash --impress '%s'; test=test -n "$DISPLAY"; description="Office Open XML Presentation Template"; nametemplate=%s.potx
+application/vnd.ms-powerpoint; soffice -no-oosplash --impress '%s'; edit=soffice -no-oosplash --impress '%s'; test=test -n "$DISPLAY"; description="Microsoft PowerPoint Document"; nametemplate=%s.ppt
+text/mathml; soffice -no-oosplash --math '%s'; edit=soffice -no-oosplash --math '%s'; test=test -n "$DISPLAY"; description="MathML Formula"; nametemplate=%s.mml
+application/rtf; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; test=test -n "$DISPLAY"; description="Rich Text Format"; nametemplate=%s.rtf
+application/x-extension-txt; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; test=test -n "$DISPLAY"; description="Plain Text Document"; nametemplate=%s.txt
+application/x-t602; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; test=test -n "$DISPLAY"; description="T602 Document"; nametemplate=%s.602
+application/vnd.wordperfect; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; test=test -n "$DISPLAY"; description="WordPerfect Document"; nametemplate=%s.wp
+application/vnd.ms-word.document.macroEnabled.12; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Document with Macros Enabled"; nametemplate=%s.docm
+application/vnd.ms-word.template.macroEnabled.12; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Document Template with Macros Enabled"; nametemplate=%s.dotm
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Document"; nametemplate=%s.docx
+application/vnd.openxmlformats-officedocument.wordprocessingml.template; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Document Template"; nametemplate=%s.dotx
+application/msword; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; test=test -n "$DISPLAY"; description="Microsoft Word Document"; nametemplate=%s.doc
+application/vnd.ms-works; soffice -no-oosplash --writer '%s'; edit=soffice -no-oosplash --writer '%s'; test=test -n "$DISPLAY"; description="Microsoft Works Document"; nametemplate=%s.wps
+text/*; less '%s'; needsterminal
+text/*; view '%s'; edit=vim '%s'; compose=vim '%s'; needsterminal
+text/*; more '%s'; needsterminal
+application/x-debian-package; /usr/lib/mime/debian-view '%s'; needsterminal; description=Debian GNU/Linux Package; nametemplate=%s.deb

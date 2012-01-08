@@ -1,0 +1,1898 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="Desactivar a creación de rede sen fíos">
+						<longdesc>Estabeleza isto a VERDADEIRO para desactivar a creación de redes sen fíos adhoc ao usar o aplicativo.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="Marca de tempo">
+						<longdesc>Empregado para determinar se as configuracións deberían ser migradas á nova versión.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="Eliminar as notificacións de redes dispoñíbeis">
+						<longdesc>Estabeleza isto a VERDADEIRO para desactivar as notificacións cando haxa dispoñíbeis redes inarámicas.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="Desactivar as notificacións de desconexión">
+						<longdesc>Estabeleza isto a VERDADEIRO para desactivar as notificacións cando se desconecte de unha rede.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="Desactivar as notificacións de conexión">
+						<longdesc>Estabeleza isto a VERDADEIRO para desactivar as notificacións cando se conecte a unha rede.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="fade">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="unresponsive_saturation">
+									<local_schema short_desc="Saturación das Fiestras Bloqueadas">
+										<longdesc>Saturación das xanelas bloqueadas (en %) (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unresponsive_brightness">
+									<local_schema short_desc="Brillo das Fiestras Bloqueadas">
+										<longdesc>Brillo (en %) das xanelas bloqueadas (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="dim_unresponsive">
+									<local_schema short_desc="Escurecer as Fiestras que non Responden">
+										<longdesc>Escurecer as xanelas que non están a responder ao que o xestor de xanelas require</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fullscreen_visual_bell">
+									<local_schema short_desc="Campá Visual a Pantalla Completa">
+										<longdesc>Efecto de desvanecemento da pantalla completa cando sona a campá do sistema</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="visual_bell">
+									<local_schema short_desc="Campá Visual">
+										<longdesc>Efecto de desvanecemento ao soar a campá do sistema</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Desvanecer xanelas">
+										<longdesc>Fiestras que se deben desvanecer (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_time">
+									<local_schema short_desc="Tempo de desvanecemento">
+										<longdesc>Modo &quot;Tempo constante&quot; para a Duración do Desvanecemento de Fiestra (1 - 5000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_speed">
+									<local_schema short_desc="Velocidade de Desvanecemento">
+										<longdesc>Window fade speed (0.1 - 25.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_mode">
+									<local_schema short_desc="Modo de Desvanecemento">
+										<longdesc>Modo de desvanecemento das xanelas (0 = Velocidade constante, 1 = Constante de tempo)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="wobbly">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="maximize_effect">
+									<local_schema short_desc="Efecto ao Maximizar">
+										<longdesc>Activar o efecto semellante á xelatina cando se maximizan ou minimizan as xanelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="move_window_match">
+									<local_schema short_desc="Mover Fiestras">
+										<longdesc>Fiestras que deben semellar xelatina cando son movidas (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grab_window_match">
+									<local_schema short_desc="Atracción das xanelas">
+										<longdesc>Fiestras que deben semellar xelatina cando son agarradas (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_window_match">
+									<local_schema short_desc="Enfocar Fiestras">
+										<longdesc>Fiestras que deben semellar xelatina cando son enfocadas (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_window_match">
+									<local_schema short_desc="Colocar Fiestras">
+										<longdesc>Fiestras que deben semellar xelatina cando son colocadas (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_effect">
+									<local_schema short_desc="Efecto de Enfoque">
+										<longdesc>Efecto de Enfoque da Fiestra (0 = Ningún, 1 = Temblar)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_effect">
+									<local_schema short_desc="Efecto ao colocar">
+										<longdesc>Efecto da Fiestra ao Colocala (0 = Ningún, 1 = Temblar)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="min_grid_size">
+									<local_schema short_desc="Tamaño Mínimo da Grella">
+										<longdesc>Tamaño Mínimo da Grella Vertex (4 - 128)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grid_resolution">
+									<local_schema short_desc="Resolución da Grella">
+										<longdesc>Resolución da Grella Vertex (1 - 64)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spring_k">
+									<local_schema short_desc="K do mola">
+										<longdesc>Constante do mola (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="friction">
+									<local_schema short_desc="Fricción">
+										<longdesc>Fricción do mola (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shiver">
+									<local_schema short_desc="Temblar">
+										<longdesc>Fai que as xanelas semellen xelatina</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_inverted">
+									<local_schema short_desc="Instantánea invertida">
+										<longdesc>Axuste de xanelas invertido</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_key">
+									<local_schema short_desc="Axustar xanelas">
+										<longdesc>Trocar axuste de xanelas</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="scale">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="show_desktop">
+									<local_schema short_desc="Facer Clic no Escritorio para Amosalo">
+										<longdesc>Entrar no modo Amosar Escritorio cando se faga clic no Escritorio durante o Escalado</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_key">
+									<local_schema short_desc="Iniciar Selector de Fiestras para Tódalas Fiestras na Saída Actual">
+										<longdesc>Dispor as xanelas na saída actual e iniciar a súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_button">
+									<local_schema short_desc="Iniciar Selector de Fiestras para Tódalas Fiestras na Saída Actual">
+										<longdesc>Dispor as xanelas na saída actual e iniciar a súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_edge">
+									<local_schema short_desc="Iniciar Selector de Fiestras para Tódalas Fiestras na Saída Actual">
+										<longdesc>Dispor as xanelas na saída actual e iniciar a súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_key">
+									<local_schema short_desc="Iniciar Selector de Fiestras para Grupos de Fiestras">
+										<longdesc>Dispor o grupo de xanelas e iniciar súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_button">
+									<local_schema short_desc="Iniciar Selector de Fiestras para Grupos de Fiestras">
+										<longdesc>Dispor o grupo de xanelas e iniciar súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_edge">
+									<local_schema short_desc="Iniciar Selector de Fiestras para Grupos de Fiestras">
+										<longdesc>Dispor o grupo de xanelas e iniciar súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_key">
+									<local_schema short_desc="Iniciar selector de xanelas Para Tódalas Fiestras">
+										<longdesc>Dispor todas as xanelas e iniciar súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_button">
+									<local_schema short_desc="Iniciar selector de xanelas Para Tódalas Fiestras">
+										<longdesc>Dispor todas as xanelas e iniciar súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_edge">
+									<local_schema short_desc="Iniciar selector de xanelas Para Tódalas Fiestras">
+										<longdesc>Dispor todas as xanelas e iniciar súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Iniciar Selector de Fiestras">
+										<longdesc>Dispor as xanelas e iniciar súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Iniciar Selector de Fiestras">
+										<longdesc>Dispor as xanelas e iniciar súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_edge">
+									<local_schema short_desc="Iniciar Selector de Fiestras">
+										<longdesc>Dispor as xanelas e iniciar súa transformación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="button_bindings_toggle">
+									<local_schema short_desc="Atallos para Trocar o Modo de Escala">
+										<longdesc>Atallos de teclado para trocar o modo escala no canto de activalos cando son pulsados e desactivados cando se solta.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="key_bindings_toggle">
+									<local_schema short_desc="Atallos de teclado para Trocar o Modo Escala">
+										<longdesc>Os atallos de teclado trocan o modo de escala no canto de activalo cando é pulsado e desactivado cando é soltado.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Modo de saída múltiple">
+										<longdesc>Selecciona cando son escaladasa xanelas se se empregan múltiples dispositivos de saída. (0 = Só no dispositivo de saída actual, 1 = En tódolos dispositivos de saída)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Escalado de Fiestras">
+										<longdesc>Fiestras que deben ser escaladas en modo escala (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlay_icon">
+									<local_schema short_desc="Icona Superposta">
+										<longdesc>Superpor un icona nas xanelas cando sexan escaladas (0 = Ningún, 1 = Emblema, 2 = Grande)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Opacidade">
+										<longdesc>Nivel de Opacidade en porcentaxe (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="darken_back">
+									<local_schema short_desc="Escurecer Fondo">
+										<longdesc>Escurecer fondo ao escalar xanelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Saltos do tempo">
+										<longdesc>Saltos na Escala (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Velocidade">
+										<longdesc>Velocidade de Escalado (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spacing">
+									<local_schema short_desc="Espaciado">
+										<longdesc>Espazo entre xanelas (0 - 250)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="number_of_desktops">
+									<local_schema short_desc="Número de escritorios">
+										<longdesc>Número de escritorios virtuais (1 - 36)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="vsize">
+									<local_schema short_desc="Tamaño Vertical Virtual">
+										<longdesc>Multiplicador do tamaño da pantalla para o tamaño virtual vertical (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hsize">
+									<local_schema short_desc="Tamaño Virtual Horizontal">
+										<longdesc>Multiplicador do tamaño da pantalla para o tamaño virtual horizontal (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_shaded_key">
+									<local_schema short_desc="Trocar Escurecemento da Fiestra">
+										<longdesc>Trocar escurecemento da xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_vertically_key">
+									<local_schema short_desc="Trocar Maximizado Vertical da Fiestra">
+										<longdesc>Trocar Maximizado Vertical da Fiestra Activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_horizontally_key">
+									<local_schema short_desc="Trocar Maximizado Horizontal da Fiestra">
+										<longdesc>Trocar Maximizado Horizontal da Fiestra Activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_button">
+									<local_schema short_desc="Trocar Maximizado da Fiestra">
+										<longdesc>Trocar Maximizado da Fiestra Actual</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_key">
+									<local_schema short_desc="Trocar Maximizado da Fiestra">
+										<longdesc>Trocar Maximizado da Fiestra Actual</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_edge">
+									<local_schema short_desc="Amosar Escritorio">
+										<longdesc>Ocultar todas as xanelas e enfocar o escritorio</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_key">
+									<local_schema short_desc="Amosar Escritorio">
+										<longdesc>Ocultar todas as xanelas e enfocar o escritorio</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_button">
+									<local_schema short_desc="Menú da Fiestra">
+										<longdesc>Botón de atallo para menú da xanela</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_key">
+									<local_schema short_desc="Menú da Fiestra">
+										<longdesc>Tecla de atallo para menú da xanela</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_vertically_key">
+									<local_schema short_desc="Maximizar a Fiestra Verticalmente">
+										<longdesc>Maximiza verticalmente a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_horizontally_key">
+									<local_schema short_desc="Maximizar a Fiestra Horizontalmente">
+										<longdesc>Maximiza horizontalmente a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unmaximize_window_key">
+									<local_schema short_desc="Demaximizar Fiestra">
+										<longdesc>Desmaximizar xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="Maximizar Fiestra">
+										<longdesc>Maximiza a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_button">
+									<local_schema short_desc="Minimizar Fiestra">
+										<longdesc>Minimiza a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_key">
+									<local_schema short_desc="Minimizar Fiestra">
+										<longdesc>Minimiza a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_button">
+									<local_schema short_desc="Fiestra Máis Baixa">
+										<longdesc>Fiestra máis baixa por debaixo das outras xanelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_key">
+									<local_schema short_desc="Fiestra Máis Baixa">
+										<longdesc>Fiestra máis baixa por debaixo das outras xanelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_button">
+									<local_schema short_desc="Elevar Fiestra">
+										<longdesc>Elevar xanela por enriba das restantes</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_key">
+									<local_schema short_desc="Elevar Fiestra">
+										<longdesc>Elevar xanela por enriba das restantes</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_button">
+									<local_schema short_desc="Pechar Fiestra">
+										<longdesc>Pechar a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_key">
+									<local_schema short_desc="Pechar Fiestra">
+										<longdesc>Pechar a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_match">
+									<local_schema short_desc="Prevención do Enfoque nas Fiestras">
+										<longdesc>Prevención do enfoque nas xanelas (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_level">
+									<local_schema short_desc="Nivel de Prevención de Enfoque">
+										<longdesc>Nivel de prevención da perda de enfoque (0 = Apagado, 1 = Baixa, 2 = Normal, 3 = Alta, 4 = Moi Alta)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise_delay">
+									<local_schema short_desc="Atraso na Elevación Automática">
+										<longdesc>Intervalo antes da elevación das xanelas seleccionadas (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise">
+									<local_schema short_desc="Elevación Automática">
+										<longdesc>Elevar xanelas seleccionadas despois dun intervalo de tempo</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_click">
+									<local_schema short_desc="Elevar con un Clic">
+										<longdesc>Elevar xanelas cando se faga clic nelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="Faga Clic para Enfocar">
+										<longdesc>Ao facer clic na xanela transfírese o foco cara ela</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outputs">
+									<local_schema short_desc="Saídas">
+										<longdesc>Lista de cadeas que describen os dispositivos de saída</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_outputs">
+									<local_schema short_desc="Detectar Saídas">
+										<longdesc>Detección automática de dispositivos de saída</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlapping_outputs">
+									<local_schema short_desc="Xestión de Saídas Superpostas">
+										<longdesc>Cal dos dispositivos que se superpoñen debería ser o preferido (0 = Modo intelixente, 1 = Preferir saída máis grande, 2 = Preferir saída máis pequena)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="default_icon">
+									<local_schema short_desc="Icona por defecto">
+										<longdesc>Imaxe da icona da xanela por defecto</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ping_delay">
+									<local_schema short_desc="Atraso de ping">
+										<longdesc>Intervalo entre mensaxes ping (1000 - 30000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_delay">
+									<local_schema short_desc="Atraso do Disparador de Acción de Borde">
+										<longdesc>O tempo que o punteiro debe estar no borde da pantalla antes de que acción do borde se leve a cabo. (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hide_skip_taskbar_windows">
+									<local_schema short_desc="Ocultar Fiestras Ignorando a Barra de Tarefa">
+										<longdesc>Agochar as xanelas que non están na barra de tarefas ao entrar no modo amosar escritorio</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ignore_hints_when_maximized">
+									<local_schema short_desc="Ignorar os Consellos Cando Estea Maximizado">
+										<longdesc>Ignorar incremento de tamaño e aspecto dos consellos cando a xanela está maximizada</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="audible_bell">
+									<local_schema short_desc="Campá audible">
+										<longdesc>Campá de sistema audible</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_plugins">
+									<local_schema short_desc="Complementos Activos">
+										<longdesc>Lista de engadidos activados</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="opengl">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="texture_compression">
+									<local_schema short_desc="Compresión de Texturas">
+										<longdesc>Empregala compresión para as texturas convertidas dende imaxes</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sync_to_vblank">
+									<local_schema short_desc="Sincronizar a VBlank">
+										<longdesc>Só actualizar a pantalla durante o período de limpeza vertical</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lighting">
+									<local_schema short_desc="Iluminación">
+										<longdesc>Empregar luz difusa cando se transforma a pantalla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="texture_filter">
+									<local_schema short_desc="Filtro de Textura">
+										<longdesc>Filtro de Texturas (0 = Rápido, 1 = Bo, 2 = Mellor)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="gnomecompat">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command_terminal_key">
+									<local_schema short_desc="Abrir unha terminal">
+										<longdesc>Abrir unha terminal</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_terminal">
+									<local_schema short_desc="Liña de comando do terminal">
+										<longdesc>Liña de comando do terminal</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_window_screenshot_key">
+									<local_schema short_desc="Facer captura de pantalla dunha xanela">
+										<longdesc>Facer captura de pantalla dunha xanela</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_window_screenshot">
+									<local_schema short_desc="Liña de comando para captura de pantalla de xanelas">
+										<longdesc>Liña de comando para captura de pantalla de xanelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_screenshot_key">
+									<local_schema short_desc="Facer unha capturar pantalla">
+										<longdesc>Facer unha capturar pantalla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_screenshot">
+									<local_schema short_desc="Capturar pantalla da liña de comando">
+										<longdesc>Capturar pantalla da liña de comando</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_key">
+									<local_schema short_desc="Diálogo de Execución">
+										<longdesc>Amosar caixa de diálogo Executar Aplicativo</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="main_menu_key">
+									<local_schema short_desc="Amosar Menú Principal">
+										<longdesc>Amosar o menú principal</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="screenshot">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="launch_app">
+									<local_schema short_desc="Lanzar Aplicación">
+										<longdesc>Abrir automaticamente a captura de pantalla con esta aplicación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="directory">
+									<local_schema short_desc="Cartafol">
+										<longdesc>Put screenshot images in this directory. If empty, the desktop directory will be used.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Iniciar">
+										<longdesc>Iniciar Rectángulo de Captura de Pantalla </longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="force_independent_output_painting">
+									<local_schema short_desc="Forzar debuxado na saída independente">
+										<longdesc>Debuxar cada dispositivo de saída de forma independente, aínda que o dispositivo de saída se superpoña</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unredirect_fullscreen_windows">
+									<local_schema short_desc="Desredirección das Fiestras en Pantalla Completa">
+										<longdesc>Permitir que o renderizado das xanelas a pantalla completa non sexa redirixido a mapas de imaxe fora da pantalla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="refresh_rate">
+									<local_schema short_desc="Taxa de Actualización">
+										<longdesc>Taxa de refresco da pantalla (veces/segundo)  (1 - 200)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_refresh_rate">
+									<local_schema short_desc="Detectar Taxa de Actualización">
+										<longdesc>Detección automática da taxa de actualización</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="slow_animations_key">
+									<local_schema short_desc="Animacións Lentas">
+										<longdesc>Trocar o uso de animacións lentas</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="annotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stroke_width">
+									<local_schema short_desc="Ancho do pincel">
+										<longdesc>Ancho do pincel para as anotacións (1.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="stroke_color">
+									<local_schema short_desc="Cor do pincel das anotacións">
+										<longdesc>Cor do pincel para anotacións</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="Cor de recheo das anotacións">
+										<longdesc>Cor de recheo das anotacións</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_button">
+									<local_schema short_desc="Limpar">
+										<longdesc>Limpar</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_key">
+									<local_schema short_desc="Limpar">
+										<longdesc>Limpar</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="decor">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="shadow_match">
+									<local_schema short_desc="Fiestras con sombra">
+										<longdesc>Fiestras que deben ter sombra (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="decoration_match">
+									<local_schema short_desc="Activa a xestión da decoración das xanelas">
+										<longdesc>Fiestras que se deben decorar (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mapa de Imaxe">
+										<longdesc>Permitir a xeración de mapas de imaxe para as texturas da decoración</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command">
+									<local_schema short_desc="Comando">
+										<longdesc>Liña de comando a executar se non se está a executar ningún decorador</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_y_offset">
+									<local_schema short_desc="Desprazamento Y da Sombra">
+										<longdesc>Desprazamento Y da sombra (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_x_offset">
+									<local_schema short_desc="Desprazamento X da Sombra">
+										<longdesc>Desprazamento X da sombra (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_color">
+									<local_schema short_desc="Cor da sombra">
+										<longdesc>Cor da sombra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_opacity">
+									<local_schema short_desc="Opacidade da Sombra">
+										<longdesc>Opacidade da sombra (0.01 - 6.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_radius">
+									<local_schema short_desc="Radio da Sombra">
+										<longdesc>Radio da sombra (0.1 - 18.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="zoom">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="timestep">
+									<local_schema short_desc="Saltos do tempo">
+										<longdesc>Zoom Timestep (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Velocidade">
+										<longdesc>Zoom Speed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Iniciar">
+										<longdesc>Zoom In</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="commands">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command12_edge">
+									<local_schema short_desc="Executar comando 12">
+										<longdesc>A edge binding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_edge">
+									<local_schema short_desc="Executar comando 11">
+										<longdesc>Un atallo de borde que cando é invocado, executa o comando de consola identificado polo comando11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_edge">
+									<local_schema short_desc="Executar comando 10">
+										<longdesc>Un atallo de borde que cando é invocado, executa o comando de consola identificado polo comando10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_edge">
+									<local_schema short_desc="Executar comando 9">
+										<longdesc>Un atallo de borde que cando é invocado, executa o comando de consola identificado polo comando9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_edge">
+									<local_schema short_desc="Executar comando 8">
+										<longdesc>Un atallo de borde que cando é invocado, executa o comando de consola identificado polo comando8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_edge">
+									<local_schema short_desc="Executar comando 7">
+										<longdesc>Un atallo de borde que cando é invocado, executa o comando de consola identificado polo comando7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_edge">
+									<local_schema short_desc="Executar comando 6">
+										<longdesc>Un atallo de borde que cando é invocado, executa o comando de consola identificado polo comando6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_edge">
+									<local_schema short_desc="Executar comando 5">
+										<longdesc>Un atallo de borde que cando é invocado, executa o comando de consola identificado polo comando5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_edge">
+									<local_schema short_desc="Executar comando 4">
+										<longdesc>Un atallo de borde que cando é invocado, executa o comando de consola identificado polo comando4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_edge">
+									<local_schema short_desc="Executar comando 3">
+										<longdesc>Un atallo de borde que cando é invocado, executa o comando de consola identificado polo comando3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_edge">
+									<local_schema short_desc="Executar comando 2">
+										<longdesc>Un atallo de borde que cando é invocado, executa o comando de consola identificado polo comando2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_edge">
+									<local_schema short_desc="Executar comando 1">
+										<longdesc>Un atallo de borde que cando é invocado, executa o comando de consola identificado polo comando1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command12_button">
+									<local_schema short_desc="Executar comando 12">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_button">
+									<local_schema short_desc="Executar comando 11">
+										<longdesc>Un botón de atallo que, cando é accionado, executa o comando de consolaidentificado polo comando11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_button">
+									<local_schema short_desc="Executar comando 10">
+										<longdesc>Un botón de atallo que, cando é accionado, executa o comando de consolaidentificado polo comando10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_button">
+									<local_schema short_desc="Executar comando 9">
+										<longdesc>Un botón de atallo que, cando é accionado, executa o comando de consola identificado polo comando9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_button">
+									<local_schema short_desc="Executar comando 8">
+										<longdesc>Un botón de atallo que, cando é accionado, executa o comando de consola identificado polo comando8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_button">
+									<local_schema short_desc="Executar comando 7">
+										<longdesc>Un botón de atallo que, cando é accionado, executa o comando de consola identificado polo comando7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_button">
+									<local_schema short_desc="Executar comando 6">
+										<longdesc>Un botón de atalloque, cando é accionado, executa o comando de consola identificado polo comando6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_button">
+									<local_schema short_desc="Executar comando 5">
+										<longdesc>Un botón de atallo que, cando é accionado, executa o comando de consola identificado polo comando5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_button">
+									<local_schema short_desc="Executar comando 4">
+										<longdesc>Un botón de atallo que, cando é accionado, executa o comando de consola identificado polo comando4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_button">
+									<local_schema short_desc="Executar comando 3">
+										<longdesc>Un botón de atallo que, cando é accionado, executa o comando de consola identificado polo comando3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_button">
+									<local_schema short_desc="Executar comando 2">
+										<longdesc>Un botón de atallo que, cando é accionado, executa o comando de consolaidentificado polo comando2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_button">
+									<local_schema short_desc="Executar comando 1">
+										<longdesc>Un botón de atallo que, cando é accionado, executa o comando de consolaidentificado polo comando1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command12_key">
+									<local_schema short_desc="Executar comando 12">
+										<longdesc>A keybinding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_key">
+									<local_schema short_desc="Executar comando 11">
+										<longdesc>Un atallo de teclado que, cando é accionado, executa o comando de consolaidentificado polo comando11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_key">
+									<local_schema short_desc="Executar comando 10">
+										<longdesc>Un atallo de teclado que, cando é accionado, executa o comando de consolaidentificado polo comando10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_key">
+									<local_schema short_desc="Executar comando 9">
+										<longdesc>Un atallo de teclado que, cando é accionado, executa o comando de consola identificado polo comando9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_key">
+									<local_schema short_desc="Executar comando 8">
+										<longdesc>Un atallo de teclado que, cando é accionado, executa o comando de consola identificado polo comando8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_key">
+									<local_schema short_desc="Executar comando 7">
+										<longdesc>Un atallo de teclado que, cando é accionado, executa o comando de consola identificado polo comando7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_key">
+									<local_schema short_desc="Executar comando 6">
+										<longdesc>Un atallo de teclado que, cando é accionado, executa o comando de consola identificado polo comando6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_key">
+									<local_schema short_desc="Executar comando 5">
+										<longdesc>Un atallo de teclado que, cando é accionado, executa o comando de consola identificado polo comando5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_key">
+									<local_schema short_desc="Executar comando 4">
+										<longdesc>Un atallo de teclado que, cando é accionado, executa o comando de consola identificado polo comando4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_key">
+									<local_schema short_desc="Executar comando 3">
+										<longdesc>Un atallo de teclado que, cando é accionado, executa o comando de consola identificado polo comando3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_key">
+									<local_schema short_desc="Executar comando 2">
+										<longdesc>Un atallo de teclado que, cando é accionado, executa o comando de consolaidentificado polo comando2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_key">
+									<local_schema short_desc="Executar comando 1">
+										<longdesc>Un atallo de teclado que, cando é accionado, executa o comando de consolaidentificado polo comando1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command12">
+									<local_schema short_desc="Liña de comando 12">
+										<longdesc>Command line to be executed in shell when run_command12 is invoked</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command11">
+									<local_schema short_desc="Liña de comando 11">
+										<longdesc>Liña de comando a ser executada na consola cando executar_comando11 sexa accionado</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command10">
+									<local_schema short_desc="Liña de comando 10">
+										<longdesc>Liña de comando a ser executada na consola cando executar_comando10 sexa accionado</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command9">
+									<local_schema short_desc="Liña de comando 9">
+										<longdesc>Liña de comando a ser executada na consola cando executar_comando9 sexa accionado</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command8">
+									<local_schema short_desc="Liña de comando 8">
+										<longdesc>Liña de comando a ser executada na consola cando executar_comando8 sexa accionado</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command7">
+									<local_schema short_desc="Liña de comando 7">
+										<longdesc>Liña de comando a ser executada na consola cando executar_comando7 sexa accionado</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command6">
+									<local_schema short_desc="Liña de comando 6">
+										<longdesc>Liña de comando a ser executada na consola cando executar_comando6 sexa accionado</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command5">
+									<local_schema short_desc="Liña de comando 5">
+										<longdesc>Liña de comando a ser executada na consola cando executar_comando5 sexa accionado</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command4">
+									<local_schema short_desc="Liña de comando 4">
+										<longdesc>Liña de comando a ser executada na consola cando executar_comando4 sexa accionado</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command3">
+									<local_schema short_desc="Liña de comando 3">
+										<longdesc>Liña de comando a ser executada na consola cando executar_comando3 sexa accionado</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command2">
+									<local_schema short_desc="Liña de comando 2">
+										<longdesc>Liña de comando a ser executada na consola cando executar_comando2 sexa accionado</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command1">
+									<local_schema short_desc="Liña de comando 1">
+										<longdesc>Liña de comando a ser executada na consola cando executar_comando1 sexa accionado</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="resize">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stretch_match">
+									<local_schema short_desc="Dimensionar Fiestras Estirándoas">
+										<longdesc>Fiestras que deben empregar dimensionamento por estiramento (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rectangle_match">
+									<local_schema short_desc="Dimensionado de Fiestras co Rectángulo">
+										<longdesc>Fiestras que deben empregar o dimensionado por rectángulo (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outline_match">
+									<local_schema short_desc="Dimensionado de Fiestras co Contorno">
+										<longdesc>Fiestras que deben empregar dimensionado co contorno (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="normal_match">
+									<local_schema short_desc="Dimensionado Normal de Fiestras">
+										<longdesc>Fiestras que deben empregar dimensionado normal (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="Cor de recheo">
+										<longdesc>Cor de recheo empregada para o modo de dimensionado por rectángulo</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="border_color">
+									<local_schema short_desc="Cor do borde">
+										<longdesc>Cor do borde dos extremos e modos de dimesionado por rectángulos</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="Modo de Dimensionado por Omisión">
+										<longdesc>Modo a empregar por omisión no dimensionado de xanelas (0 = Normal, 1 = Contorno, 2 = Rectángulo, 3 = Estirado)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Iniciar Dimensión de Fiestras">
+										<longdesc>Iniciar dimensionado de xanela</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Iniciar Dimensión de Fiestras">
+										<longdesc>Iniciar dimensionado de xanela</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="obs">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="saturation_values">
+									<local_schema short_desc="Valores das xanelas">
+										<longdesc>Valores de saturación para as xanelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation_matches">
+									<local_schema short_desc="Fiestras">
+										<longdesc>Fiestras que deben ter unha saturación diferente por omisión</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation_step">
+									<local_schema short_desc="Salto">
+										<longdesc>Salto na Saturación (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness_values">
+									<local_schema short_desc="Valores das xanelas">
+										<longdesc>Valores de Brillo para as xanelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness_matches">
+									<local_schema short_desc="Fiestras">
+										<longdesc>Fiestras que deben ter un brillo diferente por omisión</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness_step">
+									<local_schema short_desc="Salto">
+										<longdesc>Salto no Brillo (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity_values">
+									<local_schema short_desc="Valores das xanelas">
+										<longdesc>Valores de opacidade para as xanelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity_matches">
+									<local_schema short_desc="Fiestras">
+										<longdesc>Fiestras que deben ter unha opacidade diferente por omisión</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity_step">
+									<local_schema short_desc="Salto">
+										<longdesc>Etapa de Opacidade (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="cube">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="transparent_manual_only">
+									<local_schema short_desc="Activar Transparencia só ao rodar co rato">
+										<longdesc>Iniciar transparencia do cubo só se a rotación é iniciada polo rato.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="inactive_opacity">
+									<local_schema short_desc="Opacidade Mentres Non se Roda">
+										<longdesc>Opacidade do escritorio cando non está rotando (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_opacity">
+									<local_schema short_desc="Opacidade Durante a Rotación">
+										<longdesc>Opacidade da xanela do escritorio ao rodar (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_end_color">
+									<local_schema short_desc="Cor Final do gradiente Skydome">
+										<longdesc>Cor a utilizar para a cor inferior do gradiente do skydome por omisión</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_start_color">
+									<local_schema short_desc="Cor Inicial do gradiente Skydome">
+										<longdesc>Cor a utilizar para cor superior do gradiente do skydome por omisión</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_animated">
+									<local_schema short_desc="Animar Skydome">
+										<longdesc>Animar Skydome ao xirar o cubo</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_image">
+									<local_schema short_desc="Imaxe do Skydome">
+										<longdesc>Imaxe a empregar como textura no skydome</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome">
+									<local_schema short_desc="Skydome">
+										<longdesc>Renderizar skydome</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Saltos do tempo">
+										<longdesc>Pasos de dobrado (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Velocidade">
+										<longdesc>Velocidade de dobrado (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Aceleración">
+										<longdesc>Aceleración de dobrado (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="in">
+									<local_schema short_desc="Interior do Cubo">
+										<longdesc>Interior do cubo</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Modo de saída múltiple">
+										<longdesc>Seleccione como se mostra o cubo se se empregan dispositivos de saída múltiples (0 = Automático, 1 = Cubos múltiples, 2 = Un cubo grande)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mapa de Imaxe">
+										<longdesc>Xerar mapas cando sexa posíbel para dimensionado de mellor calidade</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unfold_key">
+									<local_schema short_desc="Desdobrar">
+										<longdesc>Desdobrar cubo</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="water">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="title_wave">
+									<local_schema short_desc="Onda dende o título">
+										<longdesc>Efecto de onda dende o título da xanela</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rain_delay">
+									<local_schema short_desc="Atraso da chuvia">
+										<longdesc>Atraso (en ms) entre cada gota de chuvia (1 - 3600000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="offset_scale">
+									<local_schema short_desc="Desprazamento da Escala">
+										<longdesc>Espaciado entre as ondas de auga (0 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_wiper_key">
+									<local_schema short_desc="Trocar limpiaparabrisas">
+										<longdesc>Troca o efecto de limpiaparabrisas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_rain_key">
+									<local_schema short_desc="Trocar chuvia">
+										<longdesc>Trocar efecto de chuvia</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Iniciar">
+										<longdesc>Activar efectos de auga co punteiro</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="rotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="rotate_to_12_window_key">
+									<local_schema short_desc="Xirar á Cara 12 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 12 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_window_key">
+									<local_schema short_desc="Xirar á Cara 11 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 11 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_window_key">
+									<local_schema short_desc="Xirar á Cara 10 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 10 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_window_key">
+									<local_schema short_desc="Xirar á Cara 9 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 9 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_window_key">
+									<local_schema short_desc="Xirar á Cara 8 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 8 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_window_key">
+									<local_schema short_desc="Xirar á Cara 7 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 7 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_window_key">
+									<local_schema short_desc="Xirar á Cara 6 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 6 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_window_key">
+									<local_schema short_desc="Xirar á Cara 5 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 5 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_window_key">
+									<local_schema short_desc="Xirar á Cara 4 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 4 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_window_key">
+									<local_schema short_desc="Xirar á Cara 3 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 3 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_window_key">
+									<local_schema short_desc="Xirar á Cara 2 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 2 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_window_key">
+									<local_schema short_desc="Xirar á Cara 1 arrastrando a Fiestra">
+										<longdesc>Xirar á cara 1 e arrastrar tamén a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_12_key">
+									<local_schema short_desc="Xirar á Cara 12">
+										<longdesc>Xirar á cara 12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_key">
+									<local_schema short_desc="Xirar á Cara 11">
+										<longdesc>Xirar á cara 11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_key">
+									<local_schema short_desc="Xirar á Cara 10">
+										<longdesc>Xirar á cara 10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_key">
+									<local_schema short_desc="Xirar á Cara 9">
+										<longdesc>Xirar á cara 9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_key">
+									<local_schema short_desc="Xirar á Cara 8">
+										<longdesc>Xirar á cara 8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_key">
+									<local_schema short_desc="Xirar á Cara 7">
+										<longdesc>Xirar á cara 7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_key">
+									<local_schema short_desc="Xirar á Cara 6">
+										<longdesc>Xirar á cara 6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_key">
+									<local_schema short_desc="Xirar á Cara 5">
+										<longdesc>Xirar á cara 5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_key">
+									<local_schema short_desc="Xirar á Cara 4">
+										<longdesc>Xirar á cara 4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_key">
+									<local_schema short_desc="Xirar á Cara 3">
+										<longdesc>Xirar á cara 3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_key">
+									<local_schema short_desc="Xirar á Cara 2">
+										<longdesc>Xirar á cara 2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_key">
+									<local_schema short_desc="Xirar á Cara 1">
+										<longdesc>Xirar á cara 1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_right_edge">
+									<local_schema short_desc="Xirar á Dereita">
+										<longdesc>Cambiar á área de traballo da dereita e manter punteiro</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_left_edge">
+									<local_schema short_desc="Xirar á Esquerda">
+										<longdesc>Xirar á area de traballo da esquerda e manter punteiro</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_window_key">
+									<local_schema short_desc="Xirar xanela">
+										<longdesc>Xirar coa xanela</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_key">
+									<local_schema short_desc="Xirar a">
+										<longdesc>Xirar á área de traballo</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_button">
+									<local_schema short_desc="Xirar á Dereita arrastrando a Fiestra">
+										<longdesc>Xirar á dereita e arrastrar a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_key">
+									<local_schema short_desc="Xirar á Dereita arrastrando a Fiestra">
+										<longdesc>Xirar á dereita e arrastrar a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_button">
+									<local_schema short_desc="Xirar á Esquerda coa Fiestra">
+										<longdesc>Xirar á esquerda e arrastrar a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_key">
+									<local_schema short_desc="Xirar á Esquerda coa Fiestra">
+										<longdesc>Xirar á esquerda e arrastrar a xanela activa</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_button">
+									<local_schema short_desc="Xirar á Dereita">
+										<longdesc>Xirar á dereita</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_key">
+									<local_schema short_desc="Xirar á Dereita">
+										<longdesc>Xirar á dereita</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_button">
+									<local_schema short_desc="Xirar á Esquerda">
+										<longdesc>Xirar á esquerda</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_key">
+									<local_schema short_desc="Xirar á Esquerda">
+										<longdesc>Xirar á esquerda</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Iniciar">
+										<longdesc>Iniciar Rotación</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Saltos do tempo">
+										<longdesc>Saltos de Tempo da Rotación (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Velocidade">
+										<longdesc>Velocidade de Rotación (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Aceleración">
+										<longdesc>Aceleración da Rotación (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sensitivity">
+									<local_schema short_desc="Sensibilidade do Punteiro">
+										<longdesc>Sensibilidade do movemento do punteiro (0.01 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="flip_time">
+									<local_schema short_desc="Duración do Xiro">
+										<longdesc>Tempo de espera antes de rodar a área de traballo (0 - 1000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Zoom">
+										<longdesc>Zoom da rotación (0.0 - 2.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_bottom">
+									<local_schema short_desc="Xirar á Cara Inferior">
+										<longdesc>Xirar o Cubo á Cara Inferior</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_top">
+									<local_schema short_desc="Xirar á Cara Superior">
+										<longdesc>Xirar o Cubo á Cara Superior</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="invert_y">
+									<local_schema short_desc="Inverter o eixo Y do Punteiro">
+										<longdesc>Inverter eixo Y do movemento do punteiro</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_rotate">
+									<local_schema short_desc="Elevar ao accionar a roda do rato">
+										<longdesc>Elevar xanelas ao accionar a roda do rato</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_dnd">
+									<local_schema short_desc="Cambiar cando se Arrastra cara o Borde">
+										<longdesc>Xirar á área de traballo seguinte ao arrastrar un obxecto cara o borde da pantalla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_window">
+									<local_schema short_desc="Xirar con Movemento cara o Borde">
+										<longdesc>Cambiar á área de traballo seguinte ao mover a xanela cara o borde da xanela</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_pointer">
+									<local_schema short_desc="Xirar cando estea o Punteiro no Borde">
+										<longdesc>Xirar á área de traballo seguinte ao mover o punteiro cara o borde da xanela</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="blur">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="independent_tex">
+									<local_schema short_desc="Recollida de textura independente">
+										<longdesc>Empregar as unidades de textura dispoñibles para facer o maior número derecollidas de textura independentes posibles.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="occlusion">
+									<local_schema short_desc="Oclusión ou desenfoque">
+										<longdesc>Desactivar desenfoque de rexións de pantalla escurecidas por outras xanelas.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="Saturación do desenfoque">
+										<longdesc>Saturación do desenfoque (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap_lod">
+									<local_schema short_desc="Mapa de Imaxe LOD">
+										<longdesc>Nivel de detalle do mapa de imaxe (0.1 - 5.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_strength">
+									<local_schema short_desc="Forza gausiana">
+										<longdesc>Forza gausiana (0.0 - 1.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_radius">
+									<local_schema short_desc="Radio gausiano">
+										<longdesc>Radio gausiano (1 - 15)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="filter">
+									<local_schema short_desc="Filtro de desenfoque">
+										<longdesc>Método de filtrado empregado para desenfocar (0 = 4x Bilinear, 1 = Gausiano, 2 = Mapa de Imaxe)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur">
+									<local_schema short_desc="Desenfoque Alfa">
+										<longdesc>Desenfocar na parte traseira das xanelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur_match">
+									<local_schema short_desc="Desenfoque alfa das xanelas">
+										<longdesc>Fiestras que deben empregar o-desenfoque alfa por omisión (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur">
+									<local_schema short_desc="Desenfocar segundo o foco">
+										<longdesc>Desenfocar as xanelas que non teñan foco</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur_match">
+									<local_schema short_desc="Desenfocar xanelas segundo o foco">
+										<longdesc>Fiestras afectadas polo desenfoque do foco (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="blur_speed">
+									<local_schema short_desc="Velocidade de desenfoque">
+										<longdesc>Velocidade de desenfoque das xanelas (0.1 - 10.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="pulse">
+									<local_schema short_desc="Pulso">
+										<longdesc>Efecto pulso</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="switcher">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="auto_rotate">
+									<local_schema short_desc="Xirar Automaticamente">
+										<longdesc>Xirar á xanela seleccionada mentres se cambia</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimized">
+									<local_schema short_desc="Minimizado">
+										<longdesc>Amosar xanelas minimizadas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="icon">
+									<local_schema short_desc="Icona">
+										<longdesc>Amosar icona ao lado da miniatura</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Zoom">
+										<longdesc>Afastar o escritorio mentres se cambian as xanelas (0 - 5)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="bring_to_front">
+									<local_schema short_desc="Traer ao Frente">
+										<longdesc>Coloca a xanela seleccionada en primeiro plano</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Opacidade">
+										<longdesc>Nivel de Opacidade en porcentaxe (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness">
+									<local_schema short_desc="Brillo">
+										<longdesc>Cantidade de brillo en porcentaxe (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="Saturación">
+										<longdesc>Cantidade de saturación en porcentaxe (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mapa de Imaxe">
+										<longdesc>Xerar mapas cando sexa posíbel para dimensionado de mellor calidade</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Cambiador de xanelas">
+										<longdesc>Fiestras que deben ser amosadas no cambiador (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Saltos do tempo">
+										<longdesc>Salto do Cambiador (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Velocidade">
+										<longdesc>Velocidade do Cambiador (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_panel_key">
+									<local_schema short_desc="Ant. Panel">
+										<longdesc>Seleccionar anterior xanela de tipo panel.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_panel_button">
+									<local_schema short_desc="Ant. Panel">
+										<longdesc>Seleccionar anterior xanela de tipo panel.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_panel_key">
+									<local_schema short_desc="Seguinte Panel">
+										<longdesc>Seleccionar seguinte xanela de tipo panel.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_panel_button">
+									<local_schema short_desc="Seguinte Panel">
+										<longdesc>Seleccionar seguinte xanela de tipo panel.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_key">
+									<local_schema short_desc="Fiestra anterior (Sen xanela sobresaínte)">
+										<longdesc>Seleccionar xanela anterior sen amosar a xanela sobresaínte.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_button">
+									<local_schema short_desc="Fiestra anterior (Sen xanela sobresaínte)">
+										<longdesc>Seleccionar xanela anterior sen amosar a xanela sobresaínte.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_key">
+									<local_schema short_desc="Seguinte Fiestra (Sen xanela sobresaínte)">
+										<longdesc>Seleccionar seguinte xanela sen amosar a xanela sobresaínte</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_button">
+									<local_schema short_desc="Seguinte Fiestra (Sen xanela sobresaínte)">
+										<longdesc>Seleccionar seguinte xanela sen amosar a xanela sobresaínte</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_key">
+									<local_schema short_desc="Fiestra anterior (Todas as xanelas)">
+										<longdesc>Amosar trocador se non está visíbel e seleccionar a xanela anterior de todas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_button">
+									<local_schema short_desc="Fiestra anterior (Todas as xanelas)">
+										<longdesc>Amosar trocador se non está visíbel e seleccionar a xanela anterior de todas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_key">
+									<local_schema short_desc="Seguinte Fiestra (Todas as xanelas)">
+										<longdesc>Amosar trocador se non está visíbel e seleccionar a seguinte xanela de tódalas xanelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_button">
+									<local_schema short_desc="Seguinte Fiestra (Todas as xanelas)">
+										<longdesc>Amosar trocador se non está visíbel e seleccionar a seguinte xanela de tódalas xanelas</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_key">
+									<local_schema short_desc="Ant. xanela">
+										<longdesc>Amosar trocador se non está visíbel e seleccionar a xanela anterior</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_button">
+									<local_schema short_desc="Ant. xanela">
+										<longdesc>Amosar trocador se non está visíbel e seleccionar a xanela anterior</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_key">
+									<local_schema short_desc="Seguinte xanela">
+										<longdesc>Amosar trocador se non está visíbel e seleccionar seguinte xanela</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_button">
+									<local_schema short_desc="Seguinte xanela">
+										<longdesc>Amosar trocador se non está visíbel e seleccionar seguinte xanela</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="move">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="lazy_positioning">
+									<local_schema short_desc="Posicionamento preguizoso">
+										<longdesc>Non actualizar a posición das xanelas no servidor ata acabar o movemento</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snapoff_maximized">
+									<local_schema short_desc="Separar as xanelas maximizadas">
+										<longdesc>Separar e restaurar as xanelas maximizaas cando se arrastren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="constrain_y">
+									<local_schema short_desc="Restrinxir Y">
+										<longdesc>Restrinxir a coordenada Y á area de traballo</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Opacidade">
+										<longdesc>Nivel de opacidade das xanelas en movemento (1 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Iniciar Movemento de Fiestras">
+										<longdesc>Iniciar movemento da xanela</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Iniciar Movemento de Fiestras">
+										<longdesc>Iniciar movemento da xanela</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="place">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="viewport_y_values">
+									<local_schema short_desc="Posicións Y da Área de Traballo">
+										<longdesc>Posicións dos puntos de vista verticais</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_x_values">
+									<local_schema short_desc="Posicións X da Área de traballo">
+										<longdesc>Posicións de áreas de traballo horizontais</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_matches">
+									<local_schema short_desc="Fiestras colocadas nas áreas de traballo">
+										<longdesc>Fiestras que deben ser colocadas en áreas de traballo específicos por omisión</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode_matches">
+									<local_schema short_desc="Fiestras">
+										<longdesc>Windows that should have a certain positioning mo+de</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_constrain_workarea">
+									<local_schema short_desc="Manter na Área de Traballo">
+										<longdesc>Manter as xanelas colocadas na área de traballo, aínda que isto signifique que a posición poida diferir da posición especificada</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_y_values">
+									<local_schema short_desc="Posicións Y">
+										<longdesc>Valores de posición Y</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_x_values">
+									<local_schema short_desc="Posicións X">
+										<longdesc>Valores de posición X</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_matches">
+									<local_schema short_desc="Fiestras Colocadas">
+										<longdesc>Fiestras que se deben ser colocadas por omisión</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="force_placement_match">
+									<local_schema short_desc="Forzar o colocado das xanelas">
+										<longdesc>Fiestras que se deben colocar obrigatoriamente, aínda que se indique no xestor de xanelas que se deben evitar a súa colocación (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Modo de saída múltiple">
+										<longdesc>Selecciona como se debe comportar a colocación de xanelas cando se seleccionan saídas múltiples (0 = Empregar o dispositivo de saída activo, 1 = Empregar o dispositivo de saída co punteiro, 2 = Empregar o dispositivo de saída da xanela enfocada, 3 = Colocar en tódalas saídas)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="Modo de Colocación">
+										<longdesc>Algoritmo a empregar para posicionar as xanelas (0 = En Cascada, 1 = Centrado, 2 = Intelixente, 3 = Maximizar, 4 = Aleatorio, 5 = Pointer)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="workarounds">
+									<local_schema short_desc="Entornos">
+										<longdesc>Entornos de colocación de xanela</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="clone">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_button">
+									<local_schema short_desc="Iniciar">
+										<longdesc>Iniciar selección clonada</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY app "Dictionary">
+<!ENTITY applet "Dictionary Applet">
+<!ENTITY appversion "2.14.0">
+<!ENTITY date "January 2005">
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY manrevision "1.0.0">
+]>
+<!-- This file describes the Dictionary applet and application. -->
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified 11 April, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="de">
+<!-- please do not change the id; for translations, change language to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Wörterbuch-Handbuch</title>
+
+    <abstract role="description">
+      <para>Das Wörterbuch ermöglicht Ihnen das Nachschlagen von Definitionen und der korrekten Schreibweise von Wörtern.</para>
+    </abstract>
+    
+    <copyright>
+      <year>2005</year>
+      <holder>Emmanuele Bassi</holder>
+    </copyright><copyright><year>2008</year><holder>Mario Blättermann (mario.blaettermann@t-online.de)</holder></copyright>
+    
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2006</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+   
+    <publisher> 
+      <publishername>GNOME-Dokumentationsprojekt</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Das vorliegende Dokument kann gemäß den Bedingungen der GNU Free Documentation License (GFDL), Version 1.1 oder jeder späteren, von der Free Software Foundation veröffentlichten Version ohne unveränderbare Abschnitte sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem <ulink type="help" url="ghelp:fdl">Link</ulink> oder in der mit diesem Handbuch gelieferten Datei COPYING-DOCS.</para>
+         <para>Dieses Handbuch ist Teil einer Sammlung von GNOME-Handbüchern, die unter der GFDL veröffentlicht werden. Wenn Sie dieses Handbuch getrennt von der Sammlung weiterverbreiten möchten, können Sie das tun, indem Sie eine Kopie der Lizenz zum Handbuch hinzufügen, wie es in Abschnitt 6 der Lizenz beschrieben ist.</para>
+
+	<para>Viele der Namen, die von Unternehmen verwendet werden, um ihre Produkte und Dienstleistungen von anderen zu unterscheiden, sind eingetragene Warenzeichen. An den Stellen, an denen diese Namen in einer GNOME-Dokumentation erscheinen, werden die Namen in Großbuchstaben oder mit einem großen Anfangsbuchstaben geschrieben, wenn das GNOME-Dokumentationsprojekt auf diese Warenzeichen hingewiesen wird.</para>
+
+	<para>DAS DOKUMENT UND VERÄNDERTE FASSUNGEN DES DOKUMENTS WERDEN UNTER DEN BEDINGUNGEN DER GNU FREE DOCUMENTATION LICENSE ZUR VERFÜGUNG GESTELLT MIT DEM WEITERGEHENDEN VERSTÄNDNIS, DASS: <orderedlist>
+		<listitem>
+		  <para>DIESES DOKUMENT WIRD »WIE VORLIEGEND« GELIEFERT, OHNE GARANTIEN IRGENDEINER ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES BEZIEHT SICH AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT ODER VERÄNDERTE FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR EINEN BESTIMMTEN ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER VERLETZT. DAS VOLLE RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER VERÄNDERTE FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE EIN DOKUMENT ODER EINE VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART BEINHALTEN, TRAGEN SIE (NICHT DER URSPRUNGSAUTOR, DER AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR NOTWENDIGE DIENSTLEISTUNGEN, REPARATUREN ODER FEHLERKORREKTUREN. DIESER HAFTUNGSAUSSCHLUSS IST EIN ESSENZIELLER TEIL DIESER LIZENZ. DIE VERWENDUNG EINES DOKUMENTS ODER EINER VERÄNDERTEN VERSION DES DOKUMENTS IST NICHT GESTATTET AUßER UNTER BEACHTUNG DIESES HAFTUNGSAUSSCHLUSSES UND</para>
+		</listitem>
+		<listitem>
+		  <para>UNTER KEINEN UMSTÄNDEN UND AUF BASIS KEINER RECHTSGRUNDLAGE, EGAL OB DURCH UNERLAUBTEN HANDLUNGEN (EINSCHLIEßLICH FAHRLÄSSIGKEIT), VERTRAG ODER ANDERWEITIG KANN DER AUTOR, URSPRUNGSAUTOR, EIN MITWIRKENDER ODER EIN VERTRIEBSPARTNER DIESES DOKUMENTS ODER EINER VERÄNDERTEN FASSUNG DES DOKUMENTS ODER EIN ZULIEFERER EINER DIESER PARTEIEN, HAFTBAR GEMACHT WERDEN FÜR DIREKTE, INDIREKTE, SPEZIELLE, VERSEHENTLICHE ODER FOLGESCHÄDEN JEGLICHER ART, EINSCHLIEßLICH UND OHNE EINSCHRÄNKUNGEN SCHÄDEN DURCH VERLUST VON KULANZ, ARBEITSAUSFALL, COMPUTERVERSAGEN ODER COMPUTERFEHLFUNKTIONEN ODER ALLE ANDEREN SCHÄDEN ODER VERLUSTE, DIE SICH AUS ODER IN VERBINDUNG MIT DER VERWENDUNG DES DOKUMENTS UND VERÄNDERTER FASSUNGEN DES DOKUMENTS ERGEBEN, AUCH WENN DIE OBEN GENANNTEN PARTEIEN ÜBER DIE MÖGLICHKEIT SOLCHER SCHÄDEN INFORMIERT WAREN.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Emmanuele</firstname> 
+	<surname>Bassi</surname> 
+	<affiliation> 
+	  <address><email>ebassi@gmail.com</email></address> 
+	</affiliation> 
+      </author> 
+
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>translator@gnome.org</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+
+    </authorgroup>
+
+    <revhistory>
+      <revision> 
+	<revnumber>Wörterbuch-Handbuch V1.0.0</revnumber> 
+	<date>Januar 2005</date> 
+	<revdescription> 
+	  <para role="author">Emmanuele Bassi</para>
+	  <para role="publisher">GNOME-Dokumentationsprojekt</para>
+	</revdescription> 
+      </revision>
+    </revhistory> 
+
+    <releaseinfo>Dieses Handbuch beschreibt Version 2.14.0 des Wörterbuchs.</releaseinfo> 
+    <legalnotice> 
+      <title>Rückmeldungen</title> 
+      <para>Um Fehler zu melden oder einen Vorschlag zur Anwendung <application>Wörterbuch</application> oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen auf der <ulink url="ghelp:gnome-feedback" type="help">GNOME-Seite für Rückmeldungen</ulink>.</para>
+      
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>Wörterbuch</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+  <sect1 id="gnome-dictionary-introduction"> 
+    <title>Einführung</title>
+
+    <para>Die Anwendung <application>Wörterbuch</application> ermöglicht Ihnen, in einer Wörterbuch-Quelle nach Wörtern und Begriffen zu suchen.</para>
+    
+  </sect1>
+
+<!-- ============= Getting Started =========================== -->  
+  <sect1 id="gnome-dictionary-getting-started">
+    <title>Erste Schritte</title>
+    
+<!-- ============= To Start Dictionary ======================= -->
+    <sect2 id="gnome-dictionary-start-application">
+      <title>So starten Sie das Wörterbuch</title>
+      
+      <para>Sie können das <application>Wörterbuch</application> auf folgende Arten starten:</para>
+      
+      <variablelist>
+        	<varlistentry>
+        	  <term>Menü <guimenu>Anwendungen</guimenu></term>
+        	  <listitem>
+        	    <para>Wählen Sie <menuchoice><guisubmenu>Werkzeuge</guisubmenu><guimenuitem>Wörterbuch</guimenuitem></menuchoice>.</para>
+        	  </listitem>
+        	</varlistentry>
+    	<varlistentry>
+    	  <term>Befehlszeile</term>
+    	  <listitem>
+    	    <para>Führen Sie den folgenden Befehl aus: <command>gnome-dictionary</command></para>
+    	  </listitem>
+    	</varlistentry>
+      </variablelist>
+      
+      <para>Nach dem Start wird das <application>Wörterbuch</application>-Fenster angezeigt:</para>
+      
+      <figure id="gnome-dictionary-fig">
+        <title>Wörterbuch-Fenster</title>
+        <screenshot> 
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome-dictionary-application.png" format="PNG"/>
+            </imageobject>
+            <textobject><phrase>Zeigt das Wörterbuch-Hauptfenster an.</phrase></textobject> 
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+    </sect2>
+
+  </sect1>
+  
+<!-- ============= Usage ===================================== -->
+  <sect1 id="gnome-dictionary-usage">
+    <title>Benutzung</title>
+    
+    <sect2 id="gnome-dictionary-lookup">
+      <title>Suchen nach einem Wort</title>
+      
+      <para>Um ein Wort nachzuschlagen, geben Sie es in das <guilabel>Eingabefeld</guilabel> ein und drücken dann die <keycap>Eingabetaste</keycap>.</para>
+    
+      <para>Falls einige Definitionen für das Wort gefunden wurden, werden diese innerhalb des Hauptfensters angezeigt:</para>
+
+      <figure id="gnome-dictionary-lookup-fig">
+        <title>Wörterbuch-Fenster</title>
+        <screenshot> 
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome-dictionary-lookup.png" format="PNG"/>
+            </imageobject>
+            <textobject><phrase>Zeigt eine Definition im Wörterbuch-Hauptfenster.</phrase></textobject> 
+          </mediaobject>
+        </screenshot>
+      </figure>
+      
+      <para>Anderenfalls erscheint eine Fehlermeldung mit der Angabe der Art des Fehlers.</para>
+    
+    </sect2>
+    
+    <sect2 id="gnome-dictionary-save">
+      <title>Ergebnisse des Nachschlagens speichern</title>
+      
+      <para>Um die Ergebnisse des Nachschlagens zu speichern, wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Eine Kopie speichern …</guimenuitem></menuchoice>. Geben Sie den Namen der Datei in den Dialog <guilabel>Eine Kopie speichern</guilabel> ein, dann klicken Sie auf <guibutton>Speichern</guibutton>.</para>
+    
+    </sect2>
+    
+    <sect2 id="gnome-dictionary-print">
+      <title>Ergebnisse des Nachschlagens drucken</title>
+      
+      <para>Um die Ergebnisse des Nachschlagens zu drucken, wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Drucken …</guimenuitem></menuchoice>.</para>
+
+      <para>Im Dialog <guilabel>Drucken</guilabel> können Sie den zu verwendenden Drucker, das Papierformat und die Anzahl der Kopien auswählen.</para>
+
+      <para>Um eine Vorschau des zu druckenden Texts anzuzeigen, klicken Sie auf die Schaltfläche <guibutton>Druckvorschau</guibutton>.</para>
+
+      <para>Zum Drucken klicken Sie auf <guibutton>Drucken</guibutton>.</para>
+    
+    </sect2>
+    
+    <sect2 id="gnome-dictionary-find">
+      <title>Text suchen</title>
+
+      <figure id="gnome-dictionary-find-fig">
+        <title>Wörterbuch-Fenster</title>
+        <screenshot> 
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome-dictionary-find.png" format="PNG"/>
+            </imageobject>
+            <textobject><phrase>Zeigt die Wörterbuch-Suchleiste im Hauptfenster.</phrase></textobject> 
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      
+      <para>Um einen Text innerhalb der Ergebnisse des Nachschlagens zu suchen, gehen Sie wie folgt vor:</para>
+      
+      <orderedlist>
+        <listitem><para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Suchen</guimenuitem></menuchoice>, um die <guilabel>Suchen</guilabel>-Leiste anzuzeigen.</para></listitem>
+        <listitem><para>Geben Sie den zu suchenden Text in das Eingabfeld <guilabel>Suchen</guilabel> ein.</para></listitem>
+        <listitem><para>Um das nächste Vorkommen des Texts zu finden, klicken Sie auf <guibutton>Weiter</guibutton>. Um das vorhergehende Vorkommen des Texts zu finden, klicken Sie auf <guibutton>Zurück</guibutton>.</para></listitem>
+      </orderedlist>
+    
+    </sect2>
+      
+  </sect1>
+
+<!-- ============= Preferences =============================== -->
+  <sect1 id="gnome-dictionary-preferences">
+    <title>Einstellungen</title>
+    
+    <para>Um die Einstellungen der Anwendung <application>Wörterbuch</application> zu ändern, wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Einstellungen</guimenuitem></menuchoice>.</para>
+
+<!-- ============= Source Tab ================================ -->
+    <sect2 id="gnome-dictionary-source-tab">
+      <title>Wörterbuchquellen</title>
+
+      <figure id="gnome-dictionary-sources-fig">
+        <title>Wörterbuch-Fenster</title>
+        <screenshot> 
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome-dictionary-preferences-source.png" format="PNG"/>
+            </imageobject>
+            <textobject><phrase>Zeigt den Reiter »Quelle« des Einstellungsdialogs.</phrase></textobject> 
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <para>Um die Wörterbuchquelle zu ändern, die zum Nachschlagen von Wörtern verwendet wird, wählen Sie die gewünschte Quelle aus der Liste.</para>
+    </sect2>
+    
+<!-- ============= Add Source ================================ -->
+    <sect2 id="gnome-dictionary-add-source">
+      <title>Hinzufügen einer neuen Datenquelle</title>
+
+      <figure id="gnome-dictionary-add-source-fig">
+        <title>Wörterbuch-Fenster</title>
+        <screenshot> 
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome-dictionary-add-source.png" format="PNG"/>
+            </imageobject>
+            <textobject><phrase>Zeigt den Dialog zum Hinzufügen neuer Quellen.</phrase></textobject> 
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <para>Um eine neue Wörterbuchquelle hinzuzufügen, gehen Sie wie folgt vor:</para>
+
+      <orderedlist>
+        <listitem><para>Klicken Sie auf die Schaltfläche <guibutton>Hinzufügen</guibutton>.</para></listitem>
+	<listitem><para>Ändern Sie den Namen der Quelle im Eingabefeld <guilabel>Beschreibung</guilabel></para></listitem>
+	<listitem><para>Ändern Sie die Art des Transports der neuen Quelle in der Aufklappliste <guilabel>Transport</guilabel></para></listitem>
+	<listitem><para>Ändern Sie die Einstellungen der neuen Quelle</para></listitem>
+	<listitem><para>Klicken Sie auf <guibutton>Hinzufügen</guibutton>.</para></listitem>
+      </orderedlist>
+
+      <para>Die verschiedenen Transporttypen verwenden unterschiedliche Attribute. Hier sehen Sie eine Liste der für den jeweiligen Transporttyp verfügbaren Attribute:</para>
+
+      <informaltable frame="all">
+        <tgroup cols="2" colsep="1" rowsep="1">
+	  <thead>
+	    <row valign="top">
+	      <entry><para>Transport</para></entry>
+	      <entry><para>Attribute</para></entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row valign="top">
+	      <entry><para>Wörterbuch-Server</para></entry>
+	      <entry>
+	        <para>Der Rechnername des zu verwendenen Wörterbuch-Servers</para>
+		<para>Der zu verwendene Port des Wörterbuch-Servers</para>
+              </entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    
+    </sect2>
+
+<!-- ============= Remove Source ============================= -->
+    <sect2 id="gnome-dictionary-remove-source">
+      <title>Entfernen einer Quelle</title>
+      
+      <para>Um eine Wörterbuchquelle zu entfernen, führen Sie die folgenden Schritte aus:</para>
+
+      <orderedlist>
+        <listitem><para>Wählen Sie die zu entfernende Quelle aus</para></listitem>
+	<listitem><para>Klicken Sie auf die Schaltfläche <guibutton>Entfernen</guibutton>.</para></listitem>
+      </orderedlist>
+
+      <warning><para>Falls Sie eine Wörterbuchquelle löschen, wird diese dauerhaft aus der Liste der verfügbaren Quellen entfernt. Außerdem können Sie einige systemweit definierte Wörterbuchquellen nicht löschen, es sei denn, Sie verfügen über die notwendigen Rechte, um dies zu tun.</para></warning>
+      
+    </sect2>
+    
+<!-- ============= Print Tab ================================= -->
+    <sect2 id="gnome-dictionary-print-tab">
+      <title>Druckoptionen</title>
+
+      <figure id="gnome-dictionary-print-fig">
+        <title>Wörterbuch-Fenster</title>
+        <screenshot> 
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome-dictionary-preferences-print.png" format="PNG"/>
+            </imageobject>
+            <textobject><phrase>Zeigt den Reiter »Drucken« innerhalb des Einstellungsdialogs.</phrase></textobject> 
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <para>Falls Sie die beim Drucken verwendete Schriftart und -größe ändern wollen, gehen Sie wie folgt vor:</para>
+
+      <orderedlist>
+        <listitem><para>Klicken Sie auf die Schaltfläche <guibutton>Schriftart</guibutton>.</para></listitem>
+	<listitem><para>Wählen Sie die Schriftart und -größe, die Sie verwenden wollen</para></listitem>
+	<listitem><para>Klicken Sie auf <guibutton>OK</guibutton>.</para></listitem>
+      </orderedlist>
+	
+    </sect2>
+    
+  </sect1>
+
+<!-- ============= Dictionary Applet ======================== -->
+  <sect1 id="gnome-dictionary-applet">
+  <title>Das Wörterbuch-Applet</title>
+  
+  <para>Die Anwendung <application>Wörterbuch</application> liefert ein Panel-Applet mit, das <application>Wörterbuch-Applet</application>. Sie können das <application>Wörterbuch-Applet</application> zu einem Panel hinzufügen und damit in Wörterbüchern nachschlagen.</para>
+
+  <figure id="gnome-dictionary-applet-fig">
+    <title>Fenster des Wörterbuch-Applets</title>
+    <screenshot> 
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/gnome-dictionary-applet.png" format="PNG"/>
+        </imageobject>
+        <textobject><phrase>Zeigt das Wörterbuch-Applet.</phrase></textobject> 
+      </mediaobject>
+    </screenshot>
+  </figure>
+
+
+<!-- ============= Dictionary Applet Start ================== -->
+    <sect2 id="gnome-dictionary-applet-start">
+      <title>So starten Sie das Wörterbuch-Applet</title>
+    
+      <para>Um das <application>Wörterbuch-Applet</application> zu einem Panel hinzuzufügen, klicken Sie mit der rechten Maustaste darauf und wählen dann <guimenuitem>Zum Panel hinzufügen …</guimenuitem>. Wählen Sie <application>Wörterbuchsuche</application> im <application>Zum Panel hinzufügen</application>-Dialog aus, und klicken Sie dann auf <guibutton>OK</guibutton>.</para>
+      
+    </sect2>
+
+<!-- ============= Dictionary Applet Start ================== -->
+    <sect2 id="gnome-dictionary-applet-usage">
+      <title>Verwendung des Wörterbuch-Applets</title>
+      
+      <para>Um ein Wort nachzuschlagen, geben Sie es in das <guilabel>Eingabefeld</guilabel> ein, und drücken dann die <keycap>Eingabetaste</keycap>. Alternativ können Sie mit der rechten Maustaste auf das Wörterbuch-Symbol klicken und dann <guimenuitem>Nachschlagen</guimenuitem> wählen.</para>
+      
+      <para>Falls einige Definitionen für das Wort gefunden werden konnten, erscheint ein Fenster, in dem der Text der Definitionen angezeigt wird:</para>
+
+      <figure id="gnome-dictionary-applet-window-fig">
+        <title>Fenster des Wörterbuch-Applets</title>
+        <screenshot> 
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gnome-dictionary-applet-window.png" format="PNG"/>
+            </imageobject>
+            <textobject><phrase>Zeigt das Hauptfenster des Wörterbuch-Applets.</phrase></textobject> 
+          </mediaobject>
+        </screenshot>
+      </figure>
+      
+      <para>Klicken Sie auf <guibutton>Speichern</guibutton>, um die Definitionen in einer Textdatei zu speichern. Klicken Sie auf <guibutton>Drucken</guibutton>, um die Definitionen zu drucken. Klicken Sie auf <guibutton>Leeren</guibutton>, um die Definitionen zu löschen. </para>
+      
+      <para>Sie können das Fenster schließen, indem Sie das Wörterbuch-Symbol anklicken oder die <keycap>Esc</keycap>-Taste drücken.</para>
+
+    </sect2>
+    
+    <sect2 id="gnome-dictionary-applet-preferences">
+      <title>Einstellungen</title>
+      
+      <para>Um das <application>Wörterbuch-Applet</application> zu konfigurieren, klicken Sie mit der rechten Maustaste aus fas Wörterbuch-Symbol und wählen dann <guimenuitem>Einstellungen</guimenuitem>.</para>
+      
+      <para>Der Dialog <guilabel>Einstellungen</guilabel> ist der gleiche, wie er vom <application>Wörterbuch</application> verwendet wird, siehe <xref linkend="gnome-dictionary-preferences"/></para>
+      
+    </sect2>
+    
+  </sect1>
+
+</article>

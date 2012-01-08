@@ -1,0 +1,114 @@
+#!/bin/sh
+
+set -e
+
+APP_DIR="/etc/apparmor.d"
+APP_PROFILE="usr.bin.firefox"
+APP_CONFFILE="$APP_DIR/$APP_PROFILE"
+APP_DISABLE="$APP_DIR/disable/$APP_PROFILE"
+APP_NAME=firefox
+
+# Prepare to move a conffile without triggering a dpkg question
+prep_mv_conffile() {
+    local PKGNAME="$1"
+    local CONFFILE="$2"
+
+    [ -e "$CONFFILE" ] || return 0
+
+    local md5sum="$(md5sum $CONFFILE | sed -e 's/ .*//')"
+    local old_md5sum="$(dpkg-query -W -f='${Conffiles}' $PKGNAME | \
+            sed -n -e "\' $CONFFILE ' { s/ obsolete$//; s/.* //; p }")"
+	#'
+    if [ "$md5sum" = "$old_md5sum" ]; then
+        rm -f "$CONFFILE"
+    fi
+}
+
+# Remove a no-longer used conffile
+rm_conffile() {
+    local PKGNAME="$1"
+    local CONFFILE="$2"
+
+    [ -e "$CONFFILE" ] || return 0
+
+    local md5sum="$(md5sum $CONFFILE | sed -e 's/ .*//')"
+    local old_md5sum="$(dpkg-query -W -f='${Conffiles}' $PKGNAME | \
+            sed -n -e "\' $CONFFILE ' { s/ obsolete$//; s/.* //; p }")"
+	# The quotes above confuse gedit, which considers the rest of the script to be inside quotes, so balance that out'
+    if [ "$md5sum" != "$old_md5sum" ]; then
+        echo "Obsolete conffile $CONFFILE has been modified by you."
+        echo "Saving as $CONFFILE.dpkg-bak ..."
+        mv -f "$CONFFILE" "$CONFFILE".dpkg-bak
+    else
+        echo "Removing obsolete conffile $CONFFILE ..."
+        rm -f "$CONFFILE"
+    fi
+}
+
+disable_profile() {
+    # Create a symlink to the yet-to-be-unpacked profile
+    if [ ! -e "$APP_CONFFILE" ]; then
+        mkdir -p `dirname $APP_DISABLE` 2>/dev/null || true
+        ln -sf $APP_CONFFILE $APP_DISABLE
+    fi
+}
+
+# Unconditionally disable AppArmor profile for Ubuntu 9.04 and under, since
+# it requires abstractions found only in 9.10 and higher.
+major=`lsb_release -r | awk '{print $2}' | cut -d '.' -f 1`
+version=`lsb_release -r | awk '{print $2}'`
+if [ "$major" -lt 10 ] && [ "$version" != "9.10" ]; then
+    disable_profile
+else
+    if [ "$1" = "install" ]; then
+        # Disable AppArmor profile on install, unless the last profile they
+        # modified is enabled.
+        base=`echo $APP_PROFILE | cut -d '-' -f 1`
+        last_modified=`ls -rt $APP_DIR/$base* 2>/dev/null | grep -v '\.dpkg' | tail -n1`
+        if [ -s "$last_modified" ]; then
+            if [ -e "$APP_DIR/disable/`basename $last_modified`" ]; then
+                disable_profile
+            fi
+        else
+	    # Fresh install and no other firefox profiles exist, so disable.
+            disable_profile
+        fi
+    elif [ "$1" = "upgrade" ]; then
+        # Disable AppArmor on upgrade from earlier than when we first shipped
+        # the profile if the user does not already have a profile defined.
+        if dpkg --compare-versions "$2" lt "3.7~a1~hg20091203" ; then
+            disable_profile
+        fi
+    fi
+fi
+
+# These conffiles used to belong to the package we replaced. However, that
+# package may no longer exist on the system anymore if the user was previously using abrowser,
+# so we deal with cleaning up the conffiles here. I'm not totally sure what order everything
+# happens in. I think if we conflict and replace the old package, it will get removed (or the new
+# version unpacked) first, before we arrive here. This means that dpkg-query will still show 
+# these conffiles as existing on the system (but obsolete), until we upgrade once more.
+case "$1" in
+install|upgrade)
+    if dpkg --compare-versions "$2" le "4.0~b7"; then
+        rm_conffile "${APP_NAME}" "/etc/${APP_NAME}/profile/bookmarks.html"
+        rm_conffile "${APP_NAME}" "/etc/${APP_NAME}/profile/localstore.rdf"
+        rm_conffile "${APP_NAME}" "/etc/${APP_NAME}/profile/mimeTypes.rdf"
+        rm_conffile "${APP_NAME}" "/etc/${APP_NAME}/profile/prefs.js"
+        rm_conffile "${APP_NAME}" "/etc/${APP_NAME}/profile/chrome/userChrome-example.css"
+        rm_conffile "${APP_NAME}" "/etc/${APP_NAME}/profile/chrome/userContent-example.css"
+    fi
+    # What we want to do here is migrate this conffile when:
+    # 1) Upgrading from any version older than Natty. Note, as all releases will track the
+    #    the latest Firefox version in the future, we can't just simply compare package
+    #    versions
+    # 2) Upgrading from any version older than Firefox 5.0~b2+build1+nobinonly-0ubuntu3 in Oneiric
+    PREV_MAJOR_UBUNTU_VER=`echo "$2" | sed 's/.*ubuntu\(.*\)/\1/' | sed 's/\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\(.*\)/\2/'`
+    if dpkg --compare-versions "$2" le "5.0~b2+build1+nobinonly-0ubuntu2" || \
+       ([ "x$PREV_MAJOR_UBUNTU_VER" != "x" ] && [ "$PREV_MAJOR_UBUNTU_VER" -lt "11" ]); then
+        prep_mv_conffile "${APP_NAME}" "/etc/${APP_NAME}/pref/firefox.js"
+    fi
+esac
+
+
+

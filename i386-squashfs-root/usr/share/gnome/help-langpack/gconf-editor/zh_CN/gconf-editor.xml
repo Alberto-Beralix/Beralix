@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.8">
+<!ENTITY manrevision "2.8">
+<!ENTITY date "September 2004">
+<!ENTITY app "Configuration Editor">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Feb 12, 2002
+-->
+<article id="index" lang="zh_CN">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>配置编辑器手册</title>       
+    <copyright> 
+      <year>2004</year>
+      <holder>Sun Microsystems</holder> 
+    </copyright><copyright><year>2009.</year><holder>Awgnl (y.z.h@gmx.com)</holder></copyright>
+    <!-- translators: uncomment this:
+         <copyright>
+         <year>2003</year>
+         <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+         </copyright>
+    -->
+
+    <publisher role="maintainer"> 
+      <publishername>GNOME 文档项目</publishername> 
+    </publisher> 
+
+       <legalnotice id="legalnotice">
+         <para>对于本文档的复制、分发和／或修改必须遵循自由软件基金会 (Free Software Foundation) 发布的 GNU 自由文档许可证 (GFDL) 版本 1.1 或更高版本，该许可证没有固定的部分、没有封面和背页文本。您可以在此<ulink type="help" url="ghelp:fdl">链接</ulink>上或在随本手册一起分发的 COPYING-DOCS 文件中找到 GFDL 的副本。</para>
+          <para>本手册是在 GFDL 许可之下分发的 GNOME 手册集合的一部分。如果想要单独分发此手册，可以在手册中添加该许可证的一份副本然后分发，如该许可证的第 6 部分所述。</para>
+ 
+         <para>各个公司使用的许多用于区别它们产品和服务的名称都声明为商标。在所有的 GNOME 文档以及 GNOME 文档项目的成员中，这些名称都是以全大写字母或首字母大写显示，从而表明它们是商标。</para>
+ 
+         <para>本文档以及文档的修改版本都是在遵循 GNU 自由文档许可证的条款下提供，这表示具有以下含义：<orderedlist>
+                 <listitem>
+                   <para>文档按“原样”提供，不提供任何明示或暗示的保证，包括但不限于：文档或文档的修改版本没有适销性方面的缺陷、适合特定目的的适用性，以及没有侵权行为。您将自行承担本文档以及文档修改版本的质量、准确性以及性能方面的风险。如果任何文档或文档修改版本存在缺陷，您(而不是最初的编写者、作者或撰写人)将承担所有必需的服务、维修或更正的费用。此免责声明是本许可证的重要组成部分。如果不接受此免责声明，那么您就没有权利使用任何文档或文档的修改版本；并且</para>
+                 </listitem>
+                 <listitem>
+                   <para>无论在任何情况以及在任何法律理论下，本文档或文档修改版本的作者、最初的编写者、任何撰写人或任何分发者，或者任意这些方的任何提供者都不对任何人由于使用本"文档或文档修改版本引起或带来的任何直接的、间接的、特殊的、偶然的或继发的损失承担任何民事(包括疏忽)、合同或其它方面的责任，这些损失包括但不限于信誉损失、工作停止、计算机失败或故障，或任何以及所有其它损失或由此引发的或与之相关的损失，即使这些方已被告知存在出现此类损失的可能性时也是如此。</para>
+                 </listitem>
+           </orderedlist></para>
+   </legalnotice>
+ 
+    <!-- This file  contains link to license for the documentation (GNU FDL), and 
+         other legal stuff such as "NO WARRANTY" statement. Please do not change 
+         any of this. -->
+
+    <authorgroup>
+      <author>
+        <firstname>Sun</firstname>
+        <surname>GNOME 文档团队</surname>
+        <affiliation><orgname>Sun Microsystems</orgname></affiliation>
+      </author>
+      <author>
+        <firstname>Angela</firstname>
+        <surname>Boyle</surname>
+        <affiliation>
+          <orgname>GNOME 文档项目</orgname>
+        </affiliation>
+      </author>
+      <editor>
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>GNOME 文档项目</orgname>
+        </affiliation>
+      </editor>
+      <!-- This is appropriate place for other contributors: translators,
+           maintainers,  etc. Commented out by default.
+           <othercredit role="translator">
+           <firstname>Latin</firstname> 
+           <surname>Translator 1</surname> 
+           <affiliation> 
+           <orgname>Latin Translation Team</orgname> 
+           <address> <email>translator@gnome.org</email> </address> 
+           </affiliation>
+           <contrib>Latin translation</contrib>
+           </othercredit>
+      -->
+    </authorgroup>
+    <abstract role="description"><para>配置编辑器是用来更改被应用程序使用而通过首选项对话框无法更改的配置选项</para></abstract>
+
+    <revhistory>
+      <revision>
+        <revnumber>Version 2.8</revnumber>
+        <date>2004年9月</date>
+        <revdescription>
+          <para role="author">GNOME 文档项目</para>
+          <para role="publisher">GNOME 文档项目</para>
+          <para role="status">没有复审</para>
+        </revdescription>
+      </revision>
+      <revision> 
+        <revnumber>版本 2.1</revnumber> 
+        <date>2004年8月</date> 
+        <revdescription> 
+          <para role="author">Sun GNOME 文档团队</para>
+          <para role="publisher">GNOME 文档项目</para>
+        </revdescription> 
+      </revision>
+      <revision> 
+        <revnumber>版本 2.0.1</revnumber> 
+        <date>2004年1月</date> 
+        <revdescription> 
+          <para role="author">Sun GNOME 文档团队</para>
+          <para role="publisher">GNOME 文档项目</para>
+        </revdescription> 
+      </revision>
+    </revhistory> 
+    <releaseinfo>本手册描述 2.8 版的配置编辑器</releaseinfo> 
+    <legalnotice> 
+      <title>反馈</title> 
+      <para>如要对配置编辑器程序或本手册报告错误或提出建议，可以参考在 <ulink url="ghelp:gnome-feedback" type="help">GNOME 反馈页面</ulink>中的指导。</para>
+      <!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+</articleinfo> 
+
+<indexterm> 
+  <primary>GConf 编辑器</primary> 
+</indexterm>
+
+<sect1 id="introduction">
+  <title>简介</title>
+  <para>GNOME 桌面和许多应用程序使用 <application>GConf</application> 存储用户的参数配置和系统配置数据。<application>GConf</application> 为参数配置提供了一个重要的存储位置，为用户和系统管理员提供了一个简化的配置管理方式。更多的关于 <application>GConf</application> 的信息可以在 <ulink url="ghelp:system-admin-guide#gconf-0">GNOME 系统管理员指南</ulink> 中找到。</para>
+  <para><application>配置编辑器</application>允许用户修改他们整个 GNOME 桌面环境和任何使用 <application>GConf</application> 的应用程序的参数配置。并且，系统管理员可以使用<application>配置编辑器</application>设置能影响到所有用户的默认值和强制项。</para>
+  <para>参数配置以分层次的键的形式存储于 <application>GConf</application> 中。每一个键与一个值结合用来指定您此选项的设置。例如，键 <literal>/apps/glines/preferences/ball_theme</literal> 存储了您在游戏 <application>Five or More</application> (连珠消球)中的主题。</para>
+  <caution><para><application>配置编辑器</application>使您能够直接更改您的配置源。如果您不是一个经验丰富的使用者，不要使用<application>配置编辑器</application>来设置 GNOME 桌面环境的参数，而是在 GNOME 桌面设置中使用首选项工具。 关于使用首选项工具的信息，参看在您平台上最新版本的 <ulink url="ghelp:user-guide">GNOME 桌面环境用户指南</ulink>。</para></caution>
+</sect1>
+
+<sect1 id="getting-started"> 
+  <title>入门指南</title>
+
+  <sect2 id="to-start"> 
+    <title>配置编辑器的启动</title>
+    <para>您可以用以下的方式启动<application>配置编辑器</application>：</para>
+    <variablelist>
+      <varlistentry>
+        <term><guimenu>应用程序</guimenu>菜单</term>
+        <listitem>
+          <para>选择<menuchoice><guisubmenu>系统工具</guisubmenu><guimenuitem>配置编辑器</guimenuitem></menuchoice>。</para>
+          <note><para>一些发行版中隐藏了此菜单。在这种情况下，使用后面描述的第二种方法。</para></note>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>命令行</term>
+        <listitem>
+          <para>执行下面的命令：<command>gconf-editor</command></para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+
+  <sect2 id="when-you-start">
+    <title>当您启动了配置编辑器</title>
+    <para>当您启动了<application>配置编辑器</application>，会显示下面的窗口。</para>
+    <figure id="gconf_editor_window"> 
+      <title><application>配置编辑器</application>窗口</title>
+      <screenshot> 
+        <mediaobject> 
+          <imageobject>
+            <imagedata fileref="figures/gconf_editor_anno_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>显示 GConf 编辑器窗口。插图编号：树窗格，修改窗格，文档窗格。</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para><application>配置编辑器</application>窗口包括下列窗格：</para>
+    <variablelist>
+      <varlistentry>
+        <term>树窗格</term>
+        <listitem><para>使您可以通过分层结构的键操纵 <application>GConf</application>。您可以使用此窗格将您想要修改的键显示在修改窗格中。树窗格在窗口的左边。</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>修改窗格</term>
+        <listitem>
+          <para>显示在树窗格中 <application>GConf</application> 被选中的键。使用此窗格选中您想修改的键并修改键值。修改窗格在窗口的右上角。</para>
+          <para>在修改窗格中键旁边的图标显示了您能够为此键输入的值的类型。例如，键 <literal>/system/http_proxy/use_http_proxy</literal> 旁边的复选标记图标表示您能够为此键输入一个布尔值(真或假)。查看<xref linkend="icons"/>获得各图标更多的信息。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>文档窗格</term>
+        <listitem><para>显示此时选中键的文档。使用此窗格读取关于 <application>GConf</application> 中选项的键信息。</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>结果窗格(未显示)</term>
+        <listitem><para>使您能够查看搜索的结果或让您通过列出最近的键进行查找。窗口的其余部分会显示您在此窗格中选中的任一键的信息。当您列出最近的键或执行一次搜索时结果窗格将出现在窗口的底部。</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+</sect1>
+
+<sect1 id="workwindows">
+  <title>窗口操作</title>
+  <sect2 id="workwindows-opennew">
+    <title>打开新窗口</title>
+    <para>您可以在<application>配置编辑器</application>中打开三种类型的窗口：<application>设置</application>、<application>默认值</application>和<application>强制值</application>。<application>配置编辑器</application>基于您打开的窗口的类型设置相应类型的值。选择相应的条目您可以在<guimenu>文件</guimenu>菜单下打开每一种窗口类型。</para>
+    <note><para>因为<application>默认值</application>与<application>强制值</application>窗口的设置会影响到电脑所有的使用者，所以仅有系统管理员可以使用这些类型的窗口。要更改您的参数配置，您可以使用<application>设置</application>窗口。</para></note>
+    <variablelist>
+      <varlistentry>
+        <term><application>设置</application></term>
+        <listitem><para>您可以使用<application>设置</application>窗口设置您个人的参数配置。在<application>设置</application>窗口中做出的改变仅会影响您的桌面。您无法改变系统管理员已经做出的强制值的设置。</para></listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <varlistentry>
+        <term><application>默认值</application></term>
+        <listitem><para>如果您是一位系统管理员，您可以使用<application>默认值</application>窗口为所有用户编辑默认设置。如果一位用户没有直接设置键值，默认设置的值会被采用。用户总能更改默认设置。</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><application>强制值</application></term>
+        <listitem><para>如果您是一位系统管理员，您可以使用<application>强制值</application>窗口为所有用户编辑强制设置。当一个键被设置为强制值，用户将不可更改此值。此可以用于锁定特定选项。</para></listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+
+  <sect2 id="workwindows-close">
+    <title>关闭退出</title>
+    <para>您可以在窗口中通过选择<menuchoice><guimenu>文件</guimenu><guimenuitem>关闭窗口</guimenuitem></menuchoice>来关闭<application>配置编辑器</application>。若要关闭所有的<application>配置编辑器</application>窗口完全退出程序，在任一<application>配置编辑器</application>中选择<menuchoice><guimenu>文件</guimenu><guimenuitem>退出</guimenuitem></menuchoice>。</para>
+  </sect2>
+</sect1>
+
+<sect1 id="workkeys">
+  <title>键操作</title>
+  <para>键是查阅值的一种途径。在 <application>GConf</application> 中存储的每一个选项分配了一个键。使用 <application>GConf</application> 的程序通过访问键值来决定自己的外观和行为。当您在一个程序的<guilabel>首选项</guilabel>中做出一些改变的时候，您也同时改变了在<application>GConf</application>中与之相关联的键值。</para>
+
+  <sect2 id="copy-key">
+    <title>复制键名</title>
+    <para>在修改窗格中选择您想复制的键名，选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>复制键名</guimenuitem></menuchoice>，可以复制键名到剪贴板。您可以粘贴键名到任何其它程序。</para>
+  </sect2>
+  <sect2 id="list-key">
+    <title>查看最近使用的键名</title>
+    <para>选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>列出最近的键</guimenuitem></menuchoice>，可以查看最近使用的键名。此动作会在当前窗口底部打开结果窗格。您可以用滚动滚动条或按方向键的方式查看结果列表。您选中的键或文件夹的信息会在窗口其余部分显示。</para>
+    <para>当您需要恢复一个您刚改动过的键而又忘了它在哪时，查看最近使用的键是很有用的。</para>
+    <!-- REMARK -->
+    <remark>截图或许是整齐的。特别地，关闭、复制和清除也能在结果窗格中找到。</remark>
+  </sect2>
+  <sect2 id="modify-key">
+    <title>修改键值</title>
+    <para>在键名旁边的图标显示了此键所能取值的类型。查看<xref linkend="icons"/>以获得各图标更多的信息。要更改键值，按以下的步骤执行：</para>
+    <procedure>
+      <step><para>使用树窗格显示您想在修改窗格中修改的键。</para></step>
+      <step><para>在修改窗格中选取键。</para></step>
+      <step>
+        <para>修改整数型或字符串型的键。在键的<guilabel>值</guilabel>栏中单击，为此键输入新值。或者，在键上右击，从弹出菜单中选择<guimenuitem>编辑键</guimenuitem>。</para>
+        <para>更改布尔值类型的键，在键的<guilabel>值</guilabel>栏中选择或取消选择复选框。或者，在键上右击，从弹出菜单中选择<guimenuitem>编辑键</guimenuitem>。</para>
+        <para>改变列表型键的值，在键上右击，从弹出菜单中选择<guimenuitem>编辑键</guimenuitem>。<guimenuitem>编辑键</guimenuitem>对话框提供与此键相关联的一列值。您可以使用这个对话框编辑在列中每一特定的值，增加或删除列中的值，还可以使每一值在列中上下移动。</para>
+      </step>
+    </procedure>
+    <para>您的系统管理员可能通过强制值已经锁定某些键。如果选中的键已被设置强制值，您将不能编辑此值。如果您不被允许编辑此键值，文档窗格中会显示<guilabel>此键不可写</guilabel>的标注。</para>
+  </sect2>
+</sect1>
+
+<sect1 id="finding">
+  <title>键的快速查找</title>
+  <para>快速确定键的位置，<application>配置编辑器</application>允许您在<application>GConf</application>中搜索键名。另外，对于您需要经常访问的键您可以使用书签来快速定位键所在的目录。</para>
+
+  <sect2 id="using-bookmark">
+    <title>使用书签</title>
+    <para>访问在您书签中的目录位置，从<guimenu>书签</guimenu>菜单中选择相应位置。您可以在您<guimenu>书签</guimenu>菜单中添加或删除目录位置。</para>
+    <para>添加一个书签，在树窗格中选中您想标记的位置。选择<menuchoice><guimenu>书签</guimenu><guimenuitem>添加书签</guimenuitem></menuchoice>。</para>
+    <para>删除一个书签，执行以下步骤：</para>
+    <procedure>
+      <step><para>选择<menuchoice><guimenu>书签</guimenu><guimenuitem>编辑书签</guimenuitem></menuchoice>。</para></step>
+      <step><para>在<application>编辑书签</application>对话框中选中书签，然后点<guibutton>删除</guibutton>。</para></step>
+      <step><para>点击<guibutton>关闭</guibutton>。</para></step>
+    </procedure>
+  </sect2>
+  <sect2 id="search">
+    <title>搜索键</title>
+    <para>要搜索键，请执行以下步骤：</para>
+    <procedure>
+      <step><para>选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>查找</guimenuitem></menuchoice>。</para></step>
+      <step><para>在<guilabel>搜索</guilabel>框中输入您想搜索的关键字。您可以选中<guilabel>也在键名中搜索</guilabel>和<guilabel>也在键值中搜索</guilabel>的复选框。如果这些复选框没被选中，搜索只会在目录名上执行。选中这些复选框会扩大搜索范围。</para></step>
+      <step><para>单击<guibutton>查找</guibutton>。</para></step>
+    </procedure>
+    <para>搜索结果会显示在结果窗格中。想在结果列表中浏览，首先选中此窗格，然后您可以用滚动滚动条或按方向键的方式查看结果列表。您选中的键或目录的信息会在窗口其余部分显示。</para>
+    <!-- REMARK -->
+    <remark>截图或许是整齐的。特别地，关闭、复制和清除也能在结果窗格中找到。</remark>
+  </sect2> 
+</sect1>
+
+<sect1 id="defaults-mandatory">
+  <title>默认值和强制值设置</title>
+  <para>如果您是位系统管理员，您可以在 <application>GConf</application> 中设置默认值和强制值以影响所有用户。默认值的设置用于当用户没有明确设置的键值，并且用户可以修改它们。强制值的设置总会应用于所有的用户，并且他们无法修改。</para>
+  <para>您可以使用<application>默认值</application>和<application>强制值</application>窗口来编辑或删除默认值和强制值项。<application>默认值</application>和<application>强制值</application>窗口仅为您显示那些已经设为默认值和强制值的键。您不能使用这些窗口来建立新的默认值或强制值项，而是，您要在<application>设置</application>窗口中将一些项设置为默认值或强制值。</para>
+  <para>选择<menuchoice><guimenu>文件</guimenu><guimenuitem>新建默认值窗口</guimenuitem></menuchoice>以打开一个<application>默认值</application>窗口。选择<menuchoice><guimenu>文件</guimenu><guimenuitem>新建强制值窗口</guimenuitem></menuchoice>以打开一个<application>强制值</application>窗口。</para>
+
+  <sect2 id="creating-defaults">
+    <title>建立默认值设置</title>
+    <para>建立默认值，执行以下步骤：</para>
+    <procedure>
+      <step><para>在<application>设置</application>窗口中，使用树窗格显示出您想设为默认值的键。</para></step>
+      <step><para>在此键上右击，在弹出菜单中选择<guimenuitem>设为默认值</guimenuitem>。</para></step>
+    </procedure>
+  </sect2>
+  <sect2 id="creating-mandatory">
+    <title>建立强制值设置</title>
+    <para>建立强制值，执行以下步骤：</para>
+    <procedure>
+      <step><para>在<application>设置</application>窗口中，使用树窗格显示出您想设为强制值的键。</para></step>
+      <step><para>在此键上右击，在弹出菜单中选择<guimenuitem>设为强制值</guimenuitem>。</para></step>
+    </procedure>
+  </sect2>
+  <sect2 id="modifying-defaults-mandatory">
+    <title>修改或移除默认值或强制值项</title>
+    <para>您可以在<application>默认值</application>和<application>强制值</application>窗口中修改或删除默认值和强制值项。修改一个默认值或强制值项要使用相应的窗口，在<application>设置</application>窗口中修改您想修改的键。查看<xref linkend="modify-key"/>获得修改键值的更多信息。</para>
+    <para>删除一个默认值或强制值键，执行以下步骤：</para>
+    <procedure>
+      <step><para>在相应窗口中，使用树窗格显示出您想从默认值或强制值设置中删除的键。</para></step>
+      <step><para>在此键上右击，从弹出窗口中选择<guimenuitem>清除键</guimenuitem>。</para></step>
+    </procedure>
+  </sect2>
+</sect1>
+
+<sect1 id="icons">
+  <title>图标和键类型</title>
+  <para>在修改窗格中键旁边的图标显示了您能够为此键输入的值的类型。下面的列表显示可能出现的图标和它们代表的值的类型。</para>
+  <variablelist>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+        <imagedata fileref="figures/entry-bool.png" format="PNG"/>
+      </imageobject></inlinemediaobject>布尔值类型的键</term>
+      <listitem><para>可以取真或假。<application>配置编辑器</application>为这种类型的键提供一个复选框。</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-number.png" format="PNG"/>
+      </imageobject></inlinemediaobject>数类型的键</term>
+      <listitem><para>可以赋数值。这些键的值可以是整数或是浮点的(分数的)数值中的一种。</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-string.png" format="PNG"/>
+      </imageobject></inlinemediaobject>字符串类型的键</term>
+      <listitem><para>可以赋以文本的字符串值。</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-schema.png" format="PNG"/>
+      </imageobject></inlinemediaobject>模式类型的键</term>
+      <listitem><para>用来为其它键建立文档。每一个键的文档由一个单独的键提供，典型地在<literal>/schemas</literal>目录下。用户和系统管理员通常不需要对模式类型的键采取操作。</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-list.png" format="PNG"/>
+      </imageobject></inlinemediaobject>列表类型的键</term>
+      <listitem><para>任意长度的列表。列表中的每一元素必须有相同的类型，且是布尔值、数或字符串中这样基本类型中的一个。</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-blank.png" format="PNG"/>
+      </imageobject></inlinemediaobject>值对类型的键</term>
+      <listitem><para>可以准确地赋以两个值。这两个值必须属于基本类型中的一种，但它们可以有不同类型。目前，<application>配置编辑器</application>还不支持编辑值对类型的键。</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-blank.png" format="PNG"/>
+      </imageobject></inlinemediaobject>空白</term>
+      <listitem><para>用于<application>配置编辑器</application>无法理解的类型的键。空白的图标目前也用于值对类型的键。</para></listitem>
+    </varlistentry>
+  </variablelist>
+</sect1>
+</article>

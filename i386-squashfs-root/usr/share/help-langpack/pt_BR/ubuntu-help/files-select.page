@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-select" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="files#faq"/>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <desc>Pressione <keyseq><key>Ctrl</key><key>S</key></keyseq> para selecionar múltiplos arquivos que tenham nomes parecidos.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Selecione arquivos por padrão</title>
+
+  <p>Você pode selecionar arquivos em uma pasta usando um padrão no nome do arquivo. Pressione <keyseq><key>Ctrl</key><key>S</key></keyseq> para trazer para a frente a janela <gui>Selecionar ocorrências de padrão</gui>. Digite em um padrão usando partes comuns dos nomes do arquivo mais caracteres curinga. Existem dois tipos de caracteres curinga disponíveis.</p>
+
+  <list style="compact">
+    <item><p><file>*</file> corresponde a qualquer número de quaisquer caracteres, mesmo de nenhum caractere ao todo.</p></item>
+    <item><p><file>?</file> corresponde a exatamente um de qualquer caractere.</p></item>
+  </list>
+
+  <p>Por exemplo:</p>
+
+  <list>
+    <item><p>Se você tem um arquivo de texto de documento aberto e uma imagem em que todos têm o mesmo nome base <file>Conta</file>, selecione todos os três com o padrão</p>
+    <example><p><file>Fatura.*</file></p></example></item>
+    
+    <item><p>Se você tiver algumas fotos que são nomeadas como <file>férias-001.jpgfile&gt;, ffile&gt;, ffile&gt;; selecione-as com o padr</file></p>
+    <example><p><file>Férias-???.jpg</file></p></example></item>
+    
+    <item><p>Se você tem fotos de antes, mas você editou algumas delas e acrescentou <file>-editadafile&gt; no final do nome do arquivo das fotos que voc</file></p>
+    <example><p><file>Férias-???-editado.jpg</file></p></example></item>
+  </list>
+</page>

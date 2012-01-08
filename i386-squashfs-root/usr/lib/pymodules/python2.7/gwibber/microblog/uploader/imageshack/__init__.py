@@ -1,0 +1,1 @@
+/usr/share/pyshared/gwibber/microblog/uploader/imageshack/__init__.py

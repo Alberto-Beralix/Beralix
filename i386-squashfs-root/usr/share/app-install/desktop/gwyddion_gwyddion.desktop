@@ -1,0 +1,21 @@
+[Desktop Entry]
+X-AppInstall-Package=gwyddion
+X-AppInstall-Popcon=94
+X-AppInstall-Section=universe
+
+Version=1.0
+Type=Application
+Name=Gwyddion
+Comment=SPM data visualization and analysis
+TryExec=gwyddion
+Exec=gwyddion --remote-new %F
+# XDG requires an absolute path here to be permitted to say "gwyddion.png".
+# So, give it what it deserves.
+Icon=_usr_share_icons_hicolor_48x48_apps_gwyddion
+# This is filled from gwyddion.xml
+MimeType=application/x-aist-nt-spm;application/x-anfatec-spm;application/x-ape-spm;application/x-attocube-asc;application/x-bcr-spm;application/x-bcrf-spm;application/x-burleigh-spm;application/x-burleigh-bii-spm;application/x-burleigh-export-spm;application/x-createc-spm;application/x-dme-spm;application/x-ecs-spm;application/x-nanosurf-spm;application/x-gdef-spm;application/x-gsf-spm;application/x-gwyddion-spm;application/x-hitachi-spm;application/x-igor-binary-wave;application/x-intematix-spm;application/x-jeol-spm;application/x-jpk-image-scan;application/x-olympus-lext-4000;application/x-mapvue;application/x-zygo-spm;application/x-microprof-txt;application/x-microprof;application/x-mif-spm;application/x-mi-spm;application/x-mul-spm;application/x-nanoeducator-spm;application/x-nanonics-spm;application/x-nanonis-spm;application/x-nanoscan-spm;application/x-nanoscope-ii-spm;application/x-nanoscope-iii-spm;application/x-nanotop-spm;application/x-nt-mdt-spm;application/x-olympus-lext-3000;application/x-omicron-spm;application/x-omicron-flat;application/x-omicron-matrix-spm;application/x-wyko-opd;application/x-wyko-asc;application/x-nanosurf-plt-spm;application/x-pni-spm;application/x-symphotime-pt3;application/x-quesant-afm;application/x-rhk-sm3-spm;application/x-rhk-sm4-spm;application/x-rhk-sm2-spm;application/x-robotics-spm;application/x-sdf-spm;application/x-micromap-spm;application/x-seiko-spm;application/x-sensofar-spm;application/x-sensolytics-spm;application/x-shimadzu-spm;application/x-sicm-spm;application/x-sis-spm;application/x-spip-asc;application/x-spml-spm;application/x-spmlab-spm;application/x-spmlab-float-spm;application/x-stmprg-spm;application/x-stp-spm;application/x-surf-spm;application/x-unisoku-spm;application/x-wipfile-spm;application/x-witec-spm;application/x-wsf-spm;application/x-wsxm-spm;
+Terminal=false
+StartupNotify=true
+Categories=GTK;Physics;Science;Engineering;RasterGraphics;2DGraphics;Graphics;
+
+X-Ubuntu-Gettext-Domain=app-install-data

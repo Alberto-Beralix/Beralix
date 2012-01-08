@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-wireless-troubleshooting-initial-check" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-wireless-troubleshooting"/>
+    <link type="next" xref="net-wireless-troubleshooting-hardware-info"/>
+
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+
+    <credit type="author">
+      <name>Contribuidores da wiki de documentação do Ubuntu</name>
+    </credit>
+
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <desc>Solucionar problemas de conexão para uma rede sem fio.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Executar uma verificação inicial</title>
+
+<p>Nosso primeiro passo será verificar alguma informação básica de conectividade de rede.</p>
+<steps>
+   <item><p>Esteja certo que seu notebook não esteja conectado a uma conexão de internet <em>cabeada</em>.</p></item>
+   <item><p>Se você tem um adaptador sem fio externo (como adaptador sem fio USB ou um cartão PCMCIA), tenha certeza que que ele está inserido no slot adequado no seu computador.</p></item>
+   <item><p>Se sua placa sem fio está <em>dentro</em> do seu computador, tenha certeza que seu interruptor do adaptador sem fio está ligado.</p></item>
+   <item><p>Clique no <gui>menu rede</gui> no painel superior e tenha certeza que a configuração <gui>Habilitar rede sem fio</gui> está marcada.</p></item>
+   <item><p>Abra uma janela do <app>terminal</app> (como <app>gnome-terminal</app>) e entre com o seguinte comando:</p>
+  <p><cmd>nm-tool</cmd></p></item>
+</steps>
+
+   <p>O programa <app>nm-tool</app> irá exibir informações sobre seu hardware de rede e estado da conexão. Se a saída da seção de conexão sem fio conter o texto <code>Estado: Conectado</code>, isso significa que o adaptador sem fio está funcionando ele está conectado ao seu roteador sem fio.</p>
+
+  <p>Se você está conectado ao roteador sem fio, mas ainda não pode acessar a internet, seu roteador pode não estar configurado corretamente ou o seu Provedor de serviços de Internet (ISP) pode estar com alguns problemas técnicos. Reveja o seu roteador e guias de configuração da ISP ou contate sua ISP para suporte.</p>
+  <p>Se a saída do comando <cmd>nm-tool</cmd> não indicar que você estava conectado à rede, prossiga à <link xref="net-wireless-troubleshooting-hardware-info">próxima porção</link> do guia de solução de problemas.</p>
+
+<links type="series"/>
+</page>

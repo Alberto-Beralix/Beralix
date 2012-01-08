@@ -1,0 +1,18 @@
+toshset
+-------
+
+As of version 1.69-2, this package contains an additional utility that is not
+a part of the upstream toshset package.  The utility is toshsat1800-irdasetup.
+It was requested by a user and since it is too small to be placed into its own
+package, I have included it with toshset.  Please read the README.IrDA for
+details on how to use it.
+
+Toshset requires an experimental version of the toshiba_acpi kernel module with
+an ACPI-enabled kernel. Otherwise it works only if the laptop supports the old
+APM BIOS. (The last of these was produced something like 5 years ago.)
+
+In /usr/share/doc/toshset/toshiba-acpi you can find the experimental version of
+the toshiba_acpi kernel module. You can run 'sh install.sh' for compiling and
+install the module. (Ubuntu users don't need it)
+
+ -- Giuseppe Iuculano <giuseppe@iuculano.it>  Fri, 27 Feb 2009 14:46:08 +0100

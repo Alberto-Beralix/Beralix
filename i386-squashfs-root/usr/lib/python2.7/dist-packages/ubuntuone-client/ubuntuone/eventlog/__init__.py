@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/ubuntuone-client/ubuntuone/eventlog/__init__.py

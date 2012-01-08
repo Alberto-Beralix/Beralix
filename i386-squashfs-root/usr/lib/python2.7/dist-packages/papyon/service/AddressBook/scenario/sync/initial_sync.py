@@ -1,0 +1,1 @@
+../../../../../../../../share/pyshared/papyon/service/AddressBook/scenario/sync/initial_sync.py

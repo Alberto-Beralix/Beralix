@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/apps/packagemanager/script_settings.py

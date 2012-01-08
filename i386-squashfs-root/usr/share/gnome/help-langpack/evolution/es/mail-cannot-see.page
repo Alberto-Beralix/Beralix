@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-cannot-see" xml:lang="es">
+
+  <info>
+    <desc>Si recibió o envió un correo pero ya no puede encontrarlo.</desc>
+    
+    <link type="guide" xref="index#common-mail-problems"/>
+
+    <revision pkgversion="2.28.3" version="0.1" date="2010-10-09" status="candidate"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>No puedo ver algunos correos, ¿dónde están?</title>
+
+<list>
+ <item>
+  <p>Compruebe si está usando filtros en los correos entrantes (o salientes). Esto podría estar moviendo automáticamente sus correos a otro destino.</p>
+ </item>
+ <item>
+  <p>Check your search view in the search bar right above the message list. Perhaps the <gui>Show</gui> dropdown list is set to a filter like <gui>Read Messages</gui>, or the text input filed contains some value. Click the broom icon to clear the search field.</p>
+ </item>
+ <item>
+  <p>If you cannot see any emails at all in a folder, check that you have not maximized the message preview (so the message list pane is hidden). To do this, click <guiseq><gui>View</gui><gui>Preview</gui><gui>Show Message Preview</gui></guiseq>.</p>
+ </item>
+ <item>
+  <p>Mire en la carpeta <gui>SPAM</gui>. Los correos marcados como SPAM desaparecen de la carpeta original y se mueven a la carpeta de SPAM.</p>
+ </item>
+ <!-- Does the following option still exist? -->
+ <item>
+  <p>Pulse <guiseq><gui>Editar</gui><gui>Mostrar mensajes ocultos</gui></guiseq> para asegurarse de que se muestran todos los mensajes.</p>
+ </item>
+ <item>
+  <p>Compruebe su carpeta predeterminada en <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Cuentas de correo-e</gui><gui>Editar</gui><gui>Predeterminados</gui></guiseq>. Posiblemente esté establecida una carpeta distinta de la que cree.</p>
+ </item>
+</list>
+
+</page>

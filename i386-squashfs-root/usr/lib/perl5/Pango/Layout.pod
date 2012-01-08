@@ -1,0 +1,385 @@
+=head1 NAME
+
+Pango::Layout - an object representing a paragraph of text with attributes
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Pango::Layout
+
+
+
+=cut
+
+=for object Pango::Layout - an object representing a paragraph of text with attributes
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 layout = Pango::Layout-E<gt>B<new> ($context)
+
+=over
+
+=item * $context (Pango::Context) 
+
+=back
+
+=head2 alignment = $layout-E<gt>B<get_alignment> 
+
+=head2 $layout-E<gt>B<set_alignment> ($alignment)
+
+=over
+
+=item * $alignment (Pango::Alignment) 
+
+=back
+
+=head2 attrlist or undef = $layout-E<gt>B<get_attributes> 
+
+=head2 $layout-E<gt>B<set_attributes> ($attrs)
+
+=over
+
+=item * $attrs (Pango::AttrList or undef) 
+
+=back
+
+=head2 boolean = $layout-E<gt>B<get_auto_dir> 
+
+Since: pango 1.4
+
+=head2 $layout-E<gt>B<set_auto_dir> ($auto_dir)
+
+=over
+
+=item * $auto_dir (boolean) 
+
+=back
+
+Since: pango 1.4
+
+=head2 integer = $layout-E<gt>B<get_baseline> 
+
+Since: pango 1.22
+
+=head2 $layout-E<gt>B<context_changed> 
+
+=head2 context = $layout-E<gt>B<get_context> 
+
+=head2 layout = $src-E<gt>B<copy> 
+
+=head2 (strong_pos, weak_pos) = $layout->B<get_cursor_pos> ($index)
+
+=over
+
+=item * $index_ (integer) 
+
+=back
+
+
+
+=head2 ellipsizemode = $layout-E<gt>B<get_ellipsize> 
+
+Since: pango 1.6
+
+=head2 $layout-E<gt>B<set_ellipsize> ($ellipsize)
+
+=over
+
+=item * $ellipsize (Pango::EllipsizeMode) 
+
+=back
+
+Since: pango 1.6
+
+=head2 (ink_rect, logical_rect) = $layout->B<get_extents>
+
+=head2 (ink_rect, logical_rect) = $layout->B<get_pixel_extents>
+
+
+
+=head2 fontdescription or undef = $layout-E<gt>B<get_font_description> 
+
+Since: pango 1.8
+
+=head2 $layout-E<gt>B<set_font_description> ($desc)
+
+=over
+
+=item * $desc (Pango::FontDescription or undef) 
+
+=back
+
+=head2 integer = $layout-E<gt>B<get_height> 
+
+Since: pango 1.20
+
+=head2 $layout-E<gt>B<set_height> ($height)
+
+=over
+
+=item * $height (integer) 
+
+=back
+
+Since: pango 1.20
+
+=head2 integer = $layout-E<gt>B<get_indent> 
+
+=head2 $layout-E<gt>B<set_indent> ($newval)
+
+=over
+
+=item * $newval (integer) 
+
+=back
+
+=head2 array reference = $layout-E<gt>B<index_to_pos> ($index_)
+
+=over
+
+=item * $index_ (integer) 
+
+=back
+
+=head2 boolean = $layout-E<gt>B<is_ellipsized> 
+
+Since: pango 1.16
+
+=head2 boolean = $layout-E<gt>B<is_wrapped> 
+
+Since: pango 1.16
+
+=head2 layoutiter = $layout-E<gt>B<get_iter> 
+
+=head2 integer = $layout-E<gt>B<get_justify> 
+
+=head2 $layout-E<gt>B<set_justify> ($newval)
+
+=over
+
+=item * $newval (integer) 
+
+=back
+
+=head2 integer = $layout-E<gt>B<get_line_count> 
+
+=head2 layoutline or undef = $layout-E<gt>B<get_line> ($line)
+
+=over
+
+=item * $line (integer) 
+
+=back
+
+=head2 layoutline or undef = $layout-E<gt>B<get_line_readonly> ($line)
+
+=over
+
+=item * $line (integer) 
+
+=back
+
+Since: pango 1.16
+
+=head2 list = $layout-E<gt>B<get_lines> 
+
+=head2 list = $layout-E<gt>B<get_lines_readonly> 
+
+Since: pango 1.16
+
+=head2 list = $layout-E<gt>B<get_log_attrs> 
+
+Returns a list of Pango::LogAttr's
+
+=head2 $layout-E<gt>B<set_markup> ($markup)
+
+=over
+
+=item * $markup (string) 
+
+=back
+
+=head2 accel_char = $layout-E<gt>B<set_markup_with_accel> ($markup, $accel_marker)
+
+=over
+
+=item * $markup (string) 
+
+=item * $accel_marker (character) 
+
+=back
+
+=head2 (new_index, new_trailing) = $layout-E<gt>B<move_cursor_visually> ($strong, $old_index, $old_trailing, $direction)
+
+=over
+
+=item * $strong (boolean) 
+
+=item * $old_index (integer) 
+
+=item * $old_trailing (integer) 
+
+=item * $direction (integer) 
+
+=back
+
+=head2 list = $layout-E<gt>B<get_pixel_extents> 
+
+=head2 (width, height) = $layout-E<gt>B<get_pixel_size> 
+
+=head2 integer = $layout-E<gt>B<get_single_paragraph_mode> 
+
+=head2 $layout-E<gt>B<set_single_paragraph_mode> ($newval)
+
+=over
+
+=item * $newval (integer) 
+
+=back
+
+=head2 (width, height) = $layout-E<gt>B<get_size> 
+
+=head2 integer = $layout-E<gt>B<get_spacing> 
+
+=head2 $layout-E<gt>B<set_spacing> ($newval)
+
+=over
+
+=item * $newval (integer) 
+
+=back
+
+=head2 tabarray or undef = $layout-E<gt>B<get_tabs> 
+
+=head2 $layout-E<gt>B<set_tabs> ($tabs)
+
+=over
+
+=item * $tabs (Pango::TabArray or undef) 
+
+=back
+
+=head2 string = $layout-E<gt>B<get_text> 
+
+=head2 $layout-E<gt>B<set_text> ($text)
+
+=over
+
+=item * $text (string) 
+
+=back
+
+=head2 integer = $layout-E<gt>B<get_unknown_glyphs_count> 
+
+Since: pango 1.16
+
+=head2 integer = $layout-E<gt>B<get_width> 
+
+=head2 $layout-E<gt>B<set_width> ($newval)
+
+=over
+
+=item * $newval (integer) 
+
+=back
+
+=head2 wrapmode = $layout-E<gt>B<get_wrap> 
+
+=head2 $layout-E<gt>B<set_wrap> ($wrap)
+
+=over
+
+=item * $wrap (Pango::WrapMode) 
+
+=back
+
+=head2 (index, trailing) = $layout->B<xy_to_index> ($x, $y)
+
+=over
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=back
+
+
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Pango::Alignment
+
+=over
+
+=item * 'left' / 'PANGO_ALIGN_LEFT'
+
+=item * 'center' / 'PANGO_ALIGN_CENTER'
+
+=item * 'right' / 'PANGO_ALIGN_RIGHT'
+
+=back
+
+
+=head2 enum Pango::EllipsizeMode
+
+=over
+
+=item * 'none' / 'PANGO_ELLIPSIZE_NONE'
+
+=item * 'start' / 'PANGO_ELLIPSIZE_START'
+
+=item * 'middle' / 'PANGO_ELLIPSIZE_MIDDLE'
+
+=item * 'end' / 'PANGO_ELLIPSIZE_END'
+
+=back
+
+
+=head2 enum Pango::WrapMode
+
+=over
+
+=item * 'word' / 'PANGO_WRAP_WORD'
+
+=item * 'char' / 'PANGO_WRAP_CHAR'
+
+=item * 'word-char' / 'PANGO_WRAP_WORD_CHAR'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

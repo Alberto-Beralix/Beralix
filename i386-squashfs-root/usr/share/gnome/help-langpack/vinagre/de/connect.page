@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" id="connect" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#connections"/>
+    <title type="sort">1</title>
+    <desc>Establish a connection to another computer on your local network.</desc>
+    <credit type="author">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@googlemail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+  <title>Eine Verbindung aufbauen</title>
+
+  <p>You can connect to other computers on your local network using
+  <app>Vinagre</app>.</p>
+
+  <steps>
+    <item>
+      <p>Wählen Sie <guiseq><gui>Entfernt</gui><gui>Verbinden</gui></guiseq>.</p>
+      <figure>
+        <title>Verbindungsdialog</title>
+        <media type="image" mime="image/png" src="figures/vinagre-connect-dialog.png"/>
+      </figure>
+    </item>
+    <item>
+      <p>Choose the <gui>Protocol</gui> and the <gui>Host</gui> for the
+      connection.</p>
+      <note>
+        <p>Some protocols allow you to see all available computers on your
+        local network by clicking the <gui>Find</gui> button. Without
+        <app>Avahi</app> support, this button will not be displayed.</p>
+      </note>
+    </item>
+    <item>
+      <p>Select the options which you want enabled when the connection is
+      made. Options will vary depending on the protocol you use.</p>
+    </item>
+    <item>
+      <p>Click the <gui>Connect</gui> button.</p>
+      <note>
+	<p>At this point, the remote desktop may need to confirm the
+	connection. If this is the case, the viewer may remain black until the
+	connection is confirmed.</p>
+      </note>
+      <note>
+        <p>Einige Rechner erfordern eine sichere Verbindung. In diesem Fall wird ein Legitimierungsdialog geöffnet, der Sie um die Eingabe der Legitimationsdaten für die Verbindung bittet. Die Art der Anmeldedaten hängt vom jeweiligen entfernten Rechner ab, meist werden es Benutzername und Passwort sein. Wenn Sie das Feld <gui>Legitimation merken</gui> aktivieren, speichert <app>Vinagre</app> diese Information in der <app>GNOME-Schlüsselbundverwaltung</app>.</p>
+      </note>
+    <figure>
+      <title>Legitimierungsdialog</title>
+      <media type="image" mime="image/png" src="figures/vinagre-auth-needed.png"/>
+    </figure>
+    </item>
+  </steps>
+
+  <p>Falls die Verbindung vorher bereits einmal genutzt wurde, erreichen Sie diese auch über <guiseq><gui>Entfernt</gui><gui>Zuletzt geöffnete Verbindungen</gui></guiseq>.</p>
+
+  <p>Um eine Verbindung zu schließen, wählen Sie <guiseq><gui>Entfernt</gui><gui>Schließen</gui></guiseq> oder klicken Sie auf den Knopf <gui>Schließen</gui>.</p>
+
+</page>

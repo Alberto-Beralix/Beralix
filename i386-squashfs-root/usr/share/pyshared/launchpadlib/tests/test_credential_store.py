@@ -1,0 +1,138 @@
+# Copyright 2010 Canonical Ltd.
+
+# This file is part of launchpadlib.
+#
+# launchpadlib is free software: you can redistribute it and/or modify it
+# under the terms of the GNU Lesser General Public License as published by the
+# Free Software Foundation, version 3 of the License.
+#
+# launchpadlib is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+# for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with launchpadlib. If not, see <http://www.gnu.org/licenses/>.
+
+"""Tests for the credential store classes."""
+
+import os
+import tempfile
+import unittest
+
+from launchpadlib.testing.helpers import (
+    fake_keyring,
+    InMemoryKeyring,
+)
+
+from launchpadlib.credentials import (
+    AccessToken,
+    Credentials,
+    KeyringCredentialStore,
+    UnencryptedFileCredentialStore,
+)
+
+
+class CredentialStoreTestCase(unittest.TestCase):
+
+    def make_credential(self, consumer_key):
+        """Helper method to make a fake credential."""
+        return Credentials(
+            "app name", consumer_secret='consumer_secret:42',
+            access_token=AccessToken(consumer_key, 'access_secret:168'))
+
+
+class TestUnencryptedFileCredentialStore(CredentialStoreTestCase):
+    """Tests for the UnencryptedFileCredentialStore class."""
+
+    def setUp(self):
+        ignore, self.filename = tempfile.mkstemp()
+        self.store = UnencryptedFileCredentialStore(self.filename)
+
+    def tearDown(self):
+        if os.path.exists(self.filename):
+            os.remove(self.filename)
+
+    def test_save_and_load(self):
+        # Make sure you can save and load credentials to a file.
+        credential = self.make_credential("consumer key")
+        self.store.save(credential, "unique key")
+        credential2 = self.store.load("unique key")
+        self.assertEquals(credential.consumer.key, credential2.consumer.key)
+
+    def test_unique_id_doesnt_matter(self):
+        # If a file contains a credential, that credential will be
+        # accessed no matter what unique ID you specify.
+        credential = self.make_credential("consumer key")
+        self.store.save(credential, "some key")
+        credential2 = self.store.load("some other key")
+        self.assertEquals(credential.consumer.key, credential2.consumer.key)
+
+    def test_file_only_contains_one_credential(self):
+        # A credential file may contain only one credential. If you
+        # write two credentials with different unique IDs to the same
+        # file, the first credential will be overwritten with the
+        # second.
+        credential1 = self.make_credential("consumer key")
+        credential2 = self.make_credential("consumer key2")
+        self.store.save(credential1, "unique key 1")
+        self.store.save(credential1, "unique key 2")
+        loaded = self.store.load("unique key 1")
+        self.assertEquals(loaded.consumer.key, credential2.consumer.key)
+
+
+class TestKeyringCredentialStore(CredentialStoreTestCase):
+    """Tests for the KeyringCredentialStore class."""
+
+    def setUp(self):
+        self.keyring = InMemoryKeyring()
+        self.store = KeyringCredentialStore()
+
+    def test_save_and_load(self):
+        # Make sure you can save and load credentials to a keyring.
+        with fake_keyring(self.keyring):
+            credential = self.make_credential("consumer key")
+            self.store.save(credential, "unique key")
+            credential2 = self.store.load("unique key")
+            self.assertEquals(
+                credential.consumer.key, credential2.consumer.key)
+
+    def test_lookup_by_unique_key(self):
+        # Credentials in the keyring are looked up by the unique ID
+        # under which they were stored.
+        with fake_keyring(self.keyring):
+            credential1 = self.make_credential("consumer key1")
+            self.store.save(credential1, "key 1")
+
+            credential2 = self.make_credential("consumer key2")
+            self.store.save(credential2, "key 2")
+
+            loaded1 = self.store.load("key 1")
+            self.assertEquals(
+                credential1.consumer.key, loaded1.consumer.key)
+
+            loaded2 = self.store.load("key 2")
+            self.assertEquals(
+                credential2.consumer.key, loaded2.consumer.key)
+
+    def test_reused_unique_id_overwrites_old_credential(self):
+        # Writing a credential to the keyring with a given unique ID
+        # will overwrite any credential stored under that ID.
+
+        with fake_keyring(self.keyring):
+            credential1 = self.make_credential("consumer key1")
+            self.store.save(credential1, "the only key")
+
+            credential2 = self.make_credential("consumer key2")
+            self.store.save(credential2, "the only key")
+
+            loaded = self.store.load("the only key")
+            self.assertEquals(
+                credential2.consumer.key, loaded.consumer.key)
+
+    def test_bad_unique_id_returns_none(self):
+        # Trying to load a credential without providing a good unique
+        # ID will get you None.
+        with fake_keyring(self.keyring):
+            self.assertEquals(None, self.store.load("no such key"))
+

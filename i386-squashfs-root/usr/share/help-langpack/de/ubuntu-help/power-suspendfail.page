@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="power-suspendfail" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="power#problems"/>
+    <link type="guide" xref="hardware-problems-graphics"/>
+    
+    <desc>Manche Hardware-Komponenten verursachen Probleme mit Bereitschaft/Ruhezustand.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Warum wacht mein Rechner nicht mehr auf, nachdem ich ihn in den Schlafmodus versetzt habe?</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Marked incomplete as of 2011-04-04. Marking final for 3.0. Revisit for 3.2</p>
+</comment>
+
+<p>Wenn Sie Ihren Rechner in den Schlafmodus (in Bereitschaft) oder in den Ruhezustand versetzen und dann versuchen, ihn wieder aufzuwecken oder einzuschalten, kann es sein, dass das nicht so funktioniert wie erwartet. Das könnte daran liegen, dass die Bereitschaft/der Ruhezustand von Ihrer Hardware nicht richtig unterstützt wird.</p>
+
+<section id="wakeup">
+ <title>Mein Rechner ist im Schlafmodus und wacht nicht mehr auf</title>
+ <p>Wenn Sie Ihren Rechner in den Schlafmodus (Bereitschaft) versetzt haben und danach eine Taste drücken oder mit der Maus klicken, sollte er aufwachen und einen Bildschirm anzeigen, der nach Ihrem Passwort fragt. Wenn das nicht passiert, versuchen Sie die Ein-/Ausschalttaste zu drücken (nicht gedrückt halten, nur einmal drücken).</p>
+ <p>Wenn das noch immer nicht hilft, stellen Sie sicher, dass Ihr Monitor eingeschaltet ist, und versuchen Sie es noch einmal mit einem Tastendruck auf der Tastatur.</p>
+ <p>Als letzten Ausweg schalten Sie den Rechner aus, indem Sie die Ein-/Ausschalttaste für 5 bis 10 Sekunden gedrückt halten. Dadurch werden Sie nicht gespeicherte Arbeit verlieren, aber Sie sollten dann wieder in der Lage sein, den Rechner einzuschalten.</p>
+ <p>Falls das jedes Mal passiert, wenn Sie den Rechner in den Schlafmodus schicken, dann funktioniert wohl die Bereitschaft nicht mit Ihrer Hardware.</p>
+</section>
+
+<section id="hibernate">
+ <title>Meine Anwendungen/Dokumente sind nicht geöffnet, wenn ich den Rechner wieder einschalte</title>
+ <p>Wenn Sie Ihren Rechner in den Ruhezustand versetzt und dann wieder eingeschaltet haben, aber keines Ihrer Dokumente und keine Ihrer Anwendungen offen ist, dann ist das Versetzen in den Ruhezustand vermutlich nicht richtig gelungen. Das passiert manchmal wegen eines geringfügigen Problems und der Rechner wird sich beim nächsten Mal wieder einwandfrei in den Ruhezustand bringen können. Das kann aber auch passieren, weil Sie eine Software-Aktualisierung eingespielt haben, nach der der Rechner neu gestartet werden musste; in diesem Fall könnte der Rechner ausgeschaltet worden sein, statt in den Ruhezustand zu wechseln.</p>
+ 
+ <p>Es ist auch möglich, dass der Rechner aufgrund mangelhafter Hardwareunterstützung nicht in der Lage ist, in den Ruhezustand zu wechseln. Das kann zum Beispiel an einem Problem mit den Linuxtreibern für Ihre Hardware liegen. Sie können dies überprüfen, indem Sie noch einmal in den Ruhezustand wechseln und beobachten, ob es dieses Mal funktioniert. Wenn nicht, handelt es sich vermutlich um ein Problem mit den Treibern für Ihren Rechner.</p>
+</section>
+
+<section id="hardware">
+ <title>Meine kabellose Verbindung (oder andere Hardware) funktioniert nicht, wenn ich meinen Rechner aufwecke</title>
+ <p>Wenn Sie Ihren Rechner in den Schlafmodus oder Ruhezustand versetzen und dann wieder aufwecken, kann es sein, dass die Internetverbindung, die Maus oder irgendein anderes Gerät nicht richtig funktioniert. Das könnte daran liegen, dass der Gerätetreiber Bereitschaft/Ruhezustand nicht richtig unterstützt. Das ist ein <link xref="hardware-driver">Problem mit dem Treiber</link> und nicht mit dem Gerät selbst.</p>
+ <p>Wenn das Gerät eine Ein-/Ausschalttaste hat, versuchen Sie es auszuschalten und dann wieder einzuschalten. In den meisten Fällen wird das Gerät wieder funktionieren. Wenn es mit einem USB-Kabel oder Ähnlichem angeschlossen ist, stecken Sie das Gerät aus und dann wieder ein und sehen Sie, ob es wieder funktioniert.</p>
+ <p>Wenn Sie das Gerät nicht ausschalten/ausstecken können oder wenn das nicht geholfen hat, müssen Sie den Rechner wohl neu starten, um das Gerät wieder in Gang zu bringen.</p>
+</section>
+
+</page>

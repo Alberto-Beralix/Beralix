@@ -1,0 +1,23 @@
+#!/bin/sh
+set -e
+
+# version 0.3.9-1 started shipping /var/lib/scrollkeeper erroneously, hence
+# the database was overwritten and needs a full rebuild
+#
+# this fix was added in version 0.3.9+dfsg-2
+if [ "$1" = "configure" ] && dpkg --compare-versions "$2" ge "0.3.9-1" && dpkg --compare-versions "$2" lt "0.3.9+dfsg-2" && which scrollkeeper-rebuilddb >/dev/null 2>&1; then
+    echo "Upgrade from broken Tomboy version detected, running scrollkeeper-rebuilddb..."
+    scrollkeeper-rebuilddb -q
+fi
+
+# Automatically added by dh_installmenu
+if [ "$1" = "configure" ] && [ -x "`which update-menus 2>/dev/null`" ]; then
+	update-menus
+fi
+# End automatically added section
+# Automatically added by dh_installmime
+if [ "$1" = "configure" ] && [ -x "`which update-mime-database 2>/dev/null`" ]; then
+	update-mime-database /usr/share/mime
+fi
+# End automatically added section
+

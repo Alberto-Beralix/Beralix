@@ -1,0 +1,38 @@
+
+    Toshset is a command-line tool allowing access to much of the
+Toshiba hardware interface. It can do things like control
+display brightness, set the fan speed, and enable the optional
+Bluetooth interface. 
+
+    Credit for the difficult task of reverse-engineering the Toshiba
+hardware interface goes to others, principly Jonathan Buzzard.
+
+The toshset home page is 
+http://schwieters.org/toshset.html
+
+A link for Jonathan's tools is
+http://www.buzzard.org.uk/toshiba/
+
+To build an executable: 
+
+./configure
+make
+make install
+
+For command-line options, try toshset with no command-line options.
+
+Comments, suggestions, and the output of toshset -v -q are welcome.
+
+Support for the Toshiba hardware kernel interface: uncommenting the
+appropriate line in the Makefile enables USE_KERNEL_INTERFACE. In its
+current incarnation, when compiled with this option, toshset first
+tries the kernel interface before attempting to talk directly to the
+BIOS. This will likely evolve a bit. The justification for this
+option: operation under ACPI. Hopefully, the toshiba kernel interface
+will soon support ACPI, and with it toshset.
+
+This program is a work in progress. Because Toshiba has not published
+its hardware specifications, Jonathan's task of reverse-engineering is
+an ongoing process.
+
+Charles@Schwieters.org

@@ -1,0 +1,115 @@
+#!/usr/bin/perl -w
+# Written by Bill Allombert for the Debian popularity-contest project.
+# This file is placed in the public domain.
+
+use strict;
+use IO::Socket;
+
+my %opts;
+
+# Not using Getopt::Std to avoid perl-modules dependency
+while($#ARGV >= 0 && ($_ = $ARGV[0]) =~ /^-/) {
+        shift @ARGV;
+        if (/^-C$/) { $opts{'C'} = 1; next }
+        if (/^-d$/) { $opts{'d'} = 1; next }
+        if (/^-u$/) { $opts{'u'} = shift; next }
+        if (/^-f$/) { $opts{'f'} = shift; next }
+        &usage("unknown option");
+	exit 1;
+}
+
+sub usage {
+    print "popcon-upload: error: @_\n" if ($#_ >= 0);
+    print <<"EOF";
+Usage: $0 [-Cd] [-u <url>] [-f <file>]
+  -C        send submissions in clear text, and not compressed
+  -d        enable debugging
+  -u <url>  submit to the given URL (default popcon.debian.org)
+  -f <file> read popcon report from file (default stdin)
+EOF
+}
+
+my $compressed = 1; # Submit reports in a compressed form?
+
+my ($submiturl)  = $opts{'u'} || "http://popcon.debian.org/cgi-bin/popcon.cgi";
+my ($file)  = $opts{'f'} || "-";
+$compressed = 0 if ($opts{'C'});
+
+my ($host) = $submiturl =~ m%http://([^/]+)%;
+
+print "Unable to parse url\n" if ($opts{'d'} && ! $host);
+
+# Configure the proxy:
+my ($http_proxy,$proxy,$port,$remote);
+
+$http_proxy=$ENV{'http_proxy'};
+if (defined($http_proxy))
+{
+  $http_proxy =~ m{http://([^:]*)(?::([0-9]+))?} 
+        or die ("unrecognized http_proxy");
+  $proxy=$1; $port=$2;
+}
+  
+$proxy=$host unless (defined($proxy));
+$port=80 unless (defined($port));
+
+# Compress the report:
+my ($str,$len);
+my $encoding;
+if ($compressed) {
+    open FILE, "gzip -c $file |" or die "gzip -c $file";
+    $encoding = "x-gzip";
+} else {
+    open FILE, "< $file" or die "reading from '$file'";
+    $encoding = "identity";
+}
+$str .= $_ while(<FILE>); 
+close(FILE);
+$len = length($str);
+
+# 30 second timeout on http connections
+$SIG{ALRM} = sub { die "timeout in popcon-upload\n" };
+alarm(30);
+
+# Connect to server
+$remote = IO::Socket::INET->new(Proto => "tcp", PeerAddr => $proxy, 
+                                                PeerPort => $port); 
+unless ($remote) { die "cannot connect to $proxy:$port" }
+
+my $boundary = "----------ThIs_Is_tHe_bouNdaRY_\$";
+
+#Content-Length: $len
+# text/plain; charset=utf-8
+my $ORS = "\r\n"; # Use DOS line endings to make HTTP happy
+my $form;
+$form .= "--${boundary}$ORS";
+$form .= "Content-Disposition: form-data; name=\"popcondata\"; filename=\"popcon-data\"$ORS";
+$form .= "Content-Encoding: $encoding$ORS";
+$form .= "Content-Type: application/octet-stream$ORS$ORS";
+$form .= "$str$ORS";
+$form .= "--${boundary}--$ORS";
+$form .= "$ORS";
+
+my $formlen = length($form);
+
+#Send data
+print $remote "POST $submiturl HTTP/1.1\r\n";
+print $remote "User-Agent: popcon-upload\r\n";
+print $remote "Host: $host\r\n";
+print $remote "Content-Type: multipart/form-data; boundary=$boundary\r\n";
+print $remote "Content-Length: $formlen\r\n";
+print $remote "\r\n";
+print $remote "$form";
+
+#Get answer
+my($answer)="";
+while(<$remote>)
+{
+  $answer.=$_;
+  m/Thanks/ and last;
+}
+close ($remote);
+#Check answer
+my $status = ($answer =~ m/Thanks/) ? 0 : 1;
+print "Failed to upload, answer '$answer'\n" if $status && $opts{'d'};
+exit $status;

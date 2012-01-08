@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+# Automatically added by dh_python2:
+# make sure python-central files are removed before new package is installed
+if [ "$1" = upgrade ] && [ -f /var/lib/pycentral/debconf.pkgremove ]
+then
+	pycentral pkgremove debconf
+	rm -f /var/lib/pycentral/debconf.pkgremove
+fi
+
+# End automatically added section
+
+
+# Move conffile.
+if [ -e /etc/apt/apt.conf.d/debconf ]; then
+	mv -f /etc/apt/apt.conf.d/debconf /etc/apt/apt.conf.d/70debconf
+fi

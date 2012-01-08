@@ -1,0 +1,9 @@
+This is the ubuntu version of aptdaemon.
+
+We carry the following patch that may not get upstream:
+03_auth_me_less.patch:
+ Its for the use case when adding a repository, doing a reload
+ and immediately installing a package from it. Upstream is fine
+ with the patch as a distro patch but it may not make it upstream
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>, Thu,  1 Apr 2010 17:36:57 +0200

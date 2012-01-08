@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-working-offline" xml:lang="zh_CN">
+
+  <info>
+    <desc>Work with your mail while not being connected to the network.</desc>
+<!-- TODO:POST-3-2: Offline work for web calendars etc also exists => create index page for Offline working? -->
+    <link type="guide" xref="index#mail-basic"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-30" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-send.html.en#usage-mail-getnsend-offline -->
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+
+  </info>
+
+<title>离线工作</title>
+
+<p>Offline mode helps you communicate with remote mail storage systems like GroupWise, IMAP or Exchange, in situations where you are not connected to the network at all times. Evolution keeps a local copy of one or more folders to allow you to compose messages, storing them in your Outbox to be sent the next time you connect.</p>
+
+<p>POP邮件将下载所有的邮件到您的本地计算机，但其它类型的邮件通常只下载邮件头，只有当您要阅读邮件时才会下载其余部分。 在您离线之前，Evolution会从您选择保存的文件夹中下载未读的邮件。</p>
+
+<section id="mark-folders">
+<title>Marking folders for offline usage</title>
+<p>To mark a mail folder for offline use,</p>
+<steps>
+<item><p>Right-click the folder, then click <gui>Properties</gui>.</p></item>
+<item><p>Click <gui>Copy folder content locally for offline operation</gui>.</p></item>
+</steps>
+</section>
+
+<section id="sync-for-offline">
+<title>Syncing messages for offline usage</title>
+<p>Your connection status is shown by the small icon in the lower left corner of the Evolution main window. When you are online, it displays two connected cables. When you go offline via clicking the icon or via <guiseq><gui>File</gui><gui>Work Offline</gui></guiseq>, the cables separate. You will be asked whether you want to go offline immediately or synchronize folders locally before you go offline.</p>
+<p>To download Messages for Offline Operations without immediately going offline, select <guiseq><gui>File</gui><gui>Download Messages for Offline Usage</gui></guiseq>.</p>
+</section>
+
+<section id="network-manager-integration">
+<title>自动感知网络状态</title>
+<p>Evolution能自动感知网络状态并以此运作。例如，当网络中断时Evolution会自动切换到离线模式，当网络复原时会自动回到在线模式。注意要确保您的系统安装了网络管理器后该功能才会有效。</p>
+</section>
+
+</page>

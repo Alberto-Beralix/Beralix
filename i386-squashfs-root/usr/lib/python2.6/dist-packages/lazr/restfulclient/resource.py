@@ -1,0 +1,1 @@
+../../../../../share/pyshared/lazr/restfulclient/resource.py

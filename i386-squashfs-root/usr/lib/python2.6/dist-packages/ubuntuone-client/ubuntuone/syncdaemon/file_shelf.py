@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/ubuntuone-client/ubuntuone/syncdaemon/file_shelf.py

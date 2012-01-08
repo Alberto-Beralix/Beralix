@@ -1,0 +1,10 @@
+#! /bin/sh
+set -e
+if [ "$1" = rtupdate ]; then
+	pyclean -p gedit /usr/lib/gedit
+	pycompile -p gedit  /usr/lib/gedit
+fi
+if [ "$1" = rtupdate ]; then
+	pyclean -p gedit /usr/lib/gedit/plugins
+	pycompile -p gedit  /usr/lib/gedit/plugins
+fi

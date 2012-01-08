@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "2.26">
+<!ENTITY app "gnome-user-share">
+]>
+<article id="index" lang="zh_CN">
+  <articleinfo>
+	 <title>个人文件共享手册</title>
+	 <copyright>
+		<year>2009</year>
+		<holder>Red Hat, Inc.</holder>
+         </copyright><copyright><year>2009, 2010</year><holder>TeliuTe (teliute@163.com)</holder></copyright>
+
+	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+	 <authorgroup>
+           <author role="maintainer">
+             <firstname>Matthias</firstname>
+             <surname>Clasen</surname>
+           </author>
+	 </authorgroup>
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+	 <revhistory>
+		<revision>
+		  <revnumber>1.0</revnumber>
+		  <date>2009</date>
+		  <revdescription>
+			 <para role="author">Matthias Clasen <email>mclasen@redhat.com</email></para>
+		  </revdescription>
+		</revision>
+	 </revhistory>
+	 <releaseinfo>本手册讲述的是用户共享手册 2.26 版。</releaseinfo>
+	 <legalnotice>
+		<title>反馈</title>
+		<para>要报告关于用户共享或使用手册中的缺陷，或者提出建议，请参照 <ulink url="ghelp:gnome-feedback" type="help">GNOME 反馈页</ulink> 上的指导。</para>
+	 </legalnotice>
+    <abstract role="description">
+      <para>用户共享是一个会话服务，可以很方便地在不同计算机之间共享文件。</para>
+    </abstract>
+  </articleinfo>
+  <indexterm><primary>GNOME 用户共享</primary></indexterm>
+  <indexterm><primary>文件共享</primary></indexterm>
+  <indexterm><primary>共享</primary></indexterm>
+
+  <sect1 id="gnome-user-share-intro">
+	 <title>介绍</title>
+	 <para>用户共享是一个会话服务，用于输出您的主目录中的 <filename>公共</filename> 文件夹的内容，其他人可以通过局域网很方便地访问。在其他计算机上，共享的文件夹会出现在 <application>nautilus 文件管理器</application> 的网络窗口中，是一个叫“<replaceable>user</replaceable> 的共享文件夹 ”，这儿的 <replaceable>user</replaceable>，将会是您的用户名。</para>
+	 <para>GNOME 用户共享使用一个 WebDAV 服务来共享 <filename>公共</filename> 文件夹，并且使用 mDNS 在局域网中通知共享。</para>
+         <para>另外，GNOME 用户共享能使共享文件夹通过 ObexFTP 到蓝牙，并通过您计算机上的蓝牙 ObexPush 来接收文件。</para>
+  </sect1>
+
+  <sect1 id="gnome-user-share-getting-started">
+    <title>快速入门</title>
+
+    <sect2 id="gnome-user-share-start">
+       <title>启动 GNOME 用户共享</title>
+
+       <para>GNOME 用户共享服务在您登录时，由 <application>gnome-session</application> 正常启动，可以通过 <guimenu>系统</guimenu> 菜单的 <menuchoice><guimenu>首选项</guimenu><guimenu>启动的应用程序</guimenu></menuchoice> 菜单来改变，点击“用户共享”条目来设置它。</para>
+
+       <para>要配置不同种类的文件共享，可以使用文件共享首选项。在 <guimenu>系统</guimenu> 的  <menuchoice><guimenu>首选项</guimenu><guimenu>个人文件共享</guimenu></menuchoice>。</para>
+       <figure id="file-sharing-preferences">
+         <title>文件共享首选项</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/file-sharing-preferences.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+ 
+     </sect2>
+     <sect2 id="gnome-user-share-enabling-sharing">
+       <title>允许在网络上文件共享</title>
+       <para>打开文件共享首选项 <guimenu>系统</guimenu> 菜单的 <menuchoice><guimenu>首选项</guimenu><guimenu>个人文件共享</guimenu></menuchoice> 菜单。</para>
+       <figure id="sharing-over-the-network">
+         <title>在网络上共享文件</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/sharing-over-the-network.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>要允许文件通过 WebDAV 共享，选中 <guilabel>在网络上共享公共文件</guilabel>。当文件共享启用时，密码保护控件允许您设置一个密码，当其他计算机想要访问共享文件是指定。<note><para>在你访问共享文件夹的时候，本地机子上的防火墙的配置可能会导致错误提示。请联系您的系统管理员以获得更多信息。</para></note><itemizedlist>
+           <listitem>
+              <para>选中 <guilabel>从不</guilabel> 允许任何人随意读和写共享文件夹里的文件。</para>
+           </listitem>
+           <listitem>
+              <para>选择 <guilabel>总是</guilabel> 需要密码验证才能读和写共享文件夹里的文件。</para>
+           </listitem>
+           <listitem>
+              <para>选择 <guilabel>当写入文件时</guilabel> 允许任何人读取文件，但写文件时需要密码验证。</para>
+           </listitem>
+         </itemizedlist><note><para>如果您设定了一个密码，你就得把密码发给每一个您允许访问共享文件的用户。因此，这个密码应该跟您的用户登录密码不同。</para></note></para>  
+     </sect2>
+
+     <sect2 id="gnome-user-share-enabling-bluetooth">
+       <title>允许通过蓝牙共享文件</title>
+       <para>打开文件共享首选项 <guimenu>系统</guimenu> 菜单的 <menuchoice><guimenu>首选项</guimenu><guimenu>个人文件共享</guimenu></menuchoice> 菜单。</para>
+       <figure id="sharing-over-bluetooth">
+         <title>通过蓝牙共享文件</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/sharing-over-bluetooth.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>要启用蓝牙共享，选中 <guilabel>通过蓝牙共享公共文件</guilabel> 复选框。要允许远程蓝牙设备删除您共享文件夹里的文件，选中 <guilabel>允许远程设备删除文件</guilabel> 复选框。要允许远程蓝牙设备访问您的共享文件夹，甚至他们没有与您的计算机配对，选中 <guilabel>需要远程设备与此计算机配对</guilabel> 复选框。 <note><para>当您允许非配对的远程设备访问您的共享文件时，任何人可以通过蓝牙手机在您的计算机附件访问、甚至修改您的共享文件。</para></note></para>
+     </sect2>
+
+     <sect2 id="gnome-user-share-bluetooth-receiving">
+       <title>通过蓝牙接收文件</title>
+       <para>打开文件共享首选项 <guimenu>系统</guimenu> 菜单的 <menuchoice><guimenu>首选项</guimenu><guimenu>个人文件共享</guimenu></menuchoice> 菜单。</para>
+       <figure id="receiving-over-bluetooth">
+         <title>通过蓝牙接收文件</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/receiving-over-bluetooth.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>要让远程蓝牙设备发送文件到您的计算机，选中 <guilabel>通过蓝牙在下载文件夹里接受文件</guilabel> 复选框。接收的文件将存储到您主目录的 <filename>下载</filename> 文件夹中。当启用接收文件，<guilabel>接收文件</guilabel> 面板允许您设定哪一个远程设备被允许发送文件。<itemizedlist>
+            <listitem>
+              <para>选择 <guilabel>总是</guilabel> 允许其他远程设备发送文件。</para>
+            </listitem>
+            <listitem>
+              <para>选择 <guilabel>仅配对的设备</guilabel> 只接收配对设备传输的文件。<note><para>配对设备是一个正在连接到您计算机的设备，已经输入了一个 PIN 代码来连接的。</para></note></para>
+            </listitem>
+            <listitem>
+              <para>选择 <guilabel>仅配对的和信任的设备</guilabel> 只接收从配对的和信任的设备传输的文件。</para>
+            </listitem>
+          </itemizedlist></para>
+        <para>使用 <guilabel>提示相关的接收文件</guilabel> 复选框，当通过蓝牙接收文件时，是否出现提示。</para>
+     </sect2>
+  </sect1>
+
+</article>

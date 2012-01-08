@@ -1,0 +1,1 @@
+../../../../share/pyshared/zeitgeist/__init__.py

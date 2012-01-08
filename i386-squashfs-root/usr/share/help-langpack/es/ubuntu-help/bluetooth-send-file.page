@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="bluetooth-send-file" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="bluetooth"/>
+    <desc>Compartir archivos entre dispositivos Bleutooth, como su equipo y su teléfono.</desc>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Paul W. Frields</name>
+      <email>stickster@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Enviar un archivo a un dispositivo Bluetooth.</title>
+  <p>Puede enviar archivos a los dispositivos Bluetooth conectados, tales como algunos teléfonos móviles u otros equipos. Algunos tipos de dispositivos no permiten la transferencia de archivos, o tipos de archivos específicos.</p>
+
+  <steps>
+    <item>
+      <p>Si no lo ha hecho ya, <link xref="bluetooth-connect-device">cree una conexión</link> al dispositivo Bluetooth.</p>
+    </item>
+    <item>
+      <p>Pulse el <gui>Menú de Bluetooth</gui> en el <gui>panel superior</gui> y pulse <gui>Enviar archivos al dispositivo</gui>.</p>
+    </item>
+    <item>
+      <p>Seleccione el archivo que quiera enviar y pulse <gui>Seleccionar</gui>.</p>
+      <p>(Para enviar más de un archivo en una carpeta, mantenga pulsado <key>Ctrl</key> al seleccionar cada archivo.)</p>
+    </item>
+    <item>
+      <p>Seleccione de la lista el dispositivo al que quiere enviar los archivos y pulse <gui>Enviar</gui>.</p>
+      <p>Puede limitar la lista a determinados tipos de dispositivos usando la lista desplegable <gui>Tipo de dispositivo</gui>. También puede filtrar la lista para que solo aparezcan los dispositivos emparejados o los que sean de confianza.</p>
+    </item>
+    <item>
+      <p>El propietario del dispositivo receptor normalmente tiene que pulsar un botón para aceptar el archivo. Cuando este acepte o rechace, el resultado de la transferencia de archivos se mostrará en pantalla.</p>
+    </item>
+  </steps>
+
+</page>

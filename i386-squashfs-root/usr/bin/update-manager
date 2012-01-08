@@ -1,0 +1,109 @@
+#!/usr/bin/python
+# update-manager.in - easy updating application
+#  
+#  Copyright (c) 2004-2008 Canonical
+#                2004-2008 Michael Vogt
+#                2004 Michiel Sikkes
+#  
+#  Author: Michiel Sikkes <michiel@eyesopened.nl>
+#          Michael Vogt <mvo@debian.org>
+# 
+#  This program is free software; you can redistribute it and/or 
+#  modify it under the terms of the GNU General Public License as 
+#  published by the Free Software Foundation; either version 2 of the
+#  License, or (at your option) any later version.
+# 
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+# 
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+#  USA
+
+from gi.repository import Gtk
+import gi
+gi.require_version("Gtk", "3.0")
+
+import os
+import sys
+
+from UpdateManager.UpdateManager import UpdateManager
+from DistUpgrade.DistUpgradeVersion import VERSION
+import gettext
+from optparse import OptionParser
+
+if __name__ == "__main__":
+  APP="update-manager"
+  DIR="/usr/share/locale"
+
+  Gtk.init_check(sys.argv)
+
+  gettext.install(APP, DIR, unicode=True)
+  try:
+    locale.setlocale(locale.LC_ALL, "")
+  except:
+    pass
+
+  # Begin parsing of options
+  parser = OptionParser()
+  parser.add_option ("-V", "--version", action="store_true",
+                     dest="show_version", default=False,
+                     help=_("Show version and exit"))
+  parser.add_option ("--data-dir", "", 
+                     default="/usr/share/update-manager/",
+                     help=_("Directory that contains the data files"))
+  parser.add_option ("-c", "--check-dist-upgrades", action="store_true",
+                     dest="check_dist_upgrades", default=False,
+                     help=_("Check if a new Ubuntu release is available"))
+  parser.add_option ("-d", "--devel-release", action="store_true",
+                     dest="devel_release", default=False,
+                     help=_("Check if upgrading to the latest devel release "
+                          "is possible"))
+  parser.add_option ("-p","--proposed", action="store_true",
+                     dest="use_proposed", default=False,
+                     help=_("Upgrade using the latest proposed version of the release upgrader"))
+  parser.add_option ("--no-focus-on-map", action="store_true",
+                     dest="no_focus_on_map", default=False,
+                     # TRANSLATORS: this describes the "focus-on-map" gtk
+                     # property that controls if a new window takes the
+                     # input focus control when it is displayed for the
+                     # first time (see also the gtk devhelp page)
+                     help=_("Do not focus on map when starting"))
+  parser.add_option ("--dist-upgrade", action="store_true",
+                     dest="dist_upgrade", default=False,
+                     help=_("Try to run a dist-upgrade"))
+  parser.add_option ("--no-update", action="store_true",
+                     dest="no_update", default=False,
+                     help=_("Do not check for updates when starting"))
+  parser.add_option ("-s","--sandbox", action="store_true", default=False,
+                     # TRANSLATORS: aufs is the name of the filesystem
+                     # that is used to create the overlay
+                     help=_("Test upgrade with a sandbox aufs overlay"))
+
+  (options, args) = parser.parse_args()
+
+  #data_dir="/usr/share/update-manager/"
+  #data_dir="/tmp/xxx/share/update-manager/"
+  data_dir = os.path.normpath(options.data_dir)+"/"
+
+  if options.show_version:
+    print "%s: version %s" % (os.path.basename(sys.argv[0]), VERSION)
+    sys.exit(0)
+
+  if options.dist_upgrade == True:
+    #import logging
+    #logging.basicConfig(level=logging.DEBUG)
+    from DistUpgrade.DistUpgradeViewGtk3 import DistUpgradeViewGtk3
+    from DistUpgrade.DistUpgradeController import DistUpgradeController
+    # FIXME: Having a "partial upgrade" view here would make it possible
+    #        to get rid of the ugly hideStep() stuff
+    view = DistUpgradeViewGtk3(data_dir)
+    view.label_title.set_markup("<b><big>%s</big></b>" % _("Running partial upgrade"))
+    controler = DistUpgradeController(view, datadir=data_dir)
+    controler.doPartialUpgrade()
+  else:
+    app = UpdateManager(data_dir, options)
+    app.main(options)

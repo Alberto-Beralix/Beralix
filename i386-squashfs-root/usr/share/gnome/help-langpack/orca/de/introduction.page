@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="introduction" xml:lang="de">
+  <info>
+    <link type="guide" xref="index#getting_started"/>
+    <link type="next" xref="howto_setting_up_orca"/>
+    <title type="sort">1. Willkommen bei Orca</title>
+    <desc>Einführung in den <app>Orca</app> Bildschirmleser</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+  <title>Willkommen bei Orca</title>
+  <p>
+    <app>Orca</app> is a free, open source, flexible, and extensible
+    screen reader that provides access to the graphical desktop via
+    speech and refreshable braille.
+  </p>
+  <p>
+    <app>Orca</app> works with applications and toolkits that support
+    the Assistive Technology Service Provider Interface (AT-SPI), which
+    is the primary assistive technology infrastructure for Linux and
+    Solaris. Applications and toolkits supporting the AT-SPI include the
+    GNOME Gtk+ toolkit, the Java platform's Swing toolkit, OpenOffice,
+    Gecko, and WebKitGtk. AT-SPI support for the KDE Qt toolkit is being
+    pursued.
+  </p>
+  <section id="launching">
+    <title><app>Orca</app> starten</title>
+    <p>So starten Sie <app>Orca</app>:</p>
+    <list>
+      <item>
+        <p>
+          Type <cmd>orca</cmd>, along with any optional parameters, in a
+          terminal window or within the <gui>Run</gui> dialog and then press
+          <key>Return</key>.
+        </p>
+      </item>
+      <item>
+        <p>
+          The method for configuring <app>Orca</app> to be launched
+          automatically as your preferred screen reader will depend upon
+          which desktop environment you use. For instance, in GNOME 3.x
+          this option can be found in the Universal Access Control Center
+          panel on the <gui>Seeing</gui> page.
+        </p>
+      </item>
+    </list>
+  </section>
+  <section id="quitting">
+    <title><app>Orca</app> beenden</title>
+      <p>So beenden Sie <app>Orca</app>:</p>
+      <list>
+        <item>
+          <p>
+            Press the <gui>Quit</gui> button in the <app>Orca</app> main
+            window.
+          </p>
+        </item>
+        <item>
+          <p>
+            Press <keyseq><key>Orca Modifier</key><key>Q</key></keyseq>.
+            This command works whether the <app>Orca</app> main window is
+            enabled or not.
+          </p>
+        </item>
+        <item>
+          <p>Geben Sie <cmd>orca -q</cmd> oder <cmd>orca --quit</cmd> in einem Terminalfenster oder im <gui>Anwendung ausführen</gui>-Dialog ein und drücken Sie die <key>Eingabetaste</key>.</p>
+        </item>
+      </list>
+    </section>
+    <section id="loadtime">
+      <title>Startoptionen</title>
+      <p>Die folgenden Optionen können beim Start von <app>Orca</app> angegeben werden:</p>
+      <list>
+        <item>
+          <p><cmd>-?</cmd>, <cmd>--help</cmd>:  Diese Hilfe anzeigen</p>
+        </item>
+        <item>
+          <p><cmd>-v</cmd>, <cmd>--version</cmd>: Zeigt die Version von <app>Orca</app></p>
+        </item>
+        <item>
+          <p><cmd>-s</cmd>, <cmd>--setup</cmd>, <cmd>--gui-setup</cmd>: Einrichtung der Benutzereinstellungen</p>
+        </item>
+        <item>
+          <p><cmd>-t</cmd>, <cmd>--text-setup</cmd>: Einrichtung der Benutzereinstellungen (Textversion)</p>
+        </item>
+        <item>
+          <p><cmd>-n</cmd>, <cmd>--no-setup</cmd> Einrichtung der Benutzereinstellungen überspringen</p>
+        </item>
+        <item>
+          <p><cmd>-u</cmd>, <cmd>--user-prefs-dir=<em>Ordnername</em></cmd>: Verwendet <em>Ordnername</em> als alternativen Ordner für die Benutzereinstellungen</p>
+        </item>
+        <item>
+          <p><cmd>-e</cmd>, <cmd>--enable=<em>Option</em></cmd>: Erzwingt die Verwendung einer Option, wobei die <em>Option</em> eine der folgenden sein kann:</p>
+          <list>
+            <item><p><cmd>speech</cmd></p></item>
+            <item><p><cmd>braille</cmd></p></item>
+            <item><p><cmd>braille-monitor</cmd></p></item>
+            <item><p><cmd>main-window</cmd></p></item>
+            <item><p><cmd>splash-window</cmd></p></item>
+          </list>
+        </item>
+        <item>
+          <p><cmd>-d</cmd>, <cmd>--disable=<em>Option</em></cmd>: Verhindert die Verwendung einer Option, wobei die <em>Option</em> eine der folgenden sein kann:</p>
+          <list>
+            <item><p><cmd>speech</cmd></p></item>
+            <item><p><cmd>braille</cmd></p></item>
+            <item><p><cmd>braille-monitor</cmd></p></item>
+            <item><p><cmd>main-window</cmd></p></item>
+            <item><p><cmd>splash-window</cmd></p></item>
+          </list>
+        </item>
+        <item>
+            <p><cmd>-i</cmd>, <cmd>--import-file=<em>Dateiname</em></cmd>: Importiert ein Profil aus der angegebenen <app>Orca</app>-Profildatei</p>
+        </item>
+        <item>
+          <p><cmd>-q</cmd>, <cmd>--quit</cmd>: Beendet <app>Orca</app></p>
+        </item>
+        <item>
+          <p><cmd>-f</cmd>, <cmd>--forcequit</cmd>: Erzwingt das sofortige Beenden von <app>Orca</app>.</p>
+        </item>
+        <item>
+          <p><cmd>--replace</cmd>: Ersetzt ein bereits laufendes <app>Orca</app></p>
+        </item>
+        <item>
+          <p><cmd>-l</cmd>, <cmd>--list-apps</cmd>: Gibt die bekannten laufenden Anwendungen aus</p>
+        </item>
+        <item>
+          <p><cmd>--debug</cmd>: Sendet Fehlerdiagnoseausgaben an die Datei debug-YYYY-MM-DD-HH:MM:SS.out</p>
+        </item>
+        <item>
+          <p><cmd>--debug-file=<em>Dateiname</em></cmd>: Sendet Fehlerdiagnoseausgaben an die angegebene Datei</p>
+        </item>
+      </list>
+    </section>
+
+</page>

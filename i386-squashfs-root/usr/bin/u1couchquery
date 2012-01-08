@@ -1,0 +1,69 @@
+#!/usr/bin/python
+# Copyright 2011 Canonical Ltd.
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 3, as published
+# by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranties of
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+# PURPOSE.  See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+"""ubuntuone-couchdb-query: Command line query tool for Ubuntu One CouchDBs"""
+
+
+from optparse import OptionParser
+
+import socket
+from ubuntuone import couch
+
+socket.setdefaulttimeout(5)
+
+
+if __name__ == "__main__":
+    PARSER = OptionParser(usage="prog [options] urlpath")
+    PARSER.add_option("--oauth-signature-method", dest="sigmeth",
+                      default="HMAC_SHA1",
+                      help="OAuth signature method to use (PLAINTEXT or "
+                      "HMAC_SHA1)")
+    PARSER.add_option("--http-method", dest="http_method",
+                      default="GET",
+                      help="HTTP method to use")
+    PARSER.add_option("--body", dest="body",
+                      default=None,
+                      help="HTTP request body")
+    PARSER.add_option("--consumer-key", dest="consumer_key",
+                      default=None,
+                      help="OAUth consumer key")
+    PARSER.add_option("--consumer-secret", dest="consumer_secret",
+                      default=None,
+                      help="OAUth consumer secret")
+    PARSER.add_option("--access-token", dest="access_token",
+                      default=None,
+                      help="OAUth access token")
+    PARSER.add_option("--token-secret", dest="token_secret",
+                      default=None,
+                      help="OAUth token secret")
+    PARSER.add_option("--server-override", dest="server_override",
+                      default=None,
+                      help="Use a different server")
+    PARSER.add_option("-H", "--header", dest="header", action="append",
+                      default=None,
+                      help="Supply an extra header (as 'Headername: value')")
+
+    (OPTIONS, ARGS) = PARSER.parse_args()
+    if len(ARGS) != 1:
+        PARSER.error("You must specify a urlpath (e.g., a dbname)")
+
+    print couch.request(
+        urlpath=ARGS[0], sig_meth=OPTIONS.sigmeth,
+        http_method=OPTIONS.http_method, request_body=OPTIONS.body,
+        server_override=OPTIONS.server_override,
+        access_token=OPTIONS.access_token, token_secret=OPTIONS.token_secret,
+        consumer_key=OPTIONS.consumer_key,
+        consumer_secret=OPTIONS.consumer_secret,
+        extra_headers=OPTIONS.header)

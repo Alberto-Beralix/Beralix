@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="commandline" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <title type="sort">Command line</title>
+    <desc><cmd>evince</cmd> 命令可以打开任意数量的文件，并处在指定的页面和模式。</desc>
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    <name>Tiffany Antopolski</name>
+    <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>The command line</title>
+
+<p>要从命令行中启动文档查看器，输入 <cmd>evince</cmd>。您可以通过在 evince 命令后输入文件名来打开某个指定的文件：</p>
+
+<screen>evince 文件.pdf</screen>
+<p>您可以通过在 evince 命令后输入以空格分隔的多个文件名来打开多个文件：</p>
+<screen>evince 文件1.pdf 文件2.pdf</screen>
+<p>
+The <app>document viewer</app> also supports the handling of files on the web.  For example, after the evince command you can give the location of a file on the web:
+</p>
+<screen>evince http://www.claymath.org/millennium/P_vs_NP/pvsnp.pdf</screen>
+<section>
+    <title>Opening a document at a specific page</title>
+    <p>您可以使用 <cmd>--page-label</cmd> 语句来打开某个文档的指定页。例如，要打开文档的第 3 页，您可以输入：</p>
+    <screen>evince --page-label=3 file.pdf</screen>
+    <p>页码应该和在文档查看器的工具栏显示的页码格式一样。</p>
+</section>
+<section>
+    <title>Opening a document in fullscreen mode</title>
+    <screen>evince --fullscreen 文件.pdf</screen>
+</section>
+<section>
+    <title>Opening a document in presentation mode</title>
+    <screen>evince --presentation 文件.pdf</screen>
+</section>
+<section>
+    <title>Opening a document in preview mode</title>
+    <screen>evince --preview 文件.pdf</screen>
+</section>
+</page>

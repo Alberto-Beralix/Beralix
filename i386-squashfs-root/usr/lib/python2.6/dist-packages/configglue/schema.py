@@ -1,0 +1,1 @@
+../../../../share/pyshared/configglue/schema.py

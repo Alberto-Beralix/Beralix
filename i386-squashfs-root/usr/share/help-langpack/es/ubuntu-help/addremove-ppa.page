@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="addremove-ppa" xml:lang="es">
+  <info>
+    <link type="guide" xref="addremove"/>
+
+    <revision version="11.04" date="2011-04-21" status="final"/>
+
+    <credit type="author">
+      <name>Equipo de documentación de Ubuntu</name>
+    </credit>
+
+    <desc>Añadir PPA para ayudar a probar software especializado o aún no publicado</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Añadir un archivador de paquetes personales (PPA)</title>
+  <p>Los <em>Archivos de Paquetes Personales (Personal Package Archives, o PPA)</em> son repositorios de software diseñados para usuarios de Ubuntu y que son más fáciles de instalar que otros repositorios de terceros.</p>
+  <note style="warning"><p>Añada programas solamente de repositorios en los que confía. Los repositorios de programas de terceros no son vigilados por los miembros de seguridad de Ubuntu y podrían contener programas dañinos para su equipo.</p></note>
+
+    <steps>
+        <title>Instalar un PPA</title>
+        <item><p>En la página principal del PPA, busque un encabezado que diga <gui>Adding this PPA to your system</gui> («añadir este PPA a su sistema»). Tome nota de la ubicación del PPA, que debería tener un aspecto similar a esto: <code>ppa:mozillateam/firefox-stable</code>.</p></item>
+        <item><p>Abra el icono del <app>Centro de software de Ubuntu</app> en el Lanzador, o busque «Centro de software» en la barra de búsqueda del <app>Tablero</app>.</p></item>
+        <item><p>Cuando se inicie el Centro de software, pulse <guiseq><gui>Editar&gt;</gui><gui>Orígenes del software</gui></guiseq></p></item>
+        <item><p>Se le solicitará que introduzca su contraseña. Cuando lo haya hecho, vaya a la pestaña <gui>Otro software</gui>.</p></item>
+        <item><p>Pulse <gui>Añadir</gui> e introduzca la ubicación del <code>ppa:</code>.</p></item>
+        <item><p>Pulse <gui>Añadir origen</gui> y luego cierre la ventana de Orígenes del software. El Centro de software de Ubuntu comprobará sus orígenes del software en busca de nuevas actualizaciones.</p></item>
+    </steps>
+
+</page>

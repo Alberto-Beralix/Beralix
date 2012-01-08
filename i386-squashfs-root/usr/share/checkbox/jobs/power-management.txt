@@ -1,0 +1,83 @@
+plugin: manual
+name: power-management/shutdown-boot
+description:
+ Shutdown/boot cycle verification procedure:
+ 1.- Shutdown your machine
+ 2.- Boot your machine
+ 3.- Repeat steps 1 and 2 at least 5 times
+ .
+ Note: This test case has to be executed manually before checkbox execution
+
+plugin: manual
+name: power-management/lid
+description:
+ Does closing your laptop lid cause your screen to blank?
+
+plugin: manual
+name: power-management/lid_close
+requires: device.product == 'Lid Switch' and package.name == 'linux'
+command:
+ for i in `seq 20`; do
+  state=`cat /proc/acpi/button/lid/LID/state | awk '{print $2}'`
+  [ "$state" = "closed" ] && exit 0 || sleep 0.5
+ done
+ exit 1
+description:
+ Click the Test button, then close and open the lid.
+ .
+ Did the screen turn off while the lid was closed?
+
+plugin: manual
+name: power-management/lid_open
+requires: device.product == 'Lid Switch' and package.name == 'linux'
+command:
+ for i in `seq 20`; do
+  state=`cat /proc/acpi/button/lid/LID/state | awk '{print $2}'`
+  [ "$state" = "open" ] && exit 0 || sleep 0.5
+ done
+ exit 1
+description:
+ Click the Test button, then close the lid and wait 5 seconds.
+ .
+ Open the lid.
+ .
+ Did the screen turn back on when the lid was opened?
+
+plugin: shell
+name: power-management/rtc
+requires: package.name == 'linux'
+command:
+ test -e /dev/rtc
+description:
+ Make sure that the RTC (Real-Time Clock) device exists.
+
+plugin: shell
+name: power-management/fwts_wakealarm
+description: Run Colin Kings FWTS wakealarm test
+description-cs.UTF-8: Spustit test FWTS wakealarm od Colina Kinga
+description-de.UTF-8: Colin Kings FWTS-Aufwachalarmtest ausführen
+description-en_AU.UTF-8: Run Colin Kings FWTS wakealarm test
+description-en_GB.UTF-8: Run Colin Kings FWTS wakealarm test
+description-es.UTF-8: Ejecutar prueba de alarma de reanudación de Colin Kings FWTS
+description-it.UTF-8: Esegue i test wakealarm FWTS di Colin King
+description-pt_BR.UTF-8: Executar o teste de despertador da Colin King's FWTS
+description-sl.UTF-8: Zaženite preizkus budilke Colin Kings FWTS
+requires:
+ package.name == 'linux'
+ package.name == 'fwts'
+command: fwts_test -w -l $CHECKBOX_DATA/fwts-wakealarm.log
+
+plugin: shell
+name: power-management/tickless_idle
+requires: package.name == 'linux'
+description: Check to see if CONFIG_NO_HZ is set in the kernel
+description-cs.UTF-8: Zkontrolovat, zda je v jádře zapnuta volba CONFIG_NO_HZ
+description-de.UTF-8: Prüfen Sie ob CONFIG_NO_HZ im Kernel festgelegt ist
+description-en_AU.UTF-8: Check to see if CONFIG_NO_HZ is set in the kernel
+description-en_GB.UTF-8: Check to see if CONFIG_NO_HZ is set in the kernel
+description-es.UTF-8: Comprobar que CONFIG_NO_HZ esté establecido en el núcleo
+description-it.UTF-8: Verifica se nel kernel è stato impostato CONFIG_NO_HZ
+description-pt_BR.UTF-8: Verificar se CONFIG_NO_HZ está ativado no kernel
+description-sl.UTF-8: Preverite, da je CONFIG_NO_HZ nastavljen v jedru.
+command:
+ zgrep 'CONFIG_NO_HZ=y' /boot/config-`uname -r` >/dev/null 2>&1

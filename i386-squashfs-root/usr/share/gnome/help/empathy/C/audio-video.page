@@ -1,0 +1,224 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="topic"
+      id="audio-video">
+
+  <info>
+    <link type="guide" xref="index#audio-video"/>
+    <desc>Information on when it is possible to have an audio or video conversation.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-02" status="draft"/>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-14" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-04" status="done"/>
+      -->
+    </revision>
+    <revision pkgversion="2.30" version="0.2" date="2010-02-14" status="review"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Audio and video support</title>
+
+  <p>You can only have audio and video conversation with contacts who are using
+  an application which also supports this feature.  When your contacts support
+  audio or video conversations, you will see the following icons next to their
+  names in the contact list:</p>
+
+  <table frame="all" rules="cols rowgroups" shade="rows">
+    <thead>
+      <tr>
+        <td>
+          <p>
+            Icon
+          </p>
+        </td>
+        <td>
+          <p>
+            Description
+          </p>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        <p>
+          <media type="image" mime="image/png" src="figures/audio-input-microphone.png">
+            Icon for audio conversation
+          </media>
+        </p>
+      </td>
+      <td>
+        <p>The contact is able to have an audio conversation.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <media type="image" mime="image/png" src="figures/camera-web.png">
+            Icon for video conversation
+          </media>
+        </p>
+      </td>
+      <td>
+        <p>The contact is able to have a video conversation.</p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  
+  <note>
+    <p>
+      In order to have an audio conversation, you need to have a sound card that is
+      supported by your operating system, and a working microphone. 
+    </p>
+    <p>
+      In order to have a video conversation, you need to have a webcam that is
+      supported by your operating system, and a working microphone.
+    </p>
+  </note>
+
+  <section id="services">
+  
+  <title>Supported Account Types</title>
+
+  <p>You can only have audio and video conversations using accounts on
+  certain supported services.  The following table lists whether audio
+  and video is supported for each type of account.</p>
+
+  <note>
+    <p>Account types are provided by plugins.  Your system may not have
+    all of the following types available, or it may have types not listed
+    here.  Updated plugins may make audio or video conversations possible
+    on account types that are listed as unsupported here.</p>
+  </note>
+
+  <comment>
+    <cite date="2009-09-04">Shaun McCance</cite>
+    <p>I'd like to do tables like this using nothing for No and ✔ for Yes, but
+    we need to look at the accessibility impact.  I've
+    <link href="http://mail.gnome.org/archives/gnome-doc-list/2009-September/msg00006.html">asked
+    the accessibility team</link> for input.</p>
+  </comment>
+
+  <comment>
+    <cite date="2009-09-04">Shaun McCance</cite>
+    <p>There's recent work on telepathy-butterfly and papyon to support
+    audio and video for MSN.  It might be released in time for 2.28, but
+    since it doesn't follow the Gnome release schedule, I can't be sure.
+    If it looks like it's going to ship, let's mark it Yes.</p>
+  </comment>
+  
+  <table frame="all" rules="rowgroups colgroups" shade="rows">
+    <colgroup><col/></colgroup><colgroup><col/><col/></colgroup>
+    <thead>
+      <tr>
+        <td><p>Service</p></td>
+        <td><p>Audio</p></td>
+        <td><p>Video</p></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p>AIM</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>Facebook Chat</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>gadugadu</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>Google Talk</p></td>
+        <td><p>Yes</p></td>
+        <td><p>Yes</p></td>
+      </tr>
+      <tr>
+        <td><p>Groupwise</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>ICQ</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>IRC</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>Jabber</p></td>
+        <td><p>Yes</p></td>
+        <td><p>Yes</p></td>
+      </tr>
+      <tr>
+        <td><p>MSN</p></td>
+        <td><p>Yes</p></td>
+        <td><p>Yes</p></td>
+      </tr>
+      <tr>
+        <td><p>myspace</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>qq</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>People Nearby</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>sametime</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>silc</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>SIP</p></td>
+        <td><p>Yes</p></td>
+        <td><p>Yes</p></td>
+      </tr>
+      <tr>
+        <td><p>Yahoo!</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+      <tr>
+        <td><p>zephyr</p></td>
+        <td><p>No</p></td>
+        <td><p>No</p></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  </section>
+
+</page>

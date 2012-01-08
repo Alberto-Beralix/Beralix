@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="nautilus-connect" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="files" group="more"/>
+    <desc>Dateien auf einem anderen Rechner ansehen und bearbeiten – via FTP, SSH, Windows-Freigaben oder WebDAV.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Durchsuchen von Dateien auf einem Server oder in einer Netzwerkfreigabe</title>
+
+<p>You can connect to a server or network share to browse and
+view files on that server, exactly as if they were on your
+own computer. This is a convenient way to download or upload 
+files on the internet, or to share files with other people on
+your local network.</p>
+
+<p>To browse files over the network, first <link xref="files-browse">open the file manager</link></p>
+
+<p>Click <gui>Browse Network</gui> in the sidebar, or select
+<gui>Network</gui> from the <gui>Go</gui> menu. The file manager
+will find any computers on your local area network that advertise
+their ability to serve files. If you want to connect to a server
+on the internet, or if you do not see the computer you're looking
+for, you can manually connect to a server by typing in its 
+internet/network address.</p>
+
+<steps>
+  <title>Mit einem Dateiserver verbinden</title>
+  <item><p>In the file manager, click <guiseq><gui>File</gui>
+  <gui>Connect to Server</gui></guiseq>.</p></item>
+  <item><p>Enter the server address, select the type of server, and enter
+  any additional information as required. Then click <gui>Connect</gui>.
+  Details on server types are <link xref="#types">listed below</link>.</p>
+  <p>For servers on the internet, you can usually use the domain name
+  (e.g. <sys>ftp.example.com</sys>). For computers on your local network, 
+  however, you may have to use the computer's 
+  <link xref="net-findip">numeric IP address</link>.</p>
+  </item>
+  <item><p>A new window will open showing you the files on the server.
+  You can browse the files just as you would for those on your own computer.</p>
+  <p>The server will also be added to the sidebar so you can access it quickly 
+  in the future</p>
+  </item>
+</steps>
+
+<section id="types">
+ <title>Verschiedene Arten von Servern</title>
+
+<p>You can connect to different types of servers. Some servers
+are public, and allow anybody to connect. Other servers require
+you to log in with a user name and password.</p>
+<p>You may not have permissions to perform certain actions on files 
+on a server. For example, on public FTP sites, you will probably not be
+able to delete files.</p>
+
+<terms>
+<title>Servertypen</title>
+<item>
+  <title>SSH</title>
+  <p>Wenn Sie einen <em>Secure-Shell</em>-Zugang zu einem Server haben, können Sie sich mit dieser Methode verbinden. Viele Homepageanbieter stellen einen SSH-Zugang zur Verfügung, damit ihre Kunden auf sicherem Weg Dateien hochladen können. SSH-Server erfordern immer eine Anmeldung. Wenn Sie zum Anmelden einen SSH-Schlüssel verwenden, lassen Sie das Passwortfeld leer.</p>
+  
+  <comment><cite>shaunm</cite><p>We should have a topics on encryption
+  keys, possibly rolling the seahorse help into gnome-help. Then link
+  from here.</p></comment>
+  
+  <p>When using SSH, all the data you send (including your password)
+  is encrypted so that other users on your network can't see it.</p>
+</item>
+<item>
+  <title>FTP (mit Anmeldung)</title>
+  <p>FTP is a popular way to exchange files on the Internet.
+  Because data is not encrypted over FTP, many servers now provide
+  access through SSH. Some servers, however, still allow or require
+  you to use FTP to upload or download files. FTP sites with logins
+  will usually allow you to delete and upload files.</p>
+</item>
+<item>
+  <title>Öffentlicher FTP</title>
+  <p>Server, die Ihnen das Herunterladen von Dateien erlauben, stellen manchmal einen öffentlichen oder anonymen FTP-Zugang bereit. Diese Server verlangen keinen Benutzernamen und kein Passwort und gestatten normalerweise nicht, Dateien zu löschen oder hochzuladen.</p>
+  <note><p>Manche anonymen FTP-Zugänge verlangen einen öffentlichen Benutzernamen und ein Passwort oder einen öffentlichen Benutzernamen mit Ihrer E-Mail-Adresse als Passwort. Wählen Sie für diese Server <gui>FTP (mit Zugangsbeschränkung</gui> und geben Sie die vom FTP-Betreiber verlangten Zugangsdaten ein.</p></note>
+</item>
+<item>
+  <title>Windows-Freigabe</title>
+  <p>Windows-Rechner verwenden ein proprietäres Protokoll, um Dateien in einem lokalen Netzwerk auszutauschen. Die Rechner in einem Windows-Netzwerk sind manchmal in <em>Domains</em> organisiert, um den Zugriff besser verwalten zu können. Wenn Sie über die entsprechenden Zugriffsrechte auf dem entfernten Rechner verfügen, können Sie sich in der Dateiverwaltung mit einer Windows-Freigabe verbinden.</p>
+</item>
+<item>
+  <title>WebDAV und Sicheres WebDAV</title>
+  <p>Based on the HTTP protocol used on the web, WebDAV is sometimes used to
+  share files on a local network and to store files on the internet. If the
+  server you're connecting to supports secure connections, you should choose
+  this option. Secure WebDAV uses strong SSL encryption, so that other users 
+  can't see your password.</p>
+  <comment>
+    <cite date="2011-04-01">shaunm</cite>
+    <p>Also used by gnome-user-share, but we're not talking about that
+    in gnome-help for 3.0. Hopefully it will be better integrated in 3.2,
+    and we can discuss it better in the help. If that happens, link from
+    here.</p>
+  </comment>
+</item>
+</terms>
+</section>
+
+</page>

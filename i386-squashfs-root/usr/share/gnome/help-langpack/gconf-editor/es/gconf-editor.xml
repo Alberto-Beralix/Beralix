@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.8">
+<!ENTITY manrevision "2.8">
+<!ENTITY date "September 2004">
+<!ENTITY app "Configuration Editor">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Feb 12, 2002
+-->
+<article id="index" lang="es">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Manual del Editor de configuración</title>       
+    <copyright> 
+      <year>2004</year>
+      <holder>Sun Microsystems</holder> 
+    </copyright><copyright><year>2007-2008</year><holder>Jorge González (jorgegonz@svn.gnome.org)</holder></copyright>
+    <!-- translators: uncomment this:
+         <copyright>
+         <year>2003</year>
+         <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+         </copyright>
+    -->
+
+    <publisher role="maintainer"> 
+      <publishername>Proyecto de Documentación GNOME</publishername> 
+    </publisher> 
+
+       <legalnotice id="legalnotice">
+         <para>Se permite copiar, distribuir y/o modificar este documento bajo los términos de la GNU Free Documentacion License (GFDL), Versión 1.1 o cualquiera de las últimas versiones publicadas por la Free Software Foundation sin Seciones Invariantes, sin Textos de Portada, y sin Textos de Contraportada. Se puede encontrar una copia de la GFDL en este <ulink type="help" url="ghelp:fdl">enlace</ulink> o en el archivo COPYING-DOCS distribuido con este manual.</para>
+          <para>Este manual es parte de una colección de manuales de GNOME distribuidos bajo la GFDL. Si se quiere distribuir este manual separadamente de la colección, se puede hacer añadiendo una copia de licencia del manual, como la descrita en la sección 6 de la licencia.</para>
+ 
+         <para>Muchos de los nombres utilizados por compañías para distinguir sus productos y servicios son declarados como marcas registradas. Cuando estos nombres aparecen en cualquiera documentación de GNOME, y los miembros de Documentación del Proyecto GNOME son conscientes de estas marcas registradas, entonces estos nombres están en letras mayúsculas o empiezan por letra mayúscula.</para>
+ 
+         <para>ESTE DOCUMENTO Y LAS VERSIONES MODIFICADAS DEL MISMO SE OFRECEN SEGÚN LAS CONDICIONES ESTABLECIDAS EN LA LICENCIA DE DOCUMENTACIÓN LIBRE DE GNU (GFDL) Y TENIENDO EN CUENTA QUE: <orderedlist>
+                 <listitem>
+                   <para>EL DOCUMENTO SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, NI EXPLÍCITA NI IMPLÍCITA INCLUYENDO, SIN LIMITACIÓN, GARANTÍA DE QUE EL DOCUMENTO O VERSIÓN MODIFICADA DE ÉSTE CAREZCA DE DEFECTOS COMERCIALES, SEA ADECUADO A UN FIN CONCRETO O INCUMPLA ALGUNA NORMATIVA. TODO EL RIESGO RELATIVO A LA CALIDAD, PRECISIÓN Y UTILIDAD DEL DOCUMENTO O SU VERSIÓN MODIFICADA RECAE EN USTED. SI CUALQUIER DOCUMENTO O VERSIÓN MODIFICADA DE AQUÉL RESULTARA DEFECTUOSO EN CUALQUIER ASPECTO, USTED (Y NO EL REDACTOR INICIAL, AUTOR O CONTRIBUYENTE) ASUMIRÁ LOS COSTES DE TODA REPARACIÓN, MANTENIMIENTO O CORRECCIÓN NECESARIOS. ESTA RENUNCIA DE GARANTÍA ES UNA PARTE ESENCIAL DE ESTA LICENCIA. NO SE AUTORIZA EL USO DE NINGÚN DOCUMENTO NI VERSIÓN MODIFICADA DE ÉSTE POR EL PRESENTE, SALVO DENTRO DEL CUMPLIMIENTO DE LA RENUNCIA;Y</para>
+                 </listitem>
+                 <listitem>
+                   <para>BAJO NINGUNA CIRCUNSTANCIA NI BAJO NINGUNA TEORÍA LEGAL, SEA POR ERROR (INCLUYENDO NEGLIGENCIA), CONTRATO O DE ALGÚN OTRO MODO, EL AUTOR, EL ESCRITOR INICIAL, CUALQUIER CONTRIBUIDOR, O CUALQUIER DISTRIBUIDOR DEL DOCUMENTO O VERSIÓN MODIFICADA DEL DOCUMENTO, O CUALQUIER PROVEEDOR DE CUALQUIERA DE ESAS PARTES, SERÁ RESPONSABLE ANTE NINGUNA PERSONA POR NINGÚN DAÑO DIRECTO, INDIRECTO, ESPECIAL, INCIDENTAL O DERIVADO DE NINGÚN TIPO, INCLUYENDO, SIN LIMITACIÓN DAÑOS POR PÉRDIDA DE MERCANCÍAS, PARO TÉCNICO, FALLO INFORMÁTICO O MAL FUNCIONAMIENTO O CUALQUIER OTRO POSIBLE DAÑO O PÉRDIDAS DERIVADAS O RELACIONADAS CON EL USO DEL DOCUMENTO O SUS VERSIONES MODIFICADAS, AUNQUE DICHA PARTE HAYA SIDO INFORMADA DE LA POSIBILIDAD DE QUE SE PRODUJESEN DICHOS DAÑOS.</para>
+                 </listitem>
+           </orderedlist></para>
+   </legalnotice>
+ 
+    <!-- This file  contains link to license for the documentation (GNU FDL), and 
+         other legal stuff such as "NO WARRANTY" statement. Please do not change 
+         any of this. -->
+
+    <authorgroup>
+      <author>
+        <firstname>Sun</firstname>
+        <surname>Equipo de documentación de GNOME</surname>
+        <affiliation><orgname>Sun Microsystems</orgname></affiliation>
+      </author>
+      <author>
+        <firstname>Angela</firstname>
+        <surname>Boyle</surname>
+        <affiliation>
+          <orgname>Proyecto de Documentación GNOME</orgname>
+        </affiliation>
+      </author>
+      <editor>
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>Proyecto de Documentación GNOME</orgname>
+        </affiliation>
+      </editor>
+      <!-- This is appropriate place for other contributors: translators,
+           maintainers,  etc. Commented out by default.
+           <othercredit role="translator">
+           <firstname>Latin</firstname> 
+           <surname>Translator 1</surname> 
+           <affiliation> 
+           <orgname>Latin Translation Team</orgname> 
+           <address> <email>translator@gnome.org</email> </address> 
+           </affiliation>
+           <contrib>Latin translation</contrib>
+           </othercredit>
+      -->
+    </authorgroup>
+    <abstract role="description"><para>El Editor de configuración se puede usar para cambiar las opciones de configuración que usan las aplicaciones y que pueden no estar disponibles a través de los diálogos de Preferencias</para></abstract>
+
+    <revhistory>
+      <revision>
+        <revnumber>Versión 2.8</revnumber>
+        <date>Septiembre de 2004</date>
+        <revdescription>
+          <para role="author">Proyecto de Documentación GNOME</para>
+          <para role="publisher">Proyecto de Documentación GNOME</para>
+          <para role="status">sin revisar</para>
+        </revdescription>
+      </revision>
+      <revision> 
+        <revnumber>Versión 2.1</revnumber> 
+        <date>Agosto de 2004</date> 
+        <revdescription> 
+          <para role="author">Equipo de documentación de Sun GNOME</para>
+          <para role="publisher">Proyecto de Documentación GNOME</para>
+        </revdescription> 
+      </revision>
+      <revision> 
+        <revnumber>Versión 2.0.1</revnumber> 
+        <date>Enero de 2004</date> 
+        <revdescription> 
+          <para role="author">Equipo de documentación de Sun GNOME</para>
+          <para role="publisher">Proyecto de Documentación GNOME</para>
+        </revdescription> 
+      </revision>
+    </revhistory> 
+    <releaseinfo>Este manual describe la versión 2.8 de Editor de configuración.</releaseinfo> 
+    <legalnotice> 
+      <title>Comentarios</title> 
+      <para>Para informar sobre un fallo o hacer sugerencias sobre la aplicación Editor de configuración o sobre este manual, siga las indicaciones en la <ulink url="ghelp:gnome-feedback" type="help">Página de comentarios de GNOME</ulink>.</para>
+      <!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+</articleinfo> 
+
+<indexterm> 
+  <primary>Editor de configuración</primary> 
+</indexterm>
+
+<sect1 id="introduction">
+  <title>Introducción</title>
+  <para>El escritorio GNOME y muchas aplicaciones utilizan <application>GConf</application> para almacenar las preferencias del usuario y los datos de configuración del sistema. <application>GConf</application> proporciona una ubicación de almacenamiento central para las preferencias, simplificando la administración de la configuración para los usuarios y administradores del sistema. Para obtener más información acerca de <application>GConf</application> visite la <ulink url="ghelp:system-admin-guide#gconf-0">guía para administradores del sistema de GNOME</ulink>.</para>
+  <para>El <application>Editor de configuración</application> le permite modificar sus preferencias para todo el escritorio GNOME y cualquier aplicación que use <application>GConf</application>. Adicionalmente, los administradores del sistema pueden usar el <application>Editor de configuración</application> para establecer los ajustes predeterminados y obligatorios que afecten a todos los usuarios.</para>
+  <para>Las preferencias se almacenan en <application>GConf</application> en una jerarquía de claves. Cada clave tiene asociado un valor que especifica su configuración para esa preferencia. Por ejemplo, la clave <literal>/apps/glines/preferences/ball_theme</literal> almacena el tema usado en <application>Cinco o más</application>.</para>
+  <caution><para>El <application>Editor de configuración</application> le permite modificar su configuración directamente. Si no es un usuario experimentado, no utilice el <application>Editor de configuración</application> para establecer preferencias para el escritorio GNOME. En su lugar, utilice las herramientas de preferencias en el escritorio GNOME. Para obtener más información acerca de cómo usar las herramientas de preferencias, lea la última versión de la <ulink url="ghelp:user-guide">Guía del usuario del escritorio GNOME</ulink> para su plataforma.</para></caution>
+</sect1>
+
+<sect1 id="getting-started"> 
+  <title>Inicio</title>
+
+  <sect2 id="to-start"> 
+    <title>Para iniciar el Editor de configuración</title>
+    <para>Puede iniciar el <application>Editor de configuración</application> de las formas siguientes:</para>
+    <variablelist>
+      <varlistentry>
+        <term>Menú <guimenu>Aplicaciones</guimenu></term>
+        <listitem>
+          <para>Elija <menuchoice><guisubmenu>Herramientas del sistema</guisubmenu><guimenuitem>Editor de configuración</guimenuitem></menuchoice>.</para>
+          <note><para>Algunas distribuciones ocultan este menú. En ese caso, use el segundo método abajo descrito.</para></note>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Línea de comandos</term>
+        <listitem>
+          <para>Ejecute el siguiente comando: <command>gconf-editor</command></para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+
+  <sect2 id="when-you-start">
+    <title>Cuando inicie el Editor de configuración</title>
+    <para>Cuando inicie el <application>Editor de configuración</application> se mostrará la siguiente ventana.</para>
+    <figure id="gconf_editor_window"> 
+      <title>Ventana de <application>Editor de configuración</application></title>
+      <screenshot> 
+        <mediaobject> 
+          <imageobject>
+            <imagedata fileref="figures/gconf_editor_anno_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Muestra la ventana del Editor de configuración. Con: Panel del árbol, panel de modificaciones, panel de documentación.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>La ventana del <application>Editor de configuración</application> contiene los siguientes paneles:</para>
+    <variablelist>
+      <varlistentry>
+        <term>Panel del árbol</term>
+        <listitem><para>Le permite navegar por la jerarquía de claves en <application>GConf</application>. Utilice este panel para mostrar las claves que quiere modificar en el panel de modificaciones. El panel del árbol está a la parte izquierda de la ventana.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Panel de modificaciones</term>
+        <listitem>
+          <para>Muestra las claves en la ubicación <application>GConf</application> seleccionada en el panel del árbol. Use este panel para seleccionar las claves que quiera modificar así como para modificar los valores de las claves. El panel de modificaciones está situado en la parte superior de la parte derecha de la ventana.</para>
+          <para>Los iconos al lado de las claves del panel de modificaciones indican qué tipo de valor puede introducir para la clave. Por ejemplo, el icono de  casilla de verificación al lado de la clave <literal>/system/http_proxy/use_http_proxy</literal> indica que puede introducir un valor Booleano (verdadero o falso) para la clave. Para obtener más información sobre cada icono vea <xref linkend="icons"/>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Panel de documentación</term>
+        <listitem><para>Muestra la documentación para la clave actualmente seleccionada. Utilice este panel para leer más información acerca de las preferencias de las claves <application>GConf</application>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Panel de resultados (no se muestra)</term>
+        <listitem><para>Le permite ver el resultado de una búsqueda o buscar a través de la lista de nombres de claves vistas recientemente. El resto de la ventana muestra la información de cualquiera que sea la clave seleccionada en este panel. El panel de resultados aparecerá en la parte inferior de la ventana cuando se listen las claves vistas recientemente o se realice una búsqueda.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+</sect1>
+
+<sect1 id="workwindows">
+  <title>Trabajar con las ventanas</title>
+  <sect2 id="workwindows-opennew">
+    <title>Abrir nuevas ventanas</title>
+    <para>Hay tres tipos de ventana que puede abrir en el <application>Editor de configuración</application>: <application>Configuración</application>, <application>Predeterminados</application>, y <application>Obligatorios</application>. Los valores que el <application>Editor de configuración</application> ajusta dependen de qué tipo de ventana está abierta. Puede abrir cada tipo de ventana con el elemento apropiado en el menú <guimenu>Archivo</guimenu>.</para>
+    <note><para>Ya que los ajustes en las ventanas de <application>Predeterminados</application> y <application>Obligatorios</application> afectan a todos los usuarios del equipo, sólo un administrador del sistema puede usar esos tipos de ventana. Para cambiar sus preferencias, debe usar la ventana de <application>Configuración</application>.</para></note>
+    <variablelist>
+      <varlistentry>
+        <term><application>Configuración</application></term>
+        <listitem><para>Puede usar la ventana de <application>Configuración</application> para establecer sus preferencias personales. Los cambios realizados en la ventana de <application>Configuración</application> sólo afectarán a su escritorio. No puede cambiar los ajustes que el administrador del sistema ha establecido como obligatorios.</para></listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <varlistentry>
+        <term><application>Predeterminados</application></term>
+        <listitem><para>Si es un administrador del sistema, puede usar la ventana de <application>Predeterminados</application> para editar los ajustes predeterminados para todos los usuarios. Si un usuario no establece explícitamente el valor para una clave, el valor se tomará de los ajustes predeterminados. Los usuarios siempre pueden sobreescribir los ajustes predeterminados.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><application>Obligatorios</application></term>
+        <listitem><para>Si es un administrador del sistema, puede usar la ventana de <application>Obligatorios</application> para editar los ajustes obligatorios para todos los usuarios. Cuando se establece un valor obligatorio para una clave, los usuarios no pueden cambiarlo. Esto puede usarse para bloquear ciertas opciones.</para></listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+
+  <sect2 id="workwindows-close">
+    <title>Cerrar y salir</title>
+    <para>Puede cerrar una ventana del <application>Editor de configuración</application> seleccionando <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Cerrar ventana</guimenuitem></menuchoice> en esa ventana. Para cerrar todas las ventanas del <application>Editor de configuración</application> y salir completamente de la aplicación, seleccione <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Salir</guimenuitem></menuchoice> en cualquiera de las ventanas del <application>Editor de configuración</application>.</para>
+  </sect2>
+</sect1>
+
+<sect1 id="workkeys">
+  <title>Trabajar con las claves</title>
+  <para>Las claves son una manera de buscar un valor. Cada preferencia almacenada en <application>GConf</application> se asigna a una clave. Las aplicaciones que usan <application>GConf</application> acceden a los valores de las claves para determinar cómo deben mostrarse y comportarse. Cuando cambia algo en las <guilabel>Preferencias</guilabel> de una aplicación, está cambiando los valores asociados a una clave en <application>GConf</application>.</para>
+
+  <sect2 id="copy-key">
+    <title>Copiar el nombre de una clave</title>
+    <para>Para copiar el nombre de una clave al portapapeles, seleccione el nombre de la clave que quiere copiar del panel de modificaciones. Elija<menuchoice><guimenu>Editar</guimenu><guimenuitem>Copiar el nombre de la clave</guimenuitem></menuchoice>. Puede pegar el nombre de la clave en cualquier otra aplicación.</para>
+  </sect2>
+  <sect2 id="list-key">
+    <title>Ver los nombres de claves recientes</title>
+    <para>Para ver los nombres de las claves recientes, elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Listar claves recientes</guimenuitem></menuchoice>. Esta acción abrirá el panel de resultados en la parte inferior de la ventana actual. Puede moverse a través de la lista de resultados desplazándose arriba y abajo con la barra de desplazamiento y las teclas de flechas. La información para la clave o carpeta seleccionada se mostrará en el resto de la ventana.</para>
+    <para>Ver las claves recientes es útil si necesita volver a una clave que acaba de cambiar y no recuerda dónde está.</para>
+    <!-- REMARK -->
+    <remark>Una captura de pantalla sería correcto. En particular, los botones de cerrar, copiar y limpiar en el panel de resultados deberían estar explicados.</remark>
+  </sect2>
+  <sect2 id="modify-key">
+    <title>Modificar el valor de una clave</title>
+    <para>Los iconos al lado del nombre de la clave muestran qué tipo de valor puede tomar la clave. Lea <xref linkend="icons"/> para obtener más información acerca de cada icono. Para modificar el valor de una clave, realice los siguientes pasos:</para>
+    <procedure>
+      <step><para>Use el panel del árbol para mostrar la llave que quiere modificar en el panel de modificaciones.</para></step>
+      <step><para>Seleccione la clave a modificar en el panel de modificaiones.</para></step>
+      <step>
+        <para>Para cambiar el valor de una clave de tipo entero o texto, pulse en la columna <guilabel>Valor</guilabel> de la clave. Escriba el nuevo valor para la clave. Alternativamente, pulse con el botón derecho del ratón sobre la clave y seleccione <guimenuitem>Editar clave</guimenuitem> del menú emergente.</para>
+        <para>Para cambiar el valor de una clave Booleana, pulse en la columna <guilabel>Valor</guilabel> de la clave para seleccionar o deseleccionar la casilla de verificación. Alternativamente, pulse con el botón derecho del ratón sobre la clave y seleccione <guimenuitem>Editar clave</guimenuitem> del menú emergente.</para>
+        <para>Para cambiar el valor de una lista de claves, pulse con el botón derecho del ratón y seleccione <guimenuitem>Editar clave</guimenuitem> del menú emergente. El diálogo <guimenuitem>Editar clave</guimenuitem> proporciona una lista de valores asociados a esa clave. Puede usar este diálogo para editar cada uno de los valores en la lista, añadir o eliminar valores de la lista y mover cada uno de los valores arriba o abajo de la lista.</para>
+      </step>
+    </procedure>
+    <para>El administrador de su sistema puede que haya bloqueado ciertas claves proporcionando valores obligatorios. Si la clave seleccionada tiene ajustado un valor obligatorio, no será capaz de editar el valor. El panel de documentación mostrará la etiqueta <guilabel>Esta clave no es editable</guilabel> si no le está permitido editar el valor de esa clave.</para>
+  </sect2>
+</sect1>
+
+<sect1 id="finding">
+  <title>Buscar claves rápidamente</title>
+  <para>Para localizar claves rápidamente, el <application>Editor de configuración</application> le permite buscar nombres de claves en <application>GConf</application>. Adicionalmente, puede usar marcadores para buscar directorios de claves a los que necesite acceder frecuentemente.</para>
+
+  <sect2 id="using-bookmark">
+    <title>Usar marcadores</title>
+    <para>Para acceder a una ruta de directorio en sus marcadores, elija la ubicación del menú de <guimenu>Marcadores</guimenu>. Puede añadir y eliminar rutas de directorios en su menú <guimenu>Marcadores</guimenu>.</para>
+    <para>Para añadir un marcador, seleccione la ubicación que quiere marcar en el panel del árbol. Elija <menuchoice><guimenu>Marcadores</guimenu><guimenuitem>Añadir marcador</guimenuitem></menuchoice>.</para>
+    <para>Para borrar un marcador realice los siguientes pasos:</para>
+    <procedure>
+      <step><para>Elija <menuchoice><guimenu>Marcadores</guimenu><guimenuitem>Editar marcadores</guimenuitem></menuchoice>.</para></step>
+      <step><para>Seleccione el marcador del diálogo <application>Editar marcadores</application> y después pulse <guibutton>Borrar</guibutton>.</para></step>
+      <step><para>Pulse <guibutton>Cerrar</guibutton>.</para></step>
+    </procedure>
+  </sect2>
+  <sect2 id="search">
+    <title>Buscar claves</title>
+    <para>Para buscar claves realice los siguientes pasos:</para>
+    <procedure>
+      <step><para>Elija <menuchoice><guimenu>Editar</guimenu><guimenuitem>Buscar</guimenuitem></menuchoice>.</para></step>
+      <step><para>Introduzca la palabra clave que quiera buscar en el campo <guilabel>Buscar</guilabel>. También puede seleccionar las opciones <guilabel>Buscar también en los nombres de las claves</guilabel> y <guilabel>Buscar también en los valores de las claves</guilabel> de las casillas de verificación. Si estas casillas no están seleccionadas, la búsqueda sólo se realizará en los nombres de carpetas. Al seleccionar estas casillas se expanden los parámetros de búsqueda.</para></step>
+      <step><para>Pulse <guibutton>Buscar</guibutton>.</para></step>
+    </procedure>
+    <para>Los resultados de la búsqueda se mostrarán en el panel de resultados. Para moverse a través de la lista de resultados, primero seleccione el panel. Después puede moverse a través de los resultados con la barra de desplazamiento o las teclas de flechas. La información de la llave seleccionada o de la carpeta se mostrará en el resto de la ventana.</para>
+    <!-- REMARK -->
+    <remark>Una captura de pantalla sería correcto. En particular, los botones de cerrar, copiar y limpiar en el panel de resultados deberían estar explicados.</remark>
+  </sect2> 
+</sect1>
+
+<sect1 id="defaults-mandatory">
+  <title>Ajustes predeterminados y obligatorios</title>
+  <para>Si es un administrador del sistema puede establecer ajustes predeterminados y obligatorios en <application>GConf</application> que afectarán a todos los usuarios. Los ajustes predeterminados se usan cuando el usuario no ha establecido un valor explícitamente, y los usuarios siempre pueden sobreescribirlos. Los ajustes obligatorios siempre se usan para todos los usuarios y éstos no pueden sobreescribirlos.</para>
+  <para>Puede usar las ventanas de <application>Predeterminados</application> y <application>Obligatorios</application> para editar y eliminar ajustes predeterminados y obligatorios. Las ventanas de <application>Predeterminados</application> y <application>Obligatorios</application> sólo mostrarán aquellos valores que son predeterminados u obligatorios. No puede usar esas ventanas para crear nuevos ajustes predeterminados u obligatorios. En su lugar, puede establecer ajustes desde la ventana de <application>Configuración</application> como predeterminados u obligatorios.</para>
+  <para>Para abrir una ventana de <application>Predeterminados</application>, elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Ventana de predeterminados nueva</guimenuitem></menuchoice>. Para abrir una ventana de <application>Obligatorios</application> elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Ventana de obligatorios nueva</guimenuitem></menuchoice>.</para>
+
+  <sect2 id="creating-defaults">
+    <title>Crear ajustes predeterminados</title>
+    <para>Para crear un ajuste predeterminado realice los siguientes pasos:</para>
+    <procedure>
+      <step><para>En la ventana de <application>Configuración</application>, use el panel del árbol para mostrar la llave que quiere establecer como predeterminada.</para></step>
+      <step><para>Pulse con el botón derecho del ratón sobre la clave y seleccione <guimenuitem>Establecer como predeterminado</guimenuitem> del menú emergente.</para></step>
+    </procedure>
+  </sect2>
+  <sect2 id="creating-mandatory">
+    <title>Crear ajustes obligatorios</title>
+    <para>Para crear un ajuste obligatorio realice los siguientes pasos:</para>
+    <procedure>
+      <step><para>En la ventana de <application>Configuración</application>, use el panel del árbol para mostrar la clave que quiere establecer como obligatoria.</para></step>
+      <step><para>Pulse con el botón derecho del ratón sobre la clave y seleccione <guimenuitem>Establecer como obligatorio</guimenuitem> del menú emergente.</para></step>
+    </procedure>
+  </sect2>
+  <sect2 id="modifying-defaults-mandatory">
+    <title>Modificar y eliminar ajustes predeterminados y obligatorios</title>
+    <para>Puede usar las ventanas de <application>Obligatorios</application> y <application>Predeterminados</application> para modificar y eliminar los ajustes predeterminados y obligatorios. Para modificar un ajuste predeterminado u obligatorio use la ventana apropiada y modifique la clave igual que si lo hiciese en la ventana de <application>Configuración</application>. Lea <xref linkend="modify-key"/> para obtener más información acerca de modificar claves.</para>
+    <para>Para eliminar una clave predeterminada u obligatoria realice los siguientes pasos:</para>
+    <procedure>
+      <step><para>En la ventana apropiada, use el panel del árbol para mostrar la clave que quiere eliminar de los ajustes predeterminados u obligatorios.</para></step>
+      <step><para>Pulse con el botón derecho del ratón y seleccione <guimenuitem>Desestablecer clave</guimenuitem> del menú emergente.</para></step>
+    </procedure>
+  </sect2>
+</sect1>
+
+<sect1 id="icons">
+  <title>Iconos y tipos de claves</title>
+  <para>Los iconos al lado de las claves del panel de modificaciones indican qué tipo de valor puede introducir para la clave. La siguiente lista muestra los posibles iconos y qué tipo de valores representan.</para>
+  <variablelist>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+        <imagedata fileref="figures/entry-bool.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Clave Booleana</term>
+      <listitem><para>Puede ser verdadero o falso. El <application>Editor de configuración</application> proporcionará una casilla de verificación para este tipo de clave.</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-number.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Clave numérica</term>
+      <listitem><para>Pueden contener números. Éstos pueden ser enteros o números en coma flotante (fraccionales).</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-string.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Clave de texto</term>
+      <listitem><para>Puede contener cualquier cadena de texto.</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-schema.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Clave de esquema</term>
+      <listitem><para>Se usan para documentar otras claves. La documentación para cada clave se proporciona por una clave separada, típicamente bajo el directorio <literal>/schemas</literal>. Generalmente los usuarios y administradores del sistema no necesitan trabajar con claves de esquemas directamente.</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-list.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Lista de claves</term>
+      <listitem><para>Listas de longitud determinada. Cada elemento de la lista debe ser del mismo tipo, y de tipo Booleano, numérico o de texto.</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-blank.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Clave de parejas</term>
+      <listitem><para>Puede contener exactamente dos valores. Los dos valores deben ser de tipo primitivo, pero no tienen por qué ser del mismo tipo. El <application>Editor de configuración</application> no puede editar una clave de parejas.</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-blank.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Vacío</term>
+      <listitem><para>Se usa cuando el <application>Editor de configuración</application> no comprende el tipo de clave. El icono vacío también se usa para claves de parejas.</para></listitem>
+    </varlistentry>
+  </variablelist>
+</sect1>
+</article>

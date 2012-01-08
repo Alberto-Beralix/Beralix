@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-composer-change-quotation-string" xml:lang="es">
+
+  <info>
+    <desc>No es posible cambiar la cita introducida al responder un correo.</desc>
+    
+    <link type="guide" xref="index#common-mail-problems"/>
+    <link type="seealso" xref="mail-composer-reply"/>
+    <link type="seealso" xref="mail-composer-forward"/>
+
+    <revision pkgversion="2.32.1" version="0.2" date="2010-12-15" status="draft"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+<title>Cambiar la cadena «El <em>fecha, persona</em> escribió:» al responder</title>
+
+<p>Los usuarios avanzados pueden cambiar esta cadena editando la clave de gconf <file>/apps/evolution/mail/composer/message_attribution</file> a través de gconf-editor.</p>
+<!-- TODO: Outdated once Evolution switches to GSettings -->
+</page>

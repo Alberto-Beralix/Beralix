@@ -1,0 +1,6 @@
+#! /bin/sh
+set -e
+if [ "$1" = rtupdate ]; then
+	pyclean -p hplip-data /usr/share/hplip
+	pycompile -p hplip-data -V 2.5- /usr/share/hplip
+fi

@@ -1,0 +1,20 @@
+# vim:syntax=apparmor
+#
+# abstraction for allowing graphical email clients in Ubuntu
+#
+
+  /usr/bin/anjal PUx,
+  /usr/bin/balsa PUx,
+  /usr/bin/claws-mail PUx,
+  /usr/bin/evolution PUx,
+  /usr/lib/GNUstep/Applications/GNUMail.app/GNUMail PUx,
+  /usr/bin/kmail PUx,
+  /usr/bin/mailody PUx,
+  /usr/bin/modest PUx,
+  /usr/bin/seamonkey PUx,
+  /usr/bin/sylpheed PUx,
+  /usr/bin/tkrat PUx,
+
+  /usr/lib/thunderbird/thunderbird PUx,
+  /usr/lib/thunderbird-[1-9]*/thunderbird{,.sh} PUx,
+

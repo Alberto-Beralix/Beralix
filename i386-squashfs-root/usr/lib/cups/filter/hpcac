@@ -1,0 +1,450 @@
+#!/usr/bin/perl  -W
+use strict;
+use File::Temp qw(tempfile);
+use File::Basename;
+use Sys::Hostname;
+
+#######################################################
+#
+###################################################### 
+
+my $arg_job                 = $ARGV[0];
+my $arg_user                = $ARGV[1];
+my $arg_title               = $ARGV[2];
+my $arg_copies              = $ARGV[3];
+my $arg_options             = $ARGV[4];
+
+my $progname = basename( $0 );
+
+# Set to 1 to capture the Postscript that you generate to a temp file
+my $capture_postscript = 0;
+
+# Set to 1 to print debug messages to CUPS error log
+my $debug = 0;
+
+my $capture_fh = undef;
+my $capture_filename = undef;
+my $procfile;
+
+#----------------------------------------------------
+
+###################################################### 
+# Various debug & error subs
+# Error and debugging messages have to go to STDERR
+###################################################### 
+sub abort_exit
+{
+    my $mesg = shift;
+    print STDERR "ERROR: $progname - $mesg\n";
+    exit( 1 );
+}
+
+sub print_debug
+{
+    return if( ! $debug );
+    my $output = shift;
+    print STDERR "DEBUG: $progname [PID $$] $output\n";
+}
+
+sub print_info
+{
+    my $output = shift;
+    print STDERR "INFO: $progname [PID $$] $output\n";
+}
+
+sub print_warning
+{
+    my $output = shift;
+    print STDERR "WARN: $progname [PID $$] $output\n";
+}
+
+###################################################################
+# Open a temp file to capture the Postscript that I send to the printer.
+# Used for debugging
+###################################################################
+sub open_capture
+{
+    if( $capture_postscript ) {
+	( $capture_fh, $capture_filename ) =
+	    tempfile( "${progname}-$$-capture-XXXXXX", DIR => "/tmp", SUFFIX => ".ps", UNLINK => 0 );
+	if ( !defined $capture_fh ) {
+	    # Not a fatal issue
+	    print_warning( "Could not open capture file.  Will not save Postscript output." );
+	    $capture_filename = undef;
+	    $capture_postscript = 0;
+	}
+	else {
+	    print_info( "Capturing Postscript to '$capture_filename'" );
+	}
+    }
+}
+
+###################################################################
+# Close the debugging capture log
+###################################################################
+sub close_capture
+{
+    if( $capture_postscript && defined $capture_fh ) {
+	close( $capture_fh ) or print_warning( "Could not close capture file '$capture_filename': $!" );
+    }
+}
+
+###################################################################
+# Print out the given line to STDOUT (print data stream)
+# and optionally capture it for debugging.
+###################################################################
+sub emit_line
+{
+    my $line = shift;
+    print $line;
+
+    if( $capture_postscript && $capture_fh ) {
+	print $capture_fh $line;
+    }
+}
+
+###################################################################
+# Get the type of accounting that is used for the printer
+# by looking at the PPD for specific values.
+# Currently only support HPAccountingInfo: 1
+###################################################################
+sub GetHPAccountingType
+{
+    my $ppd = $ENV{"PPD"};
+    if( (! $ppd ) || (! -r $ppd ) ) {
+	return( "NONE", "NONE" );
+    }
+    
+    open( PPDFILE, "$ppd" ) or 	return( "NONE", "NONE" );
+
+    my $accounting_type = "NONE";
+    my $accounting_mode = "NONE";
+    my $ppdline;
+    while( <PPDFILE> ) {
+	$ppdline = $_;
+	if( $ppdline =~ /^\*HPAccountingInfo:\s*(\d*)\s*$/ ) {
+	    $accounting_type = "HPAccountingInfo";
+	    $accounting_mode = $1;
+	    print_debug("HPAccountingInfo found $accounting_mode");
+	}
+    }
+    close( PPDFILE );
+
+    return( $accounting_type, $accounting_mode );
+}
+
+###################################################################
+# The Postscript code containing the accounting info
+# has starting and ending snippets.
+###################################################################
+sub InsertFeatureStart
+{
+    emit_line( "[{\n" );
+}
+
+sub InsertFeatureEnd
+{
+    emit_line( "} stopped cleartomark\n" );
+}
+
+###################################################################
+sub GetUser
+{
+    my $user;
+    if ( $arg_user ) {
+	$user = $arg_user;
+    }
+    else {
+	$user = "nobody";
+    }
+
+    return( $user );
+}
+
+###################################################################
+sub GetJob { }
+
+
+###################################################################
+sub GetTitle { }
+
+###################################################################
+sub GetOptions
+{ 
+    my %opt_hash = ();
+    my $options = $arg_options;
+    my @opt_array = split( ' ', $options );
+    foreach my $option ( @opt_array ) {
+	my( $name, $value ) = split( /=/, $option, 2 );
+	if ( !$value ) {
+	    $value = "";
+	}
+	print_debug( "Option $name='$value'" );
+	$opt_hash{$name} = $value;
+    }
+    return( \%opt_hash );
+}
+
+###################################################################
+# If a UUID wasn't given to us by CUPS, try a few methods
+# to create one ourselves.
+###################################################################
+sub CreateUUID
+{
+    my $uuid_str = "";
+    eval {
+	require Data::UUID;
+	my $ug = new Data::UUID;
+	$uuid_str = $ug->create_str;
+    };
+    if ($@) {
+	$uuid_str = `uuidgen`;
+	$uuid_str =~ s/\r?\n?$//;
+    }
+
+    return( $uuid_str );
+}
+
+###################################################################
+# CUPS passes in an option value that contains a UUID.
+# If it's there, use that and if not, try to create one ourselves
+###################################################################
+sub GetUUID
+{
+    my $uuid = "";
+    my $r_opt_hash = GetOptions();
+    # job-uuid=urn:uuid:018c1dab-3c0c-3edf-6036-1e87af479038
+
+    my $job_uuid = $$r_opt_hash{ "job-uuid" };
+    if ( $job_uuid ) {
+	if ( $job_uuid =~ /urn:uuid:(.*)/ ) {
+	    $uuid = $1;
+	    print_debug( "UUID in job-uuid=$uuid" );
+	}
+	else {
+	    print_debug( "bad job-uuid" );
+	    $uuid = CreateUUID();
+	}
+    }
+    else {
+	$uuid = CreateUUID();
+    }
+
+    if ( ! $uuid ) {
+	print_debug( "EPIC FAIL: Could not find nor generate UUID" );
+    }
+    
+    return( $uuid );
+}
+
+###################################################################
+# Get the system name
+###################################################################
+sub GetSystem
+{
+    my $system_name = hostname;
+    if( !$system_name ) {
+	$system_name = "unknown-system_name";
+    }
+
+    return( $system_name );
+
+}
+
+###################################################################
+# The domain value is really a Windows domain.  Since we're
+# not using this in the Windows environment, we just
+# use the hostname. The value is not used for Color Access Control
+# filtering but it still has to be included in the job accounting info
+###################################################################
+sub GetDomain
+{
+    my $domain = hostname;
+    if( !$domain ) {
+	$domain = "unknown-domain";
+    }
+
+    return( $domain );
+}
+
+###################################################################
+# Gather up all of the information needed for the accounting data
+# to be included in the print stream
+###################################################################
+sub GetHPAccountingInfo
+{
+    my( $jobname, $user, $system, $domain, $date, $uuid, $app, $appexe, $dept );
+
+    $jobname = $arg_job;
+    $user = GetUser();
+    $system = GetSystem();
+    $domain = GetDomain();
+    my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
+    $year += 1900;
+    $mon += 1;
+    # YYYYMMDDhhmmss
+    $date = sprintf( "%s%02d%02d%02d%02d%02d", $year, $mon, $mday, $hour, $min, $sec);
+    $uuid = GetUUID(); 
+
+    # There is no way to get the name of the application that generated this PS file.
+    # Set it to this as a fallback.
+    $app = "HP Linux Printing";
+    $appexe = "HP Linux Printing";
+
+    $dept = $user;
+
+    return( $jobname, $user, $system, $domain, $date, $uuid, $app, $appexe, $dept );
+}
+
+###################################################################
+# Once the accounting data has been gathered, format it and
+# include it in the print stream.
+###################################################################
+sub InsertHPAccountingInfo
+{
+
+    my ( $accounting_type, $accounting_mode ) = GetHPAccountingType();
+    print_debug( "Accounting Type=$accounting_type\tAccounting Mode=$accounting_mode");
+
+    if( ! ( ($accounting_type eq "HPAccountingInfo") && ($accounting_mode == 1)) ) {
+	print_debug( "Color Access Control not in effect." );
+	return;
+    }
+
+    InsertFeatureStart();
+    my( $jobname, $user, $system, $domain, $date, $uuid, $app, $appexe, $dept ) = GetHPAccountingInfo();
+
+    my $accounting_feature = "";
+    $accounting_feature = "%%BeginFeature: *HPAccountingInfo\n" .
+	"    currentpagedevice /StringCodeSet known\n" .
+	"    {\n" .
+	"        << /StringCodeSet (UTF8) >> setpagedevice\n" .
+	"        <<\n" .
+	"            /JobName ($jobname)\n" .
+	"            /JobAcct1 ($user)\n" .
+	"            /JobAcct2 ($system)\n" .
+	"            /JobAcct3 ($domain)\n" .
+	"            /JobAcct4 ($date)\n" .
+	"            /JobAcct5 ($uuid)\n" .
+	"            /JobAcct6 ($app)\n" .
+	"            /JobAcct7 ($appexe)\n" .
+	"            /JobAcct8 ($dept)\n" .
+	"        >> setuserparams\n" .
+	"    }\n" .
+	"    {\n" .
+	"        <<\n" .
+	"            /JobName ($jobname)\n" .
+	"            /JobAcct1 ($user)\n" .
+	"            /JobAcct2 ($system)\n" .
+	"            /JobAcct3 ($domain)\n" .
+	"            /JobAcct4 ($date)\n" .
+	"            /JobAcct5 ($uuid)\n" .
+	"            /JobAcct6 ($app)\n" .
+	"            /JobAcct7 ($appexe)\n" .
+	"            /JobAcct8 ($dept)\n" .
+	"        >> setuserparams\n" .
+	"    } ifelse\n" .
+	"%%EndFeature\n";
+
+    emit_line( $accounting_feature );
+    InsertFeatureEnd();
+}
+
+###################################################################
+# If the print job is from stdin, save a copy
+###################################################################
+sub stdin2file
+{
+    my ( $tmp_fh, $tmp_filename ) =
+	tempfile( "${progname}-$$-stdin-XXXXXX", SUFFIX => ".ps", DIR => "/tmp", UNLINK => 0 );
+    if ( !defined $tmp_fh ) {
+	abort_exit( "Cannot create tempfile '$tmp_filename'" );
+    }
+
+    print_debug( "Copying STDIN to $tmp_filename" );
+    while (<STDIN>)
+    {
+	print $tmp_fh $_;
+    }
+    close $tmp_fh or abort_exit( "Cannot close tempfile '$tmp_filename': $!" );
+    return( $tmp_filename );
+}
+
+###################################################################
+# If the print job is contained in a file, make a copy.
+# A copy is made because the original file could be deleted
+# before this print job is completed.
+###################################################################
+sub copy_file
+{
+        my $from = shift;
+
+        open (FROM, "<$from" ) or abort_exit( "Cannot read '$from': $!" );
+	my ( $tmp_fh, $tmp_filename ) =
+	    tempfile( "${progname}-$$-copy-XXXXXX", SUFFIX => ".ps", DIR => "/tmp", UNLINK => 0 );
+	if ( !defined $tmp_fh ) {
+	    abort_exit( "Couldn't create temporary file '$tmp_filename'" );
+	}
+
+	print_debug( "Copying $from to $tmp_filename" );
+        while (<FROM>) {
+	    print $tmp_fh $_ or abort_exit( "Can't write to tempfile '$tmp_filename': $!" );
+	}
+        close $tmp_fh or abort_exit( "Cannot close tempfile '$tmp_filename': $!" );
+        close FROM;
+        return $tmp_filename;
+}
+
+###################################################################
+# Given the print job, look through it for the right place to
+# insert the accounting info.  The document is assumed to be in
+# the Adobe DSC format already and should contain the BeginProlog
+# item.  Upstream CUPS filters will have converted the Postscript
+# data into DSC format.
+###################################################################
+sub processfile
+{
+        my $fn = shift;
+        open (PSFILE, "<$fn") or abort_exit( "Cannot open '$fn': $!");
+        while (<PSFILE>)
+        {
+                emit_line( $_ );
+		if( /%%BeginProlog/ ) {
+		    InsertHPAccountingInfo();
+		}
+        }
+        close PSFILE;
+}
+
+###################################################################
+# Main
+###################################################################
+
+if ($#ARGV == 4)
+{
+    $procfile = stdin2file();
+}
+elsif ($#ARGV == 5)
+{
+    $procfile = copy_file($ARGV[5]);
+} else {
+    abort_exit( "job-id user title copies options [file]");
+}
+
+for my $i ( 0 .. $#ARGV ) {
+    print_debug( "ARG $i=$ARGV[$i]")
+}
+print_debug("job-id=$arg_job user=$arg_user title=$arg_title copies=$arg_copies $arg_options $procfile");
+
+my ($key, $value);
+foreach $key ( sort keys %ENV) {
+    print_debug("ENV $key=$ENV{$key}");
+}
+
+print_debug( "Processing file");
+open_capture();
+processfile($procfile);
+close_capture();
+
+unlink($procfile) or print STDERR "ERROR: $progname - Couldn't remove '$procfile': $!\n";
+exit 0;

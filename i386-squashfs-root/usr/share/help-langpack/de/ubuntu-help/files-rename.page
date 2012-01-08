@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-rename" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <desc>So ändern Sie den Namen einer Datei oder eines Ordners.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Eine Datei oder einen Ordner umbenennen</title>
+
+  <steps>
+    <item><p><link xref="files-browse">Öffnen Sie die Dateiverwaltung</link>.</p></item>
+    <item><p>Klicken Sie mit der rechten Maustaste auf eine Datei oder einen Ordner und wählen Sie <gui>Umbenennen</gui> oder wählen Sie die Datei aus und drücken Sie <key>F2</key>.</p></item>
+    <item><p>Geben Sie den neuen Namen ein und drücken Sie die <key>Eingabetaste</key>.</p></item>
+  </steps>
+
+  <p>Sie können eine Datei auch im <link xref="nautilus-file-properties-basic">Eigenschaften</link>-Fenster umbenennen.</p>
+
+  <p>When you rename a file, only the first part of the name of the file is selected, not the file extension (the part after the "."). The extension normally denotes what type of file it is (e.g. <file>file.pdf</file> is a PDF document), and you usually do not want to change that. If you need to change the extension as well, select it with your mouse, or press <keyseq><key>Ctrl</key><key>A</key></keyseq> to select the entire file name.</p>
+
+  <section id="valid-chars">
+    <title>Gültige Zeichen für Dateinamen</title>
+    <p>Sie können in Dateinamen jedes Zeichen außer <key>/</key> (Schrägstrich) verwenden. Manche Geräte verwenden aber ein <em>Dateisystem</em>, das weitere Einschränkungen bei Dateinamen vorsieht. USB-Sticks sind zum Beispiel oft mit dem Dateisystem <em>FAT32</em> formatiert. Auf diesen Geräten und auch wenn Sie Dateien an Leute weitergeben wollen, die ein anderes Betriebssystem verwenden, sollten Sie folgende Zeichen vermeiden: <key>|</key>, <key>\</key>, <key>?</key>, <key>*</key>, <key>&lt;</key>, <key>"</key>, <key>:</key>, <key>&gt;</key>, <key>/</key>.</p>
+
+    <note style="warning">
+    <p>Wenn Sie eine Datei so benennen, dass sie mit <key>.</key> als erstem Zeichen beginnt, wird diese Datei <link xref="files-hidden">verborgen</link>.</p>
+    </note>
+  </section>
+
+  <section id="common-probs">
+    <title>Häufige Probleme</title>
+    <terms>
+      <item>
+        <title>Der Name wird bereits verwendet</title>
+        <p>Sie können nicht zwei Dateien oder Ordner mit demselben Namen im selben Ordner haben. Wenn Sie versuchen, einer Datei einen Namen zu geben, der in diesem Ordner bereits existiert, wird die Dateiverwaltung das nicht zulassen. Verwenden Sie einen anderen Namen.</p>
+        <p>Bei Datei- und Ordnernamen wird Groß- und Kleinschreibung berücksichtigt. Zum Beispiel sind <file>Datei.txt</file> und <file>datei.txt</file> unterschiedliche Namen. Das ist zwar erlaubt, aber nicht immer empfehlenswert.</p>
+      </item>
+      <item>
+        <title>Der Dateiname ist zu lang</title>
+        <p>Auf manchen Dateisystemen dürfen Dateinamen nicht länger als 255 Zeichen sein. Verwenden Sie einen kürzeren Namen.</p>
+      </item>
+      <item>
+        <title>Die Option zum Umbenennen ist ausgegraut</title>
+        <p>Falls <gui>Umbenennen</gui> ausgegraut ist, haben Sie nicht das Recht, die Datei umzubenennen. Wenn Sie nicht die erforderlichen Rechte zum Umbenennen einer Datei haben, sollten Sie das im Allgemeinen auch nicht tun. Siehe <link xref="nautilus-file-properties-permissions"/>.</p>
+      </item>
+    </terms>
+  </section>
+</page>

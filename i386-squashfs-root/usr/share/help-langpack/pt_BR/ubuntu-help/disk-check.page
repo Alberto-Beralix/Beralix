@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="disk-check" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    
+    <credit type="author">
+      <name>Equipe de Documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Natalia Ruz Leiva</name>
+      <email>nruz@alumnos.inf.utfsm.cl</email>
+    </credit>
+
+    <desc>Você pode testar se seu disco rígido tem problemas para ter certeza que ele está saudável.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Verificar por problemas no disco rígido</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Rewrite steps to use common simple form in 3.0.1</p>
+</comment>
+<section id="disk-status">
+ <title>Verificando o disco rígido</title>
+  <p>Discos rígidos têm uma ferramenta embutida de verificação de sua saúde chamada <app>SMART</app> (Self-Monitoring, Analysis, and Reporting Technology), que vai verificar continuamente o disco por problemas em potencial. O SMART também avisa a você quando o disco está para falhar, ajudando você a prevenir a perda de dados importante.</p>
+
+  <p>Apesar de o SMART ser executado automaticamente, você pode também verificar a saúde do seu disco executando o aplicativo <app>Utilitário de discos</app>:</p>
+
+<steps>
+  <title>Verifique a saúde do seu disco usando o aplicativo Utilitário de discos</title>
+     <item><p>Abra o aplicativo <app>Utilitário de discos</app> a partir do <gui>Painel</gui>.</p></item>
+     <item><p>Selecione o disco que você quer verificar da lista de <gui>Dispositivos de armazenamento</gui>. As informações e o estado do disco irão aparecer abaixo de <gui>Unidade</gui>.</p></item>
+     <item><p>Em <gui>Status do SMART<gui> deve aparecer "A unidade está bem".</gui></gui></p></item> 
+     <item><p>Clique no botão <gui>Dados do SMART</gui> para ver mais informações do drive ou executar um autoteste.</p></item>
+</steps>
+
+</section>
+
+<section id="disk-not-healthy">
+ <title>E se o disco não estiver bem?</title>
+ <p>Mesmo que o <gui>Status do SMART</gui> indique que o disco <em>não está</em> saudável, pode não ser motivo para alarme. Entretanto, é melhor estar preparado com uma <link xref="backup-why">cópia de segurança</link> para prevenir perda de dados.</p>
+
+ <p>Se no status aparecer "Pré-falha", o disco está razoavelmente bem mas avisa que desgastes foram detectados, o que significa que ele poderá falhar em um futuro próximo. Se seu disco rígido (ou computador) já tiver alguns anos e bem capaz de você ver essa mensagem em algumas das verificações. Você deve <link xref="backup-how">realizar cópias de segurança regularmente</link> e verificar o status de tempos em tempos para ver se ele piora.</p>
+
+ <p>Se piorar, você pode querer levar o seu computador/disco rígido a um profissional para um diagnóstico mais profundo ou reparo.</p>
+
+</section>
+
+</page>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-sort" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <desc>Organize arquivos por nome, tamanho, tipo ou quando eles foram alterados.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Organizar arquivos e pastas</title>
+
+<p>Você pode ordenar arquivos de maneiras diferentes em uma pasta, por exemplo organizando-os em ordem de data ou tamanho do arquivos. Veja <link xref="#ways"/> abaixo para uma lista de maneiras comuns de organizar arquivos.</p>
+
+<p>A maneira como você pode organizar arquivos depende da <em>visão da pasta</em> que você está usando. Você pode alterar a visão atual usando o menu <gui>Ver</gui>.</p>
+
+<p>Quando você alterar como os itens são organizados em uma pasta, isso somente afeta essa pasta. O gerenciador de arquivos irá lembrar da sua escolha de ordenação para a pasta, mas use a ordem de classificação padrão para outras pastas. Veja <link xref="nautilus-views"/> para mais informações sobre como alterar a ordem de classificação padrão.</p>
+
+<section id="icon-view">
+ <title>Visão de ícones</title>
+ <p>Para organizar arquivos em uma ordem diferente, dê um clique com o botão direito em um espaço em branco da pasta e escolha uma opção do menu <gui>Organizar itens</gui>. Alternativamente, use o menu <guiseq><gui>Ver</gui><gui>Organizar itens</gui></guiseq>.</p>
+ <p>Como um exemplo, se você selecionar <gui>Organizar por nome</gui> do menu <gui>Organizar itens</gui>, os arquivos serão classificados pelos nomes, em ordem alfabética. Veja <link xref="#ways"/> para outras opções.</p>
+ <p>Você pode classificar em ordem reversa selecionando <gui>Ordem reversa</gui> do menu <gui>Organizar itens</gui>.</p>
+ <p>Para controle completo sobre a ordem e posição dos arquivos na pasta, dê um clique com o botão direito em um espaço em branco da pasta e selecione <guiseq><gui>Organizar itens</gui><gui>Manualmente</gui></guiseq>. Você pode então reorganizar os arquivos arrastando-os na pasta. Organização manual somente funciona em visão de ícones.</p>
+ <p>A opção <gui>Aparência compacta</gui> no menu <gui>Organizar itens</gui> organiza os arquivos para que eles ocupem o menor espaço possível. Isso é útil se você quer ter muitos arquivos visíveis ao mesmo tempo em uma pasta.</p>
+</section>
+
+<section id="list-view">
+ <title>Visualização em lista</title>
+ <p>Para classificar os arquivos em uma ordem diferente, clique em um dos cabeçalhos da coluna no gerenciador de arquivos. Por exemplo, clique em <gui>Tipo</gui> para classificar por tipo de arquivo. Clique no cabeçalho da coluna de novo para classificar na ordem reversa.</p>
+ <p>Em visão de lista, você pode mostrar colunas com mais atributos e classificar nessas colunas. Clique em <guiseq><gui>Ver</gui><gui>Colunas visíveis</gui></guiseq> e selecione as colunas que você quer que estejam visíveis. Você será capaz então de classificar por essas colunas. Veja <link xref="nautilus-list"/> para descrições de colunas disponíveis.</p>
+</section>
+
+<section id="compact-view">
+ <title>Visão compacta</title>
+ <p>Você pode classificar os arquivos em visão compacta do mesmo jeito que você pode classificá-los na visão de ícone. A única diferença é que você não pode posicionar manualmente os arquivos em qualquer lugar que você quiser; eles são sempre organizados como uma lista nessa visão.</p>
+</section>
+
+<section id="ways">
+ <title>Caminhos para organizar os arquivos</title>
+ <terms>
+  <item>
+   <title>Por nome</title>
+   <p>Ordena alfabeticamente pelo nome do arquivo.</p>
+  </item>
+  <item>
+   <title>Por tamanho</title>
+   <p>Classifica pelo tamanho do arquivo (quanto espaço em disco ele consome). Classifica do menos para o maior tamanho por padrão.</p>
+  </item>
+  <item>
+   <title>Por tipo</title>
+   <p>Classifica alfabeticamente pelo tipo do arquivo. Arquivos do mesmo tipo são agrupados juntos e depois classificados pelo nome.</p>
+  </item>
+  <item>
+   <title>Por data de modificação</title>
+   <p>Classifica pela data e hora que um arquivo foi alterado pela última vez. Classifica do mais velho para o mais novo por padrão.</p>
+  </item>
+ </terms>
+</section>
+
+</page>

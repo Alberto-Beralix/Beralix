@@ -1,0 +1,29 @@
+#!/bin/sh
+
+PREREQ=""
+DESCRIPTION="Disabling user menu..."
+
+prereqs()
+{
+       echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+. /scripts/casper-functions
+
+log_begin_msg "$DESCRIPTION"
+
+indicator_session_version=$(chroot /root dpkg-query -W --showformat='${Version}' indicator-session 2>/dev/null) || indicator_session_version=""
+if [ -n "$indicator_session_version" ]; then
+    printf "[com.canonical.indicator.session]\nuser-show-menu=false\n" >> /root/usr/share/glib-2.0/schemas/casper.gschema.override
+    chroot /root glib-compile-schemas /usr/share/glib-2.0/schemas/
+fi
+
+log_end_msg

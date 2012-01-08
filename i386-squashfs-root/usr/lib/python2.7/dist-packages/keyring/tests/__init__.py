@@ -1,0 +1,1 @@
+../../../../../share/pyshared/keyring/tests/__init__.py

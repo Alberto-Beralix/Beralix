@@ -1,0 +1,296 @@
+<?xml version="1.0">
+<html
+ xmlns="http://www.w3.org/TR/html4/"
+ xmlns:empathy="http://live.gnome.org/Empathy">
+  <head>
+    <style type="text/css">
+html, body, div, p {
+  padding: 0;
+  margin: 1px;
+}
+
+body {
+  margin-left: -1em;
+}
+
+div.row {
+  margin-left: 1em;
+  clear: both;
+}
+
+div.row p {
+  display: inline;
+  white-space: pre-wrap;
+}
+
+span.open:after {
+  content: "\25BE";
+  margin-right: 2px;
+}
+
+span.closed:after {
+  content: "\25B8";
+  margin-right: 2px;
+}
+
+span.date {
+  float: right;
+  color: gray;
+}
+
+img.icon {
+  vertical-align: middle;
+  padding-right: 1px;
+}
+    </style>
+    <script type="text/javascript">
+var EMPATHY_NS='http://live.gnome.org/Empathy';
+
+function filterNodes (node, tagName)
+{
+  var out = new Array();
+
+  for (var i = 0; i < node.childNodes.length; i++)
+    {
+      var elem = node.childNodes[i];
+
+      if (elem.tagName == tagName)
+        out.push(elem);
+    }
+
+  return out;
+}
+
+function getNodes(node)
+{
+  return filterNodes(node, 'DIV');
+}
+
+function getContent(node)
+{
+  return filterNodes(node, 'P')[0];
+}
+
+function getToggle(node)
+{
+  return filterNodes(node, 'SPAN')[0];
+}
+
+function setExpander(node, open)
+{
+  var toggle = getToggle(node);
+  var display;
+  var nodes;
+
+  if (open)
+    {
+      toggle.setAttribute('class', 'open');
+      display = 'block';
+    }
+  else
+    {
+      toggle.setAttribute('class', 'closed');
+      display = 'none';
+    }
+
+  nodes = getNodes(node);
+
+  for (var i = 0; i < nodes.length; i++)
+    nodes[i].style.display = display;
+}
+
+function expandAll()
+{
+  function expandAllRecurse(node)
+    {
+      var nodes = getNodes(node);
+
+      for (var i = 0; i < nodes.length; i++)
+        {
+          setExpander(nodes[i], true);
+
+          expandAllRecurse(nodes[i]);
+        }
+    }
+
+  var treeview = document.getElementById('treeview');
+
+  expandAllRecurse(treeview);
+}
+
+function setContent (contents, text, icon, date_)
+{
+  contents.innerHTML = "";
+
+  if (icon != "")
+    {
+      contents.innerHTML += '<img class="icon" src="' + icon + '"/>';
+    }
+
+  contents.innerHTML += text;
+  contents.innerHTML += '<span class="date">' + date_ + '</span>';
+}
+
+function insertRow (path, text, icon, date_)
+{
+  var treeview = document.getElementById('treeview');
+  var parentnode = treeview;
+  var i;
+
+  // walk the tree
+  for (i = 0; i < path.length - 1; i++)
+    parentnode = getNodes(parentnode)[path[i]];
+
+  // create a new node
+  var newnode = document.createElement('div');
+  newnode.setAttribute('class', 'row');
+
+  // insert the new node into the tree
+  var nodes = getNodes(parentnode);
+
+  if (path[i] >= nodes.length)
+    parentnode.appendChild(newnode);
+  else
+    parentnode.insertBefore(newnode, nodes[path[i]]);
+
+  // set the path
+  newnode.setAttributeNS(EMPATHY_NS, 'path', path.join(':'));
+
+  // add an expander
+  var toggle = document.createElement('span');
+  newnode.appendChild(toggle);
+  toggle.setAttribute('class', 'closed');
+  toggle.style.display = 'none';
+
+  var contents = document.createElement('p');
+  newnode.appendChild(contents);
+  setContent(contents, text, icon, date_);
+
+  function toggleExpander (e)
+    {
+      if (toggle.getAttribute('class') == 'closed')
+        setExpander(newnode, true);
+      else
+        setExpander(newnode, false);
+    };
+
+  toggle.onclick = toggleExpander;
+  contents.ondblclick = toggleExpander;
+
+  // if the node is not a top-level node, hide it
+  if (parentnode != treeview)
+    newnode.style.display = 'none';
+}
+
+function changeRow (path, text, icon, date_)
+{
+  var treeview = document.getElementById('treeview');
+  var node = treeview;
+
+  // walk the tree
+  for (var i = 0; i < path.length; i++)
+    node = getNodes(node)[path[i]];
+
+  // set the contents
+  var contents = getContent(node);
+  setContent(contents, text, icon, date_);
+}
+
+function deleteRow (path)
+{
+  var treeview = document.getElementById('treeview');
+  var node = treeview;
+
+  // walk the tree
+  for (var i = 0; i < path.length; i++)
+    node = getNodes(node)[path[i]];
+
+  node.parentNode.removeChild(node);
+}
+
+function reorderRows (path, new_order)
+{
+  var treeview = document.getElementById('treeview');
+  var node = treeview;
+
+  // walk the tree
+  for (var i = 0; i < path.length; i++)
+    node = getNodes(node)[path[i]];
+
+  var nodes = getNodes(node);
+
+  // remove all the nodes from the DOM
+  for (var i = 0; i < nodes.length; i++)
+    node.removeChild(nodes[i]);
+
+  // put them back in the new order
+  // For reference: new_order[new_pos] = old_pos
+  for (var i = 0; i < nodes.length; i++)
+    node.appendChild(nodes[new_order[i]]);
+
+  // recursively update the path
+  function updatePaths(path, node)
+    {
+      var nodes = getNodes(node);
+
+      for (var i = 0; i < nodes.length; i++)
+        {
+          var newpath = path.concat([i]);
+
+          nodes[i].setAttributeNS(EMPATHY_NS, 'path', newpath.join(':'));
+          updatePaths(newpath, nodes[i]);
+        }
+    }
+
+  updatePaths(path, node);
+}
+
+function hasChildRows (path, has_children)
+{
+  var treeview = document.getElementById('treeview');
+  var node = treeview;
+
+  // walk the tree
+  for (var i = 0; i < path.length; i++)
+    node = getNodes(node)[path[i]];
+
+  var toggle = getToggle(node);
+
+  if (has_children)
+    toggle.style.display = 'inline';
+  else
+    toggle.style.display = 'none';
+}
+
+function getOffset (node)
+{
+  var y = 0;
+
+  while (node != null && !isNaN(node.offsetTop))
+    {
+      y += node.offsetTop - node.scrollTop;
+      node = node.offsetParent;
+    }
+
+  return y;
+}
+
+function scrollToRow (path)
+{
+  var treeview = document.getElementById('treeview');
+  var node = treeview;
+
+  // walk the tree
+  for (var i = 0; i < path.length; i++)
+    node = getNodes(node)[path[i]];
+
+  window.scrollTo(0, getOffset(node));
+}
+    </script>
+  </head>
+
+  <body>
+    <div id="treeview">
+    </div>
+  </body>
+</html>

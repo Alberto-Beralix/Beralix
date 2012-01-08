@@ -1,0 +1,24 @@
+[Desktop Entry]
+X-AppInstall-Package=libreoffice-calc
+X-AppInstall-Popcon=63823
+X-AppInstall-Section=main
+
+Version=1.0
+Terminal=false
+Icon=libreoffice34-calc
+Type=Application
+Categories=Office;
+Exec=libreoffice --calc %U
+MimeType=application/vnd.oasis.opendocument.spreadsheet;application/vnd.oasis.opendocument.spreadsheet-flat-xml;application/vnd.oasis.opendocument.spreadsheet-template;application/vnd.sun.xml.calc;application/vnd.sun.xml.calc.template;application/vnd.stardivision.calc;application/vnd.stardivision.chart;application/msexcel;application/vnd.ms-excel;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;application/vnd.ms-excel.sheet.macroenabled.12;application/vnd.openxmlformats-officedocument.spreadsheetml.template;application/vnd.ms-excel.template.macroenabled.12;application/vnd.ms-excel.sheet.binary.macroenabled.12;text/csv;application/x-dbf;
+Name=LibreOffice Calc
+GenericName=Spreadsheet
+Comment=Perform calculation, analyze information and manage lists in spreadsheets by using Calc.
+InitialPreference=5
+X-Ayatana-Desktop-Shortcuts=New
+[New Shortcut Group]
+Name=New Spreadsheet
+Exec=libreoffice -calc %U
+TargetEnvironment=Unity
+X-KDE-Protocols=file,http,smb,ftp,webdav
+
+X-Ubuntu-Gettext-Domain=app-install-data

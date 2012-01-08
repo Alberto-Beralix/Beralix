@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="newgame" xml:lang="de">
+      
+  <info>
+    <title type="sort">1</title>
+    <link type="guide" xref="index#play"/>
+    <link type="seealso" xref="gametypes"/>
+    <desc>Ein Spiel starten und spielen.</desc>
+    <revision pkgversion="2.30" version="0.1" date="2010-01-10" status="draft"/>
+    <revision pkgversion="2.30" version="0.2" date="2010-01-21" status="review"/>
+   <credit type="author">
+    <name>Milo Casagrande</name>
+    <email>milo@ubuntu.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+  </info>
+
+  <title>Spielsitzung</title>
+  
+  <section id="game-start">
+    <title>Eine neue Spielsitzung starten</title>
+    <p>Um ein neues Spiel zu starten, führen Sie folgende Schritte durch:</p>
+    <list>
+      <item>
+        <p>Wählen Sie <guiseq><gui style="menu">Spiel</gui><gui style="menuitem">Neues Spiel</gui></guiseq> und danach den Typ des gewünschten Spiels.</p>
+      </item>
+      <item>
+        <p>Klicken Sie auf einen der Knöpfe in der Werkzeugleiste.</p>
+      </item>
+    </list>
+    <p>Die Knöpfe der Werkzeugleiste haben folgende Funktionen:</p>
+    <table frame="none" rules="none" shade="none">
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Alle</title>
+            <p>Startet ein neues Spiel mit allen verfügbaren Spielarten.</p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/all-games.png">
+            <p>Knopf für alle Spiele</p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Logik</title>
+            <p>Startet ein neues Spiel, das nur Logikrätsel beinhaltet.</p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/logic-games.png">
+            <p>Knopf für Logikspiele</p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Rechnen</title>
+            <p>Startet ein neues Spiel, in dem nur Übungen zum Rechnen enthalten sind.</p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/math-games.png">
+            <p>Knopf für Rechenaufgaben</p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Gedächtnis</title>
+            <p>Startet ein neues Spiel, das nur aus Gedächtnisübungen besteht.</p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/memory-games.png">
+            <p>Knopf für Gedächtnisspiele</p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Verbal</title>
+            <p>Startet ein neues Spiel, das nur verbale Analogien enthält.</p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/verbal-games.png">
+            <p>Knopf für verbale Spiele</p>
+          </media>
+        </td>
+      </tr>
+    </table>
+    <note>
+      <p>Diese Beschreibungen beziehen sich auch auf die Spielarten, die man im <gui style="menu">Spiel</gui>-Menü wählen kann.</p>
+    </note>
+  </section>
+  <section id="game-play">
+    <title>Spielsitzungen</title>
+    <note style="tip">
+      <p>Lesen Sie sich die Anleitung immer genau durch, wenn Sie ein Spiel spielen!</p>
+    </note>
+    <p>Die Spielsitzung beginnt mit der Anzeige der Problemstellung und der Frage nach der Antwort. Am unteren Rand des Fensters finden Sie die Hauptkontrollelemente zur Steuerung des Spiels.</p>
+    <p>Sobald Sie die Antwort der Aufgabe wissen, schreiben Sie diese in das <gui style="input">Antwort</gui>-Eingabefeld und drücken Sie <gui style="button">OK</gui>.</p>
+    <p>Um zum nächsten Spiel zu gelangen, klicken Sie auf <gui style="button">Weiter</gui>.</p>
+    <note>
+      <p>Wenn Sie auf <gui style="button">Weiter</gui> klicken, bevor die Aufgabe gelöst worden ist oder ohne Angabe einer Antwort, so wird das Spiel in Ihren Ergebnissen gezählt.</p>
+    </note>
+  </section>
+</page>

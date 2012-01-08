@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="mouse-problem-notmoving" xml:lang="pt-BR">
+<info>
+    <link type="guide" xref="mouse#problems"/>
+    <desc>Como verificar seu mouse se ele não estiver funcionando.</desc>
+    
+    <revision version="11.04" date="2011-04-28" status="final"/>
+    <credit type="author">
+        <name>Phil Bull</name>
+        <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+</info>
+
+<title>Ponteiro do mouse não se move</title>
+
+<links type="section"/>
+
+<section id="plugged-in">
+ <title>Verifique se o mouse está conectado</title>
+ <p>Se você tem um mouse com cabo, verifique se ele está conectado firmemente ao computador.</p>
+ <p>Se ele for um mouse USB (com um conector retangular), tente conectá-lo em uma porta USB diferente. Se ele for um mouse PS/2 (com um conector pequeno, arredondado com seis pinos), tenha certeza que ele está conectado à porta verde do mouse ao invés da porta roxa do teclado. Você pode precisar reiniciar o computador se ele não estiver conectado.</p>
+</section>
+
+<section id="connected">
+ <title>Verifique se o mouse foi reconhecido pelo seu computador</title>
+ <steps>
+  <item>
+  <p>Vá ao <link xref="unity-dash-intro">painel</link> e abra o <app>Terminal</app>.</p></item>
+  <item>
+   <p>Na janela do terminal, no prompt (o $), digite <cmd>xsetpointer -l | grep Pointer</cmd>, exatamente como aparece aqui e aperte <key>Enter</key>.</p>
+  </item>
+  <item>
+   <p>Uma pequena lista de dispositivos de mouse irá aparecer. Verifique que pelo menos um dos itens diz <sys>[XExtensionPointer]</sys> próximo a ele e que um dos itens <sys>[XExtensionPointer]</sys> tem o nome do mouse à esquerda dele.</p>
+  </item>
+  <item><p>Se não houver entradas com o nome do mouse seguida de <sys>[XExtensionPointer]</sys>, então o mouse não foi reconhecido por seu computador. Se a entrada existir, seu mouse foi reconhecido. Nesse caso, você deve certificar-se de que o mouse está <link xref="#plugged-in">conectado</link> e em <link xref="#broken">condições de uso</link>.</p></item>
+ </steps>
+
+ <p>Se o seu mouse tem um conector serial (RS-232), você pode precisar executar alguns passos extras para fazê-lo funcionar. Os passos podem depender da marca ou modelo do seu mouse.</p>
+ 
+ <p>Pode ser complicado corrigir problemas com a detecção do seu mouse. Peça suporte da sua distribuição ou fabricante se você acha que seu mouse não foi devidamente detectado.</p>
+ 
+ <comment>
+ <cite date="2009-09-11">Phil Bull</cite>
+  <p>
+  Should provide some useful advice rather than just saying "you might need to 
+  perform extra steps".
+  </p>
+ </comment>
+</section>
+
+<section id="broken">
+ <title>Verifique se o mouse realmente funciona</title>
+ <p>Conecte o mouse em um computador diferente e veja se ele funciona.</p>
+ 
+ <p>Se o mouse é um mouse ótico ou a laser, uma luz deve estar brilhando da parte de baixo do mouse, se ele estiver ligado. Se não tiver luz, verifique se ele está ligado. Se ele está ligado e não tem luz, o mouse pode estar quebrado.</p>
+</section>
+
+<section id="wireless-mice">
+ <title>Verificando o mouse sem fio</title>
+ 
+ <list>
+  <item>
+   <p>Clique em um botão e veja se o ponteiro do mouse se move agora. Alguns mouses sem fio suspendem para economizar energia, então podem não responder até que você clique em um botão.</p>
+  </item>
+  <item>
+   <p>Verifique se a bateria do mouse está carregada.</p>
+  </item>
+  <item>
+   <p>Certifique-se de que o recebedor está firmemente conectado ao computador.</p>
+  </item>
+  <item>
+   <p>Se o seu mouse e o receptor podem operar em diferentes canais de rádio, certifique-se que ambos estejam configurados no mesmo canal.</p>
+  </item>
+  <item>
+   <p>Talvez seja necessário pressionar um botão no mouse, recebedor ou ambos para estabelecer uma conexão. O manual de instruções do seu mouse deve conter mais detalhes se for esse o caso.</p>
+  </item>
+ </list>
+
+ <p>A maioria dos mice sem-fio com transmissão RF (rádio) devem funcionar automaticamente, após serem conectados ao computador. Se você tiver um mouse Bluetooth ou IR (infravermelho), talvez sejam necessários outros passos para que ele funcione. Esses passos dependem do modelo e fabricante do mouse.</p>
+
+<comment>
+ <cite date="2009-09-11">Phil Bull</cite>
+ <p>Should provide some useful advice rather than just saying "you might need to perform extra steps".</p>
+</comment>
+</section>
+
+</page>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="nautilus-file-properties-permissions" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="files#faq"/>
+    <link type="seealso" xref="nautilus-file-properties-basic"/>
+
+    <desc>Legen Sie fest, wer Ihre Dateien und Ordner betrachten und bearbeiten darf.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+  <title>Festlegen von Zugriffsrechten für Dateien</title>
+
+  <p>You can use file permissions control who can view and edit files that
+  you own. To view and set the permissions for a file, right click it and
+  select <gui>Properties</gui>, then select the <gui>Permissions</gui> tab.</p>
+
+  <p>Siehe <link xref="#files"/> und <link xref="#folders"/> weiter unten für Details darüber, welche Art von Zugriffsrechten Sie setzen können.</p>
+
+  <section id="files">
+    <title>Dateien</title>
+
+    <p>Sie können Zugriffsrechte für den Dateibesitzer, die Gruppe und alle anderen Benutzer des Systems festlegen. Bei Ihren eigenen Dateien sind Sie der Besitzer und Sie können sich selbst nur Leserechte oder Lese- und Schreibrechte geben. Setzen Sie die Rechte einer Datei auf »nur lesen«, wenn Sie verhindern wollen, dass Sie sie versehentlich verändern.</p>
+
+    <p>Jeder Benutzer auf Ihrem Rechner gehört zu einer Gruppe. Auf Privatrechnern ist es üblich, dass jeder Benutzer seine eigene Gruppe hat, somit werden Gruppenrechte selten verwendet. In Unternehmen werden Gruppen manchmal für Abteilungen oder Projekte verwendet. Jede Datei hat einen Besitzer, sie gehört aber auch einer Gruppe. Sie können sowohl die Gruppe der Datei bestimmen als auch die Zugriffsrechte für alle Benutzer dieser Gruppe. Sie können einer Datei nur eine Gruppe zuweisen, der Sie selbst angehören.</p>
+
+    <p>Sie können auch die Zugriffsrechte für andere Benutzer als den Besitzer und die Gruppenmitglieder festlegen.</p>
+
+    <p>Wenn die Datei ein Programm ist, wie etwa ein Skript, müssen Sie <gui>Datei als Programm ausführen</gui> auswählen, um es auszuführen. Selbst wenn diese Option aktiv ist, kann die Dateiverwaltung die Datei mit einer Anwendung öffnen oder Sie danach fragen, was sie damit tun soll. Siehe <link xref="nautilus-behavior#executable"/> für weitere Informationen.</p>
+  </section>
+
+  <section id="folders">
+    <title>Ordner</title>
+    <p>Sie können Ordner-Zugriffsrechte für den Besitzer, die Gruppe und andere Benutzer festlegen. Im oberen Abschnitt über Datei-Zugriffsrechte finden Sie eine Erklärung, wer der Besitzer, die Gruppe und andere Benutzer sind.</p>
+    <p>Die Zugriffsrechte, die Sie für Ordner vergeben können, unterscheiden sich von denen für Dateien.</p>
+    <terms>
+      <item>
+        <title><gui>Keine</gui></title>
+        <p>Der Benutzer kann nicht einmal sehen, welche Dateien im Ordner sind.</p>
+      </item>
+      <item>
+        <title><gui>Dateien nur auflisten</gui></title>
+        <p>Der Benutzer sieht zwar, welche Dateien im Ordner sind, kann aber keine Dateien öffnen, erstellen oder löschen.</p>
+      </item>
+      <item>
+        <title><gui>Auf Dateien zugreifen</gui></title>
+        <p>Der Benutzer kann Dateien im Ordner zwar öffnen (vorausgesetzt, er hat für die jeweilige Datei die erforderlichen Rechte), kann aber keine neuen Dateien erstellen oder Dateien löschen.</p>
+      </item>
+      <item>
+        <title><gui>Dateien erstellen und löschen</gui></title>
+        <p>Der Benutzer hat vollen Zugriff auf den Ordner, er kann Dateien öffnen, erstellen und löschen.</p>
+      </item>
+    </terms>
+
+    <p>Sie können die Zugriffsrechte für alle Dateien eines Ordners auf einmal festlegen, indem Sie die <gui>Zugriff</gui>-Auswahllisten und die Option <gui>Ausführen</gui> verwenden. Für keine Änderung belassen Sie die Auswahllisten bei <gui>---</gui> bzw. das <gui>Ausführen</gui>-Ankreuzfeld im unbestimmten Zustand (mit einer horizontalen Linie).</p>
+    <p>Wenn Sie <gui>Zugriffsrechte auf enthaltene Dateien übertragen</gui> anklicken, passt die Dateiverwaltung die Lese-, Schreib- und Ausführungsrechte der enthaltenen Dateien an, und zwar aufgrund der Einstellungen, die Sie unter <gui>Zugriff</gui> und <gui>Ausführen</gui> vorgenommen haben. Auch die Ordner-Zugriffsrechte von Unterordnern werden an die Zugriffsrechte dieses Ordners angeglichen. Zugriffsrechte für enthaltene Dateien werden auch auf Dateien in Unterordnern angewendet, und zwar bis in jede Tiefe.</p>
+  </section>
+
+</page>

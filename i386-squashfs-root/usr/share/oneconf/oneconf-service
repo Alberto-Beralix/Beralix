@@ -1,0 +1,105 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# Copyright (C) 2010 Canonical
+#
+# Authors:
+#  Didier Roche <didrocks@ubuntu.com>
+#
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; version 3.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+# details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+
+import dbus
+import logging
+from optparse import OptionParser
+import sys
+
+import gettext
+from gettext import gettext as _
+
+LOG = logging.getLogger(__name__)
+
+from oneconf.enums import MIN_TIME_WITHOUT_ACTIVITY, ONECONF_SERVICE_NAME
+from oneconf.version import *
+
+def quit(loop, myservice):
+    '''quit if no activity at least in MIN_TIME_WITHOUT_ACTIVITYs'''
+    if myservice.activity:
+        LOG.debug('Some recent activity, still alive for %ss'
+                      % MIN_TIME_WITHOUT_ACTIVITY)
+        # TODO: check if server has new sync info and send a dbus signal there
+        
+        myservice.activity = False
+        return True
+    LOG.debug('No more activity, go to sleep')
+    loop.quit()
+    
+def createcheckforquit(loop, myservice):
+    # This function add 10 secondes more than in the software-center oneconf plugins
+    # after starting up to keep the service up when USC is running
+    # (there is a ping every MIN_TIME_WITHOUT_ACTIVITY - 10)
+    GObject.timeout_add_seconds(MIN_TIME_WITHOUT_ACTIVITY, quit, loop, myservice)
+    return False
+    
+def createsynchandler(myservice, use_mock):
+
+    # create only on demand to avoid first sync/upload to delay first request
+    # this sync automatically as soon as network/sso is available
+    LOG.debug('Create a sync handler with infra')
+    infra = None
+    if use_mock:
+        from oneconf.networksync.infraclient_fake import WebCatalogAPI
+        infra = WebCatalogAPI()
+    myservice.synchandler = SyncHandler(myservice.hosts, package_handler=myservice.get_packageSetHandler(), infraclient=infra, dbusemitter=myservice)
+    return False
+    
+if __name__ == '__main__':
+    usage = _("usage: %prog [options]")
+    parser = OptionParser(version= "%prog " + VERSION, usage=usage)
+    parser.add_option("--debug", action="store_true", dest="debug",
+                      help=_("enable debug mode"))
+    parser.add_option("--mock", action="store_true", dest="mock",
+                      help=_("use the mock infrastructure"))
+    (options, args) = parser.parse_args()
+    # set verbosity
+    if options.debug:
+        logging.basicConfig(level=logging.DEBUG)
+    else:
+        logging.basicConfig(level=logging.INFO)
+
+    # do import only now (otherwise, the import of dbus change level of debug)
+    from gi.repository import GObject
+    from dbus.mainloop.glib import DBusGMainLoop
+    from oneconf.dbusconnect import DbusHostsService
+    from oneconf.networksync import SyncHandler
+
+    DBusGMainLoop(set_as_default=True)
+    loop = GObject.MainLoop()
+    
+    # only OneConf service at a time
+    error_message = None
+    try:
+        if ONECONF_SERVICE_NAME in dbus.SessionBus().list_names():
+            error_message =_("An OneConf service is already running, shut it down with oneconf-query --stop")
+        else:
+            myservice = DbusHostsService(loop)
+    except dbus.DBusException, e:
+        error_message = e
+    if error_message:
+        LOG.critical(error_message)
+        sys.exit(1)
+
+    GObject.timeout_add_seconds(10, createcheckforquit, loop, myservice)
+    GObject.timeout_add_seconds(20, createsynchandler, myservice, options.mock)
+    LOG.debug("daemon up and running")
+    loop.run()
+

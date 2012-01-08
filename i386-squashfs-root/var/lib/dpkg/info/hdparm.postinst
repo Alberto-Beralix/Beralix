@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+if [ -n "$2" ] && dpkg --compare-versions "$2" lt 8.9-2; then
+  rm -fv /etc/rc0.d/K75hdparm /etc/rc6.d/K75hdparm
+fi
+# Automatically added by dh_installudev
+if [ "$1" = configure ]; then
+	if [ -e "/etc/udev/rules.d/85_hdparm.rules" ]; then
+		echo "Preserving user changes to /etc/udev/rules.d/85-hdparm.rules ..."
+		if [ -e "/etc/udev/rules.d/85-hdparm.rules" ]; then
+			mv -f "/etc/udev/rules.d/85-hdparm.rules" "/etc/udev/rules.d/85-hdparm.rules.dpkg-new"
+		fi
+		mv -f "/etc/udev/rules.d/85_hdparm.rules" "/etc/udev/rules.d/85-hdparm.rules"
+	fi
+fi
+# End automatically added section
+

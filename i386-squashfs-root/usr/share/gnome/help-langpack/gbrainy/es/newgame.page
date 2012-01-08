@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="newgame" xml:lang="es">
+      
+  <info>
+    <title type="sort">1</title>
+    <link type="guide" xref="index#play"/>
+    <link type="seealso" xref="gametypes"/>
+    <desc>Iniciar y jugar un juego.</desc>
+    <revision pkgversion="2.30" version="0.1" date="2010-01-10" status="draft"/>
+    <revision pkgversion="2.30" version="0.2" date="2010-01-21" status="review"/>
+   <credit type="author">
+    <name>Milo Casagrande</name>
+    <email>milo@ubuntu.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Compartir Igual 3.0</p>
+   </license>
+  </info>
+
+  <title>Sesión de partidas</title>
+  
+  <section id="game-start">
+    <title>Comenzar una nueva sesión</title>
+    <p>Para iniciar un juego nuevo haz uno de los siguientes:</p>
+    <list>
+      <item>
+        <p>Elige <guiseq><gui style="menu">Juego</gui><gui style="menuitem">Juego nuevo</gui></guiseq> y selecciona el tipo de juego al que jugar.</p>
+      </item>
+      <item>
+        <p>Pulsa uno de los botones en la barra de herramientas.</p>
+      </item>
+    </list>
+    <p>Los botones de la barra de herramientas tienen los siguientes significados:</p>
+    <table frame="none" rules="none" shade="none">
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Todos</title>
+            <p>Inicia una partida nueva jugando con todos los tipos de juegos disponibles.</p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/all-games.png">
+            <p>Botón de todos los juegos</p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Lógica</title>
+            <p>Inicia una partida nueva jugando sólo a juegos de lógica.</p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/logic-games.png">
+            <p>Botón de juegos de lógica</p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Cálculo</title>
+            <p>Inicia una partida nueva jugando sólo a juegos de cálculo.</p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/math-games.png">
+            <p>Botón de juegos de cálculo</p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Memoria</title>
+            <p>Inicia una partida nueva jugando sólo a juegos de memoria.</p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/memory-games.png">
+            <p>Botón de juegos de memoria</p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Verbal</title>
+            <p>Inicia una partida nueva jugando sólo a juegos verbales.</p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/verbal-games.png">
+            <p>Botón de juegos verbales</p>
+          </media>
+        </td>
+      </tr>
+    </table>
+    <note>
+      <p>Estas descripciones también se aplican a los tipos de juegos que puede seleccionar en el menú <gui style="menu">Juego</gui>.</p>
+    </note>
+  </section>
+  <section id="game-play">
+    <title>Jugar una sesión</title>
+    <note style="tip">
+      <p>Lee siempre las instrucciones cuidadosamente al jugar una partida.</p>
+    </note>
+    <p>La sesión de partidas comienza mostrándote el problema y preguntándote la solución. En la parte inferior de la ventana está el conjunto principal de controles que puede usar para interactuar con el juego.</p>
+    <p>Una vez que conozcas la respuesta al problema escríbela en la entrada de texto <gui style="input">Respuesta</gui> y después pulsa <gui style="button">Aceptar</gui>.</p>
+    <p>Para pasar al siguiente juego pulsa <gui style="button">Siguiente</gui>.</p>
+    <note>
+      <p>Si pulsas <gui style="button">Siguiente</gui> antes de completar el juego o sin haber proporcionado una respuesta el juego contará en tu resultado.</p>
+    </note>
+  </section>
+</page>

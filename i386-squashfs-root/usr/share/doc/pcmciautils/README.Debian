@@ -1,0 +1,11 @@
+Network configuration
+---------------------
+
+If your PCMCIA network card is not brought up automatically, add the
+following to /etc/network/interfaces:
+
+allow-hotplug eth0
+
+Substitute eth0 for the interface name.
+
+ -- Per Olofsson <pelle@debian.org>, Thu, 22 Jun 2006 15:00:00 +0200

@@ -1,0 +1,6 @@
+#! /bin/sh
+set -e
+if [ "$1" = rtupdate ]; then
+	pyclean -p onboard /usr/share/onboard
+	pycompile -p onboard -V 2.7- /usr/share/onboard
+fi

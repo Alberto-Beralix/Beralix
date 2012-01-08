@@ -1,0 +1,47 @@
+# vim:syntax=apparmor
+
+  #include <abstractions/X>
+
+  # Pulseaudio
+  /usr/bin/pulseaudio ixr,
+
+  # Image viewers
+  /usr/bin/eog PUxr,
+  /usr/bin/gimp* PUxr,
+  /usr/bin/shotwell PUxr,
+  /usr/bin/digikam PUxr,
+  /usr/bin/f-spot PUxr,
+
+  #include <abstractions/ubuntu-media-players>
+  owner @{HOME}/.macromedia/** rw,
+  /opt/real/RealPlayer/mozilla/nphelix.so rm,
+  /usr/bin/lpstat PUxr,
+  /usr/bin/lpr PUxr,
+
+  # npviewer
+  /usr/lib/nspluginwrapper/i386/linux/npviewer{,.bin} ixr,
+  /var/lib/ r,
+  /var/lib/**/*.so mr,
+  /usr/bin/setarch ixr,
+
+  # Bittorrent clients
+  #include <abstractions/ubuntu-bittorrent-clients>
+
+  # Mozplugger
+  /etc/mozpluggerrc r,
+  /usr/bin/mozplugger-helper PUxr,
+
+  # Archivers
+  /usr/bin/ark PUxr,
+  /usr/bin/file-roller PUxr,
+  /usr/bin/xarchiver PUxr,
+  /usr/local/lib{,32,64}/*.so* mr,
+
+  # News feed readers
+  #include <abstractions/ubuntu-feed-readers>
+
+  # Googletalk
+  /opt/google/talkplugin/*.so mr,
+  /opt/google/talkplugin/lib/*.so mr,
+  /opt/google/talkplugin/GoogleTalkPlugin ixr,
+  owner @{HOME}/.config/google-googletalkplugin/** rw,

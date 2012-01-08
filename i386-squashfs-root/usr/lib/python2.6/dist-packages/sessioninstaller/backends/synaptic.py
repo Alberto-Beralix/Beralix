@@ -1,0 +1,1 @@
+../../../../../share/pyshared/sessioninstaller/backends/synaptic.py

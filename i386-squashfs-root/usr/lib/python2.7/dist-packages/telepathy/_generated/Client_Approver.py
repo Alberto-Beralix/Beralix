@@ -1,0 +1,1 @@
+../../../../../share/pyshared/telepathy/_generated/Client_Approver.py

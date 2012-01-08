@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task a11y" id="a11y-bouncekeys" xml:lang="es">
+  <info>
+    <link type="guide" xref="a11y#mobility" group="keyboard"/>
+    <link type="guide" xref="keyboard"/>
+
+    <revision date="2011-04-06" status="outdated"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>Ignorar pulsaciones rápidas de la misma tecla.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Activar el rechazo de teclas</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Turn on from the keyboard?! How do I turn these features on from
+  the keyboard then? Used to be there were odd shortcuts. I think
+  5x Shift turned one of them on. Fix for 3.2</p>
+</comment>
+
+<p>Active el <em>rechazo de teclas</em> para ignorar las pulsaciones de teclas repetidas rápidamente. Por ejemplo, si tiene temblores de manos que pueden hacer que pulse teclas varias veces cuando sólo quiere pulsarlas una, entonces debería activar el rechazo de teclas.</p>
+
+<steps>
+  <item><p>Pulse en el icono situado en el extremo derecho de la <gui>barra superior</gui> y seleccione <gui>Configuración del sistema</gui>.</p></item>
+  <item><p>Pulse <gui>Acceso universal</gui>.</p></item>
+  <item><p>Seleccione la pestaña <gui>Escritura</gui>.</p></item>
+  <item><p>Seleccione <gui>Activar las características de accesibilidad desde el teclado</gui>.</p></item>
+  <item><p>Active el <gui>Rechazo de teclas</gui>.</p></item>
+</steps>
+
+<p>Use el deslizador <gui>Retardo de aceptación</gui> para cambiar el tiempo que debe esperar el rechazo de teclas antes de registrar otra tecla pulsada después de la pulsada en primer lugar. Seleccione <gui>Pitar al rechazar una tecla</gui> si quiere que el equipo emita un sonido cada vez que ignora una tecla porque la pulsación ha sucedido demasiado pronto después de la pulsación de la tecla anterior.</p>
+
+ <note style="tip">
+ <p>Puede activar y desactivar esta función rápidamente desde el <link xref="a11y-icon">menú de acceso universal</link>.</p>
+ </note>
+
+</page>

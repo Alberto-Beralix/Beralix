@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="addremove-remove" xml:lang="en-AU">
+  <info>
+    <link type="guide" xref="addremove" group="#first"/>
+
+    <revision version="11.04" date="2011-04-18" status="final"/>
+
+    <credit type="author">
+      <name>Ubuntu Documentation Team</name>
+    </credit>
+
+    <desc>Remove software that you no longer use.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Remove an application</title>
+
+    <p>The <app>Ubuntu Software Center</app> makes it easy to remove software that you no longer use.</p>
+    
+    <steps>
+    <item>
+        <p>Click on the <app>Software Center</app> icon in the <gui>Launcher</gui>, or open 
+        the <gui>Dash</gui>, and search for <app>Software Center</app>.</p>
+    </item>
+    <item>
+      <p>When the <app>Software Center</app> opens, click on <gui>Installed Software</gui>.</p>
+    </item>
+    <item>
+        <p>In the <em>Installed Software</em> section, find the application that you want to remove by finding it in 
+        the list or by searching for it.</p>
+    </item>
+    <item>
+        <p>Select the application and click <gui>Remove</gui>.</p>
+    </item>
+    <item>
+        <p>You may be asked to enter your password. After you have done that, the application will be removed. 
+        This should not take very long.</p>
+    </item>
+    </steps>
+    <note><p>
+    Some applications depend on others being installed in order to work 
+    properly. If you try to remove an application which is needed by another 
+    application, both of them will be removed. You will be asked 
+    to confirm that this is what you want to happen before the applications 
+    are removed.
+    </p></note>
+    <p>For more information about using the <app>Ubuntu Software Center</app>, consult the 
+    <link href="ghelp:software-center">Ubuntu Software Center Manual</link>.</p>
+    <p>
+    If the application that you want to remove is not available in the 
+    <app>Ubuntu Software Center</app>, use <link xref="addremove-install-synaptic">Synaptic
+    </link> to remove it instead.
+    </p>
+
+</page>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/bailer/screen0/options/fatal_fallback_mode</key>
+      <applyto>/apps/compiz-1/plugins/bailer/screen0/options/fatal_fallback_mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>2</default>
+      <locale name="C">
+        <short>Fatal fallback mode</short>
+        <long>How best to handle a fatal fallback (0 = No action, 1 = Reduced functionality mode, 2 = Detect session fallback, 3 = Execute custom fallback)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/bailer/screen0/options/custom_fallback_window_manager</key>
+      <applyto>/apps/compiz-1/plugins/bailer/screen0/options/custom_fallback_window_manager</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <locale name="C">
+        <short>Custom fallback window manager command</short>
+        <long>Command to execute when selecting to do a custom fallback</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/bailer/screen0/options/custom_alternative_shell</key>
+      <applyto>/apps/compiz-1/plugins/bailer/screen0/options/custom_alternative_shell</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <locale name="C">
+        <short>Custom alternative shell command</short>
+        <long>If compiz is providing a shell and it can't load, an alternative shell will be launched. This is to override the alternative shell detection</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/bailer/screen0/options/poor_performance_fallback</key>
+      <applyto>/apps/compiz-1/plugins/bailer/screen0/options/poor_performance_fallback</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Poor performance fallback</short>
+        <long>What do do when plugins indicate that performance is reading poor levels (0 = No action, 1 = Launch fatal fallback, 2 = Unload a custom list of plugins, 3 = Reduced functionality mode)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/bailer/screen0/options/bad_performance_threshold</key>
+      <applyto>/apps/compiz-1/plugins/bailer/screen0/options/bad_performance_threshold</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>50</default>
+      <locale name="C">
+        <short>Bad performance threshold</short>
+        <long>How much bad performance to tolerate before taking decisive action (0 - 300)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/bailer/screen0/options/bad_plugins</key>
+      <applyto>/apps/compiz-1/plugins/bailer/screen0/options/bad_plugins</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Bad Plugins</short>
+        <long>Plugins to unload in case the session is being impacted</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

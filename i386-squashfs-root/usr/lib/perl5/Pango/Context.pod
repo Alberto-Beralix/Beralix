@@ -1,0 +1,217 @@
+=head1 NAME
+
+Pango::Context - Pango object that stores global information used to control the itemization process
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Pango::Context
+
+
+
+=cut
+
+=for object Pango::Context - Pango object that stores global information used to control the itemization process
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 direction = $context-E<gt>B<get_base_dir> 
+
+=head2 $context-E<gt>B<set_base_dir> ($direction)
+
+=over
+
+=item * $direction (Pango::Direction) 
+
+=back
+
+=head2 gravity = $context-E<gt>B<get_base_gravity> 
+
+Since: pango 1.16
+
+=head2 $context-E<gt>B<set_base_gravity> ($gravity)
+
+=over
+
+=item * $gravity (Pango::Gravity) 
+
+=back
+
+Since: pango 1.16
+
+=head2 fontdescription = $context-E<gt>B<get_font_description> 
+
+=head2 $context-E<gt>B<set_font_description> ($desc)
+
+=over
+
+=item * $desc (Pango::FontDescription) 
+
+=back
+
+=head2 fontmap = $context-E<gt>B<get_font_map> 
+
+Since: pango 1.6
+
+=head2 gravity = $context-E<gt>B<get_gravity> 
+
+Since: pango 1.16
+
+=head2 gravityhint = $context-E<gt>B<get_gravity_hint> 
+
+Since: pango 1.16
+
+=head2 $context-E<gt>B<set_gravity_hint> ($hint)
+
+=over
+
+=item * $hint (Pango::GravityHint) 
+
+=back
+
+Since: pango 1.16
+
+=head2 language = $context-E<gt>B<get_language> 
+
+=head2 $context-E<gt>B<set_language> ($language)
+
+=over
+
+=item * $language (Pango::Language) 
+
+=back
+
+=head2 @families = $context->B<list_families>
+
+
+
+=head2 font = $context-E<gt>B<load_font> ($desc)
+
+=over
+
+=item * $desc (Pango::FontDescription or undef) 
+
+=back
+
+=head2 fontset = $context-E<gt>B<load_fontset> ($desc, $language)
+
+=over
+
+=item * $desc (Pango::FontDescription) 
+
+=item * $language (Pango::Language or undef) 
+
+=back
+
+=head2 matrix or undef = $context-E<gt>B<get_matrix> 
+
+Since: pango 1.6
+
+=head2 $context-E<gt>B<set_matrix> ($matrix)
+
+=over
+
+=item * $matrix (Pango::Matrix or undef) 
+
+=back
+
+Since: pango 1.6
+
+=head2 fontmetrics = $context-E<gt>B<get_metrics> ($desc, $language)
+
+=over
+
+=item * $desc (Pango::FontDescription) 
+
+=item * $language (Pango::Language or undef) 
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Pango::Direction
+
+=over
+
+=item * 'ltr' / 'PANGO_DIRECTION_LTR'
+
+=item * 'rtl' / 'PANGO_DIRECTION_RTL'
+
+=item * 'ttb-ltr' / 'PANGO_DIRECTION_TTB_LTR'
+
+=item * 'ttb-rtl' / 'PANGO_DIRECTION_TTB_RTL'
+
+=item * 'weak-ltr' / 'PANGO_DIRECTION_WEAK_LTR'
+
+=item * 'weak-rtl' / 'PANGO_DIRECTION_WEAK_RTL'
+
+=item * 'neutral' / 'PANGO_DIRECTION_NEUTRAL'
+
+=back
+
+
+=head2 enum Pango::Gravity
+
+=over
+
+=item * 'south' / 'PANGO_GRAVITY_SOUTH'
+
+=item * 'east' / 'PANGO_GRAVITY_EAST'
+
+=item * 'north' / 'PANGO_GRAVITY_NORTH'
+
+=item * 'west' / 'PANGO_GRAVITY_WEST'
+
+=item * 'auto' / 'PANGO_GRAVITY_AUTO'
+
+=back
+
+
+=head2 enum Pango::GravityHint
+
+=over
+
+=item * 'natural' / 'PANGO_GRAVITY_HINT_NATURAL'
+
+=item * 'strong' / 'PANGO_GRAVITY_HINT_STRONG'
+
+=item * 'line' / 'PANGO_GRAVITY_HINT_LINE'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-missingvcgt" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="color#problems"/>
+    <link type="seealso" xref="color-gettingprofiles"/>
+    <desc>Correção de cores na tela inteira modifica todas as cores da tela em todas as janelas.</desc>
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Faltando informações sobre correção de cores na tela inteira?</title>
+  <p>Infelizmente, muitos dos perfis ICC fornecidos pelos fabricantes não incluem a informação necessária para a correção de cor na tela inteira. Estes perfis podem ser úteis para aplicativos que podem fazer compensação de cores, mas você não irá ver todas as cores da sua tela mudarem.</p>
+  <p>Para criar um perfil de monitor, que inclui dados tanto de calibragem como de caracterização, você vai precisar usar um instrumento de medição de cores chamado colorímetro ou um espectrômetro.</p>
+
+</page>

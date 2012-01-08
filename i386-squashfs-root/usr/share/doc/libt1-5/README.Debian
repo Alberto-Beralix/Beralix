@@ -1,0 +1,25 @@
+t1lib for Debian
+----------------
+
+This package has been created from scratch using debhelper. It contains
+four binary packages:
+ * shared library - libt1-5
+ * development files - libt1-5-dev
+ * font-related binary utils - t1lib5-bin
+ * documentation - libt1-5-doc
+
+However you can read in upstream's README that t1lib is completely independent
+of X11, you should know that package provides also libt1x library which
+contains X11 pixmap support. That's why it requires a bunch of X-libraries
+installed. If you consider this as a bad behavior, please discuss it on
+debian-devel list.
+
+NOTE: The old 't1lib0' package will *remove* /etc/t1lib/ and its
+contents if you purge it. Since this package is now obsolete, there
+is no good solution for this; you must back up your font database and
+config file if you wish to preserve them. Sorry...
+
+This package has been previously maintained by David Huggins-Daines, great
+thanks to him for his good job.
+
+ -- Artur R. Czechowski <arturcz@hell.pl>, Tue, 11 Nov 2003 13:31:48 +0100

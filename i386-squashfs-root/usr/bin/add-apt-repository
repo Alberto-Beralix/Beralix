@@ -1,0 +1,99 @@
+#!/usr/bin/python
+
+import os
+import sys
+import gettext
+import locale
+
+from softwareproperties.SoftwareProperties import SoftwareProperties
+from softwareproperties.ppa import DEFAULT_KEYSERVER, expand_ppa_line
+from aptsources.sourceslist import SourceEntry
+from optparse import OptionParser
+from gettext import gettext as _
+
+if __name__ == "__main__":
+    try:
+        locale.setlocale(locale.LC_ALL, "")
+    except:
+        pass
+    usage = """Usage: %prog <sourceline>
+
+%prog is a script for adding apt sources.list entries. 
+It can be used to add any repository and also provides a shorthand 
+syntax for adding a Launchpad PPA (Personal Package Archive)
+repository.
+
+<sourceline> - The apt repository source line to add. This is one of:
+  a complete apt line in quotes, 
+  a repo url and areas in quotes (areas defaults to 'main')
+  a PPA shortcut.
+
+  Examples:
+    apt-add-repository 'deb http://myserver/path/to/repo stable myrepo'
+    apt-add-repository 'http://myserver/path/to/repo myrepo'
+    apt-add-repository 'https://packages.medibuntu.org free non-free'
+    apt-add-repository http://extras.ubuntu.com/ubuntu 
+    apt-add-repository ppa:user/repository
+
+If --remove is given the tool will remove the given sourceline from your
+sources.list
+"""
+    parser = OptionParser(usage)
+    # FIXME: provide a --sources-list-file= option that 
+    #        puts the line into a specific file in sources.list.d
+    parser.add_option ("-m", "--massive-debug", action="store_true",
+        dest="massive_debug", default=False,
+        help="Print a lot of debug information to the command line")
+    parser.add_option("-r", "--remove", action="store_true",
+        dest="remove", default=False,
+        help="remove repository from sources.list.d directory")
+    parser.add_option("-k", "--keyserver",
+        dest="keyserver", default=DEFAULT_KEYSERVER,
+        help="URL of keyserver. Default: %default")
+    parser.add_option("-y", "--yes", action="store_true",
+        dest="assume_yes", default=False,
+        help="Assume yes to all queries")
+    (options, args) = parser.parse_args()
+
+    if os.geteuid() != 0:
+        print _("Error: must run as root")
+        sys.exit(1)
+
+    if (len(args) != 1):
+        print _("Error: need a repository as argument")
+        sys.exit(1)
+
+    # force new ppa file to be 644 (LP: #399709)
+    os.umask(0022)
+
+    # get the line
+    line = args[0]
+
+    # display PPA info (if needed)
+    if line.startswith("ppa:") and not options.assume_yes:
+        from softwareproperties.ppa import get_ppa_info_from_lp
+        user, sep, ppa_name = line.split(":")[1].partition("/")
+        ppa_name = ppa_name or "ppa"
+        ppa_info = get_ppa_info_from_lp(user, ppa_name)
+        print _("You are about to add the following PPA to your system:")
+        print " %s" % ppa_info["displayname"]
+        print " %s" % (ppa_info["description"] or "")
+        print _(" More info: %s") % ppa_info["web_link"]
+        if sys.stdin.isatty():
+            print _("Press [ENTER] to continue or ctrl-c to cancel adding it")
+            sys.stdin.readline()
+
+    # add it
+    sp = SoftwareProperties(options=options)
+    if options.remove:
+        (line, file) = expand_ppa_line(line.strip(), sp.distro.codename)
+        source_entry = SourceEntry(line, file)
+        try:
+            sp.remove_source(source_entry)
+        except ValueError:
+            print _("Error: '%s' doesn't exist in a sourcelist file" % line)
+    else:
+        if not sp.add_source_from_line(line):
+            print _("Error: '%s' invalid" % line)
+            sys.exit(1)
+        sp.sourceslist.save()

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="addremove-sources" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="addremove"/>
+
+    <revision version="11.04" date="2011-04-21" status="final"/>
+
+    <credit type="author">
+      <name>Time de documentação do Ubuntu</name>
+    </credit>
+
+    <desc>Adicione outros repositórios para ampliar as fontes de aplicativos que o Ubuntu utiliza para instalação e atualizações.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Adicionar repositórios adicionais de softwares</title>
+  <p>Aplicativos estão disponíveis a partir de fontes de terceiros, bem como do padrão de repositórios de aplicativos do Ubuntu. Se você quiser instalar o aplicativo a partir de um repositório de terceiros, você deve adicioná-lo à lista de repositórios disponíveis do Ubuntu.</p>
+  <note style="warning"><p>Somente adicione repositórios de aplicativos de fontes em que você confia. Repositórios de aplicativos de terceiros não passam pela verificação de segurança feita pelos membros do Ubuntu, e podem conter aplicativos nocivos ao seu computador.</p></note>
+
+    <steps>
+        <title>Instalar outros repositórios</title>
+        <item><p>Clique no ícone da <app>Central de Programas do Ubuntu</app>, localizado no Lançador ou pesquise por Central de Programas do Ubuntu na barra de pesquisa do <app>Painel</app>.</p></item>
+        <item><p>Quando a Central de Programas iniciar, clique em <guiseq><gui>Editar&gt;</gui><gui>Canais de Software</gui></guiseq></p></item>
+        <item><p>Será solicitado para que você digite a sua senha. Após ter feito isso, mude para a aba <gui>Outro Software</gui>.</p></item>
+        <item><p>Clique em <gui>Adicionar</gui> e digite a linha do APT do repositório. Esta linha deverá estar disponível no site do repositório e deve ter esta semelhança:</p>
+        <p><code>deb http://br.archive.ubuntu.com/ubuntu/ maverick main</code></p></item>
+        <item><p>Clique em <gui>Adicionar Fonte</gui> e feche a janela dos Canais de Software. A Central de Programas do Ubuntu verificará os seus canais de software para novas atualizações.</p></item>
+    </steps>
+
+  <section id="canonical-partner">
+    <title>Ativar o repositório do Parceiro da Canonical</title>
+    <p>O repositório de Parceiros da Canonical oferece alguns aplicativos proprietários que embora não custem dinheiro para serem usados, são proprietários. Ele inclui programas como o <app>Skype</app>, o <app>Adobe Reader</app> e o <app>Plug-in do Adobe Flash</app>. Programas nesse repositório aparecerão na Central de Programas do Ubuntu, mas não serão instaláveis até que esse repositório seja habilitado.</p>
+    <p>Para habilitar o repositório, siga os passos acima para abrir a aba <gui>Outros programas</gui> em <app>Fontes de programas</app>. Se você vir o repositório <gui>Parceiros da Canonical</gui> na lista, certifique-se de que ele está marcado e então feche a janela de Fontes de programas. Se você não o vir, clique <gui>Acrescentar</gui> e digite:</p>
+    <p><code>deb http://archive.canonical.com/ubuntu natty partner</code></p>
+   <p>Clique em <gui>Adicionar Fonte</gui> e feche a janela dos Canais de Software. Aguarde um momento para que a Central de Programas do Ubuntu baixe a informação do repositório.</p>
+  </section>
+
+</page>

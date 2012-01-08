@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Postinst for pppconfig by John Hasler 1999-2005
+# Any possessor of a copy of this program may treat it as if it
+# were in the public domain.  I waive all rights.
+
+set -e
+
+if [ -x "`which update-menus`" ] ; then
+    update-menus
+fi
+if dpkg --compare-versions "$2" lt "2.3.18ubuntu2"; then
+	update-rc.d -f dns-clean remove >/dev/null
+fi
+update-rc.d dns-clean start 70 1 2 3 4 5 . >/dev/null
+
+
+exit 0

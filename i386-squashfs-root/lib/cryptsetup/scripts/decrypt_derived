@@ -1,0 +1,46 @@
+#!/bin/sh
+
+countlines() {
+	local IFS input count tmp
+	input="$1"
+	count=0
+	IFS='
+'
+	for tmp in $input; do
+		count=$(( $count + 1 ))
+	done
+	echo $count
+}
+
+if [ -z "$1" ]; then
+	echo "$0: must be executed with a crypto device as argument" >&2
+	exit 1
+fi
+
+if ! device=$(dmsetup --showkeys table 2> /dev/null | grep "^$1:"); then
+	echo "$0: failed to find $1 in dmtable" >&2
+	exit 1
+fi
+
+if [ -z "$device" ]; then
+	echo "$0: device $1 doesn't exist" >&2
+	exit 1
+fi
+
+count=$(countlines "$device")
+if [ $count -ne 1 ]; then
+	echo "$0: more than one device match $1" >&2
+	exit 1
+fi
+
+eval set -- $device
+type="$4"
+key="$6"
+
+if [ "$type" != "crypt" ]; then
+	echo "$0: device $1 is not a crypto device" >&2
+	exit 1
+fi
+
+echo -n "$key"
+exit 0

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="tips-specialchars" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="tips"/>
+    <link type="seealso" xref="keyboard-layouts"/>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <desc>Digite caracteres não encontrados no seu teclado, incluindo alfabetos estrangeiros, símbolos matemáticos e dingbats.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Digite os caracteres especiais</title>
+
+  <comment>
+    <cite date="2011-04-04">shaunm</cite>
+    <p>Marking complete for 3.0. We didn't get keyboard-inputmethods in.
+    If we get it for 3.0.1, uncomment the last section, write something,
+    and link.</p>
+  </comment>
+
+  <p>Você pode acessar e ver milhares de caracteres da maioria dos sistemas de escrita do mundo, mesmo aqueles que não encontrou em seu teclado. Esta página lista algumas maneiras diferentes para você poder inserir caracteres especiais.</p>
+
+  <links type="section">
+    <title>Métodos para digitar caracteres</title>
+  </links>
+
+  <section id="charmap">
+    <title>Mapa de caracteres</title>
+    <p>GNOME vem com um aplicativo de mapa de caracteres, que permite navegar em todos os caracteres Unicode. Use o mapa de caracteres para localizar o caractere desejado e em seguida copie e cole-o onde você precisar.</p>
+    <p>Você pode encontrar o <app>Mapa de Caracteres</app> na barra. Para mais informações sobre o mapa de caracteres, consulte o <link href="ghelp:gucharmap">Manual do Mapa de Caracteres</link>.</p>
+  </section>
+
+  <section id="compose">
+    <title>Compor chave</title>
+    <p>Uma tecla de composição é uma tecla especial que o permite pressional várias teclas em sequência para obter um caractere especial. Por exemplo, para digitar a letra acentuada <em>é</em>, você pode pressionar <key>compor</key>, depois <key>'</key> e então <key>e</key>.</p>
+    <p>Teclados não possuem teclas de composição específicas. Em vez disso, você pode definir uma das teclas existentes em seu teclado como uma tecla de composição.</p>
+    <steps>
+      <title>Definir uma tecla de composição</title>
+      <item><p>Clique no ícone que está no canto direito da <gui>barra superior</gui> e selecione <gui>Configurações do sistema</gui>.</p></item>
+      <item><p>Clique em <gui>Região e idioma</gui>.</p></item>
+      <item><p>Selecione o guia <gui>Disposições</gui> e clique em <gui>Opções</gui>.</p></item>
+      <item><p>Encontre o grupo chamado <gui>Posição da tecla de composição</gui>. Escolha a tecla ou teclas que você gostaria que se comportasse como uma tecla de composição. Você pode escolher teclas como o <key>Caps Lock</key>, uma das teclas <key>Alt</key>, ou a tecla de menu. Qualquer tecla que você selecionar somente funcionará como uma tecla de composição, deixando de servir ao seu propósito inicial.</p></item>
+    </steps>
+    <p>Você pode digitar muitos caracteres comuns com a tecla de composição, por exemplo:</p>
+    <list>
+      <item><p>Pressione <key>composição</key>, depois <key>'</key> e então a letra sobre a qual deverá aparecer o acento agudo, como <em>é</em>.</p></item>
+      <item><p>Pressione <key>composição</key>, depois <key>`</key> (acento grave) e então a letra sobre a qual o acento deverá aparecer, como <em>è</em>.</p></item>
+      <item><p>Pressione <key>composição</key>, depois <key>"</key> e então a letra sobre a qual o trema deverá aparecer, como <em>ë</em>.</p></item>
+      <item><p>Pressione <key>composição</key>, depois <key>-</key> e então a letra sober a qual o mácron deverá aparecer, como <em>ē</em>.</p></item>
+    </list>
+    <p>Para mais sequências de teclas de composição, acesse <link href="http://en.wikipedia.org/wiki/Compose_key#Common_compose_combinations">esta página da Wikipedia (em inglês)</link>.</p>
+  </section>
+
+  <section id="ctrlshiftu">
+    <title>Pontos de código</title>
+    <p>Você pode digitar qualquer caractere Unicode usando apenas o seu teclado com o ponto de código numérico do caractere. Todo caractere é identificado por um código de ponto de quatro caracteres. Para encontrar o ponto de código de um caractere, encontre o caractere na aplicação do mapa de caractere e olhe na barra de status ou na aba <gui>detalhes do caractere</gui>. O ponto de código são os quatro caracteres depois do <gui>U+</gui>.</p>
+
+    <p>Para digitar um caractere através de seu ponto de código, pressione <key>ctrl</key> e <key>shift</key>, digite <key>u</key> seguido pelos quatro caracteres de ponto de código, então libere <key>ctrl</key> e <key>shift</key>. Se você às vezes usa caracteres que você não pode acessar facilmente por outros métodos, você pode achar útil memorizar o ponto de código desses caracteres para que você possa digitá-los rapidamente.</p>
+  </section>
+
+  <section id="layout">
+    <title>Disposições do teclado</title>
+    <p>Você pode fazer o seu teclado se comportar como o teclado de uma outra língua, independentemente de as letras impressas nas teclas. Você mesmo pode facilmente alternar entre diferentes disposições de teclado usando um ícone na barra superior. Para saber como, veja <link xref="keyboard-layouts"/>.</p>
+  </section>
+
+<!--
+  <section id="im">
+    <title>Input methods</title>
+    <p>XXXXX: write input methods page, link</p>
+  </section>
+-->
+
+</page>

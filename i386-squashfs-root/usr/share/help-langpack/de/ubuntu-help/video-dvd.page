@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="video-dvd" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="media#videos"/>
+    
+    <desc>Die erforderlichen Codecs könnten nicht installiert sein, oder die DVD könnte einen falschen Ländercode haben.</desc>
+    
+    <revision version="11.04" date="2011-04-06" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Warum werden DVDs nicht abgespielt?</title>
+
+<p>Wenn Sie eine DVD in Ihren Rechner einlegen und diese nicht wiedergegeben wird, dann könnten die erforderlichen »Codecs« nicht installiert sein oder die DVD hat einen falschen »Ländercode«.</p>
+
+<section id="codecs">
+ <title>Installieren der erforderlichen Codecs für DVD-Wiedergabe</title>
+ <p>Um DVDs wiedergeben zu können, müssen die passenden <em>Codecs</em> installiert sein. Ein Codec ist eine Software, die Anwendungen ermöglicht, ein bestimmtes Video- oder Audio-Format zu lesen. Wenn Sie versuchen, eine DVD wiederzugeben und nicht die richtigen Codecs installiert sind, dann sollte Ihr Wiedergabeprogramm Sie darüber informieren und Ihnen anbieten, diese für Sie zu installieren.</p>
+ <p>DVDs sind auch mit einem System Namens CSS »kopiergeschützt«. Dies verhindert das Kopieren der DVDs, aber auch die Wiedergabe, sofern Sie über keine <link xref="video-dvd-restricted">zusätzliche Software</link> verfügen, die mit dem Kopierschutz umgehen kann.</p>
+</section>
+
+<section id="region">
+ <title>Überprüfen der DVD-Region</title>
+ <p>DVDs haben einen »Ländercode«, der darüber Auskunft gibt, in welchen Regionen der Welt es erlaubt ist, diese DVD wiederzugeben. DVD-Spieler können nur DVDs wiedergeben, die aus der gleichen Region wie das Gerät selbst stammen. Wenn Sie beispielsweise einen DVD-Spieler aus der Region 1 haben, bedeutet das, dass Sie nur DVDs aus Nordamerika abspielen können.</p>
+ <p>Falls die Region des DVD-Wiedergabeprogramms auf Ihrem Rechner und der Code der abzuspielenden DVD nicht übereinstimmen, ist die Wiedergabe nicht möglich. Oft ist es jedoch möglich, die Region Ihres DVD-Wiedergabeprogramms zu ändern, aber Sie können das nur wenige Male tun, bevor das Wiedergabeprogramm fest und dauerhaft einer Region zugeordnet wird.</p>
+ <p>Um die Region des DVD-Wiedergabeprogramms auf Ihrem Rechner zu ändern, verwenden Sie <link href="apt:regionset">regionset</link>.</p>
+</section>
+	
+</page>

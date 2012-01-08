@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-search" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#gedit-working-with-files"/>
+    <link type="seealso" xref="gedit-replace"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <credit type="author">
+      <name>Daniel Neel</name>
+      <email>dneelyep@gmail.com</email>
+    </credit>
+  </info>
+
+  <title>搜索文本</title>
+    <p>搜索工具可以帮您查找文档中指定的文本。</p>
+    <steps>
+      <title>查找文本</title>
+      <item><p>点菜单 <guiseq><gui>搜索</gui><gui>查找</gui></guiseq> 命令，打开 <gui style="menu">搜索对话框</gui>，也可以按组合键 <keyseq><key>Ctrl</key><key>F</key></keyseq>。</p></item>
+      <item><p>在 <gui>搜索窗口</gui> 中输入您想要查找的文本。</p></item>
+      <item><p>在您输入的同时，<app>gedit</app> 就会高亮显示文档中的匹配项。</p></item>
+      <item><p>To scroll through the search results, do any of the 
+      following:</p>
+      <p>Click on the <gui>up</gui> or <gui>down</gui> facing arrows next to 
+      the <gui>search window</gui>
+      </p>
+      <p>Press the <key>up arrow</key> or <key>down arrow</key> keys on your keyboard</p>
+      <p>Press <keyseq><key>Ctrl</key><key>G</key></keyseq> or <keyseq><key>Ctrl</key><key>
+      Shift</key><key>G</key></keyseq>.</p></item>
+      <p>Press the <key>Ctrl</key> and use your mouse or touchpad's 
+      <key>scroll</key> feature to move up or down through the text.</p>
+      </steps>
+
+  <p>To close the <gui>search window</gui>, press either <key>Esc</key> or 
+  <key>Enter</key>. Pressing <key>Esc</key> will return the cursor to where 
+  it was before you began your search. Pressing <key>Enter</key> will return 
+  the cursor to the current position in the search results.</p>
+
+    <list>
+      <title>Search tips</title>
+      <item><p>If you highlight a portion of text with your mouse, and then press
+      <keyseq><key>Ctrl</key><key>F</key></keyseq>, the text you've highlighted
+      will appear in the search window.</p></item>
+      <item><p>For advanced search options, you can click on the <gui>Magnifying 
+      Glass</gui> icon in the search window, or you can right-click on any 
+      portion of the search window.</p></item>
+      <item><p>您搜索的文本会保持高亮状态，甚至搜索完毕还会高亮。要取消高亮状态，点菜单 <guiseq><gui>搜索</gui><gui>清除突出显示</gui></guiseq>，或者按组合键 <keyseq><key>Ctrl</key><key>Shift</key><key>K</key></keyseq>。</p>
+      </item>
+    </list>
+
+</page>

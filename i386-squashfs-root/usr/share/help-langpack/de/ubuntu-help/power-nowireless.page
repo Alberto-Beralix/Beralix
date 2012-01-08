@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="power-nowireless" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="power#problems"/>
+    <link type="guide" xref="net-problem"/>
+    <link type="seealso" xref="power-suspendfail"/>
+    
+    <desc>Einige Funknetzwerkgeräte haben Probleme mit dem Ruhezustand umzugehen und werden danach nicht richtig aktiviert.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Ich habe keine Funknetzwerkverbindung, wenn ich meinen Rechner aus einem Energiesparmodus aufwecke</title>
+
+<p>Wenn Sie Ihren Rechner schlafen legen (in Bereitschaft versetzen) oder in den Ruhezustand versetzen, kann es vorkommen, dass keine Funknetzwerkverbindung besteht, wenn Sie ihn wieder aufwecken. Dies tritt ein, wenn die <link xref="hardware-driver">Treiber</link> des Funknetzwerkgerätes bestimmte Energiesparfunktionen nicht unterstützen. Dies hat zur Folge, dass die Funknetzwerkverbindung nach dem Aufwachen nicht hergestellt werden kann.</p>
+
+<p>Tritt dieser Fall ein, versuchen Sie die Funkverbindung aus- und wieder einzuschalten. Wenn Ihr Rechner über einen Schalter für die Funknetzwerkkarte verfügt, schalten Sie diese ebenfalls aus und wieder ein. Einige Laptops verwenden hierfür eine Tastenkombination. Das Symbol dafür sieht meist aus wie eine »Funkwelle«. Sie können auch versuchen auf das Netzwerksymbol im oberen Panel zu klicken und <gui>Funknetzwerk aktivieren</gui> abzuschalten, ein paar Sekunden zu warten und es dann wieder einzuschalten.</p>
+
+<p>Falls dies nicht funktioniert, sollte ein Neustart des Rechners die Funkverbindung wiederherstellen.</p>
+
+</page>

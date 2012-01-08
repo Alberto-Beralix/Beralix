@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "0.8.0">
+<!ENTITY manrevision "1.3">
+<!ENTITY date "January 2011">
+<!ENTITY app "gparted">
+<!ENTITY appname "GParted">
+<!-- Information about the entities:
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the command name of the application.
+       Use the appname entity to specify the formal name of the application.
+  -->]>
+<!-- Remember to update the revision history -->
+<!--
+      To generate a single html file of this document, use the command:
+        xmlto html-nochunks gparted.xml
+
+      To test this document in a viewer, use the command:
+        gnome-help file:/full-path-to-gparted.xml
+ -->
+<!-- ============= Document Header =================================== -->
+<?db.chunk.max_depth 4?>
+<article id="gparted" lang="pt_BR">
+<!-- Please do not change the id. -->
+<!-- For translations, change lang to appropriate code -->
+  <articleinfo>
+    <title>Manual do GParted</title>
+    <publisher>
+      <publishername>Projeto do GParted</publishername>
+    </publisher>
+
+    <abstract role="description">
+      <para>GParted é um editor de partições do GNOME para criação, reorganização e exclusão de partições de disco. O GParted permite que você altere a organização das partições preservando todo o conteúdo de cada partição.</para>
+    </abstract>
+
+    <copyright>
+      <year>2008, 2009, 2010, 2011</year>
+      <holder>Curtis Gedak</holder>
+    </copyright><copyright><year>2008, 2009</year><holder>Fabrício Godoy (skarllot@gmail.com)</holder></copyright><copyright><year>2008, 2009</year><holder>Leonardo Ferreira Fontenelle (leonardof@gnome.org)</holder></copyright>
+
+<!-- translators: uncomment this:
+    <copyright>
+      <year>2009</year>
+      <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+    </copyright>
+-->
+
+    <legalnotice>
+      <para>Permissão concedida para copiar, distribuir e/ou modificar este documento sob os termos da Licença de Documentação Livre GNU (GNU Free Documentation License), Versão 1.2 ou qualquer versão mais recente publicada pela Free Software Foundation; sem Seções Invariantes, sem Textos de Capa Frontal, e sem Textos de Contracapa. Você pode encontrar uma cópia da licença GFDL no <ulink type="help" url="ghelp:fdl">link</ulink> ou em <ulink type="http" url="http://www.fsf.org/licensing/licenses/fdl.html"/> ou no arquivo COPYING-DOCS distribuído com este manual.</para>
+    </legalnotice>
+
+    <authorgroup>
+      <author role="maintainer">
+        <firstname>Curtis</firstname>
+        <surname>Gedak</surname>
+        <affiliation>
+          <orgname>Projeto do GParted</orgname>
+          <address>
+            <email>gedakc@users.sf.net</email>
+          </address>
+        </affiliation>
+      </author>
+
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+      <othercredit role="translator">
+        <firstname>Latin</firstname>
+        <surname>Translator 1</surname>
+        <affiliation>
+          <orgname>Latin Translation Team</orgname>
+          <address> <email>translator@gnome.org</email> </address>
+        </affiliation>
+        <contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+    <revhistory>
+      <revision>
+        <revnumber>GParted Manual V1.3</revnumber>
+        <date>January 2011</date>
+        <revdescription>
+          <para role="author">Curtis Gedak</para>
+          <para role="publisher">Projeto do GParted</para>
+          <para role="annotations">Describes version 0.8.0 of GParted</para>
+        </revdescription> 
+      </revision>
+      <revision>
+        <revnumber>GParted Manual V1.2</revnumber>
+        <date>June 2010</date>
+        <revdescription>
+          <para role="author">Curtis Gedak</para>
+          <para role="publisher">Projeto do GParted</para>
+          <para role="annotations">Describes version 0.6.0 of GParted</para>
+        </revdescription> 
+      </revision>
+      <revision>
+        <revnumber>GParted Manual V1.1</revnumber>
+        <date>July 2009</date>
+        <revdescription>
+          <para role="author">Curtis Gedak</para>
+          <para role="publisher">Projeto do GParted</para>
+          <para role="annotations">Describes version 0.4.6 of GParted</para>
+        </revdescription> 
+      </revision>
+      <revision>
+        <revnumber>Manual do GParted v1.0</revnumber>
+        <date>Janeiro de 2009</date>
+        <revdescription>
+          <para role="author">Curtis Gedak</para>
+          <para role="publisher">Projeto do GParted</para>
+          <para role="annotations">Describes version 0.4.2 of GParted</para>
+        </revdescription> 
+      </revision>
+      <revision>
+        <revnumber>GParted Manual V0.3.9</revnumber>
+        <date>September 2008</date>
+        <revdescription>
+          <para role="author">Curtis Gedak</para>
+          <para role="publisher">Projeto do GParted</para>
+          <para role="annotations">Describes version 0.3.9 of GParted</para>
+        </revdescription> 
+      </revision>
+    </revhistory>
+
+    <releaseinfo>
+    This manual describes version 0.8.0 of GParted
+    </releaseinfo>
+
+    <legalnotice>
+      <title>Feedback</title>
+      <para>
+      To report a bug or make a suggestion regarding the
+      <application>gparted</application> application or this manual,
+      follow the directions at
+      <ulink type="http" url="http://gparted.org/bugs.php"/>.
+      </para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+
+  </articleinfo>
+
+<!-- ============= Document Body ===================================== -->
+<!-- ============= Introduction ====================================== -->
+  <sect1 id="gparted-introduction">
+    <title>Introdução</title>
+    <para>O aplicativo <application>gparted</application> é um editor de partições do GNOME para a criação, reorganização e exclusão de partições de disco.</para>
+    <para>Um dispositivo de disco pode ser subdividido em uma ou mais partições. O aplicativo <application>gparted</application> permite que você altere a organização das partições em um dispositivo de disco preservando todo o conteúdo de cada partição.</para>
+    <para>Com o <application>gparted</application> você pode efetuar as seguintes tarefas: <itemizedlist>
+        <listitem>
+          <para>Criar uma tabela de partições no dispositivo de disco.</para>
+        </listitem>
+        <listitem>
+          <para>Habilitar e desabilitar sinalizadores de partição tais como "boot" e "hidden".</para>
+        </listitem>
+        <listitem>
+          <para>Realizar ações com partições, tais como criar, excluir, redimensionar, mover, verificar, etiquetar, copiar e colar.</para>
+        </listitem>
+      </itemizedlist></para>
+    <caution>
+      <para>Editar partições pode potencialmente causar a PERDA de DADOS.</para>
+      <para>O aplicativo <application>gparted</application> é projetado para possibilitar que você edite partições cuidando para que o risco de perda de dados seja reduzido. O aplicativo foi cuidadosamente testado e é usado pela equipe do projeto GParted. Porém, pode ocorrer uma perda de dados devida a erros de software, problemas de hardware ou falha de energia.</para>
+      <para>Você pode ajudar a reduzir o risco de perda de dados não montando e desmontando as partições fora do aplicativo <application>gparted</application> enquanto o <application>gparted</application> está sendo executado.</para>
+      <para>Aconselhamos você a FAZER BACKUP dos seus DADOS antes de usar o aplicativo <application>gparted</application>.</para>
+    </caution>
+  </sect1>
+  
+<!-- ============= Getting Started =================================== -->
+  <sect1 id="gparted-getting-started">
+    <title>Primeiros passos</title>
+    <para>
+    </para>
+
+<!-- ============= To Start gparted ================================== -->
+    <sect2 id="gparted-to-start">
+      <title>Iniciando o gparted</title>
+      <para>Você pode iniciar o <application>gparted</application> das seguintes maneiras:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Menu <guimenu>Aplicativos</guimenu></term>
+          <listitem>
+            <para>Vá até <menuchoice><guisubmenu>Sistema</guisubmenu><guimenuitem>Editor de Partições GParted</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Linha de comando</term>
+          <listitem>
+            <para>Execute o seguinte comando: <command>gparted</command></para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Ao iniciar, o <application>gparted</application> buscará dispositivos de disco no seu computador.</para>
+	</sect2>
+
+<!-- ============= When You Start gparted ============================ -->
+    <sect2 id="gparted-when-you-start">
+
+      <title>A janela do GParted</title>
+      <para>Quando você iniciar o <application>gparted</application>, a seguinte janela será exibida:</para>
+
+      <!-- ==== Figure ==== -->
+      <!-- The GNOME Documentation Project recommends a maximum image
+           width of 510 pixels.
+           http://library.gnome.org/devel/gdp-style-guide/stable/screenshot-4.html.en
+      -->
+      <figure id="gparted-window">
+        <title>Janela do GParted</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/gparted_window.png" format="PNG"/>
+              </imageobject>
+            <textobject>
+              <phrase>Mostra a janela principal do GParted.</phrase>
+            </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+
+      <para>A janela do <application>gparted</application> contém os seguintes elementos:</para>
+      <variablelist>
+        <varlistentry>
+          <term>Barra de menus</term>
+          <listitem>
+            <para>Os menus da barra de menus contém todos os comandos que você precisa para trabalhar com os dispositivos de disco e partições no <application>gparted</application>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Barra de ferramentas</term>
+          <listitem>
+            <para>A barra de ferramentas contém um subconjunto dos comandos que você pode acessar da barra de menus.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Área de exibição de gráfico</term>
+          <listitem>
+            <para>A área de exibição de gráfico contém a representação visual das partições do dispositivo de disco selecionado.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Área de exibição de texto</term>
+          <listitem>
+            <para>A área de exibição de texto contém uma lista de texto das partições do dispositivo de disco selecionado.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Barra de status</term>
+          <listitem>
+            <para>A barra de status exibe informações sobre a atividade atual do <application>gparted</application> ou o número de operações pendentes.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Painel de informações de dispositivo</term>
+          <listitem>
+            <para>O painel de informações do dispositivo exibe detalhes sobre o dispositivo de disco selecionado.</para>
+            <para>Por padrão o painel de informações de dispositivo não é mostrado. Para mostrá-lo vá até <menuchoice><guimenu>Ver</guimenu><guimenuitem>Informações do dispositivo</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Painel de operações pendentes</term>
+          <listitem>
+            <para>O painel de operações pendentes exibe a lista atual de operações de partição na fila.</para>
+            <para>Por padrão, o painel de operações pendentes não é mostrado quando não há operações pendentes. Para mostrá-lo vá até <menuchoice><guimenu>Ver</guimenu><guimenuitem>Operações pendentes</guimenuitem></menuchoice>.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+      <para>Quando você clica com o botão esquerdo em qualquer área de exibição, você seleciona uma partição para executar ações de edição de partição.</para>
+      <para>Quando você clica com o botão direito em qualquer área de exibição o aplicativo exibe um menu de contexto. O menu de contexto contém as ações de edição de partição.</para>
+
+      <para>Como nos outros aplicativos do GNOME, as ações no <application>gparted</application> podem ser realizadas de diversas maneiras: com o menu, com a barra de ferramentas ou as teclas de atalho.</para>
+    </sect2>
+
+<!-- ============= To Specify Devices on the Command Line ============ -->
+    <sect2 id="gparted-run-from-cmd-line">
+      <title>Executando o GParted da linha de comando</title>
+      <para>Você pode executar o <application>gparted</application> da linha de comando e especificar um ou mais dispositivos de disco.</para>
+      <para>Para trabalhar com múltiplos dispositivos de disco da linha de comando digite o seguinte comando e então pressione <keycap>Enter</keycap>:</para>
+      <para>
+      <screen><prompt>$</prompt><command>gparted <replaceable>/caminho-do-dispositivo1 /caminho-do-dispositivo2</replaceable></command></screen>
+      </para>
+    </sect2>
+  </sect1>
+
+<!-- ============= Usage ============================================= -->
+<!-- ============= Viewing File System Support ======================= -->
+  <sect1 id="gparted-usage">
+    <title>Visualizando sistemas de arquivos com suporte</title>
+      <para>Para ver para quais ações há suporte nos sistemas de arquivos, vá até: <menuchoice><guimenu>Ver</guimenu><guimenuitem>Suporte ao sistema de arquivos</guimenuitem></menuchoice>. O aplicativo exibirá o diálogo <guilabel>Suporte ao sistema de arquivos</guilabel>.</para>
+      <itemizedlist>
+        <listitem>
+          <para>Para ver detalhes sobre o gráfico, clique <guibutton>Legenda</guibutton>. O aplicativo exibirá mais informações sobre o gráfico.</para>
+        </listitem>
+        <listitem>
+          <para>Se você instalou algum software enquanto o <application>gparted</application> estava executando, clique em <guibutton>Varrer novamente por ações suportadas</guibutton> para atualizar o gráfico. O aplicativo atualizará a exibição do gráfico.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Para fechar o diálogo <guilabel>Suporte ao sistema de arquivos</guilabel> clique <guibutton>Fechar</guibutton>.</para>
+  </sect1>
+
+<!-- ============= Working With Devices ============================== -->
+  <sect1 id="gparted-devices">
+    <title>Trabalhando com dispositivos</title>
+
+<!-- ============= To Select a Device ================================ -->
+    <sect2 id="gparted-select-device">
+      <title>Selecionando um dispositivo</title>
+      <para>Para selecionar um dispositivo de disco, vá até: <menuchoice><guimenu>GParted</guimenu><guimenuitem>Dispositivos</guimenuitem></menuchoice> e selecione um dispositivo da lista. O aplicativo exibirá o layout de partição do dispositivo na janela do <application>gparted</application>.</para>
+    </sect2>
+
+<!-- ============= To View Device Information ======================== -->
+    <sect2 id="gparted-view-device-information">
+      <title>Vendo as informações de dispositivo</title>
+      <para>Para ver informações sobre um dispositivo de disco: <orderedlist>
+          <listitem>
+            <para>Selecione um dispositivo de disco. Consulte a <xref linkend="gparted-select-device"/>.</para>
+          </listitem>
+          <listitem>
+            <para>Selecione: <menuchoice><guimenu>Ver</guimenu><guimenuitem>Informações do dispositivo</guimenuitem></menuchoice>. O aplicativo abrirá um painel lateral na janela do <application>gparted</application> e exibirá informações sobre o dispositivo.</para>
+         </listitem>
+       </orderedlist></para>
+      <para>Para fechar o painel lateral <guilabel>Informações do dispositivo</guilabel>, desmarque: <menuchoice><guimenu>Ver</guimenu><guimenuitem>Informações do dispositivo</guimenuitem></menuchoice>.</para>
+    </sect2>
+
+<!-- ============= To Refresh a Device =============================== -->
+    <sect2 id="gparted-refresh-device">
+      <title>Atualizando todos os dispositivos</title>
+      <para>Para atualizar todos os dispositivos de disco, vá até: <menuchoice><guimenu>GParted</guimenu><guimenuitem>Atualizar dispositivos</guimenuitem></menuchoice>. O aplicativo varrerá novamente todos os dispositivos de disco e atualizará o layout de partição do dispositivo na janela do <application>gparted</application>.</para>
+    </sect2>
+
+<!-- ============= To Create a New Partition Table =================== -->
+    <sect2 id="gparted-create-partition-table">
+      <title>Criando uma nova tabela de partição</title>
+      <para>Para criar uma nova tabela de partições no dispositivo de disco: <orderedlist>
+          <listitem>
+            <para>Selecione um dispositivo de disco. Consulte a <xref linkend="gparted-select-device"/>.</para>
+          </listitem>
+          <listitem>
+            <para>Vá até <menuchoice><guimenu>Dispositivo</guimenu><guimenuitem>Criar tabela de partição</guimenuitem></menuchoice>. O aplicativo exibirá o diálogo <guilabel>Criar tabela de partições em <replaceable>/caminho-do-dispositivo</replaceable></guilabel>.</para>
+          </listitem>
+          <listitem>
+            <para>Se você desejar uma tabela de partições que não seja msdos, clique em <guibutton>Avançado</guibutton> e selecione um tipo de tabela de partições da lista.</para>
+          </listitem>
+          <listitem>
+            <para>
+            Click <guibutton>Apply</guibutton> to create the new partition table.
+            The application writes the new partition table to the disk device.
+            The application refreshes the device partition layout in the
+            <application>gparted</application> window.
+            </para>
+          </listitem>
+        </orderedlist></para>
+      <caution>
+        <para>AVISO: Isso APAGARÁ TODOS OS DADOS de TODO DISPOSITIVO DE DISCO.</para>
+        <para>Se você acidentalmente sobrescrever sua tabela de partições, consulte a <xref linkend="gparted-recover-partition-table"/>.</para>
+      </caution>
+    </sect2>
+
+<!-- ============= To Attempt Data Rescue =================== -->
+    <sect2 id="gparted-attempt-data-rescue">
+      <title>Attempting Data Rescue</title>
+      <para>
+      To attempt data rescue from a disk device:
+        <orderedlist>
+          <listitem>
+            <para>Selecione um dispositivo de disco. Consulte a <xref linkend="gparted-select-device"/>.</para>
+          </listitem>
+          <listitem>
+            <para>
+            Choose:
+            <menuchoice><guimenu>Device</guimenu><guimenuitem>Attempt Data Rescue</guimenuitem></menuchoice>.
+            The application displays a
+            <guilabel>Search for file systems on <replaceable>/path-to-device</replaceable></guilabel>
+            dialog.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            Click <guibutton>OK</guibutton> to start the full disk scan.
+            </para>
+            <tip>
+              <para>
+              Large disk devices can take a very long time to scan.
+              If you do not have the time to wait for a full disk scan
+              then click <guibutton>Cancel</guibutton>.
+              </para>
+            </tip>
+            <note>
+              <para>
+              A maximum of 4 partitions with file systems might be
+              discovered.  If you want to discover more than 4
+              partitions and restore the partition table, see
+              <xref linkend="gparted-recover-partition-table"/>.
+              </para>
+            </note>
+          </listitem>
+          <listitem>
+            <para>
+            When the full disk scan completes one of two possible
+            dialogs is displayed:
+              <itemizedlist>
+                <listitem>
+                  <para>
+                  <guilabel>No file systems found
+                  on <replaceable>/path-to-device</replaceable>
+                  </guilabel>
+                  </para>
+                  <para>
+                  If no file systems are found, you have other options
+                  to try to rescue your data.
+                  The <application>photorec</application> application
+                  is designed to help recover many different types of
+                  lost files.  For more information
+                  about <application>photorec</application>, see
+                  <ulink type="http" url="http://www.cgsecurity.org/wiki/PhotoRec"/>.
+                  </para>
+                  <para>
+                  Click <guibutton>OK</guibutton> to close the dialog
+                  box, and end this attempt to rescue data.
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                  <guilabel>File systems found
+                  on <replaceable>/path-to-device</replaceable>
+                  </guilabel>
+                  </para>
+                  <para>
+                  If file systems are found, each file system is
+                  displayed in a list along with
+                  a <guibutton>View</guibutton> button.  The dialog
+                  will indicate if there are data inconsistencies.
+                  Inconsistencies in the data might prevent you from
+                  viewing the data.
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            To rescue data, use the following steps for each file system:
+              <orderedlist numeration="upperalpha">
+                <listitem>
+                  <para>
+                  Click <guibutton>View</guibutton> to mount and display
+                  the file system.  Your default file manager is opened
+                  and displays a read-only view of the file system.
+                  </para>
+                  <note>
+                    <para>
+                    If the dialog <guilabel>Unable to open the default
+                    file manager</guilabel> is displayed, then you
+                    will need to open a file manager and navigate to
+                    the mount point for the file system.
+                    </para>
+                    <para>
+                    The mount point is shown in the dialog, for
+                    example "/tmp/gparted-roview-XXXXXX".
+                    </para>
+                    <para>
+                    Click <guibutton>OK</guibutton> to close the
+                    <guilabel>Unable to open the
+                    default file manager</guilabel> dialog.
+                    </para>
+                  </note>
+                </listitem>
+                <listitem>
+                  <para>
+                  Use the file manager to copy your data to other
+                  storage media.
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+                  When you are finished copying your data, close the
+                  file manager.
+                  </para>
+                </listitem>
+              </orderedlist>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+            When you are finished rescuing data,
+            click <guibutton>Close</guibutton> to end this attempt to
+            rescue data.  The application umounts any file systems
+            that were mounted for viewing.  Then the application
+            rescans all the disk devices and refreshes the device
+            partition layout in the <application>gparted</application>
+            window.
+            </para>
+          </listitem>
+        </orderedlist>
+      </para>
+    </sect2>
+
+  </sect1>
+
+<!-- ============= Working with Partitions =========================== -->
+  <sect1 id="gparted-partitions">
+    <title>Trabalhando com partições</title>
+
+<!-- ============= Basic Partition Actions =========================== -->
+    <sect2 id="gparted-basic-partition-actions">
+      <title>Ações básicas com partições</title>
+      <para>Estas ações não alterarão as partições do seu dispositivo de disco.</para>
+
+<!-- ============= To Select a Partition ============================= -->
+      <sect3 id="gparted-select-partition">
+        <title>Selecionando uma partição</title>
+        <para>Para selecionar uma partição, use um dos seguintes métodos: <itemizedlist>
+            <listitem>
+              <para>Clique em uma partição na área de exibição gráfica.</para>
+            </listitem>
+            <listitem>
+              <para>Clique em uma partição na área de exibição de texto.</para>
+            </listitem>
+          </itemizedlist></para>
+        <para>O aplicativo destacará a partição tanto na área de exibição gráfica quanto na área de exibição de texto na janela do <application>gparted</application>.</para>
+        <note>
+          <para>Operações de partição como excluir, redimensionar, mover, copiar, formatar, verificar e rotular necessitam de que a partição seja desmontada. Consulte a <xref linkend="gparted-unmount-partition"/>.</para>
+        </note>
+      </sect3>
+
+<!-- ============= To Select Unallocated Space ======================= -->
+      <sect3 id="gparted-select-unallocated">
+        <title>Selecionando espaço não alocado</title>
+        <para>Para selecionar um espaço não alocado use um dos seguintes métodos: <itemizedlist>
+            <listitem>
+              <para>Clique em <guilabel>não alocada</guilabel> da área de exibição gráfica.</para>
+            </listitem>
+            <listitem>
+              <para>Clique em <guilabel>não alocada</guilabel> da área de exibição de texto.</para>
+            </listitem>
+          </itemizedlist></para>
+        <para>O aplicativo destacará o espaço não alocado tanto na área de exibição gráfica quanto na área de exibição de texto na janela do <application>gparted</application>.</para>
+        <tip>
+          <para>Se você não tiver qualquer dispositivo de disco com espaço não alocado, você pode tentar o seguinte:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Adicionar um novo dispositivo de disco ao seu computador.</para>
+            </listitem>
+            <listitem>
+              <para>Reduzir uma partição que contenha espaço não usado. Consulte a <xref linkend="gparted-resize-partition"/>.</para>
+            </listitem>
+          </itemizedlist>
+        </tip>
+      </sect3>
+
+<!-- ============= To View Partition Information ===================== -->
+    <sect3 id="gparted-view-partition-information">
+        <title>Vendo informações da partição</title>
+        <para>Para ver informações sobre uma partição: <orderedlist>
+            <listitem>
+              <para>Selecione uma partição. Consulte a <xref linkend="gparted-select-partition"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Informação</guimenuitem></menuchoice>. O aplicativo abrirá o diálogo <guilabel>Informações sobre <replaceable>/caminho-da-partição</replaceable></guilabel>.</para>
+            </listitem>
+          </orderedlist></para>
+        <para>Para fechar o diálogo <guilabel>Informações sobre <replaceable>/caminho-da-partição</replaceable></guilabel>, clique <guibutton>Fechar</guibutton>.</para>
+      </sect3>
+
+<!-- ============= To Mount a Partition ============================== -->
+      <sect3 id="gparted-mount-partition">
+        <title>Montando uma partição</title>
+        <para>Para montar uma partição: <orderedlist>
+            <listitem>
+              <para>Selecione uma partição desmontada. Consulte a <xref linkend="gparted-select-partition"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Montar</guimenuitem></menuchoice> e selecione um ponto de montagem da lista. O aplicativo montará a partição no ponto de montagem e atualizará o layout de partições do dispositivo na janela do <application>gparted</application>.</para>
+            </listitem>
+          </orderedlist></para>
+        <note>
+          <para>Se <menuchoice><guimenu>Partição</guimenu><guimenuitem>Montar</guimenuitem></menuchoice> não estiver visível, então o <application>gparted</application> não sabe onde a partição deveria ser montada.</para>
+        </note>
+      </sect3>
+
+<!-- ============= To Unmount a Partition ============================ -->
+      <sect3 id="gparted-unmount-partition">
+        <title>Desmontando uma partição</title>
+        <para>Para desmontar uma partição: <orderedlist>
+            <listitem>
+              <para>Selecione uma partição montada. Consulte a <xref linkend="gparted-select-partition"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Desmontar</guimenuitem></menuchoice>. O aplicativo desmontará a partição do ponto de montagem e atualizará o layout de partições de dispositivo na janela do <application>gparted</application>.</para>
+            </listitem>
+          </orderedlist></para>
+        <tip>
+          <para>Se <menuchoice><guimenu>Partição</guimenu><guimenuitem>Desmontar</guimenuitem></menuchoice> não for bem sucedido, então provavelmente a partição está em uso.</para>
+          <para>Para ter todas partições desmontadas e disponíveis para ações de edição de partição, inicie o computador com um Live CD e use o <application>gparted</application>. Consulte a <xref linkend="gparted-acquire-livecd"/></para>
+        </tip>
+      </sect3>
+
+    </sect2>
+<!-- ============= End of Basic Partition Actions ==================== -->
+
+<!-- ============= Intermediate Partition Actions ==================== -->
+    <sect2 id="gparted-intermediate-partition-actions">
+      <title>Ações intermediárias com partições</title>
+      <para>Estas ações alterarão as partições do seu dispositivo de disco. Estas ações não modificarão os limites iniciais e finais de suas partições existentes.</para>
+
+<!-- ============= Creating a New Partition ========================== -->
+      <sect3 id="gparted-create-new-partition">
+        <title>Criando uma nova partição</title>
+        <para>Para criar uma nova partição: <orderedlist>
+            <listitem>
+              <para>Selecione um espaço não alocado no dispositivo de disco. Consulte a <xref linkend="gparted-select-unallocated"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Novo</guimenuitem></menuchoice>. O aplicativo exibirá o diálogo <guilabel>Criar nova partição</guilabel>.</para>
+            </listitem>
+            <listitem>
+              <para>Especifique o tamanho e a localização para a partição. Consulte a <xref linkend="gparted-specify-partition-size-and-location"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Especifique o alinhamento para a partição. Consulte a <xref linkend="gparted-specify-partition-alignment"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Especifique o tipo de partição. Consulte a <xref linkend="gparted-specify-partition-type"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Especifique o tipo de sistema de arquivos para a partição. Consulte a <xref linkend="gparted-specify-partition-file-system"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Especifique o rótulo para a partição. Consulte a <xref linkend="gparted-specify-partition-label"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Clique <guibutton>Adicionar</guibutton> para adicionar a operação de criação de partição para a fila de operações. O aplicativo exibirá a operação de criação de partição no painel <guilabel>Operações pendentes</guilabel> na janela do <application>gparted</application>.</para>
+            </listitem>
+          </orderedlist></para> 
+      </sect3>
+
+<!-- ============= To Delete a Partition ============================= -->
+      <sect3 id="gparted-delete-partition">
+        <title>Excluindo uma partição</title>
+        <para>Para excluir uma partição: <orderedlist>
+            <listitem>
+              <para>Selecione uma partição desmontada. Consulte a <xref linkend="gparted-select-partition"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Excluir</guimenuitem></menuchoice>. O aplicativo exibirá a operação de exclusão no painel <guilabel>Operações pendentes</guilabel>.</para>
+            </listitem>
+          </orderedlist></para>
+        <caution>
+          <para>Se você excluir uma partição lógica, todas as partições lógicas existentes depois da partição lógica excluída sofrerão mudanças nos nomes de dispositivo.</para>
+          <para>Por exemplo, uma partição estendida contém quatro partições lógicas A, B, C e D. Estas partições lógicas serão acessadas pelo sistema operacional como a seguir:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Partição A como /dev/sda5.</para>
+            </listitem>
+            <listitem>
+              <para>Partição B como /dev/sda6.</para>
+            </listitem>
+            <listitem>
+              <para>Partição C como /dev/sda7.</para>
+            </listitem>
+            <listitem>
+              <para>Partição D como /dev/sda8.</para>
+            </listitem>
+          </itemizedlist>
+          <para>Se a partição B for excluída, as partições lógicas restantes serão acessadas pelo sistema operacional como a seguir:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Partição A como /dev/sda5.</para>
+            </listitem>
+            <listitem>
+              <para>Partição C como /dev/sda6. Note a alteração no nome do dispositivo.</para>
+            </listitem>
+            <listitem>
+              <para>Partição D como /dev/sda7. Note a alteração no nome do dispositivo.</para>
+            </listitem>
+          </itemizedlist>
+          <para>Alterações no nome do dispositivo podem causar problemas se uma partição for montada usando o nome de dispositivo. Você pode evitar o problema usando o rótulo ou o UUID (Universally Unique Identifier, Identificador Universalmente Único) da partição ao montá-la.</para>
+          <para>Alterações no nome de um dispositivo podem afetar negativamente os seguintes arquivos: <itemizedlist>
+              <listitem>
+                <para>/etc/fstab - Contém uma lista de sistemas de arquivos a montar.</para>
+              </listitem>
+              <listitem>
+                <para>/boot/grub/menu.lst - Contém instruções de inicialização do sistema operacional para o carregador de inicialização <application>grub</application>.</para>
+              </listitem>
+            </itemizedlist></para>
+        </caution>
+      </sect3>
+
+<!-- ============= To Format a Partition ============================= -->
+      <sect3 id="gparted-format-partition">
+        <title>Formatando uma partição</title>
+        <para>Para formatar uma partição: <orderedlist>
+            <listitem>
+              <para>Selecione uma partição desmontada. Consulte a <xref linkend="gparted-select-partition"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Formatar para</guimenuitem></menuchoice> e selecione um tipo de sistema de arquivos da lista. O aplicativo exibirá a operação de formatação de partição no painel <guilabel>Operações pendentes</guilabel>.</para>
+            </listitem>
+          </orderedlist></para>
+      </sect3>
+
+<!-- ============= To Set a Partition Label ========================== -->
+      <sect3 id="gparted-setting-partition-label">
+        <title>Definindo um rótulo de partição</title>
+        <para>Para definir um rótulo ou nome de volume para a partição: <orderedlist>
+            <listitem>
+              <para>Selecione uma partição desmontada. Consulte a <xref linkend="gparted-select-partition"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Rótulo</guimenuitem></menuchoice>. O aplicativo abrirá o diálogo <guilabel>Definir rótulo de partição em <replaceable>/caminho-da-partição</replaceable></guilabel>.</para>
+            </listitem>
+            <listitem>
+              <para>Digite um rótulo na caixa de texto <guilabel>Rótulo</guilabel>.</para>
+            </listitem>
+            <listitem>
+              <para>Clique <guibutton>OK</guibutton>. O aplicativo exibirá uma operação de definição de rótulo no painel <guilabel>Operações pendentes</guilabel>.</para>
+            </listitem>
+          </orderedlist></para>
+      </sect3>
+
+<!-- ============= Specifying Partition Details ====================== -->
+      <sect3 id="gparted-specify-partition-details">
+        <title>Especificando detalhes de partição</title>
+        <para>Especificar detalhes da partição é útil ao realizar ações como criar, redimensionar e mover.</para>
+
+<!-- ============= To Specify a Partition Size and Location ========== -->
+        <sect4 id="gparted-specify-partition-size-and-location">
+          <title>Especificando tamanho e localização da partição</title>
+          <para>Para especificar o tamanho e a localização da partição, use um ou uma combinação dos seguintes passos: <itemizedlist>
+              <listitem>
+                <para>Clique e segure a seta em um dos limites da área de gráfico. Arraste a seta à esquerda ou à direita dentro da faixa da exibição.</para>
+              </listitem>
+              <listitem>
+                <para>Clique e segure o meio da partição na área de gráfico. Arraste a partição à esquerda ou à direita dentro da faixa de exibição.</para>
+              </listitem>
+              <listitem>
+                <para>Clique nas setas dos botões giratórios ou digite valores numéricos para ajustar os seguintes campos: <itemizedlist>
+                    <listitem>
+                      <para>
+                      <guilabel>Espaço livre antes</guilabel>
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                      <guilabel>Novo tamanho</guilabel>
+                      </para>
+                    </listitem>
+                    <listitem>
+                      <para>
+                      <guilabel>Espaço livre após</guilabel>
+                      </para>
+                    </listitem>
+                  </itemizedlist></para>
+              </listitem>
+            </itemizedlist></para>
+          <para>O aplicativo atualizará tanto a área de gráfico quanto os números junto aos três campos.</para>
+        </sect4>
+
+<!-- ============= To Specify a Partition Alignment ================== -->
+        <sect4 id="gparted-specify-partition-alignment">
+          <title>Especificando o alinhamento de partição</title>
+          <para>
+          To specify the alignment of the partition, click the 
+          <guilabel>Align to</guilabel> arrow button, and select from the list.
+          </para>
+          <itemizedlist>
+            <listitem>
+              <para>
+              Use <guilabel>MiB</guilabel> alignment for modern
+              operating systems.  This setting aligns partitions to
+              start and end on precise mebibyte (1,048,576 byte)
+              boundaries.  MiB alignment provides enhanced performance
+              when used with RAID systems and with Solid State Drives,
+              such as USB flash drives.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+              Use <guilabel>Cylinder</guilabel> alignment to maintain
+              compatibility with operating systems released before the
+              year 2000, such as DOS.  This setting aligns partitions
+              to start and end on disk cylinder boundaries.
+              </para>
+              <tip>
+                <para>
+                The Cylinder/Head/Sector values reported by modern
+                disk devices no longer have a direct physical
+                relationship to the data stored on the disk device.
+                Hence it is no longer valid to use this alignment
+                setting to achieve enhanced performance.
+                </para>
+              </tip>
+            </listitem>
+            <listitem>
+              <para>
+              Use <guilabel>None</guilabel> only if you have an
+              in-depth knowledge of disk structure, partition tables,
+              and boot records.  This setting places partition
+              boundaries relative to the end of any immediately
+              preceding partition on the disk device.  This setting
+              is not guaranteed to reserve or respect space required
+              for boot records.
+              </para>
+            </listitem>
+          </itemizedlist>
+        </sect4>
+
+<!-- ============= To Specify a Partition Type ======================= -->
+        <sect4 id="gparted-specify-partition-type">
+          <title>Especificando o tipo de partição</title>
+          <para>Para especificar o tipo de partição, clique em <guilabel>Criar como</guilabel> e selecione um item da lista.</para>
+          <note>
+            <para>A tabela de partição msdos limita as partições como a seguir: <itemizedlist>
+                <listitem>
+                  <para>Máximo de 4 partições primárias.</para>
+                </listitem>
+                <listitem>
+                  <para>Máximo de 3 partições primárias e 1 partição estendida.</para>
+                  <para>A partição estendida pode conter múltiplas partições lógicas. Algumas distribuições GNU/Linux possibilitam o suporte de acesso a 15 partições lógicas em um dispositivo de disco.</para>
+                </listitem>
+                <listitem>
+                  <para>O tamanho máximo de uma partição é de 2 Terabytes usando um tamanho de setor de 512 bytes. A partição precisa também começar nos primeiros 2 Terabytes do dispositivo de disco.</para>
+                </listitem>
+              </itemizedlist></para>
+          </note>
+          <tip>
+            <para>Partições primárias fornecem melhores chances de recuperação de dados porque os limites da partição são armazenados em locais conhecidos no dispositivo de disco.</para>
+          </tip>
+        </sect4>
+
+<!-- ============= To Specify a Partition File System ================ -->
+        <sect4 id="gparted-specify-partition-file-system">
+          <title>Especificando um sistema de arquivos da partição</title>
+          <para>Para especificar o tipo de sistema de arquivos para a partição, clique em <guilabel>Sistema de arquivos</guilabel> e selecione um item da lista.</para>
+          <note>
+            <para>Seguem-se exemplos de usos para alguns sistemas de arquivos: <itemizedlist>
+                <listitem>
+                  <para>Os sistemas de arquivos ext2 e ext3 podem ser usados para instalar o GNU/Linux e para dados.</para>
+                </listitem>
+                <listitem>
+                  <para>Linux-swap pode ser usado com o GNU/Linux para aumentar a memória virtual do seu computador.</para>
+                </listitem>
+                <listitem>
+                  <para>Os sistemas de arquivos fat16 e fat32 podem ser usados para compartilhar dados entre sistemas operacionais livres e comerciais.</para>
+                </listitem>
+                <listitem>
+                  <para>Não formatado pode ser usado se você desejar criar uma partição sem sistema de arquivos.</para>
+                </listitem>
+              </itemizedlist></para>
+          </note>
+        </sect4>
+
+<!-- ============= To Specify a Partition Label ====================== -->
+        <sect4 id="gparted-specify-partition-label">
+          <title>Especificando um rótulo de partição</title>
+          <para>Para especificar um rótulo de partição, também conhecido como rótulo de volume, digite um rótulo na caixa de texto <guilabel>Rótulo</guilabel>.</para>
+          <tip>
+            <para>Rótulos podem ser usados para ajudá-lo a lembrar o que está armazenado na partição.</para>
+            <para>Rótulos únicos podem ser usados para montar sistemas de arquivos com o sistema operacional GNU/Linux.</para>
+          </tip>
+        </sect4>
+
+      </sect3>
+<!-- ============= End of Specifying Partition Details =============== -->
+
+    </sect2>
+<!-- ============= End of Intermediate Partition Actions ============= -->
+
+<!-- ============= Advanced Partition Actions ======================== -->
+    <sect2 id="gparted-advanced-partition-actions">
+      <title>Ações avançadas com partições</title>
+      <para>Estas ações alterarão as partições do seu dispositivo de disco. Estas ações podem modificar os limites iniciais ou finais de suas partições existentes. Estas ações podem fazer os sistemas operacionais falharem em inicializar.</para>
+
+<!-- ============= To Resize a Partition ============================= -->
+      <sect3 id="gparted-resize-partition">
+        <title>Redimensionando uma partição</title>
+        <para>As operações de redimensionamento e movimentação uma partição podem ser realizadas por uma única operação no <application>gparted</application>.</para>
+        <para>Para redimensionar uma partição: <orderedlist>
+            <listitem>
+              <para>Selecione uma partição desmontada. Consulte a <xref linkend="gparted-select-partition"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Redimensionar/Mover</guimenuitem></menuchoice>. O aplicativo exibirá o diálogo <guilabel>Redimensionar/Mover <replaceable>/caminho-da-partição</replaceable></guilabel>.</para>
+            </listitem>
+            <listitem>
+              <para>Ajuste o tamanho da partição. Consulte a <xref linkend="gparted-specify-partition-size-and-location"/>.</para>
+              <tip>
+                <para>
+                If you do not want the start of an existing partition
+                to move, then do not change the <guilabel>free space
+                preceding</guilabel> value.
+                </para>
+              </tip>
+            </listitem>
+            <listitem>
+              <para>Especifique o alinhamento da partição. Consulte a <xref linkend="gparted-specify-partition-alignment"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Clique <guibutton>Redimensionar/Mover</guibutton>. O aplicativo exibirá a operação de redimensionamento/movimentação no painel <guilabel>Operações pendentes</guilabel>.</para>
+            </listitem>
+            <listitem>
+              <para>Examine a operação que foi adicionada ao painel <guilabel>Operações pendentes</guilabel>.</para>
+              <para>Se a operação envolver uma movimentação, leve em consideração as seguintes informações: <itemizedlist>
+                  <listitem>
+                    <para>Uma movimentação pode levar um longo tempo para ser completada.</para>
+                  </listitem>
+                  <listitem>
+                    <para>Se a partição for uma partição de inicialização do sistema operacional, então uma movimentação pode fazer o sistema operacional falhar em inicializar.</para>
+                  </listitem>
+                </itemizedlist></para>
+              <para>Se você não estiver preparado para esperar ou consertar problemas potenciais de inicialização do sistema operacional, então você deve desfazer a operação. Consulte a <xref linkend="gparted-undo-last-operation"/>.</para>
+            </listitem>
+          </orderedlist></para>
+        <tip>
+          <para>Para aumentar ou mover uma partição é necessário espaço não alocado disponível adjacente à partição.</para>
+          <para>Se você estiver aumentando uma partição lógica, então o espaço não alocado precisará estar dentro da partição estendida.</para>
+          <para>Se você estiver aumentando uma partição primária, então o espaço não alocado precisará estar fora da partição estendida.</para>
+          <para>Você pode mover espaço não alocado para dentro ou para fora da partição estendida redimensionando os limites da partição estendida.</para>
+        </tip>
+        <tip>
+          <para>Para melhorar a habilidade de reduzir partições NTFS, você pode considerar uma ou mais das seguintes recomendações: <itemizedlist>
+              <listitem>
+                <para>Desfragmentar o sistema de arquivos.</para>
+                <para>Inicializar no modo seguro com o sistema operacional comercial que usa NTFS pode melhorar a possibilidade de desfragmentação do sistema de arquivos. Para entrar no modo seguro, pressione <keycap>F8</keycap> enquanto seu computador está inicializando o sistema operacional.</para>
+              </listitem>
+              <listitem>
+                <para>Verifique se a partição contém erros com o seguinte comando: <screen><prompt>C:&gt; </prompt><command>chkdsk</command> /f /r</screen> Lembre-se de reiniciar para o sistema operacional comercial que usa NTFS, para permitir a execução do comando <command>chkdsk</command>.</para>
+              </listitem>
+              <listitem>
+                <para>Desabilite o arquivo de paginação temporariamente. O arquivo de paginação ocupa uma localização fixa na partição, e o processo de desfragmentação é incapaz de movimentá-lo.</para>
+              </listitem>
+              <listitem>
+                <para>Temporariamente mova os arquivos grandes para outra partição ou dispositivo de disco. Arquivos grandes são definidos como maiores do que algumas centenas de Megabytes (MB).</para>
+              </listitem>
+              <listitem>
+                <para>Garanta um correto desligamento do sistema operacional comercial que usa NTFS antes de redimensionar a partição NTFS</para>
+              </listitem>
+              <listitem>
+                <para>Deixe ao menos 10 por cento de espaço não usado na partição NTFS. Se você reduzir muito a partição, o sistema operacional comercial poderá ter dificuldade para funcionar corretamente.</para>
+              </listitem>
+              <listitem>
+                <para>Depois de reduzir a partição NTFS, reinicie duas vezes o sistema operacional comercial que a usa.</para>
+              </listitem>
+            </itemizedlist></para>
+        </tip>
+      </sect3>
+
+<!-- ============= To Move a Partition =============================== -->
+      <sect3 id="gparted-move-partition">
+        <title>Movendo uma partição</title>
+        <para>As operação de movimentação e redimensionamento da partição podem ser realizadas por uma única operação do <application>gparted</application>.</para>
+        <para>Para mover uma partição: <orderedlist>
+            <listitem>
+              <para>Selecione uma partição desmontada. Consulte a <xref linkend="gparted-select-partition"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Redimensionar/Mover</guimenuitem></menuchoice>. O aplicativo exibirá o diálogo <guilabel>Redimensionar/Mover <replaceable>/caminho-da-partição</replaceable></guilabel>.</para>
+            </listitem>
+            <listitem>
+              <para>Ajuste a localização da partição. Consulte a <xref linkend="gparted-specify-partition-size-and-location"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Especifique o alinhamento da partição. Consulte a <xref linkend="gparted-specify-partition-alignment"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Clique <guibutton>Redimensionar/Mover</guibutton>. O aplicativo exibirá a operação de redimensionamento/movimentação no painel <guilabel>Operações pendentes</guilabel>.</para>
+            </listitem>
+          </orderedlist></para>
+        <tip>
+          <para>Se a partição for um partição de inicialização do sistema operacional, este poderá não inicializar após a operação de movimentação ter sido aplicada.</para>
+          <para>Se o sistema operacional falhar em inicializar, consulte a <xref linkend="gparted-fix-operating-system-boot-problems"/>.</para>
+        </tip>
+      </sect3>
+
+<!-- ============= To Copy and Paste a Partition ===================== -->
+      <sect3 id="gparted-copy-and-paste-partition">
+        <title>Copiando e colando uma partição</title>
+        <para>Para copiar uma partição: <orderedlist>
+            <listitem>
+              <para>Selecione uma partição desmontada. Consulte a <xref linkend="gparted-select-partition"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Copiar</guimenuitem></menuchoice>. O aplicativo marcará a partição como partição de origem.</para>
+            </listitem>
+          </orderedlist></para>
+        <para>Para colar uma partição: <orderedlist>
+            <listitem>
+              <para>Selecione um espaço não alocado no dispositivo de disco. Consulte a <xref linkend="gparted-select-unallocated"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Colar</guimenuitem></menuchoice>. O aplicativo exibirá o diálogo <guilabel>Colar <replaceable>/caminho-da-partição</replaceable></guilabel>.</para>
+            </listitem>
+            <listitem>
+              <para>Se você quiser, pode ajustar o tamanho e localização da partição. Consulte a <xref linkend="gparted-specify-partition-size-and-location"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Se você quiser, pode especificar o alinhamento da partição. Consulte a <xref linkend="gparted-specify-partition-alignment"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Clique <guibutton>Colar</guibutton>. O aplicativo exibirá a operação de cópia no painel <guilabel>Operações pendentes</guilabel>.</para>
+            </listitem>
+          </orderedlist></para>
+        <caution>
+          <para>A cópia da partição tem o mesmo rótulo e o mesmo UUID (Universally Unique Identifier, Identificador Universalmente Único) como a partição de origem. Isto pode causar algum problema nas ações de montagem que usam o rótulo da partição ou o UUID para identificar a partição. O problema é que o rótulo e o UUID não são únicos.</para>
+          <para>Aconselhamos você a tomar um dos dos seguintes cuidados: <itemizedlist>
+              <listitem>
+                <para>Altere o UUID da partição. Se o rótulo da partição não estiver vazio, altere o rótulo da partição.</para>
+              </listitem>
+              <listitem>
+                <para>Use algum outro método para garantir que a partição de origem e a cópia da partição de origem não sejam usadas no mesmo computador ao mesmo tempo.</para>
+              </listitem>
+            </itemizedlist></para>
+        </caution>
+      </sect3>
+
+<!-- ============= To Manage Partition Flags ========================= -->
+      <sect3 id="gparted-manage-partition-flags">
+        <title>Gerenciando flags de partição</title>
+        <para>Para gerenciar flags de partição: <orderedlist>
+            <listitem>
+              <para>Selecione uma partição. Consulte a <xref linkend="gparted-select-partition"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Gerenciar flags</guimenuitem></menuchoice>. O aplicativo abrirá o diálogo <guilabel>Gerenciar flags em <replaceable>/caminho-da-partição</replaceable></guilabel>.</para>
+              <para>
+                <itemizedlist>
+                  <listitem>
+                    <para>Para habilitar um flag, marque a caixa de seleção ao lado do flag. O aplicativo gravará o flag habilitado na partição e atualizará o diálogo <guilabel>Gerenciar flags em <replaceable>/caminho-da-partição</replaceable></guilabel>.</para>
+                  </listitem>
+                  <listitem>
+                    <para>Para desabilitar um flag, desmarque a caixa de seleção ao lado do flag. O aplicativo gravará o flag desabilitado na partição e atualizará o diálogo <guilabel>Gerenciar flags em <replaceable>/caminho-da-partição</replaceable></guilabel>.</para>
+                  </listitem>
+                </itemizedlist>
+              </para>
+            </listitem>
+          </orderedlist></para>
+        <para>Para fechar o diálogo <guilabel>Gerenciar flags em <replaceable>/caminho-da-partição</replaceable></guilabel>, clique <guibutton>Fechar</guibutton>.</para>
+        <note>
+          <para>Segue-se uma descrição dos flags em uma tabela de partição msdos: <itemizedlist>
+              <listitem>
+                <para>Boot (inicializável) é usado por alguns carregadores de inicialização de sistemas operacionais comerciais. O flag boot indica que a partição está ativa ou é inicializável. Apenas uma partição do dispositivo de disco pode estar ativo.</para>
+              </listitem>
+              <listitem>
+                <para>Hidden (oculto) é usado por alguns sistemas operacionais comerciais. O flag hidden deixa a partição invisível ao sistema operacional.</para>
+              </listitem>
+              <listitem>
+                <para>LBA é usado por alguns carregadores de inicialização de sistemas operacionais comerciais. O flag LBA indica que a partição deveria ser acessada usando o LBA (Logical Block Addressing, Endereçamento de Bloco Lógico) em vez de endereçamento CHS (Cylinder-Head-Sector, Cilindro-Cabeça-Setor).</para>
+              </listitem>
+              <listitem>
+                <para>LVM é usado para indicar que a partição é usada por um LVM (Logical Volume Manager, Gerenciador de Volume).</para>
+              </listitem>
+              <listitem>
+                <para>Palo é usado pelo palo, o carregador de inicialização do PA-RISC (Precision Architecture - Reduced Instruction Set Computing, Arquitetura Precisa - Computador com um Conjunto Reduzido de Instruções).</para>
+              </listitem>
+              <listitem>
+                <para>Prep é usado para indicar a partição de inicialização no hardware do PowerPC (Power Performance Computing).</para>
+              </listitem>
+              <listitem>
+                <para>RAID é usado para indicar a partição usada em um RAID (Redundant Array of Inexpensive Disks, Conjunto Redundante de Discos Econômicos).</para>
+              </listitem>
+            </itemizedlist></para>
+        </note>
+      </sect3>
+
+<!-- ============= To Check a Partition ============================== -->
+      <sect3 id="gparted-Check-partition">
+        <title>Verificando uma partição</title>
+        <para>A verificação de uma partição tentará encontrar e corrigir problemas no sistema de arquivos. A verificação de uma partição tentará aumentar o sistema de arquivos de forma a preencher a partição.</para>
+        <para>Para verificar uma partição: <orderedlist>
+            <listitem>
+              <para>Selecione uma partição desmontada. Consulte a <xref linkend="gparted-select-partition"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Vá até <menuchoice><guimenu>Partição</guimenu><guimenuitem>Verificar</guimenuitem></menuchoice>. O aplicativo exibirá a operação de verificação da partição no painel <guilabel>Operações pendentes</guilabel>.</para>
+            </listitem>
+          </orderedlist></para>
+      </sect3>
+
+<!-- ============= End of Advanced Partition Actions ================= -->
+    </sect2>
+
+<!-- ============= Working with the Operation Queue ================== -->
+    <sect2 id="gparted-operation-queue">
+      <title>Trabalhando com a fila de operações</title>
+
+<!-- ============= To Undo Last Operation ============================ -->
+      <sect3 id="gparted-undo-last-operation">
+        <title>Desfazendo a última operação</title>
+        <para>Para desfazer a última operação da fila de operações, vá até: <menuchoice><guimenu>Editar</guimenu><guimenuitem>Desfazer a última operação</guimenuitem></menuchoice>. O aplicativo removerá a última operação da fila exibida no painel <guilabel>Operações pendentes</guilabel>. Se não houver operações restantes na fila, o aplicativo fechará o painel <guilabel>Operações pendentes</guilabel>.</para>
+      </sect3>
+
+<!-- ============= To Clear All Operations =========================== -->
+      <sect3 id="gparted-clear-all-operations">
+        <title>Limpando todas as operações</title>
+        <para>Para limpar todas as operações da fila de operações, vá até: <menuchoice><guimenu>Editar</guimenu><guimenuitem>Limpar todas as operações</guimenuitem></menuchoice>. O aplicativo removerá todas operações da fila e fechará o painel <guilabel>Operações pendentes</guilabel>.</para>
+      </sect3>
+
+<!-- ============= To Apply All Operations =========================== -->
+      <sect3 id="gparted-apply-all-operations">
+        <title>Aplicando todas as operações</title>
+        <para>Para aplicar todas operações: <orderedlist>
+            <listitem>
+              <para>Vá até: <menuchoice><guimenu>Editar</guimenu><guimenuitem>Aplicar todas as operações</guimenuitem></menuchoice>. O aplicativo exibirá o diálogo <guilabel>Aplicar as operações no dispositivo</guilabel>.</para>
+              <caution>
+                <para>Editar partições tem potencial para causar PERDA de DADOS. Aconselhamos você a fazer backup dos seus dados antes de aplicar suas operações de edição de partição.</para>
+              </caution>
+            </listitem>
+            <listitem>
+              <para>Clique em <guibutton>Aplicar</guibutton>. O aplicativo exibirá o diálogo <guilabel>Aplicando operações pendentes</guilabel>. O aplicativo aplicará cada operação pendente na ordem em que elas tiverem sido criadas. O aplicativo exibirá um atualização de status quando cada operação for completada. <itemizedlist>
+                  <listitem>
+                    <para>Para ver mais informações, clique em <guibutton>Detalhes</guibutton>. O aplicativo exibirá mais detalhes sobre as operações.</para>
+                    <para>Para ver mais informações sobre os passos em cada operação, clique na seta ao lado de cada passo.</para>
+                  </listitem>
+                  <listitem>
+                    <para>Para interromper as operações enquanto elas estão em execução, clique em <guibutton>Cancelar</guibutton>. O aplicativo exibirá o diálogo de aviso.</para>
+                    <para>Aconselhamos você a clicar em <guibutton>Continuar operação</guibutton> porque <guibutton>Cancelar operação</guibutton> pode causar GRAVES danos ao sistema de arquivos. Cancele a operação apenas se você concordar com as conseqüências.</para>
+                    <para>Quando o aplicativo terminar de aplicar todas as operações, exibirá o botão <guibutton>Salvar detalhes</guibutton> e o botão <guibutton>Fechar</guibutton>.</para>
+                  </listitem>
+                </itemizedlist></para>
+            </listitem>
+            <listitem>
+              <para>Se você quiser salvar os detalhes da aplicação de todas as operações, clique em <guibutton>Salvar detalhes</guibutton>. O aplicativo exibirá o diálogo <guilabel>Salvar detalhes</guilabel>. <orderedlist numeration="loweralpha">
+                  <listitem>
+                    <para>Se você quiser alterar o nome de arquivo padrão, digite um nome de arquivo na caixa de texto <guilabel>Nome</guilabel>.</para>
+                  </listitem>
+                  <listitem>
+                    <para>Se você quiser salvar o arquivo em uma pasta diferente de /root, clique em <guibutton>Navegar em outras pastas</guibutton>. O aplicativo exibirá um navegador do sistema de arquivos.</para>
+                    <para>Use o navegador do sistema de arquivos para selecionar uma pasta.</para>
+                  </listitem>
+                  <listitem>
+                    <para>Clique <guibutton>Salvar</guibutton> para salvar o arquivo. O aplicativo salvará o arquivo de detalhes.</para>
+                  </listitem>
+                </orderedlist></para>
+              <caution>
+                <para>Se você usar o <application>gparted</application> de um Live CD, então a raiz do sistema de arquivos estará na memória RAM. Todos os arquivos salvos na raiz do sistema de arquivos do Live CD serão perdidos quando você desligar o computador.</para>
+                <para>Se você tiver salvado os detalhes do gparted na raiz do sistema de arquivos do Live CD, então você precisará copiar o arquivo para armazenamento mais permanente. Exemplos de armazenamentos mais permanentes são os drives de disco rígido ou um drive de memória flash USB.</para>
+              </caution>
+            </listitem>
+            <listitem>
+              <para>Clique <guibutton>Fechar</guibutton>. O aplicativo fechará o diálogo <guilabel>Aplicando operações pendentes</guilabel>. O aplicativo varrerá novamente todos dispositivos de disco e atualizará o layout de partição do dispositivo na janela do <application>gparted</application>.</para>
+            </listitem>
+          </orderedlist></para>
+      </sect3>
+
+<!-- ============= End of Working with the Operation Queue =========== -->
+    </sect2>
+
+  </sect1>
+
+<!-- ============= Acquiring GParted on Live CD ====================== -->
+  <sect1 id="gparted-acquire-livecd">
+    <title>Adquirindo o GParted em Live CD</title>
+    <para>Um Live CD é um CD (Disco Compacto) contendo um sistema operacional inicializável. Um Live CD permite que você inicialize seu computador a partir de um CD.</para>
+    <para>Usar o <application>gparted</application> a partir de um Live CD tem as seguintes vantagens: <itemizedlist>
+        <listitem>
+          <para>Você poderá editar todas as suas partições porque as partições não estão montadas.</para>
+        </listitem>
+        <listitem>
+          <para>Você poderá editar as partições em computadores que não tenham um sistema operacional inicializável.</para>
+        </listitem>
+      </itemizedlist></para>
+    <para>O aplicativo <application>gparted</application> está disponível em muitas distribuições em Live CD.</para>
+    <para>Você pode baixar uma imagem Live CD contendo o <application>gparted</application> a partir dos seguintes websites: <itemizedlist>
+        <listitem>
+          <para>
+          GParted Live CD
+          <ulink type="http" url="http://gparted.org/livecd.php"/>
+          </para>
+        </listitem>
+        <listitem>
+          <para>System Rescue CD <ulink type="http" url="http://www.sysresccd.org"/></para>
+        </listitem>
+      </itemizedlist></para>
+    <tip>
+      <para>Para evitar o desperdício de um CD vazio ao gravar um arquivo de imagem de CD, use as seguintes dicas:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Confira se que o checksum do arquivo baixado é igual ao checksum divulgado na página de download.</para>
+        </listitem>
+        <listitem>
+          <para>Certifique-se de gravar o arquivo .iso como uma imagem para um CD vazio. Se você gravar o arquivo .iso como dado para um CD vazio então o CD não inicializará no seu computador.</para>
+        </listitem>
+      </itemizedlist>
+    </tip>
+  </sect1>
+
+<!-- ============= Fixing Operating System Boot Problems ============= -->
+  <sect1 id="gparted-fix-operating-system-boot-problems">
+    <title>Consertando problemas de inicialização do sistema operacional</title>
+    <para>Seu computador pode falhar em inicializar o sistema operacional se você realizar uma das seguintes ações: <itemizedlist>
+        <listitem>
+          <para>Excluir uma partição.</para>
+        </listitem>
+        <listitem>
+          <para>Mover uma partição.</para>
+        </listitem>
+        <listitem>
+          <para>Instalar outro sistema operacional e sobrescrever o MBR (Master Boot Record).</para>
+        </listitem>
+      </itemizedlist></para>
+    <para>
+    You are advised to consult documentation for your boot loader
+    to learn how to fix the problem.
+    You might consult the
+    <ulink type="http" url="http://gparted.org/faq.php">GParted FAQ</ulink>,
+    or the
+    <ulink type="http" url="http://gparted.org/forum.php">GParted forum</ulink>.
+    You might also use Internet search engines to learn how other people
+    have solved similar problems.
+    </para>
+
+<!-- ============= Fixing GRUB Boot Problem ========================== -->
+    <sect2 id="gparted-fix-grub-boot-problem">
+      <title>Consertando problema de inicialização do GRUB</title>
+      <para>O GRUB (Grand Unified Boot loader) pode falhar em inicializar um sistema operacional se você fizer uma das seguintes ações: <itemizedlist>
+          <listitem>
+            <para>Mover a partição contendo o arquivo stage2 do GRUB.</para>
+          </listitem>
+          <listitem>
+            <para>Instalar um novo sistema operacional que sobrescreva o MBR (Master Boot Record).</para>
+          </listitem>
+        </itemizedlist></para>
+      <para>Para corrigir estes problemas você precisará reinstalar o registro de inicialização do GRUB usando os seguintes passos: <orderedlist>
+          <listitem>
+            <para>Inicie o aplicativo <application>grub</application> da linha de comando. <screen><prompt>$ </prompt><command>grub</command></screen></para>
+          </listitem>
+          <listitem>
+            <para>Localize onde stage1 do <application>grub</application> está localizado usando um dos seguintes:</para>
+            <para>Se a pasta /boot estiver armazenada na partição /, use o comando: <screen><prompt>grub&gt; </prompt><command>find</command> /boot/grub/stage1</screen>. Se a pasta /boot estiver armazenada em uma partição diferente do que a partição /, use o comando: <screen><prompt>grub&gt; </prompt><command>find</command> /grub/stage1</screen></para>
+            <para>A saída do comando <command>find</command> pode ser como a seguinte: <screen><computeroutput> <replaceable>(hd0,0)</replaceable></computeroutput></screen>. Se mais do que uma linha estiver listada na saída do comando, você precisará decidir qual dispositivo você usará para o <application>grub</application>.</para>
+          </listitem>
+          <listitem>
+            <para>Defina o dispositivo raiz do <application>grub</application> especificando o dispositivo retornado pelo comando <command>find</command>. <screen><prompt>grub&gt; </prompt>root <replaceable>(hd0,0)</replaceable></screen></para>
+          </listitem>
+          <listitem>
+            <para>Reinstale o <application>grub</application> especificando o dispositivo retornado pelo comando <command>find</command>. <screen><prompt>grub&gt; </prompt>setup <replaceable>(hd0,0)</replaceable></screen></para>
+          </listitem>
+          <listitem>
+            <para>Saia do <application>grub</application>. <screen><prompt>grub&gt; </prompt>quit</screen></para>
+          </listitem>
+          <listitem>
+            <para>Reinicie seu computador.</para>
+          </listitem>
+        </orderedlist></para>
+      <para>O aplicativo <application>grub</application> está incluso em cada Live CD listado na <xref linkend="gparted-acquire-livecd"/></para>
+    </sect2>
+
+<!-- ============= End of Fixing Operating System Boot Problems ====== -->
+  </sect1>
+
+<!-- ============= Recovering Partition Tables ======================= -->
+  <sect1 id="gparted-recover-partition-table">
+    <title>Recuperando tabelas de partição</title>
+    <para>Se você acidentalmente sobrescrever sua tabela de partição, há uma chance de que você possa recuperá-la.</para>
+    <para>O aplicativo <application>testdisk</application> é projetado para ajudar a recuperar partições perdidas. Para mais informações sobre o <application>testdisk</application>, consulte <ulink type="http" url="http://www.cgsecurity.org/wiki/TestDisk"/>.</para>
+    <para>O aplicativo <application>testdisk</application> está incluso em cada Live CD listado na <xref linkend="gparted-acquire-livecd"/></para>
+  </sect1>
+
+</article>

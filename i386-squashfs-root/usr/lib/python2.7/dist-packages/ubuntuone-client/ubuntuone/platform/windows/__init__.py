@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/ubuntuone-client/ubuntuone/platform/windows/__init__.py

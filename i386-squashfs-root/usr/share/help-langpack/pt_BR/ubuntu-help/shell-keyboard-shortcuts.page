@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="tip" id="shell-keyboard-shortcuts" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="tips"/>
+    <link type="guide" xref="shell-overview"/>
+    <link type="seealso" xref="windows-key"/>
+    
+    <desc>Conhecendo a área de trabalho usando o teclado.</desc>
+    
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Projeto de documentação do Ubuntu</name>
+      <email>ubuntu-doc@lists.ubuntu.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Atalhos do teclado</title>
+
+<table rules="rows" frame="top bottom">
+<title>Usando o painel e o lançador</title>
+  <tr>
+    <td><p>Pressione <link xref="windows-key"><key>meta</key></link></p></td>
+    <td><p>Abre a <gui>Barra</gui>. Toque de novo para fechar.</p></td>
+  </tr>
+  <tr>
+    <td><p/></td>
+    <td><p>O painel se abre com foco na caixa de busca, utilizada para encontrar aplicativos e arquivos. Utilize as setas do teclado para navegar pelos resultados. Pressione <key>Enter</key> para lançar.</p></td>
+  </tr>
+  <tr>
+    <td><p>Segurar <link xref="windows-key"><key>meta</key></link></p></td>
+    <td><p>Exibir o <gui>lançador</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>1</key></keyseq></p></td>
+    <td><p>Inicia o primeiro item do lançador ou troca para ele se já estiver rodando. Se o <key>Shift</key> também for pressionado, será aberta uma nova janela.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>2</key></keyseq></p></td>
+    <td><p>Inicia o segundo item do lançador ou troca para ele se já estiver rodando. Esse padrão continua até <keyseq><key>Meta</key><key>0</key></keyseq>, que abre o décimo item.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F1</key></keyseq></p></td>
+    <td><p>Abra o lançador. Use as teclas de setas para navegar e <key>Enter</key> para iniciar ou alterne para uma aplicação.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F2</key></keyseq></p></td>
+    <td><p>Abre o painel em um modo especial para rodar comandos que você digita. Pressione <key>Enter</key> para executar o comando atual. Você também pode usar as setas do teclado para escolher um comando diferente e pressionar <key>Enter</key> para executá-lo.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>A</key></keyseq></p></td>
+    <td><p>Abrindo as <gui>lentes dos aplicativos</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>F</key></keyseq></p></td>
+    <td><p>Abre a <gui>lente de arquivos e pastas</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>T</key></keyseq></p></td>
+    <td><p>Abrir a <gui>Lixeira</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>T</key></keyseq></p></td>
+    <td><p>Abra o <app>Terminal</app>.</p></td>
+  </tr>
+  <tr>
+    <td><p><key>Alt</key></p></td>
+    <td><p>Exibir o <gui>menu aplicativo</gui>. <keyseq><key>Alt</key><key>F</key></keyseq> abre o menu <gui>arquivo</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><key>F10</key></p></td>
+    <td><p>Abrir o menu. Usar as teclas de setas para navegar. Você também pode acessar os <link xref="unity-appmenu-intro">menus indicadores</link>.</p></td>
+  </tr>
+</table>
+
+<table rules="rows" frame="top bottom">
+<title>Conhecendo o ambiente de trabalho</title>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F4</key></keyseq></p></td>
+    <td><p>Fechar a janela atual.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F10</key></keyseq></p></td>
+    <td><p>Maximizar a janela atual. Se a janela já estiver maximizada, desfazer a maximização dela.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>Tab</key></keyseq></p></td>
+    <td><p><link xref="shell-windows-switching">Alterna rapidamente entre janelas.</link> Segure <key>Shift</key> para ir na ordem contrária.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>D</key></keyseq></p></td>
+    <td><p>Esconde todas as janelas e mostra a área de trabalho. Pressione novamente para restaurar suas janelas.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>S</key></keyseq></p></td>
+    <td><p>Ativa o comutador de janelas. Reduz o tamanho de todos os <link xref="shell-workspaces">espaços de trabalho</link>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>W</key></keyseq></p></td>
+    <td><p>Ativa o modo "Expo". Mostra todas as janelas de todos os espaços de trabalho.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Shift</key><key>Alt</key><key>↑</key></keyseq></p></td>
+    <td><p>Ativa o modo "Expo". Mostra todas as janelas deste espaço de trabalho.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Teclas de seta</key></keyseq></p></td>
+    <td><p><link xref="shell-workspaces-switch">Alternar entre os espaços de trabalho.</link></p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>Teclas de seta</key></keyseq></p></td>
+    <td><p><link xref="shell-workspaces-movewindow">Mover a janela atual para outro espaço de trabalho</link></p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>L</key></keyseq></p></td>
+    <td><p><link xref="shell-exit#lock-screen">Bloquear tela.</link></p></td>
+  </tr>
+</table>
+
+<table rules="rows" frame="top bottom">
+<title>Atalhos de edição comuns</title>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>A</key></keyseq></p></td>
+    <td><p>Selecionar todo o texto ou itens em uma lista.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>X</key></keyseq></p></td>
+    <td><p>Cortar (remover) texto ou itens selecionados e colocá-los na área de transferência.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq></p></td>
+    <td><p>Copiar texto selecionado ou itens para a área de transferência.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>V</key></keyseq></p></td>
+    <td><p>Cola o conteúdo da área de transferência.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Z</key></keyseq></p></td>
+    <td><p>Desfaz a última ação.</p></td>
+  </tr>
+</table>
+
+<table rules="rows" frame="top bottom">
+<title>Capturando da tela</title>
+  <tr>
+    <td><p><key>Print Screen</key></p></td>
+    <td><p>Tirar uma captura de tela.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>Print Screen</key></keyseq></p></td>
+    <td><p>Capturar a tela da janela ativa.</p></td>
+  </tr>
+</table>
+
+  <comment>
+    <cite date="2011-04-24">jbicha</cite>
+    <p>Compiz has even more <link href="http://wiki.compiz.org/CommonKeyboardShortcuts">
+keyboard shortcuts</link>.</p>
+  </comment>
+
+</page>

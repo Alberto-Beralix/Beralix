@@ -1,0 +1,50 @@
+#!/bin/sh
+
+set -e
+
+TRUSTEDFILE="/etc/apt/trusted.gpg"
+ARCHIVE_KEYRING="/usr/share/keyrings/ubuntu-extras-keyring.gpg"
+REMOVED_KEYS="/usr/share/keyrings/ubuntu-extras-keyring-removed-keys.gpg"
+
+GPG_CMD="gpg --ignore-time-conflict --no-options --no-default-keyring --secret-keyring /etc/apt/secring.gpg --trustdb-name /etc/apt/trustdb.gpg"
+GPG="$GPG_CMD  --keyring $TRUSTEDFILE --primary-keyring $TRUSTEDFILE"
+
+process_remove_keyring() {
+    REMOVED_KEYS="$1"
+
+    if [ -r "$REMOVED_KEYS" ]; then
+	# remove no-longer supported/used keys
+	keys=`$GPG_CMD --keyring $REMOVED_KEYS --with-colons --list-keys | grep ^pub | cut -d: -f5`
+	for key in $keys; do
+	    if $GPG --list-keys --with-colons | grep ^pub | cut -d: -f5 | grep -q $key; then
+		$GPG  --batch --delete-key --yes ${key}
+	    fi
+	done
+    fi
+}
+
+case "$1" in
+    configure)
+	if [ -x /usr/bin/apt-key ]; then
+            echo "Importing extras.ubuntu.com keyring"
+	    apt-key add "$ARCHIVE_KEYRING"
+        fi
+        if [ -x /usr/bin/gpg ]; then
+            echo "Processing extras.ubuntu.com removal keyring"
+            process_remove_keyring  "$REMOVED_KEYS"
+            echo "OK"
+	fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+
+
+exit 0

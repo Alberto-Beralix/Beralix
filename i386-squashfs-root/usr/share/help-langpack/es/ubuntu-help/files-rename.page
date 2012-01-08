@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-rename" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <desc>Cambiar el nombre de un archivo o de una carpeta</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Renombrar un archivo o una carpeta</title>
+
+  <steps>
+    <item><p><link xref="files-browse">Abra el gestor de archivos</link>.</p></item>
+    <item><p>Pulse con el botón derecho sobre un archivo o carpeta y seleccione <gui>Renombrar</gui>, o seleccione el archivo y pulse <key>F2</key>.</p></item>
+    <item><p>Escriba el nombre nuevo y pulse <key>Intro</key>.</p></item>
+  </steps>
+
+  <p>También puede renombrar un archivo desde la ventana de <link xref="nautilus-file-properties-basic">propiedades</link>.</p>
+
+  <p>Cuando cambia el nombre de un archivo, solo se selecciona la primera parte del nombre de ese archivo, sin la extensión (la parte que va detrás de «.»). La extensión normalmente representa el tipo de archivo (p.ej <file>archivo.pdf</file> es un documento PDF), y normalmente no querrá cambiarla. Si necesita cambiar la extensión también, selecciónela con su ratón, o pulse <keyseq><key>Ctrl</key><key>A</key></keyseq> para seleccionar el nombre completo del archivo.</p>
+
+  <section id="valid-chars">
+    <title>Caracteres válidos para nombres de archivo</title>
+    <p>Puede usar cualquier carácter en los nombres de archivos, excepto la barra inclinada <key>/</key>. Algunos dispositivos, sin embargo, usan <em>sistemas de archivos</em> con más restricciones en los nombres de archivos. Por ejemplo, las memorias USB normalmente vienen formateadas con el sistema de archivos <em>FAT32</em>. En tales dispositivos, o cuando vaya a compartir archivos con personas que usan otros sistemas operativos, debería evitar los caracteres siguientes: <key>|</key>, <key>\</key>, <key>?</key>, <key>*</key>, <key>&lt;</key>, <key>"</key>, <key>:</key>, <key>&gt;</key>, <key>/</key>.</p>
+
+    <note style="warning">
+    <p>Si nombra a un archivo con un <key>.</key> como primer carácter, el archivo quedará <link xref="files-hidden">oculto</link>.</p>
+    </note>
+  </section>
+
+  <section id="common-probs">
+    <title>Problemas comunes</title>
+    <terms>
+      <item>
+        <title>El nombre ya está en uso</title>
+        <p>No puede tener dos archivos o carpetas con el mismo nombre en la misma carpeta. Si al cambiar el nombre a un archivo intenta asignarle uno que ya existe en la carpeta donde está trabajando, el gestor de archivos no se lo permitirá. Use un nombre distinto.</p>
+        <p>Los nombres de archivos y carpetas distinguen las mayúsculas y las minúsculas. Por ejemplo, <file>Archivo.txt</file> y <file>archivo.txt</file> son dos nombres diferentes. Esto está permitido, aunque no siempre es una buena idea.</p>
+      </item>
+      <item>
+        <title>El nombre del archivo es demasiado largo</title>
+        <p>En algunos sistemas de archivos, los nombres de archivos no pueden contener más de 255 caracteres. Use un nombre más corto.</p>
+      </item>
+      <item>
+        <title>La opción para renombrar está en gris</title>
+        <p>Si la opción <gui>Renombrar</gui> aparece en color gris, es que no tiene los permisos necesarios para cambiar el nombre del archivo. Normalmente, si no tiene los permisos adecuados, no debería intentar renombrarlo. Consulte <link xref="nautilus-file-properties-permissions"/>.</p>
+      </item>
+    </terms>
+  </section>
+</page>

@@ -1,0 +1,1 @@
+../../../../../share/pyshared/telepathy/_generated/Channel_Type_Stream_Tube.py

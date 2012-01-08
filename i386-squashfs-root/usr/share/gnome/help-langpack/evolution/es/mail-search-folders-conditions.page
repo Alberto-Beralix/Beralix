@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-search-folders-conditions" xml:lang="es">
+
+  <info>
+    <desc>Condiciones disponibles para configurar carpetas de búsqueda.</desc>
+
+    <link type="seealso" xref="mail-search-folders"/>
+
+    <revision pkgversion="3.0.2" version="0.1" date="2011-08-01" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-organize-vfolders.html.en -->
+ </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+    
+  </info>
+
+  <title>Condiciones disponibles para las Carpetas de búsqueda</title>
+
+<list>
+<item><p>Remitente:</p>
+<p>La dirección de correo electrónico del remitente o el nombre del remitente.</p></item>
+
+<item><p>Destinatarios:</p>
+<p>Los destinatarios del mensaje.</p></item>
+
+<item><p>Cc:</p>
+<p>Sólo los destinatarios Cc del correo.</p></item>
+
+<item><p>Cco:</p>
+<p>Sólo los destinatarios con Cco de este mensaje. Obviamente esto sólo se puede aplicar a filtros salientes.</p></item>
+
+<item><p>Remitente o destinatarios:</p>
+<p>La dirección de correo electrónico del remitente, el nombre del remitente or de los destinatarios del correo.</p></item>
+
+<item><p>Asunto:</p>
+<p>La línea asunto del mensaje.</p></item>
+
+<item><p>Cabecera específica:</p>
+<p>Cualquier cabecera incluyendo las <link xref="mail-composer-custom-header-lines">personalizadas</link>.</p>
+<p>If a message uses a header more than once, Evolution pays attention only to the first instance, even if the message defines the header differently the second time. For example, if a message declares the Resent-From: header as "engineering@example.com" and then restates it as "marketing@example.com", Evolution filters as though the second declaration did not occur. To filter on messages that use headers multiple times, use a regular expression.</p></item>
+
+<item><p>Cuerpo del mensaje:</p>
+<p>Busca en el texto efectivo del mensaje.</p></item>
+
+<item><p>Expresión:</p>
+<p>(Sólo para programadores) busca un mensaje que corresponda a una expresión escrita en lenguaje Scheme, usado para definir <link xref="mail-filters">filtros</link> en Evolution.</p></item>
+
+<item><p>Fecha de envío:</p>
+<p>Filtra los mensajes en función de la fecha de envío. En primer lugar, defina las condiciones que desea ver cumplidas con un mensaje, tales como antes de una hora determinada o después de de ella, etc. A continuación, especifique la fecha y hora. La fecha y hora del mensaje se compara con la hora del sistema al ejecutarse el filtro, o con una hora y fecha específica elegida en el calendario. Es posible incluso buscar mensajes dentro de un intervalo de tiempo relativo, por ejemplo, buscar mensajes en los últimos cuatro días.</p></item>
+
+<item><p>Fecha de recepción:</p>
+<p>Funciona del mismo modo que la opción Fecha de envío, excepto que compara la fecha y hora de recepción del mensaje con las fechas especificadas.</p></item>
+
+<item><p>Etiqueta:</p>
+<p>Los mensajes pueden tener las <link xref="mail-labels">labels</link> Importante, Trabajo, personal, Tareas pendientes o Más tarde. Puede establecer etiquetas con otros filtros o manualmente.</p></item>
+
+<item><p>Puntuación:</p>
+<p>Establece la puntuación del mensaje con un número entero mayor que 0. Puede tener un filtro ajustado o cambiar la puntuación de un mensaje, y después configurar otro filtro par amover los mensajes que ha puntuado. La puntuación de un mensaje no está basada en nada en particular: es simplemente un número que puede asignar a mensajes para que otros filtros puedan procesarlos.</p></item>
+
+<item><p>Tamaño (Kib):</p>
+<p>Ordenación basada en el tamaño del mensaje, en kilobytes.</p></item>
+
+<item><p>Estado:</p>
+<p>Filtros de acuerdo al estado de un mensaje. El estado puede ser Respoder a, Borrador, Importante, Leído o SPAM.</p></item>
+
+<item><p>Seguimiento:</p>
+<p>Comprueba si el mensaje está <link xref="mail-follow-up-flag">marcado para su seguimiento</link>.</p></item>
+
+<item><p>Completado en:</p></item>
+<!-- TODO: Explain usage of this option. -->
+
+<item><p>Adjuntos:</p>
+<p>Comprueba si existe un adjunto para el correo.</p></item>
+
+<item><p>Lista de correo</p>
+<p>Filtros basados en mensajes que provienen de listas de correo. Este filtro puede perder mensajes de algunos servidores de listas, porque comprueba la cabecera X-BeenThere, que se usa para identificar listas de correo u otras redistribuciones de correo. El correo proveniente de servidores de listas que no establezca adecuadamente la cabecera X-BeenThere no será filtrado.</p></item>
+
+<item><p>Coincide con la expresión regular:</p>
+<p>(For programmers only) If you know your way around a <link href="https://secure.wikimedia.org/wikipedia/en/wiki/Regular_expression">regex</link>, or regular expression, this option allows you to search for complex patterns of letters, so that you can find, for example, all words that start with a and end with m, and are between six and fifteen letters long, or all messages that declare a particular header twice. For information about how to use regular expressions, check the man page for the grep command.</p></item>
+
+<item><p>Ubicación del mensaje:</p></item>
+<!-- TODO: Explain usage of this option. -->
+
+<item><p>Coincidir con todo:</p></item>
+<!-- TODO: Explain usage of this option. -->
+</list>
+</page>

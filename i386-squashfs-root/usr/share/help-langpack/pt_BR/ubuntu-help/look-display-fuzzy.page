@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="look-display-fuzzy" xml:lang="pt-BR">
+
+  <info>
+   <link type="guide" xref="hardware-problems-graphics"/>
+   <desc>A resolução da tela pode estar definida incorretamente.</desc>	
+   <revision version="11.04" date="2011-04-24" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Natalia Ruz Leiva</name>
+      <email>nruz@alumnos.inf.utfsm.cl</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Por que as coisas aparecem estranhas/pixeladas em minha tela?</title>
+
+<p>Isso acontece porque a resolução escolhida não é a correta para seu monitor.</p>
+
+<p>Para resolver isso, clique no ícone mais à direita no painel e vá em <gui>Configurações do Sistema</gui>. Na seção de Hardware, escolha <gui>Monitores</gui>. Tente algumas das opções de <gui>Resolução</gui> e fique com aquela que fizer sua tela parecer melhor.</p>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Would like a little more explanation on native resolution, which
+  is generally only applicable on LCDs. There's a stub for using two
+  monitors. Link from section below when it's added.</p>
+</comment>
+
+<section id="multihead">
+ <title>Quando múltiplas telas estão conectadas</title>
+ 
+ <p>Se tiver dois monitores conectados ao computador (um monitor comum e um projetor, por exemplo) os monitores podem ter resoluções diferentes. Entretanto, a placa gráfica do computador pode exibir em apenas uma resolução por vez e, por isso, pelo menos um dos seus monitores ficará estranho.</p>
+ 
+ <p>Você pode definir isso para que assim dois monitores tenham resoluções diferentes, mas você não será capaz de exibir a mesma coisa em ambas as telas simultaneamente. Em efeito, você terá duas telas independentes conectadas ao mesmo tempo. Você pode mover janelas de uma tela para outra, mas você não pode mostrar a mesma janela em ambas as telas ao mesmo tempo.</p>
+ 
+ <p>Configurar as telas para que assim cada uma delas tenha sua própria resolução:</p>
+ 
+ <steps>
+  <item>
+   <p>Clique no ícone no lado direito do painel e selecione <gui>Configurações do sistema</gui>. Abra <gui>Monitores</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Desmarcar <gui>Monitor espelho</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Selecione um monitor de cada vez a partir da caixa cinza no topo da janela <gui>Monitores</gui>. Altere a <gui>Resolução</gui> até que o monitor pareça correto.</p>
+  </item>
+ </steps>
+
+</section>
+
+</page>

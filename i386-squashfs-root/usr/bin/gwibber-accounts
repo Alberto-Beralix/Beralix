@@ -1,0 +1,109 @@
+#!/usr/bin/env python
+#
+# Copyright (C) 2010 Canonical Ltd
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License version 2 as
+# published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Copyright (C) 2010 Ken VanDine <ken.vandine@canonical.com>
+#
+# Launch script for Gwibber Accounts
+#
+
+import sys
+from os.path import join, dirname, exists, realpath, abspath
+import gtk, gobject, wnck
+from dbus.mainloop.glib import DBusGMainLoop
+import gettext
+from gettext import lgettext as _
+if hasattr(gettext, 'bind_textdomain_codeset'):
+    gettext.bind_textdomain_codeset('gwibber','UTF-8')
+gettext.textdomain('gwibber')
+
+######################################################################
+# Don't run again if we are already running
+progname = "gwibber-accounts"
+screen = wnck.screen_get_default()
+while gtk.events_pending():
+  gtk.main_iteration()
+for w in screen.get_windows():
+  if w.get_application().get_name() == progname:
+    import time
+    w.move_to_workspace(screen.get_active_workspace())
+    w.activate(int(time.time()))
+    print int(time.time())
+    quit()
+
+######################################################################
+# Setup path
+LAUNCH_DIR = abspath(sys.path[0])
+SOURCE_DIR = join(LAUNCH_DIR, "..", "gwibber")
+
+# If we were invoked from a Gwibber source directory add that as the
+# preferred module path ...
+if exists(join(SOURCE_DIR, "accounts.py")):
+    sys.path.insert(0, realpath(dirname(SOURCE_DIR)))
+    try:
+        from gwibber.microblog.util import log
+        log.logger.name = "Gwibber Accounts"
+        log.logger.info("Running from the source tree")
+        from gwibber import accounts
+    finally:
+        del sys.path[0]
+else:
+    from gwibber.microblog.util import log
+    log.logger.name = "Gwibber Accounts"
+    log.logger.info("Running from the system path")
+    from gwibber import accounts
+
+######################################################################
+# Options 
+from optparse import OptionParser
+parser = OptionParser()
+parser.add_option("-d", "--debug", action="store_true",
+                  dest="debug", default=False, 
+                  help=_("Log debug messages"))
+parser.add_option("-a", "--select-account", action="store",
+                  dest="selected_account", default=None, 
+                  help=_("Account to select"))
+parser.add_option("-c", "--condition", action="store",
+                  dest="condition", default=None,
+                  help=_("Condition, valid values are info, warning or error"))
+parser.add_option("-m", "--message", action="store",
+                  dest="message", default=None,
+                  help=_("Message to display explaining the condition"))
+
+(options, args) = parser.parse_args()
+
+if options.selected_account:
+  selected_account = options.selected_account
+else:
+  selected_account = None
+if options.condition:
+  condition = options.condition
+else:
+  condition = None
+if options.message:
+  message = options.message
+else:
+  message = None
+
+if options.debug:
+  log.logger.setLevel(log.logging.DEBUG)
+else:
+  log.logger.setLevel(log.logging.INFO)
+######################################################################
+
+
+DBusGMainLoop(set_as_default=True)
+accounts.GwibberAccountManager(selected_account=selected_account, condition=condition, message=message)
+gtk.main()

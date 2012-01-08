@@ -1,0 +1,196 @@
+=head1 NAME
+
+Pango::Cairo - Pango rendering with the Cairo backend
+
+=cut
+
+=for position DESCRIPTION
+I<Pango::Cairo> contains a few functions that help integrate pango and
+cairo.  Since they aren't methods of a particular object, they are bound as
+plain functions.
+=cut
+
+
+
+=for object Pango::Cairo - Pango rendering with the Cairo backend
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 layout = Pango::Cairo::create_layout ($cr)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=back
+
+
+
+=head2 Pango::Cairo::error_underline_path ($cr, $x, $y, $width, $height)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $x (double) 
+
+=item * $y (double) 
+
+=item * $width (double) 
+
+=item * $height (double) 
+
+=back
+
+
+
+Since: pango 1.14
+
+=head2 Pango::Cairo::glyph_string_path ($cr, $font, $glyphs)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $font (Pango::Font) 
+
+=item * $glyphs (Pango::GlyphString) 
+
+=back
+
+
+
+=head2 Pango::Cairo::layout_line_path ($cr, $line)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $line (Pango::LayoutLine) 
+
+=back
+
+
+
+=head2 Pango::Cairo::layout_path ($cr, $layout)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $layout (Pango::Layout) 
+
+=back
+
+
+
+=head2 Pango::Cairo::show_error_underline ($cr, $x, $y, $width, $height)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $x (double) 
+
+=item * $y (double) 
+
+=item * $width (double) 
+
+=item * $height (double) 
+
+=back
+
+
+
+Since: pango 1.14
+
+=head2 Pango::Cairo::show_glyph_string ($cr, $font, $glyphs)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $font (Pango::Font) 
+
+=item * $glyphs (Pango::GlyphString) 
+
+=back
+
+
+
+=head2 Pango::Cairo::show_layout ($cr, $layout)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $layout (Pango::Layout) 
+
+=back
+
+
+
+=head2 Pango::Cairo::show_layout_line ($cr, $line)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $line (Pango::LayoutLine) 
+
+=back
+
+
+
+=head2 Pango::Cairo::update_context ($cr, $context)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $context (Pango::Context) 
+
+=back
+
+
+
+=head2 Pango::Cairo::update_layout ($cr, $layout)
+
+=over
+
+=item * $cr (Cairo::Context) 
+
+=item * $layout (Pango::Layout) 
+
+=back
+
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

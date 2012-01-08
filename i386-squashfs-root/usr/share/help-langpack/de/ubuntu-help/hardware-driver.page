@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="hardware-driver" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="hardware" group="more"/>
+    
+    <desc>A hardware/device driver allows your computer to use devices that are attached to it.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Was ist ein Treiber?</title>
+
+<p>Devices are the physical "parts" of your computer. They may be <em>external</em> like printers and monitor or <em>internal</em> like graphics and audio cards.</p>
+
+<p>In order for your computer to be able to use these devices, it needs to know how to communicate with them. This is done by a piece of software called a <em>device driver</em>.</p>
+
+<p>Wenn Sie ein Gerät an Ihren Rechner anschließen, muss der passende Treiber installiert sein, damit dieses Gerät funktioniert. Wenn Sie beispielsweise einen Drucker anschließen, der passende Treiber aber nicht verfügbar ist, dann werden Sie den Drucker nicht benutzen können. Normalerweise besitzt jedes Gerätemodell einen eigenen Treiber, der nicht mit anderen Modellen kompatibel ist.</p>
+
+<p>Unter Linux sind die Treiber für die meisten Geräte standardmäßig installiert, so dass alle Geräte funktionieren sollten, sobald Sie sie anschließen. Es kann jedoch vorkommen, dass Treiber händisch installiert werden müssen oder überhaupt nicht verfügbar sind.</p>
+
+<p>In addition, some existing drivers are incomplete or partially non-functional. For example, you might find that your printer can't do double-sided printing, but is otherwise completely functional.</p>
+
+</page>

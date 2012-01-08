@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-not-sent" xml:lang="es">
+
+  <info>
+    <desc>Posibles motivos por los que los correos no se envían.</desc>
+    
+    <link type="guide" xref="index#common-mail-problems"/>
+
+    <revision pkgversion="2.28.3" version="0.1" date="2010-10-16" status="review"/>
+    <credit type="author">
+      <name>April Gonzales</name>
+      <email>loonycookie@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+</info>
+
+<title>El correo no se ha enviado</title>
+
+<p>Puede haber varias razones por las que los correos no se envían:</p>
+
+<list>
+<item><p>Dirección de correo-e no válida. Compruebe si todas las direcciones listadas como destinatarios del correo son correctas. Si el correo contiene una dirección errónea o no válida no se enviará el mensaje.</p></item>
+<item><p>Configuración SMTP incorrecta. Compruebe si la configuración usada para los correos salientes es correcta. Usar una dirección de servidor o un método incorrecto hará que no se puedan enviar correos.</p></item>
+<item><p>Offline status. Evolution may be offline. Check on the <gui style="button">Send and Receive</gui> button; if it is greyed out, then you are offline. To go online, go to <guiseq><gui>File</gui><gui>Work online</gui></guiseq>. You should now be able to use the <gui style="button">Send and Receive</gui> button.</p></item>
+</list>
+
+
+</page>

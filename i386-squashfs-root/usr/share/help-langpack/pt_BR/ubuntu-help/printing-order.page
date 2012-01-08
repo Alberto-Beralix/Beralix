@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="printing-order" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="printing#paper"/>
+
+    <desc>Agrupar e inverter a ordem de impressão.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Fazer impressão de páginas em uma ordem diferente</title>
+
+<section id="reverse">
+ <title>Reverter</title>
+ <p>Impressoras, normalmente, imprimem a primeira página primeiro e a última página por último, então as páginas terminam na ordem inversa quando você pegá-las. Se necessário, você pode inverter a ordem de impressão.</p>
+ <p>Inverter a ordem:</p>
+ <steps>
+  <item><p>Clique <guiseq><gui>arquivo</gui><gui>imprimir</gui></guiseq>.</p></item>
+  <item><p>Na aba <gui>Geral</gui> da janela da impressora, abaixo de <em>Cópias</em>, verifique <gui>Inverter</gui>. A última página será impressa primeiro e assim por diante.</p></item>
+ </steps>
+</section>
+
+<section id="collate">
+ <title>Agrupar</title>
+ <p>Se você estiver imprimindo mais de uma cópia do documento, as impressões serão agrupadas pelo número da página por padrão (i.e. todas as cópias da página um saem, depois as cópias da página dois e assim por diante). <em>Agrupar</em> fará cada cópia sair com suas páginas agrupadas juntas na ordem certa.</p>
+
+ <p>Para agrupar:</p>
+ <steps>
+  <item><p>Clique <guiseq><gui>arquivo</gui><gui>imprimir</gui></guiseq>.</p></item>
+  <item><p>Na aba <gui>Geral</gui> da janela da impressora, abaixo de <em>Cópias</em>, verifique <gui>Agrupar</gui>.</p></item>
+ </steps>
+ <!-- Need to add this image <media type="image" src="figures/reverse-collate.png"/> -->
+</section>
+
+</page>

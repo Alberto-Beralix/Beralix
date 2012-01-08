@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/google/protobuf/internal/type_checkers.py

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="tasks" id="prev-conv" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#text-conv"/>
+    <desc>Examinar o buscar en sus conversaciones anteriores</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-17" status="stub"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-31" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-08-31" status="done"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Ver conversaciones anteriores</title>
+
+  <comment>
+    <cite date="2009-08-31">Shaun McCance</cite>
+    <p>Resaltar texto es extraño: <link href="http://bugzilla.gnome.org/show_bug.cgi?id=593733">#593733</link>. Si existe un resaltado actualmente, independiente de la selección (en amarillo, por ejemplo), se puede usar el término «resaltar». De otra forma se debe usar el término «seleccionado». Siga el progreso del error.</p>
+  </comment>
+
+  <p><app>Empathy</app> guarda automáticamente todas las conversaciones de texto que tiene con sus contactos. Puede <link xref="#search">buscar a través de todas sus conversaciones anteriores</link> o <link xref="#browse">buscar conversación anteriores</link> por contacto y fecha.</p>
+
+  <note>
+    <p>No necesita estar conectado a Internet para ver y buscar en sus conversaciones anteriores.</p>
+  </note>
+
+  <section id="search" style="task">
+  <title>Buscar conversaciones anteriores</title>
+
+  <p>Puede realizar una búsqueda de texto completo sobre todas sus conversaciones anteriores.</p>
+
+  <steps>
+    <item>
+      <p>Desde la ventana <gui>Lista de contactos</gui> elija <guiseq><gui>Ver</gui><gui>Conversaciones anteriores</gui></guiseq>. Alternativamente, pulse <key>F3</key>.</p>
+    </item>
+    <item>
+      <p>Seleccione la pestaña <gui>Buscar</gui>.</p>
+    </item>
+    <item>
+      <p>En el campo <gui>Para</gui> escriba el texto que quiere buscar. Pulse <gui>Buscar</gui> o pulse <key>Intro</key>.</p>
+    </item>
+    <item>
+      <p>Se mostrará en la lista bajo el campo de búsqueda cualquier conversación que coincida con sus términos de búsqueda. Las conversaciones se ordenan por fecha de forma predeterminada.</p>
+    </item>
+    <item>
+      <p>Pulse sobre una conversación para verla. <app>Empathy</app> seleccionará el texto en la conversación que coincida con sus términos de búsqueda.</p>
+    </item>
+  </steps>
+  </section>
+
+  <section id="browse" style="task">
+  <title>Examinar conversaciones anteriores</title>
+
+  <p>Puede examinar por fecha las conversaciones anteriores con sus contactos o en salas de chat.</p>
+
+  <steps>
+    <item>
+      <p>Desde la ventana <gui>Lista de contactos</gui> elija <guiseq><gui>Ver</gui><gui>Conversaciones anteriores</gui></guiseq>. Alternativamente, pulse <key>F3</key>.</p>
+    </item>
+    <item>
+      <p>Seleccione la pestaña <gui>Conversaciones</gui>.</p>
+    </item>
+    <item>
+      <p>Seleccione una cuenta de la lista desplegable en la parte superior izquierda. Para esa cuenta se mostrará debajo una lista de contactos y una sala de chat.</p>
+    </item>
+    <item>
+      <p>Para ver sus conversaciones anteriores, seleccione un contacto o una sala de chat. De forma predeterminada se muestra la conversación más reciente.</p>
+    </item>
+    <item>
+      <p>Puede examinar sus conversaciones por fecha. Los días en los que mantuvo una conversación con el contacto seleccionado se mostrarán en negrita. Pulse sobre una fecha para seleccionarla. Pulse las fechas junto al mes y año para examinar fechas anteriores.</p>
+    </item>
+  </steps>
+
+  <p>Puede buscar texto en las conversaciones mostradas escribiéndolo en el campo de búsqueda en la parte superior. Se resaltará el texto coincidente.</p>
+
+  <note style="tip">
+    <p>Puede ver rápidamente las conversaciones anteriores con uno de sus contactos desde la ventana <gui>Lista de contactos</gui>. Simplemente pulse con el botón derecho del ratón sobre el contacto y seleccione <gui>Conversaciones anteriores</gui>. Se abrirá la ventana <gui>Ver conversaciones previas</gui> con el contacto seleccionado.</p>
+  </note>
+    
+  </section>
+
+</page>

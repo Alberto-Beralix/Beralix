@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="shell-workspaces" xml:lang="es">
+
+  <info>
+
+    <link type="guide" xref="shell-windows#working-with-workspaces" group="#first"/>
+    
+    <desc>Las áreas de trabajo son una manera de agrupar ventanas en su escritorio.</desc>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    
+  </info>
+
+<title>¿Qué es un área de trabajo y cómo me ayudará?</title>
+
+<media type="image" src="figures/unity-workspace-intro.png" style="floatend floatright">
+  <p>Botón del cambiador de espacios de trabajo</p>
+</media>
+
+<p>Los espacios de trabajo representan un grupo de ventanas en su escritorio. Estos escritorios virtuales incrementan el tamaño de su área de trabajo. Los espacios de trabajo disminuyen el desorden y facilita la navegación por el escritorio.</p>
+
+<p>Puede usar los espacios de trabajo para organizar sus quehaceres. Por ejemplo, puede tener todas sus ventanas de comunicación, como el correo electrónico y las aplicaciones de chat en un único espacio de trabajo, y las tareas es que esté haciendo en otro espacio de trabajo diferente. Su gestor de música podría estar en un tercer espacio de trabajo.</p>
+
+ <p>Abra el <link xref="unity-launcher-intro">Lanzador</link> y pulse en el icono del <gui>cambiador de espacios de trabajo</gui> situado cerca de la parte inferior. De forma predeterminada, Ubuntu muestra cuatro espacios de trabajo, organizados en dos filas por dos columnas. Puede cambiar fácilmente el número de espacios de trabajo:</p>
+
+<steps>
+  <title>Cambiar el número de espacios de trabajo</title>
+  <item><p>Vaya al <link xref="unity-dash-intro">Tablero</link> y abra el <app>Terminal</app>.</p></item>
+  <item><p>Para cambiar el número de filas, teclee la orden siguiente, sustituyendo el número final por el número que desee. Pulse <key>Entrar</key>.</p>
+    <p><code>gconftool-2 --type=int --set /apps/compiz-1/general/screen0/options/vsize 2</code></p></item>
+  <item><p>Para cambiar el número de columnas, teclee la orden siguiente, sustituyendo el número final por el número que desee. Pulse <key>Entrar</key>.</p>
+    <p><code>gconftool-2 --type=int --set /apps/compiz-1/general/screen0/options/hsize 2</code></p></item>
+</steps>
+
+</page>

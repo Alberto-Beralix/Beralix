@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="display-lock" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="prefs-display"/>
+    <link type="seealso" xref="session-screenlocks"/>
+    <link type="seealso" xref="shell-exit#lock-screen"/>
+    <desc>Impedir que otras personas puedan usar su escritorio cuando se aleje de su equipo.</desc>
+    <revision version="11.04" date="2011-04-24" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info> 
+
+  <title>Bloquear automáticamente su pantalla</title>
+
+  <p>Cuando se aleje de su equipo, debería <link xref="shell-exit#lock-screen">bloquear la pantalla</link> para impedir que otras personas puedan usar su escritorio y acceder a sus archivos. Su sesión permanecerá abierta y todas sus aplicaciones seguirán funcionando, pero tendrá que introducir su contraseña para poder volver a usar su equipo. Puede bloquear la pantalla manualmente, pero también puede hacer que la pantalla se bloquee automáticamente.</p>
+
+  <steps>
+  <item><p>Pulse en el icono situado en el extremo derecho de la <gui>barra superior</gui> y seleccione <gui>Configuración del sistema</gui>.</p></item>
+    <item><p>Seleccione <gui>Pantalla</gui>.</p></item>
+    <item><p>Make sure <gui>Lock</gui> is switched on, then select a timeout
+    from the drop-down list below. The screen will automatically lock after
+    you have been inactive for this long. You can also select <gui>Screen
+    turns off</gui> to lock the screen after the screen is automatically
+    turned off, controlled with the <gui>Turn off after</gui> drop-down
+    list above.</p></item>
+  </steps>
+  
+  <note style="tip">
+    <p>To lock your screen immediately, click the icon at the very right of the 
+    <gui>top bar</gui> and select <gui>Lock Screen</gui>, or just press 
+    <keyseq><key>Ctrl</key><key>Alt</key><key>L</key></keyseq>.</p>
+  </note>
+</page>

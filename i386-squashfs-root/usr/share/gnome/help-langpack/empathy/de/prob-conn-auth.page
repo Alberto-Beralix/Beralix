@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="prob-conn-auth" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="prob-conn"/>
+    <link type="seealso" xref="create-account"/>
+    <desc>Eine Fehlermeldung »<gui>Legitimierung fehlgeschlagen</gui>« erscheint im Hauptfenster.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-17" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-07-23" status="draft"/>
+    <revision pkgversion="2.28" version="0.3" date="2009-08-14" status="review"/>
+    <revision pkgversion="2.30" version="0.4" date="2010-02-16" status="review"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>Eine Meldung zeigt »Legitimierung fehlgeschlagen« an</title>
+
+  <p>Dieser Fehler geschieht, wenn Ihr Sofortnachrichtendienst keine Verbindung erlaubt, weil Benutzername oder Passwort aus verschiedenen Gründen nicht akzeptiert werden konnten.</p>
+
+  <steps>
+    <item>
+      <p>Stellen Sie sicher, dass Sie mit dem Internet beziehungsweise mit einem lokalen Netzwerk verbunden sind.</p>
+    </item>
+    <item>
+      <p>Stellen Sie sicher, dass Sie bei dem Dienst ein Konto registriert haben, mit dem Sie sich verbinden wollen. Falls Sie über kein Konto verfügen, verweigern die meisten Dienste die Verbindung.</p>
+    </item>
+    <item>
+      <p>Klicken Sie auf das <media type="image" mime="image/png" src="figures/gtk-edit.png">Bearbeiten</media>-Symbol in der Fehlermeldung.</p>
+    </item>
+    <item>
+      <p>Geben sie Ihren Benutzernamen und Ihr Passwort erneut ein, um sicher zu stellen, dass diese korrekt sind.</p>
+    </item>
+    <item>
+      <p>Deaktivieren Sie das Ankreuzfeld <gui>Aktiviert</gui> und aktivieren Sie es erneut, um einen neuen Verbindungsversuch zu starten.</p>
+    </item>
+  </steps>
+</page>

@@ -1,0 +1,21 @@
+[org.freedesktop.Telepathy.Client]
+Interfaces=org.freedesktop.Telepathy.Client.Handler
+
+[org.freedesktop.Telepathy.Client.Handler.HandlerChannelFilter 0]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.StreamedMedia
+org.freedesktop.Telepathy.Channel.TargetHandleType u=1
+
+[org.freedesktop.Telepathy.Client.Handler.HandlerChannelFilter 1]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.StreamedMedia
+org.freedesktop.Telepathy.Channel.TargetHandleType u=1
+org.freedesktop.Telepathy.Channel.Type.StreamedMedia.InitialAudio b=true
+
+[org.freedesktop.Telepathy.Client.Handler.HandlerChannelFilter 2]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.StreamedMedia
+org.freedesktop.Telepathy.Channel.TargetHandleType u=1
+org.freedesktop.Telepathy.Channel.Type.StreamedMedia.InitialVideo b=true
+
+[org.freedesktop.Telepathy.Client.Handler.Capabilities]
+org.freedesktop.Telepathy.Channel.Interface.MediaSignalling/ice-udp=true
+org.freedesktop.Telepathy.Channel.Interface.MediaSignalling/gtalk-p2p=true
+org.freedesktop.Telepathy.Channel.Interface.MediaSignalling/video/h264=true

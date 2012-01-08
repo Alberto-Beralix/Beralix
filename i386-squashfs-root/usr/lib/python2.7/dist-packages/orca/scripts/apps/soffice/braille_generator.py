@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/apps/soffice/braille_generator.py

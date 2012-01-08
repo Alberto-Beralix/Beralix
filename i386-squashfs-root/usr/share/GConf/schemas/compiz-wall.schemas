@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/show_switcher</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/show_switcher</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Show Viewport Switcher Preview</short>
+        <long>Show switcher window while switching viewports</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/miniscreen</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/miniscreen</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Show Live Viewport Previews</short>
+        <long>Show live viewport previews in switcher window</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/preview_timeout</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/preview_timeout</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.2</default>
+      <locale name="C">
+        <short>Switch Target Preview Visibility Time</short>
+        <long>Duration (in s) the switch target preview should remain visible after switching ends. (0.0 - 2.0)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/preview_scale</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/preview_scale</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>130</default>
+      <locale name="C">
+        <short>Preview Scale</short>
+        <long>Size of the preview in % (0 - 400)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/edge_radius</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/edge_radius</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>5</default>
+      <locale name="C">
+        <short>Edge Radius</short>
+        <long>Radius of the rounded edge (0 - 20)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/border_width</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/border_width</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>7</default>
+      <locale name="C">
+        <short>Border Width</short>
+        <long>Width of the border between the previews (0 - 30)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/outline_color</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/outline_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#ffffff32</default>
+      <locale name="C">
+        <short>Outline Color</short>
+        <long>Outline color of the switcher window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/background_gradient_base_color</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/background_gradient_base_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#00000064</default>
+      <locale name="C">
+        <short>Base Color</short>
+        <long>First color for the background gradient of the switcher window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/background_gradient_highlight_color</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/background_gradient_highlight_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#00000064</default>
+      <locale name="C">
+        <short>Highlight Color</short>
+        <long>Second color for the background gradient of the switcher window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/background_gradient_shadow_color</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/background_gradient_shadow_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#00000064</default>
+      <locale name="C">
+        <short>Shadow Color</short>
+        <long>Third color for the background gradient of the switcher window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/thumb_gradient_base_color</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/thumb_gradient_base_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#55555532</default>
+      <locale name="C">
+        <short>Base Color</short>
+        <long>First color for the thumb gradient of the switcher window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/thumb_gradient_highlight_color</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/thumb_gradient_highlight_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#55555532</default>
+      <locale name="C">
+        <short>Highlight Color</short>
+        <long>Second color for the thumb gradient of the switcher window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/thumb_highlight_gradient_base_color</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/thumb_highlight_gradient_base_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#ffffffff</default>
+      <locale name="C">
+        <short>Base Color</short>
+        <long>First color for the thumb highlight gradient of the switcher window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/thumb_highlight_gradient_shadow_color</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/thumb_highlight_gradient_shadow_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#dfdfdfff</default>
+      <locale name="C">
+        <short>Shadow Color</short>
+        <long>Second color for the thumb highlight gradient of the switcher window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/arrow_base_color</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/arrow_base_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#e6e6e6d9</default>
+      <locale name="C">
+        <short>Base Color</short>
+        <long>First color of the arrow of the switcher window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/arrow_shadow_color</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/arrow_shadow_color</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>#dcdcdcd9</default>
+      <locale name="C">
+        <short>Shadow Color</short>
+        <long>Second color of the arrow of the switcher window.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/allow_wraparound</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/allow_wraparound</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Allow Wrap-Around</short>
+        <long>Allow wrap-around when moving the wall up/down/left/right</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/slide_duration</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/slide_duration</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.3</default>
+      <locale name="C">
+        <short>Wall Sliding Duration</short>
+        <long>Duration (in s) for wall sliding viewport switching animation (0.0 - 5.0)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/no_slide_match</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/no_slide_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>type=Dock | type=Desktop | state=Sticky</default>
+      <locale name="C">
+        <short>Non Sliding Windows</short>
+        <long>Windows that should not slide during the slide animation (match)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/left_key</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/left_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;Left</default>
+      <locale name="C">
+        <short>Move Left</short>
+        <long>Move along the wall to the left</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/left_button</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/left_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Move Left</short>
+        <long>Move along the wall to the left</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/right_key</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/right_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;Right</default>
+      <locale name="C">
+        <short>Move Right</short>
+        <long>Move along the wall to the right</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/right_button</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/right_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Move Right</short>
+        <long>Move along the wall to the right</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/up_key</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/up_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;Up</default>
+      <locale name="C">
+        <short>Move Up</short>
+        <long>Move along the wall up</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/up_button</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/up_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Move Up</short>
+        <long>Move along the wall up</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/down_key</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/down_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;Down</default>
+      <locale name="C">
+        <short>Move Down</short>
+        <long>Move along the wall down</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/down_button</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/down_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Move Down</short>
+        <long>Move along the wall down</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/next_key</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/next_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Move Next</short>
+        <long>Move along the wall to the next viewport</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/next_button</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/next_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Move Next</short>
+        <long>Move along the wall to the next viewport</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/prev_key</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/prev_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Move Prev</short>
+        <long>Move along the wall to the previous viewport</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/prev_button</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/prev_button</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Move Prev</short>
+        <long>Move along the wall to the previous viewport</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/left_window_key</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/left_window_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Left</default>
+      <locale name="C">
+        <short>Move Left With Window</short>
+        <long>Move with window along the wall to the left</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/right_window_key</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/right_window_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Right</default>
+      <locale name="C">
+        <short>Move Right With Window</short>
+        <long>Move with window along the wall to the right</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/up_window_key</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/up_window_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Up</default>
+      <locale name="C">
+        <short>Move Up With Window</short>
+        <long>Move with window along the wall up</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/down_window_key</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/down_window_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Down</default>
+      <locale name="C">
+        <short>Move Down With Window</short>
+        <long>Move with window along the wall down</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/flip_left_edge</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/flip_left_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Left</default>
+      <locale name="C">
+        <short>Flip Left</short>
+        <long>Flip left</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/flip_right_edge</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/flip_right_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Right</default>
+      <locale name="C">
+        <short>Flip Right</short>
+        <long>Flip right</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/flip_up_edge</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/flip_up_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Top</default>
+      <locale name="C">
+        <short>Flip Up</short>
+        <long>Flip up</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/flip_down_edge</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/flip_down_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Bottom</default>
+      <locale name="C">
+        <short>Flip Down</short>
+        <long>Flip down</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/mmmode</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/mmmode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Multimonitor behavior</short>
+        <long>How should a multimonitor configuration be handled (0 = Switch all, 1 = Switch separately)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/edgeflip_pointer</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/edgeflip_pointer</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Edge Flip Pointer</short>
+        <long>Flip viewport when moving the pointer to a screen edge</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/edgeflip_move</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/edgeflip_move</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Edge Flip Move</short>
+        <long>Flip viewport when moving a window to a screen edge</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/wall/screen0/options/edgeflip_dnd</key>
+      <applyto>/apps/compiz-1/plugins/wall/screen0/options/edgeflip_dnd</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Edge Flip DnD</short>
+        <long>Flip viewport when dragging an object to a screen edge</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

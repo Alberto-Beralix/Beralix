@@ -1,0 +1,19 @@
+plugin: remote
+name: mago
+description: Automated desktop testing
+description-cs.UTF-8: Automatizované testování pracovního prostředí
+description-de.UTF-8: Automatisierte Rechner-Tests
+description-en_AU.UTF-8: Automated desktop testing
+description-en_GB.UTF-8: Automated desktop testing
+description-es.UTF-8: Prueba de escritorio automatizado
+description-gl.UTF-8: Proba de escritorio automatizado
+description-hu.UTF-8: Automatikus asztali tesztelés
+description-it.UTF-8: Test automatico del desktop
+description-pt_BR.UTF-8: Teste automatizado de desktop
+description-ru.UTF-8: Автоматизированная проверка рабочего стола
+description-sl.UTF-8: Samodejno preizkušanje namizja
+requires:
+ package.name == 'bzr'
+ package.name == 'python-ldtp'
+ desktop.gnome.interface.accessibility == True
+command: mago_suite

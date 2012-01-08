@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="calendar-layout-appointment-display" xml:lang="zh_CN">
+
+  <info>
+    <desc>Define the displaying of appointments in the calendar.</desc>
+    
+    <link type="guide" xref="calendar-layout"/>
+
+    <revision pkgversion="3.0.2" version="0.3" date="2011-08-25" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/config-prefs-cal.html.en#bshpsxa -->
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Appearance of Appointments</title>
+
+<!-- TODO:POST-3-2: Just listing the partially busted UI options (also see calendar-layout-general-formatting) here is very poor and not task-oriented, but that's it for the time being. Better ideas welcome. -->
+
+<!-- TODO: Recheck once https://bugzilla.gnome.org/show_bug.cgi?id=657233 is fixed, as the current UI is a huge mess. -->
+
+<p>The following calendar-related options are available under <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Calendar and Tasks</gui><gui>Display</gui></guiseq>.</p>
+
+<section id="general">
+<title>常规</title>
+<list>
+<item><p>时间分隔：</p>
+<p>设置在日历视图上(日视图)显示的时间分隔线。</p></item>
+<item><p>在周视图和月视图中显示约会结束时间：</p>
+<p>Evolution会在周视图和月视图中显示每个约会的结束时间(如果时间不重叠的话)。</p></item>
+<item><p>在月视图中压缩周末：</p>
+<p>选择该项的话，在月视图中周末只会显示一栏而不会是两栏。</p></item>
+<item><p>显示周数目：</p>
+<p>在日历中对应的周旁边显示周数目。</p></item>
+<item><p>Show recurring events in italic in bottom left calendar</p></item>
+<item><p>通过一个周来滚动月视图</p></item>
+</list>
+</section>
+
+<section id="date-time">
+<title>日期/时间格式</title>
+<p>You can change the format of the <gui>Date</gui> column by setting your preferred format.</p>
+<p>The placeholders in the format expression are strftime formats. For a complete list of available strftime formats, run <code>date --help</code> in a terminal window.</p>
+</section>
+
+</page>

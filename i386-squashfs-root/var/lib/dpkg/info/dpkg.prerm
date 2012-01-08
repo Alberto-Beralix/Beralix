@@ -1,0 +1,118 @@
+#!/bin/sh -e
+# This script can be called in the following ways:
+#
+# Before the package is removed:
+#      <prerm> remove
+#
+# Before an upgrade:
+#      <old-prerm> upgrade <new-version>
+# if that fails:
+#      <new-prerm> failed-upgrade <old-version>
+#
+#
+# Before package is deconfigured while dependency is replaced due to conflict:
+#      <prerm> deconfigure in-favour <new-package> <version>
+#              removing <old-package> <version>
+#
+# Before the package is replaced due to conflict:
+#      <prerm> remove in-favour <new-package> <version>
+
+downgrade_multiarch_infodb()
+{
+    admindir=${DPKG_ADMINDIR:-/var/lib/dpkg}
+    pkgadmindir=$admindir/info
+
+    coinst_pkgs="`ls "$pkgadmindir" | \
+        sed -n -e 's/^\([^:]\+:[^.]\+\)\..*$/\1/p' | sort -u | \
+        cut -d: -f1 | uniq -d`"
+
+    # Abort if we cannot possibly downgrade
+    if [ -n "$coinst_pkgs" ]; then
+        cat <<- MSG
+	dpkg: error: You have more than one architecture instance for some
+	installed 'Multi-Arch: same' packages, to be able to downgrade dpkg
+	you will need to have only one instance installed per package.
+
+	List of co-installed packages:
+
+	$coinst_pkgs
+	MSG
+        exit 1
+    fi
+
+    bad_dep_pkgs=$(dpkg-query -f'${Package} ${Depends} ${Recommends} ${Suggests} ${Enhances} ${Conflicts} ${Replaces} ${Breaks}\n' -W | \
+	grep ":any" | cut -d" " -f1 | sort -u)
+    if [ -n "$bad_dep_pkgs" ]; then
+        cat <<- MSG
+	dpkg: error: Some installed packages have multiarch dependencies
+	that the old dpkg won't parse. You should get rid of them
+	(or downgrade them to versions without those dependencies) before
+	proceeding with dpkg's downgrade.
+
+	List of affected packages:
+
+	$bad_dep_pkgs
+	MSG
+	exit 1
+    fi
+
+    for dep in Depends Recommends Suggests Enhances \
+	       Conflicts Replaces Breaks; do
+	if grep -qE "^$dep:.*:any" $admindir/available; then
+		cat <<- MSG
+		dpkg: error: $admindir/available references packages with
+		multiarch dependencies that the old dpkg won't parse. You
+		should clear this file with "dpkg --clear-avail" before
+		proceeding with dpkg's downgrade.
+		MSG
+		exit 1
+	fi
+    done
+
+    echo "Downgrading the multiarch dpkg control files database ..."
+    ls $pkgadmindir | grep : | while read oldfile; do
+        # We first do a round of hardlinks to the new names, so that the db
+        # will never be unusable for either of the dpkg versions.
+        newfile=$(echo $oldfile | sed -e 's/:[^.]\+//')
+        ln "$pkgadmindir/$oldfile" "$pkgadmindir/$newfile"
+    done
+    echo -n "1" >$admindir/format
+}
+
+case "$1" in
+    upgrade)
+        # Downgrade the multiarch db to a “monoarch” db layout
+        if dpkg --compare-versions "$2" lt 1.16.0~ubuntu4; then
+	    if dpkg --compare-versions "$2" ge 1.16.0~ubuntu1; then
+		# this version had provisional multiarch support with
+		# a different layout.
+		infodir="/var/lib/dpkg/info/$(dpkg --print-architecture)"
+		# since this version of dpkg may have been configured using
+		# the old version, the directory might have been recreated
+		# under us - so handle this case by removing and converting
+		# to a symlink.
+		if [ -d "$infodir" ] && ! [ -L "$infodir" ]; then
+		    # if this fails, it's because it has contents, so
+		    # downgrading will corrupt the dpkg database.  let it fail
+		    # before things get out of hand!
+		    rmdir "$infodir"
+		fi
+		if [ ! -d "$infodir" ]; then
+		    ln -sf . "$infodir"
+		fi
+	    fi
+            downgrade_multiarch_infodb
+        fi
+        ;;
+
+    remove|failed-upgrade|deconfigure)
+        ;;
+
+    *)
+        echo "$0 called with unknown argument \`$1'" 1>&2
+        exit 1
+        ;;
+esac
+
+
+exit 0

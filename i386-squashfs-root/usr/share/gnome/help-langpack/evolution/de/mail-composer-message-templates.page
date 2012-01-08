@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-composer-message-templates" xml:lang="de">
+
+  <info>
+ <desc>Message templates to reuse in the composer.</desc>
+
+ <link type="guide" xref="index#mail-composing-advanced"/>
+
+ <revision pkgversion="2.32.2" version="0.1" date="2011-07-21" status="stub"/>
+ <credit type="author">
+   <name>Andre Klapper</name>
+   <email>ak-47@gmx.net</email>
+ </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/b1dlaazl.html.en -->
+ </credit>
+ <license>
+   <p>Creative Commons Share Alike 3.0</p>
+ </license> 
+
+  </info>
+
+<title>Nachrichtenvorlagen</title>
+<p>A message template is a standard message that you can use at any time to send mail with the same pattern.</p>
+<p>To enable the Message Template Plugin, click <guiseq><gui>Edit</gui><gui>Plugins</gui></guiseq> and enable <gui>Templates</gui>.</p>
+
+<!-- TODO: Check correctness of all these steps in 3.1. --> 
+<!-- TODO:POST-3-2: Split this into subpages maybe, and turn this into a guide page! -->
+
+<section id="create">
+<title>Creating a Message Template from an existing Message</title>
+<steps>
+  <item><p>Wählen Sie die Nachricht aus.</p></item>
+  <item><p>Right-click the message and choose <gui>Move to folder</gui> or <gui>Copy to folder</gui>.</p></item>
+  <item><p>Select the <gui>Templates</gui> folder under <gui>On This Computer</gui>.</p></item>
+</steps>
+<p>You can also edit an existing message and save it as a template:</p>
+<steps>
+  <item><p>Open the message and click <gui>Reply</gui>.</p></item>
+  <item><p>Bearbeiten Sie den Inhalt der Nachricht oder die Empfänger nach Ihren Wünschen.</p></item>
+  <item><p>Select <guiseq><gui>File</gui><gui>Save as Template</gui></guiseq>.</p></item>
+ </steps>
+</section>
+
+<section id="save">
+ <title>Eine neue Nachricht als Vorlage speichern</title>
+ <steps>
+  <item>
+<p>Click <gui>New</gui> and enter in the composer window what you need for the template.</p>
+  </item>
+  <item>
+<p>Select <guiseq><gui>File</gui><gui>Save as Template</gui></guiseq>.</p>
+  </item>
+ </steps>
+</section>
+
+<section id="reply">
+ <title>Eine Nachrichtenvorlage als Antwort verwenden</title>
+ <steps>
+  <item>
+<p>Klicken Sie mit der rechten Maustaste auf die Nachricht, die Sie beantworten, und Ordner, und wählen Sie <gui>Vorlagen</gui>.</p>
+<p>Dies listet alle Nachrichtenvorlagen im Ordner <gui>Vorlagen</gui> auf.</p>
+  </item>
+  <item>
+<p>Wählen Sie die gewünschte Nachrichtenvorlage aus. Nehmen Sie bei Bedarf Änderungen im E-Mail-Editor vor.</p>
+  </item>
+  <item>
+<p>Klicken Sie auf <gui>Abschicken</gui>.</p>
+<p>Wenn Sie zum Antworten eine Nachrichtenvorlage wählen, dann wird der Betreff in der Antwort beibehalten.</p>
+  </item>
+ </steps>
+</section>
+
+<section id="configure">	
+<title>Nachrichtenvorlagen einrichten</title>
+<steps>
+<item><p>Select <guiseq><gui>Edit</gui><gui>Plugins</gui></guiseq>.</p></item>
+<item><p>Click <gui>Templates</gui>.</p></item>
+<item><p>Klicken Sie auf den Reiter <gui>Konfiguration</gui>.</p></item>
+<item><p>Sie können Paare von Schlüsselwörtern und Werten hinzufügen, löschen und bearbeiten. Sie können eine beliebige anzahl von Schlüssel-Wert-Paaren angeben.</p></item>
+</steps>
+ <p>In jeder Vorlage wird jedes Vorkommen von jedem $key durch den entsprechenden Wert in der Konfiguration ersetzt. Wenn Sie zum Beispiel den Schlüssel auf »Manager« und den Wert auf »Harry« setzen, so wird jedes Auftreten von $Manager durch »Harry« in der Nachricht ersetzt.</p>
+ <p>Assume that you have 1000 message templates with your current manager's name in them. When the current manager is replaced by a new one, it is not easy for you to manually replace the manager's name in all the 1000 messages. If the messages have a $Manager key value, you can reset the value in the Configuration tab of this plugin.</p>
+ <p>Nach Voreinstellung werden alle Umgebungsvariablen als Schlüssel-Wert-Paare verwendet. Ein Vorkommen von $env_variable wird durch den Wert ersetzt, den sie hat. Zum Beispiel wird ein Vorkommen von $PATH in Ihrer Vorlage durch dessen Wert ersetzt, wenn die Vorlage verwendet wird.</p>
+ <p>Der Ersetzungsvorgang folgt der folgenden Reihenfolge:</p>
+ <steps>
+  <item>
+<p>$key wird durch den Wert ersetzt, der in dem Karteireiter »Konfiguration« des Vorlagen-Plugins festgelegt ist.</p>
+  </item>
+  <item>
+<p>Wenn der Schlüssel nicht gefunden wird, dann wird es durch den Wert der zugehörigen Umgebungsvariable ersetzt.</p>
+  </item>
+  <item>
+<p>Wenn der Schlüssel weder eine Konfigurationsoption oder eine Umgebungsvariable ist, so werden keine Änderungen umgesetzt.</p>
+  </item>
+ </steps>
+</section>
+
+</page>

@@ -1,0 +1,49 @@
+#! /bin/sh
+
+# $Id: dns-clean,v 1.1.1.1 2004/05/07 03:12:59 john Exp $
+
+# dns-clean by John Hasler 1999-2003
+# Any possessor of a copy of this program may treat it as if it
+# were in the public domain.  I waive all rights.
+
+# This script should be run at bootup to clean up any mess left by 0dns-up.
+# It should be run before ppp is started.
+# It should never be run while ppp is up.
+
+### BEGIN INIT INFO
+# Provides:          dns-clean
+# Required-Start:    $local_fs $remote_fs gdm
+# Required-Stop:     $local_fs
+# Default-Start:     1 2 3 4 5
+# Default-Stop:
+# Short-Description: Cleans up any mess left by 0dns-up
+# Description: 0dns-up often leaves behind some cruft. This Script is meant
+#              to clean up any such mess.
+### END INIT INFO
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+test -f /usr/sbin/pppconfig || exit 0
+# We might have a tmpfs /var/run.
+mkdir /var/run/pppconfig >/dev/null 2>&1 || true
+test -f /etc/ppp/ip-down.d/0dns-down || exit 0
+
+. /lib/lsb/init-functions
+. /etc/default/rcS
+
+case "$1" in
+  start)
+	[ "$VERBOSE" != no ] && log_begin_msg "Restoring resolver state..."
+	/etc/ppp/ip-down.d/0dns-down "0dns-clean"
+	[ "$VERBOSE" != no ] && log_end_msg $?
+	;;
+  stop|restart|force-reload)
+	;;
+  *)
+        ;;
+esac
+
+exit 0
+
+
+

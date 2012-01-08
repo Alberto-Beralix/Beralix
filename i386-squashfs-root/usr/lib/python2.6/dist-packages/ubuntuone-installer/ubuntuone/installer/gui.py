@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/ubuntuone-installer/ubuntuone/installer/gui.py

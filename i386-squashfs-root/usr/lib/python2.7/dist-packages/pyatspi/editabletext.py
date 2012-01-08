@@ -1,0 +1,1 @@
+../../../../share/pyshared/pyatspi/editabletext.py

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.4">
+<!ENTITY date "October 2005">
+<!ENTITY app "System Log Viewer">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="zh_CN">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>系统日志查看器手册</title>
+
+    <abstract role="description">
+      <para>系统日志查看器是一个查看和监视系统日志文件的图形化用户界面。</para>
+    </abstract>
+
+    <copyright> 
+      <year>2003</year> 
+      <holder>Sun Microsystems</holder> 
+    </copyright> 
+    <copyright> 
+      <year>2000</year> 
+      <holder>Judith Samson</holder> 
+    </copyright><copyright><year>2009, 2010</year><holder>TeliuTe (teliute@163.com)</holder></copyright> 
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <publisher> 
+      <publishername>GNOME 文档项目</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>对于本文档的复制、分发和/或修改必须遵循自由软件基金会 (Free Software Foundation) 发布的 GNU 自由文档许可证 (GFDL) 版本 1.1 或更高版本，该许可证没有固定的部分、没有封面和背页文本。您可以在此<ulink type="help" url="ghelp:fdl">链接</ulink>上或在随本手册一起分发的 COPYING-DOCS 文件中找到 GFDL 的副本。</para>
+         <para>本手册是在 GFDL 许可之下分发的 GNOME 手册集合的一部分。如果想要单独分发此手册，可以在手册中添加该许可证的一份副本然后分发，如该许可证的第 6 部分所述。</para>
+
+	<para>各个公司使用的许多用于区别它们产品和服务的名称都声明为商标。在所有的 GNOME 文档以及 GNOME 文档项目的成员中，这些名称都是以全大写字母或首字母大写显示，从而表明它们是商标。</para>
+
+	<para>本文档以及文档的修改版本都是在遵循 GNU 自由文档许可证的条款下提供，这表示具有以下含义： <orderedlist>
+		<listitem>
+		  <para>文档按“原样”提供，不提供任何明示或暗示的保证，包括但不限于：文档或文档的修改版本没有适销性方面的缺陷、适合特定目的的适用性，以及没有侵权行为。您将自行承担本文档以及文档修改版本的质量、准确性以及性能方面的风险。如果任何文档或文档修改版本存在缺陷，您（而不是最初的编写者、作者或撰写人）将承担所有必需的服务、维修或更正的费用。此免责声明是本许可证的重要组成部分。如果不接受此免责声明，那么您就没有权利使用任何文档或文档的修改版本；并且</para>
+		</listitem>
+		<listitem>
+		  <para>无论在任何情况以及在任何法律理论下，本文档或文档修改版本的作者、最初的编写者、任何撰写人或任何分发者，或者任意这些方的任何提供者都不对任何人由于使用本文档或文档修改版本引起或带来的任何直接的、间接的、特殊的、偶然的或继发的损失承担任何民事（包括疏忽）、合同或其它方面的责任，这些损失包括但不限于信誉损失、工作停止、计算机失败或故障，或任何以及所有其它损失或由此引发的或与之相关的损失，即使这些方已被告知存在出现此类损失的可能性时也是如此。</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+   <authorgroup> 
+   <author> 
+		<firstname>Sun</firstname> 
+		<surname>GNOME 文档小组</surname> 
+		<affiliation> 
+	  	<orgname>Sun Microsystems</orgname> 
+	  	<address> <email>gdocteam@sun.com</email> </address> 
+		</affiliation> 
+   </author> 
+
+   <author> 
+		<firstname>Judith</firstname> 
+		<surname>Samson</surname> 
+		<affiliation> 
+	  	<orgname>GNOME 文档项目</orgname> 
+	  	<address> <email>judith@samsonsource.com</email> </address> 
+		</affiliation> 
+   </author> 
+   
+    <author> 
+		<firstname>Paul</firstname> 
+		<surname>Cutler</surname> 
+		<affiliation> 
+	  	<orgname>GNOME 文档小组</orgname> 
+	  	<address> <email>pcutler@gnome.org</email> </address> 
+		</affiliation> 
+   </author> 
+
+   <author role="maintainer">
+   	<firstname>Vincent</firstname>
+	<surname>Noel</surname>
+	<affiliation>
+	  <address><email>vincent.noel@gmail.com</email></address>
+	</affiliation>
+   </author>
+      
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+   <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  	<orgname>Latin Translation Team</orgname> 
+	  	<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+   </othercredit>
+-->
+    </authorgroup>
+
+    <revhistory>
+            <revision> 
+		<revnumber>系统日志查看器手册 V2.5</revnumber> 
+		<date>2009年10月</date> 
+		<revdescription> 
+	  		<para role="author">Paul Cutler <email>pcutler@gnome.org</email></para>
+	  		<para role="publisher">GNOME 文档项目</para>
+		</revdescription> 
+      </revision>
+      <revision> 
+		<revnumber>系统日志查看器手册 V2.4</revnumber> 
+		<date>2005年10月</date> 
+		<revdescription> 
+	  		<para role="author">Vincent Noel <email>vincent.noel@gmail.com</email></para>
+	  		<para role="publisher">GNOME 文档项目</para>
+		</revdescription> 
+      </revision>
+      <revision> 
+		<revnumber>系统日志查看器手册 V2.3</revnumber> 
+		<date>2002年10月</date> 
+		<revdescription> 
+	  		<para role="author">Sun GNOME Documentation Team <email>gdocteam@sun.com</email></para>
+	  		<para role="publisher">GNOME 文档项目</para>
+		</revdescription> 
+      </revision>
+      <revision> 
+		<revnumber>系统日志查看器手册 V2.2</revnumber> 
+		<date>2002年8月</date> 
+		<revdescription> 
+	  		<para role="author">Sun GNOME Documentation Team <email>gdocteam@sun.com</email></para>
+	  		<para role="publisher">GNOME 文档项目</para>
+		</revdescription> 
+      </revision>
+      <revision> 
+		<revnumber>系统日志查看器手册 V2.1</revnumber> 
+		<date>2002年7月</date> 
+		<revdescription> 
+	  		<para role="author">Sun GNOME Documentation Team <email>gdocteam@sun.com</email></para>
+	  		<para role="publisher">GNOME 文档项目</para>
+		</revdescription> 
+      </revision>
+      <revision> 
+		<revnumber>系统日志查看器手册 V2.0</revnumber> 
+		<date>2002年5月</date> 
+		<revdescription> 
+	  		<para role="author">Sun GNOME Documentation Team <email>gdocteam@sun.com</email></para>
+	  		<para role="publisher">GNOME 文档项目</para>
+		</revdescription> 
+      </revision> 
+      <revision> 
+		<revnumber>日志查看器手册</revnumber> 
+		<date>2000</date> 
+		<revdescription> 
+	  		<para role="author">Judith Samson <email>judith@samsonsource.com</email></para>
+	  		<para role="publisher">GNOME 文档项目</para>
+			</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>本手册讲述的是系统日志查看器 2.12 版。</releaseinfo> 
+    <legalnotice> 
+      <title>反馈</title> 
+      <para>要报告关于系统日志查看器或本手册的错误或提出建议，请参照 <ulink url="ghelp:gnome-feedback" type="help">GNOME 反馈页</ulink> 中的指导。</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>系统日志查看器</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="syslog-introduction"> 
+    <title>介绍</title> 
+
+      <para><application>系统日志查看器</application> 是一个图形的，菜单模式的查看器，您可以使用它查看和监视您的系统日志。<application>系统日志查看器</application> 带有许多功能可以帮助您管理日志，包括一个日历、日志监视和日志状态显示。</para>
+
+      <para><application>系统日志查看器</application> 对于一个新的系统管理员是很有帮助的，因为它提供了一个比文本显示更简单的，更友好的显示界面。它也对更多富有经验的管理员很有用处，里面包含的日历可以帮助您定位和跟踪错误，也可以使用监视器来连续监测关键日志。</para>
+
+      <warning><para><application>系统日志查看器</application> 仅仅对那些通常需要管理员权限的，要访问系统日志文件的用户有用。</para></warning>
+
+  </sect1>
+
+  <sect1 id="syslog-getting-started">
+    <title>快速入门</title> 
+
+    <para>您可以用下面的方法启动 <application>系统日志查看器</application>：</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term><guimenu>应用程序</guimenu> 菜单</term>
+    		<listitem>
+    		<para>选择 <menuchoice><guisubmenu>系统工具</guisubmenu><guimenuitem>日志查看器</guimenuitem></menuchoice>。</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>命令行</term>
+    		<listitem>
+    		<para>输入 <command>gnome-system-log</command>，然后按一下 <keycap>回车键</keycap>。</para>
+    		<para> 		 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+
+    <para>当您启动了 <application>系统日志查看器</application>，会出来下面的窗口。</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="syslog-fig"> 
+	<title>系统日志查看器窗口</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/syslog_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>显示系统日志查看器主窗口，包含菜单栏、显示区、滚动条和状态栏。</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+    <para>第一次启动 <application>系统日志查看器</application>，程序默认打开几个日志文件(像 <filename>/var/log/messages</filename>)。打开的日志列出在左边的侧栏里。选中的日志显示在主窗口的工作区域里。</para>
+
+      <para>默认地，<application>系统日志查看器</application> 监视每个打开的日志，任何变化会自动出现在主窗口中，更多相关信息，请参阅：<xref linkend="syslog-monitor"/>。</para>
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="syslog-usage"> 
+    <title>用法</title>
+
+    <sect2 id="syslog-open">
+    	<title>查看一个日志</title>
+    	<para>要查看一个日志，点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>打开</guimenuitem></menuchoice> 命令，在出来的 <guilabel>打开日志</guilabel> 对话框里，选择您想打开的日志，然后点 <guibutton>打开</guibutton> 按钮，使用滚动条来翻页。</para>
+
+        <para>您可以根据需要打开多个日志。<application>系统日志查看器</application> 在主窗口中每次显示一个日志。打开的日志列出在左边侧栏中。选中的日志内容列出在主窗口区域里。要查看其它打开的日志，只要在日志列表里选中即可。</para>
+
+        <para>注意，<application>系统日志查看器</application> 也允许您打开压缩格式日志(文件名以“.gz”结尾)。</para>
+    </sect2>
+
+    <sect2 id="syslog-selection">
+    <title>复制日志行到剪贴板</title>
+    <para>要复制一条或多条日志到剪贴板，只要在主窗口里选中它，然后点菜单 <menuchoice><guimenu>编辑</guimenu><guimenuitem>复制</guimenuitem></menuchoice> 命令。如果您想复制整个日志到剪贴板，点菜单 <menuchoice><guimenu>编辑</guimenu><guimenuitem>全选</guimenuitem></menuchoice> 命令，然后再点 <menuchoice><guimenu>编辑</guimenu><guimenuitem>复制</guimenuitem></menuchoice> 命令。</para>
+    </sect2>
+
+    <sect2 id="syslog-hide-sidebar">
+    <title>隐藏侧边栏</title>
+    <para>侧边栏里包含一个日志列表和日历，要隐藏侧边栏，点菜单 <menuchoice><guimenu>查看</guimenu><guimenuitem>侧边栏</guimenuitem></menuchoice>。</para>
+    </sect2>
+    
+    <sect2 id="syslog-monitor">
+    	<title>监视日志</title>
+    	<para>您可以使用 <application>系统日志查看器</application> 来监视日志变化。默认地，所有打开的日志都是被监视的。如果增加了新的一行日志，这个日志的名称会加粗显示。如果是当前显示的日志，新的一行会自动添加到日志结尾，5 秒后日志名称恢复正常情况。</para>
+
+    </sect2>
+    
+    <sect2 id="syslog-stats">
+    	<title>查看日志信息</title>
+    	<para>日志信息通常显示在状态栏，包括：</para> 
+    	<itemizedlist>
+    		<listitem><para>在日志里的第几行。</para>
+    		</listitem>
+    		<listitem><para>日志的大小(字节)。</para>
+    		</listitem>
+    		<listitem><para>日志最后修改的日期。</para>
+    		</listitem>
+    	</itemizedlist> 
+        <para>状态栏也可以被显示或隐藏，通过 <menuchoice><guimenu>查看</guimenu><guimenuitem>状态栏</guimenuitem></menuchoice> 菜单选项。</para>
+    </sect2>
+    
+    <sect2 id="syslog-close">
+    	<title>关闭日志</title>
+    	<para>要关闭一个日志，点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>关闭</guimenuitem></menuchoice> 命令。</para>
+    </sect2>
+    
+    <sect2 id="syslog-exit">
+    	<title>退出系统日志查看器</title>
+    	<para>要退出 <application>系统日志查看器</application>，点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>退出</guimenuitem></menuchoice> 命令。</para>
+    </sect2>
+ 
+  </sect1>
+
+</article>

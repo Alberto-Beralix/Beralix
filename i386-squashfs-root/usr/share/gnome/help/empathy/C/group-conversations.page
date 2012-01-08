@@ -1,0 +1,150 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="topic"
+      id="group-conversations">
+
+  <info>
+    <link type="guide" xref="index#text-conv"/>
+    <desc>
+      Start or join a group conversation with your contacts.
+    </desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-02" status="stub"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-17" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-17" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-09" status="deferred"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Group conversations</title>
+  
+  <p>
+    Group conversations permits you to have text conversations with more than one
+    contact at the same time.
+  </p>
+  <p>
+    To have a group conversation you need to have a registered account with either
+    Jabber or Google Talk, or a People Nearby account.
+  </p>
+
+  <note>
+    <p>
+      You can have a group conversation only with the contacts that are using the
+      same service as yours.
+    </p>
+  </note>
+
+  <section id="start-group-conv">
+
+  <title>Start a group conversation</title>
+
+  <steps>
+    <item>
+      <p>
+        From the <gui>Contact List</gui> window, choose <guiseq><gui>Room</gui><gui>Join</gui></guiseq>.
+      </p>
+    </item>
+    <item>
+      <p>
+        From the <gui>Account</gui> drop-down list, select the account you want to use
+        for the group conversation.
+      </p>
+    </item>
+    <item>
+      <p>
+        In the <gui>Server</gui> text box, type the name of server in which the conversation
+        will be hosted.
+      </p>
+      <p>
+        Leave it empty if it will be on the current server.
+      </p>
+    </item>
+    <item>
+      <p>
+        In the <gui>Room</gui> text box, type the name you want to give to the conversation.
+      </p>
+      <note>
+        <p>
+          This will be the name of the room you are going to have a conversation. This
+          name will be publicly available for other people to join. It is not possible
+          to create a private room.
+        </p>
+      </note>
+    </item>
+    <item>
+      <p>
+        To invite other contacts to join the group conversation, from the
+        <gui>Contact List</gui> window, select the contact you want to invite, 
+        and perform one of the following:
+      </p>
+      <list>
+        <item>
+          <p>
+            Right-click on the contact and choose <gui>Invite to chatroom</gui>.
+          </p>
+        </item>
+        <item>
+          <p>
+            Choose <guiseq><gui>Edit</gui><gui>Contact</gui><gui>Invite to chatroom</gui></guiseq>.
+          </p>
+        </item>
+      </list> 
+      <p>
+        If you have more than one group conversation open, select the one you want to invite
+        your contacts.
+      </p>
+    </item>
+  </steps>
+  
+  </section>
+
+  <section id="join-group-conv">
+
+  <title>Join a group conversation</title>
+
+  <steps>
+    <item>
+      <p>
+        From the <gui>Contact List</gui> window, choose
+        <guiseq><gui>Room</gui><gui>Join</gui></guiseq>.
+      </p>
+    </item>
+    <item>
+      <p>
+        Expand the <gui>Room List</gui> section to see all the existing rooms.
+      </p>
+    </item>
+    <item>
+      <p>
+        Double-click on the name of a room to join it.
+      </p>
+    </item>
+  </steps>
+
+  <p>
+    It is not possible to join all existing rooms. Some of the rooms might require a
+    password, or might be invitation only. <app>Empathy</app> does not support these
+    kind of rooms.
+  </p>
+
+  <!-- TODO: find out where the password protected or invitation only icons are
+  and create a table. -->
+
+  </section>
+
+</page>

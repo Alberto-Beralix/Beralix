@@ -1,0 +1,104 @@
+plugin: shell
+name: open_ssh_test
+requires: package.name == 'ssh'
+command: pgrep sshd >/dev/null || (echo 'FAIL: sshd is not running.' 2>&1 && false)
+description: sshd test
+description-cs.UTF-8: Test sshd
+description-de.UTF-8: sshd-Test
+description-en_AU.UTF-8: sshd test
+description-en_GB.UTF-8: sshd test
+description-es.UTF-8: Prueba sshd
+description-hu.UTF-8: sshd teszt
+description-it.UTF-8: Test sshd
+description-pt_BR.UTF-8: Teste de sshd
+description-ru.UTF-8: Проверка sshd
+description-sl.UTF-8: preizkus sshd
+description-tr.UTF-8: sshd testi
+
+plugin: shell
+name: print_server_test
+requires: package.name == 'cups'
+command: pgrep cupsd >/dev/null || (echo 'FAIL: cupsd is not running.' 2>&1 && false)
+description: Print/CUPs server test
+description-cs.UTF-8: Test tiskového serveru CUPS
+description-de.UTF-8: Druck/CUPS-Server-Test
+description-en_AU.UTF-8: Print/CUPs server test
+description-en_GB.UTF-8: Print/CUPs server test
+description-es.UTF-8: Prueba de servidor de impresión/CUPs
+description-hu.UTF-8: Nyomtató/CUPs kiszolgáló teszt
+description-it.UTF-8: Test del server di stampa/CUPS
+description-pt_BR.UTF-8: Teste de Impressão/servidor CUPs
+description-ru.UTF-8: Проверка сервера Печати/CUP
+description-sl.UTF-8: Preizkus strežnika za tiskanje CUPs
+
+plugin: shell
+name: dns_server_test
+requires: package.name == 'bind9' and package.name == 'dnsutils'
+user: root
+command: dns_server_test
+description: DNS server test
+description-cs.UTF-8: Test DNS serveru
+description-de.UTF-8: DNS-Server-Test
+description-en_AU.UTF-8: DNS server test
+description-en_GB.UTF-8: DNS server test
+description-es.UTF-8: Prueba de servidor DNS
+description-hu.UTF-8: DNS kiszolgáló teszt
+description-it.UTF-8: Test del server DNS
+description-pt_BR.UTF-8: Teste de servidor DNS
+description-ru.UTF-8: Проверка DNS-сервера
+description-sl.UTF-8: Preizkus strežnika DNS
+description-tr.UTF-8: DNS sunucu sınaması
+
+plugin: shell
+name: samba_test
+requires: package.name == 'samba' and package.name == 'winbind'
+user: root
+command: samba_test
+description: Samba server test
+description-cs.UTF-8: Test samba serveru
+description-de.UTF-8: Samba-Server-Test
+description-en_AU.UTF-8: Samba server test
+description-en_GB.UTF-8: Samba server test
+description-es.UTF-8: Prueba de servidor Samba
+description-hu.UTF-8: Samba kiszolgáló teszt
+description-it.UTF-8: Test del server Samba
+description-pt_BR.UTF-8: Teste de servidor Samba
+description-ru.UTF-8: Проверка Samba-сервера
+description-sl.UTF-8: Preizkus strežnika Samba
+description-tr.UTF-8: Samba sunucu sınaması
+
+plugin: shell
+name: lamp_test
+requires: package.name == 'apache2' and package.name == 'php5-mysql' and package.name == 'libapache2-mod-php5' and package.name == 'mysql-server'
+user: root
+command: lamp_test
+description: LAMP server test
+description-cs.UTF-8: Test LAMP serveru
+description-de.UTF-8: LAMP-Server-Test
+description-en_AU.UTF-8: LAMP server test
+description-en_GB.UTF-8: LAMP server test
+description-es.UTF-8: Prueba de servidor LAMP
+description-hu.UTF-8: LAMP kiszolgáló teszt
+description-it.UTF-8: Test del server LAMP
+description-pt_BR.UTF-8: Teste de servidor LAMP
+description-ru.UTF-8: Проверка LAMP-сервера
+description-sl.UTF-8: Preizkus strežnika LAMP
+description-tr.UTF-8: LAMP sunucu sınaması
+
+plugin: shell
+name: tomcat_test
+requires: package.name == 'tomcat6'
+user: root
+command: tomcat_test
+description: Tomcat server test
+description-cs.UTF-8: Test Tomcat serveru
+description-de.UTF-8: Tomcat-Server-Test
+description-en_AU.UTF-8: Tomcat server test
+description-en_GB.UTF-8: Tomcat server test
+description-es.UTF-8: Prueba de servidor Tomcat
+description-hu.UTF-8: Tomcat kiszolgáló teszt
+description-it.UTF-8: Test del server Tomcat
+description-pt_BR.UTF-8: Teste de servidor Tomcat
+description-ru.UTF-8: Проверка Tomcat-сервера
+description-sl.UTF-8: Preizkus strežnika Tomcast
+description-tr.UTF-8: Tomcat sunucu sınaması

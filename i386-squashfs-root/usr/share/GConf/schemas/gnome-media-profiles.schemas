@@ -1,0 +1,3555 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/global/profile_list</key>
+      <applyto>/system/gstreamer/0.10/audio/global/profile_list</applyto>
+      <owner>gnome-media</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[cdlossy,cdlossless,aac,mp2,mp3,voicelossy,voicelossless]</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>List of profiles</short>
+        <long>
+          List of audio recording profiles.  The list contains
+          strings naming subdirectories relative to
+          /system/gstreamer/0.10/audio/profiles.
+        </long>
+      </locale>
+    </schema>
+
+<!-- template schema for each of the profiles -->
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/name</key>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default></default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>A short name for the audio profile</short>
+        <long>
+          A short name for the audio profile, to be used in selections
+          and uniquely identifying the profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/description</key>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default></default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>A description for the audio profile</short>
+        <long>
+          A description of the profile, containing more information and
+          describing when to use this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/pipeline</key>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default></default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The partial GStreamer pipeline used</short>
+        <long>
+          A partial GStreamer pipeline to use for this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/extension</key>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default></default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The default file extension for this profile</short>
+        <long>
+          A filename extension to be used when storing files encoded
+          with this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/active</key>
+      <owner>gnome-media</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>Whether this profile is to be used</short>
+        <long>
+          Whether to use and display this profile.
+        </long>
+      </locale>
+    </schema>
+
+<!-- each of the profiles we supply by default -->
+    <!-- CD quality, lossy compression -->
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/cdlossy/name</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/cdlossy/name</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>CD Quality, Lossy</default>
+        <short>A short name for the audio profile</short>
+        <long>
+          A short name for the audio profile, to be used in selections
+          and uniquely identifying the profile.
+        </long>
+      </locale>
+      <locale name="af">
+        <default>CD-kwaliteit, met verlies</default>
+      </locale>
+      <locale name="ar">
+        <default>جودة القرص المدمج، فاقِد</default>
+      </locale>
+      <locale name="as">
+        <default>সিডি&apos;ৰ সমান মানসম্পন্ন, নিম্নমানসম্পন্ন (Lossy)</default>
+      </locale>
+      <locale name="ast">
+        <default>Calidá de CD, con pérdida</default>
+      </locale>
+      <locale name="az">
+        <default>CD Keyfiyyəti, İtkili</default>
+      </locale>
+      <locale name="be">
+        <default>Якасьць CD, з памяншэньнем якасьці</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Jakaść CD, stratnaja</default>
+      </locale>
+      <locale name="bg">
+        <default>Качество на CD със загуби</default>
+      </locale>
+      <locale name="bn">
+        <default>CD-এর গুণমান, নিম্ন মান (লসি)</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>CD-র গুণমান, নিম্ন মান (লসি)</default>
+      </locale>
+      <locale name="br">
+        <default>Perzhded CD, gant koll</default>
+      </locale>
+      <locale name="bs">
+        <default>CD kvaliteta, uz gubitke</default>
+      </locale>
+      <locale name="ca">
+        <default>Qualitat de CD, amb pèrdua</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Qualitat de CD, amb pèrdua</default>
+      </locale>
+      <locale name="cs">
+        <default>Kvalita CD, ztrátová</default>
+      </locale>
+      <locale name="cy">
+        <default>Ansawdd CD, Colledig</default>
+      </locale>
+      <locale name="da">
+        <default>Cd-kvalitet, med tab</default>
+      </locale>
+      <locale name="de">
+        <default>CD-Qualität, verlustbehaftet</default>
+      </locale>
+      <locale name="dz">
+        <default>སི་ཌི་གི་སྤུས་ཚད། ལཱོསི་སི།</default>
+      </locale>
+      <locale name="el">
+        <default>Ποιότητα CD, Απωλεστική</default>
+      </locale>
+      <locale name="en_CA">
+        <default>CD Quality, Lossy</default>
+      </locale>
+      <locale name="en_GB">
+        <default>CD Quality, Lossy</default>
+      </locale>
+      <locale name="es">
+        <default>Calidad de CD, con pérdida</default>
+      </locale>
+      <locale name="et">
+        <default>CD-kvaliteet, kadudega</default>
+      </locale>
+      <locale name="eu">
+        <default>CD-kalitatea, galerarekin</default>
+      </locale>
+      <locale name="fa">
+        <default>کیفیت سی‌دی، خسارت‌دار</default>
+      </locale>
+      <locale name="fi">
+        <default>CD-taso, häviöllinen</default>
+      </locale>
+      <locale name="fr">
+        <default>Qualité CD, avec perte</default>
+      </locale>
+      <locale name="gl">
+        <default>Calidade de CD, con perda</default>
+      </locale>
+      <locale name="gu">
+        <default>CD ગુણવત્તા, નુકસાનવાળી</default>
+      </locale>
+      <locale name="he">
+        <default>CD Quality, Lossy</default>
+      </locale>
+      <locale name="hi">
+        <default>सीडी क्वालिटी, हानियुक्त</default>
+      </locale>
+      <locale name="hr">
+        <default>CD kvaliteta, s gubitkom kvalitete</default>
+      </locale>
+      <locale name="hu">
+        <default>CD-minőség, veszteséges</default>
+      </locale>
+      <locale name="id">
+        <default>Kualitas CD, Aus</default>
+      </locale>
+      <locale name="it">
+        <default>Qualità CD, con perdita</default>
+      </locale>
+      <locale name="ja">
+        <default>CD の品質 (劣化あり)</default>
+      </locale>
+      <locale name="kn">
+        <default>ಸೀಡಿ ಗುಣಮಟ್ಟ, ನಷ್ಟವಾದ</default>
+      </locale>
+      <locale name="ko">
+        <default>CD 수준, 손실 있음</default>
+      </locale>
+      <locale name="ku">
+        <default>Kalîteya CDyê, Biwindahî</default>
+      </locale>
+      <locale name="lt">
+        <default>CD kokybės, nuostolingas</default>
+      </locale>
+      <locale name="lv">
+        <default>CD Kvalitāte, ar zudumiem</default>
+      </locale>
+      <locale name="mai">
+        <default>CD गुणवत्ता, हानियुक्त</default>
+      </locale>
+      <locale name="mg">
+        <default>Kalitao CD, Misy very</default>
+      </locale>
+      <locale name="mk">
+        <default>Квалитет на CD, послабо</default>
+      </locale>
+      <locale name="ml">
+        <default>CD നിലവാരം, Lossy</default>
+      </locale>
+      <locale name="mn">
+        <default>CD чанар, Алдагдалтай</default>
+      </locale>
+      <locale name="mr">
+        <default>सीडी दर्जा, हानीयुक्त</default>
+      </locale>
+      <locale name="nb">
+        <default>CD-kvalitet. Med tap</default>
+      </locale>
+      <locale name="nds">
+        <default>CD Qualität, Verlustbehaftet</default>
+      </locale>
+      <locale name="ne">
+        <default>सीडी गुणस्तर, नोक्सान मुलक</default>
+      </locale>
+      <locale name="nl">
+        <default>Cd-kwaliteit, met kwaliteitsverlies</default>
+      </locale>
+      <locale name="nn">
+        <default>CD-kvalitet, med tap</default>
+      </locale>
+      <locale name="or">
+        <default>ସି.ଡି. ଗୁଣବତ୍ତା, କ୍ଷତିଯୁକ୍ତ</default>
+      </locale>
+      <locale name="pa">
+        <default>CD ਕੁਆਲਟੀ, ਲੂਸ਼ੀ</default>
+      </locale>
+      <locale name="pl">
+        <default>Jakość CD, stratna</default>
+      </locale>
+      <locale name="pt">
+        <default>Qualidade de CD, Com Perca</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Qualidade de CD, com perdas</default>
+      </locale>
+      <locale name="ro">
+        <default>Calitate CD, cu pierderi</default>
+      </locale>
+      <locale name="ru">
+        <default>CD-качество, с потерями</default>
+      </locale>
+      <locale name="si">
+        <default>CD තත්වයේ, Lossy</default>
+      </locale>
+      <locale name="sk">
+        <default>CD kvalita, stratová</default>
+      </locale>
+      <locale name="sl">
+        <default>CD kakovost, z izgubami</default>
+      </locale>
+      <locale name="sq">
+        <default>Kualitet CD, me humbje</default>
+      </locale>
+      <locale name="sr">
+        <default>ЦД квалитет, са губитком</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>CD kvalitet, sa gubitkom</default>
+      </locale>
+      <locale name="sv">
+        <default>Cd-kvalitet, med förluster</default>
+      </locale>
+      <locale name="ta">
+        <default>CD தரம், இழப்பிடுகள்</default>
+      </locale>
+      <locale name="te">
+        <default>CD నాణ్యత, నష్టపూరితంగా</default>
+      </locale>
+      <locale name="th">
+        <default>คุณภาพซีดี, เสียรายละเอียด</default>
+      </locale>
+      <locale name="tr">
+        <default>CD Kalitesi, Kayıplı</default>
+      </locale>
+      <locale name="ug">
+        <default>CD ئاۋاز سۈپىتى، خورايدىغان</default>
+      </locale>
+      <locale name="uk">
+        <default>CD якість, з втратами якості</default>
+      </locale>
+      <locale name="vi">
+        <default>Chất lưọng đĩa CD, mất mát</default>
+      </locale>
+      <locale name="xh">
+        <default>Umgangatho weCD, onokuLahleka</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>CD 音质，有损</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>CD 品質，破壞性</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>CD 品質，破壞性</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/cdlossy/description</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/cdlossy/description</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>Used for converting to CD-quality audio, but with a lossy compression codec. Use this for CD extraction and radio recordings.</default>
+        <short>A description for the audio profile</short>
+        <long>
+          A description of the profile, containing more information and
+          describing when to use this profile.
+        </long>
+      </locale>
+      <locale name="ar">
+        <default>يستخدم للتّحويل إلى صوتٍ بجودة الأقراص المدمجة و لكن باستخدام كودك ضغط فاقِد. استخدم هذا للاستخراج من الأقراص المدمجة و تسجيلات الرّاديو.</default>
+      </locale>
+      <locale name="as">
+        <default>নিম্নমানসম্পন্ন (Lossless) কম্পপ্ৰেশন কোডেক ব্যৱহাৰ কৰি সিডি&apos;ৰ সমান মানসম্পন্ন অডিও-তে ৰূপান্তৰেৰ বাবে ব্যৱহৃত হয়।  সিডিৰ পৰা অডিও কপি কৰা বা বেতাৰৰ পৰা অডিও ৰেকৰ্ড কৰাৰ সময় এটি ব্যৱহাৰ কৰক।</default>
+      </locale>
+      <locale name="ast">
+        <default>Úsase pa pasar soníu con calidá de CD, con un codec de compresión con pérdida. Use esto pa sacar les pistes d&apos;un CD y grabaciones de radiu.</default>
+      </locale>
+      <locale name="az">
+        <default>CD-keyfiyyətində, amma itkili olaraq audioya dönüşdürmək üçündür. CD-dən nəğmə köçürülməsi və radio qeydləri üçün bunu seçin.</default>
+      </locale>
+      <locale name="be">
+        <default>Выкарыстоўваецца для пераўтварэньня ў аўдыёфайлы якасьці CD, але з дапамогай кодэка, які памяншае якасьць. Выкарыстоўвайце яго для капіяваньня з CD і радыёзапісаў.</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Užyvany dla kanvertavańnia huku da jakaści CD, ale z kodekam stratnaj kampresii. Naležyć užyć dla zdabyvańnia huku z dyskaŭ CD albo z radyjo.</default>
+      </locale>
+      <locale name="bg">
+        <default>Използва се а конвертиране на аудио с качеството на CD чрез кодек със загуба на качество. Използвайте този избор за сваляне на CD или за запис за радио.</default>
+      </locale>
+      <locale name="bn">
+        <default>CD-গুণমানের অডিওতে রূপান্তর করতে ব্যবহৃত। কিন্তু নিম্ন গুণমানের কম্প্রেশন কোডেক সহ। CD থেকে এক্সট্র্যাক্ট করার জন্য অথবা রেডিও রেকর্ডিং-এর জন্য এটি ব্যবহার করুন।</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>CD-গুণমানের অডিওতে রূপান্তর করতে ব্যবহৃত। কিন্তু নিম্ন গুণমানের কম্প্রেশন কোডেক সহ। CD থেকে এক্সট্র্যাক্ট করার জন্য অথবা রেডিও রেকর্ডিং-র জন্য এটি ব্যবহার করুন।</default>
+      </locale>
+      <locale name="bs">
+        <default>Koristi se za pretvaranje CD kvalitete zvuka, ali sa gubljenjem kvalitete. Koristi ovo za CD ekstraktovanje i radio snimanje.</default>
+      </locale>
+      <locale name="ca">
+        <default>Utilitzat per convertir a àudio amb qualitat de CD, però amb un còdec de compressió amb pèrdua. Utilitzeu això per a extracció de CD i enregistraments de ràdio.</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Utilitzat per convertir a àudio amb qualitat de CD, però amb un còdec de compressió amb pèrdua. Utilitzeu això per a extracció de CD i enregistraments de ràdio.</default>
+      </locale>
+      <locale name="cs">
+        <default>Používáno k převodu zvuku na kvalitu CD, ale se ztrátově komprimujícím kodekem. Vhodné k použití při extrakci CD a nahrávek z rádia.</default>
+      </locale>
+      <locale name="cy">
+        <default>Defnyddir er mwyn trosi i sain ansawdd CD, ond gyda chodec cywasgu colledig. Defnyddiwch hwn er mwyn echdynnu CD a recordio radio.</default>
+      </locale>
+      <locale name="da">
+        <default>Konverterer til lyd af cd-kvalitet, men med en komprimeringskodek med kvalitetstab. Benyt denne til cd- eller radio-optagelser.</default>
+      </locale>
+      <locale name="de">
+        <default>Wird zum Konvertieren von Audio-Daten in CD-Qualität verwendet, allerdings mit einem erlustbehafteten Kompressions-Codec. Verwenden Sie dies für das Rippen von CDs und Radio-Aufnahmen.</default>
+      </locale>
+      <locale name="dz">
+        <default>སི་ཌི་གི་ སྤུས་ཚད་ཅན་གྱི་རྣར་ཉན་ལུ་ གཞི་བསྒྱུར་གྱི་དོན་ལུ་ ལག་ལེན་འཐབ་པ། དེ་འབདཝ་ད་ ལཱོསི་སི་ཨེབ་བཙུགས་ཀྱི་ ཀོ་ཌེཀ་དང་བཅསཔ་སྦེ་ཨིན། འདི་སི་ཌི་བཏོན་ནི་དང་ རེ་ཌིའོ་གི་སྒྲ་བཟུང་ནིའི་དོན་ལུ་ ལག་ལེན་འཐབ།</default>
+      </locale>
+      <locale name="el">
+        <default>Χρησιμοποιείται για μετατροπή σε ήχο ποιότητας CD, αλλά με χρήση codec απωλεστικής συμπίεσης. Κάντε χρήση αυτής της επιλογής για εξαγωγή ήχου CD ή για ηχογραφήσεις από ραδιόφωνο.</default>
+      </locale>
+      <locale name="en_CA">
+        <default>Used for converting to CD-quality audio, but with a lossy compression codec. Use this for CD extraction and radio recordings.</default>
+      </locale>
+      <locale name="en_GB">
+        <default>Used for converting to CD-quality audio, but with a lossy compression codec. Use this for CD extraction and radio recordings.</default>
+      </locale>
+      <locale name="es">
+        <default>Usado para convertir el sonido a calidad de CD, pero con un códec de compresión con pérdida. Use este para extracción de CD y grabaciones de radio.</default>
+      </locale>
+      <locale name="et">
+        <default>Kasutatakse CD-kvaliteediga audio teisendamiseks koos kadudega pakkimisga. Kasuta raadiost ja CD-plaatidelt salvestamisel.</default>
+      </locale>
+      <locale name="eu">
+        <default>CD kalitateko audiora bihurtzeko erabiltzen da, konpresioan galera duen kodeketarekin. Erabili CDa erauzteko edo irratia grabatzeko.</default>
+      </locale>
+      <locale name="fa">
+        <default>برای تبدیل به صدای با کیفیت سی‌دی، اما با یک کُدِک فشرده‌سازی خسارت‌دار استفاده می‌شود. برای استخراج سی‌دی یا ضبط رادیو از این استفاده کنید.</default>
+      </locale>
+      <locale name="fi">
+        <default>Käytetään CD-tasoisen äänen tuomiseen, mutta häviöllisellä pakkauksella. Käytä tätä CD-levyjen ja radio-ohjelmien tuontiin.</default>
+      </locale>
+      <locale name="fr">
+        <default>Utilisé pour la conversion vers la qualité CD audio, mais avec un codec de compression avec perte. À utiliser pour l&apos;extraction de CD et l&apos;enregistrement de radio.</default>
+      </locale>
+      <locale name="gl">
+        <default>Úsase para converter en audio con calidade de CD, mais cun códec de compresión con perda. Úseo para a extracción de CD e gravacións de radio.</default>
+      </locale>
+      <locale name="gu">
+        <default>CD-ગુણવત્તા ઓડિયોમાં ફેરવવા માટે વપરાય છે, પરંતુ નુકસાનકારક સંકોચન સાથે.આને CD વિસ્તૃત કરવા અને રેડિયો રેકોર્ડ કરવા માટે વાપરો.</default>
+      </locale>
+      <locale name="he">
+        <default>Used for converting to CD-quality audio, but with a lossy compression codec. Use this for CD extraction and radio recordings.</default>
+      </locale>
+      <locale name="hi">
+        <default>सीडी-क्वॉलिटी ऑडियो में परिवर्तन हेतु उपयोग में लिया जाता है, परंतु हानियुक्त संपीडन कोडेक के साथ. इसका उपयोग सीडी से ऑडियो निकालने तथा रेडियो रेकॉर्डिंग हेतु करें.</default>
+      </locale>
+      <locale name="hr">
+        <default>Koristi se za pretvaranje u zvuk CD kvalitete, ali sa kodekom sažimanja s gubitkom kvalitete. Koristite za preuzimanje sa CD-a i snimanje zvuka.</default>
+      </locale>
+      <locale name="hu">
+        <default>CD-minőségű hanggá alakításhoz használható, veszteséges tömörítést végző kodekkel. CD beolvasásához és rádiófelvételhez használja ezt.</default>
+      </locale>
+      <locale name="id">
+        <default>Digunakan untuk mengkoversi ke audio sekualitas CD, tapi dengan codec kompresi yang aus. Gunakan pilihan ini bila ingin mengekstrak CD dan merekam radio.</default>
+      </locale>
+      <locale name="it">
+        <default>Per convertire in qualità CD audio, ma con un codec con compressione con perdita. Consigliato per l&apos;estrazione da CD e registrazioni radio.</default>
+      </locale>
+      <locale name="ja">
+        <default>CD と同等の品質を持つオーディオへ変換する際に使用しますが、劣化のある圧縮コーデックを用います。CD からの抽出やラジオの記録を行う場合にセットしてください。</default>
+      </locale>
+      <locale name="kn">
+        <default>ಸೀಡಿ-ಗುಣಮಟ್ಟದ ಆಡಿಯೋ ಅನ್ನು ಪರಿವರ್ತಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ, ಆದರೆ ಗುಣಮಟ್ಟ ನಷ್ಟಗೊಳ್ಳುವ ಸಂಕುಚನಗೊಳಿಸಲಾದ ಕೋಡೆಕ್‌ನೊಂದಿಗೆ. ಇದನ್ನು ಸೀಡಿಯಲ್ಲಿರುವದನ್ನು ಹೊರತೆಗೆಯಲು ಹಾಗು ರೇಡಿಯೊ ರೆಕಾರ್ಡಿಂಗಿನಲ್ಲಿ ಬಳಸಿ.</default>
+      </locale>
+      <locale name="ko">
+        <default>CD 수준의 오디오로 변환하는 데 사용합니다. 손실 압축 코덱을 사용합니다. CD에서 음악을 복사하거나 라디오를 녹음할 때 사용하십시오.</default>
+      </locale>
+      <locale name="lt">
+        <default>Naudojama konvertuojant CD kokybės garsą, tačiau su nuostolingu glaudinimo kodeku. Naudokite šį profilį garso rašymui iš CD ir radijo įrašams.</default>
+      </locale>
+      <locale name="lv">
+        <default>Tiek izmantots, lai konvertētu uz CD kvalitātes audio ar kvalitātes zudumiem. Izmantojiet to CD kopiju veidošanai un radio pārraižu ierakstiem.</default>
+      </locale>
+      <locale name="mai">
+        <default>CD-क्वॉलिटी आडियोमे परिवर्तन लेल उपयोगमे लेल जाएत अछि, परंतु हानियुक्त संपीडन कोडेक क&apos; सँग. एकर उपयोग CD सँ ऑडियो निकालए आओर रेडियो रेकार्डिंग लेल करू.</default>
+      </locale>
+      <locale name="mg">
+        <default>Entina amadihana ny feo mba hanaraka kalitao CD amin&apos;ny alalana codec famintinana manary. Io ampiasaina rehefa haka hira tanaty CD sy handraikitra feon&apos;onjam-peo.</default>
+      </locale>
+      <locale name="mk">
+        <default>Се користи за конвертирање на CD-квалитетно аудио, но со кодек за послаба компресија. Користете го ова за вадење од CD и за снимање на радио снимки.</default>
+      </locale>
+      <locale name="ml">
+        <default>സിഡി രീതിയ്ക്കുള്ള ഓഡിയോയിലേക്ക് വേര്‍തിരിക്കുന്നതിനായി ഉപയോഗിക്കുന്നു, പക്ഷേ കുറഞ്ഞ കംപ്രഷന്‍ കോഡക്കോടെ. സിഡി എക്സ്ട്രാക്ഷനും റേഡിയോ റിക്കോര്‍ഡിങിനുമായി ഇതുപയോഗിക്കുക.</default>
+      </locale>
+      <locale name="mn">
+        <default>CD-чанарын дуу руу хөрвүүлэхэд хэрэглэсэн, гэхдээ алдаатай (гэхдээ шахалтын үед алдаатай) шахдаг кодек-оор.Үүнийг CD гаргах болон дуу бичихэд хэрэглэдэг.</default>
+      </locale>
+      <locale name="mr">
+        <default>सीडी-दर्जा ऑडियो मध्ये रूपांतर करीता वापरले जाते, परंतु हानियुक्त संकुचन कोडेक सह. CD प्राप्ती व रेडियो रेकॉर्डिंग करीता याचा वापर करा.</default>
+      </locale>
+      <locale name="nb">
+        <default>Brukes for konvertering til lyd med CD-kvalitet, men med komprimering med tap av kvalitet. Bruk denne for henting av data fra CD og opptak fra radio.</default>
+      </locale>
+      <locale name="ne">
+        <default>सीडी गुणस्तर अडियोमा रूपान्तरण गर्नका लागि, तर नोक्सान हुने सङ्कुचन कोडेकसँग प्रयोग गरिन्छ । यसलाई सीडी उद्धरण र रेडियो रेकर्डिङका लागि प्रयोग गर्नुहोस् ।</default>
+      </locale>
+      <locale name="nl">
+        <default>Gebruikt voor het converteren naar cd-kwaliteit audio, maar met een coderingsmethode die kwaliteitsverlies geeft. Gebruik dit voor het uitpakken vanaf cd en radio-opnamen.</default>
+      </locale>
+      <locale name="nn">
+        <default>Brukt til å konvertera til CD-kvalitets-lyd, men med ei koding med kvalitetstap. Bruk dette til å kopiera ut lyd frå CD-ar og til radioopptak.</default>
+      </locale>
+      <locale name="or">
+        <default>ସି.ଡି. ଗୁଣବତ୍ତା ଧ୍ବନିକୁ ପରିବର୍ତନ କରିବା ପାଇଁ ବ୍ଯବହାର କରାଯାଇଛି, କିନ୍ତୁ କ୍ଷତିଯୁକ୍ତ ସଙ୍କୋଚନ ସଙ୍କେତକ/ଅବସଙ୍କେତକ ସହିତ. ସି.ଡି.ରୁ ବାହାର କରିବା ପାଇଁ ବା ରେଡିଓରୁ ଲିପିବଦ୍ଧ କରିବା ପାଇଁ ଏହାକୁ ବ୍ଯବହାର କରନ୍ତୁ.</default>
+      </locale>
+      <locale name="pa">
+        <default>CD-ਕੁਆਲਟੀ ਦੀ ਆਡੀਓ ਲਈ ਵਰਤਿਆ ਜਾਦਾ ਹੈ, ਪਰ ਇੱਕ ਹਲਕੇ ਪੱਧਰ ਦੇ ਕੋਡ ਨਾਲ। ਇਸ ਨੂੰ CD ਖੋਲਣ ਤੇ ਰੇਡੀਓ ਰਿਕਾਰਡ ਕਰਨ ਲਈ ਵਰਤੋਂ।</default>
+      </locale>
+      <locale name="pl">
+        <default>Używany do konwersji dźwięku do jakości CD, ale z koderem używającym kompresji stratnej. Należy użyć przy nagraniach radiowych lub wyodrębnianych z płyt CD.</default>
+      </locale>
+      <locale name="pt">
+        <default>Utilizado para converter para audio com qualidade de CD, mas com um codec de compressão com perca. Utilize-o para extracção de CD e gravações de rádio.</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Usado para converter para áudio com qualidade de CD, mas com um codec de compressão com perdas. Use isto para extração de CD e gravações de rádio.</default>
+      </locale>
+      <locale name="ro">
+        <default>Folosit la conversia audio de calitate CD, dar cu un codec cu pierderi la compresie. Folosiți-l pentru extragerea melodiilor de pe CD și înregistrări radio.</default>
+      </locale>
+      <locale name="ru">
+        <default>Используется для преобразования в звук CD-качества, но с потерями. Используйте для оцифровки CD и записи радио.</default>
+      </locale>
+      <locale name="sk">
+        <default>Používa sa pre konvertovanie do zvuku kvality CD, ale pomocou kodeku so stratovou kompresiou. Vhodné pre výbery z CD a rozhlasové záznamy.</default>
+      </locale>
+      <locale name="sl">
+        <default>Uporabljeno za pretvarjanje v zvok CD kakovosti, vendar s kodekom z izgubami. Uporabite možnost, za razširjanje sledi CD nosilcev in za radijsko snemanje.</default>
+      </locale>
+      <locale name="sq">
+        <default>Përdoret për të konvertuar në një kualitet audio për CD, por me një codec kompresimi me humbje. Përdorni këtë për nxjerrje nga CD dhe regjistrime nga radio.</default>
+      </locale>
+      <locale name="sr">
+        <default>Користи се за претварање у звук ЦД квалитета, али са компресијом са губицима. Користите ово за извлачење са ЦД-а и снимања са радија.</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>Koristi se za pretvaranje u zvuk CD kvaliteta, ali sa kompresijom sa gubicima. Koristite ovo za izvlačenje sa CD-a i snimanja sa radija.</default>
+      </locale>
+      <locale name="sv">
+        <default>Används för att konvertera till ljud med cd-kvalitet, men med en kodek med förluster. Använd detta för cd-extrahering och radioinspelningar.</default>
+      </locale>
+      <locale name="ta">
+        <default>CD ஆடியோவை உபயோகப்படுத்தி மாற்றுக,</default>
+      </locale>
+      <locale name="te">
+        <default>CD-నాణ్యతా ఆడియో కి మార్చుటలో ఉపయోగించబడింది, అయితే నష్టంకాని కంప్రషన్ కొడెక్స్ తో. CD ఎక్సట్రాక్షన్ మరియు రేడియో రికార్డింగ్స్ కు ఉపయోగించండి.</default>
+      </locale>
+      <locale name="th">
+        <default>ใช้แปลงเป็นข้อมูลเสียงคุณภาพเท่าซีดี แต่ใช้ codec บีบอัดแบบเสียรายละเอียด ใช้โพรไฟล์นี้สำหรับดึงข้อมูลเสียงออกจากซีดี และกับการอัดเสียงจากวิทยุ</default>
+      </locale>
+      <locale name="tr">
+        <default>Kayıplı sıkıştırma kodlayıcısı ile CD-kalitesinde ses çevirmek için kullanılır. Bunu CD&apos;leri dosya halinde kaydederken ve radyo kayıtlarında kullanın.</default>
+      </locale>
+      <locale name="ug">
+        <default>CD ئاۋاز سۈپىتىدە ئايلاندۇرىدىغان ئاۋازغا ئىشلىتىلىدۇ ئەمما خورايدىغان كودلاش ئۇسۇلىنى قوللىنىدۇ. CD دىن ئاجرىتىش ياكى رادىئو خاتىرىلەشتە مۇشۇ خىل ئۇسۇلنى ئىشلىتىڭ.</default>
+      </locale>
+      <locale name="uk">
+        <default>Використовується для перетворення звуку CD-якості, з використанням кодеку з втратою якості. Використовуйте для CD та радіо записів.</default>
+      </locale>
+      <locale name="vi">
+        <default>Sử dụng để chuyển đổi sang âm thanh chất lượng khớp đĩa CD, nhưng mà với codec (phương pháp nén và truyền nhiều loại dữ liệu khác) nén có mất mát. Hãy sử dụng nó để rút đĩa CD, và thu âm thanh radiô.</default>
+      </locale>
+      <locale name="xh">
+        <default>Esetyenziselwa ukuguqulela kumgangatho wesandi seCD, kodwa noxinzelello olulahlekayo lwecodec. Sebenzisa oku ukukhupha iCD noshicilelo kunomathotholo.</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>用于转换为 CD 音质的音频，但使用有损压缩编码方式。进行 CD 提取或广播录音时请使用此方式。</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>用作轉換 CD 品質的音效，但使用失真的編碼器。適用於音樂光碟擷取或錄下電台廣播。</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>用作轉換 CD 品質的音效，但使用失真的編碼器。適用於音樂光碟擷取或錄下電台廣播。</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/cdlossy/pipeline</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/cdlossy/pipeline</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>audio/x-raw-float,rate=44100,channels=2 ! vorbisenc name=enc quality=0.5 ! oggmux</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The partial GStreamer pipeline used</short>
+        <long>
+          A partial GStreamer pipeline to use for this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/cdlossy/extension</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/cdlossy/extension</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>ogg</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The default file extension for this profile</short>
+        <long>
+          A filename extension to be used when storing files encoded
+          with this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/active</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/cdlossy/active</applyto>
+      <owner>gnome-media</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>Whether this profile is to be used</short>
+        <long>
+          Whether to use and display this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <!-- CD quality, lossless compression -->
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/cdlossless/name</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/cdlossless/name</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>CD Quality, Lossless</default>
+        <short>A short name for the audio profile</short>
+        <long>
+          A short name for the audio profile, to be used in selections
+          and uniquely identifying the profile.
+        </long>
+      </locale>
+      <locale name="af">
+        <default>CD-kwaliteit, sonder verlies</default>
+      </locale>
+      <locale name="ar">
+        <default>جودة القرص المدمج، بلا خسارة</default>
+      </locale>
+      <locale name="as">
+        <default>সিডি&apos;ৰ সমান মানসম্পন্ন, অনুৰূপ মানসম্পন্ন (Lossless)</default>
+      </locale>
+      <locale name="ast">
+        <default>Calidá de CD, ensin pérdida</default>
+      </locale>
+      <locale name="az">
+        <default>CD Keyfiyyəti, İtkisiz</default>
+      </locale>
+      <locale name="be">
+        <default>Якасьць CD, без памяншэньня якасьці</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Jakaść CD, biasstratnaja</default>
+      </locale>
+      <locale name="bg">
+        <default>Качество на CD без загуби</default>
+      </locale>
+      <locale name="bn">
+        <default>CD-এর গুণমান, উচ্চ মান (লস-লেস)</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>CD-র গুণমান, উচ্চ মান (লস-লেস)</default>
+      </locale>
+      <locale name="br">
+        <default>Perzhded CD, hep koll</default>
+      </locale>
+      <locale name="bs">
+        <default>CD kvaliteta, bez gubitaka</default>
+      </locale>
+      <locale name="ca">
+        <default>Qualitat de CD, sense pèrdua</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Qualitat de CD, sense pèrdua</default>
+      </locale>
+      <locale name="cs">
+        <default>Kvalita CD, bezeztrátová</default>
+      </locale>
+      <locale name="cy">
+        <default>Ansawdd CD, Digolled</default>
+      </locale>
+      <locale name="da">
+        <default>Cd-kvalitet, tabsfri</default>
+      </locale>
+      <locale name="de">
+        <default>CD-Qualität, verlustfrei</default>
+      </locale>
+      <locale name="dz">
+        <default>སི་ཌི་གི་སྤུས་ཚད། ལཱོསི་ལེསི།</default>
+      </locale>
+      <locale name="el">
+        <default>Ποιότητα CD, Μη Απωλεστική</default>
+      </locale>
+      <locale name="en_CA">
+        <default>CD Quality, Lossless</default>
+      </locale>
+      <locale name="en_GB">
+        <default>CD Quality, Lossless</default>
+      </locale>
+      <locale name="es">
+        <default>Calidad de CD, sin pérdida</default>
+      </locale>
+      <locale name="et">
+        <default>CD-kvaliteet, kadudeta</default>
+      </locale>
+      <locale name="eu">
+        <default>CD-kalitatea, galerarik gabe</default>
+      </locale>
+      <locale name="fa">
+        <default>کیفیت سی‌دی، بدون خسارت</default>
+      </locale>
+      <locale name="fi">
+        <default>CD-taso, häviötön</default>
+      </locale>
+      <locale name="fr">
+        <default>Qualité CD, sans perte</default>
+      </locale>
+      <locale name="gl">
+        <default>Calidade de CD, sen perda</default>
+      </locale>
+      <locale name="gu">
+        <default>CD ગુણવત્તા, નુકસાનવિના</default>
+      </locale>
+      <locale name="he">
+        <default>CD Quality, Lossless</default>
+      </locale>
+      <locale name="hi">
+        <default>सीडी क्वालिटी, हानि-रहित</default>
+      </locale>
+      <locale name="hr">
+        <default>CD kvaliteta, bez gubitka kvalitete</default>
+      </locale>
+      <locale name="hu">
+        <default>CD-minőség, veszteségmentes</default>
+      </locale>
+      <locale name="id">
+        <default>Kualitas CD, Tak Aus</default>
+      </locale>
+      <locale name="it">
+        <default>Qualità CD, senza perdita</default>
+      </locale>
+      <locale name="ja">
+        <default>CD の品質 (劣化なし)</default>
+      </locale>
+      <locale name="kn">
+        <default>ಸೀಡಿ ಗುಣಮಟ್ಟ, ನಷ್ಟವಿಲ್ಲದೆ</default>
+      </locale>
+      <locale name="ko">
+        <default>CD 수준, 손실 없음</default>
+      </locale>
+      <locale name="ku">
+        <default>Kalîteya CDyê, Bêwindahî</default>
+      </locale>
+      <locale name="lt">
+        <default>CD kokybės, nenuostolingas</default>
+      </locale>
+      <locale name="lv">
+        <default>CD Kvalitāte, bez zudumiem</default>
+      </locale>
+      <locale name="mai">
+        <default>CD गुणवत्ता, हानि-रहित</default>
+      </locale>
+      <locale name="mg">
+        <default>Kalitao CD, Tsy misy very</default>
+      </locale>
+      <locale name="mk">
+        <default>Квалитет на CD, средно</default>
+      </locale>
+      <locale name="ml">
+        <default>CD നിലവാരം, Lossless</default>
+      </locale>
+      <locale name="mn">
+        <default>CD чанар, Алдагдалгүй</default>
+      </locale>
+      <locale name="mr">
+        <default>सीडी दर्जा, हानी विना</default>
+      </locale>
+      <locale name="nb">
+        <default>CD-kvalitet. Uten tap</default>
+      </locale>
+      <locale name="nds">
+        <default>CD Qualität, Verlustfrie</default>
+      </locale>
+      <locale name="ne">
+        <default>सीडी गुणस्तर, नोक्सान रहित</default>
+      </locale>
+      <locale name="nl">
+        <default>Cd-kwaliteit, zonder kwaliteitsverlies</default>
+      </locale>
+      <locale name="nn">
+        <default>CD-kvalitet, utan tap</default>
+      </locale>
+      <locale name="or">
+        <default>ସି.ଡି. ଗୁଣବତ୍ତା, କ୍ଷତିହୀନ</default>
+      </locale>
+      <locale name="pa">
+        <default>CD ਕੁਆਲਟੀ, ਲੂਸ਼ਲਿਸ</default>
+      </locale>
+      <locale name="pl">
+        <default>Jakość CD, bezstratna</default>
+      </locale>
+      <locale name="pt">
+        <default>Qualidade de CD, Sem Perca</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Qualidade de CD, sem perdas</default>
+      </locale>
+      <locale name="ro">
+        <default>Calitate CD, fara pierderi</default>
+      </locale>
+      <locale name="ru">
+        <default>CD-качество, без потерь</default>
+      </locale>
+      <locale name="si">
+        <default>CD තත්වයේ, Lossless</default>
+      </locale>
+      <locale name="sk">
+        <default>CD kvalita, bezstratová</default>
+      </locale>
+      <locale name="sl">
+        <default>CD kakovost, brez izgub</default>
+      </locale>
+      <locale name="sq">
+        <default>Kualitet CD, pak humbje</default>
+      </locale>
+      <locale name="sr">
+        <default>ЦД квалитет, без губитака</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>CD kvalitet, bez gubitaka</default>
+      </locale>
+      <locale name="sv">
+        <default>Cd-kvalitet, förlustfri</default>
+      </locale>
+      <locale name="ta">
+        <default>CD தரம், இழப்பிடுகள்</default>
+      </locale>
+      <locale name="te">
+        <default>CD నాణ్యత, లాస్‌లెస్</default>
+      </locale>
+      <locale name="th">
+        <default>คุณภาพซีดี, ไม่เสียรายละเอียด</default>
+      </locale>
+      <locale name="tr">
+        <default>CD Kalitesi, Kayıpsız</default>
+      </locale>
+      <locale name="ug">
+        <default>CD ئاۋاز سۈپىتى، خورىمايدىغان</default>
+      </locale>
+      <locale name="uk">
+        <default>CD якість, без втрат якості</default>
+      </locale>
+      <locale name="vi">
+        <default>Chất lưọng đĩa CD, không mất mát</default>
+      </locale>
+      <locale name="xh">
+        <default>Umgangatho weCD, ongaLahlekiyo</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>CD 音质，无损</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>CD 品質，非破壞性</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>CD 品質，非破壞性</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/cdlossless/description</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/cdlossless/description</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>Used for converting to CD-quality audio, but with a lossless compression codec. Use this if you later want to edit the file or burn it to CD.</default>
+        <short>A description for the audio profile</short>
+        <long>
+          A description of the profile, containing more information and
+          describing when to use this profile.
+        </long>
+      </locale>
+      <locale name="ar">
+        <default>يستخدم للتّحويل إلى صوتٍ بجودة الأقراص المدمجة و لكن باستخدام كودك تشفير بلا خسارة. استخدم هذا إذا كنت تريد تعديل الملف لاحقًا أو كتابته إلى قرصٍ مدمج.</default>
+      </locale>
+      <locale name="as">
+        <default>অনুৰূপ মানসম্পন্ন (Lossless) কম্পপ্ৰেশন কোডেক ব্যৱহাৰ কৰি সিডি&apos;ৰ সমান মানসম্পন্ন অডিও-তে ৰূপান্তৰেৰ বাবে ব্যৱহৃত হয়।  আপনি যদি নথিপত্ৰকে পৰবৰ্তীতে সম্পাদন কৰিবলৈ অথবা সিডি&apos;তে লিখতে চান, তবে এটি ব্যৱহাৰ কৰক।</default>
+      </locale>
+      <locale name="ast">
+        <default>Usáu pa pasar soníu con calidá de CD, con un codec de compresión ensin pérdida. Use esto si quier remanar el ficheru o grabalu nún CD.</default>
+      </locale>
+      <locale name="az">
+        <default>CD-keyfiyyətində itkisiz audioya dönüşdürmək üçündür. Əgər faylı redaktə etmək ya da CD-yə qeyd etmək istəyirsinizsə bunu seçin.</default>
+      </locale>
+      <locale name="be">
+        <default>Выкарыстоўваецца для пераўтварэньня ў аўдыёфайлы якасьці CD, але з дапамогай кодэка, які не памяншае якасьць. Выкарыстоўвайце яго, калі пазьней вы хочаце зьмяніць файл ці запісаць яго на CD.</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Užyvany dla kanvertavańnia huku da jakaści CD, ale z kodekam biasstratnaj kampresii. Naležyć užyć, kali ŭ budučyni ty chočaš redahavać fajł albo zapisvać na dysku CD.</default>
+      </locale>
+      <locale name="bg">
+        <default>Използва се за конвертиране на аудио с качеството на CD чрез кодек без загуба на качество. Използвайте този избор, ако искате да редактирате по-късно или да правите запис на CD.</default>
+      </locale>
+      <locale name="bn">
+        <default>CD-গুণমানের অডিওতে রূপান্তর করতে ব্যবহৃত। কিন্তু উচ্চ গুণমানের কম্প্রেশন কোডেক সহ। ফাইলটি পরে সম্পাদনা করার জন্য অথবা CD-তে বার্ন করতে হলে এটি ব্যবহার করুন।</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>CD-গুণমানের অডিওতে রূপান্তর করতে ব্যবহৃত। কিন্তু উচ্চ গুণমানের কম্প্রেশন কোডেক সহ। ফাইলটি পরে সম্পাদনা করার জন্য অথবা CD-তে বার্ন করতে হলে এটি ব্যবহার করুন।</default>
+      </locale>
+      <locale name="bs">
+        <default>Koristi se za pretvaranje CD kvalitet zvuka, ali sa gubljenje kvalitete. Koristi ovo ako želiš poslije urediti datoteku za snimanje na CD.</default>
+      </locale>
+      <locale name="ca">
+        <default>Utilitzat per convertir a àudio amb qualitat de CD, però amb un còdec de compressió sense pèrdua. Utilitzeu això si més tard voleu editar el fitxer o gravar-ho a un CD.</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Utilitzat per convertir a àudio amb qualitat de CD, però amb un còdec de compressió sense pèrdua. Utilitzeu això si més tard voleu editar el fitxer o gravar-ho a un CD.</default>
+      </locale>
+      <locale name="cs">
+        <default>Používáno pro převod zvuku na kvalitu CD, ale s bezeztrátově komprimujícím kodekem. Vhodné k použití, pokud chcete soubor později upravovat nebo jej vypálit na CD.</default>
+      </locale>
+      <locale name="cy">
+        <default>Defnyddir er mwyn trosi i sain ansawdd CD, ond gyda chodec cywasgu digolled. Defnyddiwch hwn os ydych am olygu&apos;r ffeil yn hwyrach neu ei hysgrifennu at CD.</default>
+      </locale>
+      <locale name="da">
+        <default>Bruges til at konvertere til lyd af cd-kvalitet, men med en tabsfri komprimeringskodek. Benyt denne, hvis du senere vil redigere filen eller brænde den til en cd.</default>
+      </locale>
+      <locale name="de">
+        <default>Wird zum Konvertieren von Audio-Daten in CD-Qualität verwendet, und zwar mit einem verlustbehafteten Kompressions-Codec. Verwenden Sie dies, falls Sie die Datei später bearbeiten oder auf CD brennen wollen.</default>
+      </locale>
+      <locale name="dz">
+        <default>སི་ཌི་གི་ སྤུས་ཚད་ཅན་གྱི་རྣར་ཉན་ལུ་ གཞི་བསྒྱུར་གྱི་དོན་ལུ་ ལག་ལེན་འཐབ་པ། དེ་འབདཝ་ད་ ལཱོསི་ལེསི་ཨེབ་བཙུགས་ཀྱི་ ཀོ་ཌེཀ་དང་བཅསཔ་སྦེ་ཨིན། ཁྱོད་ཀྱིས་ཤུལ་ལས་ ཡིག་སྣོད་དེ་ཞུན་དག་བརྐྱབ་ནི་དང་ ཡང་ན་ སི་ཌི་ནང་བཙུགས་སྤྱོད་འབད་དགོ་མནོ་བ་ཅིན་ འདི་ལག་ལེན་འཐབ།</default>
+      </locale>
+      <locale name="el">
+        <default>Χρησιμοποιείται για μετατροπή σε ήχο ποιότητας CD, αλλά με χρήση codec μη απωλεστικής συμπίεσης. Κάντε χρήση αυτής της επιλογής αν θέλετε στο μέλλον να επεξεργαστείτε το αρχείο ή να το γράψετε σε CD.</default>
+      </locale>
+      <locale name="en_CA">
+        <default>Used for converting to CD-quality audio, but with a lossless compression codec. Use this if you want to edit the file later or burn it to CD.</default>
+      </locale>
+      <locale name="en_GB">
+        <default>Used for converting to CD-quality audio, but with a lossless compression codec. Use this if you later want to edit the file or burn it to CD.</default>
+      </locale>
+      <locale name="es">
+        <default>Usado para convertir a sonido de calidad de CD, pero con un códec de compresión sin pérdida. Use esto si quiere editar luego el archivo o grabarlo en un CD.</default>
+      </locale>
+      <locale name="et">
+        <default>Kasutatakse CD-kvaliteediga audio teisendamiseks koos kadudeta pakkimisga. Kasuta seda juhul, kui sa soovid audiofaili hiljem muuta või CD-plaadile salvestada.</default>
+      </locale>
+      <locale name="eu">
+        <default>CD kalitateko audiora bihurtzeko erabiltzen da, baina konpresioan galerarik gabeko kodeketarekin. Erabili hau fitxategia editatzea edo CD batean grabatzea nahi baduzu.</default>
+      </locale>
+      <locale name="fa">
+        <default>برای تبدیل به صدای با کیفیت سی‌دی، اما با یک کُدِک فشرده‌سازی بدون خسارت استفاده می‌شود. اگر می‌خواهید بعداً پرونده را ویرایش کنید یا در سی‌دی ذخیره کنید از این استفاده کنید.</default>
+      </locale>
+      <locale name="fi">
+        <default>Käytetään CD-tasoisen äänen tuomiseen käyttäen häviötöntä pakkausta. Käytä tätä mikäli haluat myöhemmin muokata tuomaasi tiedostoa tai polttaa sen CD:lle.</default>
+      </locale>
+      <locale name="fr">
+        <default>Utilisé pour la conversion vers la qualité CD audio, mais avec un codec de compression sans perte. À utiliser si vous souhaitez éditer le fichier plus tard ou le graver sur un CD.</default>
+      </locale>
+      <locale name="gl">
+        <default>Úsase para converter en audio con calidade de CD, mais cun códec de compresión sen perda. Úseo se máis tarde quere editar o ficheiro ou gravalo nun CD.</default>
+      </locale>
+      <locale name="gu">
+        <default>CD-ગુણવત્તા ઓડિયોમાં ફેરવવા માટે વપરાય છે, પરંતુ નુકસાનવિહીન સરખામણી codec સાથે. જો તમે પછી તેમાં ફેરફાર કરવા માંગો છો અથવા તેને CD પર લખવા માંગો તો.</default>
+      </locale>
+      <locale name="he">
+        <default>Used for converting to CD-quality audio, but with a lossless compression codec. Use this if you later want to edit the file or burn it to CD.</default>
+      </locale>
+      <locale name="hi">
+        <default>सीडी-क्वॉलिटी ऑडियो में परिवर्तन हेतु उपयोग में लिया जाता है, परंतु हानिरहित संपीडन कोडेक के साथ. इसका उपयोग तभी करें यदि आप बाद में फ़ाइल को संपादित करना चाहेंगे या इसे सीडी में प्रतिलिपि करना चाहेंगे.</default>
+      </locale>
+      <locale name="hr">
+        <default>Koristi se za pretvaranje u zvuk CD kvalitete, ali sa kodekom sažimanja bez gubitka kvalitete. Koristite ovo ako kasnije želite datoteku uređivati ili pohraniti na CD.</default>
+      </locale>
+      <locale name="hu">
+        <default>CD-minőségű hanggá alakításhoz használható, veszteségmentes tömörítést végző kodekkel. Használja ezt, ha később szerkeszteni vagy CD-re akarja írni a fájlt.</default>
+      </locale>
+      <locale name="id">
+        <default>Digunakan untuk mengkoversi ke audio sekualitas CD, tapi dengan codec kompresi yang antiaus. Gunakan pilihan ini bila ingin merubah berkasnya atau merekamnya ke CD.</default>
+      </locale>
+      <locale name="it">
+        <default>Per convertire in qualità CD audio, ma con un codec con compressione senza perdita. Consigliato se in seguito si intende modificare il file o masterizzarlo in un CD.</default>
+      </locale>
+      <locale name="ja">
+        <default>CD と同等の品質を持つオーディオへ変換する際に使用しますが、劣化のない圧縮コーデックを用います。あとでファイルを編集したり CD へ書き込む可能性がある場合にセットしてください。</default>
+      </locale>
+      <locale name="kn">
+        <default>ಸೀಡಿ-ಗುಣಮಟ್ಟದ ಆಡಿಯೋ ಅನ್ನು ಪರಿವರ್ತಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ, ಆದರೆ ಗುಣಮಟ್ಟ ನಷ್ಟಗೊಳ್ಳುವ ಸಂಕುಚನಗೊಳಿಸಲಾದ ಕೋಡೆಕ್‌ನೊಂದಿಗೆ. ನೀವು ಮತ್ತೆ ಯಾವಾಗಲಾದರೂ ಕಡತವನ್ನು ಸಂಪಾದಿಸಲು ಅಥವ ಅದನ್ನು ಸೀಡಿಗೆ ಬರೆಯಲು ಬಯಸಿದಲ್ಲಿ ಬಳಸಿ.</default>
+      </locale>
+      <locale name="ko">
+        <default>CD 수준의 오디오로 변환하는 데 사용합니다. 비손실 압축 코덱을 사용합니다. 파일을 편집하거나 CD로 구우려고 할 때 사용하십시오.</default>
+      </locale>
+      <locale name="lt">
+        <default>Naudojama konvertuojant CD kokybės garsą, tačiau su nenuostolingu glaudinimu. Naudokit šį profilį, jei vėliau norėsite taisyti šį failą arba norėsite įrašyti jį į CD.</default>
+      </locale>
+      <locale name="lv">
+        <default>Tiek izmantots, lai konvertētu uz CD kvalitātes audio bez kvalitātes zudumiem. Izmantojiet to, ja vēlāk gribēsiet rediģēt failus vai rakstīt tos diskos.</default>
+      </locale>
+      <locale name="mai">
+        <default>CD-क्वॉलिटी आडियोमे परिवर्तन लेल उपयोगमे लेल जाएत अछि, परंतु हानिरहित संपीडन कोडेक क&apos; सँग. एकर उपयोग तखन करू जँ अहाँ बादमे फाइलकेँ संपादित कएनाइ चाहब अथवा एकरा CD मे कापी कएनाइ चाहब.</default>
+      </locale>
+      <locale name="mg">
+        <default>Entina amadihana ny feo mba hanaraka kalitao CD amin&apos;ny alalana codec famintinana tsy manary. Io ampiasaina raha te hanova ilay rakitra na hisokitra azy amin&apos;ny kapila ianao any aoriana any.</default>
+      </locale>
+      <locale name="mk">
+        <default>Се користи за конвертирање кон CD-квалитетно аудио, но со кодек за средна компресија. Користете го ова ако подоцна сакате да ја уредите датотеката или да ја снимите на CD.</default>
+      </locale>
+      <locale name="ml">
+        <default>സിഡി രീതിയ്ക്കുള്ള ഓഡിയോയിലേക്ക് വേര്‍തിരിക്കുന്നതിനായി ഉപയോഗിക്കുന്നു, പക്ഷേ കുറഞ്ഞ കംപ്രഷന്‍ കോഡക്കോടെ. നിങ്ങള്‍ക്കു് പിന്നീട് ഈ ഫയല്‍ ചിട്ടപ്പെടുത്തുകയോ സിഡിയിലേക്ക് പകര്‍ത്തുകയോ ചെയ്യുന്നതിനായി ഇതുപയോഗിക്കുക.</default>
+      </locale>
+      <locale name="mn">
+        <default>CD-чанарын дуу руу хөрвүүлэхэд хэрэглэгдэнэ, гэхдээ алдаагүй (гэхдээ шахалтын үед алдаа гарахгүй) шахдаг кодек-оор. Үүнийг та дараа файл засах буюу CD-д хуулахад хэрэглэнэ.</default>
+      </locale>
+      <locale name="mr">
+        <default>सीडी-दर्जा ऑडियो मध्ये रूपांतर करीता वापरले जाते, परंतु हानिरहित संकुचन कोडेक सह. याचा वापर पुढे फाइल संपादन करीता किंवा CD ची प्रत बनविण्याकरीता करा.</default>
+      </locale>
+      <locale name="nb">
+        <default>Brukes for konvertering til lyd med CD-kvalitet, men med komprimering uten tap av kvalitet. Bruk denne hvis du vil redigere filen senere eller brenne den til en CD.</default>
+      </locale>
+      <locale name="ne">
+        <default>सीडी-गुणस्तर अडियोमा रुपान्तरण गर्नका लागि, तर कोडेकको नोक्सानरहित सङ्कुचनसँग प्रयोग गरिन्छ । यदि तपाईँ पछि फाइल सम्पादन गर्न वा सीडीमा बचत गर्न चाहनुहुन्छ भने यसको प्रयोग गर्नुहोस् ।</default>
+      </locale>
+      <locale name="nl">
+        <default>Gebruikt voor het converteren naar cd-kwaliteit audio, maar met een coderingsmethode zonder kwaliteitsverlies. Gebruik dit indien u het bestand later wilt bewerken of branden naar cd.</default>
+      </locale>
+      <locale name="nn">
+        <default>Brukt til å konvertera til CD-kvalitets-lyd, men med ei tapsfri koding. Bruk dette dersom du vil redigera fila eller brenna henne til ein CD seinare.</default>
+      </locale>
+      <locale name="or">
+        <default>ସି.ଡି. ଗୁଣବତ୍ତା ଧ୍ବନିକୁ ପରିବର୍ତନ କରିବା ପାଇଁ ବ୍ଯବହାର କରାଯାଇଛି, କିନ୍ତୁ କ୍ଷତିହୀନ ସଙ୍କୋଚନ ସଙ୍କେତକ/ଅବସଙ୍କେତକ ସହିତ. ପରେ ଫାଇଲକୁ ସମ୍ପାଦନ କରିବାକୁ ଚାହିଁଲେ, ବା ତାହାକୁ ସି.ଡି.ରେ ଲେଖିବାକୁ ଚାହିଁଲେ ଏହାକୁ ବ୍ଯବହାର କରନ୍ତୁ</default>
+      </locale>
+      <locale name="pa">
+        <default>CD-ਪੱਧਰ ਦੀ ਆਡੀਓ ਲਈ ਵਰਤਿਆ ਜਾਦਾ ਹੈ, ਪਰ ਇੱਕ ਹਲਕੇ ਪੱਧਰ ਦੇ ਕੋਡ ਨਾਲ। ਇਸ ਨੂੰ ਜੇਕਰ ਤੁਸੀਂ ਬਾਅਦ ਵਿੱਚ ਫਾਇਲ ਨੂੰ ਸੋਧਣਾ ਜਾਂ CD ਤੇ ਲਿਖਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਵਰਤੋਂ।</default>
+      </locale>
+      <locale name="pl">
+        <default>Używany do konwersji dźwięku do jakości CD, ale z koderem używającym bezstratnej kompresji. Należy użyć, gdy w przyszłości plik będzie zmieniany lub wypalany na płycie CD.</default>
+      </locale>
+      <locale name="pt">
+        <default>Utilizado para converter para audio com qualidade de CD, mas com um codec de compressão sem perca. Utilize-o se mais tarde desejar editar o ficheiro ou gravá-lo num CD.</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Usado para converter para áudio com qualidade de CD, mas com um codec de compressão sem perdas. Use isto se mais tarde você quiser editar o arquivo ou gravá-lo em um CD.</default>
+      </locale>
+      <locale name="ro">
+        <default>Folosit la conversia audio de calitate CD, dar cu un codec fără pierderi la compresie. Folosiți-l în cazul în care doriți să editați mai târziu fișierul sau să îl scrieți pe un CD.</default>
+      </locale>
+      <locale name="ru">
+        <default>Используется для преобразования звука CD-качества, со сжатием без потерь. Используйте это сжатие, если вы захотите позже отредактировать файл или записать его на CD.</default>
+      </locale>
+      <locale name="sk">
+        <default>Používa sa pre konvertovanie do zvuku kvality CD, ale pomocou kodeku s bezstratovou kompresiou. Vhodné v prípade, ak chcete neskôr súbor upravovať alebo ho napáliť na CD.</default>
+      </locale>
+      <locale name="sl">
+        <default>Uporabljeno za pretvarjanje v zvok CD kakovosti, vendar s kodekom brez izgub. Uporabite možnost, če želite pozneje urediti datoteko ali jo zapisati na CD disk.</default>
+      </locale>
+      <locale name="sq">
+        <default>Përdoret për të konvertuar në një kualitet audio për CD, por me një codec kompresimi për pak humbje. Përdorni këtë nëse më vonë dëshironi të ndryshoni këtë file apo t&apos;a shkruani në CD.</default>
+      </locale>
+      <locale name="sr">
+        <default>Користи се за претварање у звук ЦД квалитета, али са компресијом без губитака. Користите ово ако желите да касније мењате датотеку или да је нарежете на ЦД.</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>Koristi se za pretvaranje u zvuk CD kvaliteta, ali sa kompresijom bez gubitaka. Koristite ovo ako želite da kasnije menjate datoteku ili da je narežete na CD.</default>
+      </locale>
+      <locale name="sv">
+        <default>Används för att konvertera till ljud med cd-kvalitet, men med en förlustfri kodek. Använd detta om du vill redigera filen senare eller bränna den på en cd-skiva.</default>
+      </locale>
+      <locale name="ta">
+        <default>CD ஆடியோவை உபயோகப்படுத்தி மாற்றுக, CD யில் கோப்புகளை உருவாக்கு</default>
+      </locale>
+      <locale name="te">
+        <default>CD-నాణ్యతా ఆడియో కి మార్చుటలో ఉపయోగించబడింది, కాని నష్టంకాని కంప్రెషన్ కొడెక్స్ తో. మీరు తరువాత దస్త్రాన్ని సరికూర్చాలనుకున్నా లేదా CD కి వ్రాద్దామనుకున్నా దీనిని ఉపయోగించండి.</default>
+      </locale>
+      <locale name="th">
+        <default>ใช้แปลงเป็นข้อมูลเสียงคุณภาพเท่าซีดี แต่ใช้ codec บีบอัดแบบไม่เสียรายละเอียด ใช้โพรไฟล์นี้ถ้าคุณต้องการกลับมาแก้ไขข้อมูลเสียงใหม่ หรือต้องการเขียนลงซีดี</default>
+      </locale>
+      <locale name="tr">
+        <default>Kayıpsız sıkıştırma kodlayıcısı ile CD-kalitesinde ses çevirmek için kullanılır. Bunu eğer daha sonra dosyayı düzenlemek ya da CD&apos;ye kaydetmek istiyorsanız kullanın.</default>
+      </locale>
+      <locale name="ug">
+        <default>CD ئاۋاز سۈپىتىدە ئايلاندۇرىدىغان ئاۋازغا ئىشلىتىلىدۇ ئەمما خورىمايدىغان كودلاش ئۇسۇلىنى قوللىنىدۇ. ئەگەر سەل تۇرۇپ ھۆججەتنى تەھرىرلىمەكچى ياكى CD غا ئويماقچى بولسىڭىز مۇشۇ خىل ئۇسۇلنى ئىشلىتىڭ.</default>
+      </locale>
+      <locale name="uk">
+        <default>Використовується для перетворення звуку CD-якості, з використанням кодеку без втрати якості. Використовуйте, якщо бажаєте далі редагувати файл, або записати його на CD.</default>
+      </locale>
+      <locale name="vi">
+        <default>Sử dụng để chuyển đổi sang âm thanh chất lượng khớp đĩa CD, nhưng mà với codec (phương pháp nén và truyền nhiều loại dữ liệu khác) nén không mất mát.</default>
+      </locale>
+      <locale name="xh">
+        <default>Esetyenziselwa ukuguqulela kumgangatho wesandi seCD, kodwa onelahleko encinci yoxinzelello lwe-codec. Sebenzisa oku ukuba kamva ufuna ukuhlela ifayili okanye ukuyitshisa ukuba yiCD.</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>用于转换为 CD 音质的音频，但是用无损压缩编码方式。如果您稍后想要编辑文件，或者将其刻录到 CD，请使用此方式。</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>用作轉換 CD 品質的音效，但使用不失真的編碼器。適用於日後編輯該檔案或將檔案燒錄至光碟。</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>用作轉換 CD 品質的音效，但使用不失真的編碼器。適用於日後編輯該檔案或將檔案燒錄至光碟。</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/cdlossless/pipeline</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/cdlossless/pipeline</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>audio/x-raw-int,rate=44100,channels=2 ! flacenc name=enc</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The partial GStreamer pipeline used</short>
+        <long>
+          A partial GStreamer pipeline to use for this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/cdlossless/extension</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/cdlossless/extension</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>flac</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The default file extension for this profile</short>
+        <long>
+          A filename extension to be used when storing files encoded
+          with this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/active</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/cdlossless/active</applyto>
+      <owner>gnome-media</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>Whether this profile is to be used</short>
+        <long>
+          Whether to use and display this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <!-- Voice quality, lossless compression -->
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/voicelossless/name</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/voicelossless/name</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>Voice, Lossless</default>
+        <short>A short name for the audio profile</short>
+        <long>
+          A short name for the audio profile, to be used in selections
+          and uniquely identifying the profile.
+        </long>
+      </locale>
+      <locale name="af">
+        <default>Stem, sonder verlies</default>
+      </locale>
+      <locale name="ar">
+        <default>الصوت، غير مُضيع</default>
+      </locale>
+      <locale name="as">
+        <default>Voice, Lossless</default>
+      </locale>
+      <locale name="ast">
+        <default>Voz, ensin perda</default>
+      </locale>
+      <locale name="be">
+        <default>Голас, без памяншэньня якасьці</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Hołas, biasstratnaja</default>
+      </locale>
+      <locale name="bg">
+        <default>Глас без загуби</default>
+      </locale>
+      <locale name="bn">
+        <default>কন্ঠস্বর, উচ্চ গুণমান</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>কন্ঠস্বর, উচ্চ গুণমান (লস-লেস)</default>
+      </locale>
+      <locale name="br">
+        <default>Mouezh, hep koll</default>
+      </locale>
+      <locale name="ca">
+        <default>Veu, sense pèrdua</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Veu, sense pèrdua</default>
+      </locale>
+      <locale name="cs">
+        <default>Hlas, bezeztrátový</default>
+      </locale>
+      <locale name="cy">
+        <default>Llais, Digolled</default>
+      </locale>
+      <locale name="da">
+        <default>Tale, tabsfri</default>
+      </locale>
+      <locale name="de">
+        <default>Sprache, verlustfrei</default>
+      </locale>
+      <locale name="dz">
+        <default>སྐད། ལོསི་ལེསི།</default>
+      </locale>
+      <locale name="el">
+        <default>Ομιλία, Μη Απωλεστική</default>
+      </locale>
+      <locale name="en_CA">
+        <default>Voice, Lossless</default>
+      </locale>
+      <locale name="en_GB">
+        <default>Voice, Lossless</default>
+      </locale>
+      <locale name="es">
+        <default>Voz, sin pérdida</default>
+      </locale>
+      <locale name="et">
+        <default>Hääl, kadudeta</default>
+      </locale>
+      <locale name="eu">
+        <default>Ahotsa, galerarik gabe</default>
+      </locale>
+      <locale name="fi">
+        <default>Puhe, häviötön</default>
+      </locale>
+      <locale name="fr">
+        <default>Voix, sans perte</default>
+      </locale>
+      <locale name="gl">
+        <default>Voz, sen perda</default>
+      </locale>
+      <locale name="gu">
+        <default>અવાજ, નકુસાનવિના</default>
+      </locale>
+      <locale name="he">
+        <default>Voice, Lossless</default>
+      </locale>
+      <locale name="hi">
+        <default>आवाज, हानि-रहित</default>
+      </locale>
+      <locale name="hr">
+        <default>Glas, s gubitkom kvalitete</default>
+      </locale>
+      <locale name="hu">
+        <default>Hang, veszteségmentes</default>
+      </locale>
+      <locale name="id">
+        <default>Suara, Bagus</default>
+      </locale>
+      <locale name="it">
+        <default>Voce, senza perdita</default>
+      </locale>
+      <locale name="ja">
+        <default>音声 (品質劣化なし)</default>
+      </locale>
+      <locale name="kn">
+        <default>ಧ್ವನಿ, ನಷ್ಟವಿಲ್ಲದೆ</default>
+      </locale>
+      <locale name="ko">
+        <default>음성 수준, 손실 없음</default>
+      </locale>
+      <locale name="ku">
+        <default>Deng, Bêwindahî</default>
+      </locale>
+      <locale name="lt">
+        <default>Balsas, nenuostolingas</default>
+      </locale>
+      <locale name="lv">
+        <default>Balss, bez zudumiem</default>
+      </locale>
+      <locale name="mai">
+        <default>आवाज, हानि-रहित</default>
+      </locale>
+      <locale name="mg">
+        <default>Feon&apos;olona, Tsy misy very</default>
+      </locale>
+      <locale name="mk">
+        <default>Глас, средно</default>
+      </locale>
+      <locale name="ml">
+        <default>Voice, Lossless</default>
+      </locale>
+      <locale name="mn">
+        <default>Авиа, алдаагүй</default>
+      </locale>
+      <locale name="mr">
+        <default>ध्वनी, हानीविना</default>
+      </locale>
+      <locale name="nb">
+        <default>Stemme. Uten tap</default>
+      </locale>
+      <locale name="nds">
+        <default>Sprak, Verlustfrie</default>
+      </locale>
+      <locale name="ne">
+        <default>आवाज, नोक्सानरहित</default>
+      </locale>
+      <locale name="nl">
+        <default>Telefoonkwaliteit, wav (zonder kwaliteitsverlies)</default>
+      </locale>
+      <locale name="nn">
+        <default>Røyst, utan tap</default>
+      </locale>
+      <locale name="or">
+        <default>କଥା, କ୍ଷତିହୀନ</default>
+      </locale>
+      <locale name="pa">
+        <default>ਆਵਾਜ਼, ਲੂਜ਼-ਲਿਸ</default>
+      </locale>
+      <locale name="pl">
+        <default>Głos, bezstratna</default>
+      </locale>
+      <locale name="pt">
+        <default>Voz, Sem Perca</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Voz, sem perdas</default>
+      </locale>
+      <locale name="ro">
+        <default>Voce, fara pierderi</default>
+      </locale>
+      <locale name="ru">
+        <default>Голос, без потерь</default>
+      </locale>
+      <locale name="sk">
+        <default>Hlas, bezstratové</default>
+      </locale>
+      <locale name="sl">
+        <default>Glas, brez izgub</default>
+      </locale>
+      <locale name="sq">
+        <default>Zë, pak humbje</default>
+      </locale>
+      <locale name="sr">
+        <default>Глас, без губитака</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>Glas, bez gubitaka</default>
+      </locale>
+      <locale name="sv">
+        <default>Röst, förlustfri</default>
+      </locale>
+      <locale name="ta">
+        <default>குரல், தளர்வில்லாத</default>
+      </locale>
+      <locale name="te">
+        <default>స్వరం, నష్టములేకుండా</default>
+      </locale>
+      <locale name="th">
+        <default>เสียงพูด, ไม่เสียรายละเอียด</default>
+      </locale>
+      <locale name="tr">
+        <default>Ses, Kayıpsız</default>
+      </locale>
+      <locale name="ug">
+        <default>ئاۋاز، خورىمايدىغان</default>
+      </locale>
+      <locale name="uk">
+        <default>Голос, без втрат якості</default>
+      </locale>
+      <locale name="vi">
+        <default>Tiếng nói, Không mất mát</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>语音，无损</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>語音，不失真</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>語音，不失真</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/voicelossless/description</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/voicelossless/description</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>Used for converting to lossless voice-quality audio. Use this for recording and editing speech.</default>
+        <short>A description for the audio profile</short>
+        <long>
+          A description of the profile, containing more information and
+          describing when to use this profile.
+        </long>
+      </locale>
+      <locale name="ar">
+        <default>يستخدم للتّحويل إلى ملف صوتٍ غير مضيع بجودةٍ الحديث. استخدم هذا لتسجيل النّطق.</default>
+      </locale>
+      <locale name="as">
+        <default>কণ্ঠস্বৰেৰ মত মানসম্পন্ন অডিওতে ৰূপান্তৰেৰ বাবে ব্যৱহৃত হয়।  কথা ৰেকৰ্ড আৰু পৰিবৰ্তনৰ বাবে এটি ব্যৱহাৰ কৰক।</default>
+      </locale>
+      <locale name="ast">
+        <default>Usáu pa convertir en soníu de calidá de voz ensin pérdida. Use ésti para grabar y editar voz.</default>
+      </locale>
+      <locale name="be">
+        <default>Выкарыстоўваецца для пераўтварэньня ў аўдыёзапісы голасу без памяншэньня якасьці. Выкарыстоўвайце яго для запісу і зьмены голасу.</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Užyvany dla biasstratnaha kanvertavańnia huku da jakaści hołasu. Karystajsia hetym dla zapisu j redahavańnia hołasu.</default>
+      </locale>
+      <locale name="bg">
+        <default>Използва се за конвертиране към аудио формат без загуби, предназначено за запис на човешки глас. Използвайте за записване и редактиране на реч.</default>
+      </locale>
+      <locale name="bn">
+        <default>উচ্চ গুণমানের কন্ঠস্বরের অনুরূপ অডিওতে রূপান্তর করতে ব্যবহৃত। রেকর্ডিং অথবা স্বর সম্পাদনার জন্য ব্যবহার করুন।</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>উচ্চ গুণমানের কন্ঠস্বরের অনুরূপ অডিওতে রূপান্তর করতে ব্যবহৃত। রেকর্ডিং অথবা ভাষ্য সম্পাদনার জন্য ব্যবহার করুন।</default>
+      </locale>
+      <locale name="ca">
+        <default>Utilitzat per convertir a àudio amb qualitat de veu sense pèrdua. Utilitzeu això per enregistrar veu.</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Utilitzat per convertir a àudio amb qualitat de veu sense pèrdua. Utilitzeu això per enregistrar veu.</default>
+      </locale>
+      <locale name="cs">
+        <default>Používáno k převodu na bezeztrátový zvuk s kvalitou pro záznam hlasu. Vhodné pro záznam a úpravu mluveného slova.</default>
+      </locale>
+      <locale name="cy">
+        <default>Defnyddir ar gyfer trosi i sain ansawdd llais di-golled. Defnyddiwch hwn ar gyfer recordio a golygu llais.</default>
+      </locale>
+      <locale name="da">
+        <default>Konverterer til tabsfri talekvalitetslyd. Benyt denne til optagelse og redigering af tale.</default>
+      </locale>
+      <locale name="de">
+        <default>Wird zum verlustfreien Konvertieren von Audio-Daten in Sprachqualität verwendet. Verwenden Sie dies für Sprachaufnahmen, die Sie bearbeiten möchten.</default>
+      </locale>
+      <locale name="dz">
+        <default>ལོསི་ལེསི་རྣར་ཉན་སྐད་ཀྱི་སྤུས་ཚད་ལུ་ གཞི་བསྒྱུར་གྱི་དོན་ལུ་ ལག་ལེན་འཐབ་ཡོད། འདི་སྒྲ་བཟུང་དང་ གསུང་བཤད་ཞུན་དག་བརྐྱབ་ནིའི་དོན་ལུ་ ལག་ལེན་འཐབ།</default>
+      </locale>
+      <locale name="el">
+        <default>Χρησιμοποιείται για μετατροπή σε ήχο ποιότητας επαρκής για ομιλία. Κάντε χρήση αυτής της επιλογής για ηχογράφηση και επεξεργασία ομιλίας.</default>
+      </locale>
+      <locale name="en_CA">
+        <default>Used for converting to lossless voice-quality audio. Use this for recording and editing speech.</default>
+      </locale>
+      <locale name="en_GB">
+        <default>Used for converting to lossless voice-quality audio. Use this for recording and editing speech.</default>
+      </locale>
+      <locale name="es">
+        <default>Usado para convertir en sonido de calidad de voz sin pérdida. Use éste para grabar y editar voz.</default>
+      </locale>
+      <locale name="et">
+        <default>Kasutatakse teisendamiseks kadudeta häälekvaliteediga vormingusse. Kasuta seda kõne salvestamiseks ja redigeerimiseks.</default>
+      </locale>
+      <locale name="eu">
+        <default>Galerarik gabeko ahots-kalitateko audiora bihurtzeko erabiltzen da. Erabili hitzaldiak grabatzeko eta editatzeko.</default>
+      </locale>
+      <locale name="fi">
+        <default>Käytetään muuntamaan häviöttömäksi puhetasoiseksi ääneksi. Käytä tätä puheen äänittämiseen ja muokkaamiseen.</default>
+      </locale>
+      <locale name="fr">
+        <default>Utilisé pour une conversion en qualité audio de voix sans perte. À utiliser pour l&apos;enregistrement et l&apos;édition de la parole.</default>
+      </locale>
+      <locale name="gl">
+        <default>Úsase para converter en audio con calidade de voz sen perda. Úseo para gravar e editar voz.</default>
+      </locale>
+      <locale name="gu">
+        <default>ગુમ નહિં થાય તેવી અવાજ-ગુણવત્તા ઓડિયોમાં રૂપાંતરણ કરવા માટે વપરાય છે. આને અવાજ રેકોર્ડ અને ફેરફાર કરવા માટે વાપરો.</default>
+      </locale>
+      <locale name="he">
+        <default>Used for converting to lossless voice-quality audio. Use this for recording and editing speech.</default>
+      </locale>
+      <locale name="hi">
+        <default>आवाज़-क्वॉलिटी ऑडियो में परिवर्तन हेतु उपयोग में लिया जाता है. इसका उपयोग भाषण रेकॉर्ड करने हेतु करें.</default>
+      </locale>
+      <locale name="hr">
+        <default>Koristi se za pretvaranje u zvuk glasovne kvalitete bez gubitaka. Koristite za snimanje i uređivanje govora.</default>
+      </locale>
+      <locale name="hu">
+        <default>Veszteségmentes, beszédhang minőségű hanggá alakításhoz használható. Beszéd felvételéhez vagy szerkesztéséhez használja ezt.</default>
+      </locale>
+      <locale name="id">
+        <default>Digunakan untuk mengkoversi ke audio berkualitas bagus. Gunakan untuk merekam dan penyuntingan pembicaraan.</default>
+      </locale>
+      <locale name="it">
+        <default>Per convertire a un audio di qualità vocale. Consigliato per la registrazione e modifica del parlato.</default>
+      </locale>
+      <locale name="ja">
+        <default>音声を品質劣化のないオーディオ形式に変換する際に使用します。音声を録音して編集する場合に使用してください。</default>
+      </locale>
+      <locale name="kn">
+        <default>ನಷ್ಟಗೊಳ್ಳದ ಧ್ವನಿ-ಗುಣಮಟ್ಟದ ಆಡಿಯೋವನ್ನು ಪರಿವರ್ತಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. ಧ್ವನಿಯನ್ನು ರೆಕಾರ್ಡು ಮಾಡಲು ಹಾಗು ಸಂಪಾದಿಸಲು ಇದನ್ನು ಬಳಸಿ.</default>
+      </locale>
+      <locale name="ko">
+        <default>음성 수준의 비손실 오디오로 변환하는 데 사용합니다. 음성을 녹음 및 편집할 때 사용하십시오.</default>
+      </locale>
+      <locale name="lt">
+        <default>Naudojama konvertuojant į nenuostolingą balso kokybės garsą. Naudokite šį profilį kalbos įrašymui ir taisymui.</default>
+      </locale>
+      <locale name="lv">
+        <default>Tiek izmantots, lai bez kvalitātes zudumiem konvertētu balss kvalitātes audio. Lietojiet to, lai ierakstītu un rediģētu balss ierakstus.</default>
+      </locale>
+      <locale name="mai">
+        <default>आवाज़-क्वॉलिटी आडियोमे परिवर्तन लेल उपयोगमे लेल जाएत अछि. एकर उपयोग भाषण रेकॉर्ड करब लेल करू.</default>
+      </locale>
+      <locale name="mg">
+        <default>Entina mamadika ny feo hanaraka kalitaom-peo tsy misy very. Io ampiasaina rehefa handraikitra sy hanova feon&apos;olona.</default>
+      </locale>
+      <locale name="mk">
+        <default>Се користи за конвертирање на аудио со гласовен квалитет. Користете го ова за снимање на говор кој што ќе го уредувате потоа.</default>
+      </locale>
+      <locale name="ml">
+        <default>നഷ്ടംകുറഞ്ഞ ശബ്ദം നിലവാരമുള്ള ഓഡിയോയിലേക്കു് വേര്‍തിരിക്കുന്നതിനായി ഉപയോഗിക്കുന്നു. റിക്കോര്‍ഡിങിനും പ്രസംഗം ചിട്ടപ്പെടുത്തുന്നതിനും ഇതുപയോഗിക്കുക.</default>
+      </locale>
+      <locale name="mn">
+        <default>Авианы чанарыг алдаагүй хувиргахад хэрэглэсэн. Үүнийг дуу бичихэд болон өгүүллийг өөрчлөхөд хэрэглэнэ.</default>
+      </locale>
+      <locale name="mr">
+        <default>हानीविना आवाज-दर्जा ऑडिओ रूपांतर करीता वापरले जाते. याचा वापर भाष्य रेकॉर्ड व संपादन करीता करा.</default>
+      </locale>
+      <locale name="nb">
+        <default>Brukes for konvertering til lyd med stemmekvalitet uten tap. Bruk denne for å ta opp og redigere tale.</default>
+      </locale>
+      <locale name="ne">
+        <default>नोक्सान रहित ध्वनी-गुणस्तर अडियोमा रूपान्तरण गर्न प्रयोग गरिन्छ । यसलाई वाचन रेकर्ड गर्न वा सम्पादन गर्न प्रयोग गर्नुहोस् ।</default>
+      </locale>
+      <locale name="nl">
+        <default>Gebruikt voor het converteren naar stemkwaliteit-audio zonder verlies. Gebruik dit voor het opnemen en bewerken van spraak.</default>
+      </locale>
+      <locale name="nn">
+        <default>Brukt til å konverta til lyd med røystkvalitet, utan kvalitetstap. Bruk dette til å ta opp tale.</default>
+      </locale>
+      <locale name="or">
+        <default>କ୍ଷତିହୀନ କଥା ଗୁଣବତ୍ତା ଧ୍ବନିକୁ ପରିବର୍ତନ କରିବା ପାଇଁ ବ୍ଯବହାର କରାଯାଏ. ଭାଷଣ ଲିପିବଦ୍ଧ ଓ ସମ୍ପାଦନ ପାଇଁ ଏହାକୁ ବ୍ଯବହାର ପାଇଁ କରନ୍ତୁ </default>
+      </locale>
+      <locale name="pa">
+        <default>ਲੂਜ਼-ਲਿਸ ਆਵਾਜ਼-ਕੁਆਲਟੀ ਆਡੀਓ ਤਬਰੀਲ ਕਰਨ ਲਈ ਵਰਤੀ ਜਾਂਦੀ ਹੈ। ਇਸ ਨੂੰ ਰਿਕਾਰਡਿੰਗ ਅਤੇ ਭਾਸ਼ਣ ਸੋਧਣ ਲਈ ਵਰਤੋਂ।</default>
+      </locale>
+      <locale name="pl">
+        <default>Używany do bezstratnej konwersji dźwięku do jakości głosu. Należy użyć do nagrywania i modyfikacji mowy.</default>
+      </locale>
+      <locale name="pt">
+        <default>Utilizado para converter para audio com qualidade vocal sem perca. Utilize-o para gravar e editar discursos.</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Usado para converter para áudio com qualidade de voz sem perdas. Use isto para gravar e editar vozes.</default>
+      </locale>
+      <locale name="ro">
+        <default>Folosit la conversia audio de calitate voce fără pierderi. Folosiți-l pentru înregistrarea și editarea vocii.</default>
+      </locale>
+      <locale name="ru">
+        <default>Преобразование звука голосового качества без потерь. Используется для записи и редактирования речи.</default>
+      </locale>
+      <locale name="sk">
+        <default>Používa sa pre konvertovanie do bezstratového zvuku hlasovej kvality. Vhodné na nahrávanie a úpravy reči.</default>
+      </locale>
+      <locale name="sl">
+        <default>Uporabljeno za pretvarjanje v zvok kakovosti glasu brez izgub. Uporabite možnost za snemanje in urejanje govora.</default>
+      </locale>
+      <locale name="sq">
+        <default>Përdoret për konvertim në kualitet audio e folur. Përdore për regjistrime të dhe ndryshime të të folurit.</default>
+      </locale>
+      <locale name="sr">
+        <default>Користи се за претварање у звук без губитака гласовног квалитета. Користите ово за снимање говора.</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>Koristi se za pretvaranje u zvuk bez gubitaka glasovnog kvaliteta. Koristite ovo za snimanje govora.</default>
+      </locale>
+      <locale name="sv">
+        <default>Används för att konvertera till ljud med röstkvalitet och är inte dataförstörande. Använd denna för inspelning och redigering av tal.</default>
+      </locale>
+      <locale name="ta">
+        <default>கேட்பொலி தளர்வு குரல்-தரத்திற்கு மாற்ற பயன்படுத்தப்பட்டது. இதனை பேச்சு பதிவு செய்ய மற்றும்தொகுக்க பயன்படுத்து</default>
+      </locale>
+      <locale name="te">
+        <default>స్వరం-నాణ్యత పొని ఆడియో మార్పులో ఉపయోగపడుతుంది. దీనిని రికార్డింగ్ మరియు సంభాషణ సరికూర్పునకు ఉపయెగించండి.</default>
+      </locale>
+      <locale name="th">
+        <default>ใช้แปลงเป็นข้อมูลเสียงคุณภาพเสียงพูดแบบไม่เสียรายละเอียด ใช้โพรไฟล์นี้กับการอัดและแก้ไขเสียงพูด</default>
+      </locale>
+      <locale name="tr">
+        <default>Konuşma-kalitesinde kayıpsız sese çevirmek için kullanılır. Bunu konuşmaları kaydedip düzenlerken kullanın.</default>
+      </locale>
+      <locale name="ug">
+        <default>خورىمايدىغان نۇتۇق ئاۋاز ئۈنۈمىدىكى ئۈن ئايلاندۇرۇشقا ئىشلىتىلىدۇ. نۇتۇق خاتىرىلەش ۋە تەھرىرلەشتە بۇ خىل ئۇسۇلنى ئىشلىتىڭ.</default>
+      </locale>
+      <locale name="uk">
+        <default>Перетворення звуку голосової якості без втрат. Використовуйте для запису та редагування голосу.</default>
+      </locale>
+      <locale name="vi">
+        <default>Sử dụng để chuyển đổi sang âm thanh chất lượng tiếng nói không mất mát. Hãy sử dụng nó để thu và sửa đổi tiếng nói.</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>用于转换为无损的语音质量的音频。录制和编辑语音时请使用此方式。</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>用作轉換為沒有失真語音品質的音效。適用於需要編輯的演講錄音。</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>用作轉換為沒有失真語音品質的音效。適用於需要編輯的演講錄音。</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/voicelossless/pipeline</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/voicelossless/pipeline</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>audio/x-raw-int,rate=22050,channels=1 ! wavenc name=enc</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The partial GStreamer pipeline used</short>
+        <long>
+          A partial GStreamer pipeline to use for this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/voicelossless/extension</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/voicelossless/extension</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>wav</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The default file extension for this profile</short>
+        <long>
+          A filename extension to be used when storing files encoded
+          with this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/active</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/voicelossless/active</applyto>
+      <owner>gnome-media</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>Whether this profile is to be used</short>
+        <long>
+          Whether to use and display this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <!-- Voice quality, lossy compression -->
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/voicelossy/name</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/voicelossy/name</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>Voice, Lossy</default>
+        <short>A short name for the audio profile</short>
+        <long>
+          A short name for the audio profile, to be used in selections
+          and uniquely identifying the profile.
+        </long>
+      </locale>
+      <locale name="af">
+        <default>Stem, met verlies</default>
+      </locale>
+      <locale name="ar">
+        <default>الصوت، مُضيع</default>
+      </locale>
+      <locale name="as">
+        <default>Voice, Lossy</default>
+      </locale>
+      <locale name="ast">
+        <default>Voz, con perda</default>
+      </locale>
+      <locale name="be">
+        <default>Голас, з памяншэньнем якасьці</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Hołas, stratnaja</default>
+      </locale>
+      <locale name="bg">
+        <default>Глас със загуби</default>
+      </locale>
+      <locale name="bn">
+        <default>কন্ঠস্বর, নিম্ন গুণমান</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>কন্ঠস্বর, নিম্ন গুণমান (লসি)</default>
+      </locale>
+      <locale name="br">
+        <default>Mouezh, gant koll</default>
+      </locale>
+      <locale name="ca">
+        <default>Veu, amb pèrdua</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Veu, amb pèrdua</default>
+      </locale>
+      <locale name="cs">
+        <default>Hlas, ztrátový</default>
+      </locale>
+      <locale name="cy">
+        <default>Llais, Collir Data</default>
+      </locale>
+      <locale name="da">
+        <default>Tale, med tab</default>
+      </locale>
+      <locale name="de">
+        <default>Sprache, verlustbehaftet</default>
+      </locale>
+      <locale name="dz">
+        <default>སྐད་ ལོ་སི།</default>
+      </locale>
+      <locale name="el">
+        <default>Ομιλία, Με Απώλεια</default>
+      </locale>
+      <locale name="en_CA">
+        <default>Voice, Lossy</default>
+      </locale>
+      <locale name="en_GB">
+        <default>Voice, Lossy</default>
+      </locale>
+      <locale name="es">
+        <default>Voz, con pérdida</default>
+      </locale>
+      <locale name="et">
+        <default>Hääl, kadudega</default>
+      </locale>
+      <locale name="eu">
+        <default>Ahotsa, galerarekin</default>
+      </locale>
+      <locale name="fi">
+        <default>Puhe, häviöllinen</default>
+      </locale>
+      <locale name="fr">
+        <default>Voix, avec perte</default>
+      </locale>
+      <locale name="gl">
+        <default>Voz, con perda</default>
+      </locale>
+      <locale name="gu">
+        <default>અવાજ, નુકસાની</default>
+      </locale>
+      <locale name="he">
+        <default>Voice, Lossy</default>
+      </locale>
+      <locale name="hi">
+        <default>आवाज, क्षीण</default>
+      </locale>
+      <locale name="hr">
+        <default>Glas, bez gubitka kvalitete</default>
+      </locale>
+      <locale name="hu">
+        <default>Hang, veszteséges</default>
+      </locale>
+      <locale name="id">
+        <default>Suara, Kurang bagus</default>
+      </locale>
+      <locale name="it">
+        <default>Voce, con perdita</default>
+      </locale>
+      <locale name="ja">
+        <default>音声 (品質劣化あり)</default>
+      </locale>
+      <locale name="kn">
+        <default>ಧ್ವನಿ, ನಷ್ಟದೊಂದಿಗೆ</default>
+      </locale>
+      <locale name="ko">
+        <default>음성 수준, 손실 있음</default>
+      </locale>
+      <locale name="ku">
+        <default>Dengi Biwindahî</default>
+      </locale>
+      <locale name="lt">
+        <default>Balsas, nuostolingas</default>
+      </locale>
+      <locale name="lv">
+        <default>Balss, ar zudumiem</default>
+      </locale>
+      <locale name="mai">
+        <default>आवाज, क्षीण</default>
+      </locale>
+      <locale name="mg">
+        <default>Feon&apos;olona, Misy very</default>
+      </locale>
+      <locale name="mk">
+        <default>Глас</default>
+      </locale>
+      <locale name="ml">
+        <default>Voice, Lossy</default>
+      </locale>
+      <locale name="mn">
+        <default>Авиа, алдаатай</default>
+      </locale>
+      <locale name="mr">
+        <default>ध्वनी, हानीरहीत</default>
+      </locale>
+      <locale name="nb">
+        <default>Stemme. Med tap</default>
+      </locale>
+      <locale name="nds">
+        <default>Sprak, Verlustbehaftet</default>
+      </locale>
+      <locale name="ne">
+        <default>आवाज, नोक्सानमुलक</default>
+      </locale>
+      <locale name="nl">
+        <default>Telefoonkwaliteit, speex (met kwaliteitsverlies)</default>
+      </locale>
+      <locale name="nn">
+        <default>Røyst, med tap</default>
+      </locale>
+      <locale name="or">
+        <default>କଥା, କ୍ଷତିଯୁକ୍ତ</default>
+      </locale>
+      <locale name="pa">
+        <default>ਆਵਾਜ਼, ਲੂਜ਼ੀ</default>
+      </locale>
+      <locale name="pl">
+        <default>Głos, stratna</default>
+      </locale>
+      <locale name="pt">
+        <default>Voz, Com Perca</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Voz, com perdas</default>
+      </locale>
+      <locale name="ro">
+        <default>Voce, cu pierderi</default>
+      </locale>
+      <locale name="ru">
+        <default>Голос, с потерями</default>
+      </locale>
+      <locale name="sk">
+        <default>Hlas, stratové</default>
+      </locale>
+      <locale name="sl">
+        <default>Glas, z izgubami</default>
+      </locale>
+      <locale name="sq">
+        <default>Zë, kualitet i ulët</default>
+      </locale>
+      <locale name="sr">
+        <default>Глас, са губицима</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>Glas, sa gubicima</default>
+      </locale>
+      <locale name="sv">
+        <default>Röst, förlust</default>
+      </locale>
+      <locale name="ta">
+        <default>குரல், தளர்வு</default>
+      </locale>
+      <locale name="te">
+        <default>స్వరం, నష్టపూరితంగా</default>
+      </locale>
+      <locale name="th">
+        <default>เสียงพูด, เสียรายละเอียด</default>
+      </locale>
+      <locale name="tr">
+        <default>Ses, Kayıplı</default>
+      </locale>
+      <locale name="ug">
+        <default>ئاۋاز، خورايدىغان</default>
+      </locale>
+      <locale name="uk">
+        <default>Голос, з втратами</default>
+      </locale>
+      <locale name="vi">
+        <default>Tiếng nói, Mất mát</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>语音，有损</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>語音，失真</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>語音，失真</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/voicelossy/description</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/voicelossy/description</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>Used for converting to lossy voice-quality audio. Use this for recording speech that doesn't need to be edited.</default>
+        <short>A description for the audio profile</short>
+        <long>
+          A description of the profile, containing more information and
+          describing when to use this profile.
+        </long>
+      </locale>
+      <locale name="ar">
+        <default>يستخدم للتّحويل إلى ملف صوتٍ مضيع بجودةٍ الكلام. استخدم هذا لتسجيل المحادثات التي لا تحتاج إلى تحرير.</default>
+      </locale>
+      <locale name="as">
+        <default>কণ্ঠস্বৰেৰ মত মানসম্পন্ন অডিওতে ৰূপান্তৰেৰ বাবে ব্যৱহৃত হয়।  অপৰিবৰ্তনযোগ্য কথা ৰেকৰ্ড কৰাৰ বাবে এটি ব্যৱহাৰ কৰক।</default>
+      </locale>
+      <locale name="ast">
+        <default>Usáu pa convertise en soníu de calidá de voz con pérdida. Use ésti para grabar voz que nun necesite editase.</default>
+      </locale>
+      <locale name="be">
+        <default>Выкарыстоўваецца для пераўтварэньня ў аўдыёзапісы голасу з памяншэньнем якасьці. Выкарыстоўвайце яго для запісу голасу, які ня трэба потым зьмяняць.</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Užyvany dla stratnaha kanvertavańnia huku da jakaści hołasu. Karystajsia hetym dla zapisu hołasu, jaki potym nia treba madyfikavać.</default>
+      </locale>
+      <locale name="bg">
+        <default>Използва се за конвертиране към аудио формат със загуби, предназначено за запис на човешки глас. Използвайте за записване на реч, която няма да бъде редактирана.</default>
+      </locale>
+      <locale name="bn">
+        <default>নিম্ন গুণমানের কন্ঠস্বরের অনুরূপ অডিওতে রূপান্তর করতে ব্যবহৃত। ভাষ্য রেকর্ডিং সম্পাদনার জন্য ব্যবহার করুন যা সম্পাদন করা হবে না।</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>নিম্ন গুণমানের কন্ঠস্বরের অনুরূপ অডিওতে রূপান্তর করতে ব্যবহৃত। ভাষ্য রেকর্ডিং সম্পাদনার জন্য ব্যবহার করুন যা সম্পাদন করা হবে না।</default>
+      </locale>
+      <locale name="ca">
+        <default>Utilitzat per convertir a àudio amb qualitat de veu amb pèrdua. Utilitzeu això per enregistrar veu que no faci falta editar.</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Utilitzat per convertir a àudio amb qualitat de veu amb pèrdua. Utilitzeu això per enregistrar veu que no faça falta editar.</default>
+      </locale>
+      <locale name="cs">
+        <default>Používáno pro převod na ztrátový zvuk s kvalitou pro záznam hlasu. Vhodné pro nahrávání mluveného slova, které není potřeba upravovat.</default>
+      </locale>
+      <locale name="cy">
+        <default>Defnyddir ar gyfer trosi i sain ansawdd llais lle collir data. Defnyddiwch hwn ar gyfer recordio llais lle nad oes angen ei olygu wedyn.</default>
+      </locale>
+      <locale name="da">
+        <default>Konverterer til talekvalitetslyd med tab. Benyt denne til taleoptagelser der ikke skal redigeres.</default>
+      </locale>
+      <locale name="de">
+        <default>Wird zum verlustbehafteten Konvertieren von Audio-Daten in Sprachqualität verwendet. Verwenden Sie dies für Sprachaufnahmen, die Sie nicht bearbeiten möchten.</default>
+      </locale>
+      <locale name="dz">
+        <default>ལོ་སི་རྣར་ཉན་སྐད་ཀྱི་སྤུས་ཚད་ལུ་ གཞི་བསྒྱུར་གྱི་དོན་ལུ་ ལག་ལེན་འཐབ་ཡོད། འདི་ཞུན་དག་བརྐྱབ་མ་དགོ་པའི་གསུང་བཤད་བཟུང་ནིའི་དོན་ལུ་ ལག་ལེན་འཐབ།</default>
+      </locale>
+      <locale name="el">
+        <default>Χρησιμοποιείται για μετατροπή σε ήχο ποιότητας επαρκής για ομιλία. Κάντε χρήση αυτής της επιλογής για ηχογράφηση ομιλίας που δεν χρειάζεται επεξεργασία.</default>
+      </locale>
+      <locale name="en_CA">
+        <default>Used for converting to lossy voice-quality audio. Use this for recording speech that does not need to be edited.</default>
+      </locale>
+      <locale name="en_GB">
+        <default>Used for converting to lossy voice-quality audio. Use this for recording speech that doesn&apos;t need to be edited.</default>
+      </locale>
+      <locale name="es">
+        <default>Usado para convertirse en sonido de calidad de voz con pérdida. Use éste para grabar voz que no necesite editarse.</default>
+      </locale>
+      <locale name="et">
+        <default>.Kasutatakse teisendamiseks kadudega häälekvaliteediga vormingusse. Kasuta seda sellise kõne salvestamiseks, mida pole plaanis hiljem redigeerida.Kasutatakse hääle kadudeta salvestamiseks. Kasuta seda kõne salvestamiseks ja redigeerimiseks.</default>
+      </locale>
+      <locale name="eu">
+        <default>Galera duen ahots-kalitateko audiora bihurtzeko erabiltzen da. Erabili editatu behar ez diren hitzaldiak grabatzeko.</default>
+      </locale>
+      <locale name="fi">
+        <default>Käytetään muuntamaan häviölliseksi puhetasoiseksi ääneksi. Käytä tätä puheen äänittämiseen, kun puhetta ei tarvitse enää muokata.</default>
+      </locale>
+      <locale name="fr">
+        <default>Utilisé pour la conversion en qualité audio de voix avec perte. À utiliser pour l&apos;enregistrement de la parole qui n&apos;a pas besoin d&apos;être éditée.</default>
+      </locale>
+      <locale name="gl">
+        <default>Úsase para converter en audio con calidade de voz e con perda. Úseo para gravar voz que non se precisa editar.</default>
+      </locale>
+      <locale name="gu">
+        <default>આછી અવાજ-ગુણવત્તા ઓડિયો માટે રૂપાંતરણ કરવા માટે વપરાય છે. આને અવાજ રેકોર્ડ કરવા માટે વાપરો કે જેને ફેરફાર કરવાની જરૂર નથી.</default>
+      </locale>
+      <locale name="he">
+        <default>Used for converting to lossy voice-quality audio. Use this for recording speech that doesn&apos;t need to be edited.</default>
+      </locale>
+      <locale name="hi">
+        <default>आवाज़-क्वॉलिटी ऑडियो में परिवर्तन हेतु उपयोग में लिया जाता है. इसका उपयोग भाषण रेकॉर्ड करने हेतु करें जो संपादित नहीं है.</default>
+      </locale>
+      <locale name="hr">
+        <default>Koristi se za pretvaranje u zvuk glasovne kvalitete s gubicima. Koristite za snimanje govora kojeg ne treba uređivati.</default>
+      </locale>
+      <locale name="hu">
+        <default>Veszteséges, beszédhang minőségű hanggá alakításhoz használható. Szerkesztést nem igénylő beszéd felvételéhez használja ezt.</default>
+      </locale>
+      <locale name="id">
+        <default>Digunakan untuk mengkoversi ke audio biasa. Gunakan untuk merekam pembicaraan yang tidak perlu penyuntingan.</default>
+      </locale>
+      <locale name="it">
+        <default>Per convertire a un audio di qualità vocale. Consigliato per la registrazione del parlato che non necessita modifiche.</default>
+      </locale>
+      <locale name="ja">
+        <default>音声を品質劣化のあるオーディオ形式に変換する際に使用します。編集する必要のない音声を録音する場合に使用してください。</default>
+      </locale>
+      <locale name="kn">
+        <default>ನಷ್ಟವಾಗುವ ಧ್ವನಿ-ಗುಣಮಟ್ಟದ ಆಡಿಯೋವನ್ನು ಪರಿವರ್ತಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. ಸಂಪಾದಿಸುವ ಅಗತ್ಯವಿಲ್ಲದ ಧ್ವನಿಯನ್ನು ರೆಕಾರ್ಡು ಮಾಡಲು ಇದನ್ನು ಬಳಸಿ.</default>
+      </locale>
+      <locale name="ko">
+        <default>음성 수준의 손실 오디오로 변환하는 데 사용합니다. 편집할 필요 없는 음성을 녹음할 때 사용하십시오.</default>
+      </locale>
+      <locale name="lt">
+        <default>Naudojama konvertuojant į nuostolingą balso kokybės garsą. Naudokite šį profilį kalbos, kurios nereiks taisyti, įrašymui.</default>
+      </locale>
+      <locale name="lv">
+        <default>Tiek izmantots, lai ar kvalitātes zudumiem konvertētu balss kvalitātes audio. Lietojiet to, lai ierakstītu balss ierakstus, kas pēc tam nav jārediģē.</default>
+      </locale>
+      <locale name="mai">
+        <default>आवाज़-क्वॉलिटी आडियोमे परिवर्तन लेल उपयोगमे लेल जाएत अछि. एकर उपयोग भाषण रेकार्ड करब लेल करू जे संपादित नहि अछि.</default>
+      </locale>
+      <locale name="mg">
+        <default>Entina hamadihana ny feo hanaraka kalitaom-peo misy very. Io ampiasaina rehefa handraikitra feon&apos;olona tsy mila fanovana.</default>
+      </locale>
+      <locale name="mk">
+        <default>Се користи за конвертирање на аудио со гласовен квалитет. Користете го ова за снимање на говор кој што не треба да биде уредуван потоа.</default>
+      </locale>
+      <locale name="ml">
+        <default>കുറഞ്ഞ ശബ്ദം നിലവാരമുള്ള ഓഡിയോയിലേക്കു് വേര്‍തിരിക്കുന്നതിനായി ഉപയോഗിക്കുന്നു. ചിട്ടപ്പെടുത്തേണ്ടാത്ത പ്രസംഗത്തിനായി ഇതുപയോഗിക്കുക.</default>
+      </locale>
+      <locale name="mn">
+        <default>Авианы чанарыг алдаатай хувиргахад хэрэглэсэн. Үүнийг засварлах шаардлагагүй өгүүллийг бичихэд хэрэглэнэ.</default>
+      </locale>
+      <locale name="mr">
+        <default>हानीरहीत आवाज-दर्जा ऑडिओ रूपांतर करीता वापरले जाते. याचा वापर भाष्य रेकॉर्ड करीता करा ज्यास संपादनची आवश्यकता नाही.</default>
+      </locale>
+      <locale name="nb">
+        <default>Brukes for konvertering til lyd med stemmekvalitet med tap. Bruk denne for å ta opp tale som ikke krever redigering.</default>
+      </locale>
+      <locale name="ne">
+        <default>नोक्सानमुलक ध्वनी-गुणस्तर अडियोमा रूपान्तरण गर्नका लागि प्रयोग गरिन्छ । सम्पादन गर्नु नपर्ने वाचन रेकर्ड गर्नका लागि यसको प्रयोग गर्नुहोस् ।</default>
+      </locale>
+      <locale name="nl">
+        <default>Gebruikt voor het converteren naar stemkwaliteit-audio met verlies. Gebruik dit voor het opnemen van spraak die geen verdere bewerking behoeft.</default>
+      </locale>
+      <locale name="nn">
+        <default>Brukt til å konverta til lyd med røystkvalitet, med kvalitetstap. Bruk dette til å ta opp tale som ikkje treng å redigerast.</default>
+      </locale>
+      <locale name="or">
+        <default>କ୍ଷତିଯୁକ୍ତ କଥା ଗୁଣବତ୍ତା ଧ୍ବନିକୁ ପରିବର୍ତନ କରିବା ପାଇଁ ବ୍ଯବହାର କରାଯାଏ. ଯଦି ସମ୍ପାଦନର ଆବଶ୍ଯକତା ନାହିଁ, ଭାଷଣ ଲିପିବଦ୍ଧ କରିବା ପାଇଁ ଏହାକୁ ବ୍ଯବହାର ପାଇଁ କରନ୍ତୁ </default>
+      </locale>
+      <locale name="pa">
+        <default>ਇੱਕ ਲੂਜ਼ੀ ਆਵਾਜ਼-ਕੁਆਲਟੀ ਆਡੀਓ ਵਿੱਚ ਤਬਦੀਲ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। ਇਸ ਨੂੰ ਭਾਸ਼ਣ ਰਿਕਾਰਡ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ, ਜਿਸ ਨੂੰ ਸੋਧਣ ਦੀ ਲੋੜ ਨਾ ਪਵੇ।</default>
+      </locale>
+      <locale name="pl">
+        <default>Używany do stratnej konwersji dźwięku do jakości głosu. Należy użyć do nagrywania mowy, która nie będzie potem modyfikowana.</default>
+      </locale>
+      <locale name="pt">
+        <default>Utilizado para converter para audio com qualidade vocal com perca. Utilize-o para gravar discursos que não necessitem de ser editados.</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Usado para converter para áudio com qualidade de voz com perdas. Use isto para gravar vozes que não precisam ser editadas.</default>
+      </locale>
+      <locale name="ro">
+        <default>Folosit la conversia audio de calitate voce cu pierderi. Folosiți-l pentru înregistrarea vocii când editarea nu este necesară.</default>
+      </locale>
+      <locale name="ru">
+        <default>Преобразование звука голосового качества с потерями. Используйте для записи речи, которую не придётся редактировать.</default>
+      </locale>
+      <locale name="sk">
+        <default>Používa sa na konvertovanie do stratového zvuku hlasovej kvality. Vhodné pre záznam reči, kde sa nepredpokladajú ďalšie úpravy.</default>
+      </locale>
+      <locale name="sl">
+        <default>Uporabljeno za pretvarjanje v zvok kakovosti glasu z izgubami. Uporabite možnostza snemanje govora, ki ga ni treba urejati.</default>
+      </locale>
+      <locale name="sq">
+        <default>Përdoret për konvertim në kualitet të ulët audio e folur. Përdore për regjistrime të të folurit që nuk ka nevojë për përpunime.</default>
+      </locale>
+      <locale name="sr">
+        <default>Користи се за претварање у звук са губицима гласовног квалитета. Користите ово за снимање говора.</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>Koristi se za pretvaranje u zvuk sa gubicima glasovnog kvaliteta. Koristite ovo za snimanje govora.</default>
+      </locale>
+      <locale name="sv">
+        <default>Används för att konvertera till ljud med röstkvalitet och är dataförstörande. Använd denna för inspelning av tal som inte behöver redigeras.</default>
+      </locale>
+      <locale name="ta">
+        <default>கேட்பொலி தளர்வு குரல்-தரத்திற்கு மாற்ற பயன்படுத்தப்பட்டது. இதனை தொகுக்க தேவையில்லாத குரல் பதிவிற்கு பயன்படுத்து</default>
+      </locale>
+      <locale name="te">
+        <default>దీనిని స్వరం-నాణ్యత కాని ఆడియో మార్పులో ఉపయోగించండి.దీనిని సరికూర్చ వలిసిన అవసరం లేని సంభాషణ రికార్డింగ్ లో ఉపయోగించండి.</default>
+      </locale>
+      <locale name="th">
+        <default>ใช้แปลงเป็นข้อมูลเสียงคุณภาพเสียงพูดแบบเสียรายละเอียด ใช้โพรไฟล์นี้กับการอัดและแก้ไขเสียงพูด</default>
+      </locale>
+      <locale name="tr">
+        <default>Konuşma-kalitesinde kayıplı sese çevirmek için kullanılır. Bunu düzenleme gerektirmeyen konuşmaları kaydederken kullanın.</default>
+      </locale>
+      <locale name="ug">
+        <default>خورايدىغان نۇتۇق ئاۋاز ئۈنۈمىدىكى ئۈن ئايلاندۇرۇشقا ئىشلىتىلىدۇ. تەھرىرلىمەيدىغان نۇتۇقنى خاتىرىلەشتە بۇ خىل ئۇسۇلنى ئىشلىتىڭ.</default>
+      </locale>
+      <locale name="uk">
+        <default>Перетворення звуку голосової якості з втратами. Використовуйте для запису голосу, який не доведеться редагувати.</default>
+      </locale>
+      <locale name="vi">
+        <default>Sử dụng để chuyển đổi sang âm thanh chất lượng tiếng nói mất mát. Hãy sử dụng nó để thu tiếng nói không cần sửa đổi.</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>用于转换为有损语音质量的音频。录制无需编辑的语音时请使用此方式。</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>用作轉換為具失真語音品質的音效。適用於無需編輯的演講錄音。</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>用作轉換為具失真語音品質的音效。適用於無需編輯的演講錄音。</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/voicelossy/pipeline</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/voicelossy/pipeline</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>audio/x-raw-int,rate=32000,channels=1 ! speexenc name=enc ! oggmux</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The partial GStreamer pipeline used</short>
+        <long>
+          A partial GStreamer pipeline to use for this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/voicelossy/extension</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/voicelossy/extension</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>spx</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The default file extension for this profile</short>
+        <long>
+          A filename extension to be used when storing files encoded
+          with this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/active</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/voicelossy/active</applyto>
+      <owner>gnome-media</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>Whether this profile is to be used</short>
+        <long>
+          Whether to use and display this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <!-- MP2 -->
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/mp2/name</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/mp2/name</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>CD Quality, MP2</default>
+        <short>A short name for the audio profile</short>
+        <long>
+          A short name for the audio profile, to be used in selections
+          and uniquely identifying the profile.
+        </long>
+      </locale>
+      <locale name="af">
+        <default>CD-kwaliteit, MP2</default>
+      </locale>
+      <locale name="ar">
+        <default>جودة قرص مدمج، MP2</default>
+      </locale>
+      <locale name="as">
+        <default>CD-ৰ গুণমান, MP2</default>
+      </locale>
+      <locale name="ast">
+        <default>Calidá de CD, MP2</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Jakaść CD, MP2</default>
+      </locale>
+      <locale name="bg">
+        <default>Качество на CD — MP2</default>
+      </locale>
+      <locale name="bn">
+        <default>CD-এর গুণমান, MP2</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>CD-র গুণমান, MP2</default>
+      </locale>
+      <locale name="br">
+        <default>Perzhded CD, MP2</default>
+      </locale>
+      <locale name="ca">
+        <default>Qualitat de CD, MP2</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Qualitat de CD, MP2</default>
+      </locale>
+      <locale name="cs">
+        <default>Kvalita CD, MP2</default>
+      </locale>
+      <locale name="da">
+        <default>Cd-kvalitet, MP2</default>
+      </locale>
+      <locale name="de">
+        <default>CD-Qualität, MP2</default>
+      </locale>
+      <locale name="el">
+        <default>Ποιότητα CD, MP2</default>
+      </locale>
+      <locale name="en@shaw">
+        <default>CD 𐑒𐑢𐑪𐑤𐑦𐑑𐑰, MP2</default>
+      </locale>
+      <locale name="en_GB">
+        <default>CD Quality, MP2</default>
+      </locale>
+      <locale name="es">
+        <default>Calidad de CD, MP2</default>
+      </locale>
+      <locale name="et">
+        <default>CD-kvaliteet, MP2</default>
+      </locale>
+      <locale name="eu">
+        <default>CD-kalitatea, MP2</default>
+      </locale>
+      <locale name="fi">
+        <default>CD-taso, MP2</default>
+      </locale>
+      <locale name="fr">
+        <default>Qualité CD, MP2</default>
+      </locale>
+      <locale name="gl">
+        <default>Calidade de CD, MP2</default>
+      </locale>
+      <locale name="gu">
+        <default>CD ગુણવત્તા, MP2</default>
+      </locale>
+      <locale name="he">
+        <default>CD Quality, MP2</default>
+      </locale>
+      <locale name="hi">
+        <default>सीडी गुणवत्ता, MP3</default>
+      </locale>
+      <locale name="hu">
+        <default>CD-minőség, MP2</default>
+      </locale>
+      <locale name="id">
+        <default>Kualitas CD, MP2</default>
+      </locale>
+      <locale name="it">
+        <default>Qualità CD, MP2</default>
+      </locale>
+      <locale name="ja">
+        <default>CD の品質 (MP2)</default>
+      </locale>
+      <locale name="kn">
+        <default>ಸೀಡಿ ಗುಣಮಟ್ಟ, MP2</default>
+      </locale>
+      <locale name="ko">
+        <default>CD 수준, MP2</default>
+      </locale>
+      <locale name="lt">
+        <default>CD kokybės, MP2</default>
+      </locale>
+      <locale name="lv">
+        <default>CD kvalitāte, MP2</default>
+      </locale>
+      <locale name="ml">
+        <default>സി.ഡി. നിലവാരം, MP2</default>
+      </locale>
+      <locale name="mr">
+        <default>CD दर्जा, MP2</default>
+      </locale>
+      <locale name="nb">
+        <default>CD-kvalitet, MP2</default>
+      </locale>
+      <locale name="nds">
+        <default>CD Qualität, MP2</default>
+      </locale>
+      <locale name="nl">
+        <default>Cd-kwaliteit, MP2</default>
+      </locale>
+      <locale name="nn">
+        <default>CD-kvalitet, MP2</default>
+      </locale>
+      <locale name="or">
+        <default>CD ଗୁଣବତ୍ତା, MP2</default>
+      </locale>
+      <locale name="pa">
+        <default>CD ਕੁਆਲਟੀ, MP੨</default>
+      </locale>
+      <locale name="pl">
+        <default>Jakość CD, MP2</default>
+      </locale>
+      <locale name="pt">
+        <default>Qualidade de CD, MP2</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Qualidade de CD, MP2</default>
+      </locale>
+      <locale name="ro">
+        <default>Calitate CD, MP2</default>
+      </locale>
+      <locale name="ru">
+        <default>CD-качество, MP2</default>
+      </locale>
+      <locale name="sk">
+        <default>CD kvalita, MP2</default>
+      </locale>
+      <locale name="sl">
+        <default>CD kakovost, MP2</default>
+      </locale>
+      <locale name="sr">
+        <default>ЦД квалитет, МП2</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>CD kvalitet, MP2</default>
+      </locale>
+      <locale name="sv">
+        <default>Cd-kvalitet, MP2</default>
+      </locale>
+      <locale name="ta">
+        <default>CD தரம், MP2</default>
+      </locale>
+      <locale name="te">
+        <default>CD నాణ్యత, MP2</default>
+      </locale>
+      <locale name="th">
+        <default>คุณภาพซีดี, MP2</default>
+      </locale>
+      <locale name="tr">
+        <default>CD Kalitesi, MP2</default>
+      </locale>
+      <locale name="ug">
+        <default>CD ئاۋاز سۈپىتى، MP2</default>
+      </locale>
+      <locale name="uk">
+        <default>CD якість, MP2</default>
+      </locale>
+      <locale name="vi">
+        <default>Chất lưọng đĩa CD, MP2</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>CD 音质，MP2</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>CD 音質，MP2</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>CD 音質，MP2</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/mp2/description</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/mp2/description</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>Used for converting to CD-quality audio, but with the lossy MP2 codec. Use this for preparing files for copying to devices that only support the MP2 codec. Note that using this format may be illegal in your jurisdiction; contact your lawyer for advice.</default>
+        <short>A description for the audio profile</short>
+        <long>
+          A description of the profile, containing more information and
+          describing when to use this profile.
+        </long>
+      </locale>
+      <locale name="ar">
+        <default>يستخدم للتحويل إلى صوت بجودة القرص المدمج لكن باستخدام مرمز MP2 فاقِد. استخدم هذا لتجهيز الملفات للنسخ لأجهزة تدعم مرمز MP2 فقط. لاحظ أن استخدام هذا المرمز قد لا يكون قانونيا في بلدك، راجع محاميك طلبا للنصيحة.</default>
+      </locale>
+      <locale name="as">
+        <default>CD-গুণমানৰ অডিওতে ৰূপান্তৰ কৰিবলৈ ব্যৱহৃত। কিন্তু নিম্ন গুণমানৰ MP2 কোডেক সহ। শুধুমাত্ৰ MP2 কোডেক ব্যৱহাৰকৰ্তা যন্ত্ৰে কপি কৰাৰ বাবে নথিপত্ৰ প্ৰস্তুত কৰাৰ বাবে এটি ব্যৱহাৰ কৰক। উল্লেখ্য, এই কোডেকেৰ ব্যৱহাৰ আপনাৰ এলাকায় বেআইনি হতে পাৰে আৰু কোনো আইনী বিশেষজ্ঞেৰ পৰামৰ্শ নেওয়া বাঞ্ছনীয়।</default>
+      </locale>
+      <locale name="ast">
+        <default>Usao pa convertir a audio con calidá de CD, pero usando&apos;l codec con perda MP2. Use esto pa preparar ficheros pa copialos a preseos que nun sofiten más qu&apos;el codec MP2. Atalante que l&apos;usu d&apos;esti formatu pue ser ilegal na so xurisdicción; contaute col so abogáu si necesita conseyu.</default>
+      </locale>
+      <locale name="bg">
+        <default>Използва се за конвертиране на аудио с качеството на CD чрез кодека със загуба на качество MP2. Използвайте този избор при подготвяне на файлове за копиране на устройства, които поддържат само кодека MP2. Имайте предвид, че използването на този формат може да е незаконно в страната ви. Свържете се с юрист за съвет.</default>
+      </locale>
+      <locale name="bn">
+        <default>CD-গুণমানের অডিওতে রূপান্তর করতে ব্যবহৃত। কিন্তু নিম্ন গুণমানের MP2 কোডেক সহ। শুধুমাত্র MP2 কোডেক ব্যবহারকারী ডিভাইসে অনুলিপি করার জন্য ফাইল প্রস্তুত করতে এটি ব্যবহার করুন। উল্লেখ্য, এই কোডেকের ব্যবহার আপনার এলাকায় বেআইনি হতে পারে এবং কোনো আইনী বিশেষজ্ঞের পরামর্শ নেওয়া বাঞ্ছনীয়।</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>CD-গুণমানের অডিওতে রূপান্তর করতে ব্যবহৃত। কিন্তু নিম্ন গুণমানের MP2 কোডেক সহ। শুধুমাত্র MP2 কোডেক ব্যবহারকারী ডিভাইসে কপি করার জন্য ফাইল প্রস্তুত করার জন্য এটি ব্যবহার করুন। উল্লেখ্য, এই কোডেকের ব্যবহার আপনার এলাকায় বেআইনি হতে পারে এবং কোনো আইনী বিশেষজ্ঞের পরামর্শ নেওয়া বাঞ্ছনীয়।</default>
+      </locale>
+      <locale name="ca">
+        <default>Utilitzat per convertir a àudio amb qualitat de CD, però amb el còdec MP2 amb pèrdua. Feu-lo servir per preparar els fitxers per copiar a dispositius que només permetin el còdec MP2. Pot ser que l&apos;ús d&apos;aquest format sigui il·legal a la vostra jurisdicció, consulteu-ho amb el vostre advocat.</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Utilitzat per convertir a àudio amb qualitat de CD, però amb el còdec MP2 amb pèrdua. Feu-lo servir per preparar els fitxers per copiar a dispositius que només permeten el còdec MP2. Pot ser que l&apos;ús d&apos;este format siga il·legal a la vostra jurisdicció, consulteu-ho amb el vostre advocat.</default>
+      </locale>
+      <locale name="cs">
+        <default>Používá se ke konverzi se zvukovou kvalitou CD, ale se ztrátovým kodekem MP2. Vhodné jako příprava souborů ke zkopírování na zařízení podporující pouze kodek MP2. Vezměte prosím na vědomí, že použití tohoto formátu může být ilegální. Kontaktuje laskavě v této záležitosti právního poradce.</default>
+      </locale>
+      <locale name="da">
+        <default>Til brug for konvertering til cd-kvalitetslyd, men med det tabsgivende MP2-codec. Brug dette for at forberede filer til kopiering til enheder der kun understøtter MP2-codec&apos;et. Vær opmærksom på at brug af dette format kan være ulovligt i din retskreds; kontakt din advokat for rådgivning.</default>
+      </locale>
+      <locale name="de">
+        <default>Wird zum Konvertieren von Audio-Daten in CD-Qualität, allerdings mit dem verlustbehafteten MP2-Codec, verwendet. Beachten Sie, dass die Benutzung dieses Formats unter Umständen in Ihrem Land illegal ist. Fragen Sie Ihren Rechtsanwalt für weitere Beratung.</default>
+      </locale>
+      <locale name="el">
+        <default>Χρησιμοποιείται για μετατροπή σε ήχο ποιότητας CD, αλλά με τον απωλεστικό MP2 codec. Χρησιμοποιήστε αυτή την επιλογή για προετοιμασία για αντιγραφή αρχείων σε συσκευές που υποστηρίζουν μόνο τον MP2 codec. Σημειώστε ότι η χρήση αυτού του τύπου μπορεί να είναι παράνομη στην περιοχή σας- καλύτερα να συμβουλευτείτε ένα δικηγόρο για συμβουλές.</default>
+      </locale>
+      <locale name="en_GB">
+        <default>Used for converting to CD-quality audio, but with the lossy MP2 codec. Use this for preparing files for copying to devices that only support the MP2 codec. Note that using this format may be illegal in your jurisdiction; contact your lawyer for advice.</default>
+      </locale>
+      <locale name="es">
+        <default>Se utiliza para convertir a sonido con calidad de CD, pero con el códec con pérdidas MP2. Utilice esto para preparar archivos que se copiarán a dispositivos que solamente conocen el códec MP2. Tenga en cuenta que el uso de este formato podría ser ilegal en su jurisdicción; contacte con su abogado para obtener más información.</default>
+      </locale>
+      <locale name="et">
+        <default>Kasutatakse CD-kvaliteediga audio teisendamiseks koos kadudeta pakkimisga MP2 koodeki abil. Kasuta seda juhul, kui sa soovid ette valmistada audiofaile seadmetele, mis toetavad ainult MP2 kodekit. Pane tähele, et selle vormingu kasutamine võib olla mõnedes piirkondades keelatud, nõuande saamiseks on mõistlik juristi poole pöörduda.</default>
+      </locale>
+      <locale name="eu">
+        <default>CD-kalitateko audiora bihurtzeko erabiltzen da, galeradun MP2 kodekarekin ordea. Erabili hau fitxategiak prestatzeko MP2 kodeka onartzen duten gailuetan kopiatzeko. Jakin ezazu formatu hau erabiltzea ilegala izan daitekeela bizi zaren estatuan. Galdetu iezaiozu abokatu bati xehetasun gehiagorako.</default>
+      </locale>
+      <locale name="fi">
+        <default>Käytetään CD-tasoisen äänen tuomiseen häviöllisellä MP2-koodekilla. Käytä tätä, kun haluat viedä tiedostoja laitteille, jotka tukevat vain MP2-muotoa. Huomaa, että tämän muunnoksen käyttö saattaa olla maassasi laitonta.</default>
+      </locale>
+      <locale name="fr">
+        <default>Utilisé pour la conversion en qualité CD audio, mais avec un codec de compression MP2 avec perte. À utiliser pour créer des fichiers qui seront lus sur des périphériques ne prenant en charge que le format MP2. Notez que l&apos;utilisation de ce format peut être illégale suivant les lois en vigueur dans votre pays ; demandez conseil à un avocat.</default>
+      </locale>
+      <locale name="gl">
+        <default>Emprégase para converter en audio de calidade de CD, mais co códec con perdas MP2. Utilice isto ao preparar ficheiros para copialos en dispositivos que só soporten o códec MP2. Teña en conta que usar este formato pode ser ilegal na súa xurisdición. Aconséllese co seu avogado.</default>
+      </locale>
+      <locale name="gu">
+        <default>CD-ગુણવત્તા ઓડિયોમાં રૂપાંતરિત કરવા માટે વપરાય છે, પરંતુ lossy MP2 codec સાથે. આને ફાઈલોને ઉપકરણોમાં નકલ કરવા માટે તૈયાર કરવા માટે જ વાપરો કે જે માત્ર MP2 codec ને આધાર આપે. નોંધ કરો કે આ બંધારણ વાપરવાનું તમારા વિસ્તારમાં અયોગ્ય હોઈ શકે; સલાહ માટે તમારા વકીલનો સંપર્ક કરો.</default>
+      </locale>
+      <locale name="he">
+        <default>Used for converting to CD-quality audio, but with the lossy MP2 codec. Use this for preparing files for copying to devices that only support the MP2 codec. Note that using this format may be illegal in your jurisdiction; contact your lawyer for advice.</default>
+      </locale>
+      <locale name="hi">
+        <default>MP2 कोडेक के साथ CD-गुणवत्ता बदलने के लिए प्रयुक्त लॉसी. युक्ति में नक़ल करने के लिए फाइल तैयारी के लिए इसे प्रयोग करें जो कि केवल MP2 कोडेक का समर्थन करता है. नोट करें कि इस प्रारूप का प्रयोग करना आपके क्षेत्र के लिए अवैध हो सकता है; अपने वकील से युक्ति के लिए संपर्क करें.</default>
+      </locale>
+      <locale name="hu">
+        <default>CD-minőségű hanggá alakításhoz használható, veszteséges tömörítést végző MP2 kodekkel. Használja ezt fájlok előkészítéséhez csak az MP2 kodeket támogató eszközre másolásra. Ne feledje, hogy ezen formátum használata illegális lehet egyes joghatóságok alatt, ha bizonytalan, kérjen tanácsot ügyvédjétől.</default>
+      </locale>
+      <locale name="id">
+        <default>Digunakan untuk mengubah ke audio kualitas CD, tapi dengan codec MP2 yang lossy. Gunakan pilihan ini untuk menyalin ke perangkat yang hanya mendukung codec MP2. Perhatikan bahwa pemakaian bentuk ini mungkin tak legal di yurisdiksi Anda; silakan hubungi pengacara Anda untuk saran.</default>
+      </locale>
+      <locale name="it">
+        <default>Per convertire in qualità CD audio, ma con il codec MP2 con perdita. Consigliato per la preparazione di file da copiare su dispositivi che supportano solamente il codec MP2. L&apos;uso di questo formato potrebbe essere illegale nel proprio paese, contattare il proprio avvocato per maggiori informazioni.</default>
+      </locale>
+      <locale name="ja">
+        <default>CD と同等の品質を持つオーディオへ変換する際に使用しますが、劣化のある MP2 コーデックを用います。MP2 コーデックのみをサポートしているデバイスにファイルをコピーする準備段階で使用してください。このコーデックを使用すると法律違反になる可能性があるので注意してください。弁護士に相談してみてください。</default>
+      </locale>
+      <locale name="kn">
+        <default>ಸೀಡಿ-ಗುಣಮಟ್ಟದ ಆಡಿಯೋ ಅನ್ನು ಪರಿವರ್ತಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ, ಆದರೆ ಗುಣಮಟ್ಟ ನಷ್ಟಗೊಳ್ಳುವ MP2 ಕೋಡೆಕ್‌ನೊಂದಿಗೆ. ಇದನ್ನು MP2 ಕೋಡೆಕ್ ಅನ್ನು ಮಾತ್ರ ಬೆಂಬಲಿಸುವ ಸಾಧನಗಳಿ ಕಾಪಿಮಾಡಲು ಕಡತಗಳನ್ನು ತಯಾರಿಸಲು ಬಳಸಿ. ನೀವಿರುವ ಸ್ಥಳದ ಕಾನೂನಿನ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಈ ಫಾರ್ಮಾಟನ್ನು ಬಳಸುವುದು ಅನಧೀಕೃತವಾಗಿರಬಹುದು; ಸಲಹೆಗಾಗಿ ನಿಮ್ಮ ವಕೀಲರನ್ನು ಸಂಪರ್ಕಿಸಿ.</default>
+      </locale>
+      <locale name="ko">
+        <default>CD 수준의 오디오로 변환하는 데 사용합니다. 손실 MP2 코덱을 사용합니다. MP2 코덱을 지원하는 장치로 파일을 복사할 때 사용하십시오. 이 형식을 사용하는 것은 지역에 따라 위법이 될 수 있습니다. 변호사에게 상담하시기 바랍니다.</default>
+      </locale>
+      <locale name="lt">
+        <default>Naudojama konvertuojant CD kokybės garsą, tačiau su nuostolingu MP2 kodeku. Naudokite šį profilį failų, kuriuos kopijuosite į įrenginius, palaikančius tik MP2 kodeką, paruošimui. Atminkite, kad naudoti šį formatą jūsų teisės sistemoje gali būti nelegalu; pasitarkite su savo teisininku.</default>
+      </locale>
+      <locale name="lv">
+        <default>Tiek izmantots, lai konvertētu uz CD kvalitātes skaņu izmantojot MP2 kodeku, kas kompresē ar zaudējumiem. Izmantojiet šo, lai sagatavotu skaņu pārnešanai uz ierīcēm, kas atbalsta vienīgi MP2 kodeku. Šī kodeka izmantošana var nebūt likumīga jūsu valstī; konsultējieties ar juristu.</default>
+      </locale>
+      <locale name="ml">
+        <default>സിഡി രീതിയ്ക്കുള്ള ഓഡിയോയിലേക്ക് വേര്‍തിരിക്കുന്നതിനായി ഉപയോഗിക്കുന്നു, പക്ഷേ കുറഞ്ഞ MP2 കോഡക്കോടെ. MP2 കോഡക് മാത്രം പിന്തുണയ്ക്കുന്ന ഉപകരണങ്ങളിലേക്ക് ഫയലുകളെ പകര്‍ത്തുന്നിനായി ഇതുപയോഗിക്കുക. കുറിപ്പു്: ഇതൊരുപക്ഷേ, നിയമ വിരുദ്ധമാകാം., ദയവായി നിങ്ങളുടെ അഭിഭാഷകനുമായി ബന്ധപ്പെടുക.</default>
+      </locale>
+      <locale name="mr">
+        <default>CD-दर्जा ऑडिओच्या रूपांतर करीता वापरले जाते, पण हानीरहीत MP2 कोडेक सह. याचा वापर फक्त MP2 कोडक वरील साधन करीता फाइल बनविण्या करीता करा. लक्ष्यात ठेवा या स्वरूपचा वापर तुमच्या अधिकारिता अंतर्गत कायदेशीर नसावे; तुमच्या वकीलाचा सल्ला करीता संपर्क करा.</default>
+      </locale>
+      <locale name="nb">
+        <default>Brukes for konvertering til lyd med CD-kvalitet, men med MP2-kodek som gir tap av kvalitet. Bruk denne for å forberede filer for kopiering til enheter som bare har støtte for MP2-kodeken. Vær oppmerksom på at bruk av dette formatet, kan være ulovlig i din rettskrets; kontakt din advokat for råd.</default>
+      </locale>
+      <locale name="nl">
+        <default>Gebruikt voor het converteren naar cd-kwaliteit audio met de MP3-coderingsmethode (geeft kwaliteitsverlies). Gebruik dit voor het apparaten die enkel het MP3-formaat ondersteunen. Let erop dat dit formaat niet overal ter wereld vrij (legaal) te gebruiken is.</default>
+      </locale>
+      <locale name="nn">
+        <default>Vert brukt for å konvertera lyd med CD-kvalitet, men med MP2-kodeken som gjev tap av kvalitet. Bruk denne for å konvertera lydfiler til bruk på einingar som berre støttar MP2-kodeken. Ver merksam på at bruk av dette formatet kan vera ulovleg i din jurisdiksjon; kontakt ein advokat for råd.</default>
+      </locale>
+      <locale name="or">
+        <default>CD-ବିଶେଷତା ଧ୍ୱନୀକୁ ପରିବର୍ତ୍ତନ କରିବା ପାଇଁ ବ୍ୟବହୃତ ହୋଇଥାଏ, କିନ୍ତୁ MP2 ସାଙ୍କେତିକ ସହିତ। ଯନ୍ତ୍ରଗୁଡ଼ିକରେ ନକଲ କରିବା ପାଇଁ ଫାଇଲ ପ୍ରସ୍ତୁତ କରିବାକୁ ଏହାକୁ ବ୍ୟବହାର କରନ୍ତୁ ଯାହାକି କେବଳ MP2 ସାଙ୍କେତିକକୁ ବ୍ୟବହାର କରିଥାଏ। ମନେରଖନ୍ତୁ ଏହି ଶୈଳୀକୁ ବ୍ୟବହାର କରିବା ଆପଣଙ୍କ ଅଞ୍ଚଳରେ ଅନୈତିକ ହୋଇପାରେ; ଉପଦେଶ ପାଇଁ ଆପଣଙ୍କ ଓକିଲ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ।</default>
+      </locale>
+      <locale name="pa">
+        <default>CD-ਕੁਆਲਟੀ ਦੀ ਆਡੀਓ ਲਈ ਵਰਤਿਆ ਜਾਦਾ ਹੈ, ਪਰ ਇੱਕ ਲੂਸ਼ੀ MP੨ codec ਨਾਲ। ਇਸ ਨੂੰ ਜੰਤਰਾਂ ਉੱਤੇ ਕਾਪੀ ਕਰਨ ਲਈ ਵਰਤੋਂ, ਜੋ ਕਿ ਸਿਰਫ਼ MP੩ codec ਲਈ ਹੀ ਸਹਾਇਕ ਹਨ। ਯਾਦ ਰੱਖੋ ਕਿ ਇਹ ਫਾਰਮੈਟ ਗੈਰ-ਕਾਨੂੰਨੀ ਹੋ ਸਕਦਾ ਹੈ, ਸਲਾਹ ਲਈ ਆਪਣੇ ਵਕੀਲ ਨੂੰ ਪੁੱਛੋ।</default>
+      </locale>
+      <locale name="pl">
+        <default>Używane do konwersji do jakości CD, ale ze stratnym kodekiem MP2. Kodek ten przydaje się do przygotowywania plików do kopiowania na urządzenia obsługujące tylko MP2. Uwaga: w niektórych krajach ten format może być nielegalny. Proszę zasięgnąć rady prawnika.</default>
+      </locale>
+      <locale name="pt">
+        <default>Utilizado para converter para audio com qualidade de CD, mas com o codec com percas MP2. Utilize para preparar ficheiros para serem copiados para dispositivos que apenas suportam o codec MP2. Note que utilizar este formato poderá ser ilegal no seu país; contacte o seu advogado para obter aconselhamento.</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Usado para a conversão de áudio com qualidade de CD, mas com o codec MP2 com perdas. Use isso para preparar arquivos a serem copiados para dispositivos que somente suportam o codec MP2. Observe que usar este formato pode ser considerado ilegal em sua jurisdição; consulte seu advogado para um conselho.</default>
+      </locale>
+      <locale name="ro">
+        <default>Folosit pentru convertirea la calitate audio CD, dar cu codecul cu pierderi MP2. Folosiți asta doar pentru a copia către dispozitivele care suportă doar codecul MP2. Rețineți faptul că utilizarea aceastui codec ar putea fi ilegală în țara dumneavoastră, contactați avocatul dumneavoastră pentru mai multe sfaturi.</default>
+      </locale>
+      <locale name="ru">
+        <default>Используется для преобразования в звук CD-качества, но с кодеком MP2, который не обеспечивает полного сохранения. Таким образом можно подготовить файлы для устройств, которые поддерживают только кодек MP2. Заметьте, что использование этого кодека может быть нелегальным в некоторых странах, для получения дополнительной информации обратитесь к юристу.</default>
+      </locale>
+      <locale name="sk">
+        <default>Používa sa na konverziu zvuku v kvalite CD, ale so stratovým kodekom MP2. Je to použiteľné len na prípravu súborov pre zariadenia, ktoré podporujú iba kodek MP2. Upozornenie: používanie tohto formátu môže byť v niektorých krajinách dokonca protizákonné; opýtajte sa svojho právnika.</default>
+      </locale>
+      <locale name="sl">
+        <default>Uporabljeno za pretvarjanje v zapis kakovosti kot jo ima zvočni CD, vendar s kodekom MP2, ki ne omogoča take kakovosti. Uporabite možnost za pripravo datotek za kopiranje na naprave, ki podpirajo samo kodek MP3. Pomnite, da je uporaba tega zapisa lahko sporna, saj je avtorsko zaščitena; za več podrobnosti stopite v stik z odvetnikom.</default>
+      </locale>
+      <locale name="sr">
+        <default>Користи се за претварање у звук ЦД квалитета, али са МП2 форматом са губицима. Користите ово за припрему датотека за копирање на уређај који подржава МП2. Овај формат може бити нелегалан у вашој земљи; консултујте адвоката за савет.</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>Koristi se za pretvaranje u zvuk CD kvaliteta, ali sa MP2 formatom sa gubicima. Koristite ovo za pripremu datoteka za kopiranje na uređaj koji podržava MP2. Ovaj format može biti nelegalan u vašoj zemlji; konsultujte advokata za savet.</default>
+      </locale>
+      <locale name="sv">
+        <default>Används för att konvertera till ljud i cd-kvalitet, men med en MP2-kodek med förluster. Använd den här för att förbereda filer för kopiering till enheter som endast har stöd för MP2-kodeken.</default>
+      </locale>
+      <locale name="ta">
+        <default>குறுந்தட்டு தர ஒலியை இழப்புடன் கூடிய எம்பி2 குறியாக்கத்துக்கு மாற்ற உதவுகிறது. இதை எம்பி2 குறியாக்கம் மட்டுமே பயன்படுத்தும் சாதனங்களுக்கு கோப்புகளை நகலெடுக்க பயன்படுத்துங்கள். இந்த பாங்கை பயன்படுத்துவது உங்கள் நாட்டில் சட்ட விரோதமாக இருக்கலாம். உங்கள் வக்கீலை கலந்தாலோசிக்கவும்.</default>
+      </locale>
+      <locale name="te">
+        <default>CD-నాణ్యతా ఆడియో మార్పు కొరకు ఉపయోగపడుతుంది, అయితే నష్టపోవు MP2 కొడెక్ తో. MP2 కొడెక్ లకు మద్దతునిచ్చే సాదనములకు నకలు తీయుటకు దస్త్రాలను సిద్దపరుచుటలో ఉపయోగించుము. మీ ప్రాంతంలో ఈ ఫార్మాట్ ను ఉపయోగించుట న్యాయవిరోధం కావచ్చు, సలహా కొరకు మీ వకీలు ను సంప్రదించండి.</default>
+      </locale>
+      <locale name="th">
+        <default>ใช้แปลงเป็นข้อมูลเสียงคุณภาพเท่าซีดี แต่ใช้ codec MP2 ซึ่งมีการสูญเสียรายละเอียด ใช้โพรไฟล์นี้ในการเตรียมแฟ้มสำหรับคัดลอกไปยังอุปกรณ์ที่รองรับเฉพาะ codec MP2 เท่านั้น สังเกตว่าการใช้รูปแบบข้อมูลนี้อาจผิดกฎหมายโดยความรับผิดชอบเป็นของคุณ กรุณาปรึกษานักกฎหมาย</default>
+      </locale>
+      <locale name="tr">
+        <default>CD kalitesinde sese dönüştürmek, ancak kayıplı MP2 kodeki kullanmak için kullanılır. Yalnızca MP2 kodek desteği olan cihazlara kopyalama için dosya hazırlanmasında bunu kullanın. Bu formatı kullanmak bulunduğunuz yerde yasadışı olabileceğini unutmayın; tavsiye için avukatınıza başvurabilirsiniz.</default>
+      </locale>
+      <locale name="ug">
+        <default>CD ئاۋاز سۈپىتىدە ئايلاندۇرىدىغان ئاۋازغا ئىشلىتىلىدۇ ئەمما خورايدىغان MP2 كودلاش ئۇسۇلىنى قوللىنىدۇ. پەقەت MP2 كودلاش ئۇسۇلىنى قوللايدىغان ئۈسكۈنىگە ھۆججەت كۆچۈرۈشتە ئىشلىتىلىدۇ. دىققەت بۇ خىل فورمات قوللىنىلسا سىز تۇرۇشلۇق جاينىڭ ئەدلىيە تۈزۈمىدە قانۇنسىز بولۇشى مۇمكىن؛ بۇ ھەقتىكى تەكلىپكە ئېرىشمەكچى بولسىڭىز ئادۋوكاتىڭىز بىلەن ئالاقىلىشىڭ.</default>
+      </locale>
+      <locale name="uk">
+        <default>Використовується для перетворення звуку CD-якості, але використовуючи кодек MP2 з втратою якості. Використовуйте його для підготовки файлів для копіювання на пристрої, які підтримують лише кодек MP2. Зверніть увагу, використання цього формату може бути незаконним у вашій країні; проконсультуйтесь у юриста з цього приводу.</default>
+      </locale>
+      <locale name="vi">
+        <default>Dùng để chuyển đổi sang âm thanh chất lượng đĩa CD, nhưng với bộ mã hoá (codec) MP2 mất mát. Được dùng để chuẩn bị sao chép tập tin vào thiết bị chỉ hỗ trợ mã hoá MP2. Chú ý rằng dùng định dạng này có thể không hợp pháp trong khu vực của bạn; hãy liên hệ với luật sư để được tư vấn.</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>用于转换为 CD 音质的音频，但使用有损 MP2 编码方式。制作需要复制到仅支持 MP2 编码方式的设备的文件时使用。注意使用此格式可能在您所在的司法制度下是违法的；请联系您的律师以获得建议。</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>用來轉換 CD 品質的音效，但使用破壞性的 MP2 編碼解碼器。適用於準備複製檔案到僅支援 MP2 編碼解碼器的裝置。注意！使用此格式在你處於的司法管轄領域內可能是違法的；請聯絡律師詢問意見。</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>用來轉換 CD 品質的音效，但使用破壞性的 MP2 編碼解碼器。適用於準備複製檔案到僅支援 MP2 編碼解碼器的裝置。注意！使用此格式在您處於的司法管轄領域內可能是違法的；請聯絡律師詢問意見。</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/mp2/pipeline</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/mp2/pipeline</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>audio/x-raw-int,rate=44100,channels=2 ! twolame name=enc mode=0 bitrate=192 ! id3v2mux</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The partial GStreamer pipeline used</short>
+        <long>
+          A partial GStreamer pipeline to use for this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/mp2/extension</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/mp2/extension</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>mp2</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The default file extension for this profile</short>
+        <long>
+          A filename extension to be used when storing files encoded
+          with this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/active</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/mp2/active</applyto>
+      <owner>gnome-media</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>Whether this profile is to be used</short>
+        <long>
+          Whether to use and display this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <!-- MP3 -->
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/mp3/name</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/mp3/name</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>CD Quality, MP3</default>
+        <short>A short name for the audio profile</short>
+        <long>
+          A short name for the audio profile, to be used in selections
+          and uniquely identifying the profile.
+        </long>
+      </locale>
+      <locale name="af">
+        <default>CD-kwaliteit, MP3</default>
+      </locale>
+      <locale name="ar">
+        <default>جودة قرص مدمج، MP3</default>
+      </locale>
+      <locale name="as">
+        <default>CD Quality, MP3</default>
+      </locale>
+      <locale name="ast">
+        <default>Calidá de CD, MP3</default>
+      </locale>
+      <locale name="be">
+        <default>Якасьць CD, MP3</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Jakaść CD, MP3</default>
+      </locale>
+      <locale name="bg">
+        <default>Качество на CD — MP3</default>
+      </locale>
+      <locale name="bn">
+        <default>CD-এর গুণমান, MP3</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>CD-র গুণমান, MP3</default>
+      </locale>
+      <locale name="br">
+        <default>Perzhded CD, MP3</default>
+      </locale>
+      <locale name="ca">
+        <default>Qualitat de CD, MP3</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Qualitat de CD, MP3</default>
+      </locale>
+      <locale name="cs">
+        <default>Kvalita CD, MP3</default>
+      </locale>
+      <locale name="da">
+        <default>Cd-kvalitet, MP3</default>
+      </locale>
+      <locale name="de">
+        <default>CD-Qualität, MP3</default>
+      </locale>
+      <locale name="dz">
+        <default>སི་ཌི་གི་སྤུས་ཚད་  ཨེམ་པི་༣</default>
+      </locale>
+      <locale name="el">
+        <default>Ποιότητα CD, MP3</default>
+      </locale>
+      <locale name="en@shaw">
+        <default>CD 𐑒𐑢𐑪𐑤𐑦𐑑𐑰, MP3</default>
+      </locale>
+      <locale name="en_GB">
+        <default>CD Quality, MP3</default>
+      </locale>
+      <locale name="es">
+        <default>Calidad de CD, MP3</default>
+      </locale>
+      <locale name="et">
+        <default>CD-kvaliteet, MP3</default>
+      </locale>
+      <locale name="eu">
+        <default>CD-kalitatea, MP3</default>
+      </locale>
+      <locale name="fi">
+        <default>CD-taso, MP3</default>
+      </locale>
+      <locale name="fr">
+        <default>Qualité CD, MP3</default>
+      </locale>
+      <locale name="gl">
+        <default>Calidade de CD, MP3</default>
+      </locale>
+      <locale name="gu">
+        <default>CD ગુણવત્તા, MP3</default>
+      </locale>
+      <locale name="he">
+        <default>CD Quality, MP3</default>
+      </locale>
+      <locale name="hi">
+        <default>सीडी क्वालिटी, MP3</default>
+      </locale>
+      <locale name="hu">
+        <default>CD-minőség, MP3</default>
+      </locale>
+      <locale name="id">
+        <default>Kualitas CD, MP3</default>
+      </locale>
+      <locale name="it">
+        <default>Qualità CD, MP3</default>
+      </locale>
+      <locale name="ja">
+        <default>CD の品質 (MP3)</default>
+      </locale>
+      <locale name="kn">
+        <default>ಸೀಡಿ ಗುಣಮಟ್ಟ, MP3</default>
+      </locale>
+      <locale name="ko">
+        <default>CD 수준, MP3</default>
+      </locale>
+      <locale name="ku">
+        <default>Kalîteya CDyê, MP3</default>
+      </locale>
+      <locale name="lt">
+        <default>CD kokybės, MP3</default>
+      </locale>
+      <locale name="lv">
+        <default>CD kvalitāte, MP3</default>
+      </locale>
+      <locale name="mk">
+        <default>Квалитет на CD, MP3</default>
+      </locale>
+      <locale name="ml">
+        <default>CD നിലവാരം, MP3</default>
+      </locale>
+      <locale name="mr">
+        <default>सीडी दर्जा, MP3</default>
+      </locale>
+      <locale name="nb">
+        <default>CD-kvalitet, MP3</default>
+      </locale>
+      <locale name="nds">
+        <default>CD Qualität, MP3</default>
+      </locale>
+      <locale name="ne">
+        <default>सीडी गुणस्तर, MP3</default>
+      </locale>
+      <locale name="nl">
+        <default>Cd-kwaliteit, MP3</default>
+      </locale>
+      <locale name="nn">
+        <default>CD-kvalitet, MP3</default>
+      </locale>
+      <locale name="or">
+        <default>CD ଗୁଣବତ୍ତା, MP3</default>
+      </locale>
+      <locale name="pa">
+        <default>CD ਕੁਆਲਟੀ, MP੩</default>
+      </locale>
+      <locale name="pl">
+        <default>Jakość CD, MP3</default>
+      </locale>
+      <locale name="pt">
+        <default>Qualidade de CD, MP3</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Qualidade de CD, MP3</default>
+      </locale>
+      <locale name="ro">
+        <default>Calitate CD, MP3</default>
+      </locale>
+      <locale name="ru">
+        <default>CD-качество, MP3</default>
+      </locale>
+      <locale name="si">
+        <default>CD තත්වයේ, MP3</default>
+      </locale>
+      <locale name="sk">
+        <default>CD kvalita, MP3</default>
+      </locale>
+      <locale name="sl">
+        <default>CD kakovost, MP3</default>
+      </locale>
+      <locale name="sq">
+        <default>Kualitet CD, MP3</default>
+      </locale>
+      <locale name="sr">
+        <default>ЦД квалитет, МП3</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>CD kvalitet, MP3</default>
+      </locale>
+      <locale name="sv">
+        <default>Cd-kvalitet, MP3</default>
+      </locale>
+      <locale name="ta">
+        <default>CD தரம், MP3</default>
+      </locale>
+      <locale name="te">
+        <default>CD నాణ్యత, MP3</default>
+      </locale>
+      <locale name="th">
+        <default>คุณภาพซีดี, MP3</default>
+      </locale>
+      <locale name="tr">
+        <default>CD Kalitesi, MP3</default>
+      </locale>
+      <locale name="ug">
+        <default>CD ئاۋاز سۈپىتى، MP3</default>
+      </locale>
+      <locale name="uk">
+        <default>CD якість, MP3</default>
+      </locale>
+      <locale name="vi">
+        <default>Chất lưọng đĩa CD, MP3</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>CD 音质，MP3</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>CD 品質，MP3</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>CD 品質，MP3</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/mp3/description</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/mp3/description</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>Used for converting to CD-quality audio, but with the lossy MP3 codec. Use this for preparing files for copying to devices that only support the MP3 codec. Note that using this format may be illegal in your jurisdiction; contact your lawyer for advice.</default>
+        <short>A description for the audio profile</short>
+        <long>
+          A description of the profile, containing more information and
+          describing when to use this profile.
+        </long>
+      </locale>
+      <locale name="ar">
+        <default>يستخدم للتحويل إلى صوت بجودة القرص المدمج لكن باستخدام كودك MP3 فاقِد. استخدم هذا لتجهيز الملفات للنسخ لأجهزة تدعم كودك MP3 فقط. لاحظ أن استخدام هذا الكودك قد لا يكون قانونيا في بلدك، راجع محاميك طلبا للنصيحة.</default>
+      </locale>
+      <locale name="as">
+        <default>উল্লেখিত সময় অবধি উল্লেখিত সময় অবধি উল্লেখিত সময় অবধি উল্লেখিত সময় অবধি.</default>
+      </locale>
+      <locale name="ast">
+        <default>Usáu pa convertir a soníu con calidá de CD, pero col códec con pérdida MP3. Úselu pa tresnar ficheros que llueu se copiarán a preseos que namái aguanten el códec MP3. Decátese que l&apos;usu d&apos;esti formatu pue ser illegal na so xurisdicción; contaute col so asesor pa que lu aconseye.</default>
+      </locale>
+      <locale name="be">
+        <default>Для пераўтварэньня ў гук CD-якасьці, але з згубным кодэкам MP3. Выкарыстоўвайце толькі для падрыхтоўкі файлаў для капіяваньня на прылады, якія падтрымліваюць толькі кодэк MP3. Увага: выкарыстаньне гэтага кодэка можа быць нелегальным у Вашай краіне; зьвярніцеся да юрыста для высьвятленьня сытуацыі.</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Užyvany dla kanvertavańnia huku da jakaści CD, ale z kodekam stratnaj kampresii MP3. Naležyć užyć dla padrychtoŭki fajłaŭ da kapijavańnia na pryłady, jakija absłuhoŭvajuć tolki kodek MP3. Uvaha: u niekatorych krainach vykarystańnie hetaha farmatu moža być zabaronienym, tamu lepiej parajsia ź jurystam.</default>
+      </locale>
+      <locale name="bg">
+        <default>Използва се за конвертиране на аудио с качеството на CD чрез кодека със загуба на качество MP3. Използвайте този избор при подготвяне на файлове за копиране на устройства, които поддържат само кодека MP3. Имайте предвид, че използването на този формат може да е незаконно в страната ви. Свържете се с юрист за съвет.</default>
+      </locale>
+      <locale name="bn">
+        <default>CD-গুণমানের অডিওতে রূপান্তর করতে ব্যবহৃত। কিন্তু নিম্ন গুণমানের MP3 কোডেক সহ। শুধুমাত্র MP3 কোডেক ব্যবহারকারী ডিভাইসে অনুলিপি করার জন্য ফাইল প্রস্তুত করতে এটি ব্যবহার করুন। উল্লেখ্য, এই কোডেকের ব্যবহার আপনার এলাকায় বেআইনি হতে পারে এবং কোনো আইনী বিশেষজ্ঞের পরামর্শ নেওয়া বাঞ্ছনীয়।</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>CD-গুণমানের অডিওতে রূপান্তর করতে ব্যবহৃত। কিন্তু নিম্ন গুণমানের MP3 কোডেক সহ। শুধুমাত্র MP3 কোডেক ব্যবহারকারী ডিভাইসে কপি করার জন্য ফাইল প্রস্তুত করার জন্য এটি ব্যবহার করুন। উল্লেখ্য, এই কোডেকের ব্যবহার আপনার এলাকায় বেআইনি হতে পারে এবং কোনো আইনী বিশেষজ্ঞের পরামর্শ নেওয়া বাঞ্ছনীয়।</default>
+      </locale>
+      <locale name="ca">
+        <default>Utilitzat per convertir a àudio amb qualitat de CD, però amb un còdec MP3 amb pèrdua. Feu-lo servir per preparar els fitxers per copiar a dispositius que només permetin el còdec MP3. Pot ser que l&apos;ús d&apos;aquest format sigui il·legal a la vostra jurisdicció, consulteu-ho amb el vostre advocat.</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Utilitzat per convertir a àudio amb qualitat de CD, però amb un còdec MP3 amb pèrdua. Feu-lo servir per preparar els fitxers per copiar a dispositius que només permeten el còdec MP3. Pot ser que l&apos;ús d&apos;este format siga il·legal a la vostra jurisdicció, consulteu-ho amb el vostre advocat.</default>
+      </locale>
+      <locale name="cs">
+        <default>Používá se ke konverzi se zvukovou kvalitou CD, ale se ztrátovým kodekem MP3. Vhodné jako příprava souborů ke zkopírování na zařízení podporující pouze kodek MP3. Vezměte prosím na vědomí, že použití tohoto formátu může být ilegální. Kontaktuje laskavě v této záležitosti právního poradce.</default>
+      </locale>
+      <locale name="da">
+        <default>Til brug for konvertering til cd-kvalitetslyd, men med det tabsgivende MP3-codec. Brug dette for at forberede filer til kopiering til enheder der kun understøtter MP3-codec&apos;et. Vær opmærksom på at brug af dette format kan være ulovligt i din retskreds; kontakt din advokat for rådgivning.</default>
+      </locale>
+      <locale name="de">
+        <default>Wird zum Konvertieren von Audio-Daten in CD-Qualität, allerdings mit dem verlustbehafteten MP3-Codec, verwendet. Beachten Sie, dass die Benutzung dieses Formats unter Umständen in Ihrem Land illegal ist. Fragen Sie Ihren Rechtsanwalt für weitere Beratung.</default>
+      </locale>
+      <locale name="dz">
+        <default>སི་ཌི་-སྤུས་ཚད་རྣར་ཉན་ལུ་གཞི་བསྒྱུར་འབད་ནིའི་དོན་ལུ་ལག་ལེན་འཐབ་ཡོད་ དེ་འབདཝ་ད་ ལོ་སི་ཨེམ་པི་༣ཀོ་ཌེཀ་དང་གཅིག་ཁར། འ་ནི་འདི་ ཨེམ་པི་༣་ཀོ་ཌེཀ་འདི་རྐྱངམ་ཅིག་རྒྱབ་སྐྱོར་འབད་མི་ ཐབས་འཕྲུལ་ལུ་འདྲ་བཤུས་རྐྱབས་ནིའི་དོན་ལུ་ ཡིག་སྣོད་ཚུ་གྲ་སྒྲིག་འབད་ནིའི་དོན་ལས་ལག་ལེན་འཐབ། འ་ནི་རྩ་སྒྲིག་ལག་ལེན་འཐབ་ནི་འདི་ ཁྱོད་རའི་དབང་ཚད་ཁྱབ་ཁོངས་ནང་ཁྲིམས་འགལ་ཅིག་འོང་ བསླབ་བྱའི་དོན་ལུ་ཁྱོད་རའི་ཁྲིམས་རྩོདཔ་དང་འབྲེལ་བ་འཐབ།</default>
+      </locale>
+      <locale name="el">
+        <default>Χρησιμοποιείται για μετατροπή σε ήχο ποιότητας CD, αλλά με τον απωλεστικό MP3 codec Κάντε χρήση αυτής της επιλογής για προετοιμασία για αντιγραφή αρχείων σε συσκευές που υποστηρίζουν μόνο τον MP3 codec. Σημειώστε ότι η χρήση αυτού του τύπου μπορεί να είναι παράνομη στην περιοχή σας- καλύτερα να συμβουλευτείτε ένα δικηγόρο για συμβουλές.</default>
+      </locale>
+      <locale name="en_GB">
+        <default>Used for converting to CD-quality audio, but with the lossy MP3 codec. Use this for preparing files for copying to devices that only support the MP3 codec. Note that using this format may be illegal in your jurisdiction; contact your lawyer for advice.</default>
+      </locale>
+      <locale name="es">
+        <default>Se usa para convertir a sonido con calidad de CD, pero con el códec con pérdida MP3. Úselo para preparar archivos que se copiarán a dispositivos que solamente conocen el códec MP3. Tenga en cuenta que el uso de este formato podría ser ilegal en su jurisdicción; contacte con su abogado para obtener más información.</default>
+      </locale>
+      <locale name="et">
+        <default>Kasutatakse CD-kvaliteediga audio teisendamiseks koos kadudeta pakkimisga MP3 koodeki abil. Kasuta seda juhul, kui sa soovid ette valmistada audiofaile seadmetele, mis toetavad ainult MP3 kodekit. Pane tähele, et selle vormingu kasutamine võib olla mõnedes piirkondades keelatud, nõuande saamiseks on mõistlik juristi poole pöörduda.</default>
+      </locale>
+      <locale name="eu">
+        <default>CD-kalitateko audiora bihurtzeko erabiltzen da, galeradun MP3 kodekarekin ordea. Erabili hau fitxategiak prestatzeko MP3 kodeka onartzen duten gailuetan kopiatzeko. Jakin ezazu formatu hau erabiltzea ilegala izan daitekeela bizi zaren estatuan. Galdetu iezaiozu abokatu bati xehetasun gehiagorako.</default>
+      </locale>
+      <locale name="fi">
+        <default>Käytetään CD-tasoisen äänen tuomiseen häviöllisellä MP3-koodekilla. Käytä tätä, kun haluat viedä tiedostoja laitteille, jotka tukevat vain MP3-muotoa. Huomaa, että tämän muunnoksen käyttö saattaa olla maassasi laitonta.</default>
+      </locale>
+      <locale name="fr">
+        <default>Utilisé pour la conversion en qualité CD audio, mais avec un codec de compression MP3 avec perte. À utiliser pour créer des fichiers qui seront lus sur des périphériques ne prenant en charge que le format MP3. Notez que l&apos;utilisation de ce format peut être illégale suivant les lois en vigueur dans votre pays ; demandez conseil à un avocat.</default>
+      </locale>
+      <locale name="gl">
+        <default>Úsase para converter a calidade de CD de audio, mais cun códec de comprensión MP3 con perda. Utilice isto para preparar os ficheiros para copialos a dispositivos que só soportan o códec de comprensión MP3. Teña en conta que usar este formato pode ser ilegal na súa xurisdición; contacte co seu avogado para pedirlle asesoramento.</default>
+      </locale>
+      <locale name="gu">
+        <default>CD-ગુણવત્તા ઓડિયોમાં રૂપાંતરિત કરવા માટે વપરાય છે, પરંતુ lossy MP3 codec સાથે. આને ફાઈલોને ઉપકરણોમાં નકલ કરવા માટે તૈયાર કરવા માટે જ વાપરો કે જે માત્ર MP3 codec ને આધાર આપે. નોંધ કરો કે આ બંધારણ વાપરવાનું તમારા વિસ્તારમાં અયોગ્ય હોઈ શકે; સલાહ માટે તમારા વકીલનો સંપર્ક કરો.</default>
+      </locale>
+      <locale name="he">
+        <default>Used for converting to CD-quality audio, but with the lossy MP3 codec. Use this for preparing files for copying to devices that only support the MP3 codec. Note that using this format may be illegal in your jurisdiction; contact your lawyer for advice.</default>
+      </locale>
+      <locale name="hi">
+        <default>MP3 कोडेक के साथ CD-गुणवत्ता बदलने के लिए प्रयुक्त लॉसी. युक्ति में नक़ल करने के लिए फाइल तैयारी के लिए इसे प्रयोग करें जो कि केवल MP3 कोडेक का समर्थन करता है. नोट करें कि इस प्रारूप का प्रयोग करना आपके क्षेत्र के लिए अवैध हो सकता है; अपने वकील से युक्ति के लिए संपर्क करें.</default>
+      </locale>
+      <locale name="hu">
+        <default>CD-minőségű hanggá alakításhoz használható, veszteséges tömörítést végző MP3 kodekkel. Használja ezt fájlok előkészítéséhez csak az MP3 kodeket támogató eszközre másolásra. Ne feledje, hogy ezen formátum használata illegális lehet egyes joghatóságok alatt, ha bizonytalan, kérjen tanácsot ügyvédjétől.</default>
+      </locale>
+      <locale name="id">
+        <default>Digunakan untuk mengubah ke audio kualitas CD, tapi dengan codec MP3 yang lossy. Gunakan pilihan ini untuk menyalin ke perangkat yang hanya mendukung codec MP3. Perhatikan bahwa pemakaian bentuk ini mungkin tak legal di yurisdiksi Anda; silakan hubungi pengacara Anda untuk saran.</default>
+      </locale>
+      <locale name="it">
+        <default>Per convertire in qualità CD audio, ma con il codec MP3 con perdita. Consigliato per la preparazione di file da copiare su dispositivi che supportano solamente il codec MP3. L&apos;uso di questo formato potrebbe essere illegale nel proprio paese, contattare il proprio avvocato per maggiori informazioni.</default>
+      </locale>
+      <locale name="ja">
+        <default>CD と同等の品質を持つオーディオへ変換する際に使用しますが、劣化のある MP3 コーデックを用います。MP3 コーデックのみをサポートしているデバイスにファイルをコピーする準備段階で使用してください。このコーデックを使用すると法律違反になる可能性があるので注意してください。弁護士に相談してみてください。</default>
+      </locale>
+      <locale name="kn">
+        <default>ಸೀಡಿ-ಗುಣಮಟ್ಟದ ಆಡಿಯೋ ಅನ್ನು ಪರಿವರ್ತಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ, ಆದರೆ ಗುಣಮಟ್ಟ ನಷ್ಟಗೊಳ್ಳುವ MP3 ಕೋಡೆಕ್‌ನೊಂದಿಗೆ. ಇದನ್ನು MP3 ಕೋಡೆಕ್ ಅನ್ನು ಮಾತ್ರ ಬೆಂಬಲಿಸುವ ಸಾಧನಗಳಿ ಕಾಪಿಮಾಡಲು ಕಡತಗಳನ್ನು ತಯಾರಿಸಲು ಬಳಸಿ. ನೀವಿರುವ ಸ್ಥಳದ ಕಾನೂನಿನ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಈ ಫಾರ್ಮಾಟನ್ನು ಬಳಸುವುದು ಅನಧೀಕೃತವಾಗಿರಬಹುದು; ಸಲಹೆಗಾಗಿ ನಿಮ್ಮ ವಕೀಲರನ್ನು ಸಂಪರ್ಕಿಸಿ.</default>
+      </locale>
+      <locale name="ko">
+        <default>CD 수준의 오디오로 변환하는 데 사용합니다. 손실 MP3 코덱을 사용합니다. MP3 코덱을 지원하는 장치로 파일을 복사할 때 사용하십시오. 이 형식을 사용하는 것은 지역에 따라 위법이 될 수 있습니다. 변호사에게 상담하시기 바랍니다.</default>
+      </locale>
+      <locale name="lt">
+        <default>Naudojama konvertuojant CD kokybės garsą, tačiau su nuostolingu MP3 kodeku. Naudokite šį profilį failų, kuriuos kopijuosite į įrenginius, palaikančius tik MP3 kodeką, paruošimui. Atminkite, kad naudoti šį formatą jūsų teisės sistemoje gali būti nelegalu; pasitarkite su savo teisininku.</default>
+      </locale>
+      <locale name="lv">
+        <default>Tiek izmantots, lai konvertētu uz CD kvalitātes skaņu izmantojot MP3 kodeku, kas kompresē ar zaudējumiem. Izmantojiet šo, lai sagatavotu skaņu pārnešanai uz ierīcēm, kas atbalsta vienīgi MP3 kodeku. Šī kodeka izmantošana var nebūt likumīga jūsu valstī; konsultējieties ar juristu.</default>
+      </locale>
+      <locale name="mk">
+        <default>Се користи за конвертирање на звук со CD-квалитет, но со кодекот MP3, со загуба. Користете го ова за да ги подготвите датотеките за копирање на уреди кои го поддржуваат само MP3 кодекот. Забележете дека користењето на овој формат може да е нелегално во Вашата јуриздикција; контактирајте со Вашиот адвокат за совет.</default>
+      </locale>
+      <locale name="ml">
+        <default>സിഡി രീതിയ്ക്കുള്ള ഓഡിയോയിലേക്ക് വേര്‍തിരിക്കുന്നതിനായി ഉപയോഗിക്കുന്നു, പക്ഷേ കുറഞ്ഞ MP3 കോഡക്കോടെ. MP3 കോഡക് മാത്രം പിന്തുണയ്ക്കുന്ന ഉപകരണങ്ങളിലേക്ക് ഫയലുകളെ പകര്‍ത്തുന്നിനായി ഇതുപയോഗിക്കുക. കുറിപ്പു്: ഇതൊരുപക്ഷേ, നിയമ വിരുദ്ധമാകാം., ദയവായി നിങ്ങളുടെ അഭിഭാഷകനുമായി ബന്ധപ്പെടുക.</default>
+      </locale>
+      <locale name="mr">
+        <default>CD-दर्जा ऑडिओच्या रूपांतर करीता वापरले जाते, पण हानीरहीत MP3 कोडेक सह. याचा वापर फक्त MP3 कोडक वरील साधन करीता फाइल बनविण्या करीता करा. लक्ष्यात ठेवा या स्वरूपचा वापर तुमच्या अधिकारिता अंतर्गत कायदेशीर नसावे; तुमच्या वकीलाचा सल्ला करीता संपर्क करा.</default>
+      </locale>
+      <locale name="nb">
+        <default>Brukes for konvertering til lyd med CD-kvalitet, men med MP3-kodek som gir tap av kvalitet. Bruk denne for å forberede filer for kopiering til enheter som bare har støtte for MP3-kodeken. Vær oppmerksom på at bruk av dette formatet, kan være ulovlig i din rettskrets; kontakt din advokat for råd.</default>
+      </locale>
+      <locale name="ne">
+        <default>सीडी गुणस्तर अडियोमा रुपान्तरण गर्नका लागि, तर नोक्सान हुनसक्ने MP3 कोडेकसँग प्रयोग गरिन्छ । यसलाई MP3 कोडेक मात्र समर्थन गर्ने यन्त्रमा प्रतिलिपि गर्नका लागि फाइल तयार गर्न प्रयोग गर्नुहोस् । याद गर्नुहोस् यस ढाँचाको प्रयोग गर्नु तपाईँको अधिकार क्षेत्रमा अवैध हुन्छ; सुझावका लागि तपाईँको वकिलको सम्पर्क गर्नुहोस् ।</default>
+      </locale>
+      <locale name="nl">
+        <default>Gebruikt voor het converteren naar cd-kwaliteit audio met de MP3-coderingsmethode (geeft kwaliteitsverlies). Gebruik dit voor het apparaten die enkel het MP3-formaat ondersteunen. Let erop dat dit formaat niet overal ter wereld vrij (legaal) te gebruiken is.</default>
+      </locale>
+      <locale name="nn">
+        <default>Vert brukt for å konvertera lyd med CD-kvalitet, men med MP3-kodeken som gjev tap av kvalitet. Bruk denne for å konvertera lydfiler til bruk på einingar som berre støttar MP3-kodeken. Ver merksam på at bruk av dette formatet kan vera ulovleg i din jurisdiksjon; kontakt ein advokat for råd.</default>
+      </locale>
+      <locale name="or">
+        <default>CD-ବିଶେଷତା ଧ୍ୱନୀକୁ ପରିବର୍ତ୍ତନ କରିବା ପାଇଁ ବ୍ୟବହୃତ ହୋଇଥାଏ, କିନ୍ତୁ MP3 ସାଙ୍କେତିକ ସହିତ। ଯନ୍ତ୍ରଗୁଡ଼ିକରେ ନକଲ କରିବା ପାଇଁ ଫାଇଲ ପ୍ରସ୍ତୁତ କରିବାକୁ ଏହାକୁ ବ୍ୟବହାର କରନ୍ତୁ ଯାହାକି କେବଳ MP3 ସାଙ୍କେତିକକୁ ବ୍ୟବହାର କରିଥାଏ। ମନେରଖନ୍ତୁ ଏହି ଶୈଳୀକୁ ବ୍ୟବହାର କରିବା ଆପଣଙ୍କ ଅଞ୍ଚଳରେ ଅନୈତିକ ହୋଇପାରେ; ଉପଦେଶ ପାଇଁ ଆପଣଙ୍କ ଓକିଲ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ।</default>
+      </locale>
+      <locale name="pa">
+        <default>CD-ਕੁਆਲਟੀ ਦੀ ਆਡੀਓ ਲਈ ਵਰਤਿਆ ਜਾਦਾ ਹੈ, ਪਰ ਇੱਕ ਲੂਸ਼ੀ MP3 codec ਨਾਲ। ਇਸ ਨੂੰ ਜੰਤਰਾਂ ਉੱਤੇ ਨਕਲ ਕਰਨ ਲਈ ਵਰਤੋਂ, ਜੋ ਕਿ ਸਿਰਫ਼ MP3 codec ਲਈ ਹੀ ਸਹਾਇਕ ਹਨ। ਯਾਦ ਰੱਖੋ ਕਿ ਇਹ ਫਾਰਮੈਟ ਗੈਰ-ਕਾਨੂੰਨੀ ਹੋ ਸਕਦਾ ਹੈ, ਸਲਾਹ ਲਈ ਆਪਣੇ ਵਕੀਲ ਨੂੰ ਪੁੱਛੋ।</default>
+      </locale>
+      <locale name="pl">
+        <default>Używane do konwersji do jakości CD, ale ze stratnym kodekiem MP3. Kodek ten przydaje się do przygotowywania plików do kopiowania na urządzenia obsługujące tylko MP3. Uwaga: w niektórych krajach ten format może być nielegalny. Proszę zasięgnąć rady prawnika.</default>
+      </locale>
+      <locale name="pt">
+        <default>Utilizado para converter para audio com qualidade de CD, mas com o codec com percas MP3. Utilize para preparar ficheiros para serem copiados para dispositivos que apenas suportam o codec MP3. Note que utilizar este formato poderá ser ilegal no seu país; contacte o seu advogado para obter aconselhamento.</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Usado para a conversão de áudio com qualidade de CD, mas com o codec MP3 com perdas. Use isso para preparar arquivos a serem copiados para dispositivos que somente suportam o codec MP3. Observe que usar este formato pode ser considerado ilegal em sua jurisdição; consulte seu advogado para um conselho.</default>
+      </locale>
+      <locale name="ro">
+        <default>Folosit pentru convertirea la calitate audio CD, dar cu codecul cu pierderi MP3. Folosiți asta doar pentru a copia către dispozitivele care suportă doar codecul MP3. Rețineți faptul că utilizarea aceastui codec ar putea fi ilegală în țara dumneavoastră, contactați avocatul dumneavoastră pentru mai multe sfaturi.</default>
+      </locale>
+      <locale name="ru">
+        <default>Используется для преобразования в звук CD-качества, но с кодеком MP3, который не обеспечивает полного сохранения. Таким образом можно подготовить файлы для устройств, которые поддерживают только кодек MP3. Заметьте, что использование этого кодека может быть нелегальным в некоторых странах, для получения дополнительной информации обратитесь к юристу.</default>
+      </locale>
+      <locale name="sk">
+        <default>Používa sa na konverziu zvuku v kvalite CD, ale so stratovým kodekom MP3. Je to použiteľné len na prípravu súborov pre zariadenia, ktoré podporujú iba kodek MP3. Upozornenie: používanie tohto formátu môže byť v niektorých krajinách dokonca protizákonné; opýtajte sa svojho právnika.</default>
+      </locale>
+      <locale name="sl">
+        <default>Uporabljeno za pretvarjanje v zapis kakovosti kot jo ima zvočni CD, vendar s kodekom MP3, ki ne omogoča take kakovosti. Uporabite možnost za pripravo datotek za kopiranje na naprave, ki podpirajo samo kodek MP3. Pomnite, da je uporaba tega zapisa lahko sporna, saj je avtorsko zaščitena; za več podrobnosti stopite v stik z odvetnikom.</default>
+      </locale>
+      <locale name="sq">
+        <default>Përdoret për të konvertuar në kualitet CD audio, por me codec MP3 me humbje. Këshilluar për përgatitjen e file për tu kopjuar në dispozitivë që suportojnë vetëm codec MP3. Përdorimi i këtij formati mund të jetë ilegal në shtetin tuaj, pyesni avokatin tuaj për informacione më të hollësishme.</default>
+      </locale>
+      <locale name="sr">
+        <default>Користи се за претварање у звук ЦД квалитета, али са МП3 форматом са губицима. Користите ово за припрему датотека за копирање на уређај који подржава МП3. Овај формат може бити нелегалан у вашој земљи; консултујте адвоката за савет.</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>Koristi se za pretvaranje u zvuk CD kvaliteta, ali sa MP3 formatom sa gubicima. Koristite ovo za pripremu datoteka za kopiranje na uređaj koji podržava MP3. Ovaj format može biti nelegalan u vašoj zemlji; konsultujte advokata za savet.</default>
+      </locale>
+      <locale name="sv">
+        <default>Används för att konvertera till ljud i cd-kvalitet, men med en MP3-kodek med förluster. Använd den här för att förbereda filer för kopiering till enheter som endast har stöd för MP3-kodeken.</default>
+      </locale>
+      <locale name="ta">
+        <default>குறுந்தட்டு தர ஒலியை இழப்புடன் கூடிய எம்பி3 குறியாக்கத்துக்கு மாற்ற உதவுகிறது. இதை எம்பி3 குறியாக்கம் மட்டுமே பயன்படுத்தும் சாதனங்களுக்கு கோப்புகளை நகலெடுக்க பயன்படுத்துங்கள். இந்த பாங்கை பயன்படுத்துவது உங்கள் நாட்டில் சட்ட விரோதமாக இருக்கலாம். உங்கள் வக்கீலை கலந்தாலோசிக்கவும்.</default>
+      </locale>
+      <locale name="te">
+        <default>CD-నాణ్యతా ఆడియో మార్పు కొరకు ఉపయోగపడుతుంది, అయితే నష్టపోవు MP3 కొడెక్ తో. MP3 కొడెక్ లకు మద్దతునిచ్చే సాదనములకు నకలు తీయుటకు దస్త్రాలను సిద్దపరుచుటలో ఉపయోగించుము. మీ ప్రాంతంలో ఈ ఫార్మాట్ ను ఉపయోగించుట న్యాయవిరోధం కావచ్చు, సలహా కొరకు మీ వకీలు ను సంప్రదించండి.</default>
+      </locale>
+      <locale name="th">
+        <default>ใช้แปลงเป็นข้อมูลเสียงคุณภาพเท่าซีดี แต่ใช้ codec MP3 ซึ่งมีการสูญเสียรายละเอียด ใช้โพรไฟล์นี้ในการเตรียมแฟ้มสำหรับคัดลอกไปยังอุปกรณ์ที่รองรับเฉพาะ codec MP3 เท่านั้น สังเกตว่าการใช้รูปแบบข้อมูลนี้อาจผิดกฎหมายโดยความรับผิดชอบเป็นของคุณ กรุณาปรึกษานักกฎหมาย</default>
+      </locale>
+      <locale name="tr">
+        <default>Kayıplı MP3 dönüştürücüsü kullanılarak CD kalitesindeki sese çevirmek için kullanılır. Bunu yalnızca MP3 dönüştürücüsünü destekleyen cihazlara kopyalanacak dosyalar hazırlamak için kullanın. Bu ses biçiminin hukuk sisteminize göre yasadışı olabileceğini unutmayın; öneri için avukatınızla iletişime geçin.</default>
+      </locale>
+      <locale name="ug">
+        <default>CD ئاۋاز سۈپىتىدە ئايلاندۇرىدىغان ئاۋازغا ئىشلىتىلىدۇ ئەمما خورايدىغان MP3 كودلاش ئۇسۇلىنى قوللىنىدۇ. پەقەت MP3 كودلاش ئۇسۇلىنى قوللايدىغان ئۈسكۈنىگە ھۆججەت كۆچۈرۈشتە ئىشلىتىلىدۇ. دىققەت بۇ خىل فورمات قوللىنىلسا سىز تۇرۇشلۇق جاينىڭ ئەدلىيە تۈزۈمىدە قانۇنسىز بولۇشى مۇمكىن؛ بۇ ھەقتىكى تەكلىپكە ئېرىشمەكچى بولسىڭىز ئادۋوكاتىڭىز بىلەن ئالاقىلىشىڭ.</default>
+      </locale>
+      <locale name="uk">
+        <default>Використовується для перетворення звуку CD-якості, але використовуючи кодек MP3 з втратою якості. Використовуйте його для підготовки файлів для копіювання на пристрої, які підтримують лише кодек MP3. Зверніть увагу, використання цього формату може бути незаконним у вашій країні; проконсультуйтесь у юриста з цього приводу.</default>
+      </locale>
+      <locale name="vi">
+        <default>Dùng để chuyển đổi sang âm thanh chất lượng CD, nhưng với bộ mã hoá MP3 mất mát. Được dùng để chuẩn bị sao chép tập tin vào thiết bị chỉ hỗ trợ mã hoá MP3. Chú ý rằng dùng định dạng này có thể không hợp pháp trong khu vực của bạn; hãy liên hệ với luật sư để được tư vấn.</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>用于转换为 CD 音质的音频，但使用有损 MP3 编码方式。制作需要复制到仅支持 MP3 编码方式的设备的文件时使用。注意使用此格式可能在您所在的司法制度下是违法的；请联系您的律师以获得建议。</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>用作轉換 CD 品質的音效，但使用失真的 MP3 編碼解碼器。適用於替支援 MP3 編碼解碼器的裝置準備要複製至的檔案。注意！使用此格式在你處於的司法管轄領域內可能是違法的，請聯絡律師詢問意見。</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>用作轉換 CD 品質的音效，但使用失真的 MP3 編碼解碼器。適用於替支援 MP3 編碼解碼器的裝置準備要複製至的檔案。注意！使用此格式在您處於的司法管轄領域內可能是違法的，請聯絡律師詢問意見。</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/mp3/pipeline</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/mp3/pipeline</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>audio/x-raw-int,rate=44100,channels=2 ! lamemp3enc name=enc target=0 quality=6 ! xingmux ! id3v2mux</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The partial GStreamer pipeline used</short>
+        <long>
+          A partial GStreamer pipeline to use for this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/mp3/extension</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/mp3/extension</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>mp3</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The default file extension for this profile</short>
+        <long>
+          A filename extension to be used when storing files encoded
+          with this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/active</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/mp3/active</applyto>
+      <owner>gnome-media</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>Whether this profile is to be used</short>
+        <long>
+          Whether to use and display this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <!-- AAC -->
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/aac/name</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/aac/name</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>CD Quality, AAC</default>
+        <short>A short name for the audio profile</short>
+        <long>
+          A short name for the audio profile, to be used in selections
+          and uniquely identifying the profile.
+        </long>
+      </locale>
+      <locale name="af">
+        <default>CD-kwaliteit, AAC</default>
+      </locale>
+      <locale name="ar">
+        <default>جودة قرص مدمج، AAC</default>
+      </locale>
+      <locale name="as">
+        <default>CD Quality, AAC</default>
+      </locale>
+      <locale name="ast">
+        <default>Calidá de CD, AAC</default>
+      </locale>
+      <locale name="be">
+        <default>Якасьць CD, AAC</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Jakaść CD, AAC</default>
+      </locale>
+      <locale name="bg">
+        <default>Качество на CD — AAC</default>
+      </locale>
+      <locale name="bn">
+        <default>CD-এর গুণমান, AAC</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>CD-র গুণমান, AAC</default>
+      </locale>
+      <locale name="br">
+        <default>Perzhded CD, AAC</default>
+      </locale>
+      <locale name="ca">
+        <default>Qualitat de CD, AAC</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Qualitat de CD, AAC</default>
+      </locale>
+      <locale name="cs">
+        <default>Kvalita CD, AAC</default>
+      </locale>
+      <locale name="da">
+        <default>Cd-kvalitet, AAC</default>
+      </locale>
+      <locale name="de">
+        <default>CD-Qualität, AAC</default>
+      </locale>
+      <locale name="dz">
+        <default>སི་ཌི་གི་སྤུས་ཚད་  ཨེ་ཨེ་སི་</default>
+      </locale>
+      <locale name="el">
+        <default>Ποιότητα CD, AAC</default>
+      </locale>
+      <locale name="en_GB">
+        <default>CD Quality, AAC</default>
+      </locale>
+      <locale name="es">
+        <default>Calidad de CD, AAC</default>
+      </locale>
+      <locale name="et">
+        <default>CD-kvaliteet, AAC</default>
+      </locale>
+      <locale name="eu">
+        <default>CD-kalitatea, ACC</default>
+      </locale>
+      <locale name="fi">
+        <default>CD-taso, AAC</default>
+      </locale>
+      <locale name="fr">
+        <default>Qualité CD, AAC</default>
+      </locale>
+      <locale name="gl">
+        <default>Calidade de CD, AAC</default>
+      </locale>
+      <locale name="gu">
+        <default>CD ગુણવત્તા, AAC</default>
+      </locale>
+      <locale name="he">
+        <default>CD Quality, AAC</default>
+      </locale>
+      <locale name="hi">
+        <default>सीडी क्वालिटी, एएसी</default>
+      </locale>
+      <locale name="hu">
+        <default>CD-minőség, AAC</default>
+      </locale>
+      <locale name="id">
+        <default>Kualitas CD, AAC</default>
+      </locale>
+      <locale name="it">
+        <default>Qualità CD, AAC</default>
+      </locale>
+      <locale name="ja">
+        <default>CD の品質 (AAC)</default>
+      </locale>
+      <locale name="kn">
+        <default>ಸೀಡಿ ಗುಣಮಟ್ಟ, AAC</default>
+      </locale>
+      <locale name="ko">
+        <default>CD 수준, AAC</default>
+      </locale>
+      <locale name="ku">
+        <default>Kalîteya CDyê, AAC</default>
+      </locale>
+      <locale name="lt">
+        <default>CD kokybės, AAC</default>
+      </locale>
+      <locale name="lv">
+        <default>CD Kvalitāte, AAC</default>
+      </locale>
+      <locale name="mk">
+        <default>Квалитет на CD, AAC</default>
+      </locale>
+      <locale name="ml">
+        <default>CD നിലവാരം, AAC</default>
+      </locale>
+      <locale name="mr">
+        <default>सीडी दर्जा, AAC</default>
+      </locale>
+      <locale name="nb">
+        <default>CD-kvalitet, AAC</default>
+      </locale>
+      <locale name="nds">
+        <default>CD Qualität, AAC</default>
+      </locale>
+      <locale name="ne">
+        <default>सीडी गुणस्तर, AAC</default>
+      </locale>
+      <locale name="nl">
+        <default>Cd-kwaliteit, AAC</default>
+      </locale>
+      <locale name="nn">
+        <default>CD-kvalitet, AAC</default>
+      </locale>
+      <locale name="or">
+        <default>CD ଗୁଣବତ୍ତା, AAC</default>
+      </locale>
+      <locale name="pa">
+        <default>CD ਕੁਆਲਟੀ, AAC</default>
+      </locale>
+      <locale name="pl">
+        <default>Jakość CD, AAC</default>
+      </locale>
+      <locale name="pt">
+        <default>Qualidade de CD, AAC</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Qualidade de CD, AAC</default>
+      </locale>
+      <locale name="ro">
+        <default>Calitate CD, AAC</default>
+      </locale>
+      <locale name="ru">
+        <default>CD-качество, AAC</default>
+      </locale>
+      <locale name="si">
+        <default>CD තත්වයේ, AAC</default>
+      </locale>
+      <locale name="sk">
+        <default>CD kvalita, AAC</default>
+      </locale>
+      <locale name="sl">
+        <default>CD kakovost, AAC</default>
+      </locale>
+      <locale name="sq">
+        <default>Kualitet CD, AAC</default>
+      </locale>
+      <locale name="sr">
+        <default>ЦД квалитет, ААЦ</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>CD kvalitet, AAC</default>
+      </locale>
+      <locale name="sv">
+        <default>Cd-kvalitet, AAC</default>
+      </locale>
+      <locale name="ta">
+        <default>CD தரம், AAC</default>
+      </locale>
+      <locale name="te">
+        <default>CD నాణ్యత, AAC</default>
+      </locale>
+      <locale name="th">
+        <default>คุณภาพซีดี, AAC</default>
+      </locale>
+      <locale name="tr">
+        <default>CD Kalitesi, AAC</default>
+      </locale>
+      <locale name="ug">
+        <default>CD ئاۋاز سۈپىتى، AAC</default>
+      </locale>
+      <locale name="uk">
+        <default>CD якість, AAC</default>
+      </locale>
+      <locale name="vi">
+        <default>Chất lưọng đĩa CD, AAC</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>CD 音质，AAC</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>CD 品質，AAC</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>CD 品質，AAC</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/aac/description</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/aac/description</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <default>Used for converting to CD-quality audio, but with the lossy AAC codec. Use this for preparing files for copying to devices that only support the AAC codec. Note that using this format may be illegal in your jurisdiction; contact your lawyer for advice.</default>
+        <short>A description for the audio profile</short>
+        <long>
+          A description of the profile, containing more information and
+          describing when to use this profile.
+        </long>
+      </locale>
+      <locale name="ar">
+        <default>يستخدم للتحويل إلى صوت بجودة القرص المدمج لكن باستخدام كودك AAC فاقِد. استخدم هذا لتجهيز الملفات للنسخ لأجهزة تدعم كودك AAC فقط. لاحظ أن استخدام هذا الكودك قد لا يكون قانونيا في بلدك، راجع محاميك طلبا للنصيحة.</default>
+      </locale>
+      <locale name="as">
+        <default>উল্লেখিত সময় অবধি উল্লেখিত সময় অবধি উল্লেখিত সময় অবধি উল্লেখিত সময় অবধি.</default>
+      </locale>
+      <locale name="ast">
+        <default>Usáu pa convertir a soníu con calidá de CD, pero col códec con pérdida AAC. Úselu pa tresnar ficheros que llueu se copiarán a preseos que namái aguanten el códec AAC. Decátese que l&apos;usu d&apos;esti formatu pue ser illegal na so xurisdicción; contaute col so asesor pa que lu aconseye.</default>
+      </locale>
+      <locale name="be">
+        <default>Для пераўтварэньня ў гук CD-якасьці, але з згубным кодэкам AAC. Выкарыстоўвайце толькі для падрыхтоўкі файлаў для капіяваньня на прылады, якія падтрымліваюць толькі кодэк AAC. Увага: выкарыстаньне гэтага кодэка можа быць нелегальным у Вашай краіне; зьвярніцеся да юрыста для высьвятленьня сытуацыі.</default>
+      </locale>
+      <locale name="be@latin">
+        <default>Užyvany dla kanvertavańnia huku da jakaści CD, ale z kodekam stratnaj kampresii AAC. Naležyć užyć dla padrychtoŭki fajłaŭ da kapijavańnia na pryłady, jakija absłuhoŭvajuć tolki kodek AAC. Uvaha: u niekatorych krainach vykarystańnie hetaha farmatu moža być zabaronienym, tamu lepiej parajsia ź jurystam.</default>
+      </locale>
+      <locale name="bg">
+        <default>Използва се за конвертиране на аудио с качеството на CD чрез кодека със загуба на качество AAC. Използвайте този избор при подготвяне на файлове за копиране на устройства, които поддържат само кодека AAC. Имайте предвид, че използването на този формат може да е незаконно в страната ви. Свържете се с юрист за съвет.</default>
+      </locale>
+      <locale name="bn">
+        <default>CD-গুণমানের অডিওতে রূপান্তর করতে ব্যবহৃত। কিন্তু নিম্ন গুণমানের AAC কোডেক সহ। শুধুমাত্র AAC কোডেক ব্যবহারকারী ডিভাইসে অনুলিপি করার জন্য ফাইল প্রস্তুত করতে এটি ব্যবহার করুন। উল্লেখ্য, এই কোডেকের ব্যবহার আপনার এলাকায় বেআইনি হতে পারে এবং কোনো আইনী বিশেষজ্ঞের পরামর্শ নেওয়া বাঞ্ছনীয়।</default>
+      </locale>
+      <locale name="bn_IN">
+        <default>CD-গুণমানের অডিওতে রূপান্তর করতে ব্যবহৃত। কিন্তু নিম্ন গুণমানের AAC কোডেক সহ। শুধুমাত্র AAC কোডেক ব্যবহারকারী ডিভাইসে কপি করার জন্য ফাইল প্রস্তুত করার জন্য এটি ব্যবহার করুন। উল্লেখ্য, এই কোডেকের ব্যবহার আপনার এলাকায় বেআইনি হতে পারে এবং কোনো আইনী বিশেষজ্ঞের পরামর্শ নেওয়া বাঞ্ছনীয়।</default>
+      </locale>
+      <locale name="ca">
+        <default>Utilitzat per convertir a àudio amb qualitat de CD, però amb un còdec AAC amb pèrdua. Feu-lo servir per preparar els fitxers per copiar a dispositius que només permetin el còdec AAC. Pot ser que l&apos;ús d&apos;aquest format sigui il·legal a la vostra jurisdicció, consulteu-ho amb el vostre advocat.</default>
+      </locale>
+      <locale name="ca@valencia">
+        <default>Utilitzat per convertir a àudio amb qualitat de CD, però amb un còdec AAC amb pèrdua. Feu-lo servir per preparar els fitxers per copiar a dispositius que només permeten el còdec AAC. Pot ser que l&apos;ús d&apos;este format siga il·legal a la vostra jurisdicció, consulteu-ho amb el vostre advocat.</default>
+      </locale>
+      <locale name="cs">
+        <default>Používá se ke konverzi se zvukovou kvalitou CD, ale se ztrátovým kodekem AAC. Vhodné jako příprava souborů ke zkopírování na zařízení podporující pouze kodek AAC. Vezměte prosím na vědomí, že použití tohoto formátu může být ilegální. Kontaktuje laskavě v této záležitosti právního poradce.</default>
+      </locale>
+      <locale name="da">
+        <default>Til brug for konvertering til cd-kvalitetslyd, men med det tabsgivende AAC-codec. Brug dette for at forberede filer til kopiering til enheder der kun understøtter AAC-codec&apos;et. Vær opmærksom på at brug af dette format kan være ulovligt i din retskreds; kontakt din advokat for rådgivning.</default>
+      </locale>
+      <locale name="de">
+        <default>Wird zum Konvertieren von Audio-Daten in den verlustbehafteten AAC-Codec verwendet. Benutzen Sie dies für Dateien, die für ein Gerät kopiert werden das nur AAC kodierte Dateien unterstützt. Beachten Sie, dass die Benutzung dieses Formats unter Umständen in Ihrem Land illegal ist. Fragen Sie Ihren Rechtsanwalt für weitere Beratung.</default>
+      </locale>
+      <locale name="dz">
+        <default>སི་ཌི་-སྤུས་ཚད་རྣར་ཉན་ལུ་གཞི་བསྒྱུར་འབད་ནིའི་དོན་ལུ་ལག་ལེན་འཐབ་ཡོད་ དེ་འབདཝ་ད་ ལོ་སི་ཨེ་ཨེ་སི་ཀོ་ཌེཀ་དང་གཅིག་ཁར། འ་ནི་འདི་ ཨེ་ཨེ་སི་ཀོ་ཌེཀ་འདི་རྐྱངམ་ཅིག་རྒྱབ་སྐྱོར་འབད་མི་ ཐབས་འཕྲུལ་ལུ་འདྲ་བཤུས་རྐྱབས་ནིའི་དོན་ལུ་ ཡིག་སྣོད་ཚུ་གྲ་སྒྲིག་འབད་ནིའི་དོན་ལས་ལག་ལེན་འཐབ། འ་ནི་རྩ་སྒྲིག་ལག་ལེན་འཐབ་ནི་འདི་ ཁྱོད་རའི་དབང་ཚད་ཁྱབ་ཁོངས་ནང་ཁྲིམས་འགལ་ཅིག་འོང་ བསླབ་བྱའི་དོན་ལུ་ཁྱོད་རའི་ཁྲིམས་རྩོདཔ་དང་འབྲེལ་བ་འཐབ།</default>
+      </locale>
+      <locale name="el">
+        <default>Χρησιμοποιείται για μετατροπή σε ήχο ποιότητας CD, αλλά με τον απωλεστικό AAC codec Κάντε χρήση αυτής της επιλογής για προετοιμασία για αντιγραφή αρχείων σε συσκευές που υποστηρίζουν μόνο τον AAC codec. Σημειώστε ότι η χρήση αυτού του τύπου μπορεί να είναι παράνομη στην περιοχή σας- καλύτερα να συμβουλευτείτε ένα δικηγόρο για συμβουλές.</default>
+      </locale>
+      <locale name="en_GB">
+        <default>Used for converting to CD-quality audio, but with the lossy AAC codec. Use this for preparing files for copying to devices that only support the AAC codec. Note that using this format may be illegal in your jurisdiction; contact your lawyer for advice.</default>
+      </locale>
+      <locale name="es">
+        <default>Se usa para convertir a sonido con calidad de CD, pero con el códec con pérdida AAC. Úselo para preparar archivos que se copiarán a dispositivos que solamente conocen el códec AAC. Tenga en cuenta que el uso de este formato podría ser ilegal en su jurisdicción; contacte con su abogado para obtener más información.</default>
+      </locale>
+      <locale name="et">
+        <default>Kasutatakse CD-kvaliteediga audio teisendamiseks koos kadudeta pakkimisga AAC koodeki abil. Kasuta seda juhul, kui sa soovid ette valmistada audiofaile seadmetele, mis toetavad ainult AAC kodekit. Pane tähele, et selle vormingu kasutamine võib olla mõnedes piirkondades keelatud, nõuande saamiseks on mõistlik juristi poole pöörduda.</default>
+      </locale>
+      <locale name="eu">
+        <default>CD-kalitateko audiora bihurtzeko erabiltzen da, galeradun AAC kodekarekin ordea. Erabili hau fitxategiak prestatzeko AAC kodeka onartzen duten gailuetan kopiatzeko. Jakin ezazu formatu hau erabiltzea ilegala izan daitekeela bizi zaren estatuan. Galdetu iezaiozu abokatu bati xehetasun gehiagorako.</default>
+      </locale>
+      <locale name="fi">
+        <default>Käytetään CD-tasoisen äänen tuomiseen häviöllisellä AAC-koodekilla. Käytä tätä, kun haluat viedä tiedostoja laitteille, jotka tukevat vain AAC-muotoa. Huomaa, että tämän muunnoksen käyttö saattaa olla maassasi laitonta.</default>
+      </locale>
+      <locale name="fr">
+        <default>Utilisé pour la conversion en qualité CD audio, mais avec un codec de compression AAC avec perte. À utiliser pour créer des fichiers qui seront lus sur des périphériques ne prenant en charge que le format AAC. Notez que l&apos;utilisation de ce format peut être illégale suivant les lois en vigueur dans votre pays ; demandez conseil à un avocat.</default>
+      </locale>
+      <locale name="gl">
+        <default>Úsase para converter a calidade de CD de audio, mais cun códec de comprensión ACC con perda. Utilice isto para preparar os ficheiros para copialos a dispositivos que só soportan o códec de comprensión AAC. Teña en conta que usar este formato pode ser ilegal na súa xurisdición; contacte co seu avogado para pedirlle asesoramento.</default>
+      </locale>
+      <locale name="gu">
+        <default>CD-ગુણવત્તા ઓડિયોમાં રૂપાંતરિત કરવા માટે વપરાય છે, પરંતુ lossy AAC codec સાથે. આને ફાઈલોને ઉપકરણોમાં નકલ કરવા માટે તૈયાર કરવા માટે જ વાપરો કે જે માત્ર AAC codec ને આધાર આપે. નોંધ કરો કે આ બંધારણ વાપરવાનું તમારા વિસ્તારમાં અયોગ્ય હોઈ શકે; સલાહ માટે તમારા વકીલનો સંપર્ક કરો.</default>
+      </locale>
+      <locale name="he">
+        <default>Used for converting to CD-quality audio, but with the lossy AAC codec. Use this for preparing files for copying to devices that only support the AAC codec. Note that using this format may be illegal in your jurisdiction; contact your lawyer for advice.</default>
+      </locale>
+      <locale name="hi">
+        <default>AAC कोडेक के साथ CD-गुणवत्ता बदलने के लिए प्रयुक्त लॉसी. युक्ति में नक़ल करने के लिए फाइल तैयारी के लिए इसे प्रयोग करें जो कि केवल AAC कोडेक का समर्थन करता है. नोट करें कि इस प्रारूप का प्रयोग करना आपके क्षेत्र के लिए अवैध हो सकता है; अपने वकील से युक्ति के लिए संपर्क करें.</default>
+      </locale>
+      <locale name="hu">
+        <default>CD-minőségű hanggá alakításhoz használható, veszteséges tömörítést végző AAC kodekkel. Használja ezt fájlok előkészítéséhez csak az AAC kodeket támogató eszközre másolásra. Ne feledje, hogy ezen formátum használata illegális lehet egyes joghatóságok alatt, ha bizonytalan, kérjen tanácsot ügyvédjétől.</default>
+      </locale>
+      <locale name="id">
+        <default>Digunakan untuk mengubah ke audio kualitas CD, tapi dengan codec AAC yang lossy. Gunakan pilihan ini untuk menyalin ke perangkat yang hanya mendukung codec AAC. Perhatikan bahwa pemakaian bentuk ini mungkin tak legal di yurisdiksi Anda; silakan hubungi pengacara Anda untuk saran.</default>
+      </locale>
+      <locale name="it">
+        <default>Per convertire in qualità CD audio, ma con il codec AAC con perdita. Consigliato per la preparazione di file da copiare su dispositivi che supportano solamente il codec AAC. L&apos;uso di questo formato potrebbe essere illegale nel proprio paese, contattare il proprio avvocato per maggiori informazioni.</default>
+      </locale>
+      <locale name="ja">
+        <default>CD と同等の品質を持つオーディオへ変換する際に使用しますが、劣化のある AAC コーデックを用います。AAC コーデックのみをサポートしているデバイスにファイルをコピーする準備段階で使用してください。このコーデックを使用すると法律違反になる可能性があるので注意してください。弁護士に相談してみてください。</default>
+      </locale>
+      <locale name="kn">
+        <default>ಸೀಡಿ-ಗುಣಮಟ್ಟದ ಆಡಿಯೋ ಅನ್ನು ಪರಿವರ್ತಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ, ಆದರೆ ಗುಣಮಟ್ಟ ನಷ್ಟಗೊಳ್ಳುವ AAC ಕೋಡೆಕ್‌ನೊಂದಿಗೆ. ಇದನ್ನು AAC ಕೋಡೆಕ್ ಅನ್ನು ಮಾತ್ರ ಬೆಂಬಲಿಸುವ ಸಾಧನಗಳಿ ಕಾಪಿಮಾಡಲು ಕಡತಗಳನ್ನು ತಯಾರಿಸಲು ಬಳಸಿ. ನೀವಿರುವ ಸ್ಥಳದ ಕಾನೂನಿನ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಈ ಫಾರ್ಮಾಟನ್ನು ಬಳಸುವುದು ಅನಧೀಕೃತವಾಗಿರಬಹುದು; ಸಲಹೆಗಾಗಿ ನಿಮ್ಮ ವಕೀಲರನ್ನು ಸಂಪರ್ಕಿಸಿ.</default>
+      </locale>
+      <locale name="ko">
+        <default>CD 수준의 오디오로 변환하는 데 사용합니다. 손실 AAC코덱을 사용합니다. AAC코덱을 지원하는 장치로 파일을 복사할 때 사용하십시오. 이 형식을 사용하는 것은 지역에 따라 위법이 될 수 있습니다. 변호사에게 상담하시기 바랍니다.</default>
+      </locale>
+      <locale name="lt">
+        <default>Naudojama konvertuojant CD kokybės garsą, tačiau su nuostolingu AAC kodeku. Naudokite šį profilį failų, kuriuos kopijuosite į įrenginius, palaikančius tik AAC kodeką, paruošimui. Atminkite, kad naudoti šį formatą jūsų teisės sistemoje gali būti nelegalu; pasitarkite su savo teisininku.</default>
+      </locale>
+      <locale name="lv">
+        <default>Tiek izmantots, lai konvertētu uz CD kvalitātes skaņu izmantojot AAC kodeku, kas kompresē ar zaudējumiem. Izmantojiet šo, lai sagatavotu skaņu pārnešanai uz ierīcēm, kas atbalsta vienīgi AAC kodeku. Šī kodeka izmantošana var nebūt likumīga jūsu valstī; konsultējieties ar juristu.</default>
+      </locale>
+      <locale name="mk">
+        <default>Се користи за конвертирање на звук со CD-квалитет, но со кодекот AAC, со загуба. Користете го ова за да ги подготвите датотеките за копирање на уреди кои го поддржуваат само AAC кодекот. Забележете дека користењето на овој формат може да е нелегално во Вашата јуриздикција; контактирајте со Вашиот адвокат за совет.</default>
+      </locale>
+      <locale name="ml">
+        <default>സിഡി രീതിയ്ക്കുള്ള ഓഡിയോയിലേക്ക് വേര്‍തിരിക്കുന്നതിനായി ഉപയോഗിക്കുന്നു, പക്ഷേ കുറഞ്ഞ ACC കോഡക്കോടെ. ACC കോഡക് മാത്രം പിന്തുണയ്ക്കുന്ന ഉപകരണങ്ങളിലേക്ക് ഫയലുകളെ പകര്‍ത്തുന്നിനായി ഇതുപയോഗിക്കുക. കുറിപ്പു്: ഇതൊരുപക്ഷേ, നിയമ വിരുദ്ധമാകാം., ദയവായി നിങ്ങളുടെ അഭിഭാഷകനുമായി ബന്ധപ്പെടുക.</default>
+      </locale>
+      <locale name="mr">
+        <default>CD-दर्जा ऑडिओच्या रूपांतर करीता वापरले जाते, पण हानीरहीत AAC कोडेक सह. याचा वापर फक्त AAC कोडक वरील साधन करीता फाइल बनविण्या करीता करा. लक्ष्यात ठेवा या स्वरूपचा वापर तुमच्या अधिकारिता अंतर्गत कायदेशीर नसावे; तुमच्या वकीलाचा सल्ला करीता संपर्क करा.</default>
+      </locale>
+      <locale name="nb">
+        <default>Brukes for konvertering til lyd med CD-kvalitet, men med AAC-kodek som gir tap av kvalitet. Bruk denne for å forberede filer for kopiering til enheter som bare har støtte for AAC-kodeken. Vær oppmerksom på at bruk av dette formatet, kan være ulovlig i din rettskrets; kontakt din advokat for råd.</default>
+      </locale>
+      <locale name="ne">
+        <default>सीडी गुणस्तर अडियोमा रुपान्तरण गर्नका लागि, तर हराउन सक्ने AAC कोडेकसँग प्रयोग गरिन्छ । यसलाई AAC कोडेक मात्र समर्थन गर्ने यन्त्रमा प्रतिलिपि गर्नका लागि फाइल तयार गर्न प्रयोग गर्नुहोस् । याद गर्नुहोस् यस ढाँचाको प्रयोग गर्नु तपाईँको अधिकार क्षेत्रमा अवैध हुन्छ; सुझावका लागि तपाईँको वकिललाई सम्पर्क गर्नुहोस् ।</default>
+      </locale>
+      <locale name="nl">
+        <default>Gebruikt voor het converteren naar cd-kwaliteit audio met de AAC-coderingsmethode (geeft kwaliteitsverlies). Gebruik dit voor het apparaten die enkel het AAC-formaat ondersteunen. Let erop dat dit formaat niet overal ter wereld vrij (legaal) te gebruiken is.</default>
+      </locale>
+      <locale name="nn">
+        <default>Vert brukt for å konvertera lyd med CD-kvalitet, men med AAC-kodeken som gjev tap av kvalitet. Bruk denne for å konvertera lydfiler til bruk på einingar som berre støttar AAC-kodeken. Ver merksam på at bruk av dette formatet kan vera ulovleg i din jurisdiksjon; kontakt ein advokat for råd.</default>
+      </locale>
+      <locale name="or">
+        <default>CD-ବିଶେଷତା ଧ୍ୱନୀକୁ ପରିବର୍ତ୍ତନ କରିବା ପାଇଁ ବ୍ୟବହୃତ ହୋଇଥାଏ, କିନ୍ତୁ AAC ସାଙ୍କେତିକ ସହିତ। ଯନ୍ତ୍ରଗୁଡ଼ିକରେ ନକଲ କରିବା ପାଇଁ ଫାଇଲ ପ୍ରସ୍ତୁତ କରିବାକୁ ଏହାକୁ ବ୍ୟବହାର କରନ୍ତୁ ଯାହାକି କେବଳ AAC ସାଙ୍କେତିକକୁ ବ୍ୟବହାର କରିଥାଏ। ମନେରଖନ୍ତୁ ଏହି ଶୈଳୀକୁ ବ୍ୟବହାର କରିବା ଆପଣଙ୍କ ଅଞ୍ଚଳରେ ଅନୈତିକ ହୋଇପାରେ; ଉପଦେଶ ପାଇଁ ଆପଣଙ୍କ ଓକିଲ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ।</default>
+      </locale>
+      <locale name="pa">
+        <default>CD-ਕੁਆਲਟੀ ਦੀ ਆਡੀਓ ਲਈ ਵਰਤਿਆ ਜਾਦਾ ਹੈ, ਪਰ ਇੱਕ AAC codec ਨਾਲ। ਇਸ ਨੂੰ ਜੰਤਰਾਂ ਉੱਤੇ ਕਾਪੀ ਕਰਨ ਲਈ ਵਰਤੋਂ, ਜੋ ਕਿ ਸਿਰਫ਼ AAC codec ਲਈ ਹੀ ਸਹਾਇਕ ਹਨ। ਯਾਦ ਰੱਖੋ ਕਿ ਇਹ ਫਾਰਮੈਟ ਗੈਰ-ਕਾਨੂੰਨੀ ਹੋ ਸਕਦਾ ਹੈ, ਸਲਾਹ ਲਈ ਆਪਣੇ ਵਕੀਲ ਨੂੰ ਪੁੱਛੋ।</default>
+      </locale>
+      <locale name="pl">
+        <default>Używane do konwersji do jakości CD, ale ze stratnym kodekiem AAC. Kodek ten przydaje się do przygotowywania plików do kopiowania na urządzenia obsługujące tylko AAC. Uwaga: w niektórych krajach ten format może być nielegalny. Proszę zasięgnąć rady prawnika.</default>
+      </locale>
+      <locale name="pt">
+        <default>Utilizado para converter para audio com qualidade de CD, mas com o codec com percas AAC. Utilize para preparar ficheiros para serem copiados para dispositivos que apenas suportam o codec AAC. Note que utilizar este formato poderá ser ilegal no seu país; contacte o seu advogado para obter aconselhamento.</default>
+      </locale>
+      <locale name="pt_BR">
+        <default>Usado para a conversão de áudio com qualidade de CD, mas com o codec AAC com perdas. Use isso para preparar arquivos a serem copiados para dispositivos que somente suportam o codec AAC. Observe que usar este formato pode ser considerado ilegal em sua jurisdição; consulte seu advogado para um conselho.</default>
+      </locale>
+      <locale name="ro">
+        <default>Folosit pentru convertirea la calitate audio CD, dar cu codecul cu pierderi AAC. Folosiți asta doar pentru a copia către dispozitivele care suportă doar codecul AAC. Rețineți faptul că utilizarea aceastui codec ar putea fi ilegală în țara dumneavoastră, contactați avocatul dumneavoastră pentru mai multe sfaturi.</default>
+      </locale>
+      <locale name="ru">
+        <default>Используется для преобразования в звук CD-качества, но с кодеком AAC, который не обеспечивает полного сохранения. Таким образом можно подготовить файлы для устройств, которые поддерживают только кодек AAC. Заметьте, что использование этого кодека может быть нелегальным в некоторых странах, для получения дополнительной информации обратитесь к юристу.</default>
+      </locale>
+      <locale name="sk">
+        <default>Používa sa na konverziu zvuku v kvalite CD, ale so stratovým kodekom AAC. Je to použiteľné len na prípravu súborov pre zariadenia, ktoré podporujú iba kodek AAC. Upozornenie: používanie tohto formátu môže byť v niektorých krajinách dokonca protizákonné; opýtajte sa svojho právnika.</default>
+      </locale>
+      <locale name="sl">
+        <default>Uporabljeno za pretvarjanje v zapis kakovosti kot jo ima zvočni CD, vendar s kodekom AAC, ki ne omogoča take kakovosti. Uporabite možnost za pripravo datotek za kopiranje na naprave, ki podpirajo samo kodek MP3. Pomnite, da je uporaba tega zapisa lahko sporna, saj je avtorsko zaščitena; za več podrobnosti stopite v stik z odvetnikom.</default>
+      </locale>
+      <locale name="sq">
+        <default>Përdoret për të konvertuar në kualitet CD audio, por me codec AAC me humbje. Këshilluar për përgatitjen e file për tu kopjuar në dispozitivë që suportojnë vetëm codec AAC. Përdorimi i këtij formati mund të jetë ilegal në shtetin tuaj, pyesni avokatin tuaj për informacione më të hollësishme.</default>
+      </locale>
+      <locale name="sr">
+        <default>Користи се за претварање у звук ЦД квалитета, али са ААЦ форматом са губицима. Користите ово за припрему датотека за копирање на уређај који подржава ААЦ. Обратите пажњу да овај формат може бити нелегалан у твојој земљи; консултуј се са адвокатом за савет.</default>
+      </locale>
+      <locale name="sr@latin">
+        <default>Koristi se za pretvaranje u zvuk CD kvaliteta, ali sa AAC formatom sa gubicima. Koristite ovo za pripremu datoteka za kopiranje na uređaj koji podržava AAC. Obratite pažnju da ovaj format može biti nelegalan u tvojoj zemlji; konsultuj se sa advokatom za savet.</default>
+      </locale>
+      <locale name="sv">
+        <default>Används för att konvertera till ljud i cd-kvalitet, men med en AAC-kodek med förluster. Använd den här för att förbereda filer för kopiering till enheter som endast har stöd för AAC-kodeken.</default>
+      </locale>
+      <locale name="ta">
+        <default>குறுந்தட்டு தர ஒலியை இழப்புடன் கூடிய ஏஏசி குறியாக்கத்துக்கு மாற்ற உதவுகிறது. இதை ஏஏசி  குறியாக்கம் மட்டுமே பயன்படுத்தும் சாதனங்களுக்கு கோப்புகளை நகலெடுக்க பயன்படுத்துங்கள். இந்த பாங்கை பயன்படுத்துவது உங்கள் நாட்டில் சட்ட விரோதமாக இருக்கலாம். உங்கள் வக்கீலை கலந்தாலோசிக்கவும்.</default>
+      </locale>
+      <locale name="te">
+        <default>CD-నాణ్యతా ఆడియో మార్పు కొరకు ఉపయోగపడుతుంది, అయితే నష్టపోవు AAC కొడెక్ తో. AAC కొడెక్ లకు మద్దతునిచ్చే సాదనములకు నకలు తీయుటకు దస్త్రాలను సిద్దపరుచుటలో ఉపయోగించుము. మీ ప్రాంతంలో ఈ ఫార్మాట్ ను ఉపయోగించుట న్యాయవిరోధం కావచ్చు, సలహా కొరకు మీ వకీలు ను సంప్రదించండి.</default>
+      </locale>
+      <locale name="th">
+        <default>ใช้แปลงเป็นข้อมูลเสียงคุณภาพเท่าซีดี แต่ใช้ codec AAC ซึ่งมีการสูญเสียรายละเอียด ใช้โพรไฟล์นี้ในการเตรียมแฟ้มสำหรับคัดลอกไปยังอุปกรณ์ที่รองรับเฉพาะ codec AAC เท่านั้น สังเกตว่าการใช้รูปแบบข้อมูลนี้อาจผิดกฎหมายโดยความรับผิดชอบเป็นของคุณ กรุณาปรึกษานักกฎหมาย</default>
+      </locale>
+      <locale name="tr">
+        <default>Kayıplı AAC dönüştürücüsü kullanılarak CD kalitesindeki sese çevirmek için kullanılır. Bunu yalnızca AAC dönüştürücüsünü destekleyen cihazlara kopyalanacak dosyalar hazırlamak için kullanın. Bu ses biçiminin hukuk sisteminize göre yasadışı olabileceğini unutmayın; öneri için avukatınızla iletişime geçin.</default>
+      </locale>
+      <locale name="ug">
+        <default>CD ئاۋاز سۈپىتىدە ئايلاندۇرىدىغان ئاۋازغا ئىشلىتىلىدۇ ئەمما خورايدىغان AAC كودلاش ئۇسۇلىنى قوللىنىدۇ. پەقەت AAC كودلاش ئۇسۇلىنى قوللايدىغان ئۈسكۈنىگە ھۆججەت كۆچۈرۈشتە ئىشلىتىلىدۇ. دىققەت بۇ خىل فورمات قوللىنىلسا سىز تۇرۇشلۇق جاينىڭ ئەدلىيە تۈزۈمىدە قانۇنسىز بولۇشى مۇمكىن؛ بۇ ھەقتىكى تەكلىپكە ئېرىشمەكچى بولسىڭىز ئادۋوكاتىڭىز بىلەن ئالاقىلىشىڭ.</default>
+      </locale>
+      <locale name="uk">
+        <default>Використовується для перетворення звуку CD-якості, але використовуючи кодек AAC з втратою якості. Використовуйте його для підготовки файлів для копіювання на пристрої, які підтримують лише кодек AAC. Зверніть увагу, використання цього формату може бути незаконним у вашій країні; проконсультуйтесь у юриста з цього приводу.</default>
+      </locale>
+      <locale name="vi">
+        <default>Dùng để chuyển đổi sang âm thanh chất lượng CD, nhưng với bộ mã hoá AAC mất mát. Được dùng để chuẩn bị sao chép tập tin vào thiết bị chỉ hỗ trợ mã hoá AAC. Chú ý rằng dùng định dạng này có thể không hợp pháp trong khu vực của bạn; hãy liên hệ với luật sư để được tư vấn.</default>
+      </locale>
+      <locale name="zh_CN">
+        <default>用于转换为 CD 音质的音频，但使用有损 AAC 编码方式。制作需要复制到仅支持 AAC 编码方式的设备的文件时使用。注意使用此格式可能在您所在的司法制度下是违法的；请联系您的律师以获得建议。</default>
+      </locale>
+      <locale name="zh_HK">
+        <default>用作轉換 CD 品質的音效，但使用失真的 AAC 編碼解碼器。適用於替支援 AAC 編碼解碼器的裝置準備要複製至的檔案。注意！使用此格式在你處於的司法管轄領域內可能是違法的，請聯絡律師詢問意見。</default>
+      </locale>
+      <locale name="zh_TW">
+        <default>用作轉換 CD 品質的音效，但使用失真的 AAC 編碼解碼器。適用於替支援 AAC 編碼解碼器的裝置準備要複製至的檔案。注意！使用此格式在您處於的司法管轄領域內可能是違法的，請聯絡律師詢問意見。</default>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/aac/pipeline</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/aac/pipeline</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>audio/x-raw-int,rate=44100,channels=2 ! faac profile=2 ! ffmux_mp4</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The partial GStreamer pipeline used</short>
+        <long>
+          A partial GStreamer pipeline to use for this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/aac/extension</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/aac/extension</applyto>
+      <owner>gnome-media</owner>
+      <type>string</type>
+      <default>m4a</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>The default file extension for this profile</short>
+        <long>
+          A filename extension to be used when storing files encoded
+          with this profile.
+        </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/system/gstreamer/0.10/audio/profiles/aac/active</key>
+      <applyto>/system/gstreamer/0.10/audio/profiles/aac/active</applyto>
+      <owner>gnome-media</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>libgnome-media-profiles</gettext_domain>
+      <locale name="C">
+        <short>Whether this profile is to be used</short>
+        <long>
+          Whether to use and display this profile.
+        </long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

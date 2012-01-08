@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.2.2">
+<!ENTITY manrevision "2.5">
+<!ENTITY date "June 2010">
+<!ENTITY app "GStreamer Properties">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="en_GB">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>GStreamer Properties Manual V2.5</title>       
+
+    <copyright>
+      <year>2003</year> 
+      <holder>Christian Fredrik Kalager Schaller</holder> 
+    </copyright><copyright><year>2009</year><holder>Jen Ockwell (jenfraggleubuntu@gmail.com)</holder></copyright> 
+
+    <abstract role="description">
+      <para>GStreamer Properties lets you configure parameters related to the hardware and multimedia</para>
+    </abstract>
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2003</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <publisher> 
+      <publishername>GNOME Documentation Project</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation Licence (GFDL), Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL at this <ulink type="help" url="ghelp:fdl">link</ulink> or in the file COPYING-DOCS distributed with this manual.</para>
+         <para>This manual is part of a collection of GNOME manuals distributed under the GFDL. If you want to distribute this manual separately from the collection, you can do so by adding a copy of the licence to the manual, as described in section 6 of the licence.</para>
+
+	<para>Many of the names used by companies to distinguish their products and services are claimed as trademarks. Where those names appear in any GNOME documentation, and the members of the GNOME Documentation Project are made aware of those trademarks, then the names are in capital letters or initial capital letters.</para>
+
+	<para>DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS OF THE GNU FREE DOCUMENTATION LICENCE WITH THE FURTHER UNDERSTANDING THAT: <orderedlist>
+		<listitem>
+		  <para>DOCUMENT IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS LICENCE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND</para>
+		</listitem>
+		<listitem>
+		  <para>UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGES.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Christian Fredrik</firstname> 
+	<surname>Kalager Schaller</surname> 
+	<affiliation> 
+	  <orgname>gnome.org</orgname> 
+	  <address/> 
+	</affiliation> 
+      </author> 
+
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>translator@gnome.org</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+
+    <revhistory>
+      <revision> 
+			<revnumber>GStreamer Properties Manual V2.5</revnumber> 
+			<date>June 2010</date> 
+			<revdescription> 
+	  			<para role="author">Marc-Andre Lureau</para>
+	  			<para role="publisher">GNOME Documentation Project</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>GStreamer Properties Manual V2.4</revnumber> 
+			<date>December 2003</date> 
+			<revdescription> 
+	  			<para role="author">Christian Fredrik Kalager Schaller</para>
+	  			<para role="publisher">GNOME Documentation Project</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>GStreamer Properties Manual V1.0</revnumber> 
+			<date>September 2003</date> 
+			<revdescription> 
+	  			<para role="author">Christian Fredrik Kalager Schaller</para>
+	  			<para role="publisher">GNOME Documentation Project</para>
+			</revdescription> 
+      </revision>
+         </revhistory> 
+
+    <releaseinfo>This manual describes version 2.2.2 of GStreamer Properties.</releaseinfo> 
+    <legalnotice> 
+      <title>Feedback</title> 
+      <para>To report a bug or make a suggestion regarding the GStreamer Properties application or this manual, follow the directions in the <ulink url="ghelp:gnome-feedback" type="help">GNOME Feedback Page</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>GStreamer properties</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="gstreamer-properties-introduction"> 
+    <title>Introduction</title> 
+    <para>The <application>GStreamer Properties</application> application enables you
+    to configure parameters related to the hardware and multimedia
+    systems on your system.</para>
+    <note><para>Only advanced users should normally need
+    this as your OS vendor should be shipping the system with the
+    correct defaults.</para></note>
+  </sect1>
+
+  <sect1 id="gstreamer-properties-getting-started">
+    <title>Getting Started</title> 
+
+    <para>You can start <application>GStreamer Properties</application> in the following ways:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term><guimenu>Applications</guimenu> menu</term>
+    		<listitem>
+    		<para>Choose <menuchoice><guisubmenu>Preferences</guisubmenu><guimenuitem>GStreamer Properties</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Command line</term>
+    		<listitem>
+    		<para>Type <command>gstreamer-properties</command>, then press <keycap>Return</keycap>.</para>
+    		<para> 		 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+
+    <para>When you start <application>GStreamer Properties</application>, the following window is displayed.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="gstreamer-properties-fig"> 
+	<title>GStreamer Properties Window</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/gstreamer_properties_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Shows the <application>GStreamer Properties</application> main window. Contains menubar, toolbar, and drop-down menus for the input and output audio options.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="gstreamer-properties-usage"> 
+    <title>Usage</title>
+	<para>The GStreamer properties applet offers four drop down
+	menus spread over two tabs.  There are two drop-menues for
+	audio and two for video. These choices set the default for
+	most GNOME applications for output and input of Sound and
+	Video.</para>
+
+    <sect2 id="gstreamer-properties-concepts">
+    	<title>Understanding the menu options</title>
+
+    	<para>Looking at the screen for setting audio options you
+    	notice that the two sections are called Default Sink and
+    	Default Source. These are terms used in the GStreamer
+    	framework that GNOME uses to describe where data is sent and
+    	where it comes from. The Default sink is in other words where
+    	GNOME apps should output their sound, while Default source is
+    	where the sound comes from.</para>
+
+	<para>The reason you might want to alter these settings is
+	because under Unix there are many different audio systems and
+	sound server which you might want to output to. For instance
+	on Linux popular alternatives are the PulseAudio sound server
+	or ALSA.</para>
+
+	<para>If you wish that your GNOME applcations output their
+	sound to the PulseAudio sound server you set the Default Sink
+	to use PulseAudio. And if you wish that your GNOME
+	applications which has sound recording capabilities use the
+	ALSA sound system, choose ALSA as the Default Source.</para>
+
+	<note><para>As mentioned elsewhere in this user guide. These setting
+	are meant for as a tool for advanced users who have
+	specialized need. As an ordinary user, you should not need to
+	set these as the vendor of your distribution should have set
+	them to sensible defaults for you.
+        </para></note>
+    	
+    </sect2>
+  </sect1>  
+
+
+</article>

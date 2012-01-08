@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/apps/gcalctool/script.py

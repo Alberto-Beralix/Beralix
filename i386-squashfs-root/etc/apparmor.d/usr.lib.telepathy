@@ -1,0 +1,85 @@
+# vim:syntax=apparmor
+# Author: Jamie Strandboge <jamie@canonical.com>
+
+#include <tunables/global>
+
+/usr/lib/telepathy/mission-control-5 {
+    #include <abstractions/base>
+    #include <abstractions/nameservice>
+
+    /usr/share/glib-*/schemas/   r,
+    /usr/share/glib-*/schemas/** r,
+    /usr/share/telepathy/   r,
+    /usr/share/telepathy/** r,
+
+    owner @{HOME}/.mission-control/      rw,
+    owner @{HOME}/.mission-control/**    rw,
+    owner @{HOME}/.cache/.mc_connections rw,
+
+    # Site-specific additions and overrides. See local/README for details.
+    # Please note that accesses in local/usr.lib.telepathy are also applied to
+    # /usr/lib/telepathy/telepathy-*.
+    #include <local/usr.lib.telepathy>
+}
+
+# This could be broken out into the various binaries, but for now, ok
+/usr/lib/telepathy/telepathy-* {
+    #include <abstractions/base>
+    #include <abstractions/dbus-session>
+    #include <abstractions/nameservice>
+    #include <abstractions/ssl_certs>
+    #include <abstractions/user-tmp>
+
+    /bin/dash ix,
+    /usr/bin/gconftool-2 ix,
+
+    # Maybe in abstractions?
+    owner @{HOME}/.{cache,config}/dconf/user rw,
+
+    # from gnome abstraction
+    /usr/share/gvfs/remote-volume-monitors/  r,
+    /usr/share/gvfs/remote-volume-monitors/* r,
+    owner /{,var/}run/gdm/*/database r,
+    owner /{,var/}run/lightdm/authority/[0-9]* r,
+
+    owner @{PROC}/[0-9]*/fd/ r,
+
+    /usr/share/glib-*/schemas/   r,
+    /usr/share/glib-*/schemas/** r,
+    /etc/purple/prefs.xml        r,
+    /usr/share/purple/           r,
+    /usr/share/purple/**         r,
+    /usr/share/themes/           r,
+    /usr/share/themes/**         r,
+    /usr/lib/purple*/            r,
+    /usr/lib/purple*/*.so        mr,
+    /usr/lib/telepathy/*/        r,
+    /usr/lib/telepathy/*/*.so    mr,
+    /usr/lib/libproxy*/*/modules/     r,
+    /usr/lib/libproxy*/*/modules/*.so mr,
+
+    # for telepathy-butterfly (LP: #816429)
+    #include <abstractions/python>
+    /usr/include/python{2,3}*/pyconfig.h r,
+    deny @{PROC}/[0-9]*/mounts r,
+    deny /sbin/ldconfig x,
+    deny /usr/bin/gcc-[0-9]* x,
+    /bin/uname ix,
+
+    owner @{HOME}/.cache/telepathy/          rw,
+    owner @{HOME}/.cache/telepathy/**        rwk,
+    owner @{HOME}/.local/share/telepathy*/   rw,
+    owner @{HOME}/.local/share/telepathy*/** rwk,
+
+    owner @{HOME}/.cache/wocky/                     rw,
+    owner @{HOME}/.cache/wocky/caps/                rw,
+    owner @{HOME}/.cache/wocky/caps/*.db{,-journal} rwk,
+
+    owner @{HOME}/.local/share/TpLogger/   rw,
+    owner @{HOME}/.local/share/TpLogger/** rwk,
+
+    # Site-specific additions and overrides. See local/README for details.
+    # Please note that accesses in local/usr.lib.telepathy are also applied to
+    # /usr/lib/telepathy/mission-control-5.
+    #include <local/usr.lib.telepathy>
+}

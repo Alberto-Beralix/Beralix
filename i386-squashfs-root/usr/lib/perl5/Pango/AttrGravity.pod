@@ -1,0 +1,84 @@
+=head1 NAME
+
+Pango::AttrGravity - Pango gravity attribute
+
+=cut
+
+=for object Pango::AttrGravity - Pango gravity attribute
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 attribute = Pango::AttrGravity-E<gt>B<new> ($gravity, ...)
+
+=over
+
+=item * $gravity (Pango::Gravity) 
+
+=item * ... (list) 
+
+=back
+
+Since: pango 1.16
+
+=head2 gravity = $attr-E<gt>B<value> (...)
+
+=over
+
+=item * ... (list) 
+
+=back
+
+Since: pango 1.16
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Pango::Gravity
+
+=over
+
+=item * 'south' / 'PANGO_GRAVITY_SOUTH'
+
+=item * 'east' / 'PANGO_GRAVITY_EAST'
+
+=item * 'north' / 'PANGO_GRAVITY_NORTH'
+
+=item * 'west' / 'PANGO_GRAVITY_WEST'
+
+=item * 'auto' / 'PANGO_GRAVITY_AUTO'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

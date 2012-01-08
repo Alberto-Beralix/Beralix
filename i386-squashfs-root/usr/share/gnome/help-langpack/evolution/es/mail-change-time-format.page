@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-change-time-format" xml:lang="es">
+
+  <info>
+    <desc>Cambiar el formato de la fecha y la hora en la lista de mensajes.</desc>
+    <link type="guide" xref="mail-layout-changing"/>
+
+    <revision pkgversion="2.32.2" version="0.2" date="2011-08-25" status="draft"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+  <title>Formatos de fechas y hora</title>
+<p>You can change the format of the <gui>Date</gui> column by setting your preferred format under <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Preferences</gui><gui>Headers</gui><gui>Date/Time format</gui></guiseq>.</p>
+<p>Los marcadores de posición en la expresión de formato son formatos de strftime. Para obtener una lista completa de formatos de strftime, ejecute <code>date --help</code> en una ventana de la terminal.</p>
+<!-- TODO: Time formats settings for Calendar (calendar-layout-appointment-display), Contacts (Edit>Prefs>Contacts) are split everywhere, probably introduce a guide page linking to these three pages -->
+</page>

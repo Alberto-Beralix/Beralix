@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+bansheedir=${libdir}/banshee
+
+Name: Banshee Core
+Description: Core APIs for the Banshee Media Framework
+Version: 2.2.0
+Requires: taglib-sharp dbus-sharp-1.0 dbus-sharp-glib-1.0 glib-sharp-2.0 mono-addins banshee-hyena banshee-hyena-data-sqlite banshee-musicbrainz
+Libs: -r:${bansheedir}/Banshee.Core.dll

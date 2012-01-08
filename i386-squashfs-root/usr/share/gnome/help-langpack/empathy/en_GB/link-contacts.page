@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="link-contacts" xml:lang="en_GB">
+      
+  <info>
+    <link type="guide" xref="index#contacts"/>
+    <link type="seealso" xref="send-message"/>
+    <link type="seealso" xref="audio-call"/>
+    <link type="seealso" xref="video-call"/>
+    <desc>Merge and separate different contacts into a single one.</desc>
+    <revision pkgversion="2.32" version="0.1" date="2010-09-06" status="draft"/>
+    <revision pkgversion="2.32" version="0.2" date="2010-09-09" status="review"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>
+        Creative Commons Share Alike 3.0
+      </p>
+    </license>
+  </info>
+
+  <title>Combine and separate contacts</title>
+  <p>
+    If one, or more, of your contacts has multiple accounts with different
+    messaging services, you can combine these contacts into a single one.
+  </p>
+  <p>
+    The resulting contact is called a <em>meta-contact</em>: a contact composed
+    from different single contacts.
+  </p>
+  <p>
+    If you have a Jane Smith contact that is using three different messaging
+    services like:
+  </p>
+  <list>
+    <item>
+      <p>
+        janes@facebook
+      </p>
+    </item>
+    <item>
+      <p>
+        jane.smith@gmail
+      </p>
+    </item>
+    <item>
+      <p>
+        jane_smith@hotmail
+      </p>
+    </item>
+  </list>
+  <p>
+    You can combine these contacts into a single Jane Smith one.
+  </p>
+  
+  <section id="linking">
+    <title>Combining contacts</title>
+    <steps>
+      <item>
+        <p>
+          From the <gui>Contact List</gui> window, right-click one of the contact
+          that has different accounts, and select
+          <gui style="menuitem">Link Contacts...</gui>.
+        </p>
+      </item>
+      <item>
+        <p>
+          From the left pane in the <gui>Link Contacts</gui> window,
+          select the contacts you want to combine.
+        </p>
+      </item>
+      <item>
+        <p>
+          Click <gui style="button">Link</gui>.
+        </p>
+      </item>
+    </steps>
+    <note>
+      <p>
+        When a meta-contact has been created, the default contact that will be used
+        to have a conversation with when you double-click on it, is the contact with
+        the highest presence on-line.
+      </p>
+    </note>
+  </section>
+  
+  <section id="unlinkg">
+    <title>Separating contacts</title>
+    <steps>
+      <item>
+        <p>
+          From the <gui>Contact List</gui>, right-click the contact
+          to separate, and select <gui style="menuitem">Link Contacts...</gui>.
+        </p>
+      </item>
+      <item>
+        <p>
+          Click <gui style="button">Unlink</gui>.
+        </p>
+      </item>
+    </steps>
+  </section>
+</page>

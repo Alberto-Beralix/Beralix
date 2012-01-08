@@ -1,0 +1,62 @@
+name: phoronix
+plugin: remote
+description: Automated benchmark testing
+description-ar.UTF-8: اختبارات الأداء الآلية
+description-ast.UTF-8: Prueba de rendimientu automatizada
+description-bg.UTF-8: Автоматизиран еталонен тест
+description-bn.UTF-8: অটোমেটেড বেঞ্চমার্ক পরীক্ষা
+description-bo.UTF-8: Automated benchmark testing
+description-br.UTF-8: Bank prouadoù lakaet da emgefreek
+description-bs.UTF-8: Automatizovano benčmark testiranje
+description-ca.UTF-8: Comprovacions de referència automàtiques
+description-cs.UTF-8: Automatický test výkonu
+description-da.UTF-8: Automatiske ydelsestest
+description-de.UTF-8: Automatisierter Leistungs-Test
+description-el.utf-8: Αυτόματη δοκιμή μέτρησης των επιδόσεων
+description-en_AU.UTF-8: Automated benchmark testing
+description-en_CA.UTF-8: Automated benchmark testing
+description-en_GB.UTF-8: Automated benchmark testing
+description-eo.UTF-8: Aŭtomatigita taksotestado
+description-es.UTF-8: Prueba de rendimiento automatizada
+description-et.UTF-8: Automatiseeritud jõudlustestid
+description-eu.UTF-8: Proba-banku automatizatua
+description-fi.UTF-8: Automatisoitu suorituskyvyn mittaus
+description-fr.UTF-8: Banc de test automatisé
+description-gl.UTF-8: Proba automática de rendemento
+description-he.UTF-8: בדיקת ביצועים אוטומטית
+description-hi.UTF-8: स्वतः तलचिह्न जाँच
+description-hr.UTF-8: Automatsko testiranje performansi
+description-hu.UTF-8: Automatizált sebességteszt
+description-it.UTF-8: Test automatico del benchmark
+description-ja.UTF-8: 自動ベンチマークテスト
+description-ko.UTF-8: 자동 벤치마크 테스트
+description-lt.UTF-8: Automatizuotas našumo testavimas
+description-lv.UTF-8: Automātiskā procesu mērijumu testēšana
+description-ms.UTF-8: Pengujian tanda aras automatik
+description-nb.UTF-8: Automatisk ytelsestesting
+description-ne.UTF-8: स्वचालित मानदण्ड परीक्षण
+description-nl.UTF-8: Geautomatiseerde benchmark-tests
+description-oc.UTF-8: Banc de tèsts automatizats
+description-pl.UTF-8: Zautomatyzowane testowanie wydajności
+description-pt.UTF-8: Testes automáticos de performance
+description-pt_BR.UTF-8: Teste automatizado de performance
+description-ro.UTF-8: Teste de performanță automatizate
+description-ru.UTF-8: Автоматическое тестирование производительности
+description-sk.UTF-8: Automatické testovanie výkonu
+description-sl.UTF-8: Samodejno preizkušanje hitrosti delovanja
+description-sq.UTF-8: Testim automatik i benchmark
+description-sr.UTF-8: Тестирање аутоматизованог бенчмарка
+description-sv.UTF-8: Automatisk prestandatestning
+description-tr.UTF-8: Otomatik karşılaştırma testi
+description-ug.UTF-8: ئاپتوماتلاشقان benchmark سىنىقىنى
+description-uk.UTF-8: Автоматичне тестування продуктивності
+description-vi.UTF-8: Đánh giá hệ thống tự động
+description-zh_CN.UTF-8: 自动基准测试
+description-zh_HK.UTF-8: 自動評效測試
+description-zh_TW.UTF-8: 自動評效測試
+requires:
+ package.name == 'git-core'
+ package.name == 'php5-cli'
+ package.name == 'python-pexpect'
+user: root
+command: phoronix_suite | filter_templates --whitelist='name=encode-ogg' --whitelist='name=unigine-sanctuary' --whitelist='name=unigine-tropics' --whitelist='name=lightsmark' --whitelist='name=norsetto-shadow' --whitelist='name=compliance-acpi' --whitelist='name=compliance-ogl' --whitelist='name=compliance-sensors' | filter_packages

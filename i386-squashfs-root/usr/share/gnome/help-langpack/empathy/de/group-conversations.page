@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" id="group-conversations" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#text-conv"/>
+    <desc>Starten oder betreten Sie eine Gruppenunterhaltung mit Ihren Kontakten.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-02" status="stub"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-17" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-17" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-09" status="deferred"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Gruppenunterhaltungen</title>
+  
+  <p>Gruppenunterhaltungen ermöglichen Ihnen Textunterhaltungen mit mehreren Kontakten zugleich.</p>
+  <p>Für eine Gruppenunterhaltung benötigen Sie ein registriertes Konto bei entweder Google Talk oder Jabber, oder ein »People Nearby«-Konto.</p>
+
+  <note>
+    <p>Eine Gruppenunterhaltung können Sie nur mit denjenigen Kontakten führen, die den gleichen Dienst wie Sie verwenden.</p>
+  </note>
+
+  <section id="start-group-conv">
+
+  <title>Starten einer Gruppenunterhaltung</title>
+
+  <steps>
+    <item>
+      <p>Wählen Sie im <gui>Kontaktlisten</gui>-Fenster <guiseq><gui>Raum</gui><gui>Betreten</gui></guiseq>.</p>
+    </item>
+    <item>
+      <p>Aus der <guilabel>Konto</guilabel>-Aufklappliste wählen Sie das Konto, welches Sie für die Gruppenunterhaltung verwenden wollen.</p>
+    </item>
+    <item>
+      <p>Geben Sie in das <guilabel>Server</guilabel>-Textfeld den Namen des Servers ein, auf dem die Unterhaltung stattfinden soll.</p>
+      <p>Lassen Sie dies leer, wenn es sich um den aktuellen Server handelt.</p>
+    </item>
+    <item>
+      <p>Geben Sie in das <guilabel>Raum</guilabel>-Textfeld den Namen ein, den Sie der neuen Unterhaltung zuweisen wollen.</p>
+      <note>
+        <p>Dies wird der Name des Raumes für die Unterhaltung sein. Dieser Name ist öffentlich für Andere einsehbar, um den Raum zu betreten. Es ist nicht möglich, einen privaten Raum zu erstellen.</p>
+      </note>
+    </item>
+    <item>
+      <p>Um im <gui>Kontaktlisten</gui>-Fenster andere Kontakte zur Teilnahme an einer Gruppenunterhaltung einzuladen, gehen Sie wie folgt vor:</p>
+      <list>
+        <item>
+          <p>Klicken Sie mit der rechten Maustaste auf den Kontakt, und wählen Sie anschließend <guimenuitem>In Chatraum einladen</guimenuitem>.</p>
+        </item>
+        <item>
+          <p>Wählen Sie <guiseq><gui>Bearbeiten</gui><gui>Kontakt</gui><gui>In Chatraum einladen</gui></guiseq>.</p>
+        </item>
+      </list> 
+      <p>Falls Sie mehrere Gruppenunterhaltung geöffnet haben, wählen Sie diejenige aus, in welche Sie Ihre Kontakte einladen wollen.</p>
+    </item>
+  </steps>
+  
+  </section>
+
+  <section id="join-group-conv">
+
+  <title>Einer Gruppenunterhaltung beitreten</title>
+
+  <steps>
+    <item>
+      <p>Wählen Sie im <gui>Kontaktlisten</gui>-Fenster <guiseq><gui>Raum</gui><gui>Betreten</gui></guiseq>.</p>
+    </item>
+    <item>
+      <p>Klappen Sie den Abschnitt <gui>Raumliste</gui> aus, um alle vorhandenen Räume anzuzeigen.</p>
+    </item>
+    <item>
+      <p>Klicken Sie doppelt auf den Namen eines Raums, um ihn zu betreten.</p>
+    </item>
+  </steps>
+
+  <p>Es ist nicht möglich, alle vorhandenen Räume zu betreten. Einige der Räume dürften ein Passwort wiederum können nur aufgrund einer Einladung betreten werden. <app>Empathy</app> unterstützt diese Art von Räumen nicht.</p>
+
+  <!-- TODO: find out where the password protected or invitation only icons are
+  and create a table. -->
+
+  </section>
+
+</page>

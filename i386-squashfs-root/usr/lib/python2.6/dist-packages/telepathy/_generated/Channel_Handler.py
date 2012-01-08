@@ -1,0 +1,1 @@
+../../../../../share/pyshared/telepathy/_generated/Channel_Handler.py

@@ -1,0 +1,12 @@
+# This will setup non-us keyboards in early userspace,
+# necessary for punching in passphrases.
+KEYMAP=y
+
+# force busybox on initramfs
+BUSYBOX=y
+
+# declare that we need usplash included in the initramfs, for pretty prompting
+USPLASH=y
+
+# and for systems using plymouth instead, use the new option
+FRAMEBUFFER=y

@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "2.24.0">
+<!ENTITY manrevision "0.2">
+<!ENTITY date "October 2007">
+<!ENTITY app "Mousetweaks">
+<!ENTITY application "<application>&app;</application>">
+<!ENTITY legal SYSTEM "legal.xml">
+]>
+<article id="index" lang="en_GB">
+  <articleinfo>
+    <title>Mousetweaks Manual</title>
+
+    <abstract role="description">
+      <para><application>Mousetweaks</application> provides mouse accessibility enhancements for the GNOME Desktop.</para>
+    </abstract>
+
+    <copyright>
+      <year>2007 - 2010</year>
+
+      <holder>Francesco Fumanti</holder>
+    </copyright><copyright><year>2009</year><holder>Jen Ockwell (jenfraggleubuntu@gmail.com)</holder></copyright>
+
+    
+<legalnotice id="legalnotice">
+  <para>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation Licence (GFDL), Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL at this <ulink type="http" url="http://www.gnu.org/licences/fdl-1.3.txt">link</ulink> or in the the top-level directory of the Mousetweaks source package.</para>
+
+  <para>This manual is part of a collection of GNOME manuals distributed under the GFDL. If you want to distribute this manual separately from the collection, you can do so by adding a copy of the licence to the manual, as described in section 6 of the licence.</para>
+
+  <para>Many of the names used by companies to distinguish their products and services are claimed as trademarks. Where those names appear in any GNOME documentation, and the members of the GNOME Documentation Project are made aware of those trademarks, then the names are in capital letters or initial capital letters.</para>
+
+  <para>DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS OF THE GNU FREE DOCUMENTATION LICENCE WITH THE FURTHER UNDERSTANDING THAT: <orderedlist>
+      <listitem>
+        <para>DOCUMENT IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS LICENCE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS AUTHORISED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND</para>
+      </listitem>
+
+      <listitem>
+        <para>UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGES.</para>
+      </listitem>
+    </orderedlist></para>
+</legalnotice>
+
+
+    <authorgroup>
+      <author role="maintainer">
+        <firstname>Francesco</firstname>
+
+        <surname>Fumanti</surname>
+
+        <affiliation>
+          <address><email>frfumanti@svn.gnome.org</email> </address>
+        </affiliation>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>Version 2.32</revnumber>
+
+        <date>August 2010</date>
+
+        <revdescription>
+          <para role="author">Adapt the manual to the changes done to
+          mousetweaks for GNOME 2.32. Francesco Fumanti
+          <email>frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Version 2.30</revnumber>
+
+        <date>March 2010</date>
+
+        <revdescription>
+          <para role="author">Adapt the manual to the changes done to
+          mousetweaks for GNOME 2.30. Francesco Fumanti
+          <email>frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Version 2.28</revnumber>
+
+        <date>September 2009</date>
+
+        <revdescription>
+          <para role="author">Adapt the manual to the changes done to
+          mousetweaks for GNOME 2.28. Francesco Fumanti
+          <email>frfumanti@svn.gnome.org&gt;</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>version 2.25.90</revnumber>
+
+        <date>February 2nd 2009</date>
+
+        <revdescription>
+          <para role="author">The manual has been edited to match the changes
+          done to mousetweaks for GNOME 2.26. Moreover, the license of the
+          manual has been raised to GFDL 1.3. Francesco Fumanti
+          <email>frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>version 2.24</revnumber>
+
+        <date>July 2008</date>
+
+        <revdescription>
+          <para role="author">The contents of the manual have been upgraded to
+          integrate the improvements done to mousetweaks for GNOME 2.24.
+          Francesco Fumanti <email>frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>version 2.21.5</revnumber>
+
+        <date>January 2008</date>
+
+        <revdescription>
+          <para role="author">The contents of the manual have been adapted to the changes applied to mousetweaks for its integration into GNOME 2.22. Francesco Fumanti <email>frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>version 0.2</revnumber>
+
+        <date>November 2007</date>
+
+        <revdescription>
+          <para role="author">The contents of the manual have been adapted to the default theme of GNOME, called Clearlooks. This version is included with the release 0.2.6 of Mousetweaks. Francesco Fumanti <email>francesco.fumanti@gmx.net</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>version 0.1</revnumber>
+
+        <date>October 2007</date>
+
+        <revdescription>
+          <para role="author">First draft of the manual. Francesco Fumanti <email>francesco.fumanti@gmx.net</email></para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>This manual describes the accessibility tools provided by
+    mousetweaks and their graphical user interfaces, which consist of the
+    accessibility tab of the mouse control panel and two panel
+    applets.</releaseinfo>
+
+    <contrib>To report a bug or make a suggestion regarding the Mousetweaks application or this manual, please go to GNOME's Bugzilla.</contrib>
+
+    <legalnotice>
+      <title>Feedback</title>
+
+      <para>To report a bug or make a suggestion regarding <application>the mousetweaks module</application> (i.e. mouse accessibility), its user interface or its manual, please use the facilities provided by <ulink type="http" url="http://bugzilla.gnome.org/">GNOME's Bugzilla</ulink>.</para>
+    </legalnotice>
+  </articleinfo>
+
+  <indexterm zone="index">
+    <primary>Mousetweaks</primary>
+  </indexterm>
+
+  <indexterm zone="index">
+    <primary>mousetweaks</primary>
+  </indexterm>
+
+  <sect1 id="mouse-a11y-introduction">
+    <title>Introduction</title>
+
+    <para><application>Mousetweaks</application> provides mouse accessibility enhancements for the GNOME Desktop. Indeed, it offers the following functions to the user:</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Simulated secondary click: it allows the user to perform a secondary click (menu click) by holding down the primary mouse button while keeping the pointer motionless.</para>
+      </listitem>
+
+      <listitem>
+        <para>Dwell click: it allows the user to perform the various clicks without pressing any <hardware>hardware button</hardware>.</para>
+      </listitem>
+
+      <listitem>
+        <para>Pointer capture: it allows the user to lock the pointer in a determined area of the panel until the user releases it by a predefined keystroke or mouse button.</para>
+      </listitem>
+    </itemizedlist>
+
+    <note>
+      <para>Since version 2.31.3, mousetweaks does not depend any more on the
+      AT-SPI accessibility framework.</para>
+    </note>
+  </sect1>
+
+  <sect1 id="mouse-a11y-how-to-start-features">
+    <title>How To Start The Functions</title>
+
+    <para>The simulated secondary click and the dwell click depend on the mousetweaks process; however the pointer capture applet depends on the GNOME panel. Consequently, also the methods to start them vary.</para>
+
+    <sect2 id="mouse-a11y-start-ssc">
+      <title>Starting The Simulated Secondary Click Function</title>
+
+      <para>You can start the Simulated Secondary Click in two ways:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>from the graphical user interface</para>
+        </listitem>
+
+        <listitem>
+          <para>from the command line</para>
+        </listitem>
+      </itemizedlist>
+
+      <sect3 id="mouse-a11y-start-ssc-by-gui">
+        <title>Start From The Graphical User Interface</title>
+
+        <para>The graphical user interface to start the simulated secondary click is located in the Accessibility tab of the Mouse control panel. To open it, choose the menu <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Control Centre</guimenuitem></menuchoice> and the Control Centre will open. By clicking on Mouse in the Control Centre, the Mouse control panel will open and after clicking on the Accessibility tab, you will see the following settings:</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-tab.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Picture of the Mouse control panel</para>
+          </textobject>
+        </mediaobject>
+
+        <para>To start the simulated secondary click function, put a tick into the tickbox that says:</para>
+
+        <para><quote>Trigger secondary click by holding down the primary button</quote></para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-ssc-checkbox.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Picture of the tickbox to start the simulated secondary click</para>
+          </textobject>
+        </mediaobject>
+      </sect3>
+
+      <sect3 id="mouse-a11y-start-ssc-by-cli">
+        <title>Start From The Command Line</title>
+
+        <para>To start the simulated secondary click from the command line, open the <application>Terminal</application> and type the following:</para>
+
+        <para><command>mousetweaks <parameter>--ssc</parameter></command></para>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-start-dwell">
+      <title>Starting The Dwell Click Function</title>
+
+      <para>You can start the dwell click function in three ways:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>from the Accessibility tab of the Mouse control panel</para>
+        </listitem>
+
+        <listitem>
+          <para>from the command line</para>
+        </listitem>
+
+        <listitem>
+          <para>from the On/Off button on the Dwell Click panel applet</para>
+        </listitem>
+      </itemizedlist>
+
+      <sect3 id="mouse-a11y-start-dwell-by-gui">
+        <title>Start From The Accessibility tab of the Mouse control panel</title>
+
+        <para>The graphical user interface to start the dwell click is located in the Accessibility tab of the Mouse control panel. To open it, choose the menu <menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu><guimenuitem>Control Centre</guimenuitem></menuchoice> and the Control Centre will open. By clicking on Mouse in the Control Centre, the Mouse control panel will open and after clicking on the Accessibility tab, you will see the following settings:</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-tab.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Picture of the Mouse control panel</para>
+          </textobject>
+        </mediaobject>
+
+        <para>To start the dwell click function, put a tick into the tickbox that says:</para>
+
+        <para><quote>Initiate click when stopping pointer movement</quote></para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-checkbox.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Picture of the tickbox to start the dwell click function</para>
+          </textobject>
+        </mediaobject>
+      </sect3>
+
+      <sect3 id="mouse-a11y-start-dwell-by-cli">
+        <title>Start From The Command Line</title>
+
+        <para>To start the dwell click function and show the click type window from the command line, open the <application>Terminal</application> and type the following:</para>
+
+        <para><command>mousetweaks <parameter>--dwell
+        --show-ctw</parameter></command></para>
+
+        <note>
+          <para>The starting parameters --login and --daemonize were added to
+          allow GDM to start and quit mousetweaks: the first disables the
+          check for the Assistive Technologies framework at the start of
+          mousetweaks; by not passing the second, mousetweaks will keep the
+          pid that it got when it started, allowing GDM to shut it down by
+          using the pid.</para>
+        </note>
+      </sect3>
+
+      <sect3 id="mouse-a11y-start-dwell-by-panel-applet">
+        <title>Start From The On/Off button On The Dwell Click Panel Applet</title>
+
+        <para>It is possible to start the Dwell Click by simply resting
+        (dwelling) for a little delay with the pointer on the mouse icon
+        displayed by the Dwell Click panel applet. In fact, this mouse icon is
+        a dwellable On/Off button that provides feedback of the passing dwell
+        time by filling its frame with another colour. When the frame is
+        completely filled, the button displays its active state and the dwell
+        click gets started.</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-click-type-applet.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Picture showing the click type applet at the right of the GNOME menus</para>
+          </textobject>
+        </mediaobject>
+
+        <note>
+          <para>For instructions about how to install the Dwell Click applet
+          on the GNOME panel, please have a look at <link linkend="mouse-a11y-start-pointer-capture">Starting The Pointer
+          Capture Function</link> where you can see how it is done for the
+          Pointer Capture panel applet. The procedure for the Dwell Click
+          panel applet is similar.</para>
+        </note>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-start-pointer-capture">
+      <title>Starting The Pointer Capture Function</title>
+
+      <para>As the Pointer Capture applet comes in the from of a panel applet, its starting method has to follow the rules dictated by the GNOME panel. Thus, to start the Pointer Capture function, you only have to install it on the panel and it will automatically run.</para>
+
+      <para>In order to add it to the panel, proceed as you do with any panel applet: perform a secondary click on the panel to open its contextual menu, choose <guimenuitem>Add to Panel</guimenuitem>, and you will get the window showing all the applets that can be installed on the GNOME panel.</para>
+
+      <para>By double clicking on the <guilabel>Pointer Capture</guilabel> item in the Add to Panel window, the Pointer Capture applet will be added to the panel, and it will run until it is removed from the GNOME panel.</para>
+    </sect2>
+  </sect1>
+
+  <sect1 id="mouse-a11y-how-to-stop-features">
+    <title>How To Quit The Functions</title>
+
+    <para>Similar to the starting of the functions, their quitting also depends on the feature that you want to quit.</para>
+
+    <sect2 id="mouse-a11y-stop-ssc">
+      <title>Quitting The Simulated Secondary Click</title>
+
+      <para>It is possible to quit the Simulated Secondary Click in two ways:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>By removing the tick from the corresponding tickbox in the control panel of <application>Mousetweaks</application>.</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-ssc-checkbox.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Picture of the tickbox to start the simulated right click feature</para>
+            </textobject>
+          </mediaobject>
+
+          <para>Please refer to <link linkend="mouse-a11y-start-ssc-by-gui">Start The Simulated Secondary Click From The Graphical User Interface</link> to locate the tickbox.</para>
+        </listitem>
+
+        <listitem>
+          <para>By typing the following command at the command line:</para>
+
+          <para><command>mousetweaks</command>
+          <parameter>--shutdown</parameter></para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+
+    <sect2 id="mouse-a11y-stop-dwell">
+      <title>Quitting The Dwell Click</title>
+
+      <para>It is possible to quit the dwell click in three ways:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>By removing the tick from the corresponding tickbox in the control panel of <application>Mousetweaks</application>.</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-checkbox.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Picture of the tickbox to start the buttonless click feature</para>
+            </textobject>
+          </mediaobject>
+
+          <para>Please refer to <link linkend="mouse-a11y-start-dwell-by-gui">Start The Dwell Click From The Graphical User Interface</link> to locate the tickbox.</para>
+        </listitem>
+
+        <listitem>
+          <para>By typing the following command at the command line:</para>
+
+          <para><command>mousetweaks</command>
+          <parameter>--shutdown</parameter></para>
+        </listitem>
+
+        <listitem>
+          <para>If the Dwell Click applet has been installed on the GNOME panel, the Dwell Click can be disabled by dwelling with the pointer on its On/Off button.</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-click-type-applet.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Picture showing the click type applet at the right of the GNOME menus</para>
+            </textobject>
+          </mediaobject>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+
+    <sect2 id="mouse-a11y-stop-pointer-capture">
+      <title>Quitting The Pointer Capture Function</title>
+
+      <para>As the Pointer Capture function comes in the form of a panel applet, you have to quit it the same way that you do it with other applets: you have to remove it from the GNOME panel. To do it, perform a right click on the handle of the applet and choose <guimenuitem>Remove From Panel</guimenuitem> from its contextual menu.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-context-menu.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>Picture showing the pointer capture area (green) with its contextual menu</para>
+        </textobject>
+      </mediaobject>
+
+      <tip>
+        <para>When using the default GNOME theme, the handle of the Pointer Capture applet are the two vertical dotted lines at the left of the pointer capture area.</para>
+      </tip>
+    </sect2>
+  </sect1>
+
+  <sect1 id="mouse-a11y-functions-description">
+    <title>Description Of The Functions</title>
+
+    <para>Mousetweaks offers three pointer accessibility functions to the user. In this section you will find the description of the three functions: <itemizedlist>
+        <listitem>
+          <para><xref linkend="mouse-a11y-ssc-description"/></para>
+        </listitem>
+
+        <listitem>
+          <para><xref linkend="mouse-a11y-dwell-description"/></para>
+        </listitem>
+
+        <listitem>
+          <para><xref linkend="mouse-a11y-pointer-capture-description"/></para>
+        </listitem>
+      </itemizedlist></para>
+
+    <sect2 id="mouse-a11y-ssc-description">
+      <title>Simulated Secondary Click Description</title>
+
+      <para>When the user activates this feature, he will be able to perform secondary clicks by using the <mousebutton>primary mouse button</mousebutton>. This is especially useful for users that have only one <mousebutton>mouse button</mousebutton> at their disposal.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-ssc-delay-slider.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>Picture showing the settings belonging to the Simulated Secondary Click.</para>
+        </textobject>
+      </mediaobject>
+
+      <sect3 id="mouse-a11y-ssc-usage">
+        <title>How Does It Work?</title>
+
+        <para>Let us assume that the user has enabled the Simulated Secondary Click feature.</para>
+
+        <para>To perform a simulated secondary click, the user has to keep the
+        <mousebutton>primary mouse button</mousebutton> pressed without moving
+        the pointer for the time determined by the delay slider of the
+        Simulated Secondary Click feature. While the <mousebutton>primary
+        mouse button</mousebutton> is kept pressed, the arrow of the pointer
+        will be filled with a different color to give feedback about the
+        passing time.</para>
+
+        <para>If the user releases the <mousebutton>primary mouse
+        button</mousebutton> before the arrow of the pointer has been
+        completely filled with the new color, the system will only receive the
+        information of the <mousebutton>primary mouse button</mousebutton>
+        press and release.</para>
+
+        <para>If the user releases the <mousebutton>primary mouse
+        button</mousebutton> after the arrow of pointer has been completely
+        filled with the new color, the <mousebutton>primary mouse
+        button</mousebutton> events will be followed by a
+        <mousebutton>secondary mouse button</mousebutton> click. In fact,
+        mousetweaks creates this simulated <mousebutton>secondary mouse
+        button</mousebutton> click as soon as the user releases the the
+        <mousebutton>primary mouse button</mousebutton>.</para>
+
+        <para>The explanations above assumed that the pointer did not move
+        between the <mousebutton>primary mouse button</mousebutton> press and
+        release. If the pointer gets moved before the <mousebutton>primary
+        mouse button</mousebutton> is released, no simulated secondary click
+        will be created. Consequently, to cancel an initiated secondary click,
+        the user only has to move the pointer before releasing the
+        <mousebutton>primary mouse button</mousebutton>.</para>
+
+        <para>Moreover, the fact that the simulated secondary click is
+        immediately preceded by a left click makes it behave differently than
+        expected when the preceding left click has an incidence on the object
+        that is to receive the simulated secondary click. Please, have a look
+        at the section about the <link linkend="mouse-a11y-ssc-pecularities">Differences To The Normal
+        Secondary Click</link> for more details.</para>
+      </sect3>
+
+      <sect3>
+        <title id="mouse-a11y-ssc-delay">The Delay Slider</title>
+
+        <para>How long the user has to hold the <mousebutton>primary mouse button</mousebutton> pressed, is determined by the <guilabel>Delay</guilabel> slider located under the activation tickbox. By using this slider, the user can choose the delay most appropriate to him.</para>
+      </sect3>
+
+      <sect3>
+        <title id="mouse-a11y-ssc-motion-treshold">Motion Threshold</title>
+
+        <para>People that have trouble to keep the pointer completely motionless can use the Motion Threshold slider of the Dwell Click feature. This setting makes mousetweaks ignore little mouse movements, so that the simulated secondary click is issued even if the pointer is not completely motionless. Please have a look at the section of the <link linkend="mouse-a11y-dwell-motion-treshold">Motion Threshold slider of the Dwell Click feature</link> for more information about it.</para>
+
+        <note>
+          <para>The <guilabel>Motion Threshold</guilabel> slider that is located under the <guilabel>Dwell Click</guilabel> feature is also effective for the <guilabel>Simulated Secondary Click</guilabel> feature, even if the <guilabel>Dwell Click</guilabel> feature is disabled.</para>
+        </note>
+      </sect3>
+
+      <sect3 id="mouse-a11y-ssc-pecularities">
+        <title>Differences To The Normal Secondary Click</title>
+
+        <para>As the Simulated Secondary Click does not discard
+        the<mousebutton> primary mouse button</mousebutton> press and release,
+        the resulting primary click occurs just before the secondary click
+        created by mousetweaks. Consequently, the simulated secondary click
+        behaves a bit differently than the normal secondary click, because the
+        latter is usually not preceded immediately by a <mousebutton>primary
+        mouse button</mousebutton> click. For example:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>It is not possible to perform a secondary click on multiple items because the primary click issued before the secondary click deselects the items.</para>
+          </listitem>
+
+          <listitem>
+            <para>When performing a simulated secondary click on a link in a
+            web page, the primary click, that precedes the simulated secondary
+            click, opens the referenced page before the simulated secondary
+            click has a chance to open the contextual menu of the link.</para>
+
+            <tip>
+              <para>The contextual menu of a link in a web page can be opened
+              by performing a simulated secondary click while keeping the Ctrl
+              modifier pressed. This works because the referenced page opens
+              in a new tab when the link receives a primary click in
+              conjunction with a pressed Ctrl modifier; which is also what
+              happens as a side effect when opening the contextual menu of a
+              link by using the simulated secondary click in conjunction with
+              the Ctrl modifier.</para>
+
+              <para>However the browser has to be configured to not
+              automatically switch to the new tab when it opens; otherwise the
+              page with the link disappears as the new tab becomes visible and
+              the contextual menu does not appear.</para>
+            </tip>
+          </listitem>
+
+          <listitem>
+            <para>When the simulated secondary click is performed on the trash
+            icon in the panel, not only does the contextual menu appear, but
+            the trash folder also opens. (The former is caused by the
+            secondary click, the latter by the primary click preceding the
+            secondary click.)</para>
+          </listitem>
+        </itemizedlist>
+
+        <note>
+          <para>It is not possible to provide a list of all diverging behaviours, because it depends on the reaction of the application receiving the secondary click preceded by a primary click.</para>
+        </note>
+
+        <para>Looking at it the other way, it is not possible to perform a
+        long motionless <mousebutton>primary mouse button</mousebutton> press
+        without also triggering the secondary click, unless the pointer is
+        moved before the <mousebutton>primary mouse button</mousebutton>
+        release. This may also have unexpected consequences for some users.
+        For example:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>When releasing the primary button after keeping it pressed
+            on the arrow of a scrollbar for more than the delay time, the
+            scrollbar jumps to the bottom. This is in fact the normal
+            behaviour of a secondary click on an arrow of a scrollbar.</para>
+
+            <tip>
+              <para>To avoid that the scrollbar jumps to the bottom, simply
+              move the pointer away from the arrow of the scrollbar before
+              releasing the primary button; this way, the initiated simulated
+              secondary click gets cancelled.</para>
+            </tip>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-dwell-description">
+      <title>Dwell Click Description</title>
+
+      <para>There are users that cannot use any hardware button. By activating the <guilabel>Dwell Click</guilabel>, they can have the mouse perform the various clicks without pressing any mouse button. The click types that can be performed are: single primary click, double click, drag click and secondary click.</para>
+
+      <note>
+        <para>When the dwell click is active, the <mousebutton>mouse
+        buttons</mousebutton> remain functional and it is still possible to
+        click with the <mousebutton>mouse buttons</mousebutton>. Moreover, If
+        the user performs a click with a <mousebutton>mouse
+        button</mousebutton> while a dwell click is in progress, the dwell
+        click gets stopped and no dwell click is generated; to initiate a new
+        dwell click, the user has to move and stop moving the mouse as usual
+        for the dwell click.</para>
+      </note>
+
+      <sect3 id="mouse-a11y-dwell-usage">
+        <title>How Does It Work?</title>
+
+        <para>Each time the pointer stops moving, a dwell click is initiated. To give feedback to the user, mousetweaks will fill the arrow of the pointer with another colour while it is counting down the time before the click completion kicks in.</para>
+
+        <para>How the click is completed and how the click type is chosen depends on what dwell mode the user has selected. The two available modes are:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Choose type of click beforehand</para>
+          </listitem>
+
+          <listitem>
+            <para>Choose type of click with mouse gestures</para>
+          </listitem>
+        </itemizedlist>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-mode-choice.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Picture showing the radio buttons to select dwell mode</para>
+          </textobject>
+        </mediaobject>
+
+        <para>To select the mode, the user only has to click on the radio button that corresponds to his choice.</para>
+
+        <sect4 id="mouse-a11y-dwell-mode-ctw">
+          <title>Automatic Click Completion With Click Type Choice Beforehand</title>
+
+          <para>This mode is active when the user selects <guilabel>Choose type of click beforehand</guilabel>. In fact, after the mouse has been motionless for the time defined by the <guilabel>Delay</guilabel> slider, the system will automatically perform the click type that is selected in the Click Type Window shown here:</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-click-type-window.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Picture showing the click type window</para>
+            </textobject>
+          </mediaobject>
+
+          <para>To display the <guimenu>Click Type Window</guimenu> on the screen, the user has to put a tick <application>in the tickbox named <quote><guilabel>Show click type window</guilabel></quote>:</application></para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-ctw-checkbox.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Picture with the tickbox to display the click type window</para>
+            </textobject>
+          </mediaobject>
+
+          <para>After the click has occurred, the single click type will be automatically restored. In order to choose another click type, the user has to perform an automatic click on the <guibutton>button</guibutton> in the <guilabel>Click Type Window</guilabel> that corresponds to his click type choice.</para>
+
+          <para>Instead of the Click Type Window some users might prefer to use the <guilabel>Dwell Click</guilabel> panel applet, that has some advantages:.</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-click-type-applet.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Picture showing the click type applet at the right of the GNOME menus</para>
+            </textobject>
+          </mediaobject>
+
+          <para>Indeed, by using the <guilabel>Dwell Click</guilabel> panel applet: <itemizedlist>
+              <listitem>
+                <para>The user does not need the <guilabel>Click Type Window</guilabel> that might cover other windows on the desktop.</para>
+              </listitem>
+
+              <listitem>
+                <para>The user has a direct way to start and stop the dwell click by using the <guilabel>On/Off</guilabel> button of the <guilabel>Dwell Click</guilabel> applet. This is especially useful when he wants to disable dwelling for a little while to read some text without the interference of a dwell click.</para>
+              </listitem>
+            </itemizedlist></para>
+
+          <para>To display the <guilabel>Dwell Click</guilabel> applet on the GNOME panel, the user has to follow the usual procedure to add applets to the GNOME panel. An example about how to do it can be found in the section <link linkend="mouse-a11y-start-pointer-capture">Starting The Pointer Capture Function</link>.</para>
+
+          <para>The <guilabel>Click Type Window</guilabel> and the <guilabel>Dwell Click</guilabel> applet can be used simultaneously or each on its own.</para>
+        </sect4>
+
+        <sect4 id="mouse-a11y-dwell-mode-gestures">
+          <title>Click Completion And Click Type Choice By Mouse Gesture</title>
+
+          <para>This mode is active when the user selects <guilabel>Choose type of click with mouse gestures</guilabel>. In fact, after the mouse has been motionless for the delay defined by the <link linkend="mouse-a11y-dwell-delay">Delay slider</link>, the shape of the pointer will change for a little time lapse; let's call this shape the gesture shape:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>If the user moves the pointer while it is showing the gesture shape, a click is performed at the location where the pointer was last motionless; finally the pointer returns to its normal shape. The type of click performed depends on the direction of the movement of the mouse. During the movement of the pointer, a line is drawn following the movement of the pointer to give feedback to the user.</para>
+            </listitem>
+
+            <listitem>
+              <para>If the user keeps the pointer motionless until it returns to its normal shape, the user can move the mouse without a click being performed. The next dwell click can be performed at the next pointer stop.</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>The user also has the possibility to match click type with movement direction by using the 4 <guimenu>popups</guimenu> available:</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-gesture-mapping.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>Picture showing the configuration options to map click type to movement direction</para>
+            </textobject>
+          </mediaobject>
+
+          <para>There is also a <guimenuitem>Disabled</guimenuitem> menu item in each <guimenu>popup</guimenu>. The user can select it if he does not want some click types to be performed automatically. This is especially interesting for users that have problems with only certain click types.</para>
+        </sect4>
+      </sect3>
+
+      <sect3>
+        <title id="mouse-a11y-dwell-delay">Dwell Delay Setting</title>
+
+        <para>With the <guilabel>Delay</guilabel> slider, the user can configure how long the pointer has to be motionless for the click to be initiated.</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-delay-slider.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Picture showing the delay slider of the dwell click</para>
+          </textobject>
+        </mediaobject>
+
+        <note>
+          <para>The dwell delay only works in the context of the dwell click.</para>
+        </note>
+      </sect3>
+
+      <sect3 id="mouse-a11y-dwell-motion-treshold">
+        <title>Motion Threshold Setting</title>
+
+        <para>For people that have trouble to keep the mouse motionless, there is the <guilabel>Motion Threshold</guilabel> slider.</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-motion-treshold.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>Picture showing the motion threshold slider of the dwell click</para>
+          </textobject>
+        </mediaobject>
+
+        <para>When the slider is set towards low, even little mouse movements are considered; however, by setting a higher threshold, the pointer has to travel a bigger distance before it is considered as moving.</para>
+
+        <note>
+          <para>The Motion Threshold setting does not only work for the Dwell Click, but also for the Simulated Secondary Click, even if the Dwell Click is disabled.</para>
+        </note>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-pointer-capture-description">
+      <title>Locking The Pointer Description</title>
+
+      <para>There are people that have to use their pointing device not only for the computer. These people would welcome a way to lock the pointer into an area of the screen, so that they can use their pointing device for other tasks.</para>
+
+      <para>In fact, the Pointer Capture panel applet creates an area on the panel, into which the user can lock the pointer until he releases it in a determined way.</para>
+
+      <note>
+        <para>Have a look at <link linkend="mouse-a11y-start-pointer-capture">Starting The Pointer
+        Capture Function</link> for instructions about how to install the
+        pointer capture applet on the GNOME panel.</para>
+      </note>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-context-menu.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>Picture showing the pointer capture area (green) with its contextual menu</para>
+        </textobject>
+
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-locked.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>Picture of the pointer capture area when the pointer has been captured</para>
+        </textobject>
+      </mediaobject>
+
+      <para>By choosing <guimenu>Preferences</guimenu> in the contextual menu of the <guilabel>Pointer Capture</guilabel> applet, the user gets a window with the options of the <guilabel>Pointer Capture</guilabel> applet:</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-preferences.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>Picture showing the preferences of the Pointer Capture applet</para>
+        </textobject>
+      </mediaobject>
+
+      <para>The <guilabel>Preferences</guilabel> window of the <guilabel>Pointer Capture</guilabel> applet has three sections:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>In the <guilabel>Capture Pointer</guilabel> section, the user can specify under what circumstances the pointer gets captured when it moves into the capture area. For example: if the control modifier is ticked, the pointer gets captured when it is over the capture area and the user presses the Control modifier key. If no modifier is ticked and the mouse button is set to 0, the pointer only has to move into the capture area to get locked.</para>
+
+          <para>It is also possible to specify a combination of modifiers and mouse button.</para>
+        </listitem>
+
+        <listitem>
+          <para>In the <guilabel>Release Pointer</guilabel> section, the user can specify what modifier or mouse button releases the pointer.</para>
+
+          <para>It is also possible to specify a combination of modifiers and mouse button.</para>
+        </listitem>
+
+        <listitem>
+          <para>In the <guilabel>Size of Capture Area</guilabel> section, the user can specify the width of the capture area on the GNOME panel.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+
+  <sect1 id="mouse-a11y-about">
+    <title>About <application>Mousetweaks</application></title>
+
+    <sect2>
+      <title>Authors and hosting site</title>
+
+      <para><application>Mousetweaks</application> is based on a <ulink type="https" url="https://wiki.ubuntu.com/Accessibility/Specs/MouseTweaks">specification</ulink> hosted on Launchpad. It was implemented by Gerd Kohlberger ( <email>gerdk@svn.gnome.org</email> ), and I ( <email>frfumanti@svn.gnome.org</email> ) helped with testing and logistics.</para>
+
+      <para>You can find more information about Mousetweaks on <ulink type="https" url="https://launchpad.net/mousetweaks">Launchpad</ulink> and on <ulink url="http://live.gnome.org//Mousetweaks/Home">GNOME Live</ulink>.</para>
+    </sect2>
+
+    <sect2>
+      <title>Feedback</title>
+
+      <para>To report a bug or make a suggestion regarding the <application>mousetweaks</application> module, its user interface or its manual, please use the facilities provided by <ulink type="http" url="http://bugzilla.gnome.org/">GNOME's Bugzilla</ulink>. If it concerns the layout of the Accessibility tab of the Mouse control panel, please file it against the gnome-control-center module; for anything else regarding mousetweaks, please file it against the mousetweaks module.</para>
+    </sect2>
+
+    <sect2>
+      <title>Licence</title>
+
+      <para>Mousetweaks is distributed under the terms of the GNU General Public Licence as published by the Free Software Foundation; either version 3 of the Licence, or (at your option) any later version. A copy of the licence can be found at this <ulink type="http" url="http://www.gnu.org/licences/gpl-3.0.txt">link</ulink>, or in the file COPYING.GPL included with the source code of this program.</para>
+
+      <para>This manual is distributed under the terms of the The GNU Free Documentation Licence as published by the Free Software Foundation; either version 1.3 of the Licence, or (at your option) any later version. A copy of the licence can be found at this <ulink type="http" url="http://www.gnu.org/licences/fdl-1.3.txt">link</ulink>, or in the file COPYING.FDL included with the source code of this program.</para>
+    </sect2>
+  </sect1>
+</article>

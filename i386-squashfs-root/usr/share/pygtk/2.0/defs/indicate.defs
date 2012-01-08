@@ -1,0 +1,448 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object Indicator
+  (in-module "Indicate")
+  (parent "GObject")
+  (c-name "IndicateIndicator")
+  (gtype-id "INDICATE_TYPE_INDICATOR")
+)
+
+(define-object Listener
+  (in-module "Indicate")
+  (parent "GObject")
+  (c-name "IndicateListener")
+  (gtype-id "INDICATE_TYPE_LISTENER")
+)
+
+(define-object Server
+  (in-module "Indicate")
+  (parent "GObject")
+  (c-name "IndicateServer")
+  (gtype-id "INDICATE_TYPE_SERVER")
+)
+
+;; Enumerations and flags ...
+
+(define-enum Interests
+  (in-module "Indicate")
+  (c-name "IndicateInterests")
+  (gtype-id "INDICATE_TYPE_INTERESTS")
+  (values
+    '("none" "INDICATE_INTEREST_NONE")
+    '("server-display" "INDICATE_INTEREST_SERVER_DISPLAY")
+    '("server-signal" "INDICATE_INTEREST_SERVER_SIGNAL")
+    '("indicator-display" "INDICATE_INTEREST_INDICATOR_DISPLAY")
+    '("indicator-signal" "INDICATE_INTEREST_INDICATOR_SIGNAL")
+    '("indicator-count" "INDICATE_INTEREST_INDICATOR_COUNT")
+    '("last" "INDICATE_INTEREST_LAST")
+  )
+)
+
+
+;; From indicator.h
+
+(define-function indicate_indicator_get_type
+  (c-name "indicate_indicator_get_type")
+  (return-type "GType")
+)
+
+(define-function indicate_indicator_new
+  (c-name "indicate_indicator_new")
+  (is-constructor-of "IndicateIndicator")
+  (return-type "IndicateIndicator*")
+)
+
+(define-method show
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_show")
+  (return-type "none")
+)
+
+(define-method hide
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_hide")
+  (return-type "none")
+)
+
+(define-method is_visible
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_is_visible")
+  (return-type "gboolean")
+)
+
+(define-method get_id
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_get_id")
+  (return-type "guint")
+)
+
+(define-method user_display
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_user_display")
+  (return-type "none")
+  (parameters
+    '("guint" "timestamp")
+  )
+)
+
+(define-method set_property
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_set_property")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "key")
+    '("const-gchar*" "data")
+  )
+)
+
+(define-method set_property_icon
+  (of-object "IndicateIndicator")
+  (c-name "indicate_gtk_indicator_set_property_icon")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "key")
+    '("const-GdkPixbuf*" "data")
+  )
+)
+
+(define-method set_property_time
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_set_property_time")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "key")
+    '("GTimeVal*" "time")
+  )
+)
+
+(define-method set_property_int
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_set_property_int")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "key")
+    '("gint" "value")
+  )
+)
+
+(define-method set_property_bool
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_set_property_bool")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "key")
+    '("gboolean" "value")
+  )
+)
+
+(define-method get_property
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_get_property")
+  (return-type "const-gchar*")
+  (parameters
+    '("const-gchar*" "key")
+  )
+)
+
+(define-method list_properties
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_list_properties")
+  (return-type "GPtrArray*")
+)
+
+(define-method set_displayed
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_set_displayed")
+  (return-type "none")
+  (parameters
+    '("gboolean" "displayed")
+  )
+)
+
+(define-method get_displayed
+  (of-object "IndicateIndicator")
+  (c-name "indicate_indicator_get_displayed")
+  (return-type "gboolean")
+)
+
+
+;; From listener.h
+
+(define-function indicate_listener_server_get_gtype
+  (c-name "indicate_listener_server_get_gtype")
+  (return-type "GType")
+)
+
+(define-pointer ListenerServer
+  (in-module "Indicate")
+  (c-name "IndicateListenerServer")
+  (gtype-id "INDICATE_TYPE_LISTENER_SERVER")    
+)
+
+(define-pointer ListenerIndicator
+  (in-module "Indicate")
+  (c-name "IndicateListenerIndicator")
+  (gtype-id "INDICATE_TYPE_LISTENER_INDICATOR")    
+)
+
+(define-function indicate_listener_get_type
+  (c-name "indicate_listener_get_type")
+  (return-type "GType")
+)
+
+(define-function indicate_listener_new
+  (c-name "indicate_listener_new")
+  (is-constructor-of "IndicateListener")
+  (return-type "IndicateListener*")
+)
+
+(define-function indicate_listener_ref_default
+  (c-name "indicate_listener_ref_default")
+  (return-type "IndicateListener*")
+)
+
+(define-method get_property
+  (of-object "IndicateListener")
+  (c-name "indicate_listener_get_property")
+  (return-type "none")
+  (parameters
+    '("IndicateListenerServer*" "server")
+    '("IndicateListenerIndicator*" "indicator")
+    '("gchar*" "property")
+    '("indicate_listener_get_property_cb" "callback")
+    '("gpointer" "data")
+  )
+)
+
+(define-method get_property_time
+  (of-object "IndicateListener")
+  (c-name "indicate_listener_get_property_time")
+  (return-type "none")
+  (parameters
+    '("IndicateListenerServer*" "server")
+    '("IndicateListenerIndicator*" "indicator")
+    '("gchar*" "property")
+    '("indicate_listener_get_property_time_cb" "callback")
+    '("gpointer" "data")
+  )
+)
+
+(define-method get_property_icon
+  (of-object "IndicateListener")
+  (c-name "indicate_gtk_listener_get_property_icon")
+  (return-type "none")
+  (parameters
+    '("IndicateListenerServer*" "server")
+    '("IndicateListenerIndicator*" "indicator")
+    '("gchar*" "property")
+    '("indicate_gtk_listener_get_property_icon_cb" "callback")
+    '("gpointer" "data")
+  )
+)
+
+(define-method display
+  (of-object "IndicateListener")
+  (c-name "indicate_listener_display")
+  (return-type "none")
+  (parameters
+    '("IndicateListenerServer*" "server")
+    '("IndicateListenerIndicator*" "indicator")
+    '("guint" "timestamp")
+  )
+)
+
+(define-method server_get_type
+  (of-object "IndicateListener")
+  (c-name "indicate_listener_server_get_type")
+  (return-type "none")
+  (parameters
+    '("IndicateListenerServer*" "server")
+    '("indicate_listener_get_server_property_cb" "callback")
+    '("gpointer" "data")
+  )
+)
+
+(define-method server_get_desktop
+  (of-object "IndicateListener")
+  (c-name "indicate_listener_server_get_desktop")
+  (return-type "none")
+  (parameters
+    '("IndicateListenerServer*" "server")
+    '("indicate_listener_get_server_property_cb" "callback")
+    '("gpointer" "data")
+  )
+)
+
+(define-method get_dbusname
+  (of-object "IndicateListenerServer")
+  (c-name "indicate_listener_server_get_dbusname")
+  (return-type "const-gchar*")
+)
+
+(define-method get_id
+  (of-object "IndicateListenerIndicator")
+  (c-name "indicate_listener_indicator_get_id")
+  (return-type "guint")
+)
+
+(define-method server_show_interest
+  (of-object "IndicateListener")
+  (c-name "indicate_listener_server_show_interest")
+  (return-type "none")
+  (parameters
+    '("IndicateListenerServer*" "server")
+    '("IndicateInterests" "interest")
+  )
+)
+
+(define-method server_remove_interest
+  (of-object "IndicateListener")
+  (c-name "indicate_listener_server_remove_interest")
+  (return-type "none")
+  (parameters
+    '("IndicateListenerServer*" "server")
+    '("IndicateInterests" "interest")
+  )
+)
+
+(define-method server_check_interest
+  (of-object "IndicateListener")
+  (c-name "indicate_listener_server_check_interest")
+  (return-type "gboolean")
+  (parameters
+    '("IndicateListenerServer*" "server")
+    '("IndicateInterests" "interest")
+  )
+)
+
+
+
+;; From listener-marshal.h
+
+
+
+;; From server.h
+
+(define-function indicate_server_get_type
+  (c-name "indicate_server_get_type")
+  (return-type "GType")
+)
+
+(define-function indicate_server_new
+  (c-name "indicate_server_new")
+  (is-constructor-of "IndicateServer")
+  (return-type "IndicateServer*")
+)
+
+(define-function indicate_server_set_dbus_object
+  (c-name "indicate_server_set_dbus_object")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "obj")
+  )
+)
+
+(define-method set_desktop_file
+  (of-object "IndicateServer")
+  (c-name "indicate_server_set_desktop_file")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "path")
+  )
+)
+
+(define-method set_type
+  (of-object "IndicateServer")
+  (c-name "indicate_server_set_type")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "type")
+  )
+)
+
+(define-method set_count
+  (of-object "IndicateServer")
+  (c-name "indicate_server_set_count")
+  (return-type "none")
+  (parameters
+    '("guint" "count")
+  )
+)
+
+(define-method show
+  (of-object "IndicateServer")
+  (c-name "indicate_server_show")
+  (return-type "none")
+)
+
+(define-method hide
+  (of-object "IndicateServer")
+  (c-name "indicate_server_hide")
+  (return-type "none")
+)
+
+(define-method get_next_id
+  (of-object "IndicateServer")
+  (c-name "indicate_server_get_next_id")
+  (return-type "guint")
+)
+
+(define-method add_indicator
+  (of-object "IndicateServer")
+  (c-name "indicate_server_add_indicator")
+  (return-type "none")
+  (parameters
+    '("IndicateIndicator*" "indicator")
+  )
+)
+
+(define-method remove_indicator
+  (of-object "IndicateServer")
+  (c-name "indicate_server_remove_indicator")
+  (return-type "none")
+  (parameters
+    '("IndicateIndicator*" "indicator")
+  )
+)
+
+(define-function indicate_server_ref_default
+  (c-name "indicate_server_ref_default")
+  (return-type "IndicateServer*")
+)
+
+(define-method set_default
+  (of-object "IndicateServer")
+  (c-name "indicate_server_set_default")
+  (return-type "none")
+)
+
+(define-method check_interest
+  (of-object "IndicateServer")
+  (c-name "indicate_server_check_interest")
+  (return-type "gboolean")
+  (parameters
+    '("IndicateInterests" "interest")
+  )
+)
+
+(define-method get_max_indicators
+  (of-object "IndicateServer")
+  (c-name "indicate_server_get_max_indicators")
+  (return-type "gint")
+)
+
+
+
+
+;; From interests.h
+
+
+
+;; From indicate-enum-types.h
+
+(define-function indicate_interests_get_type
+  (c-name "indicate_interests_get_type")
+  (return-type "GType")
+)
+
+

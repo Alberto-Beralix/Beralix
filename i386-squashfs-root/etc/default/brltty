@@ -1,0 +1,16 @@
+# This is a configuration file for /etc/init.d/brltty; it allows you to
+# perform common modifications to the behavior of the brltty daemon
+# startup.
+
+# Arguments to pass to BRLTTY
+ARGUMENTS="-q"
+
+# If true (or yes) BRLTTY will be started during initramfs execution.
+# If you change this setting, you have to run "update-initramfs -u" to have it
+# take effect.  If this setting is on, "update-initramfs -u" also needs to be
+# run if /etc/brltty.conf gets changed.
+START_IN_INITRAMFS=false
+
+# Set RUN_BRLTTY=yes to start brltty at boot time. You may need to
+# configure it in /etc/brltty.conf.
+RUN_BRLTTY=no

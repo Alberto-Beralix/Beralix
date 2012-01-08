@@ -1,0 +1,20 @@
+#!/bin/sh -e
+
+if [ "$1" = "configure" ]; then
+    SEQFILE=/var/spool/cron/atjobs/.SEQ
+    if [ ! -f $SEQFILE ]; then
+	echo 0 > $SEQFILE
+	chmod 600 $SEQFILE
+	chown daemon:daemon $SEQFILE
+    fi
+fi
+
+# Automatically added by dh_installinit
+if [ -e "/etc/init/atd.conf" ]; then
+	invoke-rc.d atd start || exit $?
+fi
+# End automatically added section
+# Automatically added by dh_installinit
+update-rc.d -f atd remove >/dev/null || exit $?
+# End automatically added section
+

@@ -1,0 +1,130 @@
+=head1 NAME
+
+Pango::TabArray - an object containing an array of tab stops
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----Pango::TabArray
+
+
+
+=cut
+
+=for object Pango::TabArray - an object containing an array of tab stops
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 tabarray = Pango::TabArray-E<gt>B<new> ($initial_size, $positions_in_pixels, ...)
+
+=over
+
+=item * $initial_size (integer) 
+
+=item * $positions_in_pixels (boolean) 
+
+=item * ... (list) pairs of Pango::TabAlign's and integers, the alignments and positions of the tab stops.
+
+=back
+
+
+
+=head2 tabarray = Pango::TabArray-E<gt>B<new_with_positions> ($initial_size, $positions_in_pixels, ...)
+
+=over
+
+=item * $initial_size (integer) 
+
+=item * $positions_in_pixels (boolean) 
+
+=item * ... (list) pairs of Pango::TabAlign's and integers, the alignments and positions of the tab stops.
+
+=back
+
+Alias for L<new|tabarray = Pango::TabArray-E<gt>new ($initial_size, $positions_in_pixels, ...)>.
+
+=head2 boolean = $tab_array-E<gt>B<get_positions_in_pixels> 
+
+=head2 $tab_array-E<gt>B<resize> ($new_size)
+
+=over
+
+=item * $new_size (integer) 
+
+=back
+
+=head2 integer = $tab_array-E<gt>B<get_size> 
+
+=head2 list = $tab_array-E<gt>B<get_tab> ($tab_index)
+
+=over
+
+=item * $tab_index (integer) 
+
+=back
+
+=head2 $tab_array-E<gt>B<set_tab> ($tab_index, $alignment, $location)
+
+=over
+
+=item * $tab_index (integer) 
+
+=item * $alignment (Pango::TabAlign) 
+
+=item * $location (integer) 
+
+=back
+
+=head2 list = $tab_array-E<gt>B<get_tabs> 
+
+Returns a list of Pango::TabAlign's, alignments, and integers, locations. 
+Even elemtents are alignments and odd elements are locations, so 0 is the first
+alignment and 1 is the first location, 2 the second alignment, 3 the second 
+location, etc.
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Pango::TabAlign
+
+=over
+
+=item * 'left' / 'PANGO_TAB_LEFT'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Boxed>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

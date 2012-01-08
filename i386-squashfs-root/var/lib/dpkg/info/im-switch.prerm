@@ -1,0 +1,29 @@
+#!/bin/sh
+set -e
+
+ua_remove () {
+	update-alternatives \
+        --remove xinput-$1 \
+        /etc/X11/xinit/xinput.d/$2 ;
+}
+
+case "$1" in
+    remove|upgrade|deconfigure)
+        ua_remove all_ALL default
+        ua_remove all_ALL default-xim
+        ua_remove lo_TH lo-gtk
+        ua_remove all_ALL none
+        ua_remove th_TH th-xim
+        ua_remove th_TH th-gtk
+        ;;
+    failed-upgrade)
+        ;;
+    *)
+        echo "prerm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+
+
+exit 0

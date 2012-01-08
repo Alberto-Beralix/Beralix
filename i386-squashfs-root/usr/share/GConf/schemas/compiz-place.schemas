@@ -1,0 +1,1433 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/workarounds</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/workarounds</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Workarounds</short>
+        <long>Window placement workarounds</long>
+      </locale>
+      <locale name="bn">
+        <short>ওয়ার্কএরাউন্ড</short>
+        <long>উইন্ডো প্রতিস্থাপন ওয়ার্কএরাউন্ড</long>
+      </locale>
+      <locale name="bn_IN">
+        <short>ওয়ার্কএরাউন্ড</short>
+        <long>উইন্ডো প্রতিস্থাপন ওয়ার্কএরাউন্ড</long>
+      </locale>
+      <locale name="ca">
+        <short>Solucions alternatives</short>
+        <long>Solucions alternatives de disposició de finestres</long>
+      </locale>
+      <locale name="cs">
+        <short>Řešení problémů</short>
+        <long>Nouzová řešení umístění oken</long>
+      </locale>
+      <locale name="da">
+        <short>Løsninger</short>
+        <long>Løsninger til vinduesplaceringer</long>
+      </locale>
+      <locale name="de">
+        <short>Workarounds</short>
+        <long>Fensterplatzierungs-Workarounds</long>
+      </locale>
+      <locale name="el">
+        <short>Μοντίφες</short>
+        <long>Μοντίφες για τοποθέτηση παραθύρων</long>
+      </locale>
+      <locale name="es">
+        <short>Soluciones alternativas</short>
+        <long>Procedimientos para posicionamiento de ventanas</long>
+      </locale>
+      <locale name="eu">
+        <short>Konponbideak</short>
+        <long>Leihoak kokatzeko konponbideak</long>
+      </locale>
+      <locale name="fi">
+        <short>Poikkeukset</short>
+        <long>Poikkeukset ikkunoiden sijoittamisessa</long>
+      </locale>
+      <locale name="fr">
+        <short>Solutions</short>
+        <long>Solutions de placement de fenêtre</long>
+      </locale>
+      <locale name="gl">
+        <short>Entornos</short>
+        <long>Entornos de colocación de xanela</long>
+      </locale>
+      <locale name="gu">
+        <short>ઉકેલો</short>
+        <long>વિન્ડો જગ્યા ઉકેલો</long>
+      </locale>
+      <locale name="he">
+        <short>מעקפים</short>
+        <long>פתרונות מעקף למיקום</long>
+      </locale>
+      <locale name="hu">
+        <short>Kerülő megoldások</short>
+        <long>Kerülőmegoldások az ablak elhelyezésére</long>
+      </locale>
+      <locale name="it">
+        <short>Alternative</short>
+        <long>Alternative posizionamento finestre</long>
+      </locale>
+      <locale name="ja">
+        <short>回避策</short>
+        <long>モーダルダイアログ向けの配置問題回避策</long>
+      </locale>
+      <locale name="ko">
+        <short>예비 수단</short>
+        <long>창 배치 문제의 회피 방법</long>
+      </locale>
+      <locale name="nb">
+        <short>Omveier</short>
+        <long>Omveier for vindusplassering</long>
+      </locale>
+      <locale name="or">
+        <short>ଚାରିପଟେକାମକରେ</short>
+        <long>ଉଇଣ୍ଡୋ ସ୍ଥାପନ ଚାରିପଟେକାମକରେ</long>
+      </locale>
+      <locale name="pl">
+        <short>Obejścia problemów</short>
+        <long>Obejścia problemów z rozmieszczeniem okien</long>
+      </locale>
+      <locale name="pt">
+        <short>Soluções</short>
+        <long>Soluções para colocação de janelas</long>
+      </locale>
+      <locale name="pt_BR">
+        <short>Soluções</short>
+        <long>Soluções para disposição das janelas</long>
+      </locale>
+      <locale name="ro">
+        <short>Soluții</short>
+        <long>Soluții de amplasare ferestre</long>
+      </locale>
+      <locale name="ru">
+        <short>Обходные пути</short>
+        <long>Обходные пути при размещении окна</long>
+      </locale>
+      <locale name="sk">
+        <short>Núdzové riešenia</short>
+        <long>Núdzové riešenia umiestnenia okna</long>
+      </locale>
+      <locale name="sv">
+        <short>Problemlösningar</short>
+        <long>Problemlösning för fönsterplacering</long>
+      </locale>
+      <locale name="tr">
+        <short>Hızlı Çözümler</short>
+        <long>Pencere konumlandırma hızlı çözümleri</long>
+      </locale>
+      <locale name="uk">
+        <short>Обхідні шляхи</short>
+        <long>Обхідні шляхи при розміщенні вікна</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>工作区</short>
+        <long>窗口放置工作区</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>視窗位置解決方式</short>
+        <long>視窗位置的解決方式</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/mode</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>2</default>
+      <locale name="C">
+        <short>Placement Mode</short>
+        <long>Algorithm to use for window placement (0 = Cascade, 1 = Centered, 2 = Smart, 3 = Maximize, 4 = Random, 5 = Pointer)</long>
+      </locale>
+      <locale name="bn">
+        <short>প্রতিস্থাপন প্রণালী</short>
+        <long>উইন্ডো স্থাপনের জন্য ব্যবহৃত অ্যালগোরিদম (0 = কাসকেড, 1 = কেন্দ্রীভূত, 2 = স্মার্ট, 3 = বড় করা, 4 = ইচ্ছামত, 5 = Pointer)</long>
+      </locale>
+      <locale name="bn_IN">
+        <short>প্রতিস্থাপন প্রণালী</short>
+        <long>উইন্ডো স্থাপনের জন্য ব্যবহৃত অ্যালগোরিদম (0 = কাসকেড, 1 = কেন্দ্রীভূত, 2 = স্মার্ট, 3 = বড় করা, 4 = ইচ্ছামত, 5 = Pointer)</long>
+      </locale>
+      <locale name="cs">
+        <short>Rozmístění oken</short>
+        <long>Algoritmus použitý pro rozmístění oken (0 = Kaskáda, 1 = Centrovaný, 2 = Chytrý, 3 = Maximalizovat, 4 = Náhodný, 5 = Pointer)</long>
+      </locale>
+      <locale name="de">
+        <short>Platzierungsmodus</short>
+        <long>Algorithmus für die Fensterpositionierung (0 = Kaskadenförmig, 1 = Zentriert, 2 = Intelligent, 3 = Maximieren, 4 = Zufällig, 5 = Pointer)</long>
+      </locale>
+      <locale name="el">
+        <short>Τρόπος τοποθέτησης</short>
+        <long>Αλγόριθμος για τοποθέτηση των παραθύρων (0 = Κατταράκτης, 1 = Στο Κέντρο, 2 = Έξυπνο, 3 = Μεγιστοποίησε, 4 = Τυχαία, 5 = Pointer)</long>
+      </locale>
+      <locale name="es">
+        <short>Modo de Posicionamiento</short>
+        <long>Algoritmo a emplear para el posicionamiento de ventanas (0 = Cascada, 1 = Centrado, 2 = Inteligente, 3 = Maximizada, 4 = Aleatorio, 5 = Pointer)</long>
+      </locale>
+      <locale name="eu">
+        <short>Kokapen Modua</short>
+        <long>Leiho kokapenerako algoritmoa (0 = Kaskadan, 1 = Zentratua, 2 = Adimentsua, 3 = Maximizatu, 4 = Ausaz, 5 = Pointer)</long>
+      </locale>
+      <locale name="fi">
+        <short>Käyetettävä metodi sijoittamisessa</short>
+        <long>Ikkunan sijoittamiseen käyettettävä algoritmi (0 = Porrasta, 1 = Keskitetty, 2 = Älykäs, 3 = Suurenna, 4 = Satunnainen, 5 = Pointer)</long>
+      </locale>
+      <locale name="fr">
+        <short>Mode de placement</short>
+        <long>Algorithme à utiliser pour le déplacement des fenêtres (0 = Cascade, 1 = Centré, 2 = Intelligent, 3 = Maximiser, 4 = Aléatoire, 5 = Pointer)</long>
+      </locale>
+      <locale name="gl">
+        <short>Modo de Colocación</short>
+        <long>Algoritmo a empregar para posicionar as xanelas (0 = En Cascada, 1 = Centrado, 2 = Intelixente, 3 = Maximizar, 4 = Aleatorio, 5 = Pointer)</long>
+      </locale>
+      <locale name="gu">
+        <short>ગોઠવણી સ્થિતિ</short>
+        <long>વિન્ડો ગોઠવણી માટે વાપરવાનો અલગોરિધમ (0 = ધોધવાળું, 1 = કેન્દ્રિત થયેલ, 2 = ચપળ, 3 = મહત્તમ કરો, 4 = રેન્ડમ, 5 = Pointer)</long>
+      </locale>
+      <locale name="he">
+        <short>מצב קביעת מיקום</short>
+        <long>אלגוריתם לקביעת מיקום החלון (0 = דירוג, 1 = ממורכז, 2 = חכם, 3 = הגדל למקסימום, 4 = אקראי, 5 = Pointer)</long>
+      </locale>
+      <locale name="hi">
+        <short>नियोजन प्रकार</short>
+        <long>विंडो स्थापन के लिए प्रयोग के लिए अलगोरिथम (0 = प्रपाती, 1 = केंद्रित, 2 = स्मार्ट, 3 = Maximize, 4 = क्रमहीन, 5 = Pointer)</long>
+      </locale>
+      <locale name="hu">
+        <short>Elhelyezés módja</short>
+        <long>Az ablakok elhelyezésére használt algoritmus (0 = Lépcsőzetes, 1 = Középre, 2 = Intelligens, 3 = Maximalizálás, 4 = Véletlen, 5 = Pointer)</long>
+      </locale>
+      <locale name="it">
+        <short>Modalità di posizionamento</short>
+        <long>Algoritmo da usare per il posizionamento della finestra (0 = Cascata, 1 = Centrato, 2 = Intelligente, 3 = Massimizzato, 4 = Casuale, 5 = Pointer)</long>
+      </locale>
+      <locale name="ja">
+        <short>配置形式</short>
+        <long>ウィンドウ配置に使用するアルゴリズム (0 = カスケード, 1 = 中央, 2 = スマート, 3 = 最大化, 4 = ランダム, 5 = Pointer)</long>
+      </locale>
+      <locale name="ko">
+        <short>배치 모드</short>
+        <long>창 배치에 사용할 알고리즘 (0 = 계단, 1 = 중앙, 2 = 똑똑하게, 3 = 최대화, 4 = 무작위로, 5 = Pointer)</long>
+      </locale>
+      <locale name="nb">
+        <short>Plasseringsmodus</short>
+        <long>Algoritme som brukes for plassering av vinduer (0 = Tett-i-tett, 1 = Sentrert, 2 = Smart, 3 = Maksimer, 4 = Tilfeldig, 5 = Pointer)</long>
+      </locale>
+      <locale name="nl">
+        <short>Plaatsing modus</short>
+        <long>Te gebruiken algoritme om vensters te plaatsen (0 = Achter elkaar, 1 = Gecentreerd, 2 = Slim, 3 = Maximaliseer, 4 = Willekeurig, 5 = Pointer)</long>
+      </locale>
+      <locale name="or">
+        <short>ସ୍ଥାପନ ମୋଡ</short>
+        <long>ଉଇଣ୍ଡୋ ସ୍ଥାପନ ପାଇଁ ଉପୟୋଗ ହେବାକୁ ଥିବା ଆଲଗୋରିଥମ (0 = କ୍ଯାସକେଡ, 1 = କେନ୍ଦ୍ରିତ, 2 = ସ୍ଫୁର୍ତ୍ତି, 3 = ସର୍ବାଧିକ କର, 4 = କ୍ରମହୀନ, 5 = Pointer)</long>
+      </locale>
+      <locale name="pa">
+        <short>ਸਥਿਤੀ ਰੱਖਣ ਮੋਡ</short>
+        <long>ਵਿੰਡੋ ਸਥਿਤੀ ਬਦਲਣ ਵਾਸਤੇ ਐਲੋਗਰਥਿਮ (0 = ਕੈਸਕੇਡ, 1 = ਸੈਂਟਰਡ, 2 = ਸਮਾਰਟ, 3 = Maximize, 4 = ਰੈਂਡਮ, 5 = Pointer)</long>
+      </locale>
+      <locale name="pl">
+        <short>Tryb rozmieszczenia</short>
+        <long>Algorytm używany do rozmieszczenia okien (0 = Kaskada, 1 = Wyśrodkowany, 2 = Inteligentny, 3 = Maksymalizuj, 4 = Losowy, 5 = Pointer)</long>
+      </locale>
+      <locale name="pt">
+        <short>Modo de disposição</short>
+        <long>Algoritmo usado para dispor janelas (0 = Cascata, 1 = Centrado, 2 = Inteligente, 3 = Maximizar, 4 = Aleatório, 5 = Pointer)</long>
+      </locale>
+      <locale name="pt_BR">
+        <short>Modo de disposição</short>
+        <long>Algoritmo usado para a disposição das janelas (0 = Cascata, 1 = Centralizado, 2 = Inteligente, 3 = Maximizar, 4 = Aleatório, 5 = Pointer)</long>
+      </locale>
+      <locale name="ro">
+        <short>Rgim de amplasare</short>
+        <long>Algoritm de utilizat pentru amplasarea ferestrelor (0 = Cascadă, 1 = Centrat, 2 = Inteligent, 3 = Maximize, 4 = Aleator, 5 = Pointer)</long>
+      </locale>
+      <locale name="ru">
+        <short>Режим размещения</short>
+        <long>Алгоритм, используемый для размещения окна (0 = Каскадом, 1 = По центру, 2 = Умный, 3 = Развернуть, 4 = Случайно, 5 = Pointer)</long>
+      </locale>
+      <locale name="sk">
+        <short>Spôsob rozmiestnenia</short>
+        <long>Algoritmus použitý pre rozmiestnenie okna (0 = Kaskáda, 1 = Vystrednené, 2 = Inteligentné, 3 = Maximalizovať, 4 = Náhodné, 5 = Pointer)</long>
+      </locale>
+      <locale name="sv">
+        <short>Placeringsläge</short>
+        <long>Algoritm att använda för fönsterplacering (0 = Kaskad, 1 = Centrerad, 2 = Smart, 3 = Maximera, 4 = Slumpmässigt, 5 = Pointer)</long>
+      </locale>
+      <locale name="tr">
+        <short>Yerleştirme Kipi</short>
+        <long>Pencere yerleşimi için kullanılacak algoritma (0 = Basamakla, 1 = Ortalanmış, 2 = Akıllı, 3 = Büyüt, 4 = Rastgele, 5 = Pointer)</long>
+      </locale>
+      <locale name="uk">
+        <short>Режим розміщення</short>
+        <long>Алгоритм, що використовується для розміщення вікна (0 = Каскадом, 1 = У центрі, 2 = Розумний, 3 = Розгорнути, 4 = Випадковий, 5 = Pointer)</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>安置模式</short>
+        <long>放置窗口所用的算法 (0 = 层叠, 1 = 居中, 2 = 灵巧, 3 = 最大化, 4 = 随机, 5 = Pointer)</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>放置方法</short>
+        <long>視窗放置的使用方式 (0 = 層疊, 1 = 居中, 2 = 聰明模式, 3 = 最大化, 4 = 隨機亂數, 5 = Pointer)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/multioutput_mode</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/multioutput_mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Multi Output Mode</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="bn">
+        <short>বিবিধ আউটপুট প্রণালী</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="bn_IN">
+        <short>বিবিধ আউটপুট প্রণালী</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="de">
+        <short>Modus für Mehrfachausgabe</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="el">
+        <short>Kατάσταση Πολλαπλών Οθονών</short>
+        <long>Επιλέγει το πως η τοποθέτηση παραθύρων θα συμπεριφερθεί αν γινει χρήση πολλαπλών οθονών (0 = Χρήση της ενεργής συσκευής εξόδου, 1 = Χρήση της συσκευής εξόδου με τον δείκτη, 2 = Χρήση της συσκευής εξόδου του εστιασμένου παραθύρου, 3 = Τοποθέτηση σε όλες τις οθόνες)</long>
+      </locale>
+      <locale name="es">
+        <short>Modo de multi salidas</short>
+        <long>Selecciona como debe comportarse el acomodamiento de ventanas si se selecciona multipes salidas (0 = Usar el dispositivo de salida activo, 1 = Usar el dispositivo de salida con apuntador, 2 = Usar el dispositivo de salida de la ventana enfocada, 3 = Colocar en todas las salidas)</long>
+      </locale>
+      <locale name="eu">
+        <short>Irteera anitzeko modua</short>
+        <long>Hautatu nola kokatuko diren leihoak hainbat irteera gailu erabiltzen badira. (0 = Irteera gailu aktiboa erabili, 1 = Aukeratu irteera gailuan erakusleaz, 2 = Fokua duen leihoaren irteera gailua erabili, 3 = Kokatu irteera guztietan zehar )</long>
+      </locale>
+      <locale name="fi">
+        <short>Useita ulostuloja</short>
+        <long>Määrittää kuinka ikkunoiden sijoittelun tulisi toimia, jos valittuina on useita ulostuloja (0 = Käytä aktiivista ulostulolaitetta, 1 = Käytä osoittimen sisältämää ulostulolaitetta, 2 = Käytä kohdistetun ikkunan ulostulolaitetta, 3 = Sijoita kaikkien ulostulojen kesken)</long>
+      </locale>
+      <locale name="fr">
+        <short>Mode de sorties multiples</short>
+        <long>Sélectionne comme un emplacement de fenêtre pourrait se comporter si plusieurs sorties sont sélectionnées (0 = Utilise la périphérique de sortie actif, 1 = Utilise la périphérique de sortie avec le pointeur, 2 = Utilise la périphérique de sortie sur la fenêtre active, 3 = Placer à travers toutes les sorties)</long>
+      </locale>
+      <locale name="gl">
+        <short>Modo de saída múltiple</short>
+        <long>Selecciona como se debe comportar a colocación de xanelas cando se seleccionan saídas múltiples (0 = Empregar o dispositivo de saída activo, 1 = Empregar o dispositivo de saída co punteiro, 2 = Empregar o dispositivo de saída da xanela enfocada, 3 = Colocar en tódalas saídas)</long>
+      </locale>
+      <locale name="gu">
+        <short>વિવિધ આઉટપુટ સ્થિતિ</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="he">
+        <short>מצב פלט מרובה</short>
+        <long>קובע כיצד יש למקם חלונות אם נבחר יותר מהתקן פלט אחד (0 = השתמש בהתקן פלט פעיל, 1 = השתמש בהתקן הפלט עם הסמן, 2 = השתמש בהתקן הפלט של החלון הפעיל, 3 = מקם לרוחב כל התקני הפלט)</long>
+      </locale>
+      <locale name="hi">
+        <short>मल्टी आउटपुट प्रकार</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="hu">
+        <short>Többkimenetes üzemmód</short>
+        <long>Megadja, hogy több kimeneti eszköz esetén, az ablakelhelyezés viselkedését (0 = Aktív kimeneti eszköz használata, 1 = Egérmutatót megjelenítő eszköz használata, 2 = Fókuszált ablakot megjelenítő eszköz használata, 3 = Összes kimenet használata)</long>
+      </locale>
+      <locale name="it">
+        <short>Modalità multi-output</short>
+        <long>Seleziona il comportamento del posizionamento delle finestre se sono selezionati molteplici output (0 = Usare dispositivo di output attivo, 1 = Usare dispositivo di output con puntatore, 2 = Usare dispositivo di output della finestra col focus, 3 = Posizionare le finestre tra tutti gli output)</long>
+      </locale>
+      <locale name="ja">
+        <short>マルチ出力の形式</short>
+        <long>マルチ出力が選択されている場合の、ウィンドウ配置の振る舞いの選択 (0 = アクティブ状態の出力デバイスを使用, 1 = ポインタが置かれている出力デバイスを使用, 2 = フォーカス・ウィンドウの出力デバイスを使用, 3 = すべての出力デバイスにわたって配置)</long>
+      </locale>
+      <locale name="ko">
+        <short>다중 화면 모드</short>
+        <long>다중 화면 장치 옵션이 활성화 되었을 때 창의 배치를 어떻게 할지 선택하세요. (0 = 활성화 되어있는 모니터 사용, 1 = 마우스 포인터가 있는 모니터 사용, 2 = 현재 사용 중인 창이 있는 모니터 사용, 3 = 모든 화면에 위치)</long>
+      </locale>
+      <locale name="nb">
+        <short>Flerskjermsmodus</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="nl">
+        <short>Multi uitvoer modus</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="or">
+        <short>ବହୁ-ଆଉଟପୁଟ ମୋଡ</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="pa">
+        <short>ਮਲਟੀ ਆਉਟਪੁੱਟ ਮੋਡ</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="pl">
+        <short>Tryb wielu urządzeń wyjściowych</short>
+        <long>Określa jak powino się zachowywać rozmieszczenie okien jeśli jest używanych wiele urządzeń wyjścia. (0 = Użyj aktywnego urządzenia wyjściowego, 1 = Użyj urządzenia wyjściowego z kursorem myszy, 2 = Użyj urządzednia wyjściowego na wybranym oknie, 3 = Ułóż na wszystkich wyjściach)</long>
+      </locale>
+      <locale name="pt">
+        <short>Modo de Multi Saída</short>
+        <long>Selecciona como a colocação de janelas se deve comportar se estiverem seleccionados múltiplos dispositivos de saída. (0 = Usar dispositivo de saída activo, 1 = Usar dispositivo de saída com cursor, 2 = Usar dispositivo de saída da janela com foco, 3 = Colocar em todos os dispositivos de saída)</long>
+      </locale>
+      <locale name="pt_BR">
+        <short>Modo de Multi Saída</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="ro">
+        <short>Regim „Ieșiri multiple”</short>
+        <long>Alege comportamentul amplasării în prezența ieșirilor multiple (0 = Folosește dispozitivul de ieșire activ, 1 = Folosește dispozitivul de ieșire cu indicatorul, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="ru">
+        <short>Режим множественного вывода</short>
+        <long>Выбор как должно себя вести позиционирование окон, если используется несколько выводов (0 = Использовать активное устройство вывода, 1 = Использовать устройство вывода с курсором, 2 = Использовать устройство вывода сфокусированного окна, 3 = Размещать на всех устройствах вывода)</long>
+      </locale>
+      <locale name="sk">
+        <short>Viacnásobný výstupný režim</short>
+        <long>Označuje ako by sa malo správať umiestňovanie okien ak je označených viacero výstupov (0 = Použiť aktívne výstupné zariadenie, 1 = Použiť výstupné zariadenie s ukazovateľom, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="sv">
+        <short>Läge för multipla utmatningar</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="tr">
+        <short>Çoklu Çıktı Kipi</short>
+        <long>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Çıktı aygıtını işaretçi ile kullan, 2 = Use output device of focussed window, 3 = Place across all outputs)</long>
+      </locale>
+      <locale name="uk">
+        <short>Режим множинного виводу</short>
+        <long>Вибір як має себе вести позиціонування вікон, якщо використовується декілька виводів (0 = Використовувати активний пристрій виводу, 1 = Використовувати пристрій виведення з курсором, 2 = Використовувати пристрій виводу сфокусованого вікна, 3 = Розміщувати на всіх пристроях виводу)</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>多重输出模式</short>
+        <long>选择当选用了多重输出时窗口放置的行为 (0 = 使用当前输出设备, 1 = 使用指针所指的输出设备, 2 = 使用当前窗口的输出设备, 3 = 跨越所有输出放置)</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>多重輸出模式</short>
+        <long>如果有多個輸出裝置可使用時，視窗要如何定位。 (0 = 使用已使用中的輸出裝置, 1 = 使用已選點選那個輸出裝置, 2 = 使用已選視窗的那個輸出裝置, 3 = 放置在所有的輸出裝置)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/force_placement_match</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/force_placement_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default/>
+      <locale name="C">
+        <short>Force Placement Windows</short>
+        <long>Windows that should forcedly be placed, even if they indicate the window manager should avoid placing them. (match)</long>
+      </locale>
+      <locale name="el">
+        <short>Εξαναγκασμός Τοποθέτησης Παραθύρων</short>
+        <long>Παράθυρα που πρέπει αναγκαστικά να τοποθετηθούν, ακόμα κ αν υποδεικνύουν στον διαχειριστή παραθύρων οτι πρέπει να αποφύγει να τα τοποθετήσει. (match)</long>
+      </locale>
+      <locale name="es">
+        <short>Forzar el posicionamiento de las ventanas</short>
+        <long>Ventanas que deben ser colocadas forzosamente, inclusive si indican que el administrador de ventanas debe evitar colocarlas (match)</long>
+      </locale>
+      <locale name="eu">
+        <short>Behartu leihoen kokatzea</short>
+        <long>Kokatzera behartuko diren leihoak, nahiz eta leiho kudeatzaileak horiek kokatzea saihestu  (match)</long>
+      </locale>
+      <locale name="fi">
+        <short>Pakotetun sijoittelun ikkunat</short>
+        <long>Ikkunatyypit, jotka tulisi pakotetusti sijoittaa paikoilleen, vaikka ne kieltäisivät ikkunointiohjelmaa tekemästä niin. (match)</long>
+      </locale>
+      <locale name="fr">
+        <short>Forcer le Placement d'une fenêtre</short>
+        <long>Les fenêtres pourrait être forcées à se situer, même si elles indiquent que le gestionnaire de fenêtre pourrait éviter de les situer. (match)</long>
+      </locale>
+      <locale name="gl">
+        <short>Forzar o colocado das xanelas</short>
+        <long>Fiestras que se deben colocar obrigatoriamente, aínda que se indique no xestor de xanelas que se deben evitar a súa colocación (match)</long>
+      </locale>
+      <locale name="he">
+        <short>כפה מיקום על חלונות</short>
+        <long>חלונות שיש למקמם בכפייה, גם אם הם מבקשים ממנהל החלונות שלא לעשות זאת. (match)</long>
+      </locale>
+      <locale name="hu">
+        <short>Ablakelhelyezés erőltetése</short>
+        <long>Ablakok, amelyek elhelyezését szabályozni kell, még akkor is, ha az ablakkezelő úgy jelzi, hogy az adott ablakok elhelyezését nem szabad szabályozni. (match)</long>
+      </locale>
+      <locale name="it">
+        <short>Posizionamento finestre forzato</short>
+        <long>Finestre che devono essere posizionate in ogni caso, anche se il gestore di finestre non dovrebbe posizionarle. (match)</long>
+      </locale>
+      <locale name="ja">
+        <short>強制配置ウィンドウ</short>
+        <long>強制的に配置させるウィンドウ。ウィンドウ・マネージャに配置の対象外とするようにウィンドウが指示している場合でも配置します。 (match)</long>
+      </locale>
+      <locale name="ko">
+        <short>강제로 창을 위치</short>
+        <long>윈도우 매니저가 위치시키지 않도록 했다고 해도, 강제로 위치시킬 창들을 설정합니다. (match)</long>
+      </locale>
+      <locale name="pl">
+        <short>Wymuś ułożenie okien</short>
+        <long>Okna, które powinny być rozmieszczone "na siłę", nawet jeśli wskazują, że menadżer okien pominie rozmieszczanie ich (match)</long>
+      </locale>
+      <locale name="pt">
+        <short>Forçar Colacação Janelas</short>
+        <long>Janelas que devem ser posicionadas, mesmo que indiquem que o gestor de janelas deve evitar posicioná-las. (match)</long>
+      </locale>
+      <locale name="ru">
+        <short>Принудительное позиционирование окон</short>
+        <long>Окна, которые должны быть спозиционированы, даже если они указывают, что этого делать не нужно. (match)</long>
+      </locale>
+      <locale name="sk">
+        <short>Vynútené umiestnenie okien</short>
+        <long>Okná ktoré by mali byť nútene umiestnené aj keď by sa okenný manažér mal vyhnúť takémuto umiestneniu. (match)</long>
+      </locale>
+      <locale name="tr">
+        <short>Pencerelerin Yetleşimini Zorla</short>
+        <long>Windows that should forcedly be placed, even if they indicate the window manager should avoid placing them. (match)</long>
+      </locale>
+      <locale name="uk">
+        <short>Примусове позиціонування вікон</short>
+        <long>Вікна, які повинні бути опозиціоновані, навіть якщо вони вказують, що цього робити не потрібно. (match)</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>强制窗口放置</short>
+        <long>即便向窗口管理器提出避免放置的请求，仍应强制放置的窗口 (match)</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>強制視窗位置</short>
+        <long>即使視窗管理員禁止放置的區域，仍然強制放置視窗 (match)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/position_matches</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/position_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Positioned windows</short>
+        <long>Windows that should be positioned by default</long>
+      </locale>
+      <locale name="bn">
+        <short>অবস্থানযুক্ত উইন্ডো</short>
+        <long>প্রথাস্বরূপভাবে যে উইন্ডোগুলির অবস্থান নির্ণয় করা হবে</long>
+      </locale>
+      <locale name="bn_IN">
+        <short>অবস্থানযুক্ত উইন্ডো</short>
+        <long>প্রথাস্বরূপভাবে যে উইন্ডোগুলির অবস্থান নির্ণয় করা হবে</long>
+      </locale>
+      <locale name="cs">
+        <short>Pozicované okna</short>
+        <long>Okna, které budou implicitně rozmístěny</long>
+      </locale>
+      <locale name="de">
+        <short>Positionierte Fenster</short>
+        <long>Fenstertypen, die an eine bestimmte Position platziert werden sollen</long>
+      </locale>
+      <locale name="el">
+        <short>Τοποθετημένα παράθυρα</short>
+        <long>Παράθυρα που πρέπει να τοποθετηθούν εξ' ορισμού</long>
+      </locale>
+      <locale name="es">
+        <short>Ventanas Posicionadas</short>
+        <long>Ventanas que deben posicionarse por defecto</long>
+      </locale>
+      <locale name="eu">
+        <short>Kokatutako leihoak</short>
+        <long>Berez kokatuko diren leihoak</long>
+      </locale>
+      <locale name="fi">
+        <short>Sijoitetut ikkunat</short>
+        <long>Ikkunatyypit, jotka tulisi sijoittaa oletuksena</long>
+      </locale>
+      <locale name="fr">
+        <short>Fenêtres positionnées</short>
+        <long>Fenêtres devant être positionnées par défaut</long>
+      </locale>
+      <locale name="gl">
+        <short>Fiestras Colocadas</short>
+        <long>Fiestras que se deben ser colocadas por omisión</long>
+      </locale>
+      <locale name="he">
+        <short>חלונות ממוקמים</short>
+        <long>חלונות שיש למקמם כברירת מחדל</long>
+      </locale>
+      <locale name="hu">
+        <short>Pozicionált ablakok</short>
+        <long>Alapértelmezés szerint pozicionálandó ablakok</long>
+      </locale>
+      <locale name="it">
+        <short>Finestre da posizionare</short>
+        <long>Tipi di finestre da posizionare in modo predefinito</long>
+      </locale>
+      <locale name="ja">
+        <short>固定位置ウィンドウ</short>
+        <long>デフォルトで特定位置に配置するウィンドウ</long>
+      </locale>
+      <locale name="ko">
+        <short>배치된 창</short>
+        <long>기본적으로 배치되어야하는 창</long>
+      </locale>
+      <locale name="nb">
+        <short>Posisjonerte vinduer</short>
+        <long>Vinduer som skal posisjoneres som standard</long>
+      </locale>
+      <locale name="nl">
+        <short>Gepositioneerde vensters</short>
+        <long>Vensters die standaard gepositioneerd moeten worden</long>
+      </locale>
+      <locale name="or">
+        <short>ସ୍ଥାପିତ ଉଇଣ୍ଡୋ</short>
+        <long>ଉଇଣ୍ଡୋ ୟାହାକି ଡିଫଲ୍ଟରେ ସ୍ଥାପିତ ହେବା ଉଚିତ</long>
+      </locale>
+      <locale name="pl">
+        <short>Ułożone okna</short>
+        <long>Typy okien, które powinny być ułożone domyślnie </long>
+      </locale>
+      <locale name="pt">
+        <short>Janelas posicionadas</short>
+        <long>Janelas que devem ser posicionadas por omissão</long>
+      </locale>
+      <locale name="pt_BR">
+        <short>Janelas posicionadas</short>
+        <long>Janelas que devem ser posicionadas por padrão</long>
+      </locale>
+      <locale name="ru">
+        <short>Спозиционированные окна</short>
+        <long>Окна, которые должны быть спозиционированны по умолчанию</long>
+      </locale>
+      <locale name="sk">
+        <short>Umiestnené okná</short>
+        <long>Okná, ktoré by mali byť štandardne umiestnené</long>
+      </locale>
+      <locale name="sv">
+        <short>Positionerade fönster</short>
+        <long>Fönster som ska bli positionerade som standard</long>
+      </locale>
+      <locale name="tr">
+        <short>Konumlandırılmış pencereler</short>
+        <long>Öntanımlı olarak konumlandırılacak pencereler</long>
+      </locale>
+      <locale name="uk">
+        <short>Опозиціонувати вікна</short>
+        <long>Вікна, які повинні бути опозиціоновані за замовчуванням</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>已定位的窗口</short>
+        <long>默认应定位的窗口</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>視窗的部位</short>
+        <long>預設的視窗位置</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/position_x_values</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/position_x_values</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>X Positions</short>
+        <long>X position values</long>
+      </locale>
+      <locale name="bn">
+        <short>X অবস্থান</short>
+        <long>X অবস্থানের মূল্য</long>
+      </locale>
+      <locale name="bn_IN">
+        <short>X অবস্থান</short>
+        <long>X অবস্থানের মূল্য</long>
+      </locale>
+      <locale name="cs">
+        <short>Pozice X</short>
+        <long>Hodnoty pozice na ose X</long>
+      </locale>
+      <locale name="de">
+        <short>X-Position</short>
+        <long>Horizontale Position</long>
+      </locale>
+      <locale name="el">
+        <short>Θέσεις Χ</short>
+        <long>Τιμές θέσης Χ</long>
+      </locale>
+      <locale name="es">
+        <short>Posiciones X</short>
+        <long>Valores de posición X</long>
+      </locale>
+      <locale name="eu">
+        <short>X kokapenak</short>
+        <long>X kokapen balioak</long>
+      </locale>
+      <locale name="fi">
+        <short>X-sijainnit</short>
+        <long>X-sijainnin arvot</long>
+      </locale>
+      <locale name="fr">
+        <short>Positions en X</short>
+        <long>Valeurs de la position en X</long>
+      </locale>
+      <locale name="gl">
+        <short>Posicións X</short>
+        <long>Valores de posición X</long>
+      </locale>
+      <locale name="gu">
+        <short>X સ્થાનો</short>
+        <long>X સ્થાન કિંમતો</long>
+      </locale>
+      <locale name="he">
+        <short>מיקום ב-X</short>
+        <long>ערכי מיקום ב-X</long>
+      </locale>
+      <locale name="hu">
+        <short>Vízszintes pozíció</short>
+        <long>Vízszintes pozíció</long>
+      </locale>
+      <locale name="it">
+        <short>Posizioni X</short>
+        <long>Valori posizione X</long>
+      </locale>
+      <locale name="ja">
+        <short>X 位置</short>
+        <long>X 位置の値</long>
+      </locale>
+      <locale name="ko">
+        <short>가로축 위치</short>
+        <long>가로축 위치값</long>
+      </locale>
+      <locale name="nb">
+        <short>X-posisjoner</short>
+        <long>Verdier for X-posisjon</long>
+      </locale>
+      <locale name="nl">
+        <short>X positie</short>
+        <long>X positie waarden</long>
+      </locale>
+      <locale name="or">
+        <short>X ସ୍ଥାନଗୁଡିକ</short>
+        <long>X ସ୍ଥାନ ମୂଲ୍ଯଗୁଡିକ</long>
+      </locale>
+      <locale name="pl">
+        <short>Pozycje X</short>
+        <long>Wartości dla pozycji X</long>
+      </locale>
+      <locale name="pt">
+        <short>Posições X</short>
+        <long>Valores de posição X</long>
+      </locale>
+      <locale name="pt_BR">
+        <short>Posições X</short>
+        <long>Valores da posição X</long>
+      </locale>
+      <locale name="ro">
+        <short>Poziții pe X</short>
+        <long>Valori poziții pe X</long>
+      </locale>
+      <locale name="ru">
+        <short>Положения по X</short>
+        <long>Значения положения по X</long>
+      </locale>
+      <locale name="sk">
+        <short>Pozície X</short>
+        <long>Hodnoty pozíce na osi X</long>
+      </locale>
+      <locale name="sv">
+        <short>X-positioner</short>
+        <long>X-positionsvärden</long>
+      </locale>
+      <locale name="tr">
+        <short>X Konumları</short>
+        <long>X konum değerleri</long>
+      </locale>
+      <locale name="uk">
+        <short>Положення по X</short>
+        <long>Значення положення по X</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>X位置</short>
+        <long>X位置取值</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>X座標的位置</short>
+        <long>X座標位置的數值</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/position_y_values</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/position_y_values</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Y Positions</short>
+        <long>Y position values</long>
+      </locale>
+      <locale name="bn">
+        <short>Y অবস্থান</short>
+        <long>Y অবস্থানের মূল্য</long>
+      </locale>
+      <locale name="bn_IN">
+        <short>Y অবস্থান</short>
+        <long>Y অবস্থানের মূল্য</long>
+      </locale>
+      <locale name="cs">
+        <short>Pozice Y</short>
+        <long>Hodnoty pozice na ose Y</long>
+      </locale>
+      <locale name="de">
+        <short>Y-Position</short>
+        <long>Vertikale Position</long>
+      </locale>
+      <locale name="el">
+        <short>Θέσεις Υ</short>
+        <long>Τιμές θέσης Υ</long>
+      </locale>
+      <locale name="es">
+        <short>Posiciones Y</short>
+        <long>Valores de posición Y</long>
+      </locale>
+      <locale name="eu">
+        <short>Y kokapenak</short>
+        <long>Y kokapen balioak</long>
+      </locale>
+      <locale name="fi">
+        <short>Y-sijainnit</short>
+        <long>Y-sijainnin arvot</long>
+      </locale>
+      <locale name="fr">
+        <short>Positions en Y</short>
+        <long>Valeurs de la position en Y</long>
+      </locale>
+      <locale name="gl">
+        <short>Posicións Y</short>
+        <long>Valores de posición Y</long>
+      </locale>
+      <locale name="gu">
+        <short>Y સ્થાનો</short>
+        <long>Y સ્થાન કિંમતો</long>
+      </locale>
+      <locale name="he">
+        <short>מיקום ב-Y</short>
+        <long>ערכי מיקום ב-Y</long>
+      </locale>
+      <locale name="hu">
+        <short>Függőleges pozíció</short>
+        <long>Függőleges pozíció</long>
+      </locale>
+      <locale name="it">
+        <short>Posizioni Y</short>
+        <long>Valori posizione Y</long>
+      </locale>
+      <locale name="ja">
+        <short>Y 位置</short>
+        <long>Y 位置の値</long>
+      </locale>
+      <locale name="ko">
+        <short>세로축 위치</short>
+        <long>세로축 위치값</long>
+      </locale>
+      <locale name="nb">
+        <short>Y-posisjoner</short>
+        <long>Verdier for Y-posisjon</long>
+      </locale>
+      <locale name="nl">
+        <short>Y positie's</short>
+        <long>Y positie waarden</long>
+      </locale>
+      <locale name="or">
+        <short>Y ସ୍ଥାନଗୁଡିକ</short>
+        <long>Y ସ୍ଥାନ ମୂଲ୍ଯଗୁଡିକ</long>
+      </locale>
+      <locale name="pl">
+        <short>Pozycje Y</short>
+        <long>Wartości dla pozycji Y</long>
+      </locale>
+      <locale name="pt">
+        <short>Posições Y</short>
+        <long>Valores de posição Y</long>
+      </locale>
+      <locale name="pt_BR">
+        <short>Posições Y</short>
+        <long>Valores da posição Y</long>
+      </locale>
+      <locale name="ro">
+        <short>Poziții pe Y</short>
+        <long>Valori poziții pe Y</long>
+      </locale>
+      <locale name="ru">
+        <short>Положения по Y</short>
+        <long>Значения положения по Y</long>
+      </locale>
+      <locale name="sk">
+        <short>Pozície Y</short>
+        <long>Hodnoty pozíce na osi Y</long>
+      </locale>
+      <locale name="sv">
+        <short>Y-positioner</short>
+        <long>Y-positionsvärden</long>
+      </locale>
+      <locale name="tr">
+        <short>Y Konumları</short>
+        <long>Y konum değerleri</long>
+      </locale>
+      <locale name="uk">
+        <short>Положення по Y</short>
+        <long>Значення положення по Y</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>Y位置</short>
+        <long>Y位置取值</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>Y座標的位置</short>
+        <long>Y座標位置的數值</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/position_constrain_workarea</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/position_constrain_workarea</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>bool</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Keep In Workarea</short>
+        <long>Keep placed window in work area, even if that means that the position might differ from the specified position</long>
+      </locale>
+      <locale name="bg">
+        <short>Запазване в работната площ</short>
+        <long>Keep placed window in work area, even if that means that the position might differ from the specified position</long>
+      </locale>
+      <locale name="el">
+        <short>Διατήρηση Στον Χώρο Εργασίας</short>
+        <long>Διατήρηση του τοποθετημένου παραθύρου στον χώρο εργασίας, ακόμα κ αν αυτό σημαίνει οτι η θέση του μπορεί να διαφέρει απο την καθορισμένη του θέση</long>
+      </locale>
+      <locale name="es">
+        <short>Mantener en el área de trabajo</short>
+        <long>Mantener la ventana posicionada en el área de trabajo, inclusio si eso implicase que la posición difiera de la posición específica</long>
+      </locale>
+      <locale name="eu">
+        <short>Mantendu lan arean</short>
+        <long>Mantendu leiho kokapena lan arean, nahiz eta kokapen hau ez etorri bat kokapen zehatzaz</long>
+      </locale>
+      <locale name="fi">
+        <short>Pidä työtilassa</short>
+        <long>Pidä asetettu ikkuna työtilassa, vaikka se tarkoittaisi sijainnin eriävyyttä määritellystä sijainnista</long>
+      </locale>
+      <locale name="fr">
+        <short>Garder dans la Zone de Travail</short>
+        <long>Garder la fenêtre dans la zone de travail, même si cela signifie que la position peut différer de celle spécifiée</long>
+      </locale>
+      <locale name="gl">
+        <short>Manter na Área de Traballo</short>
+        <long>Manter as xanelas colocadas na área de traballo, aínda que isto signifique que a posición poida diferir da posición especificada</long>
+      </locale>
+      <locale name="he">
+        <short>שמור בתוך משטח העבודה</short>
+        <long>שמור את החלונות בתוך משטח העבודה לאחר מיקום, גם אם יש להציבם לשם כך במיקום שונה מזה המבוקש</long>
+      </locale>
+      <locale name="hu">
+        <short>Munkaasztalon tartás</short>
+        <long>Ablakelhelyezés erőltetésének felülbírálása úgy, hogy az ablak minden esetben a munkaasztalon maradjon</long>
+      </locale>
+      <locale name="it">
+        <short>Mantenere nello spazio di lavoro</short>
+        <long>Mantiene le finestre in posizione nello spazio lavoro, anche se ciò significa che la posizione può differire da quella specificata.</long>
+      </locale>
+      <locale name="ja">
+        <short>ワークエリアに限定</short>
+        <long>結果として指定位置とは異なってしまう場合でも、ウィンドウの配置位置をワークエリア内に限定。</long>
+      </locale>
+      <locale name="ko">
+        <short>작업 영역에 유지</short>
+        <long>위치 설정에 적용되는 창을 작업 영역에 유지합니다. 그 위치가 특정한 위치와 다를지라도 유지합니다.</long>
+      </locale>
+      <locale name="pl">
+        <short>Utrzymuj na pulpicie</short>
+        <long>Utrzymuj wskazane okna na pulpicie , nawet jeśli ich pozycja będzie się różnić od ich określonej pozycji</long>
+      </locale>
+      <locale name="pt">
+        <short>Manter Na Área Trabalho</short>
+        <long>Manter janelas colocadas na área de trabalho, mesmo que isso signifique que a posição possa diferir da posição especificada</long>
+      </locale>
+      <locale name="ru">
+        <short>Держать в рабочей области</short>
+        <long>Предотвратить перемещение окон запределы экрана</long>
+      </locale>
+      <locale name="tr">
+        <short>Çalışma Bölgesinde Kal</short>
+        <long>Keep placed window in work area, even if that means that the position might differ from the specified position</long>
+      </locale>
+      <locale name="uk">
+        <short>Тримати в робочій області</short>
+        <long>Запобігти переміщенню вікон за межі екрану</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>保持在工作区</short>
+        <long>保持设置的窗口在工作区，甚至位置可能不同于那特别位置。</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>保持在工作區域</short>
+        <long>保持在視窗工作區域，即使與指定位置不同</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/mode_matches</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/mode_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Windows</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="el">
+        <short>Παράθυρα</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="es">
+        <short>Ventanas</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="eu">
+        <short>Leihoak</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="fi">
+        <short>Ikkunat</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="fr">
+        <short>Fenêtres</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="gl">
+        <short>Fiestras</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="he">
+        <short>חלונות</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="hu">
+        <short>Ablakok</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="it">
+        <short>Finestre</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="ja">
+        <short>ウィンドウ</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="ko">
+        <short>창</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="pl">
+        <short>Okna</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="pt">
+        <short>Janelas</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="ru">
+        <short>Окна</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="uk">
+        <short>Вікна</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>窗口</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>何種視窗</short>
+        <long>Windows that should have a certain positioning mo+de</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/mode_modes</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/mode_modes</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Mode</short>
+        <long>Positioning modes</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/viewport_matches</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/viewport_matches</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Viewport positioned windows</short>
+        <long>Windows that should be positioned in specific viewports by default</long>
+      </locale>
+      <locale name="bn">
+        <short>ভিউপোর্ট অবস্থানের উইন্ডো</short>
+        <long>প্রথাস্বরূপভাবে যে ভিউপোর্টে উইন্ডোগুলি রাখা হবে </long>
+      </locale>
+      <locale name="bn_IN">
+        <short>ভিউপোর্ট অবস্থানের উইন্ডো</short>
+        <long>প্রথাস্বরূপভাবে যে ভিউপোর্টে উইন্ডোগুলি রাখা হবে </long>
+      </locale>
+      <locale name="de">
+        <short>Auf Viewport platzierte Fenster</short>
+        <long>Fenstertypen, die auf einen bestimmten Viewport platziert werden sollen</long>
+      </locale>
+      <locale name="el">
+        <short>Τοποθετημένα παράθυρα στις εικονικές επιφάνειες εργασίας</short>
+        <long>Παράθυρα που θα τοποθετηθούν σε συγκεκριμένες εικονικές επιφάνειες εργασίας εξ' ορισμού</long>
+      </locale>
+      <locale name="es">
+        <short>Ventanas posicionadas en viewport</short>
+        <long>Ventanas que deben posicionarse en viewports específicos por defecto</long>
+      </locale>
+      <locale name="eu">
+        <short>Mahaigain aurkezpenan kokatutako leihoak</short>
+        <long>Mahaigain aurkezpen konkretuan berez kokatuko diren leihoak</long>
+      </locale>
+      <locale name="fi">
+        <short>Tiettyyn työpöytään sijoitettavat ikkunat</short>
+        <long>Ikkunatyypit, jotka tulisi sijoittaa tiettyyn työpöytään oletuksena</long>
+      </locale>
+      <locale name="fr">
+        <short>Fenêtres positionnées sur un bureau</short>
+        <long>Types de fenêtres qui devraient être positionnées sur un bureau spécifique par défaut</long>
+      </locale>
+      <locale name="gl">
+        <short>Fiestras colocadas nas áreas de traballo</short>
+        <long>Fiestras que deben ser colocadas en áreas de traballo específicos por omisión</long>
+      </locale>
+      <locale name="he">
+        <short>חלונות הממוקמים על משטח</short>
+        <long>חלונות שיש למקמם במשטח ספציפי כברירת מחדל</long>
+      </locale>
+      <locale name="hu">
+        <short>Munkaterületen elhelyezett ablakok</short>
+        <long>Alapértelmezés szerint megadott munkalapra pozicionálandó ablakok</long>
+      </locale>
+      <locale name="it">
+        <short>Finestre posizionate in area visibile</short>
+        <long>Tipi di finestre da posizionare in un'area visibile specifica in modo predefinito</long>
+      </locale>
+      <locale name="ja">
+        <short>固定ビューポート・ウィンドウ</short>
+        <long>デフォルトで特定ビューポートに配置するウィンドウ</long>
+      </locale>
+      <locale name="ko">
+        <short>작업 공간에 배치된 창</short>
+        <long>기본적으로 특정 작업 공간에 배치되어야하는 창</long>
+      </locale>
+      <locale name="nb">
+        <short>Arbeidsområde-plasserte vinduer</short>
+        <long>Vinduer som skal plasseres i spesifikke arbeidsområder som standard</long>
+      </locale>
+      <locale name="nl">
+        <short>Viewport gepositioneerde vensters</short>
+        <long>Vensters die gepositioneerd moeten worden in een specifieke viewport</long>
+      </locale>
+      <locale name="or">
+        <short>ଦୃଶ୍ଯପୋର୍ଟ ସ୍ଥାପିତ ଉଇଣ୍ଡୋ</short>
+        <long>ଉଇଣ୍ଡୋ ୟାହାକି ଡିଫଲ୍ଟରେ ଗୋଟିଏ ନିର୍ଦ୍ଦିଷ୍ଟ ଦୃଶ୍ଯପୋର୍ଟରେ ସ୍ଥାପିତ ହେବା ଉଚିତ</long>
+      </locale>
+      <locale name="pl">
+        <short>Przemieszczenie okien na pulpity</short>
+        <long>Typy okien, które powinny być domyślnie ułożone na konkretnych pulpitach</long>
+      </locale>
+      <locale name="pt">
+        <short>Janelas posicionadas no viewport</short>
+        <long>Janelas que devem ser posicionadas em viewports específicos por omissão</long>
+      </locale>
+      <locale name="pt_BR">
+        <short>Janelas posicionadas na janela de visualização</short>
+        <long>Janelas que devem ser posicionadas por padrão em janelas de visualização específicas</long>
+      </locale>
+      <locale name="ru">
+        <short>Спозиционированные окна видового окна</short>
+        <long>Окна, которые должны быть спозиционированны в определенном экране по умолчанию</long>
+      </locale>
+      <locale name="sk">
+        <short>Okná umiestnené v pohľadoch</short>
+        <long>Okná, ktoré by mali byť štandardne umiestnené na konkrétnu plochu</long>
+      </locale>
+      <locale name="tr">
+        <short>Masaüstüne konumlandırılacak pencereler</short>
+        <long>Öntanımlı olarak belirli bir masaüstüne konumlandırılacak pencereler</long>
+      </locale>
+      <locale name="uk">
+        <short>Опозиціонування вікна видовоих вікон</short>
+        <long>Вікна, які повинні бути опозиціоновані в певному екрані за замовчуванням</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>视图中的定位窗口</short>
+        <long>指定视图中默认应定位的窗口</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>視窗的視點位置</short>
+        <long>預設的自定義視窗視點位置</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/viewport_x_values</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/viewport_x_values</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>X Viewport Positions</short>
+        <long>Horizontal viewport positions</long>
+      </locale>
+      <locale name="bn">
+        <short>X ভিউপোর্ট অবস্থান</short>
+        <long>অনুভূমিক ভিউপোর্টের অবস্থান</long>
+      </locale>
+      <locale name="bn_IN">
+        <short>X ভিউপোর্ট অবস্থান</short>
+        <long>অনুভূমিক ভিউপোর্টের অবস্থান</long>
+      </locale>
+      <locale name="cs">
+        <short>Pozice plochy na ose X</short>
+        <long>Horizontal viewport positions</long>
+      </locale>
+      <locale name="de">
+        <short>Viewport-X-Position</short>
+        <long>Horizontale Viewport-Position</long>
+      </locale>
+      <locale name="el">
+        <short>Θέσεις Χ Εικονικών Επιφανειών Εργασίας</short>
+        <long>Οριζόντιες θέσεις εικονικών επιφανειών εργασίας</long>
+      </locale>
+      <locale name="es">
+        <short>Posiciones de Viewport X</short>
+        <long>Posiciones de los puntos de vista horizontales</long>
+      </locale>
+      <locale name="eu">
+        <short>X mahaigain aurkezpen kokapenak</short>
+        <long>Mahaigain aurkezpen horizontalen kokapena</long>
+      </locale>
+      <locale name="fi">
+        <short>Näkymän X-sijainnit</short>
+        <long>Työpöytien vaakataso-sijainti</long>
+      </locale>
+      <locale name="fr">
+        <short>Positions du viewport en X</short>
+        <long>Positions du viewport horizontal</long>
+      </locale>
+      <locale name="gl">
+        <short>Posicións X da Área de traballo</short>
+        <long>Posicións de áreas de traballo horizontais</long>
+      </locale>
+      <locale name="gu">
+        <short>X દૃશ્યપોર્ટ સ્થાનો</short>
+        <long>આડા દૃશ્યપોર્ટ સ્થાનો</long>
+      </locale>
+      <locale name="he">
+        <short>מיקומי משטח ב-X</short>
+        <long>מיקומי משטח אופקיים</long>
+      </locale>
+      <locale name="hu">
+        <short>Vízszintes munkalap pozíció</short>
+        <long>Vízszintes munkalap pozíció</long>
+      </locale>
+      <locale name="it">
+        <short>Posizioni X area visibile</short>
+        <long>Posizioni orizzontali area visibile</long>
+      </locale>
+      <locale name="ja">
+        <short>X ビューポート位置</short>
+        <long>水平ビューポート位置</long>
+      </locale>
+      <locale name="ko">
+        <short>작업 공간 가로축 위치</short>
+        <long>가로 작업 공간 위치</long>
+      </locale>
+      <locale name="nb">
+        <short>X-posisjoner på arbeidsområde</short>
+        <long>Horisontale posisjoner på arbeidsområde</long>
+      </locale>
+      <locale name="nl">
+        <short>X viewport positie's</short>
+        <long>Horizontale viewport positie's</long>
+      </locale>
+      <locale name="or">
+        <short>X ଦୃଶ୍ଯପୋର୍ଟ ସ୍ଥାନଗୁଡିକ</short>
+        <long>ଦିଗବଳାଯ ଦୃଶ୍ଯପୋର୍ଟ ସ୍ଥାନଗୁଡିକ</long>
+      </locale>
+      <locale name="pl">
+        <short>Pozycje wirtualnych pulpitów osi X</short>
+        <long>Poziome pozycje wirtualnych pulpitów</long>
+      </locale>
+      <locale name="pt">
+        <short>Posições X do viewport</short>
+        <long>Posições horizontais</long>
+      </locale>
+      <locale name="pt_BR">
+        <short>Posições X da janela de visualização</short>
+        <long>Posições horizontais</long>
+      </locale>
+      <locale name="ru">
+        <short>Положения видового окна по X</short>
+        <long>Горизонтальные позиции видовых окон</long>
+      </locale>
+      <locale name="sk">
+        <short>Pozície plochy na osi X</short>
+        <long>Vodorovné pozície pohľadov</long>
+      </locale>
+      <locale name="tr">
+        <short>X Görünüm Yüzü Konumları</short>
+        <long>Yatay masaüstü konumları</long>
+      </locale>
+      <locale name="uk">
+        <short>Положення видового вікна по X</short>
+        <long>Горизонтальні позиції видових вікон</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>X视图位置</short>
+        <long>水平视图位置</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>X座標視點的位置</short>
+        <long>水平視點位置</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/place/screen0/options/viewport_y_values</key>
+      <applyto>/apps/compiz-1/plugins/place/screen0/options/viewport_y_values</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Y Viewport Positions</short>
+        <long>Vertical viewport positions</long>
+      </locale>
+      <locale name="bn">
+        <short>Y ভিউপোর্ট অবস্থান</short>
+        <long>উল্লম্ব ভিউপোর্ট অবস্থান</long>
+      </locale>
+      <locale name="bn_IN">
+        <short>Y ভিউপোর্ট অবস্থান</short>
+        <long>উল্লম্ব ভিউপোর্ট অবস্থান</long>
+      </locale>
+      <locale name="cs">
+        <short>Pozice plochy na ose Y</short>
+        <long>Vertical viewport positions</long>
+      </locale>
+      <locale name="de">
+        <short>Viewport-Y-Position</short>
+        <long>Vertikale Viewport-Position</long>
+      </locale>
+      <locale name="el">
+        <short>Θέσεις Υ Εικονικών Επιφανειών Εργασίας</short>
+        <long>Κάθετες θέσεις εικονικών επιφανειών εργασίας</long>
+      </locale>
+      <locale name="es">
+        <short>Posiciones de Viewport Y</short>
+        <long>Posiciones de viewport verticales</long>
+      </locale>
+      <locale name="eu">
+        <short>Y mahaigain aurkezpen kokapenak</short>
+        <long>Mahaigain aurkezpen bertikalen kokapenak</long>
+      </locale>
+      <locale name="fi">
+        <short>Näkymän Y-sijainnit</short>
+        <long>Työpöytien pystytaso-sijainti</long>
+      </locale>
+      <locale name="fr">
+        <short>Positions du viewport en Y</short>
+        <long>Positions du viewport vertical</long>
+      </locale>
+      <locale name="gl">
+        <short>Posicións Y da Área de Traballo</short>
+        <long>Posicións dos puntos de vista verticais</long>
+      </locale>
+      <locale name="gu">
+        <short>Y દૃશ્યપોર્ટ સ્થાનો</short>
+        <long>ઊભા દૃશ્યપોર્ટ સ્થાનો</long>
+      </locale>
+      <locale name="he">
+        <short>מיקומי משטח ב-Y</short>
+        <long>מיקומי משטח אנכיים</long>
+      </locale>
+      <locale name="hu">
+        <short>Függőleges munkalap pozíció</short>
+        <long>Függőleges munkalap pozíció</long>
+      </locale>
+      <locale name="it">
+        <short>Posizioni Y area visibile</short>
+        <long>Posizioni verticali area visibile</long>
+      </locale>
+      <locale name="ja">
+        <short>Y ビューポート位置</short>
+        <long>垂直ビューポート位置</long>
+      </locale>
+      <locale name="ko">
+        <short>작업 공간 세로축 위치</short>
+        <long>세로 작업 공간 위치</long>
+      </locale>
+      <locale name="nb">
+        <short>Y-posisjoner på arbeidsområde</short>
+        <long>Vertikale posisjoner på arbeidsområde</long>
+      </locale>
+      <locale name="nl">
+        <short>Y viewport positie's</short>
+        <long>Verticale viewport positie</long>
+      </locale>
+      <locale name="or">
+        <short>Y ଦୃଶ୍ଯପୋର୍ଟ ସ୍ଥାନଗୁଡିକ</short>
+        <long>ଦଣ୍ଡରୂପୀ ଦୃଶ୍ଯପୋର୍ଟ ସ୍ଥାନଗୁଡିକ</long>
+      </locale>
+      <locale name="pl">
+        <short>Pozycje wirtualnych pulpitów osi Y</short>
+        <long>Pionowe pozycje wirtualych pulpitów</long>
+      </locale>
+      <locale name="pt">
+        <short>Posições Y do viewport</short>
+        <long>Posições verticais</long>
+      </locale>
+      <locale name="pt_BR">
+        <short>Posições Y da janela de visualização</short>
+        <long>Posições verticais</long>
+      </locale>
+      <locale name="ru">
+        <short>Положения видового окна по Y</short>
+        <long>Вертикальные позиции видовых окон</long>
+      </locale>
+      <locale name="sk">
+        <short>Pozície plochy na osi Y</short>
+        <long>Zvislé pozície pohľadov</long>
+      </locale>
+      <locale name="tr">
+        <short>Y Görünüm Yüzü Konumları</short>
+        <long>Dikey masaüstü konumları</long>
+      </locale>
+      <locale name="uk">
+        <short>Положення видового вікна по Y</short>
+        <long>Вертикальні позиції видових вікон</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>Y视图位置</short>
+        <long>垂直视图位置</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>Y座標視點的位置</short>
+        <long>垂直視點位置</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

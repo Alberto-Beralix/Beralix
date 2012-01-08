@@ -1,0 +1,24 @@
+[Desktop Entry]
+X-AppInstall-Package=libreoffice-math
+X-AppInstall-Popcon=63676
+X-AppInstall-Section=main
+
+Version=1.0
+Terminal=false
+Icon=libreoffice34-math
+Type=Application
+Categories=Office;
+Exec=libreoffice --math %U
+MimeType=application/vnd.oasis.opendocument.formula;application/vnd.sun.xml.math;application/vnd.stardivision.math;
+Name=LibreOffice Math
+GenericName=Formula Editor
+Comment=Create and edit scientific formulas and equations by using Math.
+InitialPreference=5
+X-Ayatana-Desktop-Shortcuts=New
+[New Shortcut Group]
+Name=New Formula
+Exec=libreoffice -math %U
+TargetEnvironment=Unity
+X-KDE-Protocols=file,http,smb,ftp,webdav
+
+X-Ubuntu-Gettext-Domain=app-install-data

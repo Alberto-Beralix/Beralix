@@ -1,0 +1,18 @@
+# This file is distributed under the same license as the Sentinella package.
+# Copyright (C) 2010 Carlos Olmedo Escobar <carlos.olmedo.e@gmail.com>
+# http://standards.freedesktop.org/desktop-entry-spec/latest/index.html
+[Desktop Entry]
+X-AppInstall-Package=sentinella
+X-AppInstall-Popcon=43
+X-AppInstall-Section=universe
+
+Name=Sentinella
+Exec=sentinella -caption "%c" %i
+Icon=sentinella
+GenericName=Action launcher based on system activity
+Terminal=false
+Type=Application
+X-KDE-StartupNotify=true
+Categories=System;Monitor;Qt;
+
+X-Ubuntu-Gettext-Domain=app-install-data

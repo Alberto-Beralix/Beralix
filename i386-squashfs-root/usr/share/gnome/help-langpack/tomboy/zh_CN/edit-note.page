@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="task" id="edit-notes" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#notes"/>
+    <link type="seealso" xref="create-notes"/>
+    <link type="seealso" xref="delete-notes"/>
+    <desc>编辑和修饰您的便笺。</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-05-29" status="candidate"/>
+    <credit type="author">
+      <name>Paul Cutler</name>
+      <email>pcutler@gnome.org</email>
+    </credit>    
+<!--
+    <copyright>
+      <year>2010</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+-->
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>编辑便笺</title>    
+  
+		<p>阿帖便笺允许您用多种方法来设置便笺文本格式，包括撤消和重做，加粗、倾斜、下划线等等。</p>
+		
+   <section id="redo-undo">
+	
+	<title>撤消和重做</title>
+	
+		<p>要撤消最近一次操作，包括输入的文本或设置的格式，请点击工具栏上的 <gui>文本</gui> 图标，然后选择 <gui>撤消</gui> 命令。</p>
+
+		<p>要恢复最近一次的撤消操作，请点击工具栏上的 <gui>文本</gui> 图标，然后选择 <gui>重做</gui> 命令。</p>
+	
+  </section>
+	 
+  <section id="text-format">
+	
+	<title>设置文本格式</title>
+	
+		<p>您可以用便笺文本设置为多种格式，包括添加下划线、加粗或倾斜文本，高亮字词，或者添加删除线。</p>
+  </section>
+	 
+  <section id="text-size">
+	
+	<title>更改文本大小</title>
+	
+		<p>您可以用以下两种方法来设置文本大小。</p>
+		<p>选中您想要设定大小的文本，然后按 <keyseq><key>Ctrl</key><key>+</key></keyseq> 增大字号，或者按 <keyseq><key>Ctrl</key><key>-</key></keyseq> 减小字号。</p>
+		<p>另外，您可以点工具栏上的 <gui>文本</gui> 图标，然后在预置的四个大小中选择小、普通、大、特大。</p>
+	
+  </section>
+	 
+  <section id="bullets">
+	
+	<title>设置项目符号</title>
+	
+		<p>项目符号的创建可以使用键盘，或者工具栏上的<gui>文本</gui>图标。</p>
+		<p>要手动创建一个项目符号，先输入星号键 <key>*</key>，然后输入文本，按回车键后自动转换成项目符号列表，下一行也会自动作为项目列表项。如果您想创建下一级列表，按 <key>回车键</key> 后再接着按 <key>Tab</key> 键。</p>
+		<p>您也可以先选中一行，然后点工具栏上的 <gui>文本</gui> 图标，勾选 <gui>项目符号</gui> 复选框，把文本行转化为符号列表项。</p>
+
+	
+  </section>
+</page>

@@ -1,0 +1,1406 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.26.0">
+<!ENTITY manrevision "2.26.0">
+<!ENTITY date "April 2006">
+<!ENTITY appname "Archive Manager">
+<!ENTITY app "<application>Archive Manager</application>">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file. 
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.GNOME.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Jan 30, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="de">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title><application>Archivmanager</application>-Handbuch</title>
+     <abstract role="description">
+       <para>Sie können den Archivmanager, auch File Roller genannt, zum Erstellen, Betrachten, Verändern oder Entpacken von Archiven verwenden.</para>
+     </abstract>
+    <copyright>
+      <year>2009</year>
+      <holder>Paul Cutler</holder>
+    </copyright>	    
+	<copyright> 
+      <year>2006</year> 
+      <year>2008</year>
+      <holder>Paolo Bacchilega</holder> 
+    </copyright> 
+     <copyright>
+        <year>2003</year>
+        <year>2004</year>
+        <holder>Sun Microsystems</holder> 
+    </copyright>
+    <copyright> 
+      <year>2003</year> 
+      <holder>Paolo Bacchilega</holder> 
+    </copyright> 
+    <copyright> 
+      <year>2002</year> 
+      <holder>Alexander Kirillov</holder> 
+    </copyright><copyright><year>2006</year><holder>Jan Arne Petersen (jpetersen@jpetersen.org)</holder></copyright><copyright><year>2008, 2009</year><holder>Mario Blättermann (mariobl@gnome.org)</holder></copyright> 
+
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher role="maintainer"> 
+      <publishername>GNOME-Dokumentationsprojekt</publishername> 
+    </publisher> 
+
+      <legalnotice id="legalnotice">
+         <para>Das vorliegende Dokument kann gemäß den Bedingungen der GNU Free Documentation License (GFDL), Version 1.1 oder jeder späteren, von der Free Software Foundation veröffentlichten Version ohne unveränderbare Abschnitte sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem <ulink type="help" url="ghelp:fdl">Link</ulink> oder in der mit diesem Handbuch gelieferten Datei COPYING-DOCS.</para>
+          <para>Das vorliegende Handbuch ist Teil einer Reihe von GNOME-Handbüchern, die unter der GFDL verteilt werden. Wenn Sie dieses Handbuch separat verteilen möchten, können Sie dies tun, indem Sie dem Handbuch eine Kopie der Lizenz, wie in Abschnitt 6 der Lizenz beschrieben, hinzufügen.</para>
+ 
+         <para>Bei vielen der von Firmen zur Unterscheidung ihrer Produkte und Dienstleistungen verwendeten Namen handelt es sich um Marken. An den Stellen, an denen derartige Namen in einer GNOME-Dokumentation vorkommen und wenn die Mitglieder des GNOME-Dokumentationsprojekts über diese Marken informiert wurden, sind die Namen in Großbuchstaben oder mit großen Anfangsbuchstaben geschrieben.</para>
+ 
+         <para>DAS DOKUMENT UND MODIFIZIERTE VERSIONEN DES DOKUMENTS WERDEN GEMÄSS DER BEDINGUNGEN DER GNU FREE DOCUMENTATION LICENSE MIT DER FOLGENDEN VEREINBARUNG BEREITGESTELLT: <orderedlist>
+                 <listitem>
+                   <para>DAS DOKUMENT WIRD »WIE VORLIEGEND« GELIEFERT, OHNE JEGLICHE GEWÄHRLEISTUNG, WEDER AUSDRÜCKLICH NOCH STILLSCHWEIGEND, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF, GEWÄHRLEISTUNGEN, DASS DAS DOKUMENT ODER EINE MODIFIZIERTE VERSION DES DOKUMENTS FREI VON HANDELSÜBLICHEN FEHLERN UND FÜR EINEN BESTIMMTEN ZWECK GEEIGNET IST UND KEINE RECHTE DRITTER VERLETZT. JEGLICHES RISIKO IN BEZUG AUF DIE QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER EINER MODIFIZIERTEN VERSION DES DOKUMENTS TRAGEN SIE. SOLLTE SICH EIN DOKUMENT ODER EINE MODIFIZIERTE VERSION DAVON IN IRGENDEINER WEISE ALS FEHLERHAFT ERWEISEN, TRAGEN SIE (NICHT DER URSPRÜNGLICHE VERFASSER, AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR JEGLICHE ERFORDERLICHE SERVICE-, REPARATUR- UND KORREKTURMASSNAHMEN: DIESE BESCHRÄNKUNG DER GEWÄHRLEISTUNG IST WESENTLICHER BESTANDTEIL DIESER LIZENZ. JEDE VERWENDUNG EINES DOKUMENTS ODER EINER MODIFIZIERTEN VERSION DES DOKUMENTS UNTERLIEGT DIESER BESCHRÄNKUNG; UND</para>
+                 </listitem>
+                 <listitem>
+                   <para>UNTER KEINEN UMSTÄNDEN UND GEMÄSS KEINER RECHTSLEHRE, WEDER AUFGRUND VON UNERLAUBTEN HANDLUNGEN (EINSCHLIESSLICH FAHRLÄSSIGKEIT), VERTRÄGEN ODER SONSTIGEM, KANN DER AUTOR, DER URSPRÜNGLICHE VERFASSER, EIN MITWIRKENDER ODER EIN VERTEILER DES DOKUMENTS ODER EINER MODIFIZIERTEN VERSION DES DOKUMENTS ODER EIN LIEFERANT EINER DIESER PARTEIEN VON EINER PERSON FÜR DIREKTE, INDIREKTE, BESONDERE, ZUFÄLLIGE ODER ALS FOLGE AUFGETRETENE SCHÄDEN IRGENDEINER ART, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF, SCHÄDEN DURCH GESCHÄFTSWERTVERLUSTE, ARBEITSAUSFÄLLE, COMPUTERAUSFÄLLE ODER -FUNKTIONSSTÖRUNGEN ODER JEGLICHE ANDERE SCHÄDEN ODER VERLUSTE, DIE DURCH ODER IM ZUSAMMENHANG MIT DER VERWENDUNG DES DOKUMENTS ODER EINER MODIFIZIERTEN VERSION DES DOKUMENTS ENTSTANDEN SIND, SELBST WENN DIESE PARTEI ÜBER MÖGLICHE SCHÄDEN INFORMIERT WORDEN SEIN SOLLTE, HAFTBAR GEMACHT WERDEN.</para>
+                 </listitem>
+           </orderedlist></para>
+   </legalnotice>
+  <!-- This file contains link to license for the
+   documentation (GNU FDL), and other legal stuff such as "NO
+   WARRANTY" statement. Please do not change any of this. -->
+
+    <authorgroup> 
+       <author> 
+         <firstname>Sun</firstname>
+         <surname>GNOME-Dokumentationsteam</surname>
+         <affiliation> 
+            <orgname>Sun Microsystems</orgname>
+        </affiliation>
+      </author>
+      <author> 
+	<firstname>Paolo</firstname> 
+	<surname>Bacchilega</surname> 
+	<affiliation> 
+	  <orgname>GNOME-Dokumentationsprojekt</orgname> 
+	</affiliation> 
+      </author> 
+      <author> 
+	<firstname>Alexander</firstname> 
+	<surname>Kirillov</surname> 
+	<affiliation> 
+	  <orgname>GNOME-Dokumentationsprojekt</orgname> 
+	  <address> <email>kirillov@math.sunysb.edu</email> </address> 
+	</affiliation> 
+      </author> 
+      <author>
+        <firstname>Paul</firstname>
+        <surname>Cutler</surname>
+        <affiliation>
+          <orgname>GNOME-Dokumentationsprojekt</orgname>
+          <address><email>pcutler@foresightlinux.org</email></address>
+        </affiliation>
+      </author>	  
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review">
+		<ulink type="techreview" url="http://bugzilla.gnome.org/show_bug.cgi?id=575419"/>
+	</releaseinfo>
+
+         <revhistory>
+                <revision>
+                  <revnumber>Archivmanager-Handbuch V2.26.0</revnumber>
+                  <date>März 2009</date>
+                  <revdescription>
+                         <para role="author">Paul Cutler</para>
+                         <para role="publisher">GNOME-Dokumentationsprojekt</para>
+                  </revdescription>
+                </revision>
+				
+                <revision>
+                  <revnumber>Archivmanager-Handbuch V2.24.0</revnumber>
+                  <date>Juli 2008</date>
+                  <revdescription>
+                         <para role="author">Paolo Bacchilega</para>
+                         <para role="publisher">GNOME-Dokumentationsprojekt</para>
+                  </revdescription>
+                </revision>
+				
+                <revision>
+                  <revnumber>Archivmanager-Handbuch V2.6</revnumber>
+                  <date>April 2006</date>
+                  <revdescription>
+                         <para role="author">Paolo Bacchilega</para>
+                         <para role="publisher">GNOME-Dokumentationsprojekt</para>
+                  </revdescription>
+                </revision>
+
+                <revision>
+                  <revnumber>File Roller-Handbuch V2.5</revnumber>
+                  <date>März 2004</date>
+                  <revdescription>
+                         <para role="author">Sun GNOME Dokumentationsteam</para>
+                         <para role="publisher">GNOME-Dokumentationsprojekt</para>
+                  </revdescription>
+                </revision>
+                <revision>
+                  <revnumber>File Roller-Handbuch V2.4</revnumber>
+                  <date>Februar 2004</date>
+                  <revdescription>
+                         <para role="author">Sun GNOME Dokumentationsteam</para>
+                         <para role="publisher">GNOME-Dokumentationsprojekt</para>
+                  </revdescription>
+                </revision>
+                <revision>
+                  <revnumber>File Roller-Handbuch V2.3</revnumber>
+                  <date>August 2003</date>
+                  <revdescription>
+                         <para role="author">Sun GNOME Dokumentationsteam</para>
+                         <para role="publisher">GNOME-Dokumentationsprojekt</para>
+                  </revdescription>
+                </revision>
+                <revision>
+                  <revnumber>File Roller-Handbuch V2.2</revnumber>
+                  <date>Juni 2003</date>
+                  <revdescription>
+                         <para role="author">Sun GNOME Dokumentationsteam</para>
+                         <para role="publisher">GNOME-Dokumentationsprojekt</para>
+                  </revdescription>
+                </revision>
+                <revision>
+                  <revnumber>File Roller-Handbuch V2.1</revnumber>
+                  <date>Januar 2003</date>
+                  <revdescription>
+                         <para role="author">Paolo Bacchilega</para>                         
+                         <para role="publisher">GNOME-Dokumentationsprojekt</para>
+                  </revdescription>
+                </revision>
+                <revision>
+                  <revnumber>File Roller-Handbuch V2.0</revnumber>
+                  <date>Juni 2002</date>
+                  <revdescription>
+                         <para role="author">Alexander Kirillov</para>                         
+                         <para role="publisher">GNOME-Dokumentationsprojekt</para>
+                  </revdescription>
+                </revision>
+         </revhistory>
+
+    <releaseinfo>In diesem Handbuch wird Version 2.26.0 des Archivmanagers beschrieben.</releaseinfo> 
+    <legalnotice> 
+        <title>Rückmeldungen</title>
+        <para>Wenn Sie Fehler finden oder Vorschläge zur <application>Archivmanager</application>-Anwendung oder diesem Handbuch haben, befolgen Sie bitte die Anweisungen auf der <ulink url="ghelp:gnome-feedback" type="help">GNOME-Seite für Rückmeldungen</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+  </articleinfo> 
+  <indexterm zone="index"> 
+    <primary>File Roller</primary> 
+  </indexterm> 
+  <indexterm zone="index"> 
+    <primary>file-roller</primary> 
+  </indexterm>
+  <indexterm zone="index"> 
+    <primary>Archivieren</primary> 
+  </indexterm>
+  <indexterm zone="file-roller-add-files"> 
+    <primary>Archive</primary> 
+    <secondary>Dateien einfügen in</secondary>
+  </indexterm> 
+  <indexterm zone="file-roller-delete-files"> 
+    <primary>Archive</primary> 
+    <secondary>Dateien löschen aus</secondary>
+  </indexterm> 
+  <indexterm zone="file-roller-open"> 
+    <primary>Archive</primary> 
+    <secondary>öffnen</secondary>
+  </indexterm> 
+  <indexterm zone="file-roller-view"> 
+    <primary>Archive</primary> 
+    <secondary>anzeigen</secondary>
+  </indexterm> 
+  <indexterm zone="file-roller-extract"> 
+    <primary>Archive</primary> 
+    <secondary>entpacken</secondary>
+  </indexterm> 
+  <indexterm zone="file-roller-create"> 
+    <primary>Archive</primary> 
+    <secondary>erstellen</secondary>
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="file-roller-intro"> 
+    <title>Einführung</title> 
+    <para>Die <application>Archivmanager</application>-Anwendung dient zum Erstellen, Anzeigen, Ändern und Entpacken von Archiven. Ein Archiv ist eine Datei, die als "Behälter" für andere Dateien fungiert. Archive können zahlreiche Dateien, Ordner sowie Unterordner enthalten, die normalerweise in komprimierter Form vorliegen.</para>
+    <para>Der <application>Archivmanager</application> stellt lediglich eine grafische Benutzeroberfläche dar. Die Archivoperationen selbst werden von Befehlszeilendienstprogrammen wie <command>tar</command>, <command>gzip</command> und <command>bzip2</command> durchgeführt.</para>
+    <para>Wenn die entsprechenden Befehlszeilentools auf Ihrem System installiert sind, bietet der <application>Archivmanager</application> Unterstützung für die in der nachfolgenden Tabelle aufgeführten Archivformate.</para> 
+      <informaltable frame="all">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="COLSPEC0" colwidth="50*"/>
+          <colspec colname="COLSPEC1" colwidth="50*"/>
+          <thead>
+            <row valign="top">
+              <entry colname="COLSPEC0">
+                <para>Format</para></entry>
+              <entry colname="COLSPEC1" align="left">
+                <para>Dateinamenerweiterung</para></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row valign="top">
+              <entry><para>7-Zip-Archiv</para></entry>
+              <entry align="left"><para><filename>.7z</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>WinAce-Archiv</para></entry>
+              <entry align="left"><para><filename>.ace</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>ALZip-Archiv</para></entry>
+              <entry align="left"><para><filename>.alz</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>AIX-Archiv (kleiner Index)</para></entry>
+              <entry align="left"><para><filename>.ar</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>ARJ-Archiv</para></entry>
+              <entry align="left"><para><filename>.arj</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Cabinet-Datei</para></entry>
+              <entry align="left"><para><filename>.cab</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>UNIX-CPIO-Archiv</para></entry>
+              <entry align="left"><para><filename>.cpio</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Linux-Debian-Paket</para></entry>
+              <entry align="left"><para><filename>.deb</filename></para></entry>
+            </row>            
+            <row valign="top">
+              <entry><para>CD-Image im ISO-9660-Format</para></entry>
+              <entry align="left"><para><filename>.iso</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Java-Archiv</para></entry>
+              <entry align="left"><para><filename>.jar</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Java-Enterprise-Archiv</para></entry>
+              <entry align="left"><para><filename>.ear</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Java-Webarchiv</para></entry>
+              <entry align="left"><para><filename>.war</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>LHA-Archiv</para></entry>
+              <entry align="left"><para><filename>.lha</filename> oder <filename>.lzh</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>WinRAR-komprimiertes Archiv</para></entry>
+              <entry align="left"><para><filename>.rar</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Im RAR-Format archiviertes Comic-Buch</para></entry>
+              <entry align="left"><para><filename>.cbr</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Linux-RPM-Paket</para></entry>
+              <entry align="left"><para><filename>.rpm</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Unkomprimiertes tar-Archiv</para></entry>
+              <entry align="left"><para><filename>.tar</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Mit <command>bzip</command> komprimiertes tar-Archiv</para></entry>
+              <entry align="left"><para><filename>.tar.bz</filename> oder <filename>.tbz</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Mit <command>bzip2</command> komprimiertes tar-Archiv</para></entry>
+              <entry align="left"><para><filename>.tar.bz2</filename> oder <filename>.tbz2</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Mit <command>gzip</command> komprimiertes tar-Archiv</para></entry>
+              <entry align="left"><para><filename>.tar.gz</filename> oder <filename>.tgz</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Mit <command>lzip</command> komprimiertes tar-Archiv</para></entry>
+              <entry align="left"><para><filename>.tar.lz</filename> oder <filename>.tlz</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Mit <command>lzop</command> komprimiertes tar-Archiv</para></entry>
+              <entry align="left"><para><filename>.tar.lzo</filename> oder <filename>.tzo</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Mit <command>compress</command> komprimiertes tar-Archiv</para></entry>
+              <entry align="left"><para><filename>.tar.Z</filename> oder <filename>.taz</filename></para></entry>
+            </row>
+             <row valign="top">
+              <entry><para>Mit <command>7zip</command> komprimiertes tar-Archiv</para></entry>
+              <entry align="left"><para><filename>.tar.7z</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Stuffit-Archive</para></entry>
+              <entry align="left"><para><filename>.bin</filename> oder <filename>.sit</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>PKZIP- oder Winzip-Archiv</para></entry>
+              <entry align="left"><para><filename>.zip</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Comic-Buch als ZIP-Archiv</para></entry>
+              <entry align="left"><para><filename>.cbz</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Zoo-Archiv</para></entry>
+              <entry align="left"><para><filename>.zoo</filename></para></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    <para>Das auf UNIX- und Linux-Systemen am häufigsten verwendete Archivformat ist das mit <command>gzip</command> oder <command>bzip2</command> komprimierte tar-Archiv.</para>  
+    <para>Auf Microsoft-Windows-Systemen werden Archive meistens mit <application>PKZIP</application> oder <application>WinZip</application> erstellt.</para>
+    <sect2 id="file-roller-intro-nonarchive">
+      <title>Komprimierte Nicht-Archivdateien</title> 
+      <para>Eine komprimierte Nicht-Archivdatei entsteht, wenn Sie eine normale Datei, also kein Archiv, mit <command>bzip2</command>, <command>gzip</command>, <command>lzip</command>, <command>lzop</command>, <command>compress</command> oder <command>rzip</command> komprimieren. So entsteht beispielsweise die Datei <filename>datei.txt.gz</filename>, wenn Sie die Datei <filename>datei.txt</filename> mit <command>gzip</command> komprimieren.</para>
+      <para>Mit dem <application>Archivmanager</application> können Sie eine komprimierte Nicht-Archivdatei erstellen, öffnen und entpacken.</para> 
+    </sect2>
+  </sect1>
+
+<!-- ============= Getting Started =========================== -->
+  <sect1 id="file-roller-get-start">
+    <title>Erste Schritte</title>
+    <para>In diesem Abschnitt erfahren Sie, wie der <application>Archivmanager</application> gestartet wird und erhalten eine Beschreibung der Benutzeroberfläche des <application>Archivmanagers</application>.</para>
+
+<!-- ============= To Start File Roller ============================ -->
+         <sect2 id="file-roller-to-start">
+                <title>So starten Sie den <application>Archivmanager</application></title>
+                <para>Sie können den <application>Archivmanager</application> auf eine der folgenden Weisen starten:</para>
+                <variablelist>
+                <varlistentry>
+                <term><guimenu>Anwendungs</guimenu>-Menü</term>
+                <listitem>
+                <para>Wählen Sie <menuchoice><guisubmenu>Zubehör</guisubmenu><guimenuitem>Archivmanager</guimenuitem></menuchoice>.</para>
+                </listitem>
+                </varlistentry>
+                <varlistentry>
+                <term>Befehlszeile</term>
+                <listitem>
+                <para>Führen Sie den Befehl <command>file-roller</command> aus.</para>
+                </listitem>
+                </varlistentry>
+                </variablelist>
+        </sect2>
+
+         <sect2 id="file-roller-when-start">
+                <title>Beim Start des <application>Archivmanagers</application></title>
+                <para>Wenn Sie den <application>Archivmanager</application> starten, wird folgendes Fenster angezeigt:</para>
+
+                <figure id="file-roller-FIG-main-window">
+                  <title><application>Archivmanager</application>-Fenster</title>
+                  <screenshot>
+                         <mediaobject>
+                                <imageobject>
+                                  <imagedata fileref="figures/file-roller_main_window.png" format="PNG"/>
+                                         </imageobject>
+                                <textobject> <phrase>Zeigt das Hauptfenster des Archivmanagers.</phrase>
+                                </textobject>
+                        </mediaobject>
+                  </screenshot>
+                </figure>
+
+                <para>Das <application>Archivmanager</application>-Fenster enthält die folgenden Elemente:</para>
+                <variablelist>
+                  <varlistentry> <term>Menüleiste</term>
+                         <listitem>
+                                <para>Die Menüs in der Menüleiste enthalten alle Befehle, die Sie zum Arbeiten mit Archiven im <application>Archivmanager</application> benötigen.</para>
+                         </listitem>
+                  </varlistentry>
+                  <varlistentry> <term>Werkzeugleiste</term>
+                         <listitem>
+                                <para>Die Werkzeugleiste enthält einen Teil der Befehle, die Sie über die Menüleiste aufrufen können. Der <application>Archivmanager</application> zeigt die Werkzeugleiste standardmäßig an. Zum Ausblenden der Werkzeugleiste wählen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Werkzeugleiste</guimenuitem></menuchoice>. Um die Werkzeugleiste wieder einzublenden, wählen Sie erneut <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Werkzeugleiste</guimenuitem></menuchoice>.</para>
+                         </listitem>
+                  </varlistentry>
+                  <varlistentry> <term>Ordnerleiste</term>
+                         <listitem>
+                                <para>Die Ordnerleiste ermöglicht es, sich zwischen den Ordnern eines Archivs fortzubewegen. Der <application>Archivmanager</application> zeigt die Ordnerleiste nur in der Ordneransicht an. Weitere Informationen finden Sie in <xref linkend="file-roller-view-type-folder"/>.</para>
+                         </listitem>
+                  </varlistentry>
+                  <varlistentry> <term>Anzeigebereich</term>
+                         <listitem>
+                                <para>Im Anzeigebereich sehen Sie den Inhalt des Archivs.</para>
+                         </listitem>
+                  </varlistentry>
+                  <varlistentry> <term>Statusleiste</term>
+                         <listitem>
+                                <para>Die Statusleiste zeigt Informationen über die aktuelle Aktivität des <application>Archivmanagers</application> und dazugehörige Informationen über den Archivinhalt an. Der <application>Archivmanager</application> zeigt die Statusleiste standardmäßig an. Zum Ausblenden der Statusleiste wählen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Statusleiste</guimenuitem></menuchoice>. Um die Statusleiste wieder auszublenden, wählen Sie erneut <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Statusleiste</guimenuitem></menuchoice>.</para>
+                         </listitem>
+                  </varlistentry>
+                </variablelist>
+                <para>Wenn Sie mit der rechten Maustaste auf das <application>Archivmanager</application>-Fenster klicken, wird ein Kontextmenü eingeblendet. Das Kontextmenü enthält die gängigsten Archivbefehle für die jeweilige Situation.</para>
+
+     <sect3 id="file-roller-bookmarks">
+        <title>Durchsuchen des Dateisystems</title>
+        <para>Verschiedene <application>Archivmanager</application>-Dialoge (<guilabel>Neu</guilabel>, <guilabel>Öffnen</guilabel>, <guilabel>Entpacken</guilabel>,...) ermöglichen Ihnen, Ihren Computer nach Dateien und Ordnern zu durchsuchen. Ziehen Sie das <ulink type="help" url="ghelp:user-guide?filechooser-open">Desktop-Benutzerhandbuch</ulink> zu Rate, um mehr über die Benutzung dieser Datei-Dialoge zu erfahren.</para>
+        <para>Sie können auch den Abschnitt <ulink type="help" url="ghelp:user-guide?nautilus-bookmarks">Lesezeichen</ulink> des Desktop-Benutzerhandbuchs zu Rate ziehen, um zu erfahren, wie Sie das <guilabel>Orte</guilabel>-Seitenfenster verwenden können, um Ihre bevorzugten Orte zu erreichen.</para>
+     </sect3>
+   </sect2>
+</sect1>
+
+
+
+<!-- ======= Working with archives ============= --> 
+
+<sect1 id="file-roller-working">
+      <title>Arbeiten mit Archiven</title>
+      <para>Bei der Bearbeitung von Archiven mit dem <application>Archivmanager</application> werden alle Änderungen direkt auf der Festplatte gespeichert. Wenn Sie beispielsweise eine Datei aus einem Archiv löschen, dann löscht der <application>Archivmanager</application> diese, sobald Sie auf <guibutton>OK</guibutton> klicken. In diesem Verhalten unterscheidet sich die Anwendung von den meisten anderen, bei welchen Änderungen erst dann auf der Festplatte gespeichert werden, wenn Sie entweder die Anwendung beenden oder den Menübefehl <guimenuitem>Speichern</guimenuitem> wählen.</para>
+      <para>Bei sehr umfangreichen Archiven oder langsamen Systemen können einige Aktionen viel Zeit beanspruchen. Sie können die aktuelle Aktion mit der Taste <keycap>Esc</keycap> abbrechen. Alternativ wählen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Stopp</guimenuitem></menuchoice>, oder klicken Sie auf <guibutton>Stopp</guibutton> in der Werkzeugleiste.</para>      
+      <para>Im <application>Archivmanager</application> lässt sich eine Aktion auf verschiedene Arten durchführen. Beispielsweise können Sie ein Archiv auf diese Arten öffnen: <informaltable frame="all"><tgroup cols="2" colsep="1" rowsep="1"><colspec colname="COLSPEC0" colwidth="50*"/><colspec colname="COLSPEC1" colwidth="50*"/><thead>
+                        <row valign="top">
+                          <entry colname="COLSPEC0">
+                            <para>Komponente der Benutzeroberfläche</para></entry>
+                          <entry colname="COLSPEC1" align="left"> 
+                            <para>Aktion</para></entry>
+                        </row>
+                      </thead><tbody>
+                        <row valign="top">               
+                          <entry><para>Fenster</para></entry>
+                          <entry><para>Ziehen Sie das Archiv aus einer anderen Anwendung, wie dem Dateimanager, in das Hauptfenster des <application>Archivmanagers</application>.</para></entry>
+                        </row>
+                        <row valign="top">               
+                          <entry><para>Menüleiste</para></entry>
+                          <entry><para>Wählen Sie <menuchoice><guimenu>Archiv</guimenu><guimenuitem>Öffnen</guimenuitem></menuchoice>.</para>
+           <para>Wenn Sie das Archiv kürzlich geöffnet hatten, wird es im Menü <menuchoice><guimenu>Archiv</guimenu><guimenuitem>Zuletzt geöffnet</guimenuitem></menuchoice> aufgelistet.</para> 
+</entry>
+                        </row>
+                        <row valign="top">               
+                          <entry><para>Werkzeugleiste</para></entry>
+                          <entry><para>Klicken Sie auf den Knopf <guibutton>Öffnen</guibutton> in der Symbolleiste.</para>
+           <para>Wenn Sie das Archiv kürzlich geöffnet haben, klicken Sie auf den nach unten zeigenden Pfeil neben dem Knopf <guibutton>Öffnen</guibutton> in der Werkzeugleiste.</para></entry>
+                        </row>
+                        <row valign="top">               
+                          <entry><para>Rechte Maustaste und Kontextmenü</para></entry>
+                          <entry><para>Klicken Sie mit der rechten Maustaste auf das Archiv, und wählen Sie <guilabel>Öffnen</guilabel> im Kontextmenü.</para></entry>
+                        </row>
+                        <row valign="top">               
+                          <entry><para>Tastenkombinationen</para></entry>
+                          <entry><para>Drücken Sie <keycombo><keycap>Strg</keycap><keycap>O</keycap></keycombo>.</para></entry>
+                        </row>
+                      </tbody></tgroup></informaltable></para>
+      <para>In diesem Handbuch wird die Arbeitsweise über die Menüleiste beschrieben.</para>
+
+    <sect2 id="file-roller-pattern">
+      <title>Dateinamenmuster</title>
+      <para>Der <application>Archivmanager</application> ermöglicht Ihnen mehrere Dateien gleichzeitig hinzuzufügen, zu entpacken oder zu löschen. Um eine Aktion auf alle Dateien, die einem bestimmten Muster entsprechen, anzuwenden, geben Sie das Muster in das Textfeld ein. Die Muster dürfen Standardplatzhalter, wie <keycap>*</keycap> für beliebige Zeichenfolgen oder <keycap>?</keycap> für beliebige einzelne Zeichen, enthalten. Sie können mehrere durch Komma getrennte Muster eingeben. Der <application>Archivmanager</application> wendet die Aktion auf alle Dateien an, die mit mindestens einem dieser Muster übereinstimmen. Die Beispiele in der folgenden Tabelle zeigen, wie Sie mithilfe von Dateinamenmustern Dateien auswählen können.</para>
+      <informaltable frame="all">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="COLSPEC0" colwidth="50*"/>
+          <colspec colname="COLSPEC1" colwidth="50*"/>
+          <thead>
+            <row valign="top">
+              <entry colname="COLSPEC0">
+                <para>Muster</para></entry>
+              <entry colname="COLSPEC1" align="left"> 
+                <para>Übereinstimmende Dateien</para></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row valign="top">               
+              <entry><para><filename>*</filename></para></entry>
+              <entry align="left"><para>Alle Dateien</para></entry>
+            </row>
+            <row valign="top">               
+              <entry><para><filename>*.tar*</filename></para></entry>
+              <entry align="left"><para>Alle Dateien mit der Erweiterung <filename>tar</filename>, einschließlich solcher, bei welchen auf die Erweiterung <filename>tar</filename> eine beliebige Zeichenfolge folgt, wie z. B. <filename>filename.tar.gz</filename></para></entry>
+            </row>
+            <row valign="top">               
+              <entry><para><filename>*.jpg; *.jpeg</filename></para></entry>
+              <entry align="left"><para>Alle Dateien mit der Erweiterung <filename>jpg</filename> und alle Dateien mit der Erweiterung <filename>jpeg</filename></para></entry>
+            </row>
+            <row valign="top">               
+              <entry><para><filename>file?.gz</filename></para></entry>
+              <entry align="left"><para>Alle Dateien mit der Erweiterung <filename>gz</filename>, die den Dateinamen »file«, gefolgt von einem einzelnen Zeichen haben, beispielsweise <filename>file2.gz</filename> oder <filename>filex.gz</filename>. </para></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+
+<!-- ======= To open an archive ============= --> 
+
+<sect2 id="file-roller-open">
+      <title>So öffnen Sie ein Archiv</title>
+      <para>Gehen Sie wie folgt vor, um ein Archiv zu öffnen: <orderedlist>
+          <listitem>
+           <para>Wählen Sie <menuchoice><guimenu>Archiv</guimenu><guimenuitem>Öffnen</guimenuitem></menuchoice>, um das Dialogfeld <guilabel>Öffnen</guilabel> aufzurufen. Alternativ drücken Sie <keycombo><keycap>Strg</keycap><keycap>O</keycap></keycombo>, oder klicken auf  <guibutton>Öffnen</guibutton> in der Werkzeugleiste.</para> 
+          </listitem>
+          <listitem>
+           <para>Wählen Sie das zu öffnende Archiv aus.</para> 
+          </listitem>
+          <listitem>
+           <para>Klicken Sie auf <guibutton>Öffnen</guibutton>.</para> 
+          </listitem>
+        </orderedlist></para>
+      <para>Der <application>Archivmanager</application> ermittelt automatisch den Archivtyp und zeigt Folgendes an: <itemizedlist>
+          <listitem>
+            <para>den Archivnamen in der Titelleiste des Fensters</para>
+          </listitem>
+          <listitem>
+            <para>den Archivinhalt im Anzeigebereich</para>
+          </listitem>
+          <listitem>
+            <para>die Gesamtanzahl der Dateien und Ordner (Objekte) im Archiv sowie die Größe des unkomprimierten Archivs in der Statusleiste</para>
+          </listitem>
+        </itemizedlist></para>
+      <para>Um ein weiteres Archiv zu öffnen, wählen Sie wieder <menuchoice><guimenu>Archiv</guimenu><guimenuitem>Öffnen</guimenuitem></menuchoice>. Der <application>Archivmanager</application> öffnet jedes Archiv in einem neuen Fenster. Sie können kein weiteres Archiv im gleichen Fenster öffnen.</para>
+      <para>Wenn Sie versuchen, ein Archiv zu öffnen, das in einem für den <application>Archivmanager</application> unbekannten Format erstellt wurde, zeigt die Anwendung eine Fehlermeldung an. Unter <xref linkend="file-roller-intro"/> finden Sie eine Liste der unterstützten Formate.</para>
+  </sect2>
+
+<!-- ======= Selecting files in an archive  ============= --> 
+    <sect2 id="file-roller-select-files">
+      <title>So wählen Sie Dateien in einem Archiv aus</title>
+    <para>Mit <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Alle auswählen</guimenuitem></menuchoice> oder Drücken von <keycombo><keycap>Strg</keycap><keycap>A</keycap></keycombo> wählen Sie alle Dateien im Archiv aus.</para>
+      <para>Um die Auswahl aller Dateien im Archiv aufzuheben, wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Alle abwählen</guimenuitem></menuchoice> oder drücken Sie <keycombo><keycap>Umschalt</keycap><keycap>Strg</keycap><keycap>A</keycap></keycombo>.</para>
+    </sect2>
+
+  <!-- =========== Extracting Files From an Archive ==================== -->
+
+  <sect2 id="file-roller-extract"> 
+    <title>So entpacken Sie Dateien aus einem Archiv</title> 
+    <para>Gehen Sie wie folgt vor, um Dateien aus einem offenen Archiv zu entpacken: <orderedlist>
+        <listitem><para>Wählen Sie die Dateien aus, die Sie entpacken wollen. Um mehrere Dateien auszuwählen, halten Sie die <keycap>Strg</keycap>-Taste gedrückt und klicken Sie die Dateien an, die Sie auswählen wollen.</para>
+        </listitem>
+        <listitem><para>Wählen Sie <menuchoice><guimenu>Archiv</guimenu><guimenuitem>Entpacken</guimenuitem></menuchoice>, um das Dialogfeld <guilabel>Entpacken</guilabel> aufzurufen. Alternativ klicken Sie auf <guibutton>Entpacken</guibutton> in der Wekzeugleiste.</para>
+        </listitem>
+        <listitem><para>Wählen Sie den Ordner aus, wo der<application>Archivmanager</application> die Dateien entpacken soll.</para>
+        </listitem>
+        <listitem><para>Wählen Sie die benötigten Extraktionsoptionen aus. Weitere Informationen zu den Extraktionsoptionen finden Sie in <xref linkend="file-roller-extract-options"/>.</para>
+        </listitem>
+        <listitem><para>Klicken Sie auf <guibutton>Entpacken</guibutton>.</para>
+        <note>
+          <para>Wenn das Archiv nur verschlüsselte Dateien enthält und Sie das Passwort nicht eingegeben haben, dann bittet der <application>Archivmanager</application> um die Eingabe des Passworts.</para>
+          <para>Wenn das Archiv verschlüsselte und unverschlüsselte Dateien enthält und Sie das Passwort nicht eingeben haben, dann fragt der <application>Archivmanager</application> nicht nach einem Passwort. Stattdessen entpackt der <application>Archivmanager</application> nur die unverschlüsselten Dateien aus dem Archiv.</para>
+          <para>Weitere Informationen zu Passwörtern finden Sie in <xref linkend="file-roller-encrypt-files"/>.</para>
+        </note>
+        </listitem>
+        </orderedlist></para>
+      <para>Der <application>Archivmanager</application> bietet auch die Möglichkeit, Dateien aus einem Archiv in einem Dateimanager-Fenster zu entpacken, ohne dazu ein separates <application>Archivmanager</application>-Fenster öffnen zu müssen. Weitere Informationen finden Sie in <xref linkend="file-roller-fmgr"/>.</para>
+    <para>Beim Entpacken wird eine <emphasis>Kopie</emphasis> der angegebenen Dateien im Archiv hergestellt. Die entpackten Dateien weisen dieselben Berechtigungen und dasselbe Änderungsdatum wie die in das Archiv aufgenommenen Originaldateien auf.</para>
+    <para>Der Archivinhalt wird beim Entpacken nicht geändert. Wie Sie Dateien aus einem Archiv löschen, erfahren Sie in <xref linkend="file-roller-delete-files"/>.</para>
+  </sect2>
+    
+<!-- ======= Closing the Archive ============= --> 
+  <sect2 id="file-roller-archive-close">
+    <title>So schließen Sie ein Archiv</title>
+    <para>Wenn Sie das aktuelle Archiv und das <application>Archivmanager</application>-Fenster schließen möchten, wählen Sie <menuchoice><guimenu>Archiv</guimenu><guimenuitem>Beenden</guimenuitem></menuchoice>, oder drücken Sie <keycombo><keycap>Strg</keycap><keycap>W</keycap></keycombo>.</para>
+    <note>
+      <para>Es gibt keine Möglichkeit, das aktuelle Archiv zu schließen, und dabei das <application>Archivmanager</application>-Anwendungsfenster geöffnet zu lassen.</para>
+    </note>
+  </sect2>
+</sect1>
+
+
+<!-- =============  Creating Archives ============================= -->
+<sect1 id="file-roller-creating"> 
+    <title>Erstellen von Archiven</title> 
+    <para>Mit dem <application>Archivmanager</application> können Sie nicht nur bereits vorhandene Archive öffnen, sondern auch neue Archive erstellen.</para>
+    <sect2 id="file-roller-create"> 
+    <title>So erstellen Sie ein Archiv</title> 
+    <para>Gehen Sie wie folgt vor, um ein Archiv zu erstellen: <orderedlist>
+        <listitem>
+          <para>Wählen Sie <menuchoice><guimenu>Archiv</guimenu><guimenuitem>Neu</guimenuitem></menuchoice>, um das Dialogfeld <guilabel>Neu</guilabel> aufzurufen. Alternativ drücken Sie <keycombo><keycap>Strg</keycap><keycap>N</keycap></keycombo>, oder klicken Sie auf <guibutton>Neu</guibutton> in der Werkzeugleiste.</para>
+        </listitem>
+        <listitem>
+          <para>Geben Sie den Ordner an, wo der <application>Archivmanager</application> das neue Archiv anlegen soll. Wählen Sie dazu einen Pfad aus der Einblendliste <guilabel>In Order Speichern</guilabel>. Wenn der Ordner in dem Drehfeld nicht vorhanden ist, klicken Sie auf <guilabel>Ordner-Browser</guilabel> und wählen Sie den Ordner aus. Sie können den gewünschten Pfad auch in das Textfeld <guilabel>Name</guilabel> eingeben.</para>
+        </listitem>
+        <listitem>
+          <para>Geben Sie den Namen des neuen Archivs einschließlich Dateinamenerweiterung in das Textfeld <guilabel>Name</guilabel> ein. Alternativ können Sie einen Archivnamen ohne Dateinamenerweiterung eingeben und dann den Archivtyp im Aufklappmenü <guilabel>Archivtyp</guilabel> angeben. Dadurch wird die Dateinamenerweiterung automatisch hinzugefügt.</para>
+        </listitem>
+        <listitem><para>Wählen Sie die benötigten Erzeugungsoptionen durch anklicken von <guilabel>Weitere Optionen</guilabel> aus. Weitere Informationen zu den Erzeugungsoptionen finden Sie in <xref linkend="file-roller-create-options"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf <guibutton>Neu</guibutton>. Der <application>Archivmanager</application> erzeugt ein leeres Archiv, schreibt es aber noch nicht auf die Festplatte.</para>
+        </listitem>
+        <listitem>
+          <para>Fügen Sie gemäß der Anleitung unter <xref linkend="file-roller-add-files"/> Dateien in das neue Archiv ein. <note>
+                  <para>Der <application>Archivmanager</application> schreibt erst dann ein neues Archiv auf die Festplatte, wenn das Archiv mindestens eine Datei enthält. Wenn Sie ein neues Archiv erstellen und den <application>Archivmanager</application> beenden, ohne zuvor Dateien in das Archiv eingefügt zu haben, löscht der <application>Archivmanager</application> das Archiv.</para>
+                </note></para>
+        </listitem>
+      </orderedlist></para>
+</sect2>
+
+    <!-- ======= Adding files to an archive  ============= --> 
+  <sect2 id="file-roller-add-files">
+    <title>So fügen Sie Dateien in ein Archiv ein</title>
+    <para>Gehen Sie wie folgt vor, um Dateien in ein Archiv einzufügen: <orderedlist>
+         <listitem>
+           <para>Entscheiden Sie, wo im Archiv Sie die Dateien hinzufügen möchten, und öffnen Sie dann den Ort im Archiv.</para> 
+         </listitem>
+         <listitem>
+           <para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Dateien hinzufügen</guimenuitem></menuchoice>, um das Dialogfeld <guilabel>Dateien hinzufügen</guilabel> aufzurufen, oder klicken Sie auf <guibutton>Dateien hinzufügen</guibutton> in der Werkzeugleiste.</para> 
+         </listitem>
+         <listitem>
+           <para>Wählen Sie die hinzuzufügenden Dateien aus. Um mehrere Dateien auszuwählen, halten Sie beim Anklicken der Dateien die <keycap>Strg</keycap>-Taste gedrückt. </para> 
+         </listitem>
+         <listitem>
+           <para>Klicken Sie auf <guibutton>Hinzufügen</guibutton>. Der <application>Archivmanager</application> fügt die Dateien in den aktuell geöffneten Ordner des Archivs ein.</para> 
+         </listitem>
+      </orderedlist></para>
+    <para>Mit dem Dialogfeld <guilabel>Dateien hinzufügen</guilabel> können Sie keine Ordner in das Archiv einfügen. Um Ordner einzufügen, folgen Sie der Anleitung unter <xref linkend="file-roller-add-folder"/>.</para>
+    <para>Das Dialogfeld <guilabel>Dateien hinzufügen</guilabel> bietet die <guilabel>Nur hinzufügen, falls neuer</guilabel>-Option, weitere Informationen zu dieser Option finden Sie in <xref linkend="file-roller-add-options"/>.</para>
+    <para>Außerdem können Sie Dateien in ein Archiv einfügen, das in einem Dateimanager-Fenster geöffnet ist, ohne dazu ein separates <application>Archivmanager</application>-Fenster öffnen zu müssen. Weitere Informationen finden Sie in <xref linkend="file-roller-fmgr"/>.</para>
+    <para>Bei diesem Hinzufügevorgang wird eine <emphasis>Kopie</emphasis> der angegebenen Dateien oder Ordner in das Archiv aufgenommen. Der <application>Archivmanager</application> entfernt die Originaldateien dabei nicht. Sie bleiben unverändert im Dateisystem zurück. Die eingefügten Kopien weisen dieselben Berechtigungen und dasselbe Änderungsdatum wie die Originaldateien auf.</para>
+    </sect2>
+
+<!-- ======= Adding files - Adding folder  ============= --> 
+    <sect2 id="file-roller-add-folder">
+      <title>So fügen Sie einen Ordner in ein Archiv ein</title>
+    <para>Gehen Sie wie folgt vor, um einen Ordner in ein Archiv einzufügen: <orderedlist>
+         <listitem>
+           <para>Entscheiden Sie, wo im Archiv Sie die Dateien hinzufügen möchten, und öffnen Sie dann den Ort im Archiv.</para>
+         </listitem>
+         <listitem>
+           <para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Einen Ordner hinzufügen</guimenuitem></menuchoice>, um das Dialogfeld <guilabel>Ordner hinzufügen</guilabel> aufzurufen.</para> 
+         </listitem>
+         <listitem>
+           <para>Wählen Sie den hinzuzufügenden Ordner aus.</para> 
+         </listitem>
+         <listitem>
+           <para>Klicken Sie auf <guibutton>Hinzufügen</guibutton>. Der <application>Archivmanager</application> fügt den Ordner in den aktuell geöffneten Ordner des Archivs ein.</para> 
+         </listitem>
+      </orderedlist></para>
+    <para>Das Dialogfeld <guilabel>Einen Ordner hinzufügen</guilabel> bietet verschiedene erweiterte Optionen. Weitere Informationen finden Sie in <xref linkend="file-roller-add-options"/>.</para>
+    </sect2>
+
+  <!-- ======= Converting an Archive to Another Format ============= --> 
+  <sect2 id="file-roller-convert-archive">
+    <title>So wandeln Sie ein Archiv in ein anderes Format um</title>
+    <para>Gehen Sie wie folgt vor, um ein Archiv in ein anderes Format umzuwandeln und in eine neue Datei zu speichern:</para>
+    <orderedlist>
+      <listitem>
+        <para>Öffnen Sie das umzuwandelnde Archiv.</para>
+      </listitem>
+      <listitem>
+        <para>Wählen Sie <menuchoice><guimenu>Archiv</guimenu><guimenuitem>Speichern Unter</guimenuitem></menuchoice>, um das Dialogfeld <guilabel>Speichern</guilabel> aufzurufen.</para>
+      </listitem>
+      <listitem>
+        <para>Geben Sie in das Textfeld <guilabel>Name</guilabel> den neuen Archivnamen ein.</para>
+      </listitem>
+      <listitem>
+        <para>Wählen Sie das neue Format in dem Einstellfeld <guilabel>Archivtyp</guilabel> aus. Sie können auch die Dateinamenerweiterung in das Textfeld <guilabel>Name</guilabel> eingeben und in der Einblendliste <guilabel>Archivtyp</guilabel> den Eintrag <guilabel>Automatisch</guilabel> auswählen.</para>
+      </listitem>
+      <listitem>
+        <para>Wählen Sie die benötigten Erzeugungsoptionen durch anklicken von <guilabel>Weitere Optionen</guilabel> aus. Weitere Informationen zu den Erzeugungsoptionen finden Sie in <xref linkend="file-roller-create-options"/>.</para>
+      </listitem>      
+      <listitem>
+        <para>Klicken Sie auf <guibutton>Speichern</guibutton>.</para>
+        <note>
+          <para>Wenn das Archiv nur verschlüsselte Dateien enthält und Sie das Passwort nicht eingegeben haben, dann bittet der <application>Archivmanager</application> um die Eingabe des Passworts.</para>
+          <para>Wenn das Archiv verschlüsselte und unverschlüsselte Dateien enthält und Sie das Passwort nicht eingegeben haben, dann bittet der <application>Archivmanager</application> nicht um die Eingabe des Passworts. Stattdessen kopiert der <application>Archivmanager</application> nur die unverschlüsselten Dateien in das neue Archiv.</para>
+          <para>Weitere Informationen zu Passwörtern finden Sie in <xref linkend="file-roller-encrypt-files"/>.</para>
+        </note>
+      </listitem>
+    </orderedlist>
+  </sect2>
+</sect1>
+
+<!-- ======= Operations on Archive Contents ============= --> 
+<sect1 id="file-roller-modify-contents">
+  <title>Ändern des Archivinhalts</title>
+  <para>Der Inhalt eines Archivs kann auf verschiedene Arten geändert werden.</para>
+
+<!-- ======= Encrypting files in an archive  ============= --> 
+    <sect2 id="file-roller-encrypt-files">
+      <title>So verschlüsseln Sie Dateien in einem Archiv</title>
+    <para>Aus Sicherheitsgründen kann es sich anbieten, die Dateien, die Sie in ein Archiv einfügen möchten, zu verschlüsseln.</para>
+      <para>Wenn das Archivformat Verschlüsselung unterstützt, können Sie ein Passwort angeben, um hinzuzufügende Dateien zu verschlüsseln.</para>
+      <note>
+        <para>Gegenwärtig unterstützen nur die Archivformate 7-ZIP, ZIP, RAR und ARJ die Verschlüsselung.</para>
+      </note>
+     <para>Gehen Sie wie folgt vor, um ein Passwort für die Verschlüsselung festzulegen:</para>
+       <orderedlist>
+          <listitem><para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Passwort</guimenuitem></menuchoice>, um das Dialogfeld <guilabel>Passwort</guilabel> aufzurufen.</para></listitem> 
+<listitem><para>Geben Sie in das Textfeld <guilabel>Passwort</guilabel> das Passwort ein.</para></listitem>
+<listitem><para>Klicken Sie auf <guibutton>OK</guibutton>.</para></listitem>
+       </orderedlist>
+    <para>Der <application>Archivmanager</application> verwendet das Passwort zur Verschlüsselung von Dateien, die Sie dem aktuell geöffneten Archiv hinzufügen und zur Entschlüsselung von Dateien, die Sie aus dem aktuell geöffneten Archiv entpacken. Der <application>Archivmanager</application> löscht das Passwort, sobald Sie das Archiv schließen.</para>
+      <para>Wie Sie feststellen können, ob ein Archiv verschlüsselte Dateien enthält, erfahren Sie im Abschnitt <xref linkend="file-roller-extra-info"/>.</para>
+      <note>
+      <para>Die Verschlüsselung durch Archivierungsdienstprogramme ist schwach und unsicher. Wenn es auf Sicherheit ankommt, sollten Sie ein starkes Verschlüsselungswerkzeug wie beispielsweise <ulink url="http://www.gnupg.org" type="http">GNU Privacy Guard</ulink> einsetzen.</para>
+      </note>
+    </sect2>
+
+<!-- ======= Renaming files in an archive  ============= --> 
+  <sect2 id="file-roller-rename-files">
+    <title>So benennen Sie eine Datei in einem Archiv um</title>
+    <para>Gehen Sie wie folgt vor, um eine Datei in einem Archiv umzubenennen:</para>
+      <orderedlist>
+        <listitem>
+          <para>Wählen Sie die umzubennende Datei aus.</para>
+        </listitem>
+        <listitem>
+          <para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Umbenennen</guimenuitem></menuchoice>, oder drücken Sie <keycombo><keycap>F2</keycap></keycombo>,um das Dialogfeld <guilabel>Umbenennen</guilabel> aufzurufen.</para>
+        </listitem>
+        <listitem>
+          <para>Geben Sie in das Textfeld <guilabel>Neuer Dateiname</guilabel> den neuenDateinamen ein.</para>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf <guibutton>Umbenennen</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+  </sect2>
+
+<!-- ======= Copying files in an archive  ============= --> 
+  <sect2 id="file-roller-copy-files">
+    <title>So kopieren Sie Dateien in einem Archiv</title>
+    <para>Gehen Sie wie folgt vor, um Dateien in einem Archiv zu kopieren:</para>
+      <orderedlist>
+        <listitem>
+          <para>Wählen Sie die zu kopierenden Dateien aus.</para>
+        </listitem>
+        <listitem>
+          <para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Kopieren</guimenuitem></menuchoice>, oder drücken Sie <keycombo><keycap>Strg</keycap><keycap>C</keycap></keycombo>.</para>
+        </listitem>
+        <listitem>
+          <para>Öffnen Sie den Ordner, in den die Dateien kopiert werden sollen.</para>
+        </listitem>
+        <listitem>
+          <para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Einfügen</guimenuitem></menuchoice>, oder drücken Sie <keycombo><keycap>Strg</keycap><keycap>V</keycap></keycombo>.</para>
+        </listitem>
+      </orderedlist>
+  </sect2>
+
+<!-- ======= Moving files in an archive  ============= --> 
+  <sect2 id="file-roller-move-files">
+    <title>So verschieben Sie Dateien in einem Archiv</title>
+    <para>Gehen Sie wie folgt vor, um Dateien in einem Archiv zu verschieben:</para>
+      <orderedlist>
+        <listitem>
+          <para>Wählen Sie die zu verschiebenden Dateien aus.</para>
+        </listitem>
+        <listitem>
+          <para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Ausschneiden</guimenuitem></menuchoice>, oder drücken Sie <keycombo><keycap>Strg</keycap><keycap>X</keycap></keycombo>.</para>
+        </listitem>
+        <listitem>
+          <para>Öffnen Sie den Ordner, in den die Dateien verschoben werden sollen.</para>
+        </listitem>
+        <listitem>
+          <para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Einfügen</guimenuitem></menuchoice>, oder drücken Sie <keycombo><keycap>Strg</keycap><keycap>V</keycap></keycombo>.</para>
+        </listitem>
+      </orderedlist>
+  </sect2>
+
+<!-- ======= Deleting files from an archive  ============= --> 
+  <sect2 id="file-roller-delete-files">
+    <title>So löschen Sie Dateien aus einem Archiv</title>
+    <para>Gehen Sie wie folgt vor, um Dateien aus einem Archiv zu löschen:</para>
+      <orderedlist>
+        <listitem>
+          <para>Wählen Sie die zu löschenden Dateien aus.</para>
+        </listitem>
+        <listitem>
+          <para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Löschen</guimenuitem></menuchoice>, oder drücken Sie <keycap>Entf</keycap>, um das Dialogfeld <guilabel>Löschen</guilabel> aufzurufen.</para>
+        </listitem>
+        <listitem>
+          <para>Wählen Sie eine der folgenden Löschoptionen aus:</para>
+          <variablelist>
+            <varlistentry>
+              <term><guilabel>Alle Dateien</guilabel></term>
+              <listitem>
+                <para>Löschen aller Dateien aus dem Archiv.</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term><guilabel>Gewählte Dateien</guilabel></term>
+              <listitem>
+                <para>Löschen der ausgewählten Dateien aus dem Archiv.</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term><guilabel>Dateien</guilabel></term>
+              <listitem>
+                <para>Löschen aller Dateien aus dem Archiv, die mit einem gegebenen Muster übereinstimmen. Weitere Informationen über Dateinamenmuster finden Sie in <xref linkend="file-roller-pattern"/>.</para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+        <listitem>
+          <para>Klicken Sie auf <guibutton>OK</guibutton>.</para>
+        </listitem>
+      </orderedlist>
+  </sect2>
+
+<!-- =============  Modify a File in an Archive ==================== -->
+  <sect2 id="file-roller-modify-archive-file"> 
+    <title>So verändern Sie eine Datei aus einem Archiv</title> 
+    <para>Gehen Sie wie folgt vor, um eine Datei aus einem Archiv zu bearbeiten: <orderedlist>
+      <listitem><para>Doppelklicken Sie auf die Datei, die Sie öffnen wollen. Alternativ klicken Sie mit der rechten Maustaste auf die Datei und wählen <menuchoice><guimenuitem>Öffnen</guimenuitem></menuchoice>.</para></listitem>
+      <listitem><para>Bearbeiten Sie die in Schritt 1 geöffnete Datei, und speichern Sie die Änderungen.</para></listitem>
+      <listitem><para>Der <application>Archivmanager</application> zeigt einen Bestätigungsdialog, in dem Sie bestätigen müssen, dass die Datei im Archiv mit den von Ihnen getätigten Änderungen aktualisiert werden soll.</para></listitem>
+      <listitem><para>Klicken Sie auf <guibutton>Aktualisieren</guibutton>.</para></listitem>
+      </orderedlist></para>
+    <para>Der <application>Archivemanager</application> verwendet die im System definierten Zuordnung der Dateitypen zu den Anwendungen, um die zum Öffnen einer Datei passende Anwendung zu ermitteln. Diese Zuordnungen können Sie im Reiter <guilabel>Öffnen mit</guilabel> des Dateieigenschaftsdialogs anzeigen und anpassen. Wenn der <application>Archivmanager</application> die geeignete Anwendung nicht ermitteln kann, zeigt er das Dialogfeld <guilabel>Dateien öffnen</guilabel> an, in dem Sie eine Anwendung, wie unten beschrieben, auswählen können.</para>
+    <sect3 id="file-roller-modifiy-archive-file-custom-app">
+    <title>So verändern Sie eine Datei in einem Archiv mit einer benutzerdefinierten Anwendung</title>
+    <para>Sie können zur Bearbeitung einer Datei anstatt der Standardanwendung eine selbstgewählte Anwendung benutzen. So verwenden Sie eine externe Anwendung zum Öffnen einer Datei: <orderedlist>
+      <listitem><para>Klicken sie mit der rechten Maustaste auf die Datei.</para></listitem>
+      <listitem><para>Wählen Sie <menuchoice><guimenuitem>Öffnen mit ...</guimenuitem></menuchoice>.</para></listitem>
+      </orderedlist></para>    
+    <para>Der <application>Archivmanager</application> zeigt den Dialog <guilabel>Dateien öffnen</guilabel>, welcher alle Anwendungen auflistet, die Dateien des jeweiligen Typs öffnen können. Um eine dieser Anwendungen auszuwählen, doppelklicken Sie auf den Namen der Anwendung und klicken anschließend auf <guibutton>Öffnen</guibutton>. Alternativ geben Sie den Namen der Anwendung in das Textfeld <guilabel>Anwendung</guilabel> ein und klicken dann auf <guibutton>Öffnen</guibutton>, um die Anwendung Ihrer Wahl zu starten.</para>
+    <para>Wenn die Anwendung gestartet ist, folgen Sie den Anweisungen ab Schritt 2 wie in <xref linkend="file-roller-modify-archive-file"/> beschrieben.</para>
+    </sect3>
+  </sect2>
+</sect1>
+
+
+<!-- ======= Viewing an archive ============= --> 
+<sect1 id="file-roller-view">
+  <title>Anzeigen von Archiven</title>
+  <para>Der <application>Archivmanager</application> bietet Anzeigeoptionen für verschiedene Aspekte eines Archivs.</para>
+
+<!-- ======= Archive Properties ============= --> 
+    <sect2 id="file-roller-view-archive-properties">
+      <title>So zeigen Sie Archiveigenschaften an</title>
+      <para>Zum Anzeigen der Eigenschaften eines Archivs wählen Sie <menuchoice><guimenu>Archiv</guimenu><guimenuitem>Eigenschaften</guimenuitem></menuchoice>. Dadurch wird das Dialogfeld <guilabel>Eigenschaften</guilabel> aufgerufen. Im Dialogfeld <guilabel>Eigenschaften</guilabel> werden die folgenden Archivinformationen angezeigt: <variablelist>
+	      <varlistentry>
+	        <term><guilabel>Name</guilabel></term>
+	        <listitem><para>Der Name des Archivs.</para></listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term><guilabel>Ort</guilabel></term>
+	        <listitem><para>Die Position des Archivs im Dateisystem.</para></listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term><guilabel>Änderungsdatum</guilabel></term>
+	        <listitem><para>Das Datum und die Uhrzeit der letzten Änderung des Archivs.</para></listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term><guilabel>Archivgröße</guilabel></term>
+	        <listitem><para>Die Größe des komprimierten Archivinhalts.</para></listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term><guilabel>Inhaltsgröße</guilabel></term>
+	        <listitem><para>Die Größe des unkomprimierten Archivinhalts. Diese Information finden Sie auch in der Statusleiste.</para></listitem>
+	      </varlistentry>
+
+	      <varlistentry>
+	        <term><guilabel>Kompressionsgrad</guilabel></term>
+	        <listitem><para>Der Kompressionsgrad ist ein Wert, der verwendet wird, um die Reduktion der Datengröße zu beschreiben. Eine Kompressionsrate von 5 bedeutet zum Beispiel, dass das komprimierte Archiv 1/5 der Größe der Originaldaten hat.</para></listitem>
+	      </varlistentry>
+
+	      <varlistentry>
+	        <term><guilabel>Anzahl der Dateien</guilabel></term>
+	        <listitem><para>Die Anzahl der Dateien im Archiv.</para></listitem>
+	      </varlistentry>
+            </variablelist></para>
+    </sect2>
+ 
+
+<!-- ======= Archive Contents ============= --> 
+    <sect2 id="file-roller-view-archive-contents">
+      <title>So zeigen Sie den Archivinhalt an</title>
+
+      <para>Der <application>Archivmanager</application> zeigt den Archivinhalt im Hauptfenster in Form einer Dateiliste mit den folgenden Spalten an: <variablelist>
+	  <varlistentry>
+	    <term><guilabel>Name</guilabel></term>
+	    <listitem><para>Der Name der Datei oder des Ordners im Archiv.</para></listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Größe</guilabel></term>
+	    <listitem><para>Die Größe einer Datei nach dem Entpacken der Datei aus dem Archiv. Bei Ordnern bleibt das Feld <guilabel>Größe</guilabel> leer. Weitere Informationen über die Anzeige der Größe einer komprimierten Datei finden Sie in <xref linkend="file-roller-extra-info"/>.</para></listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Typ</guilabel></term>
+	    <listitem><para>Der Dateityp. Bei Ordnern wird im Feld <guilabel>Typ</guilabel> der Wert <literal>Ordner</literal> angezeigt.</para></listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Änderungsdatum</guilabel></term>
+	    <listitem><para>Das Datum, an welchem die Datei zuletzt geändert wurde. Bei Ordnern ist das Feld <guilabel>Änderungsdatum</guilabel> leer.</para></listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Ort</guilabel></term>
+	    <listitem><para>Der Pfad zur Datei im Archiv. Diese Spalte ist nur in der Dateiansicht sichtbar, und zwar wenn in der Ordneransicht der Ort der Dateien im Textfeld <guilabel>Orte</guilabel> in der Ordnerleiste angezeigt wird. Weitere Informationen über das Betrachten von Archivtypen finden Sie in <xref linkend="file-roller-view-type-folder"/>.</para></listitem>
+	  </varlistentry>
+        </variablelist></para>
+      <para>Sollte das Archiv, seitdem Sie es mit dem <application>Archivmanager</application> geöffnet haben, von einem anderen Programm geändert worden sein, wählen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Aktualisieren</guimenuitem></menuchoice>, um den Archivinhalt von der Festplatte neu einzuladen.</para>
+      <para>Informationen über die Anpassung der Anzeige des Archivinhalts durch den <application>Archivmanager</application> finden Sie in <xref linkend="file-roller-archive-custom"/>.</para>
+      <para>Für komplexere Vorgänge verwenden Sie bitte eine andere auf Ihrem System installierte Anwendung. Weitere Informationen finden Sie unter <xref linkend="file-roller-view-archive-file"/>.</para>
+    </sect2>
+
+  <!-- =============  Viewing a File in an Archive ==================== -->
+  <sect2 id="file-roller-view-archive-file"> 
+    <title>So zeigen Sie eine Datei aus einem Archiv an</title> 
+    <para>Um eine Datei in einem Archiv zu betrachten, folgen Sie den Anweisungen in <xref linkend="file-roller-modify-archive-file"/>. Wenn Sie die geöffnete Datei speichern, dann klicken Sie auf <guilabel>Abbrechen</guilabel>, wenn der <application>Archivmanager</application> um Bestätigung für die Aktualisierung der Datei im Archiv bittet.</para>
+  </sect2>
+
+<!-- =============  Testing the Integrity of an Archive ==================== -->
+  <sect2 id="file-roller-test-archive"> 
+    <title>So prüfen Sie die Integrität eines Archivs</title> 
+    <para>Manchmal kann ein Archiv aus verschiedenen Gründen beschädigt sein. Um zu überprüfen, ob ein Archiv beschädigt ist, wählen Sie <menuchoice><guimenu>Archiv</guimenu><guimenuitem>Integritätsprüfung</guimenuitem></menuchoice>: <itemizedlist>
+              <listitem>
+                <para>Wenn das Archiv keine Fehler enthält, öffnet der <application>Archivmanager</application> das Dialogfenster <guilabel>Ergebnisse der Überprüfung</guilabel> und gibt für jede Datei den Status <literal>OK</literal> an.</para>
+              </listitem>
+              <listitem>
+                <para>Falls das Archiv einige Fehler enthält, öffnet der <application>Archivmanager</application> den Dialog <guilabel>Ergebnisse der Überprüfung</guilabel>, welcher den Teil des Archivs anzeigt, der die Fehler enthält.</para>
+              </listitem>
+            </itemizedlist></para>
+    <para>Es könnte unmöglich sein, eine beschädigte Datei zu entpacken, was zum Datenverlust führt. Aus diesem Grund sollten Sie die Integrität des Archivs prüfen, bevor Sie die Originaldateien löschen.</para>
+    <para>Wenn das Archiv verschlüsselte Dateien enthält, fragt der <application>Archivmanager</application> nach dem Passwort, bevor die Überprüfung ausgeführt wird.</para>
+    <note>
+      <para>Nicht alle Archivtypen unterstützen die Integritätsprüfung. Die folgenden Archivtypen können auf Integrität getestet werden: 7-Zip, RAR, ZIP, ACE, ARJ und Zoo.</para>
+    </note>
+    <tip>
+      <title>Tipp</title>
+      <para>Um die Integrität eines Archivs zu prüfen, dessen Format die Integritätsprüfung nicht unterstützt, entpacken Sie alle Dateien aus dem Archiv und prüfen, ob diese Aktion erfolgreich war.</para>      
+    </tip>
+  </sect2>  
+</sect1>
+    
+<!-- ======= Customizing the Archive Display ============= --> 
+<sect1 id="file-roller-archive-custom">
+  <title>Anpassen der Archivanzeige</title>
+  <para>Die Anzeige des Archivinhalts durch den <application>Archivmanager</application> lässt sich wie folgt anpassen:</para>
+  <itemizedlist>
+    <listitem>
+      <para>Umschalten zwischen der Ordner- und der Dateianzeige. Siehe hierzu <xref linkend="file-roller-view-type"/>.</para>
+    </listitem>
+    <listitem>
+      <para>Angabe der Reihenfolge, in welcher Dateien in der Liste aufgeführt werden sollen. Siehe hierzu <xref linkend="file-roller-view-sort"/>.</para>
+    </listitem> 
+    <listitem>
+      <para>Anzeige zusätzlicher Angaben über den Archivinhalt. Siehe hierzu <xref linkend="file-roller-extra-info"/>.</para>
+    </listitem> 
+  </itemizedlist>
+  <para>Nach jeder der oben genannten Anpassungen aktualisiert der <application>Archivmanager</application> die Anzeige sofort.</para>
+
+  <sect2 id="file-roller-view-type">
+    <title>So stellen Sie die Anzeigeart ein</title>
+    <para>Wenn das Archiv Ordner enthält, können Sie den Archivinhalt entweder in der <link linkend="file-roller-view-type-folder">Ordneransicht</link> oder der <link linkend="file-roller-view-type-file">Dateiansicht</link> anzeigen.</para>
+
+    <sect3 id="file-roller-view-type-folder">
+      <title>Ordneransicht</title>
+      <para>Der <application>Archivmanager</application> zeigt den Archivinhalt standardmäßig in der Ordneransicht an. Um die Ordneransicht ausdrücklich einzustellen, wählen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Als Ordner anzeigen</guimenuitem></menuchoice>.</para>
+      <para>In der Ordneransicht des <application>Archivmanagers</application> werden die Ordner genau wie in einem Dateimanager angezeigt. Das bedeutet, dass der <application>Archivmanager</application> Ordner im Anzeigebereich durch ein Ordnersymbol und einen Ordnernamen darstellt. Zum Anzeigen des Inhalts eines Ordners doppelklicken Sie auf den Ordnernamen.</para>
+      <para>Die Ordnerleiste, die nur in der Ordneransicht des <application>Archivmanagers</application> zu sehen ist, enthält:</para>
+      <informaltable frame="all">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="COLSPEC0" colwidth="50*"/>
+          <colspec colname="COLSPEC1" colwidth="50*"/>
+          <thead>
+            <row valign="top">
+              <entry colname="COLSPEC0">
+                <para>Komponente</para></entry>
+              <entry colname="COLSPEC1">
+                <para>Beschreibung</para></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row valign="top">
+              <entry>
+                <para>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/file-roller_leftarrow.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Zeigt das Symbol, mit dem Sie zum zuvor besuchten Ort gehen können.</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </para>
+              </entry>
+              <entry>
+                <para>Klicken Sie auf diesen Knopf, um zum zuvor besuchten Ort zu gehen.</para>
+              </entry>
+            </row>
+            <row valign="top">
+              <entry>
+                <para>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/file-roller_rightarrow.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Zeigt das Symbol, mit dem Sie zum als nächstes besuchten Ort gehen können.</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </para>
+              </entry>
+              <entry>
+                <para>Klicken Sie auf diesen Knopf, um zum als nächstes besuchten Ort zu gehen.</para>
+              </entry>
+            </row>
+            <row valign="top">
+              <entry>
+                <para>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/file-roller_uparrow.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Zeigt das Symbol, mit dem Sie eine Ebene nach oben in der Ordnerhierarchie gehen können.</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </para>
+              </entry>
+              <entry>
+                <para>Klicken Sie auf diesen Knopf, um eine Ebene nach oben in der Ordnerhierarchie zu gehen.</para>
+              </entry>
+            </row>
+            <row valign="top">
+              <entry>
+                <para>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/file-roller_home.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>Zeigt das Symbol, mit dem Sie zur obersten Ebene des Ordnerhierarchie innerhalb des Archivs gehen können.</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </para>
+              </entry>
+              <entry>
+                <para>Klicken Sie auf diesen Knopf, um zur obersten Ebene der Ordnerhierarchie innerhalb des Archivs zu gehen.</para>
+              </entry>
+            </row>
+            <row valign="top">
+              <entry>
+                <para>
+                  <guilabel>Ort</guilabel>
+                </para>
+              </entry>
+              <entry>
+                <para>Dieses Textfeld zeigt den vollständigen Pfadnamen des aktuell angezeigten Ordners innerhalb des Archivs an.</para>
+                <para>Wenn Sie innerhalb der Ordnerhierarchie zu einer anderen Ebene gehen möchten, geben Sie in das Textfeld <guilabel>Ort</guilabel> den neuen Ordner ein und drücken Sie die <keycap>Eingabetaste</keycap>. Der <application>Archivmanager</application> zeigt den Inhalt des ausgewählten Ordners an.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect3>
+
+    <sect3 id="file-roller-view-type-file">
+      <title>Dateiansicht</title>
+      <para>Um die Dateiansicht einzustellen, wählen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Alle Dateien anzeigen</guimenuitem></menuchoice>.</para>
+      <para>In der Dateiansicht zeigt der <application>Archivmanager</application> alle im Archiv befindlichen Dateien, einschließlich der Dateien in Unterordnern, in einer einzigen Liste an.</para>
+    </sect3>
+
+  </sect2>
+
+  <sect2 id="file-roller-view-sort">
+    <title>So sortieren Sie die Dateiliste</title>
+    <para>Die Dateiliste lässt sich nach Namen, Größe, Typ, Änderungsdatum oder Ordner sortieren.</para>
+    <para>Um die Sortierreihenfolge anzugeben, klicken Sie auf die Überschrift der jeweiligen Spalte. </para>
+    <para>Um die Sortierreihenfolge umzukehren, klicken Sie nochmals auf die Überschrift der jeweiligen Spalte. </para>
+    <para>Wenn Sie die Dateiliste beispielsweise nach Änderungsdatum sortieren möchten, klicken Sie auf die Spaltenüberschrift <guilabel>Änderungsdatum</guilabel>. Daraufhin ordnet der <application>Archivmanager</application> die Dateiliste um und sortiert die Dateien von alt nach neu nach ihrem Änderungsdatum. Sollen die neuesten Dateien zuerst angezeigt werden, klicken Sie erneut auf die Spaltenüberschrift <guilabel>Änderungsdatum</guilabel>.</para>
+    <para>Der <application>Archivmanager</application> nimmt immer auch eine sekundäre Sortierung nach dem Dateinamen vor. Für das obige Beispiel heißt dies, dass der <application>Archivmanager</application> Dateien mit demselben Änderungsdatum nach ihren Namen sortiert.</para>
+  </sect2>
+
+  <sect2 id="file-roller-extra-info">
+    <title>So zeigen Sie zusätzliche Angaben an</title>
+      <para>Zum Öffnen des Dialogfelds <guilabel>Letzte Ausgabe</guilabel>, wählen Sie <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Letzte Ausgabe</guimenuitem></menuchoice>: <itemizedlist>
+              <listitem>
+                <para>Wenn Sie das Archiv während der aktuellen <application>Archivmanager</application>-Sitzung bereits geprüft haben, zeigt das Dialogfeld <guilabel>Letzte Ausgabe</guilabel> die Ergebnisse der letzten Prüfung an.</para>
+              </listitem>
+              <listitem>
+                <para>Haben Sie das Archiv während der aktuellen <application>Archivmanager</application>-Sitzung noch nicht geprüft, dann sehen Sie im Dialogfeld <guilabel>Letzte Ausgabe</guilabel> eine Liste aller Dateien des Archivs, jedoch ohne Dateistatus. Stattdessen zeigt das Dialogfeld <guilabel>Letzte Ausgabe</guilabel> die komprimierte Größe jeder Datei, die Komprimierungsstärke in Prozent sowie das Datum und die Uhrzeit der letzten Änderung an.</para>
+              </listitem>
+            </itemizedlist></para>
+  </sect2>
+</sect1>
+
+<!-- ====== Using the File Manager Popup Menu to Manipulate an Archive ===== -->
+
+<sect1 id="file-roller-fmgr"> 
+    <title>Arbeiten mit Archiven im Dateimanager</title> 
+    <para>Mit dem Dateimanager lassen sich Dateien in ein Archiv einfügen oder Dateien aus einem Archiv entpacken</para>
+
+<!-- ======= Adding files Using File Manager Menu  ============= --> 
+    <sect2 id="file-roller-fmgr-add">
+      <title>So fügen Sie mit dem Dateimanager Dateien in ein Archiv ein</title>
+           <para>Mit dem Dateimanager lassen sich Dateien auf folgende Arten in Archive einfügen: <itemizedlist>
+             <listitem><para>Ziehen von Dateien aus einem Dateimanager- in ein <application>Archivmanager</application>-Fenster.</para>
+             </listitem>
+             <listitem><para>Verwenden des Dateimanager-Kontextmenüs.</para>
+             </listitem>
+          </itemizedlist></para>
+      <para>Führen Sie die folgenden Schritte aus, um Dateien mit dem Dateimanager in ein Archiv einzufügen:</para>
+      <orderedlist>
+        <listitem><para>Klicken Sie in einem Dateimanager-Fenster mit der rechten Maustaste auf die Dateien oder Ordner.</para>
+        </listitem>
+        <listitem><para>Wählen Sie im Kontextmenü des Dateimanagers den Befehl <guimenuitem>Archiv anlegen</guimenuitem>, um das Dialogfeld <guilabel>Archiv anlegen</guilabel> aufzurufen.</para>
+        </listitem>
+        <listitem><para>Geben Sie den Archivnamen ohne Dateinamenerweiterung in das Textfeld <guilabel>Archiv</guilabel> ein.</para>
+        </listitem>
+        <listitem><para>Wählen Sie in der Einblendliste den Archivtyp aus.</para>
+        </listitem>
+        <listitem><para>Wählen Sie den Zielordner für die vom <application>Archivmanager</application> entpackten Dateien aus der Einblendliste <guilabel>In Ordner entpacken</guilabel>. Wenn der Ordner in der Liste nicht vorhanden ist, wählen Sie <guilabel>Andere...</guilabel> um den Ordner im Dialogfeld <guilabel>Zielordner</guilabel> auszuwählen.</para>
+        </listitem>
+        <listitem><para>Wählen Sie die benötigten Erzeugungsoptionen durch anklicken von <guilabel>Weitere Optionen</guilabel> aus. Weitere Informationen zu den Erzeugungsoptionen finden Sie in <xref linkend="file-roller-create-options"/>.</para>
+        </listitem>
+        <listitem><para>Klicken Sie auf <guilabel>Anlegen</guilabel>, um die ausgewählten Dateien in den Wurzelordner des angegebenen Archivs einzufügen.</para>
+                 <note><para>Auf alle übrigen erweiterten Optionen können Sie nur zugreifen, indem Sie den <application>Archivmanager</application> gemäß der Anweisung unter <xref linkend="file-roller-to-start"/> aufrufen.</para></note>
+        </listitem>
+      </orderedlist>
+    </sect2>
+
+<!-- ======= Extracting files Using File Manager Menu  ============= --> 
+  <sect2 id="file-roller-fmgr-extract">
+      <title>So entpacken Sie mit dem Dateimanager Dateien aus einem Archiv</title>
+           <para>Mit dem Dateimanager lassen sich Dateien auf folgende Arten aus Archiven entpacken: <itemizedlist>
+             <listitem><para>Ziehen von Dateien aus einem <application>Archivmanager</application>- in ein Dateimanager-Fenster.</para>
+             </listitem>
+             <listitem><para>Verwenden des Dateimanager-Kontextmenüs.</para>
+             </listitem>
+          </itemizedlist></para>
+      <para>Führen Sie die folgenden Schritte aus, um Dateien mit dem Dateimanager aus einem Archiv zu entpacken:</para>
+      <orderedlist>
+        <listitem><para>Klicken Sie im Dateimanager-Fenster mit der rechten Maustaste auf das Archiv.</para>
+        </listitem>
+        <listitem><para>Wählen Sie <guimenuitem>Hier entpacken</guimenuitem> um den gesamten Archivinhalt in den Ordner, in dem sich das Archiv befindet, zu entpacken.</para>
+        </listitem>
+      </orderedlist>
+      <note><para>Falls das Archiv verschlüsselt ist, bittet der <application>Archivmanager</application> vor dem Entpacken der Dateien um die Eingabe des Passworts.</para></note>
+    </sect2>
+
+</sect1>
+
+<!-- ======= Create Archive Advanced Options  ============= --> 
+    <sect1 id="file-roller-create-options">
+      <title>Erzeugungsoptionen</title>
+      <para>Klicken Sie beim Erzeugen eines neuen Archivs oder Umwandeln eines bestehenden Archivs in ein anderes Format auf <guilabel>Weitere Optionen</guilabel>, um folgende weitere Optionen anzugeben:</para>
+      <variablelist>
+       <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>Passwort</guilabel></term>
+	  <listitem>
+	  <para>Geben Sie das Passwort ein, das bei der Verschlüsselung des Archivs verwendet werden soll. Falls kein Passwort angegeben wird, wird das Archiv nicht verschlüsselt.</para>
+	  <note>
+	    <para>Nicht alle Archivtypen unterstützen Verschlüsselungen. Weitere Informationen über die Verschlüsselung von Dateien finden Sie in <xref linkend="file-roller-encrypt-files"/>.</para>
+	  </note>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>	  
+	  <term><guilabel>Dateiliste ebenfalls verschlüsseln</guilabel></term>
+	  <listitem>
+	  <para>Falls diese Option ausgewählt ist, wird das Passwort bereits für die Anzeige der Liste der im Archiv enthaltenen Dateien benötigt, anderenfalls ist das Passwort nur für das Entpacken der Dateien aus dem Archiv erforderlich. Diese Option ist nur verfügbar, wenn ein Passwort angegeben wurde.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>	  
+	  <term><guilabel>Archiv teilen</guilabel></term>
+	  <listitem>
+	  <para>Wählen Sie diese Option, um das Archiv in mehrere Dateien der angegebenen Größe zu teilen.</para>
+	  <note>
+	    <para>Nur 7-Zip-Archive und RAR-Archive werden von dieser Funktion unterstützt.</para>
+	  </note>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect1>
+
+<!-- ======= Add Advanced Options  ============= --> 
+    <sect1 id="file-roller-add-options">
+      <title>Hinzufügeoptionen</title>
+      <para>Die Dialogfelder <guilabel>Dateien hinzufügen</guilabel> und <guilabel>Einen Ordner hinzufügen</guilabel> bieten die folgenden Optionen:</para>
+      <variablelist>
+       <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>Nur hinzufügen, falls neuer</guilabel></term>
+	  <listitem>
+            <para>Mit dieser Option wird die angegebene Datei nur dann in das Archiv eingefügt, wenn sie noch nicht im Archiv vorhanden ist oder das Archiv eine ältere Version derselben Datei enthält. Welche Dateiversion die neuere ist, ermittelt der <application>Archivmanager</application> anhand des Änderungsdatums. Ist die Version der im Archiv vorhandenen Datei die neuere, dann fügt der <application>Archivmanager</application> die angegebene Datei nicht in das Archiv ein.</para>
+	    <para>Wenn Sie diese Option nicht auswählen, fügt der <application>Archivmanager</application> die Datei in das Archiv ein und überschreibt die zuvor im Archiv enthaltene Datei.</para>
+	    <tip>
+	      <title>Tipp</title>
+	      <para>Die Option <guilabel>Nur hinzufügen, falls neuer</guilabel> erweist sich beim Anlegen von Sicherheitskopien mit dem <application>Archivmanager</application> als besonders hilfreich. Angenommen, das Archiv <filename>backup.tar.gz</filename> enthält eine Sicherungskopie Ihres »persönlichenOrdners«, die eine Woche alt ist. Führen Sie die folgenden Schritte aus, um das Archiv auf den aktuellen Stand Ihres »persönlichen Ordners« zu bringen: <orderedlist>
+                      <listitem>
+                        <para>Öffnen Sie das Archiv <filename>backup.tar.gz</filename> im <application>Archivmanager</application>.</para>
+                      </listitem>
+                      <listitem>
+                        <para>Wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Einen Ordner hinzufügen</guimenuitem></menuchoice>, um das Dialogfeld <guilabel>Einen Ordner hinzufügen</guilabel> aufzurufen.</para> 
+                      </listitem>
+                      <listitem>
+                        <para>Wählen Sie Ihren »persönlichen Ordner« aus.</para>
+                      </listitem>
+                      <listitem>
+                        <para>Wählen Sie die Option <guilabel>Nur hinzufügen, falls neuer</guilabel> aus.</para>
+                      </listitem>
+                      <listitem>
+                        <para>Klicken Sie auf <guibutton>Hinzufügen</guibutton>.</para>
+                      </listitem>
+                    </orderedlist></para>
+                <para>Der <application>Archivmanager</application> fügt automatisch alle Dateien, die Sie während der letzten Woche erzeugt haben, zum Archiv hinzu. Ebenso werden alle Dateien aktualisiert, die Sie während der letzten Woche verändert haben. Allerdings löscht der <application>Archivmanager</application> keine Dateien aus dem Archiv, die Sie während der letzten Woche gelöscht haben. Die Aktualisierung des Archivs geht viel schneller vonstatten als eine komplette Sicherung Ihres persönlichen Ordners.</para>
+	  </tip>
+	</listitem>
+      </varlistentry>
+      </variablelist>
+      <sect2 id="file-roller-add-folder-options">
+      <title>Optionen für »Einen Ordner hinzufügen«</title>
+      <para>Mit den folgenden Optionen des Dialogfelds <guilabel>Einen Ordner hinzufügen</guilabel> lassen sich sämtliche Dateien, die bestimmten Kriterien entsprechen, automatisch auswählen und hinzufügen:</para>
+      <variablelist>
+       <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>Dateien einschließen</guilabel></term>
+	  <listitem>
+            <para>Geben Sie ein Dateinamenmuster in dieses Textfeld ein, um Dateien einzuschließen, die mit dem angegebenen Muster übereinstimmen. Weitere Informationen über Dateinamenmuster finden Sie in <xref linkend="file-roller-pattern"/>.</para>
+          </listitem>
+	</varlistentry>
+       <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>Dateien ausschließen</guilabel></term>
+	  <listitem>
+            <para>Geben Sie ein Dateinamenmuster in dieses Textfeld ein, um Dateien auszuschließen, die mit dem angegebenen Muster übereinstimmen. Weitere Informationen über Dateinamenmuster finden Sie in <xref linkend="file-roller-pattern"/>.</para>
+          </listitem>
+	</varlistentry>
+        <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>Ordner ausschließen</guilabel></term>
+	  <listitem>
+            <para>Geben Sie ein Dateinamenmuster in dieses Textfeld ein, um Dateien, die mit dem angegebenen Muster übereinstimmen, auszuschließen. Weitere Informationen über Dateinamenmuster finden Sie in <xref linkend="file-roller-pattern"/>.</para>
+          </listitem>
+	</varlistentry>      
+       <!-- ============= -->	
+      <varlistentry>
+	<term><guilabel>Unterordner einschließen</guilabel></term>
+	<listitem>
+          <para>Wählen Sie diese Option aus, um alle mit dem Muster übereinstimmenden Dateien aus dem aktuellen Ordner und seinen Unterordnern einzufügen.</para>
+          <note>
+          <para>Dabei muss nicht der Name des Unterordners, sondern der Dateiname mit dem Muster übereinstimmen.</para>
+          </note>
+	  <para>Wenn Sie diese Option nicht auswählen, fügt der <application>Archivmanager</application> nur übereinstimmende Dateien aus dem aktuellen Ordner ein.</para>
+        </listitem>
+      </varlistentry>
+       <!-- ============= -->	
+     <varlistentry>
+	<term><guilabel>Ordner ausschließen, die symbolische Links sind</guilabel></term>
+	  <listitem>
+            <para>Mit dieser Option werden Dateien aus Ordnern, die nur symbolische Links darstellen, ausgelassen. Symbolische Links sind Zeiger auf oder Verknüpfungen zu anderen Ordnern.</para>
+	    <para>Wenn Sie diese Option nicht auswählen, fügt der <application>Archivmanager</application>übereinstimmende Dateien aus Ordnern, die symbolische Links darstellen, ein.</para>
+          </listitem>
+	</varlistentry>
+       <!-- ============= -->
+     <varlistentry>
+	<term><guibutton>Optionen speichern</guibutton></term>
+	  <listitem>
+            <para>Klicken Sie auf diesen Knopf, um die aktuelle Auswahl von Hinzufügeoptionen in eine Datei zu speichern. Das Dialogfeld <guilabel>Optionen speichern</guilabel> wird angezeigt. Geben Sie einen beschreibenden Dateinamen in das Textfeld <guilabel>Optionsname</guilabel> ein und klicken Sie auf <guibutton>Speichern</guibutton>.</para>
+          </listitem>
+	</varlistentry>
+       <!-- ============= -->	
+     <varlistentry>
+	<term><guibutton>Optionen laden</guibutton></term>
+	  <listitem>
+            <para>Klicken Sie auf diesen Knopf, um eine früher gespeicherte Auswahl von Hinzufügeoptionen zu laden oder zu löschen. Das Dialogfeld <guilabel>Optionen laden</guilabel> wird angezeigt.</para>
+            <itemizedlist>
+              <listitem>
+                <para>Wählen Sie die Optionsdatei in der Liste und klicken Sie auf <guibutton>Anwenden</guibutton>, um eine Auswahl von Optionen zu laden.</para>
+              </listitem>
+              <listitem>
+                <para>Wählen Sie die Optionsdatei in der Liste und klicken Sie auf <guibutton>Löschen</guibutton>, um eine Auswahl von Optionen zu löschen. Klicken Sie auf <guibutton>Schließen</guibutton>, um das Dialogfeld zu schließen.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+	</varlistentry>
+       <!-- ============= -->	
+     <varlistentry>
+	<term><guibutton>Optionen zurücksetzen</guibutton></term>
+	  <listitem>
+            <para>Klicken Sie auf diesen Knopf, um die aktuelle Auswahl von Hinzufügeoptionen auf die Standardwerte zurückzusetzen.</para>
+          </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+
+<!-- ======= Extract Options  ============= --> 
+  <sect1 id="file-roller-extract-options">
+    <title>Extraktionsoptionen</title>
+      
+    <para>Das Dialogfeld <guilabel>Entpacken</guilabel> bietet die folgenden Optionen, welche beim beenden des <application>Archivmanagers</application> gespeichert werden:</para>
+      <variablelist>
+       <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>Entpacken</guilabel></term>
+	  <listitem>
+            <para>Wählen Sie die zu entpackenden Dateien aus:</para>
+            <variablelist>
+              <varlistentry>
+                <term><guilabel>Alle Dateien</guilabel></term>
+                <listitem>
+                  <para>Alle Dateien</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term><guilabel>Gewählte Dateien</guilabel></term>
+                <listitem>
+                  <para>Gewählte Dateien</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term><guilabel>Dateien</guilabel></term>
+                <listitem>
+                  <para>Entpacken aller Dateien im aktuell geöffneten Archiv, die mit einem gegebenen Muster übereinstimmen. Weitere Informationen über Dateinamenmuster finden Sie in <xref linkend="file-roller-pattern"/>.</para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+	  </listitem>
+	</varlistentry>
+	<!-- ============= -->	
+	<varlistentry>
+      <term><guilabel>Aktionen</guilabel></term>
+        <listitem>
+          <para>Wählen Sie die folgenden Extraktionsoptionen:</para>	
+          <variablelist>
+	        <varlistentry>
+	          <term><guilabel>Ordner neu anlegen</guilabel></term>
+	          <listitem><para>Mit dieser Option wird beim Entpacken der angegebenen Dateien deren Ordnerhierarchie beibehalten.</para> 
+                <para>Angenommen, Sie geben <filename>/tmp</filename> in das Textfeld <guilabel>Ort</guilabel> ein und geben an, dass alle Dateien entpackt werden sollen. Das Archiv enthält einen Unterordner namens <filename>doc</filename>. <itemizedlist>
+                  <listitem><para>Wenn Sie die Option <guilabel>Ordner neu erstellen</guilabel> auswählen, entpackt der <application>Archivmanager</application> den Inhalt des Unterordners nach <filename>/tmp/doc</filename>.</para>
+                 </listitem>
+                 <listitem><para>Wenn Sie die Option <guilabel>Ordner neu erstellen</guilabel> nicht auswählen, erzeugt der <application>Archivmanager</application> keine Unterordner. Stattdessen entpackt der <application>Archivmanager</application> alle Dateien des Archivs, einschließlich der Dateien in den Unterordnern, nach <filename>/tmp</filename>.</para>
+                 </listitem>
+               </itemizedlist></para></listitem>
+	         </varlistentry>
+             <!-- ============= -->	
+	         <varlistentry>
+	           <term><guilabel>Vorhandene Dateien ersetzen</guilabel> </term>
+	           <listitem><para>Mit dieser Option werden Dateien im Zielordner, deren Namen mit den Namen der ausgewählten Dateien übereinstimmen, überschrieben.</para>
+	             <para>Wenn Sie diese Option nicht auswählen, entpackt der <application>Archivmanager</application> eine angegebene Datei nicht, falls der Zielordner bereits eine Datei mit demselben Namen enthält.</para>
+	           </listitem>
+	         </varlistentry>
+             <!-- ============= -->	
+	         <varlistentry>
+	           <term><guilabel>Keine älteren Dateien entpacken</guilabel> </term>
+	           <listitem>
+	             <para>Diese Option ist nur wirksam, solange die Option <guilabel>Vorhandene Dateien ersetzen</guilabel> aktiviert ist.</para>
+	             <para>Wählen Sie die Option <guilabel>Keine älteren Dateien entpacken</guilabel> aus, damit die angegebene Datei nur dann entpackt wird, wenn sie im Zielordner noch nicht vorhanden ist oder der Zielordner eine ältere Version der Datei enthält. Welche Dateiversion die neuere ist, ermittelt der <application>Archivmanager</application> anhand des Änderungsdatums. Ist die Version der im Archiv vorhandenen Datei die ältere, dann entpackt der <application>Archivmanager</application> die angegebene Datei nicht in den Zielordner.</para>
+	             <para>Wenn Sie die Option <guilabel>Keine älteren Dateien entpacken</guilabel> nicht auswählen und die Option <guilabel>Vorhandene Dateien ersetzen</guilabel> aktiviert ist, entpackt der <application>Archivmanager</application> die angegebene Datei aus dem Archiv und überschreibt den vorigen Inhalt des Zielordners.</para>
+	           </listitem>
+	         </varlistentry>
+	       </variablelist>
+	     </listitem>
+	   </varlistentry>
+     </variablelist>	
+  </sect1>
+
+
+</article>

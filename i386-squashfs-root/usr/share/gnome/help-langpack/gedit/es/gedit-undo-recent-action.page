@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-undo-recent-action" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#gedit-working-with-files"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <credit type="author">
+      <name>Daniel Neel</name>
+      <email>dneelyep@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+  </info>
+
+  <title>Deshacer una acción reciente</title>
+
+  <!-- TODO: Maybe include a note about how gedit undoes sequences of "similar" actions, rather than every individual keystroke? For example, whole words are deleted rather than letters.
+I think we should also include a note about how many "undo's" you can do, and that you can't
+undo something once you've saved the file.-->
+  <p>Todos cometemos errores. Incluso los usuarios de <app>gedit</app> los cometen. Afortunadamente <app>gedit</app> puede ayudarle a solucionar errores. Para deshacer una acción en <app>gedit</app> pulse <keyseq><key>Ctrl</key><key>Z</key></keyseq> o pulse <guiseq><gui>Editar</gui><gui>Deshacer</gui></guiseq>.</p>
+
+  <p><app>gedit</app>deshará una acción cada vez que pulse <keyseq><key>Ctrl</key><key>Z</key></keyseq> o seleccione <guiseq><gui>Editar</gui><gui>Deshacer</gui></guiseq>.</p>
+
+</page>

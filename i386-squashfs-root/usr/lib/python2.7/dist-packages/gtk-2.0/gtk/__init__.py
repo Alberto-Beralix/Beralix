@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gtk-2.0/gtk/__init__.py

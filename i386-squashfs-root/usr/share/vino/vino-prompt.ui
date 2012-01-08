@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<!--*- mode: xml -*-->
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <object class="GtkDialog" id="vino_dialog">
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Question</property>
+    <property name="resizable">False</property>
+    <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="dialog-vbox1">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox" id="hbox30">
+            <property name="visible">True</property>
+            <property name="orientation">horizontal</property>
+            <property name="border_width">12</property>
+            <property name="spacing">12</property>
+            <child>
+              <object class="GtkImage" id="sharing_icon">
+                <property name="visible">True</property>
+                <property name="yalign">0</property>
+                <property name="stock">gtk-missing-image</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="vbox34">
+                <property name="visible">True</property>
+                <property name="orientation">vertical</property>
+                <property name="spacing">6</property>
+                <child>
+                  <object class="GtkLabel" id="warning_label">
+                    <property name="visible">True</property>
+                    <property name="xalign">0</property>
+                    <property name="label" translatable="yes">Another user is trying to view your desktop.</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="scale" value="1.2"/>
+                    </attributes>
+                    <property name="wrap">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="host_label">
+                    <property name="visible">True</property>
+                    <property name="xalign">0</property>
+                    <property name="label" translatable="yes">A user on another computer is trying to remotely view or control your desktop.</property>
+                    <property name="wrap">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="question_label">
+                    <property name="visible">True</property>
+                    <property name="xalign">0</property>
+                    <property name="label" translatable="yes">Do you want to allow them to do so?</property>
+                    <property name="wrap">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="hbuttonbox1">
+            <property name="visible">True</property>
+            <property name="layout_style">GTK_BUTTONBOX_END</property>
+            <child>
+              <object class="GtkButton" id="help_button">
+                <property name="can_focus">True</property>
+                <property name="can_default">True</property>
+                <property name="no_show_all">True</property>
+                <property name="label">gtk-help</property>
+                <property name="use_stock">True</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="refuse_button">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="has_focus">True</property>
+                <property name="can_default">True</property>
+                <property name="has_default">True</property>
+                <property name="label" translatable="yes">_Refuse</property>
+                <property name="use_underline">True</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="allow_button">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="can_default">True</property>
+                <property name="label" translatable="yes">_Allow</property>
+                <property name="use_underline">True</property>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">GTK_PACK_END</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="-11">help_button</action-widget>
+      <action-widget response="-2">refuse_button</action-widget>
+      <action-widget response="-3">allow_button</action-widget>
+    </action-widgets>
+  </object>
+</interface>

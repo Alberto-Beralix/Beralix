@@ -1,0 +1,1 @@
+../../../../share/pyshared/gnome_sudoku/sudoku_maker.py

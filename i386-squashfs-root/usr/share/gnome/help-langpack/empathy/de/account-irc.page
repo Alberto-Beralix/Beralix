@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="screen" id="account-irc" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="irc-manage#manage"/> 
+    <desc>Zusätzlich erforderliche Informationen für Verbindungen zu IRC-Netzwerken.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-31" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-08-31" status="done"/>
+      -->
+    </revision>
+    <revision pkgversion="2.30" version="0.2" date="2010-04-19" status="review"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/> 
+-->
+  </info>
+
+  <title>IRC-Kontendetails</title>
+
+  <p>IRC-Konten erfordern andere Informationen als die meisten anderen Kontentypen. Um ein IRC-Konto zu erstellen, müssen Sie mindestens ein IRC-Netzwerk und einen Spitznamen angeben. Diese Seite erläutert die Informationen, die Sie für ein IRC-Konto angeben können.</p>
+
+  <note style="info package">
+    <p>Sie müssen das Paket <sys>telepathy-idle</sys> installiert haben, um das IRC in <app>Empathy</app> nutzen zu können.</p>
+  </note>
+
+  <terms>
+    <item>
+      <title><gui>Netzwerk</gui></title>
+      <p>IRC ist ein offenes System, welches Personen erlaubt, separate IRC-Netzwerke zu betreiben. Jedes Netzwerk ist in sich abgeschlossen und hat seine eigenen Benutzer und Unterhaltungsräume. <app>Empathy</app> listet die populärsten Netzwerke in der Auswahlliste <gui>Netzwerk</gui> auf. Sie können zusätzliche Netzwerke hinzufügen. Siehe <link xref="#networks"/> nachfolgend.</p>
+    </item>
+    <item>
+      <title><gui>Spitzname</gui></title>
+      <p>Ihr Spitzname ist Ihr eindeutiger Name im IRC-Netzwerk. Nur eine einzige Person in einem Netzwerk darf einen gegebenen Spitznamen verwenden. Falls Sie die Fehlermeldung <link xref="prob-conn-name" role="error-msg"/> erhalten, müssen Sie Ihren Spitznamen ändern.</p>
+    </item>
+    <item>
+      <title><gui>Passwort</gui></title>
+      <p>Einige Server, insbesondere diejenigen in privaten Netzwerken, erfordern ein Passwort für die Verbindung. Falls Sie legitimiert sind, das Netzwerk zu benutzen, sollte Sie Ihnen dessen Verwalter ein Passwort zur Verfügung gestellt haben.</p>
+      <note>
+        <title>NickServ-Passwörter</title>
+        <p>In einigen Netzwerken können Spitznamen mit einem Dienst namens NickServ registriert werden. <app>Empathy</app> unterstützt Passwörter für Spitznamen nicht direkt. In einigen Netzwerken, zum Beispiel FreeNode, werden Serverpasswörter automatisch an NickServ weitergeleitet, was Ihnen ermöglicht, sich mit diesem Feld bei NickServ zu identifizieren. Weitere Details hierzu finden Sie in <link xref="irc-nick-password"/></p>
+      </note>
+    </item>
+    <item>
+      <title><gui>Realname</gui></title>
+      <p>Zusätzlich zu Ihrem Spitznamen können Sie auch Ihren echten Namen angeben. Dieser wird anderen Benutzern angezeigt, wenn diese Ihre persönlichen Informationen betrachten.</p>
+    </item>
+    <item>
+      <title><gui>Verlassen-Nachricht</gui></title>
+      <p>Wenn Sie sich abmelden, wird eine Beenden-Nachricht an alle Unterhaltungsräume gesendet, in denen Sie sich befinden, sowie an alle Benutzer, mit denen Sie eine private Unterhaltung führen. Verwenden Sie dieses Feld, um eine benutzerdefinierte Nachricht bereitzustellen.</p>
+    </item>
+  </terms>
+
+<!--
+telepathy-idle note
+-->
+
+  <section id="networks">
+    <info>
+      <title type="link">IRC-Netzwerke</title>
+    </info>
+
+    <title>Netzwerke</title>
+
+    <p><app>Empathy</app> enthält eine Liste populärer IRC-Netzwerke. Falls Sie ein anderes IRC-Netzwerk wünschen, können Sie es zur Liste hinzufügen. Sie können auch Netzwerke bearbeiten oder aus der Liste entfernen.</p>
+
+    <list>
+      <item><p>Um ein Netzwerk zur Liste hinzuzufügen, klicken Sie auf <media type="image" mime="image/png" src="figures/gtk-add.png" width="16" height="16">Hinzufügen</media>.</p></item>
+      <item><p>Um ein Netzwerk in der Liste zu bearbeiten, wählen Sie es aus und klicken auf <media type="image" mime="image/png" src="figures/gtk-edit.png" width="16" height="16">Bearbeiten</media>.</p></item>
+      <item><p>Um ein Netzwerk aus der Liste zu entfernen, wählen Sie es aus und klicken auf <media type="image" mime="image/png" src="figures/gtk-remove.png" width="16" height="16">Entfernen</media>.</p></item>
+    </list>
+
+    <p>Beim Hinzufügen oder Ändern eines Netzwerks können Sie die folgenden Informationen eingeben:</p>
+
+    <terms>
+      <item>
+        <title><gui>Netzwerk</gui></title>
+        <p>Dies ist der Name des Netzwerks, so wie der in der Liste der Netzwerke erscheinen soll.</p>
+      </item>
+      <item>
+        <title><gui>Zeichensatz</gui></title>
+        <p>Dies legt die Zeichenkodierung fest, die typischerweise in diesem Netzwerk verwendet wird. Eine Zeichenkodierung ist eine spezifische Art der internen Aufzeichnung von Zeichen in einem Rechner. Es gibt zahlreiche Zeichenkodierungen. Sie müssen die gleiche Kodierung wie die anderen Benutzer verwenden, damit deren Nachrichten korrekt angezeigt werden können.</p>
+        <!--
+            Translators: Recommend character encodings that are common
+            for your language.
+        -->
+        <p>Als Vorgabe verwendet <app>Empathy</app> UTF-8, eine moderne Zeichenkodierung, die mit Texten aus den meisten Sprachen der Welt umgehen kann. Eine weitere häufig benutzte Kodierung für Englisch und andere westliche Sprachen ist ISO-8859-1.</p>
+      </item>
+      <item>
+        <title><gui>Server</gui></title>
+        <p>Ein IRC-Netzwerk kann aus vielen Servern bestehen, mit denen Sie sich verbinden können. Wenn Sie mit einem Server in einem bestimmten Netzwerk verbunden sind, dann können Sie auch mit den Benutzern auf anderen Servern dieses Netzwerks kommunizieren. Sie können mit Hilfe der Knöpfe <gui>Hinzufügen</gui> und <gui>Entfernen</gui> Server dieses Netzwerks hinzufügen und entfernen.</p>
+        <p>Wenn ein Server ausgewählt ist, klicken Sie auf die Felder unter <gui>Server</gui> oder <gui>Port</gui>, um diese zu bearbeiten. Alternativ verwenden Sie die linke und rechte Pfeiltaste, um das Feld zu fokussieren. Mit der Leertaste beginnen Sie mit der Bearbeitung.</p>
+        <p>Aktivieren Sie das Ankreuzfeld in der <gui>SSL</gui>-Spalte, um jegliche Kommunikation mit dem Server zu verschlüsseln. Beachten Sie, dass dies andere Benutzer des Netzwerks nicht daran hindern wird, alles zu sehen, was Sie in öffentlichen Unterhaltungsräumen schreiben.</p>
+      </item>
+    </terms>
+  </section>
+</page>

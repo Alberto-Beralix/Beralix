@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="prob-conn-auth" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="prob-conn"/>
+    <link type="seealso" xref="create-account"/>
+    <desc>Aparece un mensaje de error en la ventana principal que muestra «<gui>Falló la autenticación</gui>».</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-17" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-07-23" status="draft"/>
+    <revision pkgversion="2.28" version="0.3" date="2009-08-14" status="review"/>
+    <revision pkgversion="2.30" version="0.4" date="2010-02-16" status="review"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>Obtengo un mensaje que dice «Falló la autenticación»</title>
+
+  <p>Este tipo de error sucede cuando su servicio de mensajería instantánea no le está permitiendo conectar porque por alguna razón no reconoce su nombre de usuario o contraseña.</p>
+
+  <steps>
+    <item>
+      <p>Asegúrese de que está conectado a Internet o a una red de área local.</p>
+    </item>
+    <item>
+      <p>Asegúrese de que ha registrado una cuenta con el servicio al que está intentando conectarse. Si no tiene una cuenta la mayoría de los servicios no le permitirán que se conecte.</p>
+    </item>
+    <item>
+      <p>Pulse el icono <media type="image" mime="image/png" src="figures/gtk-edit.png">Editar</media> en el mensaje de error.</p>
+    </item>
+    <item>
+      <p>Escriba su nombre de usuario y contraseña de nuevo y asegúrese de que son correctos.</p>
+    </item>
+    <item>
+      <p>Deseleccione la casilla de verificación <gui>Activada</gui> y después selecciónela de nuevo para intentar reconectar con el servicio.</p>
+    </item>
+  </steps>
+</page>

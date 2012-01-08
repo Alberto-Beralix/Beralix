@@ -1,0 +1,78 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide" style="task"
+      id="bluetooth-connect-device">
+
+  <info>
+    <link type="guide" xref="bluetooth"/>
+
+    <revision pkgversion="3.2" date="2011-09-22" status="candidate"/>
+
+    <desc>Pair Bluetooth devices.</desc>
+
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Paul W. Frields</name>
+      <email>stickster@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  </info>
+
+  <title>Connect your computer to a Bluetooth device</title>
+
+  <p>Before you can use a Bluetooth device like a mouse or a headset, you first
+  need to connect your computer to the device. This is also called pairing the
+  Bluetooth devices.</p>
+
+  <note style="important">
+    <p>Before you begin, make sure Bluetooth is enabled on your computer.
+    See <link xref="bluetooth-turn-on-off"/>.</p>
+  </note>
+
+  <steps>
+    <item>
+      <p>Click the Bluetooth icon on the top bar and select <gui>Set up a New Device</gui>.</p>
+    </item>
+    <item>
+      <p>Make the other Bluetooth device <link xref="bluetooth-visibility">discoverable or visible</link>
+      and place it within 10 meters (about 33 feet) of your computer. Then select <gui>Forward</gui>. Your
+      computer will begin searching for devices.</p>
+    </item>
+    <item>
+      <p>If there are too many devices listed, use the <gui>Device type</gui> drop-down to display only a single type of device in the list.</p>
+    </item>
+    <item>
+      <p>Select <gui>PIN options...</gui> to set how a PIN will be delivered to the other device.</p>
+      <note>
+	<p>The automatic PIN setting will use a six-digit numerical code. A device with no input keys or screen, such as a mouse or headset, may require a specific PIN such as 0000, or no PIN at all. Check your device's manual for the proper setting.</p>
+      </note>
+      <p>Choose an appropriate PIN setting for your device, and then select <gui>Close</gui>.</p>
+    </item>
+    <item>
+      <p>Click <gui>Continue</gui> to proceed.  If you did not choose a preset PIN, the PIN will be displayed on the screen.</p>
+    </item>
+    <item>
+      <p>If required, confirm the PIN on your other device. The device should show you
+      the PIN you see on your computer screen, or may prompt you to enter the PIN.
+      Confirm the PIN on the device, then click <gui>Matches</gui>.</p>
+      <p>Enter the PIN code on your other device, if required. Sometimes the other device
+      will simply show you the PIN and ask you to confirm that it matches what you see on
+      your computer.</p>
+      <p>You need to finish your entry within about 20 seconds on most devices, or the
+      connection will not be completed. If that happens, return to the device list and
+      start again.</p>
+    </item>
+    <item>
+      <p>A message appears when the connection successfully completes. Click <gui>Close</gui>.</p>
+    </item>
+  </steps>
+
+  <p>You can <link xref="bluetooth-remove-connection">remove a Bluetooth connection</link> later if desired.</p>
+  
+</page>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/org/gnome/settings-daemon/plugins/ubuntuone/" id="org.gnome.settings-daemon.plugins.ubuntuone" gettext-domain="ubuntuone-client-gnome">
+    <key type="b" name="active">
+      <default>true</default>
+      <summary>Enable Ubuntu One features</summary>
+      <description>Whether integration of Ubuntu One with gnome-settings-daemon is enabled or not.</description>
+    </key>
+    <key type="i" name="priority">
+      <default>7</default>
+      <summary>Priority for loading Ubuntu One features in gnome-settings-daemon</summary>
+      <description>The startup queue priority for the Ubuntu One gnome-settings-daemon plug-in.</description>
+    </key>
+    <key type="b" name="checked-bookmark-file">
+      <default>false</default>
+      <summary>Whether the bookmarks file configuration has been done yet.</summary>
+      <description>True if the bookmarks file has been configured with the Ubuntu One bookmark already.</description>
+    </key>
+  </schema>
+</schemalist>

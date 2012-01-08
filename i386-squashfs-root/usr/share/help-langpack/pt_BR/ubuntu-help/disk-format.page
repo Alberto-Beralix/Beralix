@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="disk-format" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    
+    <credit type="author">
+      <name>Equipe de Documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <desc>Remova todos os arquivos e pastas de um disco rígido externo ou unidade flash USB, formatando-o.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Limpar tudo de um disco removível</title>
+
+<p>Se você tiver um disco removível, como um dispositivo de memória USB ou um disco rígido externo, você às vezes pode querer remover completamente todos os seus arquivos e pastas. Você pode fazer isso <em>formatando</em> o disco - isso apaga todos os arquivos do disco e o deixa vazio.</p>
+
+<steps>
+ <title>Formatar um disco removível</title>
+ <item><p>Abra o aplicativo <app>Utilitário de discos</app> a partir do <gui>Painel</gui>.</p></item>
+ <item><p>Selecione o disco que você deseja apagar da lista de <gui>Dispositivos de armazenamento</gui>.</p>
+  <note style="warning"><p>Certifique-se de que selecionou o disco correto! Se escolher o disco errado, todos os arquivos do outro disco serão apagados!</p></note></item>
+ <item><p>Na seção de Volumes, clique <gui>Desmontar volume</gui>. Então clique em <gui>Formatar volume</gui>.</p></item>
+ <item><p>Na janela que aparecer, escolha um <gui>Tipo</gui> de sistema de arquivos para o disco.</p>
+  <p>Se você usar o disco em computadores com Windows ou Mac OS além do Linux,  escolha <gui>FAT</gui>. Se você só o utiliza no Windows, <gui>NTFS</gui> pode ser a melhor opção. Uma breve descrição do <gui>tipo de sistema de arquivo</gui> vai ser apresentada como um rótulo.</p></item>
+ <item><p>Dê um nome ao disco e clique em <gui>Formatar</gui> para iniciar a limpeza do disco.</p></item>
+ <item><p>Uma vez terminada a formatação, <gui>remova com segurança</gui> o disco. Ele deve estar em branco agora e pronto para o uso de novo.</p></item>
+</steps>
+
+<note style="warning">
+ <title>Formatar o disco não exclui seus arquivos com segurança.</title>
+ <p>Formatar um disco não é uma maneira completamente segura de apagar todos os seus dados. Um disco formatado vai parecer não ter arquivos nele, mas é possível que programas especiais de recuperação possam restaurar os arquivos. Se você precisa apagar seus arquivos com segurança, você deverá utilizar um utilitário de linha de comando, como o <app>shred</app>.</p>
+</note>
+
+</page>

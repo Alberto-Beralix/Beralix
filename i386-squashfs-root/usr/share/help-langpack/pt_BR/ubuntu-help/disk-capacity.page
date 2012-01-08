@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="disk-capacity" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    
+    <credit type="author">
+      <name>Equipe de Documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Natalia Ruz Leiva</name>
+      <email>nruz@alumnos.inf.utfsm.cl</email>
+    </credit>
+
+    <desc>Com o <gui>Analisador de Utilização do Disco</gui> ou o <gui>Monitor do sistema</gui>.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Verificar quanto de espaço livre resta no disco</title>
+<p>Você pode verificar quanto resta de espaço de disco usando <app>Analisador de uso de disco</app> e <app>Monitor do sistema</app>.</p>
+<section id="disk-usage-analyzer"><title>Verificar com o Analisador de uso de disco</title>
+<p>Para verificar o espaço livre e a capacidade do disco usando o <app>Analizador do Uso do Disco</app>:</p>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Rewrite steps to use common simple form in 3.0.1</p>
+</comment>
+
+<steps>
+     <item><p>Abra o aplicativo <app>Analisador de uso de disco</app> a partir do <gui>Painel</gui>.</p></item>
+     <item><p>A janela do <app>Analizador do Uso do Disco</app> mostrará a <gui>Capacidade total do sistema de arquivos</gui> e o <gui>Uso total do sistema de arquivos</gui>.</p><p>(Você poderá clicar em <gui>Ver como gráfico de anéis</gui> para mudar a visualização para <gui>Ver como gráficos de mapa em árvore (Treemap)</gui>).</p></item> 
+    <item><p>Clique em <gui>Varrer pasta pessoal</gui> se você quiser verificar quanto espaço de disco resta na sua pasta pessoal ou clique no ícone <gui>Varrer sistema de arquivos</gui> se você quiser verificar quanto espaço de disco resta no diretório '/' (root). Em ambos os casos, a localização dos arquivos e outras opções como uso, tamanho e conteúdo serão apresentadas. Você pode alterar a ordem dos detalhes e visualizar os arquivos em ordem de tamanho.</p></item>
+    <item><p>Clique no ícone <gui>Varrer uma pasta</gui> se você quiser verificar o espaço de disco dentro de uma pasta específica ou clique <gui>Varrer pasta remota</gui> se você quiser verificar o espaço de disco dentro de uma pasta remota.</p></item>
+    <item><p>Clique <gui>Parar</gui> ou <gui>Atualizar</gui> a qualquer momento que você precisar cancelar ou atualizar a varredura.</p></item>
+  </steps>
+
+
+<note style="tip"><p>O <gui>Analisador do uso do disco</gui> também pode ser iniciado pressionando <keyseq><key>Alt</key><key>F2</key></keyseq>, digitando 'baobab' (sem as aspas simples) e pressionando <key>Enter</key>.</p></note>
+
+</section>
+
+<section id="system-monitor"><title>Verificar com o Monitor do sistema</title>
+
+<p>Para verificar o espaço livre e a capacidade do disco com o <app>Monitor do sistema</app>:</p>
+<steps>
+    <item><p>Abra o aplicativo <app>Monitor do sistema</app> a partir do <gui>Painel</gui>.</p></item>
+    <item><p>Selecione a aba <gui>Sistemas de arquivos</gui> para ver as partições do sistema e o uso do espaço do disco em Total, Livre, Disponível e Em uso.</p></item>
+</steps>
+</section>
+<section id="disk-full"><title>E se o disco estiver muito cheio?</title>
+<p>Se o disco estiver muito cheio, você deve:</p>
+   <list>
+       <item><p>Excluir arquivos que não são importantes ou que você não usa mais.</p></item>
+       <item><p>Faça <link xref="backup-why">cópias de segurança</link> dos arquivos importantes que não precisará por enquanto e os apague do disco rígido.</p></item>
+   </list>
+</section>
+
+</page>

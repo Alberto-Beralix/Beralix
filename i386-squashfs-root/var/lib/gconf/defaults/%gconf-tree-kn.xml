@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="ಇಚ್ಛೆಯ ಅಕ್ಷರಶೈಲಿ">
+							<longdesc>ಭಾಷೆಯ ಫಲಕಕ್ಕಾಗಿನ ಇಚ್ಛೆಯ ಅಕ್ಷರಶೈಲಿಯ ಹೆಸರು</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="ಇಚ್ಛೆಯ ಅಕ್ಷರಶೈಲಿಯನ್ನು ಬಳಸು">
+							<longdesc>ಭಾಷೆಯ ಫಲಕಕ್ಕಾಗಿ ಇಚ್ಛೆಯ ಅಕ್ಷರಶೈಲಿಯ ಹೆಸರನ್ನು ಬಳಸಿ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="ಇನ್‌ಪುಟ್ ವಿಧಾನದ ಹೆಸರನ್ನು ತೋರಿಸು">
+							<longdesc>ಭಾಷೆಯ ಫಲಕದಲ್ಲಿನ ಇನ್‌ಪುಟ್ ವಿಧಾನದ ಹೆಸರನ್ನು ತೋರಿಸು</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="ವ್ಯವಸ್ಥೆಯ ಟ್ರೇಯಲ್ಲಿ ಚಿಹ್ನೆಯನ್ನು ತೋರಿಸು">
+							<longdesc>ವ್ಯವಸ್ಥೆಯ ಟ್ರೇಯಲ್ಲಿ ಚಿಹ್ನೆಯನ್ನು ತೋರಿಸು</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="ನೋಡಬೇಕಿರುವ (ಲುಕ್‌ಅಪ್‌) ಕೋಷ್ಟಕದ ಹೊಂದಿಕೆ">
+							<longdesc>ನೋಡಬೇಕಿರುವ (ಲುಕ್‌ಅಪ್‌) ಕೋಷ್ಟಕದ ಹೊಂದಿಕೆ. 0 = ಅಡ್ಡಲಾಗಿ, 1 = ಲಂಬವಾಗಿ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="ಭಾಷೆಯ ಫಲಕವನ್ನು ತೋರಿಸು">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="ಭಾಷೆಯ ಫಲಕವನ್ನು ತೋರಿಸು">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="ಸ್ವಯಂ ಅಡಗಿಸುವಿಕೆ">
+							<longdesc>ಭಾಷೆಯ ಫಲಕದ ವರ್ತನೆ. 0 = ಮೆನುವಿನಲ್ಲಿ ಅಡಕಗೊಳಿಸಲಾಗಿದೆ, 1 = ಸ್ವಯಂ ಅಡಗಿಸು, 2 = ಯಾವಾಗಲೂ ತೋರಿಸು</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="enable_by_default">
+						<local_schema short_desc="ಇನ್‌ಪುಟ್ ವಿಧಾನವನ್ನು ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಶಕ್ತಗೊಳಿಸು">
+							<longdesc>ಅನ್ವಯವು ಇನ್‌ಪುಟ್ ಗಮನವನ್ನು ಪಡೆದುಕೊಂಡಾಗ ಇನ್‌ಪುಟ್ ವಿಧಾನವನ್ನು ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಶಕ್ತಗೊಳಿಸು</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_global_engine">
+						<local_schema short_desc="ಜಾಗತಿಕ ಇನ್‌ಪುಟ್ ವಿಧಾನವನ್ನು ಬಳಸಿ">
+							<longdesc>ಒಂದೇ ಇನ್‌ಪುಟ್‌ ವಿಧಾನವನ್ನು ಎಲ್ಲಾ ಅನ್ವಯಗಳಲ್ಲೂ ಬಳಸು</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="ಪೂರ್ವ-ಸಂಪಾದನಾ(ಪ್ರಿ-ಎಡಿಟ್) ಪಠ್ಯವನ್ನು ಅಡಕಗೊಳಿಸು">
+							<longdesc>ಅನ್ವಯ ವಿಂಡೊದಲ್ಲಿ ಪೂರ್ವ-ಸಂಪಾದನಾ(ಪ್ರಿ-ಎಡಿಟ್) ಪಠ್ಯವನ್ನು ಅಡಕಗೊಳಿಸು</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="ವ್ಯವಸ್ಥೆಯ ಕೀಲಿಮಣೆ ವಿನ್ಯಾಸವನ್ನು ಬಳಸಿ">
+							<longdesc>ವ್ಯವಸ್ಥೆಯ ಕೀಲಿಮಣೆ (XKB) ವಿನ್ಯಾಸವನ್ನು ಬಳಸಿ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="ಎಂಜಿನ್‌ಗಳನ್ನು ಮೊದಲೆ ಲೋಡ್ ಮಾಡು">
+							<longdesc>ibus ಆರಂಭಗೊಂಡಾಗ ಲೋಡ್ ಮಾಡಲಾದ ಎಂಜಿನ್‌ಗಳು</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="ಹಿಂದಿನ ಎಂಜಿನ್ ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳು">
+								<longdesc>ಹಿಂದಿನ ಇನ್‌ಪುಟ್ ವಿಧಾನಕ್ಕೆ ಬದಲಾಯಿಸಲು ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿಗಳು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="ಹಿಂದಿನ ಎಂಜಿನ್ ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳು">
+								<longdesc>ಹಿಂದಿನ ಇನ್‌ಪುಟ್ ವಿಧಾನಕ್ಕೆ ಬದಲಾಯಿಸಲು ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿಗಳು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="ಮುಂದಿನ ಎಂಜಿನ್ ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳು">
+								<longdesc>ಪಟ್ಟಿಯಲ್ಲಿನ ಮುಂದಿನ ಇನ್‌ಪುಟ್ ವಿಧಾನಕ್ಕೆ ಬದಲಾಯಿಸಲು ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿಗಳು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="ಮುಂದಿನ ಎಂಜಿನ್ ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳು">
+								<longdesc>ಪಟ್ಟಿಯಲ್ಲಿನ ಮುಂದಿನ ಇನ್‌ಪುಟ್ ವಿಧಾನಕ್ಕೆ ಬದಲಾಯಿಸಲು ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿಗಳು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="disable_unconditional">
+							<local_schema short_desc="ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳನ್ನು ಅಶಕ್ತಗೊಳಿಸು">
+								<longdesc>ಇನ್‌ಪುಟ್ ವಿಧಾನವನ್ನು ಆಫ್ ಮಾಡಲು ಬಳಸಬಹುದಾದ ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_unconditional">
+							<local_schema short_desc="ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳನ್ನು ಶಕ್ತಗೊಳಿಸು">
+								<longdesc>ಇನ್‌ಪುಟ್ ವಿಧಾನವನ್ನು ಆನ್ ಮಾಡಲು ಬಳಸಬಹುದಾದ ಶಾರ್ಟ್-ಕಟ್‌ ಕೀಲಿ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಗಳನ್ನು ಟ್ರಿಗರ್ ಮಾಡು">
+								<longdesc>ಇನ್‌ಪುಟ್‌ ವಿಧಾನಗಳನ್ನು ಆಫ್ ಹಾಗು ಆನ್ ಮಾಡಲು ಶಾರ್ಟ್-ಕೀಲಿಗಳು</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="WiFi ನಿರ್ಮಿಸುವುದನ್ನು ಅಶಕ್ತಗೊಳಿಸು">
+						<longdesc>ಆಪ್ಲೆಟ್‌ ಅನ್ನು ಬಳಸುವಾಗ ಒಂದು ತಾತ್ಕಾಲಿಕ ಜಾಲಬಂಧವನ್ನು ರಚಿಸುವುದನ್ನು ಅಶಕ್ತಗೊಳಿಸಲು ಇದನ್ನು TRUE ಗೆ ಬದಲಾಯಿಸಿ.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="ಮುದ್ರೆ">
+						<longdesc>ಸಿದ್ಧತೆಗಳನ್ನು ಹೊಸ ಆವೃತ್ತಿಗೆ ವರ್ಗಾಯಿಸಬೇಕೆ ಎಂದು ನಿರ್ಧರಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="ವೈರ್ಲೆಸ್ ಜಾಲಬಂಧಗಳು ಲಭ್ಯವಿವೆ ಎಂಬ ಸೂಚನೆಗಳನ್ನು ತಡೆಹಿಡಿ">
+						<longdesc>ವೈರ್ಲೆಸ್ ಜಾಲಬಂಧಗಳು ಲಭ್ಯವಿರುವುದನ್ನು ಸೂಚಿಸುವುದನ್ನು ಅಶಕ್ತಗೊಳಿಸಲು ಇದನ್ನು TRUE ಬದಲಾಯಿಸಿ.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="ಸಂಪರ್ಕ ಕಡಿದು ಹಾಕಲಾದ ಸೂಚನೆಗಳನ್ನು ಅಶಕ್ತಗೊಳಿಸು">
+						<longdesc>ಒಂದು ಜಾಲಬಂಧದಿಂದ ಸಂಪರ್ಕ ಕಡಿದುಹಾಕುವಾಗ ಸೂಚಿಸುವುದನ್ನು ಅಶಕ್ತಗೊಳಿಸಲು ಇದನ್ನು TRUE ಗೆ ಬದಲಾಯಿಸಿ.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="ಸಂಪರ್ಕಗೊಂಡ ಸೂಚನೆಗಳನ್ನು ಅಶಕ್ತಗೊಳಿಸು">
+						<longdesc>ಒಂದು ಜಾಲಬಂಧಕ್ಕೆ ಸಂಪರ್ಕ ಸಾಧಿಸುವಾಗ ಸೂಚಿಸುವುದನ್ನು ಅಶಕ್ತಗೊಳಿಸಲು ಇದನ್ನು TRUE ಗೆ ಬದಲಾಯಿಸಿ.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

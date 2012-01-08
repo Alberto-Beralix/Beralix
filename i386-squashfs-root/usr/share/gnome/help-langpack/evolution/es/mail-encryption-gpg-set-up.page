@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-encryption-gpg-set-up" xml:lang="es">
+
+  <info>
+    <desc>Configurar GPG para su cuenta de correo para poder firmar, cifrar y descifrar correos.</desc>
+
+    <link type="guide" xref="mail-encryption#gpg"/>
+
+    <revision pkgversion="2.32.1" version="0.2" date="2011-07-27" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/encryption.html.en#encrypt-evo-integ -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Configurar el cifrado GPG para su cuenta de correo</title>
+<!-- TODO:POST-3-2: Update and rewrite using Seahorse. Needs a complete rewrite once https://bugzilla.gnome.org/show_bug.cgi?id=508744 is fixed. -->
+
+<note style="tip"><p>Necesita una clave GPG para esto. Si aún no tiene una, consulte <link xref="mail-encryption-gpg-create-key">Crear una clave GPG</link>.</p></note>
+
+<steps>
+<item><p>Seleccione <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Cuentas de correo</gui></guiseq>.</p></item>
+<item><p>Seleccione la cuenta que quiere usar de forma segura, después pulse <gui style="button">Editar</gui>.</p></item>
+<item><p>Pulse en la pestaña <gui>Seguridad</gui>.</p></item>
+<item><p>Especifique el ID de su clave en el campo <gui>ID de la clave GPG/PGP</gui>.</p>
+<note style="tip"><p>Debajo del campo puede seleccionar si quiere firmar siempre los correos salientes al usar esta cuenta y otras opciones.</p></note>
+</item>
+<item><p>Pulse <gui style="button">Aceptar</gui>.</p></item>
+<item><p>Pulse <gui style="button">Cerrar</gui>.</p></item>
+</steps>
+<p>Evolution requires that you know your key ID. If you do not remember it, you can find it by typing <code>gpg --list-keys</code> in a terminal window. Your key ID is an eight-character string with random numbers and letters.</p>
+
+</page>

@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/google/protobuf/internal/__init__.py

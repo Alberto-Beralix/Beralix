@@ -1,0 +1,1865 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="Benutzerdefinierte Schriftart">
+							<longdesc>Name der benutzerdefinierten Schriftart für Sprach-Panel</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="Benutzerdefinierte Schriftart verwenden">
+							<longdesc>Benutzerdefinierte Schriftart für Sprach-Panel verwenden</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="Name der Eingabemethode anzeigen">
+							<longdesc>Name der Eingabemethode auf Sprachleiste anzeigen</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="Symbol im Benachrichtigungsfeld anzeigen">
+							<longdesc>Symbol im Benachrichtigungsfeld anzeigen</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="Ausrichtung der Lookup-Tabelle">
+							<longdesc>Ausrichtung der Lookup-Tabelle. 0 = Horizontal, 1 = Vertikal</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="Position des Sprach-Panels">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="Position des Sprach-Panels">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="Automatisch verstecken">
+							<longdesc>Verhalten des Sprach-Panels: 0 = Im Menü einbetten, 1 = Automatisch verstecken, 2 = Immer anzeigen</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="enable_by_default">
+						<local_schema short_desc="Eingabemethode standardmäßig aktivieren">
+							<longdesc>Eingabemethode standardmäßig aktivieren, wenn die Anwendung Eingabefokus erlangt</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_global_engine">
+						<local_schema short_desc="Globale Eingabemethode wählen">
+							<longdesc>Dieselbe Eingabemethode für alle Anwendungen verwenden</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="Preedit-Text einbetten">
+							<longdesc>Preedit-Text in Anwendungsfenster einbetten</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="System-Tastaturbelegung verwenden">
+							<longdesc>System-Tastatur (XKB) Belegung verwenden</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="Engines vorladen">
+							<longdesc>Engines vorladen, während IBus startet</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="Vorherige Engine Tastenkombination">
+								<longdesc>Tastenkombination zum Wechseln zur vorherigen Eingabemethode</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="Vorherige Engine Tastenkombination">
+								<longdesc>Tastenkombination zum Wechseln zur vorherigen Eingabemethode</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="Nächste Engine Tastenkombination">
+								<longdesc>Tastenkombination zum Wechseln zur nächsten Eingabemethode in der Liste</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="Nächste Engine Tastenkombination">
+								<longdesc>Tastenkombination zum Wechseln zur nächsten Eingabemethode in der Liste</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="Auslöser Tastenkombination">
+								<longdesc>Tastenkombination zum An- oder Ausschalten der Eingabemethode</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="Das Erstellen von WiFi-Netzen ausschalten">
+						<longdesc>Legt fest, ob die Erstellung von Adhoc-Netzwerken mit dem Applet abgeschaltet ist.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="Einstellungen übernehmen">
+						<longdesc>Legt fest, ob die Einstellungen in eine neue Version übernommen werden sollen.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="Benachrichtigung über neue Funknetzwerke unterdrücken">
+						<longdesc>Legt fest, ob Benachrichtigungen über neue Funknetzwerke abgeschaltet werden.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="Benachrichtigungen über Verbindungstrennung abschalten">
+						<longdesc>Legt fest, ob Benachrichtigungen über die Verbindungstrennung von einem Netzwerk abgeschaltet werden.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="Benachrichtigungen über neue Verbindung abschalten">
+						<longdesc>Legt fest, ob Benachrichtigungen über Verbindungen mit einem Netzwerk abgeschaltet werden.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="fade">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="unresponsive_saturation">
+									<local_schema short_desc="Sättigung von nicht-reagierenden Fenstern">
+										<longdesc>Sättigung (%) von nicht-reagierenden Fenstern (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unresponsive_brightness">
+									<local_schema short_desc="Helligkeit von nicht-reagierenden Fenstern">
+										<longdesc>Helligkeit (%) von nicht-reagierenden Fenstern (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fullscreen_visual_bell">
+									<local_schema short_desc="Visuelle Glocke in Vollbild">
+										<longdesc>Ausblendeffekt für visuelle Glocke im Vollbildmodus</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="visual_bell">
+									<local_schema short_desc="Visuelle Glocke">
+										<longdesc>Ausblendeffekt für visuelle Glocke</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Ein-/Ausblenden für Fenster">
+										<longdesc>Fenster, die ein- und ausgeblendet werden sollen (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_time">
+									<local_schema short_desc="Ausblendungszeit">
+										<longdesc>Window fade time (in ms) in &quot;Constant time&quot; mode (1 - 5000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_speed">
+									<local_schema short_desc="Ausblendgeschwindigkeit">
+										<longdesc>Window fade speed (0.1 - 25.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="wobbly">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="maximize_effect">
+									<local_schema short_desc="Effekt maximieren">
+										<longdesc>Wackeleffekt beim Maximieren/Aufheben der Maximierung von Fenstern</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_effect">
+									<local_schema short_desc="Effekt fokussieren">
+										<longdesc>Fenstereffekt fokussieren (0 = Keine, 1 = Zittern)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_effect">
+									<local_schema short_desc="Effekt zuordnen">
+										<longdesc>Fenstereffekt zuordnen (0 = Keine, 1 = Zittern)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="min_grid_size">
+									<local_schema short_desc="Minimale Gittergröße">
+										<longdesc>Minimale Gittergröße (4 - 128)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grid_resolution">
+									<local_schema short_desc="Gitterauflösung">
+										<longdesc>Auflösung des Gitters (1 - 64)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spring_k">
+									<local_schema short_desc="Spring K">
+										<longdesc>Federkonstante (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="friction">
+									<local_schema short_desc="Reibung">
+										<longdesc>Reibung (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shiver">
+									<local_schema short_desc="Zittern">
+										<longdesc>Fenster zittern lassen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_inverted">
+									<local_schema short_desc="Einrasten invertiert">
+										<longdesc>Invertiertes Einrasten von Fenstern</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_key">
+									<local_schema short_desc="Fenster einrasten">
+										<longdesc>Einrasten von Fenstern ein/aus</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="scale">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="show_desktop">
+									<local_schema short_desc="Auf den Desktop klicken um ihn anzuzeigen">
+										<longdesc>Enter Show Desktop mode when Desktop is clicked during Scale</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_key">
+									<local_schema short_desc="Fensterauswahl für Fenster in aktueller Ausgabe initiieren">
+										<longdesc>Layout durchführen und mit der Umformung der Fenster in aktueller Ausgabe beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_button">
+									<local_schema short_desc="Fensterauswahl für Fenster in aktueller Ausgabe initiieren">
+										<longdesc>Layout durchführen und mit der Umformung der Fenster in aktueller Ausgabe beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_edge">
+									<local_schema short_desc="Fensterauswahl für Fenster in aktueller Ausgabe initiieren">
+										<longdesc>Layout durchführen und mit der Umformung der Fenster in aktueller Ausgabe beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_key">
+									<local_schema short_desc="Fensterauswahl für Fenstergruppe initiieren">
+										<longdesc>Layout durchführen und mit der Umformung der Fenstergruppe beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_button">
+									<local_schema short_desc="Fensterauswahl für Fenstergruppe initiieren">
+										<longdesc>Layout durchführen und mit der Umformung der Fenstergruppe beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_edge">
+									<local_schema short_desc="Fensterauswahl für Fenstergruppe initiieren">
+										<longdesc>Layout durchführen und mit der Umformung der Fenstergruppe beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_key">
+									<local_schema short_desc="Fensterauswahl für alle Fenster initiieren">
+										<longdesc>Layout durchführen und mit der Umformung aller Fenster beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_button">
+									<local_schema short_desc="Fensterauswahl für alle Fenster initiieren">
+										<longdesc>Layout durchführen und mit der Umformung aller Fenster beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_edge">
+									<local_schema short_desc="Fensterauswahl für alle Fenster initiieren">
+										<longdesc>Layout durchführen und mit der Umformung aller Fenster beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Fensterauswahl initiieren">
+										<longdesc>Layout erstellen und mit Fensterumformung beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Fensterauswahl initiieren">
+										<longdesc>Layout erstellen und mit Fensterumformung beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_edge">
+									<local_schema short_desc="Fensterauswahl initiieren">
+										<longdesc>Layout erstellen und mit Fensterumformung beginnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Modus für Mehrfachausgabe">
+										<longdesc>Legt fest, wohin skalierte Fenster platziert werden, wenn mehrere Ausgabegeräte verwendet werden. (0 = Auf momentanem Ausgabegerät, 1 = Auf allen Ausgabegeräten)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Fenster skalieren">
+										<longdesc>Fenster, die im Skaliermodus skaliert werden sollen (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlay_icon">
+									<local_schema short_desc="Symbol überlagern">
+										<longdesc>Fenster nach Skalierung mit Symbol überlagern (0 = Keine, 1 = Emblem, 2 = Groß)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Opazität">
+										<longdesc>Durchlässigkeitsgrad in Prozent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="darken_back">
+									<local_schema short_desc="Hintergrund abdunkeln">
+										<longdesc>Hintergrund beim Skalieren von Fenstern abdunkeln</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Zeitintervall">
+										<longdesc>Skalierzeitintervall (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Geschwindigkeit">
+										<longdesc>Skaliergeschwindigkeit (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spacing">
+									<local_schema short_desc="Abstand">
+										<longdesc>Abstand zwischen Fenstern (0 - 250)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="number_of_desktops">
+									<local_schema short_desc="Anzahl der Desktops">
+										<longdesc>Anzahl der virtuellen Desktops (1 - 36)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="vsize">
+									<local_schema short_desc="Vertikale virtuelle Größe">
+										<longdesc>Anzahl der virtuellen Darstellungsfelder in vertikaler Richtung (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hsize">
+									<local_schema short_desc="Virtuelle horizontale Größe">
+										<longdesc>Anzahl der virtuellen Darstellungsfelder in horizontaler Richtung (z. B. 4 für einen Würfel) (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_shaded_key">
+									<local_schema short_desc="Fenster schattieren ein/aus">
+										<longdesc>Aktives Fenster schattieren ein/aus</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_vertically_key">
+									<local_schema short_desc="Fenster vertikal maximieren ein/aus">
+										<longdesc>Aktives Fenster vertikal maximieren ein/aus</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_horizontally_key">
+									<local_schema short_desc="Fenster horizontal maximieren ein/aus">
+										<longdesc>Aktives Fenster horizontal maximieren ein/aus</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_button">
+									<local_schema short_desc="Fenster maximieren ein/aus">
+										<longdesc>Aktives Fenster maximieren ein/aus</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_key">
+									<local_schema short_desc="Fenster maximieren ein/aus">
+										<longdesc>Aktives Fenster maximieren ein/aus</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_edge">
+									<local_schema short_desc="Desktop anzeigen">
+										<longdesc>Alle Fenster ausblenden und Desktop fokussieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_key">
+									<local_schema short_desc="Desktop anzeigen">
+										<longdesc>Alle Fenster ausblenden und Desktop fokussieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_button">
+									<local_schema short_desc="Fenstermenü">
+										<longdesc>Maustastenkombination für Fenstermenü</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_key">
+									<local_schema short_desc="Fenstermenü">
+										<longdesc>Tastenkombination für Fenstermenü</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_vertically_key">
+									<local_schema short_desc="Fenster vertikal maximieren">
+										<longdesc>Aktives Fenster vertikal maximieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_horizontally_key">
+									<local_schema short_desc="Fenster horizontal maximieren">
+										<longdesc>Aktives Fenster horizontal maximieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unmaximize_window_key">
+									<local_schema short_desc="Maximierung aufheben">
+										<longdesc>Maximierung des aktiven Fensters aufheben</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="Fenster maximieren">
+										<longdesc>Aktives Fenster maximieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_button">
+									<local_schema short_desc="Fenster minimieren">
+										<longdesc>Aktives Fenster minimieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_key">
+									<local_schema short_desc="Fenster minimieren">
+										<longdesc>Aktives Fenster minimieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_button">
+									<local_schema short_desc="Fenster nach unten verschieben">
+										<longdesc>Fenster unter andere Fenster verschieben</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_key">
+									<local_schema short_desc="Fenster nach unten verschieben">
+										<longdesc>Fenster unter andere Fenster verschieben</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_button">
+									<local_schema short_desc="Fenster nach vorn verlagern">
+										<longdesc>Fenster vor andere Fenster verlagern</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_key">
+									<local_schema short_desc="Fenster nach vorn verlagern">
+										<longdesc>Fenster vor andere Fenster verlagern</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_button">
+									<local_schema short_desc="Fenster schließen">
+										<longdesc>Aktives Fenster verschieben</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_key">
+									<local_schema short_desc="Fenster schließen">
+										<longdesc>Aktives Fenster verschieben</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_match">
+									<local_schema short_desc="Fenster mit &quot;Focus Stealing Prevention&quot;">
+										<longdesc>Auswahl an Fenstern, die beim Öffnen nicht automatisch Fokus bekommen, falls zu diesem Zeitpunkt mit anderen Fenstern gearbeitet wird. (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_level">
+									<local_schema short_desc="Stärke der &quot;Focus Stealing Prevention&quot;">
+										<longdesc>Legt fest, wie strikt die &quot;Focus Stealing Prevention&quot; angewandt wird. (0 = Aus, 1 = Niedrig, 2 = Normal, 3 = Hoch, 4 = Sehr hoch)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise_delay">
+									<local_schema short_desc="Verzögerung für Automatisch in den Vordergrund">
+										<longdesc>Zeit, die vergehen soll, bevor das ausgewählte Fenster in den Vordergrund gehoben wird (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise">
+									<local_schema short_desc="Automatisch in den Vordergrund">
+										<longdesc>Ausgewählte Fenster nach Zeitintervall in Vordergrund verschieben</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_click">
+									<local_schema short_desc="Durch Klicken in den Vordergrund">
+										<longdesc>Fenster durch Anklicken in Vordergrund verschieben</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="Fokuswechsel durch Klicken">
+										<longdesc>Fenster durch Anklicken fokussieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outputs">
+									<local_schema short_desc="Ausgaben">
+										<longdesc>Liste mit Zeichenketten zur Erläuterung von Ausgabegeräten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_outputs">
+									<local_schema short_desc="Ausgaben erkennen">
+										<longdesc>Automatische Erkennung von Ausgabegeräten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlapping_outputs">
+									<local_schema short_desc="Behandlung von überlappenden Ausgabegeräten">
+										<longdesc>Legt fest, welches der überlappenden Ausgabegeräte z.B. beim Maximieren von Fenstern bevorzugt werden soll. (0 = Intelligent, 1 = Größeres Ausgabegerät bevorzugen, 2 = Kleineres Ausgabegerät bevorzugen)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="default_icon">
+									<local_schema short_desc="Standardsymbol">
+										<longdesc>Standardfenstersymbol</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ping_delay">
+									<local_schema short_desc="Pingverzögerung">
+										<longdesc>Intervall zwischen Ping-Meldungen (1000 - 30000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_delay">
+									<local_schema short_desc="Verzögerung der Rand-Aktionen">
+										<longdesc>Dauer, die der Mauszeiger am Bildschirmrand verweilen muss, bevor eine Rand-Aktion ausgeführt wird. (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hide_skip_taskbar_windows">
+									<local_schema short_desc="Programmleistenfenster ausblenden">
+										<longdesc>Fenster ausblenden, die sich bei Wechsel in Modus &quot;Desktop anzeigen&quot; nicht in Programmleiste befanden</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ignore_hints_when_maximized">
+									<local_schema short_desc="Bei maximierter Anzeige Tipps ignorieren">
+										<longdesc>Bei maximierter Anzeige Größensteigerung und Aspekttipps ignorieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="audible_bell">
+									<local_schema short_desc="Akustische Glocke">
+										<longdesc>Akustischer System-Warnton</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_plugins">
+									<local_schema short_desc="Aktive Plugins">
+										<longdesc>Liste der aktiven Plugins</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="opengl">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="texture_compression">
+									<local_schema short_desc="Texturkompression">
+										<longdesc>Benutze Kompression für aus Bildern generierte Texturen, wenn möglich.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sync_to_vblank">
+									<local_schema short_desc="Mit VBlank synchronisieren">
+										<longdesc>Bildschirmaktualisierungen nur während inaktiver vertikaler Anzeige durchführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lighting">
+									<local_schema short_desc="Beleuchtung">
+										<longdesc>Beim Umwandeln des Bildschirms diffuses Licht verwenden</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="texture_filter">
+									<local_schema short_desc="Strukturfilter">
+										<longdesc>Texturfilter (0 = Schnell, 1 = Gut, 2 = Beste)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="gnomecompat">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command_terminal_key">
+									<local_schema short_desc="Einen Terminalemulator öffnen">
+										<longdesc>Einen Terminalemulator öffnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_terminal">
+									<local_schema short_desc="Kommandozeile für Terminal">
+										<longdesc>Kommandozeile für Terminal</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_window_screenshot_key">
+									<local_schema short_desc="Bildschirmfoto von Fenster aufnehmen">
+										<longdesc>Bildschirmfoto von Fenster aufnehmen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_window_screenshot">
+									<local_schema short_desc="Kommandozeile für Fenster-Bildschirmfoto ">
+										<longdesc>Kommandozeile für Fenster-Bildschirmfoto </longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_screenshot_key">
+									<local_schema short_desc="Bildschirmfoto aufnehmen">
+										<longdesc>Bildschirmfoto aufnehmen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_screenshot">
+									<local_schema short_desc="Kommandozeile für Bildschirmfoto">
+										<longdesc>Kommandozeile für Bildschirmfoto</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_key">
+									<local_schema short_desc="Dialogfeld Ausführen">
+										<longdesc>Dialogfeld &apos;Anwendung ausführen&apos; anzeigen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="main_menu_key">
+									<local_schema short_desc="Hauptmenü anzeigen">
+										<longdesc>Hauptmenü anzeigen</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="screenshot">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="launch_app">
+									<local_schema short_desc="Anwendung starten">
+										<longdesc>Bildschirmfoto automatisch mit dieser Anwendung öffnen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="directory">
+									<local_schema short_desc="Verzeichnis">
+										<longdesc>Put screenshot images in this directory. If empty, the desktop directory will be used.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Initiieren">
+										<longdesc>Start der Auswahl des aufzunehmenden Rechtecks</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="unredirect_fullscreen_windows">
+									<local_schema short_desc="Umleitung von Vollbildfenstern aufheben">
+										<longdesc>Aufbau von Vollbildfenstern ohne Umleitung zu Offscreen-Pixmaps erlauben</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="refresh_rate">
+									<local_schema short_desc="Aktualisierungsrate">
+										<longdesc>Bildwiederholungsrate (Häufigkeit/Sekunde) (1 - 200)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_refresh_rate">
+									<local_schema short_desc="Aktualisierungsrate erkennen">
+										<longdesc>Automatische Erkennung der Aktualisierungsrate</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="slow_animations_key">
+									<local_schema short_desc="Langsame Animationen">
+										<longdesc>Verwenden langsamer Animationen ein/aus</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="annotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stroke_width">
+									<local_schema short_desc="Strichbreite">
+										<longdesc>Strichbreite für Notizen (1.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="stroke_color">
+									<local_schema short_desc="Kommentar Rahmenfarbe">
+										<longdesc>Strichfarbe für Notizen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="Füllfarbe">
+										<longdesc>Füllfarbe für Anmerkungen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_button">
+									<local_schema short_desc="Leeren">
+										<longdesc>Leeren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_key">
+									<local_schema short_desc="Leeren">
+										<longdesc>Leeren</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="decor">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="shadow_match">
+									<local_schema short_desc="Schatten für Fenster">
+										<longdesc>Fenster, um die ein Schatten gezeichnet werden soll (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="decoration_match">
+									<local_schema short_desc="Dekoration für Fenster">
+										<longdesc>Fenster, die dekoriert werden sollen (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmaps">
+										<longdesc>Mipmaps für Fensterdekorations-Texturen generieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command">
+									<local_schema short_desc="Kommando">
+										<longdesc>Decorator-Kommandozeile, die ausgeführt wird, wenn nicht bereits ein Decorator ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_y_offset">
+									<local_schema short_desc="Schattenversatz Y">
+										<longdesc>Y-Versatz des Schlagschattens (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_x_offset">
+									<local_schema short_desc="Schattenversatz X">
+										<longdesc>X-Versatz des Schlagschattens (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_color">
+									<local_schema short_desc="Schattenfarbe">
+										<longdesc>Farbe des Schlagschattens</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_opacity">
+									<local_schema short_desc="Schattenopazität">
+										<longdesc>Opazität des Schlagschattens (0.01 - 6.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_radius">
+									<local_schema short_desc="Schattenradius">
+										<longdesc>Radius des Schlagschattens (0.1 - 18.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="zoom">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="timestep">
+									<local_schema short_desc="Zeitintervall">
+										<longdesc>Zoom Timestep (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Geschwindigkeit">
+										<longdesc>Zoom Speed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Initiieren">
+										<longdesc>Zoom In</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="commands">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command12_edge">
+									<local_schema short_desc="Befehl 12 ausführen">
+										<longdesc>A edge binding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_edge">
+									<local_schema short_desc="Befehl 11 ausführen">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_edge">
+									<local_schema short_desc="Befehl 10 ausführen">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_edge">
+									<local_schema short_desc="Befehl 9 ausführen">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_edge">
+									<local_schema short_desc="Befehl 8 ausführen">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_edge">
+									<local_schema short_desc="Befehl 7 ausführen">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_edge">
+									<local_schema short_desc="Befehl 6 ausführen">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_edge">
+									<local_schema short_desc="Befehl 5 ausführen">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_edge">
+									<local_schema short_desc="Befehl 4 ausführen">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_edge">
+									<local_schema short_desc="Befehl 3 ausführen">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_edge">
+									<local_schema short_desc="Befehl 12 ausführen">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_edge">
+									<local_schema short_desc="Befehl 1 ausführen">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command12_button">
+									<local_schema short_desc="Befehl 12 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_button">
+									<local_schema short_desc="Befehl 11 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_button">
+									<local_schema short_desc="Befehl 10 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_button">
+									<local_schema short_desc="Befehl 9 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_button">
+									<local_schema short_desc="Befehl 8 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_button">
+									<local_schema short_desc="Befehl 7 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_button">
+									<local_schema short_desc="Befehl 6 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_button">
+									<local_schema short_desc="Befehl 5 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_button">
+									<local_schema short_desc="Befehl 4 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_button">
+									<local_schema short_desc="Befehl 3 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_button">
+									<local_schema short_desc="Befehl 12 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_button">
+									<local_schema short_desc="Befehl 1 ausführen">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command12_key">
+									<local_schema short_desc="Befehl 12 ausführen">
+										<longdesc>A keybinding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_key">
+									<local_schema short_desc="Befehl 11 ausführen">
+										<longdesc>Eine Tastenbelegung, die den durch Befehl 11 festgelegten Shell-Befehl ausführt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_key">
+									<local_schema short_desc="Befehl 10 ausführen">
+										<longdesc>Eine Tastenbelegung, die den durch Befehl 10 festgelegten Shell-Befehl ausführt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_key">
+									<local_schema short_desc="Befehl 9 ausführen">
+										<longdesc>Eine Tastenbelegung, die den durch Befehl 9 festgelegten Shell-Befehl ausführt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_key">
+									<local_schema short_desc="Befehl 8 ausführen">
+										<longdesc>Eine Tastenbelegung, die den durch Befehl 8 festgelegten Shell-Befehl ausführt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_key">
+									<local_schema short_desc="Befehl 7 ausführen">
+										<longdesc>Eine Tastenbelegung, die den durch Befehl 7 festgelegten Shell-Befehl ausführt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_key">
+									<local_schema short_desc="Befehl 6 ausführen">
+										<longdesc>Eine Tastenbelegung, die den durch Befehl 6 festgelegten Shell-Befehl ausführt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_key">
+									<local_schema short_desc="Befehl 5 ausführen">
+										<longdesc>Eine Tastenbelegung, die den durch Befehl 5 festgelegten Shell-Befehl ausführt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_key">
+									<local_schema short_desc="Befehl 4 ausführen">
+										<longdesc>Eine Tastenbelegung, die den durch Befehl 4 festgelegten Shell-Befehl ausführt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_key">
+									<local_schema short_desc="Befehl 3 ausführen">
+										<longdesc>Eine Tastenbelegung, die den durch Befehl 3 festgelegten Shell-Befehl ausführt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_key">
+									<local_schema short_desc="Befehl 12 ausführen">
+										<longdesc>Eine Tastenbelegung, die den durch Befehl 2 festgelegten Shell-Befehl ausführt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_key">
+									<local_schema short_desc="Befehl 1 ausführen">
+										<longdesc>Eine Tastenbelegung, die den durch Befehl 1 festgelegten Shell-Befehl ausführt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command12">
+									<local_schema short_desc="Kommandozeile 12">
+										<longdesc>Command line to be executed in shell when run_command12 is invoked</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command11">
+									<local_schema short_desc="Kommandozeile 11">
+										<longdesc>Die Kommandozeile, die bei Ausführung von run_command11 in der Shell ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command10">
+									<local_schema short_desc="Kommandozeile 10">
+										<longdesc>Die Kommandozeile, die bei Ausführung von run_command10 in der Shell ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command9">
+									<local_schema short_desc="Kommandozeile 9">
+										<longdesc>Die Kommandozeile, die bei Ausführung von run_command9 in der Shell ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command8">
+									<local_schema short_desc="Kommandozeile 8">
+										<longdesc>Die Kommandozeile, die bei Ausführung von run_command8 in der Shell ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command7">
+									<local_schema short_desc="Kommandozeile 7">
+										<longdesc>Die Kommandozeile, die bei Ausführung von run_command7 in der Shell ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command6">
+									<local_schema short_desc="Kommandozeile 6">
+										<longdesc>Die Kommandozeile, die bei Ausführung von run_command6 in der Shell ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command5">
+									<local_schema short_desc="Kommandozeile 5">
+										<longdesc>Die Kommandozeile, die bei Ausführung von run_command5 in der Shell ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command4">
+									<local_schema short_desc="Kommandozeile 4">
+										<longdesc>Die Kommandozeile, die bei Ausführung von run_command4 in der Shell ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command3">
+									<local_schema short_desc="Kommandozeile 3">
+										<longdesc>Die Kommandozeile, die bei Ausführung von run_command3 in der Shell ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command2">
+									<local_schema short_desc="Kommandozeile 2">
+										<longdesc>Die Kommandozeile, die bei Ausführung von run_command2 in der Shell ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command1">
+									<local_schema short_desc="Kommandozeile 1">
+										<longdesc>Die Kommandozeile, die bei Ausführung von run_command1 in der Shell ausgeführt wird</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="resize">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stretch_match">
+									<local_schema short_desc="Gestreckt skalierte Fenster">
+										<longdesc>Fenstertypen, die im Modus &quot;Strecken&quot; skaliert werden sollen (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rectangle_match">
+									<local_schema short_desc="&quot;Rechteck&quot;-skalierte Fenster">
+										<longdesc>Fenstertypen, die im Modus &quot;Rechteck&quot; skaliert werden sollen (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outline_match">
+									<local_schema short_desc="&quot;Umriss&quot;-skalierte Fenster">
+										<longdesc>Fenstertypen, die im Modus Umriss&quot; skaliert werden sollen (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="normal_match">
+									<local_schema short_desc="&quot;Normal&quot; skalierte Fenster">
+										<longdesc>Fenstertypen, die im Modus &quot;Normal&quot; skaliert werden sollen (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="Füllfarbe">
+										<longdesc>Im Modus &quot;Rechteck&quot; verwendete Füllfarbe.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="border_color">
+									<local_schema short_desc="Rahmenfarbe">
+										<longdesc>Für die Modi &quot;Umriss&quot; und &quot;Rechteck&quot; verwendete Rahmenfarbe.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="Standard-Modus">
+										<longdesc>Normalerweise für Fensterskalierung verwendeter Modus. (0 = Normal, 1 = Umriss, 2 = Rechteck, 3 = Strecken)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Fensterskalierung initiieren">
+										<longdesc>Fensterskalierung starten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Fensterskalierung initiieren">
+										<longdesc>Fensterskalierung starten</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="cube">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="transparent_manual_only">
+									<local_schema short_desc="Transparenz nur bei Maus-Rotation">
+										<longdesc>Würfel nur transparent, wenn er mit der Maus rotiert wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="inactive_opacity">
+									<local_schema short_desc="Opazität bei Stillstand">
+										<longdesc>Durchsichtigkeit des Desktop-Hintergrundes bei Stillstand des Würfels (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_opacity">
+									<local_schema short_desc="Opazität bei Rotation">
+										<longdesc>Durchsichtigkeit des Desktop-Hintergrundes während der Rotation des Würfels (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_end_color">
+									<local_schema short_desc="Endfarbe für Skydome-Verlauf">
+										<longdesc>Farbe, die unten im Skydome-Fallback-Verlauf verwendet werden soll</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_start_color">
+									<local_schema short_desc="Anfangsfarbe für Skydome-Verlauf">
+										<longdesc>Farbe, die oben im Skydome-Fallback-Verlauf verwendet werden soll</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_animated">
+									<local_schema short_desc="Skydome animieren">
+										<longdesc>Beim Drehen von Würfel Skydome animieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_image">
+									<local_schema short_desc="Skydome-Bild">
+										<longdesc>Bild für die Struktur des Skydome</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome">
+									<local_schema short_desc="Skydome">
+										<longdesc>Skydome anzeigen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Zeitintervall">
+										<longdesc>Faltzeitintervall (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Geschwindigkeit">
+										<longdesc>Faltgeschwindigkeit (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Beschleunigung">
+										<longdesc>Beschleunigung beim Falten (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="in">
+									<local_schema short_desc="In Würfel">
+										<longdesc>Virtueller Standpunkt befindet sich innerhalb des Würfels</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Modus für Mehrfachausgabe">
+										<longdesc>Bestimmt wie der Würfel angezeigt wird, wenn mehrere Ausgabegeräte verwendet werden (0 = Automatisch, 1 = Mehrere Würfel, 2 = Auf großem Würfel)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmaps">
+										<longdesc>Wenn möglich für präzise Skalierung Mipmaps erstellen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unfold_key">
+									<local_schema short_desc="Auffalten">
+										<longdesc>Würfel auffalten</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="water">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="title_wave">
+									<local_schema short_desc="Titelwelle">
+										<longdesc>Welleneffekt aus Fenstertitel</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rain_delay">
+									<local_schema short_desc="Regenverzögerung">
+										<longdesc>Verzögerung (in ms) zwischen den einzelnen Regentropfen (1 - 3600000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="offset_scale">
+									<local_schema short_desc="Versatz-Skalierung">
+										<longdesc>Wasser-Versatz-Skalierung (0 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_wiper_key">
+									<local_schema short_desc="Wischer ein-/ausschalten">
+										<longdesc>Wischereffekt ein-/ausschalten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_rain_key">
+									<local_schema short_desc="Regen ein/aus">
+										<longdesc>Regeneffekt ein/aus</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Initiieren">
+										<longdesc>Wassereffekte für Mauszeiger aktivieren</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="rotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="rotate_to_12_window_key">
+									<local_schema short_desc="Drehen zu Fläche 12 mit Fenster">
+										<longdesc>Drehen zu Fläche 12 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_window_key">
+									<local_schema short_desc="Drehen zu Fläche 11 mit Fenster">
+										<longdesc>Drehen zu Fläche 11 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_window_key">
+									<local_schema short_desc="Drehen zu Fläche 10 mit Fenster">
+										<longdesc>Drehen zu Fläche 10 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_window_key">
+									<local_schema short_desc="Drehen zu Fläche 9 mit Fenster">
+										<longdesc>Drehen zu Fläche 9 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_window_key">
+									<local_schema short_desc="Drehen zu Fläche 8 mit Fenster">
+										<longdesc>Drehen zu Fläche 8 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_window_key">
+									<local_schema short_desc="Drehen zu Fläche 7 mit Fenster">
+										<longdesc>Drehen zu Fläche 7 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_window_key">
+									<local_schema short_desc="Drehen zu Fläche 6 mit Fenster">
+										<longdesc>Drehen zu Fläche 6 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_window_key">
+									<local_schema short_desc="Drehen zu Fläche 5 mit Fenster">
+										<longdesc>Drehen zu Fläche 5 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_window_key">
+									<local_schema short_desc="Drehen zu Fläche 4 mit Fenster">
+										<longdesc>Drehen zu Fläche 4 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_window_key">
+									<local_schema short_desc="Drehen zu Fläche 3 mit Fenster">
+										<longdesc>Drehen zu Fläche 3 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_window_key">
+									<local_schema short_desc="Drehen zu Fläche 2 mit Fenster">
+										<longdesc>Drehen zu Fläche 2 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_window_key">
+									<local_schema short_desc="Drehen zu Fläche 1 mit Fenster">
+										<longdesc>Drehen zu Fläche 1 und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_12_key">
+									<local_schema short_desc="Drehen zu Fläche 12">
+										<longdesc>Drehen zu Fläche 12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_key">
+									<local_schema short_desc="Drehen zu Fläche 11">
+										<longdesc>Drehen zu Fläche 11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_key">
+									<local_schema short_desc="Drehen zu Fläche 10">
+										<longdesc>Drehen zu Fläche 10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_key">
+									<local_schema short_desc="Drehen zu Fläche 9">
+										<longdesc>Drehen zu Fläche 9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_key">
+									<local_schema short_desc="Drehen zu Fläche 8">
+										<longdesc>Drehen zu Fläche 8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_key">
+									<local_schema short_desc="Drehen zu Fläche 7">
+										<longdesc>Drehen zu Fläche 7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_key">
+									<local_schema short_desc="Drehen zu Fläche 6">
+										<longdesc>Drehen zu Fläche 6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_key">
+									<local_schema short_desc="Drehen zu Fläche 5">
+										<longdesc>Drehen zu Fläche 5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_key">
+									<local_schema short_desc="Drehen zu Fläche 4">
+										<longdesc>Drehen zu Fläche 4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_key">
+									<local_schema short_desc="Drehen zu Fläche 3">
+										<longdesc>Drehen zu Fläche 3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_key">
+									<local_schema short_desc="Drehen zu Fläche 2">
+										<longdesc>Drehen zu Fläche 2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_key">
+									<local_schema short_desc="Drehen zu Fläche 1">
+										<longdesc>Drehen zu Fläche 1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_right_edge">
+									<local_schema short_desc="Drehen (nach rechts kippen)">
+										<longdesc>Zum rechten Viewport wechseln und Zeiger verzerren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_left_edge">
+									<local_schema short_desc="Drehen (nach links kippen)">
+										<longdesc>Zum linken Viewport wechseln und Zeiger verzerren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_window_key">
+									<local_schema short_desc="Fenster drehen">
+										<longdesc>Mit Fenster drehen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_key">
+									<local_schema short_desc="Drehen in Richtung">
+										<longdesc>In Richtung Viewport drehen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_button">
+									<local_schema short_desc="Rechts drehen mit Fenster">
+										<longdesc>Rechts drehen und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_key">
+									<local_schema short_desc="Rechts drehen mit Fenster">
+										<longdesc>Rechts drehen und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_button">
+									<local_schema short_desc="Links drehen mit Fenster">
+										<longdesc>Links drehen und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_key">
+									<local_schema short_desc="Links drehen mit Fenster">
+										<longdesc>Links drehen und aktives Fenster mitführen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_button">
+									<local_schema short_desc="Rechts drehen">
+										<longdesc>Rechts drehen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_key">
+									<local_schema short_desc="Rechts drehen">
+										<longdesc>Rechts drehen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_button">
+									<local_schema short_desc="Links drehen">
+										<longdesc>Links drehen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_key">
+									<local_schema short_desc="Links drehen">
+										<longdesc>Links drehen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Initiieren">
+										<longdesc>Drehung starten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Zeitintervall">
+										<longdesc>Drehintervall (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Geschwindigkeit">
+										<longdesc>Drehgeschwindigkeit (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Beschleunigung">
+										<longdesc>Drehbeschleunigung (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sensitivity">
+									<local_schema short_desc="Zeigerempfindlichkeit">
+										<longdesc>Empfindlichkeit bei Zeigerbewegung (0.01 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="flip_time">
+									<local_schema short_desc="Wechselzeit">
+										<longdesc>Zeitüberschreitung vor Viewport-Wechsel (0 - 1000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Zoom">
+										<longdesc>Rotation Zoom (0.0 - 2.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_bottom">
+									<local_schema short_desc="An Unterseite einrasten">
+										<longdesc>Würfeldrehung an Unterseite einrasten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_top">
+									<local_schema short_desc="An Oberseite einrasten">
+										<longdesc>Würfeldrehung an Oberseite einrasten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="invert_y">
+									<local_schema short_desc="Y umkehren für Zeiger">
+										<longdesc>Y-Achse für Zeigerbewegung umkehren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_rotate">
+									<local_schema short_desc="Während des Drehens anheben">
+										<longdesc>Raise window when rotating</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_dnd">
+									<local_schema short_desc="An Rand wechseln (Ziehen und Ablegen)">
+										<longdesc>Zum nächsten Viewport wechseln, wenn Objekt an den Bildschirmrand gezogen wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_window">
+									<local_schema short_desc="An Rand wechseln (Verschieben)">
+										<longdesc>Zum nächsten Viewport wechseln, wenn Fenster an den Bildschirmrand verschoben wird</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_pointer">
+									<local_schema short_desc="An Rand wechseln (Zeiger)">
+										<longdesc>Zum nächsten Viewport wechseln, wenn Zeiger an den Bildschirmrand verschoben wird</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="blur">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="independent_tex">
+									<local_schema short_desc="eigenständige Texturabrufe">
+										<longdesc>nutze verfügbare Texturen für möglichst viele eigenständige Texturabrufe</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="occlusion">
+									<local_schema short_desc="Unschärfe für verdeckte Bereiche">
+										<longdesc>Unschärfe für verdeckte Bildbereiche ausschalten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="Sättigung">
+										<longdesc>Sättigung (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap_lod">
+									<local_schema short_desc="Mipmap-LOD">
+										<longdesc>Mipmap-Detailniveau (0.1 - 5.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_strength">
+									<local_schema short_desc="Stärke">
+										<longdesc>Stärke des Gaußfilters (0.0 - 1.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_radius">
+									<local_schema short_desc="Radius">
+										<longdesc>Radius des Gaußfilters (1 - 15)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="filter">
+									<local_schema short_desc="Unschärfefilter">
+										<longdesc>Methode des Unschärfefilters (0 = 4x-bilinear, 1 = Gaußsch, 2 = Mipmaps)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur">
+									<local_schema short_desc="Alphakanalunschärfe">
+										<longdesc>Unschärfe hinter transparenten Fensterbereichen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur_match">
+									<local_schema short_desc="Alphakanalunschärfe für Fenster">
+										<longdesc>Fenstertypen, auf die die Alphakanalunschärfe angewendet werden soll (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur">
+									<local_schema short_desc="Fokusunschärfe">
+										<longdesc>Unschärfe für Fenster im Hintergrund</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur_match">
+									<local_schema short_desc="Fokusunschärfe für Fenster">
+										<longdesc>Fenstertypen, auf die die Fokusunschärfe angewendet werden soll (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="blur_speed">
+									<local_schema short_desc="Geschwindigkeit">
+										<longdesc>Geschwindigkeit des Unschärfeeffekts (0.1 - 10.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="pulse">
+									<local_schema short_desc="Pulsieren">
+										<longdesc>Puls-Effekt</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="switcher">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="auto_rotate">
+									<local_schema short_desc="Automatisch Arbeitsfläche wechseln">
+										<longdesc>Während des Umschaltens zur Arbeitsfläche des selektierten Fensters wechseln.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimized">
+									<local_schema short_desc="Minimiert">
+										<longdesc>Minimierte Fenster anzeigen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="icon">
+									<local_schema short_desc="Icon">
+										<longdesc>Neben Miniaturbild Symbol anzeigen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Zoom">
+										<longdesc>Distance-Desktop sollte beim Umschalten zwischen Fenstern verkleinert sein (0 - 5)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="bring_to_front">
+									<local_schema short_desc="In den Vordergrund verschieben">
+										<longdesc>Ausgewähltes Fenster in den Vordergrund verschieben</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Opazität">
+										<longdesc>Durchlässigkeitsgrad in Prozent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness">
+									<local_schema short_desc="Helligkeit">
+										<longdesc>Helligkeitsgrad in Prozent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="Sättigung">
+										<longdesc>Sättigungsgrad in Prozent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmaps">
+										<longdesc>Wenn möglich für präzise Skalierung Mipmaps erstellen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Fenster in Umschaltauswahl">
+										<longdesc>Fenster, die beim Umschalten auswählbar sein sollen. (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Zeitintervall">
+										<longdesc>Schalterzeitintervall (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Geschwindigkeit">
+										<longdesc>Schaltergeschwindigkeit (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_key">
+									<local_schema short_desc="Vorheriges Fenster (Keine Vorschau)">
+										<longdesc>Vorheriges Fenster auswählen, ohne dabei das Vorschaufenster anzuzeigen.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_button">
+									<local_schema short_desc="Vorheriges Fenster (Keine Vorschau)">
+										<longdesc>Vorheriges Fenster auswählen, ohne dabei das Vorschaufenster anzuzeigen.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_key">
+									<local_schema short_desc="Nächstes Fenster (Keine Vorschau)">
+										<longdesc>Nächstes Fenster auswählen, ohne dabei das Vorschaufenster anzuzeigen.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_button">
+									<local_schema short_desc="Nächstes Fenster (Keine Vorschau)">
+										<longdesc>Nächstes Fenster auswählen, ohne dabei das Vorschaufenster anzuzeigen.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_key">
+									<local_schema short_desc="Vorheriges Fenster (Alle Arbeitsflächen)">
+										<longdesc>Vorschaufenster anzeigen und vorheriges Fenster (von allen Arbeitsflächen) auswählen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_button">
+									<local_schema short_desc="Vorheriges Fenster (Alle Arbeitsflächen)">
+										<longdesc>Vorschaufenster anzeigen und vorheriges Fenster (von allen Arbeitsflächen) auswählen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_key">
+									<local_schema short_desc="Nächstes Fenster (Alle Arbeitsflächen)">
+										<longdesc>Vorschaufenster anzeigen und nächstes Fenster (von allen Arbeitsflächen) auswählen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_button">
+									<local_schema short_desc="Nächstes Fenster (Alle Arbeitsflächen)">
+										<longdesc>Vorschaufenster anzeigen und nächstes Fenster (von allen Arbeitsflächen) auswählen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_key">
+									<local_schema short_desc="Vorheriges Fenster">
+										<longdesc>Vorschaufenster anzeigen und vorheriges Fenster auswählen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_button">
+									<local_schema short_desc="Vorheriges Fenster">
+										<longdesc>Vorschaufenster anzeigen und vorheriges Fenster auswählen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_key">
+									<local_schema short_desc="Nächstes Fenster">
+										<longdesc>Vorschaufenster anzeigen und nächstes Fenster auswählen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_button">
+									<local_schema short_desc="Nächstes Fenster">
+										<longdesc>Vorschaufenster anzeigen und nächstes Fenster auswählen</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="move">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="lazy_positioning">
+									<local_schema short_desc="Ökonomisch positionieren">
+										<longdesc>Serverseitige Fensterposition bis zum Ende des Verschiebevorgangs nicht aktualisieren</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snapoff_maximized">
+									<local_schema short_desc="Einrasten maximierter Fenster aufheben">
+										<longdesc>Beim Ziehen Einrasten und Maximierung maximierter Fenster aufheben</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="constrain_y">
+									<local_schema short_desc="Y einschränken">
+										<longdesc>Y-Koordinate auf Arbeitsoberfläche einschränken</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Opazität">
+										<longdesc>Durchsichtigkeit der Fenster beim Verschieben (1 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Fensterverschiebung initiieren">
+										<longdesc>Fensterverschiebung starten</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Fensterverschiebung initiieren">
+										<longdesc>Fensterverschiebung starten</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="place">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="viewport_y_values">
+									<local_schema short_desc="Viewport-Y-Position">
+										<longdesc>Vertikale Viewport-Position</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_x_values">
+									<local_schema short_desc="Viewport-X-Position">
+										<longdesc>Horizontale Viewport-Position</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_matches">
+									<local_schema short_desc="Auf Viewport platzierte Fenster">
+										<longdesc>Fenstertypen, die auf einen bestimmten Viewport platziert werden sollen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_y_values">
+									<local_schema short_desc="Y-Position">
+										<longdesc>Vertikale Position</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_x_values">
+									<local_schema short_desc="X-Position">
+										<longdesc>Horizontale Position</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_matches">
+									<local_schema short_desc="Positionierte Fenster">
+										<longdesc>Fenstertypen, die an eine bestimmte Position platziert werden sollen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Modus für Mehrfachausgabe">
+										<longdesc>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Use output device with pointer, 2 = Use output device of focussed window, 3 = Place across all outputs)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="Platzierungsmodus">
+										<longdesc>Algorithmus für die Fensterpositionierung (0 = Kaskadenförmig, 1 = Zentriert, 2 = Intelligent, 3 = Maximieren, 4 = Zufällig, 5 = Pointer)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="workarounds">
+									<local_schema short_desc="Workarounds">
+										<longdesc>Fensterplatzierungs-Workarounds</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="clone">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_button">
+									<local_schema short_desc="Initiieren">
+										<longdesc>Auswahl klonen initiieren</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

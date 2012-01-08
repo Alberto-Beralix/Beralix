@@ -1,0 +1,114 @@
+=head1 NAME
+
+Pango::Font - a rendering-system independent font representation
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Pango::Font
+
+
+
+=cut
+
+=for object Pango::Font - a rendering-system independent font representation
+
+=cut
+
+=for object Pango::Font
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 fontdescription = $font-E<gt>B<describe> 
+
+=head2 fontdescription = $font-E<gt>B<describe_with_absolute_size> 
+
+Since: pango 1.14
+
+=head2 list = Pango::extents_to_pixels ($inclusive, $nearest)
+
+=over
+
+=item * $inclusive (array reference) 
+
+=item * $nearest (array reference) 
+
+=back
+
+
+
+Since: pango 1.16
+
+=head2 fontmap = $font-E<gt>B<get_font_map> 
+
+Since: pango 1.10
+
+=head2 list = $font-E<gt>B<get_glyph_extents> ($glyph)
+
+=over
+
+=item * $glyph (integer) 
+
+=back
+
+=head2 fontmetrics = $font-E<gt>B<get_metrics> ($language)
+
+=over
+
+=item * $language (Pango::Language) 
+
+=back
+
+=head2 integer = Pango::units_from_double ($d)
+
+=over
+
+=item * $d (double) 
+
+=back
+
+
+
+Since: pango 1.16
+
+=head2 double = Pango::units_to_double ($i)
+
+=over
+
+=item * $i (integer) 
+
+=back
+
+
+
+Since: pango 1.16
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

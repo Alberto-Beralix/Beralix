@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-fixed-ip-address" xml:lang="es">
+  <info>
+    <link type="guide" xref="net-wired"/>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <desc>Usar una dirección IP estática facilita administrar algunos servicios de red.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Crear una conexión con una dirección IP fijada</title>
+
+ <p>Most networks will automatically assign an IP address and other details to your computer when you connect to the network. These details can change periodically, but you might want to have a fixed IP address for the computer so you always know what its address is (for example, if it is a file server).</p>
+  <p>Para dar a su equipo una dirección de IP fija (estática):</p>
+
+<steps>
+<item><p>Pulse el <gui>menú de red</gui> en el panel superior y seleccione <gui>Editar conexiones</gui>.</p></item>
+<item><p>Select the Auto eth connection on the <gui>Wired</gui>tab or your WiFi network on the <gui>Wireless</gui> tab and click <gui>Edit</gui>.</p></item>
+<item><p>Click on the <gui>IPv4 Settings</gui> tab and change the <gui>Method</gui> to <em>Manual</em>.</p></item>
+<item><p>If no connection information is listed in the <gui>Addresses</gui> list, or if you want to set up a new connection, click <gui>Add</gui>.</p></item>
+<item><p>Enter the <em>IP Address</em>, <em>Netmask</em>, and <em>Gateway</em> information into the appropriate boxes. How you choose these will depend on your network setup; there are specific rules governing which IP addresses and netmasks are valid for a given network.</p></item>
+<item><p>If necessary, enter a <em>Domain Name Server</em> address into the <gui>DNS servers</gui> box. This is the IP address of a server which looks up domain names; most corporate networks and internet providers have dedicated DNS servers.</p></item>
+<item><p>Pulse <gui>Guardar</gui></p></item>
+<item><p>Cerrar la ventana de configuración de la red.</p></item>
+</steps>
+
+</page>

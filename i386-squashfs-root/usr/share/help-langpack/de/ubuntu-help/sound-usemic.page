@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="sound-usemic" xml:lang="de">
+  <info>
+    <link type="guide" xref="media#sound"/>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <desc>Ein analoges oder USB-Mikrofon verwenden und das vorgegebene Eingabegerät wählen.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Ein anderes Mikrofon verwenden</title>
+
+  <p>You can use an external microphone for audio conferencing, making
+  voice recordings, or using other multimedia applications. Even if your
+  computer has a built-in microphone or a webcam with a microphone, a
+  separate microphone could provide better audio quality.</p>
+
+  <p>If your microphone has a circular TS (<em>tip, sleeve</em>) plug, plug
+  it into the appropriate socket on your computer. Most computers have two
+  sockets: one for microphones and one for speakers. Look for a picture of
+  a microphone next to the socket.
+  Microphones plugged into a TS socket will usually be used by default.
+  If not, see the instructions below for selecting a default input device.</p>
+
+  <p>Falls Sie ein USB-Mikrofon haben, stecken Sie es an einen USB-Port Ihres Rechners. USB-Mikrofone funktionieren als separate Audiogeräte, daher müssen Sie angeben, welches Mikrofon als Standard verwendet werden soll.</p>
+
+  <steps>
+    <title>Vorgegebenes Audio-Eingabegerät wählen</title>
+    <item><p>Click the <gui>sound menu</gui> on the <gui>top bar</gui> and select <gui>Sound Settings</gui>.</p></item>
+    <item><p>Wählen Sie im Reiter <guilabel>Eingabe</guilabel> das Gerät in der Geräteliste aus. Die Pegelanzeige sollte ausschlagen, wenn Sie sprechen.</p></item>
+  </steps>
+
+  <p>If you don't see your device on the <gui>Input</gui> tab, check the
+  <gui>Hardware</gui> tab. Make sure the profile for the device includes
+  "input".</p>
+</page>

@@ -1,0 +1,15 @@
+[Desktop Entry]
+X-AppInstall-Package=lynis
+X-AppInstall-Popcon=65
+X-AppInstall-Section=universe
+
+Name=Lynis auditing tool
+Comment=Security auditing tool (root)
+Exec=su-to-root -c '/usr/sbin/lynis --no-colors'
+Terminal=true
+Type=Application
+Categories=System;
+StartupNotify=true
+
+
+X-Ubuntu-Gettext-Domain=app-install-data

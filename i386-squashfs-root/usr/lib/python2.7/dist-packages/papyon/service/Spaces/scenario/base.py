@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/papyon/service/Spaces/scenario/base.py

@@ -1,0 +1,100 @@
+#!/bin/bash
+
+DESCRIPTION="Workload that exercises screensaver functionality"
+
+PREREQS=""
+DEPENDS="gnome-screensaver"
+
+CYCLE_DELAY=${CYCLE_DELAY:-10}
+ORIG_LOCK_STATE=true
+ORIG_MODE=blank
+ORIG_SAVERS="[]"
+
+SCREENSAVERS=$(ls -1 /usr/share/applications/screensavers/gl* | cut -d/ -f6 | cut -d. -f1)
+export $(dbus-launch)
+
+setup() {
+    ORIG_LOCK_STATE=$(gconftool-2 --get /apps/gnome-screensaver/lock_enabled)
+    ORIG_MODE=$(gconftool-2 --get /apps/gnome-screensaver/mode)
+    ORIG_SAVERS=$(gconftool-2 --get /apps/gnome-screensaver/themes)
+
+    # Disable screensaver locking
+    gconftool-2 --set /apps/gnome-screensaver/lock_enabled \
+        --type Boolean FALSE
+
+    # Switch screensaver to single mode
+    gconftool-2 --set /apps/gnome-screensaver/mode \
+        --type string "single"
+
+    return 0
+}
+
+finalize() {
+    # Restore screensaver locking
+    gconftool-2 --set /apps/gnome-screensaver/lock_enabled \
+        --type Boolean ${ORIG_LOCK_STATE}
+
+    # Restore screensaver mode
+    gconftool-2 --set /apps/gnome-screensaver/mode \
+        --type Boolean ${ORIG_MODE}
+}
+
+check() {
+    gnome-screensaver-command -q
+    if [ $? -ne 0 ]; then
+        echo "Error:  gnome-screensaver unavailable"
+        return 1
+    fi
+
+    if [ -z "${SCREENSAVERS}" ]; then
+        echo "Error:  No screensavers found"
+        return 1
+    fi
+    return 0
+}
+
+workload() {
+    for screensaver in ${SCREENSAVERS}; do
+        echo $screensaver
+        gconftool-2 --set /apps/gnome-screensaver/themes \
+            --type list --list-type string "[screensavers-$screensaver]"
+        if [ $? -ne 0 ]; then
+            echo "Error: Failed to set screensaver"
+        fi
+        gnome-screensaver-command -a
+        sleep ${CYCLE_DELAY}
+        gnome-screensaver-command -c
+        sleep ${CYCLE_DELAY}
+        gnome-screensaver-command -p
+        sleep ${CYCLE_DELAY}
+        gnome-screensaver-command -d
+    done
+}
+
+case $1 in
+    info)
+        echo $DESCRIPTION
+        echo $PREREQS
+        ;;
+    depends) echo $DEPENDS     ;;
+    check)   check             ;;
+    setup)   setup             ;;
+    once)    setup ; workload ; finalize ;;
+    restore) finalize          ;;
+    run)
+        echo $$
+        setup
+        while :
+        do
+            workload
+        done
+        finalize
+        ;;
+    *)
+        echo $DESCRIPTION
+        echo
+        echo $PREREQS
+        echo
+        echo "Usage: $0 {info|depends|setup|check|once|run|restore}"
+        exit 1
+esac

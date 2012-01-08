@@ -1,0 +1,21 @@
+#! /bin/sh
+set -e
+
+#gnome-menus-blacklist
+
+if [ "$1" = triggered ]; then
+    exit 0
+fi
+
+# Remove no-longer used conffiles
+dpkg-maintscript-helper rm_conffile \
+	/etc/xdg/menus/gnome-preferences.menu 2.22.2-4 -- "$@"
+dpkg-maintscript-helper rm_conffile \
+	/etc/xdg/menus/gnome-settings.menu 2.30.3-2 -- "$@"
+
+if [ "$1" = configure ] && dpkg --compare-versions "$2" lt-nl "3.2.0-0ubuntu2"; then
+    # we dropped the menu cache, clean up old files
+    rm -f /usr/share/applications/desktop.*.cache
+fi
+
+

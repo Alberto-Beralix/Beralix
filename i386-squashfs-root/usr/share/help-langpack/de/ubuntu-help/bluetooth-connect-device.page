@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="bluetooth-connect-device" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="bluetooth"/>
+    <desc>Bluetooth-Geräte koppeln.</desc>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Paul W. Frields</name>
+      <email>stickster@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Ihren Rechner mit einem anderen Bluetooth-Gerät verbinden</title>
+
+  <p>Bevor Sie Dateien zwischen aktivierten Bluetooth-Geräten übertragen können, müssen Sie diese Geräte zunächst verbinden. Dies wird auch das »Koppeln« von Bluetooth-Geräten genannt.</p>
+
+  <steps>
+    <item>
+      <p>Schalten Sie das Bluetooth-Gerät des Rechners <link xref="bluetooth-turn-on-off">ein</link>.</p>
+    </item>
+    <item>
+      <p>Wählen Sie das <gui>Bluetooth-Menü</gui> im <gui>oberen Panel</gui> und wählen Sie <gui>neues Gerät einrichten …</gui>.</p>
+    </item>
+    <item>
+      <p>Machen Sie die anderen Bluetooth-Geräte sichtbar und platzieren Sie sie in einem Umkreis von 10 Metern um den Rechner. Dann wählen Sie <gui>Weiter</gui>. Ihr Rechner beginnt nun nach Geräten zu suchen.</p>
+    </item>
+    <item>
+      <p>Falls zu viele Geräte aufgelistet werden, wählen Sie einen bestimmten <gui>Gerätetyp</gui> in der Auswahlliste aus, um die Anzeige in der Liste zu begrenzen.</p>
+    </item>
+    <item>
+      <p>Wählen Sie <gui>PIN-Optionen …</gui>, um festzulegen, wie eine PIN an das andere Gerät übertragen wird.</p>
+      <note>
+	<p>Die automatische PIN-Einstellung verwendet einen sechsstelligen Zifferncode. Ein Geräte ohne Eingabetasten oder Berührungsbildschirm erfordert möglicherweise die spezifischen Code 0000 oder überhaupt keinen Code. Schauen Sie in der Anleitung Ihres Gerätes nach, um die richtigen Einstellungen zu ermitteln.</p>
+      </note>
+      <p>Wählen Sie die Ihrem Gerät entsprechende PIN-Einstellung aus und wählen Sie dann <gui>Schließen</gui>.</p>
+    </item>
+    <item>
+      <p>Klicken Sie dann auf <gui>Weiter</gui>. Falls Sie keine voreingestellte PIN verwenden, wird die PIN auf dem Bildschirm angezeigt.</p>
+    </item>
+    <item>
+      <p>Geben Sie den PIN-Code auf Ihrem Gerät ein, falls nötig. Die meisten Geräte akzeptieren die Eingabe nur, wenn Sie innerhalb von 20 Sekunden geschieht, anderenfals kann die Verbindung nicht abgeschlossen werden. Falls dies passieren sollte, dann gehen Sie zur Geräteliste zurück und beginnen Sie erneut.</p>
+    </item>
+    <item>
+      <p>Eine Meldung informiert Sie darüber, dass die Verbindung erfolgreich abgeschlossen wurde. Falls das Gerät noch andere Möglichkeiten bietet, wie Personal Area Networking (PAN) auf einem Mobiltelefon, dann können Sie diese Funktionen über Ankreuzfelder aktivieren. Wählen Sie dann <gui>Schließen</gui>.</p>
+    </item>
+  </steps>
+
+  <p>Sie können später <link xref="bluetooth-remove-connection">eine Bluetooth-Verbindung entfernen</link>, falls gewünscht.</p>
+  
+</page>

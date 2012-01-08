@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="unity-launcher-change-size" xml:lang="es">
+  <info>
+    <link type="guide" xref="unity-launcher-intro#launcher-customizing" group="#last"/>
+    <link type="guide" xref="shell-overview#desktop"/>
+
+    <revision version="11.04" date="2011-04-20" status="draft"/>
+
+    <credit type="author">
+      <name>Equipo de documentación de Ubuntu</name>
+    </credit>
+
+    <desc>Hacer que los iconos del Lanzador sean más grandes o más pequeños según sus preferencias.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Cambiar el tamaño de los iconos en el Lanzador</title>
+
+  <p>El tamaño de los iconos del <gui>Lanzador</gui> no se puede cambiar de forma predeterminada, pero puede instalar programas que le permitan cambiar el tamaño de los iconos. Para instalar el software necesario y cambiar el tamaño de los iconos, siga los siguientes pasos:</p>
+
+  <steps>
+    <item><p>Instale la aplicación <link href="apt:compizconfig-settings-manager">Administrador de opciones CompizConfig (ccsm)</link> desde el <app>Centro de software</app>.</p>
+    <p>Si necesita ayuda para instalar la aplicación, consulte la <link xref="addremove-install">ayuda sobre instalación de software</link> o el <link href="ghelp:software-center">manual del Centro de software de Ubuntu</link>.</p></item>
+    <item><p>Una vez haya instalado el programa, pulse el icono de encendido situado en el borde derecho del <gui>panel</gui> y seleccione <gui>Configuración del sistema</gui>.</p></item>
+    <item><p>En la sección Personal, pulse <gui>Administrador de opciones CompizConfig</gui>.</p></item>
+    <item><p>En la sección <gui>Escritorio</gui> del <app>Administrador de opciones CompizConfig</app>, pulse <gui>Ubuntu Unity Plugin</gui> y seleccione la pestaña <gui>Experimental</gui>.</p></item>
+    <item><p>Mueva el deslizador del <gui>tamaño del icono del Lanzador</gui> para aumentar o disminuir el tamaño de los iconos del <gui>Lanzador</gui>.</p>
+    <note><p>El tamaño predeterminado del icono del <gui>Lanzador</gui> es <em>48</em>.</p></note></item>
+  </steps>
+  
+  <p>Los cambios en el tamaño de los iconos se apreciarán inmediatamente. Pulse <gui>Atrás</gui> y luego <gui> Cerrar</gui> para salir del <app>Administrador de opciones CompizConfig</app>.</p>
+
+</page>

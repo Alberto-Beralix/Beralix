@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="power-batterywindows" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="power#battery"/>
+    <desc>La causa del problema puede estar en ajustes de fábrica o diferentes estimaciones de la vida de la batería.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Por qué tengo menor tiempo de batería que el que tenía en Windows/Mac OS?</title>
+
+<p>Algunos equipos parecen tener una duración menor de la batería funcionando bajo Linux que la que tienen cuando funcionan con Windows o Mac OS. Una razón es que los fabricantes instalan algún software especial para Windows/Mac OS que optimiza varias configuraciones de hardware/software para un modelo de equipo en especial. Éstos ajustes son generalmente muy específicos y pueden no estar documentados, por eso incluirlos en Linux es muy difícil.</p>
+
+<p>Por desgracia, no existe una forma fácil de aplicar estos ajustes por uno mismo sin saber exactamente cuáles son. No obstante, es posible que usar algunos <link xref="power-batterylife">métodos sencillos de ahorro de energía</link> ayude. Si su equipo dispone de un <link xref="power-batteryslow">procesador de velocidad variable</link>, también puede resultarle útil cambiar sus opciones.</p>
+
+<p>Otra razón posible es que el método de estimar el tiempo de batería es diferente en Windows/Mac OS que en Linux. La duración real de la batería puede ser la misma, pero los métodos distintos resultan en estimaciones distintas. Para obtener más información consulte la <link xref="power-batteryestimate"/>.</p>
+	
+</page>

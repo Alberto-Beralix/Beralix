@@ -1,0 +1,54 @@
+=head1 NAME
+
+Pango::version - get and check the version of Pango that this was compiled against
+
+=cut
+
+=for object Pango::version - get and check the version of Pango that this was compiled against
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 boolean = Pango-E<gt>B<CHECK_VERSION> ($major, $minor, $micro)
+
+=over
+
+=item * $major (integer) 
+
+=item * $minor (integer) 
+
+=item * $micro (integer) 
+
+=back
+
+=head2 (MAJOR, MINOR, MICRO) = Pango->B<GET_VERSION_INFO>
+
+Fetch as a list the version of pango with which the Perl module was built.
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Gtk2::version>, L<Glib::version>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

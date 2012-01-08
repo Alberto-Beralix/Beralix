@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task a11y" id="a11y-dwellclick" xml:lang="es">
+  <info>
+    <link type="guide" xref="a11y#mobility" group="clicking"/>
+
+    <revision date="2011-04-06" status="outdated"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>The Hover Click (Dwell Click) feature allows you to click by holding the mouse still.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Simular una pulsación al posicionar el puntero</title>
+
+<p>Puede hacer que se pulsen los botones simplemente colocando el puntero del ratón sobre ellos (pulsación al posarse). Esto puede serle útil si encuentra difícil mover el ratón y pulsar el botón del ratón al mismo tiempo. Al activar la pulsación al posarse, usted puede mover el puntero del ratón sobre un botón, dejarlo ahí y esperar un poco; el botón se pulsará solo.</p>
+
+<steps>
+  <item><p>Pulse el icono en el extremo derecho de la barra superior y seleccione <gui>Configuración del sistema</gui>.</p></item>
+  <item><p>Abra <gui>Acceso universal</gui> y seleccione la pestaña <gui>Apuntar y pulsar</gui>.</p></item>
+  <item><p>Switch <gui>Hover Click</gui> on.</p></item>
+</steps>
+
+<p>The <gui>Hover Click</gui> window will open, and will stay above all of your other windows. You can use this to choose what sort of click should happen when you hover over a button. For example, if you select <gui>Secondary Click</gui>, the mouse will right-click when you hover over a button for a few seconds.</p>
+
+<p>Al pasar el puntero del ratón sobre un botón y no moverse, poco a poco cambiará de color. Una vez totalmente cambiado de color, el botón se pulsará.</p>
+
+<p>La pulsación al posarse funcionará en cualquier cosa sobre la que sitúe el ratón, no solo sobre botones.</p>
+
+<section id="delay">
+ <title>Cambiar el tiempo de espera antes de la pulsación de un botón</title>
+ <p>Puede cambiar el tiempo que debe pasar desde que se coloca el puntero del ratón sobre un botón hasta que ese botón recibe la pulsación. Para hacer eso, vaya a la pestaña <gui>Accesibilidad</gui> (ver más arriba) y cambie el <gui>Retardo</gui> en la sección <gui>Pulsación al posarse</gui>.</p>
+</section>
+
+<section id="threshold">
+ <title>Cambie cuánto le está permitido al ratón moverse al iniciar una pulsación al posicionar el puntero</title>
+ <p>No tiene por qué mantener el ratón perfectamente quieto cuando coloca el puntero sobre un botón para pulsarlo - el puntero se puede mover un poco y así y todo se hará la pulsación pasado un tiempo. En cambio, si lo mueve demasiado, no se producirá la pulsación.</p>
+ <p>Puede cambiar cuánto se le permite al puntero moverse y que se considere «suficiente» para pulsar el botón. Vaya a la pestaña <gui>Accesibilidad</gui> (ver más arriba) y cambie el <gui>Umbral de movimiento</gui> en la sección <gui>Pulsación al posarse</gui>; un umbral de movimiento grande permitirá que el puntero se mueva bastante más y que al mismo tiempo se registre la pulsación.</p>
+</section>
+
+</page>

@@ -1,0 +1,122 @@
+#!/usr/bin/python
+#
+# telepathy-butterfly - an MSN connection manager for Telepathy
+#
+# Copyright (C) 2006-2007 Ali Sabil <ali.sabil@gmail.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+import gobject
+import dbus.glib
+import signal
+import os
+import sys
+import logging
+
+version = (0, 5, 15)
+
+if sys.version_info < (2, 5):
+    print >> sys.stderr, 'Critical: python >= 2.5 required. Exiting.'
+    sys.exit(1)
+
+import telepathy
+if telepathy.version < (0, 15, 19):
+    print >> sys.stderr, 'Critical: telepathy-python >= 0.15.19 required. Exiting.'
+    sys.exit(1)
+
+import papyon
+if papyon.version < (0, 5, 3):
+    print >> sys.stderr, 'Critical: papyon >= 0.5.3 required. Exiting.'
+    sys.exit(1)
+
+
+from telepathy.utils import debug_divert_messages
+
+debug_divert_messages(os.getenv('BUTTERFLY_LOGFILE'))
+logging.basicConfig(level=logging.DEBUG)
+
+from butterfly import ButterflyConnectionManager
+from butterfly import ButterflyDebug
+from butterfly.util.decorator import async
+
+logger = logging.getLogger('Butterfly')
+
+IDLE_TIMEOUT = 5
+PROCESS_NAME = 'telepathy-butterfly'
+
+if __name__ == '__main__':
+    try: # change process name for killall
+       import ctypes
+       libc = ctypes.CDLL('libc.so.6')
+       libc.prctl(15, PROCESS_NAME, 0, 0, 0)
+    except Exception, e:
+       logger.warning('Unable to set processName: %s" % e')
+
+    @async
+    def quit():
+        manager.quit()
+        mainloop.quit()
+
+    # We only want to log to stderr if BUTTERFLY_DEBUG=all is set, but
+    # we want any other logging handlers to work fine (such as the
+    # debug sender one).
+    if os.environ.get('BUTTERFLY_DEBUG', None) != 'all':
+        # This dummy stream will replace sys.stderr.
+        class DummyStream(object):
+            def write(self, s):
+                pass
+
+        # First, replace the original stderr with our new dummy stream.
+        sys.stderr = DummyStream()
+
+        # The root handler has already had the original stderr set on it,
+        # so let's override that.
+        stderr_handler = logging.root.handlers[0]
+        stderr_handler.stream = sys.stderr
+
+    if 'BUTTERFLY_PERSIST' not in os.environ:
+        def timeout_cb():
+            if len(manager._connections) == 0:
+                logger.info('No connection received - quitting')
+                quit()
+            return False
+        gobject.timeout_add_seconds(IDLE_TIMEOUT, timeout_cb)
+        shutdown_callback = quit
+    else:
+        shutdown_callback = None
+
+    signal.signal(signal.SIGTERM, lambda : quit)
+
+    try:
+        manager = ButterflyConnectionManager(shutdown_func=shutdown_callback)
+        handler = ButterflyDebug(manager)
+    except dbus.exceptions.NameExistsException:
+        logger.warning('Failed to acquire bus name, connection manager already running?')
+        sys.exit(1)
+
+    def v2str(version):
+        return ".".join(map(lambda x: str(x), version))
+    logger.info("Starting butterfly %s: telepathy-python %s, papyon %s" %
+            (v2str(version), v2str(telepathy.version), v2str(papyon.version)))
+
+
+    mainloop = gobject.MainLoop(is_running=True)
+    gobject.threads_init()
+
+    while mainloop.is_running():
+        try:
+            mainloop.run()
+        except KeyboardInterrupt:
+            quit()

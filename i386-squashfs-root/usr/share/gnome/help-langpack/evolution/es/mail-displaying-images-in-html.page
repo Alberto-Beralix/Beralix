@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-displaying-images-in-html" xml:lang="es">
+
+  <info>
+    <desc>Acerca de imágenes empotradas en correos HTML recibidos.</desc>
+
+    <link type="guide" xref="mail-displaying-message"/>
+    <link type="seealso" xref="mail-downloading-images"/>
+
+    <revision pkgversion="3.1.5" version="0.4" date="2011-08-09" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>April Gonzales</name>
+      <email>loonycookie@gmail.com</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-read.html.en#usage-mail-getnsend-get-attach-html -->
+ </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Imágenes en mensajes HTML</title>
+
+<p>When someone sends you HTML mail that includes an image in the body of the message (for example, the welcome message in your Inbox), Evolution displays the image inside the message.</p>
+
+<section id="loading">
+<title>Cargar imágenes</title>
+<p>Algunas imágenes son enlaces dentro de un mensaje, más que una parte del mensaje. Evolution puede descargar esas imágenes desde internet, pero no lo hace a menos que se lo pida explícitamente. Esto es porque las imágenes servidas remotamente pueden ser muy lentas al cargarse y mostrarse, e incluso pueden ser usadas por «spammers» para llevar un seguimiento de quién lee los mensajes. No cargar automáticamente las imágenes ayuda a proteger su privacidad.</p>
+
+<p>Para cargar las imágenes en un correo electrónico pulse <guiseq><gui>Ver</gui><gui>Cargar imágenes</gui></guiseq> o pulse <keyseq><key>Ctrl</key><key>I</key></keyseq>.</p>
+
+<p>To set the default action for loading images, go to <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Preferences</gui><gui>HTML Messages</gui><gui>Loading Images</gui></guiseq>.</p>
+</section>
+
+<section id="automatically-download">
+<title>Automáticamente descargar imágenes en correos electrónicos de personas que conoce</title>
+
+<p>You can download images from emails sent by your contacts. To do this, go to <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Preferences</gui><gui>HTML Messages</gui><gui>Loading Images</gui></guiseq>. Enable the <gui>Load images only in messages from contacts</gui> option.</p>
+
+<p>Next, go to <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Contacts</gui><gui>Autocompletion</gui></guiseq>. Enable autocompletion by ticking the <gui>Always show address of the autocompleted contact</gui> checkbox.</p>
+</section>
+
+<section id="saving">
+<title>Guardar imágenes</title>
+<p>Para guardar una imagen empotrada en un correo HTML, pulse con el botón derecho del ratón sobre la imagen y seleccione <gui>Guardar imagen...</gui>.</p>
+<!-- This is available only since version 3.1.5, see https://bugzilla.gnome.org/show_bug.cgi?id=655669 -->
+</section>
+
+</page>

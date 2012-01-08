@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="commands_where_am_i" xml:lang="es">
+  <info>
+    <link type="next" xref="commands_time_date_notifications"/>
+    <link type="guide" xref="commands#getting_started"/>
+    <link type="seealso" xref="howto_whereami"/>
+    <title type="sort">3. ¿Dónde estoy?</title>
+    <title type="link">¿Dónde estoy?</title>
+    <desc>Comandos para aprender sobre su ubicación</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Comandos de ¿dónde estoy?</title>
+  <p>La característica ¿Dónde estoy? de <app>Orca</app> le muestra los detalles sensibles al contexto sobre su ubicación actual. Por ejemplo, en las tablas, ¿Dónde estoy? le muestra los detalles sobre la celda de tabla en que se encuentra; sin embargo, en el texto, le mostrará la línea actual junto con cualquier texto que se seleccione. La lista completa de lo que puede esperar que <app>Orca</app> muestre se puede encontrar en la <link xref="howto_whereami">introducción a ¿Dónde estoy?</link>.</p>
+  <p><app>Orca</app> proporciona los siguientes comandos de «Dónde estoy»:</p>
+  <list>
+    <item>
+      <p>Realizar el «dónde estoy» básico:</p>
+      <list>
+        <item>
+          <p>Sobremesa: <key>TN Intro</key></p>
+        </item>
+        <item>
+          <p>Portátil: <keyseq><key>Modificador de Orca</key><key>Intro</key></keyseq></p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>Realizar el «dónde estoy» detallado:</p>
+      <list>
+        <item>
+          <p>Sobremesa: <key>TN Intro</key> (doble pulsación)</p>
+        </item>
+        <item>
+          <p>Portátil: <keyseq><key>Modificador de Orca</key><key>Intro</key></keyseq> (doble pulsación)</p>
+        </item>
+      </list>
+    </item>
+  </list>
+  <p>Además de los comandos «Dónde estoy» dedicados, <app>Orca</app> tiene dos comandos adicionales relativos a la obtención de su ubicación actual:</p>
+  <list>
+    <item>
+      <p>Presentar la barra de título:</p>
+      <list>
+        <item>
+          <p>Sobremesa: <keyseq><key>Modificador de Orca</key><key>TN Intro</key></keyseq></p>
+        </item>
+        <item>
+          <p>Portátil: <keyseq><key>Modificador de Orca</key><key>/</key></keyseq></p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>Presentar la barra de estado:</p>
+      <list>
+        <item>
+          <p>Sobremesa: <keyseq><key>Modificador de Orca</key><key>TN Intro</key></keyseq> (doble pulsación)</p>
+        </item>
+        <item>
+          <p>Portátil: <keyseq><key>Modificador de Orca</key><key>/</key></keyseq> (doble pulsación)</p>
+        </item>
+      </list>
+    </item>
+  </list>
+</page>

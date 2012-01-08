@@ -1,0 +1,34 @@
+#!/bin/bash
+
+DESCRIPTION="Workload to generate disk write load"
+
+# Time delay before start of entire new cycle.
+CYCLE_DELAY=${CYCLE_DELAY:-1}
+
+# Filename to write to
+TMP_FILE=/tmp/cpu_$$
+
+workload() {
+    echo 1 > $TMP_FILE
+    sleep ${CYCLE_DELAY}
+}
+
+case $1 in
+    info)    echo ${DESCRIPTION} ;;
+    depends)                     ;;
+    check)                       ;;
+    setup)                       ;;
+    once)    workload            ;;
+    run)
+        echo $$
+        while :
+        do
+            workload
+        done
+        ;;
+    *)
+        echo ${DESCRIPTION}
+        echo
+        echo "Usage: $0 {info|depends|setup|check|once|run}"
+        exit 1
+esac

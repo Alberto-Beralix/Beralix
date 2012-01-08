@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="unity-launcher-change-size" xml:lang="en-AU">
+  <info>
+    <link type="guide" xref="unity-launcher-intro#launcher-customizing" group="#last"/>
+    <link type="guide" xref="shell-overview#desktop"/>
+
+    <revision version="11.04" date="2011-04-20" status="draft"/>
+
+    <credit type="author">
+      <name>Ubuntu Documentation Team</name>
+    </credit>
+
+    <desc>Make the icons in the launcher larger or smaller to suit your preferences.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Change the size of icons in the launcher</title>
+
+  <p>The size of the icons in the <gui>launcher</gui> cannot be changed by default, but you can install
+  software that will allow you to change the size of the icons. To install the necessary software and
+  change the size of the icons, complete these steps:</p>
+
+  <steps>
+    <item><p>Install the <link href="apt:compizconfig-settings-manager">CompizConfig Settings Manager (ccsm)</link>
+    application from the <app>Software Center</app>.</p>
+    <p>If you need assistance with installing the application, consult the <link xref="addremove-install">
+    software installation help</link>, or review the <link href="ghelp:software-center">Ubuntu Software Center
+    Manual</link>.</p></item>
+    <item><p>After you have installed the program, click the power icon at the very right of the 
+    <gui>panel</gui> and select <gui>System Settings</gui>.</p></item>
+    <item><p>In the Personal section, click <gui>CompizConfig Settings Manager</gui>.</p></item>
+    <item><p>In the <gui>Desktop</gui> section of the <app>CompizConfig Settings Manager</app>, click 
+    <gui>Ubuntu Unity Plugin</gui>, and select the <gui>Experimental</gui> tab.</p></item>
+    <item><p>Move the <gui>Launcher icon size</gui> slider to increase or decrease the size of the 
+    <gui>Launcher</gui> icons.</p>
+    <note><p>The default <gui>Launcher</gui> icon size is <em>48</em>.</p></note></item>
+  </steps>
+  
+  <p>Your changes to the size of the icons will be applied immediately. Click the <gui>Back</gui> and <gui>
+  Close</gui> buttons to exit the <app>CompizConfig Settings Manager</app>.</p>
+
+</page>

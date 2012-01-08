@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+
+LASTVERSION="0.99.4-0ubuntu1"
+
+dpkg-maintscript-helper rm_conffile \
+/etc/xdg/ubuntu-sso/oauth_registration.d/ubuntuone "$LASTVERSION" -- "$@"
+
+dpkg-maintscript-helper rm_conffile \
+/etc/xdg/ubuntu-sso/oauth_urls "$LASTVERSION" -- "$@"
+
+rmdir "/etc/xdg/ubuntu-sso/oauth_registration.d/" 2>/dev/null || true
+rmdir "/etc/xdg/ubuntu-sso/" 2>/dev/null || true
+
+

@@ -1,0 +1,1 @@
+/usr/share/pyshared/gwibber/microblog/uploader/ubuntuone_uploader/__init__.py

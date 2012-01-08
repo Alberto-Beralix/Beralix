@@ -1,0 +1,1 @@
+../../../../../share/pyshared/checkbox/lib/template_i18n.py

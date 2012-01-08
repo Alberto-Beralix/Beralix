@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-sort" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <desc>Ordnen Sie Dateien nach Name, Größe, Typ oder Änderungsdatum an.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Dateien und Ordner sortieren</title>
+
+<p>Sie können Dateien in einem Ordner auf verschiedene Weise sortieren, zum Beispiel nach ihrem Datum oder der Dateigröße. Siehe weiter unten <link xref="#ways"/> für eine Liste der üblichen Sortierweisen.</p>
+
+<p>Wie Sie Dateien sortieren können, hängt von der <em>Ordneransicht</em> ab, die Sie verwenden. Sie können die aktuelle Ansicht im <gui>Ansicht</gui>-Menü ändern.</p>
+
+<p>When you change how items are sorted in a folder, it only affects that folder. The file
+manager will remember your sorting choice for that folder, but use the default sort order
+for other folders. See <link xref="nautilus-views"/> for information on how to change the
+default sort order.</p>
+
+<section id="icon-view">
+ <title>Symbolansicht</title>
+ <p>Um Dateien in einer anderen Reihenfolge zu sortieren, klicken Sie mit der rechten Maustaste in ein leeres Feld im Ordner und wählen Sie eine Einstellung aus dem Menü <gui>Objekte anordnen</gui>. Alternativ verwenden Sie das Menü unter <guiseq><gui>Ansicht</gui><gui>Objekte anordnen</gui></guiseq>.</p>
+ <p>Ein Beispiel: Wenn Sie <gui>Nach Name</gui> aus dem Menü <gui>Objekte anordnen</gui> wählen, werden die Dateien in alphabetischer Reihenfolge nach ihren Namen sortiert. Siehe <link xref="#ways"/> für weitere Optionen.</p>
+ <p>Sie können in umgekehrter Reihenfolge sortieren, indem Sie <gui>Umgekehrte Reihenfolge</gui> aus dem Menü <gui>Objekte anordnen</gui> wählen.</p>
+ <p>Für vollständige Kontrolle über die Anordnung und Position der Dateien in einem Ordner klicken Sie mit der rechten Maustaste in ein leeres Feld im Ordner und wählen Sie <guiseq><gui>Objekte anordnen</gui><gui>Manuell</gui></guiseq>. Sie können sich dann die Dateien zurechtlegen, indem Sie sie im Ordner herumziehen. Das manuelle Sortieren funktioniert nur in der Symbolansicht.</p>
+ <p>Die Einstellung <gui>Kompakte Ansicht</gui> im Menü <gui>Objekte anordnen</gui> platziert die Dateien so, dass sie möglichst wenig Platz einnehmen. Das ist nützlich, wenn Sie viele Dateien auf einmal in einem Ordner überblicken möchten.</p>
+</section>
+
+<section id="list-view">
+ <title>Listenansicht</title>
+ <p>Um die Dateien in einer anderen Reihenfolge anzuordnen, klicken Sie auf einen Spaltenkopf in der Dateiverwaltung. Klicken Sie zum Beispiel auf <gui>Typ</gui>, um sie nach Dateityp zu sortieren. Klicken Sie noch einmal auf den Spaltenkopf, um die Reihenfolge umzudrehen.</p>
+ <p>In der Listenansicht können Sie Spalten mit weiteren Attributen anzeigen und nach diesen Spalten sortieren. Klicken Sie <guiseq><gui>Ansicht</gui><gui>Anzuzeigende Spalten</gui></guiseq> und wählen Sie die Spalten, die Sie sehen wollen. Sie können dann nach diesen Spalten sortieren. Siehe <link xref="nautilus-list"/> für eine Beschreibung der verfügbaren Spalten.</p>
+</section>
+
+<section id="compact-view">
+ <title>Kompakte Ansicht</title>
+ <p>Sie können Dateien in der kompakten Ansicht genau so wie in der Symbolansicht sortieren. Der einzige Unterschied ist, dass Sie die Dateien nicht frei positionieren können, wo Sie wollen. Sie sind in dieser Ansicht immer in einer Liste angeordnet.</p>
+</section>
+
+<section id="ways">
+ <title>Möglichkeiten zum Sortieren von Dateien</title>
+ <terms>
+  <item>
+   <title>Nach Name</title>
+   <p>Sortiert alphabetisch nach dem Namen der Datei.</p>
+  </item>
+  <item>
+   <title>Nach Größe</title>
+   <p>Sortiert nach der Größe der Datei (dem belegten Speicherplatz). Die Sortierung erfolgt standardmäßig von der kleinsten zur größten Datei.</p>
+  </item>
+  <item>
+   <title>Nach Typ</title>
+   <p>Sortiert alphabetisch nach dem Dateityp. Datei des gleichen Typs werden zunächst zu Gruppen zusammengefasst und dann nach Namen sortiert.</p>
+  </item>
+  <item>
+   <title>Nach Änderungsdatum</title>
+   <p>Sortiert nach Datum und Zeit der letzten Änderung der Datei. Die Sortierung erfolgt standardmäßig von der ältesten zur neuesten Datei.</p>
+  </item>
+ </terms>
+</section>
+
+</page>

@@ -1,0 +1,62 @@
+=head1 NAME
+
+Pango::FontFace - object for Pango representing a group of fonts varying only in size
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Pango::FontFace
+
+
+
+=cut
+
+=for object Pango::FontFace - object for Pango representing a group of fonts varying only in size
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 fontdescription = $face-E<gt>B<describe> 
+
+=head2 string = $face-E<gt>B<get_face_name> 
+
+=head2 boolean = $face-E<gt>B<is_synthesized> 
+
+Since: pango 1.18
+
+=head2 @sizes = $face->B<list_sizes>
+
+List the sizes available for a bitmapped font.  For scalable fonts, this will
+return an empty list.
+
+Since: pango 1.4
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Object>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

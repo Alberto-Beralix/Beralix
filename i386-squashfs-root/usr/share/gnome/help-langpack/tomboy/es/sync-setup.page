@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="task" id="sync-setup" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#sync"/>
+    <desc>Configurar Tomboy para sincronizar sus notas</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-05-29" status="candidate"/>
+    <credit type="author">
+      <name>Paul Cutler</name>
+      <email>pcutler@gnome.org</email>
+    </credit>    
+<!--
+    <copyright>
+      <year>2010</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+-->
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+ <title>Configurar la soncronización</title>
+
+ <section id="enablesync">
+
+	<title>Activar sincronización</title>
+	
+	<p><app>Tomboy</app> puede sincronizar sus notas entre varios equipos. Esto le permite tener un respaldo de sus notas en otros equipos o compartir sus notas entre otros equipos de tal forma que siempre tenga acceso a ellas.</p>
+	
+	<p>Puede activar las sincronización abriendo las <gui>Preferencias de Tomboy</gui> usando su ratón para pulsar con el botón derecho en el icono de Tomboy en su panel, barra de tareas o «dock», elija <gui>Preferencias</gui> y seleccione la pestaña <gui>Sincronización</gui>. También puede abrir las <gui>Preferencias de Tomboy</gui> desde el diálogo <gui>Buscar en todas las notas</gui>. Desde el menú, elija <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq>.</p>
+
+ </section>
+
+ <section id="conflict">
+
+	<title>Gestionar conflictos de notas</title>
+	
+	<p>Puede establecer el comportamiento predeterminado de Tomboy cuando se descubre un conflicto con una nota. Esto puede suceder cuando las notas no se sincronizar regularmente.</p>
+	
+	<p>En el diálogo <gui>Preferencias</gui> pulse el botón <gui>Avanzadas</gui>. Puede seleccionar tres opciones como comportamiento predeterminado al gestionar conflictos:</p>
+	
+	<list>
+		<item><p><gui>Preguntarme siempre qué hacer</gui>. Esta es la opción predeterminada y cuando Tomboy encuentra un conflicto le preguntará si quiere renombrar la nota local o reemplazar su nota local con la nota que ha almacenado el servidor.</p></item>
+		<item><p><gui>Renombrar mi nota local</gui>. Si esta opción está seleccionada, Tomboy reemplazará automáticamente la nota con una copia del equipo remoto y renombrará la nota en su equipo de tal forma que no pierda información en su nota.</p>
+		</item>
+		
+		<item><p><gui>Reemplazar mi nota local con la actualización del servidor</gui>. Si ha seleccionado esta opción, al sincronizar Tomboy se sobreescribirán y reemplazarán sus notas almacenadas en su equipo con una copia de las de su equipo remoto.</p></item>
+		
+		<note style="warning">
+		<p>Sobreescribir la nota es permanente. La copia en el equipo remoto reemplazará su nota local y perderá la información almacenada antes de la sincronización.</p>
+		</note>
+		
+	</list>
+		
+
+ </section> 
+ 
+  <section id="webdav">
+
+	<title>Configurar sincronización usando WebDav</title>
+	
+	<p>Para poder sincronizar sus notas contra un servidor WebDAV debe tener el sistema de archivos wdfs FUSE instalado. Siga la documentación para configurar FUSE para su sistema operativo y usuario. También deberá tener instalado el Depósito de claves de GNOME.</p>
+	
+	<p>Elija <gui>WebDAV</gui> del menú desplegable <gui>Servicio</gui>. Rellene la información para su servidor y después seleccione el botón <gui>Guardar</gui>. Ahora está listo para sincronizar sus notas.</p>
+
+ </section>
+ 
+  <section id="ssh">
+
+	<title>Configurar sincronización usando SSH</title>
+	
+	<p>Para poder sincronizar sus notas contra un servidor SSH debe tener el sistema de archivos <app>sshfs</app> FUSE instalado. Siga la documentación para configurar FUSE para su sistema operativo y usuario. También deberá tener una clave SSH para su cuenta en el servidor SSH, que se añadirá a la aplicación <app>GNOME Seahorse</app>, también conocida como <app>Contraseñas y claves de cifrado</app>.</p>
+	
+	<p>Se recomienda usar un tercer equipo o servidor como el equipo remoto en el que almacenar las notas sincronizadas que se van a sincronizar entre múltiples equipos.</p>
+
+	<p>Abra <app>Contraseñas y claves de cifrado</app> eligiendo <guiseq><gui>Aplicaciones</gui><gui>Accesorios</gui><gui>Contraseñas y claves de cifrado</gui></guiseq>. Pulse sobre su clave y elija en el menú <guiseq><gui>Remota</gui><gui>Configurar clave para Shell segura...</gui></guiseq> e introduzca el nombre de dominio o dirección IP del equipo con el que quiere sincronizar en <gui>Equipo</gui>. Introduzca el nombre de usuario del equipo remoto en <gui>Usuario</gui> y pulse <gui>Configurar</gui>. Cuando se le pregunte, introduzca la contraseña y habrá finalizado la configuración de su clave.</p>
+	
+	<p>En Tomboy, elija <gui>SSH</gui> de la lista desplegable <gui>Servicio</gui>. Rellene la información para su servidor y después pulse el botón <gui>Guardar</gui>. Ahora está listo para sincronizar sus notas. La opción <gui>Ruta de la carpeta</gui>, aunque opcional, debería apuntar a una carpeta vacía. Ahora está listo para sincronizar sus notas.</p>
+
+ </section>
+
+ <section id="local">
+
+	<title>Configurar la sincronización a una carpeta local</title>
+	
+	<p>Puede querer sincronizar sus notas contra una carpeta local disponible para otros sistemas, o si esa carpeta representa un punto de montaje local de un servidor remoto.</p>
+
+	<p>Elija <gui>Carpeta local</gui> del menú desplegable <gui>Servicio</gui>. Rellene la información para su servidor y después seleccione el botón <gui>Guardar</gui>. Ahora está listo para sincronizar sus notas.</p>
+
+ </section>
+ 
+ </page>

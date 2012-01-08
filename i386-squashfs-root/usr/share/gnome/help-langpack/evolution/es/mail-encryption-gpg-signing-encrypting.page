@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-encryption-gpg-signing-encrypting" xml:lang="es">
+
+  <info>
+    <desc>Firmar o cifrarlos correos que envía usando GPG.</desc>
+
+    <link type="guide" xref="mail-encryption#gpg"/>
+
+    <revision pkgversion="2.32.1" version="0.3" date="2011-08-24" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/encryption.html.en#bspya9p -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Firmar o cifrar correos</title>
+
+<p>Después de que haya <link xref="mail-encryption-gpg-set-up">configurado su clave GPG</link> puede firmar o cifrar un correo pulsando <guiseq><gui>Opciones</gui><gui>Firma PGP</gui></guiseq> o <gui>Cifrado PGP</gui> en el editor de mensajes.</p>
+<note style="tip"><p>La línea del Asunto del mensaje no se cifrará y no se debería usar para contener información sensible.</p></note>
+
+<p>Para enviar cada mensaje cifrado o firmado:</p>
+<steps>
+<item><p>Seleccione <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Cuentas de correo</gui></guiseq>.</p></item>
+<item><p>Seleccione la cuenta en la que cifrar mensajes.</p></item>
+<item><p>Pulse <gui style="button">Editar</gui>.</p></item>
+<item><p>Pulse en la pestaña <gui>Seguridad</gui>.</p></item>
+<item><p>Seleccione <gui>Firmar siempre los mensajes salientes cuando se use esta cuenta</gui>.</p></item>
+<item><p>Pulse <gui style="button">Aceptar</gui>.</p></item>
+<item><p>Pulse <gui style="button">Cerrar</gui>.</p></item>
+</steps>
+
+</page>

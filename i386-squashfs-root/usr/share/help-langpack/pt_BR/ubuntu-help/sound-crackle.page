@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="sound-crackle" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="sound-broken"/>
+    
+    <desc>Verifique os cabos de áudio e drivers da placa de som.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Eu ouço estalos ou zumbido quando o som está tocando</title>
+
+<p>Se você ouvir estalidos ou zumbidos quando sons são reproduzidos em seu computador, talvez você tenha um problema com os cabos ou os conectores de áudio ou com os drivers de sua placa de som.</p>
+
+<list>
+ <item>
+  <p>Verifique se os alto-falantes estão conectados corretamente.</p>
+  <p>Se os alto-falantes não estão completamente conectados ou conectados no conector errado, você poderá ouvir um som chiado.</p>
+ </item>
+ 
+ <item>
+  <p>Certifique-se de que o cabo do alto-falante/fone de ouvido não está danificado.</p>
+  <p>Cabos e conectores de áudio podem-se desgastar com o uso. Experimente conectar o cabo ou fones de ouvido a outro dispositivo de áudio (como um tocador de MP3 ou de CD) para verificar se ainda há estalidos. Se houver, talvez seja necessário substituir o cabo ou fones.</p>
+ </item>
+ 
+ <item>
+  <p>Confira se os drivers de som não estão muito bons.</p>
+  <p>Algumas placas de som não funcionam muito bem no Linux porque eles não possuem drivers muito bons. Esse problema é mais difícil de ser identificado. Experimente procurar pela marca e modelo de sua placa na Internet, juntamente ao termo "Ubuntu", para ver se outras pessoas estão tendo o mesmo problema.</p>
+  <p>Você poderá rodar <cmd>sudo lspci -v</cmd> no <app>Terminal</app> para conseguir mais informações sobre a sua placa de som.</p>
+ </item>
+</list>
+
+<comment>
+  <cite date="2011-04-01">shaunm</cite>
+  <p>Are we shipping any sort of device manager? If we do (or even if we
+  recommend one, but people need to install it), and if you can get all
+  the information you need about the sound card from that, we should
+  link to that for getting info on your sound card.</p>
+</comment>
+
+</page>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="commands_debugging" xml:lang="es">
+  <info>
+    <link type="guide" xref="commands#troubleshooting"/>
+    <title type="sort">1. Depurado</title>
+    <title type="link">Depurar</title>
+    <desc>Comandos para la resolución de problemas</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Comandos de depurado</title>
+    <list>
+      <item>
+        <p>Proporcionar información sobre el script activo actualmente: <keyseq><key>Ctrl</key><key>Alt</key><key>Modificador de Orca</key><key>Inicio</key></keyseq></p>
+      </item>
+    </list>
+    <note style="tip">
+    <p>Para que los tres comandos siguientes puedan ser de utilidad, se debe iniciar <application>Orca</application> desde una consola virtual o a través del gnome-terminal. La salida se envía sólo a la consola (es decir, no se envía ni a la locución ni a Braille).</p>
+  </note>
+  <list>
+    <item>
+      <p>Mostrar una lista de depuración con todas las aplicaciones conocidas de la consola en la que se está ejecutando <app>Orca</app>: <keyseq><key>Ctrl</key><key>Alt</key><key>Modificador de Orca</key><key>Fin</key></keyseq></p>
+    </item>
+    <item>
+      <p>Mostrar información de depuración sobre la ascendencia del objeto que tiene el foco: <keyseq><key>Ctrl</key><key>Alt</key><key>Modificador de Orca</key><key>Re Pág</key></keyseq></p>
+    </item>
+    <item>
+      <p>Mostrar información de depuración sobre la jerarquía de la aplicación que tiene el foco: <keyseq><key>Ctrl</key><key>Alt</key><key>Modificador de Orca</key><key>Av Pág</key></keyseq></p>
+    </item>
+  </list>
+</page>

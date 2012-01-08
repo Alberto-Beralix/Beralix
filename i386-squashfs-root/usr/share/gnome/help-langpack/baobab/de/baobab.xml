@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.15">
+<!ENTITY manrevision "1.0">
+<!ENTITY date "April 2006">
+<!ENTITY app "Disk Usage Analyzer">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="de">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Festplattenbelegungsanalyse-Handbuch</title>
+
+    <abstract role="description">
+      <para>Die Festplattenbelegungsanalyse ist ein grafischer, menügesteuerter Betrachter, den Sie zum Betrachten und Überwachen des Plattenplatzverbrauchs und der Ordnerstruktur verwenden können.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2006</year> 
+      <holder>Fabio Marzocca</holder> 
+    </copyright><copyright><year>2008</year><holder>Mario Blättermann (mario.blaettermann@t-online.de)</holder></copyright> 
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <publisher> 
+      <publishername>GNOME-Dokumentationsprojekt</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Das vorliegende Dokument kann gemäß den Bedingungen der GNU Free Documentation License (GFDL), Version 1.1 oder jeder späteren, von der Free Software Foundation veröffentlichten Version ohne unveränderbare Abschnitte sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem <ulink type="help" url="ghelp:fdl">Link</ulink> oder in der mit diesem Handbuch gelieferten Datei COPYING-DOCS.</para>
+         <para>Dieses Handbuch ist Teil einer Sammlung von GNOME-Handbüchern, die unter der GFDL veröffentlicht werden. Wenn Sie dieses Handbuch getrennt von der Sammlung weiterverbreiten möchten, können Sie das tun, indem Sie eine Kopie der Lizenz zum Handbuch hinzufügen, wie es in Abschnitt 6 der Lizenz beschrieben ist.</para>
+
+	<para>Viele der Namen, die von Unternehmen verwendet werden, um ihre Produkte und Dienstleistungen von anderen zu unterscheiden, sind eingetragene Warenzeichen. An den Stellen, an denen diese Namen in einer GNOME-Dokumentation erscheinen, werden die Namen in Großbuchstaben oder mit einem großen Anfangsbuchstaben geschrieben, wenn das GNOME-Dokumentationsprojekt auf diese Warenzeichen hingewiesen wird.</para>
+
+	<para>DAS DOKUMENT UND VERÄNDERTE FASSUNGEN DES DOKUMENTS WERDEN UNTER DEN BEDINGUNGEN DER GNU FREE DOCUMENTATION LICENSE ZUR VERFÜGUNG GESTELLT MIT DEM WEITERGEHENDEN VERSTÄNDNIS, DASS: <orderedlist>
+		<listitem>
+		  <para>DIESES DOKUMENT WIRD »WIE VORLIEGEND« GELIEFERT, OHNE GARANTIEN IRGENDEINER ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES BEZIEHT SICH AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT ODER VERÄNDERTE FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR EINEN BESTIMMTEN ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER VERLETZT. DAS VOLLE RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER VERÄNDERTE FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE EIN DOKUMENT ODER EINE VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART BEINHALTEN, TRAGEN SIE (NICHT DER URSPRUNGSAUTOR, DER AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR NOTWENDIGE DIENSTLEISTUNGEN, REPARATUREN ODER FEHLERKORREKTUREN. DIESER HAFTUNGSAUSSCHLUSS IST EIN ESSENZIELLER TEIL DIESER LIZENZ. DIE VERWENDUNG EINES DOKUMENTS ODER EINER VERÄNDERTEN VERSION DES DOKUMENTS IST NICHT GESTATTET AUßER UNTER BEACHTUNG DIESES HAFTUNGSAUSSCHLUSSES UND</para>
+		</listitem>
+		<listitem>
+		  <para>UNTER KEINEN UMSTÄNDEN UND AUF BASIS KEINER RECHTSGRUNDLAGE, EGAL OB DURCH UNERLAUBTEN HANDLUNGEN (EINSCHLIEßLICH FAHRLÄSSIGKEIT), VERTRAG ODER ANDERWEITIG KANN DER AUTOR, URSPRUNGSAUTOR, EIN MITWIRKENDER ODER EIN VERTRIEBSPARTNER DIESES DOKUMENTS ODER EINER VERÄNDERTEN FASSUNG DES DOKUMENTS ODER EIN ZULIEFERER EINER DIESER PARTEIEN, HAFTBAR GEMACHT WERDEN FÜR DIREKTE, INDIREKTE, SPEZIELLE, VERSEHENTLICHE ODER FOLGESCHÄDEN JEGLICHER ART, EINSCHLIEßLICH UND OHNE EINSCHRÄNKUNGEN SCHÄDEN DURCH VERLUST VON KULANZ, ARBEITSAUSFALL, COMPUTERVERSAGEN ODER COMPUTERFEHLFUNKTIONEN ODER ALLE ANDEREN SCHÄDEN ODER VERLUSTE, DIE SICH AUS ODER IN VERBINDUNG MIT DER VERWENDUNG DES DOKUMENTS UND VERÄNDERTER FASSUNGEN DES DOKUMENTS ERGEBEN, AUCH WENN DIE OBEN GENANNTEN PARTEIEN ÜBER DIE MÖGLICHKEIT SOLCHER SCHÄDEN INFORMIERT WAREN.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+   <authorgroup> 
+   <author> 
+		<firstname>Fabio</firstname> 
+		<surname>Marzocca</surname> 
+		<affiliation> 
+	  	<orgname>GNOME-Dokumentationsprojekt</orgname> 
+	  	<address> <email>thesaltydog@gmail.com</email> </address> 
+		</affiliation> 
+   </author> 
+
+   <author role="maintainer">
+   	<firstname>Fabio</firstname>
+	<surname>Marzocca</surname>
+	<affiliation>
+	  <address><email>thesaltydog@gmail.com</email></address>
+	</affiliation>
+   </author>
+      
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+   <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  	<orgname>Latin Translation Team</orgname> 
+	  	<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+   </othercredit>
+-->
+    </authorgroup>
+
+	<releaseinfo revision="2.30" role="review">
+	</releaseinfo>
+
+    <revhistory>
+      <revision> 
+		<revnumber>Festplattenbelegungsanalyse-Handbuch 1.0</revnumber> 
+		<date>April 2006</date> 
+		<revdescription> 
+	  		<para role="author">Emmanuele Bassi <email>ebassi@gmail.com</email></para>
+	  		<para role="publisher">GNOME-Dokumentationsprojekt</para>
+		</revdescription> 
+      </revision>
+    </revhistory> 
+
+    <releaseinfo>Dieses Handbuch beschreibt Version 2.15 der Festplattenbelegungsanalyse.</releaseinfo> 
+    
+    <legalnotice> 
+      <title>Rückmeldungen</title> 
+      <para>Um einen Fehler zu melden oder einen Vorschlag zur Festplattenbelegungsanalyse oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen auf der <ulink url="ghelp:gnome-feedback" type="help">GNOME-Seite für Rückmeldungen</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>Festplattenbelegungsanalyse</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="baobab-introduction"> 
+    <title>Einführung</title> 
+
+      <para><application>Festplattenbelegungsanalyse</application>  ist eine grafische, menügesteuerte Anwendung zum Analysieren des Plattenplatzverbrauchs in jeder GNOME-Arbeitsumgebung. Die <application>Festplattenbelegungsanalyse</application> kann entweder das gesamte Dateisystem einlesen, oder einen bestimmten, benutzerdefinierten Ordnerzweig (lokal oder entfernt).</para>
+       <para>Es erkennt auch automatisch in Echtzeit jegliche Änderungen sowohl in Ihrem persönlichen Ordner als auch auf jedem eingebundenen oder nicht eingebundenen Laufwerk. Die <application>Festplattenbelegungsanalyse</application> stellt dabei für jeden gewählten Ordner ein Fenster mit einer Baumansicht bereit.</para>
+
+  </sect1>
+
+<!-- ================ Getting Started ================================ -->
+	<sect1 id="baobab-getting-started">
+	<title>Erste Schritte</title>
+
+    <para>Die <application>Festplattenbelegungsanalyse</application> kann auf drei verschiedene Arten gestartet werden:</para>
+	 <itemizedlist>
+    <listitem><para>aus dem GNOME-Menü <menuchoice><guimenu>Anwendungen</guimenu><guimenuitem>Werkzeuge</guimenuitem></menuchoice>;</para>
+    		</listitem>
+    <listitem><para>in einem Terminalfenster</para>
+    		</listitem>
+    <listitem><para>in Nautilus durch »Öffnen mit …«</para>
+    		</listitem>
+    </itemizedlist> 
+
+
+<para>Falls Sie die <application>Festplattenbelegungsanalyse</application> in einem Terminalfenster starten wollen, geben Sie ein:</para> 
+  
+<para><command>baobab &lt;kompletter_Pfad_zum_Ordner&gt;</command>, dann drücken Sie die <keycap>Eingabetaste</keycap>.</para>  
+<para/> 
+	<para>Falls Sie die <application>Festplattenbelegungsanalyse</application> aus dem GNOME-Menü starten, verbleibt die Anwendung in einer Wartestellung und wartet auf eine Eingabe des Benutzers.</para> 
+    <para>Wenn Sie die <application>Festplattenbelegungsanalyse</application> aus dem GNOME-Menü starten, wird folgendes Fenster angezeigt:</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="baobab-fig"> 
+	<title>Festplattenbelegungsanalyse-Fenster</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Zeigt das Hauptfenster der Festplattenbelegungsanalyse. Enthält Menüleiste, Anzeigebereich, Rollbalken und Statusleiste.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+<para>Der Benutzer kann dann:</para>
+	<itemizedlist>
+    <listitem><para>das Einlesen des kompletten Dateisystems starten;</para>
+    		</listitem>
+    <listitem><para>einen bestimmten Ordnerzweig zum Einlesen auswählen</para>
+    		</listitem>
+    <listitem><para>entfernten Server und Ordner zum Einlesen auswählen</para>
+    		</listitem>
+    <listitem><para>Einstellungen ändern</para>
+    		</listitem>
+	</itemizedlist>
+
+
+</sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="baobab-usage"> 
+    <title>Benutzung</title>
+
+    <sect2 id="baobab-fullscan">
+      <title>Das gesamte Dateisystem einlesen</title>
+        <para>Um das Einlesen des kompletten Dateisystems zu starten, wählen Sie <menuchoice><guimenu>Aktionen</guimenu><guimenuitem>Dateisystem einlesen</guimenuitem></menuchoice> aus dem Menü, oder klicken Sie auf die Schaltfläche <guibutton>Dateisystem einlesen</guibutton> in der Werkzeugleiste.</para>
+
+	<para>Wenn der Einlesevorgang beendet ist, erhalten Sie einen kompletten Baum Ihres Dateisystems, wie diesen im nächsten Bild.</para>    
+
+    <!-- ==== Figure ==== -->
+      <figure id="baobab-fullscan-fig"> 
+	<title>Einlesen des kompletten Dateisystems mit der Festplattenbelegungsanalyse</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_fullscan.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Zeigt das Festplattenbelegungsanalyse-Fenster beim Einlesen des kompletten Dateisystems. Enthält Menüleiste, Anzeigebereich, Rollbalken und Statusleiste.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+    
+    	<note><para>Wenn Sie das komplette Dateisystem einlesen wollen, beginnt die <application>Festplattenbelegungsanalyse</application> mit dem Zeichnen des Dateibaums, sobald das Einlesen des Dateisystems beginnt. Wenn irgendeine große Partition im Dateisystem eingebunden ist, wird diese ebenfalls eingelesen.</para></note>
+    
+    <para>Die <application>Festplattenbelegungsanalyse</application> zeigt die Größen im Dateibaum als zugewiesenen Platz an. Das bedeutet, dass die angezeigten Größen sich auf den gegenwärtigen Platzverbrauch auf dem Laufwerk beziehen und nicht auf die augenscheinliche Größe des Ordners. Wenn Sie die augenscheinliche Größe des Ordners sehen wollen, deaktivieren Sie das Kontrollkästchen im Menü <menuchoice><guimenu>Ansicht</guimenu><guimenuitem>Belegter Speicherplatz</guimenuitem></menuchoice>.</para>
+    
+    <warning><para>Die <application>Festplattenbelegungsanalyse</application> bezieht den Ordner /proc dabei nicht ein, ebenso werden andere Dateien, die keine regulären Dateien sind, wie symbolische Verknüpfungen, zeichenorientierte Gerätedateien oder blockorientierte Gerätedateien nicht als Teil der Ordnergröße berücksichtigt.</para></warning>
+   
+    <para>Harte Verknüpfungen werden auf verschiedene Arten behandelt. Die erste harte Verknüpfung wird als normale Datei anerkannt, während die späteren Verknüpfungen zum gleichen Geräte-I-Node in der Gesamtbelegung nicht mitgezählt, jedoch in der rechten Spalte des Fensters hervorgehoben werden.</para>
+        </sect2>
+	
+	<sect2 id="baobab-folderscan">
+      <title>Einen Ordner einlesen</title>
+
+    <para>Um das Einlesen eines einzelnen Ordners zu starten, wählen Sie <menuchoice><guimenu>Aktionen</guimenu><guimenuitem>Ordner einlesen</guimenuitem></menuchoice> aus dem Menü, oder klicken Sie auf die Schaltfläche <guibutton>Ordner einlesen</guibutton> in der Werkzeugleiste.</para>
+
+	</sect2>
+
+	<sect2 id="baobab-remotescan">
+      <title>Einen entfernten Ordner einlesen</title>
+      
+      <para>Wenn Sie einen Ordner auf einem entfernten Server einlesen wollen, klicken Sie auf das Symbol <guibutton>Entfernten Ordner einlesen</guibutton> in der Werkzeugleiste, oder wählen Sie <menuchoice><guimenu>Aktionen</guimenu><guimenuitem>Entfernten Ordner einlesen</guimenuitem></menuchoice> im Menü, und das folgende Dialogfeld wird angezeigt. Die <application>Festplattenbelegungsanalyse</application> kann sich mit einem Server über die Protokolle SSH, FTP, SMB, HTTP und HTTPS verbinden.</para>
+ 
+     <!-- ==== Figure ==== -->
+      <figure id="baobab-remote-fig"> 
+        <title>Einlesen entfernter Ordner mit der Festplattenbelegungsanalyse</title> 
+		<screenshot> 
+	 	 <mediaobject> 
+	  	  <imageobject>
+	   	 <imagedata fileref="figures/baobab_remote.png" format="PNG"/> 
+	   	 </imageobject>
+	   	 <textobject> 
+	    	  <phrase>Zeigt das Dialogfenster der Festplattenbelegungsanalyse für entfernte Ordner.</phrase> 
+	   	 </textobject> 
+	 	 </mediaobject> 
+		</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+   
+	</sect2> 
+
+  </sect1>
+
+
+<!-- ============= Preferences =============================== -->
+  <sect1 id="baobab-preferences">
+    <title>Einstellungen</title>
+    
+    <para>Um die Einstellungen der <application>Festplattenbelegungsanalyse</application> zu ändern, wählen Sie <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Einstellungen</guimenuitem></menuchoice>.</para>
+ 
+   <!-- ==== Figure ==== -->
+      <figure id="baobab-preferences-fig"> 
+      	<title>Einstellungsfenster der Festplattenbelegungsanalyse</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_prefs.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Einstellungsfenster</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+  
+  <sect2 id="baobab-scan-preferences">
+      <title>Laufwerke zum Einlesen auswählen</title>
+  <para>Im ersten Abschnitt des Einstellungsfensters werden alle gefundenen und eingebundenen Laufwerke aufgelistet. Klicken Sie in das Kontrollkästchen, um eine Partition in das Einlesen des Dateisystems einzuschließen beziehungsweise davon auszuschließen.</para>
+  <note><para>Das Laufwerk, das unter »/« eingebunden ist, kann nicht ausgeschlossen werden.</para></note>
+  </sect2>
+ 
+   <sect2 id="baobab-monitor-preferences">
+      <title>Persönlichen Ordner überwachen</title>
+      <para>Falls diese Option ausgewählt ist, überwacht die <application>Festplattenbelegungsanalyse</application> alle externen Änderungen an Ihrem persönlichen Ordner und warnt den Benutzer, falls eine Datei hinzugefügt oder entfernt wird.</para>  
+   </sect2>  
+	</sect1>
+<!-- ================ Treemaps ================================ -->
+
+  <sect1 id="baobab-treemaps"> 
+  <title>Treemaps</title>
+
+    <para><guilabel>Treemap</guilabel>-Konzepte wurden von Ben Shneiderman in den Neunziger Jahren des vorigen Jahrhunderts entwickelt. Lesen Sie seine <ulink type="http" url="http://www.cs.umd.edu/hcil/treemap-history/index.shtml">Vision von Treemaps</ulink>.</para>
+    
+       <!-- ==== Figure ==== -->
+      <figure id="baobab-treemap-fig"> 
+        <title>Treemap-Fenster der Festplattenbelegungsanalyse</title>
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/baobab_treemaps.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Treemap-Theorie. Zeigt zwei Treemap-Diagramme</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+  
+    
+    <para>Das Bild zeigt ein Beispiel der Treemaps-Theorie. Jeder Knotenpunkt (wie im Diagramm angezeigt) hat einen Namen (einen Buchstaben) und eine zugehörige Größe (eine Zahl). Die Größe der Zweige repräsentiert beispielsweise die Größe der individuellen Dateien, die Größe der Knotenpunkte entspricht der Größe der Unterordner.</para> 
+    
+    <para>Die Treemap wird aus rekursiven Unterteilungen des ursprünglichen Rechtecks gebildet. Die Größe jedes der Teil-Rechtecke bezieht sich auf die Größe des jeweiligen Knotenpunkts. Die Richtung der Unterteilung wird in jeder Ebene umgekehrt: Zunächst waagerecht, dann senkrecht, usw. Als Ergebnis wird das ursprüngliche Rechteck in kleinere Rechtecke aufgeteilt, so dass die Größe jedes der Rechtecke die Größe des jeweiligen Zweiges widerspiegelt. Die Struktur des Baums wird so auch in der Treemap abgebildet, als Ergebnis von deren Konstruktionsweise. Die Farbgebung und die Beschriftungen können für die Bereitstellung zusätzlicher Informationen über die Zweige verwendet werden.</para>
+
+	<note><para>Treemaps sind sehr effektiv, wenn die Größe das wichtigste anzuzeigende Merkmal ist.</para></note>
+  </sect1>
+  <!-- ================ Ringschart ================================ -->
+
+  <sect1 id="baobab-ringschart"> 
+  <title>Ringdiagramm</title>
+
+    <para>Ein <guilabel>Ringdiagramm</guilabel> ist eine grafische Darstellung des Plattenplatzverbrauchs eines bestimmten Ordners. Wenn Sie die Anwendung starten, wird der Platzverbrauch des Dateisystems dargestellt, wie in der folgenden Abbildung zu sehen ist:</para>
+
+    <!-- ==== Figure ==== -->
+    <figure id="baobab-filesystem_scan"> 
+      <title>Die Festplattenbelegungsanalyse zeigt ein Ringdiagramm mit dem Platzverbrauch des Systems</title>
+      <screenshot> 
+	<mediaobject> 
+	  <imageobject>
+	    <imagedata fileref="figures/baobab_ringschart1.png" format="PNG"/> 
+	  </imageobject>
+	  <textobject> 
+	    <phrase>Nach dem Start der Anwendung wird der Platzverbrauch des Dateisystems angezeigt, rechts in einer grafischen Darstellung.</phrase> 
+	  </textobject> 
+	</mediaobject> 
+      </screenshot> 
+    </figure>
+    <!-- ==== End of Figure ==== -->
+
+    <para>Wenn Sie mit dem Einlesen eines Ordners beginnen, wird der Baum der Unterordner erstellt und auf der linken Seite aufgelistet. Jede der Spalten enthält Informationen über den Namen, den Platzverbrauch (Prozentsatz und Größe in kB, MB oder GB) und die Anzahl der enthaltenen Objekte (Dateien und Ordner). Wenn dieser Vorgang beendet ist, wird das <guilabel>Ringdiagramm</guilabel> auf der rechten Seite erstellt. Falls Sie diesen Vorgang vorzeitig beenden, erhalten Sie lediglich eine teilweise Darstellung, die auf den Ordnern basiert, die bereits eingelesen wurden.</para>
+
+
+    <!-- ==== Figure ==== -->
+    <figure id="baobab-folder_scan"> 
+      <title>Die Festplattenbelegungsanalyse zeigt ein Ringdiagramm mit dem Platzverbrauch eines Ordners</title>
+      <screenshot> 
+	<mediaobject> 
+	  <imageobject>
+	    <imagedata fileref="figures/baobab_ringschart2.png" format="PNG"/> 
+	  </imageobject>
+	  <textobject> 
+	    <phrase>Nach dem Einlesen eines Ordners.</phrase> 
+	  </textobject> 
+	</mediaobject> 
+      </screenshot> 
+    </figure>
+    <!-- ==== End of Figure ==== -->
+    
+    <para>Das <guilabel>Ringdiagramm</guilabel> wird aus einer Reihe von konzentrischen Ringen gebildet, die um einen zentralen Kreis angeordnet sind. Dieser Kreis symbolisiert den Basisordner des partiellen Dateibaums, das heißt den Ordner, den der Benutzer zum Einlesen ausgewählt hat. Jeder der Ringe stellt eine Ebene in diesem partiellen Dateibaum dar, so werden beispielsweise die Unterordner des Basisordners im ersten Ring dargestellt, und weiter außen liegende Ringe beziehen sich auf tiefer liegende Ebenen im Dateibaum. Jeder Unterordner wird durch einen Sektor des Rings dargestellt, dessen Winkel proportional zur Größe des Ordnerinhalts ist. Die Ringe werden in verschiedenen Farben dargestellt, um die Unterscheidung zu erleichtern. Bis zu fünf Ebenen können gezeichnet werden. Im Falle, dass ein Ordner in der fünften Ebene weitere Unterordner enthält, wird ein schwarzer Bogen am Rand dieses Ordnersektors gezeichnet. Falls ein Ordner als Basisordner des Baums gewählt wird, der keine weiteren Unterordner enthält, wird nur der innere Kreis gezeichnet. Wenn sie mit dem Mauszeiger über einen der Ordner in der Grafik fahren, wird dieser hervorgehoben und ein Tooltip erscheint, der Informationen über Name und Größe anzeigt. Falls es Unterordner gibt, geben kleine graue Tooltips über deren Namen Auskunft. Es ist möglich, dass nicht alle Namen der Unterordner angezeigt werden, um Überlappungen zu vermeiden.</para>
+
+    <para>Sie können in der Liste nach oben und nach unten gehen und dabei nach Ihrer Wahl die einzelnen Unterordner ausklappen. Die grafische Darstellung zeigt dabei jeweils den gewählten Ordner als Basisordner des partiellen Dateibaums an. Die Ordner sind auch über das Ringdiagramm selbst erreichbar. Wenn sie mit der linken Maustaste in einen der Ordner klicken, gelangen Sie damit tiefer in die Ordnerstruktur, indem der angeklickte Ordner als Basisordner der Grafik verwendet wird. Wenn Sie stattdessen die mittlere Maustaste verwenden (wobei der Ort des Anklickens keine Rolle spielt, solange Sie im Rahmen des <guilabel>Ringdiagramms</guilabel> bleiben), kehren Sie damit dieses Verhalten um und gelangen in der Ordnerhierarchie eine Ebene höher.</para>
+
+    <para>Der Prozentsatz des Radius des Eltern-Ordners eines bestimmten Ordners ist direkt proportional zur Beziehung zwischen seiner eigenen Größe und der Größe des Eltern-Ordners. Es ist leicht zu begreifen, dass die Größe eines Ordners kleiner oder gleich der Größe seines Eltern-Ordners sein muss. Obwohl diese grafische Darstellung lediglich Ordner anzeigt, werden die Dateien in die Größenermittlung zur Anzeige des von Ordnern belegten Platzes einbezogen.</para>
+  </sect1>
+</article>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="files-search" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <link type="guide" xref="shell-overview#files"/>
+    
+    <desc>Finden Sie Dateien anhand Ihres Namens und Typs. Speichern Sie Ihre Suche zur späteren Verwendung.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Nach Dateien suchen</title>
+  
+  <p>Sie können nach Dateien anhand ihres Namens oder Dateityps direkt in der Dateiverwaltung suchen. Sie können sogar alltägliche Suchen speichern; sie erscheinen dann als spezielle Ordner in Ihrem persönlichen Ordner.</p>
+
+  <links type="topic" style="linklist">
+    <title>Weitere Suchanwendungen</title>
+    <!-- This is an extension point where search apps can add
+    their own topics. It's empty by default. -->
+  </links>
+
+  <steps>
+    <title>Suche</title>
+    <item><p><link xref="files-browse">Öffnen Sie die Dateiverwaltung</link></p></item>
+    <item><p>Wenn Sie wissen, dass die Dateien in einem bestimmten Ordner oder seinen Unterordnern sind, gehen Sie zu diesem Ordner.</p></item>
+    <item><p>Klicken Sie auf <gui>Suchen</gui> in der Werkzeugleiste oder drücken Sie <keyseq><key>Strg</key><key>F</key></keyseq>.</p></item>
+    <item><p>Type a word or words that you know appear in the file
+    name and press enter. For example, if you name all your invoices
+    with the word "Invoice", type <input>invoice</input>. Words are
+    matched regardless of case.</p></item>
+    <item><p>You can narrow your results by selecting a different
+    starting folder in <gui>Location</gui>. Or click <gui>Location</gui>
+    and select <gui>File Type</gui> from the drop-down list to narrow
+    your results based on file type. Click the <gui>+</gui> button to
+    add multiple filters if you want to narrow based on location and
+    file type. When you make changes, click <gui>Reload</gui> to search
+    again.</p></item>
+    <item><p>Sie können die Dateien des Suchergebnisses öffnen, kopieren, löschen oder auf andere Weise damit arbeiten, so wie Sie es mit jedem anderen Ordner in der Dateiverwaltung auch machen würden.</p></item>
+    <item><p>Klicken Sie ernaut auf <gui>Suchen</gui> in der Werkzeugleiste, um die Suche zu beenden und zum Ordner zurückzukehren.</p></item>
+  </steps>
+
+  <p>Wenn Sie bestimmte Suchen häufig ausführen, können Sie sie speichern, um schnell auf sie zugreifen zu können.</p>
+
+  <steps>
+    <title>Eine Suche speichern</title>
+    <item><p>Starten Sie eine Suche, wie vorstehend beschrieben.</p></item>
+    <item><p>Wenn Sie die Suchparameter später wiederverwenden wollen, klicken Sie auf <guiseq><gui>Datei</gui><gui>Suche speichern unter</gui></guiseq>.</p></item>
+    <item><p>Geben Sie der Suche einen Namen und klicken Sie auf <gui>Speichern</gui>. Wenn Sie wollen, wählen Sie einen anderen Ordner, um die Suche darin zu speichern. Wenn Sie diesen Ordner betrachten, sehen Sie Ihre gespeicherte Suche als ein orangefarbenes Ordnersymbol mit einem Vergrößerungsglas darauf.</p></item>
+  </steps>
+</page>

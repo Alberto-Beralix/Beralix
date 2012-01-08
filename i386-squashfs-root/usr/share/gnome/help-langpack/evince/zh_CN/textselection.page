@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="textselection" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#faq"/>
+    <desc>当您复制文本时，粘贴的文本也许和您选定的并不一样。</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Why didn't the text I selected copy properly?</title>
+
+
+<p>
+If you highlight and copy text from a document using the <app>document viewer</app> and then paste it into another
+application, the formatting may alter.  It may also contain different characters than the original selection. This often happens when copying text from a PDF document with multiple columns.
+</p>
+
+
+ <p>发生该问题是因为一些文档格式处理文本的方式。在文档中的实际文本与显示出来的并非一致。这就导致了复制的结果与期望的不一样。</p>
+
+ <p>
+  Unfortunately, there is no real way of fixing this problem. Copying
+  less text at a time, or copying the text into a text editor may minimise the problem. You can locate a text editor by clicking <guiseq><gui>Activities</gui><gui>Applications</gui><gui>Accessories</gui><gui>gedit</gui></guiseq>.
+  </p>
+
+</page>

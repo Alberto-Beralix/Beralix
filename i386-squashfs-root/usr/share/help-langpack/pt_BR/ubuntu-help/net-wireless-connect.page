@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-wireless-connect" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-wireless" group="#first"/>
+    <link type="seealso" xref="net-wireless-hidden"/>
+    <link type="seealso" xref="net-wireless-troubleshooting"/>
+    
+    <revision version="11.04" date="2011-04-10" status="final"/>
+
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <credit type="author">
+      <name>O time de documentação do Ubuntu</name>
+    </credit>
+
+    <desc>Entre na internet - sem fio.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Conectar a uma rede sem fio</title>
+
+<p>Se você tiver um computador com a placa de rede sem-fio habilitada, você poderá se conectar a uma rede sem-fio que estiver dentro do alcance para ter acesso à Internet, visualizar arquivos compartilhados na rede, e assim por diante.</p>
+
+<steps>
+  <item><p>Se tem um interruptor sem fio no seu computador, certifique-se que ele esteja ligado.</p></item>
+  <item><p>Clique no <gui>menu rede</gui> no <gui>painel superior</gui> e procure pela sua rede desejada.</p>
+    <steps>
+      <item><p>Escolha o nome da sua rede sem fio.</p></item>
+      <item><p>Se o nome de sua rede sem-fio não estiver na lista, clique em <gui>Mais redes</gui> para ver se a rede está mais abaixo na lista. Se você ainda não vê a rede, você pode estar fora do alcance ou a rede <link xref="net-wireless-hidden">pode estar oculta</link>.</p></item>
+    </steps>
+  </item>
+  <item><p>Se a rede estiver protegida por uma senha (<link xref="net-wireless-wepwpa">chave de encriptação</link>), digite a senha quando solicitada e clique em <gui>Conectar</gui>.</p>
+  <p>Se você não sabe a chave, ela pode estar escrita na parte de baixo do seu roteador sem-fio ou estação base,</p></item>
+  <item><p>O ícone da rede irá alterar a aparência assim que o computador tentar se conectar à rede.</p></item>
+  <item>
+   <p>Se a conexão for bem-sucedida, o ícone irá mudar para um ponto com diversas barras sobre ele. Mais barras indicam uma conexão mais forte à rede. Se não houver muitas barras, a conexão está fraca e pode não ser muito confiável.</p>
+  </item>
+</steps>
+
+<p>Se a conexão não for bem-sucedida, você <link xref="net-passwordok-noconnect">pode ser perguntado por sua senha novamente</link> ou ele pode simplesmente dizer que a sua conexão foi desconectada. Há uma série de coisas que podem ter causado isto - você pode ter digitado a senha errada, o sinal da rede sem-fio pode estar muito fraco, ou a placa de rede sem-fio do seu computador pode ter um problema, por exemplo. Veja <link xref="net-wireless-troubleshooting"/> para mais ajuda.</p>
+
+<p>Uma conexão mais forte com uma rede sem-fio não significa necessariamente que você terá uma conexão à Internet mais rápida, ou que você terá dowloads mais rápidos. A conexão de rede sem-fio conecta seu computador a um <em>dispositivo que fornece a conexão à Internet</em> (como um roteador ou modem), mas as duas conexões são na verdade diferentes, e então vão funcionar em velocidades diferentes.</p>
+
+<note><p>Conectar-se à uma rede sem fio é fácil em muitos casos, mas às vezes poderão ser problemáticas.</p>
+<p>Se você tiver qualquer problema com acesso à rede, visite algum dos outros tópicos de ajuda relacionados à rede, clicando em um dos links "Veja também" na parte inferior desta página.</p></note>
+
+</page>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_speech" xml:lang="es">
+  <info>
+    <link type="guide" xref="preferences#orca"/>
+    <link type="next" xref="preferences_braille"/>
+    <title type="sort">2. Voz</title>
+    <title type="link">Voz</title>
+    <desc>Configurar la voz y lo que se habla</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Preferencias de voz</title>
+  <section id="enable_speech">
+    <title>Activar voz</title>
+    <media type="image" mime="image/png" src="figures/preferences_enable_speech.png"/>
+    <p>La casilla <gui>Activar voz</gui> controla si <app>Orca</app> hará uso o no de un sintetizador de voz. Los usuarios que solamente usen Braille probablemente quieran desmarcar esta casilla.</p>
+  </section>
+  <section id="tts_options">
+    <title>Opciones de texto a voz</title>
+    <media type="image" mime="image/png" src="figures/preferences_tts_options.png"/>
+    <section>
+      <title>Sistema de voz</title>
+      <p>Este cuadro combinado le permite seleccionar su sistema de voz preferido de entre los que tenga instalados. Como por ejemplo Speech Dispatcher y GNOME Speech.</p>
+    </section>
+    <section>
+      <title>Sintetizador de voz</title>
+      <p>Este cuadro combinado le permite seleccionar el sintetizador de voz que usar con el sistema de voz elegido.</p>
+    </section>
+    <section>
+      <title>Ajustes de voz</title>
+      <p>Este cuadro combinado hace posible que use voces diferentes para distinguir mejor el texto en mayúscula y el texto enlazado de otro texto, y el texto en que aparece en pantalla de otro texto que <app>Orca</app> añada.</p>
+      <note style="tip">
+        <title>Configurar múltiples voces</title>
+        <p>Para cada voz que desee configurar, primero seleccione la voz en el cuadro combinado <gui>Ajustes de voz</gui>. Luego configure la persona, la velocidad, el tono y el volumen que se usarán con esa voz.</p>
+      </note>
+    </section>
+    <section>
+      <title>Persona</title>
+      <p>Este cuadro combinado le permite elegir qué «persona» o «hablante» se debería usar con la voz seleccionada. Por ejemplo, podría querer tener a David para hablar de manera predeterminada, pero tener a Alicia para hablar los hiperenlaces. Tenga en cuenta que lo que encuentre en el cuadro combinado <gui>Persona</gui> dependerá de qué sintetizador de voz tenga instalado.</p>
+    </section>
+    <section>
+      <title>Velocidad, tono y volumen</title>
+      <media type="image" mime="image/png" src="figures/preferences_rate_pitch_volume.png"/>
+      <p>Estos tres deslizadores izquierda-derecha le permiten personalizar aún más el sonido de la persona que acaba de seleccionar.</p>
+    </section>
+  </section>
+  <section id="punctuation_level">
+    <title>Nivel de puntuación</title>
+    <media type="image" mime="image/png" src="figures/preferences_punctuation_level.png"/>
+    <p>El grupo de botones de radio <gui>Nivel de puntuación</gui> se usa para ajustar la cantidad de puntuación que se habla por el sintetizador. Los niveles disponibles son <gui>Ninguna</gui>, <gui>Alguna</gui>, <gui>La mayoría</gui> y <gui>Toda</gui>.</p>
+    <section>
+      <title>Ninguna</title>
+      <p>Seleccionar un nivel de puntuación <gui>Ninguna</gui> hará, como imagina, que no se hable ninguna puntuación. Sin embargo, note que los símbolos especiales tales como números superíndice y subíndice, fracciones unicode y viñetas todavía se hablarán en este nivel, a pesar de que algunos podrían considerar estos símbolos como signos de puntuación.</p>
+    </section>
+    <section>
+      <title>Alguna</title>
+      <p>Seleccionar nivel de puntuación <gui>Alguna</gui> hace que se hablen todos los símbolos mencionados anteriormente. Por otro lado, <app>Orca</app> hablará los símbolos matemáticos conocidos, símbolos de moneda y «^», «@», «/», «&amp;», «#».</p>
+    </section>
+    <section>
+      <title>La mayoría</title>
+      <p>Seleccionar el nivel de puntuación <gui>La mayoría</gui> hace que se hablen todos los símbolos mencionados anteriormente. Por otra parte <app>Orca</app> hablará todos los otros símbolos de puntuación conocidos <em>que no sean</em> «!», «'», «,», «.», «?».</p>
+    </section>
+    <section>
+      <title>Toda</title>
+      <p>Seleccionar un nivel de puntuación <gui>Toda</gui> hace, como ya imagina, que <app>Orca</app> hable todos los símbolos de puntuación conocidos.</p>
+    </section>
+    <p>Valor predeterminado: <gui>La mayoría</gui></p>
+  </section>
+  <section id="verbosity">
+    <title>Cantidad de información</title>
+    <media type="image" mime="image/png" src="figures/preferences_speech_verbosity.png"/>
+    <p>El ajuste <gui>Cantidad de información</gui> determina la cantidad de información que se hablará en varias situaciones. Por ejemplo, si este está establecido a extendida, y se sitúa con los cursores sobre una palabra mal escrita, <app>Orca</app> anunciará que la palabra está mal escrita. Este anuncio no se hará cuando el nivel se establece a «breve».</p>
+    <p>Valor predeterminado: <gui>extendida</gui></p>
+  </section>
+  <section id="table_rows">
+    <title>Filas de tabla</title>
+    <media type="image" mime="image/png" src="figures/preferences_table_rows.png"/>
+    <p>El grupo de botones de radio <gui>Filas de tabla</gui> determina qué se habla cuando se navega entre las filas de una tabla. Las opciones disponibles son <gui>Leer fila</gui> y <gui>Leer celda</gui>.</p>
+    <p>Considere el proceso de examinar la lista de mensajes en su bandeja de entrada. Para que <app>Orca</app> anuncie el remitente, asunto, fecha y la presencia de adjuntos necesitará <gui>Leer fila</gui>. Por otro lado, cuando se navega entre filas de una hoja de cálculo, puede que no desee escuchar la fila completa. En ese caso debería seleccionar <gui>Leer celda</gui>.</p>
+      <p>Valor predeterminado: <gui>Leer fila</gui></p>
+  </section>
+  <section id="progress_bar_updates">
+    <title>Actualizaciones de barras de progreso</title>
+    <media type="image" mime="image/png" src="figures/preferences_progress_bar_updates.png"/>
+    <section>
+      <title>Activado</title>
+      <p>Si la casilla <gui>Activado</gui> está marcada <app>Orca</app> presentará periódicamente el estado de las barras de progreso.</p>
+      <p>Valor predeterminado: marcado</p>
+    </section>
+    <section>
+      <title>Frecuencia (segs)</title>
+      <p>Este botón contador determina con qué frecuencia se hace el anuncio.</p>
+      <p>Valor predeterminado: 10</p>
+    </section>
+    <section>
+      <title>Restringir a</title>
+      <p>Este cuadro combinado le permite controlar qué barras de progreso se deberían presentar, asumiendo que la presentación de actualización de barras de progreso se ha activado. Las opciones son <gui>Todo</gui>, <gui>Aplicación</gui> y <gui>Ventana</gui>.</p>
+      <p>Seleccionar <gui>Todo</gui> dará lugar a que <app>Orca</app> presente actualizaciones para todas las barras de progreso, con independencia de la ubicación en que se encuentren las mismas.</p>
+      <p>Seleccionar <gui>Aplicación</gui> dará lugar a que <app>Orca</app> presente actualizaciones de las barras de progreso para la aplicación activa, incluso si las mismas no están en la ventana activa.</p>
+      <p>Seleccionar <gui>Ventana</gui> dará lugar a que <app>Orca</app> presente solamente actualizaciones de las barras de progreso en la ventana activa.</p>
+      <p>Valor predeterminado: <gui>Aplicación</gui></p>
+    </section>
+  </section>
+  <section id="only_speak_displayed_text">
+    <title>Hablar solamente el texto mostrado</title>
+    <media type="image" mime="image/png" src="figures/preferences_only_speak_displayed_text.png"/>
+    <p>Al marcar esta casilla hace que <app>Orca</app> solamente hable el texto actual que se muestra en pantalla. Esta opción está destinada a usuarios con baja visión y usuarios con una discapacidad de aprendizaje visual.</p>
+  </section>
+  <section id="multicase_strings">
+    <title>Hablar cadenas con mayúsculas y minúsculas como palabras</title>
+    <media type="image" mime="image/png" src="figures/preferences_speak_multicase_strings_as_words.png"/>
+    <p>En algunos textos, y sobre todo cuando se trabaja con código, uno a menudo encuentra una palabra consistente en varias palabras separadas por alternancia de capitalización tal como «CadenaMultiCapitalización». Los sintetizadores de voz no siempre pronuncian correctamente estas cadenas con mayúsculas y minúsculas. Al marcar la casilla <gui>Hablar cadenas con mayúsculas y minúsculas como palabras</gui> hará que <app>Orca</app>divida una palabra con capitalización múltiple en varias palabras separadas antes de enviarlo al sintetizador de voz.</p>
+  </section>
+  <section id="pauses">
+    <media type="image" mime="image/png" src="figures/preferences_break_speech_into_chunks.png"/>
+    <title>Partir la voz en trozos entre pausas</title>
+    <p>Dependiendo de los ajustes de voz que se tengan activados, <app>Orca</app> puede que tenga bastante que decir sobre un objeto en particular tal como su nombre, su rol, su estado, su tecla de acceso, su mensaje de aprendizaje y así sucesivamente. Al marcar la casilla <gui>Partir la voz en trozos entre pausas</gui> hará que <app>Orca</app> inserte breves pausas entre cada uno de estos elementos de información.</p>
+  </section>
+  <section id="say_all_by">
+    <media type="image" mime="image/png" src="figures/preferences_say_all_by.png"/>
+    <title>Leer todo por</title>
+    <p>El cuadro combinado <gui>Leer todo por</gui> le permite especificar si <app>Orca</app> habla una frase a la vez o una línea cuando se hace un «Leer todo» de un documento.</p>
+  </section>
+  <section id="system_voice_items">
+    <title>Información del sistema</title>
+    <media type="image" mime="image/png" src="figures/preferences_system_voice_options.png"/>
+    <p>Los siguientes elementos controlan la presentación de una variedad de información suplementaria acerca del elemento con el foco. Debido a que el texto asociado no aparece en pantalla, esta información se presenta con la voz de sistema de <app>Orca</app>.</p>
+    <note style="note">
+      <title>Configuración de información del sistema</title>
+      <p>Los siguientes elementos no estarán disponibles para configurar si la casilla <gui>Hablar solamente el texto mostrado.</gui> está marcada.</p>
+      </note>
+      <section id="speak_blank_lines">
+        <title>Indicar líneas en blanco</title>
+        <p>Si la casilla <gui>Indicar líneas en blanco</gui>está marcada, <app>Orca</app> dirá «en blanco» cada vez que llegue con flechas de cursor a una línea en blanco. Si no está marcada, <app>Orca</app> no dirá nada cuando se mueva a una línea en blanco.</p>
+      </section>
+      <section id="indentation_and_justification">
+        <title>Indicar sangrado y justificación</title>
+        <p>Cuando se trabaja con código o se editan otros documentos a menudo es deseable estar al tanto de la justificación y el sangrado. Al marcar la casilla <gui>Indicar sangrado y justificación</gui> hará que <app>Orca</app> anuncie esta información.</p>
+      </section>
+      <section id="mnemonics">
+       <title>Leer las teclas de acceso del objeto</title>
+        <p>Si se marca la casilla <gui>Leer las teclas de acceso del objeto</gui>, <app>Orca</app> anunciará las teclas de acceso asociadas al objeto con el foco (tal como <keyseq><key>Alt</key><key>A</key></keyseq> para el botón <gui>Aceptar</gui>).</p>
+      </section>
+    <section id="child_position">
+      <title>Indicar la posición del hijo</title>
+      <p>Al marcar la casilla <gui>Indicar la posición del hijo</gui> hará que <app>Orca</app> anuncie la posición del elemento con el foco en menús, listas y árboles (Ej. «9 de 16»).</p>
+    </section>
+    <section id="speak_tutorial_messages">
+      <title>Leer mensajes de aprendizaje</title>
+      <p>Si la casilla <gui>Leer mensajes de aprendizaje</gui> está marcada, <app>Orca</app> proporcionará información adicional, como la forma de interactuar con el objeto que actualmente tiene el foco.</p>
+    </section>
+  </section>
+</page>

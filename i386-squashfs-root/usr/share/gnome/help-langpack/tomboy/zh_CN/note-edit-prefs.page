@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="task" id="edit-prefs" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#prefs"/>
+    <desc>编辑便笺的首选项。</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-05-29" status="candidate"/>
+    <credit type="author">
+      <name>Paul Cutler</name>
+      <email>pcutler@gnome.org</email>
+    </credit>    
+<!--
+    <copyright>
+      <year>2010</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+-->
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+ <title>阿帖便笺首选项</title>
+ 
+ 	<p>You can change the default settings when typing notes
+ 	in Tomboy.  To change your note settings, open
+ 	 <gui>Tomboy Preferences</gui> by 
+	using your mouse to right click on the Tomboy icon in your panel,
+	taskbar or dock, and choose <gui>Preferences</gui> and  select
+	the <gui>Editing</gui> tab.  You can also open <gui> Tomboy
+	Preferences</gui> from the <gui>Search All Notes</gui> dialog. From
+	the menu, choose <guiseq><gui>Edit</gui><gui>Preferences</gui>
+	</guiseq>.
+	</p>
+ 
+ <section id="spellcheck">
+   <title>拼写检查</title>
+   <p>阿帖便笺可以在您输入内容时进行拼写检查，默认它是启用的，错误的词语会加上下划线。您可以在错误的词语上点右键，看一下拼写建议。</p>
+   
+   <p>要禁用自动拼写检查，在阿帖便笺首选项的 <gui>编辑</gui> 标签中，用鼠标或空格键不勾选 <gui>输入时检查拼写</gui>。</p>
+   
+ </section>
+
+ <section id="wikiwords">
+   <title>维基词汇</title>
+   <p>阿帖便签可以高亮显示 <gui>LookLikeThis</gui> 词汇。多个大写字母连在一起不用空格分开，类似于维基词汇，阿帖便笺将高亮词语并转换成一个链接。点击这个链接将创建一个新便笺，并用这个维基词汇作为便笺标题。</p>
+   
+   <p>加亮维基词汇默认不启用，要启用它，请在首选项的 <gui>编辑</gui> 标签中，用鼠标或空格键勾选 <gui>高亮维基词汇</gui> 复选框。</p>
+   
+ </section>
+
+ <section id="bullets">
+   <title>自动项目列表</title>
+   <p>阿帖便笺可以自动创建项目符号列表。默认启用了这个选项，当您编辑一个便笺时，输入 <key>*</key> 后再输入文本，然后按 <key>回车键</key> 就会自动创建一个项目列表。在按下 <key>回车键</key> 后，下一行也会自动显示为项目列表。</p>
+   
+   <p>要禁用自动项目列表功能，在阿帖便笺首选项的 <gui>编辑</gui> 标签中，用鼠标或空格键不勾选 <gui>允许对列表自动编号</gui>。</p>
+   
+ </section>
+
+ <section id="customfont">
+   <title>自定义字体</title>
+   <p>您可以在便笺中选择字体和字号，不使用系统默认的字体样式。这个特性默认是禁用的。</p>
+   
+   <p>要启用自定义字体样式，在阿帖便笺首选项的 <gui>编辑</gui> 标签中，用鼠标或空格键勾选 <gui>使用自定义字体</gui> 复选框。</p>
+
+   <p>点击字体按钮，将会出来一个字体对话框，允许您选择想使用的字体样式，如加粗或倾斜，以及字体大小，点 <key>确定</key> 保存选择。</p>
+   
+ </section>
+
+ <section id="renamelinks">
+ 
+   <title>重命名链接便笺</title>
+   <p>当您输入的内容是其他便笺的标题时，阿帖便笺会自动在两个便笺之间创建链接。如果您想重命名一个链接到其他地方的便笺时，阿帖会自动检测变化，您可以设定操作选项：</p>
+   
+   <list>
+     <item><p><gui>询问</gui>：发生变化时阿帖会提示您，选择下面的一项操作。</p></item>
+     <item><p><gui>从不</gui>：不修改其他便签的链接文本，但会取消它们的链接。</p></item>
+     <item><p><gui>总是</gui>：自动重命名所有其他便笺内链接到本页的文本名称。</p></item>
+   </list>
+   
+   <p>在阿帖便笺首选项的 <gui>编辑</gui> 标签中，点击 <gui>重命名一个链接便笺时：</gui> 右边的下拉揿钮，选择上面的一项。</p>
+   
+ </section>
+
+<section id="newnotetemplate">
+  <title>新建便笺模板</title>
+  <p>您可以创建一个新的便笺模板，每次创建新便笺时会自动套用它。</p>
+  
+  <p>在阿帖便笺首选项的 <gui>编辑</gui> 标签中，点击 <gui>打开新的便笺模板</gui> 按钮。出来一个新建模板窗口，跟普通便笺窗口相似。用新的文本替换里面的标题和 <gui>在此描述您的新便笺。</gui>，完成后关闭它就创建了一个新模板。以后在您每次创建新便笺时，显示的是这个新模板。</p>
+   
+</section>
+
+ </page>

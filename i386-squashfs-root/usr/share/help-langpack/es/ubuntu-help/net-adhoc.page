@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-adhoc" xml:lang="es">
+  <info>
+    <link type="guide" xref="net-wireless"/>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>Puede conectar equipos entre sí formando una red inalámbrica <em>ad-hoc</em>.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Conectarse directamente con otro equipo usando una conexión inalámbrica.</title>
+
+<p>Puede conectar equipos entre sí formando una red inalámbrica <em>ad-hoc</em>. Esto es útil si uno de los eqiupos tiene conectada una impresora que desea compartir, o si quiere transferir archivos entre ellos.</p>
+
+<p>Con una red inalámbrica normal (tipo <em>infrastructura</em>), tendría que conectar ambos equipos a una red inalámbrica suministrada por una estación base o un router inalámbrico. Si no dispone de una estación base, aún podrá conectar los equipos entre sí usando una red ad-hoc.</p>
+
+<p>Configurar una conexión inalámbrica ad-hoc:</p>
+<steps>
+ <item>
+  <p>En uno de los equipos, pulse el <gui>menú de red</gui> del panel superior y seleccione <gui>Editar las conexiones</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Vaya a la solapa <gui>Inalámbrico</gui> y pulse <gui>Añadir</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>En la ventana que aparecerá, seleccione un nombre para la red inalámbrica y luego vaya a la pestaña <gui>Inalámbrica</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Escoja un <gui>SSID</gui>. Este es el nombre de la red, que otras personas podrán ver.</p>
+ </item>
+ 
+ <item>
+  <p>Cambie el <gui>modo</gui> a <gui>Ad-hoc</gui> y deje las demás opciones con sus valores predeterminados. Pulse en <gui>Guardar</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>En el otro equipo, pulse en el <gui>indicador de red</gui> del panel superior y busque la red con el nombre que usted escogió. Puede que tarde un par de minutos en aparecer en la lista.</p>
+  <p>Click the name of your new ad-hoc network to connect to it. Once connected, you will be able to access network shares and so on, like you would if both computers were connected to a conventional wireless network.</p>
+ </item>
+</steps>
+
+<p>Estas instrucciones podrían ser diferentes si uno de los equipos no estuviese usando Linux. Puede que le resulte más fácil configurar la red ad-hoc en el equipo Linux y conectarse a él usando el otro equipo.</p>
+
+<p>Also note that some wireless network cards do not support ad-hoc networking, so you will not be able to use them to create an ad-hoc network.</p>
+
+<section id="security">
+ <title>Asegurar una red ad-hoc</title>
+ <p>Todo aquel que se encuentre dentro del área podrá conectarse a su red ad-hoc, por lo que no resulta muy segura. Puede añadir una <link xref="net-wireless-wepwpa">contraseña WEP o WPA</link> a la red para protegerla de accesos no autorizados.</p>
+ 
+ <p>Para añadir una contraseña:</p>
+ 
+ <steps>
+  <item>
+   <p>Pulse en el <gui>menú de red</gui> del panel superior y pulse <gui>Editar las conexiones</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Vaya a la pestaña <gui>Inalámbrica</gui>, seleccione la red inalámbrica ad-hoc y pulse en <gui>Editar</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Vaya a la pestaña de <gui>Seguridad inalámbrica</gui> y cambie la <gui>Seguridad</gui> para que no sea <gui>Ninguna</gui>.</p>
+  </item>
+  
+  <item>
+   <p>Elija su propia contraseña y pulse en <gui>Guardar</gui>. Los demás equipos conectados a la conexión ad-hoc tendrán que volverse a conectar y tendrá que introducir la contraseña en cada uno de ellos.</p>
+  </item>
+ </steps>
+</section>
+
+</page>

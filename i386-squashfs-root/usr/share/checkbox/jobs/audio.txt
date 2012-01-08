@@ -1,0 +1,85 @@
+plugin: manual
+name: audio/list_devices
+requires:
+ device.category == 'AUDIO'
+ package.name == 'alsa-base'
+command: cat /proc/asound/cards
+description:
+ Detecting your sound device(s):
+ .
+ $output
+ .
+ Is this correct?
+
+plugin: manual
+name: audio/playback_auto
+depends: audio/list_devices
+requires:
+ device.category == 'AUDIO'
+ package.name == 'alsa-base' and package.name == 'python-gst0.10'
+command: gst_pipeline_test -t 2 'audiotestsrc wave=sine freq=512 ! audioconvert ! audioresample ! gconfaudiosink'
+description:
+ Select Test to play a sound on the automatically detected playback device.
+ .
+ Did you hear a sound and was that sound free of any distortion, clicks or other strange noises?
+
+plugin: manual
+name: audio/playback_headphones
+depends: audio/list_devices
+requires:
+ device.category == 'AUDIO'
+ package.name == 'alsa-base' and package.name == 'python-gst0.10'
+command: gst_pipeline_test -t 2 'audiotestsrc wave=sine freq=512 ! audioconvert ! audioresample ! gconfaudiosink'
+description:
+ Please connect a pair of headphones to your audio device.
+ .
+ Select Test to play a sound on the automatically detected playback device.
+ .
+ Did you hear a sound through the headphones and did the sound play without any distortion, clicks or other strange noises from your headphones?
+
+plugin: manual
+name: audio/alsa_record_playback_internal
+depends: audio/playback_auto
+requires:
+ device.category == 'AUDIO'
+ package.name == 'alsa-base'
+command: alsa_record_playback
+description:
+ Disconnect any external microphones that you have plugged in.  Select Test, then speak into your internal microphone.  After a few seconds, your speech will be played back to you.
+ .
+ Did you hear your speech played back?
+
+plugin: manual
+name: audio/alsa_record_playback_external
+depends: audio/playback_headphones
+requires:
+ device.category == 'AUDIO'
+ package.name == 'alsa-base'
+command: alsa_record_playback
+description:
+ Connect a microphone to your microphone port.  Select Test, then speak into the microphone.  After a few seconds, your speech will be played back to you.
+ .
+ Did you hear your speech played back?
+
+plugin: manual
+name: audio/alsa_record_playback_usb
+requires:
+ device.category == 'AUDIO'
+ package.name == 'alsa-base'
+command: alsa_record_playback
+description:
+ Connect a USB audio device to your system.  Then open the volume control application by left-clicking on the speaker icon in the panel and selecting "Sound Preferences".  Select the "Input" tab and choose your USB device.  Select the "Output" tab and choose your USB device.  When you are done, select Test, then speak into the microphone.  After a few seconds, your speech will be played back to you.
+ .
+ Did you hear your speech played back?
+
+plugin: shell
+name: audio/alsa_record_playback_automated
+requires:
+ package.name == 'sox'
+ package.name == 'alsa-base'
+ device.category == 'AUDIO'
+command: audio_test
+description:
+ Play back a sound on the default output and listen for it on the \
+ default input.  This makes the most sense when the output and input \
+ are directly connected, as with a patch cable.

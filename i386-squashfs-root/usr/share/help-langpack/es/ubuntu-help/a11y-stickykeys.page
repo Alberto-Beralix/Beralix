@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task a11y" id="a11y-stickykeys" xml:lang="es">
+  <info>
+    <link type="guide" xref="a11y#mobility" group="keyboard"/>
+    <link type="guide" xref="keyboard"/>
+
+    <revision date="2011-04-06" status="outdated"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>Pulsar combinaciones de teclas tecla a tecla, en lugar de tener que mantener pulsadas todas las teclas a la vez.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Activar las Teclas pegajosas</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Turn on from the keyboard?! How do I turn these features on from
+  the keyboard then? Used to be there were odd shortcuts. I think
+  5x Shift turned one of them on. Fix for 3.2</p>
+</comment>
+
+<p>Las <em>Teclas pegajosas</em> le permiten pulsar combinaciones de teclas pulsándolas tecla a tecla, en lugar de tener que mantener pulsadas todas las teclas a la vez. Por ejemplo, la combinación <keyseq><key>Alt</key><key>Tab</key></keyseq> sirve para pasar de una ventana a otra. Si no tuviera activadas las teclas pegajosas, tendría que mantener pulsadas ambas teclas al mismo tiempo; con las teclas pegajosas, puede pulsar la tecla <key>Alt</key>, soltarla, y luego pulsar <key>Tab</key> para obtener el mismo resultado.</p>
+
+<p>Puede querer activar las teclas persistentes si encuentra dificultad para mantener pulsadas varias teclas a la vez.</p>
+
+<steps>
+  <item><p>Pulse en el icono situado en el extremo derecho de la <gui>barra superior</gui> y seleccione <gui>Configuración del sistema</gui>.</p></item>
+  <item><p>Pulse <gui>Acceso universal</gui>.</p></item>
+  <item><p>Seleccione la pestaña <gui>Escritura</gui>.</p></item>
+  <item><p>Seleccione <gui>Activar las características de accesibilidad desde el teclado</gui>.</p></item>
+  <item><p>Active las <gui>Teclas persistentes</gui>.</p></item>
+</steps>
+
+<note style="tip"><p>Puede activar y desactivar esta función rápidamente desde el <link xref="a11y-icon">menú de acceso universal</link>.</p></note>
+
+
+<p>Si pulsa dos teclas a la vez, puede hacer que las teclas persistentes se desactiven temporalmente para introducir una combinación de teclas de la forma «estándar».</p>
+<p>Por ejemplo, si activa las teclas persistentes pero pulsa <key>Alt</key> y <key>Tab</key> simultáneamente, las teclas pegajosas no esperarán a que pulse otra tecla si tenía esa opción activada. En cambio, <em>sí podría</em> esperar si solo se pulsa una tecla. Esto es útil si puede pulsar algunas combinaciones de teclas simultáneamente (por ejemplo, con teclas que estén juntas), pero no otras.</p>
+<p>Seleccione <gui>Desactivar las teclas persistentes si se pulsan durante cierto tiempo</gui> para activar esto.</p>
+
+<p>Puede hacer que su equipo emita un «pitido» cuando empiece a teclear un atajo de teclado con las teclas persistentes activadas. Esto es útil si quiere que las teclas persistentes esperen que se teclee un atajo de teclado, de manera que la siguiente pulsación se interpretará como parte de un atajo. Seleccione <gui>Pitar cuando se presione una tecla modificadora</gui> para activar esto.</p>
+
+</page>

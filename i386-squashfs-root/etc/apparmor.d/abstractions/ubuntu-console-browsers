@@ -1,0 +1,15 @@
+# vim:syntax=apparmor
+#
+# abstraction for allowing access to text-only browsers in Ubuntu. These will
+# typically also need a terminal, so when using this abstraction, should also
+# do something like:
+#
+# #include <abstractions/ubuntu-gnome-terminal>
+#
+
+  /usr/bin/elinks PUx,
+  /usr/bin/links PUx,
+  /usr/bin/lynx.cur PUx,
+  /usr/bin/netrik PUx,
+  /usr/bin/w3m PUx,
+

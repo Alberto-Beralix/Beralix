@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="contacts-ldap" xml:lang="zh_CN">
+
+  <info>
+    <desc>Use shared address books on a local network.</desc>
+    
+    <link type="guide" xref="contacts-using-several-addressbooks"/>
+
+    <revision pkgversion="3.1.5" version="0.3" date="2011-07-28" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-contact-sharing.html.en and http://library.gnome.org/users/evolution/2.32/config-prefs-contact.html.en#bxmw6w5 -->
+ </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Adding LDAP access</title>
+
+<p>The LDAP protocol was created to let users share contact information over a network by sharing access to a central directory. LDAP allows a company to maintain a shared set of contact information. Many companies keep a common LDAP address book for all their employees or for client contacts.</p>
+
+<section id="add-ldap-addressbook">
+<title>Adding an LDAP address book</title>
+
+<steps>
+<item><p>Click <guiseq><gui>File</gui><gui>New</gui><gui>Address Book</gui></guiseq>.</p></item>
+<item><p>In the <gui>General</gui> tab, select the type <gui>On LDAP Servers</gui>.</p></item>
+<item><p>Enter a name that you prefer.</p></item>
+<item><p>Enter the address of the server, the port number (the default number is 389) and whether you want to connect securely.</p></item>
+<item><p>Define the login method and your user name.</p></item>
+<item><p>Click <gui style="button">Apply</gui>.</p></item>
+<item><p>In the <gui>Details</gui> tab you can define the following settings:</p>
+<list>
+ <item><p>Search Base: The search base is the starting point for a directory search. Contact your system administrator for information about the correct settings.</p></item>
+ <item><p>Search Scope: The search scope is the breadth of a given search. The following options are available:</p>
+  <list>
+  <item><p>One: Searches the Search Base and one entry below it.</p></item>
+  <item><p>Sub: Searches the Search Base and all entries below it.</p></item>
+  </list>
+ </item>
+ <item><p>Search Filter: The search filter can be set here for all the LDAP queries. For example:</p>
+  <list>
+  <item><p><code>ObjectClass=*</code>: Lists all the objects from the server.</p></item>
+  <item><p><code>ObjectClass=User</code>: Lists only the users.</p></item>
+  <item><p><code>Filter (|(ObjectClass=User)(ObjectClass=groupOfNames))</code>: Retrieves the User and Contact List objects.</p></item>
+  <item><p><code>(&amp;(mail=*)(ObjectClass=*))</code>: Lists the objects associated with the email addresses.</p></item>
+  </list>
+ </item>
+ <item><p>Timeout (minutes): The maximum time Evolution attempts to download data from the server before giving up.</p></item>
+ <item><p>Download Limit: The maximum number of results for a given search. Most servers refuse to send more than 500 contacts, but you can set the number lower if you want to shorten downloads for very broad searches.</p></item>
+</list>
+</item>
+</steps>
+
+<note><p>If you are unsure about some settings, ask your system administrator.</p></note>
+
+</section>
+
+<section id="ldap-vs-local-addressbooks">
+<title>Differences to local address books</title>
+
+<p>LDAP address books work like local address books on your computer, with the following exceptions:</p>
+<list>
+<item><p>网络文件夹仅当您连上网络之后才能操作。如果您使用的是笔记本电脑或使用调制解调器连接，可能想要复制或缓冲网络文件夹的一部分内容。您可以将里面需要的联系人条目拖拽到本地地址簿里。</p></item>
+<item><p>您也可以标记网络文件夹供离线使用。要标记该文件夹，右键点击文件夹，选择”属性“，选择”复制文件夹内容到本地供离线操作“。</p></item>
+<item><p>为了避免造成额外的网络拥堵，Evolution正常情况下不会在打开时自动载入LDAP服务器上的数据。</p></item>
+<item><p>根据您系统设置，您可能不能编辑位于LDAP服务器上的联系人的一些信息。一些服务器禁止部分或全部的更改，一些则使用少于Evolution允许的条目。如果您需要不同的设置，请咨询您的系统管理员。</p></item>
+</list>
+</section>
+
+</page>

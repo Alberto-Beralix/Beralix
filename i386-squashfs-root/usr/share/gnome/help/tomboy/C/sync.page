@@ -1,0 +1,75 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="topic" style="task"
+      id="sync-notes">
+
+  <info>
+    <link type="guide" xref="index#sync"/>
+    <desc>Sync your Tomboy notes with other computers.</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-05-29" status="candidate"/>
+    <credit type="author">
+      <name>Paul Cutler</name>
+      <email>pcutler@gnome.org</email>
+    </credit>    
+<!--
+    <copyright>
+      <year>2010</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+-->
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  </info>
+
+ <title>Sync your notes</title>
+
+ <section id="sync">
+
+	<title>Manually Syncing Notes</title>
+	
+	<p>You can sync your notes one of three ways:</p>
+	
+	<list type="numbered">
+	  <item><p>From any note click the <gui>Tools</gui> icon
+	  and choose <gui>Synchronize Notes</gui>.</p></item>
+	  <item><p>In the <gui>Search All Notes</gui> dialog choose
+	  <guiseq><gui>Tools</gui><gui>Synchronize Notes</gui>
+	  </guiseq>.</p></item>
+	  <item><p>Using your mouse, right click on the Tomboy icon
+	  in your panel, taskbar or dock and choose <gui>Synchronize All Notes
+	  </gui>.</p></item>
+	</list>
+
+ </section>
+ 
+ <section id="autosync">
+ 
+ 	<title>Sync Your Notes Automatically</title>
+ 	
+ 	<p>Tomboy can automatically sync your notes for you in the background.
+ 	It is recommended that you configure how you handle note conflicts
+ 	before enabling syncing automatically.  You can learn about handling
+ 	note conflicts in the <link xref="sync-setup#conflict" /> 
+ 	page.</p>
+ 	
+ 	<p>You can enable sync by opening <gui>Tomboy Preferences</gui> by 
+	using your mouse to right click on the Tomboy icon in your panel,
+	taskbar or dock and choose <gui>Preferences</gui> and then select
+	the <gui>Synchronization</gui> tab.  You can also open <gui> Tomboy
+	Preferences</gui> from the <gui>Search All Notes</gui> dialog. From
+	the menu choose <guiseq><gui>Edit</gui><gui>Preferences</gui>
+	</guiseq>.
+	</p>
+	
+	<p>To enable autosync, check the <gui>Automatically Sync in Background
+	Every x Minutes</gui> box at the bottom of the Synchronization tab.</p>
+	
+	<p>Tomboy's default option is to autosync every 10 minutes.  To change
+	how often Tomboy should sync enter the number of minutes in the dialog
+	or use your mouse to move the time up or down.</p>
+	
+	<p>To disable autosync, uncheck  the <gui>Automatically Sync in	
+	Background Every x Minutes</gui> box.</p>
+	
+  </section>
+
+ </page>

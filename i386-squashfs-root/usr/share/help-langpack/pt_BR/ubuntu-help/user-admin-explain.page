@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="tip" id="user-admin-explain" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="user-accounts#privileges"/>
+    
+    <desc>Você precisa ter privilégios de administrador para modificar partes importantes do seu sistema.</desc>
+    
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Como funcionam os privilégios administrativos?</title>
+
+<p>Bem como os arquivos que <em>você</em> criar, o computador também tem uma série de arquivos que são necessários ao sistema para que ele funcione corretamente. Se esses <em>arquivos importantes do sistema</em> são alterados de modo inadequado podem causar várias quebras, então eles estão protegidos, por padrão, contra alterações feitas. Algumas aplicações também podem modificar partes importantes do sistema, e assim também também são protegidas.</p>
+
+<p>O jeito como elas são protegidas é permitindo que apenas usuários com <em>privilégios administrativos</em> possam alterar os arquivos ou usar os aplicativos. No dia-a-dia, você não vai precisar alterar qualquer sistema de arquivos ou usar esses aplicativos, assim, por padrão você não tem privilégios de administrador.</p>
+
+<p>Às vezes quando você precisa usar esses aplicativos, você pode temporariamente obter privilégios de administrador para permitir que você faça as alterações. Se um aplicativo precisa de privilégios de administrador, ele irá pedir sua senha. Por exemplo, se você quiser instalar algum novo software, o instalador do software (gerenciador de pacotes) irá pedir a sua senha de administrador para que possa adicionar o novo aplicativo no sistema. Depois de ter terminado, os seus privilégios de administrador serão retirados novamente.</p>
+
+<p>Privilégios de administrador são associados com a sua conta de usuário. Alguns usuários têm permissão para ter privilégios de administrador e alguns não. Sem privilégios de administrador, você não será capaz de instalar um software, por exemplo. Algumas contas de usuários (como por exemplo, a conta "root") possuem permanente privilégios de administrador. Você não deve usar privilégios de administrador o tempo todo, porque você pode mudar acidentalmente um arquivo importante e danificar alguma coisa.</p>
+
+<p>Resumindo, privilégios de administrador permitem alterar partes importantes do sistema quando você precisa, mas te impede de fazê-lo acidentalmente.</p>
+
+<note>
+ <title>O que significa "super usuário"?</title>
+ <p>Um usuário com privilégios é chamado algumas vezes de <em>super usuário</em>. Simplesmente porque esse usuário tem mais privilégios que usuários normais. Você pode encontrar pessoas discutindo coisas como <cmd>su</cmd> e <cmd>sudo</cmd>; esses programas são para dar privilégios de "super usuário" (administrador) temporariamente.</p>
+</note>
+
+<section id="advantages">
+ <title>Porque os privilégios de administrador são úteis?</title>
+ <p>Requer que os usuários tenham privilégios de administrador antes de mudanças importantes no sistema são feitos para ajudar a impedir que o sistema seja prejudicado, intencionalmente ou não.</p>
+ <p>Se você tiver privilégios de administrador o tempo todo, você poderá mudar acidentalmente um arquivo importante, ou executar um aplicativo que muda alguma coisa importante por engano. Só recebendo privilégios de administrador temporariamente, quando necessário, reduz o risco de acontecer esses erros.</p>
+ <p>Somente usuários de confiança deveriam ter permissões administrativas. Isso previne que outros usuários baguncem o computador ou façam coisas como desinstalar aplicativos que você precisa, instalar o que você não quer, ou alterar arquivos importantes. Isto é útil do ponto de vista de segurança.</p>
+</section>
+
+</page>

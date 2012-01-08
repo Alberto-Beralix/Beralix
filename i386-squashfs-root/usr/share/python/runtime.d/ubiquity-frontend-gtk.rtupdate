@@ -1,0 +1,6 @@
+#! /bin/sh
+set -e
+if [ "$1" = rtupdate ]; then
+	pyclean -p ubiquity-frontend-gtk /usr/lib/ubiquity
+	pycompile -p ubiquity-frontend-gtk -V 2.7- /usr/lib/ubiquity
+fi

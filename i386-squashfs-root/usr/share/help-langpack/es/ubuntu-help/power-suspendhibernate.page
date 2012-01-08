@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="question" id="power-suspendhibernate" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="power"/>
+    
+    <desc>Suspender la envía a dormir; la hibernación guarda los archivos, pero apaga por completo la corriente.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Qué ocurre cuando suspendo o hiberno el equipo?</title>
+
+<comment>
+  <cite date="2011-05-30">shaunm</cite>
+  <p>I would like a better explanation of what "saved to disk" means. As written,
+  it could be confused with open files being saved, which they aren't. Also, with
+  GNOME 3, we barely expose hibernate. It's in the power settings, but nothing
+  does it by default. Restructure prose to reflect that.</p>
+  <p>This page stays incomplete until this is dealt with.</p>
+</comment>
+
+<p>Cuando <em>suspende</em> el equipo, lo envía a dormir. Todas las aplicaciones y los documentos permanecen abiertos, pero la pantalla y otras partes del equipo se apagan para ahorrar energía. Sin embargo, el equipo sigue encendido usando una pequeña cantidad de energía. Puede despertarlo pulsando una tecla o el ratón. Si eso no funciona, pruebe a pulsar el botón de encendido.</p>
+
+<p>Cuando <em>hiberna</em> el equipo, todas las aplicaciones y los documentos permanecen abiertos (en realidad, se guardan en el disco) y el equipo se apaga por completo, por lo que no utiliza ningún tipo de energía. Es como el cierre, pero sus aplicaciones y documentos seguirán estando abiertas al encender el equipo.</p>
+
+<p>Algunos equipos tienen problemas de hardware lo que significa que <link xref="power-suspendfail">puedn no ser capaces de suspender o hibernar adecuadamente</link>. Es una buena idea comprobar la suspensión/hibernación en su equipo para ver si funciona bien.</p>
+
+<note style="important">
+ <title>Guarde siempre su trabajo antes de suspender/hibernar</title>
+ <p>Debe guardar todo su trabajo antes de suspender o hibernar el equipo, solo por si algo fuera mal y sus aplicaciones y documentos abiertos no se pudieran recuperar al encender el equipo.</p>
+</note>
+
+</page>

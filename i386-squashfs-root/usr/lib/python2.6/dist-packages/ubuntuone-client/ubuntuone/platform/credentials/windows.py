@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/ubuntuone-client/ubuntuone/platform/credentials/windows.py

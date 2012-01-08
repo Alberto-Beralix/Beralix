@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_setting_up_orca" xml:lang="es">
+<info>
+  <link type="seealso" xref="preferences"/>
+  <link type="guide" xref="index#getting_started"/>
+  <link type="next" xref="howto_the_orca_modifier"/>
+  <title type="sort">3. Configuración de Orca</title>
+  <title type="link">Configuración</title>
+    <desc>Configurar <app>Orca</app> inicialmente y más adelante</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Configuración de Orca</title>
+    <section id="initial_setup">
+      <title>Configuración inicial</title>
+      <p>Cuando ejecute <app>Orca</app> por primera vez, el programa entrará automáticamente en el modo de configuración. Dependiendo de la configuración de sus sesión activa, ocurrirá una de dos cosas:</p>
+      <list>
+        <item>
+          <p>Si el soporte de accesibilidad para su sesión ya se ha activado, se le situará al cuadro de diálogo de <link xref="preferences">preferencias</link> de <app>Orca</app> donde puede personalizar <app>Orca</app> completamente y luego usarlo inmediatamente.</p>
+        </item>
+        <item>
+          <p>Si el soporte de accesibilidad para su sesión aún no se ha activado, se ejecutará la <link xref="howto_text_setup">configuración de texto</link> de <app>Orca</app> en su lugar. La configuración de texto le permite configurar los parámetros más importantes y activar el soporte de accesibilidad para su sesión. Necesitará cerrar la sesión y volver a entrar para que la nueva configuración surta efecto.</p>
+        </item>
+      </list>
+    </section>
+    <section id="configuring_orca">
+      <title>Configurar <app>Orca</app> más adelante</title>
+      <p>Si quiere configurar <app>Orca</app> más adelante, puede hacer lo siguiente:</p>
+      <list>
+        <item>
+          <p>Pase la opción <cmd>--setup</cmd> a <app>Orca</app> la próxima vez que la ejecute para situarse automáticamente al cuadro de diálogo de <link xref="preferences">preferencias</link>.</p>
+        </item>
+        <item>
+          <p>Pase la opción de <cmd>--text-setup</cmd> a <app>Orca</app> para volver a ejecutar la <link xref="howto_text_setup">configuración de texto</link> de <app>Orca</app>.</p>
+        </item> 
+        <item>
+          <p>Entre en el cuadro de diálogo de <link xref="preferences">preferencias</link> pulsando el botón <gui>Preferencias</gui> en la ventana principal de <app>Orca</app> o pulsando <keyseq><key>Modificador de Orca</key><key>Espacio</key></keyseq> desde cualquier aplicación accesible.</p>
+        </item>
+      </list>
+    </section>
+</page>

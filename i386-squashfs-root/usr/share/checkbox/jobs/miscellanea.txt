@@ -1,0 +1,55 @@
+plugin: manual
+name: miscellanea/chvt
+requires:
+ package.alias == 'linux'
+ package.name == 'kbd'
+user: root
+command: cycle_vts
+description:
+ Select Test to switch to another virtual terminal and then back to X.  Your screen will change temporarily to a text console and then switch back to your current session.
+ .
+ Note that this test may require you to enter your password.
+ .
+ Did the screen change temporarily to a text console?
+
+plugin: shell
+name: miscellanea/fwts_test
+requires:
+  package.name == 'linux'
+  package.name == 'fwts'
+description:
+ Run Colin King's Firmware Test Suite automated tests.
+command:
+ fwts_test -l $CHECKBOX_DATA/fwts_results.log
+
+plugin: local
+name: miscellanea/check_and_install_ipmitool
+user: root
+command: dpkg -l | grep -iq 'ipmitool' || apt-get install -y ipmitool >/dev/null 2>&1
+description: ipmitool is required for ipmi testing. This checks for ipmitool and installs it if not available.
+description-cs.UTF-8: Pro testování ipmi je potřeba ipmitool. Toto zkontroluje přítopnost ipmitool a podle potřeby jej nainstaluje.
+description-de.UTF-8: ipmitool wird für ipmi- Tests benötigt. Dies prüft, ob ipmitool installiert ist und installiert es, falls notwendig.
+description-en_AU.UTF-8: ipmitool is required for ipmi testing. This checks for ipmitool and installs it if not available.
+description-en_GB.UTF-8: ipmitool is required for ipmi testing. This checks for ipmitool and installs it if not available.
+description-es.UTF-8: ipmitool se necesita para las pruebas de IPMI. Esto comprueba ipmitool y lo instala si no está disponible.
+description-gl.UTF-8: Precísase impitool para as probasd e IPMI. isto comproba ipmitool e instálao se non está dispoñíbel.
+description-hu.UTF-8: Az ipmitool szükséges az ipmi teszteléséhez. A következőkben ellenőrizve lesz a megléte és szükség esetén telepítve lesz.
+description-it.UTF-8: Per il test di ipmi è necessario ipmitool. Verrà verificata la presenza di ipmitool installandolo se non disponibile.
+description-pt_BR.UTF-8: A ipmitool é requerida para o teste de ipmi. Isto procura pela ipmitool e a instala se não disponível.
+description-ru.UTF-8: Необходим ipmitool для выполнения проверки ipmi. Выполняет проверку ipmitool и устанавливает его, если он не доступен.
+description-sl.UTF-8: Za preizušanje IPMI je zahtevan ipmitool. To preveri ipmitool in ga namesti, če ni nameščen.
+
+plugin: shell
+name: miscellanea/ipmi_test
+depends: miscellanea/check_and_install_ipmitool
+user: root
+command: ipmi_test
+description:
+ This will run some basic connectivity tests against a BMC, verifying that IPMI works.
+
+plugin: manual
+name: miscellanea/is_laptop
+description:
+ Is your system a laptop (or netbook)?
+ .
+ Selecting Yes here will allow us to run tests specific to portable computers that may not apply to desktops.

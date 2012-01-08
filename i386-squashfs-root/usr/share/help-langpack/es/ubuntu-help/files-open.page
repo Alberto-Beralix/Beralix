@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-open" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="files" group="more"/>
+    <link type="guide" xref="shell-overview#files"/>
+    <desc>Abrir archivos usando una aplicación que no es la predeterminada para ese tipo de archivos. También puede cambiar la aplicación predeterminada.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Cristopher Thomas</name>
+      <email>crisnoh@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Abrir archivos con otras aplicaciones</title>
+
+<p>Cuando se pulsa dos veces sobre un archivo en el <link xref="files-browse">gestor de archivos</link>, se abre con la aplicación predeterminada para ese tipo de archivos. Puede abrirlo con una aplicación distinta, buscar aplicaciones en línea, o establecer la aplicación predeterminada para todos los archivos del mismo tipo.</p>
+
+<p>Para abrir un archivo con una aplicación distinta de la predeterminada, pulse en el archivo y seleccione la aplicación que desee en la parte superior del menú. Si no ve la aplicación que quiere, pulse en <gui>Abrir con otra aplicación</gui>. De forma predeterminada, el gestor de archivos solo muestra las aplicaciones que sabe pueden manejar el archivo. Para buscar todas las aplicaciones en su equipo, pulse en <gui>Mostrar otras aplicaciones</gui>.</p>
+
+<p>Si aun no encuentra la aplicación que quiere, puede buscar más aplicaciones pulsando <gui>Buscar aplicaciones en línea</gui>. El gestor de archivos buscará en línea paquetes que contengan aplicaciones que manejen archivos de ese tipo.</p>
+
+<section id="default">
+  <title>Cambiar la aplicación predeterminada</title>
+  <p>Puede cambiar la aplicación predeterminada usada para abrir los archivos de un cierto tipo. Esto le permitirá abrir su aplicación preferida cuando pulse dos veces sobre un archivo para abrirlo. Por ejemplo, puede que quiera que se abra su reproductor de música favorito al pulsar dos veces sobre un archivo MP3.</p>
+
+  <steps>
+    <item><p>Seleccione un archivo del tipo cuya aplicación predeterminada desea cambiar. Por ejemplo, para cambiar la aplicación usada para abrir archivos MP3, seleccione un archivo <file>.mp3</file>.</p></item>
+    <item><p>Pulse con el botón derecho del ratón y seleccione <gui>Propiedades</gui>.</p></item>
+    <item><p>Seleccione la pestaña <gui>Abrir con</gui>.</p></item>
+    <item><p>Seleccione la aplicación que quiere y pulse <gui>Establecer como predeterminada</gui>. De manera predeterminada, el gestor de archivos solo muestra aplicaciones que sabe que pueden manejar el archivo. Para buscar entre todas las palicaciones en su equipo, pulse <gui>Mostrar otras aplicaciones</gui>.</p>
+    <p>Si <gui>Otras aplicaciones</gui> contiene una aplicación que desea usar a veces, pero que no quiere convertir en la predeterminada, seleccione esa aplicación y pulse en <gui>Añadir</gui>. Esto la añadirá a <gui>Aplicaciones recomendadas</gui>. A partir de entonces podrá usar la aplicación pulsando con el botón derecho sobre el archivo y seleccionándola de la lista.</p></item>
+  </steps>
+
+  <p>Esto cambiará la aplicación predeterminada no solo para el archivo seleccionado, sino para todos los archivos del mismo tipo.</p>
+
+</section>
+
+</page>

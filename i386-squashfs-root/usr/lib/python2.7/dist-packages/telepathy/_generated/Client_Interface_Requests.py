@@ -1,0 +1,1 @@
+../../../../../share/pyshared/telepathy/_generated/Client_Interface_Requests.py

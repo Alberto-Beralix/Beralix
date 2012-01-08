@@ -1,0 +1,80 @@
+=head1 NAME
+
+Pango::AttrGravityHint - Pango gravity hint attribute
+
+=cut
+
+=for object Pango::AttrGravityHint - Pango gravity hint attribute
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 attribute = Pango::AttrGravityHint-E<gt>B<new> ($hint, ...)
+
+=over
+
+=item * $hint (Pango::GravityHint) 
+
+=item * ... (list) 
+
+=back
+
+Since: pango 1.16
+
+=head2 gravityhint = $attr-E<gt>B<value> (...)
+
+=over
+
+=item * ... (list) 
+
+=back
+
+Since: pango 1.16
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Pango::GravityHint
+
+=over
+
+=item * 'natural' / 'PANGO_GRAVITY_HINT_NATURAL'
+
+=item * 'strong' / 'PANGO_GRAVITY_HINT_STRONG'
+
+=item * 'line' / 'PANGO_GRAVITY_HINT_LINE'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

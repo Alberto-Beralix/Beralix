@@ -1,0 +1,1 @@
+../../../../../share/pyshared/orca/scripts/self_voicing.py

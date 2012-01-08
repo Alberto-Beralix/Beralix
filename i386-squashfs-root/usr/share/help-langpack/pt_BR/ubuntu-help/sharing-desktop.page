@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="sharing-desktop" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="sharing"/>
+
+    <credit type="author">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+    </credit>
+
+    <desc>Permitir que outras pessoas vejam e interajam com o seu ambiente de trabalho utilizando o VNC.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Compartilhar seu ambiente de trabalho</title>
+
+  <p>Você pode permitir que outras pessoas vejam e controlem o ambiente de trabalho a partir de outro computador com um aplicativo de visualização de ambientes de trabalho. Configure <app>Compartilhamento de ambiente de trabalho</app> para permitir a outros acessar seu ambiente de trabalho e definir configurações de segurança.</p>
+
+  <steps>
+    <item>
+      <p>Abra diálogo de preferências <app>Compartilhamento de ambiente de trabalho</app>.</p>
+    </item>
+    <item>
+      <p>Para permitir que outros vejam ou interajam com o seu ambiente de trabalho, habilite a opção <gui>Permitir que outros usuários vejam o seu ambiente de trabalho</gui>. Isto significa que outras pessoas serão capazes de tentar se conectar ao seu computador.</p>
+    </item>
+    <item>
+      <p>Para permitir que outros vejam ou interajam com o seu ambiente de trabalho, habilite a opção <gui>Permitir que outros usuários controlem seu ambiente de trabalho</gui>. Isto irá permitir que outra pessoa possa mover o seu mouse, executar aplicativos e navegar pelos arquivos de seu computador, dependendo das configurações de segurança que você está usando atualmente.</p>
+    </item>
+  </steps>
+
+  <section id="security">
+  <title>Segurança segurança</title>
+
+  <p>É importante que você entenda integralmente o que significa cada opção de segurança antes de mudá-las.</p>
+  <terms>
+    <item>
+      <title>Confirmar acesso a seu computador</title>
+      <p>Se você quer ser capaz de escolher permitir ou não que alguém acesse seu ambiente de trabalho, selecione <gui>Você deve confirmar cada acesso a este computador</gui>. Se você desabilitar esta opção, você não será questionado se quer ou não permitir a alguém se conectar a seu computador.</p>
+      <note style="tip">
+        <p>Esta opção está habilitada por padrão.</p>
+      </note>
+    </item>
+    <item>
+      <title>Habilitar senha</title>
+      <p>Para requisitar a outras pessoas a utilização de uma senha quando estiverem se conectando a seu ambiente de trabalho, selecione <gui>Requisitar que o usuário digite esta senha:</gui>. Se você não usar esta opção, qualquer um poderá tentar ver seu ambiente de trabalho.</p>
+      <note style="tip">
+        <p>Esta opção está desabilitada por padrão, mas você deve habilitá-la e definir uma senha segura.</p>
+      </note>
+    </item>
+    <item>
+      <title>Permitir acesso a seu ambiente de trabalho pela Internet</title>
+      <p>Se o seu roteador suporta o protocolo UPnP, você pode permitir a outras pessoas que não estejam na sua rede local ver o seu ambiente de trabalho. Para permitir isto, selecione <gui>Configurar automaticamente o roteador UPnP para abrir e encaminhar portas</gui>. Alternativamente, você pode configurar seu roteador manualmente.</p>
+      <note style="tip">
+        <p>Esta opção está desabilitada por padrão.</p>
+      </note>
+    </item>
+  </terms>
+  </section>
+
+  <section id="notification-icon">
+  <title>Mostrar ícone na área de notificação</title>
+  <p>Para que você possa desconectar alguém que esteja visualizando seu ambiente de trabalho, você precisa habilitar esta opção. Se você selecionar <gui>Sempre</gui>, este ícone estará visível independentemente de que alguém esteja ou não visualizando sua área de trabalho.</p>
+    <note style="warning">
+      <p>Se esta opção estiver desabilitada, será possível a alguém se conectar a seu ambiente de trabalho sem o seu conhecimento, dependendo das configurações de segurança.</p>
+    </note>
+  </section>
+
+</page>

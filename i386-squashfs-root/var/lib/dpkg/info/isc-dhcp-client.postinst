@@ -1,0 +1,78 @@
+#!/bin/sh
+#
+#
+
+set -e
+
+# Source debconf library.
+. /usr/share/debconf/confmodule
+
+case "$1" in
+    configure)
+        if [ ! -e /var/lib/dhcp/dhclient.leases ]; then
+            if test -e /var/lib/dhcp3/dhclient.leases; then
+                cp /var/lib/dhcp3/dhclient.leases /var/lib/dhcp/dhclient.leases
+            else
+                touch /var/lib/dhcp/dhclient.leases
+            fi
+        fi
+
+	if [ -z "$2" ]; then
+		if [ -e /etc/dhcp3/dhclient.conf ]; then
+			cp /etc/dhcp3/dhclient.conf /etc/dhcp/dhclient.conf
+		fi
+	fi
+
+	# Clean up old AppArmor profile for upgrades from Ubuntu 10.10 to 11.04
+	# and 10.04 to 12.04 (ie, dhcp3-client -> isc-dhcp-client transition).
+	# This is needed (as opposed to simply waiting for a 'purge') because
+	# the dhclient3 and dhclient profiles provide AppArmor rules for the
+	# same binaries (/usr/lib/NetworkManager/nm-dhcp-client.action and
+	# /usr/lib/connman/scripts/dhclient-script) and not moving the old
+	# profile aside would mean that the old rules for these binaries take
+	# precedence over the rules provided by the new dhclient profile, since
+	# the old one is loaded after the first. (LP: #688191)
+	if dpkg --compare-versions "$2" lt 4.1.1-P1-15ubuntu2 ; then
+		if [ -e /etc/apparmor.d/sbin.dhclient3 ]; then
+			mv -f /etc/apparmor.d/sbin.dhclient3 /etc/apparmor.d/sbin.dhclient3.dpkg-old
+		fi
+	fi
+
+        ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+        exit 0
+        ;;
+    
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 0
+        ;;
+esac
+
+# Automatically added by dh_apparmor
+if [ "$1" = "configure" ]; then
+    APP_PROFILE=/etc/apparmor.d/sbin.dhclient
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE=/etc/apparmor.d/local/sbin.dhclient
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            tmp=`mktemp`
+        cat <<EOM > "$tmp"
+# Site-specific additions and overrides for sbin.dhclient.
+# For more details, please see /etc/apparmor.d/local/README.
+EOM
+            mkdir `dirname $LOCAL_APP_PROFILE` 2>/dev/null || true
+            mv -f "$tmp" "$LOCAL_APP_PROFILE"
+            chmod 644 "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-status --enabled 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+

@@ -1,0 +1,210 @@
+#!/bin/sh
+#
+# Orca
+#
+# Copyright 2006-2008 Sun Microsystems Inc.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the
+# Free Software Foundation, Inc., Franklin Street, Fifth Floor,
+# Boston MA  02110-1301 USA.
+
+# This script performs some clean up and will run Orca.  It will also
+# rerun Orca if it detects that Orca died an unnatural death.
+
+# __id__        = "$Id: orca.in,v 1.22 2006/12/08 16:21:25 wwalker Exp $"
+# __version__   = "$Revision: 1.22 $"
+# __date__      = "$Date: 2006/12/08 16:21:25 $"
+# __copyright__ = "Copyright (c) 2006-2008 Sun Microsystems Inc."
+# __license__   = "LGPL"
+
+# Set the user's $PATH for this script.
+#
+PATH="${PATH}:/usr/bin:/usr/sbin:/bin"
+export PATH
+
+# Save the arguments away.
+#
+ARGS="$*"
+
+if pidof speech-dispatcher >/dev/null; then
+	kill $(pidof speech-dispatcher)
+fi
+
+# Save away XMODMAP settings we might change.
+#
+saveXmodmap() 
+{
+    # We'll save and restore the Caps_Lock as a modifier just in case
+    # the user is using the Caps_Lock as the Orca modifier key.  We
+    # will also do so with the KP_Insert key since we want to make
+    # sure it only produces the keysyms we expect (it produces
+    # KP_Insert and KP_0 by default).  See the use of xmodmap in
+    # orca.py:loadUserSettings for the other part of what's going on.
+    # 
+    # [[[WDW: we probably should save/restore the autorepeat value of
+    # the Orca modifier key and turn the autorepeat off when Orca is
+    # running.  That can be done using the 'xset' utility, though
+    # turning it on/off is easy, but getting the current state is not
+    # straightforward.]]]
+    #
+    if [ "x$DISPLAY" != "x" ] ; then
+        CAPSLOCKSETTING=`xmodmap | grep Caps_Lock | cut -f1`
+        KPINSERTSETTING=`xmodmap -pke | grep KP_Insert`
+        INSERTSETTING=`xmodmap -pke | grep Insert | grep -v KP_`
+    fi
+}
+
+# Restore XMODMAP settings we may have changed.
+#
+restoreXmodmap()
+{
+    if [ "x$CAPSLOCKSETTING" != "x" ] ; then
+        xmodmap -e "add $CAPSLOCKSETTING = Caps_Lock" > /dev/null 2>&1
+    fi
+    if [ "x$KPINSERTSETTING" != "x" ] ; then
+        xmodmap -e "$KPINSERTSETTING" > /dev/null 2>&1
+    fi
+    if [ "x$INSERTSETTING" != "x" ] ; then
+        xmodmap -e "$INSERTSETTING" > /dev/null 2>&1
+    fi
+}
+
+# Cleans up any orca-related processes that might be running,
+# restricting it to those processes owned by the user. These include
+# orca itself, any speech synthesis drivers, and festival processes
+# running in server mode.
+#
+cleanup()
+{
+
+    # Check if we should force orca to quit, or just ask it nicely.
+    # kill -15, will give orca time to shutdown gracefully
+    # kill -9 will terminate immediately
+    if [ "$1" = "-f" ];then
+        KILLARG="-KILL"
+    else
+        KILLARG="-TERM"
+    fi
+    USERID=$(id -u)
+    PATTERN="orca[.]orca|festival [-][-]server"
+
+    pkill $KILLARG -U $USERID -f "$PATTERN"
+}
+
+waitForCleanup()
+{
+    while $(cleanup) ; do
+        sleep 0.5
+    done
+}
+
+trap cleanup HUP QUIT TERM INT ABRT
+
+# Runs orca.
+#
+runOrca()
+{
+    exec_prefix=/usr
+    PYTHONPATH=${PYTHONPATH}:${exec_prefix}/lib/python2.7/dist-packages
+    export PYTHONPATH
+    saveXmodmap
+    /usr/bin/python -c "import orca.orca; orca.orca.main()" "$ARGS"
+    restoreXmodmap
+}
+
+# Orca will fall into a text-based question and answer session if the
+# user has not configured orca and/or accessibility yet.  We will
+# force that to happen in the foreground (i.e., RUNONCE=true).  In
+# addition, if the user passes any command line arguments to orca, we
+# will run it in the foreground as well to avoid a situation where
+# orca dumps itself into the text-based setup utility.
+#
+# We make a special exception for gdm, which is used to handle the
+# accessible login.  If we're running as gdm, we assume everything is
+# all set and we don't need to muck around.
+#
+if [ "x$LOGNAME" != "xgdm" ] ; then
+    ACCESSIBILITY_ENABLED=`gsettings \
+        get org.gnome.desktop.interface toolkit-accessibility`
+    if [ "x$ACCESSIBILITY_ENABLED" != "xtrue" ] &&
+       [ `echo $ARGS | grep -c "no-setup"` -eq 0 ]; then
+        # Because we will be running Orca in text-setup mode, we want to
+        # make sure it is run in a terminal window.  If we're already in
+        # a terminal, this is great.  If not, we spawn a gnome-terminal
+        # and run orca in it.
+        #
+        tty -s && IN_TTY="true" || IN_TTY="false"
+        if [ "x$IN_TTY" = "xfalse" ] ; then
+            exec gnome-terminal -x $0 $ARGS
+            exit
+        fi
+    fi
+fi
+
+if [ `echo $ARGS | grep -c "\-q"` -gt 0 ] ; then
+    # If the user has done -q or --quit, that means to tell any
+    # existing orca process to quit.  So, we just do a cleanup.
+    #
+    cleanup
+elif [ `echo $ARGS | egrep -c " \-f|^\-f|\-\-forcequit"` -gt 0 ] ; then
+    # If the user has done -f or --forcequit, that means 
+    # that Orca has probably hung badly, and needs to be killed with force.
+    #
+    cleanup "-f"
+else
+    # Allow a --replace to kill other orca processes.
+    #
+    if [ `echo $ARGS | grep -c "\-\-replace"` -gt 0 ] ; then
+        waitForCleanup
+    fi
+
+    # If the user passed in a flag that results in orca only
+    # outputting data to the console, don't kill any other orca
+    # process.  We do this by looking for flags that *should* result
+    # in a cleanup (i.e., every legal command except -?, --help, -v,
+    # --version, -l, and --list-apps).  This way, if the user
+    # erroneously types an illegal command line argument, the help
+    # text is emitted and the other orca is not killed.
+    #
+    if [ "x$ARGS" = "x" ] ; then
+        WONT_EXIT=1
+    else
+        WONT_EXIT=`echo $ARGS | egrep -c "\-s|\-t|\-n|\-u|\-e|\-d"`
+    fi
+
+    # Do not run if another Orca is already running.
+    #
+    if [ "x$DBUS_SESSION_BUS_ADDRESS" != "x" ] && [ $WONT_EXIT -gt 0 ] ; then
+        IFS=:
+        DBUSSENDCMD=
+        for dir in $PATH:/usr/sfw/bin:/usr/local/bin; do
+            test -x "$dir/dbus-send" && {
+                DBUSSENDCMD="$dir/dbus-send"
+                break
+            }
+        done
+        if [ "x$DBUSSENDCMD" != "x" ] ; then
+            $DBUSSENDCMD --reply-timeout=5000 --print-reply \
+                --dest=org.gnome.Orca / org.freedesktop.DBus.Peer.Ping \
+                > /dev/null 2>&1
+            if [ "$?" -eq 0 ] ; then
+                echo "Another Orca process is already running for this session."
+                echo "Run \"orca --replace\" if you want to replace the current"
+                echo "process with a new one."
+                exit
+            fi
+        fi
+    fi
+    runOrca
+fi

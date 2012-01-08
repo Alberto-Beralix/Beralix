@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="power-lowpower" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="power#battery"/>
+    <desc>Permitir que a bateria descarregue completamente é ruim para ela.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Por que meu computador desligou/hibernou quando a bateria chegou a 10%?</title>
+
+<p>Quando o nível de carga da bateria fica muito baixo, seu computador automaticamente hibernará (ou seja, ele salvará todos os seus documentos e aplicativos abertos e desligará). Ele faz isso para assegurar-se de que a bateria não descarregará completamente, já que isso é ruim para a bateria. Se a bateria simplesmente acabasse, o computador não teria tempo de desligar-se adequadamente.</p>
+
+<p>Você pode alterar o que acontece quando o nível da bateria fica muito baixo, clicando no <gui>menu bateria</gui> na <gui>barra de menu</gui> e selecionando <gui>Configurações de energia</gui>. Observe a configuração <gui>Quando a energia estiver criticamente baixa: vocn salvos antes que o computador desligue.</gui></p>
+
+<p>Alguns computadores têm problemas para hibernar, e podem não recuperar as aplicações e documentos que foram abertos antes da hibernação. Nesse caso, é possível que você possa perder alguns de seus trabalhos se eles não foram salvos antes do computador hibernar. Porém você pode <link xref="power-suspendfail"> consertar os problemas de hibernação</link>.</p>
+
+</page>

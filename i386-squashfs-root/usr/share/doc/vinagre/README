@@ -1,0 +1,37 @@
+Vinagre
+=======
+
+This is Vinagre, a remote desktop viewer for the GNOME Desktop.
+
+You can download or see more information about it on:
+   http://projects.gnome.org/vinagre/
+
+Installation
+============
+
+See the file 'INSTALL' for generic installation instructions.
+
+You need the development packages of the following libraries:
+
+* gtk+-3.0
+* glib-2.0
+* gnome-keyring
+* gtk-vnc (http://live.gnome.org/gtk-vnc)
+* libxml-2.0
+
+For version information, see configure.ac.
+
+Optional support for external libraries can be enabled with the configure
+script. Relevant libraries include:
+
+* avahi-gobject and avahi-ui-gtk3
+* telepathy-glib
+* spice-client-gtk-3.0
+* vte-2.90
+
+Notes:
+
+* gtk-vnc must be compiled with the argument '--with-gtk=3.0' to the configure
+  script
+* vte must be compiled with the argument '--with-gtk=3.0' to the configure
+  script

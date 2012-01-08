@@ -1,0 +1,62 @@
+===================
+telepathy-butterfly
+===================
+
+Butterfly is a MSN connection manager for the Telepathy framework,
+currently supporting:
+
+* single-user chats
+* multi-user chats
+* audio and video calls
+
+Telepathy is a D-Bus framework for unifying real time communication,
+including instant messaging, voice calls and video calls. It abstracts
+differences between protocols to provide a unified interface for
+applications.
+
+Requirements
+============
+
+telepathy-butterfly requires:
+  telepathy-python <http://telepathy.freedesktop.org/releases/telepathy-python/>
+  papyon <http://telepathy.freedesktop.org/releases/papyon/>
+
+Bugs, feature requests and to-do list
+=====================================
+
+Report all bugs, feature requests and "to-do" items here:
+  <https://bugs.freedesktop.org/enter_bug.cgi?product=Telepathy&component=telepathy-butterfly>
+
+Versioning policy
+=================
+
+We use an "odd/even" versioning scheme where the minor version (the y in
+x.y.z) determines stability - stable branches have y even, development
+branches have y odd.
+
+Unreleased builds straight from git identify themselves as version
+"x.y.z.1".
+
+Contact info
+============
+
+This package is maintained by the Telepathy project:
+  <http://telepathy.freedesktop.org/>
+  <mailto:telepathy@lists.freedesktop.org>
+  <irc://irc.freenode.net/telepathy>
+
+Telepathy development is supported by Collabora Ltd.
+  <http://www.collabora.co.uk/>.
+
+Hacking
+=======
+
+The current version of telepathy-butterfly is always available from the 'master'
+branch of:
+  <git://git.collabora.co.uk/git/telepathy-butterfly.git>
+  <http://git.collabora.co.uk/?p=telepathy-butterfly.git> (gitweb)
+
+Stable branches are in the same repository, and are called
+telepathy-butterfly-0.6 etc.
+
+Please follow <http://telepathy.freedesktop.org/wiki/Style>.

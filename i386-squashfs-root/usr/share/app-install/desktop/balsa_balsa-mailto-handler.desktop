@@ -1,0 +1,24 @@
+[Desktop Entry]
+X-AppInstall-Package=balsa
+X-AppInstall-Popcon=303
+X-AppInstall-Section=universe
+
+Name=Balsa
+Comment=E-Mail utility
+GenericName=Mail Client
+X-GNOME-FullName=Balsa Mail Client
+X-GNOME-FullName[cs]=Poštovní klient Balsa
+X-GNOME-FullName[de]=Balsa E-Mail-Programm
+X-GNOME-FullName[es]=Cliente de correo-e Balsa
+X-GNOME-FullName[sl]=Balsa e-poštni odjemalec
+TryExec=balsa
+Exec=balsa -m %U
+Icon=gnome-balsa2
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Network;Email;
+MimeType=x-scheme-handler/mailto;
+NoDisplay=true
+
+X-Ubuntu-Gettext-Domain=app-install-data

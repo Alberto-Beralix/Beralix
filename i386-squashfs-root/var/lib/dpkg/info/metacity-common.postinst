@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installcatalogs
+if [ "$1" = "configure" ]; then
+	rm -f /etc/sgml/metacity-common.cat
+	for ordcat in /usr/share/sgml/metacity-common/catalog; do
+		update-catalog --quiet --add /etc/sgml/metacity-common.cat ${ordcat}
+	done
+	update-catalog --quiet --add --super /etc/sgml/metacity-common.cat
+fi
+# End automatically added section

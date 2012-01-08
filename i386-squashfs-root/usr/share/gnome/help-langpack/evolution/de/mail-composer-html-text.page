@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-composer-html-text" xml:lang="de">
+
+  <info>
+    <desc>Format Text in the mail composer.</desc>
+    <link type="guide" xref="mail-composer-html#formatting-options"/>
+
+    <revision pkgversion="3.0.2" version="0.3" date="2011-08-01" status="draft"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-send.html.en#usage-mail-getnsend-send-html -->
+ </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+<title>Text in HTML formatieren</title>
+
+<!-- TODO: These instructions are partially WRONG in 3.0.2 as the tool bar has been split into two. Needs an update. Maybe we also need a way to describe the non-HTML-only functions for plain text mail somewhere. -->
+
+     <p>HTML formatting tools are located in the two tool bars just above the area where you actually write the message. They also appear in the <gui>Insert</gui> and <gui>Format</gui> menus.</p>
+     <p>The icons in the tool bar are explained in tooltips which appear when you hold your mouse pointer over the buttons. The buttons fall into five categories:</p>
+
+<section id="headers-and-lists">
+ <title>Überschriften und Aufzählungen:</title>
+ <p>At the left of the upper tool bar, you can choose <gui>Normal</gui> for a default text style or <gui>Header 1</gui> through <gui>Header 6</gui> for varying sizes of header from large (1) to tiny (6). Other styles include <gui>Preformat</gui>, to use the HTML tag for preformatted blocks of text, and three types of bullet points for lists.</p>
+ <p>For instance, instead of using asterisks to mark a bulleted list, you can use the <gui>Bulleted List</gui> style from the style dropdown list. Evolution uses different bullet styles, and handles word wrap and multiple levels of indentation.</p>
+</section>
+
+<section id="alignment">
+      <title>Ausrichtung:</title>
+      <p>Located next to the Headers and Lists dropdown, the three paragraph icons should be familiar to users of most word processing software. The left-most button aligns your text to the left, the center button centers text, and the right button aligns the text to the right.</p>
+</section>
+
+<section id="indentation-rules">
+      <title>Einzug:</title>
+      <p>Der Knopf mit dem nach links zeigenden Pfeil erhöht den Einzug der Absätze, und der Knopf mit dem nach rechts zeigenden Pfeil vermindert den Einzug der Absätze.</p>
+</section>
+
+<section id="text-styles">
+      <title>Textstile:</title>
+      <p>Use these buttons in the lower tool bar to determine the way your email looks. If you have text selected, the style applies to the selected text. If you do not have text selected, the style applies to whatever you type next.</p>
+
+<table frame="all" rules="all">
+  <tr>
+    <td><p>Knopf</p></td>
+    <td><p>Beschreibung</p></td>
+  </tr>
+  <tr>
+    <td><p>TT</p></td>
+    <td><p>Schreibmaschinentext, ähnlich zur dicktengleichen Schrift.</p></td>
+  </tr>
+  <tr>
+    <td><p>Dickes A</p></td>
+    <td><p>Formatierter Text als fett.</p></td>
+  </tr>
+  <tr>
+    <td><p>Kursives A</p></td>
+    <td><p>Formatiert den Text als kursiv.</p></td>
+  </tr>
+  <tr>
+    <td><p>Unterstrichenes A</p></td>
+    <td><p>Unterstreicht Text.</p></td>
+  </tr>
+  <tr>
+    <td><p>Durchgestrichenes A</p></td>
+    <td><p>Streicht Text durch.</p></td>
+  </tr>
+</table>
+</section>
+
+<section id="color-selection">
+      <title>Farbauswahl:</title>
+      <p>At the left in the lower tool bar is the color section tool, where a box displays the current text color. To choose a new color, click the arrow button to the right. If you have text selected, the color applies to the selected text. If you do not have text selected, the color applies to whatever you type next. You can select a background color or image by right-clicking the message background, then selecting <guiseq><gui>Style</gui><gui>Page Style</gui></guiseq>.</p>
+</section>
+
+</page>

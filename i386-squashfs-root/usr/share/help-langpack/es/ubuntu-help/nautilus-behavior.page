@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-behavior" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-behavior"/>
+
+    <desc>Una sola pulsación para abrir archivos, ejecutar o ver archivos de texto ejecutables, y especificar el comportamiento de la papelera.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:mal="http://projectmallard.org/1.0/" its:version="1.0">
+      <its:withinTextRule withinText="no" selector="//mal:item/mal:title/mal:gui[not(preceding-sibling::node() or following-sibling::node())]"/>
+    </its:rules>
+  </info>
+
+<title>Preferencias de comportamiento del gestor de archivos</title>
+<p>Puede controlar si necesita una pulsación o dos para abrir archivos, si las carpetas se abren en ventanas nuevas, cómo se gestionarán los archivos de texto ejecutables, y el comportamiento de la papelera. En cualquier ventana del administrador de archvos, pulse en <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y seleccione la pestaña <gui>Comportamiento</gui>.</p>
+
+<section id="behavior">
+<title>Comportamiento</title>
+<terms>
+ <item>
+  <title><gui>Una sola pulsación para abrir elementos</gui></title>
+  <title><gui>Una doble pulsación para abrir elementos</gui></title>
+  <p>De forma predeterminada, al pulsar una vez se seleccionan archivos, y pulsando dos veces se abren. Puede optar por abrir archivos y carpetas pulsándolos una sola vez. En el modo de una sola pulsación, puede mantener apretada la tecla <key>Ctrl</key> mientras pulsa con el ratón para seleccionar uno o más archivos.</p>
+ </item>
+ <item>
+  <title><gui>Abrir cada carpeta en su propia ventana</gui></title>
+  <p>Cuando abre una carpeta en el gestor de archivos, normalmente se abre en la misma ventana. Puede pulsar con el botón derecho sobre una carpeta y seleccionar <gui>Abrir en una ventana nueva</gui> para abrir cualquier carpeta individual en una ventana nueva. Si hace esto a menudo, seleccione esta opción para que, de forma predeterminada, cada carpeta se abra en su propia ventana.</p>
+ </item>
+</terms>
+
+</section>
+<section id="executable">
+<title>Archivos de texto ejecutables</title>
+ <p>Un archivo de texto ejecutable es un archivo que contiene un programa que usted puede ejecutar. Los <link xref="nautilus-file-properties-permissions#files">permisos de archivo</link> también deben permitir que el archivo pueda ejecutarse como un programa. Los más frecuentes suelen ser scripts del intérprete de órdenes ( («shell»), de Python y de Perl. Tienen extensión .sh, .py, y .pl respectivamente.</p>
+ <p>Puede seleccionar <gui>Ejecutar archivos de texto ejecutables al abrirlos</gui>, <gui>Ver los archivos de texto ejecutables al abrirlos</gui> o <gui>Preguntar cada vez</gui>. Si se selecciona esta última opción, se mostrará una ventana preguntándole si desea ejecutar o ver el archivo de texto seleccionado.</p>
+
+
+</section>
+<section id="trash">
+<info>
+<link type="seealso" xref="files-delete"/>
+<title type="link">Preferencias de la papelera del gestor de archivos</title>
+</info>
+<title>Papelera</title>
+
+<terms>
+ <item>
+  <title><gui>Preguntar antes de vaciar la papelera o eliminar archivos</gui></title>
+  <p>Esta opción está seleccionada de forma predeterminada. Cuando se va a vaciar la papelera, aparece un mensaje confirmando si desea vaciar la papelera o borrar archivos.</p>
+ </item>
+ <item>
+  <title><gui>Incluir una orden para eliminar que no use la papelera</gui></title>
+  <p>Al seleccionar esta opción se añade una opción <gui>Eliminar</gui> en el menú <gui>Editar</gui> así como en el menú que aparece cuando pulsa con el botón derecho sobre un elemento en la aplicación <app>Archivos</app>.</p>
+<note style="warning">
+<p>Cuando se borra un elemento usando la opción <gui>Eliminar</gui> del menú, se pasa por alto la Papelera. El elemento se borra del sistema completamente. No hay forma de recuperar el elemento borrado.</p>
+</note>
+ </item>
+</terms>
+</section>
+
+</page>

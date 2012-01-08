@@ -1,0 +1,1 @@
+../../../../share/pyshared/cupshelpers/config.py

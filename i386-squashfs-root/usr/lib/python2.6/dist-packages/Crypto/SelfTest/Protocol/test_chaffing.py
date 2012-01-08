@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/Crypto/SelfTest/Protocol/test_chaffing.py

@@ -1,0 +1,72 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="prob-conn-acctdisabled">
+
+  <info>
+    <link type="guide" xref="prob-conn"/>
+    <desc>
+        The instant messaging account that you want to use is not enabled in
+        the list of accounts.
+    </desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-17" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-14" status="review"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>My account is not enabled</title>
+
+  <p>
+    If the instant messaging account that you want to use is not enabled in the
+    drop-down account list when you try to start a new conversation or join a
+    room, your account details may not be correct.
+  </p>
+
+  <steps>
+    <item>
+      <p>
+        Make sure that you are connected to the Internet, or to a local area network. 
+      </p>
+    </item>
+    <item>
+      <p>
+        Choose <guiseq><gui>Edit</gui><gui>Accounts</gui></guiseq> and select the account
+        that is not working.
+      </p>
+    </item>
+    <item>
+      <p>
+        Type your username and password again to make sure that they are correct.
+      </p>
+    </item>
+    <item>
+      <p>
+        Check in the <gui>Advanced</gui> section that all the details are correct.
+        You should be able to find these details from the website of the messaging service.
+      </p>
+    </item>
+    <item>
+      <p>
+        Check that the <gui style="checkbox">Enabled</gui> check-box is selected.
+        If it is not, select the check-box to enable the account.
+      </p>
+    </item>
+  </steps>
+
+</page>

@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p onboard 
+fi
+
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p onboard /usr/share/onboard -V 2.7-
+fi
+
+# End automatically added section

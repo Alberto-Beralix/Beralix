@@ -1,0 +1,1 @@
+../../../../../share/pyshared/papyon/util/encoding.py

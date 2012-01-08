@@ -1,0 +1,1 @@
+../../../../share/pyshared/oneconf/version.py

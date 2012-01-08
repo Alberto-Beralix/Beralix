@@ -1,0 +1,133 @@
+#! /bin/sh
+#
+### BEGIN INIT INFO
+# Provides:          pcmcia
+# Required-Start:    $local_fs
+# Required-Stop:
+# Should-Start:      udev
+# X-Start-Before:    networking
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: PCMCIA support
+# Description:       This service provides PCMCIA hardware support for
+#                    systems running Linux >= 2.6.13-rc1.
+### END INIT INFO
+
+set -e
+
+[ -f /sbin/pccardctl ] || exit 0
+
+# If /lib/lsb/init-functions doesn't exist
+# define them here, otherwise installer breaks
+if [ -f /lib/lsb/init-functions ]; then
+    . /lib/lsb/init-functions
+else
+    log_daemon_msg()
+    {
+	echo "$1: $2"
+    }
+    log_end_msg()
+    {
+	if [ "$1" = 0 ]; then
+	    echo "done"
+	else
+	    echo "failed!"
+	fi
+	return $1
+    }
+    log_success_msg()
+    {
+	echo "$@"
+    }
+    log_failure_msg()
+    {
+	echo "$@"
+    }
+fi
+
+[ -f /etc/default/pcmciautils ] && . /etc/default/pcmciautils
+
+case $PCMCIA in
+    no|false)
+	exit 0
+	;;
+esac
+
+[ -f /etc/default/rcS ] && . /etc/default/rcS
+
+# Are we running from init?
+run_by_init()
+{
+    ([ "$previous" ] && [ "$runlevel" ]) || [ "$runlevel" = S ]
+}
+
+if ls /sys/class/pcmcia_socket/* >/dev/null 2>&1; then
+    if ! run_by_init; then
+	log_success_msg "PCMCIA bridge driver already present in kernel"
+    fi
+    exit 0
+fi
+
+KERNEL_VERSION="$(uname -r)"
+KERNEL_VERSION="${KERNEL_VERSION%%-*}"
+
+supported_kernel()
+{
+    case $KERNEL_VERSION in
+	2.[012345].*|2.6.[0-9]|2.6.[0-9][!0-9]*) return 1 ;;
+	2.6.1[012]|2.6.1[012][!0-9]*) return 1 ;;
+    esac
+    return 0
+}
+
+if ! supported_kernel; then
+    log_failure_msg "pcmciautils requires Linux >= 2.6.13-rc1; use pcmcia-cs instead"
+    exit 1
+fi
+
+if [ -z "$PCIC" ]; then
+    if ! run_by_init; then
+	log_failure_msg "No PCMCIA bridge module specified"
+    fi
+    exit 0
+fi
+
+if [ "$VERBOSE" = "no" ]; then
+    MODPROBE_OPTIONS="$MODPROBE_OPTIONS -q"
+    export MODPROBE_OPTIONS
+fi
+
+case "$1" in
+    start)
+	log_daemon_msg "Loading PCMCIA bridge driver module" "$PCIC"
+
+	if [ "$CORE_OPTS" ]; then
+	    modprobe -b pcmcia_core $CORE_OPTS
+	fi
+	
+	modprobe -b $PCIC $PCIC_OPTS
+	
+	if ! [ -e /dev/.udev ]; then
+	    modprobe -qb pcmcia
+	fi
+
+	log_end_msg $?
+	;;
+
+    stop)
+	;;
+    
+    restart)
+	$0 stop
+	$0 start
+	exit $?
+	;;
+
+    reload|force-reload)
+	;;
+
+    *)
+	log_success_msg "Usage: $0 {start|stop|restart|reload|force-reload}"
+	exit 2
+	;;
+esac

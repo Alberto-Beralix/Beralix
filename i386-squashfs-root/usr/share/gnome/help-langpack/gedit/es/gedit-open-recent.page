@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-open-recent" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="gedit-files-basic" group="fifth"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+  </info>
+
+  <title>Reabrir un archivo usado recientemente</title>
+
+  <p>De forma predeterminada, <app>gedit</app> proporciona acceso fácil a cinco de los archivos más recientemente usados. Aquí se muestra cómo puede abrir un archivo usado recientemente.</p>
+  <list type="numbered">
+    <item><p>Pulse la flecha hacia abajo junto al botón <gui>Abrir</gui>.</p></item>
+    <item><p><app>gedit</app> mostrará una lista de los cinco archivos más recientemente usados.</p></item>
+    <item><p>Seleccione el archivo que quiera y se abrirá en una pestaña nueva.</p></item>
+  </list>
+
+  <note type="advanced"><p>Para ajustar el número de archivos usados recientemente que muestra gedit, debe usar la aplicación <app>gconf-editor</app>.</p>
+    <list>
+      <item><p>Lance <app>gconf-editor</app> y seleccione <guiseq><gui>apps</gui><gui>gedit-2</gui><gui>preferencias</gui><gui>iu</gui><gui>recientes</gui></guiseq>.</p></item>
+      <item><p>Pulse dos veces en el número junto a <gui>max_recents</gui> y cambie el número al valor que quiera.</p></item>
+    </list>
+  </note>
+
+</page>

@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/zope/interface/tests/test_declarations.py

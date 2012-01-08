@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="reference" id="net-firewall-ports" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="net-security"/>
+    <link type="seealso" xref="net-firewall-on-off"/>
+    <desc>You need to specify the right network port to enable/disable network access for a program with your firewall.</desc>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+    <credit type="author">
+      <name>Paul W. Frields</name>
+      <email>stickster@gmail.com</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Puertos de red usados normalmente</title>
+  <p>This is a list of network ports commonly used by applications which provide network services, like file sharing or remote desktop viewing. You can change your system's firewall to <link xref="net-firewall-on-off">block or allow access</link> to these applications. There are thousands of ports in use, so this table isn't complete.</p>
+
+  <table>
+    <thead>
+      <tr>
+	<td>
+	  <p>Puerto</p>
+	</td>
+	<td>
+	  <p>Nombre</p>
+	</td>
+	<td>
+	  <p>Descripción</p>
+	</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+	<td>
+	  <p>5353/udp</p>
+	</td>
+	<td>
+	  <p>mDNS, Avahi</p>
+	</td>
+	<td>
+	  <p>Allows systems to find each other, and describe which services they offer, without you having to specify the details manually.</p>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <p>631/udp</p>
+	</td>
+	<td>
+	  <p>Imprimir</p>
+	</td>
+	<td>
+	  <p>Allows you to send print jobs to a printer over the network.</p>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <p>631/tcp</p>
+	</td>
+	<td>
+	  <p>Imprimir</p>
+	</td>
+	<td>
+	  <p>Le permite compartir la impresora con otras personas de la red.</p>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <p>5298/tcp</p>
+	</td>
+	<td>
+	  <p>Presencia</p>
+	</td>
+	<td>
+	  <p>Le permite recibir estados de mensajería instantánea de otras personas de la red, como «en línea» u «ocupado».</p>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <p>5900/tcp</p>
+	</td>
+	<td>
+	  <p>Escritorio remoto</p>
+	</td>
+	<td>
+	  <p>Le permite compartir su escritorio con otras personas para verlo o proporcionar asistencia remota.</p>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <p>3689/tcp</p>
+	</td>
+	<td>
+	  <p>Music sharing (DAAP)</p>
+	</td>
+	<td>
+	  <p>Le permite compartir su biblioteca de música con otras personas de la red.</p>
+	</td>
+      </tr>
+    </tbody>
+  </table>
+</page>

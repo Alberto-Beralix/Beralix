@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="tip" id="user-admin-explain" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="user-accounts#privileges"/>
+    
+    <desc>Sie benötigen Systemverwalterrechte, um Änderungen an wichtigen Teilen Ihres Systems vorzunehmen.</desc>
+    
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Wie funktionieren Systemverwalterrechte?</title>
+
+<p>Neben den Dateien, die <em>Sie</em> erstellen, befindet sich auf Ihrem Rechner eine Reihe von Dateien, die vom System benötigt werden, damit es einwandfrei funktioniert. Wenn diese wichtigen <em>Systemdateien</em> unsachgemäß verändert werden, können sie allerlei Schaden anrichten, weswegen sie standardmäßig vor Änderungen geschützt sind. Bestimmte Anwendungen verändern auch wichtige Teile des Systems und sind somit ebenfalls geschützt.</p>
+
+<p>Sie werden in der Weise geschützt, dass nur Benutzer mit <em>Systemverwalterrechten</em> diese Dateien ändern oder Anwendungen benutzen können. Im alltäglichen Gebrauch werden Sie keine Systemdateien ändern oder diese Anwendungen benutzen müssen, deswegen haben Sie standardmäßig keine Systemverwalterrechte.</p>
+
+<p>Möglicherweise müssen Sie von Zeit zu Zeit eine dieser Anwendungen benutzen, dafür können Sie vorübergehend Systemverwalterrechte aktivieren, um nötige Änderungen am System vorzunehmen. Sollte eine Anwendung Systemverwalterrechte benötigen, wird sie Sie nach Ihrem Passwort fragen. Möchten Sie zum Beispiel neue Anwendungen installieren, fragt Sie die Paketverwaltung nach Ihrem Systemverwalterpasswort, um auf das System zugreifen zu können. Nach dem Beenden erlöschen diese Rechte wieder.</p>
+
+<p>Admin privileges are associated with your user account. Some users are allowed to have admin privileges and some are not. Without admin privileges, you will not be able to install software, for example. Some user accounts (for example, the "root" account) have permanent admin privileges. You shouldn't use admin privileges all of the time, because you might accidentally change an important file and break something.</p>
+
+<p>Kurzum: Systemverwalterrechte ermöglichen es Ihnen, wichtige Teile Ihres Systems zu ändern, wenn es notwendig ist, hindern Sie aber daran, dies versehentlich zu tun.</p>
+
+<note>
+ <title>Was bedeutet »super user«?</title>
+ <p>Ein Benutzer mit Systemverwalterrechten wird manchmal <em>super user</em> – also »Superbenutzer« – genannt, einfach weil dieser Benutzer mehr Rechte hat als normale Benutzer. Sie werden vielleicht einmal mitbekommen, dass Dinge wie <cmd>su</cmd> und <cmd>sudo</cmd> erörtert werden; das sind Programme zum vorübergehenden Verleihen von »super user«-, also Systemverwalterrechten.</p>
+</note>
+
+<section id="advantages">
+ <title>Warum sind Systemverwalter-Privilegien sinnvoll?</title>
+ <p>Die Erfordernis, dass Benutzer Systemverwalterrechte vor dem Ändern wichtiger Systemeinstellungen erlangen müssen, ist sinnvoll, weil es Ihr System davor schützt, absichtlich oder unabsichtlich beschädigt zu werden.</p>
+ <p>Wenn Sie die ganze Zeit Systemverwalterrechte hätten, könnten Sie unabsichtlich eine wichtige Datei ändern oder eine Anwendung starten, die versehentlich etwas Wichtiges ändert. Systemverwalterrechte nur vorübergehend und nur dann zu erhalten, wenn Sie sie brauchen, verringert das Risiko solcher Versehen.</p>
+ <p>Nur bestimmten, vertrauenswürdigen Benutzern sollte es erlaubt sein, Systemverwalterrechte zu erhalten. Dies hindert andere Benutzer daran, am Rechner herumzupfuschen und Dinge anzustellen, wie etwa Anwendungen zu entfernen, die Sie brauchen, Anwendungen zu installieren, die Sie nicht haben wollen, oder wichtige Dateien zu ändern. In Hinblick auf die Sicherheit ist das nützlich.</p>
+</section>
+
+</page>

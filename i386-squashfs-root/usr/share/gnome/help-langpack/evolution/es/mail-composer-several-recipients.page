@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-composer-several-recipients" xml:lang="es">
+
+  <info>
+    <desc>Enviar a más de una persona y usar Cc o Cco.</desc>
+    
+    <link type="guide" xref="index#mail-composing"/>
+    <link type="seealso" xref="mail-composer-reply"/>
+    <link type="seealso" xref="mail-composer-forward"/>
+    <link type="seealso" xref="mail-composer-write-new-message"/>
+
+    <revision pkgversion="3.1.5" version="0.3" date="2011-07-27" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-send.html.en#usage-mail-getnsend-send-to-types and http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-send.html.en#usage-mail-getnsend-send-to -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+<title>Enviar un correo a varios destinatarios</title>
+
+<p>Para enviar un correo electrónico a más de una persona, introduzca las direcciones en el editor separándolas por comas o puntos y comas.</p>
+
+<note><p>If you frequently write email to the same groups of people, you can create <link xref="contacts-using-contact-lists">contact lists</link> to send them mail as though they have a single address.</p></note>
+
+<section id="to-cc-bcc-meaning">
+<title>Tipos de destinatarios</title>
+<p>Email messages can have three different types of recipients. The simplest way is to put the email address or addresses in the <gui>To:</gui> text field. The <gui>Cc:</gui> text field is used for recipients that are meant to receive a copy of your message but are not the primary recipients.</p>
+
+<p>Las direcciones en la lista <gui>Cco:</gui> están ocultas a los otros destinatarios del mensaje. Puede usarlo para enviar correos a grandes grupos de personas especialmente si no se conocen entre sí o si es importante mantener la privacidad. Si el campo <gui>Cco:</gui> no está a la vista pulse <guiseq><gui>Ver</gui><gui>Campo Cco</gui></guiseq>.</p>
+</section>
+
+<section id="autocompletion">
+<title>Autocompletado</title>
+<p>Se recomienda usar la característica <link xref="contacts-autocompletion">Autocompletado</link> de la libreta de direcciones de Evolution para escribir direcciones. Al usar esto se evitan errores y se ahorra tiempo.</p>
+</section>
+
+<section id="to-cc-bcc-buttons">
+<title>Usar los botones</title>
+
+<p>Instead of typing the recipients' names you can also click the <gui style="button">To:</gui>, <gui style="button">Cc:</gui>, or <gui style="button">Bcc:</gui> buttons to get a list of the email addresses in your address books. Select the addresses and click the arrow buttons to move them into the appropriate address columns (To:, Cc:, Bcc:).</p>
+</section>
+
+</page>

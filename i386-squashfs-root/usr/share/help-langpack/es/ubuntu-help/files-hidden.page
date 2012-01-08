@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="tip" id="files-hidden" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="files#faq"/>
+    <desc>Hacer que un archivo sea invisible, para que no se le pueda ver en el gestor de archivos.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Ocultar un archivo</title>
+
+<p>Puede ocultar archivos cambiándoles el nombre para que tengan un <key>.</key> delante de su nombre. Los archivos ocultos son invisibles de forma predeterminada; no se muestran en el gestor de archivos, pero todavía están en la carpeta.</p>
+
+<p>Para ocultar un archivo, <link xref="files-rename">cámbiele el nombre</link> poniéndole un «.» al principio de su nombre. Por ejemplo, para ocultar un archivo <file>ejemplo.txt</file>, deberá cambiarle el nombre a <file>.ejemplo.txt</file>.</p>
+
+<note style="tip">
+ <p>También puede ocultar carpetas de la misma forma que puede ocultar archivos. Cambie el nombre a la carpeta poniéndole un «.» al principio de su nombre.</p>
+</note>
+
+<section id="show-hidden">
+ <title>Mostrar todos los archivos ocultos</title>
+ <p>Si desea ver todos los archivos ocultos de una carpeta, vaya a esa carpeta y seleccione <guiseq><gui>Ver</gui><gui>Mostrar los archivos ocultos</gui></guiseq> o bien pulse <keyseq><key>Ctrl</key><key>H</key></keyseq>. Se mostrarán todos los archivos ocultos junto con los que no estaban ocultos.</p>
+ <p>Algunos archivos ocultos tienen un «.» al principio de su nombre. Otros, en cambio, pueden tener un «~» al final de su nombre (consulte <link xref="files-tilde"/>).</p>
+ <p>Para volver a ocultar estos archivos, pulse <guiseq><gui>Ver</gui><gui>Mostrar archivos ocultos</gui></guiseq> o pulse <guiseq><gui>Ctrl</gui><gui>H</gui></guiseq>.</p>
+ <p>Los archivos ocultos solo se mostrarán en la ventana actual, hasta que desactive la opción para esa ventana. Para mostrar los archivos ocultos en todas las ventanas del gestor de archivos, consulte <link xref="nautilus-views"/>.</p>
+</section>
+
+<section id="unhide">
+ <title>Desvelar un archivo oculto</title>
+ <p>Para desvelar un archivo oculto, vaya a la carpeta que contiene el archivo oculto y pulse en <guiseq><gui>Ver</gui><gui>Mostrar los archivos ocultos</gui></guiseq>. Luego, busque el archivo oculto y renómbrelo de forma que su nombre no empiece por un punto «.».</p>
+ <p>Por ejemplo, para desvelar un archivo llamado <file>.ejemplo.txt</file>, debería cambiarle el nombre a <file>ejemplo.txt</file>.</p>
+ <p>Una vez que haya renombrado el archivo, puede pulsar <guiseq><gui>Ver</gui><gui>Mostrar archivos ocultos</gui></guiseq> o pulsar <keyseq><key>Ctrl</key><key>H</key></keyseq> para ocultar cualquier otro archivo oculto.</p>
+</section>
+
+</page>

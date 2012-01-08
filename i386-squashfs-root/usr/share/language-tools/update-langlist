@@ -1,0 +1,61 @@
+#!/bin/sh -e
+#
+# update-langlist maintains the LANGUAGE priority list. It does so in
+# a simplified manner, unlike the principal UI for setting the user
+# language which provides full control.
+
+first_language=$1
+user=$2
+renewed_langlist=
+
+[ -n "$first_language" -a -n "$user" ] || exit 0
+
+get_old_langlist() {
+    while read line; do
+        [ "${line%%:*}" = $user ] && break
+    done < /etc/passwd
+    if [ -n "$line" ]; then
+        OLDIFS=$IFS
+        IFS=':'
+        i=1
+        for homedir in $line; do
+            if [ $i -ne 6 ]; then
+                i=$(( $i + 1 ))
+                continue
+            fi
+            break
+        done
+        IFS=$OLDIFS
+    fi
+
+    if [ -r "$homedir/.profile" ]; then
+        old_langlist=$( grep "^[[:space:]]*export LANGUAGE=" \
+                        $homedir/.profile | cut -d '"' -f 2 )
+    fi
+}
+
+old_langlist=
+english=true
+if [ ${first_language%%[_@]*} != 'en' ]; then
+    get_old_langlist
+    english=false
+fi
+
+if [ -n "$old_langlist" ] && ! $english; then
+    if expr $old_langlist : ".*:$first_language:" > /dev/null ; then
+        renewed_langlist=$( echo $old_langlist | sed -r "s/(.+:)($first_language:)/\2\1/" )
+    elif [ ${old_langlist%%:*} = $first_language ]; then
+        # no change
+        renewed_langlist=$old_langlist
+    else
+        renewed_langlist=$first_language:$old_langlist
+    fi
+else
+    # build fresh list with 'en' as the last element
+    # no other languages needed if English was selected
+    renewed_langlist=$first_language
+    [ $first_language != 'en' ] && renewed_langlist=$renewed_langlist:en
+fi
+
+echo $renewed_langlist
+

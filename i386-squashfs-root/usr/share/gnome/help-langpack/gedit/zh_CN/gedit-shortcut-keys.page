@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="tip" id="gedit-shortcut-keys" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Paolo Borelli</name>
+    </credit>
+    <credit type="author">
+      <name>Jesse van den Kieboom</name>
+    </credit>
+    <credit type="author">
+      <name>Steve Frécinaux</name>
+    </credit>
+    <credit type="author">
+      <name>Ignacio Casal Quinteiro</name>
+    </credit>
+  </info>
+
+  <title>快捷键</title>
+
+  <p>使用<gui>快捷键</gui>执行常用任务，比用鼠标和菜单要快。下表列出了 <app>gedit</app> 的常用快捷键。</p>
+
+<!--  
+Please skip this list for now. I'm not sure if it is needed.
+  <list>
+    <title>Types of shortcut keys</title>
+    <item><p><link xref="#gedit-tab-shortcuts">Tab-related shortcut keys</link></p></item>
+    <item><p><link xref="#gedit-file-shortcuts">Shortcuts for working working with files</link></p></item>
+    <item><p><link xref="#gedit-editing-shortcuts">Shortcuts for editing</link></p></item>
+    <item><p><link xref="#gedit-pane-shortcuts">Shortcut keys for showing and hiding panes</link></p></item>
+    <item><p><link xref="#gedit-searching-shortcuts">Shortcuts for searching through text</link></p></item>
+    <item><p><link xref="#gedit-tools-shortcuts">gedit tool and plugin shortcuts</link></p></item>
+    <item><p><link xref="#gedit-help-shortcuts">User-help shortcuts</link></p></item>
+  </list>
+
+-->
+
+  <section id="gedit-tab-shortcuts">
+    <title>标签相关的快捷键</title>
+
+    <!-- For the sake of appearance, I have not used the <keyseq> feature to display key sequences in the tables. -->
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>操作</p></td>  <td><p>快捷键</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>切换到左边的标签</p></td> <td><p>Ctrl + Alt + PageUp</p></td>  
+        </tr>
+        <tr>
+          <td><p>切换到右边的标签</p></td>  <td><p>Ctrl + Alt + PageDown</p></td>
+        </tr>
+        <tr>
+          <td><p>关闭标签</p></td>  <td><p>Ctrl + W</p></td>
+        </tr>
+        <tr>
+          <td><p>保存全部标签</p></td>  <td><p>Ctrl + Shift + L</p></td>
+        </tr>
+        <tr>
+          <td><p>关闭全部标签</p></td>  <td><p>Ctrl + Shift + W</p></td>  
+        </tr>
+        <tr>
+          <td><p>跳到第 <var>n</var> 个标签</p></td>  <td><p>Alt + <var>n</var></p></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-file-shortcuts">
+    <title>文件操作的快捷键</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>操作</p></td>  <td><p>快捷键</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>创建新文档</p></td>  <td><p>Ctrl + N</p></td>  
+        </tr>
+        <tr>
+          <td><p>打开文档</p></td>  <td><p>Ctrl + O</p></td>  
+        </tr>
+        <tr>
+          <td><p>保存当前文档</p></td>  <td><p>Ctrl + S</p></td>  
+        </tr>
+        <tr>
+          <td><p>文件另存为</p></td>  <td><p>Ctrl + Shift + S</p></td>  
+        </tr>
+        <tr>
+          <td><p>打印当前文档</p></td>  <td><p>Ctrl + P</p></td>  
+        </tr>
+        <tr>
+          <td><p>打印预览</p></td>  <td><p>Ctrl + Shift + P</p></td>  
+        </tr>
+        <tr>
+          <td><p>关闭当前文档</p></td>  <td><p>Ctrl + W</p></td>  
+        </tr>
+        <tr>
+          <td><p>退出 gedit</p></td>  <td><p>Ctrl + Q</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-editing-shortcuts">
+    <title>编辑文档的快捷键</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>操作</p></td>  <td><p>快捷键</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>撤销上一次操作</p></td>  <td><p>Ctrl + Z</p></td>  
+        </tr>
+        <tr>
+          <td><p>重做上一次撤销的操作</p></td>  <td><p>Ctrl + Shift + Z</p></td>  
+        </tr>
+        <tr>
+          <td><p>剪切选中的文本或文本块，并放到剪贴板中</p></td>  <td><p>Ctrl + X</p></td>  
+        </tr>
+        <tr>
+          <td><p>复制选中的文本或文本块，并放到剪贴板中</p></td>  <td><p>Ctrl + C</p></td>  
+        </tr>
+        <tr>
+          <td><p>从剪贴板中粘贴内容</p></td>  <td><p>Ctrl + V</p></td>  
+        </tr>
+        <tr>
+          <td><p>全部选中</p></td>  <td><p>Ctrl + A</p></td>  
+        </tr>
+        <tr>
+          <td><p>删除当前行</p></td>  <td><p>Ctrl + D</p></td>  
+        </tr>
+        <tr>
+          <td><p>将选中的行上移一行</p></td>  <td><p>Alt + 上方向键</p></td>  
+        </tr>
+        <tr>
+          <td><p>将选中的行下移一行</p></td>  <td><p>Alt + 下方向键</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-pane-shortcuts">
+    <title>显示和隐藏面板的快捷键</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>操作</p></td>  <td><p>快捷键</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>显示/隐藏侧边栏</p></td>  <td><p>F9</p></td>  
+        </tr>
+        <tr>
+          <td><p>显示/隐藏底部面板。</p></td>  <td><p>Ctrl + F9</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-searching-shortcuts">
+    <title>搜索的快捷键</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>操作</p></td>  <td><p>快捷键</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>查找字符串</p></td>  <td><p>Ctrl + F</p></td>  
+        </tr>
+        <tr>
+          <td><p>查找下一个匹配的字符串</p></td>  <td><p>Ctrl + G</p></td>  
+        </tr>
+        <tr>
+          <td><p>查找上一个匹配的字符串</p></td>  <td><p>Ctrl + Shift + G</p></td>  
+        </tr>
+        <tr>
+          <td><p>查找和替换</p></td>  <td><p>Ctrl + H</p></td>  
+        </tr>
+        <tr>
+          <td><p>清除高亮显示</p></td>  <td><p>Ctrl + Shift + K</p></td>  
+        </tr>
+        <tr>
+          <td><p>跳转到行</p></td>  <td><p>Ctrl + I</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-tools-shortcuts">
+    <title>使用工具的快捷键</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>操作</p></td>  <td><p>快捷键</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>检查拼写</p></td>  <td><p>Shift + F7</p></td>  
+        </tr>
+        <tr>
+          <td><p>删除尾部空格(使用插件)</p></td>  <td><p>Alt + F12</p></td>  
+        </tr>
+        <tr>
+          <td><p>在当前文件夹运行“make”命令(用插件)</p></td>  <td><p>F8</p></td>  
+        </tr>
+        <tr>
+          <td><p>文件夹列表(使用插件)</p></td>  <td><p>Ctrl + Shift + D</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-help-shortcuts">
+    <title>帮助的快捷键</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>操作</p></td>  <td><p>快捷键</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>打开使用指南</p></td>  <td><p>F1</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</page>

@@ -1,0 +1,1065 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="Забраняване на създаването на безжична мрежа">
+						<longdesc>Включете тази опция, за да се забрани създаването на инцидентни мрежи (ад хок) чрез този аплет.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="Мигриране">
+						<longdesc>Ключът указва дали настройките да се мигрират към нова версия.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="Без уведомявания за наличие на безжични мрежи">
+						<longdesc>Задайте да е истина, за да изключите уведомяванията при наличие на безжични мрежи.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="Изключване на уведомяването за прекъсване на връзки">
+						<longdesc>Задайте да е истина, за да изключите уведомяванията при прекъсването на връзка към мрежа.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="Изключване на уведомяването за установяването на връзки">
+						<longdesc>Задайте да е истина, за да изключите уведомяванията при установяване на връзка към мрежа.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="wobbly">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="maximize_effect">
+									<local_schema short_desc="Ефект при максимизиране">
+										<longdesc>Треперене при максимизиране и демаксимизиране на прозорците</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spring_k">
+									<local_schema short_desc="Константа на пружината">
+										<longdesc>Константа на пружината (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shiver">
+									<local_schema short_desc="Треперене">
+										<longdesc>Make window shiver</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="scale">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="show_desktop">
+									<local_schema short_desc="Натисни на работен плот за да бъде показан">
+										<longdesc>Enter Show Desktop mode when Desktop is clicked during Scale</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="darken_back">
+									<local_schema short_desc="Затъмняване на фона">
+										<longdesc>Darken background when scaling windows</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Скорост">
+										<longdesc>Scale speed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="number_of_desktops">
+									<local_schema short_desc="Брой на работните плотове">
+										<longdesc>Брой на виртуалните работни плотове (1 - 36)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hsize">
+									<local_schema short_desc="Хоризонтален брой на виртуалните екрани">
+										<longdesc>Screen size multiplier for horizontal virtual size (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_edge">
+									<local_schema short_desc="Покажи работния плот">
+										<longdesc>Скриване на всички прозорци и фокусиране на десктопа</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_key">
+									<local_schema short_desc="Покажи работния плот">
+										<longdesc>Скриване на всички прозорци и фокусиране на десктопа</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_button">
+									<local_schema short_desc="Меню на прозорец">
+										<longdesc>Комбинация от клавиши за менюто на прозореца</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_key">
+									<local_schema short_desc="Меню на прозорец">
+										<longdesc>Комбинация от клавиши за менюто на прозореца</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_vertically_key">
+									<local_schema short_desc="Вертикално максимизиране">
+										<longdesc>Вертикално максимизиране на активния прозорец</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unmaximize_window_key">
+									<local_schema short_desc="Демаксимизиране на прозорец">
+										<longdesc>Unmaximize active window</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="Максимизиране на прозорец">
+										<longdesc>Максимизиране на активния прозорец</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_button">
+									<local_schema short_desc="Минимизиране на прозорец">
+										<longdesc>Минимизирай активния прозорец</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_key">
+									<local_schema short_desc="Минимизиране на прозорец">
+										<longdesc>Минимизирай активния прозорец</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_button">
+									<local_schema short_desc="Повдигане на прозореца">
+										<longdesc>Повдигане на прозореца над другите</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_key">
+									<local_schema short_desc="Повдигане на прозореца">
+										<longdesc>Повдигане на прозореца над другите</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_button">
+									<local_schema short_desc="Затваряне на прозорец">
+										<longdesc>Затвори активния прозорец</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_key">
+									<local_schema short_desc="Затваряне на прозорец">
+										<longdesc>Затвори активния прозорец</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_click">
+									<local_schema short_desc="Повдигане при цъкане">
+										<longdesc>Повдигане на прозореца при цъкане</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="Фокусиране при цъкане">
+										<longdesc>Цъкането върху прозорец премества фокуса върху него</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outputs">
+									<local_schema short_desc="Екрани">
+										<longdesc>List of strings describing output devices</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_outputs">
+									<local_schema short_desc="Засичане на екраните">
+										<longdesc>Automatic detection of output devices</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="default_icon">
+									<local_schema short_desc="Икона по подразбиране">
+										<longdesc>Икона на прозореца по подразбиране</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ping_delay">
+									<local_schema short_desc="Закъснение">
+										<longdesc>Interval between ping messages (1000 - 30000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_delay">
+									<local_schema short_desc="Закъснение за задействане на ръба">
+										<longdesc>Duration the pointer must rest in a screen edge before an edge action is taken. (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="audible_bell">
+									<local_schema short_desc="Системнен звънец">
+										<longdesc>Audible system beep</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_plugins">
+									<local_schema short_desc="Активни модули">
+										<longdesc>Списък с включените модули</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="opengl">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="sync_to_vblank">
+									<local_schema short_desc="Синхронизиране с VBlank">
+										<longdesc>Only perform screen updates during vertical blanking period</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="gnomecompat">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command_terminal_key">
+									<local_schema short_desc="Стартиране в терминал">
+										<longdesc>Стартиране в терминал</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_terminal">
+									<local_schema short_desc="Команда в терминала">
+										<longdesc>Команда в терминала</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_window_screenshot_key">
+									<local_schema short_desc="Снимай прозорец">
+										<longdesc>Снимай прозорец</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_window_screenshot">
+									<local_schema short_desc="Команден ред за заснемане на прозореца">
+										<longdesc>Команден ред за заснемане на прозореца</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_screenshot_key">
+									<local_schema short_desc="Снимай екрана">
+										<longdesc>Снимай екрана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_screenshot">
+									<local_schema short_desc="Команда за заснемане на екрана">
+										<longdesc>Команда за заснемане на екрана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="main_menu_key">
+									<local_schema short_desc="Покажи главното меню">
+										<longdesc>Показване на главното меню</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="screenshot">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="launch_app">
+									<local_schema short_desc="Стартирай приложение">
+										<longdesc>Automatically open screenshot in this application</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="directory">
+									<local_schema short_desc="Директория">
+										<longdesc>Put screenshot images in this directory. If empty, the desktop directory will be used.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Започни">
+										<longdesc>Initiate rectangle screenshot</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="refresh_rate">
+									<local_schema short_desc="Честота на обновяване">
+										<longdesc>Колко често се прерисува екрана (пъти в секунда) (1 - 200)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_refresh_rate">
+									<local_schema short_desc="Засичане на честотата на обновяване">
+										<longdesc>Автоматично засичане на скоростта на опресняване</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="slow_animations_key">
+									<local_schema short_desc="Бавни анимации">
+										<longdesc>Toggle use of slow animations</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="annotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stroke_width">
+									<local_schema short_desc="Ширина на чертите">
+										<longdesc>Ширина на чертите за анотации (1.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="stroke_color">
+									<local_schema short_desc="Цвят за линиите на анотациите">
+										<longdesc>Цвят на чертите за анотации</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="Цвят за запълване на анотациите">
+										<longdesc>Цвят за запълване на анотациите</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_button">
+									<local_schema short_desc="Изчистване">
+										<longdesc>Изчистване</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_key">
+									<local_schema short_desc="Изчистване">
+										<longdesc>Изчистване</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="decor">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="shadow_match">
+									<local_schema short_desc="Прозорци с сянка">
+										<longdesc>Прозорци които да имат сянка (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="decoration_match">
+									<local_schema short_desc="Прозорци с декорация">
+										<longdesc>Прозорци, които да бъдат декорирани (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Allow mipmaps to be generated for decoration textures</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command">
+									<local_schema short_desc="Команда">
+										<longdesc>команда за декоратор, която се изпълнява ако вче не върви декоратор</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_color">
+									<local_schema short_desc="Цвят на сянката">
+										<longdesc>Цвят на сянката</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_opacity">
+									<local_schema short_desc="Прозрачност на сянката">
+										<longdesc>Прозрачност на сянката (0.01 - 6.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_radius">
+									<local_schema short_desc="Радиус на сянката">
+										<longdesc>Радиус на сянката (0.1 - 18.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="zoom">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="speed">
+									<local_schema short_desc="Скорост">
+										<longdesc>Zoom Speed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Започни">
+										<longdesc>Zoom In</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="commands">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command11_edge">
+									<local_schema short_desc="Изпълни команда 11">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_edge">
+									<local_schema short_desc="Изпълни команда 10">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_edge">
+									<local_schema short_desc="Изпълни команда 9">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_edge">
+									<local_schema short_desc="Изпълни команда 8">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_edge">
+									<local_schema short_desc="Изпълни команда 7">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_edge">
+									<local_schema short_desc="Изпълни команда 6">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_edge">
+									<local_schema short_desc="Изпълни команда 5">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_edge">
+									<local_schema short_desc="Изпълни команда 4">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_edge">
+									<local_schema short_desc="Изпълни команда 3">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_edge">
+									<local_schema short_desc="Изпълни команда 2">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_edge">
+									<local_schema short_desc="Изпълни команда 1">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_button">
+									<local_schema short_desc="Изпълни команда 11">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_button">
+									<local_schema short_desc="Изпълни команда 10">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_button">
+									<local_schema short_desc="Изпълни команда 9">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_button">
+									<local_schema short_desc="Изпълни команда 8">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_button">
+									<local_schema short_desc="Изпълни команда 7">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_button">
+									<local_schema short_desc="Изпълни команда 6">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_button">
+									<local_schema short_desc="Изпълни команда 5">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_button">
+									<local_schema short_desc="Изпълни команда 4">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_button">
+									<local_schema short_desc="Изпълни команда 3">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_button">
+									<local_schema short_desc="Изпълни команда 2">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_button">
+									<local_schema short_desc="Изпълни команда 1">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_key">
+									<local_schema short_desc="Изпълни команда 11">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_key">
+									<local_schema short_desc="Изпълни команда 10">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_key">
+									<local_schema short_desc="Изпълни команда 9">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_key">
+									<local_schema short_desc="Изпълни команда 8">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_key">
+									<local_schema short_desc="Изпълни команда 7">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_key">
+									<local_schema short_desc="Изпълни команда 6">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_key">
+									<local_schema short_desc="Изпълни команда 5">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_key">
+									<local_schema short_desc="Изпълни команда 4">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_key">
+									<local_schema short_desc="Изпълни команда 3">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_key">
+									<local_schema short_desc="Изпълни команда 2">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_key">
+									<local_schema short_desc="Изпълни команда 1">
+										<longdesc>Комбинация от клавиши, която при натискане ще стартира команда на обвивката, идентифицирана от команда1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command11">
+									<local_schema short_desc="Команден ред 11">
+										<longdesc>Команден ред, който ще бъде изпълнен в обвивката когато run_command11 е извикана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command10">
+									<local_schema short_desc="Команден ред 10">
+										<longdesc>Команден ред, който ще бъде изпълнен в обвивката когато run_command10 е извикана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command9">
+									<local_schema short_desc="Команден ред 9">
+										<longdesc>Команден ред, който ще бъде изпълнен в обвивката когато run_command9 е извикана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command8">
+									<local_schema short_desc="Команден ред 8">
+										<longdesc>Команден ред, който ще бъде изпълнен в обвивката когато run_command8 е извикана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command7">
+									<local_schema short_desc="Команден ред 7">
+										<longdesc>Команден ред, който ще бъде изпълнен в обвивката когато run_command7 е извикана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command6">
+									<local_schema short_desc="Команден ред 6">
+										<longdesc>Команден ред, който ще бъде изпълнен в обвивката когато run_command6 е извикана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command5">
+									<local_schema short_desc="Команден ред 5">
+										<longdesc>Команден ред, който ще бъде изпълнен в обвивката когато run_command5 е извикана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command4">
+									<local_schema short_desc="Команден ред 4">
+										<longdesc>Команден ред, който ще бъде изпълнен в обвивката когато run_command4 е извикана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command3">
+									<local_schema short_desc="Команден ред 3">
+										<longdesc>Команден ред, който ще бъде изпълнен в обвивката когато run_command3 е извикана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command2">
+									<local_schema short_desc="Команден ред 2">
+										<longdesc>Команден ред, който ще бъде изпълнен в обвивката когато run_command2 е извикана</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command1">
+									<local_schema short_desc="Команден ред 1">
+										<longdesc>Команден ред, който ще бъде изпълнен в обвивката когато run_command1 е извикана</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="obs">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="saturation_step">
+									<local_schema short_desc="Стъпка">
+										<longdesc>Saturation Step (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness_step">
+									<local_schema short_desc="Стъпка">
+										<longdesc>Brightness Step (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity_step">
+									<local_schema short_desc="Стъпка">
+										<longdesc>Opacity Step (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="cube">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="transparent_manual_only">
+									<local_schema short_desc="Прозрачност само при въртене с мишка">
+										<longdesc>Кубът да е прозрачен само ако въртенето е предизвикано от мишката</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_opacity">
+									<local_schema short_desc="Прозрачност при въртене">
+										<longdesc>Прозрачност на работния плот по време на въртене (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_image">
+									<local_schema short_desc="Иображение на небето">
+										<longdesc>Изоражение което да се ползва като повърхност за небето</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome">
+									<local_schema short_desc="Небе">
+										<longdesc>Изобразявай небето</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Скорост">
+										<longdesc>Скорост на сгъването (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="in">
+									<local_schema short_desc="Във куба">
+										<longdesc>Във куба</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Generate mipmaps when possible for higher quality scaling</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unfold_key">
+									<local_schema short_desc="Разгъване">
+										<longdesc>Разгъване на куба</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="water">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_key">
+									<local_schema short_desc="Започни">
+										<longdesc>Enable pointer water effects</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="rotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="rotate_to_11_window_key">
+									<local_schema short_desc="Завъртане към Страна 11 с прозорец">
+										<longdesc>Rotate to face 11 and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_window_key">
+									<local_schema short_desc="Завъртане към Страна 10 с прозорец">
+										<longdesc>Rotate to face 10 and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_window_key">
+									<local_schema short_desc="Завъртане към Страна 1 с прозорец">
+										<longdesc>Rotate to face 1 and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_12_key">
+									<local_schema short_desc="Завъртане към Страна 12">
+										<longdesc>Rotate to face 12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_key">
+									<local_schema short_desc="Завъртане към Страна 11">
+										<longdesc>Rotate to face 11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_key">
+									<local_schema short_desc="Завъртане към Страна 10">
+										<longdesc>Rotate to face 10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_key">
+									<local_schema short_desc="Завъртане към Страна 1">
+										<longdesc>Rotate to face 1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_key">
+									<local_schema short_desc="Завъртане към">
+										<longdesc>Rotate to viewport</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_button">
+									<local_schema short_desc="Завъртане надясно с прозорец">
+										<longdesc>Rotate right and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_key">
+									<local_schema short_desc="Завъртане надясно с прозорец">
+										<longdesc>Rotate right and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_button">
+									<local_schema short_desc="Завъртане на ляво с прозорец">
+										<longdesc>Rotate left and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_key">
+									<local_schema short_desc="Завъртане на ляво с прозорец">
+										<longdesc>Rotate left and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_button">
+									<local_schema short_desc="Завъртане надясно">
+										<longdesc>Rotate right</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_key">
+									<local_schema short_desc="Завъртане надясно">
+										<longdesc>Rotate right</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_button">
+									<local_schema short_desc="Завъртане наляво">
+										<longdesc>Rotate left</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_key">
+									<local_schema short_desc="Завъртане наляво">
+										<longdesc>Rotate left</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Започни">
+										<longdesc>Start Rotation</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Скорост">
+										<longdesc>Rotation Speed (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Мащабиране">
+										<longdesc>Rotation Zoom (0.0 - 2.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="blur">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="independent_tex">
+									<local_schema short_desc="Независимо получаване на текстурите">
+										<longdesc>Use the available texture units to do as many as possible independent texture fetches.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="occlusion">
+									<local_schema short_desc="Преграждане на размиването">
+										<longdesc>Изключи размиването за региони от екрана, закрити от други прозорци.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="Насищане на размиването">
+										<longdesc>Насищане на размиването (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap_lod">
+									<local_schema short_desc="Ниво на детайла за Mipmap">
+										<longdesc>Ниво на детайлите за Mipmap (0.1 - 5.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_strength">
+									<local_schema short_desc="Сила">
+										<longdesc>Сила (0.0 - 1.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_radius">
+									<local_schema short_desc="Радиус">
+										<longdesc>Радиус (1 - 15)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="filter">
+									<local_schema short_desc="Филтър за размиване">
+										<longdesc>Метод за размиване  (0 = 4 кратно билинеарно филтриране , 1 = Гаусов, 2 = Mipmap)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur">
+									<local_schema short_desc="Размиване по алфа канала">
+										<longdesc>Размиване на прозрачните части на прозорците</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur_match">
+									<local_schema short_desc="Размиване на прозорци по алфа канала">
+										<longdesc>Прозорзи, за които се използва размиване по алфа канала по подразбиране (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur">
+									<local_schema short_desc="Размиване при фокус">
+										<longdesc>Размиване на прозорци, които не са на фокус</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur_match">
+									<local_schema short_desc="Прозорци размивани при фокус">
+										<longdesc>Прозорци, за които действа размиването (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="blur_speed">
+									<local_schema short_desc="Скорост на размиването">
+										<longdesc>Скорост на размиването на прозорците (0.1 - 10.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="pulse">
+									<local_schema short_desc="Пулсиране">
+										<longdesc>Пулсиращ ефект</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="switcher">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="zoom">
+									<local_schema short_desc="Мащабиране">
+										<longdesc>Distance desktop should be zoom out while switching windows (0 - 5)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Generate mipmaps when possible for higher quality scaling</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Скорост">
+										<longdesc>Switcher speed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_key">
+									<local_schema short_desc="Следващ прозорец (без изскачащите)">
+										<longdesc>Select next window without showing the popup window.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_button">
+									<local_schema short_desc="Следващ прозорец (без изскачащите)">
+										<longdesc>Select next window without showing the popup window.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_key">
+									<local_schema short_desc="Следващ прозорец (всички прозорци)">
+										<longdesc>Popup switcher if not visible and select next window out of all windows</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_button">
+									<local_schema short_desc="Следващ прозорец (всички прозорци)">
+										<longdesc>Popup switcher if not visible and select next window out of all windows</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_key">
+									<local_schema short_desc="Следващ прозорец">
+										<longdesc>Popup switcher if not visible and select next window</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_button">
+									<local_schema short_desc="Следващ прозорец">
+										<longdesc>Popup switcher if not visible and select next window</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="place">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="position_constrain_workarea">
+									<local_schema short_desc="Запазване в работната площ">
+										<longdesc>Keep placed window in work area, even if that means that the position might differ from the specified position</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="clone">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_button">
+									<local_schema short_desc="Започни">
+										<longdesc>Започни дублиране на изхода</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

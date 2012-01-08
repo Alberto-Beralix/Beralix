@@ -1,0 +1,10 @@
+# vim:syntax=apparmor
+
+  # Text editors (It's All Text [https://addons.mozilla.org/en-US/firefox/addon/4125])
+  /usr/bin/emacsclient.emacs-snapshot PUxr,
+  /usr/bin/emacsclient.emacs22 PUxr,
+  /usr/bin/emacs-snapshot-gtk PUxr,
+  /usr/bin/gedit PUxr,
+  /usr/bin/vim.gnome PUxr,
+  /usr/bin/leafpad PUxr,
+  /usr/bin/mousepad PUxr,

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="backup-where" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="backup-why"/>
+    <desc>Empfehlung, wo Sie Ihre Datensicherung erstellen sollten und welche Art von Speichergerät verwendet werden sollte.</desc>
+    <title type="sort">c</title>
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Speicherorte Ihrer Sicherungen</title>
+<p>Sie sollten Sicherungskopien Ihrer Dateien an einem Ort außerhalb Ihres Rechners aufbewahren - zum Beispiel auf einer externen Festplatte. Auf diese Weise ist die Datensicherung im Falle eines Rechnerabsturzes immer noch nutzbar. Für maximale Sicherheit sollten Sie die Datensicherung nicht einmal im selben Gebäude wie Ihren Rechner aufbewahren. Falls es dort brennt oder jemand einbricht, können beide Datenkopien verloren gehen, wenn sie zusammen aufbewahrt werden.</p>
+    
+<p>Es ist außerdem wichtig, einen angemessenen <em>Datensicherungsträger</em> zu wählen. Sie müssen Ihre Datensicherung auf einem Datenträger speichern, der ausreichend Speicherplatz für all Ihre zu sichernden Dateien bietet.</p>
+
+   <list style="compact">
+    <title>Lokale und entfernte Speichermöglichkeiten</title>
+    <item>
+      <p>USB-Stick (geringe Kapazität)</p>
+    </item>
+    <item>
+      <p>Interne Festplatte (hohe Kapazität)</p>
+    </item>
+    <item>
+      <p>Externe Festplatte (in der Regel hohe Kapazität)</p>
+    </item>
+    <item>
+      <p>Netzwerkspeicher (hohe Kapazität)</p>
+    </item>
+    <item>
+      <p>Datei-/Sicherungs-Server (hohe Kapazität)</p>
+    </item>
+    <item>
+     <p>Beschreibbare CDs oder DVDs (geringe/mittlere Kapazität)</p>
+    </item>
+    <item>
+     <p>Online-Sicherungsdienst wie <link href="http://aws.amazon.com/s3/">Amazon S3</link> oder <link href="https://one.ubuntu.com/">Ubuntu One</link> (speichert Ihre Daten gegen eine geringe Gebühr außerhalb des eigentlichen Dienstes)</p>
+    </item>
+   </list>
+   
+<p>Einige dieser Möglichkeiten bieten genügende Kapazität, um jede einzelne Datei auf Ihrem System zu sichern, auch bekannt als <em>vollständige Systemsicherung</em>.</p>
+</page>

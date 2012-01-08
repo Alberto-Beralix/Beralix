@@ -39,7 +39,7 @@ rm ./i386/casper/filesystem.squashfs
 mksquashfs i386-squashfs-root/ ./i386/casper/filesystem.squashfs
 # We change file permissions to the ISO boot file..
 chmod 664 ./i386/isolinux/isolinux.bin
-# We build the ISO
+# We build the ISO.
 genisoimage -A Beralix -R -b isolinux/isolinux.bin -no-emul-boot -boot-load-size 4 -boot-info-table -o ./Beralix-0.0.0-desktop-i386.iso ./i386/
 # We change the permissions of the ISO image.
 chmod 444 ./Beralix-0.0.0-desktop-i386.iso

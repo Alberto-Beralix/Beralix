@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-open" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files" group="more"/>
+    <link type="guide" xref="shell-overview#files"/>
+    <desc>Abrir arquivos usando um aplicativo que não é o padrão para esse tipo de arquivo. Você pode alterar o padrão também.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Cristopher Thomas</name>
+      <email>crisnoh@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Abrir arquivos com outros aplicativos</title>
+
+<p>Quando você faz um clique duplo em um arquivo no <link xref="files-browse">gerenciador de arquivos</link> ele será aberto com o aplicativo padrão para aquele tipo de arquivo. Você pode abri-lo em um aplicativo diferente, pesquisar online por aplicativos ou alterar o aplicativo padrão para todos os arquivos do mesmo tipo.</p>
+
+<p>Para abrir um arquivo com um aplicativo diferente do padrão, clique com o botão direito do mouse no arquivo e selecione o aplicativo que você deseja do topo do menu. Se você não vê o aplicativo que você quer, clique <gui>Abrir com outro aplicativo</gui>. Por padrão, o gerenciador de arquivos mostra somente os aplicativos que ele sabe que podem manipular o arquivo. Para ver todos os aplicativos em seu computador, clique <gui>Exibir outros aplicativos</gui>.</p>
+
+<p>Se você ainda não achar o aplicativo que você quer, você pode pesquisar por mais aplicativos clicando <gui>Pesquisar aplicativos na Internet</gui>. O gerenciador de arquivos irá pesquisar na Internet por pacotes contendo aplicativos que conhecidamente manipulam arquivos daquele tipo.</p>
+
+<section id="default">
+  <title>Alterar o aplicativo padrão</title>
+  <p>Você pode alterar a aplicação padrão que é usada para abrir arquivos de um dado tipo. Isso permitirá que você abra seus aplicativos preferidas quando você dar um clique duplo para abrir um arquivo. Por exemplo, você pode querer que seu reprodutor de música favorito abra quando você dá um clique duplo em um arquivo MP3.</p>
+
+  <steps>
+    <item><p>Selecione um arquivo do tipo cujo aplicativo padrão você deseja alterar. Por exemplo, para mudar o aplicativo que é usada para abrir arquivos MP3, selecionar um arquivo <file>.mp3.</file></p></item>
+    <item><p>Clique com o botão direito no arquivo e selecione <gui>Propriedades</gui>.</p></item>
+    <item><p>Selecione a aba <gui>Abrir com</gui>.</p></item>
+    <item><p>Selecione o aplicativo que você quer e clique em <gui>Configurar como padrão</gui>. Por padrão, o gerenciador de arquivos mostra somente os aplicativos que ele sabe que podem manipular o arquivo. Para ver todos os aplicativos em seu computador, clique em <gui>Exibir outros aplicativos</gui>.</p>
+    <p>Se <gui>Outros aplicativos</gui> contém um aplicativo que você quer usar algumas vezes, mas não quer que ele seja padrão, selecione esse aplicativo e clique em <gui>Adicionar</gui>. Isso irá adicioná-lo em <gui>Aplicativos recomendados</gui>. Você será, então, capaz de usar esse aplicativo clicando com o botão direito no arquivo e selecionando-o da lista.</p></item>
+  </steps>
+
+  <p>Isso altera a aplicação padrão não apenas para o arquivo selecionado, mas para todos os arquivos com o mesmo tipo.</p>
+
+</section>
+
+</page>

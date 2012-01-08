@@ -1,0 +1,36 @@
+#!/bin/sh
+
+set -e
+
+THIS_PACKAGE=libgl1-mesa-glx
+THIS_SCRIPT=postinst
+
+case "$1" in
+  configure)
+  # on upgrade from previous versions, clean up our non-arch-qualified
+  # alternative
+  if dpkg --compare-versions "$2" lt-nl 7.10.3-0ubuntu1; then
+    update-alternatives --remove gl_conf /usr/lib/mesa/ld.so.conf
+  fi
+  # Use alternatives to make it easier to switch between Mesa and 3rd party modules
+  update-alternatives --force \
+    --install /etc/ld.so.conf.d/i386-linux-gnu_GL.conf i386-linux-gnu_gl_conf /usr/lib/i386-linux-gnu/mesa/ld.so.conf 500 \
+    --slave /usr/lib/i386-linux-gnu/xorg/extra-modules i386-linux-gnu_xorg_extra_modules /usr/lib/i386-linux-gnu/xorg/x11-extra-modules
+
+  # ldconfig needs to be run immediately as we're changing /etc/ld.so.conf.d/ with
+  # alternatives.
+  LDCONFIG_NOTRIGGER=y ldconfig
+
+esac
+
+# Automatically added by dh_makeshlibs
+if [ "$1" = "configure" ]; then
+	ldconfig
+fi
+# End automatically added section
+
+
+exit 0
+
+# vim:set ai et sw=2 ts=2 tw=80:
+

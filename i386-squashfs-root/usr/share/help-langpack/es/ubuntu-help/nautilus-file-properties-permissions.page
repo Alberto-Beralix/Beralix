@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="nautilus-file-properties-permissions" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="files#faq"/>
+    <link type="seealso" xref="nautilus-file-properties-basic"/>
+
+    <desc>Controle quién puede ver y editar sus archivos y carpetas.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+  <title>Establecer los permisos de archivo</title>
+
+  <p>Puede usar los permisos de archivos para controlar quién puede ver y editar sus archivos. Para ver y asignar los permisos de un archivo, púlselo con el botón derecho, seleccione <gui>Propiedades</gui> y a continuación vaya a la pestaña <gui>Permisos</gui>.</p>
+
+  <p>Vea <link xref="#files"/> y <link xref="#folders"/> a continuación para más información sobre los tipos de permisos que puede asignar.</p>
+
+  <section id="files">
+    <title>Archivos</title>
+
+    <p>Puede asignar los permisos para el propietario del archivo, el grupo del propietario y todos los demás usuarios del sistema. Para sus archivos, usted es su propietario, y puede concederse a sí mismo permisos de solo lectura o de lectura/escritura. Defina un archivo como solo lectura si no quiere cambiarlo accidentalmente.</p>
+
+    <p>Cada usuario de su equipo pertenece a un grupo. En equipos domésticos, es habitual que cada usuario tenga su propio grupo, y que los permisos de grupo no se usen a menudo. En entornos empresariales, los grupos se usan a veces para departamentos o proyectos. Además de tener un propietario, cada archivo pertenece a un grupo. Puede asignar el grupo de un archivo y controlar los permisos para todos los usuarios de ese grupo. Puede asignar el grupo de un archivo solo si es un grupo al que usted pertenece.</p>
+
+    <p>También puede asignar los permisos de los usuarios que no sean el propietario ni que estén en el grupo del archivo.</p>
+
+    <p>Si el archivo es un programa, como por ejemplo un script, tendrá que seleccionar <gui>Permitir ejecutar el archivo como un programa</gui> para ejecutarlo. Incluso con esta opción activada, puede que el gestor de archivos abra ese archivo dentro de una aplicación o le pregunte qué hacer. Consulte <link xref="nautilus-behavior#executable"/> para más información.</p>
+  </section>
+
+  <section id="folders">
+    <title>Carpetas</title>
+    <p>Puede asignar permisos sobre carpetas para el propietario, el grupo y el resto de usuarios. Consulte los detalles sobre permisos de archivos más arriba para ver una explicación sobre propietarios, grupos y el resto de usuarios.</p>
+    <p>Los permisos que puede asignar a una carpeta son diferentes de los que puede asignar a un archivo.</p>
+    <terms>
+      <item>
+        <title><gui>Ninguno</gui></title>
+        <p>El usuario ni siquiera será capaz de ver qué archivos están en la carpeta.</p>
+      </item>
+      <item>
+        <title><gui>Solo listar archivos</gui></title>
+        <p>El usuario puede ser capaz de ver los archivos que hay dentro de una carpeta, pero puede no ser capaz de abrir, crear o borrar archivos.</p>
+      </item>
+      <item>
+        <title><gui>Acceder a los archivos</gui></title>
+        <p>El usuario puede ser capaz de abrir archivos en la carpeta (suponiendo que tiene permisos para ello en ese archivo en particular), pero puede no ser capaz de crear nuevos archivos o borrar archivos.</p>
+      </item>
+      <item>
+        <title><gui>Crear y eliminar archivos</gui></title>
+        <p>El usuario tendrá acceso total al directorio, incluyendo abrir, crear y borrar archivos.</p>
+      </item>
+    </terms>
+
+    <p>Puede asignar rápidamente los permisos a todos los archivos de una carpeta usando la lista desplegable  <gui>Acceso a archivos</gui> y la opción <gui>Ejecutar</gui>. Deje las listas desplegables en <gui>---</gui> para que no haya cambios, o la casilla <gui>Ejecutar</gui> en su estado indeterminado (una línea horizontal cruzándola).</p>
+    <p>Si pulsa en <gui>Aplicar permisos a los archivos contenidos</gui>, el gestor de archivos aplicará los permisos de lectura, escritura y ejecución a los archivos contenidos en función de las opciones que haya definido en <gui>Acceso a archivos</gui> y <gui>Ejecución</gui>. Además cambiará los permisos de las carpetas contenidas para ajustarse a los permisos de esa carpeta. Los permisos de los archivos contenidos se aplicarán también a los archivos contenidos en las subcarpetas, a cualquier profundidad.</p>
+  </section>
+
+</page>

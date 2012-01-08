@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="noprint" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#printing"/>
+    <desc>作者也许在该文档中设定了打印限制。</desc>
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>I can't print a document</title>
+
+<p>无法打印某个文档也许是因为：</p>
+ <list>
+  <item><p>打印机问题，或者</p></item>
+  <item><p>PDF 打印限制。</p></item>
+ </list>
+
+
+<section>
+  <title>Printer problems</title>
+  <p>您的打印机没有正确工作有很多原因。举个例子，可能是缺纸或者没墨了，也可能是打印机没有连接或已坏。</p>
+
+  <p>要检查您的打印机是否正确打印：</p>
+  <steps>
+   <item><p>Click your name on the topbar and select <gui>System Settings</gui>.</p></item>
+   <item><p>Click on your printer in the list.</p></item>
+   <item><p>Click on <gui>Print Test Page</gui>.  A page should be sent to your printer.</p>
+<note>
+ <p>
+If this fails, see <link href="ghelp:gnome-help?printing">Printing help</link>.  You may also need to see your printer's manual to see what else you can do.
+</p>
+</note>
+
+</item>
+  </steps>
+
+
+</section>
+
+<section>
+  <title>PDF printing restrictions</title>
+  <p>
+  Some PDF documents have a setting which prevents you from printing them.
+  Authors can set this printing restriction when they write a document.
+  The <app>document viewer</app> overrides this restriction by default, but you may want to check
+  that it hasn't been disabled:
+  </p>
+
+  <steps>
+    <item>
+      <p>按下 <keyseq><key>Alt</key><key>F2</key></keyseq> 以打开运行程序窗口。</p>
+    </item>
+    <item>
+      <p>
+      Type <input>dconf-editor</input> into the text box and click
+      <gui>Run</gui>. The Configuration Editor will open.
+      </p>
+    </item>
+    <item><p>Browse to <sys>/org/gnome/evince</sys> using the side pane.</p></item>
+    <item>
+      <p>确保 <gui>override_restrictions</gui> 选项已经选定。</p>
+    </item>
+    <item>
+      <p>转回到文档查看器并尝试重新打印文档。</p>
+    </item>
+  </steps>
+</section>
+
+</page>

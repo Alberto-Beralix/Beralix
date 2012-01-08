@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="reference" id="net-firewall-ports" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="net-security"/>
+    <link type="seealso" xref="net-firewall-on-off"/>
+    <desc>Você precisa especificar a porta de rede correta para habilitar/desabilitar o acesso à rede de um programa com o seu firewall.</desc>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+    <credit type="author">
+      <name>Paul W. Frields</name>
+      <email>stickster@gmail.com</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Portas de rede normalmente usadas</title>
+  <p>Esta é uma lista das portas de rede normalmente usadas por aplicativos que fornecem serviços de rede, como compartilhamento de arquivos ou visualização remota da área de trabalho. Você pode alterar o firewall do seu sistema para <link xref="net-firewall-on-off">bloquear ou permitir acesso</link> a esses aplicativos. Há milhares de portas em uso, então esta tabela não está completa.</p>
+
+  <table>
+    <thead>
+      <tr>
+	<td>
+	  <p>Porta</p>
+	</td>
+	<td>
+	  <p>Nome</p>
+	</td>
+	<td>
+	  <p>Descrição</p>
+	</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+	<td>
+	  <p>5353/udp</p>
+	</td>
+	<td>
+	  <p>mDNS, Avahi</p>
+	</td>
+	<td>
+	  <p>Permite a sistemas achar uns aos outros, e descreve quais serviços eles oferecem, sem que você tenha que especificar detalhes manualmente.</p>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <p>631/udp</p>
+	</td>
+	<td>
+	  <p>Impressão</p>
+	</td>
+	<td>
+	  <p>Permite que você envie trabalhos de impressão para a impressora através da rede.</p>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <p>631/tcp</p>
+	</td>
+	<td>
+	  <p>Impressão</p>
+	</td>
+	<td>
+	  <p>Permite que você compartilhe sua impressora com outras pessoas pela rede.</p>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <p>5298/tcp</p>
+	</td>
+	<td>
+	  <p>Preservada</p>
+	</td>
+	<td>
+	  <p>Permite que você mostre o status do seu mensageiro instantâneo a outras pessoas na rede, como "disponível" ou "ocupado".</p>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <p>5900/tcp</p>
+	</td>
+	<td>
+	  <p>Área de trabalho remota</p>
+	</td>
+	<td>
+	  <p>Permite a você compartilhar sua área de trabalho para que outras pessoas possam vê-la ou possam fornecer acesso remoto.</p>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <p>3689/tcp</p>
+	</td>
+	<td>
+	  <p>Compartilhamento de música (DAAP)</p>
+	</td>
+	<td>
+	  <p>Permite a você compartilhar sua biblioteca de música com outros na sua rede.</p>
+	</td>
+      </tr>
+    </tbody>
+  </table>
+</page>

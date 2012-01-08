@@ -1,0 +1,139 @@
+#!/bin/sh
+# preinst script for sudo
+#
+
+set -e
+
+# summary of how this script can be called:
+#        * <new-preinst> `install'
+#        * <new-preinst> `install' <old-version>
+#        * <new-preinst> `upgrade' <old-version>
+#        * <old-preinst> `abort-upgrade' <new-version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+write_verbatim_sudoers() {
+    echo "Installing verbatim /etc/sudoers"
+    cat > /etc/sudoers <<EOF
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# Please consider adding local content in /etc/sudoers.d/ instead of
+# directly modifying this file.
+#
+# See the man page for details on how to write a sudoers file.
+#
+Defaults	env_reset
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# User privilege specification
+root	ALL=(ALL:ALL) ALL
+
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+
+# Allow members of group sudo to execute any command
+%sudo	ALL=(ALL:ALL) ALL
+
+#includedir /etc/sudoers.d
+EOF
+}
+
+ubuntu_user_to_sudoers_d() {
+    local file="$1"
+    # if the filename provided already exists, do nothing
+    [ -f "$file" ] && return 0
+    mkdir -p "${file%/*}"
+    ( umask 226 && cat > "$file" ) <<EOF
+# ubuntu user is default user in cloud images.
+# It needs passwordless sudo functionality.
+ubuntu  ALL=(ALL) NOPASSWD:ALL
+EOF
+    [ $? -eq 0 ] && echo "moved ubuntu user configuration to ${file}"
+}
+
+# see bug #690873 for details why this is needed
+avoid_conffile_prompt() {
+    local PKGNAME="sudo"
+    local CONFFILE="/etc/sudoers"
+
+    [ -e "$CONFFILE" ] || return 0
+
+    # check if the conffile is modified at all
+    local md5sum="$(md5sum $CONFFILE | sed -e 's/ .*//')"
+    local old_md5sum="$(dpkg-query -W -f='${Conffiles}' $PKGNAME | \
+            sed -n -e "\' $CONFFILE ' { s/ obsolete$//; s/.* //; p }")"
+    if [ "$md5sum" = "$old_md5sum" ]; then
+       return 0
+    fi
+
+    # get md5sum, ignoring comments and whitespace lines
+    local md5sum_no_ws="$(egrep -v '^$|^#$|^#[[:space:]]+' $CONFFILE| md5sum | sed -e  's/ .*//')"
+
+    # not using case sum1|sum2|sum3 as it does not allow me to add comments
+    case "$md5sum_no_ws" in
+        # dapper and ubuntu-vm-builder (normal mode)
+        714b8a2bfbeee6bcb5007d89e246094d )
+        write_verbatim_sudoers
+        ;;
+        # hardy, karmic, *no* user-setup
+        52ec2bd66be820057d653d0c282d769d )
+        write_verbatim_sudoers
+        ;;
+        # hardy, karmic, when user-setup was run
+        4ab6217157c5a430ef71d6702756f909 )
+        write_verbatim_sudoers
+        ;;
+        # lucid, maverick, when user-setup was run
+        914c6b9ccd2ea10ce5089af040130ea0 )
+        write_verbatim_sudoers
+        ;;
+        # lucid, maverick when *no* user-setup was run
+        1e6fde53694ccf2d1424c41a1cb68a47 )
+        write_verbatim_sudoers
+        ;;
+        # natty, when user-setup was run
+        8352f26aab41eab146a021a39a877dab )
+        write_verbatim_sudoers
+        ;;
+        # natty, when *no* user-setup was run
+        9804cf9c77d63bedda288094d64f29ee )
+        write_verbatim_sudoers
+        ;;
+        # ubuntu-vm-builder (ec2 mode)
+        d6877d333ff8ddc7209ea0b517946339 )
+        write_verbatim_sudoers
+        ubuntu_user_to_sudoers_d "/etc/sudoers.d/90-cloud-ubuntu"
+        ;;
+        * )
+        echo "You have a customized /etc/sudoers file."
+        echo "Please consider putting your changes in /etc/sudoers.d"
+        ;;
+    esac
+}
+
+
+case "$1" in
+    install|upgrade)
+        if dpkg --compare-versions "$2" le "1.7.4p4-5ubuntu5"; then
+            avoid_conffile_prompt
+        fi
+    ;;
+
+    abort-upgrade)
+    ;;
+
+    *)
+        echo "preinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+
+
+exit 0

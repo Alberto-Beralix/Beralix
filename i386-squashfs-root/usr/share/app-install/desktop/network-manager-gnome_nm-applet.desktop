@@ -1,0 +1,20 @@
+[Desktop Entry]
+X-AppInstall-Package=network-manager-gnome
+X-AppInstall-Popcon=139735
+X-AppInstall-Section=main
+
+Name=Network
+Comment=Manage your network connections
+Icon=nm-device-wireless
+Exec=nm-applet
+Terminal=false
+Type=Application
+NoDisplay=true
+NotShowIn=KDE;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=NetworkManager
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Autostart-enabled=true
+AutostartCondition=GNOME3 unless-session gnome
+
+X-Ubuntu-Gettext-Domain=app-install-data

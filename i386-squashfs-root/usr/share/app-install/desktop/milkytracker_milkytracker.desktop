@@ -1,0 +1,22 @@
+[Desktop Entry]
+X-AppInstall-Package=milkytracker
+X-AppInstall-Popcon=100
+X-AppInstall-Section=universe
+
+Version=1.0
+Name=MilkyTracker
+Comment=Fasttracker 2 Clone
+Terminal=false
+TryExec=milkytracker
+Exec=milkytracker %f
+Type=Application
+Icon=milkytracker
+Categories=GNOME;AudioVideo;Audio;Video;
+MimeType=audio/x-xm
+X-Desktop-File-Install-Version=0.10
+
+[Desktop Action Play]
+Name=MilkyTracker (play song)
+Exec=milkytracker %f
+
+X-Ubuntu-Gettext-Domain=app-install-data

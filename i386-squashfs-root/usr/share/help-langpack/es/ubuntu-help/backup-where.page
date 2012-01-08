@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="backup-where" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="backup-why"/>
+    <desc>Asesoramiento sobre dónde almacenar sus copias de seguridad y qué tipo de dispositivo de almacenamiento utilizar.</desc>
+    <title type="sort">c</title>
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Dónde almacenar su copia de seguridad</title>
+<p>Debe almacenar las copias de seguridad de sus archivos en algún lugar separado de su equipo - en un disco duro externo por ejemplo. De esta manera, si el equipo se daña, la copia de seguridad seguirán siendo válida. Para mayor seguridad, no debe guardar la copia de seguridad en el mismo lugar donde se encuentra su equipo. Si hay un incendio o robo, las dos copias de los datos se pueden perder si se mantienen juntas.</p>
+    
+<p>Es importante elegir un <em>medio adecuado para la copia de seguridad</em>.  Necesita un dispositivo con suficiente espacio disponible para todos sus archivos que desee incluir en la copia de seguridad</p>
+
+   <list style="compact">
+    <title>Opciones de almacenamiento local y remoto</title>
+    <item>
+      <p>Memoria USB (baja capacidad)</p>
+    </item>
+    <item>
+      <p>Disco duro interno (alta capacidad)</p>
+    </item>
+    <item>
+      <p>Disco duro externo (por lo general de alta capacidad)</p>
+    </item>
+    <item>
+      <p>Unidad de red (alta capacidad)</p>
+    </item>
+    <item>
+      <p>Archivo/servidor de copia de seguridad (alta capacidad)</p>
+    </item>
+    <item>
+     <p>CD o DVD escribibles (baja/media capacidad)</p>
+    </item>
+    <item>
+     <p>Servicio de copia de seguridad en linea como <link href="http://aws.amazon.com/s3/">Amazon S3</link> o <link href="https://one.ubuntu.com/">Ubuntu One</link> (almacenamiento de datos por un bajo precio)</p>
+    </item>
+   </list>
+   
+<p>Algunas de estas opciones tienen la capacidad suficiente para permitir una copia de cada archivo en su sistema, también conocido como una <em>copia de seguridad completa de su sistema</em></p>
+</page>

@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="غیرفعال‌سازی ساخت وای‌فای">
+						<longdesc>برای غیرفعال کردن شبکه‌های ادهاک زمانی که از این اپلت استفاده می‌کنید گزینه True را انتخاب کنید.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="تمبر">
+						<longdesc>جهت تشخیص اینکه آیا تنظیمات باید به نسخه جدید انتقال پیدا کنند یا خیر مورد استفاده قرار می‌گیرد.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="متوقف کردن اعلان‌های موجود شبکه‌ها">
+						<longdesc>برای غیرفعال‌سازی اعلان‌ها در زمانی که شبکه‌های بی‌سیم در دسترس هستند این قسمت را True تنظیم کنید.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="غیرفعال‌سازی اعلان‌های قطع ارتباط">
+						<longdesc>برای غیرفعال‌سازی اعلان‌ها در زمان قطع ارتباط با یک شبکه این قسمت را True تنظیم کنید.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="غیرفعال‌سازی اعلان‌های برقراری ارتباط">
+						<longdesc>برای غیرفعال‌سازی اعلان‌ها در زمان ارتباط با یک شبکه این قسمت را True تنظیم کنید.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="nautilus-connect" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files" group="more"/>
+    <desc>Visualizar e editar arquivos em um outro computador sobre FTP, SSH, compartilhamentos Windows ou WebDAV.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Procure arquivos em um servidor ou um compartilhamento de rede</title>
+
+<p>Você pode conectar a um servidor ou a um compartilhamento de rede para navegar e visualizar arquivos naquele servidor, exatamente como se eles estivessem no seu próprio computador.</p>
+
+<p>Para procurar arquivos sobre a rede, primeiro <link xref="files-browse">abra o gerenciador de arquivos</link></p>
+
+<p>Clique em <gui>Navegar na rede</gui> na barra lateral, ou selecione <gui>Rede</gui> a partir do menu <gui>Ir</gui>. O gerenciador de arquivos encontrará quaisquer computadores na sua rede local que indiquem a habilidade de servir arquivos. Se você quiser se conectar a um servidor na Internet, ou se você não conseguir ver o computador que você está procurando, você poderá se conectar manualmente ao servidor digitando o seu endereço de rede/Internet.</p>
+
+<steps>
+  <title>Conectar-se a um servidor de arquivos</title>
+  <item><p>No gerenciador de arquivos, clique em <guiseq><gui>Arquivo</gui> <gui>Conectar ao servidor...</gui></guiseq>.</p></item>
+  <item><p>Digite o endereço do servidor, selecione o tipo de servidor e digite todas as informações adicionais requisitadas. Então, clique <gui>Conectar</gui>. Detalhes sobre os tipos de servidores estão <link xref="#types">listados abaixo</link>.</p>
+  <p>Para servidores na Internet, geralmente você poderá usar o nome de domínio (p. ex., <sys>ftp.example.com</sys>). Para computadores na sua rede local, entretanto, você terá que usar o <link xref="net-findip">endereço IP numérico</link>.</p>
+  </item>
+  <item><p>Uma nova janela irá ser aberta mostrando os arquivos no servidor. Você poderá navegar pelos arquivos como faria em seu próprio computador.</p>
+  <p>O servidor também será adicionado à barra lateral para que você possa acessá-lo rapidamente no futuro</p>
+  </item>
+</steps>
+
+<section id="types">
+ <title>Tipos diferentes de servidores</title>
+
+<p>Você pode conectar-se a diferentes tipos de servidores. Alguns servidores são públicos e permitem que qualquer pessoa se conecte. Outros servidores requerem que você efetue log in, com um nome de usuário e senha.</p>
+<p>Você pode não ter permissões para executar algumas ações nos arquivos de um servidor. Por exemplo, em sites públicos de FTP, você provavelmente não será capaz de excluir arquivos.</p>
+
+<terms>
+<title>Tipos de servidores</title>
+<item>
+  <title>SSH</title>
+  <p>Se você tem uma conta <em>SSH</em> em um servidor, você pode conectar usando esse método. Muitos provedores de hospedagem fornecem contas SSH aos membros para que eles possam enviar arquivos de forma segura. Servidores SSH sempre requerem que você se autentique. Se você usa uma chave SSH para autenticação, deixe o campo senha em branco.</p>
+  
+  <comment><cite>shaunm</cite><p>We should have a topics on encryption
+  keys, possibly rolling the seahorse help into gnome-help. Then link
+  from here.</p></comment>
+  
+  <p>Quando estiver utilizando o SSH, todos os dados que você enviar (incluindo a sua senha) serão encriptados para que outros usuários na rede não os vejam.</p>
+</item>
+<item>
+  <title>FTP (com login)</title>
+  <p>O FTP é uma maneira popular de trocar arquivos na Internet. Porque os dados não são encriptados no FTP, muitos servidores agora fornecem acesso através de SSH. Alguns servidores, entretanto, ainda permitem ou requerem que você use o FTP para enviar e receber arquivos. Os sites de FTP com logins geralmente irão permitir que você exclua e envie arquivos.</p>
+</item>
+<item>
+  <title>FTP público</title>
+  <p>Sites que permitem que você baixe arquivos irão algumas vezes prover acesso ftp público ou anônimo. Esses servidores não necessitam um nome de usuário e senha, e não irão permitir que você apague ou envie arquivos.</p>
+  <note><p>Alguns sites ftp anônimos requerem que você inicie uma sessão com um nome de usuário público e senha, ou com um nome de usuário público usando seu endereço de e-mail como senha. Para esses servidores, use o método <gui>ftp (com autenticação)</gui>, e use as credenciais especificadas pelo site ftp.</p></note>
+</item>
+<item>
+  <title>Compartilhamento Windows</title>
+  <p>Computadores com Windows usam um protocolo proprietário para compartilhar arquivos pela rede local. Computadores em uma rede Windows são às vezes agrupados por <em>domínios</em> para organização e por melhor controle de acesso. Se você tem as permissões corretas no computador remoto, você pode se conectar em um compartilhamento Windows a partir do gerenciador de arquivos.</p>
+</item>
+<item>
+  <title>WebDAV e WebDAV Seguro</title>
+  <p>Baseado no protocolo HTTP que é usado na Internet, WebDAV é usado às vezes para compartilhar arquivos numa rede local e para armazenar arquivos na Internet. Se o servidor a que você está conectando suportar conexões seguras, você deverá escolher esta opção. WebDAV seguro utiliza criptografia SSL, para que outros usuários não vejam a sua senha.</p>
+  <comment>
+    <cite date="2011-04-01">shaunm</cite>
+    <p>Also used by gnome-user-share, but we're not talking about that
+    in gnome-help for 3.0. Hopefully it will be better integrated in 3.2,
+    and we can discuss it better in the help. If that happens, link from
+    here.</p>
+  </comment>
+</item>
+</terms>
+</section>
+
+</page>

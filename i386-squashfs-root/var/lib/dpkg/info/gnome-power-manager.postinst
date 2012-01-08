@@ -1,0 +1,13 @@
+#! /bin/sh
+set -e
+
+# Remove obsolete conffiles
+
+case "$1" in
+configure)
+    if dpkg --compare-versions "$2" lt-nl "2.30.1-2"; then
+        rm -f /etc/xdg/autostart/gnome-power-manager.desktop
+    fi
+esac
+
+

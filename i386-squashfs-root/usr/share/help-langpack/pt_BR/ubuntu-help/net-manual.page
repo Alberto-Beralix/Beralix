@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-manual" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-wired"/>
+    <link type="guide" xref="net-wireless"/>
+
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc/>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Definir manualmente as configurações de rede</title>
+
+<p>Se sua rede não atribuir configurações de rede automaticamente a seu computador, você provavelmente terá de entrar com essas informações por conta própria. Este tópico parte do princípio de que você já sabe as configurações que deverá usar. Se não, você deverá pedir a seu administrador de rede para procurar as configurações do seu roteador ou comutador.</p>
+
+<p>Para definir manualmente as suas configurações de rede:</p>
+
+<steps>
+ <item>
+  <p>Clique no <gui>menu de rede</gui> no painel superior e clique em <gui>Editar conexões</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Encontre a conexão de rede que você quer configurar manualmente. Por exemplo, se você se conectar à rede com um cabo, olhe a aba <gui>Com fio</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Clique na conexão que você deseja editar para selecioná-la, depois clique em <gui>Editar</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Vá para a aba <gui>Configurações IPv4</gui> e mude o <gui>Método</gui> para <gui>Manual</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Clique em <gui>Adicionar</gui> e digite o <em>endereço IP</em>, <em>máscara de rede</em> e <em>endereço de gateway padrão</em> dentro das colunas na lista de <gui>Endereços</gui>. Pressione <key>Enter</key> quando você tiver terminado de digitar cada endereço.</p>
+  <p>Todos os três desses endereços devem ser "endereços IP", que são formados de quatro números deparados por pontos (e.g. 123.45.6.78).</p>
+ </item>
+ 
+ <item>
+  <p>Digite os endereços IP dos servidores DNS que pretende utilizar, separados por vírgulas.</p>
+ </item>
+ 
+ <item>
+  <p>Clique em <gui>Salvar</gui>. Se você não estiver conectado à rede, vá ao ícone da rede na barra superior e conecte. Teste as configurações de rede tentando visitar um site ou olhar arquivos compartilhados na rede, por exemplo.</p>
+ </item>
+ 
+</steps>
+
+</page>

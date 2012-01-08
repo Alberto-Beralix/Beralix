@@ -1,0 +1,193 @@
+=head1 NAME
+
+Pango::Matrix - A structure specifying a transformation between user-space coordinates and device coordinates
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----Pango::Matrix
+
+
+
+=cut
+
+=for object Pango::Matrix - A structure specifying a transformation between user-space coordinates and device coordinates
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 matrix = Pango::Matrix-E<gt>B<new> ($xx=1., $xy=0., $yx=0., $yy=1., $x0=0., $y0=0.)
+
+=over
+
+=item * $xx (double) 
+
+=item * $xy (double) 
+
+=item * $yx (double) 
+
+=item * $yy (double) 
+
+=item * $x0 (double) 
+
+=item * $y0 (double) 
+
+=back
+
+=head2 $matrix-E<gt>B<concat> ($new_matrix)
+
+=over
+
+=item * $new_matrix (Pango::Matrix) 
+
+=back
+
+=head2 $matrix-E<gt>B<rotate> ($degrees)
+
+=over
+
+=item * $degrees (double) 
+
+=back
+
+=head2 $matrix-E<gt>B<scale> ($scale_x, $scale_y)
+
+=over
+
+=item * $scale_x (double) 
+
+=item * $scale_y (double) 
+
+=back
+
+=head2 (dx, dy) = $matrix-E<gt>B<transform_distance> ($dx, $dy)
+
+=over
+
+=item * $dx (double) 
+
+=item * $dy (double) 
+
+=back
+
+Since: pango 1.16
+
+=head2 array reference = $matrix-E<gt>B<transform_pixel_rectangle> ($rect)
+
+=over
+
+=item * $rect (array reference) 
+
+=back
+
+Since: pango 1.16
+
+=head2 (x, y) = $matrix-E<gt>B<transform_point> ($x, $y)
+
+=over
+
+=item * $x (double) 
+
+=item * $y (double) 
+
+=back
+
+Since: pango 1.16
+
+=head2 array reference = $matrix-E<gt>B<transform_rectangle> ($rect)
+
+=over
+
+=item * $rect (array reference) 
+
+=back
+
+Since: pango 1.16
+
+=head2 $matrix-E<gt>B<translate> ($tx, $ty)
+
+=over
+
+=item * $tx (double) 
+
+=item * $ty (double) 
+
+=back
+
+=head2 double = $matrix-E<gt>B<x0> ($new)
+
+=over
+
+=item * $new (double) 
+
+=back
+
+=head2 double = $matrix-E<gt>B<xx> ($new=0)
+
+=over
+
+=item * $new (double) 
+
+=back
+
+=head2 double = $matrix-E<gt>B<xy> ($new)
+
+=over
+
+=item * $new (double) 
+
+=back
+
+=head2 double = $matrix-E<gt>B<y0> ($new)
+
+=over
+
+=item * $new (double) 
+
+=back
+
+=head2 double = $matrix-E<gt>B<yx> ($new)
+
+=over
+
+=item * $new (double) 
+
+=back
+
+=head2 double = $matrix-E<gt>B<yy> ($new)
+
+=over
+
+=item * $new (double) 
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Boxed>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

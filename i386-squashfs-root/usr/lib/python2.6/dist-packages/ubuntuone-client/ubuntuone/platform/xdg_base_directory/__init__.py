@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/ubuntuone-client/ubuntuone/platform/xdg_base_directory/__init__.py

@@ -1,0 +1,13 @@
+#! /bin/sh -e
+
+. /usr/share/debconf/confmodule
+. /usr/share/checkbox/install/postinst
+
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p checkbox-gtk 
+fi
+
+# End automatically added section
+

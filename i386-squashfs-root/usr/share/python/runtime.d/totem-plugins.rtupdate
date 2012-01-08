@@ -1,0 +1,6 @@
+#! /bin/sh
+set -e
+if [ "$1" = rtupdate ]; then
+	pyclean -p totem-plugins /usr/lib/totem/plugins
+	pycompile -p totem-plugins  /usr/lib/totem/plugins
+fi

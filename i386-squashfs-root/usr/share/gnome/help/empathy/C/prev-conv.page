@@ -1,0 +1,129 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="topic" style="tasks"
+      id="prev-conv">
+
+  <info>
+    <link type="guide" xref="index#text-conv"/>
+    <desc>Browse or search your previous conversations.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-17" status="stub"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-31" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-08-31" status="done"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>View previous conversations</title>
+
+  <comment>
+    <cite date="2009-08-31">Shaun McCance</cite>
+    <p>Highlighting text is quirky:
+    <link href="http://bugzilla.gnome.org/show_bug.cgi?id=593733">#593733</link>.
+    If there's an actual highlighting going on, independent of the selection
+    (like in yellow or something), we can use the term "highlight".  Otherwise
+    we need to use the term "select".  Watch that bug.</p>
+  </comment>
+
+  <p>
+    <app>Empathy</app> automatically saves all your text conversations you have
+    with your contacts.  You can <link xref="#search">search through all of your
+    previous conversations</link> or <link xref="#browse">browse previous
+    conversations</link> by contact and date.
+  </p>
+
+  <note>
+    <p>
+      You do not need to be connected to the Internet to view and search your previous
+      conversations.
+    </p>
+  </note>
+
+  <section id="search" style="task">
+  <title>Search previous conversations</title>
+
+  <p>You can perform a full-text search through all of your previous conversations.</p>
+
+  <steps>
+    <item>
+      <p>From the <gui>Contact List</gui> window, choose <guiseq><gui>View</gui>
+      <gui>Previous Conversations</gui></guiseq>.  Alternatively, press <key>F3</key>.</p>
+    </item>
+    <item>
+      <p>Select the <gui>Search</gui> tab.</p>
+    </item>
+    <item>
+      <p>In the <gui>For</gui> field, type the text you want to search for.
+      Click <gui>Find</gui> or press <key>Enter</key>.</p>
+    </item>
+    <item>
+      <p>Any conversations that matched your search terms will be shown in the list below
+      the search field.  By default, conversations are ordered by date.</p>
+    </item>
+    <item>
+      <p>Click on a conversation to view it.  <app>Empathy</app> will select the text
+      in the conversation that matched your search terms.</p>
+    </item>
+  </steps>
+  </section>
+
+  <section id="browse" style="task">
+  <title>Browse previous conversations</title>
+
+  <p>You can browse your previous conversations with your contacts or in
+  chat rooms by date.</p>
+
+  <steps>
+    <item>
+      <p>From the <gui>Contact List</gui> window, choose <guiseq><gui>View</gui>
+      <gui>Previous Conversations</gui></guiseq>.  Alternatively, press <key>F3</key>.</p>
+    </item>
+    <item>
+      <p>Select the <gui>Conversations</gui> tab.</p>
+    </item>
+    <item>
+      <p>Select an account from the drop-down list in the top left.  A list of
+      contacts and chat room for that account will be shown below.</p>
+    </item>
+    <item>
+      <p>Select a contact or chat room to view your previous conversations from.
+      By default the most recent conversation will be shown.</p>
+    </item>
+    <item>
+      <p>You can browse your conversations by date.  Days on which you had a conversation
+      with the selected contact will be shown in bold text.  Click a date to select it.
+      Click the arrows next to the month and year to browse earlier dates.</p>
+    </item>
+  </steps>
+
+  <p>You can search for text in the displayed conversation by typing into the
+  search field at the top.  The matching text will be highlighted.</p>
+
+  <note style="tip">
+    <p>You can quickly view the previous conversations with one of your contacts
+    from the <gui>Contact List</gui> window.  Simply right click the contact and
+    choose <gui>View Previous Conversations</gui>.  The <gui>Previous
+    Conversations</gui> window will open with that contact already selected.</p>
+  </note>
+    
+  </section>
+
+</page>

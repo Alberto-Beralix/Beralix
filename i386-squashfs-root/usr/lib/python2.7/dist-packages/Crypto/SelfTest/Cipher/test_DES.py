@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/Crypto/SelfTest/Cipher/test_DES.py

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="clock-calendar" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="clock"/>
+    <link type="guide" xref="shell-overview#desktop"/>
+    
+    <desc>Exibe seus compromissos no calendário, na parte superior da tela.</desc>
+    
+    <revision version="11.04" date="2011-04-06" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Veja compromissos no seu calendário</title>
+
+
+<p>Você pode organizar os compromissos do calendário clicando no relógio do painel, se você estiver usando uma aplicação de correio e calendário chamada <app>Evolution</app>.</p>
+
+<p>Se você já configurou o Evolution, clique no relógio na barra superior e depois clique em <gui>Adicionar evento</gui> para começar a adicionar compromissos. Com os compromissos adicionados, eles aparecerão abaixo do calendário quando você clicar no relógio.</p>
+
+<p>Para ter rapidamente todo o calendário do Evolution, clique no relógio e clique na primeira linha onde a data de hoje está.</p>
+
+<!--Disabling unless someone wants to make a screenshot
+<media type="image" src="figures/shell-appts.png"
+       width="500" height="282">
+  <p>Clock, calendar, and appointments</p>
+</media>-->
+
+<note><p>Isso irá funcionar somente se você tiver uma conta existente no <app>Evolution</app>. Caso contrário, uma janela irá aparecer com os passos necessários para adicionar sua primeira conta.</p></note>
+
+<section id="turn-off-appointments">
+  <title>Desative a integração do Evolution com o calendário</title>
+<p>Você também pode desativar essa função se você quiser.</p>
+
+<steps>
+  <item><p>Clique no relógio e selecione <gui>Configurações de &amp; data e hora</gui>.</p></item>
+  <item><p>Agora, alterne para a aba <gui>Relógio</gui>.</p></item>
+  <item><p>Desmarque <gui>Eventos a ocorrer do calendário Evolution</gui>.</p></item>
+</steps>
+
+</section>
+
+<comment>
+    <cite date="2011-02-10" href="mailto:nruz@alumnos.inf.utfsm.cl">Natalia Ruz</cite>
+    <p>Should have some information or link to "how to add a mail account to Evolution", and possibly an image (but maybe a screenshot is too big).</p>
+  </comment>
+</page>

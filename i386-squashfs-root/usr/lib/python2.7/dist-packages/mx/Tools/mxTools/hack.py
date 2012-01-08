@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/mx/Tools/mxTools/hack.py

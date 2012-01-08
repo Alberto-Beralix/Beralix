@@ -1,0 +1,20 @@
+#!/bin/sh
+set -e
+
+files="
+gnome-games/pixmaps/slot.svg
+gnome-games/pixmaps/baize.png
+gnome-games/mahjongg/pixmaps/postmodern.svg
+gnome-games/quadrapassel/pixmaps/quadrapassel.svg
+gnome-games-common/cards/gnomangelo_bitmap.svg
+"
+
+if [ "$1" = remove -o "$1" = purge ]; then
+	for item in $files 
+	do
+		dpkg-divert --package branding-ubuntu --remove --rename \
+		--divert "/usr/share/$item"".unbranded" "/usr/share/$item"
+	done
+fi
+
+

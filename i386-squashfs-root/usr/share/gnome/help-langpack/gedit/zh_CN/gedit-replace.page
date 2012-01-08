@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-replace" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#gedit-working-with-files"/>
+    <link type="seealso" xref="gedit-search-find"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <credit type="author">
+      <name>Daniel Neel</name>
+      <email>dneelyep@gmail.com</email>
+    </credit>
+  </info>
+
+  <title>替换文本</title>
+
+    <p>修改文本是比较费时的，为了节省时间，<app>gedit</app> 提供了一个 <app>替换</app> 功能，来帮助您查找并替换文本。</p>
+
+    <steps>
+      <title>在 <app>gedit</app> 中替换文本</title>
+      <item><p>点菜单 <guiseq><gui>搜索</gui><gui>替换</gui></guiseq> 命令打开替换工具，也可以按组合键 <keyseq><key>Ctrl</key><key>H</key></keyseq>。</p></item>
+      <item><p>在“搜索”输入框中，输入您想要替换的文本。</p></item>
+      <item><p>在“替换为”输入框中，输入想替换成的文本。</p></item>
+      <item>
+        <p>输入要替换的文本后，接着选择合适的替换选项：</p>
+        <list>
+          <item><p>要替换文档中的<em>一个</em>匹配项，点 <guibutton>替换</guibutton>。</p></item>
+          <item><p>要替换文档中的<em>所有</em>匹配项，点 <guibutton>替换全部</guibutton>。</p></item>
+        </list>
+      </item>
+    </steps>
+
+    <note style="warning">
+      <p>使用 <gui>全部替换</gui> 功能要仔细，它会替换文档中的所有项目，并且不会高亮显示被替换的文本。</p>
+    </note>
+
+  <section>
+    <title>更多选项</title>
+    <terms>
+      <item>
+        <title>区分大小写</title>
+        <p><em>区分大小写</em> 选项可以指定搜索时是否考虑大小写。选中此项搜索时将会区分字母的大小写，如果不选中，则不区分字母大小写。</p>
+      </item>
+      <item>
+        <title>匹配整个单词</title>
+        <p>使用此选项，将会搜索完整的字词，不包括词语的片段，例如，您要搜索“文档”，并且选中此选项，那么单独的“文档”会被搜索到，而“本<em>文档</em>”和“在<em>文档</em>中”都不会被搜索到。</p>
+      </item>
+      <item>
+        <title>反向搜索</title>
+        <p>这个命令会让查找改变方向，如果您想让搜索从后往前进行，那么就可以选中此项。</p>
+      </item>
+      <item>
+        <title>回绕模式</title>
+        <p>选中<app>回到文档头部继续搜索</app>选项，当查找/替换到文档结尾时，会跳到开头重新进行，这将确保查找/替换文档的所有内容。</p>
+      </item>
+    </terms>
+  </section>
+</page>

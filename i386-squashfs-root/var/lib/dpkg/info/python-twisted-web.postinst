@@ -1,0 +1,44 @@
+#! /bin/sh
+
+set -e
+
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p python-twisted-web 
+fi
+
+# End automatically added section
+
+
+case "$1" in
+    configure)
+	for p in $(pyversions -i); do
+	    $p -c 'from twisted.plugin import IPlugin, getPlugins; list(getPlugins(IPlugin))' >/dev/null 2>&1 || true
+	done
+	;;
+esac
+
+exit 0
+#! /bin/sh
+
+set -e
+
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p python-twisted-web 
+fi
+
+# End automatically added section
+
+
+case "$1" in
+    configure)
+	for p in $(pyversions -i); do
+	    $p -c 'from twisted.plugin import IPlugin, getPlugins; list(getPlugins(IPlugin))' >/dev/null 2>&1 || true
+	done
+	;;
+esac
+
+exit 0

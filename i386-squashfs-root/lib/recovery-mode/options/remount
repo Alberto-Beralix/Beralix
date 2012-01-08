@@ -1,0 +1,32 @@
+#!/bin/sh
+
+. /lib/recovery-mode/l10n.sh
+
+if [ "$READONLY" = "false" ]; then
+  exit 1
+fi
+
+if [ "$1" = "test" ]; then
+  echo $(eval_gettext "Remount / read/write and mount all other file systems")
+  exit 0
+fi
+
+. /etc/default/rcS
+[ "$FSCHECK" = "true" ] || [ -f /forcefsck ] && force_fsck="--force-fsck"
+[ "$FSCKFIX" = "yes" ] && fsck_fix="--fsck-fix"
+
+# set $LANG so that messages appearing in plymouth are translated
+if [ -r /etc/default/locale ]; then
+    . /etc/default/locale
+    export LANG LANGUAGE LC_MESSAGES LC_ALL
+fi
+
+mountall $force_fsck $fsck_fix --no-events
+
+rm -f /forcefsck 2>dev/null || true
+
+echo ""
+echo $(eval_gettext "Finished, please press ENTER")
+read TMP
+
+exit 0

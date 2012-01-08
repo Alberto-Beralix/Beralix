@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" id="group-conversations" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#text-conv"/>
+    <desc>Iniciar o unirse a un grupo de conversación con sus contactos.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-02" status="stub"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-17" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-17" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-09" status="deferred"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Conversaciones en grupo</title>
+  
+  <p>Las conversaciones en grupo le permite mantener conversaciones de texto con más de un contacto al mismo tiempo.</p>
+  <p>Para tener una conversación en grupo debe haber registrado una cuenta en Jabber o Google Talk, o en Gente cerca.</p>
+
+  <note>
+    <p>Puede tener conversaciones en grupo sólo con los contactos que usan el mismo servicio que el suyo.</p>
+  </note>
+
+  <section id="start-group-conv">
+
+  <title>Iniciar una conversación en grupo</title>
+
+  <steps>
+    <item>
+      <p>Desde la ventana <gui>Lista de contactos</gui> elija <guiseq><gui>Sala</gui><gui>Unirse</gui></guiseq>.</p>
+    </item>
+    <item>
+      <p>Desde la lista desplegable <gui>Cuenta</gui> seleccione la cuenta que quiera usar para la conversación en grupo.</p>
+    </item>
+    <item>
+      <p>En la caja de texto <gui>Servidor</gui> escriba el nombre del servidor en el que se hospedará la conversación.</p>
+      <p>Déjelo vacío si será en el servidor actual.</p>
+    </item>
+    <item>
+      <p>En la caja de texto <gui>Sala</gui> escriba el nombre que quiere darle a la conversación.</p>
+      <note>
+        <p>Este será el nombre de la sala en la que va a tener una conversación. Este nombre estará públicamente disponible para que otras personas se unan. No es posible crear una sala privada.</p>
+      </note>
+    </item>
+    <item>
+      <p>Para invitar a otros contactos a unirse a la conversación en grupo, desde la ventana <gui>Lista de contactos</gui> seleccione el contacto al que quiere invitar y realice una de las siguientes acciones:</p>
+      <list>
+        <item>
+          <p>Pulse con el botón derecho del ratón sobre el contacto y elija <gui>Invitar a la sala de chat</gui>.</p>
+        </item>
+        <item>
+          <p>Elija <guiseq><gui>Editar</gui><gui>Contacto</gui><gui>Invitar a la sala de chat</gui></guiseq>.</p>
+        </item>
+      </list> 
+      <p>Si tiene más de una conversación en grupo abierta, seleccione en la quiere invitar a sus contactos.</p>
+    </item>
+  </steps>
+  
+  </section>
+
+  <section id="join-group-conv">
+
+  <title>Unirse a una conversación en grupo</title>
+
+  <steps>
+    <item>
+      <p>Desde la ventana <gui>Lista de contactos</gui> elija <guiseq><gui>Sala</gui><gui>Unirse</gui></guiseq>.</p>
+    </item>
+    <item>
+      <p>Expanda la sección <gui>Lista de salas</gui> para ver todas las salas existentes.</p>
+    </item>
+    <item>
+      <p>Pulse dos veces sobre el nombre de una sala a la que quiera unirse.</p>
+    </item>
+  </steps>
+
+  <p>No es posible unirse a todas las salas existentes. Algunas salas pueden requerir una contraseña o pueden ser de sólo invitación. <app>Empathy</app> no soporta este tipo de salas.</p>
+
+  <!-- TODO: find out where the password protected or invitation only icons are
+  and create a table. -->
+
+  </section>
+
+</page>

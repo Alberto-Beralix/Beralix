@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="unity-launcher-change-size" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="unity-launcher-intro#launcher-customizing" group="#last"/>
+    <link type="guide" xref="shell-overview#desktop"/>
+
+    <revision version="11.04" date="2011-04-20" status="draft"/>
+
+    <credit type="author">
+      <name>Time de documentação do Ubuntu</name>
+    </credit>
+
+    <desc>Torne os ícones do lançador maiores ou menores de acordo com a sua preferência.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Altere o tamanho dos ícones do lançador</title>
+
+  <p>O tamanho dos ícones do <gui>lançador</gui> não podem ser mudados por padrão, mas você poderá instalar um software que permite mudar o tamanho destes ícones. Para instalar o software necessário e mudar o tamanho dos ícones, siga estes passos:</p>
+
+  <steps>
+    <item><p>Instale o aplicativo <link href="apt:compizconfig-settings-manager">Configurações avançadas de efeitos da área de trabalho (ccsm)</link> a partir da <app>Central de Programas</app>.</p>
+    <p>Se precisar de ajuda com a instalação do aplicativo, consulte a <link xref="addremove-install"> ajuda de instalação de software</link> ou revise o <link href="ghelp:software-center">Manual da Central de Programas do Ubuntu</link>.</p></item>
+    <item><p>Depois de instalar o programa, clique no ícone de energia no canto direito do <gui>painel</gui> e selecione <gui>Configurações do sistema</gui>.</p></item>
+    <item><p>Na seção Pessoal, clique em <gui>Gerenciador de Configurações do CompizConfig</gui>.</p></item>
+    <item><p>Na seção <gui>Área de trabalho</gui> do <app>Gerenciador de Configurações do CompizConfig</app>, clique em <gui>Ubuntu Unity Plugin</gui> e selecione o guia <gui>Experimental</gui>.</p></item>
+    <item><p>Deslize a barra <gui>Launcher icon size</gui> para aumentar ou diminuir o tamanho dos ícones do <gui>Lançador</gui>.</p>
+    <note><p>O tamanho padrão dos ícones do <gui>Lançador</gui> é <em>48</em>.</p></note></item>
+  </steps>
+  
+  <p>As alterações do tamanho dos ícones serão aplicadas imediatamente. Clique nos botões <gui>Voltar</gui> e <gui> Fechar</gui> para sair do <app>Gerenciador de Configurações do CompizConfig</app>.</p>
+
+</page>

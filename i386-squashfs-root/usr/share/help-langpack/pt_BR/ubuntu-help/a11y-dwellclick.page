@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task a11y" id="a11y-dwellclick" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="a11y#mobility" group="clicking"/>
+
+    <revision date="2011-04-06" status="outdated"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>O recurso de clique de permanência permite a você clicar mantendo o mouse parado.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Simular clique ao pairar</title>
+
+<p>Você pode fazer que os botões sejam clicados quando você pairar o ponteiro do mouse sobre eles (clique de permanência). Isso é útil se você tiver dificuldade em mover o mouse e clicar um botão do mouse ao mesmo tempo. Quando o clique de permanência estiver ligado, você pode mover o ponteiro do mouse sobre um botão, soltar o mouse e então aguardar um pouco até que o botão seja clicado por você.</p>
+
+<steps>
+  <item><p>Clique no ícone mais à direita da barra superior e selecione <gui>Configurações do sistema</gui>.</p></item>
+  <item><p>Abra <gui>Acesso universal</gui> e selecione a guia <gui>Apontando e clicando</gui>.</p></item>
+  <item><p>Coloque a chave <gui>Clique de permanência</gui> na posição "on".</p></item>
+</steps>
+
+<p>A janela do <gui>Clique de permanência</gui> abrirá e ficará sobre todas as outras janelas. Você pode usar isso para escolher que tipo de clique deve acontecer quando você parar com o ponteiro sobre um botão. Por exemplo, se você selecionar <gui>Clique secundário</gui>, o mouse irá executar um clique com o botão direito quando você parar com o ponteiro sobre um botão por alguns segundos.</p>
+
+<p>Quando você focaliza seu mouse sobre um botão e não o move, ele alterará gradualmente a cor. Quando ele tiver alterado totalmente a cor, o botão será clicado.</p>
+
+<p>Clique de permanência irá clicar em qualquer lugar que o ponteiro do seu mouse estiver focalizando, não apenas em botões.</p>
+
+<section id="delay">
+ <title>Altera quanto tempo esperar ante do botão ser clicado</title>
+ <p>Você pode alterar quanto tempo a espera deve ser entre focalizar o ponteiro do mouse sobre um botão e esse botão ser pressionado. Para fazer isso, vá até a aba <gui>Acessibilidade</gui> (veja abaixo) e altere a <gui>Espera</gui> na seção <gui>Clique de permanência</gui>.</p>
+</section>
+
+<section id="threshold">
+ <title>Altera quanto o mouse tem permissão de mover/mexer quando focalizado</title>
+ <p>Você não precisa segurar o mouse perfeitamente imóvel quando focalizar um botão para clicá-lo - o ponteiro pode mover um pouco e ainda irá clicar depois de um tempo. Se ele mover muito, entretanto, o clique pode não acontecer.</p>
+ <p>Você pode alterar quanto o ponteiro pode mover, mas ainda ser considerado "imóvel o bastante" para clicar o botão. Vá até a aba <gui>Acessibilidade</gui> (veja abaixo) e altere o <gui>Limiar de movimento</gui> na seção <gui>Clique de permanência</gui>; um limiar de movimento grande permitirá que o ponteiro mova bastante, mas ainda irá registrar o clique.</p>
+</section>
+
+</page>

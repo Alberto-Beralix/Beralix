@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "0.16">
+<!ENTITY manrevision "2.1">
+<!ENTITY date "December 2006">
+<!ENTITY app "XChat-GNOME">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file.
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!--
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="pt_BR">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo>
+    <title>Manual do <application>XChat-GNOME</application></title>
+
+    <copyright>
+      <year>2005-2006</year>
+      <holder>Brian Pepple</holder>
+    </copyright>
+    <copyright>
+      <year>2006</year>
+      <holder>Joachim Noreiko</holder>
+    </copyright><copyright><year>2007.</year><holder>Vladimir Melo (vladimirmelo@foresight.org)</holder></copyright>
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is
+     not specified, the publisher/author is the same for all versions of the
+     document.  -->
+    <publisher>
+      <publishername>Brian Pepple</publishername>
+    </publisher>
+
+   <legalnotice id="legalnotice">
+	<para>Permissão concedida para copiar, distribuir e/ou modificar este documento dentro dos termos da GNU Free Documentation License (GFDL), Versão 1.1 ou qualquer versão superior publicada pela Free Software Foundation sem nenhuma Seção Imutável, Textos de Capa e Contra-Capa. Você pode achar uma cópia do GFDL neste <ulink type="help" url="ghelp:fdl">link</ulink> ou no arquivo COPYING-DOCS distribuido com este manual.</para>
+         <para>Este manual é parte de uma coleção dos manuais do GNOME distribuídos sob a GFDL. Se você quiser distribuir este manual separadamente da coleção, você pode fazê-lo ao adicionar uma cópia da licença ao manual, como descrito na seção 6 da licença.</para>
+
+	<para>Muitos dos nomes usados por empresas para distingüir seus produtos e serviços são marcas registradas. Onde esses nomes aparecerem em qualquer documentação do GNOME e os membros do Projeto de Documentação do GNOME estiverem cientes daquelas marcas registradas, os nomes aparecerão em letras maíusculas ou com iniciais em maíusculas.</para>
+
+	<para>DOCUMENTO E VERSÕES MODIFICADAS DO DOCUMENTO SÃO FORNECIDAS PELOS TERMOS DA GNU FREE DOCUMENTATION LICENSE COM O CONHECIMENTO ADICIONAL DE QUE: <orderedlist>
+		<listitem>
+		  <para>O DOCUMENTO É FORNECIDO "NO ESTADO", SEM GARANTIA DE QUALQUER TIPO, TANTO EXPRESSA QUANTO IMPLÍCITA, INCLUINDO, SEM LIMITAÇÕES, GARANTIAS DE QUE O DOCUMENTO OU VERSÃO MODIFICADA DO MESMO É COMERCIALIZADO LIVRE DE DEFEITOS, PRÓPRIO PARA UM PROPÓSITO ESPECÍFICO OU QUE NÃO HÁ INFRAÇÕES. TODO RISCO DE QUALIDADE, PRECISÃO E PERFORMANCE DO DOCUMENTO OU VERSÃO MODIFICADA É COM VOCÊ. SE ALGUM DOCUMENTO OU VERSÃO MODIFICADA É PROVADO DEFEITUOSO EM QUALQUER ASPECTO, VOCÊ (NÃO O ESCRITOR INICIAL, AUTOR OU QUALQUER COLABORADOR) ASSUME O CUSTO DE QUALQUER SERVIÇO NECESSÁRIO, REPARO OU CORREÇÃO. ESTE AVISO DE GARANTIA CONSTITUI UMA PARTE ESSENCIAL DA LICENÇA. NENHUM USO DE QUALQUER DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO É AUTORIZADO EXCETO SOB ESTA CONDIÇÃO; E</para>
+		</listitem>
+		<listitem>
+		  <para>SOB NENHUMA CIRCUNSTÂNCIA E SOB NENHUMA TEORIA LEGAL, TANTO EM DANOS (INCLUINDO POR NEGLICÊNCIA), CONTRATO OU OUTROS, DEVE O AUTOR, ESCRITOR INICIAL OU COLABORADOR OU QUALQUER DISTRIBUIDOR DO DOCUMENTO, VERSÃO MODIFICADA OU QUALQUER FORNECEDOR DE QUALQUER DESSES GRUPOS, SER CONSIDERADO RESPONSÁVEL A QUALQUER PESSOA POR QUALQUER DANO DIRETO, INDIRETO, ESPECIAL, INCIDENTAL OU CONSEQÜENCIAL DE QUALQUER INDIVÍDUO, INCLUINDO, SEM LIMITAÇÕES, DANOS POR PERDA DE BOA VONTADE, PARADA DE TRABALHO, FALHA DE COMPUTADOR, MAL-FUNCIONAMENTO OU QUALQUER E TODOS OS OUTROS DANOS OU PERDAS RESULTANTES OU RELACIONADAS AO USO DO DOCUMENTO E VERSÕES MODIFICADAS, MESMO QUE ESSE GRUPO TENHA SIDO INFORMADO DA POSSIBILIDADE DE TAIS DANOS.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+   <!-- This file  contains link to license for the documentation (GNU FDL), and
+        other legal stuff such as "NO WARRANTY" statement. Please do not change
+	any of this. -->
+
+    <authorgroup>
+      <author role="maintainer">
+	<firstname>Brian</firstname>
+	<surname>Pepple</surname>
+	<affiliation>
+	  <orgname>Projeto Fedora</orgname>
+	  <address> <email>bpepple@fedoraproject.org</email> </address>
+	</affiliation>
+      </author>
+      <author>
+	<firstname>Joachim</firstname>
+	<surname>Noreiko</surname>
+	<affiliation>
+	  <orgname>Projeto de Documentação do GNOME</orgname>
+	  <address> <email>jnoreiko@yahoo.com</email> </address>
+	</affiliation>
+      </author>
+
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+
+      <othercredit role="translator">
+		<firstname>Latin</firstname>
+		<surname>Translator 1</surname>
+		<affiliation>
+	  		<orgname>Latin Translation Team</orgname>
+	  		<address> <email>translator@gnome.org</email> </address>
+		</affiliation>
+		<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+-->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->
+    <revhistory>
+      <revision>
+        <revnumber>Manual do XChat-GNOME 2.1</revnumber>
+	<date>December 2006</date>
+	<revdescription>
+	  <para role="author">Joachim Noreiko <email>jnoreiko@yahoo.com</email></para>
+	  <para role="publisher">Projeto de Documentação do GNOME</para>
+	  </revdescription>
+      </revision>
+      <revision>
+	<revnumber>Manual do XChat-GNOME V2.0</revnumber>
+	<date>Novembro de 2005</date>
+	<revdescription>
+	  <para role="author">Brian Pepple <email>bpepple@fedoraproject.org</email></para>
+	  <para role="publisher">Projeto de Documentação do GNOME</para>
+	</revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>Este manual descreve a versão 0.16 do XChat-GNOME.</releaseinfo>
+    <legalnotice>
+      <title>Feedback</title>
+      <para>Para relatar um bug ou dar uma uma sugestão a respeito da aplicação <application>XChat-GNOME</application> ou deste manual, siga as orientações na seção Feedback do <ulink url="ghelp:user-guide?feedback-bugs" type="help">Guia do Usuário do GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+
+    <abstract role="description">
+      <para>Um manual do usuário que descreve o uso do cliente IRC XChat-GNOME.</para>
+    </abstract>
+  </articleinfo>
+
+  <indexterm zone="index">
+    <primary>XChat-GNOME</primary>
+  </indexterm>
+  <indexterm zone="index">
+    <primary>xchat-gnome</primary>
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="xchat-gnome-introduction">
+    <title>Introdução</title>
+    <para>A aplicação <application>XChat-GNOME</application> é um programa do Internet Relay Chat (IRC) para o ambiente GNOME.</para>
+    <para><application>XChat-GNOME</application> oferece os seguintes recursos:</para>
+    <itemizedlist>
+      <listitem>
+	<para>Plug-in de Ícone da Área de Notificação</para>
+      </listitem>
+      <listitem>
+	<para>Transferência por Conexão Direta Entre Clientes (DCC)</para>
+      </listitem>
+      <listitem>
+	<para>Bate-Papo por Conexão Direta Entre Clientes (DCC)</para>
+      </listitem>
+      <listitem>
+	<para>Observância às GNOME Human Interface Guidelines (HIG)</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+<!-- =========== Getting Started ============================== -->
+<!-- Use the Getting Started section to describe the steps required
+     to start the application and to describe the user interface components
+     of the application. If there is other information that it is important
+     for readers to know before they start using the application, you should
+     also include this information here.
+     If the information about how to get started is very short, you can
+     include it in the Introduction and omit this section. -->
+
+  <sect1 id="xchat-gnome-getting-started">
+    <title>Comece Aqui</title>
+    <sect2 id="xchat-gnome-start">
+    <title>Iniciando o <application>XChat-GNOME</application></title>
+    <para>Você pode iniciar o <application>XChat-GNOME</application> das seguintes formas:</para>
+    <variablelist>
+	<varlistentry>
+	  <term>menu <guimenu>Aplicações</guimenu></term>
+	  <listitem>
+	    <para>Escolha <menuchoice><guisubmenu>Internet</guisubmenu><guimenuitem>XChat-GNOME IRC Chat</guimenuitem></menuchoice>.</para>
+	  </listitem>
+    	</varlistentry>
+    	<varlistentry>
+	  <term>Linha de comando</term>
+	  <listitem>
+	    <para>Para iniciar o <application>XChat-GNOME</application> a partir de uma linha de comando, digite <command>xchat-gnome</command>, então pressione <keycap>Enter</keycap>:</para>
+            <tip>
+	      <para>Para ver outras opções disponíveis da linha de comando, digite <command>xchat-gnome --help</command>, então pressione <keycap>Enter</keycap></para>
+            </tip>
+	  </listitem>
+    	</varlistentry>
+    </variablelist>
+    </sect2>
+
+    <sect2 id="xchat-gnome-when-start">
+    <title>Quando Você Iniciar o <application>XChat-GNOME</application></title>
+    <para>Quando você iniciar o <application>XChat-GNOME</application>, a seguinte janela é exibida.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="xchat-gnome-fig">
+	<title>Janela Principal do <application>XChat-GNOME</application></title>
+	<screenshot>
+	  <mediaobject>
+	    <imageobject><imagedata fileref="figures/xchat-gnome_main_window.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase>Shows <application>XChat-GNOME</application> main window. Contains titlebar,
+                menubar, display area, and scrollbars. Menubar contains IRC, Edit, Network,
+                Discussion, Go, and Help menus.
+              </phrase>
+	    </textobject>
+	  </mediaobject>
+	</screenshot>
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+    <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
+    <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
+
+    <para>A janela <application>XChat-GNOME</application> contém os seguintes elementos:</para>
+      <variablelist>
+	<varlistentry>
+	  <term>Barra de menu</term>
+	  <listitem>
+	    <para>Os menus na barra de menu contêm todos os comandos que você precisa para usar no <application>XChat-GNOME</application>.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Painel de Servidor</term>
+	  <listitem>
+	    <para>O Painel de Servidor mostra os Servidores e os Canais atualmente conectados.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Botão de Usuário</term>
+	  <listitem>
+	    <para>The User Button shows the number of users present in the selected Channel. Click the User Button to show a list of users. User's in the list marked as away are "Grayed out".</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Área de Discussão</term>
+	  <listitem>
+	    <para>A Área de Discussão apresenta a discussão em curso no Canal selecionado.</para>
+      <para>Digite na linha de entrada de mensagem na base da área de discussão para conversar no Canal selecionado.</para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+<!-- ================ Usage ================================ -->
+<!-- Use this section to describe how to use the application to perform the tasks for
+  which the application is designed. -->
+  <sect1 id="xchat-gnome-usage">
+    <title>Uso</title>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="xchat-gnome-connect">
+      <title>Conectando a um Servidor do Internet Relay Chat (IRC)</title>
+      <para>Para se conectar a um Servidor do Internet Relay Chat (IRC), escolha <menuchoice><guimenu>IRC</guimenu><guimenuitem>Conectar</guimenuitem></menuchoice>. O diálogo <guilabel>Conectar</guilabel> é exibido. Selecione o Servidor a que deseja se conectar, então clique em <guibutton>Conectar</guibutton>.</para>
+    </sect2>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="xchat-gnome-transfers">
+      <title>Vendo Informações de Transferência de Arquivos por Conexão Direta entre Clientes (DCC)</title>
+      <para>Para ver informações de transferência de arquivo por Conexão Direta entre Clientes (DCC), escolha <menuchoice><guimenu>IRC</guimenu><guimenuitem>Transferência de Arquivos</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="xchat-gnome-edit-text">
+      <title>Editando Texto</title>
+      <para>Você pode editar texto das seguintes formas:</para>
+      <itemizedlist>
+	<listitem>
+	  <para>Para excluir o texto selecionado do arquivo e mover o texto selecionado para um buffer, escolha <menuchoice><guimenu>Editar</guimenu><guimenuitem>Recortar</guimenuitem></menuchoice>.</para>
+	</listitem>
+	<listitem>
+	  <para>Para copiar o texto selecionado para um buffer, escolha <menuchoice><guimenu>Editar</guimenu><guimenuitem>Copiar</guimenuitem></menuchoice>.</para>
+	</listitem>
+	<listitem>
+	  <para>Para inserir os conteúdos do buffer na posição do cursor, escolha <menuchoice><guimenu>Editar</guimenu><guimenuitem>Colar</guimenuitem></menuchoice>. Você deve recortar ou copiar texto antes que possa colá-lo dentro do arquivo.</para>
+	</listitem>
+	<listitem>
+	  <para>Para limpar todo o texto da Área de Discussão do Canal selecionado atualmente, escolha <menuchoice><guimenu>Editar</guimenu><guimenuitem>Limpar</guimenuitem></menuchoice>.</para>
+	</listitem>
+      </itemizedlist>
+    </sect2>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="xchat-gnome-network-reconnect">
+      <title>Reconectando a um Servidor</title>
+      <para>Para reconectar o <application>XChat-GNOME</application> a um servidor do Internet Relay Chat (IRC), escolha <menuchoice><guimenu>Rede</guimenu><guimenuitem>Reconectar</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="xchat-gnome-network-disconnect">
+      <title>Disconectando de um Servidor</title>
+      <para>Para desconectar o <application>XChat-GNOME</application> de uma rede do Internet Relay Chat (IRC), escolha <menuchoice><guimenu>Rede</guimenu><guimenuitem>Desconectar</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="xchat-gnome-discussion-save">
+      <title>Salvando uma Transcrição de Canal</title>
+      <para>Para salvar uma transcrição de um Canal, escolha <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo></shortcut><guimenu>Discussão</guimenu><guimenuitem>Salvar Transcrição</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="xchat-gnome-discussion-leave">
+      <title>Saindo de um Canal</title>
+      <para>Quando sair do canal, você é removido dos participantes e não pode mais conversar nele, mas a discussão até aquele ponto permanece no Painel de Servidor.</para>
+      <para>Para sair de um Canal, escolha <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo></shortcut><guimenu>Discussão</guimenu><guimenuitem>Sair</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="xchat-gnome-discussion-close">
+      <title>Fechando um Canal</title>
+      <para>Quando você fechar um canal, o canal é removido da lista do Painel de Servidor.</para>
+      <para>Para fechar um Canal, escolha <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo></shortcut><guimenu>Discussão</guimenu><guimenuitem>Fechar</guimenuitem></menuchoice>.</para>
+    </sect2>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="xchat-gnome-discussion-navigate">
+      <title>Navegando pelos Canais</title>
+      <itemizedlist>
+	<listitem>
+	  <para>Para ver o canal anterior, escolha <menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>Para cima</keycap></keycombo></shortcut><guimenu>Ir</guimenu><guimenuitem>Discussão Anterior</guimenuitem></menuchoice></para>
+	</listitem>
+	<listitem>
+	  <para>Para ver o próximo canal, escolha <menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>Para baixo</keycap></keycombo></shortcut><guimenu>Ir</guimenu><guimenuitem>Próxima Discussão</guimenuitem></menuchoice></para>
+	</listitem>
+      </itemizedlist>
+    </sect2>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="xchat-gnome-network-navigate">
+      <title>Navegando pelos Servidores</title>
+      <itemizedlist>
+	<listitem>
+	  <para>Para ver o servidor anterior, escolha <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>Para cima</keycap></keycombo></shortcut><guimenu>Go</guimenu><guimenuitem>Rede Anterior</guimenuitem></menuchoice></para>
+	</listitem>
+	<listitem>
+	  <para>Para ver o próximo servidor, escolha <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>Para baixo</keycap></keycombo></shortcut><guimenu>Ir</guimenu><guimenuitem>Próxima Rede</guimenuitem></menuchoice></para>
+	</listitem>
+      </itemizedlist>
+    </sect2>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="xchat-gnome-quit">
+      <title>Saindo do XChat-GNOME</title>
+      <para>Para sair do <application>XChat-GNOME</application>, escolha <menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo></shortcut><guimenu>IRC</guimenu><guimenuitem>Sair</guimenuitem></menuchoice>.</para>
+    </sect2>
+  </sect1>
+  <!-- ============= Customization ============================= -->
+  <!-- Use this section to describe how to customize the application. -->
+  <sect1 id="xchat-gnome-prefs">
+    <title>Preferências</title>
+    <para>Para modificar as preferências do <application>XChat-GNOME</application>, escolha <menuchoice><guimenu>Editar</guimenu><guimenuitem>Preferências</guimenuitem></menuchoice>. O diálogo <guilabel>Preferências</guilabel> contém as seguintes sessões:</para>
+    <itemizedlist>
+      <listitem><para><xref linkend="xchat-gnome-prefs-general"/></para></listitem>
+      <listitem><para><xref linkend="xchat-gnome-prefs-colors"/></para></listitem>
+      <listitem><para><xref linkend="xchat-gnome-prefs-transfers"/></para></listitem>
+      <listitem><para><xref linkend="xchat-gnome-prefs-networks"/></para></listitem>
+      <listitem><para><xref linkend="xchat-gnome-prefs-plugins"/></para></listitem>
+    </itemizedlist>
+<!-- =============== Customization Subsection ================ -->
+<!-- Use a new section to describe different tabbed sections on the Settings or Preferences
+	     dialog. -->
+    <sect2 id="xchat-gnome-prefs-general">
+      <title>Preferências de IRC</title>
+      <variablelist>
+	<varlistentry>
+	  <term><guilabel>Geral</guilabel></term>
+	  <listitem>
+	    <para>Digite o <guilabel>Apelido</guilabel> que deseja usar no canal do Internet Relay Chat (IRC).</para>
+	    <para>Digite seu <guilabel>Nome Verdadeiro</guilabel>, que é exibido nas requisições <command>/whois</command>.</para>
+	    <para>Digite a <guilabel>Mensagem de Saída da Rede</guilabel> que deseja mostrar aos outros usuários quando você deixar a rede do Internet Relay Chat (IRC).</para>
+	    <para>Digite a <guilabel>Mensagem ao Sair do Canal</guilabel> que deseja mostrar aos outros usuários quando você sair de um canal do Internet Relay Chat (IRC) mas se manter conectado àquela rede de canal.</para>
+	    <para>Digite a <guilabel>Mensagem de Ausência</guilabel> que deseja mostrar às pessoas que tentarem entrar em contato com você quando estiver ausente.</para>
+          </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guilabel>Destaque</guilabel></term>
+	  <listitem>
+	    <para>Especificar palavras ou frases que devem ser destacadas em uma cor de texto diferente quando outro usuário de bate-papo dizê-las. Isto além do seu apelido, que é sempre destacado.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guilabel>Interface do Usuário</guilabel></term>
+	  <listitem>
+	    <para>Selecione a opção <guilabel>Utilizar Fonte do Terminal do Sistema</guilabel> para usar as mesmas fontes do seu terminal do sistema.</para>
+	    <para>Selecione a opção <guilabel>Utilizar esta fonte</guilabel> para abrir a caixa de diálogo Selecionar uma Fonte.</para>
+	    <para>Selecione a opção <guilabel>Mostrar cores</guilabel> para ativar as cores dos apelidos na área de discussão.</para>
+	    <para>Selecione a opção <guilabel>Mostrar hora das mensagens</guilabel> para mostrar a hora das mensagens da discussão.</para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="xchat-gnome-prefs-colors">
+      <title>Cores</title>
+      <variablelist>
+	<varlistentry>
+	  <term><guilabel>Cores de Texto</guilabel></term>
+	  <listitem>
+	    <para>Use a caixa suspensa de <guilabel>Esquemas predefinidos</guilabel> para especificar como o <application>XChat-GNOME</application> deve exibir o texto e a cor de plano de fundo. Selecione uma das seguintes opções:</para>
+	    <itemizedlist>
+	      <listitem>
+		<para>Use a opção <guilabel>Preto no Branco</guilabel> para dispor texto preto sobre um plano de fundo branco.</para>
+	      </listitem>
+	      <listitem>
+		<para>Use a opção <guilabel>Branco no Preto</guilabel> para dispor texto branco sobre um plano de fundo preto.</para>
+	      </listitem>
+	      <listitem>
+		<para>Use a opção <guilabel>Personalizado</guilabel> para criar um esquema de cor personalizado.</para>
+	      </listitem>
+	    </itemizedlist>
+	    <note>
+	      <para>As seguintes opções só podem ser mudadas se <guilabel>Esquemas predefinidos</guilabel> for configurado para <guilabel>Personalizado</guilabel>.</para>
+	    </note>
+	    <para>Clique no botão <guilabel>Cor do Texto</guilabel> para exibir o diálogo seletor de cor. Selecione a cor do texto para a área de discussão do <application>XChat-GNOME</application>.</para>
+	    <para>Clique no botão <guilabel>Cor do plano de fundo</guilabel> para exibir o diálogo seletor de cor. Selecione a cor do plano de fundo para a área de discussão do <application>XChat-GNOME</application>.</para>
+	    <para>Clique no botão <guilabel>Texto selecionado</guilabel> para exibir o diálogo seletor de cor. Selecione a cor do texto selecionado para a área de discussão do <application>XChat-GNOME</application>.</para>
+	    <para>Clique no botão <guilabel>Plano de fundo da seleção</guilabel> para exibir o diálogo seletor de cor. Selecione a cor do plano de fundo da seleção para a área de discussão do <application>XChat-GNOME</application>.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guilabel>Cores do mIRC</guilabel></term>
+	  <listitem>
+	    <para>Selecione os botões das cores que deseja mudar, para exibir o diálogo seletor de cor.</para>
+	    <note>
+	      <para>As cores só podem ser mudadas se <guilabel>Esquemas Predefinidos</guilabel> for configurado para <guilabel>Personalizado</guilabel>.</para>
+	    </note>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guilabel>Cores Adicionais</guilabel></term>
+	  <listitem>
+	    <para>Selecione os botões das cores que você deseja mudar, para exibir o diálogo seletor de cor.</para>
+	    <note>
+	      <para>As cores só podem ser mudadas se <guilabel>Esquemas Predefinidos</guilabel> for configurado para <guilabel>Personalizado</guilabel>.</para>
+	    </note>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="xchat-gnome-prefs-transfers">
+      <title>Transferência de Arquivos &amp; DCC</title>
+      <variablelist>
+	<varlistentry>
+	  <term><guilabel>Trasnferência de Arquivos</guilabel></term>
+	  <listitem>
+	    <para>Use o botão <guilabel>Baixar arquivos em</guilabel> para selecionar a pasta onde deseja baixar o arquivo.</para>
+	    <para>Use o botão <guilabel>Mover arquivos completos para</guilabel> para selecionar a pasta para onde deseja que sejam movidos os downloads completos.</para>
+	    <para>Selecione <guilabel>Converter espaços para sublinha nos nomes de arquivos</guilabel> se você deseja ter espaços convertidos em sublinhas no nome do arquivo.</para>
+	    <para>Selecione <guilabel>Salvar apelido dos remetente no nome do arquivo</guilabel> para adicionar apelido do remetente ao nome do arquivo baixado.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guilabel>Preferências de DCC</guilabel></term>
+          <listitem>
+	    <para>Selecione a opção <guilabel>Aceitar Automaticamente Chat DCC</guilabel> para aceitar automaticamente bate-papo por Conexão Direta entre Clientes (DCC).</para>
+	    <para>Selecione a opção <guilabel>Aceitar Automaticamente Transferências De Arquivo Por DCC</guilabel> para aceitar automaticamente transferência de arquivos por Conexão Direta entre Clientes (DCC).</para>
+	    <para>Selecione a opção <guilabel>Obter Meu Endereço de IP do Servidor</guilabel> para usar os DNS de seus provedores para resolver um endereço de IP.</para>
+	    <para>Selecione a opção <guilabel>Use Este Endereço de IP</guilabel> e digite seu endereço de IP, para usar um endereço de IP estático.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guilabel>Velocidade</guilabel></term>
+	  <listitem>
+	    <para>Use a caixa giratória <guilabel>KB/s enviados individualmente</guilabel> para configurar sua velocidade máxima global de envio.</para>
+	    <para>Use a caixa giratória <guilabel>KB/s enviados no total</guilabel> para configurar sua velocidade máxima global de envio.</para>
+	    <para>Use a caixa giratória <guilabel>KB/s recebidos individualmente</guilabel> para configurar sua velocidade máxima individual de download.</para>
+	    <para>Use a caixa giratória <guilabel>KB/s recebidos no total</guilabel> para configurar sua velocidade máxima global de download.</para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="xchat-gnome-prefs-networks">
+      <title>Redes</title>
+      <variablelist>
+	<varlistentry>
+	  <term>Servidores do Internet Relay Chat (IRC)</term>
+	  <listitem>
+	    <para>Para adicionar um servidor do Internet Relay Chat (IRC), clique no botão <guibutton>Adicionar</guibutton> para abrir o diálogo <guilabel>Propriedades da Rede</guilabel>. <xref linkend="xchat-gnome-network-properties"/></para>
+	    <para>Para editar um servidor do Internet Relay Chat (IRC), clique no botão <guibutton>Editar</guibutton> para abrir o diálogo <guilabel>Propriedades da Rede</guilabel>. <xref linkend="xchat-gnome-network-properties"/></para>
+	    <para>Para remover um servidor do Internet Relay Chat (IRC), clique no botão <guibutton>Remover</guibutton>. <xref linkend="xchat-gnome-network-properties"/></para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+    <sect2 id="xchat-gnome-prefs-plugins">
+      <title>Scripts e Plug-ins</title>
+      <variablelist>
+	<varlistentry>
+	    <term><guilabel>Script e Plug-ins</guilabel></term>
+	  <listitem>
+	    <para>Para habilitar ou desabilitar um plug-in ou script, selecione a opção <guilabel>Ativar</guilabel> ao lado do item apropriado.</para>
+	    <para>Para adicionar um novo plug-in ou script, clique no botão <guibutton>Abrir</guibutton> para abrir o diálogo de abrir arquivo.</para>
+	    <para>Para remover um plug-in ou script, selecione o item apropriado e clique no botão <guibutton>Remover</guibutton> .</para>
+	  </listitem>
+	</varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Network monitor</guilabel></term>
+	      <listitem>
+	        <para>Use the Network Manager to control connection state.</para>
+	      </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Auto Away</guilabel></term>
+	      <listitem>
+	        <para>Mark yourself as away when screensaver is active.</para>
+	      </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Sound notification</guilabel></term>
+	      <listitem>
+	        <para>Raise an audio notification when a word is highlighted (including your nick) or when you receive a private message.</para>
+	      </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Notification</guilabel></term>
+	      <listitem>
+	        <para>Add an icon in the notification area informing you of events in xchat-gnome.</para>
+	        <note>
+	          <para>This allows one to minimize to notification area if <guilabel>Always display notification icon</guilabel> is selected from <guilabel>Notification</guilabel> preferences.</para>
+	        </note>
+	      </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>On-screen display</guilabel></term>
+	      <listitem>
+	        <para>Display a notification box when a word is highlighted (including your nick) or when you receive a private message.</para>
+	      </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>URL scrapper</guilabel></term>
+	      <listitem>
+	        <para>Display all the urls from your conversation in a ugly box.</para>
+	      </listitem>
+	  </varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+  <sect1 id="xchat-gnome-network-properties">
+    <title>Propriedades de Rede</title>
+    <para>O diálogo <guilabel>Propriedades da Rede</guilabel> para <application>XChat-GNOME</application>, lhe permite configurar as propriedades para um servidor do Internet Relay Chat (IRC), e contém as seguintes abas:</para>
+    <itemizedlist>
+      <listitem><para><xref linkend="xchat-gnome-network-settings"/></para></listitem>
+      <listitem><para><xref linkend="xchat-gnome-network-users"/></para></listitem>
+      <listitem><para><xref linkend="xchat-gnome-network-servers"/></para></listitem>
+    </itemizedlist>
+    <sect2 id="xchat-gnome-network-settings">
+      <title>Configurações de Rede</title>
+        <variablelist>
+	  <varlistentry>
+	    <term><guilabel>Geral</guilabel></term>
+	    <listitem>
+	      <para>Digite o <guilabel>Nome</guilabel> para o servidor do Internet Relay Chat (IRC).</para>
+	      <para>Selecione a opção <guilabel>Conectar-se automaticamente à rede</guilabel> para se conectar à rede quando iniciar o <application>XChat-GNOME</application>.</para>
+	      <para>Selecione a opção <guilabel>Utilizar conexão segura (SSL)</guilabel> para se conectar com Camada Segura de Conexão (SSL).</para>
+	      <para>Selecione a opção <guilabel>Tentar conectar-se até conseguir</guilabel> para continuar com as tentativas de se conectar à rede, até conseguir.</para>
+	      <para>Use a caixa suspensa de <guilabel>Codificação de caractere</guilabel> para especificar qual codificação de caractere o <application>XChat-GNOME</application> deve usar.</para>
+	      <para>Digite a <guilabel>Senha do Servidor</guilabel>, se o servidor do Internet Relay Chat (IRC) a requiser.</para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+    </sect2>
+    <sect2 id="xchat-gnome-network-users">
+      <title>Usuários e Canais</title>
+        <variablelist>
+	  <varlistentry>
+	    <term><guilabel>Informações dos Usuários</guilabel></term>
+	    <listitem>
+	      <para>Selecione a opção <guilabel>Utilizar configurações gerais</guilabel> para usar as configurações gerais usadas na seção <guilabel>Geral</guilabel> de <xref linkend="xchat-gnome-prefs-general"/>.</para>
+	      <para>Selecione a opção <guilabel>Utilizar as configurações gerais</guilabel> para definir o <guilabel>Apelido</guilabel> e o <guilabel>Nome Verdadeiro</guilabel> específicos para este servidor do Internet Relay Chat (IRC).</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>Entrar nos Canais Automaticamente</guilabel></term>
+	    <listitem>
+	      <para>Clique no botão <guibutton>Adicionar</guibutton> para adicionar um novo canal.</para>
+	      <para>Clique no botão <guibutton>Editar</guibutton> para editar o canal selecionado.</para>
+	      <para>Clique no botão <guibutton>Remover</guibutton> para remover o canal selecionado.</para>
+	      <note><para>O nome do canal deve começar com uma cerquilha (#).</para></note>
+	    </listitem>
+         </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 id="xchat-gnome-network-servers">
+        <title>Servidores</title>
+          <variablelist>
+	    <varlistentry>
+	      <term>Servidores</term>
+	      <listitem>
+	        <para>Clique no botão <guibutton>Adicionar</guibutton> para adicionar um novo servidor do Internet Relay Chat (IRC).</para>
+	        <para>Clique no botão <guibutton>Editar</guibutton> para editar o servidor do Internet Relay Chat (IRC) selecionado.</para>
+	        <para>Clique no botão <guibutton>Remover</guibutton> para remover o servidor do Internet Relay Chat (IRC).</para>
+               <note><para>To specify custom port use (/) as seperator, as "host/port" </para></note>
+	      </listitem>
+	    </varlistentry>
+	</variablelist>
+      </sect2>
+    </sect1>
+
+<!-- ============= About ================================== -->
+<!-- This section contains info about the program (not docs), such as
+      author's name(s), web page, license, feedback address. This
+      section is optional: primary place for this info is "About.." box of
+      the program. However, if you do wish to include this info in the
+      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="xchat-gnome-about">
+    <title>Sobre <application>XChat-GNOME</application></title>
+    <para>Para encontrar mais informação sobre <application>XChat-GNOME</application>, por favor visite a <ulink url="http://live.gnome.org/Xchat-Gnome" type="http">Página da Web do XChat-GNOME</ulink>.</para>
+    <para>Para relatar um bug ou fazer uma sugestão a respeito desta aplicação ou deste manual, veja a seção Feedback do <ulink url="ghelp:user-guide?feedback-bugs" type="help">Guia do Usuário do GNOME</ulink>.</para>
+
+    <para>Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo sob os termos da GNU General Public License uma publicação da Free Software Foundation; em sua versão 2 da Licença, ou (em sua opção) sua versão posterior. Uma cópia desta licença pode ser encontrada neste <ulink url="ghelp:gpl" type="help">link</ulink>, ou no arquivo COPYING incluído com o código fonte do programa.</para>
+
+  </sect1>
+</article>

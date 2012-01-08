@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_text_setup" xml:lang="es">
+  <info>
+    <desc>Una característica que le permite realizar una configuración básica de <app>Orca</app> aunque el entorno gráfico no esté en ejecución.</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Usar la configuración en modo texto</title>
+  <p>Orca tiene una característica de configuración en modo texto que le permite realizar una configuración básica de <app>Orca</app> aunque el entorno gráfico no esté en ejecución.</p>
+  <steps>
+    <title>Iniciar la instalación asistida de <app>Orca</app> en modo de sólo texto</title>
+    <item>
+      <p>Abra un diálogo <gui>Ejecutar</gui>. En la mayoría de las distribuciones, esto se puede hacer pulsando <keyseq><key>Alt</key><key>F2</key></keyseq>. Alternativamente, puede usar una ventana de la termina o la consola de texto del sistema.</p>
+    </item>
+    <item>
+      <p>Escriba <cmd>orca --text-setup</cmd> o <cmd>orca -t</cmd> y pulse <key>Intro</key>.</p>
+    </item>
+  </steps>
+  <p>Se le harán algunas preguntas:</p>
+  <steps>
+    <item>
+      <p>Seleccione el sistema de voz deseado</p>
+      <p>Las siguientes opciones dependerán de qué sistemas de voz tenga instalados en su sistema. Escriba el número asociado a su sistema de voz deseado y pulse <key>Intro</key>.</p>
+    </item>
+    <item>
+      <p>Seleccione el servidor de voz deseado</p>
+      <p>Las siguientes opciones dependerán de qué sintetizadores de voz tenga instalados en su sistema. Escriba el número asociado a su servidor de voz deseado y pulse <key>Intro</key>.</p>
+    </item>
+    <item>
+      <p>Seleccione la voz deseada</p>
+      <p>Las «voces» corresponden a los idiomas disponibles. En el caso de «speech-dispatcher», hay aproximadamente 60 idiomas y dialectos admitidos, y cada cierto tiempo se agregan más. Escriba el número de su opción de idioma (por ejemplo, <cmd>7</cmd> para «Inglés americano») y pulse <key>Intro</key>. No necesita esperar a que se lea la lista completa. Además, <app>Orca</app> trata de poner su idioma predeterminado como primera opción, de modo que en muchos casos simplemente tendrá que escribir <cmd>1</cmd> y pulsar <key>Intro</key> sin tener que escuchar la lista completa de voces.</p>
+    </item>
+    <item>
+      <p>¿Activar eco por palabras?</p>
+      <p>Esta opción hace que <app>Orca</app> lea las palabras cuando termina de escribirlas. Escriba <cmd>s</cmd> o <cmd>n</cmd> y pulse <key>Intro</key>.</p>
+    </item>
+    <item>
+      <p>¿Activar eco de teclas?</p>
+      <p>Esta opción hace que <app>Orca</app> lea todas las teclas que se pulsan. Escriba <cmd>s</cmd> o <cmd>n</cmd> y pulse <key>Intro</key>.</p>
+      <p>Si indica que le gustaría activar el eco de teclas, la configuración le preguntará por los tipos de eco de teclas que puede activar o desactivar. Para cada uno, escriba <cmd>s</cmd> para activarlo o <cmd>n</cmd> para desactivarlo y pulse <key>Intro</key>. Los tipos de eco de teclas son:</p>
+      <list>
+        <item>
+          <p>teclas alfanuméricas y de puntuación</p>
+          <p>Esta opción controla si las teclas <key>a</key>, <key>b</key>, <key>c</key>, <key>;</key>, <key>?</key>, etcétera se deben hablar o no cuando se pulsan.</p>
+        </item>
+        <item>
+          <p>teclas modificadoras</p>
+          <p>Esta opción controla si las teclas <key>Shift</key>, <key>Ctrl</key>, <key>Alt</key> y <key>Windows</key>, etcétera se deben hablar o no cuando se pulsan.</p>
+        </item>
+        <item>
+          <p>teclas de bloqueo</p>
+          <p>Esta opción controla si las teclas <key>Bloq Mayús</key>, <key>Bloq Despl</key>, y <key>Bloq Num</key>, etcétera se deben hablar o no cuando se pulsan.</p>
+        </item>
+        <item>
+          <p>teclas de función</p>
+          <p>Esta opción controla si las teclas <key>F1</key> hasta <key>F12</key> se deben hablar o no cuando se pulsan.</p>
+        </item>
+        <item>
+          <p>teclas de acción</p>
+          <p>Esta opción controla si las teclas <key>Retroceso</key>, <key>Supr</key>, <key>Intro</key>, <key>Escape</key>, <key>Tab</key>, <key>Re Pág</key>, <key>Av Pág</key>, <key>Inicio</key>, y <key>Fin</key> se deben leer al pulsarlas.</p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>Seleccione la distribución de teclado deseada.</p>
+      <p>Orca tiene dos distribuciones de teclado: escritorio y portátil. La distribución que elija afecta a qué tecla se usa como «modificador de Orca».</p>
+      <list>
+        <item>
+          <p>Si está usando la distribución de portátil, el Modificador de Orca predeterminado será <key>Bloq Mayús</key></p>
+        </item>
+        <item>
+          <p>Si está usando la distribución de escritorio, el Modificador de Orca será tanto <key>Ins</key> como <key>TN Ins</key>, esta última es la misma tecla que <key>TN 0</key>.</p>
+        </item>
+      </list>
+      <p>La distribución también determina las pulsaciones de teclas asociadas a un número de comandos de <app>Orca</app>, especialmente en las áreas de «Revisión», «¿Dónde estoy?» y «Leer todo».</p>
+      <p>Escriba <cmd>1</cmd> para la distribución de escritorio o <cmd>2</cmd> para la distribución de portátil y pulse <key>Intro</key>.</p>
+    </item>
+    <item>
+      <p>Activar Braille</p>
+      <p>Esta función da por hecho que hay disponible un dispositivo compatible con BrlTTY. Escriba <cmd>s</cmd> o <cmd>n</cmd> y pulse <key>Intro</key>. Tenga en cuenta que por lo general solamente puede introducir <cmd>s</cmd>; Orca se recuperará correctamente y funcionará incluso si no puede encontrar BrlTTY.</p>
+    </item>
+    <item>
+      <p>Activar el monitor de Braille</p>
+      <p>El Monitor Braille de Orca es una representación del sistema braille en pantalla. Se ha diseñado principalmente para desarrolladores videntes que necesitan verificar la salida BrlTTY, pero también puede ser útil en otras situaciones, tales como el diagnóstico o la verificación visual de la salida Braille. Escriba <cmd>s</cmd> o <cmd>n</cmd> y pulse <key>Intro</key>.</p>
+    </item>
+    <item>
+      <p>Iniciar <app>Orca</app> automáticamente al iniciar la sesión</p>
+      <p>Escriba <cmd>s</cmd> si quiere que <app>Orca</app> se ejecute automáticamente o <cmd>n</cmd> si no quiere, y pulse <key>Intro</key>.</p>
+    </item>
+  </steps>
+  <p>Eso es todo. <app>Orca</app> está listo para ser utilizado. Si todavía no se ha activado la accesibilidad, <app>Orca</app> la activa ahora y le pide cerrar sesión y volver a entrar para que comiencen a funcionar los servicios. Escriba <cmd>s</cmd> y pulse <key>Intro</key> para reiniciar su inicio de sesión. Si ya se activó la accesibilidad por otro lado, simplemente se le pedirá que pulse <key>Intro</key>, tras lo cual <app>Orca</app> se ejecutará.</p>
+</page>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <!-- workarounds metadata -->
+    <plugin name="workarounds" useBcop="true">
+        <category>Utility</category>
+        <short>Workarounds</short>
+        <long>Metacity-like workarounds.</long>
+	<deps>
+	        <relation type="after">
+			<plugin>composite</plugin>
+			<plugin>opengl</plugin>
+			<plugin>decor</plugin>
+			<plugin>animation</plugin>
+	        </relation>
+		<requirement>
+			<plugin>opengl</plugin>
+		</requirement>
+			
+	</deps>
+        <options>
+	    <option type="bool" name="keep_minimized_windows">
+		<short>Keep previews of minimized windows</short>
+		<long>Don't delete window contents on minimize. This does not work with some applications</long>
+		<default>false</default>
+	    </option>
+            <option type="bool" name="legacy_fullscreen">
+                <short>Legacy Fullscreen Support</short>
+                <long>Make Wine and legacy applications fullscreen properly.</long>
+                <default>false</default>
+            </option>
+            <option type="bool" name="firefox_menu_fix">
+                <short>Firefox Menu Fix</short>
+                <long>Fix window type of Firefox and Thunderbird menus.</long>
+                <default>false</default>
+            </option>
+            <option type="bool" name="ooo_menu_fix">
+                <short>OpenOffice.org Menu Fix</short>
+                <long>Fix window type of OpenOffice.org menus.</long>
+                <default>true</default>
+            </option>
+            <option type="bool" name="notification_daemon_fix">
+                <short>Notification Daemon Fix</short>
+                <long>Fix window type of notification daemon windows.</long>
+                <default>false</default>
+            </option>
+            <option type="bool" name="java_fix">
+                <short>Java Window Fix</short>
+                <long>Fix window type of various Java windows.</long>
+                <default>true</default>
+            </option>
+	    <option type="bool" name="java_taskbar_fix">
+		<short>Java Taskbar Fix</short>
+		<long>Fix java windows disappearing from taskbar</long>
+		<default>true</default>
+	    </option>
+            <option type="bool" name="qt_fix">
+                <short>Qt Window Fix</short>
+                <long>Fix window type of various Qt windows.</long>
+                <default>false</default>
+	    </option>
+	    <option type="bool" name="convert_urgency">
+		<short>Convert Urgency to Demands Attention</short>
+		<long>Make "urgent" windows also "demand attention".</long>
+		<default>false</default>
+	    </option>
+	    <option type="bool" name="aiglx_fragment_fix">
+                <short>AIGLX Fragment Parameter Fix</short>
+                <long>Fix broken glProgramEnvParameter4f implementation.</long>
+                <default>true</default>
+            </option>
+            <option type="bool" name="fglrx_xgl_fix">
+                <short>Fix screen updates in XGL with fglrx.</short>
+                <long>Fix for broken GLX_MESA_copy_sub_buffer on XGL in fglrx.</long>
+                <default>false</default>
+            </option>
+            <option type="bool" name="force_glx_sync">
+                <short>Force synchronization between X and GLX</short>
+                <long>Force synchronization between X and GLX, which may help for window parts not redrawing correctly when using Nvidia drivers, but also may decrease performance.</long>
+                <default>false</default>
+            </option>
+	    <option type="bool" name="no_wait_for_video_sync">
+		<short>Don't wait for video sync</short>
+		<long>Don't wait for the next video sync time to redraw</long>
+		<default>false</default>
+	    </option>
+	    <option type="bool" name="force_swap_buffers">
+		<short>Force full screen redraws (buffer swap) on repaint</short>
+		<long>Forces the entire screen to redraw every repaint. Use with care, this will cause a massive increase in GPU and CPU usage</long>
+		<default>false</default>
+	    </option>
+            <subgroup>
+                <short>Window stickyness</short>
+                <option type="bool" name="sticky_alldesktops">
+                    <short>Make "on all desktops" windows "sticky"</short>
+                    <long>Make "on all desktops" windows sticky. Sticky windows are visible on all viewports.</long>
+                    <default>false</default>
+                </option>
+                <option name="alldesktop_sticky_match" type="match">
+                    <short>"On all desktops" sticky match</short>
+                    <long>Windows on all desktops that should be made sticky</long>
+                    <default>any</default>
+                </option>
+            </subgroup>
+        </options>
+    </plugin>
+</compiz>

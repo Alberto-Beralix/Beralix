@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-wireless-hidden" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-wireless"/>
+    <link type="seealso" xref="net-wireless-troubleshooting"/>
+    
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <credit type="author">
+      <name>Time de documentação do Ubuntu</name>
+    </credit>
+
+    <desc>Clique no <gui>menu rede</gui> no painel superior e selecione <gui>Conectar-se a uma rede sem fio oculta</gui>.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Conectar-se a uma rede sem fio oculta</title>
+
+<p>É possível configurar uma rede sem fio para que ela seja "oculta." Redes ocultas não serão mostradas na lista de redes que é exibida quando você clica no menu rede no painel superior (nem aparecerão na lista de redes sem fio em qualquer outro computador).</p>
+
+<p>Para conectar a uma rede sem fio, clique no <gui>menu rede</gui> no painel superior e selecione <gui>Conectar-se a rede sem fio oculta</gui>. Na janela que aparecer, digite o nome da rede, escolha o tipo de segurança sem fio e clique em <gui>Conectar</gui>.</p>
+
+<p>Você pode ter que verificar as configurações da base da estação/roteador sem fio para ver qual o nome da rede. Ela é chamada algumas vezes de <em>BSSID</em> (Identificador de configuração de serviço básica) e procurar alguma coisa como: <gui>02:00:01:02:03:04</gui>.</p>
+
+<p>Você também deve verificar as configurações de segurança da estação de rede sem fio base; procure termos como WEP e WPA.</p>
+
+<note>
+ <p>Você pode pensar que ocultar sua rede sem fio irá aumentar a segurança, evitando que pessoas que não a conheçam conectem nela. Na prática, esse não é o caso; a rede é ligeiramente mais difícil de se encontrar, mas ela ainda é detectável.</p>
+</note>
+ 
+</page>

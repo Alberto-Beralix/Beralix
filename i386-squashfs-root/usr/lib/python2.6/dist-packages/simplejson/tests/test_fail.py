@@ -1,0 +1,1 @@
+../../../../../share/pyshared/simplejson/tests/test_fail.py

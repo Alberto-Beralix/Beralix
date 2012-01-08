@@ -1,0 +1,1 @@
+../../../../../share/pyshared/butterfly/channel/muc.py

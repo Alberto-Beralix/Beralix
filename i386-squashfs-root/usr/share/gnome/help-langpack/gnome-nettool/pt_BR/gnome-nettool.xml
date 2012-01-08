@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.17.1">
+<!ENTITY manrevision "2.7">
+<!ENTITY date "November 2006">
+<!ENTITY app "GNOME Nettool">
+]>
+<!-- =============Document Header ============================= -->
+<article id="index" lang="pt_BR">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+   <title>Manual GNOME Nettool V2.7</title>
+   <abstract role="description">
+     <para>
+        Nettool Manual
+        GNOME's Nettool gives a graphical user interface for a number
+        of network tools, such as ping, netstat, traceroute, port scan, 
+        lookup, finger, and whois.
+     </para>
+   </abstract>
+   <copyright> 
+    <year>2006</year>
+    <holder>Fundação GNOME</holder>
+     </copyright><copyright><year>2008</year><holder>Leonardo Gregianin (leogregianin@gmail.com)</holder></copyright><copyright><year>2008</year><holder>Andre Pinheiro (andrepip@gmail.com)</holder></copyright>
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2003</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+   <publisher> 
+    <publishername>Projeto de documentação do GNOME</publishername>
+   </publisher>
+      <legalnotice id="legalnotice">
+         <para>Permissão concedida para copiar, distribuir e/ou modificar este documento sob os termos da Licença de Documentação Livre GNU (GNU Free Documentation License), Versão 1.1 ou qualquer versão mais recente publicada pela Free Software Foundation; sem Seções Invariantes, Textos de Capa Frontal, e sem Textos de Contracapa. Você pode encontrar uma cópia da licença GFDL no link <ulink type="help" url="ghelp:fdl">link</ulink> ou no arquivo COPYING-DOCS distribuído com este manual.</para>
+          <para>Este manual é parte da coleção de manuais GNOME distribuídos sob a GFDL. Se você quiser distribuir este manual separadamente da coleção, você pode fazê-lo adicionando uma cópia da licença deste manual, como descrito na seção 6 da licença.</para>
+ 
+         <para>Muitos dos nomes usados por empresas para distinguir seus produtos e serviços são reivindicados como marcas registradas. Onde esses nomes aparecem em qualquer documentação do GNOME e os membros do Projeto de Documentação do GNOME estiverem cientes dessas marcas registradas, os nomes aparecerão impressos em letras maiúsculas ou com iniciais em maiúsculas.</para>
+ 
+         <para>O DOCUMENTO E VERSÕES MODIFICADAS DO DOCUMENTO SÃO FORNECIDOS SOB OS TERMOS DA GNU FREE DOCUMENTATION LICENSE COM O ENTENDIMENTO ADICIONAL DE QUE: <orderedlist>
+                 <listitem>
+                   <para>O DOCUMENTO É FORNECIDO NA BASE "COMO ESTÁ", SEM GARANTIAS DE QUALQUER TIPO, TANTO EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO LIMITADO A, GARANTIAS DE QUE O DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO SEJA COMERCIALIZÁVEL, LIVRE DE DEFEITOS, PRÓPRIO PARA UM PROPÓSITO ESPECÍFICO OU SEM INFRAÇÕES. TODO O RISCO A RESPEITO DA QUALIDADE, EXATIDÃO, E DESEMPENHO DO DOCUMENTO OU VERSÕES MODIFICADAS DO DOCUMENTO É DE SUA RESPONSABILIDADE. SE ALGUM DOCUMENTO OU VERSÃO MODIFICADA SE PROVAR DEFEITUOSO EM QUALQUER ASPECTO, VOCÊ (NÃO O ESCRITOR INICIAL, AUTOR OU QUALQUER CONTRIBUIDOR) ASSUME O CUSTO DE QUALQUER SERVIÇO NECESSÁRIO, REPARO OU CORREÇÃO. ESSA RENÚNCIA DE GARANTIAS CONSTITUI UMA PARTE ESSENCIAL DESTA LICENÇA. NENHUM USO DESTE DOCUMENTO OU VERSÃO MODIFICADA DESTE DOCUMENTO É AUTORIZADO SE NÃO FOR SOB ESSA RENÚNCIA; E</para>
+                 </listitem>
+                 <listitem>
+                   <para>SOB NENHUMA CIRCUNSTÂNCIA E SOB NENHUMA TEORIA LEGAL, TANTO EM DANO (INCLUINDO NEGLIGÊNCIA), CONTRATO, OU OUTROS, DEVEM O AUTOR, ESCRITOR INICIAL, QUALQUER CONTRIBUIDOR, OU QUALQUER DISTRIBUIDOR DO DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO, OU QUALQUER FORNECEDOR DE ALGUMA DESSAS PARTES, SER CONSIDERADOS RESPONSÁVEIS A QUALQUER PESSOA POR QUALQUER DANO, SEJA DIRETO, INDIRETO, ESPECIAL, ACIDENTAL OU CONSEQÜENCIAL DE QUALQUER INDIVÍDUO, INCLUINDO, MAS NÃO LIMITADO A, DANOS POR PERDA DE BOA VONTADE, TRABALHO PARADO, FALHA OU MAU FUNCIONAMENTO DO COMPUTADOR, OU QUALQUER E TODOS OS OUTROS DANOS OU PERDAS RESULTANTES OU RELACIONADOS AO USO DO DOCUMENTO E VERSÕES MODIFICADAS, MESMO QUE TAL PARTE TENHA SIDO INFORMADA DA POSSIBILIDADE DE TAIS DANOS.</para>
+                 </listitem>
+           </orderedlist></para>
+   </legalnotice>
+  
+   <authorgroup> 
+    <author role="maintainer">
+      <firstname>Rodrigo</firstname>
+      <surname>Moya</surname>
+    </author>
+
+<!-- This is appropriate place for other contributors: translators,
+       maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+  <firstname>Latin</firstname> 
+  <surname>Translator 1</surname> 
+  <affiliation> 
+    <orgname>Latin Translation Team</orgname> 
+    <address> <email>translator@gnome.org</email> </address> 
+  </affiliation>
+  <contrib>Latin translation</contrib>
+      </othercredit>
+-->
+   </authorgroup>
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+   <revhistory>
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+   than the current revision. -->
+       <revision> 
+      <revnumber>gnome-nettool V2.17.1</revnumber>
+      <date>2006</date> 
+      <revdescription> 
+       <para role="publisher">Projeto de documentação do GNOME</para>
+      </revdescription>
+    </revision>
+   </revhistory>
+   <releaseinfo>Este manual descreve a versão 2.17.1 do GNOME Nettool.</releaseinfo>
+   <legalnotice> 
+    <title>Feedback</title>
+    <para>Para informar um problema ou dar uma sugestão com relação ao aplicativo <application>GNOME Nettool</application> ou a este manual, siga as instruções no link <ulink url="ghelp:gnome-feedback" type="help">Página de Feedback do GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+  </articleinfo>
+
+  <indexterm><primary>gnome-nettool</primary></indexterm>
+  <indexterm><primary>aplicativo de ferramenta de rede</primary></indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+  <sect1 id="gnome-nettool-intro"> 
+    <title>Introdução</title>
+    <para>This is only a template to get the documentation done. It should not be translated.</para> 
+  </sect1>
+
+</article>
+<!-- vi:set ts=2 sw=2 expandtab: -->

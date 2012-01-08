@@ -1,0 +1,458 @@
+#!/usr/bin/perl
+# vim:cindent:ts=2:sw=2:et:fdm=marker:cms=\ #\ %s
+#
+# $Id: install-docs.in 224 2011-03-04 14:05:50Z robert $
+
+use warnings;
+use strict;
+
+use Debian::DocBase::Common;
+
+
+# declared in Debian::DocBase::InstallDocs;
+use vars qw($fully_functional $opt_verbose $opt_debug $opt_update_menus $opt_rootdir $exitval
+            $MODE_INSTALL $MODE_REMOVE $MODE_REMOVE_ALL $MODE_INSTALL_ALL
+            $MODE_DUMP_DB $MODE_INSTALL_CHANGED
+            $MODE_STATUS $MODE_CHECK);
+
+my $version='0.10.2';
+
+BEGIN {
+  if ($ENV{'DPKG_MAINTSCRIPT_PACKAGE'} && $ENV{'DPKG_MAINTSCRIPT_PACKAGE'} ne "doc-base") {
+    print STDERR "install-docs called from ".
+                  $ENV{'DPKG_MAINTSCRIPT_PACKAGE'} . "'s maintainer script, exiting\n"
+      if $ENV{'DOC_BASE_DEBUG'};
+    exit 0;
+  }
+  $fully_functional = eval {
+                              require Debian::DocBase::InstallDocs;
+                              import  Debian::DocBase::InstallDocs;
+                              require Debian::DocBase::Utils;
+                              import  Debian::DocBase::Utils;
+                              require Debian::DocBase::Gettext;
+                              import  Debian::DocBase::Gettext;
+                              require Debian::DocBase::DB;
+                              import  Debian::DocBase::DB;
+                              require Debian::DocBase::Programs::Dwww;
+                              import  Debian::DocBase::Programs::Dwww;
+                              require Debian::DocBase::Programs::Dhelp;
+                              import  Debian::DocBase::Programs::Dhelp;
+                              require Debian::DocBase::Programs::Scrollkeeper;
+                              import  Debian::DocBase::Programs::Scrollkeeper;
+                              1;
+                        };
+  warn $@ if $@;
+}
+
+=head1 NAME
+
+install-docs - manage online Debian documentation
+
+=cut
+
+
+
+# set umask explicitly
+umask 022;
+
+# constants
+my $do_dwww_update = 1;
+my $force_reregister_flagfile = "/var/lib/doc-base/info/FORCE-REREGISTER.flag";
+
+=head1 SYNOPSIS
+
+ install-docs [options] -i,--install | -r,--remove | -c,--check file [ file ... ]
+
+ install-docs [options] -I,--install-all | -C,--install-changed | -R,--remove-all
+
+ install-docs [options] -s,--status docid [ docid ... ]
+
+ install-docs [options] --dump-db dbname
+
+ install-docs -h,--help | -V,--version
+
+
+=head1 DESCRIPTION
+
+B<install-docs> is a tool allow Debian package maintainers to register
+documentation to various documentation systems.  It currently supports
+B<dhelp>,  B<dwww>, B<doc-central>, and B<scrollkeeper> browsers.
+
+This manual page provides a quick synopsis of B<install-docs> usage.
+Full documentation can be found in the documentation, including a
+description of the control file syntax and grammar.
+
+=head1 OPTIONS
+
+=over 4
+
+=cut
+sub _CheckArgCount($$) { # {{{
+  my ($cnt, $option) = @_;
+  ++$cnt;
+
+  if ($option eq "install-all" or $option eq "install-changed" or $option eq "remove-all") {
+    Fatal($ERR_USAGE, _g("Too many arguments for `%s'."), $option) unless $cnt == 0;
+  } 
+  elsif ($option eq "dump-db") {
+    Fatal($ERR_USAGE, _g("`%s' requires exactly one argument."), $option) unless $cnt == 1;
+  }
+  else {
+    Fatal($ERR_USAGE, _g("Arguments missing for `%s'."), $option) if $cnt == 0;
+  }    
+} # }}}
+   
+
+sub _CheckFunctionality(;$) { # {{{
+  my $dont_force_reg = shift;
+  if (not $fully_functional) {
+    open F, "> $force_reregister_flagfile"
+      or die "Cannot open file $force_reregister_flagfile for writing: $!\n"; # gettext functions may not be defined here yet
+    print F "\n";
+    close F;
+    exit 0;
+  }
+  if (!$dont_force_reg && -e $force_reregister_flagfile) {
+    Inform( _g("Re-registation of all documents forced by %s."), $force_reregister_flagfile);
+    SetMode($MODE_INSTALL_ALL);
+    unlink ($force_reregister_flagfile);
+    return 1;
+  }
+  return 0;
+
+} # }}}
+
+
+sub _Usage($) # {{{
+{
+  my $exit_val = shift;
+  eval  
+  {
+    require Pod::Usage;
+    Pod::Usage::pod2usage(-verbose => 1, -exitval => $exit_val);
+  };
+  if ($@)
+  { 
+# There's no point in translating the text below, it will be shown when perl package
+# is not installed only.
+    Inform("install-docs [options] -i,--install | -r,--remove | -c,--check file [ file ... ]\n\n" .
+           "install-docs [options] -I,--install-all | -C,--install-changed | -R,--remove-all\n\n" .
+           "install-docs [options] -s,--status docid [ docid ... ]\n\n" .
+           "install-docs [options] --dump-db files.db | status.db\n\n" .
+           "install-docs -h,--help | -V,--version\n");
+  };
+  exit ($exit_val);
+} # }}} 
+
+#### Parse arguments loop #####
+
+_Usage($ERR_USAGE) if $#ARGV < 0;
+
+while (my $arg = shift @ARGV) {
+
+  # try to handle concatenation of options e.g. `-vdi' instead of `-v -d -i'
+  if ($arg =~ /^(-\w)(\w+)$/) {
+    $arg = $1;
+    unshift(@ARGV, "-".$2)
+  }
+
+  if (($arg eq '-v') or ($arg eq '--verbose')) { # {{{
+
+=item B<-v>, B<--verbose>
+
+Operate verbosely.
+
+=cut
+    $opt_verbose = 1;
+     next;  # }}} 
+
+   } elsif (($arg eq '-d') or ($arg eq '--debug')) { # {{{
+
+=item B<-d>, B<--debug>
+
+Print some debugging information.
+
+=cut
+    $opt_debug = 1;
+    next;  # }}} 
+
+   } elsif ($arg eq '--no-update-menus') { # {{{
+
+=item B<--no-update-menus>
+
+Inhibit running L<dwww-build-menu(8)>, L<dhelp_parse(8)>,
+and L<scrollkeeper-update(8)>.
+
+=cut
+    $opt_update_menus = 0;
+    next; # }}} 
+
+   } elsif ($arg  eq '--rootdir') { # {{{
+
+=item B<--rootdir> I<dir>
+
+Set the root directory to I<dir> instead of `I</>'. Useful and valid only with
+the B<--check> action.
+
+=cut
+    _CheckArgCount($#ARGV, "rootdir");
+    $arg = shift @ARGV;
+    -d $arg or die sprintf _g("`%s' does not exist or is not a directory."), $arg;
+    ($opt_rootdir = $arg) =~ s/\/+$//;
+    next; # }}}
+
+
+=back
+
+=head1 ACTIONS
+
+Below is list of possible actions B<install-docs> could handle. There can be only one action
+option passed to install-docs, moreover the action with its arguments must be the last option
+passed.
+
+Each I<file> argument should be the full path for the doc-base control file (i.e.
+`/usr/share/doc-base/some_file' or `/etc/doc-base/documents/some_file'), and each
+I<docid> should be the document identifier
+(Document identifiers are set in the `Document' field of the control file, and usually
+correspond to the package name.)
+
+If I<file> or I<docid> equals `B<->' (the minus sign), the list of
+arguments is read from the standard input (each file name or document id in separate line).
+
+=over 4
+
+
+=cut
+
+   } elsif (($arg eq '-i') or ($arg eq '--install')) { # {{{ 
+
+=item B<-i> I<file> [I<file> ...],  B<--install> I<file> [I<file> ...]
+
+Install the documentation described by the control file I<file>.
+
+=cut
+    # install new docs
+    _CheckFunctionality() or SetMode($MODE_INSTALL, @ARGV);
+    _CheckArgCount($#ARGV, "install");
+    last; # }}}
+
+  } elsif (($arg eq '-r') or ($arg eq '--remove')) { # {{{
+
+=item B<-r> I<file> [I<file> ...],  B<--remove> I<file> [I<file> ...]
+
+Remove the documentation identified by the control file
+I<file>.
+
+=cut
+    # remove old docs #
+    _CheckFunctionality() or SetMode($MODE_REMOVE, @ARGV);
+    _CheckArgCount($#ARGV, "remove");
+    last; # }}}
+
+  } elsif (($arg eq '-c') or ($arg eq '--check')) { # {{{
+
+=item B<-c> I<file> [I<file> ...],  B<--check> I<file> [I<file> ...]
+
+Check the control file I<file> and display number of possible problems found.
+Use with I<--verbose> to get the actual locations of errors and warnings.
+If I<--rootdir> was also given, its argument will be prepended to names of the files
+given if the `Files' and `Index' fields of the I<file>.
+
+=cut
+    _CheckArgCount($#ARGV, "check");
+    SetMode($MODE_CHECK, @ARGV);
+    last; # }}}
+
+   } elsif (($arg eq '-R') or ($arg eq '--remove-all')) { # {{{
+
+=item B<-R>,  B<--remove-all>
+
+De-register all registered documents.
+
+=cut
+    _CheckFunctionality(1);
+    _CheckArgCount($#ARGV, "remove-all");
+    SetMode($MODE_REMOVE_ALL);
+    last; # }}}
+
+  } elsif (($arg eq '-I') or ($arg eq '--install-all')) { # {{{
+
+=item B<-I>, B<--install-all>
+
+(Re)register all documents from F</usr/share/doc-base> and F</etc/doc-base/documents>.
+
+=cut
+    _CheckFunctionality(1);
+    _CheckArgCount($#ARGV, "install-all");
+    SetMode($MODE_INSTALL_ALL);
+    last; # }}}
+
+  } elsif (($arg eq '-C') or ($arg eq '--install-changed')) { # {{{
+
+=item B<-C>, B<--install-changed>
+
+Compare contents of F</usr/share/doc-base> and F</etc/doc-base/documents> directories
+with registered documents database and de-register any files that are missing and
+(re)register only changed or new files.
+
+=cut
+    _CheckFunctionality(1);
+    _CheckArgCount($#ARGV, "install-changed");
+    SetMode($MODE_INSTALL_CHANGED);
+    last; # }}}
+
+  } elsif (($arg eq '-s') or ($arg eq '--status')) {  # {{{
+
+=item B<-s> I<docid> [I<docid> ...], B<--status> I<docid> [I<docid> ...]
+
+Display the status of the document identifier I<docid>.
+
+=cut
+    _CheckArgCount($#ARGV, "status");
+    SetMode($MODE_STATUS, @ARGV);
+    last; # }}}
+
+  } elsif (($arg eq '-L') or ($arg eq '--listfiles')) { # {{{
+
+=item B<-L> I<docid> [I<docid> ...], B<--listfiles> I<docid> [I<docid> ...]
+
+Deprecated option. Does nothing.
+
+=cut
+    warn sprintf _g("Ignoring deprecated command line argument: %s.\n"), $arg;
+    exit $ERR_NONE;
+ # }}}
+
+  }  elsif ($arg eq '--dump-db') { # {{{
+
+=item B<--dump-db> I<dbname>
+
+Dumps contents of internal databases, for debugging purposes. I<dbname> can be either B<files.db> or
+B<status.db>.
+
+=cut
+    _CheckArgCount($#ARGV, "dump-db");
+    SetMode($MODE_DUMP_DB, @ARGV);
+    last # }}}
+
+   } elsif (($arg eq '-h') or ($arg eq '--help')) { # {{{
+
+=item B<-h>, B<--help>
+
+Show a short help message.
+
+
+=cut
+    _Usage($ERR_NONE);
+    # NOT REACHED  # }}}
+
+   } elsif (($arg eq '-V') or ($arg eq '--version')) { # {{{
+
+=item B<-V>, B<--version>
+
+Display version information.
+
+=back
+
+=cut
+    print "install-docs $version\n";
+    exit $ERR_NONE;
+    # NOT REACHED  # }}}
+
+  } else { # {{{ default: die
+    _Usage($ERR_USAGE);
+  } # }}}
+
+}
+
+
+
+#### Main function
+InstallDocsMain();
+
+
+exit ($exitval);
+
+__DATA__
+
+=head1 COMPATIBILITY ISSUES
+
+The following features were added in version 0.8.4,
+please make sure to add proper
+`I<Conflicts>' or `I<Depends>' lines if you would like to use them in your package's scripts:
+
+=over
+
+=item *
+
+support for passing more than one argument to the B<-i> and B<-r> actions,
+
+=item *
+
+reading arguments from the standard input,
+
+=item *
+
+B<-I>,B<--install-all>, B<-R>, B<---remove-all>, B<-c>, B<--check> actions,
+
+=item *
+
+B<-d>, B<--debug>, B<-h>, B<--help> options.
+
+=back 
+
+The B<-C>, B<--install-changed>, B<--dump-db>, B<-V>, B<--version> options were added in 0.8.12.
+
+=head1 FILES
+
+=over 4
+
+=item F</usr/share/doc-base/>
+
+The location of doc-base control files provided by various packages.
+
+=item F</etc/doc-base/documents/>
+
+The location of doc-base control files provided by local administrator.
+
+=item F</var/lib/doc-base/info/documents/>
+
+The location of registered control files.
+
+=item F</var/lib/doc-base/info/status.db>
+
+Statuses of registered documents.
+
+=item F</var/lib/doc-base/info/files.db>
+
+Timestamps and documents ids of registered doc-base files.
+
+=item F</var/lib/doc-base/omf/>
+
+The location of generated scrollkeeper OMF files.
+Note: F</usr/share/omf/doc-base> should be a symbolic link pointing to the directory.
+
+=back
+
+=head1 BUGS
+
+See L<http://bugs.debian.org/doc-base>.
+
+=head1 SEE ALSO
+
+dhelp(1), doccentral(1), dwww(7), scrollkeeper(7),
+Debian doc-base Manual F</usr/share/doc/doc-base/doc-base.html/index.html>
+
+=head1 AUTHOR
+
+This program was originally written by Christian Schwarz
+<schwarz@debian.org>, for the Debian GNU/Linux system, and the
+next maintainer was Adam Di Carlo <aph@debian.org>.
+Robert Luberda <robert@debian.org> is currently maintaining and extending it.
+
+This software was meant to be for the benefit of the entire Debian
+user and developer community.  If you are interested in being involved
+with this software, please join the mailing list
+<debian-doc@lists.debian.org>.
+
+=cut

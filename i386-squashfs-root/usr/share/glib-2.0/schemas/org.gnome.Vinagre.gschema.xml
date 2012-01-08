@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/org/gnome/vinagre/" id="org.gnome.Vinagre">
+    <key type="b" name="shared-flag">
+      <default>true</default>
+      <summary>Whether we should leave other clients connected</summary>
+      <description>When connecting to a host, the client can say to the server to leave other clients connected or to drop the existent connections. Set the value to true to share the desktop with the other clients.</description>
+    </key>
+    <key type="b" name="always-show-tabs">
+      <default>false</default>
+      <summary>Whether we should show tabs even when there is only one active connection</summary>
+      <description>Set to "true" to always show the tabs. Set to "false" to only show the tabs when there is more than one active connection.</description>
+    </key>
+    <key type="b" name="show-accels">
+      <default>false</default>
+      <summary>Whether we should show the menu accelerators (shortcut keys)</summary>
+      <description>Set to "false" to disable menu shortcuts. Set to "true" to enable them. Note that if they are enabled, those keys will be intercepted by the menu and will not be sent to the remote host.</description>
+    </key>
+    <key type="i" name="history-size">
+      <default>15</default>
+      <summary>Maximum number of history items in connect dialog</summary>
+      <description>Specifies the maximum number of items in the host dropdown entry.</description>
+    </key>
+    <key type="b" name="always-enable-listening">
+      <default>false</default>
+      <summary>Whether we should start the program listening for reverse connections</summary>
+      <description>Set to "true" to always start the program listening for reverse connections.</description>
+    </key>
+  </schema>
+</schemalist>

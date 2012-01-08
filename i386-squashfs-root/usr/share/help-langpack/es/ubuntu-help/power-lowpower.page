@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="power-lowpower" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="power#battery"/>
+    <desc>Dejar que la batería se descargue completamente no es bueno para ella.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Por qué se apaga/hiberna el equipo cuando la batería llega al 10%?</title>
+
+<p>Cuando el nivel de cargade la batería sea demasiado bajo, su equipo hibernará automáticamente (es decir, guardará todos sus documentos y aplicaciones, y luego se apagará). Lo hace así para garantizar que la batería no se descarga completamente, ya que eso es perjudicial para la misma. Si la batería descargara completamente, el equipo no tendría tiempo de apagarse correctamente.</p>
+
+<p>You can change what happens when the battery level gets too low by clicking the <gui>battery menu</gui> in the <gui>menu bar</gui> and selecting <gui>Power Settings</gui>. Look at the <gui>When power is critically low</gui> setting. You can choose for the computer to hibernate or shut down; if you choose shut down, your applications and documents <em>will not</em> be saved before the computer turns off.</p>
+
+<p>Algunos equipos tienen problemas al hibernar, y al reanudarse no son capaces de recuperar las aplicaciones y documentos que tenía abiertos. En este caso, puede que se haya perdido algo de su trabajo si no lo guardó antes de que el equipo hibernara. Quizá pueda <link xref="power-suspendfail">arreglar problemas de hibernación</link>.</p>
+
+</page>

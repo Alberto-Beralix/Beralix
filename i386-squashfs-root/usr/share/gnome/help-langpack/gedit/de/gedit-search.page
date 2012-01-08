@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-search" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#gedit-working-with-files"/>
+    <link type="seealso" xref="gedit-replace"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <credit type="author">
+      <name>Daniel Neel</name>
+      <email>dneelyep@gmail.com</email>
+    </credit>
+  </info>
+
+  <title>Nach Text suchen</title>
+    <p>Das Suchwerkzeug hilft Ihnen beim Auffinden bestimmter Textteile in Ihrer Datei.</p>
+    <steps>
+      <title>Text finden</title>
+      <item><p>Öffnen Sie das <gui style="menu">Suchfenster</gui>, indem Sie <guiseq><gui>Suchen</gui><gui>Suchen</gui></guiseq> wählen oder <keyseq><key>Strg</key><key>F</key></keyseq> drücken. Dadurch wird der Eingabezeiger an den Beginn der Eingabezeile im <gui>Suchfenster</gui> verschoben.</p></item>
+      <item><p>Geben Sie den zu suchenden Text im <gui>Suchfenster</gui> ein.</p></item>
+      <item><p>Bei der Eingabe beginnt <app>gedit</app>, die Textteile hervorzuheben, die mit dem eingegebenen Text übereinstimmen.</p></item>
+      <item><p>Um die Suchergebnisse zu durchsuchen, gehen Sie wie folgt vor:</p>
+      <p>Klicken Sie auf die nach <gui>unten</gui> oder <gui>oben</gui> weisenden Pfeile neben dem <gui>Suchfenster</gui> oder</p>
+      <p>Drücken Sie die <key>Pfeiltaste hoch</key> oder <key>Pfeiltaste runter</key> auf Ihrer Tastatur</p>
+      <p>Drücken Sie <keyseq><key>Strg</key><key>G</key></keyseq> oder <keyseq><key>Strg</key><key>Umschalttaste</key><key>G</key></keyseq>.</p></item>
+      <p>Drücken Sie die <key>Strg</key>-Taste und verwenden Sie die <key>Bildlauf</key>-Funktion der Maus oder des Touchpads, um sich nach oben oder unten durch den Text zu bewegen.</p>
+      </steps>
+
+  <p>Um das <gui>Suchen-Fenster</gui> zu schließen, können Sie entweder die <key>Esc</key>- oder <key>Eingabe</key>-Taste drücken. Wenn Sie <key>Esc</key> drücken, wird der Cursor wieder an der Stelle platziert, wo er vor dem Beginn Ihrer Suche war. Nach dem Drücken von <key>Eingabe</key> wird der Cursor an der aktuellen Position der Suchergebnisse platziert.</p>
+
+    <list>
+      <title>Suchtipps</title>
+      <item><p>Wenn Sie einen Textabschnitt mit Ihrer Maus markieren und anschließend <keyseq><key>Strg</key><key>F</key></keyseq> drücken, erscheint der hervorgehobene Text im Suchfenster.</p></item>
+      <item><p>Erweiterte Suchoptionen erreichen Sie, indem Sie auf das <gui>Lupensymbol</gui> im Suchfenster klicken oder einen Klick mit der rechten Maustaste auf einer beliebigen Stelle des Suchfensters ausführen.</p></item>
+      <item><p>Der von Ihnen gesuchte Text wird weiterhin in <app>gedit</app> hervorgehoben, auch nachdem die Suche abgeschlossen ist. Um die Hervorhebung zu entfernen, klicken Sie auf <guiseq><gui>Suchen</gui><gui>Hervorhebung zurücksetzen</gui></guiseq> oder drücken Sie <keyseq><key>Strg</key><key>Umschalttaste</key><key>K</key></keyseq>.</p>
+      </item>
+    </list>
+
+</page>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="addins-tools" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="addins#manage"/>
+    <desc>Zusätzliche Funktionalität zu Notizen aktivieren.</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-05-29" status="candidate"/>
+    <credit type="author">
+      <name>Paul Cutler</name>
+      <email>pcutler@gnome.org</email>
+    </credit>    
+<!--
+    <copyright>
+      <year>2010</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+-->
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+ <title>Tomboy-Werkzeuge-Addins</title>
+
+	<p>Addins fügen zusätzliche Funktionalität zu Ihren Tomboy-Notizen hinzu.</p>
+
+  <section id="backlinks">
+    <title>Backlinks</title>
+	<p>Das Addin <gui>Was zeigt hier hin?</gui> ist standardmäßig aktiviert und zeigt Ihnen an, welche Notizen mit derjenigen Notiz verknüpft sind, welche Sie gerade betrachten.</p> 
+  </section>
+
+<section id="html-export">
+  <title>In HTML exportieren</title>
+  <p>Das Addin <gui>In HTML exportieren</gui> ist standardmäßig aktiviert und exportiert eine Notiz in das HTML-Format.</p>
+	<p>Um eine Notiz in das HTML-Format zu exportieren, klicken Sie auf das <gui>Werkzeuge</gui>-Symbol in der Werkzeugleiste einer Notiz und wählen Sie <gui>In HTML exportieren</gui>. Daraufhin wird ein Dialog zum Speichern der Notiz angezeigt. Wählen Sie den Ordner, in welchem Sie die Notiz speichern wollen und ändern Sie den Namen der neuen HTML-Datei, falls Sie sie unter einem anderen Namen als die eigentliche Notiz speichern wollen. Die Notiz wird dann als eine HTML-Datei gespeichert und automatisch in Ihrem Browser angezeigt.</p>
+</section>
+
+<section id="timestamp">
+  <title>Zeitstempel einfügen</title>
+  <p>Das Addin <gui>Zeitstempel einfügen</gui> ist standardmäßig deaktiviert. Um es zu aktivieren, wählen Sie das Addin <gui>Zeitstempel einfügen</gui> in den Tomboy-Einstellungen aus und klicken Sie auf <gui>Aktivieren</gui>.</p>
+	<p>Um Ihre Notizen mit einem Zeitstempel zu versehen, klicken Sie auf das <gui>Werkzeuge</gui>-Symbol in der Werkzeugleiste einer Notiz und wählen Sie <gui>Zeitstempel einfügen</gui> oder drücken Sie <key>STRG + D</key>.</p>
+</section>
+
+<section id="noteoftheday">
+  <title>Note of the Day</title>
+  <p>Das Addin <gui>Note of the Day</gui> ist standardmäßig deaktiviert. Zum Aktivieren wählen Sie das Addin <gui>Note of the Day</gui> in den Tomboy-Einstellungen aus und klicken Sie auf <gui>Aktivieren</gui>.</p>
+	<p>Das Addin <gui>Note of the Day</gui> erzeugt eine neue Notiz mit einem dem Schema <em>Heute: Montag, 26. Juli 2010</em> folgenden Titel. Zur Notiz werden außerdem Zeilen für <em>Aufgaben</em> und <em>Termine</em> automatisch hinzugefügt.</p>
+</section>
+
+<section id="watcher">
+  <title>Notizordner-Überwachung</title>
+  <p>Das Addin zur Notizordner-Überwachung überwacht den Ordner, in dem Ihre Tomboy-Notizen gespeichert sind. Falls das Addin Änderungen an Ihren Notizen feststellt, werden diese Änderungen wirksam und in Ihren Notizen dargestellt. Dieses Addin wird üblicherweise von Abgleichdiensten von Drittanbietern wie Dropbox genutzt. Informationen zur Nutzung solcher Dienste werden von diesem Hilfedokument nicht bereitgestellt.</p>
+</section>
+
+ </page>

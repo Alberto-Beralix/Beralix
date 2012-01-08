@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-behavior" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-behavior"/>
+
+    <desc>Dê um clique simples para abrir arquivos, executar ou visualizar arquivos de texto executáveis e especificar o comportamento da lixeira.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:mal="http://projectmallard.org/1.0/" its:version="1.0">
+      <its:withinTextRule withinText="no" selector="//mal:item/mal:title/mal:gui[not(preceding-sibling::node() or following-sibling::node())]"/>
+    </its:rules>
+  </info>
+
+<title>Preferências de comportamento do gerenciador de arquivos</title>
+<p>Você pode controlar se você der um clique único  ou clique duplo nos arquivos, se as pastas estão abertas em uma nova janela, como arquivos de textos são executados, e o comportamento do lixo. Em qualquer janela do gerenciador de arquivos, clique <guiseq><gui>Editar</gui><gui>Preferências</gui></guiseq> e selecione o <gui>Comportamento</gui> da aba.</p>
+
+<section id="behavior">
+<title>Comportamento</title>
+<terms>
+ <item>
+  <title><gui>Clique simples para abrir os itens.</gui></title>
+  <title><gui>Clique duplo para abrir os itens.</gui></title>
+  <p>Por padrão, ao clicar seleciona os arquivos e clicar duas vezes os abre. Você pode optar para que os arquivos e pastas abram quando você clicar neles uma vez. Quando você usar o modo de clique único, você pode manter pressionada a tecla <key>Ctrl</key> enquanto clica para selecionar um ou mais arquivos.</p>
+ </item>
+ <item>
+  <title><gui>Abrir cada pasta em sua própria janela</gui></title>
+  <p>Quando você abre uma pasta no gerenciador de arquivos, ele irá abrir normalmente na mesma janela. Você pode clicar com o  botão direito do mouse em uma pasta e selecionar <gui> Abrir em uma Nova Janela</gui> para abrir qualquer pasta individual em uma nova janela. Se você costuma fazer isso, selecione essa opção se você preferiria  ter cada pasta aberta em sua própria janela por padrão.</p>
+ </item>
+</terms>
+
+</section>
+<section id="executable">
+<title>Arquivos de texto executáveis</title>
+ <p>Um arquivo de texto executável é um arquivo que contém um programa que você pode rodar (executar). A <link xref="nautilus-file-properties-permissions#files">permissões do arquivo</link> também permitirá que o arquivo seja executado como um programa. Os mais comuns são scripts Shell, Python e Perl. Estes possuem extensões .sh .py, e .pl respectivamente.</p>
+ <p>Você pode selecionar para <gui>Executar os arquivos de texto executáveis quando estiverem abertos</gui>, <gui> Ver os arquivos de texto executáveis quando estiverem abertos</gui> ou <gui> Perguntar a cada vez</gui>. Se a última opção for selecionada, uma caixa de diálogo aparecerá perguntando se você deseja executar ou exibir o arquivo de texto selecionado.</p>
+
+
+</section>
+<section id="trash">
+<info>
+<link type="seealso" xref="files-delete"/>
+<title type="link">Preferências de lixeira do gerenciador de arquivos</title>
+</info>
+<title>Lixeira</title>
+
+<terms>
+ <item>
+  <title><gui>Perguntar antes de esvaziar a lixeira ou excluir arquivos</gui></title>
+  <p>Essa opção é seleciona por padrão. Quando esvaziar a lixeira, uma mensagem será exibida confirmando que você gostaria de esvaziar a lixeira ou excluir arquivos.</p>
+ </item>
+ <item>
+  <title><gui>Inclui um comando de exclusão que ignora a lixeira</gui></title>
+  <p>Selecionando esta opção irá adicionar um item <gui>Excluir</gui> ao menu <gui>Editar</gui> assim como o menu que aparece quando você clica com o botão direito em um item na aplicação <app>Arquivos</app>.</p>
+<note style="warning">
+<p>Um item excluído através da opção de menu <gui>Remover</gui> não passa pela lixeira. Ele é removido do sistema por completo. Não há como recuperá-lo.</p>
+</note>
+ </item>
+</terms>
+</section>
+
+</page>

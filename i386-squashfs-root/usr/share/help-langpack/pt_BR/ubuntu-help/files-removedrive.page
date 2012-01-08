@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-removedrive" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="files#removable"/>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <desc>Ejetar ou desmontar uma unidade de disco USB, CD, DVD ou outro dispositivo.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Remover uma unidade externa com segurança</title>
+
+  <p>Quando você usa um dispositivo de armazenamento externo como um pendrive, você precisa removê-lo com segurança antes de desconectá-lo. Se você apenas desconectar o dispositivo, estará correndo o risco de desconectá-lo enquanto uma aplicação está o usando, o que pode resultar em perdas ou danos em alguns dos seus arquivos. Quando você usar um disco óptico como um CD ou um DVD, você pode usar os mesmos passos para ejetar o disco de seu computador.</p>
+
+  <steps>
+    <item><p><link xref="files-browse">Abrir o gerenciador de arquivos</link>.</p></item>
+    <item><p>Localize o dispositivo na barra lateral. Ele deve ter um pequeno ícone de ejetar próximo ao nome. Clique no ícone de ejetar para remover com segurança ou ejetar o dispositivo.</p></item>
+  </steps>
+
+  <p>Alternativamente, você pode clicar com o botão direito no dispositivo e selecionar <gui>Ejetar</gui> ou <gui>Remover o dispositivo com segurança</gui>. Dispositivos USB não podem ser fisicamente ejetados, então não há diferença entre <gui>Ejetar</gui> ou <gui>Remover o dispositivo com segurança</gui> para esses dispositivos.</p>
+
+  <p>Se algum arquivo armazenado no dispositivo estiver aberto em alguma aplicação, não será possível remover o dispositivo com segurança. Você será avisado por uma janela dizendo que "o volume está ocupado" e com a lista de todos os arquivos abertos no dispositivo. Uma vez fechado todos os aquivos do dispositivo, ele será removido com segurança automaticamente (e poderá ser desconectado ou ejetado).</p>
+
+  <p>Você também pode escolher <gui>Desmontar mesmo assim</gui> para remover o dispositivo sem fechar os arquivos. Isso pode causar erros nos aplicativos que estão com esses arquivos abertos.</p>
+
+  <p>Se você não puder fechar um dos arquivos, por exemplo se o aplicativo que está usando o arquivo está bloqueado, você pode clicar com o botão direito no arquivo na janela <gui>Volume está ocupado</gui> e selecionar <gui>Terminar processo</gui>. Isso irá forçar toda a aplicação a fechar, o que poderia fechar outros arquivos que você tem aberto com aquele aplicativo.</p>
+</page>

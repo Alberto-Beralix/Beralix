@@ -1,0 +1,160 @@
+Template: checkbox/plugins/apport_prompt/default_enabled
+Type: boolean
+Description: Enable bug reporting by default? 
+ If this option is set to Yes, then checkbox will ask if the user wants
+ to file a bug for failing tests, even if apport is not enabled.
+Description-de.UTF-8: Fehlerberichterstattung standardmäßig aktivieren? 
+ Wenn diese Option auf Ja gesetzt ist, wird Checkbox den Nutzer fragen, ob ein Fehlerbericht für fehlgeschlagene Tests erstellt werden soll, auch wenn apport nicht aktiviert ist.
+Description-en_AU.UTF-8: Enable bug reporting by default? 
+ If this option is set to Yes, then checkbox will ask if the user wants to file a bug for failing tests, even if apport is not enabled.
+Description-en_GB.UTF-8: Enable bug reporting by default? 
+ If this option is set to Yes, then checkbox will ask if the user wants to file a bug for failing tests, even if apport is not enabled.
+Description-es.UTF-8: ¿Activar informes de error de manera predeterminada? 
+ Si esta opción se establece a Sí, Checkbox preguntará al usuario si desea informar de errores por cada prueba fallida, aún si apport está desactivado.
+Description-hu.UTF-8: Legyen a hibajelentés engedélyezve alapértelmezetten? 
+ Ha ez a funkció engedélyezve van, a Checkbox sikertelen teszt esetén felkínálja a hibajelentést, akkor is, ha az apport nincs engedélyezve.
+Description-it.UTF-8: Abilitare in modo predefinito la segnalazione di bug? 
+ Se questa opzione è impostata a Sì, checkbox chiederà all'utente se vuole segnalare un bug per i test falliti, anche se apport non è abilitato.
+Description-ja.UTF-8: デフォルトでバグ報告を有効にしますか？ 
+ このオプションが有効になっていると、テストに失敗した際にバグ報告を行うかどうか、checkboxが確認するようになります。これはapportが有効になっていなくても機能します。
+Description-nl.UTF-8: Bugs rapporteren standaard inschakelen? 
+ Wanneer deze optie is ingeschakeld zal checkbox vragen of de gebruiker een bug wilt rapporteren voor mislukte tests, zelfs wanneer apport is uitgeschakeld.
+Description-pt_BR.UTF-8: Habilitar o relatório de erro por padrão? 
+ Se esta opção está definido como Sim, então a caixa de verificação irá perguntar se o usuário quer relatar o erro no teste falho, mesmo se o apport não estiver habilitado.
+Description-zh_TW.UTF-8: 預設啟用臭蟲回報？ 
+ 若這個選項設為「是」，checkbox 會詢問使用者是否要不管 apport 有沒有啟用，都提交失敗測試的臭蟲回報。
+
+Template: checkbox/plugins/apport_prompt/default_package
+Type: string
+Description: Default package to report bugs against:
+ When filing a new bug through checkbox, if it does not guess the 
+ package, the default package that the bug will be file against.
+Description-de.UTF-8: Paket, für das standardmäßig Fehlerberichte erstellt werden:
+ Wenn ein neuer Fehlerbericht mithilfe von Checkbox erstellt und das betroffene Paket nicht erkannt wird, wird der Fehlerbericht für das angegebene standardmäßige Paket erstellt.
+Description-en_AU.UTF-8: Default package to report bugs against:
+ When filing a new bug through checkbox, if it does not guess the  package, the default package that the bug will be file against.
+Description-en_GB.UTF-8: Default package to report bugs against:
+ When filing a new bug through checkbox, if it does not guess the  package, the default package that the bug will be file against.
+Description-it.UTF-8: Pacchetto predefinito rispetto al quale segnalare i bug:
+ Pacchetto predefinito rispetto al quale segnalare i bug, se non ne viene ipotizzato alcuno, quando un nuovo bug viene segnalato attraverso checkbox.
+Description-ja.UTF-8: デフォルトでバグ報告の対象とするパッケージ:
+ checkbox経由でバグ報告を行う場合、パッケージ名を推定できなかったときは、デフォルトのパッケージ名を用いて報告します。
+Description-nl.UTF-8: Standaard pakket om bugs voor te rapporteren:
+ Wanneer een nieuwe bug wordt gerapporteerd via checkbox, en het het pakket kan niet geraden worden, dan zal de bug worden gerapporteerd voor het standaardpakket.
+
+Template: checkbox/plugins/jobs_info/blacklist
+Type: string
+Description: Test suite blacklist:
+ List of job files to never run when testing with checkbox.
+Description-de.UTF-8: Sperrliste der Testsammlung:
+ Liste der Aufträge, die während des Testens mit Checkbox niemals ausgeführt werden.
+Description-en_AU.UTF-8: Test suite blacklist:
+ List of job files to never run when testing with checkbox.
+Description-en_GB.UTF-8: Test suite blacklist:
+ List of job files to never run when testing with checkbox.
+Description-it.UTF-8: Blacklist dei set di test:
+ Elenco dei file di lavori che non devono essere mai eseguiti durante i test con checkbox.
+Description-ja.UTF-8: テストスイートのブラックリスト:
+ checkboxによるテスト時に、実行しないジョブのリスト。
+Description-nl.UTF-8: Testsuite zwarte lijst:
+ Lijst van taken die nooit uitgevoerd moeten worden wanneer er getest wordt met checkbox.
+Description-zh_TW.UTF-8: 測試套組黑名單：
+ checkbox 測試時永不執行的工作清單。
+
+Template: checkbox/plugins/jobs_info/whitelist
+Type: string
+Description: Test suite whitelist:
+ List of jobs to run when testing with checkbox.
+Description-de.UTF-8: Positivliste der Testsammlung:
+ Liste der Aufträge, die während des Testens mit Checkbox ausgeführt werden.
+Description-en_AU.UTF-8: Test suite whitelist:
+ List of jobs to run when testing with checkbox.
+Description-en_GB.UTF-8: Test suite whitelist:
+ List of jobs to run when testing with checkbox.
+Description-it.UTF-8: Whitelist dei set di test:
+ Elenco dei lavori da eseguire durante i test con checkbox.
+Description-ja.UTF-8: テストスイートのホワイトリスト:
+ checkboxによるテスト時に、実行するジョブのリスト。
+Description-nl.UTF-8: Testsuite witte lijst:
+ Lijst van taken die uitgevoerd moeten worden wanneer er getest wordt met checkbox.
+Description-zh_TW.UTF-8: 測試套組白名單：
+ checkbox 測試時要執行的工作清單。
+
+Template: checkbox/plugins/launchpad_exchange/transport_url
+Type: string
+Default: https://launchpad.net/+hwdb/+submit
+Description: Transport URL:
+ URL where to send submissions.
+Description-de.UTF-8: Transport-URL:
+ URL, an welche die Ergebnisse gesendet werden.
+Description-en_AU.UTF-8: Transport URL:
+ URL where to send submissions.
+Description-en_GB.UTF-8: Transport URL:
+ URL where to send submissions.
+Description-it.UTF-8: URL di trasporto:
+ URL al quale effettuare gli invii.
+Description-nl.UTF-8: Transport-URL:
+ URL waar de inzendingen naartoe worden gestuurd.
+Description-zh_TW.UTF-8: 傳輸網址：
+ 傳送報告提交的所在網址。
+
+Template: checkbox/plugins/launchpad_prompt/email
+Type: string
+Description: Launchpad E-mail:
+ E-mail address used to sign in to Launchpad.
+Description-de.UTF-8: Launchpad-E-Mail:
+ E-Mail-Adresse, die zum Anmelden bei Launchpad verwendet wird.
+Description-en_AU.UTF-8: Launchpad E-mail:
+ E-mail address used to sign in to Launchpad.
+Description-en_GB.UTF-8: Launchpad E-mail:
+ E-mail address used to sign in to Launchpad.
+Description-es.UTF-8: Correo-e de Launchpad:
+ Dirección de correo electrónico usada para iniciar sesión en Launchpad.
+Description-it.UTF-8: Email Launchpad:
+ Indirizzo email usato per accedere a Launchpad.
+Description-nl.UTF-8: Launchpad e-mail:
+ E-mailadres om bij Launchpad aan te melden.
+Description-zh_TW.UTF-8: Launchpad 電子郵件：
+ 用來登入 Launchpad 的電子郵件位址。
+
+Template: checkbox/plugins/proxy_info/http_proxy
+Type: string
+Description: HTTP Proxy:
+ HTTP proxy to use instead of the one specified in environment.
+Description-de.UTF-8: HTTP-Proxy:
+ HTTP-Proxy, der anstelle des in den Umgebungseinstellungen festgelegten Proxys verwendet wird.
+Description-en_AU.UTF-8: HTTP Proxy:
+ HTTP proxy to use instead of the one specified in environment.
+Description-en_GB.UTF-8: HTTP Proxy:
+ HTTP proxy to use instead of the one specified in environment.
+Description-es.UTF-8: Proxy HTTP:
+ Proxy HTTP que se usará en lugar del especificado en el entorno.
+Description-it.UTF-8: Proxy HTTP:
+ Proxy HTTP da usare al posto di quello specificato nella variabile d'ambiente.
+Description-ja.UTF-8: HTTP Proxy:
+ 環境設定で指定されているProxyとは別の、登録時に利用するHTTP Proxy。
+Description-nl.UTF-8: HTTP-proxy:
+ HTTP-proxy om te gebruiken in plaats van degene die in de omgeving is ingesteld.
+Description-zh_TW.UTF-8: HTTP 代理：
+ 要使用的 HTTP 代理，而不是使用環境內所指定的。
+
+Template: checkbox/plugins/proxy_info/https_proxy
+Type: string
+Description: HTTPS Proxy:
+ HTTPS proxy to use instead of the one specified in environment.
+Description-de.UTF-8: HTTPS-Proxy:
+ HTTPS-Proxy, der anstelle des in den Umgebungseinstellungen festgelegten Proxys verwendet wird.
+Description-en_AU.UTF-8: HTTPS Proxy:
+ HTTPS proxy to use instead of the one specified in environment.
+Description-en_GB.UTF-8: HTTPS Proxy:
+ HTTPS proxy to use instead of the one specified in environment.
+Description-es.UTF-8: Proxy HTTPS:
+ Proxy HTTPS que se usará en lugar del especificado en el entorno.
+Description-it.UTF-8: Proxy HTTPS:
+ Proxy HTTPS da usare al posto di quello specificato nella variabile d'ambiente.
+Description-ja.UTF-8: HTTPS Proxy:
+ 環境設定で指定されているProxyとは別の、登録時に利用するHTTPS Proxy。
+Description-nl.UTF-8: HTTPS-proxy:
+ HTTPS-proxy om te gebruiken in plaats van degene die in de omgeving is ingesteld.
+Description-zh_TW.UTF-8: HTTPS 代理：
+ 要使用的 HTTPS 代理，而不是使用環境內所指定的。

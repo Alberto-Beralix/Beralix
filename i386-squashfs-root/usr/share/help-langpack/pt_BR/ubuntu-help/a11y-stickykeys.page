@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task a11y" id="a11y-stickykeys" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="a11y#mobility" group="keyboard"/>
+    <link type="guide" xref="keyboard"/>
+
+    <revision date="2011-04-06" status="outdated"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>Digite os atalhos de teclado uma tecla por vez, em vez de ter de manter todas elas pressionadas ao mesmo tempo.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Ligar Teclas de aderência</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Turn on from the keyboard?! How do I turn these features on from
+  the keyboard then? Used to be there were odd shortcuts. I think
+  5x Shift turned one of them on. Fix for 3.2</p>
+</comment>
+
+<p><em>Teclas de aderência</em> permitem a você digitar atalhos de teclados pressionando uma tecla de cada vez, em vez de ter de pressioná-las todas ao mesmo tempo. Por exemplo, o atalho <keyseq><key>Alt</key><key>Tab</key></keyseq> alterna as janelas. Sem as teclas de aderência, você precisaria segurar ambas as teclas ao mesmo tempo; com as teclas de aderência, você pressionaria <key>Alt</key> e depois <key>Tab</key> para alternar janelas.</p>
+
+<p>Talvez você queira ligar as teclas de aderência se você sente dificuldade em pressionar várias teclas ao mesmo tempo.</p>
+
+<steps>
+  <item><p>Clique no ícone que está no canto direito da <gui>barra superior</gui> e selecione <gui>Configurações do sistema</gui>.</p></item>
+  <item><p>Clique em <gui>Acesso universal</gui>.</p></item>
+  <item><p>Selecione a aba <gui>Digitação</gui>.</p></item>
+  <item><p>Selecione <gui>Ativar recursos de acessibilidade pelo teclado</gui>.</p></item>
+  <item><p>Ponha a chave <gui>Teclas de aderência&gt; na posição "ON".</gui></p></item>
+</steps>
+
+<note style="tip"><p>Você pode ligar e desligar rapidamente esse recurso a partir do <link xref="a11y-icon">menu de acesso universal</link>.</p></note>
+
+
+<p>Se você pressionar duas teclas de uma vez, você pode fazer as teclas de aderência se desligarem automaticamente para permitir que você digite um atalho de teclado da maneira "padrão".</p>
+<p>Por exemplo, se você tiver as teclas de aderência ligadas, mas pressiona <key>Alt</key> e <key>Tab</key> ao mesmo tempo, as teclas de aderência não esperariam que você pressionasse outra tecla se essa opção estiver ligada. Ele somente esperaria se você só pressionasse uma tecla. Isso é útil se você for capaz de pressionar alguns alguns atalhos de teclado simultaneamente (por exemplo, quando as teclas estão próximas umas das outras), mas não outros.</p>
+<p>Escolha <gui>Desabilitar se duas teclas forem pressionadas simultaneamente</gui> para habilitar isso.</p>
+
+<p>Você pode fazer com que seu computadora produza um alarme sonoro quando você começa a digitar um atalho de teclado com as teclas de aderência ativadas. Isto é útil se você quer saber que as teclas de aderência estão esperando que um atalho de teclado seja pressionado, então o pressionamento da tecla será interpretado como parte do atalho. Selecione <gui>Emitir alarme sonoro quando uma tecla modificadora é pressionada</gui> para ativar esse recurso.</p>
+
+</page>

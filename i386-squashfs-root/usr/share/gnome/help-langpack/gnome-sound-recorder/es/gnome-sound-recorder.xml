@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.5.2">
+<!ENTITY manrevision "2.5">
+<!ENTITY date "February 2004">
+<!ENTITY app "Sound Recorder">
+<!ENTITY ug "GNOME Desktop User Guide">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="es">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Manual del Grabador de sonido V2.5</title>       
+
+    <copyright> 
+      <year>2002</year>
+      <year>2003</year> 
+      <year>2004</year> 
+      <holder>Sun Microsystems</holder> 
+    </copyright><copyright><year>2007-2008</year><holder>Jorge González (jorgegonz@svn.gnome.org)</holder></copyright> 
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2003</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <abstract role="description">
+      <para>El Grabador de sonido es una aplicación simple para grabar y reproducir diferentes archivos de sonido</para>
+    </abstract>
+
+    <publisher> 
+      <publishername>Proyecto de documentación de GNOME</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Se concede permiso para copiar, distribuir o modificar este documento según las condiciones de la GNU Free Documentation License (GFDL), Versión 1.1 o cualquier versión posterior publicada por la Free Software Foundation sin Secciones invariantes, Textos de portada y Textos de contraportada. Encontrará una copia de la GFDL en este <ulink type="help" url="ghelp:fdl">enlace</ulink> o en el archivo COPYING-DOCS distribuido con este manual.</para>
+         <para>Este manual forma parte de una colección de documentos de GNOME distribuidos según la GFDL. Si desea distribuir este manual de forma independiente de la colección, puede hacerlo agregando una copia de la licencia al documento, según se describe en la sección 6 de la misma.</para>
+
+	<para>Muchos de los nombres utilizados por las empresas para distinguir sus productos y servicios se consideran marcas comerciales. Cuando estos nombres aparezcan en la documentación de GNOME, y siempre que se haya informado a los miembros del Proyecto de documentación de GNOME de dichas marcas comerciales, los nombres aparecerán en mayúsculas o con las iniciales en mayúsculas.</para>
+
+	<para>ESTE DOCUMENTO Y LAS VERSIONES MODIFICADAS DEL MISMO SE PROPORCIONAN SEGÚN LAS CONDICIONES ESTABLECIDAS EN LA LICENCIA DE DOCUMENTACIÓN LIBRE DE GNU (GFDL) Y TENIENDO EN CUENTA QUE: <orderedlist>
+		<listitem>
+		  <para>EL DOCUMENTO SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, NI EXPLÍCITA NI IMPLÍCITA INCLUYENDO, SIN LIMITACIÓN, GARANTÍA DE QUE EL DOCUMENTO O VERSIÓN MODIFICADA DE ÉSTE CAREZCA DE DEFECTOS COMERCIALES, SEA ADECUADO A UN FIN CONCRETO O INCUMPLA ALGUNA NORMATIVA. TODO EL RIESGO RELATIVO A LA CALIDAD, PRECISIÓN Y UTILIDAD DEL DOCUMENTO O SU VERSIÓN MODIFICADA RECAE EN USTED. SI CUALQUIER DOCUMENTO O VERSIÓN MODIFICADA DE AQUÉL RESULTARA DEFECTUOSO EN CUALQUIER ASPECTO, USTED (Y NO EL REDACTOR INICIAL, AUTOR O CONTRIBUYENTE) ASUMIRÁ LOS COSTES DE TODA REPARACIÓN, MANTENIMIENTO O CORRECCIÓN NECESARIOS. ESTA RENUNCIA DE GARANTÍA ES UNA PARTE ESENCIAL DE ESTA LICENCIA. NO SE AUTORIZA EL USO DE NINGÚN DOCUMENTO NI VERSIÓN MODIFICADA DE ÉSTE POR EL PRESENTE, SALVO DENTRO DEL CUMPLIMIENTO DE LA RENUNCIA;Y</para>
+		</listitem>
+		<listitem>
+		  <para>EN NINGUNA CIRCUNSTANCIA NI BAJO NINGUNA TEORÍA LEGAL, SEA POR ERROR (INCLUYENDO NEGLIGENCIA) CONTRATO O DOCUMENTO DE OTRO TIPO, EL AUTOR, EL ESCRITOR INICIAL, EL AUTOR DE APORTACIONES NI NINGÚN DISTRIBUIDOR DEL DOCUMENTO O VERSIÓN MODIFICADA DEL DOCUMENTO, NI NINGÚN PROVEEDOR DE NINGUNA DE ESAS PARTES, SERÁ RESPONSABLE ANTE NINGUNA PERSONA POR NINGÚN DAÑO DIRECTO, INDIRECTO, ESPECIAL, INCIDENTAL O DERIVADO DE NINGÚN TIPO, INCLUYENDO, SIN LIMITACIÓN DAÑOS POR PÉRDIDA DE FONDO DE COMERCIO, PARO TÉCNICO, FALLO INFORMÁTICO O AVERÍA O CUALQUIER OTRO POSIBLE DAÑO O AVERÍA DERIVADO O RELACIONADO CON EL USO DEL DOCUMENTO O SUS VERSIONES MODIFICADAS, AUNQUE DICHA PARTE HAYA SIDO INFORMADA DE LA POSIBILIDAD DE QUE SE PRODUJESEN ESOS DAÑOS.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Sun</firstname> 
+	<surname>Equipo de documentación de GNOME</surname> 
+	<affiliation> 
+	  <orgname>Sun Microsystems</orgname> 
+	  <address/> 
+	</affiliation> 
+      </author> 
+
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>translator@gnome.org</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+
+    <revhistory>
+      <revision> 
+			<revnumber>Manual del Grabador de sonido V2.5</revnumber> 
+			<date>Febrero de 2004</date> 
+			<revdescription> 
+	  			<para role="author">Equipo de documentación de GNOME de Sun</para>
+	  			<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Manual del Grabador de sonido V2.4</revnumber> 
+			<date>Septiembre de 2003</date> 
+			<revdescription> 
+	  			<para role="author">Equipo de documentación de GNOME de Sun</para>
+	  			<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Manual del Grabador de sonido V2.3</revnumber> 
+			<date>Enero de 2003</date> 
+			<revdescription> 
+	  			<para role="author">Equipo de documentación de GNOME de Sun</para>
+	  			<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Manual del Grabador de sonido V2.2</revnumber> 
+			<date>Agosto de 2002</date> 
+			<revdescription> 
+	  			<para role="author">Equipo de documentación de GNOME de Sun</para>
+	  			<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Manual del Grabador de sonido V2.1</revnumber> 
+			<date>Junio de 2002</date> 
+			<revdescription> 
+	  			<para role="author">Equipo de documentación de GNOME de Sun</para>
+	  			<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Manual del Grabador de sonido V2.0</revnumber> 
+			<date>Mayo de 2002</date> 
+			<revdescription> 
+	  			<para role="author">Equipo de documentación de GNOME de Sun</para>
+	  			<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Este manual describe la versión 2.5.2 del Grabador de sonido.</releaseinfo> 
+    <legalnotice> 
+      <title>Comentarios</title> 
+      <para>Para informar de un fallo, o hacer alguna sugerencia concerniente a la aplicación Grabador de sonido o este manual, siga las indicaciones en la <ulink url="ghelp:gnome-feedback" type="help">Página de comentarios de GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>Grabador de sonido</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="grecord-introduction"> 
+    <title>Introducción</title> 
+    <para>La aplicación <application>Grabador de sonido</application> le permite grabar y reproducir archivos de sonido <filename>.flac</filename>, <filename>.oga</filename> (sonido OGG u <filename>.oga</filename>) y <filename>.wav</filename>.</para>
+  </sect1>
+
+  <sect1 id="grecord-getting-started">
+    <title>Inicio</title> 
+
+    <para>Puede iniciar el <application>Grabador de sonido</application> de las siguientes formas:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Menú <guilabel>Aplicaciones</guilabel></term>
+    		<listitem>
+                  <para>Elija <menuchoice><guisubmenu>Sonido y vídeo</guisubmenu><guimenuitem>Grabador de sonido</guimenuitem></menuchoice>.</para> 
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Línea de comandos</term>
+    		<listitem>
+    		<para>Ejecute el siguiente comando: <command>gnome-sound-recorder</command></para>
+    		<para> 		 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+
+    <para>Se mostrará la siguiente ventana al iniciar el <application>Grabador de sonido</application>.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="grecord-fig"> 
+	<title>Ventana del Grabador de sonido</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/grecord_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Muestra la ventana principal del Grabador de sonido. Contiene una barra de menú, una barra de herramientas, una barra de progreso y una barra de estado.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="grecord-usage"> 
+    <title>Uso</title>
+
+    <sect2 id="grecord-record">
+    	<title>Iniciar una nueva grabación</title>
+    	<para>Para iniciar una nueva sesión de grabación, realice los siguientes pasos:</para> 
+    	<orderedlist>
+    		<listitem><para>Elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Nuevo</guimenuitem></menuchoice>.</para></listitem>
+    		<listitem><para>Use la lista desplegable <guilabel>Grabar como</guilabel> para seleccionar una de las siguientes opciones de grabación:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para><guilabel>Calidad de CD, sin pérdida</guilabel></para>
+                  </listitem>
+                  <listitem>
+                    <para><guilabel>Calidad de CD, con pérdida</guilabel></para>
+                  </listitem>
+                  <listitem>
+                    <para><guilabel>Voz</guilabel></para>
+                  </listitem>
+                </itemizedlist>
+</listitem>
+    		<listitem><para>Para iniciar la grabación, elija <menuchoice><guimenu>Control</guimenu><guimenuitem>Grabar</guimenuitem></menuchoice>.</para></listitem>
+    		<listitem><para>Para parar la grabación, elija <menuchoice><guimenu>Control</guimenu><guimenuitem>Detener</guimenuitem></menuchoice>.</para></listitem>
+    		<listitem><para>Para reproducir la grabación, elija <menuchoice><guimenu>Control</guimenu><guimenuitem>Reproducir</guimenuitem></menuchoice>.</para></listitem>
+		<listitem><para>Para ejecutar el mezclador de sonido, elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Abrir Control de volumen</guimenuitem></menuchoice>.</para></listitem>
+    		<listitem><para>Para guardar la grabación, elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Guardar como</guimenuitem></menuchoice> y escriba un nombre para el archivo de sonido.</para></listitem>    		
+    	</orderedlist>
+    </sect2>
+ 
+    <sect2 id="grecord-play">
+    	<title>Reproducir un sonido</title>
+    	<para>Para reproducir un archivo de sonido elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Abrir</guimenuitem></menuchoice>. Seleccione un archivo de sonido en el diálogo <guilabel>Abrir un archivo</guilabel>, después pulse <guibutton>Aceptar</guibutton>. El <application>Grabador de sonido</application> muestra la duración del archivo en minutos y segundos debajo de la barra de progreso. Para reproducir el archivo, elija <menuchoice><guimenu>Control</guimenu><guimenuitem>Reproducir</guimenuitem></menuchoice>. El indicador de progreso se mueve a lo largo de la barra de progreso según se va reproduciendo el archivo de sonido.</para> 
+    </sect2>  
+ 
+    <sect2 id="grecord-props">
+    	<title>Mostrar las propiedades de un archivo</title>
+    	<para>Para mostrar las propiedades de un archivo elija <menuchoice><guimenu>Archivo</guimenu><guimenuitem>Propiedades</guimenuitem></menuchoice>. El <application>Grabador de sonido</application> muestra la siguiente información acerca del archivo:</para>
+        <variablelist>
+          <varlistentry>
+            <term><guilabel>Información de archivo</guilabel></term>
+            <listitem>
+              <para><guilabel>Carpeta</guilabel> muestra el nombre de la carpeta en la que se ubica el archivo.</para>
+              <para><guilabel>Nombre de archivo</guilabel> muestra el nombre del archivo.</para>
+              <para><guilabel>Tamaño de archivo</guilabel> muestra el tamaño del archivo.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><guilabel>Información de audio</guilabel></term>
+            <listitem>
+              <para><guilabel>Duración del archivo</guilabel> muestra la longitud de los datos de sonido en el archivo.</para>
+              <para><guilabel>Número de canales</guilabel> muestra el número de canales en los que se grabaron los datos de sonido.</para>
+              <para><guilabel>Frec. de muestreo</guilabel> muestra la frecuencia de muestreo a la que se grabaron los datos de sonido.</para>
+              <para><guilabel>Frec. de bits</guilabel> muestra la tasa de bit a la que se grabaron los datos de sonido.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+ 
+    </sect2>  
+    
+  </sect1>
+
+</article>

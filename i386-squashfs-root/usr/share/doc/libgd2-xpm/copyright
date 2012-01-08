@@ -1,0 +1,197 @@
+Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?rev=135
+Name: GD
+Maintainer: Pierre-Alain Joye <pierre@libgd.org>
+Source: http://www.libgd.org/releases/
+
+X-Stripped: ./VMS/*, ./cmake/*
+X-Stripped-Reason: some files lack copyright info
+
+X-Stripped: ./test/*
+X-Stripped-Reason: unusable without cmake modules, and truetype file lack license
+
+Copyright: 1997-2007, Thomas Boutell, Pierre-Alain Joye and contributors
+License: other-GD
+
+Files: Makefile.in
+Copyright: 1994-2006, Free Software Foundation, Inc.
+License: other-GAP-Makefile.in
+
+Files: ,/depcomp,
+ ./ltmain.sh,
+ ./missing
+Copyright: 1996-2005, Free Software Foundation, Inc
+License: GPL-2+ or other-SA-Autoconf
+
+Files: ./wbmp.[ch]
+Copyright: 2000, Johan Van den Brande <johan@vandenbrande.com>
+License: UNKNOWN
+
+Files: ./strlcpy.c
+Copyright: 1998, Todd C. Miller <Todd.Miller@courtesan.com>
+License: BSD
+ Copyright (c) 1998 Todd C. Miller <Todd.Miller@courtesan.com>
+ All rights reserved.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. The name of the author may not be used to endorse or promote products
+    derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+ AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL
+ THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+ OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Files: ./configure
+Copyright: 1992-1996, 1998-2006
+License: other-GAP-configure
+
+Files: ./install-sh
+Copyright: 1991, the Massachusetts Institute of Technology
+License: UNKNOWN
+
+Files: ./gd_topal.c
+Copyright: 1991-1996, Thomas G. Lane
+License: UNKNOWN
+
+Files: ./gd_png.c
+Copyright: 1999, Greg Roelofs and Thomas Boutell
+License: UNKNOWN
+
+Files: ./gd_gd2.c
+Copyright: 1999, Philip Warner
+License: UNKNOWN
+
+Files: ./gd_jpeg.c
+Copyright: 2000, Doug Becker <thebeckers@home.com>
+License: UNKNOWN
+
+Files: ./gd_wbmp.c
+Copyright: 2000, Maurice Szmurlo <Maurice.Szmurlo@info.unicaen.fr>
+	????, Johan Van den Brande <johan@vandenbrande.com>
+License: other
+ Permission to use, copy, modify, and distribute this software and its
+ documentation for any purpose and without fee is hereby granted, provided
+ that the above copyright notice appear in all copies and that both that
+ copyright notice and this permission notice appear in supporting
+ documentation.  This software is provided "as is" without express or
+ implied warranty.
+
+Files: ./gd_gif_out.c
+Copyright: is the property of
+	1989, by Jef Poskanzer
+License: other
+ Code drawn from ppmtogif.c, from the pbmplus package
+ .
+ Based on GIFENCOD by David Rowley <mgardi@watdscu.waterloo.edu>. A
+ Lempel-Zim compression based on "compress".
+ .
+ Modified by Marcel Wijkstra <wijkstra@fwi.uva.nl>
+ .
+ Copyright (C) 1989 by Jef Poskanzer.
+ .
+ Permission to use, copy, modify, and distribute this software and its
+ documentation for any purpose and without fee is hereby granted, provided
+ that the above copyright notice appear in all copies and that both that
+ copyright notice and this permission notice appear in supporting
+ documentation.  This software is provided "as is" without express or
+ implied warranty.
+ .
+ The Graphics Interchange Format(c) is the Copyright property of
+ CompuServe Incorporated.  GIF(sm) is a Service Mark property of
+ CompuServe Incorporated.
+
+Files: ./debian/*
+Copyright: 2001, Ivo Timmermans <ivo@debian.org>
+	2002-2010, Jonas Smedegaard <dr@jones.dk>
+License: GPL-2+
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2, or (at
+ your option) any later version.
+ .
+ On Debian GNU/Linux systems, the complete text of the GNU General
+ Public License (GPL) version 2 can be found at
+ /usr/share/common-licenses/GPL-2.
+
+License: other-GAP-Makefile.in
+ This Makefile.in is free software; the Free Software Foundation
+ gives unlimited permission to copy and/or distribute it,
+ with or without modifications, as long as this notice is preserved.
+
+License: other-GAP-configure
+ This configure script is free software; the Free Software Foundation
+ gives unlimited permission to copy, distribute and modify it.
+
+License: other-SA-Autoconf
+ As a special exception to the GNU General Public License, if you
+ distribute this file as part of a program that contains a
+ configuration script generated by Autoconf, you may include it under
+ the same distribution terms that you use for the rest of that program.
+
+License: other-GD
+ Portions copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001,
+ 2002 by Cold Spring Harbor Laboratory. Funded under Grant
+ P41-RR02188 by the National Institutes of Health. 
+ .
+ Portions copyright 1996, 1997, 1998, 1999, 2000, 2001, 2002 by
+ Boutell.Com, Inc. 
+ .
+ Portions relating to GD2 format copyright 1999, 2000, 2001, 2002
+ Philip Warner.
+ .
+ Portions relating to PNG copyright 1999, 2000, 2001, 2002 Greg
+ Roelofs. 
+ .
+ Portions relating to gdttf.c copyright 1999, 2000, 2001, 2002 John  
+ Ellson (ellson@lucent.com).
+ .
+ Portions relating to gdft.c copyright 2001, 2002 John Ellson  
+ (ellson@lucent.com).  
+ .
+ Portions copyright 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007
+	 Pierre-Alain Joye (pierre@libgd.org).  
+ .
+ Portions relating to JPEG and to color quantization copyright 2000,
+ 2001, 2002, Doug Becker and copyright (C) 1994, 1995, 1996, 1997,
+ 1998, 1999, 2000, 2001, 2002, Thomas G. Lane. This software is
+ based in part on the work of the Independent JPEG Group. See the
+ file README-JPEG.TXT for more information.
+ .
+ Portions relating to WBMP copyright 2000, 2001, 2002 Maurice
+ Szmurlo and Johan Van den Brande.
+ .
+ Permission has been granted to copy, distribute and modify gd in
+ any context without fee, including a commercial application,
+ provided that this notice is present in user-accessible supporting
+ documentation.
+ .
+ This does not affect your ownership of the derived work itself, and 
+ the intent is to assure proper credit for the authors of gd, not to
+ interfere with your productive use of gd. If you have questions,
+ ask. "Derived works" includes all programs that utilize the   
+ library. Credit must be given in user-accessible documentation.
+ .
+ This software is provided "AS IS." The copyright holders disclaim  
+ all warranties, either express or implied, including but not
+ limited to implied warranties of merchantability and fitness for a
+ particular purpose, with respect to this code and accompanying  
+ documentation.
+ .
+ Although their code does not appear in gd, the authors wish to thank
+ David Koblas, David Rowley, and Hutchison Avenue Software Corporation
+ for their prior contributions.

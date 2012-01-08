@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+# install all packages that were pulled in by enabling modules in
+# jockey, since we do save the X.org configuration already. Without the
+# accompanying driver packages (like nvidia-glx), the target system would be
+# wrecked.
+
+PKGLIST=/var/cache/jockey/installed_packages
+
+[ -e $PKGLIST ] || exit 0
+
+for p in `cat $PKGLIST`; do
+    apt-install $p
+done

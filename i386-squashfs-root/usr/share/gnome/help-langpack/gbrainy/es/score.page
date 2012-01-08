@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="score" xml:lang="es">
+      
+  <info>
+    <link type="guide" xref="index#play"/>
+    <link type="seealso" xref="history"/>
+    <desc>Cómo se calculan las puntaciones del jugados.</desc>
+    <revision pkgversion="2.30" version="0.1" date="2010-01-22" status="draft"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+
+  <title>Puntuaciones de las partidas y tiempos</title>
+  <p>Si respondes incorrectamente a un puzle no obtendrás ninguna puntación.</p>
+  <p>Si respondes correctamente a un puzle obtendrás una puntuación que depende del tiempo que te haya llevado resolver el problema y si usaste alguna sugerencia durante el juego.</p>
+  <p>La siguiente tabla resume las diferentes duraciones de los juegos (en segundos) basadas en el nivel de dificultad.</p>
+  <table frame="all" rules="all">
+    <tr>
+      <td><p/></td>
+      <td><p>Fácil</p></td>
+      <td><p>Medio</p></td>
+      <td><p>Avanzado</p></td>
+    </tr>
+    <tr>
+      <td><p>Puzles de lógica</p></td>
+      <td><p>156</p></td>
+      <td><p>120</p></td>
+      <td><p>110</p></td>
+    </tr>
+    <tr>
+      <td><p>Cálculo mental</p></td>
+      <td><p>78</p></td>
+      <td><p>60</p></td>
+      <td><p>55</p></td>
+    </tr>
+    <tr>
+      <td><p>Entrenadores de memoria</p></td>
+      <td><p>39</p></td>
+      <td><p>30</p></td>
+      <td><p>27</p></td>
+    </tr>
+    <tr>
+      <td><p>Analogías verbales</p></td>
+      <td><p>39</p></td>
+      <td><p>30</p></td>
+      <td><p>27</p></td>
+    </tr>
+  </table>
+  <p>Se aplica la siguiente lógica con el tiempo esperado para el nivel de dificultad actual y el tiempo usado para completar la partida:</p>
+  <list>
+    <item>
+      <p>Si completar el juego te lleva menos tiempo del esperado, consigues 10 puntos.</p>
+    </item>
+    <item>
+      <p>Si completar el juego te lleva más del tiempo esperado consigues 8 puntos.</p>
+    </item>
+    <item>
+      <p>Si completar el juego te lleva más del doble de tiempo del esperado consigues 7 puntos.</p>
+    </item>
+    <item>
+      <p>Si completar el juego te lleva más del triple de tiempo del esperado consigues 6 puntos.</p>
+    </item>
+    <item>
+      <p>Si usas una sugerencia tu puntuación será sólo del 80% de la puntuación original.</p>
+    </item>
+  </list>
+  
+  <section id="computing-scores">
+    <title>Computar los totales</title>
+    <p><app>gbrainy</app> mantiene un seguimiento de los tipos diferentes de juegos jugados. Para calcular la puntuación final de cada conjunto de tipos de juegos suma todos los resultados del mismo tipo de juegos jugados y después aplica un factor basado en el logaritmo de 10 para el nivel de dificultad fácil, 20 para el nivel de dificultad medio y 30 para el nivel de dificultad avanzado.</p>
+	  <p>Esto significa que al jugar el nivel de dificultad medio, para obtener 100 puntos necesitarás conseguir al menos 10 puntos en las últimas 20 partidas de cada tipo de juego jugado.</p>
+	  <p>Esto puede sonar como un reto pero permite a los jugadores comparar las puntuaciones en las partidas de diferentes sesiones (en el histórico de partidas del jugador) y permite un mejor seguimiento de la progresión del jugador durante todas las partidas que ha jugado.</p>
+  </section>
+</page>

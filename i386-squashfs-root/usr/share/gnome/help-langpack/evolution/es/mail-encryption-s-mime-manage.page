@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-encryption-s-mime-manage" xml:lang="es">
+
+  <info>
+    <desc>Añadir, editar, ver y eliminar certificados S/MIME.</desc>
+
+    <link type="guide" xref="mail-encryption#s-mime"/>
+
+    <revision pkgversion="2.32.1" version="0.1" date="2011-01-05" status="draft"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/bshoty0.html.en -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Gestionar certificados S/MIME</title>
+
+<p>Los certificados le permiten comunicarse con otros de una forma segura bajo una conexión cifrada o firmar un mensaje confirmando su identidad al contacto. Estos ajustes sólo se aplican al cifrado S/MIME.</p>
+<p>Puede importar, ver, editar (excepto sus propios certificados), y eliminar sus certificados bajo <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Certificados</gui></guiseq>.</p>
+<p><gui>Your Certificates</gui> displays a list of certificates that you own. To add a signing certificate, click <gui style="button">Import</gui>, select the file to import, then click <gui style="button">Open</gui> and enter a password.</p>
+<p>Pulse sobre la pestaña <gui>Certificados de contactos</gui> para mostrar una lista de los certificados que posee de sus contactos. Estos certificados le permiten descifrar mensajes así como verificar los mensajes firmados.</p>
+<p><gui>Autoridades</gui> muestra una lista de las autoridades de certificados de confianza quienes verifican que el certificado que tiene es válido.</p>
+</page>

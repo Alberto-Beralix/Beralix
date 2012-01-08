@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="backup-restore" xml:lang="es">
+
+  <info>
+    <desc>Respaldar y restaurar los datos y la configuración de Evolution</desc>
+
+    <link type="guide" xref="index#data-migration-and-sync"/>
+    <link type="seealso" xref="data-storage"/>
+
+    <revision pkgversion="3.1.5" version="0.2" date="2011-08-05" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Respaldar y restaurar</title>
+
+<p>Puede respaldar sus datos de Evolution. El respaldo guarda sus ajustes, correos, contactos, tareas, notas y calendarios. Se almacenará en formato comprimido gzip, dentro de un archivador tar.</p>
+
+<section id="backup">
+<title>Respaldos</title>
+<list>
+<item><p>Seleccione <guiseq><gui>Archivo</gui><gui>Respaldar datos de Evolution…</gui></guiseq>.</p></item>
+<item><p>Elija un nombre de archivo y la carpeta donde quiere guardar el archivo de respaldo y pulse <gui style="button">Guardar</gui>.</p></item>
+<item><p>Se le pedirá que cierre Evolution. Responda <gui style="button">Sí</gui>.</p></item>
+</list>
+</section>
+
+<section id="restore">
+<title>Restaurar</title>
+<list>
+<item><p>Seleccione <guiseq><gui>Archivo</gui><gui>Restaurar datos de Evolution…</gui></guiseq>.</p></item>
+<item><p>Seleccione el archivo y pulse <gui style="button">Abrir</gui>.</p></item>
+<item><p>Se le pedirá que cierre Evolution. Responda <gui style="button">Sí</gui>.</p></item>
+</list>
+<note style="tip"><p>En el <link xref="intro-first-run">asistente de primera ejecución</link> puede restaurar Evolution desde un archivo de respaldo.</p></note>
+</section>
+
+</page>

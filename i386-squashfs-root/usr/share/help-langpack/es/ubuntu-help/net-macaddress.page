@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="tip" id="net-macaddress" xml:lang="es">
+  <info>
+    <link type="guide" xref="net-general"/>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <desc>El código único asignado al hardware de red.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>¿Qué es una dirección MAC?</title>
+
+  <p>Una <em>dirección MAC</em> es el código único asignado por el fabricante a una pieza de hardware de red (como una tarjeta inalámbrica o una tarjeta Ethernet). <em> MAC</em> significa <em>Media Access Control</em>, y cada código tiene la intención de ser único para un dispositivo en particular.</p>
+
+  <p>Una dirección MAC consiste en seis grupos de dos caracteres, cada uno de ellos separado por dos puntos. <code>00:1B:44:11:3A:B7</code> es un ejemplo de dirección MAC.</p>
+
+  <p>Para identificar la dirección MAC de su hardware de red:</p>
+  <steps>
+    <item><p>Pulse el <gui>indicador de red</gui> de la barra superior.</p></item>
+    <item><p>Seleccione <gui>Información de la conexión</gui>.</p></item>
+    <item><p>Su dirección MAC se mostrará como la <gui>Dirección hardware</gui>.</p></item>
+  </steps>  
+    
+  <note><p>In practice, you may need to <link xref="net-editcon">modify or "spoof" a MAC address</link>. For example, some internet service providers may require that a specific MAC address be used to access their service. If the network card stops working, and you need to change your network card, the service won't work anymore. In such cases, you would need to spoof the MAC address.</p></note>
+
+</page>

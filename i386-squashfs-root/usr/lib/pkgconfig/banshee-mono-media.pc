@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+bansheedir=${libdir}/banshee
+
+Name: Banshee Mono.Media
+Description: Mono.Media libraries for the Banshee Media Framework
+Version: 2.2.0
+Libs: -r:System -r:${bansheedir}/Mono.Media.dll
+

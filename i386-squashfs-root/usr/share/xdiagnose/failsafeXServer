@@ -1,0 +1,139 @@
+#!/bin/bash
+
+# $Id:$
+#
+# This provides a stripped down 'failsafe' mode for situations
+# where X is failing to start up.
+
+# Author: Bryce W. Harrington <bryce@canonical.com>
+
+# Copyright (C) 2010 Canonical, Ltd.
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be included
+# in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+# IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+# CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+# TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+# SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+xorg_conf_failsafe=${BPX_XORG_CONF_FAILSAFE:-"/etc/X11/xorg.conf.failsafe"}
+xorg_conf=${BPX_XORG_CONF:-"/etc/X11/xorg.conf"}
+client=${BPX_CLIENT:-"/usr/share/xdiagnose/failsafeXinit"}
+clientargs=${BPX_CLIENTARGS:-$xorg_conf_failsafe}
+checkduration=${BPX_CHECK_DURATION:-30}
+failsafe_log=${BPX_LOG:-"/var/log/Xorg.failsafe.log"}
+
+displaymanager=$1
+
+server=${BPX_SERVER:-/usr/bin/X}
+serverargs="${serverargs} -br -once -config ${xorg_conf_failsafe} -logfile ${failsafe_log}"
+   # -br:      Black background
+   # -once:    Terminate server after one session
+   # -config:  Specify location of xorg.conf file to use
+   #           Note: Only root can specify absolute paths
+   # -logfile: Don't overwrite Xorg.0.log
+
+warn() {
+    echo "Warning:  $1" 1>&2
+}
+
+is_installed() {
+    prog=$1
+    need=$2
+    /usr/bin/which $prog > /dev/null 2>&1
+    err=$?
+    if [ ! $err = 0 ]; then
+	warn "Could not $need because $prog is not installed ($err)"
+	return $err
+    fi
+    return 0
+}
+
+get_driver() {
+    machine=$(uname -m)
+    if grep -q -E '(nouveau|drm)fb' /proc/fb; then
+        echo "fbdev"
+    elif [ $machine = "ppc" ]; then
+        echo "fbdev"
+    elif [ $machine = "powerpc" ]; then
+        echo "fbdev"
+    elif [ $machine = "ppc64" ]; then
+        echo "fbdev"
+    else
+        echo "vesa"
+    fi
+    return 0
+}
+
+# Check if we've already attempted a failsafe session without success
+if [ -e "$failsafe_log" ]; then
+    cur_time=$(date +"%s")
+    last_run=$(tail -n 1 $failsafe_log | cut -d' ' -f1)
+    time_diff=$(expr $cur_time - $last_run)
+    if [ $time_diff -lt $checkduration ]; then
+        warn "Failsafe mode was already attempted within $checkduration seconds."
+        warn "Falling back to display manager to report the issue."
+        exit 1
+    fi
+fi
+
+driver=$(get_driver)
+
+# If no failsafe xorg.conf exists, generate a stock one
+if [ ! -e $xorg_conf_failsafe ]; then
+    cat > $xorg_conf_failsafe <<EOF
+Section "Device"
+	Identifier	"Configured Video Device"
+	Driver		"$driver"
+EndSection
+
+Section "Monitor"
+	Identifier	"Configured Monitor"
+EndSection
+
+Section "Screen"
+	Identifier	"Default Screen"
+	Monitor		"Configured Monitor"
+	Device		"Configured Video Device"
+EndSection
+EOF
+fi
+
+if [ -e $xorg_conf ]; then
+    md5xorg=$(md5sum $xorg_conf)
+    date +"%s $md5xorg" >> $failsafe_log
+    if [ $? -ne 0 ]; then
+        warn "Cannot write to $failsafe_log"
+    fi
+fi
+
+if [ -z "$displaymanager" ] ; then
+    # Heuristically figure out what the display manager should be
+    if pidof /usr/sbin/gdm ; then
+        displaymanager="gdm"
+    elif pidof lightdm ; then
+        displaymanager="lightdm"
+    fi
+fi
+clientargs="${clientargs} with-${displaymanager}"
+
+# Stop any existing display managers, else they could conflict
+service gdm stop
+service lightdm stop
+
+echo "xinit $client $clientargs -- $server $serverargs"
+xinit $client $clientargs -- $server $serverargs
+

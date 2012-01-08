@@ -1,0 +1,6 @@
+#! /bin/sh
+set -e
+if [ "$1" = rtupdate ]; then
+	pyclean -p apt-xapian-index /usr/share/apt-xapian-index
+	pycompile -p apt-xapian-index -V 2.4- /usr/share/apt-xapian-index
+fi

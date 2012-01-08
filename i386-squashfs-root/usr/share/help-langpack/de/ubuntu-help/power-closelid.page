@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="question" id="power-closelid" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="power"/>
+    <link type="seealso" xref="power-suspendfail"/>
+    
+    <desc>Laptops werden in Bereitschaft versetzt, wenn sie zugeklappt werden, um Strom zu sparen.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Warum wird mein Rechner abgeschaltet, wenn ich den Deckel schließe?</title>
+
+<p>Wenn Sie Ihren Laptop zuklappen, wird er in <em>Bereitschaft</em> versetzt, um Strom zu sparen. Das bedeutet, dass der Rechner nicht wirklich ausgeschaltet ist – er ist nur im Schlafmodus. Sie können ihn aufwecken, indem Sie ihn aufklappen. Wenn er nicht aufwacht, versuchen Sie es mit einem Mausklick oder einem Tastendruck. Wenn das noch immer nicht funktioniert, drücken Sie die Ein-/Ausschalttaste.</p>
+
+<p>Manche Rechner können nicht richtig in Bereitschaft versetzt werden, normalerweise weil ihre Hardware vom Betriebssystem nicht vollständig unterstützt wird (beispielsweise sind die Linuxtreiber unvollständig). In diesem Fall kann es passieren, dass Sie Ihren Laptop nicht mehr aufwecken können, nachdem Sie ihn zugeklappt haben. Sie können versuchen, <link xref="power-suspendfail">das Problem mit der Bereitschaft</link> zu lösen oder den Rechner daran hindern, in Bereitschaft zu gehen, wenn Sie ihn zuklappen.</p>
+
+<section id="nosuspend">
+ <title>Den Laptop nicht in Bereitschaft versetzen, wenn er zugeklappt wird</title>
+ <p>Wenn Sie nicht wollen, dass der Laptop in Bereitschaft versetzt wird, wenn Sie ihn zuklappen, können Sie die Einstellungen für dieses Verhalten ändern. Um den Rechner den Bildschirm leeren zu lassen, statt in Bereitschaft zu gehen, wenn er zugeklappt wird, gehen Sie wie folgt vor:</p>
+ <note style="warning">
+   <p>Be very careful if you change this setting. Some laptops can overheat
+   if they are left running with the lid closed, especially if they are in
+   a confined place like a backpack.</p>
+ </note>
+ <steps>
+   <item>
+     <p>Open the <app>Terminal</app> application from the <gui>Dash</gui>.</p>
+   </item>
+   <item>
+     <p>To change the setting used when running on battery power, type this command and press <key>Enter</key>:</p>
+     <screen>gsettings set org.gnome.settings-daemon.plugin.power lid-close-battery-action blank</screen>
+   </item>
+   <item>
+     <p>To change the setting used when running on AC power, type this command and press <key>Enter</key>:</p>
+     <screen>gsettings set org.gnome.settings-daemon.plugin.power lid-close-ac-action blank</screen>
+   </item>
+ </steps>
+ <p>There are other settings available besides "blank," such as "nothing," which causes the computer to do nothing.</p>
+</section>
+
+</page>

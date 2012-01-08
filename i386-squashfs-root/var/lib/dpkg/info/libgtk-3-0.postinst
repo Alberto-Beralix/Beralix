@@ -1,0 +1,31 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = triggered ]; then
+    for trigger in $2; do
+        if ! [ -d $trigger ]; then
+            continue
+        fi
+        case $trigger in
+          /usr/lib/gtk-3.0/3.0.0/immodules)
+            # This is triggered everytime an application installs a
+            # GTK immodule loader
+            /usr/lib/libgtk-3-0/gtk-query-immodules-3.0 /usr/lib/gtk-3.0/3.0.0/immodules/*.so > /usr/lib/gtk-3.0/3.0.0/immodules.cache || true
+            ;;
+        esac
+    done
+    exit 0
+fi
+
+# Automatically added by dh_makeshlibs
+if [ "$1" = "configure" ]; then
+	ldconfig
+fi
+# End automatically added section
+
+
+# Also handle the initial installation
+if [ -d /usr/lib/gtk-3.0/3.0.0/immodules ]; then
+     /usr/lib/libgtk-3-0/gtk-query-immodules-3.0 /usr/lib/gtk-3.0/3.0.0/immodules/*.so > /usr/lib/gtk-3.0/3.0.0/immodules.cache || true
+fi
+

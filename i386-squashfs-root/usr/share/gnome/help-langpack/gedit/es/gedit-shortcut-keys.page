@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="tip" id="gedit-shortcut-keys" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Paolo Borelli</name>
+    </credit>
+    <credit type="author">
+      <name>Jesse van den Kieboom</name>
+    </credit>
+    <credit type="author">
+      <name>Steve Frécinaux</name>
+    </credit>
+    <credit type="author">
+      <name>Ignacio Casal Quinteiro</name>
+    </credit>
+  </info>
+
+  <title>Teclas rápidas</title>
+
+  <p>Use las <gui>teclas rápidas</gui> para realizar tareas comunes más rápidamente que con el ratón y los menús. Las siguientes tablas listan todas las teclas rápidas de <application>gedit</application>.</p>
+
+<!--  
+Please skip this list for now. I'm not sure if it is needed.
+  <list>
+    <title>Types of shortcut keys</title>
+    <item><p><link xref="#gedit-tab-shortcuts">Tab-related shortcut keys</link></p></item>
+    <item><p><link xref="#gedit-file-shortcuts">Shortcuts for working working with files</link></p></item>
+    <item><p><link xref="#gedit-editing-shortcuts">Shortcuts for editing</link></p></item>
+    <item><p><link xref="#gedit-pane-shortcuts">Shortcut keys for showing and hiding panes</link></p></item>
+    <item><p><link xref="#gedit-searching-shortcuts">Shortcuts for searching through text</link></p></item>
+    <item><p><link xref="#gedit-tools-shortcuts">gedit tool and plugin shortcuts</link></p></item>
+    <item><p><link xref="#gedit-help-shortcuts">User-help shortcuts</link></p></item>
+  </list>
+
+-->
+
+  <section id="gedit-tab-shortcuts">
+    <title>Tecla rápidas relacionadas con las pestañas</title>
+
+    <!-- For the sake of appearance, I have not used the <keyseq> feature to display key sequences in the tables. -->
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>Para hacer esto</p></td>  <td><p>Pulsar esto</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>Cambiar a la siguiente pestaña a la izquierda</p></td> <td><p>Ctrl + Alt + Re Pág</p></td>  
+        </tr>
+        <tr>
+          <td><p>Cambiar a la siguiente pestaña a la derecha</p></td>  <td><p>Ctrl + Alt + Av Pág</p></td>
+        </tr>
+        <tr>
+          <td><p>Cerrar pestaña</p></td>  <td><p>Ctrl + W</p></td>
+        </tr>
+        <tr>
+          <td><p>Guardar todas las pestañas.</p></td>  <td><p>Ctrl + Mayús. + L</p></td>
+        </tr>
+        <tr>
+          <td><p>Cerrar todas las pestañas.</p></td>  <td><p>Ctrl + Mayús. + W</p></td>  
+        </tr>
+        <tr>
+          <td><p>Saltar a la <var>n</var>a pestaña.</p></td>  <td><p>Alt + <var>n</var></p></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-file-shortcuts">
+    <title>Teclas rápidas para trabajar con archivos</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>Para hacer esto</p></td>  <td><p>Pulsar esto</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>Crear un documento nuevo</p></td>  <td><p>Ctrl + N</p></td>  
+        </tr>
+        <tr>
+          <td><p>Abrir un documento</p></td>  <td><p>Ctrl + O</p></td>  
+        </tr>
+        <tr>
+          <td><p>Guardar el documento actual</p></td>  <td><p>Ctrl + S</p></td>  
+        </tr>
+        <tr>
+          <td><p>Guardar el documento actual con un nombre de archivo nuevo</p></td>  <td><p>Ctrl + Mayús. + S</p></td>  
+        </tr>
+        <tr>
+          <td><p>Imprimir el documento actual</p></td>  <td><p>Ctrl + P</p></td>  
+        </tr>
+        <tr>
+          <td><p>Vista previa de impresión</p></td>  <td><p>Ctrl + Mayús. + P</p></td>  
+        </tr>
+        <tr>
+          <td><p>Cerrar el documento actual</p></td>  <td><p>Ctrl + W</p></td>  
+        </tr>
+        <tr>
+          <td><p>Salir de gedit</p></td>  <td><p>Ctrl + Q</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-editing-shortcuts">
+    <title>Teclas rápidas para editar archivos</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>Para hacer esto</p></td>  <td><p>Pulsar esto</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>Deshacer la última acción</p></td>  <td><p>Ctrl + Z</p></td>  
+        </tr>
+        <tr>
+          <td><p>Rehacer la última acción deshecha</p></td>  <td><p>Ctrl + Mayús. + Z</p></td>  
+        </tr>
+        <tr>
+          <td><p>Cortar el texto o región seleccionada y ubicarlo en el portapapeles</p></td>  <td><p>Ctrl + X</p></td>  
+        </tr>
+        <tr>
+          <td><p>Copiar el texto o región seleccionado al portapapeles</p></td>  <td><p>Ctrl + C</p></td>  
+        </tr>
+        <tr>
+          <td><p>Pegar el contenido del portapapeles</p></td>  <td><p>Ctrl + V</p></td>  
+        </tr>
+        <tr>
+          <td><p>Seleccionar todo el texto en el archivo</p></td>  <td><p>Ctrl + A</p></td>  
+        </tr>
+        <tr>
+          <td><p>Eliminar la línea actual</p></td>  <td><p>Ctrl + D</p></td>  
+        </tr>
+        <tr>
+          <td><p>Mover la línea seleccionada una línea arriba</p></td>  <td><p>Alt + flecha arriba</p></td>  
+        </tr>
+        <tr>
+          <td><p>Mover la línea seleccionada una línea abajo</p></td>  <td><p>Alt + flecha abajo</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-pane-shortcuts">
+    <title>Teclas rápidas para mostrar y ocultar paneles</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>Para hacer esto</p></td>  <td><p>Pulsar esto</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>Mostrar/ocultar el panel lateral</p></td>  <td><p>F9</p></td>  
+        </tr>
+        <tr>
+          <td><p>Mostrar/ocultar el panel inferior</p></td>  <td><p>Ctrl + F9</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-searching-shortcuts">
+    <title>Teclas rápidas para búsquedas</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>Para hacer esto</p></td>  <td><p>Pulsar esto</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>Buscar una cadena</p></td>  <td><p>Ctrl + F</p></td>  
+        </tr>
+        <tr>
+          <td><p>Buscar la siguiente instancia de la cadena</p></td>  <td><p>Ctrl + G</p></td>  
+        </tr>
+        <tr>
+          <td><p>Buscar la instancia anterior de la cadena</p></td>  <td><p>Ctrl + Mayús. + G</p></td>  
+        </tr>
+        <tr>
+          <td><p>Buscar y reemplazar</p></td>  <td><p>Ctrl + H</p></td>  
+        </tr>
+        <tr>
+          <td><p>Limpiar el resaltado</p></td>  <td><p>Ctrl + Mayús. + K</p></td>  
+        </tr>
+        <tr>
+          <td><p>Ir a la línea</p></td>  <td><p>Ctrl + I</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-tools-shortcuts">
+    <title>Teclas rápidas para las herramientas</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>Para hacer esto</p></td>  <td><p>Pulsar esto</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>Comprobar ortografía</p></td>  <td><p>Mayús. + F7</p></td>  
+        </tr>
+        <tr>
+          <td><p>Eliminar espacios finales (con complemento)</p></td>  <td><p>Alt + F12</p></td>  
+        </tr>
+        <tr>
+          <td><p>Ejecutar «make» en la carpeta actual (con complemento)</p></td>  <td><p>F8</p></td>  
+        </tr>
+        <tr>
+          <td><p>Listado de directorio (con complemento)</p></td>  <td><p>Ctrl + Mayús. + D</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gedit-help-shortcuts">
+    <title>Teclas rápidas para la ayuda</title>
+
+    <table frame="all" rules="all">
+      <thead>
+        <tr>
+          <td><p>Para hacer esto</p></td>  <td><p>Pulsar esto</p></td>  
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p>Abrir la guía de usuario de gedit</p></td>  <td><p>F1</p></td>  
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</page>

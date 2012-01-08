@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-removedrive" xml:lang="es">
+  <info>
+    <link type="guide" xref="files#removable"/>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <desc>Expulsar o desmontar una memoria USB, un CD, un DVD u otro dispositivo.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Extraer una unidad externa de forma segura</title>
+
+  <p>Cuando use dispositivos de almacenamiento externo, como memorias USB o similares, deberá extraerlos con seguridad antes de desconectarlos. Si simplemente desconecta el dispositivo, corre el riesgo de hacerlo cuando la aplicación todavía lo está usando, lo que podría provocar que alguno de sus archivos se pierda o se dañe. Cuando use un disco óptico como un CD o un DVD, podrá seguir estos mismos pasos para expulsar el disco de su equipo.</p>
+
+  <steps>
+    <item><p><link xref="files-browse">Abra el gestor de archivos</link>.</p></item>
+    <item><p>Localice el dispositivo en la barra lateral. Debería tener un pequeño icono de expulsión junto al nombre. Pulse en ese icono para expulsar el dispositivo o extraerlo con seguridad.</p></item>
+  </steps>
+
+  <p>También puede pulsar con el botón derecho sobre el dispositivo y seleccionar <gui>Expulsar</gui> o <gui>Extraer unidad de forma segura</gui>. Las unidades USB no se pueden expulsar físicamente, por lo que en esos dispositivos no hay diferencia entre  <gui>Expulsar</gui> o <gui>Extraer unidad de forma segura</gui>.</p>
+
+  <p>Si alguno de los archivos almacenados en el dispositivo está abierto en cualquier aplicación, no podrá extraer el dispositivo con seguridad. Se le aparecerá una ventana diciéndole que «El volumen está ocupado» y mostrándole todos los archivos abiertos en el dispositivo. Cuando haya cerrado todos los archivos del dispositivo, el dispositivo se extraerá con seguridad automáticamente (así que ya podrá desconectarlo o expulsarlo).</p>
+
+  <p>También puede seleccionar <gui>Desmontar de todos modos</gui> para extraer el dispositivo sin cerrar los archivos. Esto puede provocar errores en las aplicaciones que tuvieran esos archivos abiertos.</p>
+
+  <p>Si no pudiera cerrar uno de los archivos (por ejemplo, si la aplicación que está usando el archivo se ha bloqueado) puede pulsar con el botón derecho sobre el archivo de la ventana <gui>El volumen está ocupado</gui> y seleccionar <gui>Terminar proceso</gui>. Esto obligará a la aplicación bloqueada a cerrarse, lo que podría cerrar otros archivos que dicha aplicación tuviese abiertos.</p>
+</page>

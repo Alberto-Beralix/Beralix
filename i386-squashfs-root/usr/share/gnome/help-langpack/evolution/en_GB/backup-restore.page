@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="backup-restore" xml:lang="en_GB">
+
+  <info>
+    <desc>Back up and restore your Evolution data and settings.</desc>
+
+    <link type="guide" xref="index#data-migration-and-sync"/>
+    <link type="seealso" xref="data-storage"/>
+
+    <revision pkgversion="3.1.5" version="0.2" date="2011-08-05" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Back up and restore</title>
+
+<p>You can back up your Evolution data. The backup saves your settings, mail, contacts, tasks, memos and calendars. It will be stored in a gzip-compressed tar archive file.</p>
+
+<section id="backup">
+<title>Backing up</title>
+<list>
+<item><p>Select <guiseq><gui>File</gui><gui>Back up Evolution Data...</gui></guiseq>.</p></item>
+<item><p>Choose a filename and the folder where you want to save the backup file, and click <gui style="button">Save</gui>.</p></item>
+<item><p>You will get asked to close Evolution. Answer with <gui style="button">Yes</gui>.</p></item>
+</list>
+</section>
+
+<section id="restore">
+<title>Restoring</title>
+<list>
+<item><p>Select <guiseq><gui>File</gui><gui>Restore Evolution Data...</gui></guiseq>.</p></item>
+<item><p>Choose the file, and click <gui style="button">Open</gui>.</p></item>
+<item><p>You will get asked to close Evolution. Answer with <gui style="button">Yes</gui>.</p></item>
+</list>
+<note style="tip"><p>In the <link xref="intro-first-run">first-run assistant</link>, you can restore Evolution data from a backup file.</p></note>
+</section>
+
+</page>

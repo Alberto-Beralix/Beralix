@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-wireless-troubleshooting-initial-check" xml:lang="es">
+  <info>
+    <link type="guide" xref="net-wireless-troubleshooting"/>
+    <link type="next" xref="net-wireless-troubleshooting-hardware-info"/>
+
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+
+    <credit type="author">
+      <name>Contribuyentes al wiki de documentación de Ubuntu</name>
+    </credit>
+
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <desc>Resolución de problemas al conectarse a una red inalámbrica.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Realizar una comprobación inicial</title>
+
+<p>Nuestro primer paso será verificar alguna información básica de conexión de redes.</p>
+<steps>
+   <item><p>Asegúrese que su portátil no está conectado a una conexión de Internet <em>cableada</em>-</p></item>
+   <item><p>Si tiene un adaptador externo inalámbrico (como un adaptador inalámbrico USB o una tarjeta PCMCIA), asegúrese de que está insertada en la ranura correcta en el equipo.</p></item>
+   <item><p>Si su tarjeta inalámbrica está <em>dentro</em> de su equipo, asegúrese que de su adaptador inalámbrico está encendido.</p></item>
+   <item><p>Pulse en el <gui>menú de red</gui> del panel superior y asegúrese de que está activada la opción <gui>Activar inalámbrico</gui>.</p></item>
+   <item><p>Abra una ventana de <app>terminal</app> (como la de <app>gnome-terminal</app>) e introduzca la orden siguiente:</p>
+  <p><cmd>nm-tool</cmd></p></item>
+</steps>
+
+   <p>El programa <app>nm-tool</app> le mostrará información sobre el estado de su hardware de red y de su conexión. Si la salida de la sección de red inalámbrica contiene el texto <code>State: Connected</code>, significará que su adaptador inalámbrico está funcionando y conectado a su router inalámbrico.</p>
+
+  <p>Si está conectado a su router inalámbrico pero todavía no puede acceder a Internet, puede que su router no esté correctamente configurado, o que su proveedor de Internet esté experimentando algunos problemas técnicos. Revise las guías de su router y de su proveedor, o contacte con este para obtener soporte.</p>
+  <p>Si la salida de la orden <cmd>nm-tool</cmd> no indica que está conectado a la red, siga con la <link xref="net-wireless-troubleshooting-hardware-info">siguiente parte</link> de la guía de resolución de problemas.</p>
+
+<links type="series"/>
+</page>

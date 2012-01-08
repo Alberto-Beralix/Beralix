@@ -1,0 +1,1 @@
+../../../../share/pyshared/xdiagnose/pci_devices.py

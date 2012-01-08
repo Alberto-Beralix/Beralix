@@ -1,0 +1,11 @@
+GPL Ghostscript for Debian
+==========================
+
+GPL Ghostscript is linked against the shared IJG JPEG library (not a
+statically linked local copy).  Some valid PostScript and PDF files will
+fail to parse due to some (old, presumably?) Adobe interpreters
+violating the JPEG standard.  More info at [bug#582521].
+
+[bug#582521]: <http://bugs.debian.org/582521>
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 11 Feb 2011 19:46:57 +0100

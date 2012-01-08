@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-imap-headers" xml:lang="zh_CN">
+
+  <info>
+    <desc>Define which mail headers to download when using IMAP.</desc>
+    
+    <link type="guide" xref="index#mail-advanced-imap"/>
+    <link type="guide" xref="mail-account-manage-imap#imap-headers"/>
+
+    <revision pkgversion="3.1.5" version="0.3" date="2011-07-29" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/b15fx7uz.html.en -->
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+
+<title>IMAP 信头</title>
+
+<note><p>The <gui>IMAP Headers</gui> tab is only displayed in the <gui>Account Editor</gui> if <guiseq><gui>Edit</gui><gui>Plugins</gui><gui>IMAP Features</gui></guiseq> is enabled.</p></note>
+
+<p>Evolution allows you for IMAP accounts to choose the headers that you want to download so that you can reduce the download time and filter or move your mail around the way you like it. The IMAP Mail header options are as follows:</p>
+<list>
+<item><p>Fetch All Headers:</p><p>所有邮件的所有可用IMAP邮件头都会被下载。</p></item>
+<item><p>Basic Headers (Fastest):</p><p>这包括日期，发信人，收信人，抄送，主题，首选项，In-Reply-To，邮件ID，Mime版本以及内容类型。如果您只想获取、查看邮件而不需要根据您的邮件列表分类邮件，可以选择该项。这样Evolution会运行的快一些，推荐多数普通用户使用。</p></item>
+<item><p>Basic and Mailing List Headers (Default):</p><p>选择该项可以创建基于邮件列表头(如列表ID)的过滤规则，这样除了基本的邮件头之外，还会获取与邮件列表对应的邮件头。邮件列表头会包含如下信息：邮件列表ID，邮件列表拥有者，以及其它您可以用来创建邮件列表过滤的信息。</p><p>This is the default Header preference that comes with Evolution. When this option is chosen, Evolution will download a basic set of headers (as described above) along with a set of headers that are needed for client-side filters based on mailing lists. If you do not have any filters on Evolution, it is recommended to switch to the <gui>Basic Headers</gui> option.</p></item>
+</list>
+
+<p>要设置IMAP邮件头：</p>
+<steps>
+<item><p>Select <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Accounts</gui></guiseq>.</p></item>
+<item><p>选择IMAP账户。</p></item>
+<item><p>Click <gui>Edit</gui>.</p></item>
+<item><p>Click the <gui>IMAP Headers</gui> tab.</p></item>
+<item><p>Optionally: If you want to define extra headers to download you can add these in the <gui>Custom Headers</gui> section.</p></item>
+</steps>
+
+<note><p>The option to define IMAP Headers is currently only available for IMAP accounts, but not for IMAP+ accounts.</p></note><!-- TODO:DEVELOPERS: Recheck this once https://bugzilla.gnome.org/show_bug.cgi?id=655519 has been fixed -->
+</page>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <enum id="org.gnome.SimpleScan.ScanDirection">
+    <value value="0" nick="top-to-bottom"/>
+    <value value="1" nick="left-to-right"/>
+    <value value="2" nick="bottom-to-top"/>
+    <value value="3" nick="right-to-left"/>
+  </enum>
+  <enum id="org.gnome.SimpleScan.PageSide">
+    <value value="1" nick="front"/>
+    <value value="2" nick="back"/>
+    <value value="3" nick="both"/>
+  </enum>
+
+  <schema path="/org/gnome/simple-scan/" id="org.gnome.SimpleScan" gettext-domain="simple-scan">
+    <key type="i" name="window-width">
+      <default>600</default>
+      <summary>Window width in pixels</summary>
+    </key>
+    <key type="i" name="window-height">
+      <default>400</default>
+      <summary>Window height in pixels</summary>
+    </key>
+    <key type="b" name="window-is-maximized">
+      <default>false</default>
+      <summary>TRUE if the application window is maximized</summary>
+    </key>
+    <key type="s" name="selected-device">
+      <default>''</default>
+      <summary>Device to scan from</summary>
+      <description>SANE device to acquire images from.</description>
+    </key>
+    <key type="s" name="document-type">
+      <default>'photo'</default>
+      <choices>
+        <choice value="text"/>
+        <choice value="photo"/>
+      </choices>
+      <summary>Type of document being scanned</summary>
+      <description>Type of document being scanned. This setting decides on the scan resolution, colors and post-processing.</description>
+    </key>
+    <key name="scan-direction" enum="org.gnome.SimpleScan.ScanDirection">
+      <default>'top-to-bottom'</default>
+      <summary>Direction of scan</summary>
+      <description>The direction of the scanner across the scanned page.</description>
+    </key>
+    <key type="i" name="page-width">
+      <default>595</default>
+      <summary>Width of scanned image in pixels</summary>
+      <description>The width of scanned image in pixels. This value is updated to what the last scanned page was.</description>
+    </key>
+    <key type="i" name="page-height">
+      <default>842</default>
+      <summary>Height of scanned image in pixels</summary>
+      <description>The height of scanned image in pixels. This value is updated to what the last scanned page was.</description>
+    </key>
+    <key type="i" name="paper-width">
+      <default>0</default>
+      <summary>Width of paper in tenths of a mm</summary>
+      <description>The width of the paper in tenths of a mm (or 0 for automatic paper detection).</description>
+    </key>
+    <key type="i" name="paper-height">
+      <default>0</default>
+      <summary>Height of paper in tenths of a mm</summary>
+      <description>The height of the paper in tenths of a mm (or 0 for automatic paper detection).</description>
+    </key>
+    <key type="i" name="page-dpi">
+      <default>72</default>
+      <summary>Resolution of last scanned image</summary>
+      <description>The resolution in dots-per-inch of the previously scanned image.</description>
+    </key>
+    <key type="i" name="text-dpi">
+      <default>150</default>
+      <summary>Resolution for text scans</summary>
+      <description>The resolution in dots-per-inch to use when scanning text.</description>
+    </key>
+    <key type="i" name="photo-dpi">
+      <default>300</default>
+      <summary>Resolution for photo scans</summary>
+      <description>The resolution in dots-per-inch to use when scanning photos.</description>
+    </key>
+    <key name="page-side" enum="org.gnome.SimpleScan.PageSide">
+      <default>'both'</default>
+      <summary>Page side to scan</summary>
+      <description>The page side to scan.</description>
+    </key>
+    <key type="s" name="save-directory">
+      <default>''</default>
+      <summary>Directory to save files to</summary>
+      <description>The directory to save files to. Defaults to the documents directory if unset.</description>
+    </key>
+  </schema>
+</schemalist>

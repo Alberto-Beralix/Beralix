@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# for trunk (handle symlink too)
+real_script=`readlink $0`
+[ -x "`dirname $real_script`/../oneconf-query" ] && PREFIX="`dirname $real_script`/../"
+${PREFIX}oneconf-query --async-update
+exit $?

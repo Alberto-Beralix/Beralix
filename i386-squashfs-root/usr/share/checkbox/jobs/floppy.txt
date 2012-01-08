@@ -1,0 +1,26 @@
+plugin: local
+name: floppy/check
+requires: device.driver == 'floppy'
+description: Floppy test
+description-cs.UTF-8: Test disketové mechaniky
+description-de.UTF-8: Diskettenlaufwerkstest
+description-en_AU.UTF-8: Floppy test
+description-en_GB.UTF-8: Floppy test
+description-es.UTF-8: Prueba de disquete
+description-gl.UTF-8: Proba de disquete
+description-hu.UTF-8: Floppy teszt
+description-it.UTF-8: Test del floppy
+description-nl.UTF-8: Diskette test
+description-pt_BR.UTF-8: Testar o disquete
+description-ru.UTF-8: Тест дискеты
+description-sl.UTF-8: Preizkus disketnega pogona
+description-tr.UTF-8: Disket Sınama
+command:
+ cat <<'EOF' | run_templates -t -s 'udev_resource | filter_templates -w "driver=floppy"'
+ plugin: shell
+ name: floppy/check_`ls /sys$path/driver/*/*/*/block`
+ requires: device.path == "$path"
+ description: Floppy test for $product
+ user: root
+ command: floppy_test /dev/`ls /sys$path/driver/*/*/*/block`
+ EOF

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="net-otherscontrol" xml:lang="es">
+  <info>
+    <link type="guide" xref="net-problem"/>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>Debe deseleccionar la opción <gui>Disponibles para todos los usuarios</gui> en los ajustes de la conexión.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Otros usuarios no pueden controlar las conexiones de red</title>
+
+<p>Si puede cambiar una conexión de red pero los demás usuarios de su equipo no pueden, usted puede establecer que la conexión esté <gui>disponible para todos los usuarios</gui>. Esto permite que cualquier usuario del equipo pueda <em>conectarse</em> usando esa conexión, pero solo aquellos usuarios <link xref="user-admin-explain">con permisos administrativos</link> podrán cambiar sus opciones.</p>
+
+<p>La razón para esto es que, ya que todos los usuarios se ven afectados por el cambio, solo los usuarios de confianza (administradores) deberían poder modificar la conexión.</p>
+
+<p>Si otros usuarios necesitan ser capaces de cambiar las conexiones por ellos mismos, haga que la conexión <em>no</em> esté disponible para todos en el equipo. De esta forma, cada uno podrá gestionar sus propios ajustes de conexión en lugar de depender de una configuración compartida, en todo el sistema, para la conexión.</p>
+
+<steps>
+ <title>Hágalo para que la conexión no se comparta nunca más</title>
+ <item>
+  <p>Pulse en el <gui>menú de red</gui> del panel superior y pulse <gui>Editar las conexiones</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Busque la conexión que quiere que cualquiera sea capaz de manejar/editar. Pulse para seleccionarla y luego pulse <gui>Editar</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Deberá introducir su contraseña de administración para cambiar la conexión. Solo los administradores pueden hacerlo.</p>
+ </item>
+ 
+ <item>
+  <p>Deseleccione <gui>Disponible para todos los usuarios</gui> y pulse <gui>Guardar</gui>. Ahora otros usuarios del equipo podrán gestionar la conexión por ellos mismos.</p>
+ </item>
+</steps>
+
+</page>

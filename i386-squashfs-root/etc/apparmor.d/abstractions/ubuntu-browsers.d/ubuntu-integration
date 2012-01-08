@@ -1,0 +1,23 @@
+# vim:syntax=apparmor
+
+  # Apport
+  /usr/bin/apport-bug PUx,
+
+  # Package installation
+  /usr/bin/apturl PUxr,
+  /usr/bin/gnome-codec-install PUxr,
+  /usr/lib/gstreamer0.10/gstreamer-0.10/gst-plugin-scanner ix,
+
+  # Input Methods
+  /usr/bin/scim PUx,
+  /usr/bin/scim-bridge PUx,
+
+  # File managers
+  /usr/bin/nautilus PUxr,
+  /usr/bin/thunar PUxr,
+
+  # Themes
+  /usr/bin/gnome-appearance-properties PUxr,
+
+  # Kubuntu
+  /usr/lib/mozilla/kmozillahelper PUxr,

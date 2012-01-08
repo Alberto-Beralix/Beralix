@@ -1,0 +1,18 @@
+gs-cjk-resource for Debian
+----------------------
+
+gs-cjk is a project started by some Japanese and is aimed at extending
+ghostscript to support CJK TrueType fonts. The result of this project
+is planned to be merged into the upstream of ghostscript.
+
+To use CJK TrueType fonts from ghostscript, you need this package
+(gs-cjk-resource) and cmap package(s) like cmap-adobe-japan1 (for
+Japanese TrueType), cmap-adobe-gb1 (for Simplified-Chinese TrueType),
+cmap-adobe-cns1 (for Simplified-Chinese TrueType) and cmap-adobe-korea1
+(for Korean TrueType). CMap is related to Adobe CID-keyed font Technology,
+and it is needed for gs-cjk to handle CJK TrueType fonts because
+CJK TrueType fonts pretend to be CID-keyed fonts through gs-cjk.
+
+The resource files included in this package are Adobe CMaps.
+
+ -- Yasuhiro Take <take@debian.org>, Wed, 29 Nov 2000 23:12:52 +0900

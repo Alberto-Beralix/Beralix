@@ -1,0 +1,30 @@
+gnupg with cryptsetup and LUKS in Debian
+----------------------------------------
+
+The Debian cryptsetup package provides the keyscript decrypt_gnupg for setups
+with a gnupg encrypted LUKS keyfile.
+
+The following example assumes that you store the encrypted keyfile in
+/etc/keys/cryptkey.gpg. LUKS device /dev/<luks_device> needs to be substituted.
+
+First, you'll have to create the encrypted keyfile:
+
+# dd if=/dev/random bs=1 count=256 | gpg --no-options --no-random-seed-file \
+	--no-default-keyring --keyring /dev/null --secret-keyring /dev/null \
+	--trustdb-name /dev/null --symmetric --output /etc/keys/cryptkey.gpg
+
+Next the LUKS device needs to be formated with the key:
+
+# /usr/bin/gpg -q --no-options --no-mdc-warning --no-random-seed-file \
+	--no-default-keyring --keyring /dev/null --secret-keyring /dev/null \
+	--trustdb-name /dev/null --decrypt /etc/keys/cryptkey.gpg | \
+	cryptsetup luksFormat /dev/<luks_device>
+
+In order to unlock the encrypted LUKS device automatically, add the following
+to /etc/crypttab:
+
+cdev1	/dev/<luks_device>	/etc/keys/cryptkey.gpg	luks,keyscript=decrypt_gnupg
+
+In case that you want to encrypt the root filesystem with a gnupg encrypted key,
+the initramfs hooks should do all additionally required work for you at initramfs
+creation/update.

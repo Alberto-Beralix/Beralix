@@ -1,0 +1,178 @@
+plugin: manual
+name: graphics/xorg-version
+requires: package.name == "x11-utils"
+command: xdpyinfo | grep "^X.Org version" | cut -d ':' -f 2 | tr -d ' '
+description:
+ 2d graphics appears to be working, your running X.Org version is:
+ $output
+ .
+ Is this correct?
+
+plugin: shell
+name: graphics/xorg-version-output
+command: xdpyinfo | grep "^X.Org version" | cut -d ':' -f 2 | tr -d ' '
+requires: package.name == "x11-utils"
+description:
+ Automated test to store output in checkbox report
+
+plugin: shell
+name: graphics/gtkperf
+depends: graphics/xorg-version-output
+requires: package.name == 'gtkperf'
+command: gtkperf -a
+description:
+ Run gtkperf to make sure that GTK based test cases work
+ .
+ In the future add the returned time as a benchmark result to the checkbox report
+
+plugin: manual
+name: graphics/resolution-change
+depends: graphics/xorg-version-output
+description:
+ Display resolution change procedure:
+ 1.- Open System->Preferences->Monitors
+ 2.- Select a new resolution from the dropdown list
+ 3.- Click on Apply
+ 4.- The resolution should change
+ 5.- Select the original resolution from the dropdown list
+ 6.- Click on Apply
+ 7.- The resolution should change again
+ .
+ Did the resolution change as expected?
+
+plugin: manual
+name: graphics/rotation
+depends: graphics/xorg-version-output
+description:
+ Display rotation verification procedure:
+ 1.- Open System->Preferences->Monitors
+ 2.- Select a new rotation value from the dropdown list
+ 3.- Click on Apply
+ 4.- The display should be rotated according to the new configuration value
+ 5.- Click on Restore Previous Configuration
+ 6.- The display configuration change should be reverted
+ 7.- Repeat 2-6 for different rotation values
+ .
+ Did the display rotation change as expected?
+
+plugin: shell
+name: graphics/xorg-process
+requires: package.name == 'xorg' and package.name == 'procps'
+command: pgrep -f '/usr/bin/X' >/dev/null
+description: Test that the X process is running.
+description-cs.UTF-8: Ověřit, že běží proces X.
+description-de.UTF-8: Testen, ob der X-Prozess ausgeführt wird.
+description-en_AU.UTF-8: Test that the X process is running.
+description-en_GB.UTF-8: Test that the X process is running.
+description-es.UTF-8: Prueba que el proceso de X está en ejecución.
+description-gl.UTF-8: Proba que o proceso de X está en execución.
+description-hu.UTF-8: Az X folyamat futásának tesztelése.
+description-it.UTF-8: Verifica che il processo X sia in esecuzione.
+description-pt_BR.UTF-8: Testar se o processo X está sendo executado
+description-ru.UTF-8: Проверка выполнения процесса X.
+description-sl.UTF-8: Preizkus ali je opravilo X zagnano.
+description-tr.UTF-8: X işleminin çalıştığını sınayın.
+
+plugin: shell
+name: graphics/xorg-failsafe
+requires: package.name == 'xorg'
+command: ! test -e /var/log/Xorg.failsafe.log
+description: Test that the X is not running in failsafe mode.
+description-cs.UTF-8: Ověřit, že X neběží v záchranném režimu.
+description-de.UTF-8: Testen, dass der X-Prozess im abgesicherten Modus nicht ausgeführt wird.
+description-en_AU.UTF-8: Test that the X is not running in failsafe mode.
+description-en_GB.UTF-8: Test that the X is not running in failsafe mode.
+description-es.UTF-8: Pruebe que X no está funcionando en modo a prueba de errores.
+description-gl.UTF-8: Proba para saber se X non está funcionando en modo a proba de erros.
+description-it.UTF-8: Verifica che X non sia in esecuzione in modalità grafica sicura
+description-pt_BR.UTF-8: Testar se o X não está sendo executado no modo de segurança.
+description-ru.UTF-8: Проверка незадействованности процесса X в безопасном режиме.
+description-sl.UTF-8: Preizkus, da se X ne izvaja v zasilnem načinu.
+description-tr.UTF-8: Hatasız kipte X'in çalışmadığını sınar.
+
+plugin: shell
+name: graphics/xorg-memory
+requires: package.name == 'xorg' and device.driver == 'i915'
+user: root
+command: xorg_memory_test xeyes
+description: Test that X does not leak memory when running programs.
+description-cs.UTF-8: Ověřit, že X nezpůsobuje memory leaky při spouštění programů.
+description-de.UTF-8: Testen, dass der X-Prozess während der Ausführung von Programmen keine Speicherlücke aufweist.
+description-en_AU.UTF-8: Test that X does not leak memory when running programs.
+description-en_GB.UTF-8: Test that X does not leak memory when running programs.
+description-es.UTF-8: Prueba que X no pierde memoria cuando se ejecutan programas.
+description-gl.UTF-8: Proba que X non perde memoria cando se executan programas.
+description-hu.UTF-8: Teszt, hogy nincs-e memória szivárgás az X-ben futó programok esetén.
+description-it.UTF-8: Verifica che X non causi una perdita di memoria durante l'esecuzione di programmi.
+description-pt_BR.UTF-8: Testar se o X não vaza memória quando programas são executados.
+description-ru.UTF-8: Проверка процесса Х на отсутствие утечек памяти при выполнении программ.
+description-sl.UTF-8: Preizkus, da X ne pušča pomnilnika, ko poganja programe.
+description-tr.UTF-8: X'in programları çalıştırırken bellek taşmasını sınayın.
+
+plugin: manual
+name: graphics/resolution
+requires:
+ device.category == 'VIDEO'
+command: resolution_test
+description:
+ This display is using the following resolution:
+ .
+ $output
+ .
+ Is this acceptable for your display?
+
+plugin: shell
+name: graphics/minimum_resolution
+requires:
+ device.category == 'VIDEO'
+command: resolution_test --horizontal 800 --vertical 600
+description:
+ Ensure the current resolution meets or exceeds the recommended minimum
+ resolution (800x600). See here for details:
+ .
+ https://help.ubuntu.com/community/Installation/SystemRequirements
+
+plugin: manual
+name: graphics/display
+requires: package.name == 'xorg' and package.name == 'python-gst0.10'
+command: gst_pipeline_test -t 2 'videotestsrc ! ffmpegcolorspace ! gconfvideosink'
+description:
+ Select Test to display a video test.
+ .
+ Do you see color bars and static?
+
+plugin: manual
+name: graphics/xrandr_detect_modes
+requires: package.name == 'xorg'
+command: xrandr
+description:
+ The following screens and video modes have been detected on your system:
+ .
+ $output
+ .
+ Is this correct?
+
+plugin: manual
+name: graphics/cycle_resolution
+requires: package.name == 'xorg'
+depends: xrandr_detect_modes
+command: xrandr_cycle
+description:
+ Select Test to cycle through the detected video modes for your system.
+ .
+ Did the screen appear to be working for each mode?
+
+plugin: shell
+name: graphics/compiz_check
+command: run_compiz_check | ansi_parser
+description:
+ Check that the hardware is able to run compiz.
+
+plugin: manual
+name: graphics/glxgears
+requires: package.name == 'mesa-utils'
+command: glxgears
+description:
+ Select Test to execute glxgears to ensure that minimal 3d graphics support is in place.
+ .
+ Did the 3d animation appear?

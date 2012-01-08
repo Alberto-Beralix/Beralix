@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy toplevel-contextual -->
+  <object class="GtkVBox" id="vbox_individual_widget">
+    <property name="spacing">6</property>
+    <child>
+      <object class="GtkScrolledWindow" id="scrolled_window_individual">
+        <property name="hscrollbar-policy">never</property>
+        <property name="vscrollbar-policy">never</property><!-- Modified in code when necessary -->
+        <property name="shadow-type">none</property><!-- Modified in code when necessary -->
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkViewport" id="viewport_individual">
+            <property name="shadow-type">none</property>
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkVBox" id="vbox_individual">
+                <property name="visible">True</property>
+                <property name="spacing">6</property>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+      <packing>
+        <property name="position">0</property>
+        <property name="expand">False</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkVBox" id="vbox_location">
+        <property name="spacing">6</property>
+        <child>
+          <object class="GtkLabel" id="label_location">
+            <property name="visible">True</property>
+            <property name="xalign">0</property>
+            <property name="label" translatable="yes">&lt;b&gt;Location&lt;/b&gt; at (date)</property>
+            <property name="use_markup">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkAlignment" id="alignment1">
+            <property name="visible">True</property>
+            <property name="left_padding">12</property>
+            <child>
+              <object class="GtkVBox" id="subvbox_location">
+                <property name="visible">True</property>
+                <property name="spacing">5</property>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <object class="GtkFrame" id="viewport_map">
+                    <property name="height_request">150</property>
+                    <property name="resize_mode">queue</property>
+                    <property name="label_xalign">0</property>
+                    <property name="shadow_type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkHBox" id="hbox_client_types">
+        <property name="spacing">6</property>
+        <child>
+          <object class="GtkImage" id="image_phone">
+            <property name="visible">True</property>
+            <property name="icon_name">phone</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label1">
+            <property name="visible">True</property>
+            <property name="xalign">0</property>
+            <property name="label" translatable="yes">Online from a phone or mobile device</property>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+      <packing>
+        <property name="position">2</property>
+      </packing>
+    </child>
+    <child>
+      <object class="EmpathyGroupsWidget" id="groups_widget"/>
+      <packing>
+        <property name="position">2</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkVBox" id="vbox_details">
+        <property name="spacing">6</property>
+        <child>
+          <object class="GtkLabel" id="label649">
+            <property name="visible">True</property>
+            <property name="xalign">0</property>
+            <property name="label" translatable="yes">Contact Details</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkAlignment" id="alignment30">
+            <property name="visible">True</property>
+            <property name="left_padding">12</property>
+            <child>
+              <object class="GtkVBox" id="vbox218">
+                <property name="visible">True</property>
+                <property name="spacing">6</property>
+                <child>
+                  <object class="GtkTable" id="table_details">
+                    <property name="visible">True</property>
+                    <property name="n_columns">2</property>
+                    <property name="column_spacing">12</property>
+                    <property name="row_spacing">6</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkHBox" id="hbox_details_requested">
+                    <property name="spacing">6</property>
+                    <child>
+                      <object class="GtkImage" id="image885">
+                        <property name="visible">True</property>
+                        <property name="stock">gtk-dialog-info</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label653">
+                        <property name="visible">True</property>
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">Information requested…</property>
+                        <property name="use_markup">True</property>
+                        <property name="wrap">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="position">3</property>
+      </packing>
+    </child>
+  </object>
+</interface>

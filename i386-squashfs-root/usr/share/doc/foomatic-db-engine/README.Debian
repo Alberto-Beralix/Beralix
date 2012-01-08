@@ -1,0 +1,66 @@
+foomatic-db-engine for Debian
+-----------------------------
+
+The structure of the OpenPrinting (foomatic) printer configuration system in
+Debian (and upstream) consists of 3 core packages:
+
+* foomatic-db: Contains the foomatic printer database, split in
+  openprinting-ppds and openprinting-ppds-extra.
+
+* foomatic-db-engine (this package): Contains the foomatic-configure script.
+
+* foomatic-filters: Contains the filter scripts for various backend
+  printing systems.
+
+If you want a GUI to configure your printer, you may want to try
+
+* system-config-printer and system-config-printer-kde, which are printer
+  configuration tools integrated in GNOME and KDE system configuration tools
+
+** How to configure a queue manually **
+
+The command "foomatic-configure" handles this.  Set up the queue as follows:
+
+foomatic-configure -n <queue-name> -N <description> -L <location> 
+  -c <connection> -p <printer> -d <driver> -s <spooler>
+
+where:
+
+queue-name: What you want the queue to be called.
+
+description: A human-readable description of the queue.
+
+location: The physical location of the printer.
+
+connection: How the printer is connected.  e.g.:
+  Parallel port: file:/dev/lp0
+  USB port:      file:/dev/usb/lp0
+  IPP/CUPS:      ipp://printserver.example.org/printers/lj4500
+  Samba/Windows: smb://WORKGROUP/PC/Canon
+  JetDirect:     socket://jetdirect.example.org:9100/
+
+printer: The printer database name.  Generally:
+  Manufacturer_Model-Name
+
+driver: The driver backend to use.  For most modern printers, one of:
+  hpijs      (if you have foomatic-db installed)
+  gutenprint (if you have foomatic-db-gutenprint installed)
+  Postscript
+
+Your best bet on these two items is looking them up in the database at
+  OpenPrinting (http://www.openprinting.org/) or looking through the
+  XML files in /usr/share/foomatic/db/source/printer/
+
+spooler: one of: cups, lpd, lprng, ppd, direct, ppr, pdq, gnulpr
+  (You can omit the -s option and it will try to guess.)
+
+** Notes for CUPS users **
+
+IMPORTANT: If your printer filter is not working (dumping raw
+PostScript to the printer) immediately after setting up a queue with
+foomatic-configure, you may need to reload the CUPS daemon.  e.g. use:
+# invoke-rc.d cups reload
+
+ -- Chris Lawrence <lawrencc@debian.org>, Tue Jul  1 19:15:43 2003
+ Updated by:
+ -- Didier Raboud <didier@raboud.com>  Fri, 23 Jul 2010 14:36:27 +0200

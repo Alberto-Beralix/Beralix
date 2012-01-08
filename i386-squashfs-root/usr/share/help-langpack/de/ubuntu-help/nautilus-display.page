@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-display" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-display"/>
+
+    <desc>Symbolbeschriftungen und das Datumsformat in der Dateiverwaltung festlegen.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Einstellungen für die Anzeige der Dateiverwaltung</title>
+
+<p>Sie können die Anzeige von Dateien in der Dateiverwaltung in vielerlei Hinsicht bestimmen, etwa Symbolbeschriftungen und wie das Datum dargestellt wird. Klicken Sie dazu in einem beliebigen Fenster der Dateiverwaltung auf <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq> und wählen Sie den Reiter <gui>Anzeige</gui>.</p>
+
+<section id="icon-captions">
+  <title>Symbolbeschriftungen</title>
+  <media type="image" src="figures/nautilus-icons.png" width="250" height="110" style="floatend floatright">
+    <p>Einstellungen für die Spalten in der Dateiverwaltungssymbole mit Beschriftungen</p>
+  </media>
+  <p>Wenn Sie die Symbolansicht verwenden, können Sie zusätzliche Informationen über Dateien und Ordner in einer Beschriftung unter jedem einzelnen Symbol anzeigen lassen. Dies ist zum Beispiel nützlich, wenn Sie oft überprüfen müssen, wer der Besitzer einer Datei ist oder wann sie das letzte Mal geändert wurde.</p>
+  <p>Je weiter Sie die Ansicht in einem Ordner vergrößern (im <gui>Ansicht</gui>-Menü), desto mehr Informationen werden in den Symbolbeschriftungen angezeigt. Sie können bis zu drei Informationen in den Beschriftungen anzeigen lassen. Die erste wird in den meisten Ansichtsgrößen angezeigt, die letzte nur bei sehr starker Vergrößerung.</p>
+  <p>Die Informationen, die Sie in den Symbolbeschriftungen anzeigen lassen können, sind dieselben, die in der Listenansicht zur Verfügung stehen. Siehe <link xref="nautilus-list"/> für weitere Informationen.</p>
+  <note><p>Wenn Sie ein Fenster der Dateiverwaltung offen haben, müssen Sie es womöglich aktualisieren, damit die neuen Symbolbeschriftungen wirksam werden. Klicken Sie <guiseq><gui>Ansicht</gui><gui>Aktualisieren</gui></guiseq> oder drücken Sie <keyseq><key>Strg</key><key>R</key></keyseq>.</p></note>
+</section>
+
+<section id="date">
+  <title>Datumsformat</title>
+  <p>Zugriffs- und Änderungszeiten von Dateien können in Symbolbeschriftungen oder in den Spalten der Listenansicht angezeigt werden. Sie können das für Sie geeignetste Datumsformat aus der <gui>Format</gui>-Auswahlliste auswählen. Unter den verfügbaren Formaten befinden sich ein ausführliches Format, wie Sie es vielleicht handschriftlich benutzen würden, ein internationales Standardformat und eines, das relative Angaben verwendet, wie zum Beispiel <em>heute</em> und <em>gestern</em>. Die Auswahlliste zeigt die Formate anhand von Beispielen, für die das aktuelle Datum verwendet wird.</p>
+</section>
+
+
+</page>

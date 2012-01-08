@@ -1,0 +1,232 @@
+This package was debianized by Sebastien Bacher <seb128@debian.org> on
+Tue, 22 Nov 2005 10:46:59 +0100.
+Current maintainer is Frank Lichtenheld <djpig@debian.org>.
+
+It was downloaded from http://www.gtkpod.org/downloads.html
+
+Copyright Holders:
+
+Copyright (C) 2002-2007 Jorg Schuler <jcsjcs at users.sourceforge.net>
+ (original gtkpod code)
+Copyright (C) 2005-2009 Christophe Fergeau <teuf at gnome.org>
+ (libraryfication and API documentation)
+Copyright (C) 2005-2007 Nick Piper <nick-gtkpod at nickpiper co uk>
+ (Python bindings)
+Copyright 2005 Steve Wahl <steve at pro-ns dot net>
+ (parts of src/itdb_itunesdb.c)
+Copyright (C) 2007 Emmanuele Bassi  <ebassi@gnome.org>
+Copyright (C) 1995 A.M. Kuchling
+Copyright (C) 2006 Dave Benson
+ (src/gchecksum.c)
+Copyright (c) 20060423 Thomas Perl <thp at perli.net>
+ (bindings/python/examples/create_mp3_tags_from_itdb.py)
+Copyright (c) 2006 Michael McLellan <mikey@mclellan.org.nz>
+ (tests/test-photos.c)
+Copyright (C) 2006-2008 Alejandro Lamas Daviña <alejandro.lamas@ific.uv.es>
+ (po/es.po)
+Copyright (C) 2003 David Le Brun
+Copyright (C) 2005-2008 Éric Lassauge
+ (po/fr.po)
+Copyright (C) 2008 Assaf Gillat <gillata@gmail.com>
+ (po/he.po)
+Copyright (C) 2003 Edward Matteucci
+Copyright (C) 2007-2008 Daniele Forsi <daniele@forsi.it>
+ (po/it.po)
+Copyright (C) 2004-2008 Stefan Asserhäll <stefan.asserhall@comhem.se>
+
+License:
+
+    This package is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this package; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU Lesser General
+Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
+
+tests/test-covers.c,
+tests/test-write-covers.c,
+/* Copyright (c) 2005, Christophe Fergeau <teuf@gnome.org>
+ * All rights reserved.
+
+ * Redistribution and use in source and binary forms, with or without 
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *    * Redistributions of source code must retain the above copyright notice, 
+ *      this list of conditions and the following disclaimer.
+ *    * Redistributions in binary form must reproduce the above copyright 
+ *      notice, this list of conditions and the following disclaimer in the 
+ *      documentation and/or other materials provided with the distribution.
+ *    * Neither the name of the <ORGANIZATION> nor the names of its 
+ *      contributors may be used to endorse or promote products derived from 
+ *      this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+tests/test-rebuild-db.cc:
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+
+tests/test-fw-id.c,
+tests/test-ls.c:
+|   This program is free software; you can redistribute it and/or modify
+|   it under the terms of the GNU General Public License as published by
+|   the Free Software Foundation; either version 2 of the License, or
+|   (at your option) any later version.
+|
+|   This program is distributed in the hope that it will be useful,
+|   but WITHOUT ANY WARRANTY; without even the implied warranty of
+|   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+|   GNU General Public License for more details.
+|
+|   You should have received a copy of the GNU General Public License
+|   along with this program; if not, write to the Free Software
+|   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL-2'.
+
+src/gchecksum.c (Parts):
+/* This MD5 digest computation is based on the equivalent code
+ * written by Colin Plumb. It came with this notice:
+ *
+ * This code implements the MD5 message-digest algorithm.
+ * The algorithm is due to Ron Rivest.  This code was
+ * written by Colin Plumb in 1993, no copyright is claimed.
+ * This code is in the public domain; do with it what you wish.
+ *
+ * Equivalent code is available from RSA Data Security, Inc.
+ * This code has been tested against that, and is equivalent,
+ * except that you don't need to include two pages of legalese
+ * with every copy.
+ */
+/*
+ *  sha.h : Implementation of the Secure Hash Algorithm
+ *
+ * Part of the Python Cryptography Toolkit, version 1.0.0
+ *
+ * Copyright (C) 1995, A.M. Kuchling
+ *
+ * Distribute and use freely; there are no restrictions on further
+ * dissemination and usage except those imposed by the laws of your
+ * country of residence.
+ *
+ */
+
+src/sha1.c:
+/* (PD) 2001 The Bitzi Corporation
+ * Please see file COPYING or http://bitzi.com/publicdomain
+ * for more info.
+ *
+ * NIST Secure Hash Algorithm
+ * heavily modified by Uwe Hollerbach <uh@alumni.caltech edu>
+ * from Peter C. Gutmann's implementation as found in
+ * Applied Cryptography by Bruce Schneier
+ * Further modifications to include the "UNRAVEL" stuff, below
+ *
+ * This code is in the public domain
+ *
+ * $Id: sha1.c,v 1.1 2005-12-28 18:06:50 tpm Exp $
+ */
+The referenced website includes this longer explanation:
+/* (PD) 2006 The Bitzi Corporation
+ * 
+ * 1. Authorship. This work and others bearing the above 
+ * label were created by, or on behalf of, the Bitzi 
+ * Corporation. Often other public domain material by
+ * other authors is incorporated; this should be clear 
+ * from notations in the source code. If other non-
+ * public-domain code or libraries are included, this is
+ * is done under those works' respective licenses.
+ * 
+ * 2. Release. The Bitzi Corporation places its portion
+ * of these labelled works into the public domain, 
+ * disclaiming all rights granted us by copyright law. 
+ *
+ * Bitzi places no restrictions on your freedom to copy, 
+ * use, redistribute and modify this work, though you 
+ * should be aware of points (3), (4), and (5) below.
+ * 
+ * 3. Trademark Advisory. The Bitzi Corporation reserves 
+ * all rights with regard to any of its trademarks which 
+ * may appear herein, such as "Bitzi", "Bitcollider", or
+ * "Bitpedia". Please take care that your uses of this 
+ * work do not infringe on our trademarks or imply our 
+ * endorsement. For example, you should change labels 
+ * and identifier strings in your derivative works where 
+ * appropriate.
+ * 
+ * 4. Licensed portions. Some code and libraries may be
+ * incorporated in this work in accordance with the 
+ * licenses offered by their respective rightsholders. 
+ * Further copying, use, redistribution and modification
+ * of these third-party portions remains subject to 
+ * their original licenses.
+ * 
+ * 5. Disclaimer. THIS SOFTWARE IS PROVIDED BY THE AUTHOR 
+ * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES 
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE 
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+ * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR 
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+ * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+ * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN 
+ * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF 
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * Please see http://bitzi.com/publicdomain or write
+ * info@bitzi.com for more info.
+ */
+
+
+docs/reference/:
+
+Permission is granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.1 or any later version
+published by the Free Software Foundation with no Invariant Sections, no
+Front-Cover Texts, and no Back-Cover Texts. You may obtain a copy of the GNU
+Free Documentation License from the Free Software Foundation by visiting their
+Web site or by writing to: Free Software Foundation, Inc., 51 Franklin St,
+Fifth Floor, Boston, MA 02110-1301, USA.
+
+On Debian systems, the complete text of the GNU Free Documentation License
+can be found in `/usr/share/common-licenses/GFDL'.

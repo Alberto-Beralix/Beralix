@@ -1,0 +1,1271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<html>
+
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+
+<title>Debian doc-base Manual - The packages interface</title>
+
+<link href="index.html" rel="start">
+<link href="ch-about.html" rel="prev">
+<link href="ch-informations.html" rel="next">
+<link href="index.html#contents" rel="contents">
+<link href="index.html#copyright" rel="copyright">
+<link href="ch-about.html" rel="chapter" title="1 About doc-base">
+<link href="ch-interface.html" rel="chapter" title="2 The packages interface">
+<link href="ch-informations.html" rel="chapter" title="3 Getting information about installed documents">
+<link href="ch-todo.html" rel="chapter" title="4 TODO List">
+<link href="ch-interface.html#s2.1" rel="section" title="2.1 Introduction">
+<link href="ch-interface.html#s-document_ids" rel="section" title="2.2 Document IDs">
+<link href="ch-interface.html#s-control_files" rel="section" title="2.3 Control Files">
+<link href="ch-interface.html#s-registering_documents" rel="section" title="2.4 Registering Documents With doc-base">
+<link href="ch-interface.html#s2.5" rel="section" title="2.5 doc-base 0.8.x features and incompatibilities">
+<link href="ch-interface.html#s-checking_syntax" rel="section" title="2.6 Checking Syntax of Control Files">
+<link href="ch-todo.html#s4.1" rel="section" title="4.1 Roadmap for 0.9.* releases">
+<link href="ch-todo.html#s4.2" rel="section" title="4.2 Old TODO entries">
+<link href="ch-interface.html#s2.3.1" rel="subsection" title="2.3.1 Example">
+<link href="ch-interface.html#s2.3.2" rel="subsection" title="2.3.2 Syntax of the control file">
+<link href="ch-interface.html#s-main_section" rel="subsection" title="2.3.2.1 The main section">
+<link href="ch-interface.html#s-format_sections" rel="subsection" title="2.3.2.2 Format sections">
+<link href="ch-interface.html#s-section_field" rel="subsection" title="2.3.3 The section field">
+<link href="ch-interface.html#s2.5.1" rel="subsection" title="2.5.1 Splitting control files over multiple binary packages">
+<link href="ch-interface.html#s2.5.2" rel="subsection" title="2.5.2 Registering local documents">
+<link href="ch-interface.html#s2.5.3" rel="subsection" title="2.5.3 dpkg triggers">
+
+</head>
+
+<body>
+
+<p><a name="ch-interface"></a></p>
+<hr>
+
+<p>
+[ <a href="ch-about.html">previous</a> ]
+[ <a href="index.html#contents">Contents</a> ]
+[ <a href="ch-about.html">1</a> ]
+[ 2 ]
+[ <a href="ch-informations.html">3</a> ]
+[ <a href="ch-todo.html">4</a> ]
+[ <a href="ch-informations.html">next</a> ]
+</p>
+
+<hr>
+
+<h1>
+Debian <code>doc-base</code> Manual
+<br>Chapter 2 - The packages interface
+</h1>
+
+<hr>
+
+<hr>
+
+<h2><a name="s2.1"></a>2.1 Introduction</h2>
+
+<p>
+Each Debian package that installs online manuals (in any format) should
+register its manuals to <code>doc-base</code>.  This is done by installing a
+<code>doc-base</code> <em>control file</em> (see <a
+href="#s-control_files">Control Files, Section 2.3</a>) and calling
+<code>install-docs</code> from the <code>postinst</code> script (see <a
+href="#s-registering_documents">Registering Documents With
+<code>doc-base</code>, Section 2.4</a>).
+</p>
+
+<hr>
+
+<h2><a name="s-document_ids"></a>2.2 Document IDs</h2>
+
+<p>
+Each document that is registered to <code>doc-base</code> must have a unique
+<em>document ID</em>.
+</p>
+
+<p>
+The document ID is usually taken from the document's title or from the package
+name.  Here are a few examples:
+</p>
+
+<pre>
+     DOCID                  Title
+     ---------------------- ----------------------------
+     debian-policy          Debian Policy Manual
+     developers-reference   Debian Developers Reference
+     doc-base               Debian doc-base Manual
+     emacs-manual           GNU Emacs Manual
+</pre>
+
+<p>
+Legal characters for the document ID are lower case letters (a-z), digits
+(0-9), plus (+) or minus (-) signs, and dots (.) (the same characters allowed
+in package names).
+</p>
+
+<hr>
+
+<h2><a name="s-control_files"></a>2.3 Control Files</h2>
+
+<p>
+For each piece online documentation, <code>doc-base</code> needs a <em>control
+file</em> that describes the documentation and the documentation file formats
+that are provided initially.
+</p>
+
+<hr>
+
+<h3><a name="s2.3.1"></a>2.3.1 Example</h3>
+
+<p>
+Here is an example of a <em>control file</em>:
+</p>
+
+<pre>
+     Document: doc-base
+     Title: Debian doc-base Manual
+     Author: Christian Schwarz
+     Abstract: This manual describes what doc-base is
+      and how it can be used to
+      manage online manuals on Debian systems.
+     Section: Debian
+     
+     Format: DebianDoc-SGML
+     Files: /usr/share/doc/doc-base/doc-base.sgml.gz
+     
+     Format: Text
+     Files: /usr/share/doc/doc-base/doc-base.txt.gz
+     
+     Format: HTML
+     Index: /usr/share/doc/doc-base/doc-base.html/index.html
+     Files: /usr/share/doc/doc-base/doc-base.html/*.html
+</pre>
+
+<p>
+If the <code>doc-base</code> package provided necessary files in other formats,
+it would be possible to add more sections at the end of the <em>control
+file</em>:
+</p>
+
+<pre>
+     
+     Format: PDF
+     Files: /usr/share/doc-base/doc-base.pdf
+     
+     Format: PostScript
+     Files: /usr/share/doc-base/doc-base.ps.gz
+     
+     Format: DVI
+     Files: /usr/share/doc-base/doc-base.dvi.gz
+     
+     Format: Info
+     Index: /usr/share/info/doc-base.info.gz
+     Files: /usr/share/info/doc-base.info*.gz
+</pre>
+
+<hr>
+
+<h3><a name="s2.3.2"></a>2.3.2 Syntax of the control file</h3>
+
+<p>
+As you can see from the above example, the syntax -- as is the whole design of
+<code>doc-base</code> -- is heavily influenced by dpkg.  This is important
+since every maintainer will have to work with <code>doc-base</code> and thus,
+it should be simple to remember the basic ideas.
+</p>
+
+<p>
+The syntax of the control file is simple:
+</p>
+<ul>
+<li>
+<p>
+The file consist of
+</p>
+<ul>
+<li>
+<p>
+exactly one main section providing base information about the registered manual
+(see <a href="#s-main_section">The main section, Section 2.3.2.1</a> below);
+</p>
+</li>
+<li>
+<p>
+one or more format sections (see <a href="#s-format_sections"><em>Format</em>
+sections, Section 2.3.2.2</a>) containing pointers to the registered
+documentation files.
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>
+Successive sections must be separated with empty lines.
+</p>
+</li>
+<li>
+<p>
+Non-empty lines use a `<samp>field-name: value</samp>' syntax.
+</p>
+</li>
+<li>
+<p>
+The field names are case-insensitive.
+</p>
+</li>
+<li>
+<p>
+The field values are case-sensitive (except for the <em>Format</em> field).
+</p>
+</li>
+<li>
+<p>
+Field values may be wrapped over several lines by making the first character of
+subsequent lines a space.
+</p>
+<ul>
+<li>
+<p>
+If a multi-line value should contain an empty line, a single dot (.) must be
+placed in the second column.
+</p>
+</li>
+<li>
+<p>
+If the <em>Abstract</em> field value should contain lines displayed verbatim,
+the lines must begin with two spaces.
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>
+The file should be encoded in UTF-8.
+</p>
+</li>
+</ul>
+
+<hr>
+
+<h4><a name="s-main_section"></a>2.3.2.1 The main section</h4>
+
+<p>
+The first section of the control file describes the document.  The following
+fields are available:
+</p>
+<dl>
+<dt><em>Document</em></dt>
+<dd>
+<p>
+<a href="#s-document_ids">Document ID</a>, required field; should be the first
+field.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><em>Title</em></dt>
+<dd>
+<p>
+Title of the document; required field.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><em>Author</em></dt>
+<dd>
+<p>
+Author(s) of the document; optional field.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><em>Abstract</em></dt>
+<dd>
+<p>
+Short paragraph giving an overview of the document; optional but recommended
+field.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><em>Section</em></dt>
+<dd>
+<p>
+Section where the document belongs; see <a href="#s-section_field">The
+<samp>section</samp> field, Section 2.3.3</a>.  Required field.
+</p>
+</dd>
+</dl>
+
+<hr>
+
+<h4><a name="s-format_sections"></a>2.3.2.2 <em>Format</em> sections</h4>
+
+<p>
+The next sections describe the different formats for the provided document
+which is described in the first section.  The following fields are available:
+</p>
+<dl>
+<dt><em>Format</em></dt>
+<dd>
+<p>
+Format for the document.  Required field.  The following formats are
+recognised:
+</p>
+<ul>
+<li>
+<p>
+<samp>HTML</samp>,
+</p>
+</li>
+<li>
+<p>
+<samp>Text</samp>,
+</p>
+</li>
+<li>
+<p>
+<samp>PDF</samp>,
+</p>
+</li>
+<li>
+<p>
+<samp>PostScript</samp>,
+</p>
+</li>
+<li>
+<p>
+<samp>Info</samp>,
+</p>
+</li>
+<li>
+<p>
+<samp>DVI</samp>,
+</p>
+</li>
+<li>
+<p>
+and <samp>DebianDoc-SGML</samp>.
+</p>
+</li>
+</ul>
+
+<p>
+The values of this field are case-insensitive (e.g.  both <samp>Text</samp> and
+<samp>text</samp> are valid).
+</p>
+</dd>
+</dl>
+<dl>
+<dt><em>Index</em></dt>
+<dd>
+<p>
+Index or top-level file for this document format.  Only applies to document
+formats <samp>HTML</samp> and <samp>Info</samp>, and required if the format is
+<samp>HTML</samp> or <samp>Info</samp>.
+</p>
+
+<p>
+This field has to contain the absolute file name of the main page of the
+document.  This file will be specified as the front page link when the document
+is registered.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><em>Files</em></dt>
+<dd>
+<p>
+Space separated list of filenames or POSIX shell globs (i.e.  <samp>*</samp>,
+<samp>?</samp>, and <samp>[]</samp> meta-characters) representing the files
+which constitute the documentation in this format.  Required field.
+</p>
+</dd>
+</dl>
+
+<p>
+There must be at least one such a section.  If there are more, each of them
+must register files in different formats (e.g.  having two <samp>Format:
+HTML</samp> sections in one <em>control file</em> is not allowed).
+</p>
+
+<p>
+Except for the <samp>Info</samp> format the files referred in both
+<em>Index</em> and <em>Files</em> fields should be placed somewhere under the
+<code>/usr/share/doc</code> hierarchy.  If for some reason it's not possible,
+then the registering package should provide a symbolic link pointing from the
+above hierarchy to the real files and register its documentation through the
+link, allowing <code>doc-base</code>, <code>dhelp</code>, or <code>dwww</code>
+packages to actually handle the documentation.  Of course, files in the
+<samp>Info</samp> format should be located in the <code>/usr/share/info</code>
+directory.
+</p>
+
+<hr>
+
+<h3><a name="s-section_field"></a>2.3.3 The <samp>section</samp> field</h3>
+
+<p>
+The <samp>section</samp> field holds a slash-separated list of hierarchical
+sections components.  The hierarchy is mostly based on the sections outlined in
+chapter 2.1 of the <code><a
+href="http://www.debian.org/doc/packaging-manuals/menu-policy/ch2.html#s2.1">Debian
+Menu Policy</a></code>, however the top-level <samp>Applications</samp>
+component was removed and a few <code>doc-base</code>-specific sections were
+added.
+</p>
+
+<p>
+The full section list is presented below.
+</p>
+<dl>
+<dt><samp>Accessibility</samp></dt>
+<dd>
+<p>
+Documentation of tools to aid people with disabilities or for machines lacking
+usual input devices.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Amateur Radio</samp></dt>
+<dd>
+<p>
+Anything relating to HAM radio.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Data Management</samp></dt>
+<dd>
+<p>
+Interactive database programs, collection managers, address books, bibliography
+tools, etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Debian</samp></dt>
+<dd>
+<p>
+Documentation of Debian specific tools, policies, etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Editors</samp></dt>
+<dd>
+<p>
+Documentation of editors, other than office word processors, for text-based
+information.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Education</samp></dt>
+<dd>
+<p>
+Educational and training softwares.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Emulators</samp></dt>
+<dd>
+<p>
+Software that allows you to run non-native software or more than one OS at a
+time.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>File Management</samp></dt>
+<dd>
+<p>
+Tools for file management, archiving, searching, CD/DVD burning, backup, etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Games</samp></dt>
+<dd>
+<p>
+Games and recreations.  Entries should be placed in appropriate subsection.
+</p>
+<dl>
+<dt><samp>Games/Action</samp></dt>
+<dd>
+<p>
+Games that involve a lot of action and require fast reflexes.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Games/Adventure</samp></dt>
+<dd>
+<p>
+Role playing and adventure games, interactive movies and stories, etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Games/Blocks</samp></dt>
+<dd>
+<p>
+Tetris-like games involving falling blocks.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Games/Board</samp></dt>
+<dd>
+<p>
+Games played on a board.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Games/Card</samp></dt>
+<dd>
+<p>
+Games involving a deck of cards.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Games/Puzzles</samp></dt>
+<dd>
+<p>
+Tests of ingenuity and logic.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Games/Simulation</samp></dt>
+<dd>
+<p>
+Simulations of the real world in all detail and complexity.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Games/Strategy</samp></dt>
+<dd>
+<p>
+Games involving long-term strategic thinking.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Games/Tools</samp></dt>
+<dd>
+<p>
+Server browsers, configurators, editors, and other game-related tools that are
+not games themselves.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Games/Toys</samp></dt>
+<dd>
+<p>
+Amusements, eye-candy, entertaining demos, screen hacks (screen-savers), etc.
+</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt><samp>Graphics</samp></dt>
+<dd>
+<p>
+2D and 3D graphics manipulation software.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Help</samp></dt>
+<dd>
+<p>
+Documentation of programs that provide user documentation.
+</p>
+<dl>
+<dt><samp>Help/Books</samp></dt>
+<dd>
+<p>
+Books.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Help/FAQ</samp></dt>
+<dd>
+<p>
+Frequently Asked Questions.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Help/HOWTO</samp></dt>
+<dd>
+<p>
+Various HOWTOs.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Help/RFC</samp></dt>
+<dd>
+<p>
+RFCs
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Help/Standards</samp></dt>
+<dd>
+<p>
+Standards
+</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt><samp>Mobile Devices</samp></dt>
+<dd>
+<p>
+Software that allows you to interface with mobile devices (phones, PDAs, etc.).
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Network</samp></dt>
+<dd>
+<p>
+Network related software.  This is a two-level section, do not put entries
+directly here.
+</p>
+<dl>
+<dt><samp>Network/Communication</samp></dt>
+<dd>
+<p>
+Mail, USENET news, chat, instant messaging, IP telephony, video conferencing
+software, etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Network/File Transfer</samp></dt>
+<dd>
+<p>
+File transfer software such as download managers, FTP clients, P2P clients,
+etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Network/Monitoring</samp></dt>
+<dd>
+<p>
+Network monitoring software
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Network/Remote Access</samp></dt>
+<dd>
+<p>
+Tools for remotely managing of computer
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Network/Web Browsing</samp></dt>
+<dd>
+<p>
+Web browsers, tools for offline browsing, etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Network/Web News</samp></dt>
+<dd>
+<p>
+Web feed (RSS, Atom, etc.) and podcast aggregators.
+</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt><samp>Office</samp></dt>
+<dd>
+<p>
+Office suites, word processors, spreadsheets, CRM, ERP, financial software,
+etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Programming</samp></dt>
+<dd>
+<p>
+IDEs, debuggers, compilers, APIs, libraries, programming languages.
+Documentation related to only one specific language should be put in subsection
+named like the language, for example:
+</p>
+<ul>
+<li>
+<p>
+<samp>Programming/C</samp>
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+<samp>Programming/C++</samp>
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+<samp>Programming/Java</samp>
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+<samp>Programming/OCaml</samp>
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+<samp>Programming/Perl</samp>
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+<samp>Programming/Python</samp>
+</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+<samp>Programming/Ruby</samp>
+</p>
+</li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt><samp>Project Management</samp></dt>
+<dd>
+<p>
+Timetable managers, group task trackers, bug tracking software, etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Science</samp></dt>
+<dd>
+<p>
+Documentation of scientific and engineering-related software.  Please use
+appropriate subsection.
+</p>
+<dl>
+<dt><samp>Science/Astronomy</samp></dt>
+<dd>
+<p>
+Astronomy-related software.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Science/Biology</samp></dt>
+<dd>
+<p>
+Biology-related software.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Science/Chemistry</samp></dt>
+<dd>
+<p>
+Chemistry-related software.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Science/Data Analysis</samp></dt>
+<dd>
+<p>
+Software designed for processing, extracting, and presenting generic scientific
+data.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Science/Electronics</samp></dt>
+<dd>
+<p>
+Circuit design tools, simulators and assemblers for microprocessors, etc
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Science/Engineering</samp></dt>
+<dd>
+<p>
+CAD, UML tools, diagram-drawing and other engineering-related software.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Science/Geoscience</samp></dt>
+<dd>
+<p>
+Geoscience-related software.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Science/Mathematics</samp></dt>
+<dd>
+<p>
+Mathematics-related software.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Science/Medicine</samp></dt>
+<dd>
+<p>
+Medicine-related software.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Science/Physics</samp></dt>
+<dd>
+<p>
+Physics-related software.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Science/Social</samp></dt>
+<dd>
+<p>
+Social sciences-related software.
+</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt><samp>Screen</samp></dt>
+<dd>
+<p>
+Programs that affect the whole screen.
+</p>
+<dl>
+<dt><samp>Screen/Saving</samp></dt>
+<dd>
+<p>
+Tools for blanking the screen.  Entries of screen hacks and configuration GUIs
+should go to other appropriate sections.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Screen/Locking</samp></dt>
+<dd>
+<p>
+Tools for locking the screen.
+</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt><samp>Shells</samp></dt>
+<dd>
+<p>
+Various shells to be used inside a terminal emulator.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Sound</samp></dt>
+<dd>
+<p>
+Sound players, editors, and rippers/recorders.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>System</samp></dt>
+<dd>
+<p>
+System related software.  Place entries in one of she subsections.
+</p>
+<dl>
+<dt><samp>System/Administration</samp></dt>
+<dd>
+<p>
+Administrative and system configuration utilities, also tools for personal user
+settings.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>System/Hardware</samp></dt>
+<dd>
+<p>
+Tools for manipulating specific hardware, especially non-standard laptop
+hardware.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>System/Language Environment</samp></dt>
+<dd>
+<p>
+This section is reserved for language-env as a special case.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>System/Monitoring</samp></dt>
+<dd>
+<p>
+System information and monitoring tools, log viewers, etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>System/Package Management</samp></dt>
+<dd>
+<p>
+Package managers and related tools.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>System/Security</samp></dt>
+<dd>
+<p>
+Security, cryptography and privacy related software, antiviruses, tools to
+track and report bugs, etc.
+</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dt><samp>Terminal Emulators</samp></dt>
+<dd>
+<p>
+Graphical terminal emulators.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Text</samp></dt>
+<dd>
+<p>
+Text oriented tools like dictionaries, OCR, translation, text analysis
+software, etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>TV and Radio</samp></dt>
+<dd>
+<p>
+TV-in, TV-out, FM radio, teletext browsers, etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Typesetting</samp></dt>
+<dd>
+<p>
+Software for typesetting text and graphics from structured input files like
+LaTeX or docbook sources, database exports etc.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Viewers</samp></dt>
+<dd>
+<p>
+Software for viewing images, documents and other (non-video) media.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Video</samp></dt>
+<dd>
+<p>
+Video players, editors, and rippers/recorders.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Web Development</samp></dt>
+<dd>
+<p>
+Software for web site editing, web programming, and site administration.
+</p>
+</dd>
+</dl>
+<dl>
+<dt><samp>Window Managers</samp></dt>
+<dd>
+<p>
+X window managers.
+</p>
+</dd>
+</dl>
+
+<hr>
+
+<h2><a name="s-registering_documents"></a>2.4 Registering Documents With <code>doc-base</code></h2>
+
+<p>
+In order to register a piece of online documentation to <code>doc-base</code>,
+all the package needs to do is installing the control file (see <a
+href="#s-control_files">Control Files, Section 2.3</a>) as file
+<code>/usr/share/doc-base/<var>document-id</var></code>.
+</p>
+
+<p>
+Further processing of the control file is handled by a <code>dpkg</code>
+trigger (cf.  <code>/usr/share/doc/dpkg/triggers.txt.gz</code>) provided by
+<code>doc-base</code>.  The trigger will call <code>install-docs</code> to
+generate
+<code>/var/lib/doc-base/documents/<var>&lt;document-id&gt;</var></code> file
+and register the online manuals to <code>dww</code>, <code>dhelp</code>, and
+<code>scrollkeeper</code> when the package is installed, and de-register the
+manuals when the package is removed.
+</p>
+
+<hr>
+
+<h2><a name="s2.5"></a>2.5 doc-base 0.8.x features and incompatibilities</h2>
+
+<hr>
+
+<h3><a name="s2.5.1"></a>2.5.1 Splitting control files over multiple binary packages</h3>
+
+<p>
+Since version 0.8.7 is it possible to provide documents with the same
+<em>document-id</em> by more than one binary package.  All such documents with
+be merged together and the merged document will be generated in
+<code>/var/lib/doc-base/documents/<em>document-id</em></code> file.  This
+feature can be useful in cases when the same documentation, but in different
+formats, is provided by two binary packages.
+</p>
+
+<p>
+For example the <code>foo-text</code> package could install the
+<code>/usr/share/doc-base/foo-text</code> file with the following contents:
+</p>
+
+<pre>
+     Document: foo
+     Title: This is foo
+     Author: John Foo &lt;foo@foo.net&gt;
+     Abstract: Description of foo
+     Section: Text
+     
+     Format: text
+     Files: /usr/share/foo-text/foo.txt.gz
+</pre>
+
+<p>
+and the <code>foo-html</code> package could install the following
+<code>/usr/share/doc-base/foo-html</code> file:
+</p>
+
+<pre>
+     Document: foo
+     Title: This is foo
+     Author: John Foo &lt;foo@foo.net&gt;
+     Abstract: Description of foo
+     Section: Text
+     
+     Format: HTML
+     Index: /usr/share/foo-html/index.html
+     Files: /usr/share/foo-html/*.html
+</pre>
+
+<p>
+When both packages are installed, <code>install-docs</code> will merge contents
+of the two files into <code>/var/lib/doc-base/documents/foo</code>:
+</p>
+
+<pre>
+     Document: foo
+     Title: This is foo
+     Author: John Foo &lt;foo@foo.net&gt;
+     Abstract: Description of foo
+     Section: Text
+     
+     Format: HTML
+     Index: /usr/share/foo-html/index.html
+     Files: /usr/share/foo-html/*.html
+     
+     Format: text
+     Files: /usr/share/foo-text/foo.txt.gz
+</pre>
+
+<hr>
+
+<h3><a name="s2.5.2"></a>2.5.2 Registering local documents</h3>
+
+<p>
+Version 0.8.7 and furthers allow user to register local documentations.  In
+order to do this local administrators need to create their own control file
+(see <a href="#s-control_files">Control Files, Section 2.3</a>, place it in the
+<code>/etc/doc-base/documents</code> directory, and then register it with
+</p>
+
+<pre>
+     install-docs -i /etc/doc-base/documents/&lt;document-id&gt;
+</pre>
+
+<p>
+Before removing the file, it should be de-registered with
+</p>
+
+<pre>
+     install-docs -r /etc/doc-base/documents/&lt;document-id&gt;
+</pre>
+
+<p>
+Since version 0.8.12
+</p>
+
+<pre>
+     install-docs --install-changed
+</pre>
+
+<p>
+may be used instead of the two above commands.
+</p>
+
+<hr>
+
+<h3><a name="s2.5.3"></a>2.5.3 dpkg triggers</h3>
+
+<p>
+<code>doc-base</code> 0.8.11 and greater uses the <code>dpkg</code> triggers
+feature to register and de-register the documentation.  There is no longer need
+to call <code>install-docs</code> from maintainer scripts.
+</p>
+
+<hr>
+
+<h2><a name="s-checking_syntax"></a>2.6 Checking Syntax of <em>Control Files</em></h2>
+
+<p>
+With the new <samp>--check</samp> (<samp>-c</samp>) option of
+<code>install-docs</code> it is possible to check the <em>control file</em>:
+</p>
+
+<pre>
+     $ install-docs --check /usr/share/doc-base/doc-base
+     /usr/share/doc-base/doc-base: No problems found
+</pre>
+
+<pre>
+     $ install-docs -c /usr/share/doc-base/xlogmaster
+     Error in `/usr/share/doc-base/xlogmaster', line 15: `Index' value missing for format info
+     /usr/share/doc-base/xlogmaster: Fatal error found, the file won't be registered
+</pre>
+
+<pre>
+     $ install-docs -c /usr/share/doc-base/MC-FAQ /usr/share/doc-base/gnu-privacy-handbook
+     /usr/share/doc-base/MC-FAQ: 1 warning(s) or non-fatal error(s) found
+     /usr/share/doc-base/gnu-privacy-handbook: 1 warning(s) or non-fatal error(s) found
+</pre>
+
+<p>
+More details about the warnings and non-fatal errors can be found using the
+<samp>--verbose</samp> (<samp>-v</samp>) option:
+</p>
+
+<pre>
+     $ install-docs -v -c /usr/share/doc-base/MC-FAQ /usr/share/doc-base/gnu-privacy-handbook
+     Warning in `/usr/share/doc-base/MC-FAQ', line 1: invalid value of `Document' field
+     /usr/share/doc-base/MC-FAQ: 1 warning(s) or non-fatal error(s) found
+     Warning in `/usr/share/doc-base/gnu-privacy-handbook', line 12: file `/usr/share/doc/gnupg-doc/GNU_Privacy_Handbook/html/book1.html' does not exist
+     /usr/share/doc-base/gnu-privacy-handbook: 1 warning(s) or non-fatal error(s) found
+</pre>
+
+<p>
+With the <samp>--rootdir</samp> option is possible to check non-installed
+packages:
+</p>
+
+<pre>
+     $ dpkg-deb -x autoclass_3.3.4-6_i386.deb AUTOCLASS_UNPACKED
+     $ install-docs --rootdir AUTOCLASS_UNPACKED -vc AUTOCLASS_UNPACKED/usr/share/doc-base/*
+     AUTOCLASS_UNPACKED/usr/share/doc-base/autoclass-results: No problems found
+     AUTOCLASS_UNPACKED/usr/share/doc-base/autoclass-theory: No problems found
+</pre>
+
+<p>
+If the <samp>--rootdir</samp> option was omitted, <code>install-docs</code>
+would complain:
+</p>
+
+<pre>
+     Warning in `AUTOCLASS_UNPACKED/usr/share/doc-base/autoclass-results', line 20: file mask `/usr/share/doc/autoclass/kdd-95.pdf' does not match any files
+     Warning in `AUTOCLASS_UNPACKED/usr/share/doc-base/autoclass-theory', line 20: file mask `/usr/share/doc/autoclass/tr-fia-90-12-7-01.pdf' does not match any files
+</pre>
+
+<hr>
+
+<p>
+[ <a href="ch-about.html">previous</a> ]
+[ <a href="index.html#contents">Contents</a> ]
+[ <a href="ch-about.html">1</a> ]
+[ 2 ]
+[ <a href="ch-informations.html">3</a> ]
+[ <a href="ch-todo.html">4</a> ]
+[ <a href="ch-informations.html">next</a> ]
+</p>
+
+<hr>
+
+<p>
+Debian <code>doc-base</code> Manual
+</p>
+
+<address>
+ver. 0.10.2, 01 July, 2011<br>
+<br>
+Christian Schwarz <code><a href="mailto:schwarz@debian.org">schwarz@debian.org</a></code><br>
+Adam Di Carlo <code><a href="mailto:aph@debian.org">aph@debian.org</a></code><br>
+Robert Luberda <code><a href="mailto:robert@debian.org">robert@debian.org</a></code><br>
+<br>
+</address>
+<hr>
+
+</body>
+
+</html>
+

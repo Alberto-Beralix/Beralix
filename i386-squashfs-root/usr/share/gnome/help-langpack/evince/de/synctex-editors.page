@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="synctex-editors" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#synctex" group="fourth"/>
+    <desc>Welchen Editor können Sie zum Bearbeiten Ihrer TeX-Datei verwenden?</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Unterstützte Editoren</title>
+
+<section><title><app>Gedit</app></title>
+<p><link xref="synctex-search#forward-search">Vorwärtssuche</link> (von <app>Gedit</app> zum <app>Dokumentenbetrachter</app>) und <link xref="synctex-search#backward-search">Rückwärtssuche</link> (vom <app>Dokumentenbetrachter</app> nach <app>Gedit</app>) werden beide unterstützt.</p>
+</section>
+
+<section><title>Vim-latex</title>
+<p>Das <app>Gedit</app>-Plugin enthält ein Python-Skript (evince_dbus.py), das verwendet werden kann, damit SyncteX mit Vim arbeiten kann. Um vim-latex zusammen mit dem <app>Dokumentenbetrachter</app> einzusetzen, gehen Sie wie folgt vor:</p>
+<steps>
+ <item>
+  <p>Kopieren Sie »evince_dbus.py« in einen beliebigen Ordner in Ihrem Suchpfad und machen Sie es ausführbar.</p>
+ </item>
+ <item>
+  <p>Bearbeiten Sie die Datei ~/.vimrc und fügen Sie die folgenden Zeilen hinzu.</p>
+<code>
+let g:Tex_ViewRule_pdf = 'evince_dbus.py'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_CompileRule_pdf = 'pdflatex --synctex=1 -interaction=nonstopmode $*'
+</code>
+
+  </item>
+  <item>
+   <p>Jetzt können Sie die Vorwärtssuche in vim-latex nutzen, indem Sie \ls eingeben. Die Rückwärtssuche wird noch nicht unterstützt.</p>
+  </item>
+</steps>
+</section>
+</page>

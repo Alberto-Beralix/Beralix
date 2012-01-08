@@ -1,0 +1,171 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="set-custom-status">
+
+  <info>
+    <link type="guide" xref="index#accounts"/>
+    <link type="seealso" xref="change-status"/>
+	  <link type="seealso" xref="status-icons"/>
+    <desc>
+      Add, edit or delete personal messages for your status.
+    </desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-30" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-10" status="review"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>Set a custom message</title>
+
+  <p>
+    Sometimes you may want to set a custom message for your status, for example to let
+    people know that you will be unavailable for a certain period of time.
+  </p>
+  <p>
+    It is possible to set a custom message based on the different statuses available.
+  </p>
+
+  <steps>
+    <item>
+      <p>
+        From the <gui>Contact List</gui> window, click on the drop-down list at
+        the top.
+      </p>
+    </item>
+    <item>
+      <p>
+        Select the status you want to add a custom message to. You have to select the one
+        identified with the label <gui>Custom Message</gui>.
+      </p>
+    </item>
+    <item>
+      <p>
+        Enter your custom message in the text box at the top of the window, and
+        press <key>Enter</key> to set the message.
+      </p>
+    </item>
+    <item>
+      <p>
+        If you want to set the custom message as a favorite, saving it in order to use it
+        again, click on the little star on the right of the text box where you wrote your
+        custom message.
+      </p>
+      <p>
+        If you do not do it, the custom message will not be available the next time you
+        use <app>Empathy</app>. It will be saved only for the current session.
+      </p>
+    </item>
+  </steps>
+
+  <section id="edit-custom">
+
+  <title>Edit, remove and add a custom message</title>
+
+  <steps>
+    <item>
+     <p>
+        From the <gui>Contact List</gui> window, click on the drop-down list at
+        the top.
+      </p>
+    </item>
+    <item>
+      <p>
+        Select <gui>Edit Custom Message</gui>.
+      </p>
+    </item>
+	  <item>
+	    <list>
+	      <item>
+	        <p>
+	          To edit a custom message:
+	        </p>
+	        <steps>
+	          <item>
+	            <p>
+	              From the <gui>Saved Presets</gui> box, select the status message
+	              you want to edit and double-click on it.
+              </p>
+            </item>
+            <item>
+              <p>
+                Type the new custom message and press <key>Enter</key> to modify it.
+              </p>
+            </item>
+          </steps>
+        </item>
+        <item>
+          <p>
+            To remove a custom message:
+          </p>
+          <steps>
+            <item>
+              <p>
+                From the <gui>Saved Presets</gui> box, select the status message you want
+                to remove.
+              </p>
+            </item>
+            <item>
+              <p>
+                Click on the <gui>Remove</gui> button.
+              </p>
+            </item>
+          </steps>
+        </item>
+        <item>
+          <p>
+            To add a new custom message, from the <gui>Add New Preset</gui> section:
+          </p>
+          <steps>
+            <item>
+              <p>
+                Click on the drop-down list to select the status you want to set a custom
+                message to.
+              </p>
+            </item>
+            <item>
+              <p>
+                Click on the text box, and type the new custom message.
+              </p>
+            </item>
+            <item>
+              <p>
+                Click on <gui>Add</gui> to add the new message to the presets ones.
+              </p>
+            </item>
+          </steps>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>
+        When finished, click on <gui>Close</gui>.
+      </p>
+    </item>
+  </steps>
+
+  <note style="tip">
+    <p>
+      When you edit or add a new custom message, it will not be set as the current
+      status message. You will need to select it from the <gui>Contact List</gui> window.
+    </p>
+  </note>
+
+  </section>
+
+</page>

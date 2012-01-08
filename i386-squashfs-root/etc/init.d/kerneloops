@@ -1,0 +1,94 @@
+#!/bin/sh
+#
+# kerneloops
+#
+# chkconfig:   345 90 88
+# description: A tool that collects and submits kernel crash \
+# signatures to the kerneloops.org website for use by the Linux \
+# kernel developers.
+# processname: kerneloops
+# config:      /etc/kerneloops.conf
+#
+### BEGIN INIT INFO
+# Provides: kerneloops
+# Default-Start: 2 3 4 5
+# Default-Stop: 1
+# Required-Start: $local_fs $remote_fs $named $network $time $syslog
+# Required-Stop: $local_fs $remote_fs $syslog
+# Short-Description: Tool to automatically collect and submit kernel crash signatures
+# Description: A tool that collects and submits kernel crash
+#   signatures to the kerneloops.org website for use by the Linux
+#   kernel developers.
+### END INIT INFO
+
+# Source function library.
+. /lib/lsb/init-functions
+
+
+exec="/usr/sbin/kerneloops"
+prog=$(basename $exec)
+service="Kernel Oops catching service"
+pidfile=/var/run/$prog.pid
+sconf="/etc/kerneloops.conf"
+enabled=1
+
+[ -x "$exec" ] || exit 0
+
+[ -e /etc/default/$prog ] && . /etc/default/$prog
+
+[ "$enabled" = "1" ] || exit 0
+
+start() {
+	log_daemon_msg "Starting $service" "$prog"
+	start-stop-daemon --start --quiet --oknodo --chuid kernoops:adm --pidfile $pidfile --exec $exec
+	retval=$?
+	pidof -s kerneloops > $pidfile
+	log_end_msg "$retval"
+	return $retval
+}
+
+stop() {
+	log_daemon_msg "Stopping $service" "$prog"
+	start-stop-daemon --stop --quiet --oknodo --pidfile $pidfile
+	retval=$?
+	rm -f $pidfile
+	log_end_msg "$retval"
+	return $retval
+}
+
+restart() {
+	stop
+	start
+}
+
+reload() {
+	restart
+}
+
+force_reload() {
+	restart
+}
+
+fdr_status() {
+	status_of_proc -p $pidfile $prog "$service"
+}
+
+
+case "$1" in
+	start|stop|restart|reload)
+  		$1
+		;;
+	force-reload)
+		force_reload
+		;;
+	status)
+		fdr_status
+		;;
+	condrestart|try-restart)
+		pidof kerneloops >/dev/null || restart
+		;;
+	*)
+		echo $"Usage: $0 {start|stop|status|restart|try-restart|reload|force-reload}"
+		exit 1
+esac
+

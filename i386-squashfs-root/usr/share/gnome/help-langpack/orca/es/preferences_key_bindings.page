@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_key_bindings" xml:lang="es">
+  <info>
+    <link type="guide" xref="preferences#orca"/>
+    <link type="next" xref="preferences_pronunciation"/>
+    <link type="seealso" xref="howto_key_bindings"/>
+    <title type="sort">6. Asociaciones de teclas</title>
+    <title type="link">Atajos de teclado</title>
+    <desc>Configurar los atajos de teclado de <app>Orca</app></desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Preferencias de las asociaciones de teclas</title>
+  <section id="orca_modifier_keys">
+    <title>Teclas modificadoras de Orca</title>
+    <media type="image" mime="image/png" src="figures/preferences_Orca_modifier_keys.png"/>
+    <p>El cuadro combinado <gui>Teclas modificadoras de Orca</gui> le permite elegir qué tecla o teclas servirán como «Modificador de Orca». Las opciones disponibles son:</p>
+    <list>
+      <item>
+        <p><gui>TN Ins</gui> (la misma que el <key>0</key> en el teclado numérico)</p></item>
+      <item><p><gui>Insertar</gui></p></item>
+      <item><p><gui>Ins, TN Ins</gui></p></item>
+      <item><p><gui>Bloqueo_mayúscula</gui></p></item>
+    </list>
+  </section>
+  <section id="key_bindings_table">
+    <title>La tabla de atajos de teclado</title>
+    <media type="image" mime="image/png" src="figures/preferences_key_bindings_table.png"/>
+    <p>La tabla de asociaciones de teclas proporciona una lista de las operaciones de <application>Orca</application> y de las teclas que están asociadas a ellas.</p>
+    <list>
+      <item>
+        <p>La columna <gui>Función</gui> es una descripción de la operación de <application>Orca</application> para ser realizada.</p>
+      </item>
+      <item>
+        <p>Los <gui>Atajos de teclado</gui> son la primera forma de invocar a la función desde le teclado. Note que el atajo de teclado puede incluir la palabra «Orca». Esto indica que la tecla <key>Modificador de Orca</key> se debería mantener pulsada junto a las otras teclas. Puede modificar el valor de esta columna pulsando <key>Intro</key>, pulsando después las teclas para el nuevo atajo, y pulsando <key>Intro</key> de nuevo.</p>
+      </item>
+      <item>
+        <p>La columna <gui>Alternativa</gui> le permite especificar un atajo de teclado adicional para esta función. Puede modificar el valor de esta columna pulsando <key>Intro</key>, pulsando después las teclas para el nuevo atajo, y pulsando <key>Intro</key> de nuevo.</p>
+      </item>
+      <item>
+        <p>La columna <gui>Modificado</gui> sirve tanto como un indicador para lo que se ha cambiado, así como una forma de restaurar las asociaciones predeterminadas con esa función.</p>
+      </item>
+    </list>
+    <p>Bajo la lista de atajos de teclado de <app>Orca</app> encontrará un grupo de comandos «sin asociar». Estos son comandos muy útiles para algunos usuarios, pero no necesarios para otros muchos. En lugar de «usar» una pulsación de tecla para esos comandos, se han dejado sin asignar de forma predeterminada. Al final de la lista están los atajos de teclado Braille, para usarlos con un dispositivo actualizable Braille.</p>
+  </section>
+</page>

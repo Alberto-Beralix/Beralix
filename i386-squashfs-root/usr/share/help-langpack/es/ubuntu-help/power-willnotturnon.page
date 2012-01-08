@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="power-willnotturnon" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="power#problems"/>
+    <link type="guide" xref="hardware-problems-graphics" group="#last"/>
+    
+    <desc>Los cables sueltos y los problemas de hardware son las posibles razones.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Mi equipo no se enciende</title>
+
+<p>Hay varias razones por las que su equipo no se encenderá. Este tema da una breve descripción de algunas de las posibles razones.</p>
+
+  <comment>
+   <cite date="2010-06-29" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
+   <p>This is a complicated topic. Give troubleshooting steps/reasons for why the computer won't turn on. Some of the reasons may be down to hardware failure.</p>
+   <p>This was marked incomplete as of 2011-04-04. I marked it final
+   for 3.0. If there's more to add, revisit for 3.2.</p>
+  </comment>
+	
+<section id="nopower">
+ <title>Equipo no enchufado, batería sin carga o cable suelto</title>
+ <p>Asegúrese de que los cables de alimentación del equipo estén bien conectados y las tomas de corriente están encendidas. Asegúrese de que el monitor está enchufado y encendido también. Si tiene un portátil, conecte el cable de carga (en caso de que se hubiera quedado sin batería). También puede comprobar que la batería está correctamente colocada en su lugar (mire en la parte inferior del portátil).</p>
+</section>
+ 
+<section id="hardwareproblem">
+ <title>Problemas con el hardware del equipo</title>
+ <p>Un componente de su equipo puede estar dañado o ser defectuoso. Si este es el caso, tendrá que conseguir reparar su equipo. Los fallos más comunes son una fuente de alimentación rota, componentes instalados incorrectamente (por ejemplo la memoria/RAM) y una placa madre defectuosa.</p>
+</section>
+ 
+<section id="beeps">
+ <title>El equipo pita y luego se apaga</title>
+ <p>Si el equipo emite un pitido varias veces cuando lo enciende y luego se apaga (o no arranca), puede estar indicando que ha detectado un problema. Estos pitidos se denominan a veces <em>códigos de pitido</em>, y el patrón de sonidos tiene la intención de decir cuál es el problema que tiene el equipo. Los distintos fabricantes utilizan diferentes códigos, por lo que tendrá que consultar el manual de la placa base o llevar su equipo a reparar.</p>
+</section>
+
+<section id="fans">
+ <title>Los ventiladores del equipo giran pero no aparece nada en la pantalla</title>
+ <p>Lo primero que verificar es que su monitor esté conectado y encendido.</p>
+ <p>Puede que este problema se deba a un fallo de hardware. Los ventiladores pueden encenderse al presionar el botón de encendido, pero puede que otras partes esenciales del sistema no se enciendan correctamente. En este caso lleve su equipo al servicio técnico.</p>
+</section>
+
+</page>

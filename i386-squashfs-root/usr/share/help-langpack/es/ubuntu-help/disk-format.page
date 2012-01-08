@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="disk-format" xml:lang="es">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    
+    <credit type="author">
+      <name>Equipo de documentación GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <desc>Eliminar todos los archivos y carpetas de una unidad de disco duro externo o memoria flash USB formateándola.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Limpiar todo en un disco extraíble</title>
+
+<p>Si tiene un disco extraible, como una memoria USB o un disco duro externo, puede que desee borrar por completo todos sus archivos y carpetas. Puede hacer esto realizando el <em>formateo</em> del disco - esto borra todos los archivos en el disco y lo deja vacío.</p>
+
+<steps>
+ <title>Formatear un disco removible</title>
+ <item><p>Abra la aplicación <app>Utilidad de disco</app> desde el <gui>Tablero</gui>.</p></item>
+ <item><p>Seleccione el disco que desea limpiar de la lista de <gui>Dispositivos de almacenamiento</gui>.</p>
+  <note style="warning"><p>¡Asegúrese de que ha seleccionado el disco correcto! Si elige el disco equivocado, ¡se borrarán todos los archivos en el otro disco!</p></note></item>
+ <item><p>En la sección Volúmenes, pulse <gui>Desmontar volumen</gui>. Luego pulse <gui>Formatear volumen</gui>.</p></item>
+ <item><p>En la ventana emergente, seleccione un <gui>Tipo</gui> de sistema de archivos para el disco.</p>
+  <p>If you use the disk on Windows and Mac OS computers in addition to Linux computers, choose <gui>FAT</gui>. If you only use it on Windows, <gui>NTFS</gui> may be a better option. A brief description of the <gui>file system type</gui> will be presented as a label.</p></item>
+ <item><p>Dele un nombre al disco y pulse <gui>Formatear</gui> para empezar a limpiar el disco.</p></item>
+ <item><p>Cuando haya acabado el formateo, <gui>extraiga con seguridad</gui> el disco. Ahora debería estar vacío y listo para usarse de nuevo.</p></item>
+</steps>
+
+<note style="warning">
+ <title>El formateo de un disco no eliminar de forma segura sus archivos</title>
+ <p>Formatting a disk is not a completely secure way of wiping all of its 
+data. A formatted disk will not appear to have files on it, but it is 
+possible that special recovery software could retrieve the files. If you 
+need to securely delete the files, you will need to use a command-line 
+utility, such as <app>shred</app>.</p>
+</note>
+
+</page>

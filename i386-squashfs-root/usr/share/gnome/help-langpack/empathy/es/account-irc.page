@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="screen" id="account-irc" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="irc-manage#manage"/> 
+    <desc>Información adicional necesaria para conectarse a redes IRC.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-31" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-08-31" status="done"/>
+      -->
+    </revision>
+    <revision pkgversion="2.30" version="0.2" date="2010-04-19" status="review"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/> 
+-->
+  </info>
+
+  <title>Detalles de la cuenta IRC</title>
+
+  <p>Las cuentas de IRC requieren información diferente que otros tipos de cuentas. Para crear una cuenta IRC debe especificar al menos la red IRC y el apodo. Esta página detalla la información que puede proporcionar para una cuenta de IRC.</p>
+
+  <note style="info package">
+    <p>Debe tener instalado el paquete <sys>telepathy-idle</sys> para poder usar el IRC en <app>Empathy</app>.</p>
+  </note>
+
+  <terms>
+    <item>
+      <title><gui>Red</gui></title>
+      <p>IRC es un sistema abierto que permite a la gente estar en diferentes redes IRC. Cada red es distinta y tiene sus propios usuarios y salas de chat. <app>Empathy</app> lista las redes más populares en la lista desplegable <gui>Red</gui>. Puede añadir redes adicionales. Consulte debajo la <link xref="#networks"/>.</p>
+    </item>
+    <item>
+      <title><gui>Apodo</gui></title>
+      <p>Su apodo es su nombre único en la red IRC. Sólo una persona en una red puede usar cierto apodo. Si obtiene un mensaje que dice <link xref="prob-conn-name" role="error-msg"/> deberá cambiar su apodo.</p>
+    </item>
+    <item>
+      <title><gui>Contraseña</gui></title>
+      <p>Algunos servidores, particularmente aquellos en redes privadas, requieren una contraseña para la conexión. Si está autorizado a usar la red, los administradores de la red le proporcionarán una contraseña.</p>
+      <note>
+        <title>Contraseñas NickServ</title>
+        <p>En algunas redes los apodos se pueden registrar con un servicio conocido como NickServ. <app>Empathy</app> no soporta directamente contraseñas para apodos. En algunas redes, incluyendo la popular red freenode, las contraseñas de servidor se redireccionan automáticamente a NickServ, permitiéndole usar este campo para identificarse con NickServ. Para obtener más información consulte la <link xref="irc-nick-password"/>.</p>
+      </note>
+    </item>
+    <item>
+      <title><gui>Nombre real</gui></title>
+      <p>Puede proporcionar su nombre real además de su apodo. Otros usuarios podrán verlo al ver su información.</p>
+    </item>
+    <item>
+      <title><gui>Mensaje de salida</gui></title>
+      <p>Cuando se desconecta se envía un mensaje de salida a todas las salas de chat en las que está y a todos los usuarios con los que tiene una conversación privada. Use este campo para proporcionar un mensaje personalizado.</p>
+    </item>
+  </terms>
+
+<!--
+telepathy-idle note
+-->
+
+  <section id="networks">
+    <info>
+      <title type="link">Redes IRC</title>
+    </info>
+
+    <title>Redes</title>
+
+    <p><app>Empathy</app> incluye una lista de redes IRC populares. Si quiere usar otra red IRC puede añadirla a la lista. También puede modificar y quitar redes de la lista.</p>
+
+    <list>
+      <item><p>Para añadir una red a la lista pulse <media type="image" mime="image/png" src="figures/gtk-add.png" width="16" height="16">Añadir</media>.</p></item>
+      <item><p>Para modificar una red de la lista seleccione la red y pulse <media type="image" mime="image/png" src="figures/gtk-edit.png" width="16" height="16">Editar</media>.</p></item>
+      <item><p>Para quitar una red de la lista seleccione y pulse <media type="image" mime="image/png" src="figures/gtk-remove.png" width="16" height="16">Quitar</media>.</p></item>
+    </list>
+
+    <p>Al añadir o modificar una red puede introducir la siguiente información:</p>
+
+    <terms>
+      <item>
+        <title><gui>Red</gui></title>
+        <p>Este es el nombre de la red como quiere que aparezca en la lista de redes.</p>
+      </item>
+      <item>
+        <title><gui>Conjunto de caracteres</gui></title>
+        <p>Esto especifica la codificación de caracteres usada generalmente en esta red. Una codificación de caracteres es una forma específica de grabar los caracteres internamente en un equipo. Existen muchas configuraciones de caracteres y debe usar la misma configuración de caracteres que el resto de usuarios para poder ver sus mensajes correctamente.</p>
+        <!--
+            Translators: Recommend character encodings that are common
+            for your language.
+        -->
+        <p>De forma predeterminada <app>Empathy</app> usa UTF-8, una codificación de caracteres moderna que puede gestionar texto en la mayoría de los idiomas del mundo. Otra configuración de caracteres común para inglés y otros idiomas occidentales es ISO-8859-1.</p>
+      </item>
+      <item>
+        <title><gui>Servidores</gui></title>
+        <p>Una red IRC puede tener muchos servidores a los que se puede conectar. Cuando está conectado a un servidor en una red en particular, puede comunicarse con todos los usuarios en todos los servidores de esa red. Puede añadir y quitar servidores para esa red usando los botones <gui>Añadir</gui> y <gui>Quitar</gui>.</p>
+        <p>Cuando un servidor esté seleccionado, pulse el campo bajo <gui>Servidor</gui> o <gui>Puerto</gui> para editarlo. Alternativamente, use las flechas izquierda y derecha para dar el foco al campo y pulse la barra espaciadora para comenzar a editarlo.</p>
+        <p>Seleccione la casilla de verificación en la columna <gui>SSL</gui> para cifrar toda la comunicación con el servidor. Note que esto no previene que otros usuarios en la red vean lo que escribe en salas de chat públicas.</p>
+      </item>
+    </terms>
+  </section>
+</page>

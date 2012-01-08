@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-working-offline" xml:lang="es">
+
+  <info>
+    <desc>Trabajar con su correo mientras no está conectado a la red.</desc>
+<!-- TODO:POST-3-2: Offline work for web calendars etc also exists => create index page for Offline working? -->
+    <link type="guide" xref="index#mail-basic"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-30" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-send.html.en#usage-mail-getnsend-offline -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Trabar desconectado</title>
+
+<p>El modo desconectado le ayuda a comunicarse con sistemas de almacenamiento de correo remoto tales como GroupWise, IMAP o Exchange en situaciones en las que no podrá estar siempre conectado a la red local. Evolution guarda copia de una o más carpetas y le permite crear nuevos mensajes, guardarlos en la Bandeja de salida y enviarlo en cuanto vuelva a conectarse.</p>
+
+<p>El correo POP descarga todos sus mensajes al sistema local, pero normalmente otras conexiones sólo descargan las cabeceras y obtienen el resto solamente cuando quiere leer el mensaje entero. Antes de desconectar, Evolution descargará todos los mensajes sin leer desde las carpetas que haya elegido almacenar.</p>
+
+<section id="mark-folders">
+<title>Marcar carpetas para su uso desconectado</title>
+<p>Para marcar una carpeta de correo para su uso desconectado,</p>
+<steps>
+<item><p>Pulse con el botón derecho del ratón sobre la carpeta, después pulse <gui>Propiedades</gui>.</p></item>
+<item><p>Pulse <gui>Copiar el contenido de la carpeta localmente para operar desconectado</gui>.</p></item>
+</steps>
+</section>
+
+<section id="sync-for-offline">
+<title>Sincronizar mensajes para su uso desconectado</title>
+<p>Your connection status is shown by the small icon in the lower left corner of the Evolution main window. When you are online, it displays two connected cables. When you go offline via clicking the icon or via <guiseq><gui>File</gui><gui>Work Offline</gui></guiseq>, the cables separate. You will be asked whether you want to go offline immediately or synchronize folders locally before you go offline.</p>
+<p>Para descargar los mensajes para operaciones en modo desconectado, seleccione <guiseq><gui>Archivo</gui><gui>Descargar mensajes para trabajar sin conexión</gui></guiseq>.</p>
+</section>
+
+<section id="network-manager-integration">
+<title>Gestión automática del estado de la red</title>
+<p>Evolution entiende automáticamente el estado de la red y actúa en concordancia. Por ejemplo, Evolution cambia a modo desconectado cuando la red se cae y cambia automáticamente cuando la red se recupera. Para activar esta característica, asegúrese de que su sistema tiene instalado Network Manager.</p>
+</section>
+
+</page>

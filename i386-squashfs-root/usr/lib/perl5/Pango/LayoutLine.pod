@@ -1,0 +1,83 @@
+=head1 NAME
+
+Pango::LayoutLine - a line in a Pango::Layout
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----Pango::LayoutLine
+
+
+
+=cut
+
+=for object Pango::LayoutLine - a line in a Pango::Layout
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 (ink_rect, logical_rect) = $line->B<get_extents>
+
+=head2 (ink_rect, logical_rect) = $line->B<get_pixel_extents>
+
+
+
+=head2 x_pos = $line-E<gt>B<index_to_x> ($index_, $trailing)
+
+=over
+
+=item * $index_ (integer) 
+
+=item * $trailing (boolean) 
+
+=back
+
+=head2 list = $line-E<gt>B<get_pixel_extents> 
+
+=head2 list = $line-E<gt>B<get_x_ranges> ($start_index, $end_index)
+
+=over
+
+=item * $start_index (integer) 
+
+=item * $end_index (integer) 
+
+=back
+
+=head2 list = $line-E<gt>B<x_to_index> ($x_pos)
+
+=over
+
+=item * $x_pos (integer) 
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Boxed>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

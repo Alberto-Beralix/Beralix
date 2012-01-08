@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/snap/screen0/options/avoid_snap</key>
+      <applyto>/apps/compiz-1/plugins/snap/screen0/options/avoid_snap</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[0]</default>
+      <locale name="C">
+        <short>Avoid Snap Modifier</short>
+        <long>Use these bindings to avoid snapping.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/snap/screen0/options/snap_type</key>
+      <applyto>/apps/compiz-1/plugins/snap/screen0/options/snap_type</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[0]</default>
+      <locale name="C">
+        <short>Snap Type</short>
+        <long>Choose 'Resistance', 'Attraction' or 'Full Mode'.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/snap/screen0/options/edges_categories</key>
+      <applyto>/apps/compiz-1/plugins/snap/screen0/options/edges_categories</applyto>
+      <owner>compiz-1</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[0]</default>
+      <locale name="C">
+        <short>Edges</short>
+        <long>Snap to 'Screen Edges', 'Windows Edges' or 'Both'.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/snap/screen0/options/resistance_distance</key>
+      <applyto>/apps/compiz-1/plugins/snap/screen0/options/resistance_distance</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>30</default>
+      <locale name="C">
+        <short>Edge Resistance Distance</short>
+        <long>The distance until edge resistance takes place. (1 - 100)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/snap/screen0/options/attraction_distance</key>
+      <applyto>/apps/compiz-1/plugins/snap/screen0/options/attraction_distance</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>20</default>
+      <locale name="C">
+        <short>Edge Attraction Distance</short>
+        <long>The distance until edge attraction takes place. (1 - 100)</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

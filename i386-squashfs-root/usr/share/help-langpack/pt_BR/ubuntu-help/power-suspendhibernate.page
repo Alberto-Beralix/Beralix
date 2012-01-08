@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="question" id="power-suspendhibernate" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="power"/>
+    
+    <desc>Suspender faz com que o computador durma; hibernar salva seus arquivos, mas desliga completamente a energia.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>O que acontece quando eu suspendo ou hiberno o computador?</title>
+
+<comment>
+  <cite date="2011-05-30">shaunm</cite>
+  <p>I would like a better explanation of what "saved to disk" means. As written,
+  it could be confused with open files being saved, which they aren't. Also, with
+  GNOME 3, we barely expose hibernate. It's in the power settings, but nothing
+  does it by default. Restructure prose to reflect that.</p>
+  <p>This page stays incomplete until this is dealt with.</p>
+</comment>
+
+<p>Quando você <em>suspende</em> o computador, você faz com que ele durma. Todos os seus aplicativos e documentos permanecem abertos, mas a tela e outras partes do computador são desligadas para economizar energia. Contudo, o computador continua ligado e ainda irá consumir uma pequena quantidade de energia. Você pode acordá-lo pressionando uma tecla ou clicando com o mouse. Se isso não funcionar, tente apertar o botão liga-desliga.</p>
+
+<p>Quando o computador <em>hiberna</em>, todos os seus aplicativos e documentos continuam abertos (na verdade, eles são salvos no disco) e o computador desliga completamente, então ele não consome energia. É como desligar, mas seus aplicativos e documentos continuarão abertos quando você ligar o computador novamente.</p>
+
+<p>Alguns computadores têm problemas com suporte de hardware, o que significa que eles <link xref="power-suspendfail">podem não ser capazes de suspender ou resumir corretamente</link>. É uma boa ideia testar suspender/hibernar no seu computador para ver se funciona corretamente.</p>
+
+<note style="important">
+ <title>Sempre salve seu trabalho antes de suspender ou hibernar</title>
+ <p>Você deve salvar todo o seu trabalho antes de suspender ou hibernar o computador, somente para o caso de alguma coisa der errado e seus aplicativos abertos e documentos não puderem ser recuperados quando você ligar seu computador novamente.</p>
+</note>
+
+</page>

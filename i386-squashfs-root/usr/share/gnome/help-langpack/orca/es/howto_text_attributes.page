@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_text_attributes" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#reading"/>
+    <link type="next" xref="howto_structural_navigation"/>
+    <title type="sort">2. Atributos de texto</title>
+    <desc>Examinar formato de texto</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Atributos de texto</title>
+  <p>El término «atributos de texto» hace referencia a la tipografía, el estilo, la alineación y otro formato asociado a un carácter o serie de caracteres dados.</p>
+  <section>
+    <title>Obtener Información de Formato</title>
+    <p>Cuando pulse <keyseq><key>Modificador de Orca</key><key>F</key></keyseq>, <app>Orca</app> leerá la información conocida en relación con los atributos de texto de un objeto. Además, <app>Orca</app> indicará opcionalmente los atributos de texto en braille, «subrayándolos» a medida que se desplaza por un documento.</p>
+    <p>Puesto que existe un gran número de atributos de texto, y no todos se preocupan por cada atributo, la <link xref="preferences_text_attributes">página de Atributos de texto del diálogo de preferencias</link> le permitirá personalizar qué atributos de texto presentará <app>Orca</app> por voz, junto al orden en que se deben presentar, y cuáles de ellos indicará <app>Orca</app> en braille.</p>
+    <p>Puesto que la <link xref="preferences_text_attributes">página de Atributos de texto</link> también forma parte de la configuración específica de la aplicación, puede personalizar la presentación de los atributos de textos en función de sus necesidades para cada aplicación que use.</p>
+  </section>
+  <section>
+    <title>Identificar palabras mal escritas</title>
+    <p>La mayoría de las aplicaciones y kits de herramientas indican que una palabra está mal escrita subrayando esa palabra con una línea roja y ondulada. La presencia de esta línea comúnmente queda expuesta a las tecnologías de asistencia como un atributo de texto. Como consecuencia, encontrará errores de ortografía entre los atributos de texto que puede elegir. De manera predeterminada, el atributo con errores de ortografía está activado tanto para voz como para braille y, por lo tanto, se presentará junto con cualesquiera otros atributos cuya indicación haya activado.</p>
+    <p>Además de acceder a la presencia de errores de ortografía como un atributo de texto, si tiene activado el eco de teclas y/o el eco de palabras y escribe mal una palabra, cuando aparezca la señal de error de ortografía, <app>Orca</app> anunciará que la palabra está «mal escrita», para que pueda volver atrás inmediatamente y corregir el error.</p>
+    <p>Finalmente, cuando se esté desplazando dentro de un documento y el cursor se traslade a una palabra mal escrita, <app>Orca</app> anunciará la presencia de un error ortográfico.</p>
+  </section>
+</page>

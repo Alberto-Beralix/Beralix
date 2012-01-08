@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-whatisprofile" xml:lang="en-AU">
+
+  <info>
+    <link type="guide" xref="color#profiles"/>
+    <desc>A colour profile is a simple file that expresses a colour space or device response.</desc>
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>What is a colour profile?</title>
+
+  <p>A colour profile is a set of data that characterises either a device such as a projector or a colour space such as sRGB.</p>
+  <p>Most colour profiles are in the form of an ICC profile, which is a small file with a <input>.ICC</input> or <input>.ICM</input> file extension.</p>
+  <p>Colour profiles can be embedded into images to specify the gamut range of the data. This ensures that users see the same colours on different devices.</p>
+  <p>Every device that is processing colour should have it's own ICC profile and when this is achieved the system is said to have an <em>end-to-end colour-managed workflow</em>. With this kind of workflow you can be sure that colours are not being lost or modified.</p>
+
+</page>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="addremove-ppa" xml:lang="de">
+  <info>
+    <link type="guide" xref="addremove"/>
+
+    <revision version="11.04" date="2011-04-21" status="final"/>
+
+    <credit type="author">
+      <name>Ubuntu-Dokumentationsteam</name>
+    </credit>
+
+    <desc>PPAs hinzufügen, um Vorabversionen oder spezielle Anwendungen zu testen</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Ein Persönliches Paketarchiv (PPA) hinzufügen</title>
+  <p><em>Persönliche Paketarchive</em> sind Paketquellen, die speziell auf Nutzer von Ubuntu ausgelegt sind. Meist sind diese leichter zu installieren als Anwendungen aus anderen Drittanbieterquellen.</p>
+  <note style="warning"><p>Fügen Sie nur Paketquellen hinzu, wenn Sie deren Quellen vertrauen. Paketquellen von Drittanbietern werden von Ubuntu-Mitgliedern nicht auf Vertrauenswürdigkeit geprüft und können Anwendungen enthalten, die schädlich für Ihren Rechner sind.</p></note>
+
+    <steps>
+        <title>Ein PPA installieren</title>
+        <item><p>On the PPA's overview page, look for the heading that reads <gui>Adding this PPA to your system</gui>. Make a note of the PPA's location, which should look similar to: <code>ppa:mozillateam/firefox-stable</code>.</p></item>
+        <item><p>Klicken Sie auf das Symbol des <app>Ubuntu Software-Centers</app> im Starter oder suchen Sie in der Suchleiste des <app>Dash</app> danach.</p></item>
+        <item><p>Klicken Sie im Menü des Software-Centers auf <guiseq><gui>Bearbeiten</gui><gui>Software-Paketquellen …</gui></guiseq></p></item>
+        <item><p>Sie werden aufgefordert, Ihr Passwort einzugeben. Nachdem Sie das getan haben, wählen Sie den Reiter <gui>Andere Software</gui>.</p></item>
+        <item><p>Klicken Sie auf <gui>Hinzufügen …</gui> und geben Sie den Ort des <code>ppa:</code> an.</p></item>
+        <item><p>Klicken Sie auf <gui>Software-Paketquelle hinzufügen</gui> und schließen die das Fenster. Das Ubuntu Software-Center wird nun Ihre Paketquellen auf Aktualisierungen überprüfen.</p></item>
+    </steps>
+
+</page>

@@ -1,0 +1,98 @@
+﻿<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="unity-dash-intro">
+  <info>
+    <link type="guide" xref="index" group="unity-dash-intro"/>
+    <revision version="11.04" date="2011-04-21" status="review"/>
+
+    <credit type="author">
+      <name>Ubuntu Documentation Team</name>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  </info>
+
+  <title>Find apps, files, and music with the Dash</title>
+  
+  <media type="image" src="figures/unity-dash-sample.png"
+       width="154" height="138" style="floatend floatright">
+  <p>Unity Search</p>
+</media>
+
+  <p>
+    The <gui>Dash</gui> allows you to search for applications, files, and music,
+    and shows you items that you have used recently. If you have ever worked on
+    a spreadsheet or edited an
+    image and forgot where you saved it, you will surely find this feature of the Dash to be useful.
+  </p>
+  
+  <p>
+    The <gui>dash</gui> includes a <gui>search bar</gui>, <gui>application and files shortcuts</gui>, and 
+    launchers for commonly-used applications (your web browser, email program, etc.). 
+  </p>
+    
+  <p>
+    To start using the <gui>dash</gui>, click on the Ubuntu logo in the top-left portion of the screen, 
+    or press the <key>meta</key> key. To hide the <gui>dash</gui>, press <key>Esc</key>.
+  </p>
+
+  <section id="dash-global-search">
+    <title>Find applications and files using the search bar</title>
+      <p>
+        The search bar is a <em>global search bar</em>, meaning you can use it to search 
+        for both applications <em>and</em> files. To use the global search bar, open 
+        the dash and then just start typing. The names and icons of relevant application 
+        and files will appear as soon as you start entering text.
+      </p>
+                    
+      <p>
+        Relevant application results will appear in one row, and relevant file results
+        will appear in a second row.  If no applications match your search query, only 
+        the <em>file</em> result list will appear. Similarly, if no files match your query, 
+        only the <em>application</em> list will appear.
+      </p>  
+      <p>
+        If you see an application that you want to use, or a file that you want to open, 
+        click on its icon to start it. Also, pressing the <key>Enter</key> key will start 
+        the first item in the list.
+      </p>
+      <note>
+        <p>
+          By default, the <gui>dash</gui> will display one row of applications or files that match 
+          your search criteria. To see more results that match your search, click <gui>See more 
+          results</gui>.
+        </p>
+      </note>
+      <note style="tip">
+        <p>
+          To add an application to the <gui>launcher</gui>, click on the application's icon,  
+          drag it to the launcher, and then release it. It will automatically be <em>pinned</em> 
+          to the launcher as one of your favorites.
+        </p>
+      </note>
+  </section>
+  <section id="dash-app-file-shortcuts">
+    <title>Application and file shortcuts</title>
+      <p>
+        Click the buttons in the row at the bottom of the dash to switch between <gui>lenses</gui>.
+        Lenses allow you to focus the Dash results and exclude results from other
+        lenses.
+      </p>
+      <p>
+        Clicking the second icon in the row will display the <gui>Applications</gui>
+        lens. This displays applications you use most frequently, applications you
+        have installed, as well as additional applications you can install from the
+        Ubuntu Software Center.
+      </p>
+      <p>
+        Clicking the document icon allows you to browse the files you have used
+        most recently, files in your <gui>Downloads</gui> folder, and your <link xref="nautilus-bookmarks-edit">bookmarked folders</link>.
+      </p>
+      <p>
+        The final lens shows songs and albums you've recently listened to.
+      </p>
+      <p>
+        To return to the main dash view, just click the first icon in the row,
+        the Home button.
+      </p>
+  </section>
+</page>

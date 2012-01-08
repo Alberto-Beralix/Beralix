@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-filters" xml:lang="es">
+
+  <info>
+    <desc>Use las reglas de filtrado para ordenar su correo automáticamente en carpetas.</desc>
+
+    <link type="guide" xref="mail-organizing"/>
+
+    <revision pkgversion="3.0.2" version="0.5" date="2011-08-25" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-organize-filters.html.en -->
+ </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+    
+  </info>
+
+  <title>Usar filtros</title>
+
+<p>Los filtros de correos aplican acciones sobre correos basándose en condiciones que usted ha definido. Puede definir filtros tanto para correo entrante como para correo saliente.</p>
+
+<p>Filters will be automatically applied to incoming messages for local accounts (such as POP). Mail serves for remote accounts (such as IMAP) often already filter mail directly on the server as this is faster. If you want to apply your Evolution filters to remote accounts, you can enable this under <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Accounts</gui><gui>Edit</gui><gui>Receiving Options</gui><gui>Options</gui><gui>Apply filters to new messages in Inbox on this server</gui></guiseq>.</p>
+
+<p>Para aplicar manualmente filtros sobre correos en una carpeta, seleccione los mensajes y pulse <guiseq><gui>Mensaje</gui><gui>Aplicar filtros</gui></guiseq> o pulse <keyseq><key>Ctrl</key><key>Y</key></keyseq>.</p>
+<p>Puede seleccionar todos los correos en su carpeta pulsando <guiseq><gui>Editar</gui><gui>Seleccionar todos</gui></guiseq> o pulsando <keyseq><key>Ctrl</key><key>A</key></keyseq>.</p>
+
+<section id="adding">
+<title>Crear un filtro</title>
+
+<steps>
+<item><p>Pulse <guiseq><gui>Editar</gui><gui>Filtros de mensajes</gui></guiseq> o pulse <guiseq><gui>Mensaje</gui><gui>Crear regla</gui></guiseq> y elija el criterio en que se basará el filtro.</p></item>
+<item><p>Pulse <gui style="button">Añadir</gui>.</p></item>
+<item><p>Introduzca un nombre en el campo <gui>Nombre de la regla</gui>.</p></item>
+<item><p>Defina las condiciones para la regla. Para cada condición debe seleccionar primero qué parte del mensaje se comprobará y después definir la comparación.</p><p>Para obtener más información acerca de las condiciones disponibles, consulte <link xref="mail-filters-conditions">condiciones disponibles para filtros</link>.</p></item>
+<item><p>If you want to define multiple conditions, define under <gui>Find items</gui> if any or if all conditions have to apply, and click <gui style="button">Add Condition</gui> and repeat the previous step.</p></item>
+<item>
+<p>Seleccione las Acciones para el filtro en la sección <gui>Entonces</gui>:</p><p>Para obtener más información acerca de las acciones disponibles, consulte <link linkend="bshly4v">Acciones disponibles para filtros</link>.</p>
+<note>
+<p>Note que el orden de los filtros es muy importante. Se aplican sobre el correo original en secuencia, como una receta.</p>
+<p>Si su primer filtro tiene una regla <gui>Parar de procesar</gui>, entonces todos los mensajes de correo que coincidan con este filtro ignorarán los siguientes filtros.</p>
+<p>When you move a message to another folder, "moving" actually means appending a copy of the message to the destination folder and marking the original message for deletion. So any subsequent filter rules will be applied to the original message that is now marked for deletion. Therefore moving a message should usually appear last in a sequence of filter rules.</p>
+</note>
+</item>
+<item><p>If you want to define multiple actions, click <gui style="button">Add Action</gui> and repeat the previous step. For example, if you want no other existing filters to be applied choose <gui>Stop Processing</gui> as the second action in the list.</p></item>
+<item><p>Pulse <gui style="button">Aceptar</gui>.</p></item>
+</steps>
+
+</section>
+
+<section id="editing">
+<title>Editar de filtros</title>
+<steps>
+<item><p>Pulse <guiseq><gui>Editar</gui><gui>Filtros de mensajes</gui></guiseq>.</p></item>
+<item><p>Seleccione el filtro.</p></item>
+<item><p>Pulse <gui style="button">Editar</gui>.</p></item>
+<item><p>Haga las correcciones que quiera, después pulse <gui style="button">Aceptar</gui> dos veces.</p></item>
+</steps>
+</section>
+
+<section id="deleting">
+<title>Borrar filtros</title>
+<steps>
+<item><p>Pulse <guiseq><gui>Editar</gui><gui>Filtros de mensajes</gui></guiseq>.</p></item>
+<item><p>Seleccione el filtro.</p></item>
+<item><p>Pulse <gui style="button">Quitar</gui>.</p></item>
+<item><p>Pulse <gui style="button">Aceptar</gui>.</p></item>
+</steps>
+</section>
+
+
+
+
+	
+</page>

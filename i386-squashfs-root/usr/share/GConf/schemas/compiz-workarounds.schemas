@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/keep_minimized_windows</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/keep_minimized_windows</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Keep previews of minimized windows</short>
+        <long>Don't delete window contents on minimize. This does not work with some applications</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/legacy_fullscreen</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/legacy_fullscreen</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Legacy Fullscreen Support</short>
+        <long>Make Wine and legacy applications fullscreen properly.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/firefox_menu_fix</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/firefox_menu_fix</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Firefox Menu Fix</short>
+        <long>Fix window type of Firefox and Thunderbird menus.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/ooo_menu_fix</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/ooo_menu_fix</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>OpenOffice.org Menu Fix</short>
+        <long>Fix window type of OpenOffice.org menus.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/notification_daemon_fix</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/notification_daemon_fix</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Notification Daemon Fix</short>
+        <long>Fix window type of notification daemon windows.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/java_fix</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/java_fix</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Java Window Fix</short>
+        <long>Fix window type of various Java windows.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/java_taskbar_fix</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/java_taskbar_fix</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Java Taskbar Fix</short>
+        <long>Fix java windows disappearing from taskbar</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/qt_fix</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/qt_fix</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Qt Window Fix</short>
+        <long>Fix window type of various Qt windows.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/convert_urgency</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/convert_urgency</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Convert Urgency to Demands Attention</short>
+        <long>Make "urgent" windows also "demand attention".</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/aiglx_fragment_fix</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/aiglx_fragment_fix</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>AIGLX Fragment Parameter Fix</short>
+        <long>Fix broken glProgramEnvParameter4f implementation.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/fglrx_xgl_fix</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/fglrx_xgl_fix</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Fix screen updates in XGL with fglrx.</short>
+        <long>Fix for broken GLX_MESA_copy_sub_buffer on XGL in fglrx.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/force_glx_sync</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/force_glx_sync</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Force synchronization between X and GLX</short>
+        <long>Force synchronization between X and GLX, which may help for window parts not redrawing correctly when using Nvidia drivers, but also may decrease performance.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/no_wait_for_video_sync</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/no_wait_for_video_sync</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Don't wait for video sync</short>
+        <long>Don't wait for the next video sync time to redraw</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/force_swap_buffers</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/force_swap_buffers</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Force full screen redraws (buffer swap) on repaint</short>
+        <long>Forces the entire screen to redraw every repaint. Use with care, this will cause a massive increase in GPU and CPU usage</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/sticky_alldesktops</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/sticky_alldesktops</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Make "on all desktops" windows "sticky"</short>
+        <long>Make "on all desktops" windows sticky. Sticky windows are visible on all viewports.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/workarounds/screen0/options/alldesktop_sticky_match</key>
+      <applyto>/apps/compiz-1/plugins/workarounds/screen0/options/alldesktop_sticky_match</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>any</default>
+      <locale name="C">
+        <short>"On all desktops" sticky match</short>
+        <long>Windows on all desktops that should be made sticky (match)</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-why-calibrate" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="color#calibration"/>
+    <desc>La calibración es importante si le preocupan los colores que se mostrarán o imprimirán.</desc>
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>¿Por qué tengo que hacer la calibración yo mismo?</title>
+
+  <p>
+    Generic profiles are usually bad.
+    When a manufacturer creates a new model, they just take a few items
+    from the production line and average them together:
+  </p>
+
+  <media type="image" src="figures/color-average.png">
+    <p>Perfiles promediados</p>
+  </media>
+
+  <p>
+    Display panels differ quite a lot from unit to unit and change
+    substantially as the display ages.
+    It is also more difficult for printers, as just changing the type
+    or weight of paper can invalidate the characterization state and
+    make the profile inaccurate.
+  </p>
+
+  <p>La mejor forma de asegurarse que que tiene un perfil adecuado es haciendo usted mismo la calibración, o dejando que una compañía externa le proporcione un perfil basado en estado exacto de caracterización</p>
+
+</page>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_pronunciation" xml:lang="es">
+  <info>
+    <link type="guide" xref="preferences#orca"/>
+    <link type="next" xref="preferences_text_attributes"/>
+    <title type="sort">7. Pronunciación</title>
+    <title type="link">Pronunciación</title>
+    <desc>Definir cómo se pronuncian palabras específicas</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Preferencias de pronunciación</title>
+  <p id="introduction">A veces su sintetizador de voz simplemente no dice lo correcto para una cadena dada. Puede que prefiera escuchar «Riendo en voz alta» en lugar de «LOL,» o «Accesibilidad» en lugar de «a11y». O puede que haya un término técnico o un nombre que el sintetizador no pronuncie correctamente.</p>
+  <p>La página <gui>Pronunciación</gui> del diálogo de preferencias de <app>Orca</app> le permite añadir, editar y eliminar entradas en el diccionario de pronunciación de <app>Orca</app>.</p>
+  <media type="image" mime="image/png" src="figures/preferences_pronunciation.png"/>
+  <p>Gracias a que la página <gui>Pronunciación</gui> es parte de la configuración específica de la aplicación, podrá personalizar sus entradas según las necesidades para cada aplicación que utilice.</p>
+  <steps>
+    <title>Añadir una entrada nueva de diccionario</title>
+    <item>
+      <p>Pulse el botón «Entrada nueva» (<keyseq><key>Alt</key><key>N</key></keyseq>)</p>
+    </item>
+    <item>
+      <p>Escriba el texto de la nueva entrada y pulse <key>Intro</key> para terminar de editar la cadena actual.</p>
+    </item>
+    <item>
+      <p>Desplácese a la columna <gui>Cadena de reemplazo</gui> y pulse <key>Intro</key> para comenzar a editar.</p>
+    </item>
+    <item>
+      <p>Escriba el texto que quiere que se hable en su lugar y pulse <key>Intro</key> para terminar de editar la cadena de reemplazo.</p>
+    </item>
+  </steps>
+  <steps>
+  <title>Editar una entrada existente del diccionario</title>
+    <item>
+      <p>Desplácese a la celda que quiera editar y pulse <key>Intro</key> para comenzar a editar.</p>
+    </item>
+    <item>
+      <p>Realice sus cambios y luego pulse <key>Intro</key> para terminar de editar.</p>
+    </item>
+  </steps>
+  <steps>
+    <title>Eliminar una entrada de diccionario existente</title>
+    <item>
+      <p>Desplácese hasta la entrada que quiere eliminar.</p>
+    </item>
+    <item>
+      <p>Pulse el botón «Eliminar» o <keyseq><key>Alt</key><key>B</key></keyseq>.</p>
+    </item>
+  </steps>
+</page>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task a11y" id="a11y-dwellclick" xml:lang="de">
+  <info>
+    <link type="guide" xref="a11y#mobility" group="clicking"/>
+
+    <revision date="2011-04-06" status="outdated"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>Die Funktion »Klicken durch Überfahren« erlaubt es Ihnen, einen Mausklick auszuführen, indem Sie die Maus nicht bewegen.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Klicken durch Überfahren simulieren</title>
+
+<p>Sie können einstellen, dass Knöpfe geklickt werden, wenn Sie mit dem Mauszeiger über sie fahren (Überfahren-Klick). Dies ist nützlich, wenn es Ihnen schwer fällt, die Maus zu bewegen und gleichzeitig die Maustaste zu drücken. Wenn der Überfahren-Klick eingeschaltet ist, können Sie Ihren Mauszeiger über einen Knopf bewegen, die Maus loslassen und eine Weile warten, damit der Knopf für Sie geklickt wird.</p>
+
+<steps>
+  <item><p>Klicken Sie auf das Symbol ganz rechts in der oberen Menüleiste und wählen Sie <gui>Systemeinstellungen</gui>.</p></item>
+  <item><p>Klicken Sie auf <gui>Barrierefreiheit</gui> und wählen Sie den Reiter <gui>Zeigen und Klicken</gui>.</p></item>
+  <item><p>Schalten Sie <gui>Überfahren-Klick</gui> an.</p></item>
+</steps>
+
+<p>Das <gui>Überfahrklick</gui>-Fenster öffnet sich und bleibt über allen anderen Fenstern. Sie können darin auswählen, was für ein Klick ausgeführt werden soll, wenn Sie einen Knopf überfahren. Wenn Sie zum Beispiel <gui>Kontextklick</gui> auswählen, wird ein Klick mit der rechten Taste ausgelöst, wenn Sie einen Knopf für ein paar Sekunden überfahren.</p>
+
+<p>Wenn Sie Ihren Mauszeiger über einen Knopf fahren und nicht bewegen, wird er schrittweise seine Farbe ändern. Wenn er die Farbe vollständig geändert hat, wird der Knopf gedrückt.</p>
+
+<p>Der Überfahren-Klick klickt überall, wo Sie Ihre Maus hinfahren, nicht nur über Knöpfen.</p>
+
+<section id="delay">
+ <title>Ändern Sie, wie lange gewartet werden soll, bis der Knopf gedrückt wird</title>
+ <p>Sie können ändern, wie lange die Verzögerung zwischen dem Halten des Mauszeigers über einem Knopf und dem Drücken des Knopfs sein soll. Um das zu tun, gehen Sie zum Reiter <gui>Zeigen und Klicken</gui> (siehe oben) und ändern Sie die <gui>Verzögerung</gui> im Abschnitt <gui>Überfahren-Klick</gui>.</p>
+</section>
+
+<section id="threshold">
+ <title>Ändern Sie, wie weit sich die Maus beim Überfahren bewegen/zittern darf</title>
+ <p>Sie müssen die Maus nicht vollkommen still halten, wenn Sie sie über einen Knopf fahren, um ihn zu klicken – der Mauszeiger darf sich ein kleines bisschen bewegen und wird dennoch nach einer Weile klicken. Wenn er sich allerdings zu sehr bewegt, wird der Klick nicht ausgelöst.</p>
+ <p>Sie können ändern, wie sehr sich der Mauszeiger bewegen darf, damit er noch immer als »ruhig genug« eingestuft wird, um den Knopf zu drücken. Gehen Sie zum Reiter <gui>Zeigen und Klicken</gui> (siehe oben) und ändern Sie den <gui>Schwellenwert der Bewegung</gui> im Abschnitt <gui>Überfahren-Klick</gui>; ein großer Schwellenwert erlaubt dem Mauszeiger ein gutes Stück Bewegung und erfasst dennoch einen Klick.</p>
+</section>
+
+</page>

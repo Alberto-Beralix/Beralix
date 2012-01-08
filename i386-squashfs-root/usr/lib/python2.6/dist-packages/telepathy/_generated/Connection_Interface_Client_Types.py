@@ -1,0 +1,1 @@
+../../../../../share/pyshared/telepathy/_generated/Connection_Interface_Client_Types.py

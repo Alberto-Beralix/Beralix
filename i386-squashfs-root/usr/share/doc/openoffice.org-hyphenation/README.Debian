@@ -1,0 +1,23 @@
+openoffice.org-hyphenation for Ubuntu
+-------------------------------------
+
+Initial release, based on files found on the OOo ftp site on 20070205.
+The following hyphenation patterns are not included in this package:
+
+ - de_DE, et_EE, hr_HR, hu_HU, lt_LT, lv_LV, nb_NO, nn_NO, pl_PL,
+   which are packaged in separate packages.
+
+ - bg_BG, which has no copyright and license information.
+
+ - ia (no copyright and license information).
+
+If new hyphenation patterns are packaged, these should be added to the
+source package, which builds the myspell/hunspell ditionary.
+
+Some packages are lacking the documentation of their origin; this is
+required information, if the base work is licensed under the LPPL.
+See http://www.openoffice.org/issues/show_bug.cgi?id=74283 for a list
+of these issues.
+
+
+ -- Matthias Klose <doko@ubuntu.com>, Wed,  7 Feb 2007 21:42:25 +0100

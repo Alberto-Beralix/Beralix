@@ -1,0 +1,55 @@
+#! /bin/sh
+set -e
+
+# Remove a no-longer used conffile
+rm_conffile()
+{
+	CONFFILE="$1"
+	ACTION="$2"
+
+	if [ "$ACTION" = rename ]; then
+		if [ -e "$CONFFILE" ]; then
+			echo "Removing obsolete conffile $CONFFILE"
+			rm -f "$CONFFILE"
+		fi
+	elif [ "$ACTION" = remove ]; then
+		if [ -e "$CONFFILE".moved-by-preinst ]; then
+			rm -f "$CONFFILE".moved-by-preinst
+		fi
+	fi
+}
+
+case $1 in
+	configure)
+		if [ ! -f /etc/pcmcia/config.opts ]; then
+			cp -a /usr/lib/pcmciautils/config.opts /etc/pcmcia/
+		fi
+		if dpkg --compare-versions "$2" lt 010-0ubuntu8; then
+			rm_conffile /etc/udev/pcmcia.rules rename
+		fi
+		if dpkg --compare-versions "$2" lt 014-4ubuntu2; then
+			rm_conffile /etc/udev/rules.d/85-pcmcia.rules remove
+		fi
+		# Ubuntu boot order
+		if [ -L /etc/rcS.d/S40pcmciautils ]; then
+			mv /etc/rcS.d/S40pcmciautils \
+			   /etc/rcS.d/S13pcmciautils
+		fi
+
+		# Remove shutdown and reboot links;
+		# this init script does not need them.
+		if dpkg --compare-versions "$2" lt "014-1ubuntu2"; then
+			rm -f /etc/rc0.d/K88pcmciautils \
+			      /etc/rc6.d/K88pcmciautils
+		fi
+		;;
+esac
+
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/pcmciautils" ]; then
+	update-rc.d pcmciautils start 13 S . >/dev/null || exit $?
+fi
+# End automatically added section
+
+
+exit 0

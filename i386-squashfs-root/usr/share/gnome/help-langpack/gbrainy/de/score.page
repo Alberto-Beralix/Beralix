@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="score" xml:lang="de">
+      
+  <info>
+    <link type="guide" xref="index#play"/>
+    <link type="seealso" xref="history"/>
+    <desc>Wie die Ergebnisse eines Spielers berechnet werden</desc>
+    <revision pkgversion="2.30" version="0.1" date="2010-01-22" status="draft"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+  <title>Spielergebnisse und Zeitmessungen</title>
+  <p>Wenn Sie eine Aufgabe falsch beantworten, so erhalten Sie keine Punkte dafür.</p>
+  <p>Wenn Sie eine Aufgabe korrekt beantworten, erhalten Sie Punkte, die sowohl von der Zeit abhängig sind, die für die Lösung des Problems benötigt wurde als auch davon, ob ein Hinweis während des Spiels zu Rate gezogen wurde.</p>
+  <p>Folgende Tabelle fasst die unterschiedlichen Spielzeiten (in Sekunden) in Abhängigkeit vom Schwierigkeitsgrad zusammen.</p>
+  <table frame="all" rules="all">
+    <tr>
+      <td><p/></td>
+      <td><p>Leicht</p></td>
+      <td><p>Mittel</p></td>
+      <td><p>Schwer</p></td>
+    </tr>
+    <tr>
+      <td><p>Logikrätsel</p></td>
+      <td><p>156</p></td>
+      <td><p>120</p></td>
+      <td><p>110</p></td>
+    </tr>
+    <tr>
+      <td><p>Übungen zum Kopfrechnen</p></td>
+      <td><p>78</p></td>
+      <td><p>60</p></td>
+      <td><p>55</p></td>
+    </tr>
+    <tr>
+      <td><p>Gedächtnisspiele</p></td>
+      <td><p>39</p></td>
+      <td><p>30</p></td>
+      <td><p>27</p></td>
+    </tr>
+    <tr>
+      <td><p>Verbale Analogien</p></td>
+      <td><p>39</p></td>
+      <td><p>30</p></td>
+      <td><p>27</p></td>
+    </tr>
+  </table>
+  <p>Basierend auf der für den gewählten Schwierigkeitsgrad erwarteten Zeit und der für die Übung benötigten Zeit, wird folgende Logik verwendet:</p>
+  <list>
+    <item>
+      <p>Wenn Sie schneller als die erwartete Zeit sind, erreichen Sie 10 Punkte.</p>
+    </item>
+    <item>
+      <p>Wenn Sie langsamer als die erwartete Zeit sind, erreichen Sie 8 Punkte.</p>
+    </item>
+    <item>
+      <p>Wenn Sie mehr als doppelt so lange brauchen wie die erwartete Zeit, erreichen Sie 7 Punkte.</p>
+    </item>
+    <item>
+      <p>Wenn Sie mehr als dreimal so lange brauchen wie die erwartete Zeit, erreichen Sie 6 Punkte.</p>
+    </item>
+    <item>
+      <p>Wenn Sie einen Hinweis verwenden, erhalten Sie nur 80 % des ursprünglichen Ergebnisses.</p>
+    </item>
+  </list>
+  
+  <section id="computing-scores">
+    <title>Berechnung der Gesamtergebnisse</title>
+    <p><app>gbrainy</app> protokolliert die verschiedenen gespielten Spielarten mit. Zur Berechnung des Endergebnisses eines jeden Satzes an Spielarten werden alle Ergebnisse derselben Spielart addiert und im Anschluss ein Faktor angewandt, der auf dem Logarithmus von 10 für den leichten Schwierigkeitsgrad, dem Logarithmus von 20 für den mittleren und dem Logarithmus von 30 für den schweren beruht.</p>
+	  <p>Das bedeutet, dass man bei mittlerem Schwierigkeitsgrad in mindestens 20 Spielen jeder Spielart 10 Punkte erreichen muss, um ein Endergebnis von 100 Punkten zu erhalten.</p>
+	  <p>Dies mag sich anspruchsvoll anhören, erlaubt Spielern allerdings, Ergebnisse aus verschiedenen Sitzungen in der Spielchronik zu vergleichen und den Fortschritt des Spielers in allen absolvierten Aufgaben besser mitzuverfolgen.</p>
+  </section>
+</page>

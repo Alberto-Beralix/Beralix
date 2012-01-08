@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-install-flash" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-browser"/>
+
+    <revision version="11.04" date="2011-04-28" status="final"/>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>Você pode precisar instalar o Flash para ser capaz de ver sites como o YouTube, que apresenta vídeos e páginas web interativas.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Instalar o plug-in Flash</title>
+
+<p>O <app>Flash</app> é um <em>plug-in</em> para o seu navegador que permite a você assistir vídeos e usar páginas interativas em alguns sites. Alguns sites não irão funcionar sem o Flash.</p>
+
+<comment>
+<cite>shaunm</cite>
+<p>Would be nice to (soft?) link to a page on the software installer</p>
+</comment>
+
+<p>Se você não tiver o Flash instalado, provavelmente será exibida uma mensagem dizendo isso, quando você visita um site que precisa dele. Flash está disponível para download (mas não open-source) grátis para a maioria dos navegadores web.</p>
+
+<steps>
+ <title>Como instalar o Flash</title>
+ <item>
+  <p>Clique <link href="apt:flashplugin-installer">neste link</link> para iniciar a <app>Central de Programas</app>.</p>
+ </item>
+ <item>
+  <p>Leia as informações e opiniões para ter certeza de que deseja instalar o Flash.</p>
+ </item>
+ <item>
+  <p>Se você optar por instalar o Flash, clique em <gui>instalar</gui> na janela da Central de Programas.</p>
+ </item>
+ <item>
+  <p>Se você tiver com alguma janela do navegador de internet aberta, feche-as e volte a abri-los. O navegador de internet irá detectar que o Flash foi instalado quando você abri-lo novamente, e agora você poderá ver sites com Flash.</p>
+ </item>
+</steps>
+
+<section id="alternatives">
+ <title>Alternativas em código aberto para o Flash</title>
+ <p>Um punhado de alternativas, livres e de código aberto, para Flash estão disponíveis. Eles tendem a funcionar melhor que o plug-in do Flash em alguns casos (por exemplo, na melhor manipulação sonora), mas pior em outros (por exemplo, não sendo capazes de exibir algumas das mais complicadas páginas em Flash na web).</p>
+ <p>Você pode gostar de tentar alguma dessas se você está insatisfeito com o reprodutor de Flash ou se você gostaria de usar tantos programas de código aberto quanto possível no seu computador. Aqui estão algumas das opções:</p>
+ <list>
+  <item><p><link href="apt:browser-plugin-gnash">Gnash</link></p></item>
+  <item><p><link href="apt:browser-plugin-lightspark">LightSpark</link></p></item>
+ </list>
+</section>
+
+</page>

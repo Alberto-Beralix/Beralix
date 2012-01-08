@@ -1,0 +1,31 @@
+#! /bin/sh
+
+set -e
+
+if [ ! -e /etc/brlapi.key ]; then
+    mcookie >/etc/brlapi.key
+    chmod 0644 /etc/brlapi.key
+fi
+ 
+#update-rc.d brltty start 10 23 . > /dev/null
+
+if type update-initramfs >/dev/null 2>&1; then
+    update-initramfs -u
+fi
+
+# Recover from incorrect init.d script headers in version 4.0-8 and earlier
+if [ "$1" = "configure" ] && dpkg --compare-versions "$2" le "4.0-8" \
+   && [ -f /etc/rcS.d/S[0-9][0-9]brltty ] \
+   && [ -f /etc/rc0.d/K[0-9][0-9]brltty ] \
+   && [ -f /etc/rc6.d/K[0-9][0-9]brltty ] ; then
+    update-rc.d -f brltty remove
+fi
+
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/brltty" ]; then
+	update-rc.d brltty start 25 S . >/dev/null
+	invoke-rc.d brltty start || exit $?
+fi
+# End automatically added section
+
+

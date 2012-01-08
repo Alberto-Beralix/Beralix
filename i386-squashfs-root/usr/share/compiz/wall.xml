@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<compiz>
+	<plugin name="wall" useBcop="true">
+		<short>Desktop Wall</short>
+		<long>Desktop Wall Plugin</long>
+		<category>Desktop</category>
+		<feature>largedesktop</feature>
+		<deps>
+			<relation type="after">
+				<plugin>composite</plugin>
+				<plugin>opengl</plugin>
+				<plugin>decor</plugin>
+			</relation>
+			<relation type="before">
+				<plugin>wobbly</plugin>
+				<plugin>fade</plugin>
+			</relation>
+			<requirement>
+				<plugin>opengl</plugin>
+				<plugin>mousepoll</plugin>
+			</requirement>
+		</deps>
+		<options>
+			<group>
+				<short>Viewport Switch Preview</short>
+				<option name="show_switcher" type="bool">
+					<short>Show Viewport Switcher Preview</short>
+					<long>Show switcher window while switching viewports</long>
+					<default>true</default>
+				</option>
+				<option name="miniscreen" type="bool">
+					<short>Show Live Viewport Previews</short>
+					<long>Show live viewport previews in switcher window</long>
+					<default>true</default>
+				</option>
+				<option name="preview_timeout" type="float">
+					<short>Switch Target Preview Visibility Time</short>
+					<long>Duration (in s) the switch target preview should remain visible after switching ends.</long>
+					<default>0.2</default>
+					<min>0.0</min>
+					<max>2.0</max>
+					<precision>0.05</precision>
+				</option>
+				<option name="preview_scale" type="int">
+					<short>Preview Scale</short>
+					<long>Size of the preview in %</long>
+					<default>130</default>
+					<min>0</min>
+					<max>400</max>
+				</option>
+				<option name="edge_radius" type="int">
+					<short>Edge Radius</short>
+					<long>Radius of the rounded edge</long>
+					<default>5</default>
+					<min>0</min>
+					<max>20</max>
+				</option>
+				<option name="border_width" type="int">
+					<short>Border Width</short>
+					<long>Width of the border between the previews</long>
+					<default>7</default>
+					<min>0</min>
+					<max>30</max>
+				</option>
+				<option name="outline_color" type="color">
+					<short>Outline Color</short>
+					<long>Outline color of the switcher window.</long>
+					<default>
+						<red>0xffff</red>
+						<green>0xffff</green>
+						<blue>0xffff</blue>
+						<alpha>0x3232</alpha>
+						</default>
+				</option>
+				<subgroup>
+					<short>Background Gradient</short>
+
+					<option name="background_gradient_base_color" type="color">
+						<short>Base Color</short>
+						<long>First color for the background gradient of the switcher window.</long>
+						<default>
+							<red>0x0000</red>
+							<green>0x0000</green>
+							<blue>0x0000</blue>
+							<alpha>0x6464</alpha>
+						</default>
+					</option>
+					<option name="background_gradient_highlight_color" type="color">
+						<short>Highlight Color</short>
+						<long>Second color for the background gradient of the switcher window.</long>
+						<default>
+							<red>0x0000</red>
+							<green>0x0000</green>
+							<blue>0x0000</blue>
+							<alpha>0x6464</alpha>
+						</default>
+					</option>
+					<option name="background_gradient_shadow_color" type="color">
+						<short>Shadow Color</short>
+						<long>Third color for the background gradient of the switcher window.</long>
+						<default>
+							<red>0x0000</red>
+							<green>0x0000</green>
+							<blue>0x0000</blue>
+							<alpha>0x6464</alpha>
+						</default>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Thumb Gradient</short>
+
+					<option name="thumb_gradient_base_color" type="color">
+						<short>Base Color</short>
+						<long>First color for the thumb gradient of the switcher window.</long>
+						<default>
+							<red>0x5555</red>
+							<green>0x5555</green>
+							<blue>0x5555</blue>
+							<alpha>0x3232</alpha>
+						</default>
+					</option>
+					<option name="thumb_gradient_highlight_color" type="color">
+						<short>Highlight Color</short>
+						<long>Second color for the thumb gradient of the switcher window.</long>
+						<default>
+							<red>0x5555</red>
+							<green>0x5555</green>
+							<blue>0x5555</blue>
+							<alpha>0x3232</alpha>
+						</default>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Highlight Gradient</short>
+
+					<option name="thumb_highlight_gradient_base_color" type="color">
+						<short>Base Color</short>
+						<long>First color for the thumb highlight gradient of the switcher window.</long>
+						<default>
+							<red>0xffff</red>
+							<green>0xffff</green>
+							<blue>0xffff</blue>
+							<alpha>0xffff</alpha>
+						</default>
+					</option>
+					<option name="thumb_highlight_gradient_shadow_color" type="color">
+						<short>Shadow Color</short>
+						<long>Second color for the thumb highlight gradient of the switcher window.</long>
+						<default>
+							<red>0xdfff</red>
+							<green>0xdfff</green>
+							<blue>0xdfff</blue>
+							<alpha>0xffff</alpha>
+						</default>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Arrow Colors</short>
+
+					<option name="arrow_base_color" type="color">
+						<short>Base Color</short>
+						<long>First color of the arrow of the switcher window.</long>
+						<default>
+							<red>0xe665</red>
+							<green>0xe665</green>
+							<blue>0xe665</blue>
+							<alpha>0xd998</alpha>
+						</default>
+					</option>
+					<option name="arrow_shadow_color" type="color">
+						<short>Shadow Color</short>
+						<long>Second color of the arrow of the switcher window.</long>
+						<default>
+							<red>0xdc28</red>
+							<green>0xdc28</green>
+							<blue>0xdc28</blue>
+							<alpha>0xd998</alpha>
+						</default>
+					</option>
+				</subgroup>
+			</group>
+			<group>
+				<short>Viewport Switching</short>
+				<option name="allow_wraparound" type="bool">
+					<short>Allow Wrap-Around</short>
+					<long>Allow wrap-around when moving the wall up/down/left/right</long>
+					<default>false</default>
+				</option>
+				<option name="slide_duration" type="float">
+					<short>Wall Sliding Duration</short>
+					<long>Duration (in s) for wall sliding viewport switching animation</long>
+					<default>0.3</default>
+					<min>0.0</min>
+					<max>5.0</max>
+					<precision>0.05</precision>
+				</option>
+				<option name="no_slide_match" type="match">
+					<short>Non Sliding Windows</short>
+					<long>Windows that should not slide during the slide animation</long>
+					<default>type=Dock | type=Desktop | state=Sticky</default>
+				</option>
+			</group>
+			<group>
+				<short>Bindings</short>
+				<subgroup>
+					<short>Move within wall</short>
+					<option name="left_key" type="key">
+						<short>Move Left</short>
+						<long>Move along the wall to the left</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;Left</default>
+					</option>
+					<option name="left_button" type="button">
+						<short>Move Left</short>
+						<long>Move along the wall to the left</long>
+					</option>
+					<option name="right_key" type="key">
+						<short>Move Right</short>
+						<long>Move along the wall to the right</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;Right</default>
+					</option>
+					<option name="right_button" type="button">
+						<short>Move Right</short>
+						<long>Move along the wall to the right</long>
+					</option>
+					<option name="up_key" type="key">
+						<short>Move Up</short>
+						<long>Move along the wall up</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;Up</default>
+					</option>
+					<option name="up_button" type="button">
+						<short>Move Up</short>
+						<long>Move along the wall up</long>
+					</option>
+					<option name="down_key" type="key">
+						<short>Move Down</short>
+						<long>Move along the wall down</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;Down</default>
+					</option>
+					<option name="down_button" type="button">
+						<short>Move Down</short>
+						<long>Move along the wall down</long>
+					</option>
+					<option name="next_key" type="key">
+						<short>Move Next</short>
+						<long>Move along the wall to the next viewport</long>
+					</option>
+					<option name="next_button" type="button">
+						<short>Move Next</short>
+						<long>Move along the wall to the next viewport</long>
+					</option>
+					<option name="prev_key" type="key">
+						<short>Move Prev</short>
+						<long>Move along the wall to the previous viewport</long>
+					</option>
+					<option name="prev_button" type="button">
+						<short>Move Prev</short>
+						<long>Move along the wall to the previous viewport</long>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Move with window within wall</short>
+					<option name="left_window_key" type="key">
+						<short>Move Left With Window</short>
+						<long>Move with window along the wall to the left</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Left</default>
+					</option>
+					<option name="right_window_key" type="key">
+						<short>Move Right With Window</short>
+						<long>Move with window along the wall to the right</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Right</default>
+					</option>
+					<option name="up_window_key" type="key">
+						<short>Move Up With Window</short>
+						<long>Move with window along the wall up</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Up</default>
+					</option>
+					<option name="down_window_key" type="key">
+						<short>Move Down With Window</short>
+						<long>Move with window along the wall down</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Down</default>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Edge flipping</short>
+					<option name="flip_left_edge" type="edge">
+						<short>Flip Left</short>
+						<long>Flip left</long>
+						<nodelay>true</nodelay>
+						<default>
+							<edge name="Left"/>
+						</default>
+						<allowed edgednd="true"/>
+					</option>
+					<option name="flip_right_edge" type="edge">
+						<short>Flip Right</short>
+						<long>Flip right</long>
+						<nodelay>true</nodelay>
+						<default>
+							<edge name="Right"/>
+						</default>
+						<allowed edgednd="true"/>
+					</option>
+					<option name="flip_up_edge" type="edge">
+						<short>Flip Up</short>
+						<long>Flip up</long>
+						<nodelay>true</nodelay>
+						<default>
+							<edge name="Top"/>
+						</default>
+						<allowed edgednd="true"/>
+					</option>
+					<option name="flip_down_edge" type="edge">
+						<short>Flip Down</short>
+						<long>Flip down</long>
+						<nodelay>true</nodelay>
+						<default>
+							<edge name="Bottom"/>
+						</default>
+						<allowed edgednd="true"/>
+					</option>
+				</subgroup>
+			</group>
+			<group>
+				<short>Viewport Switching</short>
+				<option name="mmmode" type="int">
+					<short>Multimonitor behavior</short>
+					<long>How should a multimonitor configuration be handled</long>
+					<default>0</default>
+					<min>0</min>
+					<max>1</max>
+					<desc>
+						<value>0</value>
+						<name>Switch all</name>
+					</desc>
+					<desc>
+						<value>1</value>
+						<name>Switch separately</name>
+					</desc>
+				</option>
+			</group>
+			<group>
+				<short>Edge Flipping</short>
+				<option name="edgeflip_pointer" type="bool">
+					<short>Edge Flip Pointer</short>
+					<long>Flip viewport when moving the pointer to a screen edge</long>
+					<default>false</default>
+				</option>
+				<option name="edgeflip_move" type="bool">
+					<short>Edge Flip Move</short>
+					<long>Flip viewport when moving a window to a screen edge</long>
+					<default>false</default>
+				</option>
+				<option name="edgeflip_dnd" type="bool">
+					<short>Edge Flip DnD</short>
+					<long>Flip viewport when dragging an object to a screen edge</long>
+					<default>false</default>
+				</option>
+			</group>
+		</options>
+	</plugin>
+</compiz>

@@ -1,0 +1,7 @@
+To use the dvipipetops filter:
+- create an /etc/cups/local.convs file and add the contents of
+  dvipipetops.convs to it
+- add the contents of dvipipetops.types to /etc/cups/mime.types
+- uncompress dvipipetops, give it exec permissions and put it in
+  /usr/lib/cups/filter
+- restart cups with /etc/init.d/cups restart

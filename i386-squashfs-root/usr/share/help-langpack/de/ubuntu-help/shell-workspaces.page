@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="shell-workspaces" xml:lang="de">
+
+  <info>
+
+    <link type="guide" xref="shell-windows#working-with-workspaces" group="#first"/>
+    
+    <desc>Arbeitsflächen sind eine Möglichkeit zum Gruppieren von Fenstern in Ihrer Arbeitsumgebung.</desc>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    
+  </info>
+
+<title>Was ist eine Arbeitsfläche, und was habe ich davon?</title>
+
+<media type="image" src="figures/unity-workspace-intro.png" style="floatend floatright">
+  <p>Arbeitsflächenumschalter</p>
+</media>
+
+<p>Arbeitsflächen sollen das Verwalten von Fenstern vereinfachen. Durch den größeren Arbeitsbereich können Sie Ihre Fenster leicht sortieren und so Chaos vorbeugen.</p>
+
+<p>Mithilfe der verschiedenen Arbeitsflächen können Sie Ihre Arbeit organisieren. Ein Beispiel: Alle Kommunikationsfenster wie Ihre E-Mail-Anwendung können Sie auf eine Arbeitsfläche verschieben, während Sie auf einer anderen Arbeitsfläche Dokumente bearbeiten. Ihr Musikprogramm kann sich auf einer dritten Arbeitsfläche befinden.</p>
+
+ <p>Öffnen Sie den <link xref="unity-launcher-intro">Starter</link> und klicken Sie auf den <gui>Arbeitsflächenumschalter</gui>. Standardmäßig sind vier Arbeitsflächen quadratisch eingerichtet. Sie können die Anzahl der Arbeitsflächen leicht ändern:</p>
+
+<steps>
+  <title>Die Arbeitsflächenzahl ändern</title>
+  <item><p>Gehen Sie in das <link xref="unity-dash-intro">Dash</link> und öffnen Sie ein <app>Terminal</app>.</p></item>
+  <item><p>Um die Anzahl der Zeilen zu ändern, geben Sie das folgende Kommando ein, die Zahl ersetzen Sie dabei durch die gewünschte Anzahl. Drücken Sie <key>Enter</key>.</p>
+    <p><code>gconftool-2 --type=int --set /apps/compiz-1/general/screen0/options/vsize 2</code></p></item>
+  <item><p>Um die Anzahl der Spalten zu ändern, geben Sie den folgenden Befehl ein, die Zahl ersetzen Sie dabei durch die gewünschte Anzahl. Drücken Sie die <key>Eingabetaste</key>.</p>
+    <p><code>gconftool-2 --type=int --set /apps/compiz-1/general/screen0/options/hsize 2</code></p></item>
+</steps>
+
+</page>

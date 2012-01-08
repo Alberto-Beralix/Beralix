@@ -1,0 +1,12 @@
+#!/bin/sh
+
+prefix=/usr
+datadir=${prefix}/share
+pkgdatadir=${datadir}/launchpad-integration
+
+exec /usr/bin/python -c "
+import sys
+sys.path.append('${pkgdatadir}')
+from launchpadintegration.main import main
+sys.exit(main())
+" ${1+"$@"}

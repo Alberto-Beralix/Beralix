@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="disk-benchmark" xml:lang="es">
+  <info>
+    <link type="guide" xref="disk"/>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    
+    <credit type="author">
+      <name>Equipo de documentación GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Natalia Ruz Leiva</name>
+      <email>nruz@alumnos.inf.utfsm.cl</email>
+    </credit>
+    <credit type="author">
+      <name>Steven Richards</name>
+      <email>steven.richardspc@gmail.com</email>
+    </credit>
+
+    <desc>Puede ejecutar pruebas de rendimiento sobre su disco duro para comprobar cómo es de rápido.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Comprobar el rendimiento de su disco duro</title>
+
+<p>Para comprobar el rendimiento del disco duro, vaya al <link xref="unity-dash-intro">Tablero</link> y abra la <app>Utilidad de discos</app>.</p>
+
+<p>Para ejecutar una prueba de rendimiento en la <gui>Utilidad de discos</gui>:</p>
+
+  <steps>
+    <item><p>Pulse en el disco duro en la lista <gui>Dispositivos de almacenamiento</gui>. La información sobre el disco y su estado aparecerá debajo de <gui>Unidad</gui>.</p></item>
+    <item><p>Elija <gui>Prueba de rendimiento</gui>.</p></item>
+    <item>
+     <p>Pulse <gui>Iniciar prueba de rendimiento de solo lectura</gui> o <gui>Iniciar prueba de rendimiento de lectura/escritura</gui>.</p>
+     <p>La prueba de rendimiento de solo lectura tan solo comprueba lo rápido que pueden leerse los datos del disco. La prueba de rendimiento de lectura/escritura también comprueba lo rápido que pueden grabarse los datos en el disco, por lo que tardará más en completarse.</p>
+    </item>
+  </steps>
+
+<p>Cuando finalice la prueba, aparecerán los resultados en el gráfico. Estos resultados le mostrarán lo rápido que se leyeron o escribieron los datos, y cuánto se tardó. El tiempo se mide en milisegundos (ms) y la velocidad de transferencia de datos se mide en Megabytes por segundo (MiB/s).</p>
+
+<p>Cuando finalice la prueba, se mostrarán las estadísticas siguientes debajo del gráfico:</p>
+
+  <list>
+    <item><p>Tasa mínima de lectura en Megabytes por segundo</p></item>
+    <item><p>Tasa máxima de lectura en Megabytes por segundo</p></item>
+    <item><p>Tasa media de lectura en Megabytes por segundo</p></item>
+    <item><p>Última prueba de rendimiento en segundos</p></item>
+    <item><p>Tasa mínima de escritura en Megabytes por segundo</p></item>
+    <item><p>Tasa máxima de escritura en Megabytes por segundo</p></item>
+    <item><p>Tasa media de escritura en Megabytes por segundo</p></item>
+    <item><p>Tiempo medio de acceso en milisegundos</p></item>
+  </list>
+
+</page>

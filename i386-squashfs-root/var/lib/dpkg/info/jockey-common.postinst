@@ -1,0 +1,35 @@
+#!/bin/sh -e
+
+if [ "$1" = configure ] || [ "$1" = reconfigure ]; then
+    getent group admin > /dev/null 2>&1 || addgroup --system --quiet admin
+    chown root:admin /var/cache/jockey
+    chmod 3775 /var/cache/jockey
+
+    if dpkg --compare-versions "$2" lt-nl "0.3"; then
+        # format changed between 0.2 and 0.3
+        rm -f /var/cache/jockey/check
+    fi
+
+    # clean up after restricted-manager->jockey package transition
+    if dpkg --compare-versions "$2" lt "0.3.3-0ubuntu3"; then
+        rm -f /etc/xdg/autostart/restricted-manager.desktop
+    fi
+
+    # modutils recently introduced .conf suffix requirement
+    if dpkg --compare-versions "$2" lt-nl "0.5-0ubuntu3"; then
+	for f in /etc/modprobe.d/blacklist-bcm43 /etc/modprobe.d/blacklist-local; do
+	    if [ -e "$f" ] && [ ! -e "$f.conf" ]; then
+		mv "$f" "$f.conf"
+	    fi
+	done
+    fi
+fi
+
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p jockey-common 
+fi
+
+# End automatically added section
+

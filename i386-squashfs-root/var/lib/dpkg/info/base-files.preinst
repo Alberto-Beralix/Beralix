@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+rm_if_matches_md5sum() {
+    F="$1"
+    M="$2"
+    if [ -e "$F" ]; then
+        md5=$(md5sum "$F" | cut -f 1 -d\ )
+        if [ "$md5" = "$M" ]; then
+	    rm "$F"
+        fi
+    fi
+}
+
+
+case "$1" in
+  install|upgrade)
+      # older versions did not ship 00-header/10-help-text as conffiles but
+      # newer do, because the content changed this triggers a conffile prompt
+      # now. by removing the file (if unmodified) we avoid this prompt and
+      # dpkg will re-create it
+      if dpkg --compare-versions "$2" le-nl "6.4ubuntu4"; then
+          rm_if_matches_md5sum "/etc/update-motd.d/00-header" "4241925109d5d9fc869f20143dbd4054"
+          rm_if_matches_md5sum "/etc/update-motd.d/10-help-text" "918a1e4bc361b759adff1fabbcd8fb8f"
+      fi
+  ;;
+esac

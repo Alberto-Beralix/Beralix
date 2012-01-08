@@ -1,0 +1,31 @@
+Requirements
+------------
+telepathy-python requires dbus-python version >= 0.71; version >= 0.80 is
+recommended.
+
+Using an uninstalled version
+----------------------------
+Because telepathy-python contains generated code, the src directory
+is incomplete. To run this version of telepathy-python without installing it,
+you'll have to run ``python setup.py build`` and arrange for build/lib to be
+on your ``sys.path``, for instance:
+
+    python setup.py build
+    PYTHONPATH=$PWD/build/lib python examples/call.py a.account b@example.com
+
+(See ``examples/README`` for details of the .account files used by the
+examples.)
+
+Server Base Classes
+-------------------
+telepathy.server implements base classes and mixins for implementing all of
+the D-Bus interfaces in Telepathy. Many methods are abstract and they are
+intended to be overridden in mixins for the concrete implementations, but some
+perform housekeeping for you and maintain structures with some of the state
+necessary to answer Get* calls. The API for implementing managers needs some
+fixing really.
+
+Client Library
+--------------
+The client lib in telepathy.client has some base classes to help with
+implementing a client in python.

@@ -1,0 +1,36 @@
+[Desktop Entry]
+X-AppInstall-Package=chromium-browser
+X-AppInstall-Popcon=32866
+X-AppInstall-Section=universe
+
+Version=1.0
+Name=Chromium Web Browser
+GenericName=Web Browser
+Comment=Access the Internet
+Exec=/usr/bin/chromium-browser %U
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=chromium-browser
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme-handler/https;
+StartupWMClass=Chromium-browser
+StartupNotify=true
+X-Ayatana-Desktop-Shortcuts=NewWindow;Incognito;TempProfile
+
+[NewWindow Shortcut Group]
+Name=Open a New Window
+Exec=/usr/bin/chromium-browser
+TargetEnvironment=Unity
+
+[Incognito Shortcut Group]
+Name=Open a New Window in incognito mode
+Exec=/usr/bin/chromium-browser --incognito
+TargetEnvironment=Unity
+
+[TempProfile Shortcut Group]
+Name=Open a New Window with a temporary profile
+Exec=/usr/bin/chromium-browser --temp-profile
+TargetEnvironment=Unity
+
+X-Ubuntu-Gettext-Domain=app-install-data

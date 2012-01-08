@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" id="send-message" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#text-conv"/>
+    <desc>Enviar un mensaje a uno de sus contactos.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-14" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-14" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-09" status="deferred"/>
+      -->
+    </revision>
+    <revision pkgversion="2.32" version="0.3" date="2010-09-09" status="review"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>Enviar un mensaje a alguien</title>
+
+  <steps>
+    <item>
+      <p>Desde la ventana <gui>Lista de contactos</gui> pulse dos veces sobre el nombre del contacto con el que quiere tener una conversación.</p>
+    </item>
+    <item>
+      <p>Se abrirá una ventana nueva. Cuando se establezca la conexión, verá la ventana de charla en la parte inferior de la ventana, <key>Intro</key> y el tiempo total de conversación.</p>
+    </item>
+  </steps>
+  
+  <section id="send-meta-contact" style="2column">
+    <title>Enviar un mensaje a un metacontacto</title>
+    <steps>
+      <item>
+        <p>Desde la ventana <gui>Lista de contactos</gui>, pulse con el botón derecho sobre el metacontacto.</p>
+      </item>
+      <item>
+        <p>Seleccione el contacto con el que quiere tener la conversación y, del menú, seleccione <gui style="menuitem">Chat</gui>.</p>
+      </item>
+    </steps>
+    <note style="tip">
+      <p>Para reconocer si un contecto es un <em>metacontacto</em>, mueva su ratón sobre un contacto en la ventana de la <gui>Lista de contactos</gui> y deténgalo encima un segundo: aparecerá un pequeño mensaje emergente mostrando el número de contactos que forman el metacontacto.</p>
+    </note>
+  </section>
+
+</page>

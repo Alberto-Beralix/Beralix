@@ -1,0 +1,54 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+# Authors: Natalia B Bidart <natalia.bidart@canonical.com>
+#          Eric Casteleijn <eric.casteleijn@canonical.com>
+#
+# Copyright 2010 Canonical Ltd.
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 3, as published
+# by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranties of
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+# PURPOSE.  See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program.  If not, see <http://www.gnu.org/licenses/>.
+"""Execute the graphical interface for the Ubuntu One control panel."""
+
+# Invalid name "ubuntuone-control-panel-gtk", pylint: disable=C0103
+
+import gettext
+import sys
+
+from optparse import OptionParser
+
+from ubuntuone.controlpanel import TRANSLATION_DOMAIN
+
+gettext.textdomain(TRANSLATION_DOMAIN)
+# import the GUI after the translation domain has been set
+from ubuntuone.controlpanel.gui.gtk import main
+
+
+def parser_options():
+    """Parse command line parameters."""
+    usage = "Usage: %prog [option]"
+    result = OptionParser(usage=usage)
+    result.add_option("", "--switch-to", dest="switch_to", type="string",
+                      metavar="PANEL_NAME", default="",
+                      help="Start Ubuntu One in the "
+                           "PANEL_NAME tab. Possible values are: "
+                           "dashboard, volumes, devices, applications")
+    result.add_option("-a", "--alert", dest="alert", action="store_true",
+                      default=False, help="Start Ubuntu One "
+                      "alerting the user to its presence.")
+    return result
+
+
+if __name__ == "__main__":
+    parser = parser_options()
+    (options, args) = parser.parse_args(sys.argv)
+    main(switch_to=options.switch_to, alert=options.alert)

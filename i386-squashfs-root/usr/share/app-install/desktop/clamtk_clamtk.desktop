@@ -1,0 +1,19 @@
+[Desktop Entry]
+X-AppInstall-Package=clamtk
+X-AppInstall-Popcon=4717
+X-AppInstall-Section=universe
+
+Name=Virus Scanner
+#MimeType=application/x-ms-dos-executable;application/x-msdownload;application/exe;application/x-exe;application/dos-exe;application/x-winexe;application/msdos-windows;application/x-msdos-program;application/octet-stream;application/vnd.ms-excel;application/vnd.ms-access;inode/directory;
+Comment=Scan for viruses...
+GenericName=Virus Scanner
+TryExec=clamtk
+Exec=clamtk %F
+Icon=clamtk
+Type=Application
+Terminal=false
+Categories=GTK;GNOME;Utility;Security;
+StartupNotify=false
+# vi:set encoding=UTF-8:
+
+X-Ubuntu-Gettext-Domain=app-install-data

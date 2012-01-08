@@ -1,0 +1,142 @@
+#!/usr/bin/python
+
+# NOTE: Be careful to run this from the same distro version as the upgrade was done on
+# otherwise, it may not be able to look up the proper packages.
+
+import re
+import os
+import sys
+import datetime
+
+def loadfile(filename):
+    fp = open(filename)
+    text = fp.read()
+    fp.close()
+    return text
+
+def parse_dpkg_dates(dpkg_text):
+    dates = {}
+    re_dpkg = re.compile(r'^(\d+-\d+-\d+) (\d\d:\d\d:\d\d) (\w+) (.*)$')
+    for line in dpkg_text.split("\n"):
+        m = re_dpkg.match(line)
+        if not m:
+            continue
+        event_date = datetime.datetime.strptime(m.group(1), "%Y-%m-%d")
+        dates[event_date] = True
+    dates = dates.keys()
+    dates.sort()
+    return dates
+
+def parse_dpkg(dpkg_text, start_date=None, end_date=None):
+    re_dpkg = re.compile(r'^(\d+-\d+-\d+) (\d\d:\d\d:\d\d) (\w+) (.*)$')
+
+    events = { }
+    for line in dpkg_text.split("\n"):
+        m = re_dpkg.match(line)
+        if not m:
+            continue
+
+        event_date = datetime.datetime.strptime(m.group(1), "%Y-%m-%d")
+        event_time = m.group(2)
+        event_name = m.group(3)
+        event_detail = m.group(4)
+
+        if start_date and event_date < start_date:
+            continue
+        if end_date and event_date > end_date:
+            continue
+        if event_name not in ['install', 'upgrade', 'remove']:
+            continue
+
+        [pkg, old_ver, new_ver] = event_detail.split(' ')
+
+        result = os.popen("apt-cache show %s 2>/dev/null | grep ^Source" % (pkg)).read().split(': ')
+        if len(result) > 1:
+            binary_pkg = pkg
+            value = result[1].strip()
+            source_pkg = value.split("\n")[0]
+        else:
+            source_pkg = pkg
+
+        if source_pkg in events:
+            source_event_found = False
+            for source_pkg_event in events[source_pkg]:
+                if source_pkg_event['new_version'] == new_ver:
+                    source_event_found = True
+                    source_pkg_event['binaries'].append(binary_pkg)
+                    break
+            if source_event_found:
+                continue
+        else:
+            events[source_pkg] = [ ]
+
+        # TODO: Create PackageEvent class
+        source_pkg_event = {
+            'action': event_name,
+            'date': event_date.strftime("%Y-%m-%d"),
+            'time': event_time,
+            'source_package': source_pkg,
+            'old_version': old_ver,
+            'new_version': new_ver,
+            'binaries': [ ],
+            }
+        events[source_pkg].append(source_pkg_event)
+
+        #print "%-8s %-30s %-12s %-12s %-30s %-30s" %(
+        #    event_name, source_pkg, source_pkg_event['date'], event_time, old_ver, new_ver)
+    return events
+
+if __name__ == "__main__":
+    import optparse
+    import gettext
+    from gettext import gettext as _
+    gettext.textdomain('xdiagnose')
+
+    parser = optparse.OptionParser(version="%prog %ver")
+    parser.add_option(
+        "-v", "--verbose", action="store_true", dest="verbose", default=False,
+        help=_("Show debug messages"))
+    parser.add_option(
+        "-D", "--show-dates", action="store_true", dest="show_dates", default=False,
+        help=_("List dates on which updates were performed"))
+    parser.add_option(
+        "-s", "--start-date", dest="start_date", default=None,
+        help=_("Only include entries from this date forward (YYYY/MM/DD)"))
+    parser.add_option(
+        "-e", "--end-date", dest="end_date", default=None,
+        help=_("Only include entries from this date and earlier (YYYY/MM/DD)"))
+    (options, args) = parser.parse_args()
+
+    if len(args) < 1:
+        dpkg_log_filename = '/var/log/dpkg.log'
+    else:
+        dpkg_log_filename = args[0]
+
+    if options.verbose:
+        print "Reading from %s" %(dpkg_log_filename)
+    dpkg_text = loadfile(dpkg_log_filename)
+
+    if options.show_dates:
+        event_dates = parse_dpkg_dates(dpkg_text)
+        for d in event_dates:
+            print d.strftime("%Y-%m-%d")
+        sys.exit(0)
+
+    start_date = None
+    if options.start_date:
+        start_date = datetime.datetime.strptime(options.start_date, "%Y-%m-%d")
+    end_date = None
+    if options.end_date:
+        end_date = datetime.datetime.strptime(options.end_date, "%Y-%m-%d")
+    dpkg_events = parse_dpkg(dpkg_text, start_date, end_date)
+
+    pkgs = dpkg_events.keys()
+    pkgs.sort()
+    for pkg in pkgs:
+        indent = ''
+        for event in dpkg_events[pkg]:
+            print "%s%-8s %-30s %-12s %-12s %-30s %-30s" %(indent,
+                event['action'], event['source_package'], event['date'], event['time'], event['old_version'], event['new_version'])
+            indent += ' '
+
+    sys.exit(0)

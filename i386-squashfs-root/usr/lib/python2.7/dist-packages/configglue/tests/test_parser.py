@@ -1,0 +1,1 @@
+../../../../../share/pyshared/configglue/tests/test_parser.py

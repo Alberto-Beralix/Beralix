@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-file-properties-basic" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files" group="more"/>
+
+   <desc>Veja as informações básicas do arquivo, determine as permissões, e escolha aplicativos padrão.</desc>
+
+   <revision version="11.04" date="2011-04-25" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany@antopolski.com</email>
+   </credit>
+   <credit type="author">
+     <name>Shaun McCance</name>
+     <email>shaunm@gnome.org</email>
+   </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+  <title>Propriedades do arquivo</title>
+
+  <p>Para visualizar informações sobre um arquivou ou pasta, clique com o botão direito do mouse sobre ele e selecione <gui>Propriedades</gui>. Você pode também selecionar o arquivo e pressionar <guiseq><gui>Alt</gui><gui>Enter</gui></guiseq>.</p>
+
+  <p>A janela de propriedades de arquivos mostra a você informações como o tipo de arquivo, o tamanho do arquivo e a última vez que você o modificou. Se você precisa dessas informações com frequência, você pode tê-las apresentadas nas <link xref="nautilus-list">colunas da visualização em lista</link> ou nas <link xref="nautilus-display#icon-captions">legendas dos ícones</link>.</p>
+
+  <p>As informações fornecidas na aba <gui>Básico</gui> são explicadas abaixo. Há também as abas <gui><link xref="nautilus-file-properties-permissions">Permissões</link></gui> e <gui><link xref="files-open#default">Abrir com</link></gui>. Para alguns tipos de arquivos, como imagens e vídeos, haverá uma aba extra que fornece informações como dimensões, duração e codec.</p>
+
+  <comment>
+    <cite date="2011-04-04">shaunm</cite>
+    <p>This page is intentionally written to give you some overview of
+    the other tabs, because I happen to know that in 3.0 it's the target
+    of the Help button in the properties dialog, regardless of the tab
+    you're on.</p>
+  </comment>
+
+<section id="basic">
+ <title>Propriedades básicas</title>
+ <terms>
+  <item>
+    <title><gui>Nome</gui></title>
+    <p>Você pode renomear o arquivo alterando este campo. Você pode também renomear um arquivo fora da janela de propriedades. Veja <link xref="files-rename"/>.</p>
+  </item>
+  <item>
+    <title><gui>Digite</gui></title>
+    <p>Isto ajuda você a identificar o tipo de arquivo, como um documento PDF, Texto OpenDocument ou imagem JPEG. O tipo de arquivo determina quais aplicativos podem abri-lo, entre outras coisas. Por exemplo, você não pode abrir uma foto com um reprodutor de música. Veja <link xref="files-open"/> para mais informações sobre isto.</p> 
+  <p>O <em>tipo MIME</em> do arquivo é mostrado entre parênteses; o tipo MIME é uma maneira padrão que os computadores utilizam para se referir ao tipo de arquivo.</p>
+  </item>
+
+  <item>
+    <title>Conteúdos</title>
+    <p>Este campo é apresentado se você está olhando as propriedades de uma pasta em vez de um arquivo. Ele ajuda você a ver o número de itens na pasta. Se a pasta inclui outras pastas, cada pasta interna é contada como um item, mesmo que contenha mais itens. Cada arquivo também é contado como um item. Se a pasta estiver vazia, o conteúdo irá apresentar <gui>nada</gui>.</p>
+  </item>
+
+  <item>
+    <title>Tamanho</title>
+    <p>Este campo é apresentado se você  está olhando um arquivo (não uma pasta). O tamanho de um arquivo diz quanto espaço de disco ele toma. É também um indicador de quanto tempo levará para ser baixado ou enviado em uma mensagem de e-mail (arquivos grandes levam mais tempo para enviar e receber).</p>
+    <p>Tamanhos podem ser dados em bytes, KB, MB ou GB; no caso dos últimos três, o tamanho em bytes também será dado entre parênteses. Tecnicamente, 1KB é 1024 bytes, 1MB é 1024 KB e assim por diante.</p>
+  </item>
+
+  <item>
+    <title>Local</title>
+    <p>A localização de cada arquivo no seu computador é dada por seu <em>caminho absoluto</em>. Este é um "endereço" único do arquivo no seu computador, formado pela lista das pastas que você teria que ir para encontrar o arquivo. Por exemplo, se Maria tivesse um arquivo chamado <file>Currículo.pdf</file> na sua pasta pessoal, sua localização seria <file>/home/maria/Currículo.pdr</file>.</p>
+  </item>
+
+  <item>
+    <title>Volume</title>
+    <p>O sistema de arquivos ou dispositivo em que o arquivo está armazenado. Mostra a você onde o arquivo está fisicamente armazenado, por exemplo se está no disco rígido ou num CD, ou um <link xref="nautilus-connect">compartilhamento de rede ou servidor de arquivos</link>. Discos rígido podem ser divididos em diversas <link xref="disk-partitions">partições de discos</link>; a partição será mostrada abaixo de <gui>Volume</gui> também.</p>
+  </item>
+
+  <item>
+    <title>Espaço livre</title>
+    <p>Isto só é apresentado para pastas. Dá a você a quantidade de espaço de disco que está disponível no disco onde a pasta se encontra. Isto é útil para verificar se o disco rígido está cheio.</p>
+  </item>
+
+
+  <item>
+    <title>Acessado</title>
+    <p>A data e hora quando o arquivo foi aberto pela última vez.</p>
+  </item>
+
+  <item>
+    <title>Modificado</title>
+    <p>A data e hora quando o arquivo foi modificado pela última vez.</p>
+  </item>
+ </terms>
+</section>
+
+</page>

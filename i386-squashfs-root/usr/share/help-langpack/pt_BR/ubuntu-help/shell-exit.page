@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="shell-exit" xml:lang="pt-BR">
+
+  <info>
+
+    <link type="guide" xref="index" group="shell-exit"/>
+    <link type="guide" xref="shell-overview#desktop"/>
+
+    <desc>Aprenda a como deixar sua conta de usuário, encerrando a sessão, trocando de usuário e assim por diante.</desc>
+    <!-- Should this be a guide which links to other topics? -->
+    
+    <revision version="11.04" date="2011-04-30" status="review"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Encerrar sessão, desligar, alternar de usuário</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>More links would be good, especially in #logout. Could go final
+  as-is. Incomplete for now</p>
+</comment>
+
+<p>Quando você termina de usar seu computador, você pode desligá-lo, suspendê-lo (para economizar energia), ou deixá-lo ligado e apenas encerrar a sessão.</p>
+
+<section id="logout">
+<title>Encerrar sessão ou trocar usuários</title>
+<p>Para deixar outros usuários usarem seu computador, você tanto pode encerrar a sessão, quanto manter a sessão e apenas alternar  usuário. Se você apenas alternar usuário, todas as suas aplicações irão continuar rodando, e tudo será mantido como você deixou, para quando você voltar.</p>
+<p>Para encerrar uma sessão ou trocar de usuário, clique em <link xref="unity-appmenu-intro">menu de sessão</link>na parte mais alta do painel superior e selecione a opção apropriada.</p>
+</section>
+
+<section id="lock-screen">
+<info>
+  <link type="seealso" xref="session-screenlocks"/>
+</info>
+<title>Bloquear a tela</title>
+<p>Se você está deixando seu computador por um curto período, você deve bloquear sua tela para prevenir que outras pessoas acessem seus arquivos e rode suas aplicações. Quando você voltar, apenas digite sua senha para reiniciar sua sessão. Se você não bloquear sua tela, ela irá ser bloqueada automaticamente depois de um certo período de tempo.</p>
+
+<p>Para bloquear sua tela, clique no <gui>menu sessão</gui> do painel superior e selecione <gui>bloquear tela</gui>.</p>
+
+<p>Quando sua tela é bloqueada, outros usuários podem iniciar uma sessão própria clicando em <gui>alternar de usuário</gui> na tela de senha. Você pode trocar de volta para o seu desktop quando eles terminarem.</p>
+</section>
+
+<section id="shut-down">
+<info>
+  <link type="seealso" xref="power-suspendhibernate"/>
+</info>
+<title>Suspender, desligar ou reiniciar.</title>
+
+<p>Para economizar energia, suspenda seu computador quando você não o estiver usando.  Isso salva seu estado para a memória do seu computador e desliga a maioria das funções de seu computador. Um pequeno consumo de energia é usando durante a suspensão</p>
+
+<p>Para suspender seu computador, clique no <gui>menu de sessão</gui> na parte superior do painel e selecione <gui>suspender</gui>. Ou, se você tem um laptop, simplesmente feche a tampa. Seu computador irá suspender automaticamente quando a tampa for fechada.</p>
+
+<p>Se você quer desligar seu computador completamente, ou fazer uma reinicialização completa, clique em <gui>menu da sessão</gui> e selecione <gui>Desligar</gui>.</p>
+
+<note><p>Se houver outros usuários ativos, não será permitido desligar ou reiniciar o computador, pois isto irá encerrar suas sessões. Se você é um usuário administrativo, possivelmente você será requisitado para digitar sua senha para desligar.</p></note>
+</section>
+</page>

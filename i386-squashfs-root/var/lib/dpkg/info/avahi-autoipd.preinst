@@ -1,0 +1,38 @@
+#!/bin/sh
+
+set -e
+
+# Prepare to move a conffile without triggering a dpkg question
+prep_mv_conffile() {
+    local PKGNAME="$1"
+    local CONFFILE="$2"
+
+    [ -e "$CONFFILE" ] || return 0
+
+    local md5sum="$(md5sum $CONFFILE | sed -e 's/ .*//')"
+    local old_md5sum="$(dpkg-query -W -f='${Conffiles}' $PKGNAME | \
+            sed -n -e "\' $CONFFILE ' { s/ obsolete$//; s/.* //; p }")"
+    if [ "$md5sum" = "$old_md5sum" ]; then
+        rm -f "$CONFFILE"
+    fi
+}
+
+case "$1" in
+install|upgrade)
+    if dpkg --compare-versions "$2" lt "0.6.27-3ubuntu1"; then
+        prep_mv_conffile avahi-autoipd "/etc/dhcp3/dhclient-enter-hooks.d/avahi-autoipd"
+        prep_mv_conffile avahi-autoipd "/etc/dhcp3/dhclient-exit-hooks.d/zzz_avahi-autoipd"
+    fi
+    # Remove compat symlinks for dhcp3-client which might have been
+    # created during upgrades.
+    if dpkg --compare-versions "$2" lt "0.6.28-3"; then
+        if [ -L /etc/dhcp3/dhclient-enter-hooks.d/avahi-autoipd ]; then
+            rm -f /etc/dhcp3/dhclient-enter-hooks.d/avahi-autoipd
+        fi
+        if [ -L /etc/dhcp3/dhclient-exit-hooks.d/zzz_avahi-autoipd ]; then
+            rm -f /etc/dhcp3/dhclient-exit-hooks.d/zzz_avahi-autoipd
+        fi
+    fi
+esac
+
+

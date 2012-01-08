@@ -1,0 +1,1 @@
+../../../../../share/pyshared/oneconf/networksync/fake_webcatalog_settings.py

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-whyimportant" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="color"/>
+    <desc>Gerenciamento de cores é importante para designers, fotógrafos e artistas.</desc>
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Por que o gerenciamento de cores é importante?</title>
+  <p>O gerenciamento de cores é o processo de capturar uma cor usando um dispositivo de entrada, exibi-lo em uma tela, e imprimir tudo enquanto se gerencia as cores exatas e a gama de cores de cada equipamento.</p>
+
+  <p>A necessidade de gerenciamento de cores é provavelmente melhor explicada com uma fotografia de um pássaro em um dia gelado no inverno.</p>
+
+  <figure>
+    <desc>Um pássaro em uma parede fria como visto no visor da câmera.</desc>
+    <media type="image" mime="image/png" src="figures/color-camera.png"/>
+  </figure>
+
+  <p>Monitores normalmente supersaturam o canal azul, fazendo as imagens parecerem frias.</p>
+
+  <figure>
+    <desc>Isto é o que o usuário vê na tela de um laptop típico de negócios</desc>
+    <media type="image" mime="image/png" src="figures/color-display.png"/>
+  </figure>
+
+  <p>Note como o branco não é como o de uma papel branco e o negro do olho é agora um marrom sujo.</p>
+
+  <figure>
+    <desc>Isto é o que o usuário vê ao imprimir em uma impressora jato de tinta comum</desc>
+    <media type="image" mime="image/png" src="figures/color-printer.png"/>
+  </figure>
+
+  <p>O problema básico que temos aqui é que cada dispositivo é capaz de lidar com uma gama diferente de cores. Então, enquanto você pode ser capaz de tirar uma foto de azul elétrico, a maioria das impressoras não vai ser capaz de reproduzi-lo.</p>
+  <p>A maioria dos dispositivos de imagem capturam em RGB (Red, Green, Blue) e têm que converter para CMYK (Cyan, Magenta, Yellow e Black) para a impressora. Outro problema é que você não pode usar tinta <em>branca</em>, então a brancura só pode ser tão boa quanto a cor do papel.</p>
+
+  <p>Outro problema são as unidades. Sem especificar a escala na qual uma cor é medida, nós não sabemos se o vermelho 100% está próximo do infravermelho ou se é somente o vermelho mais profundo que que a impressora pode atingir. O que é 50% vermelho no seu monitor é provavelmente algo como 62% no meu monitor. É como dizer a uma pessoa que você dirigiu por 7 unidades de distância, sem a unidade você não sabe se são 7 quilômetros ou 7 metros.</p>
+
+  <p>Quando falamos de cores, nós nos referimos às unidades como gama. A gama é essencialmente o intervalo de cores que podem ser reproduzidas. Um dispositivo como uma câmera DSLR pode ter uma gama muito ampla, sendo capaz de capturar todas as cores de um pôr-do-sol, mas um projetor tem uma gama muito pequena e todas as cores irão parecer "lavadas".</p>
+
+  <p>Em alguns casos podemos <em>corrigir</em> a resposta do dispositivo, ao alterar os dados que enviamos para o dispositivo, mas em outros casos em que isso não é possível (não é possível imprimir azul elétrico), nós precisamos mostrar ao usuário como o resultado vai parecer.</p>
+
+  <p>Para fotografias, faz sentido utilizar toda a gama tonal de um dispositivo de cor, para ser capaz de fazer alterações suaves na cor. Para outros gráficos, você pode querer que a cor seja exatamente igual, o que é importante se você está tentando imprimir uma caneca personalizada com o logotipo da Red Hat, que <em>tem</em> que ser exatamente o vermelho Red Hat.</p>
+
+</page>

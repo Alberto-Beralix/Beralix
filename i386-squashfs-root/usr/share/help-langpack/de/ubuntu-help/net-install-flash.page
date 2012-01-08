@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-install-flash" xml:lang="de">
+  <info>
+    <link type="guide" xref="net-browser"/>
+
+    <revision version="11.04" date="2011-04-28" status="final"/>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>You may need to install Flash to be able to view websites like YouTube, which display videos and interactive web pages.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Die Flash-Erweiterung installieren</title>
+
+<p><app>Flash</app> is a <em>plug-in</em> for your web browser which allows you to watch videos and use interactive web pages on some websites. Some websites won't work without Flash.</p>
+
+<comment>
+<cite>shaunm</cite>
+<p>Would be nice to (soft?) link to a page on the software installer</p>
+</comment>
+
+<p>If you do not have Flash installed, you will probably see a message telling you so when you visit a website that needs it. Flash is available as a free (but not open-source) download for most web browsers.</p>
+
+<steps>
+ <title>Installation von Flash</title>
+ <item>
+  <p>Klicken Sie auf <link href="apt:flashplugin-installer">diesen Verweis</link>, um das <app>Software Center</app> zu starten.</p>
+ </item>
+ <item>
+  <p>Lesen Sie die Informationen und Bewertung, um sicher zu gehen, dass Sie Flash installieren möchten.</p>
+ </item>
+ <item>
+  <p>Wenn Sie sich für die Installation von Flash entschieden haben, klicken Sie auf <gui>Installieren</gui> im Software-Center.</p>
+ </item>
+ <item>
+  <p>If you have any web browser windows open, close them and then re-open them. The web browser should detect that Flash is installed when you open it again, and you should now be able to view websites using Flash.</p>
+ </item>
+</steps>
+
+<section id="alternatives">
+ <title>Quelloffene Alternativen zu Flash</title>
+ <p>Es gibt eine kleine Auswahl an quelloffenen Alternativen zu Flash. In einigen Fällen funktionieren diese besser als die Flash-Erweiterung, zum Beispiel bei der Audio-Wiedergabe. Andererseits können sie auch an der Komplexität einiger Flash-Webseiten scheitern.</p>
+ <p>Falls Sie mit dem Flash-Player nicht wirklich zufrieden sind oder so viel quelloffene Software wie möglich auf Ihrem Rechner installieren wollen, sollten Sie diese Alternativen ausprobieren:</p>
+ <list>
+  <item><p><link href="apt:browser-plugin-gnash">Gnash</link></p></item>
+  <item><p><link href="apt:browser-plugin-lightspark">LightSpark</link></p></item>
+ </list>
+</section>
+
+</page>

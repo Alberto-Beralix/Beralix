@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="hardware-driver" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="hardware" group="more"/>
+    
+    <desc>Um driver de hardware ou de dispositivo permite a seu computador utilizar dispositivos que estão conectados nele.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>O que é uma unidade?</title>
+
+<p>Dispositivos são as "partes" físicas do seu computador. Eles podem ser <em>externos</em>, como impressoras e monitores, ou <em>internos</em>, como placas de som e vídeo.</p>
+
+<p>Para que seu computador possa usar esses dispositivos, ele precisa saber se comunicar com eles. Isso é feito por um pedaço de software chamado <em>driver de dispositivo</em>.</p>
+
+<p>Quando você conecta um dispositivo no seu computador, você deve ter o driver correto instalado para que aquele dispositivo funcione. Por exemplo, se você conectar uma impressora, mas o driver correto não estiver disponível, você não vai ser conseguir utilizar a impressora. Geralmente, cada modelo de dispositivo usa um driver que não é compatível com qualquer outro modelo.</p>
+
+<p>No Linux, os drivers para a maioria dos dispositivos são instalados por padrão, para que tudo possa funcionar quando você conectar ao computador. Entretanto, os drivers podem precisar de instalação manual ou podem mesmo não estar disponíveis.</p>
+
+<p>Além disso, alguns drivers existentes estão incompletos ou parcialmente não-funcionais. Por exemplo, você pode descobrir que a sua impressora não imprime frente-e-verso, mas que fora isso ela é completamente funcional.</p>
+
+</page>

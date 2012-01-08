@@ -1,0 +1,1 @@
+../../../../share/pyshared/speechd/__init__.py

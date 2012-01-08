@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="commands_flat_review" xml:lang="es">
+  <info>
+    <link type="next" xref="commands_find"/>
+    <link type="guide" xref="commands#reviewing_screen_contents"/>
+    <link type="seealso" xref="howto_flat_review"/>
+    <title type="sort">1. Revisión</title>
+    <title type="link">Revisión</title>
+    <desc>Comandos para revisar espacialmente las ventanas</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Comandos de revisión</title>
+  <p>Los comandos de <link xref="howto_flat_review">revisión</link> de Orca están diseñados para revisar espacialmente los elementos mostrados en la pantalla. Además, suponen un medio para leer la línea, palabra y carácter actuales cuando se navega en el texto de un documento.</p>
+  <section id="line">
+    <title>Comandos para revisar por línea</title>
+    <list>
+      <item>
+        <p>Primera línea (la posición «inicio»):</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>Modificador de Orca</key><key>TN 7</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>Ctrl</key><key>U</key></keyseq></p></item>
+        </list>
+      </item>
+      <item>
+        <p>Línea anterior:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 7</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>U</key></keyseq></p></item>
+        </list>
+      </item>
+      <item>
+        <p>Línea actual:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 8</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>I</key></keyseq></p></item>
+        </list>
+      </item>
+        <item><p>Hablar la línea actual:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 8</key></keyseq> (doble pulsación)</p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>I</key></keyseq> (doble pulsación)</p></item>
+        </list>
+      </item>
+      <item><p>Deletrear fonéticamente la línea actual:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 8</key></keyseq> (triple pulsación)</p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>I</key></keyseq> (triple pulsación)</p></item>
+        </list>
+      </item>
+      <item><p>Línea siguiente:</p>
+        <list>
+          <item><p>Portátil: <keyseq><key>TN 9</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>O</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Última línea (la posición «fin»):</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>Modificador de Orca</key><key>TN 9</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>Ctrl</key><key>O</key></keyseq></p></item>
+        </list>
+      </item>
+    </list>
+  </section>
+  <section id="word">
+    <title>Comandos para revisar por palabra</title>
+    <list>
+      <item><p>Palabra anterior:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>Modificador de Orca</key><key>TN 4</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>Ctrl</key><key>J</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Palabra anterior:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 4</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>J</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Palabra actual:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 5</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>K</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Hablar la palabra actual:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 5</key></keyseq> (doble pulsación)</p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>K</key></keyseq> (doble pulsación)</p></item>
+        </list>
+      </item>
+      <item><p>Deletrear fonéticamente la palabra actual:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 5</key></keyseq> (triple pulsación)</p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>K</key></keyseq> (triple pulsación)</p></item>
+        </list>
+      </item>
+      <item><p>Siguiente palabra:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 6</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>L</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Siguiente palabra:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>Modificador de Orca</key><key>TN 6</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>Ctrl</key><key>L</key></keyseq></p></item>
+        </list>
+      </item>
+    </list>
+  </section>
+  <section id="character">
+    <title>Comandos para revisar por carácter</title>
+    <list>
+      <item><p>Carácter anterior:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 1</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>M</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Carácter actual:</p>
+        <list>
+          <item><p>Portátil: <keyseq><key>TN 2</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>,</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Leer fonéticamente el carácter actual:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 2</key></keyseq> (doble pulsación)</p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>,</key></keyseq> (doble pulsación)</p></item>
+        </list>
+      </item>
+      <item><p>Leer el valor Unicode del carácter actual:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 2</key></keyseq> (triple pulsación)</p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>,</key></keyseq> (triple pulsación)</p></item>
+        </list>
+      </item>
+      <item><p>Siguiente carácter:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>TN 3</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>.</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Último carácter en la línea actual:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>Modificador de Orca</key><key>TN 1</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>Ctrl</key><key>M</key></keyseq></p></item>
+        </list>
+      </item>
+    </list>
+  </section>
+  <section id="other">
+    <title>Comandos adicionales</title>
+    <list>
+      <item><p>Conmutar la revisión (actualiza el contexto de revisión):</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>Modificador de Orca</key><key>TN -</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>P</key></keyseq></p></item>
+        </list>
+      </item>
+      <item><p>Revisar el elemento/widget actual:</p>
+        <list>
+          <item><p>Sobremesa: <keyseq><key>Modificador de Orca</key><key>TN 5</key></keyseq></p></item>
+          <item><p>Portátil: <keyseq><key>Modificador de Orca</key><key>Ctrl</key><key>K</key></keyseq></p></item>
+        </list>
+      </item>
+    </list>
+  </section>
+</page>

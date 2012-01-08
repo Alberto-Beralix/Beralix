@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gtk-2.0/pynotify/__init__.py

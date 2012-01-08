@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="user-add" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="user-accounts#manage" group="#first"/>
+<!--<link type="seealso" xref="user-addguest"/> Need to add information about guest accounts -->
+    <desc>Añadir usuarios nuevos de manera que otras personas puedan iniciar sesión en el equipo.</desc>
+    <revision version="11.04" date="2011-04-24" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Añadir una cuenta de usuario nueva</title>
+
+<comment>
+  <cite date="2011-04-15">shaunm</cite>
+  <p>We need a note in here about password hints. Share content
+  with user-changepassword</p>
+</comment>
+
+  <p>Puede añadir varias cuentas de usuario a su equipo. Dar una cuenta a cada persona en su hogar o empresa. Cada usuario tiene su propia carpeta de inicio, documentos y configuración.</p>
+
+<steps>
+  <item><p>Haga clic en su nombre en la <gui>barra de menús</gui> y seleccione <gui>Cuentas de usuario</gui>.</p></item>
+
+  <item><p>Haga clic en <gui>Desbloquear</gui> en la esquina superior izquierda y escriba su contraseña para realizar cambios. Debe ser un usuario con derechos de administrador para añadir cuentas de usuario.</p></item>
+  <item><p>En la lista de cuentas en la izquierda, pulse el botón <gui>+</gui> para añadir una cuenta de usuario nueva.</p></item>
+  <item><p>Si quiere que el nuevo usuario tenga acceso administrativo al equipo, seleccione <gui>Administrador</gui> para el tipo de cuenta. Los administradores pueden hacer cosas como añadir y eliminar usuarios, instalar software y controladores, y cambiar la fecha y la hora.</p></item>
+  <item><p>Escriba el nombre completo del nuevo usuario. El nombre de usuario se rellenará automáticamente dependiendo del nombre completo. El valor por omisión probablemente sea correcto, pero puede cambiarlo si lo desea.</p></item>
+  <item><p>Pulse <gui>Crear</gui> cuando lo haya hecho.</p></item>
+  <item><p>La cuenta está deshabilitada en principio hasta que elija lo que desea hacer con la contraseña del usuario. En <gui>Opciones de inicio de sesión</gui>, haga clic en <gui>Cuenta deshabilitada</gui>. Utilice la lista desplegable <gui>Acción</gui> para establecer la contraseña ahora, permitir al usuario iniciar sesión sin contraseña o solicitar al usuario que escriba su contraseña la primera vez que inicie sesión.</p>
+  <p>Si selecciona <gui>Establecer una contraseña ahora</gui>, el usuario tiene que teclear su contraseña en los campos <gui>Contraseña nueva</gui> y <gui>Confirmar contraseña</gui>. Consulte la <link xref="user-goodpassword"/>.</p>
+  <p>También puede pulsar el botón junto al campo <gui>Contraseña nueva</gui> para seleccionar de forma aleatoria la generación de una contraseña segura. Estas contraseñas son difíciles de adivinar para los demás, pero también difíciles de recordar, por lo que debe ser cuidadoso.</p></item>
+  <item><p>Pulse <gui>Cambiar</gui>.</p></item>
+</steps>
+	
+<note><p>Si le gusta, puede pulsar la imagen junto al nombre del usuario, a la derecha, para establecer una imagen para la cuenta. Esta imagen se mostrará en la ventana de inicio de sesión. GNOME proporciona algunos conjuntos de imágenes que puede usar, o puede seleccionar su propia imagen o hacer una foto con su cámara web.</p></note>
+
+</page>

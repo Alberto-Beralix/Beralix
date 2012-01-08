@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-share" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files" group="more"/>
+<!--<link type="guide" xref="net#sharing"/> Hiding this link until we re-add the net-sharing page -->
+    <link type="seealso" xref="nautilus-connect"/>
+    <desc>Transfere arquivos facilmente para seus contatos e dispositivos do gerenciador de arquivos.</desc>
+
+    <revision version="11.04" date="2011-04-29" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Compartilhar e transferir arquivos</title>
+
+<comment>
+  <cite date="2011-04-01">shaunm</cite>
+  <p>If we get gnome-user-share integrated nicely in 3.2, we should discuss
+  or link that here.</p>
+</comment>
+
+<p>Você pode facilmente compartilhar com seus contatos ou transferi-los para dispositivos ou <link xref="nautilus-connect">redes compartilhadas</link> diretamente do gerenciador de arquivos.</p>
+
+<steps>
+  <item><p>Abra o <link xref="files-browse">gerenciador de arquivos</link>.</p></item>
+  <item><p>Localize o arquivo que você quer transferir.</p></item>
+  <item><p>Clique com o botão direito no arquivo e selecione <gui>Enviar para...</gui>.</p></item>
+  <item><p>A janela <gui>Enviar para...</gui> irá aparecer. Escolha onde você quer enviar o arquivo e clique em <gui>Enviar</gui>. Veja a lista de destinatários abaixo para mais informações.</p></item>
+</steps>
+
+<note style="tip">
+  <p>Você pode enviar múltiplos arquivos de uma vez. Selecione múltiplos arquivos segurando <key>Ctrl</key>, depois clique com o botão direito em qualquer arquivo selecionado. Você pode ter os arquivos compactados automaticamente em um arquivo tar ou zip.</p>
+</note>
+
+<list>
+  <title>Destinos</title>
+  <item><p>Para enviar um arquivo por email, selecione <gui>Email</gui> e digite o endereço de email do destinatário.</p></item>
+  <item><p>Para enviar o arquivo para um contato de mensageiro instantâneo, seleciona <gui>Mensageiro instantâneo</gui>, depois selecione contato da lista suspensa. Seu aplicativo de mensageiro instantâneo pode precisar ser iniciado para isso funcionar.</p></item>
+  <item><p>Para gravar o arquivo em um CD ou DVD, selecione <gui>Criador de CD/DVD</gui>. Veja <link xref="files-disc-write"/> para aprender mais.</p></item>
+  <item><p>Para transferir um arquivo para um dispositivo Bluetooth, selecione <gui>Bluetooth (OBEX Push)</gui>. Veja <link xref="bluetooth"/> para mais informação.</p></item>
+  <item><p>Para copiar o arquivo para um dispositivo externo, como um drive flash USB ou para subi-lo para um servidor que você se conectou, selecione <gui>Unidades e compartilhamentos</gui>, depois selecione o dispositivo ou servidor para o qual você quer copiar os arquivos.</p></item>
+</list>
+
+</page>

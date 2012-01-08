@@ -1,0 +1,33 @@
+#!/bin/sh
+
+PREREQ=""
+DESCRIPTION="Configuring screensaver..."
+
+prereqs()
+{
+       echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+. /scripts/casper-functions
+
+log_begin_msg "$DESCRIPTION"
+
+gnome_screensaver_version=$(chroot /root dpkg-query -W --showformat='${Version}' gnome-screensaver 2>/dev/null) || gnome_screensaver_version=""
+if [ -n "$gnome_screensaver_version" ]; then
+    printf "[org.gnome.desktop.screensaver]\nlock-enabled=false\n" >> /root/usr/share/glib-2.0/schemas/casper.gschema.override
+    chroot /root glib-compile-schemas /usr/share/glib-2.0/schemas/
+fi
+
+if [ -d /root/usr/share/kubuntu-default-settings/kde-profile/default/share/config ]; then
+    printf "[ScreenSaver]\nLock=false\n" >> /root/usr/share/kubuntu-default-settings/kde-profile/default/share/config/kdesktoprc
+fi
+
+log_end_msg

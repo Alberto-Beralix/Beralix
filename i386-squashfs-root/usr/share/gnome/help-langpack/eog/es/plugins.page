@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" xmlns:if="http://projectmallard.org/experimental/if/" type="topic" style="task" id="plugins" xml:lang="es">
+
+  <info>
+   <link type="guide" xref="index#plugins" group="first"/>
+   <desc>Instalar complementos para acceder a características adicionales.</desc>
+
+   <revision pkgversion="3.2" version="0.1" date="2011-09-06" status="final"/>
+   <credit type="author">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Compartir Igual 3.0</p>
+   </license>
+
+  </info>
+
+<title>Complementos</title>
+
+<p>Puede instalar el paquete <sys>eog-plugins</sys> para obtener un conjunto de complementos para el Visor de imágenes. Los complementos añaden funcionalidades adiciones, como las listadas debajo.</p>
+
+<note style="info package">
+  <p>Puede instalar el paquete <sys>eog-plugins</sys> usando el <app>gestor de paquetes</app> de su distribución GNU/Linux.</p>
+
+  <if:choose>
+    <if:when test="if:supports('action:install')">
+      <p><link action="install:eog-plugins" href="http://ftp.gnome.org/pub/gnome/sources/eog-plugins" style="button">Instalar «eog-plugins»</link></p>
+    </if:when>
+  </if:choose>
+</note>
+
+<p>Las siguientes características se incluyen en <sys>eog-plugins</sys>:</p>
+
+<list>
+ <item>
+  <p><link xref="plugin-exif-digital">Mostrar Exif</link>: muestra la configuración de la cámara y el histograma de fotos digitales.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-postr">Cargador para Flickr</link>: crea un elemento en el menú <gui>Herramientas</gui> para subir rápidamente sus fotos a Flickr.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-exif-digital#map">Mapa</link>: muestra la geolocalización de la imagen en un mapa.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-send-by-mail">Enviar por correo-e</link>: envía una imagen a un contacto como adjunto en un correo-e nuevo.</p>
+ </item> 
+ <item>
+  <p><link xref="plugin-slideshow-shuffle">Diapositivas aleatorias</link>: muestra las diapositivas de forma aleatoria.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-zoom-width">Ampliar para ajustar a la anchura de la imagen</link>: ajusta la ampliación para que la anchura de la imagen se ajuste a la ventana.</p>
+ </item>
+ <item>
+  <p><link xref="plugin-python-console">Consola de Python</link>: una consola de «scripting» en Python para el Visor de imágenes.</p>
+ </item>
+ <item>
+  <p>Cargador de PicasaWeb: suba sus imágenes a PicasaWeb</p>
+ </item>
+</list>
+
+<note>
+ <p>Puede gestionar los complementos en la <link xref="preferences#plugins">pestaña de complementos</link> en la ventana de Preferencias.</p>
+</note>
+
+</page>

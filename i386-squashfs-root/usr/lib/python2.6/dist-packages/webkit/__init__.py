@@ -1,0 +1,1 @@
+../../../../share/pyshared/webkit/__init__.py

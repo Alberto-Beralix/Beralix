@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<schemalist>
+  <schema id="org.freedesktop.compiz.unityshell" gettext-domain="compiz">
+    <key type="s" name="launcher-reveal-edge">
+      <default>'Left'</default>
+      <summary>Reveal Mode</summary>
+      <description>From which edge should the launcher reveal.</description>
+    </key>
+    <key type="i" name="launcher-reveal-edge-timeout">
+      <default>150</default>
+      <summary>Edge Reveal Timeout</summary>
+      <description>How long (in ms) wait before revealing the launcher when the mouse pointer is touching the edge. (1 - 1000)</description>
+    </key>
+    <key type="i" name="launcher-hide-mode">
+      <default>2</default>
+      <summary>Hide Launcher</summary>
+      <description>Make the launcher hide automatically after some time of inactivity: always or just when the focussed window is not over the launcher (0 = Never, 1 = Autohide, 2 = Dodge Windows, 3 = Dodge Active Window)</description>
+    </key>
+    <key type="s" name="show-launcher">
+      <default>'&lt;Super&gt;'</default>
+      <summary>Key to show the launcher</summary>
+      <description>Make the launcher appear with that key</description>
+    </key>
+    <key type="s" name="keyboard-focus">
+      <default>'&lt;Alt&gt;F1'</default>
+      <summary>Key to put keyboard-focus on launcher</summary>
+      <description>Set the keyboard-focus on the launcher so it can be navigated with the cursor-keys</description>
+    </key>
+    <key type="s" name="execute-command">
+      <default>'&lt;Alt&gt;F2'</default>
+      <summary>Key to execute a command</summary>
+      <description>Key to open a folder or execute a command</description>
+    </key>
+    <key type="s" name="panel-first-menu">
+      <default>'F10'</default>
+      <summary>Key to open the first panel menu</summary>
+      <description>Open the first menu on the panel, allowing keyboard navigation thereafter.</description>
+    </key>
+    <key type="b" name="alt-tab-timeout">
+      <default>true</default>
+      <summary>Automatically grid windows on timer in switcher</summary>
+      <description>fixme</description>
+    </key>
+    <key type="b" name="alt-tab-bias-viewport">
+      <default>false</default>
+      <summary>Bias alt-tab sorting to prefer windows on the current viewport</summary>
+      <description>fixme</description>
+    </key>
+    <key type="s" name="alt-tab-forward">
+      <default>'&lt;Alt&gt;Tab'</default>
+      <summary>Key to start the switcher</summary>
+      <description>fixme</description>
+    </key>
+    <key type="s" name="alt-tab-prev">
+      <default>'&lt;Alt&gt;&lt;Shift&gt;Tab'</default>
+      <summary>Key to start the switcher in reverse</summary>
+      <description>fixme</description>
+    </key>
+    <key type="s" name="alt-tab-right">
+      <default>'&lt;Alt&gt;Right'</default>
+      <summary>Go right in the switcher</summary>
+      <description>fixme</description>
+    </key>
+    <key type="s" name="alt-tab-left">
+      <default>'&lt;Alt&gt;Left'</default>
+      <summary>Go left in the switcher</summary>
+      <description>fixme</description>
+    </key>
+    <key type="s" name="alt-tab-detail-start">
+      <default>'&lt;Alt&gt;Down'</default>
+      <summary>Key to expose the windows in the switcher</summary>
+      <description>fixme</description>
+    </key>
+    <key type="s" name="alt-tab-detail-stop">
+      <default>'&lt;Alt&gt;Up'</default>
+      <summary>Key to collapse windows in the switcher</summary>
+      <description>fixme</description>
+    </key>
+    <key type="s" name="alt-tab-next-window">
+      <default>'Disabled'</default>
+      <summary>Key to flip through windows in the switcher</summary>
+      <description>fixme</description>
+    </key>
+    <key type="s" name="alt-tab-prev-window">
+      <default>'Disabled'</default>
+      <summary>Key to flip through windows in the switcher backwards</summary>
+      <description>fixme</description>
+    </key>
+    <key type="b" name="show-minimized-windows">
+      <default>true</default>
+      <summary>Show minimized windows in switcher</summary>
+      <description>Hack to enable minimized windows in switcher. Disable and report bugs if problems are caused</description>
+    </key>
+    <key type="i" name="backlight-mode">
+      <default>0</default>
+      <summary>Backlight Mode</summary>
+      <description>Change how the icons are backlit (0 = Backlight Always On, 1 = Backlight Toggles, 2 = Backlight Always Off, 3 = Edge Illumination Toggles, 4 = Backlight and Edge Illumination Toggles)</description>
+    </key>
+    <key type="i" name="launch-animation">
+      <default>1</default>
+      <summary>Launch Animation</summary>
+      <description>Animation played when a launcher icon is in the process of spawning a process (0 = None, 1 = Pulse Until Running, 2 = Blink)</description>
+    </key>
+    <key type="i" name="urgent-animation">
+      <default>2</default>
+      <summary>Urgent Animation</summary>
+      <description>Animation played when a launcher icon is in the urgent state (0 = None, 1 = Pulse, 2 = Wiggle)</description>
+    </key>
+    <key type="d" name="panel-opacity">
+      <default>1.0</default>
+      <summary>Panel Opacity</summary>
+      <description>The opacity of the Panel background. (0.0 - 1.0)</description>
+    </key>
+    <key type="d" name="launcher-opacity">
+      <default>0.6667</default>
+      <summary>Launcher Opacity</summary>
+      <description>The opacity of the Launcher background. (0.0 - 1.0)</description>
+    </key>
+    <key type="i" name="icon-size">
+      <default>48</default>
+      <summary>Launcher icon size</summary>
+      <description>The size of the launcher icons (32 - 64)</description>
+    </key>
+    <key type="i" name="autohide-animation">
+      <default>3</default>
+      <summary>Hide Animation</summary>
+      <description>Animation played when the launcher is showing or hiding (0 = Fade on bfb and Slide, 1 = Slide only, 2 = Fade only, 3 = Fade and Slide)</description>
+    </key>
+    <key type="i" name="dash-blur-experimental">
+      <default>2</default>
+      <summary>Dash Blur</summary>
+      <description>Type of blur in the Dash (0 = No Blur, 1 = Static Blur, 2 = Active Blur)</description>
+    </key>
+    <key type="i" name="automaximize-value">
+      <default>75</default>
+      <summary>Automaximize value</summary>
+      <description>The minimum value to trigger automaximize. (1 - 100)</description>
+    </key>
+    <key type="i" name="devices-option">
+      <default>1</default>
+      <summary>Show Devices</summary>
+      <description>Show devices in the launcher (0 = Never, 1 = Only Mounted, 2 = Always)</description>
+    </key>
+  </schema>
+</schemalist>

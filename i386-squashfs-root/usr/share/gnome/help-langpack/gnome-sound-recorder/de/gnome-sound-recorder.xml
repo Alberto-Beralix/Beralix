@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.5.2">
+<!ENTITY manrevision "2.5">
+<!ENTITY date "February 2004">
+<!ENTITY app "Sound Recorder">
+<!ENTITY ug "GNOME Desktop User Guide">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="de">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Audio-Recorder-Handbuch V2.5</title>       
+
+    <copyright> 
+      <year>2002</year>
+      <year>2003</year> 
+      <year>2004</year> 
+      <holder>Sun Microsystems</holder> 
+    </copyright><copyright><year>2008, 2009</year><holder>Mario Blättermann (mariobl@gnome.org)</holder></copyright> 
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2003</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <abstract role="description">
+      <para>Audio-Recorder ist eine einfache Anwendung zum Aufnehmen und Abspielen verschiedener Audiodateien</para>
+    </abstract>
+
+    <publisher> 
+      <publishername>GNOME-Dokumentationsprojekt</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Das vorliegende Dokument kann gemäß den Bedingungen der GNU Free Documentation License (GFDL), Version 1.1 oder jeder späteren, von der Free Software Foundation veröffentlichten Version ohne unveränderbare Abschnitte sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem <ulink type="help" url="ghelp:fdl">Link</ulink> oder in der mit diesem Handbuch gelieferten Datei COPYING-DOCS.</para>
+         <para>Dieses Handbuch ist Teil einer Sammlung von GNOME-Handbüchern, die unter der GFDL veröffentlicht werden. Wenn Sie dieses Handbuch getrennt von der Sammlung weiterverbreiten möchten, können Sie das tun, indem Sie eine Kopie der Lizenz zum Handbuch hinzufügen, wie es in Abschnitt 6 der Lizenz beschrieben ist.</para>
+
+	<para>Viele der Namen, die von Unternehmen verwendet werden, um ihre Produkte und Dienstleistungen von anderen zu unterscheiden, sind eingetragene Warenzeichen. An den Stellen, an denen diese Namen in einer GNOME-Dokumentation erscheinen, werden die Namen in Großbuchstaben oder mit einem großen Anfangsbuchstaben geschrieben, wenn das GNOME-Dokumentationsprojekt auf diese Warenzeichen hingewiesen wird.</para>
+
+	<para>DAS DOKUMENT UND VERÄNDERTE FASSUNGEN DES DOKUMENTS WERDEN UNTER DEN BEDINGUNGEN DER GNU FREE DOCUMENTATION LICENSE ZUR VERFÜGUNG GESTELLT MIT DEM WEITERGEHENDEN VERSTÄNDNIS, DASS: <orderedlist>
+		<listitem>
+		  <para>DIESES DOKUMENT WIRD »WIE VORLIEGEND« GELIEFERT, OHNE GARANTIEN IRGENDEINER ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES BEZIEHT SICH AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT ODER VERÄNDERTE FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR EINEN BESTIMMTEN ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER VERLETZT. DAS VOLLE RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER VERÄNDERTE FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE EIN DOKUMENT ODER EINE VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART BEINHALTEN, TRAGEN SIE (NICHT DER URSPRUNGSAUTOR, DER AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR NOTWENDIGE DIENSTLEISTUNGEN, REPARATUREN ODER FEHLERKORREKTUREN. DIESER HAFTUNGSAUSSCHLUSS IST EIN ESSENZIELLER TEIL DIESER LIZENZ. DIE VERWENDUNG EINES DOKUMENTS ODER EINER VERÄNDERTEN VERSION DES DOKUMENTS IST NICHT GESTATTET AUßER UNTER BEACHTUNG DIESES HAFTUNGSAUSSCHLUSSES UND</para>
+		</listitem>
+		<listitem>
+		  <para>UNTER KEINEN UMSTÄNDEN UND AUF BASIS KEINER RECHTSGRUNDLAGE, EGAL OB DURCH UNERLAUBTEN HANDLUNGEN (EINSCHLIEßLICH FAHRLÄSSIGKEIT), VERTRAG ODER ANDERWEITIG KANN DER AUTOR, URSPRUNGSAUTOR, EIN MITWIRKENDER ODER EIN VERTRIEBSPARTNER DIESES DOKUMENTS ODER EINER VERÄNDERTEN FASSUNG DES DOKUMENTS ODER EIN ZULIEFERER EINER DIESER PARTEIEN, HAFTBAR GEMACHT WERDEN FÜR DIREKTE, INDIREKTE, SPEZIELLE, VERSEHENTLICHE ODER FOLGESCHÄDEN JEGLICHER ART, EINSCHLIEßLICH UND OHNE EINSCHRÄNKUNGEN SCHÄDEN DURCH VERLUST VON KULANZ, ARBEITSAUSFALL, COMPUTERVERSAGEN ODER COMPUTERFEHLFUNKTIONEN ODER ALLE ANDEREN SCHÄDEN ODER VERLUSTE, DIE SICH AUS ODER IN VERBINDUNG MIT DER VERWENDUNG DES DOKUMENTS UND VERÄNDERTER FASSUNGEN DES DOKUMENTS ERGEBEN, AUCH WENN DIE OBEN GENANNTEN PARTEIEN ÜBER DIE MÖGLICHKEIT SOLCHER SCHÄDEN INFORMIERT WAREN.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Sun</firstname> 
+	<surname>GNOME-Dokumentationsteam</surname> 
+	<affiliation> 
+	  <orgname>Sun Microsystems</orgname> 
+	  <address/> 
+	</affiliation> 
+      </author> 
+
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>translator@gnome.org</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+
+    <revhistory>
+      <revision> 
+			<revnumber>Audio-Recorder-Handbuch V2.5</revnumber> 
+			<date>Februar 2004</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME-Dokumentationsteam</para>
+	  			<para role="publisher">GNOME-Dokumentationsprojekt</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Audiorecorder-Handbuch V2.4</revnumber> 
+			<date>September 2003</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME-Dokumentationsteam</para>
+	  			<para role="publisher">GNOME-Dokumentationsprojekt</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Audio-Recorder-Handbuch V2.3</revnumber> 
+			<date>Januar 2003</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME-Dokumentationsteam</para>
+	  			<para role="publisher">GNOME-Dokumentationsprojekt</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Audio-Recorder-Handbuch V2.2</revnumber> 
+			<date>August 2002</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME-Dokumentationsteam</para>
+	  			<para role="publisher">GNOME-Dokumentationsprojekt</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Audio-Recorder-Handbuch V2.1</revnumber> 
+			<date>Juni 2002</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME-Dokumentationsteam</para>
+	  			<para role="publisher">GNOME-Dokumentationsprojekt</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Audio-Recorder-Handbuch V2.0</revnumber> 
+			<date>Mai 2002</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME-Dokumentationsteam</para>
+	  			<para role="publisher">GNOME-Dokumentationsprojekt</para>
+			</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Dieses Handbuch beschreibt Version 2.5.2 von Audio-Recorder</releaseinfo> 
+    <legalnotice> 
+      <title>Rückmeldungen</title> 
+      <para>Um Fehler zu melden oder einen Vorschlag zur Anwendung <application>Audio-Recorder</application> oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen auf der <ulink url="ghelp:gnome-feedback" type="help">GNOME-Seite für Rückmeldungen</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>Audio-Recorder</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="grecord-introduction"> 
+    <title>Einführung</title> 
+    <para>Die <application>Audio-Recorder</application>-Anwendung erlaubt Ihnen das Aufnehmen und Abspielen von <filename>.flac</filename>, <filename>.oga</filename> (OGG-Audio, oder <filename>.oga</filename>), und <filename>.wav</filename>-Audiodateien.</para>
+  </sect1>
+
+  <sect1 id="grecord-getting-started">
+    <title>Erste Schritte</title> 
+
+    <para>Sie können <application>Sound Recorder</application> auf folgende Arten starten:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Menü <guilabel>Anwendungen</guilabel></term>
+    		<listitem>
+                  <para>Wählen Sie <menuchoice><guisubmenu>Unterhaltungsmedien</guisubmenu><guimenuitem>Audio-Recorder</guimenuitem></menuchoice>.</para> 
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Befehlszeile</term>
+    		<listitem>
+    		<para>Führen Sie folgenden Befehl aus: <command>gnome-sound-recorder</command></para>
+    		<para> 		 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+
+    <para>Wenn Sie <application>Audio-Recorder</application> starten, wird das folgende Fenster angezeigt.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="grecord-fig"> 
+	<title>Das Fenster von Audio-Recorder</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/grecord_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Zeigt das Hauptfenster von Audio-Recorder. Enthält Menüleiste, Werkzeugleiste, Fortschrittsleiste und Statusleiste.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="grecord-usage"> 
+    <title>Benutzung</title>
+
+    <sect2 id="grecord-record">
+    	<title>So starten Sie eine neue Aufnahme</title>
+    	<para>Um eine neue Aufnahme zu starten, führen Sie die folgenden Schritte aus:</para> 
+    	<orderedlist>
+    		<listitem><para>Wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Neu</guimenuitem></menuchoice>.</para></listitem>
+    		<listitem><para>Öffnen Sie das <guilabel>Aufnehmen als:</guilabel>-Aufklappmenü, um eines der folgenden Aufnahmeformate auszuwählen:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para><guilabel>CD-Qualität, verlustfrei</guilabel></para>
+                  </listitem>
+                  <listitem>
+                    <para><guilabel>CD-Qualität, verlustbehaftet</guilabel></para>
+                  </listitem>
+                  <listitem>
+                    <para><guilabel>Sprache</guilabel></para>
+                  </listitem>
+                </itemizedlist>
+</listitem>
+    		<listitem><para>Um eine Aufnhme zu starten, wählen Sie <menuchoice><guimenu>Steuerung</guimenu><guimenuitem>Aufnahme</guimenuitem></menuchoice>.</para></listitem>
+    		<listitem><para>Um die Aufnahme zu stoppen, wählen Sie <menuchoice><guimenu>Steuerung</guimenu><guimenuitem>Stopp</guimenuitem></menuchoice>.</para></listitem>
+    		<listitem><para>Um die Aufnahme wiederzugeben, wählen Sie <menuchoice><guimenu>Steuerung</guimenu><guimenuitem>Wiedergabe</guimenuitem></menuchoice>.</para></listitem>
+		<listitem><para>Um den Audio-Mixer zu öffnen, wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Lautstärkeregler öffnen</guimenuitem></menuchoice>.</para></listitem>
+    		<listitem><para>Um die Aufnahme zu speichern, wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Speichern unter</guimenuitem></menuchoice>, dann geben Sie den Namen der Audio-Datei ein.</para></listitem>    		
+    	</orderedlist>
+    </sect2>
+ 
+    <sect2 id="grecord-play">
+    	<title>So spielen Sie eine Audiodatei ab</title>
+    	<para>Um eine Audiodatei abzuspielen,wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Öffnen</guimenuitem></menuchoice>. Wählen Sie im Dialog <guilabel>Eine Datei öffnen</guilabel> eine Audio-Datei aus, dann klicken Sie auf <guibutton>OK</guibutton>. <application>Audio-Recorder</application> zeigt die Spielzeit der Datei in Minuten und Sekunden unten im Fortschrittsbalken an. Um den Abspielvorgang zu starten, wählen Sie <menuchoice><guimenu>Steuerung</guimenu><guimenuitem>Wiedergabe</guimenuitem></menuchoice>. Die Anzeige bewegt sich entlang des Fortschrittsbalkens, wenn die Audio-Datei abgespielt wird.</para> 
+    </sect2>  
+ 
+    <sect2 id="grecord-props">
+    	<title>So zeigen Sie die Eigenschaften einer Datei an</title>
+    	<para>Um die Eigenschaften einer Datei anzuzeigen, wählen Sie <menuchoice><guimenu>Datei</guimenu><guimenuitem>Eigenschaften</guimenuitem></menuchoice>. <application>Audio-Recorder</application> zeigt die folgenden Informationen über die Datei an:</para>
+        <variablelist>
+          <varlistentry>
+            <term><guilabel>Dateiinformationen</guilabel></term>
+            <listitem>
+              <para><guilabel>Ordner</guilabel> zeigt den Namen des Ordners an, in welchem sich die Datei befindet.</para>
+              <para><guilabel>Dateiname</guilabel> zeigt den Namen der Datei an.</para>
+              <para><guilabel>Dateigröße</guilabel> zeigt die Größe der Datei an.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><guilabel>Audio-Informationen</guilabel></term>
+            <listitem>
+              <para><guilabel>Dateidauer</guilabel> zeigt die Spieldauer der Audiodaten in der Datei an.</para>
+              <para><guilabel>Anzahl der Kanäle</guilabel> zeigt die Anzahl der Kanäle der aufgenommenen Audiodaten an.</para>
+              <para><guilabel>Samplerate</guilabel> zeigt die Samplerate der aufgenommenen Audiodaten an.</para>
+              <para><guilabel>Bitrate</guilabel> zeigt die Bitrate der aufgenommenen Audiodaten an.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+ 
+    </sect2>  
+    
+  </sect1>
+
+</article>

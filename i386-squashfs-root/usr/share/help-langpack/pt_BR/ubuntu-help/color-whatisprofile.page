@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-whatisprofile" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="color#profiles"/>
+    <desc>Um perfil de cor é um simples arquivo que expressa a resposta de um espaço de cor ou dispositivo.</desc>
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>O que é a cor do perfil?</title>
+
+  <p>Um perfil de cor é um conjunto de dados que caracterizam tanto um dispositivo, tal como um projetor, ou um espaço de cor, tal como o sRGB.</p>
+  <p>A maioria dos perfis de cor estão na forma de um perfil ICC, que é um pequeno arquivo com extensão <input>.ICC</input> ou <input>.ICM</input>.</p>
+  <p>Perfis de cores podem ser embutidos nas imagens para especificar a faixa de intervalo de gama dos dados. Isso assegura que os usuários vejam as mesmas cores em diferentes dispositivos.</p>
+  <p>Todo dispositivo que processa cores deveria ter o seu próprio perfil ICC, e quando isto acontece é dito que o sistema tem um <em>fluxo de trabalho com cores gerenciadas ponta-a-ponta</em>. Com este tipo de fluxo de trabalho, você pode ter certeza que as cores não estão sendo perdidas ou modificadas.</p>
+
+</page>

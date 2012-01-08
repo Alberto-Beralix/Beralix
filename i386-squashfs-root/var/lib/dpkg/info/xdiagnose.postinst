@@ -1,0 +1,20 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installudev
+if [ "$1" = configure ]; then
+	if [ -e "/etc/udev/rules.d/z60_xdiagnose.rules" ]; then
+		echo "Preserving user changes to /etc/udev/rules.d/40-xdiagnose.rules ..."
+		if [ -e "/etc/udev/rules.d/40-xdiagnose.rules" ]; then
+			mv -f "/etc/udev/rules.d/40-xdiagnose.rules" "/etc/udev/rules.d/40-xdiagnose.rules.dpkg-new"
+		fi
+		mv -f "/etc/udev/rules.d/z60_xdiagnose.rules" "/etc/udev/rules.d/40-xdiagnose.rules"
+	fi
+fi
+# End automatically added section
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p xdiagnose 
+fi
+
+# End automatically added section

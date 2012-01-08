@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+	<schema path="/org/gnome/Totem/" id="org.gnome.totem" gettext-domain="totem">
+		<key type="b" name="lock-screensaver-on-audio">
+			<default>true</default>
+			<summary>Allow the screensaver to activate when playing audio</summary>
+			<description>Allow the screensaver to activate when playing audio. Disable if you have monitor-powered speakers.</description>
+		</key>
+		<key type="b" name="show-visualizations">
+			<default>true</default>
+			<summary>Show visual effects when no video is displayed</summary>
+			<description>Show visual effects when playing an audio only file.</description>
+		</key>
+		<key type="s" name="visualization-name">
+			<default>'goom'</default>
+			<summary>Name of the visual effects plugin</summary>
+		</key>
+		<key type="i" name="brightness">
+			<default>32767</default>
+			<summary>The brightness of the video</summary>
+		</key>
+		<key type="i" name="contrast">
+			<default>32767</default>
+			<summary>The contrast of the video</summary>
+		</key>
+		<key type="i" name="hue">
+			<default>32767</default>
+			<summary>The hue of the video</summary>
+		</key>
+		<key type="i" name="saturation">
+			<default>32767</default>
+			<summary>The saturation of the video</summary>
+		</key>
+		<key type="b" name="auto-resize">
+			<default>false</default>
+			<summary>Resize the canvas automatically on file load</summary>
+		</key>
+		<key name="connection-speed" enum="org.gnome.totem.BvwConnectionSpeed">
+			<default>'lan'</default>
+			<summary>Network connection speed</summary>
+			<description>Approximate network connection speed, used to select quality on media over the network.</description>
+		</key>
+		<key type="b" name="repeat">
+			<default>false</default>
+			<summary>Repeat mode</summary>
+		</key>
+		<key type="b" name="shuffle">
+			<default>false</default>
+			<summary>Shuffle mode</summary>
+		</key>
+		<key type="b" name="disable-deinterlacing">
+			<default>false</default>
+			<summary>Whether to disable deinterlacing for interlaced movies</summary>
+		</key>
+		<key type="b" name="debug">
+			<default>false</default>
+			<summary>Whether to enable debug for the playback engine</summary>
+		</key>
+		<key name="audio-output-type" enum="org.gnome.totem.BvwAudioOutputType">
+			<default>'stereo'</default>
+			<summary>Type of audio output to use</summary>
+		</key>
+		<key name="visualization-quality" enum="org.gnome.totem.BvwVisualizationQuality">
+			<default>'small'</default>
+			<summary>Visualization quality setting</summary>
+			<description>Quality setting for the audio visualization.</description>
+		</key>
+		<key type="d" name="network-buffer-threshold">
+			<default>2</default>
+			<summary>Network buffering threshold</summary>
+			<description>Amount of data to buffer for network streams before starting to display the stream (in seconds).</description>
+		</key>
+		<key type="s" name="subtitle-font">
+			<default>'Sans Bold 20'</default>
+			<summary>Subtitle font</summary>
+			<description>Pango font description for subtitle rendering.</description>
+		</key>
+		<key type="s" name="subtitle-encoding">
+			<default l10n="messages" context="subtitle-encoding">
+				
+				'UTF-8'</default>
+			<summary>Subtitle encoding</summary>
+			<description>Encoding character set for subtitle.</description>
+		</key>
+		<key type="s" name="open-uri">
+			<default>''</default>
+			<summary>Default location for the "Open..." dialogs</summary>
+			<description>Default location for the "Open..." dialogs. Default is the current directory.</description>
+		</key>
+		<key type="s" name="screenshot-save-uri">
+			<default>''</default>
+			<summary>Default location for the "Take Screenshot" dialogs</summary>
+			<description>Default location for the "Take Screenshot" dialogs. Default is the Pictures directory.</description>
+		</key>
+		<key type="b" name="disable-user-plugins">
+			<default>false</default>
+			<summary>Whether to disable the plugins in the user's home directory</summary>
+		</key>
+		<key type="b" name="disable-keyboard-shortcuts">
+			<default>false</default>
+			<summary>Whether to disable the keyboard shortcuts</summary>
+		</key>
+		<key type="b" name="autoload-subtitles">
+			<default>false</default>
+			<summary>Whether to autoload text subtitle files when a movie is loaded</summary>
+		</key>
+		<key type="b" name="autoload-chapters">
+			<default>true</default>
+			<summary>Whether to autoload external chapter files when a movie is loaded</summary>
+		</key>
+		<key type="b" name="remember-position">
+			<default>false</default>
+			<summary>Whether to remember the position of played audio/video files when pausing or closing them</summary>
+		</key>
+		<key type="as" name="active-plugins">
+			<default>['skipto','chapters','screenshot','media_player_keys','screensaver','movie-properties','save-file', 'youtube']</default>
+			<summary>Active plugins list</summary>
+			<description>A list of the names of the plugins which are currently active (loaded and running).</description>
+		</key>
+	</schema>
+</schemalist>

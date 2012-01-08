@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-share" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="files" group="more"/>
+<!--<link type="guide" xref="net#sharing"/> Hiding this link until we re-add the net-sharing page -->
+    <link type="seealso" xref="nautilus-connect"/>
+    <desc>Übertragen Sie einfach Dateien zu Ihren Kontakten und Geräten aus der Dateiverwaltung heraus.</desc>
+
+    <revision version="11.04" date="2011-04-29" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Dateien freigeben und übertragen</title>
+
+<comment>
+  <cite date="2011-04-01">shaunm</cite>
+  <p>If we get gnome-user-share integrated nicely in 3.2, we should discuss
+  or link that here.</p>
+</comment>
+
+<p>Sie können Dateien ganz einfach weitergeben oder auf externe Geräte oder <link xref="nautilus-connect">Netzwerkfreigaben</link> direkt aus der Dateiverwaltung heraus übertragen.</p>
+
+<steps>
+  <item><p>Öffnen Sie die <link xref="files-browse">Dateiverwaltung</link>.</p></item>
+  <item><p>Suchen Sie nach der Datei, die Sie übertragen wollen.</p></item>
+  <item><p>Klicken Sie mit der rechten Maustaste auf die Datei und wählen Sie <gui>Senden an</gui>.</p></item>
+  <item><p>Das Fenster <gui>Senden an</gui> erscheint. Wählen Sie aus, wohin Sie die Datei senden wollen und klicken Sie auf <gui>Senden</gui>. Die Liste weiter unten gibt Ihnen weitere Informationen.</p></item>
+</steps>
+
+<note style="tip">
+  <p>Sie können mehrere Dateien auf einmal senden. Wählen Sie mehrere Dateien, indem Sie die <key>Strg</key>-Taste gedrückt halten, klicken Sie dann mit der rechten Maustaste auf eine der gewählten Dateien. Sie können die Dateien automatisch in ein tar- oder zip-Archiv packen.</p>
+</note>
+
+<list>
+  <title>Ziele</title>
+  <item><p>Um die Datei per E-Mail zu senden, wählen Sie <gui>E-Mail</gui> und geben Sie die E-Mail-Adresse des Empfängers ein.</p></item>
+  <item><p>Um die Datei an einen Sofortnachrichten-Kontakt zu senden, wählen Sie <gui>Sofortnachricht</gui> und wählen Sie den Kontakt aus der Auswahlliste. Ihre Sofortnachrichtenanwendung muss dafür möglicherweise erst gestartet werden.</p></item>
+  <item><p>Um die Datei auf CD oder DVD zu brennen, wählen Sie <gui>CD/DVD-Ersteller</gui>. Für weitere Informationen siehe <link xref="files-disc-write"/>.</p></item>
+  <item><p>Um die Datei an ein Bluetooth-Gerät zu senden, wählen Sie <gui>Bluetooth (OBEX Push)</gui>. Weitere Informationen finden Sie unter <link xref="bluetooth"/>.</p></item>
+  <item><p>Um die Datei auf ein externes Gerät wie einen USB-Stick zu kopieren oder um sie auf einen Server hochzuladen, mit dem Sie verbunden sind, wählen Sie <gui>Entfernbare Medien und Freigaben</gui>, wählen Sie dann das Gerät oder den Server, auf den Sie die Dateien kopieren wollen.</p></item>
+</list>
+
+</page>

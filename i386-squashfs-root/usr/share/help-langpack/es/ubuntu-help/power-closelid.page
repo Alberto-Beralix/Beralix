@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="question" id="power-closelid" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="power"/>
+    <link type="seealso" xref="power-suspendfail"/>
+    
+    <desc>Los portátiles se suspenden cuando se cierra la tapa para ahorrar energía.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Por qué se apaga mi equipo cuando cierro la tapa?</title>
+
+<p>Cuando cierra la pantalla de su portátil, su equipo se <em>suspende</em> para ahorrar energía. Esto quiere decir que el equipo no está realmente apagado - solo está durmiendo. Puede despertarlo abriendo de nuevo la pantalla. Si no se despierta así, pruebe pulsando un botón del ratón o una tecla cualquiera. Si sigue sin funcionar, pulse el botón de encendido.</p>
+
+<p>Algunos equipos no se suspenden correctamente, normalmente porque su hardware no funciona completamente con el sistema operativo (p. ej. los controladores de Linux son incompletos). En este caso, verá que no puede reanudar su equipo después de haber cerrado la tapa del portátil. Puede intentar <link xref="power-suspendfail">resolver problemas al suspender</link>, o puede evitar que el equipo intente suspenderse cuando cierre la tapa de su portátil.</p>
+
+<section id="nosuspend">
+ <title>Parar la suspensión del equipo cuando se cierra la tapa</title>
+ <p>Si no quiere que el equipo se suspenda cuando cierre la tapa del portátil, puede cambiar las opciones de este comportamiento. Para hacer que el equipo oscurezca la pantalla (en lugar de suspender el equipo) cuando cierre la tapa del portátil:</p>
+ <note style="warning">
+   <p>Be very careful if you change this setting. Some laptops can overheat
+   if they are left running with the lid closed, especially if they are in
+   a confined place like a backpack.</p>
+ </note>
+ <steps>
+   <item>
+     <p>Abra la aplicación <app>Terminal</app> desde el <gui>Tablero</gui>.</p>
+   </item>
+   <item>
+     <p>Para cambiar la configuración usada cuando se trabaja con baterías, teclee esta orden y pulse <key>Intro</key>:</p>
+     <screen>gsettings set org.gnome.settings-daemon.plugin.power lid-close-battery-action blank</screen>
+   </item>
+   <item>
+     <p>Para cambiar el ajuste utilizado al utilizar una fuente de CA, escriba este comando y pulse <key>Intro</key>:</p>
+     <screen>gsettings set org.gnome.settings-daemon.plugin.power lid-close-ac-action blank</screen>
+   </item>
+ </steps>
+ <p>There are other settings available besides "blank," such as "nothing," which causes the computer to do nothing.</p>
+</section>
+
+</page>

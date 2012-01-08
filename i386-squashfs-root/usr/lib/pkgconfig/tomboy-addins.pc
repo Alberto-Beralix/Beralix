@@ -1,0 +1,9 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+addinsdir=${exec_prefix}/lib/tomboy/addins
+
+Name: Tomboy Addin Library
+Description: Library providing the interfaces for Tomboy addins
+Version: 1.8.0
+Libs: -r:${libdir}/tomboy/Tomboy.exe

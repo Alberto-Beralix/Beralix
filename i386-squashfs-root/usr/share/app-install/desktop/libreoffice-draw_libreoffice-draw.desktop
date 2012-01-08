@@ -1,0 +1,24 @@
+[Desktop Entry]
+X-AppInstall-Package=libreoffice-draw
+X-AppInstall-Popcon=63663
+X-AppInstall-Section=main
+
+Version=1.0
+Terminal=false
+Icon=libreoffice34-draw
+Type=Application
+Categories=Office;Graphics;
+Exec=libreoffice --draw %U
+MimeType=application/vnd.oasis.opendocument.graphics;application/vnd.oasis.opendocument.graphics-flat-xml;application/vnd.oasis.opendocument.graphics-template;application/vnd.sun.xml.draw;application/vnd.sun.xml.draw.template;application/vnd.stardivision.draw;
+Name=LibreOffice Draw
+GenericName=Drawing Program
+Comment=Create and edit drawings, flow charts, and logos by using Draw.
+InitialPreference=5
+X-Ayatana-Desktop-Shortcuts=New
+[New Shortcut Group]
+Name=New Drawing
+Exec=libreoffice -draw %U
+TargetEnvironment=Unity
+X-KDE-Protocols=file,http,smb,ftp,webdav
+
+X-Ubuntu-Gettext-Domain=app-install-data

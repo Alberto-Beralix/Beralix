@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <plugin useBcop="true" name="opengl">
+	<short>OpenGL</short>
+	<long>OpenGL Plugin</long>
+	<category>General</category>
+	<deps>
+	    <requirement>
+		<plugin>composite</plugin>
+	    </requirement>
+	</deps>
+	<options>
+	    <option type="int" name="texture_filter">
+		<short>Texture Filter</short>
+		<short xml:lang="bn">টেক্সচার ফিল্টার</short>
+		<short xml:lang="bn_IN">টেক্সচার ফিল্টার</short>
+		<short xml:lang="ca">Filtre de textura</short>
+		<short xml:lang="cs">Filtr textur</short>
+		<short xml:lang="da">Teksturfilter</short>
+		<short xml:lang="de">Strukturfilter</short>
+		<short xml:lang="el">Φίλτρο Υφών</short>
+		<short xml:lang="es">Filtro de Textura</short>
+		<short xml:lang="eu">Testura iragazkia</short>
+		<short xml:lang="fi">Tekstuurisuodatin</short>
+		<short xml:lang="fr">Filtre de texture</short>
+		<short xml:lang="gl">Filtro de Textura</short>
+		<short xml:lang="gu">લખાણ ગાળક</short>
+		<short xml:lang="he">מסנן טקסטורות</short>
+		<short xml:lang="hu">Textúraszűrő</short>
+		<short xml:lang="it">Filtro texture</short>
+		<short xml:lang="ja">テクスチャ・フィルタ</short>
+		<short xml:lang="ko">텍스쳐 필터</short>
+		<short xml:lang="nb">Teksturfilter</short>
+		<short xml:lang="nl">Texturen filter</short>
+		<short xml:lang="or">ଟେକ୍ସଚର ଫିଲ୍ଟର</short>
+		<short xml:lang="pl">Filtr tekstury</short>
+		<short xml:lang="pt">Filtro de Textura</short>
+		<short xml:lang="pt_BR">Filtro de Textura</short>
+		<short xml:lang="ro">Filtru textură</short>
+		<short xml:lang="ru">Фильтр текстур</short>
+		<short xml:lang="sk">Filter textúr</short>
+		<short xml:lang="sv">Texturfilter</short>
+		<short xml:lang="tr">Doku Filtresi</short>
+		<short xml:lang="uk">Фільтр текстур</short>
+		<short xml:lang="zh_CN">纹理过滤器</short>
+		<short xml:lang="zh_TW">材質過濾器</short>
+		<long>Texture filtering</long>
+		<long xml:lang="bn">টেক্সচার ফিল্টার করা</long>
+		<long xml:lang="bn_IN">টেক্সচার ফিল্টার করা</long>
+		<long xml:lang="cs">Filtrování textur</long>
+		<long xml:lang="de">Texturfilter</long>
+		<long xml:lang="el">Φιλτράρισμα υφών</long>
+		<long xml:lang="es">Filtrado de Texturas</long>
+		<long xml:lang="eu">Testura iragazten</long>
+		<long xml:lang="fi">Tekstuurisuodatus</long>
+		<long xml:lang="fr">Filtrage de texture</long>
+		<long xml:lang="gl">Filtro de Texturas</long>
+		<long xml:lang="gu">લખાણ ગાળણ</long>
+		<long xml:lang="he">סינון טקסטורות</long>
+		<long xml:lang="hu">Textúraszűrés</long>
+		<long xml:lang="it">Modalità di filtro texture</long>
+		<long xml:lang="ja">テクスチャ・フィルタ</long>
+		<long xml:lang="ko">텍스쳐 필터링</long>
+		<long xml:lang="nb">Teksturfiltrering</long>
+		<long xml:lang="nl">Texturen filteren</long>
+		<long xml:lang="or">ଟେକ୍ସଟର ଫିଲ୍ଟର କରିବା</long>
+		<long xml:lang="pl">Filtrowanie tekstur</long>
+		<long xml:lang="pt">Filtro de texturas</long>
+		<long xml:lang="pt_BR">Filtro de Texturas</long>
+		<long xml:lang="ro">Filtrare textură</long>
+		<long xml:lang="ru">Фильтрация текстур</long>
+		<long xml:lang="sk">Filtrovanie textúr</long>
+		<long xml:lang="sv">Texturfiltrering</long>
+		<long xml:lang="tr">Doku filtreleme</long>
+		<long xml:lang="uk">Фільтрація текстур</long>
+		<long xml:lang="zh_CN">纹理过滤</long>
+		<long xml:lang="zh_TW">材質篩選</long>
+		<default>1</default>
+		<min>0</min>
+		<max>2</max>
+		<desc>
+		    <value>0</value>
+		    <name>Fast</name>
+		    <name xml:lang="bg">Бързо</name>
+		    <name xml:lang="bn">দ্রুত</name>
+		    <name xml:lang="bn_IN">দ্রুত</name>
+		    <name xml:lang="ca">Ràpid</name>
+		    <name xml:lang="cs">Rychlé</name>
+		    <name xml:lang="da">Hurtig</name>
+		    <name xml:lang="de">Schnell</name>
+		    <name xml:lang="el">Γρήγορο</name>
+		    <name xml:lang="es">Rápido</name>
+		    <name xml:lang="eu">Azkarra</name>
+		    <name xml:lang="fi">Nopea</name>
+		    <name xml:lang="fr">Rapide</name>
+		    <name xml:lang="gl">Rápido</name>
+		    <name xml:lang="gu">ઝડપી</name>
+		    <name xml:lang="he">מהיר</name>
+		    <name xml:lang="hi">तेज</name>
+		    <name xml:lang="hr">Brzina</name>
+		    <name xml:lang="hu">Gyors</name>
+		    <name xml:lang="it">Veloce</name>
+		    <name xml:lang="ja">速さ重視</name>
+		    <name xml:lang="ko">빠름</name>
+		    <name xml:lang="nb">Rask</name>
+		    <name xml:lang="nl">Snel</name>
+		    <name xml:lang="or">ଶୀଘ୍ର</name>
+		    <name xml:lang="pa">ਤੇਜ਼</name>
+		    <name xml:lang="pl">Szybki</name>
+		    <name xml:lang="pt">Rápido</name>
+		    <name xml:lang="pt_BR">Rápido</name>
+		    <name xml:lang="ro">Rapidă</name>
+		    <name xml:lang="ru">Быстрое</name>
+		    <name xml:lang="sk">Rýchlo</name>
+		    <name xml:lang="sv">Snabb</name>
+		    <name xml:lang="tr">Hızlı</name>
+		    <name xml:lang="uk">Швидко</name>
+		    <name xml:lang="zh_CN">快速</name>
+		    <name xml:lang="zh_TW">快速</name>
+		</desc>
+		<desc>
+		    <value>1</value>
+		    <name>Good</name>
+		    <name xml:lang="bg">Добро</name>
+		    <name xml:lang="bn">ভালো</name>
+		    <name xml:lang="bn_IN">ভালো</name>
+		    <name xml:lang="ca">Bo</name>
+		    <name xml:lang="cs">Dobré</name>
+		    <name xml:lang="da">God</name>
+		    <name xml:lang="de">Gut</name>
+		    <name xml:lang="el">Καλό</name>
+		    <name xml:lang="es">Bueno</name>
+		    <name xml:lang="eu">Ona</name>
+		    <name xml:lang="fi">Hyvä</name>
+		    <name xml:lang="fr">Bon</name>
+		    <name xml:lang="gl">Bo</name>
+		    <name xml:lang="gu">સરસ</name>
+		    <name xml:lang="he">טוב</name>
+		    <name xml:lang="hi">अच्छा</name>
+		    <name xml:lang="hr">Dobro</name>
+		    <name xml:lang="hu">Jó</name>
+		    <name xml:lang="it">Buono</name>
+		    <name xml:lang="ja">良</name>
+		    <name xml:lang="ko">좋음</name>
+		    <name xml:lang="nb">God</name>
+		    <name xml:lang="nl">Goed</name>
+		    <name xml:lang="or">ଉତ୍ତମ</name>
+		    <name xml:lang="pa">ਚੰਗਾ</name>
+		    <name xml:lang="pl">Dobry</name>
+		    <name xml:lang="pt">Bom</name>
+		    <name xml:lang="pt_BR">Bom</name>
+		    <name xml:lang="ro">Bună</name>
+		    <name xml:lang="ru">Хорошее</name>
+		    <name xml:lang="sk">V poriadku</name>
+		    <name xml:lang="sv">Bra</name>
+		    <name xml:lang="tr">İyi</name>
+		    <name xml:lang="uk">Добре</name>
+		    <name xml:lang="zh_CN">好</name>
+		    <name xml:lang="zh_TW">好</name>
+		</desc>
+		<desc>
+		    <value>2</value>
+		    <name>Best</name>
+		    <name xml:lang="bn">সর্বোত্তম</name>
+		    <name xml:lang="bn_IN">সর্বোত্তম</name>
+		    <name xml:lang="ca">Millor</name>
+		    <name xml:lang="cs">Nejlepší</name>
+		    <name xml:lang="da">Bedste</name>
+		    <name xml:lang="de">Beste</name>
+		    <name xml:lang="el">Βέλτιστο</name>
+		    <name xml:lang="es">El mejor</name>
+		    <name xml:lang="eu">Onena</name>
+		    <name xml:lang="fi">Paras</name>
+		    <name xml:lang="fr">Meilleur</name>
+		    <name xml:lang="gl">Mellor</name>
+		    <name xml:lang="gu">શ્રેષ્ઠ</name>
+		    <name xml:lang="he">מיטבי</name>
+		    <name xml:lang="hi">सर्वोत्तम</name>
+		    <name xml:lang="hr">Najbolji</name>
+		    <name xml:lang="hu">Legjobb</name>
+		    <name xml:lang="it">Ottimo</name>
+		    <name xml:lang="ja">最高</name>
+		    <name xml:lang="ko">최고</name>
+		    <name xml:lang="nb">Beste</name>
+		    <name xml:lang="nl">Best</name>
+		    <name xml:lang="or">ଉତ୍ତମ</name>
+		    <name xml:lang="pa">ਉੱਤਮ</name>
+		    <name xml:lang="pl">Najlepszy</name>
+		    <name xml:lang="pt">Melhor</name>
+		    <name xml:lang="pt_BR">Melhor</name>
+		    <name xml:lang="ro">Cea mai bună</name>
+		    <name xml:lang="ru">Наилучшее</name>
+		    <name xml:lang="sk">Najlepšie</name>
+		    <name xml:lang="sv">Bästa</name>
+		    <name xml:lang="tr">En iyi</name>
+		    <name xml:lang="uk">Найкраще</name>
+		    <name xml:lang="zh_CN">最佳</name>
+		    <name xml:lang="zh_TW">最佳</name>
+		</desc>
+	    </option>
+	    <option type="bool" name="lighting">
+		<short>Lighting</short>
+		<short xml:lang="bn">আলোকপাত</short>
+		<short xml:lang="bn_IN">আলোকপাত</short>
+		<short xml:lang="ca">Il·luminació</short>
+		<short xml:lang="cs">Světlo</short>
+		<short xml:lang="da">Belysning</short>
+		<short xml:lang="de">Beleuchtung</short>
+		<short xml:lang="el">Φωτισμός</short>
+		<short xml:lang="es">Iluminación</short>
+		<short xml:lang="eu">Argitasuna</short>
+		<short xml:lang="fi">Valaistus</short>
+		<short xml:lang="fr">Éclairage</short>
+		<short xml:lang="gl">Iluminación</short>
+		<short xml:lang="gu">પ્રકાશન</short>
+		<short xml:lang="he">תאורה</short>
+		<short xml:lang="hu">Világosítás</short>
+		<short xml:lang="it">Illuminazione</short>
+		<short xml:lang="ja">照明</short>
+		<short xml:lang="ko">조명 효과</short>
+		<short xml:lang="nb">Lyn</short>
+		<short xml:lang="nl">Belichting</short>
+		<short xml:lang="or">ଆଲୋକିତକରିବା</short>
+		<short xml:lang="pl">Oświetlenie</short>
+		<short xml:lang="pt">Iluminação</short>
+		<short xml:lang="pt_BR">Iluminação</short>
+		<short xml:lang="ro">Iluminare</short>
+		<short xml:lang="ru">Освещение</short>
+		<short xml:lang="sk">Osvetlenie</short>
+		<short xml:lang="sv">Ljussättning</short>
+		<short xml:lang="tr">Aydınlatma</short>
+		<short xml:lang="uk">Освітлення</short>
+		<short xml:lang="zh_CN">光线</short>
+		<short xml:lang="zh_TW">光源</short>
+		<long>Use diffuse light when screen is transformed</long>
+		<long xml:lang="bn">স্ক্রিন স্থানান্তরিত করার সময় বিচ্ছুরিত আলো প্রয়োগ করুন</long>
+		<long xml:lang="bn_IN">স্ক্রিন স্থানান্তরিত করার সময় বিচ্ছুরিত আলো প্রয়োগ করুন</long>
+		<long xml:lang="ca">Utilitza llum de difusió en transformar la pantalla</long>
+		<long xml:lang="cs">Použít rozptýlené světlo při transformaci okna</long>
+		<long xml:lang="da">Brug spredt lys, når skærmbilledet omdannes</long>
+		<long xml:lang="de">Beim Umwandeln des Bildschirms diffuses Licht verwenden</long>
+		<long xml:lang="el">Χρήση διάχυτου φωτός όταν η οθόνη μεταμορφώνεται</long>
+		<long xml:lang="es">Usa luz indirecta cuando se transforma la pantalla</long>
+		<long xml:lang="eu">Erabili argi barreiatua pantaila transformatzean</long>
+		<long xml:lang="fi">Käytä hajavaloa ruudun muuttuessa</long>
+		<long xml:lang="fr">Utiliser la lumière diffuse lorsque l'écran est transformé</long>
+		<long xml:lang="gl">Empregar luz difusa cando se transforma a pantalla</long>
+		<long xml:lang="gu">જ્યારે સ્ક્રીન પરિવહન થઈ રહી હોય ત્યારે આછો પ્રકાશ વાપરો</long>
+		<long xml:lang="he">השתמש בפיזור אור בעת שינוי צורת מסך</long>
+		<long xml:lang="hi">स्क्रीन के बदले जाने पर विसरित प्रकाश का प्रयोग करें</long>
+		<long xml:lang="hu">Szórt fény használata képernyő-transzformációnál</long>
+		<long xml:lang="it">Usa luce diffusa alla trasformazione della schermata</long>
+		<long xml:lang="ja">画面の変換時に拡散反射光を使用</long>
+		<long xml:lang="ko">화면이 전환될 때 빛이 퍼지는 사용</long>
+		<long xml:lang="nb">Bruk diffust lys når skjermen omdannes</long>
+		<long xml:lang="nl">Gebruik diffuus licht als het scherm wordt getransformeerd</long>
+		<long xml:lang="or">ୟେବେ ସ୍କ୍ରିନ ରୂପାନ୍ତରିତ ହୋଇଥାଏ, ବିକ୍ଷିପ୍ତ ଆଲୋକ ଉପୟୋଗ କର</long>
+		<long xml:lang="pa">ਜਦੋਂ ਸਕਰੀਨ ਟਰਾਂਸਫਰਮ ਕੀਤੀ ਜਾਵੇ ਤਾਂ ਹਲਕੀ ਲਾਈਟ ਵਰਤੋਂ</long>
+		<long xml:lang="pl">Używaj rozproszonego światła podczas przekształceń ekranu</long>
+		<long xml:lang="pt">Usar luz difusa quando a tela for transformada</long>
+		<long xml:lang="pt_BR">Usar luz difusa quando a tela for transformada</long>
+		<long xml:lang="ro">Utilizare lumină difuză la transformarea ecranului</long>
+		<long xml:lang="ru">Использование рассеянного света при преобразовании экрана</long>
+		<long xml:lang="sk">Použiť rozptýlené svetlo pri transformácii obrazovky</long>
+		<long xml:lang="sv">Använd diffus belysning när skärmen transformeras</long>
+		<long xml:lang="tr">Ekran boyutu değiştirildiğinde geçirgenlik ışığı kullan</long>
+		<long xml:lang="uk">Використання розсіяного світла при перетворенні екрану</long>
+		<long xml:lang="zh_CN">转换屏幕时使用漫射光</long>
+		<long xml:lang="zh_TW">在螢幕轉換時使用擴散光</long>
+		<default>false</default>
+	    </option>
+	    <option type="bool" name="sync_to_vblank">
+		<short>Sync To VBlank</short>
+		<short xml:lang="bg">Синхронизиране с VBlank</short>
+		<short xml:lang="bn">VBlank এ Sync </short>
+		<short xml:lang="bn_IN">VBlank এ Sync </short>
+		<short xml:lang="ca">Sincronitza amb enfosquiment vertical</short>
+		<short xml:lang="cs">Synchronizovat při VBlank </short>
+		<short xml:lang="da">Synkroniser med lodret slukning</short>
+		<short xml:lang="de">Mit VBlank synchronisieren</short>
+		<short xml:lang="el">Συγχρονισμός Στην Καθετη Ανανέωση</short>
+		<short xml:lang="es">Sincronizar con borrado vertical</short>
+		<short xml:lang="eu">VBlank-era sinkronizatu</short>
+		<short xml:lang="fi">Synkronoi VBlankiin</short>
+		<short xml:lang="fr">Sync vers VBlank</short>
+		<short xml:lang="gl">Sincronizar a VBlank</short>
+		<short xml:lang="gu">VBlank માં સુમેળ કરો</short>
+		<short xml:lang="he">סינכרון עם VBlank</short>
+		<short xml:lang="hi">VBlank में तुल्यकालित करें</short>
+		<short xml:lang="hu">Szinkronizálás VBlank jelre</short>
+		<short xml:lang="it">Sincronizzare con VBlank</short>
+		<short xml:lang="ja">垂直ブランクに同期化</short>
+		<short xml:lang="ko">VBlank에 동기화</short>
+		<short xml:lang="nb">Synkroniser til VBlank</short>
+		<short xml:lang="nl">Sync naar VBlank</short>
+		<short xml:lang="or">ସିଙ୍କ Vଖାଲିକୁ</short>
+		<short xml:lang="pa">VBlank ਨਾਲ ਸੈਕਰੋਨਾਈਜ਼</short>
+		<short xml:lang="pl">Synchronizuj z VBlank</short>
+		<short xml:lang="pt">Sincronizar a VBlank</short>
+		<short xml:lang="pt_BR">Sincronizar a VBlank</short>
+		<short xml:lang="ro">Sincronizare la VBlank</short>
+		<short xml:lang="ru">Синхронизировать с VBlank</short>
+		<short xml:lang="sk">Synchronizovať pri VBlank</short>
+		<short xml:lang="sv">Synkronisera till VBlank</short>
+		<short xml:lang="tr">Dikey Boşaltma ile Eşzamanla</short>
+		<short xml:lang="uk">Синхронізація з VBlank</short>
+		<short xml:lang="zh_CN">与VBlank同步</short>
+		<short xml:lang="zh_TW">同步化到 VBlank</short>
+		<long>Only perform screen updates during vertical blanking period</long>
+		<long xml:lang="bn">উল্লম্ব ফাঁকা পর্যায়ে শুধুমাত্র স্ক্রিন আপডেট সম্পাদন করুন</long>
+		<long xml:lang="bn_IN">উল্লম্ব ফাঁকা পর্যায়ে শুধুমাত্র স্ক্রিন আপডেট সম্পাদন করুন</long>
+		<long xml:lang="ca">Només actualitza la pantalla durant els períodes d'enfosquiment vertical</long>
+		<long xml:lang="cs">Provádět aktualizace obrazovky pouze během intervalu vertikálního zatemnění</long>
+		<long xml:lang="da">Udfør kun skærmopdatering i den lodrette slukkeperiode</long>
+		<long xml:lang="de">Bildschirmaktualisierungen nur während inaktiver vertikaler Anzeige durchführen</long>
+		<long xml:lang="el">Πραγματοποίηση ανανεώσεων οθόνης μόνο κατα τη διάρκεια της κάθετης περιοδικής ανανέωσης</long>
+		<long xml:lang="es">Sólo se llevan a cabo actualizaciones de la pantalla durante el período de borrado vertical</long>
+		<long xml:lang="eu">Pantaila eguneratzeak zuritze bertikalaren denboran bakarrik baimendu</long>
+		<long xml:lang="fi">Suorita vain näyttöpäivitykset pystytasossa tehtävän tyhjäyksen aikana</long>
+		<long xml:lang="fr">N'effectuer les mises à jour de l'écran que lors de la période de vidage vertical</long>
+		<long xml:lang="gl">Só actualizar a pantalla durante o período de limpeza vertical</long>
+		<long xml:lang="gu">ઊભા કોરા સમયગાળા દરમ્યાન માત્ર સ્ક્રીન સુધારાઓ જ કરે છે</long>
+		<long xml:lang="he">בצע עדכוני מסך רק במשך המחיקות האנכיות</long>
+		<long xml:lang="hi">लंबवत रिक्ति अवधि के दौरान सिर्फ स्क्रीन अद्यतन निष्पादित करें</long>
+		<long xml:lang="hu">A képernyő-frissítések végrehajtása csak a függőleges törlési periódusban</long>
+		<long xml:lang="it">Esegue aggiornamenti dello schermo solo durante periodo di cancellazione verticale</long>
+		<long xml:lang="ja">垂直帰線期間にのみ画面を更新する</long>
+		<long xml:lang="ko">수직 공백 주기로만 화면을 업데이트함</long>
+		<long xml:lang="nb">Bare utfør skjermoppdateringer ved vertikale blankingsperioder</long>
+		<long xml:lang="nl">Scherm alleen bijwerken tijdens verticale blanking periode</long>
+		<long xml:lang="or">ଦଣ୍ଡରୂପ ଖାଲିକରିବା ଅବଧି ସମଯରେ କେବଳ ସ୍କ୍ରିନ ଅପଡେଟଗୁଡିକୁ କର</long>
+		<long xml:lang="pa">ਵਰਟੀਕਲ ਝਪਕ ਪੀਰੀਅਡ ਦੌਰਾਨ ਹੀ ਸਕਰੀਨ ਅੱਪਡੇਟ ਕਰੋ</long>
+		<long xml:lang="pl">Odświeżaj ekran tylko podczas okresu poziomego wygaszania</long>
+		<long xml:lang="pt">Apenas efectuar actualizações de ecrã durante o período de limpeza vertical</long>
+		<long xml:lang="pt_BR">Apenas efetuar atualizações de tela durante o período de limpeza vertical</long>
+		<long xml:lang="ro">Actualizează ecranul numai în timpul golirii verticale</long>
+		<long xml:lang="ru">Обновлять экран во время гашения обратного хода луча кадровой развертки</long>
+		<long xml:lang="sk">Vykonávať aktualizácie obrazovky počas intervalu vertikálneho zatemnenia</long>
+		<long xml:lang="tr">Ekran güncellemeyi sadece dikey boşaltma sürecinde yap</long>
+		<long xml:lang="uk">Оновлювати екран під час гасіння зворотного ходу променя кадрової розгортки</long>
+		<long xml:lang="zh_CN">只在垂直清屏期间执行屏幕更新</long>
+		<long xml:lang="zh_TW">只在垂直空白期間執行螢幕更新</long>
+		<default>true</default>
+	    </option>
+	    <option type="bool" name="texture_compression">
+		<short>Texture Compression</short>
+		<short xml:lang="de">Texturkompression</short>
+		<short xml:lang="el">Συμπίεση υφών</short>
+		<short xml:lang="es">Compresión de Textura</short>
+		<short xml:lang="eu">Testura trinkotzea</short>
+		<short xml:lang="fi">Tekstuurien pakkaus</short>
+		<short xml:lang="fr">Compression de texture</short>
+		<short xml:lang="gl">Compresión de Texturas</short>
+		<short xml:lang="he">דחיסת טקסטורות</short>
+		<short xml:lang="hu">Textúratömörítés</short>
+		<short xml:lang="it">Compressione texture</short>
+		<short xml:lang="ja">テクスチャ圧縮</short>
+		<short xml:lang="ko">텍스쳐 압축</short>
+		<short xml:lang="pl">Kompresja tekstur</short>
+		<short xml:lang="pt">Compressão Texturas</short>
+		<short xml:lang="ro">Compresie textură</short>
+		<short xml:lang="ru">Компрессия текстур</short>
+		<short xml:lang="sk">Kompersia textúr</short>
+		<short xml:lang="tr">Doku Sıkıştırma</short>
+		<short xml:lang="uk">Компресія текстур</short>
+		<short xml:lang="zh_CN">纹理压缩</short>
+		<short xml:lang="zh_TW">材質壓縮</short>
+		<long>If available use compression for textures converted from images</long>
+		<long xml:lang="de">Benutze Kompression für aus Bildern generierte Texturen, wenn möglich.</long>
+		<long xml:lang="el">Εαν είναι διαθέσιμο χρήση συμπίεσης για υφές που έχουν προέλθει από εικόνες</long>
+		<long xml:lang="es">Si está disponible usar la compresión de texturas convertidas desde imágenes</long>
+		<long xml:lang="eu">Ahal denean erabili trinkotzea irudietatik eratorritako testurentzat</long>
+		<long xml:lang="fi">Käytä pakkausta kuvista muunnetuille tekstuureille, jos mahdollista</long>
+		<long xml:lang="fr">Si elle est disponible, utiliser la compression des textures venant d'images converties</long>
+		<long xml:lang="gl">Empregala compresión para as texturas convertidas dende imaxes</long>
+		<long xml:lang="he">אם ניתן, השתמש בדחיסה עבור טקסטורות שהומרו מתמונות</long>
+		<long xml:lang="hu">Képekből konvertált textúrák tömörítése, amennyiben az lehetséges</long>
+		<long xml:lang="it">Se disponibile, usa la compressione per le texture convertite dalle immagini</long>
+		<long xml:lang="ja">利用可能な場合は画像から変換されたテクスチャに圧縮を使用する</long>
+		<long xml:lang="ko">가능하다면 이미지로부터 변형된 텍스쳐를 압축합니다.</long>
+		<long xml:lang="nb">Hvis mulig, bruk kompresjon for teksturer hentet fra bilder</long>
+		<long xml:lang="pl">Jeśli możliwe używaj kompresji dla tekstur przekonwertowanych z obrazków</long>
+		<long xml:lang="pt">Se disponível, usar compressão para texturas convertidas de imagens</long>
+		<long xml:lang="ro">Utilizează compresie pentru texturi convertite din imagini dacă e posibil</long>
+		<long xml:lang="ru">Использовать сжатие для текстур, конвертированных от изображений, если доступно</long>
+		<long xml:lang="sk">Ak sa dá, použiť kompresiu textúr, ktoré boli konvertované z obrázkov.</long>
+		<long xml:lang="tr">Eğer mümkünse, görüntülerden dönüştürülmüş dokular için sıkıştırma kullan</long>
+		<long xml:lang="uk">Використовувати стиснення для текстур, конвертованих від зображень, якщо є</long>
+		<long xml:lang="zh_CN">如果可能，对从图片转换来的纹理进行压缩</long>
+		<long xml:lang="zh_TW">如果可能，從圖片影像當中取得的紋理材質進行壓縮</long>
+		<default>false</default>
+	    </option>
+	</options>
+    </plugin>
+</compiz>

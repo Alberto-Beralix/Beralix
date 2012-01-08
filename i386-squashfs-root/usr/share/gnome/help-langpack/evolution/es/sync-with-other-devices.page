@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="sync-with-other-devices" xml:lang="es">
+
+  <info>
+    <desc>Sincronizar los datos de Evolution con dispositivo de mano o teléfonos móviles.</desc>
+
+    <link type="guide" xref="index#data-migration-and-sync"/>
+
+    <revision pkgversion="2.30.2" version="0.2" date="2010-12-11" status="draft"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/config-sync.html.en -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+<!-- TODO:POST-3-2: Find out how to sync modern devices, e.g. Android, iPhone, Nokia N97 / N900, N9, N950, etc. Maybe SyncEvolution is the recommended (and external) way here? -->
+  </info>
+
+  <title>Sincornizar <em>Evolution</em> con otros dispositivos</title>
+
+<p>Actualmente no hay unas «instrucciones recomendadas» para usuarios.</p>
+
+<p>Muchas distribuciones proporcionan la aplicación <link href="http://syncevolution.org/">SyncEvolution</link>, que se puede usar con dispositivos que soporten <link href="https://secure.wikimedia.org/wikipedia/en/wiki/SyncML">SyncML</link>.</p>
+
+<p>Otra opción puede ser usar las aplicaciones y dispositivos que soporten el <link href="https://secure.wikimedia.org/wikipedia/en/wiki/ActiveSync">protocolo ActiveSync</link>. Existe una <link href="https://secure.wikimedia.org/wikipedia/en/wiki/List_of_collaborative_software">lista de software colaborativo</link> disponible en Wikipedia.</p>
+
+ <p>Si puede proporcionar buenas prácticas o más información acerca de este tema, rellene un informe de error en <link href="https://bugzilla.gnome.org/enter_bug.cgi?product=evolution&amp;component=User%20Documentation">el sistema de seguimiento de errores de GNOME</link>.</p>
+
+  <section id="palm">
+    <title>Palm</title>
+<p>Se necesitan varios pasos para sincronizar con un dispositivo Palm OS como la PalmPilot(TM) y el Handspring Visor: primero, debe activar la sincronización. Segundo, su equipo debe reconocer y acceder a su dispositivo portátil. Tercero, debe decidir que tipo de sincronización quiere.</p>
+    <section id="sync-enabling-palm">
+      <title>Activar la sincronización</title>
+      <p>If you have not used a handheld device with your computer before, you need to configure it via <guiseq><gui>Edit</gui><gui>GNOME Pilot Synchronization...</gui></guiseq>. Make sure that you have read and write permissions on the device, which is normally in <file>/dev/pilot</file>. If that does not work, check in <file>/dev/ttyS0</file> if you have a serial connection, or in <file>/dev/ttyUSB1</file> for a USB connection. You can do this by becoming root user and adding your username to the group that owns this device node. For a USB device on sync, two device nodes are created, <file>ttyUSB0</file> and <file>ttyUSB1</file>. The second node is the one to be used in configuring the device.</p>
+   </section>
+   <section id="sync-selecting-conduits-">
+     <title>Seleccionar un conducto</title>
+     <p>Una vez que su equipo y el dispositivo Palm OS son capaces de comunicarse con fluidez, seleccione los <gui>Conductos de Pilot</gui> que quiera. Puede usar los conductos para sincronizar datos de numerosas aplicaciones; los conductos de Evolution llevan la etiqueta <gui>EAddress</gui> para los contactos de la libreta de direcciones, <gui>ECalendar</gui>, para el calendario y <gui>ETodo</gui> para la lista de tareas.</p>
+     <p>Pulse <gui>Activar</gui>, después pulse <gui>Configuración</gui> para cambiar el conducto una vez activado. Las opciones pueden variar en función del conducto, pero habitualmente son las siguientes:</p>
+     <list>
+       <item><p><gui>Desactivado</gui>: no hacer nada.</p></item>
+       <item><p><gui>Sincronizar</gui>: copia los datos nuevos del equipo y del dispositivo de mano en las dos direcciones. Quita los elementos que se encontraban en los dos sistemas, pero que se eliminaron en uno de ellos.</p></item>
+       <item><p><gui>Copiar desde Pilot</gui>: si el dispositivo de mano contiene datos nuevos, los copia al equipo.</p></item>
+       <item><p><gui>Copiar hacia Pilot:</gui> copia los datos nuevos del equipo hacia el dispositivo de mano.</p></item>
+     </list>
+   <p>Seleccione el comportamiento que quiera para cada conducto elegido. Si no está seguro, use <gui>Sincronizar</gui>.</p>
+  </section>
+
+  <section id="sync-information">
+   <title>Sincronizar la información</title>
+   <p>Use el siguiente procedimiento para sincronizar los datos en su dispositivo Palm Os con sus datos almacenados en Evolution.</p>
+   <list>
+     <item><p>Si quiere realizar una copia de seguridad de su información antes de sincronizar, haga una copia de la carpeta <file>.local/share/evolution</file> dentro de su carpeta personal.</p></item>
+     <item><p>Coloque su dispositivo de mano en su base y pulse el botón <gui style="button">HotSync</gui>.</p></item>
+     <item><p>Si usa un dispositivo de mano Palm OS v. 4.0 y activó la protección por contraseña, es posible que se produzcan problemas durante la sincronización. En este caso, intente desactivar la protección por contraseña de su dispositivo de mano, realice la sincronización con su equipo de sobremesa y vuelva a activar la protección con contraseña de su dispositivo.</p></item>
+    </list>
+   <p>Ahora se podrán sincronizar los datos de su dispositivo Palm OS con Evolution.</p>
+  </section>
+
+  </section>
+
+</page>

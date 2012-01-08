@@ -1,0 +1,20 @@
+#!/bin/sh
+# postinst script for gstreamer0.10-packagekit
+
+set -e
+
+update-alternatives --install /usr/bin/gstreamer-codec-install \
+		    gstreamer-codec-install \
+		    /usr/bin/gst-install 80 || true
+
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p sessioninstaller 
+fi
+
+# End automatically added section
+
+
+exit 0
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="problem" id="bluetooth-problem-connecting" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="hardware-problems-bluetooth"/>
+    <link type="guide" xref="bluetooth"/>
+    <link type="seealso" xref="hardware-driver"/>
+    
+    <desc>Der Adapter ist ausgeschaltet oder hat keinen Treiber, oder Bluetooth ist deaktiviert oder gesperrt.</desc>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Warum kann ich mein Bluetooth-Gerät nicht verbinden?</title>
+
+<p>Es gibt eine Reihe von Gründen, warum Sie nicht in der Lage sein könnten, eine Verbindung zu einem Bluetooth-Gerät herzustellen (beispielsweise eine Mobiltelefon oder ein Headset):</p>
+
+<list>
+ <item>
+  <p>Verbindung wird blockiert oder ist nicht vertrauenswürdig</p>
+  <p>Einige Bluetooth-Geräte blocken Verbindungen standardmäßig oder verlangen von Ihnen, dass Sie die Einstellungen ändern, um Verbindungen zu erlauben. Stellen Sie sicher, dass Ihr Gerät so eingerichtet ist, dass es Verbindungen erlaubt.</p>
+ </item>
+ 
+ <item>
+  <p>Bluetooth-Hardware wurde nicht erkannt</p>
+  <p>Ihr Bluetooth-Adapter/Dongle wird eventuell vom Rechner nicht erkannt. Das kann an nicht installierten Treibern für das Gerät liegen. Einige Bluetooth-Adapter werden von Linux nicht unterstützt, so dass Sie die benötigten Treiber nicht aktivieren können. In diesem Fall müssen Sie sich wahrscheinlich einen neuen Adapter zulegen.</p>
+ </item>
+ 
+ <item>
+  <p>Adapter ist nicht eingeschaltet</p>
+  <p>Stellen Sie sicher, dass Ihr Bluetooth-Adapter angeschaltet ist. Klicken Sie auf das <gui>Bluetooth-Menü</gui> im <gui>oberen Panel</gui> und kontrollieren Sie, dass es nicht ausgeschaltet ist.</p>
+ </item>
+ 
+ <item>
+  <p>Gerät für die Verbindung ist ausgeschaltet</p>
+  <p>Kontrollieren Sie, dass Bluetooth im zu verbindenden Gerät aktiviert ist. Wenn Sie zum Beispiel ein Handy verbinden möchten, stellen Sie sicher, dass es sich nicht im Flugzeugmodus befindet.</p>
+ </item>
+
+ <item>
+  <p>Kein Bluetooth-Adapter in Ihrem Rechner</p>
+  <p>Viele Rechner haben keine Bluetooth-Schnittstelle. Sie können einen Adapter kaufen, falls Sie Bluetooth verwenden wollen.</p>
+ </item>
+</list>
+
+</page>

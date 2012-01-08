@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>ConsoleKit 0.4.5 Documentation</title><link rel="stylesheet" href="docbook.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.75.2" /></head><body><div class="book" title="ConsoleKit 0.4.5 Documentation"><div class="titlepage"><div><div><h1 class="title"><a id="index"></a>ConsoleKit 0.4.5 Documentation</h1></div><div><div class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">William Jon</span> <span class="surname">McCann</span></h3><div class="affiliation"><div class="address"><p><br />
+            <code class="email">&lt;<a class="email" href="mailto:william.jon.mccann@gmail.com">william.jon.mccann@gmail.com</a>&gt;</code><br />
+          </p></div></div></div></div></div><div><p class="releaseinfo">Version 0.4.5</p></div></div><hr /></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="preface"><a href="#idp5722952">Introduction</a></span></dt><dt><span class="part"><a href="#idp3902240">I. Concepts</a></span></dt><dd><dl><dt><span class="chapter"><a href="#introduction">1. Introduction</a></span></dt><dd><dl><dt><span class="sect1"><a href="#idp3903256">About</a></span></dt><dt><span class="sect1"><a href="#idp3904120">Defining the Problem</a></span></dt><dt><span class="sect1"><a href="#idp3904696">Relevant art</a></span></dt></dl></dd><dt><span class="chapter"><a href="#terms">2. Terminology</a></span></dt><dd><dl><dt><span class="sect1"><a href="#idp3434848">Session</a></span></dt><dt><span class="sect1"><a href="#idp3425432">Session leader</a></span></dt><dt><span class="sect1"><a href="#idp3436208">Seat</a></span></dt></dl></dd><dt><span class="chapter"><a href="#design">3. Design</a></span></dt><dd><dl><dt><span class="sect1"><a href="#idp6271496">Session Lifecycle</a></span></dt><dt><span class="sect1"><a href="#idp6272296">Expected Usage</a></span></dt><dd><dl><dt><span class="sect2"><a href="#idp6272888">Text Login Manager</a></span></dt><dt><span class="sect2"><a href="#idp6275528">Graphical Login Manager</a></span></dt><dt><span class="sect2"><a href="#idp6279784">System Daemon</a></span></dt><dt><span class="sect2"><a href="#idp6281784">Hardware Abstraction Layer</a></span></dt><dt><span class="sect2"><a href="#idp6284776">Fast User Switching Agent</a></span></dt><dt><span class="sect2"><a href="#idp6289528">Session Daemon (aka Policy Agent)</a></span></dt><dt><span class="sect2"><a href="#idp6291560">Session Application</a></span></dt></dl></dd></dl></dd></dl></dd><dt><span class="part"><a href="#idp3354024">II. Reference</a></span></dt><dd><dl><dt><span class="reference"><a href="#dbus-reference">I. D-Bus API Reference</a></span></dt><dd><dl><dt><span class="refentrytitle"><a href="#Manager">org.freedesktop.ConsoleKit.Manager</a></span><span class="refpurpose"> — Manager interface</span></dt><dt><span class="refentrytitle"><a href="#Seat">org.freedesktop.ConsoleKit.Seat</a></span><span class="refpurpose"> — Seat interface</span></dt><dt><span class="refentrytitle"><a href="#Session">org.freedesktop.ConsoleKit.Session</a></span><span class="refpurpose"> — Session interface</span></dt></dl></dd></dl></dd><dt><span class="index"><a href="#idp6754696">Index</a></span></dt></dl></div><div class="preface" title="Introduction"><div class="titlepage"><div><div><h2 class="title"><a id="idp5722952"></a>Introduction</h2></div></div></div><p>
+    </p></div><div class="part" title="Part I. Concepts"><div class="titlepage"><div><div><h1 class="title"><a id="idp3902240"></a>Part I. Concepts</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#introduction">1. Introduction</a></span></dt><dd><dl><dt><span class="sect1"><a href="#idp3903256">About</a></span></dt><dt><span class="sect1"><a href="#idp3904120">Defining the Problem</a></span></dt><dt><span class="sect1"><a href="#idp3904696">Relevant art</a></span></dt></dl></dd><dt><span class="chapter"><a href="#terms">2. Terminology</a></span></dt><dd><dl><dt><span class="sect1"><a href="#idp3434848">Session</a></span></dt><dt><span class="sect1"><a href="#idp3425432">Session leader</a></span></dt><dt><span class="sect1"><a href="#idp3436208">Seat</a></span></dt></dl></dd><dt><span class="chapter"><a href="#design">3. Design</a></span></dt><dd><dl><dt><span class="sect1"><a href="#idp6271496">Session Lifecycle</a></span></dt><dt><span class="sect1"><a href="#idp6272296">Expected Usage</a></span></dt><dd><dl><dt><span class="sect2"><a href="#idp6272888">Text Login Manager</a></span></dt><dt><span class="sect2"><a href="#idp6275528">Graphical Login Manager</a></span></dt><dt><span class="sect2"><a href="#idp6279784">System Daemon</a></span></dt><dt><span class="sect2"><a href="#idp6281784">Hardware Abstraction Layer</a></span></dt><dt><span class="sect2"><a href="#idp6284776">Fast User Switching Agent</a></span></dt><dt><span class="sect2"><a href="#idp6289528">Session Daemon (aka Policy Agent)</a></span></dt><dt><span class="sect2"><a href="#idp6291560">Session Application</a></span></dt></dl></dd></dl></dd></dl></div><div class="chapter" title="Chapter 1. Introduction"><div class="titlepage"><div><div><h2 class="title"><a id="introduction"></a>Chapter 1. Introduction</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#idp3903256">About</a></span></dt><dt><span class="sect1"><a href="#idp3904120">Defining the Problem</a></span></dt><dt><span class="sect1"><a href="#idp3904696">Relevant art</a></span></dt></dl></div><div class="sect1" title="About"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp3903256"></a>About</h2></div></div></div><p>
+      ConsoleKit is a framework for keeping track of the various
+      users, sessions, and seats present on a system.  It
+      provides a mechanism for software to react to changes of any of
+      these items or of any of the metadata associated with them.
+    </p></div><div class="sect1" title="Defining the Problem"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp3904120"></a>Defining the Problem</h2></div></div></div><p>
+    To be written.
+    </p></div><div class="sect1" title="Relevant art"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp3904696"></a>Relevant art</h2></div></div></div><p>
+    To be written.
+    </p></div></div><div class="chapter" title="Chapter 2. Terminology"><div class="titlepage"><div><div><h2 class="title"><a id="terms"></a>Chapter 2. Terminology</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#idp3434848">Session</a></span></dt><dt><span class="sect1"><a href="#idp3425432">Session leader</a></span></dt><dt><span class="sect1"><a href="#idp3436208">Seat</a></span></dt></dl></div><div class="sect1" title="Session"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp3434848"></a>Session</h2></div></div></div><p>
+A session is a collection of all processes that share knowledge of a
+secret.  In the typical (or ideal) case, these processes all originate
+from a single common ancestor.
+    </p><p>
+As an implementation detail, for now, this secret should be stored in
+the process environment by the session leader under the name
+XDG_SESSION_COOKIE.  When and if we are able to take advantage of a
+mechanism in the underlying system to store session registration
+information - we will.  However, such a mechanism is not known at the
+present time.
+    </p><p>
+Using an environment variable does have certain advantages.  For one,
+it is quite easy for a process to opt-out of a Session by simply
+unsetting the XDG_SESSION_COOKIE variable.
+    </p><p>
+Limitations of using an environment variable implementation include
+not being able to strictly limit visibility of the secret to a particular
+process ancestry.  So, it is not possible to enforce session boundaries
+other than on a per-user basis.  For example, we don't yet have a way
+to prevent a process from moving between sessions owned by the same
+user.
+    </p></div><div class="sect1" title="Session leader"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp3425432"></a>Session leader</h2></div></div></div><p>
+The session leader is the process that requests that a new session be
+opened.  It does this by connecting to the D-Bus system bus and using
+either org.freedesktop.ConsoleKit.Manager.OpenSession() or
+org.freedesktop.ConsoleKit.Manager.OpenSessionWithParameters().  The session
+that it registers will remain open until the connection to the system
+bus is lost or it calls org.freedesktop.ConsoleKit.Manager.CloseSession().
+    </p><p>
+The session leader is the only process for which CloseSession() will
+be allowed.
+    </p></div><div class="sect1" title="Seat"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp3436208"></a>Seat</h2></div></div></div><p>
+A seat is a collection of sessions and a set of hardware (usually at
+least a keyboard and mouse).  Only one session may be active on a
+seat at a time.
+    </p><p>
+At the present time, all Sessions that are considered "local" to
+a system will be added the the first Seat and every other Session
+will be added to its own Seat.
+    </p><p>
+True, hardware, multi-seat capabilities will be added in a later release.
+    </p></div></div><div class="chapter" title="Chapter 3. Design"><div class="titlepage"><div><div><h2 class="title"><a id="design"></a>Chapter 3. Design</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#idp6271496">Session Lifecycle</a></span></dt><dt><span class="sect1"><a href="#idp6272296">Expected Usage</a></span></dt><dd><dl><dt><span class="sect2"><a href="#idp6272888">Text Login Manager</a></span></dt><dt><span class="sect2"><a href="#idp6275528">Graphical Login Manager</a></span></dt><dt><span class="sect2"><a href="#idp6279784">System Daemon</a></span></dt><dt><span class="sect2"><a href="#idp6281784">Hardware Abstraction Layer</a></span></dt><dt><span class="sect2"><a href="#idp6284776">Fast User Switching Agent</a></span></dt><dt><span class="sect2"><a href="#idp6289528">Session Daemon (aka Policy Agent)</a></span></dt><dt><span class="sect2"><a href="#idp6291560">Session Application</a></span></dt></dl></dd></dl></div><div class="sect1" title="Session Lifecycle"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp6271496"></a>Session Lifecycle</h2></div></div></div><p>
+The session leader process is responsible for asking
+ConsoleKit to open a new session.  In this respect, it is
+similar to the traditional POSIX user login accounting framework.
+In the typical case, the session leader is either an immediate descendant of
+a login manager or the login manager itself.  The leader makes a connection to the D-Bus system bus and asks ConsoleKit to open a session.  There are two methods available for opening a session: org.freedesktop.ConsoleKit.Manager.OpenSession() and org.freedesktop.ConsoleKit.Manager.OpenSessionWithParameters().
+    </p><p>
+If the operation succeeds, a secret cookie will be returned to the session leader.  The session leader should store this secret in the environment as XDG_SESSION_COOKIE so that it may be shared with its child processes.
+    </p><p>
+At this point the session will be registered with ConsoleKit and a particular
+set of information about the session will be stored along with it.
+    </p><p>
+ConsoleKit will decide, based on the information associated with the session, what Seat the session will be added to.
+    </p><p>
+It will also be determined, based on the same set of information, whether the Session will control the hardware associated with the Seat.  In other words, whether the Session will be active for the Seat it is attached to.  The exact mechanism for this determination depends on the type of Seat and the capabilities of the host system.
+    </p><p>
+The Session will remain open until the Session Leader disconnects from the D-Bus system bus or calls org.freedesktop.ConsoleKit.Manager.CloseSession().  The session will be removed from its Seat, and deregistered.
+    </p></div><div class="sect1" title="Expected Usage"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp6272296"></a>Expected Usage</h2></div></div></div><p>Use of this service will usually follow one of the following patterns:</p><div class="sect2" title="Text Login Manager"><div class="titlepage"><div><div><h3 class="title"><a id="idp6272888"></a>Text Login Manager</h3></div></div></div><p>This pattern operates as the Session Leader for a new Session.  This pattern needs:
+      </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">To open a new Session.</li><li class="listitem">To set properties for the Session.</li><li class="listitem">To maintain a connection to the D-Bus system bus.</li><li class="listitem">To close the Session at logout.</li></ol></div></div><div class="sect2" title="Graphical Login Manager"><div class="titlepage"><div><div><h3 class="title"><a id="idp6275528"></a>Graphical Login Manager</h3></div></div></div><p>In addition to the requirements for the Text Graphical Login Manager, this pattern is typically used to show information about currently open sessions.  It needs:
+      </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">To determine which Seat it is running on.</li><li class="listitem">To know if the current seat supports session switching.</li><li class="listitem">A list of all sessions on the current Seat.</li><li class="listitem">To know which session is active for the current Seat.</li><li class="listitem">To know when the session active state changes.</li><li class="listitem">To know when sessions are added or removed.</li><li class="listitem">Access to the metadata for any open Session.</li></ol></div></div><div class="sect2" title="System Daemon"><div class="titlepage"><div><div><h3 class="title"><a id="idp6279784"></a>System Daemon</h3></div></div></div><p>This is generally a daemon process running outside of a user session as a special user.  This pattern needs:
+      </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">To know if any user sessions are open.</li><li class="listitem">To know if the system is currently being used.</li></ol></div></div><div class="sect2" title="Hardware Abstraction Layer"><div class="titlepage"><div><div><h3 class="title"><a id="idp6281784"></a>Hardware Abstraction Layer</h3></div></div></div><p>This is a special case of System Daemon that provides catalogs and control mechanisms for hardware devices.  In addition to the requirements of System Daemon, this pattern needs:
+      </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">To determine what hardware is associated with a Seat.</li><li class="listitem">To determine what Session is active and inactive on a particular Seat.</li><li class="listitem">To know when the session active state changes.</li><li class="listitem">To determine what Session a process belongs to.</li></ol></div></div><div class="sect2" title="Fast User Switching Agent"><div class="titlepage"><div><div><h3 class="title"><a id="idp6284776"></a>Fast User Switching Agent</h3></div></div></div><p>This is related to the Graphical Login Manager and provides a shortcut to similar functionality.  It is usually a tool available in the user session that allows one to quickly switch to another user session.  This pattern needs:
+      </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">To determine which session it is running in.</li><li class="listitem">To determine which Seat it is running on.</li><li class="listitem">To know if the current seat supports session switching.</li><li class="listitem">A list of all sessions on the current Seat.</li><li class="listitem">Which session is active for the current Seat.</li><li class="listitem">To know when the session active state changes.</li><li class="listitem">Access to the metadata for any open Session.</li><li class="listitem">To know when sessions are added or removed.</li></ol></div></div><div class="sect2" title="Session Daemon (aka Policy Agent)"><div class="titlepage"><div><div><h3 class="title"><a id="idp6289528"></a>Session Daemon (aka Policy Agent)</h3></div></div></div><p>This is typically a daemon running in a user session that acts on policy only when the session is active.  This pattern needs:
+      </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">To determine which session it is running in.</li><li class="listitem">To know when the session active state changes.</li></ol></div></div><div class="sect2" title="Session Application"><div class="titlepage"><div><div><h3 class="title"><a id="idp6291560"></a>Session Application</h3></div></div></div><p>This is typically an application running in a user session that may alter its behavior when the session active state changes.  This pattern needs:
+      </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">To determine which session it is running in.</li><li class="listitem">To know when the session active state changes.</li></ol></div></div></div></div></div><div class="part" title="Part II. Reference"><div class="titlepage"><div><div><h1 class="title"><a id="idp3354024"></a>Part II. Reference</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="reference"><a href="#dbus-reference">I. D-Bus API Reference</a></span></dt><dd><dl><dt><span class="refentrytitle"><a href="#Manager">org.freedesktop.ConsoleKit.Manager</a></span><span class="refpurpose"> — Manager interface</span></dt><dt><span class="refentrytitle"><a href="#Seat">org.freedesktop.ConsoleKit.Seat</a></span><span class="refpurpose"> — Seat interface</span></dt><dt><span class="refentrytitle"><a href="#Session">org.freedesktop.ConsoleKit.Session</a></span><span class="refpurpose"> — Session interface</span></dt></dl></dd></dl></div><div class="reference" title="D-Bus API Reference"><div class="titlepage"><div><div><h1 class="title"><a id="dbus-reference"></a>D-Bus API Reference</h1></div></div><hr /></div><div class="partintro" title="D-Bus API Reference"><div></div><p>
+        ConsoleKit provides a D-Bus API for programs to obtain information about the
+        users, sessions, and seats that are present on a system.
+        </p><p>
+        Please see the other sections of this manual for an introduction to
+        these concepts.
+        </p><p>
+        This API is not yet stable and is likely to change in the future.
+        </p><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="refentrytitle"><a href="#Manager">org.freedesktop.ConsoleKit.Manager</a></span><span class="refpurpose"> — Manager interface</span></dt><dt><span class="refentrytitle"><a href="#Seat">org.freedesktop.ConsoleKit.Seat</a></span><span class="refpurpose"> — Seat interface</span></dt><dt><span class="refentrytitle"><a href="#Session">org.freedesktop.ConsoleKit.Session</a></span><span class="refpurpose"> — Session interface</span></dt></dl></div></div><div class="refentry" title="org.freedesktop.ConsoleKit.Manager"><a id="Manager"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>org.freedesktop.ConsoleKit.Manager — Manager interface</p></div><div class="refsynopsisdiv" title="Methods"><h2>Methods</h2><pre class="synopsis"><a class="link" href="#Manager.Restart">Restart</a>                   ()
+<a class="link" href="#Manager.CanRestart">CanRestart</a>                (out 'b'     can_restart)
+<a class="link" href="#Manager.Stop">Stop</a>                      ()
+<a class="link" href="#Manager.CanStop">CanStop</a>                   (out 'b'     can_stop)
+<a class="link" href="#Manager.OpenSession">OpenSession</a>               (out 's'     cookie)
+<a class="link" href="#Manager.OpenSessionWithParameters">OpenSessionWithParameters</a> (in  'a(sv)' parameters,
+                           out 's'     cookie)
+<a class="link" href="#Manager.CloseSession">CloseSession</a>              (in  's'     cookie,
+                           out 'b'     result)
+<a class="link" href="#Manager.GetSeats">GetSeats</a>                  (out 'ao'    seats)
+<a class="link" href="#Manager.GetSessions">GetSessions</a>               (out 'ao'    sessions)
+<a class="link" href="#Manager.GetSessionForCookie">GetSessionForCookie</a>       (in  's'     cookie,
+                           out 'o'     ssid)
+<a class="link" href="#Manager.GetSessionForUnixProcess">GetSessionForUnixProcess</a>  (in  'u'     pid,
+                           out 'o'     ssid)
+<a class="link" href="#Manager.GetCurrentSession">GetCurrentSession</a>         (out 'o'     ssid)
+<a class="link" href="#Manager.GetSessionsForUnixUser">GetSessionsForUnixUser</a>    (in  'u'     uid,
+                           out 'ao'    sessions)
+<a class="link" href="#Manager.GetSessionsForUser">GetSessionsForUser</a>        (in  'u'     uid,
+                           out 'ao'    sessions)
+<a class="link" href="#Manager.GetSystemIdleHint">GetSystemIdleHint</a>         (out 'b'     idle_hint)
+<a class="link" href="#Manager.GetSystemIdleSinceHint">GetSystemIdleSinceHint</a>    (out 's'     iso8601_datetime)
+</pre></div><div class="refsect1" title="Signals"><a id="idp6338464"></a><h2>Signals</h2><pre class="synopsis"><a class="link" href="#Manager::SeatAdded">SeatAdded</a>             ('o' sid)
+<a class="link" href="#Manager::SeatRemoved">SeatRemoved</a>           ('o' sid)
+<a class="link" href="#Manager::SystemIdleHintChanged">SystemIdleHintChanged</a> ('b' hint)
+</pre></div><div class="refsect1" title="Implemented Interfaces"><a id="idp6340392"></a><h2>Implemented Interfaces</h2><p>
+    Objects implementing org.freedesktop.ConsoleKit.Manager also implements
+    org.freedesktop.DBus.Introspectable,
+    org.freedesktop.DBus.Properties
+    </p></div><div class="refsect1" title="Description"><a id="idp6341376"></a><h2>Description</h2><p></p></div><div class="refsect1" title="Details"><a id="idp6342128"></a><h2>Details</h2><div class="refsect2" title="Restart ()"><a id="idp6342688"></a><h3><a id="Manager.Restart"></a>Restart ()</h3><a id="idp6343184" class="indexterm"></a><pre class="programlisting">Restart ()</pre><p>This method initiates a request to restart (ie. reboot) the computer system.</p></div><div class="refsect2" title="CanRestart ()"><a id="idp6344280"></a><h3><a id="Manager.CanRestart"></a>CanRestart ()</h3><a id="idp6344904" class="indexterm"></a><pre class="programlisting">CanRestart (out 'b' can_restart)</pre><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>can_restart</code></em>:</span></dt><dd></dd></dl></div></div><div class="refsect2" title="Stop ()"><a id="idp6347240"></a><h3><a id="Manager.Stop"></a>Stop ()</h3><a id="idp6347736" class="indexterm"></a><pre class="programlisting">Stop ()</pre><p>This method initiates a request to stop (ie. shutdown) the computer system.</p></div><div class="refsect2" title="CanStop ()"><a id="idp6348824"></a><h3><a id="Manager.CanStop"></a>CanStop ()</h3><a id="idp6349448" class="indexterm"></a><pre class="programlisting">CanStop (out 'b' can_stop)</pre><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>can_stop</code></em>:</span></dt><dd></dd></dl></div></div><div class="refsect2" title="OpenSession ()"><a id="idp6351784"></a><h3><a id="Manager.OpenSession"></a>OpenSession ()</h3><a id="idp6352280" class="indexterm"></a><pre class="programlisting">OpenSession (out 's' cookie)</pre><p>This method requests that a new <a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">Session</a>
+          be created for the calling process.  The properties of this new Session are set automatically
+          from information collected about the calling process.
+          </p><p>This new session exists until the calling process disconnects from the system bus or
+          calls <a class="link" href="#Manager.CloseSession"><code class="function">CloseSession()</code></a>.
+          </p><p>It is the responsibility of the calling process to set the environment variable
+          XDG_SESSION_COOKIE to the value of the returned cookie.  This cookie should only
+          be made available to child processes of the caller so that they may be identified
+          as members of this session.
+          </p><p>See this simple example:
+          </p><div class="informalexample"><pre class="programlisting">
+	DBusError       error;
+	DBusMessage    *message;
+	DBusMessage    *reply;
+
+	message = dbus_message_new_method_call ("org.freedesktop.ConsoleKit",
+						"/org/freedesktop/ConsoleKit/Manager",
+						"org.freedesktop.ConsoleKit.Manager",
+						"OpenSession");
+	if (message == NULL) {
+		goto out;
+	}
+
+        dbus_error_init (&amp;error);
+        reply = dbus_connection_send_with_reply_and_block (connector-&gt;connection,
+                                                           message,
+                                                           -1,
+                                                           &amp;error);
+        if (reply == NULL) {
+		goto out;
+        }
+
+        dbus_error_init (&amp;error);
+        if (! dbus_message_get_args (reply,
+                                     &amp;error,
+                                     DBUS_TYPE_STRING, &amp;cookie,
+                                     DBUS_TYPE_INVALID)) {
+		goto out;
+        }
+
+          </pre></div><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>cookie</code></em>:</span></dt><dd>The secret cookie that is used to identify the new session</dd></dl></div><p>
+See also:
+<a class="link" href="#Manager.OpenSessionWithParameters"><code class="function">OpenSessionWithParameters()</code></a></p></div><div class="refsect2" title="OpenSessionWithParameters ()"><a id="idp6358760"></a><h3><a id="Manager.OpenSessionWithParameters"></a>OpenSessionWithParameters ()</h3><a id="idp6359336" class="indexterm"></a><pre class="programlisting">OpenSessionWithParameters (in  'a(sv)' parameters,
+                           out 's'     cookie)</pre><p>This method requests that a new <a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">Session</a>
+          be created for the calling process.  The properties of this new Session are from the
+          parameters provided.
+          </p><p>This new session exists until the calling process disconnects from the system bus or
+          calls <a class="link" href="#Manager.CloseSession"><code class="function">CloseSession()</code></a>.
+          </p><p>It is the responsibility of the calling process to set the environment variable
+          XDG_SESSION_COOKIE to the value of the returned cookie.  This cookie should only
+          be made available to child processes of the caller so that they may be identified
+          as members of this session.
+          </p><p>See the <a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">Session</a> properties for a list of valid parameters.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>parameters</code></em>:</span></dt><dd>An array of sets of property names and values</dd><dt><span class="term"><em class="parameter"><code>cookie</code></em>:</span></dt><dd>The secret cookie that is used to identify the new session</dd></dl></div><div class="note" title="Permissions" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">This method is restricted to privileged users by D-Bus policy.</p></div><p>
+See also:
+<a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">org.freedesktop.ConsoleKit.Session</a></p></div><div class="refsect2" title="CloseSession ()"><a id="idp6365304"></a><h3><a id="Manager.CloseSession"></a>CloseSession ()</h3><a id="idp6365800" class="indexterm"></a><pre class="programlisting">CloseSession (in  's' cookie,
+              out 'b' result)</pre><p>This method is used to close the session identified by the supplied cookie.
+          </p><p>The session can only be closed by the same process that opened the session.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>cookie</code></em>:</span></dt><dd>The secret cookie that is used to identify the session</dd><dt><span class="term"><em class="parameter"><code>result</code></em>:</span></dt><dd>Whether the session was successfully closed</dd></dl></div></div><div class="refsect2" title="GetSeats ()"><a id="idp6368816"></a><h3><a id="Manager.GetSeats"></a>GetSeats ()</h3><a id="idp6369312" class="indexterm"></a><pre class="programlisting">GetSeats (out 'ao' seats)</pre><p>This gets a list of all the <a class="link" href="#Seat" title="org.freedesktop.ConsoleKit.Seat">Seats</a>
+          that are currently present on the system.</p><p>Each Seat ID is an D-Bus object path for the object that implements the
+          <a class="link" href="#Seat" title="org.freedesktop.ConsoleKit.Seat">Seat</a> interface.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>seats</code></em>:</span></dt><dd>an array of Seat IDs</dd></dl></div><p>
+See also:
+<a class="link" href="#Seat" title="org.freedesktop.ConsoleKit.Seat">org.freedesktop.ConsoleKit.Seat</a></p></div><div class="refsect2" title="GetSessions ()"><a id="idp6372560"></a><h3><a id="Manager.GetSessions"></a>GetSessions ()</h3><a id="idp6373056" class="indexterm"></a><pre class="programlisting">GetSessions (out 'ao' sessions)</pre><p>This gets a list of all the <a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">Sessions</a>
+          that are currently present on the system.</p><p>Each Session ID is an D-Bus object path for the object that implements the
+          <a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">Session</a> interface.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>sessions</code></em>:</span></dt><dd>an array of Session IDs</dd></dl></div><p>
+See also:
+<a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">org.freedesktop.ConsoleKit.Session</a></p></div><div class="refsect2" title="GetSessionForCookie ()"><a id="idp6376352"></a><h3><a id="Manager.GetSessionForCookie"></a>GetSessionForCookie ()</h3><a id="idp6376848" class="indexterm"></a><pre class="programlisting">GetSessionForCookie (in  's' cookie,
+                     out 'o' ssid)</pre><p>Returns the session ID that is associated with the specified cookie.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>cookie</code></em>:</span></dt><dd>The secret cookie that is used to identify the session</dd><dt><span class="term"><em class="parameter"><code>ssid</code></em>:</span></dt><dd>The object identifier for the current session</dd></dl></div></div><div class="refsect2" title="GetSessionForUnixProcess ()"><a id="idp6379592"></a><h3><a id="Manager.GetSessionForUnixProcess"></a>GetSessionForUnixProcess ()</h3><a id="idp6380208" class="indexterm"></a><pre class="programlisting">GetSessionForUnixProcess (in  'u' pid,
+                          out 'o' ssid)</pre><p>Attempts to determine the session ID for the specified
+          POSIX process ID (pid).
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>pid</code></em>:</span></dt><dd>The POSIX process ID</dd><dt><span class="term"><em class="parameter"><code>ssid</code></em>:</span></dt><dd>The object identifier for the current session</dd></dl></div></div><div class="refsect2" title="GetCurrentSession ()"><a id="idp6382912"></a><h3><a id="Manager.GetCurrentSession"></a>GetCurrentSession ()</h3><a id="idp6383408" class="indexterm"></a><pre class="programlisting">GetCurrentSession (out 'o' ssid)</pre><p>Attempts to determine the session ID that the caller belongs to.
+          </p><p>See this example of using dbus-send:
+          </p><div class="informalexample"><pre class="programlisting">
+  dbus-send --system --dest=org.freedesktop.ConsoleKit \
+  --type=method_call --print-reply --reply-timeout=2000 \
+  /org/freedesktop/ConsoleKit/Manager \
+  org.freedesktop.ConsoleKit.Manager.GetCurrentSession
+          </pre></div><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>ssid</code></em>:</span></dt><dd>The object identifier for the current session</dd></dl></div></div><div class="refsect2" title="GetSessionsForUnixUser ()"><a id="idp6386160"></a><h3><a id="Manager.GetSessionsForUnixUser"></a>GetSessionsForUnixUser ()</h3><a id="idp6386776" class="indexterm"></a><pre class="programlisting">GetSessionsForUnixUser (in  'u'  uid,
+                        out 'ao' sessions)</pre><p>This gets a list of all the <a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">Sessions</a>
+          that are currently open for the specified user.</p><p>Each Session ID is an D-Bus object path for the object that implements the
+          <a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">Session</a> interface.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>uid</code></em>:</span></dt><dd>POSIX User identification</dd><dt><span class="term"><em class="parameter"><code>sessions</code></em>:</span></dt><dd>an array of Session IDs</dd></dl></div></div><div class="refsect2" title="GetSessionsForUser ()"><a id="idp6390296"></a><h3><a id="Manager.GetSessionsForUser"></a>GetSessionsForUser ()</h3><a id="idp6390792" class="indexterm"></a><pre class="programlisting">GetSessionsForUser (in  'u'  uid,
+                    out 'ao' sessions)</pre><p>This gets a list of all the <a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">Sessions</a>
+          that are currently open for the specified user.</p><p>Each Session ID is an D-Bus object path for the object that implements the
+          <a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">Session</a> interface.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>uid</code></em>:</span></dt><dd>User identification</dd><dt><span class="term"><em class="parameter"><code>sessions</code></em>:</span></dt><dd>an array of Session IDs</dd></dl></div><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p><code class="literal">GetSessionsForUser</code> is deprecated since version 0.1.3 and should not be used in newly-written code. Use
+
+  <a class="link" href="#Manager.GetSessionsForUnixUser"><code class="function">GetSessionsForUnixUser</code></a>
+instead.</p></div></div><div class="refsect2" title="GetSystemIdleHint ()"><a id="idp6395680"></a><h3><a id="Manager.GetSystemIdleHint"></a>GetSystemIdleHint ()</h3><a id="idp6396176" class="indexterm"></a><pre class="programlisting">GetSystemIdleHint (out 'b' idle_hint)</pre><p>Returns TRUE if the <a class="link" href="#Session:idle-hint"><code class="literal">idle-hint</code></a>
+          property of every open session is TRUE or if there are no open sessions.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>idle_hint</code></em>:</span></dt><dd>The value of the system-idle-hint</dd></dl></div></div><div class="refsect2" title="GetSystemIdleSinceHint ()"><a id="idp6398648"></a><h3><a id="Manager.GetSystemIdleSinceHint"></a>GetSystemIdleSinceHint ()</h3><a id="idp6399264" class="indexterm"></a><pre class="programlisting">GetSystemIdleSinceHint (out 's' iso8601_datetime)</pre><p>Returns an ISO 8601 date-time string that corresponds to
+          the time of the last change of the system-idle-hint.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>iso8601_datetime</code></em>:</span></dt><dd>An ISO 8601 format date-type string</dd></dl></div></div></div><div class="refsect1" title="Signal Details"><a id="idp6401344"></a><h2>Signal Details</h2><div class="refsect2" title="The SeatAdded signal"><a id="idp6401904"></a><h3><a id="Manager::SeatAdded"></a>The SeatAdded signal</h3><a id="idp6402400" class="indexterm"></a><pre class="programlisting">SeatAdded ('o' sid)</pre><p>Emitted when a Seat has been added to the system.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>sid</code></em>:</span></dt><dd>The Seat ID for the added seat</dd></dl></div></div><div class="refsect2" title="The SeatRemoved signal"><a id="idp6404336"></a><h3><a id="Manager::SeatRemoved"></a>The SeatRemoved signal</h3><a id="idp6404832" class="indexterm"></a><pre class="programlisting">SeatRemoved ('o' sid)</pre><p>Emitted when a Seat has been removed from the system.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>sid</code></em>:</span></dt><dd>The Seat ID for the removed seat</dd></dl></div></div><div class="refsect2" title="The SystemIdleHintChanged signal"><a id="idp6406768"></a><h3><a id="Manager::SystemIdleHintChanged"></a>The SystemIdleHintChanged signal</h3><a id="idp6407384" class="indexterm"></a><pre class="programlisting">SystemIdleHintChanged ('b' hint)</pre><p>Emitted when the value of the system-idle-hint has changed.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>hint</code></em>:</span></dt><dd>The value of the system-idle-hint</dd></dl></div></div></div></div><div class="refentry" title="org.freedesktop.ConsoleKit.Seat"><div class="refentry.separator"><hr /></div><a id="Seat"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>org.freedesktop.ConsoleKit.Seat — Seat interface</p></div><div class="refsynopsisdiv" title="Methods"><h2>Methods</h2><pre class="synopsis"><a class="link" href="#Seat.GetId">GetId</a>               (out 'o'     sid)
+<a class="link" href="#Seat.GetSessions">GetSessions</a>         (out 'ao'    sessions)
+<a class="link" href="#Seat.GetDevices">GetDevices</a>          (out 'a(ss)' devices)
+<a class="link" href="#Seat.GetActiveSession">GetActiveSession</a>    (out 'o'     ssid)
+<a class="link" href="#Seat.CanActivateSessions">CanActivateSessions</a> (out 'b'     can_activate)
+<a class="link" href="#Seat.ActivateSession">ActivateSession</a>     (in  'o'     ssid)
+</pre></div><div class="refsect1" title="Signals"><a id="idp6495888"></a><h2>Signals</h2><pre class="synopsis"><a class="link" href="#Seat::ActiveSessionChanged">ActiveSessionChanged</a> ('o'    ssid)
+<a class="link" href="#Seat::SessionAdded">SessionAdded</a>         ('o'    ssid)
+<a class="link" href="#Seat::SessionRemoved">SessionRemoved</a>       ('o'    ssid)
+<a class="link" href="#Seat::DeviceAdded">DeviceAdded</a>          ('(ss)' device)
+<a class="link" href="#Seat::DeviceRemoved">DeviceRemoved</a>        ('(ss)' device)
+</pre></div><div class="refsect1" title="Implemented Interfaces"><a id="idp6498320"></a><h2>Implemented Interfaces</h2><p>
+    Objects implementing org.freedesktop.ConsoleKit.Seat also implements
+    org.freedesktop.DBus.Introspectable,
+    org.freedesktop.DBus.Properties
+    </p></div><div class="refsect1" title="Description"><a id="idp6499296"></a><h2>Description</h2><p>A seat is a collection of sessions and a set of hardware (usually at
+least a keyboard and mouse).  Only one session may be active on a
+seat at a time.</p></div><div class="refsect1" title="Details"><a id="idp6500208"></a><h2>Details</h2><div class="refsect2" title="GetId ()"><a id="idp6500768"></a><h3><a id="Seat.GetId"></a>GetId ()</h3><a id="idp6501264" class="indexterm"></a><pre class="programlisting">GetId (out 'o' sid)</pre><p>Returns the ID for Seat.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>sid</code></em>:</span></dt><dd>Seat ID</dd></dl></div></div><div class="refsect2" title="GetSessions ()"><a id="idp6503088"></a><h3><a id="Seat.GetSessions"></a>GetSessions ()</h3><a id="idp6503584" class="indexterm"></a><pre class="programlisting">GetSessions (out 'ao' sessions)</pre><p>This gets a list of all the <a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">Sessions</a>
+          that are currently attached to this seat.</p><p>Each Session ID is an D-Bus object path for the object that implements the
+          <a class="link" href="#Session" title="org.freedesktop.ConsoleKit.Session">Session</a> interface.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>sessions</code></em>:</span></dt><dd>an array of Session IDs</dd></dl></div></div><div class="refsect2" title="GetDevices ()"><a id="idp6506464"></a><h3><a id="Seat.GetDevices"></a>GetDevices ()</h3><a id="idp6506960" class="indexterm"></a><pre class="programlisting">GetDevices (out 'a(ss)' devices)</pre><p>This gets a list of all the devices
+          that are currently associated with this seat.</p><p>Each device is an D-Bus structure that represents
+          the device type and the device id.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>devices</code></em>:</span></dt><dd>an array of devices</dd></dl></div></div><div class="refsect2" title="GetActiveSession ()"><a id="idp6509224"></a><h3><a id="Seat.GetActiveSession"></a>GetActiveSession ()</h3><a id="idp6509720" class="indexterm"></a><pre class="programlisting">GetActiveSession (out 'o' ssid)</pre><p>Gets the Session ID that is currently active on this Seat.</p><p>Returns NULL if there is no active session.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>ssid</code></em>:</span></dt><dd>Session ID</dd></dl></div></div><div class="refsect2" title="CanActivateSessions ()"><a id="idp6511888"></a><h3><a id="Seat.CanActivateSessions"></a>CanActivateSessions ()</h3><a id="idp6512384" class="indexterm"></a><pre class="programlisting">CanActivateSessions (out 'b' can_activate)</pre><p>Used to determine whether the seat supports session activation.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>can_activate</code></em>:</span></dt><dd>TRUE if seat supports session activation</dd></dl></div></div><div class="refsect2" title="ActivateSession ()"><a id="idp6514312"></a><h3><a id="Seat.ActivateSession"></a>ActivateSession ()</h3><a id="idp6514808" class="indexterm"></a><pre class="programlisting">ActivateSession (in  'o' ssid)</pre><p>Attempt to activate the specified session.  In most
+          cases, if successful, this will cause the session to
+          become visible and take control of the hardware that is
+          associated with this seat.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>ssid</code></em>:</span></dt><dd>Session ID</dd></dl></div><p>
+See also:
+<a class="link" href="#Session.Activate"><code class="function">Activate()</code></a></p></div></div><div class="refsect1" title="Signal Details"><a id="idp6517520"></a><h2>Signal Details</h2><div class="refsect2" title="The ActiveSessionChanged signal"><a id="idp6518080"></a><h3><a id="Seat::ActiveSessionChanged"></a>The ActiveSessionChanged signal</h3><a id="idp6518616" class="indexterm"></a><pre class="programlisting">ActiveSessionChanged ('o' ssid)</pre><p>Emitted when the active session has changed.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>ssid</code></em>:</span></dt><dd>Session ID</dd></dl></div></div><div class="refsect2" title="The SessionAdded signal"><a id="idp6520536"></a><h3><a id="Seat::SessionAdded"></a>The SessionAdded signal</h3><a id="idp6521032" class="indexterm"></a><pre class="programlisting">SessionAdded ('o' ssid)</pre><p>Emitted when a session has been added to the seat.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>ssid</code></em>:</span></dt><dd>Session ID</dd></dl></div></div><div class="refsect2" title="The SessionRemoved signal"><a id="idp6522912"></a><h3><a id="Seat::SessionRemoved"></a>The SessionRemoved signal</h3><a id="idp6523408" class="indexterm"></a><pre class="programlisting">SessionRemoved ('o' ssid)</pre><p>Emitted when a session has been removed from the seat.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>ssid</code></em>:</span></dt><dd>Session ID</dd></dl></div></div><div class="refsect2" title="The DeviceAdded signal"><a id="idp6525296"></a><h3><a id="Seat::DeviceAdded"></a>The DeviceAdded signal</h3><a id="idp6525792" class="indexterm"></a><pre class="programlisting">DeviceAdded ('(ss)' device)</pre><p>Emitted when a device has been associated with the seat.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>device</code></em>:</span></dt><dd>Device structure</dd></dl></div></div><div class="refsect2" title="The DeviceRemoved signal"><a id="idp6527680"></a><h3><a id="Seat::DeviceRemoved"></a>The DeviceRemoved signal</h3><a id="idp6528176" class="indexterm"></a><pre class="programlisting">DeviceRemoved ('(ss)' device)</pre><p>Emitted when a device has been dissociated from the seat.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>device</code></em>:</span></dt><dd>Device structure</dd></dl></div></div></div></div><div class="refentry" title="org.freedesktop.ConsoleKit.Session"><div class="refentry.separator"><hr /></div><a id="Session"></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>org.freedesktop.ConsoleKit.Session — Session interface</p></div><div class="refsynopsisdiv" title="Methods"><h2>Methods</h2><pre class="synopsis"><a class="link" href="#Session.GetId">GetId</a>               (out 'o' ssid)
+<a class="link" href="#Session.GetSeatId">GetSeatId</a>           (out 'o' sid)
+<a class="link" href="#Session.GetSessionType">GetSessionType</a>      (out 's' type)
+<a class="link" href="#Session.GetUser">GetUser</a>             (out 'u' uid)
+<a class="link" href="#Session.GetUnixUser">GetUnixUser</a>         (out 'u' uid)
+<a class="link" href="#Session.GetX11Display">GetX11Display</a>       (out 's' display)
+<a class="link" href="#Session.GetX11DisplayDevice">GetX11DisplayDevice</a> (out 's' x11_display_device)
+<a class="link" href="#Session.GetDisplayDevice">GetDisplayDevice</a>    (out 's' display_device)
+<a class="link" href="#Session.GetRemoteHostName">GetRemoteHostName</a>   (out 's' remote_host_name)
+<a class="link" href="#Session.GetLoginSessionId">GetLoginSessionId</a>   (out 's' login_session_id)
+<a class="link" href="#Session.IsActive">IsActive</a>            (out 'b' active)
+<a class="link" href="#Session.IsLocal">IsLocal</a>             (out 'b' local)
+<a class="link" href="#Session.GetCreationTime">GetCreationTime</a>     (out 's' iso8601_datetime)
+<a class="link" href="#Session.Activate">Activate</a>            ()
+<a class="link" href="#Session.Lock">Lock</a>                ()
+<a class="link" href="#Session.Unlock">Unlock</a>              ()
+<a class="link" href="#Session.GetIdleHint">GetIdleHint</a>         (out 'b' idle_hint)
+<a class="link" href="#Session.GetIdleSinceHint">GetIdleSinceHint</a>    (out 's' iso8601_datetime)
+<a class="link" href="#Session.SetIdleHint">SetIdleHint</a>         (in  'b' idle_hint)
+</pre></div><div class="refsect1" title="Signals"><a id="idp6581360"></a><h2>Signals</h2><pre class="synopsis"><a class="link" href="#Session::ActiveChanged">ActiveChanged</a>   ('b' is_active)
+<a class="link" href="#Session::IdleHintChanged">IdleHintChanged</a> ('b' hint)
+<a class="link" href="#Session::Lock">Lock</a>            ()
+<a class="link" href="#Session::Unlock">Unlock</a>          ()
+</pre></div><div class="refsect1" title="Implemented Interfaces"><a id="idp6583480"></a><h2>Implemented Interfaces</h2><p>
+    Objects implementing org.freedesktop.ConsoleKit.Session also implements
+    org.freedesktop.DBus.Introspectable,
+    org.freedesktop.DBus.Properties
+    </p></div><div class="refsect1" title="Properties"><a id="idp6584464"></a><h2>Properties</h2><pre class="synopsis"><a class="link" href="#Session:unix-user">'unix-user'</a>          readwrite 'u'
+<a class="link" href="#Session:user">'user'</a>               readwrite 'u'
+<a class="link" href="#Session:session-type">'session-type'</a>       readwrite 's'
+<a class="link" href="#Session:remote-host-name">'remote-host-name'</a>   readwrite 's'
+<a class="link" href="#Session:display-device">'display-device'</a>     readwrite 's'
+<a class="link" href="#Session:x11-display">'x11-display'</a>        readwrite 's'
+<a class="link" href="#Session:x11-display-device">'x11-display-device'</a> readwrite 's'
+<a class="link" href="#Session:active">'active'</a>             readwrite 'b'
+<a class="link" href="#Session:is-local">'is-local'</a>           readwrite 'b'
+<a class="link" href="#Session:idle-hint">'idle-hint'</a>          readwrite 'b'
+</pre></div><div class="refsect1" title="Description"><a id="idp6588496"></a><h2>Description</h2><p>Session objects represent and store information
+        related to a user session.
+        </p><p>The properties associated with the Session
+        specifically refer to the properties of the "session leader".
+        </p></div><div class="refsect1" title="Details"><a id="idp6589664"></a><h2>Details</h2><div class="refsect2" title="GetId ()"><a id="idp6590224"></a><h3><a id="Session.GetId"></a>GetId ()</h3><a id="idp6590720" class="indexterm"></a><pre class="programlisting">GetId (out 'o' ssid)</pre><p>Returns the ID for Session.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>ssid</code></em>:</span></dt><dd>Session ID</dd></dl></div></div><div class="refsect2" title="GetSeatId ()"><a id="idp6592480"></a><h3><a id="Session.GetSeatId"></a>GetSeatId ()</h3><a id="idp6592976" class="indexterm"></a><pre class="programlisting">GetSeatId (out 'o' sid)</pre><p>Returns the ID for the Seat the Session is
+        attached to.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>sid</code></em>:</span></dt><dd>Seat ID</dd></dl></div><p>
+See also:
+<a class="link" href="#Seat" title="org.freedesktop.ConsoleKit.Seat">org.freedesktop.ConsoleKit.Seat</a></p></div><div class="refsect2" title="GetSessionType ()"><a id="idp6595224"></a><h3><a id="Session.GetSessionType"></a>GetSessionType ()</h3><a id="idp6595720" class="indexterm"></a><pre class="programlisting">GetSessionType (out 's' type)</pre><p>Returns the type of the session.</p><p>Warning: we haven't yet defined the allowed values for this property.
+          It is probably best to avoid this until we do.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>type</code></em>:</span></dt><dd>Session type</dd></dl></div><p>
+See also:
+<a class="link" href="#Session:session-type"><code class="literal">session-type</code></a></p></div><div class="refsect2" title="GetUser ()"><a id="idp6598520"></a><h3><a id="Session.GetUser"></a>GetUser ()</h3><a id="idp6599016" class="indexterm"></a><pre class="programlisting">GetUser (out 'u' uid)</pre><p>Returns the user that the session belongs to.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>uid</code></em>:</span></dt><dd>User ID</dd></dl></div><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p><code class="literal">GetUser</code> is deprecated since version 0.1.3 and should not be used in newly-written code. Use
+
+  <a class="link" href="#Session.GetUnixUser"><code class="function">GetUnixUser</code></a>
+instead.</p></div><p>
+See also:
+<a class="link" href="#Session:user"><code class="literal">user</code></a></p></div><div class="refsect2" title="GetUnixUser ()"><a id="idp6602608"></a><h3><a id="Session.GetUnixUser"></a>GetUnixUser ()</h3><a id="idp6603104" class="indexterm"></a><pre class="programlisting">GetUnixUser (out 'u' uid)</pre><p>Returns the POSIX user ID that the session belongs to.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>uid</code></em>:</span></dt><dd>POSIX User ID</dd></dl></div><p>
+See also:
+<a class="link" href="#Session:unix-user"><code class="literal">unix-user</code></a></p></div><div class="refsect2" title="GetX11Display ()"><a id="idp6605488"></a><h3><a id="Session.GetX11Display"></a>GetX11Display ()</h3><a id="idp6605984" class="indexterm"></a><pre class="programlisting">GetX11Display (out 's' display)</pre><p>Returns the value of the X11 DISPLAY for this session
+        if one is present.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>display</code></em>:</span></dt><dd>The value of the X11 display</dd></dl></div><p>
+See also:
+<a class="link" href="#Session:x11-display"><code class="literal">x11-display</code></a></p></div><div class="refsect2" title="GetX11DisplayDevice ()"><a id="idp6608472"></a><h3><a id="Session.GetX11DisplayDevice"></a>GetX11DisplayDevice ()</h3><a id="idp6608968" class="indexterm"></a><pre class="programlisting">GetX11DisplayDevice (out 's' x11_display_device)</pre><p>Returns the value of the display device (aka TTY) that the
+        X11 display for the session is connected to.  If there is no x11-display set then this value
+        is undefined.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>x11_display_device</code></em>:</span></dt><dd>The value of the X11 display device</dd></dl></div><p>
+See also:
+<a class="link" href="#Session:x11-display-device"><code class="literal">x11-display-device</code></a></p></div><div class="refsect2" title="GetDisplayDevice ()"><a id="idp6611576"></a><h3><a id="Session.GetDisplayDevice"></a>GetDisplayDevice ()</h3><a id="idp6612072" class="indexterm"></a><pre class="programlisting">GetDisplayDevice (out 's' display_device)</pre><p>Returns the value of the display device (aka TTY) that the
+        session is connected to.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>display_device</code></em>:</span></dt><dd>The value of the display device</dd></dl></div><p>
+See also:
+<a class="link" href="#Session:display-device"><code class="literal">display-device</code></a></p></div><div class="refsect2" title="GetRemoteHostName ()"><a id="idp6614576"></a><h3><a id="Session.GetRemoteHostName"></a>GetRemoteHostName ()</h3><a id="idp6615072" class="indexterm"></a><pre class="programlisting">GetRemoteHostName (out 's' remote_host_name)</pre><p>Returns the value of the remote host name for the session.
+        </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>remote_host_name</code></em>:</span></dt><dd>The remote host name</dd></dl></div><p>
+See also:
+<a class="link" href="#Session:remote-host-name"><code class="literal">remote-host-name</code></a></p></div><div class="refsect2" title="GetLoginSessionId ()"><a id="idp6617520"></a><h3><a id="Session.GetLoginSessionId"></a>GetLoginSessionId ()</h3><a id="idp6618016" class="indexterm"></a><pre class="programlisting">GetLoginSessionId (out 's' login_session_id)</pre><p>Returns the value of the login session ID that the
+        underlying system uses to enforce session boundaries.  If there is no login session ID
+        set then this value is an empty string.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>login_session_id</code></em>:</span></dt><dd>The value of the native system login session ID</dd></dl></div></div><div class="refsect2" title="IsActive ()"><a id="idp6620088"></a><h3><a id="Session.IsActive"></a>IsActive ()</h3><a id="idp6620584" class="indexterm"></a><pre class="programlisting">IsActive (out 'b' active)</pre><p>Returns whether the session is active on the Seat that
+        it is attached to.</p><p>If the session is not attached to a seat this value is undefined.
+        </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>active</code></em>:</span></dt><dd>TRUE if the session is active, otherwise FALSE</dd></dl></div><p>
+See also:
+<a class="link" href="#Session:active"><code class="literal">active</code></a></p></div><div class="refsect2" title="IsLocal ()"><a id="idp6623320"></a><h3><a id="Session.IsLocal"></a>IsLocal ()</h3><a id="idp6623816" class="indexterm"></a><pre class="programlisting">IsLocal (out 'b' local)</pre><p>Returns whether the session is local</p><p>FIXME: we need to come up with a concrete definition for this value.
+        It was originally used as a way to identify XDMCP sessions that originate
+        from a remote system.
+        </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>local</code></em>:</span></dt><dd>TRUE if the session is local, otherwise FALSE</dd></dl></div><p>
+See also:
+<a class="link" href="#Session:is-local"><code class="literal">is-local</code></a></p></div><div class="refsect2" title="GetCreationTime ()"><a id="idp6626632"></a><h3><a id="Session.GetCreationTime"></a>GetCreationTime ()</h3><a id="idp6627128" class="indexterm"></a><pre class="programlisting">GetCreationTime (out 's' iso8601_datetime)</pre><p>Returns an ISO 8601 date-time string that corresponds to
+          the time that the session was opened.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>iso8601_datetime</code></em>:</span></dt><dd>An ISO 8601 format date-type string</dd></dl></div></div><div class="refsect2" title="Activate ()"><a id="idp6629160"></a><h3><a id="Session.Activate"></a>Activate ()</h3><a id="idp6629656" class="indexterm"></a><pre class="programlisting">Activate ()</pre><p>Attempt to activate the this session.  In most
+          cases, if successful, this will cause the session to
+          become visible and become active on the seat that it
+          is attached to.</p><p>
+See also:
+<a class="link" href="#Seat.ActivateSession"><code class="function">Seat.ActivateSession()</code></a></p></div><div class="refsect2" title="Lock ()"><a id="idp6631432"></a><h3><a id="Session.Lock"></a>Lock ()</h3><a id="idp6631928" class="indexterm"></a><pre class="programlisting">Lock ()</pre><p>This will cause a <a class="link" href="#Session::Lock"><code class="literal">Lock</code></a>
+          signal to be emitted for this session.
+          </p><div class="note" title="Permissions" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">This method is restricted to privileged users by D-Bus policy.</p></div><p>
+See also:
+<a class="link" href="#Session::Lock"><code class="literal">Lock signal</code></a></p></div><div class="refsect2" title="Unlock ()"><a id="idp6634576"></a><h3><a id="Session.Unlock"></a>Unlock ()</h3><a id="idp6635072" class="indexterm"></a><pre class="programlisting">Unlock ()</pre><p>This will cause an <a class="link" href="#Session::Unlock"><code class="literal">Unlock</code></a>
+          signal to be emitted for this session.
+          </p><p>This can be used by login managers to unlock a session before it is
+          re-activated during fast-user-switching.
+          </p><div class="note" title="Permissions" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Permissions</h3><p class="permission">This method is restricted to privileged users by D-Bus policy.</p></div><p>
+See also:
+<a class="link" href="#Session::Unlock"><code class="literal">Unlock signal</code></a></p></div><div class="refsect2" title="GetIdleHint ()"><a id="idp6638048"></a><h3><a id="Session.GetIdleHint"></a>GetIdleHint ()</h3><a id="idp6638544" class="indexterm"></a><pre class="programlisting">GetIdleHint (out 'b' idle_hint)</pre><p>Gets the value of the <a class="link" href="#Session:idle-hint"><code class="literal">idle-hint</code></a>
+          property.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>idle_hint</code></em>:</span></dt><dd>The value of the idle-hint</dd></dl></div><p>
+See also:
+<a class="link" href="#Session:idle-hint"><code class="literal">idle-hint</code></a></p></div><div class="refsect2" title="GetIdleSinceHint ()"><a id="idp6641504"></a><h3><a id="Session.GetIdleSinceHint"></a>GetIdleSinceHint ()</h3><a id="idp6642000" class="indexterm"></a><pre class="programlisting">GetIdleSinceHint (out 's' iso8601_datetime)</pre><p>Returns an ISO 8601 date-time string that corresponds to
+          the time of the last change of the idle-hint.
+          </p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>iso8601_datetime</code></em>:</span></dt><dd>An ISO 8601 format date-type string</dd></dl></div></div><div class="refsect2" title="SetIdleHint ()"><a id="idp6644040"></a><h3><a id="Session.SetIdleHint"></a>SetIdleHint ()</h3><a id="idp6644536" class="indexterm"></a><pre class="programlisting">SetIdleHint (in  'b' idle_hint)</pre><p>This may be used by the session to indicate that
+          it is idle.
+          </p><p>Use of this method is restricted to the user
+          that owns the session.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>idle_hint</code></em>:</span></dt><dd>boolean value to set the idle-hint to</dd></dl></div></div></div><div class="refsect1" title="Signal Details"><a id="idp6646880"></a><h2>Signal Details</h2><div class="refsect2" title="The ActiveChanged signal"><a id="idp6647440"></a><h3><a id="Session::ActiveChanged"></a>The ActiveChanged signal</h3><a id="idp6647936" class="indexterm"></a><pre class="programlisting">ActiveChanged ('b' is_active)</pre><p>Emitted when the active property has changed.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>is_active</code></em>:</span></dt><dd>TRUE if the session is active, otherwise FALSE</dd></dl></div></div><div class="refsect2" title="The IdleHintChanged signal"><a id="idp6649912"></a><h3><a id="Session::IdleHintChanged"></a>The IdleHintChanged signal</h3><a id="idp6650408" class="indexterm"></a><pre class="programlisting">IdleHintChanged ('b' hint)</pre><p>Emitted when the idle-hint property has changed.</p><div class="variablelist"><dl><dt><span class="term"><em class="parameter"><code>hint</code></em>:</span></dt><dd>the new value of idle-hint</dd></dl></div></div><div class="refsect2" title="The Lock signal"><a id="idp6652288"></a><h3><a id="Session::Lock"></a>The Lock signal</h3><a id="idp6652784" class="indexterm"></a><pre class="programlisting">Lock ()</pre><p>Emitted in response to a call to the <a class="link" href="#Session.Lock"><code class="function">Lock()</code></a> method.</p><p>It is intended that the screensaver for the session should lock the screen in response to this signal.</p></div><div class="refsect2" title="The Unlock signal"><a id="idp6654640"></a><h3><a id="Session::Unlock"></a>The Unlock signal</h3><a id="idp6655136" class="indexterm"></a><pre class="programlisting">Unlock ()</pre><p>Emitted in response to a call to the <a class="link" href="#Session.Unlock"><code class="function">Unlock()</code></a> method.</p><p>It is intended that the screensaver for the session should unlock the screen in response to this signal.</p></div></div><div class="refsect1" title="Property Details"><a id="idp6657056"></a><h2>Property Details</h2><div class="refsect2" title="The &quot;unix-user&quot; property"><a id="idp6657616"></a><h3><a id="Session:unix-user"></a>The "unix-user" property</h3><a id="idp6658112" class="indexterm"></a><pre class="programlisting">'unix-user'  readwrite 'u'
+</pre><p>The user assigned to the session.</p></div><div class="refsect2" title="The &quot;user&quot; property"><a id="idp6659160"></a><h3><a id="Session:user"></a>The "user" property</h3><a id="idp6659656" class="indexterm"></a><pre class="programlisting">'user'  readwrite 'u'
+</pre><p>The user assigned to the session.</p><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p><code class="literal">user</code> is deprecated since version 0.1.3 and should not be used in newly-written code. Use
+
+  <a class="link" href="#Session:unix-user"><code class="literal">unix-user</code></a>
+instead.</p></div></div><div class="refsect2" title="The &quot;session-type&quot; property"><a id="idp6661920"></a><h3><a id="Session:session-type"></a>The "session-type" property</h3><a id="idp6662416" class="indexterm"></a><pre class="programlisting">'session-type'  readwrite 's'
+</pre><p>The type of the session.</p><p>Warning: we haven't yet defined the allowed values for this property.
+          It is probably best to avoid this until we do.
+          </p></div><div class="refsect2" title="The &quot;remote-host-name&quot; property"><a id="idp6663800"></a><h3><a id="Session:remote-host-name"></a>The "remote-host-name" property</h3><a id="idp6664336" class="indexterm"></a><pre class="programlisting">'remote-host-name'  readwrite 's'
+</pre><p>The remote host name for the session.
+          </p><p>This will be set in situations where the session is
+          opened and controlled from a remote system.
+          </p><p>For example, this value will be set when the
+          session is created from an SSH or XDMCP connection.
+          </p></div><div class="refsect2" title="The &quot;display-device&quot; property"><a id="idp6666080"></a><h3><a id="Session:display-device"></a>The "display-device" property</h3><a id="idp6666616" class="indexterm"></a><pre class="programlisting">'display-device'  readwrite 's'
+</pre><p>The display device (aka TTY) that the
+          session is connected to.
+          </p></div><div class="refsect2" title="The &quot;x11-display&quot; property"><a id="idp6667752"></a><h3><a id="Session:x11-display"></a>The "x11-display" property</h3><a id="idp6668248" class="indexterm"></a><pre class="programlisting">'x11-display'  readwrite 's'
+</pre><p>Value of the X11 DISPLAY for this session
+          if one is present.
+          </p></div><div class="refsect2" title="The &quot;x11-display-device&quot; property"><a id="idp6669384"></a><h3><a id="Session:x11-display-device"></a>The "x11-display-device" property</h3><a id="idp6669920" class="indexterm"></a><pre class="programlisting">'x11-display-device'  readwrite 's'
+</pre><p>
+          The display device (aka TTY) that the X11 display for the
+          session is connected to.  If there is no x11-display set then
+          this value is undefined.
+          </p></div><div class="refsect2" title="The &quot;active&quot; property"><a id="idp6671168"></a><h3><a id="Session:active"></a>The "active" property</h3><a id="idp6671664" class="indexterm"></a><pre class="programlisting">'active'  readwrite 'b'
+</pre><p>
+          Whether the session is active on the Seat that
+          it is attached to.</p><p>If the session is not attached to a seat this value is undefined.
+          </p></div><div class="refsect2" title="The &quot;is-local&quot; property"><a id="idp6673048"></a><h3><a id="Session:is-local"></a>The "is-local" property</h3><a id="idp6673544" class="indexterm"></a><pre class="programlisting">'is-local'  readwrite 'b'
+</pre><p>
+          Whether the session is local</p><p>FIXME: we need to come up with a concrete definition for this value.
+          It was originally used as a way to identify XDMCP sessions that originate
+          from a remote system.
+          </p></div><div class="refsect2" title="The &quot;idle-hint&quot; property"><a id="idp6674992"></a><h3><a id="Session:idle-hint"></a>The "idle-hint" property</h3><a id="idp6675488" class="indexterm"></a><pre class="programlisting">'idle-hint'  readwrite 'b'
+</pre><p>
+          This is a hint used to indicate that the session may be idle.
+          </p><p>
+          For sessions with a <a class="link" href="#Session:x11-display"><code class="literal">x11-display</code></a> set (ie. graphical
+          sessions), it is up to each session to delegate the
+          responsibility for updating this value.  Typically, the
+          screensaver will set this.
+          </p><p>However, for non-graphical sessions with a <a class="link" href="#Session:display-device"><code class="literal">display-device</code></a> set
+          the Session object itself will periodically update this value based
+          on the activity detected on the display-device itself.
+          </p><p>
+          This should not be considered authoritative.
+          </p></div></div></div></div></div><div class="index" title="Index"><div class="titlepage"><div><div><h2 class="title"><a id="idp6754696"></a>Index</h2></div></div></div><div class="index"><div class="indexdiv"><h3>A</h3><dl><dt>Activate</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6629160">Activate ()</a></dt></dl></dd><dt>ActivateSession</dt><dd><dl><dt>Seat, <a class="indexterm" href="#idp6514312">ActivateSession ()</a></dt></dl></dd><dt>active</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6671168">The "active" property</a></dt></dl></dd><dt>ActiveChanged</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6647440">The ActiveChanged signal</a></dt></dl></dd><dt>ActiveSessionChanged</dt><dd><dl><dt>Seat, <a class="indexterm" href="#idp6518080">The ActiveSessionChanged signal</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>C</h3><dl><dt>CanActivateSessions</dt><dd><dl><dt>Seat, <a class="indexterm" href="#idp6511888">CanActivateSessions ()</a></dt></dl></dd><dt>CanRestart</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6344280">CanRestart ()</a></dt></dl></dd><dt>CanStop</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6348824">CanStop ()</a></dt></dl></dd><dt>CloseSession</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6365304">CloseSession ()</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>D</h3><dl><dt>DeviceAdded</dt><dd><dl><dt>Seat, <a class="indexterm" href="#idp6525296">The DeviceAdded signal</a></dt></dl></dd><dt>DeviceRemoved</dt><dd><dl><dt>Seat, <a class="indexterm" href="#idp6527680">The DeviceRemoved signal</a></dt></dl></dd><dt>display-device</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6666080">The "display-device" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>G</h3><dl><dt>GetActiveSession</dt><dd><dl><dt>Seat, <a class="indexterm" href="#idp6509224">GetActiveSession ()</a></dt></dl></dd><dt>GetCreationTime</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6626632">GetCreationTime ()</a></dt></dl></dd><dt>GetCurrentSession</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6382912">GetCurrentSession ()</a></dt></dl></dd><dt>GetDevices</dt><dd><dl><dt>Seat, <a class="indexterm" href="#idp6506464">GetDevices ()</a></dt></dl></dd><dt>GetDisplayDevice</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6611576">GetDisplayDevice ()</a></dt></dl></dd><dt>GetId</dt><dd><dl><dt>Seat, <a class="indexterm" href="#idp6500768">GetId ()</a></dt><dt>Session, <a class="indexterm" href="#idp6590224">GetId ()</a></dt></dl></dd><dt>GetIdleHint</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6638048">GetIdleHint ()</a></dt></dl></dd><dt>GetIdleSinceHint</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6641504">GetIdleSinceHint ()</a></dt></dl></dd><dt>GetLoginSessionId</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6617520">GetLoginSessionId ()</a></dt></dl></dd><dt>GetRemoteHostName</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6614576">GetRemoteHostName ()</a></dt></dl></dd><dt>GetSeatId</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6592480">GetSeatId ()</a></dt></dl></dd><dt>GetSeats</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6368816">GetSeats ()</a></dt></dl></dd><dt>GetSessionForCookie</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6376352">GetSessionForCookie ()</a></dt></dl></dd><dt>GetSessionForUnixProcess</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6379592">GetSessionForUnixProcess ()</a></dt></dl></dd><dt>GetSessions</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6372560">GetSessions ()</a></dt><dt>Seat, <a class="indexterm" href="#idp6503088">GetSessions ()</a></dt></dl></dd><dt>GetSessionsForUnixUser</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6386160">GetSessionsForUnixUser ()</a></dt></dl></dd><dt>GetSessionsForUser</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6390296">GetSessionsForUser ()</a></dt></dl></dd><dt>GetSessionType</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6595224">GetSessionType ()</a></dt></dl></dd><dt>GetSystemIdleHint</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6395680">GetSystemIdleHint ()</a></dt></dl></dd><dt>GetSystemIdleSinceHint</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6398648">GetSystemIdleSinceHint ()</a></dt></dl></dd><dt>GetUnixUser</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6602608">GetUnixUser ()</a></dt></dl></dd><dt>GetUser</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6598520">GetUser ()</a></dt></dl></dd><dt>GetX11Display</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6605488">GetX11Display ()</a></dt></dl></dd><dt>GetX11DisplayDevice</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6608472">GetX11DisplayDevice ()</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>I</h3><dl><dt>idle-hint</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6674992">The "idle-hint" property</a></dt></dl></dd><dt>IdleHintChanged</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6649912">The IdleHintChanged signal</a></dt></dl></dd><dt>is-local</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6673048">The "is-local" property</a></dt></dl></dd><dt>IsActive</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6620088">IsActive ()</a></dt></dl></dd><dt>IsLocal</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6623320">IsLocal ()</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>L</h3><dl><dt>Lock</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6631432">Lock ()</a>, <a class="indexterm" href="#idp6652288">The Lock signal</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>O</h3><dl><dt>OpenSession</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6351784">OpenSession ()</a></dt></dl></dd><dt>OpenSessionWithParameters</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6358760">OpenSessionWithParameters ()</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>R</h3><dl><dt>remote-host-name</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6663800">The "remote-host-name" property</a></dt></dl></dd><dt>Restart</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6342688">Restart ()</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>S</h3><dl><dt>SeatAdded</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6401904">The SeatAdded signal</a></dt></dl></dd><dt>SeatRemoved</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6404336">The SeatRemoved signal</a></dt></dl></dd><dt>session-type</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6661920">The "session-type" property</a></dt></dl></dd><dt>SessionAdded</dt><dd><dl><dt>Seat, <a class="indexterm" href="#idp6520536">The SessionAdded signal</a></dt></dl></dd><dt>SessionRemoved</dt><dd><dl><dt>Seat, <a class="indexterm" href="#idp6522912">The SessionRemoved signal</a></dt></dl></dd><dt>SetIdleHint</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6644040">SetIdleHint ()</a></dt></dl></dd><dt>Stop</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6347240">Stop ()</a></dt></dl></dd><dt>SystemIdleHintChanged</dt><dd><dl><dt>Manager, <a class="indexterm" href="#idp6406768">The SystemIdleHintChanged signal</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>U</h3><dl><dt>unix-user</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6657616">The "unix-user" property</a></dt></dl></dd><dt>Unlock</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6634576">Unlock ()</a>, <a class="indexterm" href="#idp6654640">The Unlock signal</a></dt></dl></dd><dt>user</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6659160">The "user" property</a></dt></dl></dd></dl></div><div class="indexdiv"><h3>X</h3><dl><dt>x11-display</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6667752">The "x11-display" property</a></dt></dl></dd><dt>x11-display-device</dt><dd><dl><dt>Session, <a class="indexterm" href="#idp6669384">The "x11-display-device" property</a></dt></dl></dd></dl></div></div></div></div></body></html>

@@ -1,0 +1,1 @@
+../../../../../../../share/pyshared/orca/scripts/apps/gtk-window-decorator/__init__.py

@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.26">
+<!ENTITY manrevision "2.8">
+<!ENTITY date "March 2009">
+<!ENTITY app "Search for Files">
+<!ENTITY ug "GNOME Desktop User Guide">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp 
+  Template version: 2.0 beta
+  Template last modified Jan 25, 2005  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="es">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Manual de la búsqueda de archivos</title>
+
+    <abstract role="description">
+      <para>Una herramienta de búsqueda para buscar archivos, carpetas y documentos en su equipo.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2005</year> 
+      <holder>Dennis Cranston</holder> 
+    </copyright>
+    <copyright> 
+      <year>2002</year> 
+      <year>2003</year> 
+      <year>2004</year> 
+      <holder>Sun Microsystems</holder> 
+    </copyright> 
+    <copyright> 
+      <year>2000</year> 
+      <holder>Alexander Kirillov</holder> 
+    </copyright><copyright><year>2005, 2007-2009</year><holder>Jorge González (jorgegonz@svn.gnome.org)</holder></copyright>
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <publisher> 
+      <publishername>Proyecto de documentación de GNOME</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Se otorga permiso para copiar, distribuir y/o modificar este documento bajo los términos de la Licencia de Documentación Libre de GNU, Versión 1.1 o cualquier otra versión posterior publicada por la Free Software Foundation; sin Secciones Invariantes ni Textos de Cubierta Delantera ni Textos de Cubierta Trasera. Puede encontrar una copia de la licencia GFDL en este <ulink type="help" url="ghelp:fdl">enlace</ulink> o en el archivo COPYING-DOCS distribuido con este manual.</para>
+         <para>Este manual es parte de una colección de manuales de GNOME distribuido bajo la GFDL. Si quiere distribuir este manual por separado de la colección, puede hacerlo añadiendo una copia de la licencia al manual, tal como se describe en la sección 6 de la licencia.</para>
+
+	<para>Muchos de los nombres usados por compañías para distinguir sus productos y servicios son mencionados como marcas comerciales. Donde esos nombres aparezcan en cualquier documentación de GNOME, y los miembros del Proyecto de Documentación de GNOME están al corriente de esas marcas comerciales, entonces los nombres se pondrán en mayúsculas o con la inicial en mayúsculas.</para>
+
+	<para>ESTE DOCUMENTO Y LAS VERSIONES MODIFICADAS DEL MISMO SE PROPORCIONAN SEGÚN LAS CONDICIONES ESTABLECIDAS EN LA LICENCIA DE DOCUMENTACIÓN LIBRE DE GNU (GFDL) Y TENIENDO EN CUENTA QUE: <orderedlist>
+		<listitem>
+		  <para>EL DOCUMENTO SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, NI EXPLÍCITA NI IMPLÍCITA INCLUYENDO, SIN LIMITACIÓN, GARANTÍA DE QUE EL DOCUMENTO O VERSIÓN MODIFICADA DE ÉSTE CAREZCA DE DEFECTOS COMERCIALES, SEA ADECUADO A UN FIN CONCRETO O INCUMPLA ALGUNA NORMATIVA. TODO EL RIESGO RELATIVO A LA CALIDAD, PRECISIÓN Y UTILIDAD DEL DOCUMENTO O SU VERSIÓN MODIFICADA RECAE EN USTED. SI CUALQUIER DOCUMENTO O VERSIÓN MODIFICADA DE AQUÉL RESULTARA DEFECTUOSO EN CUALQUIER ASPECTO, USTED (Y NO EL REDACTOR INICIAL, AUTOR O CONTRIBUYENTE) ASUMIRÁ LOS COSTES DE TODA REPARACIÓN, MANTENIMIENTO O CORRECCIÓN NECESARIOS. ESTA RENUNCIA DE GARANTÍA ES UNA PARTE ESENCIAL DE ESTA LICENCIA. NO SE AUTORIZA EL USO DE NINGÚN DOCUMENTO NI VERSIÓN MODIFICADA DE ÉSTE POR EL PRESENTE, SALVO DENTRO DEL CUMPLIMIENTO DE LA RENUNCIA;Y</para>
+		</listitem>
+		<listitem>
+		  <para>BAJO NINGUNA CIRCUNSTANCIA NI BAJO NINGUNA TEORÍA LEGAL, SEA POR ERROR (INCLUYENDO NEGLIGENCIA), CONTRATO O DE ALGÚN OTRO MODO, EL AUTOR, EL ESCRITOR INICIAL, CUALQUIER CONTRIBUIDOR, O CUALQUIER DISTRIBUIDOR DEL DOCUMENTO O VERSIÓN MODIFICADA DEL DOCUMENTO, O CUALQUIER PROVEEDOR DE CUALQUIERA DE ESAS PARTES, SERÁ RESPONSABLE ANTE NINGUNA PERSONA POR NINGÚN DAÑO DIRECTO, INDIRECTO, ESPECIAL, INCIDENTAL O DERIVADO DE NINGÚN TIPO, INCLUYENDO, SIN LIMITACIÓN DAÑOS POR PÉRDIDA DE MERCANCÍAS, PARO TÉCNICO, FALLO INFORMÁTICO O MAL FUNCIONAMIENTO O CUALQUIER OTRO POSIBLE DAÑO O PÉRDIDAS DERIVADAS O RELACIONADAS CON EL USO DEL DOCUMENTO O SUS VERSIONES MODIFICADAS, AUNQUE DICHA PARTE HAYA SIDO INFORMADA DE LA POSIBILIDAD DE QUE SE PRODUJESEN DICHOS DAÑOS.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Dennis</firstname> 
+	<surname>Cranston</surname> 
+	<affiliation> 
+	  <orgname>Mantenedor de Buscar archivos</orgname> 
+	  <address>dennis_cranston@yahoo.com</address> 
+	</affiliation> 
+      </author> 
+      <author> 
+	<firstname>Sun</firstname> 
+	<surname>Equipo de documentación de GNOME</surname> 
+	<affiliation> 
+	  <orgname>Sun Microsystems</orgname> 
+	  <address/> 
+	</affiliation> 
+      </author> 
+      <author> 
+	<firstname>Alexander</firstname> 
+	<surname>Kirillov</surname> 
+	<affiliation> 
+	  <orgname>Proyecto de documentación de GNOME</orgname> 
+	  <address> <email>kirillov@math.sunysb.edu</email> </address> 
+	</affiliation> 
+      </author> 
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>translator@gnome.org</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+
+ <revhistory>
+ <!-- <revision> 
+	<revnumber>&app; Manual V&manrevision;</revnumber> 
+	<date>&date;</date> 
+	<revdescription> 
+	  <para role="author">Sun GNOME Documentation Team</para>
+	  <para role="publisher">GNOME Documentation Project</para>
+	</revdescription> 
+ </revision>
+-->
+   <revision> 
+			<revnumber>Manual de la búsqueda de archivos V2.7</revnumber> 
+			<date>Junio de 2005</date> 
+			<revdescription> 
+	  		<para role="author">Joachim Noreiko <email>jnoreiko@yahoo.com</email></para>
+	  		<para role="publisher">Mantenedor de Buscar archivos</para>
+			</revdescription> 
+  </revision>
+  <revision> 
+			<revnumber>Manual de la búsqueda de archivos V2.6</revnumber> 
+			<date>Enero de 2005</date> 
+			<revdescription> 
+	  		<para role="author">Dennis Cranston <email>dennis_cranston@yahoo.com</email></para>
+	  		<para role="publisher">Mantenedor de Buscar archivos</para>
+			</revdescription> 
+ </revision>
+ <revision> 
+			<revnumber>Manual de la búsqueda de archivos V2.4</revnumber> 
+			<date>Febrero de 2004</date> 
+			<revdescription> 
+	  		<para role="author">Equipo de documentación de GNOME de Sun</para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+ </revision>
+ <revision> 
+			<revnumber>Manual de la búsqueda de archivos V2.3</revnumber> 
+			<date>Septiembre de 2002</date> 
+			<revdescription> 
+	  		<para role="author">Equipo de documentación de GNOME de Sun</para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+ </revision>
+ <revision> 
+			<revnumber>Manual de la búsqueda de archivos V2.2</revnumber> 
+			<date>Agosto de 2002</date> 
+			<revdescription> 
+	  		<para role="author">Equipo de documentación de GNOME de Sun</para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+ </revision> 
+ <revision> 
+			<revnumber>Manual de la búsqueda de archivos V2.1</revnumber> 
+			<date>Julio de 2002</date> 
+			<revdescription> 
+	  		<para role="author">Equipo de documentación de GNOME de Sun</para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+ </revision> 
+ <revision> 
+			<revnumber>Manual de la búsqueda de archivos V2.0</revnumber> 
+			<date>Mayo de 2002</date> 
+			<revdescription> 
+	  		<para role="author">Equipo de documentación de GNOME de Sun</para>
+	  		<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+ </revision> 
+ <revision> 
+	<revnumber>Manual de la búsqueda de archivos</revnumber> 
+	<date>2000</date> 
+	<revdescription> 
+	  <para role="author">Alexander Kirillov <email>kirillov@math.sunysb.edu</email></para>
+	  <para role="publisher">Proyecto de documentación de GNOME</para>
+	</revdescription> 
+ </revision> 
+ </revhistory> 
+
+    <releaseinfo>Este manual describe la versión 2.26 de la búsqueda de archivos.</releaseinfo> 
+    <legalnotice> 
+      <title>Comentarios</title> 
+      <para>Para informar sobre un fallo o hacer sugerencias sobre la aplicación Búsqueda de archivos o sobre este manual, siga las indicaciones en la <ulink url="ghelp:gnome-feedback" type="help">Página de comentarios de GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>Herramienta de búsqueda</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="gsearchtool-introduction"> 
+    <title>Introducción</title> 
+    <para>La aplicación <application>Buscar archivos</application> le permite buscar archivos en su sistema. Para realizar una búsqueda básica, puede teclear un nombre de archivo o un nombre de archivo parcial, con o sin comodines. Para redefinir su búsqueda, puede aplicar opciones de búsqueda adicionales.</para>
+    <para><application>Búsqueda de archivos</application> usa los comandos UNIX <command>find</command>, <command>grep</command>, y <command>locate</command>. Por omisión, al realizar una búsqueda básica <application>Búsqueda de archivos</application> primero usa el comando <command>locate</command>, y después usa el comando <command>find</command>, más lento pero más exacto.</para>
+    <para>La discriminación de la capitalización en la búsqueda depende de su sistema operativo. Por ejemplo, en Linux, los comandos  <command>find</command>, <command>grep</command>, y <command>locate</command> soportan la opción <literal>-i</literal>, así que todas las búsquedas son no discriminan la capitalización.</para>
+  </sect1>
+
+  <sect1 id="gsearchtool-getting-started">
+    <title>Iniciando</title> 
+
+    <para>Puede iniciar la <application>Búsqueda de archivos</application> de las siguientes formas:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Desde una <guimenu>Barra de menú</guimenu> en un panel</term>
+    		<listitem>
+    		<para>Elija <menuchoice><guisubmenu>Lugares</guisubmenu><guimenuitem>Buscar archivos...</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+   	<varlistentry>
+    		<term>Desde un <guimenu>Menú principal</guimenu> en un panel</term>
+    		<listitem>
+    		<para>Elija <menuchoice><guimenuitem>Buscar archivos...</guimenuitem></menuchoice></para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Desde una línea de comandos</term>
+    		<listitem>
+    		<para>Ejecute el siguiente comando: <command>gnome-search-tool</command></para>
+    		<para> 		 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+
+    <para>Cuando inicie la <application>Búsqueda de archivos</application>, se muestra la siguiente ventana.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="mainwindow-fig"> 
+	<title>Ventana de «Búsqueda de archivos»</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject><imagedata fileref="figures/gnome-search-tool_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Muestra la ventana principal de «Búsqueda de archivos».</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="gsearchtool-usage"> 
+    <title>Uso</title>
+
+    <sect2 id="gsearchtool-simple">
+    <title>Para realizar una búsqueda básica</title>
+    
+    <para>Para realizar una búsqueda básica para un archivo en el sistema, realice los siguientes pasos:</para>
+    <orderedlist>
+    <listitem><para>Introduzca el texto a buscar en el campo <guilabel>El nombre contiene</guilabel>. El texto de búsqueda puede ser un nombre de archivo o un nombre de archivo parcial, con o sin comodines, tal como se muestra en la tabla siguiente:</para>
+
+      <informaltable frame="all">
+        <tgroup cols="3" colsep="1" rowsep="1">
+          <colspec colname="COLSPEC0" colwidth="33*"/>
+          <colspec colname="COLSPEC1" colwidth="33*"/>
+          <colspec colname="COLSPEC2" colwidth="34*"/>
+          <thead>
+            <row valign="top">
+              <entry colname="COLSPEC0">
+                <para>El nombre contiene el texto</para></entry>
+              <entry colname="COLSPEC1">
+                <para>Ejemplo</para></entry>
+              <entry colname="COLSPEC2">
+                <para>Resultado</para></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row valign="top">
+              <entry>
+                <para>Nombre de archivo completo o parcial</para>
+              </entry>
+              <entry>
+                <para><userinput>miarchivo.txt</userinput>
+                </para>
+              </entry>
+              <entry>
+                <para><application>Búsqueda de archivos</application> busca todos los archivos que contengan el texto <userinput>miarchivo.txt</userinput> en el nombre del archivo.</para>
+              </entry>
+            </row>
+            <row valign="top">
+              <entry>
+                <para>Nombre de archivo parcial combinado con los comodines (*, [, ])</para>
+              </entry>
+              <entry>
+                <para><userinput>*.[ch]</userinput>
+                </para>
+              </entry>
+              <entry>
+                <para><application>Búsqueda de archivos</application> busca todos los archivos que tengan la extensión <userinput>.c</userinput> o <userinput>.h</userinput>.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </listitem>
+    <listitem><para>En el campo <guilabel>Buscar en la carpeta</guilabel>, seleccione la carpeta o dispositivo desde el que quiere que <application>Buscar archivos</application> empiece a buscar.</para></listitem>
+    <listitem><para>Pulse en <guibutton>Buscar</guibutton> para efectuar la búsqueda.</para>
+    </listitem>
+    </orderedlist>
+    <para><application>Buscar archivos</application> busca en el directorio que especifique y en los subdirectorios del directorio. <application>Buscar archivos</application> muestra los resultados de la búsqueda en la caja <guilabel>Resultados de la búsqueda</guilabel>. Si <application>Buscar archivos</application> no encuentra ningún archivo que coincida con el criterio de búsqueda, la aplicación muestra el mensaje «No se encontró ningún archivo» en la caja <guilabel>Resultados de la búsqueda</guilabel>.</para>
+    <para>Por omisión, <application>Buscar archivos</application> realiza una búsqueda rápida usando el comando <command>locate</command> seguido por una búsqueda más intensa usando el comando <command>find</command>. El comando <command>locate</command> es más rápido porque usa una base de datos de información sobre los archivos. Si esta base de datos es más de una semana de antigua, <application>Búsqueda de archivos</application> le puede avisar de que los resultados de la búsqueda pueden estar desactualizados y darle la opción para desactivar la búsqueda rápida. Para actualizar la base de datos, ejecute el programa <command>updatedb</command> como usuario root.</para>
+  </sect2>
+    
+    <sect2 id="gsearchtool-advanced">
+    <title>Añadir a las opciones de búsqueda</title>
+    <para>Puede añadir opciones adicionales para buscar un archivo en el sistema. Para añadir opciones de búsqueda, realice los pasos siguientes:</para>
+  	<orderedlist>
+    		<listitem><para>Pulse en el texto <guilabel>Seleccionar más opciones</guilabel>.</para></listitem>
+    		<listitem><para>Pulse en la lista desplegable <guilabel>Opciones disponibles</guilabel>.</para></listitem>
+    		<listitem><para>Seleccione la opción de búsqueda que quiere aplicar.</para></listitem>
+    		<listitem><para>Pulse en <guibutton>Añadir</guibutton>.</para></listitem>
+    		<listitem><para>Especifique la información de búsqueda requerida para la opción de búsqueda, tal como se describe en la <xref linkend="tbl-search-rules"/>.</para></listitem>
+    		<listitem><para>Repita los pasos de arriba por cada opción de búsqueda que quiera aplicar.</para></listitem>
+    	</orderedlist>	
+    	<para>Para quitar una opción de búsqueda de la búsqueda actual, pulse en el botón <guibutton>Quitar</guibutton> junto a la opción.</para>
+    	<para>Para desactivar las opciones de búsqueda de la búsqueda actual, pulse en el texto <guilabel>Seleccionar más opciones</guilabel>.</para>
+    
+    <table id="tbl-search-rules" frame="topbot">
+    <title>Opciones de búsqueda</title> 
+		  <tgroup cols="2" colsep="1" rowsep="1">
+			 <colspec colname="COLSPEC0" colwidth="33*"/>
+			 <colspec colname="COLSPEC1" colwidth="33*"/>
+			 <thead> 
+				<row valign="top"> 
+				  <entry> 
+					 <para>Nombre de opción</para></entry> 
+				  <entry> 
+					 <para>Descripción</para></entry> 
+				</row> 
+			 </thead> 
+			 <tbody> 
+				<row valign="top"> 
+				  <entry> 
+					 <para>Contiene el texto</para></entry> 
+				  <entry> 
+					 <para>Busca archivos de tipo texto plano que contienen el texto especificado.</para></entry>  
+				</row> 
+				<row valign="top"> 
+				  <entry> 
+					 <para>Fecha de modificación anterior a</para></entry> 
+				  <entry> 
+					 <para>Busca archivos que se han modificado antes del periodo especificado en días.</para></entry>  
+				</row>
+				<row valign="top"> 
+				  <entry> 
+					 <para>Fecha de modificación posterior a</para></entry> 
+				  <entry> 
+					 <para>Busca archivos que se han modificado posteriormente al periodo especificado en días.</para></entry>  
+				</row>
+				<row valign="top"> 
+				  <entry> 
+					 <para>Tamaño de al menos</para></entry> 
+				  <entry> 
+					 <para>Busca archivos que son iguales o mayores que el tamaño especificado en kilobytes.</para></entry>  
+				</row>
+				<row valign="top"> 
+				  <entry> 
+					 <para>Tamaño de como mucho</para></entry> 
+				  <entry> 
+					 <para>Busca archivos que son más pequeños o iguales al tamaño especificado en kilobytes.</para></entry>  
+				</row>
+				<row valign="top"> 
+				  <entry> 
+					 <para>El archivo está vacío</para></entry> 
+				  <entry> 
+					 <para>Busca archivos vacíos.</para></entry>  
+				</row> 
+				<row valign="top"> 
+				  <entry> 
+					 <para>Pertenece al usuario</para></entry> 
+				  <entry> 
+					 <para>Busca archivos que pertenecen al usuario especificado. Teclee el nombre del usuario en la caja de texto proporcionada.</para></entry>  
+				</row> 
+				<row valign="top"> 
+				  <entry> 
+					 <para>Pertenece al grupo</para></entry> 
+				  <entry> 
+					 <para>Busca archivos que pertenecen al grupo especificado. Teclee el nombre del grupo en la caja de texto proporcionada.</para></entry>  
+				</row> 
+				<row valign="top"> 
+				  <entry> 
+					 <para>El propietario es desconocido</para></entry> 
+				  <entry> 
+					 <para>Busca archivos que pertenecen a un usuario o grupo que es desconocido para el sistema.</para></entry>  
+				</row> 
+				<row valign="top"> 
+				  <entry> 
+					 <para>El nombre no contiene</para></entry> 
+				  <entry> 
+					 <para>Busca nombres de archivos que no contienen la cadena que introduzca. Introduzca un nombre completo de archivo o un nombre parcial con comodines en el campo proporcionado. Use * para indicar una secuencia de caracteres. Use ? para indicar un solo carácter. La búsqueda discrimina la capitalización.</para></entry>  
+				</row> 
+				<row valign="top"> 
+				  <entry> 
+					 <para>El nombre coincide con la expresión regular</para></entry> 
+				  <entry> 
+					 <para>Busca archivos que contengan la expresión regular especificada en su ruta de directorio o nombre de archivo. Teclee la expresión regular en la caja de texto proporcionada.</para></entry>  
+				</row>
+				<row valign="top"> 
+				  <entry> 
+					 <para>Mostrar archivos ocultos y de resguardo</para></entry> 
+				  <entry> 
+					 <para>Incluye archivos ocultos y de resguardo en la búsqueda.</para></entry>  
+				</row> 
+				<row valign="top"> 
+				  <entry> 
+					 <para>Seguir enlaces simbólicos</para></entry> 
+				  <entry> 
+					 <para>Sigue los enlaces simbólicos al buscar archivos.</para></entry>  
+				</row> 
+				<row valign="top"> 
+				  <entry> 
+					 <para>Excluir otros sistemas de archivos</para></entry> 
+				  <entry> 
+					 <para>Busca en los directorios que nestán en el mismo sistema de archivos que el directorio de inicio.</para></entry>  
+				</row> 
+				 				
+			 </tbody> 
+		  </tgroup> 
+		</table> 
+    
+    </sect2>
+
+    <sect2 id="gsearchtool-stop">
+    <title>Para parar una búsqueda</title>
+    <para>Pulse en el botón <guibutton>Detener</guibutton> para parar una búsqueda antes de que <application>Búsqueda de archivos</application> complete la búsqueda.</para>
+    </sect2>
+    
+    <sect2 id="gsearchtool-view">
+    <title>Para abrir un archivo mostrado</title>
+    <para>Para abrir un archivo mostrado en la lista de <guilabel>Resultados de búsqueda</guilabel>, realice uno de los siguientes pasos:</para>
+    <itemizedlist>
+    <listitem><para>Pulse con el botón derecho del ratón y seleccione <guimenuitem>Abrir</guimenuitem>.</para></listitem>
+     <listitem><para>Doble pulsación en el archivo.</para></listitem>
+    </itemizedlist>
+    <para>Para abrir la carpeta que contiene un archivo mostrado en la lista <guilabel>Resultados de la búsqueda</guilabel>, pulse con el botón derecho en el archivo, después elija <guimenuitem>Abrir la carpeta contenedora</guimenuitem>.</para>
+    </sect2>
+
+    <sect2 id="gsearchtool-delete">
+    <title>Para borrar archivo mostrado</title>
+    <para>Para borrar un archivo mostrado en los <guilabel>Resultados de la búsqueda</guilabel>, pulse con el botón derecho en el archivo, después elija <guimenuitem>Mover a la papelera</guimenuitem>.</para>
+    </sect2>
+    
+    <!--
+    <sect2 id="gsearchtool-search-command">
+    <title>To View the Search Command Used by &app;</title>
+    <para>To view the command that <application>&app;</application> used to perform the previous search, choose <menuchoice><guimenu>Search</guimenu><guimenuitem>Show Command</guimenuitem></menuchoice>. The <guilabel>Search Command Line</guilabel> displays the command. </para>
+    </sect2>
+    -->
+    
+    <sect2 id="gsearchtool-savetofile">
+    <title>Para guardar los resultados de la búsqueda</title>
+    <para>Para guardar los resultados de la última búsqueda que realizó <application>Búsqueda de archivos</application>, pulse en la lista <guilabel>Resultados de la búsqueda</guilabel>.</para>
+    </sect2>
+ 
+  </sect1>
+
+<!-- ============= Settings ============================== -->
+
+  <sect1 id="gsearchtool-settings-gconf-keys">
+    <title>Configuraciones</title> 
+
+    <para><application>Buscar archivos</application> proporciona claves gconf para modificar algo su comportamiento. Los valores gconf se pueden cambiar iniciando el <application>Editor de configuración</application> de las formas siguientes:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Menú <guimenu>Aplicaciones</guimenu></term>
+    		<listitem>
+    		<para>Elija<menuchoice><guisubmenu>Herramientas del sistema</guisubmenu><guimenuitem>Editor de configuración</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Línea de comandos</term>
+    		<listitem>
+    		<para>Ejecute el siguiente comando: <command>gconf-editor</command></para> 
+    		</listitem>
+    	</varlistentry>	
+    </variablelist>
+    
+    <sect2 id="gsearchtool-disablequicksearch">
+    <title>Desactivar búsqueda rápida</title>
+    <para>Nombre de la clave: /apps/gnome-search-tool/disable_quick_search</para>
+    <para>Valor predeterminado: false</para>
+    <para><application>Buscar archivos</application> acelera las búsquedas de nombres de archivos usando el comando <command>locate</command>. <command>Locate</command> proporciona una manera segura para indexar y buscar rápidamente nombres de archivo. Debido a que <command>locate</command> se basa en un índice de archivos, la lista <guilabel>Resultados de búsqueda</guilabel> quizá no siempre esté al día.</para>
+    </sect2>
+
+    <sect2 id="gsearchtool-disablesecondscan">
+    <title>Desactivar el segundo análisis de la búsqueda rápida</title>
+    <para>Nombre de la clave: /apps/gnome-search-tool/disable_quick_search_second_scan</para>
+    <para>Valor predeterminado: false</para>
+    <para>Tras completar una búsqueda rápida, <application>Buscar archivos</application> realizará una búsqueda intensiva usando el comando <command>find</command>. El propósito de esta segunda búsqueda es encontrar los archivos que no se hayan indexado. Los archivos que coincidan con el criterio de búsqueda se añaden a la lista de <guilabel>Resultados de búsqueda</guilabel> manteniendo la lista al día.</para>
+    </sect2>
+
+    <sect2 id="gsearchtool-quicksearchexclude">
+    <title>Rutas excluidas de la búsqueda rápida</title>
+    <para>Nombre de la clave: /apps/gnome-search-tool/quick_search_excluded_paths</para>
+    <para>Valores predeterminados: [/mnt/*,/media/*,/dev/*,/tmp/*,/proc/*,/var/*]</para>
+    <para><application>Buscar archivos</application> no realizará una búsqueda rápida para las rutas definidas por esta clave. Las búsquedas de nombres de archivo en las rutas definidas usarán el comando <command>find</command>. Los comodines * y ? están soportados.</para>
+    </sect2>
+
+    <sect2 id="gsearchtool-secondscanexclude">
+    <title>Rutas excluidas de la segunda inspección de la búsqueda rápida</title>
+    <para>Nombre de la clave: /apps/gnome-search-tool/quick_search_second_scan_excluded_paths</para>
+    <para>Valores predeterminados: [/]</para>
+    <para><application>Buscar archivos</application> no realizará una segunda inspección después de una búsqueda rápida para las rutas definidas en esta clave. Las búsquedas rápidas en las rutas definidas no se las seguirá con una búsqueda intensa usando el comando <command>find</command>. Los comodines *  y ? están soportados.</para>
+    </sect2>
+
+    <sect2 id="gsearchtool-showoptions">
+    <title>Mostrar opciones adicionales</title>
+    <para>Nombre de la clave:  /apps/gnome-search-tool/show_additional_options</para>
+    <para>Valor predeterminado: false</para>
+    <para>Esta clave determina si la sección <guilabel>Seleccionar más opciones</guilabel> está expandida cuando se inicia  <application>Buscar archivos</application>.</para>
+    </sect2>
+    
+  </sect1>
+
+</article>

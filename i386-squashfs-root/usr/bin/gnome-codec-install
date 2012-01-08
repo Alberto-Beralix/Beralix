@@ -1,0 +1,12 @@
+#!/usr/bin/python
+
+import sys
+import pygtk
+pygtk.require('2.0')
+import gtk
+
+from GnomeCodecInstall import Main
+
+if __name__ == "__main__":
+  Main.main(sys.argv[1:])
+  

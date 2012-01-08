@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-imap-subscriptions" xml:lang="es">
+
+  <info>
+    <desc>Carpeta IMAP para suscripciones.</desc>
+    
+    <link type="guide" xref="index#mail-advanced-imap"/>
+    <link type="guide" xref="mail-account-manage-imap#other-settings"/>
+    <link type="guide" xref="mail-account-manage-imap-plus#other-settings"/>
+
+    <revision pkgversion="3.0.2" version="0.3" date="2011-08-05" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-subscriptions.html.en -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+
+<title>Suscripciones IMAP</title>
+
+<p>As opening many IMAP folders on the server takes time you can define which IMAP folders to check and display in Evolution, and which ones to ignore for the time being, via the <gui>IMAP Subscriptions Manager</gui>.</p>
+<steps>
+<item><p>Seleccione <guiseq><gui>Carpeta</gui><gui>Subscripciones</gui></guiseq> o pulse con el botón derecho del ratón sobre el nodo de nivel superior de una cuenta de correo-e en la lista de carpetas y pulse <gui>Gestionar subscripciones</gui>.</p></item> 
+<item><p>Si tiene cuentas en varios servidores, seleccione el servidor donde quiere gestionar sus suscripciones.</p></item>
+<item><p>Evolution mostrará la lista de archivos y carpetas disponibles en el servidor IMAP.</p></item>
+<item><p>Seleccione un archivo o carpeta pulsando sobre él.</p>
+<p>Necesitará seleccionar, al menos, la carpeta Bandeja de entrada. En función de cómo esté configurado su servidor IMAP la lista de archivos disponibles puede incluir carpetas que no son de correo, que puede ignorar sin mayor problema.</p></item>
+<item><p>Active la correspondiente casilla de verificación de carpeta para añadir una carpeta a sus suscripciones.</p></item>
+</steps>
+
+</page>

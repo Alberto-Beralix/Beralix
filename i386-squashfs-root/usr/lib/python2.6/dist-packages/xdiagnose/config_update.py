@@ -1,0 +1,1 @@
+../../../../share/pyshared/xdiagnose/config_update.py

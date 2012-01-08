@@ -1,0 +1,45 @@
+#!/bin/sh
+
+set -e
+
+PKG=ttf-punjabi-fonts
+FONTCONF_RENAME_VERSION=1:0.5.5
+FONTCONF_FILE=/etc/fonts/conf.d/${PKG}.conf
+DEFOMA_OBSOLETE_VERSION=1:0.5.7
+DEFOMA_FILE=/etc/defoma/hints/${PKG}.hints
+
+# Remove a no-longer used conffile
+rm_conffile() {
+    local PKGNAME="$1"
+    local CONFFILE="$2"
+    [ -e "$CONFFILE" ] || return 0
+
+    local md5sum="$(md5sum $CONFFILE | sed -e 's/ .*//')"
+    local old_md5sum="$(dpkg-query -W -f='${Conffiles}' $PKGNAME | \
+            sed -n -e "\' $CONFFILE ' { s/ obsolete$//; s/.* //; p }")"
+    if [ "$md5sum" != "$old_md5sum" ]; then
+        echo "Obsolete conffile $CONFFILE has been modified by you."
+        echo "Saving as $CONFFILE.dpkg-bak ..."
+        mv -f "$CONFFILE" "$CONFFILE".dpkg-bak
+    else
+        echo "Removing obsolete conffile $CONFFILE ..."
+        rm -f "$CONFFILE"
+    fi
+}
+
+case "$1" in
+install|upgrade)
+    if dpkg --compare-versions "$2" lt-nl "$FONTCONF_RENAME_VERSION"; then
+	rm_conffile $PKG $FONTCONF_FILE
+    fi
+    if dpkg --compare-versions "$2" lt-nl "$DEFOMA_OBSOLETE_VERSION"; then
+	if [ -f $DEFOMA_FILE ]; then
+        	if [ -x /usr/bin/defoma-font ]; then
+			defoma-font purge-all $DEFOMA_FILE || true
+		fi
+	fi
+	rm_conffile $PKG $DEFOMA_FILE
+    fi
+esac
+
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="addins-tools" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="addins#manage"/>
+    <desc>启用额外的便笺功能。</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-05-29" status="candidate"/>
+    <credit type="author">
+      <name>Paul Cutler</name>
+      <email>pcutler@gnome.org</email>
+    </credit>    
+<!--
+    <copyright>
+      <year>2010</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+-->
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+ <title>阿帖便笺工具扩展</title>
+
+	<p>工具扩展为您的阿帖便笺增加额外的功能。</p>
+
+  <section id="backlinks">
+    <title>反向链接</title>
+	<p><gui>反向链接</gui> 扩展默认是启用的，允许您查看哪些便笺链接到您当前查看的便笺。</p> 
+  </section>
+
+<section id="html-export">
+  <title>导出为 HTML</title>
+  <p><gui>导出为 HTML</gui> 扩展默认是启用的，可以把指定的便笺导出为 HTML 网页。</p>
+	<p>要导出一个便笺为 HTML，点工具栏上的 <gui>工具</gui> 图标，然后选 <gui>导出为 HTML</gui>，出来一个保存便笺的对话框。选择保存便笺的文件夹，还可以给导出的 HTML 文件换一个文件名。保存的 HTML 文件会立刻自动显示在浏览器中。</p>
+</section>
+
+<section id="timestamp">
+  <title>插入时间戳</title>
+  <p><gui>插入时间戳</gui> 扩展默认是禁用的，要启用它，在首选项选中 <gui>插入时间戳</gui> 扩展，然后点 <gui>启用</gui>。</p>
+	<p>要在便笺中添加时间戳，点工具栏上的 <gui>工具</gui> 图标，然后选 <gui>插入时间戳</gui>，或者按  <key>Ctrl + D</key>。</p>
+</section>
+
+<section id="noteoftheday">
+  <title>日记</title>
+  <p><gui>日记</gui> 扩展默认是禁用的，要启用它，在首选项选中 <gui>日记</gui> 扩展，然后点 <gui>启用</gui>。 </p>
+	<p><gui>日记</gui> 扩展每天创建一个新便笺，例如标题是 <em>今天: 2010年1月21日 星期二</em>。便笺会自动添加 <em>任务</em> 和 <em>约会</em> 两行。</p>
+</section>
+
+<section id="watcher">
+  <title>便笺文件夹监视器</title>
+  <p>便笺文件夹监视器扩展监视您保存阿帖便笺的文件夹。如果它检测到您的便笺发生变化，它会立即应用这些变化，并在您的便笺中显示。这个扩展一般和第三方同步服务配合使用，比如 Dropbox。设置第三方同步服务超出了此帮助文档的讲述范围。</p>
+</section>
+
+ </page>

@@ -1,0 +1,239 @@
+=head1 NAME
+
+Pango::Script - identifies different writing systems
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Enum
+  +----Pango::Script
+
+
+
+=cut
+
+=for object Pango::Script - identifies different writing systems
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 script = Pango::Script-E<gt>B<for_unichar> ($ch)
+
+=over
+
+=item * $ch (character) 
+
+=back
+
+Since: pango 1.4
+
+=head2 language or undef = Pango::Script-E<gt>B<get_sample_language> ($script)
+
+=over
+
+=item * $script (Pango::Script) 
+
+=back
+
+Since: pango 1.4
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Pango::Script
+
+=over
+
+=item * 'invalid-code' / 'PANGO_SCRIPT_INVALID_CODE'
+
+=item * 'common' / 'PANGO_SCRIPT_COMMON'
+
+=item * 'inherited' / 'PANGO_SCRIPT_INHERITED'
+
+=item * 'arabic' / 'PANGO_SCRIPT_ARABIC'
+
+=item * 'armenian' / 'PANGO_SCRIPT_ARMENIAN'
+
+=item * 'bengali' / 'PANGO_SCRIPT_BENGALI'
+
+=item * 'bopomofo' / 'PANGO_SCRIPT_BOPOMOFO'
+
+=item * 'cherokee' / 'PANGO_SCRIPT_CHEROKEE'
+
+=item * 'coptic' / 'PANGO_SCRIPT_COPTIC'
+
+=item * 'cyrillic' / 'PANGO_SCRIPT_CYRILLIC'
+
+=item * 'deseret' / 'PANGO_SCRIPT_DESERET'
+
+=item * 'devanagari' / 'PANGO_SCRIPT_DEVANAGARI'
+
+=item * 'ethiopic' / 'PANGO_SCRIPT_ETHIOPIC'
+
+=item * 'georgian' / 'PANGO_SCRIPT_GEORGIAN'
+
+=item * 'gothic' / 'PANGO_SCRIPT_GOTHIC'
+
+=item * 'greek' / 'PANGO_SCRIPT_GREEK'
+
+=item * 'gujarati' / 'PANGO_SCRIPT_GUJARATI'
+
+=item * 'gurmukhi' / 'PANGO_SCRIPT_GURMUKHI'
+
+=item * 'han' / 'PANGO_SCRIPT_HAN'
+
+=item * 'hangul' / 'PANGO_SCRIPT_HANGUL'
+
+=item * 'hebrew' / 'PANGO_SCRIPT_HEBREW'
+
+=item * 'hiragana' / 'PANGO_SCRIPT_HIRAGANA'
+
+=item * 'kannada' / 'PANGO_SCRIPT_KANNADA'
+
+=item * 'katakana' / 'PANGO_SCRIPT_KATAKANA'
+
+=item * 'khmer' / 'PANGO_SCRIPT_KHMER'
+
+=item * 'lao' / 'PANGO_SCRIPT_LAO'
+
+=item * 'latin' / 'PANGO_SCRIPT_LATIN'
+
+=item * 'malayalam' / 'PANGO_SCRIPT_MALAYALAM'
+
+=item * 'mongolian' / 'PANGO_SCRIPT_MONGOLIAN'
+
+=item * 'myanmar' / 'PANGO_SCRIPT_MYANMAR'
+
+=item * 'ogham' / 'PANGO_SCRIPT_OGHAM'
+
+=item * 'old-italic' / 'PANGO_SCRIPT_OLD_ITALIC'
+
+=item * 'oriya' / 'PANGO_SCRIPT_ORIYA'
+
+=item * 'runic' / 'PANGO_SCRIPT_RUNIC'
+
+=item * 'sinhala' / 'PANGO_SCRIPT_SINHALA'
+
+=item * 'syriac' / 'PANGO_SCRIPT_SYRIAC'
+
+=item * 'tamil' / 'PANGO_SCRIPT_TAMIL'
+
+=item * 'telugu' / 'PANGO_SCRIPT_TELUGU'
+
+=item * 'thaana' / 'PANGO_SCRIPT_THAANA'
+
+=item * 'thai' / 'PANGO_SCRIPT_THAI'
+
+=item * 'tibetan' / 'PANGO_SCRIPT_TIBETAN'
+
+=item * 'canadian-aboriginal' / 'PANGO_SCRIPT_CANADIAN_ABORIGINAL'
+
+=item * 'yi' / 'PANGO_SCRIPT_YI'
+
+=item * 'tagalog' / 'PANGO_SCRIPT_TAGALOG'
+
+=item * 'hanunoo' / 'PANGO_SCRIPT_HANUNOO'
+
+=item * 'buhid' / 'PANGO_SCRIPT_BUHID'
+
+=item * 'tagbanwa' / 'PANGO_SCRIPT_TAGBANWA'
+
+=item * 'braille' / 'PANGO_SCRIPT_BRAILLE'
+
+=item * 'cypriot' / 'PANGO_SCRIPT_CYPRIOT'
+
+=item * 'limbu' / 'PANGO_SCRIPT_LIMBU'
+
+=item * 'osmanya' / 'PANGO_SCRIPT_OSMANYA'
+
+=item * 'shavian' / 'PANGO_SCRIPT_SHAVIAN'
+
+=item * 'linear-b' / 'PANGO_SCRIPT_LINEAR_B'
+
+=item * 'tai-le' / 'PANGO_SCRIPT_TAI_LE'
+
+=item * 'ugaritic' / 'PANGO_SCRIPT_UGARITIC'
+
+=item * 'new-tai-lue' / 'PANGO_SCRIPT_NEW_TAI_LUE'
+
+=item * 'buginese' / 'PANGO_SCRIPT_BUGINESE'
+
+=item * 'glagolitic' / 'PANGO_SCRIPT_GLAGOLITIC'
+
+=item * 'tifinagh' / 'PANGO_SCRIPT_TIFINAGH'
+
+=item * 'syloti-nagri' / 'PANGO_SCRIPT_SYLOTI_NAGRI'
+
+=item * 'old-persian' / 'PANGO_SCRIPT_OLD_PERSIAN'
+
+=item * 'kharoshthi' / 'PANGO_SCRIPT_KHAROSHTHI'
+
+=item * 'unknown' / 'PANGO_SCRIPT_UNKNOWN'
+
+=item * 'balinese' / 'PANGO_SCRIPT_BALINESE'
+
+=item * 'cuneiform' / 'PANGO_SCRIPT_CUNEIFORM'
+
+=item * 'phoenician' / 'PANGO_SCRIPT_PHOENICIAN'
+
+=item * 'phags-pa' / 'PANGO_SCRIPT_PHAGS_PA'
+
+=item * 'nko' / 'PANGO_SCRIPT_NKO'
+
+=item * 'kayah-li' / 'PANGO_SCRIPT_KAYAH_LI'
+
+=item * 'lepcha' / 'PANGO_SCRIPT_LEPCHA'
+
+=item * 'rejang' / 'PANGO_SCRIPT_REJANG'
+
+=item * 'sundanese' / 'PANGO_SCRIPT_SUNDANESE'
+
+=item * 'saurashtra' / 'PANGO_SCRIPT_SAURASHTRA'
+
+=item * 'cham' / 'PANGO_SCRIPT_CHAM'
+
+=item * 'ol-chiki' / 'PANGO_SCRIPT_OL_CHIKI'
+
+=item * 'vai' / 'PANGO_SCRIPT_VAI'
+
+=item * 'carian' / 'PANGO_SCRIPT_CARIAN'
+
+=item * 'lycian' / 'PANGO_SCRIPT_LYCIAN'
+
+=item * 'lydian' / 'PANGO_SCRIPT_LYDIAN'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Enum>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

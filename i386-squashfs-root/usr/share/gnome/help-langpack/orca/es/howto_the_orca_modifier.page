@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_the_orca_modifier" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#getting_started"/>
+    <link type="next" xref="howto_learn_modes"/>
+    <title type="sort">4. El modificador de Orca</title>
+    <desc>Una tecla que funciona como <key>Mayús</key>, <key>Ctrl</key>, y <key>Alt</key></desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>El modificador de Orca</title>
+  <p>Orca tiene una tecla modificadora especial, similar a <key>Mayús</key>, <key>Ctrl</key>, y <key>Alt</key>. Está específicamente diseñada para ejecutar comandos de <app>Orca</app> sin generar conflictos en las aplicaciones que esté usando.</p>
+  <p>A qué tecla se asocia, de manera predeterminada,el «Modificador de Orca», dependerá de si está usando la distribución de portátil de <app>Orca</app> o su distribución de escritorio:</p>
+  <list>
+    <item>
+      <p>Si está usando la distribución de portátil, el Modificador de Orca predeterminado será <key>Bloq Mayús</key></p>
+    </item>
+    <item>
+      <p>Si está usando la distribución de escritorio, el Modificador de Orca será tanto <key>Ins</key> como <key>TN Ins</key>, esta última es la misma tecla que <key>TN 0</key>.</p>
+    </item>
+  </list>
+  <p>Si quiere mantener su distribución de teclado actual, pero quiere seleccionar una tecla modificadora diferente, puede hacerlo siguiendo estos pasos:</p>
+  <steps>
+    <title>Cambiar el «modificador de Orca»</title>
+    <item>
+      <p>Entre en el diálogo de <link xref="preferences">Preferencias de Orca</link> pulsando <keyseq><key>Modificador de Orca</key><key>Espacio</key></keyseq>.</p>
+    </item>
+    <item>
+      <p>Vaya a la página <gui>Asociaciones de teclas</gui>.</p>
+    </item>
+    <item>
+      <p>Vaya al cuadro combinado <gui>Tecla modificadoras de Orca</gui>.</p>
+    </item>
+    <item>
+      <p>Elija el modificador que quiere. Las opciones disponibles son:</p>
+      <list>
+        <item><p>Ins, TN Ins</p></item>
+        <item><p>TN Ins</p></item>
+        <item><p>Insertar</p></item>
+        <item><p>Bloqueo_mayúscula</p></item>
+      </list>
+    </item>
+    <item><p>Pulse el botón <gui>Aplicar</gui>.</p></item>
+  </steps>
+</page>

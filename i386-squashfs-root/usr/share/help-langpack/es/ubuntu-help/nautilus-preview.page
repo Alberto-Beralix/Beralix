@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-preview" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-preview"/>
+
+    <desc>Controlar cuándo se usan miniaturas y vistas previas de archivos.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Preferencias de la vista previa del gestor de archivos</title>
+
+<p>El gestor de archivos crea miniaturas para previsualizar archivos de imágenes y vídeos, y también puede previsualizar archivos de texto y de sonido. Las vistas previas pueden resultar lentas con archivos grandes o a través de la red, por lo que puede controlar cuándo se harán vistas previas. En cualquier ventana del gestor de archivos, pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq> y seleccione la pestaña <gui>Vista previa</gui>.</p>
+
+<p>De forma predeterminada, todas las vistas previas se harán sobre archivos locales situados en su equipo o en unidades externas conectadas al mismo. El gestor de archivos puede <link xref="nautilus-connect">explorar archivos en otros equipos</link> situados en una red de área local o en Internet. Si suele explorar archivos a través de una red local a menudo, y la red local tiene un gran ancho de banda, puede que quiera establecer algunas o todas las opciones de vista previa a <gui>Siempre</gui>.</p>
+
+<terms>
+  <item>
+    <title><gui>Archivos de texto</gui></title>
+    <p>El icono de los archivos de texto plano se parece a una hoja de papel con texto dentro. El gestor de archivos extrae automáticamente las primeras líneas de texto del archivo y las muestra en el icono. Puede activar o desactivar esta característica, o activarla solo para los archivos situados en su equipo y en unidades externas locales.</p>
+  </item>
+  <item>
+    <title><gui>Otros archivos previsualizables</gui></title>
+    <p>El gestor de archivos puede automáticamente crear miniaturas de imágenes, vídeos, archivos PDF y otros tipos de archivos. Las aplicaciones con tipos de archivos personalizados pueden proporcionar miniaturas para los archivos que crean. Puede activar o desactivar esta característica solo para archivos en su equipo y en discos locales externos. También puede permitir crear miniaturas para archivos por debajo de un cierto tamaño.</p>
+  </item>
+  <item>
+    <title><gui>Archivos de sonido</gui></title>
+    <p>Puede hacer <link xref="files-preview-music">escuchas previas de música y otros archivos de sonido</link> poniendo el ratón encima. Puede activar o desactivar esta función, o activarla solo para los equipos situados en su equipo o en unidades externas locales.</p>
+  </item>
+  <item>
+    <title><gui>Carpetas</gui></title>
+    <p>Si visualiza el tamaño de los archivos en las <link xref="nautilus-list">columnas de la vista de lista</link> o en las <link xref="nautilus-display#icon-captions">leyendas de los iconos</link>, las carpetas mostrarán la cantidad de archivos y carpetas que contienen. Contar los elementos que hay en una carpeta puede resultar lento, especialmente en carpetas muy grandes, o a través de la red. Puede activar o desactivar esta característica, o activarla solo para los archivos almacenados en su equipo y en unidades externas locales.</p>
+  </item>
+</terms>
+</page>

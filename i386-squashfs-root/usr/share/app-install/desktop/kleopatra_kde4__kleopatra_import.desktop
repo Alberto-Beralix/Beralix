@@ -1,0 +1,18 @@
+[Desktop Entry]
+X-AppInstall-Package=kleopatra
+X-AppInstall-Popcon=128
+X-AppInstall-Section=universe
+
+Type=Application
+Icon=kleopatra
+Exec=kleopatra --import-certificate %F
+MimeType=application/pkcs7-mime;application/x-x509-ca-cert;application/x-pkcs12;application/pgp-keys;
+Categories=Qt;KDE;Utility;Security;X-KDE-Utilities-PIM;
+
+Name=Kleopatra
+Comment=Certificate Manager and Unified Crypto GUI
+NoDisplay=true
+
+X-KDE-StartupNotify=true
+
+X-Ubuntu-Gettext-Domain=app-install-data

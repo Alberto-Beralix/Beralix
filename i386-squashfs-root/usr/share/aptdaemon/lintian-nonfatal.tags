@@ -1,0 +1,25 @@
+# This file lists all tags that cause an automatic reject on upload but can
+# be overridden (nonfatal tags).  It is based on the data file retrieved from
+# http://ftp-master.debian.org/static/lintian.tags
+#
+# Last updated: 2011-01-26
+
+arch-dependent-file-in-usr-share
+arch-independent-package-contains-binary-or-object
+binary-or-shlib-defines-rpath
+binary-with-bad-dynamic-table
+control-interpreter-without-depends
+copyright-contains-dh_make-todo-boilerplate
+dir-or-file-in-var-www
+embedded-library
+missing-build-dependency
+# For LSB packages it is sufficient to depend on lsb-base
+# missing-dependency-on-libc
+mknod-in-maintainer-script
+no-shlibs-control-file
+non-etc-file-marked-as-conffile
+package-contains-info-dir-file
+preinst-interpreter-without-predepends
+statically-linked-binary
+usr-share-doc-symlink-without-dependency
+wrong-file-owner-uid-or-gid

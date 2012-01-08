@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" style="task" id="edit-prefs" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#prefs"/>
+    <desc>Bearbeitungseinstellungen für Notizen.</desc>
+    <revision pkgversion="3.0" version="0.1" date="2010-05-29" status="candidate"/>
+    <credit type="author">
+      <name>Paul Cutler</name>
+      <email>pcutler@gnome.org</email>
+    </credit>    
+<!--
+    <copyright>
+      <year>2010</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+-->
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+ <title>Notizeinstellungen</title>
+ 
+ 	<p>Sie können die Standardeinstellungen beim Eingeben von Notizen in Tomboy ändern. Um die Notizeinstellungen zu ändern, öffnen Sie die <gui>Tomboy-Einstellungen</gui>, indem Sie mit der rechten Maustaste auf das Tomboy-Symbol in Ihrem Panel, Ihrer Taskbar oder Ihrem Dock klicken. Wählen Sie anschließend <gui>Einstellungen</gui> und klicken Sie auf den Reiter <gui>Bearbeiten</gui>. Sie können die <gui>Tomboy-Einstellungen</gui> auch aus dem Dialog <gui>Alle Notizen durchsuchen</gui> heraus öffnen. Wählen Sie im Menü <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq>.</p>
+ 
+ <section id="spellcheck">
+   <title>Rechtschreibprüfung</title>
+   <p>Tomboy kann die Rechtschreibung unmittelbar prüfen, wenn Sie eine Notiz schreiben. Die Rechtschreibprüfung ist standardmäßig aktiviert, so dass Tomboy falsch geschriebene Wörter unterstreicht. Sie können Änderungsvorschläge anzeigen lassen, indem Sie mit der rechten Maustaste auf das falsch geschriebene Wort klicken.</p>
+   
+   <p>Um die automatische Rechtschreibprüfung zu deaktivieren, benutzen Sie die Maus oder die Leertaste, um das Ankreuzfeld <gui>Rechtschreibprüfung während der Eingabe</gui> im Reiter <gui>Bearbeiten</gui> der Tomboy-Einstellungen zu deaktivieren.</p>
+   
+ </section>
+
+ <section id="wikiwords">
+   <title>WikiWords</title>
+   <p>Tomboy kann Wörter hervorheben, die <gui>AussehenWieDieses</gui>. Bei der Großschreibung mehrerer aufeinanderfolgender Wörter, ohne Leerzeichen einzufügen, ähnlich wie in einem Wiki, hebt Tomboy das Wort hervor und erstellt daraus eine Verknüpfung. Durch einen Klick auf diese Verknüpfung wird eine neue Notiz mit dem WikiWord als Titel angelegt.</p>
+   
+   <p>WikiWords sind standardmäßig deaktiviert. Um WikiWords zu benutzen, aktivieren Sie mit der Maus oder der Leertaste das Ankreuzfeld <gui>WikiWords hervorheben</gui> im Reiter <gui>Bearbeiten</gui> der Tomboy-Einstellungen.</p>
+   
+ </section>
+
+ <section id="bullets">
+   <title>Automatische Aufzählungslisten</title>
+   <p>Tomboy kann automatisch Aufzählungslisten erzeugen. Diese Option ist standardmäßig aktiviert, wenn Sie eine Notiz bearbeiten. Die Eingabe von <key>*</key>, gefolgt von dem Text und einem Druck der <key>Eingabetaste</key>, erzeugt automatisch eine Aufzählungsliste. Nach dem Drücken der <key>Eingabetaste</key> beginnt die nächste Zeile ebenfalls mit einem Aufzählungszeichen.</p>
+   
+   <p>Um automatische Aufzählungslisten zu deaktivieren, deaktivieren Sie mit der Maus oder der Leertaste das Ankreuzfeld <gui>Automatische Aufzählungslisten aktivieren</gui> im Reiter <gui>Bearbeiten</gui> der Tomboy-Einstellungen.</p>
+   
+ </section>
+
+ <section id="customfont">
+   <title>Benutzerdefinierte Schriften</title>
+   <p>Sie können in Tomboy eine andere Schrift oder Schriftgröße verwenden, als sie von den globalen Einstellungen der Arbeitsumgebung vorgegeben ist. Dieses Funktionsmerkmal ist standardmäßig deaktiviert.</p>
+   
+   <p>Um eine andere Schrift zu benutzen, deaktivieren Sie mit der Maus oder der Leertaste das Ankreuzfeld <gui>Eigene Schriftart verwenden</gui> im Reiter <gui>Bearbeiten</gui> der Tomboy-Einstellungen.</p>
+
+   <p>Sie können dann den <gui>Schrift</gui>-Knopf anklicken, woraufhin ein Dialogfeld geöffnet wird. In diesem Dialog können Sie die gewünschte Schrift auswählen, sowie den Stil (z.B. Fett, Kursiv) und die Größe der Schrift. Klicken Sie auf <key>Ok</key>, um Ihre Auswahl zu speichern.</p>
+   
+ </section>
+
+ <section id="renamelinks">
+ 
+   <title>Umbenennen einer verknüpften Notiz</title>
+   <p>Tomboy erstellt automatisch Verknüpfungen, sobald Sie den Titel einer gespeicherten Notiz in Ihrer aktuellen Notiz erwähnen. Falls Sie versuchen, eine Notiz umzubenennen, welche Verknüpfungen zu anderen Tomboy-Notizen enthält, können Sie das Verhalten in solchen Fällen einstellen, wenn eine solche Änderung erkannt wird. Folgende Optionen stehen Ihnen zur Verfügung:</p>
+   
+   <list>
+     <item><p><gui>Immer fragen, was zu tun ist</gui>: Tomboy fragt jedes Mal nach, welche der nachfolgenden Optionen angewendet werden soll, wenn eine Änderung erkannt wurde.</p></item>
+     <item><p><gui>Verknüpfungen nie umbenennen</gui>: Tomboy lässt die anderen Notizen unverändert und löst die Verknüpfung der Notizen.</p></item>
+     <item><p><gui>Verknüpfungen immer umbenennen</gui>: Tomboy benennt alle Verknüpfungen in anderen Notizen in den Namen der umbenannten Notiz um.</p></item>
+   </list>
+   
+   <p>Wählen Sie eine der obigen Optionen aus dem Auswahlfeld rechts von <gui>Wenn eine verknüpfte Notiz umbenannt wird:</gui> im Reiter <gui>Bearbeiten</gui> der Tomboy-Einstellungen.</p>
+   
+ </section>
+
+<section id="newnotetemplate">
+  <title>Erstellen einer neuen Notizvorlage</title>
+  <p>Sie können eine neue Vorlage erstellen, die jedes Mal angezeigt wird, wenn Sie eine neue Notiz anlegen.</p>
+  
+  <p>Klicken Sie auf den Knopf <gui>Vorlage für neue Notizen öffnen</gui> im Reiter <gui>Bearbeiten</gui> der Tomboy-Einstellungen. Eine neue Vorlage wird angezeigt, welche einer Tomboy-Notiz ähnelt. Ersetzen Sie den Text <gui>Beschreiben Sie Ihre neue Notiz hier.</gui> durch den Text, den die neue Vorlage enthalten soll. Schließen Sie die Notiz, um den Erstellungsvorgang der neuen Vorlage abzuschließen. Jedes Mal beim Anlegen einer neuen Notiz wird diese Vorlage angezeigt.</p>
+   
+</section>
+
+ </page>

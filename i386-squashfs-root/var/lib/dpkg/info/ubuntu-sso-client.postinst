@@ -1,0 +1,32 @@
+#!/bin/sh
+set -e
+
+LASTVERSION="0.99.4-0ubuntu1"
+
+dpkg-maintscript-helper rm_conffile \
+/etc/xdg/ubuntu-sso/oauth_registration.d/ubuntuone "$LASTVERSION" -- "$@"
+
+dpkg-maintscript-helper rm_conffile \
+/etc/xdg/ubuntu-sso/oauth_urls "$LASTVERSION" -- "$@"
+
+rm_confdir() {
+    local DIR="$1"
+    if [ -d $DIR ]; then rmdir $DIR; fi || true
+}
+
+case "$1" in
+configure)
+    if dpkg --compare-versions "$2" le "$LASTVERSION"; then
+        rm_confdir "/etc/xdg/ubuntu-sso/oauth_registration.d"
+        rm_confdir "/etc/xdg/ubuntu-sso/"
+    fi
+esac
+
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p ubuntu-sso-client 
+fi
+
+# End automatically added section
+

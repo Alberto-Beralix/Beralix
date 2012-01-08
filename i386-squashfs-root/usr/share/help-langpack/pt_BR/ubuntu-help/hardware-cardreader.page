@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="hardware-cardreader" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="media#photos"/>
+    <link type="guide" xref="hardware#problems"/>
+    
+    <desc>Resolução de problemas com leitores de cartão de memória.</desc>
+    
+    <revision version="11.04" date="2011-03-25" status="stub"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Problemas com leitor de cartões de memória.</title>
+
+<p>Muitos computadores contém leitores para SD (Secure Digital), MMC (MultiMediaCard), SmartMedia, Memory Stick, CompactFlash, e outros cartões de memória. Eles devem ser automaticamente detectados e <link xref="disk-partitions">montados</link>. Aqui seguem alguns passos para resolução de problemas caso isso não ocorra:</p>
+
+<steps>
+<item>
+<p>Assegure-se de que o cartão está inserido corretamente. Muitos cartões parecem estar "de cabeça para baixo" quando corretamente inseridos. Assegure-se também de que o cartão está firmemente encaixado na entrada do leitor; alguns cartões, especialmente o CompactFlash, demandam um pouco de força para serem inseridos corretamente. (Tome cuidado para não empurrar com muito força! Se você encontrar algo sólido, não force.)</p>
+</item>
+
+<item>
+<p>Abra <app>Arquivos</app> usando o menu de <gui>Atividades</gui>. O cartão inserido aparece na lista de <gui>Dispositivos</gui> na barra lateral esquerda? Às vezes o cartão aparece na lista mas não está montado; clique nele uma vez para montá-lo. (Se a barra lateral não estiver visível, pressione <key>F9</key> ou clique em <guiseq><gui>Visualizar</gui><gui>Barra lateral</gui><gui>Mostrar barra lateral</gui></guiseq>.)</p>
+</item>
+
+<item>
+<p>Se o seu cartão não aparece na barra lateral, clique em <guiseq><gui>Ir</gui><gui>Computador</gui></guiseq>. Se o seu leitor de cartão estiver corretamente configurado, ele deverá aparecer como uma unidade quando nenhum cartão está presente, e como o próprio cartão quando o cartão tiver sido montado (veja na figura abaixo).</p>
+</item>
+
+<item>
+<p>Se você vir o leitor de cartão mas não o cartão, o problema pode ser o próprio cartão. Tente um outro cartão ou verifique o cartão em um leitor diferente, se possível.</p>
+</item>
+</steps>
+
+<p>Se nenhum cartão ou unidade estiver disponível na pasta <gui>Computador</gui>, é possível que seu leitor de cartão não funcione com o Linux devido a questões de driver. Se o seu leitor de cartão é interno (está dentro do computador em vez de estar fora), isso é mais provável. A melhor solução é conectar o seu dispositivo (câmera, telefone celular, etc) em uma porta USB do computador. Leitores de cartão USB externos também estão disponíveis e são muito melhor suportados pelo Linux.</p>
+
+<figure>
+  <desc>Na ilustração da janela <gui>Computador</gui>, um leitor corretamente configurado está representado por três unidades: <gui>CompactFlash</gui>, <gui>SmartMedia</gui>, e <gui>Secure Digital</gui>. Somente o cartão SD está montado, e visível na coluna da esquerda (onde diz <em>31 MB ...</em>).</desc>
+  <media type="image" mime="image/png" src="figures/hardware-cardreader.png"/>
+</figure>
+</page>

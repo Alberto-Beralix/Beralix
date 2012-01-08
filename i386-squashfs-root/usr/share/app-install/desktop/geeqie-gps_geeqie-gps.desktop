@@ -1,0 +1,20 @@
+[Desktop Entry]
+X-AppInstall-Package=geeqie-gps
+X-AppInstall-Popcon=206
+X-AppInstall-Section=universe
+
+Name=Geeqie (GPS support)
+GenericName=Image Viewer
+Comment=View and manage images
+Exec=geeqie-gps -r %F
+Icon=geeqie
+Type=Application
+Terminal=false
+# Startup notification disabled, since the remote -r switch may not open a new window...
+#StartupNotify=false
+#StartupWMClass=geeqie
+NotShowIn=X-Geeqie;
+Categories=Graphics;Viewer;
+MimeType=application/x-navi-animation;image/bmp;image/x-bmp;image/x-MS-bmp;image/gif;image/x-icon;image/jpeg;image/png;image/x-portable-anymap;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-cmu-raster;image/x-sun-raster;image/x-tga;image/tiff;image/vnd.wap.wbmp;image/x-xbitmap;image/x-xpixmap;image/svg;image/svg+xml;image/x-png;image/xpm;image/x-ico;image/x-pcx;
+
+X-Ubuntu-Gettext-Domain=app-install-data

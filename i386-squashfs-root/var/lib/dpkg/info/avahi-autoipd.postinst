@@ -1,0 +1,44 @@
+#!/bin/sh
+
+set -e
+
+# Move a conffile without triggering a dpkg question
+mv_conffile() {
+    local OLDCONFFILE="$1"
+    local NEWCONFFILE="$2"
+
+    [ -e "$OLDCONFFILE" ] || return 0
+
+    echo "Preserving user changes to $NEWCONFFILE ..."
+    mv -f "$NEWCONFFILE" "$NEWCONFFILE".dpkg-new
+    mv -f "$OLDCONFFILE" "$NEWCONFFILE"
+}
+
+case "$1" in
+  configure)
+    if ! getent passwd avahi-autoipd >/dev/null; then
+      adduser --disabled-password --quiet --system \
+        --home /var/lib/avahi-autoipd \
+        --gecos "Avahi autoip daemon" --group avahi-autoipd
+    fi
+
+    # When upgradig from previous versions move dhclient hooks to new location
+    if dpkg --compare-versions "$2" lt "0.6.27-3ubuntu1"; then
+        mv_conffile "/etc/dhcp3/dhclient-enter-hooks.d/avahi-autoipd" \
+                    "/etc/dhcp/dhclient-enter-hooks.d/avahi-autoipd"
+        mv_conffile "/etc/dhcp3/dhclient-exit-hooks.d/zzz_avahi-autoipd" \
+                    "/etc/dhcp/dhclient-exit-hooks.d/zzz_avahi-autoipd"
+    fi
+
+    # FIXME: restart it somehow... SIGHUP?
+  ;;
+  abort-upgrade|abort-remove|abort-deconfigure)
+  ;;
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2
+    exit 1
+  ;;
+esac
+
+
+

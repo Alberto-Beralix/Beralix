@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+echo
+echo "Gathering system configuration via hp-check -t -r (please wait)..."
+/usr/bin/hp-check -t -r >&3 2>&3

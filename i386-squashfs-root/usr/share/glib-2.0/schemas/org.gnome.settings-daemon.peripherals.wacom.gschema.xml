@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/org/gnome/settings-daemon/plugins/wacom/" id="org.gnome.settings-daemon.plugins.wacom" gettext-domain="gnome-settings-daemon">
+    <key type="b" name="active">
+      <default>true</default>
+      <summary>Activation of this plugin</summary>
+      <description>Whether this plugin would be activated by gnome-settings-daemon or not</description>
+    </key>
+    <key type="i" name="priority">
+      <default>6</default>
+      <summary>Priority to use for this plugin</summary>
+      <description>Priority to use for this plugin in gnome-settings-daemon startup queue</description>
+    </key>
+  </schema>
+  <schema path="/org/gnome/settings-daemon/peripherals/wacom/" id="org.gnome.settings-daemon.peripherals.wacom" gettext-domain="gnome-settings-daemon">
+    <child schema="org.gnome.settings-daemon.peripherals.wacom.stylus" name="stylus"/>
+    <child schema="org.gnome.settings-daemon.peripherals.wacom.eraser" name="eraser"/>
+    <child schema="org.gnome.settings-daemon.peripherals.wacom.cursor" name="cursor"/>
+    <child schema="org.gnome.settings-daemon.peripherals.wacom.pad" name="pad"/>
+
+    <key name="rotation" enum="org.gnome.settings-daemon.GsdWacomRotation">
+    <default>'none'</default>
+    <summary>Wacom tablet rotation</summary>
+    <description>Set this to 'none', 'cw' for 90 degree clockwise, 'half' for 180 degree, and 'ccw' for 90 degree counterclockwise.</description>
+    </key>
+    <key type="b" name="touch">
+      <default>true</default>
+      <summary>Wacom touch feature</summary>
+      <description>Enable this to move the cursor when the user touches the tablet.</description>
+    </key>
+    <key type="b" name="tablet-pc-button">
+      <default>false</default>
+      <summary>Wacom tablet PC feature</summary>
+      <description>Enable this to only report stylus events when the tip is pressed.</description>
+    </key>
+  </schema>
+  <schema path="/org/gnome/settings-daemon/peripherals/wacom/stylus/" id="org.gnome.settings-daemon.peripherals.wacom.stylus" gettext-domain="gnome-settings-daemon">
+    <key type="b" name="is-absolute">
+      <default>true</default>
+      <summary>Wacom stylus absolute mode</summary>
+      <description>Enable this to set the stylus to absolute mode.</description>
+    </key>
+    <key type="ai" name="pressurecurve">
+      <default>[0, 0, 100, 100]</default>
+      <summary>Wacom stylus pressure curve</summary>
+      <description>Set this to x1, y1 and x2, y2 of the pressure curve applied to the stylus.</description>
+    </key>
+    <key type="ai" name="area">
+      <default>[-1, -1, -1, -1]</default>
+      <summary>Wacom stylus tablet area</summary>
+      <description>Set this to x1, y1 and x2, y2 of the area usable by the stylus.</description>
+    </key>
+    <key type="ai" name="buttonmapping">
+      <default>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]</default>
+      <summary>Wacom stylus button mapping</summary>
+      <description>Set this to the logical button mapping.</description>
+    </key>
+    <key type="i" name="pressurethreshold">
+      <default>-1</default>
+      <summary>Wacom stylus pressure threshold</summary>
+      <description>Set this to the pressure value at which a stylus click event is generated.</description>
+    </key>
+  </schema>
+  <schema path="/org/gnome/settings-daemon/peripherals/wacom/eraser/" id="org.gnome.settings-daemon.peripherals.wacom.eraser" gettext-domain="gnome-settings-daemon">
+    <key type="b" name="is-absolute">
+      <default>true</default>
+      <summary>Wacom eraser absolute mode</summary>
+      <description>Enable this to set the eraser to absolute mode.</description>
+    </key>
+    <key type="ai" name="pressurecurve">
+      <default>[0, 0, 100, 100]</default>
+      <summary>Wacom eraser pressure curve</summary>
+      <description>Set this to x1, y1 and x2, y2 of the pressure curve applied to the eraser.</description>
+    </key>
+    <key type="ai" name="area">
+      <default>[-1, -1, -1, -1]</default>
+      <summary>Wacom eraser tablet area</summary>
+      <description>Set this to x1, y1 and x2, y2 of the area usable by the eraser.</description>
+    </key>
+    <key type="ai" name="buttonmapping">
+      <default>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]</default>
+      <summary>Wacom eraser button mapping</summary>
+      <description>Set this to the logical button mapping.</description>
+    </key>
+    <key type="i" name="pressurethreshold">
+      <default>-1</default>
+      <summary>Wacom eraser pressure threshold</summary>
+      <description>Set this to the pressure value at which an eraser click event is generated.</description>
+    </key>
+  </schema>
+  <schema path="/org/gnome/settings-daemon/peripherals/wacom/cursor/" id="org.gnome.settings-daemon.peripherals.wacom.cursor" gettext-domain="gnome-settings-daemon">
+    <key type="b" name="is-absolute">
+      <default>true</default>
+      <summary>Wacom cursor absolute mode</summary>
+      <description>Enable this to set the cursor to absolute mode.</description>
+    </key>
+    <key type="ai" name="area">
+      <default>[-1, -1, -1, -1]</default>
+      <summary>Wacom cursor tablet area</summary>
+      <description>Set this to x1, y1 and x2, y2 of the area usable by the cursor.</description>
+    </key>
+    <key type="ai" name="buttonmapping">
+      <default>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]</default>
+      <summary>Wacom cursor button mapping</summary>
+      <description>Set this to the logical button mapping.</description>
+    </key>
+  </schema>
+  <schema path="/org/gnome/settings-daemon/peripherals/wacom/pad/" id="org.gnome.settings-daemon.peripherals.wacom.pad" gettext-domain="gnome-settings-daemon">
+    <key type="ai" name="area">
+      <default>[-1, -1, -1, -1]</default>
+      <summary>Wacom pad tablet area</summary>
+      <description>Set this to x1, y1 and x2, y2 of the area usable by the pad.</description>
+    </key>
+    <key type="ai" name="buttonmapping">
+      <default>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]</default>
+      <summary>Wacom pad button mapping</summary>
+      <description>Set this to the logical button mapping.</description>
+    </key>
+  </schema>
+</schemalist>

@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+# Undo doc-dir symlinking.  Leave this to pkgbinarymangler.
+# This can be removed after the next LTS
+if [ "$1" = upgrade ] && [ -L /usr/share/doc/xserver-xorg-input-all ]; then
+    rm -f /usr/share/doc/xserver-xorg-input-all
+fi

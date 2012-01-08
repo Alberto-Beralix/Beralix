@@ -1,0 +1,39 @@
+[Desktop Entry]
+X-AppInstall-Package=shutter
+X-AppInstall-Popcon=2126
+X-AppInstall-Section=universe
+
+Version=1.0
+Name=Shutter
+GenericName=Screenshot Tool
+Comment=Capture, edit and share screenshots
+Exec=shutter %F
+Icon=shutter
+Terminal=false
+Type=Application
+Categories=Utility;Application;
+MimeType=image/bmp;image/jpeg;image/gif;image/png;image/tiff;image/x-bmp;image/x-ico;image/x-png;image/x-pcx;image/x-tga;image/xpm;image/svg+xml;
+X-Ayatana-Desktop-Shortcuts=Select;Screen;Window;Active
+
+[Select Shortcut Group]
+Name=Capture an area of the screen
+Exec=shutter --select
+OnlyShowIn=Unity
+
+[Screen Shortcut Group]
+Name=Capture the entire screen
+Exec=shutter --full
+OnlyShowIn=Unity
+
+[Window Shortcut Group]
+Name=Select a window to capture
+Exec=shutter --window
+OnlyShowIn=Unity
+
+[Active Shortcut Group]
+Name=Capture the current active window
+Exec=shutter --active
+OnlyShowIn=Unity
+
+
+X-Ubuntu-Gettext-Domain=app-install-data

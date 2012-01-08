@@ -1,0 +1,15 @@
+[Desktop Entry]
+X-AppInstall-Package=xinput-calibrator
+X-AppInstall-Popcon=20
+X-AppInstall-Section=universe
+
+Name=Calibrate Touchscreen
+Comment=Run the calibration tool for touchscreens
+Exec=/bin/sh -c "xinput_calibrator; cat"
+Terminal=true
+Type=Application
+Icon=xinput_calibrator
+StartupNotify=true
+Categories=System;Settings;
+
+X-Ubuntu-Gettext-Domain=app-install-data

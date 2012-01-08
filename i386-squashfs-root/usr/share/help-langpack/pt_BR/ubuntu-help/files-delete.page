@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-delete" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <link type="seealso" xref="files-recover"/>
+    <desc>Remover arquivos ou pastas que você não precisa mais.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Cristopher Thomas</name>
+      <email>crisnoh@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Excluir arquivos e pastas</title>
+
+<p>Se você não quiser um arquivo ou pasta mais, você pode excluí-lo.</p>
+
+<p>Quando você exclui um item, ele é movido para a pasta Lixeira, onde ele é armazenado até que você esvazie a lixeira. Itens armazenados na pasta Lixeira podem ser <link xref="files-recover">restaurados para a sua localização original</link> se você decidir que precisa deles ou se eles foram excluídos acidentalmente.</p>
+
+<steps>
+  <item><p>Selecione o item que deseja excluir, clicando uma vez.</p></item>
+  <item><p>Pressione <key>Delete</key> no seu teclado. Alternativamente, arraste o item para a <gui>Lixeira</gui> na barra lateral.</p></item>
+</steps>
+
+<p>Para excluir um arquivo permanentemente e liberar espaço de disco no seu computador, você precisa esvaziar a lixeira. Para esvaziar a lixeira, clique com o botão direito do mouse em <gui>Lixeira</gui>, na barra lateral, e selecione <gui>Esvaziar lixeira</gui>. Alternativamente, você pode excluir permanentemente itens individuais na lixeira navegando até a lixeira a partir da barra lateral ou do menu <gui>Ir</gui>. Selecione os arquivos que você quer excluir permanentemente e pressione <gui>Delete</gui> no seu teclado, ou clique com o botão direito e selecione <gui>Excluir permanentemente</gui>.</p>
+
+<note><p>Arquivos excluídos num <link xref="files#removable">dispositivo removível</link> podem não estar visíveis em outros sistemas operacionais, como o Windows ou o Mac OS. Os arquivos continuam lá e estarão disponíveis quando você reconectar o dispositivo no seu computador.</p></note>
+
+<section id="permanent">
+ <title>Apagar permanentemente um arquivo</title>
+<p>Você pode imediatamente apagar um arquivo permanentemente, sem ter que enviá-lo para a lixeira primeiro.</p>
+
+<steps>
+  <item><p>Selecione o item que deseja excluir.</p></item>
+  <item><p>Pressione e segure a tecla <gui>Shift</gui>, em seguida pressione a tecla <key>Delete</key> no seu teclado.</p></item>
+  <item><p>Por você não poder desfazer isso, você será solicitado a confirmar se deseja excluir o arquivo ou pasta.</p></item>
+</steps>
+
+<p>Se você frequentemente precisa apagar arquivos sem usar a lixeira (por exemplo, se trabalha muito com dados sensivos), você pode adicionar a entrada <gui>Excluir</gui> no menu do clique direito para arquivos e pastas. Clique em guiseq&gt;<gui>Editar</gui><gui>Preferências</gui></p>
+
+</section>
+</page>

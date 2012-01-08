@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+bansheedir=${libdir}/banshee
+
+Name: Banshee Services
+Description: Service layer APIs for the Banshee Media Framework
+Version: 2.2.0
+Requires: banshee-core banshee-mono-media
+Libs: -r:${bansheedir}/Banshee.Services.dll

@@ -1,0 +1,21 @@
+[Desktop Entry]
+X-AppInstall-Package=gwenview
+X-AppInstall-Popcon=7439
+X-AppInstall-Section=main
+
+Name=Gwenview
+GenericName=Image Viewer
+Comment=A simple image viewer
+Exec=gwenview %U -caption "%c" %i
+Terminal=false
+Icon=gwenview
+Type=Application
+Categories=Qt;KDE;Graphics;Viewer;Photography;
+MimeType=inode/directory;image/gif;image/jpeg;image/png;image/bmp;image/x-eps;image/x-ico;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-xbitmap;image/x-xpixmap;
+X-DocPath=gwenview/index.html
+# InitialPreference should be greater than Okular so that Gwenview is the
+# primary application associated with images, but less than Konqueror or Dolphin
+# so that Gwenview is not the primary applications for folders.
+InitialPreference=8
+
+X-Ubuntu-Gettext-Domain=app-install-data

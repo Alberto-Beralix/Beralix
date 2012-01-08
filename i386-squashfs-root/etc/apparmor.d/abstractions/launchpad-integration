@@ -1,0 +1,6 @@
+# vim:syntax=apparmor
+# launchpad-integration
+
+  # allow launchpad-integration to run unconfined using Secure Execution (Ux)
+  /usr/bin/launchpad-integration Uxr,
+

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Action script ensure that unattended-upgrades is finished 
+# before a hibernate 
+#
+# Copyright: Copyright (c) 2009 Michael Vogt
+# License:   GPL-2
+#
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+if [ ! -x /usr/share/unattended-upgrades/unattended-upgrade-shutdown ]; then
+	exit 0
+fi
+
+case "${1}" in
+        hibernate)
+         	python /usr/share/unattended-upgrades/unattended-upgrade-shutdown       
+                ;;
+        resume|thaw)
+		# nothing
+                ;;
+esac
+

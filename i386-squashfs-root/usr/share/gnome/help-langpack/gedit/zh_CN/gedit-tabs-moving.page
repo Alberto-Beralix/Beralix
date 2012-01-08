@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-tabs-moving" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#gedit-working-with-files" group="last"/>
+    <revision pkgversion="3.0" version="1.0" date="2011-03-25" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <credit type="collaborator">
+      <name>Daniel Neel</name>
+      <email>dneelyep@gmail.com</email>
+    </credit>
+  </info>
+
+  <title>移动和重排标签顺序</title>
+  <p><app>gedit</app> 中的标签可以移动，这样文件操作就更加方便，同一个窗口内的标签可以重新排序，也可以移出 <app>gedit</app>(创建一个新的 <app>gedit</app> 窗口)，并且可以从一个窗口移到另外一个窗口中。</p>
+
+  <section id="tabs-change-order">
+    <title>在 gedit 窗口中改变标签顺序</title>
+
+    <p>要更改窗口中标签的顺序：</p>
+
+    <list type="numbered">
+      <item><p>在标签上点击并按住鼠标按钮</p></item>
+      <item><p>拖动标签到想要的去位置上</p></item>
+      <item><p>松开鼠标按钮</p></item>
+    </list>
+
+    <p>标签将会放在您松手位置标签的旁边，立即插在其他打开标签的中间。</p>
+
+  </section>
+
+  <section id="tabs-moving-new-window">
+    <title>移动标签，创建一个新的 gedit 窗口</title>
+    <p>拖拽标签到一个新窗口：</p>
+
+    <list type="numbered">
+      <item><p>在标签上点击并按住鼠标按钮</p></item>
+      <item><p>将标签从它所在的位置上移开</p></item>
+      <item><p>松开鼠标按钮</p></item>
+    </list>
+
+    <p>或者，标签文档打开后，点菜单 <guiseq><gui>文档</gui><gui>移动到新窗口</gui></guiseq>。</p>
+
+    <note style="tip">
+      <p>若是其中有一个窗口最大化时，移动标签会变得十分困难，最好的办法是，在拖动标签之前，先取消窗口的最大化。</p>
+    </note>
+
+  </section>
+
+  <section id="tabs-moving-other-window">
+    <title>将标签移到其他 gedit 窗口中</title>
+
+    <p>如果您想将标签从一个窗口移动到另一个窗口中：</p>
+
+    <list type="numered">
+      <item><p>在标签上点击并按住鼠标按钮</p></item>
+      <item><p>拖动标签到新窗口</p></item>
+      <item><p>将它放在新窗口的其他标签旁边</p></item>
+      <item><p>松开鼠标按钮</p></item>
+    </list>
+
+    <p>使用快捷键会更方便管理标签，请参阅：<link xref="gedit-shortcut-keys#gedit-tab-shortcuts"/>。</p>
+
+  </section>
+
+</page>

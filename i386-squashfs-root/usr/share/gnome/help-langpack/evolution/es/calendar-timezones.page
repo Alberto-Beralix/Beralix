@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="calendar-timezones" xml:lang="es">
+
+  <info>
+    <desc>Usar zonas horarias en el calendario.</desc>
+
+    <link type="guide" xref="index#calendar-advanced"/>
+
+    <revision pkgversion="3.1.5" version="0.4" date="2011-07-28" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/bshlzlu.html.en -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Usar zonas horarias</title>
+
+<p>Evolution soporta el uso de varias zonas horarias.</p>
+
+<section id="default-timezone">
+<title>Establecer sus zonas horarias globales</title>
+
+<p>De forma predeterminada Evolution usa la hora del sistema. Se puede cambiar bajo <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Calendario y tareas</gui><gui>General</gui><gui>Hora</gui><gui>Zona horaria</gui></guiseq>.</p>
+
+<p>Si trata con mucha gente en otro huso horario específico puede mostrar ese segundo huso horario en la vista de día de su calendario. Puede configurar una segunda zona horaria bajo <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Calendario y tareas</gui><gui>General</gui><gui>Hora</gui><gui>Zona secundaria</gui></guiseq>.</p>
+</section>
+
+<section id="appointment-timezone">
+<title>Configurar una zona horaria para una cita</title>
+
+<p>También puede configurar información específica de la zona horaria para cada cita. Para ello <link xref="calendar-usage">añada una cita nueva o edite una ya existente</link> y pulse sobre el botón del globo terráqueo para personalizar la zona horaria existente. Por ejemplo, si vive en Madrid, España, y tiene una reunión telefónica para la tarde con alguien en California, debe asegurarse que las citas están coordinadas. Usar las zonas horarias adecuadas en cada cita ayuda a evitar esa confusión potencial.</p>
+</section>
+
+</page>

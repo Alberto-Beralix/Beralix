@@ -1,0 +1,1 @@
+../../../../../share/pyshared/ubuntuone-couch/ubuntuone/__init__.py

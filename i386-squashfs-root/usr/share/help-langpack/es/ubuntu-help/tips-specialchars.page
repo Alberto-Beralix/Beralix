@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="tips-specialchars" xml:lang="es">
+  <info>
+    <link type="guide" xref="tips"/>
+    <link type="seealso" xref="keyboard-layouts"/>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <desc>Escriba los caracteres que no se encuentran en el teclado, incluidos los alfabetos extranjeros, símbolos matemáticos y «dingbats».</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Insertar caracteres especiales</title>
+
+  <comment>
+    <cite date="2011-04-04">shaunm</cite>
+    <p>Marking complete for 3.0. We didn't get keyboard-inputmethods in.
+    If we get it for 3.0.1, uncomment the last section, write something,
+    and link.</p>
+  </comment>
+
+  <p>Puede introducir y ver miles de caracteres de la mayoría de los sistemas de escritura del mundo, incluso los que no se encuentran en el teclado. En esta página se enumeran algunas de las diferentes maneras en las que puede introducir caracteres especiales.</p>
+
+  <links type="section">
+    <title>Métodos para introducir caracteres</title>
+  </links>
+
+  <section id="charmap">
+    <title>Mapa de caracteres</title>
+    <p>GNOME viene con una aplicación de mapa de caracteres que le permite examinar todos los caracteres en Unicode. Use el mapa de caracteres para buscar el carácter que quiere, y cópielo y péguelo donde quiera.</p>
+    <p>Puede encontrar el <app>Mapa de caracteres</app> en el <gui>Tablero</gui>. Para obtener más información sobre el mapa de caracteres, consulte el <link href="ghelp:gucharmap">manual del mapa de caracteres</link>.</p>
+  </section>
+
+  <section id="compose">
+    <title>Tecla de composición</title>
+    <p>Una tecla compuesta es una tecla especial que le permite pulsar varias teclas seguidas para obtener un carácter especial. Por ejemplo, para usar las letras con tilde <em>é</em> puede pulsar <key>componer</key> despúes <key>'</key> y después <key>e</key>.</p>
+    <p>Los teclados no tienen teclas de composición específicas. En su lugar, puede definir una de las teclas existentes en su teclado, como tecla para componer.</p>
+    <steps>
+      <title>Definir una tecla de composición</title>
+      <item><p>Pulse en el icono situado en el extremo derecho de la <gui>barra superior</gui> y seleccione <gui>Configuración del sistema</gui>.</p></item>
+      <item><p>Pulse en <gui>Región e idioma</gui></p></item>
+      <item><p>Seleccione la pestaña <gui>Disposición</gui> y pulse <gui>Opciones</gui>.</p></item>
+      <item><p>Busque el grupo llamado <gui>Posición de tecla de composición</gui>. Seleccione la tecla o teclas que le gustaría que se comportasen como tecla de composición. Puede seleccionar teclas como <key>Bloq Mayús</key>, o <key>Alt</key> o la tecla menú. Cualquier tecla que seleccione funcionará solo como tecla de composición y nunca más funcionará con su propósito original.</p></item>
+    </steps>
+    <p>Puede teclear muchos caracteres comunes usando la tecla compuesta, por ejemplo:</p>
+    <list>
+      <item><p>Pulse <key>componer</key> después <key>'</key> después una letra para establecer la tilde en tal letra, tal como la <em>é</em>.</p></item>
+      <item><p>Pulse <key>componer</key> después <key>`</key> después una letra para establecer un acento grave sobre tal letra, tal como <em>è</em>.</p></item>
+      <item><p>Pulse <key>componer</key> después <key>"</key> después una letra para establecer una diéresis en tal letra, tal como la <em>ë</em>.</p></item>
+      <item><p>Pulse <key>componer</key> después <key>-</key> después una letra para establecer una diéresis en tal letra, tal como la <em>ë</em>.</p></item>
+    </list>
+    <p>Para saber más sobre teclas de composición, consulte <link href="http://en.wikipedia.org/wiki/Compose_key#Common_compose_combinations">la página de teclas de composición en Wikipedia</link>.</p>
+  </section>
+
+  <section id="ctrlshiftu">
+    <title>Puntos de código</title>
+    <p>Puede introducir cualquier carácter Unicode utilizando solo el teclado con el punto de código numérico del carácter. Cada carácter se identifica con un punto de código de cuatro caracteres. Para encontrar el punto de código de un carácter, busque el carácter en la aplicación de mapa de caracteres y mire en la barra de estado o en la pestaña <gui>Detalles de carácter</gui>. El punto de código son los cuatro caracteres que hay después de <gui>U+</gui>.</p>
+
+    <p>Para introducir un carácter por su punto de código, mantenga presionadas <key>Ctrl</key> y <key> Mayús</key>, teclee <key>u</key> seguido por los cuatros caracteres del punto de código, a continuación, suelte <key>Ctrl</key> y <key>Mayús</key>. Si suele utilizar caracteres a los que no puede acceder fácilmente con otros métodos, puede que le resulte útil memorizar el punto de código para esos caracteres de manera que pueda introducirlos rápidamente.</p>
+  </section>
+
+  <section id="layout">
+    <title>Distribuciones de teclado</title>
+    <p>Puede hacer que el teclado se comporte como el teclado de otro idioma, independientemente de las letras impresas en las teclas. Incluso puede cambiar fácilmente entre diferentes distribuciones de teclado con un icono en la barra superior. Para saber cómo hacerlo, consulte la <link xref="keyboard-layouts"/>.</p>
+  </section>
+
+<!--
+  <section id="im">
+    <title>Input methods</title>
+    <p>XXXXX: write input methods page, link</p>
+  </section>
+-->
+
+</page>

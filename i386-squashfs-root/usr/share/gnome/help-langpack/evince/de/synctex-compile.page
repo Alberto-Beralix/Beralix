@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="synctex-compile" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#synctex" group="third"/>
+    <desc>So kompilieren Sie Ihr TeX-Dokument mit SyncTeX</desc>
+
+    <revision pkgversion="3.2" version="0.1" date="2011-09-05" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+<title>TeX mit SyncTeX kompilieren</title>
+<p>Die Zeile <em>\synctex=1</em> in der Präambel Ihrer TeX-Datei löst den Abgleich mit SyncTeX aus. <code>
+\documentclass{article}
+\synctex=1
+\usepackage{fullpage}
+\begin{document}
+...
+\end{document}
+</code><p>Alternativ können Sie den pdflatex-Befehl mit der Option <em>-synctex=1</em> ausführen:</p><screen>pdflatex -synctex=1 IhreDatei.tex</screen> age&gt;</p></page>

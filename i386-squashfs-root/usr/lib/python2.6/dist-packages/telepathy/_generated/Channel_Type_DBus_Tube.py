@@ -1,0 +1,1 @@
+../../../../../share/pyshared/telepathy/_generated/Channel_Type_DBus_Tube.py

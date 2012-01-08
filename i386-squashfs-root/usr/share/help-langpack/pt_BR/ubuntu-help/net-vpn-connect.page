@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-vpn-connect" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net"/>
+    
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <desc>Conectar a uma rede local privada sobre a internet.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Redes virtuais privadas (VPNs)</title>
+
+<p>Uma VPN (ou <em>rede virtual privada</em>) é uma forma de conectar em uma rede local através da internet. Por exemplo, digamos que você queira conectar na rede local de seu local de trabalho enquanto está em uma viagem de negócios. Você teria que encontrar uma conexão com a internet em algum lugar ( como em um hotel) e então conectar com a VPN do seu local de trabalho. Isso seria como se você estivesse conectado diretamente com a rede do trabalho, mas a real conexão de rede seria através da conexão de internet do hotel. Conexões VPN são usualmente <em>criptografadas</em> para prevenir que pessoa acessem a rede local que você está conectando sem iniciarem uma sessão.</p>
+
+<p>Existe inúmeros tipos de VPN. Você talvez tenha que instalar alguns softwares extra dependendo do tipo de vpn que você está se conectando. Descubra os detalhes da conexão com quem é responsável pela vpn e veja qual <em>cliente vpn</em> você precisa usar. Então, abra o <app>central Ubuntu de software</app> e procure pelo pacote <app>network-manager</app> o qual trabalha com a sua vpn (se existir um) e instale ele. Você irá precisar clicar no link <gui>mostrar itens técnicos</gui> na parte inferior da <app>Central de Programas do Ubuntu</app>.</p>
+
+<note>
+ <p>Se não existir um pacote de gerenciamento de rede para o seu tipo de VPN, você provavelmente irá ter que baixar e instalar algum software cliente a partir da companhia que provê o software de VPN. Você provavelmente irá ter que seguir algumas instruções  diferentes para que o pacote funcione.</p>
+</note>
+
+<p>Uma vez pronto, você pode configurar a conexão VPN:</p>
+
+<steps>
+ <item>
+  <p>Clique no <gui>menu rede</gui> no painel superior e sob <gui>Conexões VPN</gui>, selecione <gui>Configurar VPN</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Clique em <gui>Adicionar</gui> e escolha qual tipo de conexão VPN você tem.</p>
+ </item>
+ 
+ <item>
+  <p>Clique em <gui>Criar</gui> e siga as instruções na tela, entrando com detalhes, como seu nome de usuário e senha.</p>
+ </item>
+ 
+ <item>
+  <p>Quando você tiver terminado de configurar a VPN, clique em <gui>menu de rede</gui>  no painel superior, vá para <gui>conexões vpn</gui> e clique na conexão que você acabou de criar. Ele irá tentar estabelecer uma conexão VPN - o ícone de rede irá mudar enquanto ele tentar conectar.</p>
+ </item>
+ 
+ <item>
+  <p>Com otimismo, você irá se conectar com a vpn com sucesso. Se não, você talvez precise checar as configurações feitas da VPN. Você pode fazer isso clicando no menu de rede, e selecionando <gui>editar conexões</gui> e indo para a aba <gui>VPN</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Para desconectar da VPN, clique no menu rede e selecione <gui>Desconectar</gui> sob o nome da sua conexão VPN.</p>
+ </item>
+</steps>
+
+</page>

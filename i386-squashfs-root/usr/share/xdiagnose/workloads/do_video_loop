@@ -1,0 +1,59 @@
+#!/bin/bash
+
+VIDEO_DEFAULT=/usr/share/tpclient-pywx/graphics/intro-high.mpg
+DESCRIPTION="Workload that runs multiple video streams in parallel"
+
+PREREQS="Specify a video (defaults to ${VIDEO_DEFAULT})"
+DEPENDS="mplayer tpclient-pywx"
+
+VIDEO_FILENAME=${2:-${VIDEO_DEFAULT}}
+VIDEO_PLAYER=${VIDEO_PLAYER:-mplayer -volume 0}
+CYCLE_DELAY=${CYCLE_DELAY:-12}
+
+check() {
+    # Verify a valid video has been specified
+    if [ ! -e $VIDEO_FILENAME ]; then
+	if $VIDEO_FILENAME = $VIDEO_DEFAULT ; then
+            echo "Error:  Could not find video to play"
+	    echo "        Install tpclient-pywx or specify file on command line"
+	else
+            echo "Error:  $VIDEO_FILENAME does not exist"
+	fi
+        return 1
+    fi
+}
+
+workload() {
+    ${VIDEO_PLAYER} ${VIDEO_FILENAME} > /dev/null 2>&1 &
+    PID=$!
+    echo ${VIDEO_PLAYER} ${VIDEO_FILENAME} [${PID}]
+
+    # Let video play for a while, then kill it if it's still running
+    sleep ${CYCLE_DELAY}
+    kill ${PID} > /dev/null 2>&1
+}
+
+case $1 in
+    info)
+        echo $DESCRIPTION
+        echo $PREREQS
+        ;;
+    depends) echo $DEPENDS     ;;
+    check)   check             ;;
+    setup)                     ;;
+    once)    workload          ;;
+    run)
+        echo $$
+        while :
+        do
+            workload
+        done
+        ;;
+    *)
+        echo $DESCRIPTION
+        echo
+        echo $PREREQS
+        echo
+        echo "Usage: $0 {info|depends|setup|check|once|run} [VIDEO]"
+        exit 1
+esac

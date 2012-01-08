@@ -1,0 +1,173 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="newgame">
+      
+  <info>
+    <title type="sort">1</title>
+    <link type="guide" xref="index#play"/>
+    <link type="seealso" xref="gametypes"/>
+    <desc>Start and play a game.</desc>
+    <revision pkgversion="2.30" version="0.1" date="2010-01-10" status="draft"/>
+    <revision pkgversion="2.30" version="0.2" date="2010-01-21" status="review"/>
+   <credit type="author">
+    <name>Milo Casagrande</name>
+    <email>milo@ubuntu.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+  </info>
+
+  <title>Game session</title>
+  
+  <section id="game-start">
+    <title>Start a new session</title>
+    <p>
+      To start a new game, do one of the following:
+    </p>
+    <list>
+      <item>
+        <p>
+          Choose <guiseq><gui style="menu">Game</gui><gui style="menuitem">New Game</gui></guiseq>, and select
+          the type of game to play.
+        </p>
+      </item>
+      <item>
+        <p>
+          Click on one of the buttons in the toolbar.
+        </p>
+      </item>
+    </list>
+    <p>
+      The toolbar buttons have the following meanings:
+    </p>
+    <table frame="none" rules="none" shade="none">
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>All</title>
+            <p>
+              Starts a new game playing all the available game types.            
+            </p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/all-games.png">
+            <p>
+              All games button
+            </p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Logic</title>
+            <p>
+              Start a new game playing only logic games.
+            </p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/logic-games.png">
+            <p>
+            Logic games button
+            </p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Calculation</title>
+            <p>
+              Starts a new game playing only calculation games.
+            </p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/math-games.png">
+            <p>
+              Calculation games button
+            </p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Memory</title>
+            <p>
+              Starts a new game playing only memory games.
+            </p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/memory-games.png">
+            <p>
+              Memory games button
+            </p>
+          </media>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <terms>
+          <item>
+            <title>Verbal</title>
+            <p>
+              Starts a new game playing only verbal analogy games.           
+            </p>
+          </item>
+        </terms>
+        </td>
+        <td>
+          <media type="image" mime="image/png" src="figures/verbal-games.png">
+            <p>
+              Verbal games button
+            </p>
+          </media>
+        </td>
+      </tr>
+    </table>
+    <note>
+      <p>
+        These descriptions also apply to the game types that you can select from
+        the <gui style="menu">Game</gui> menu.
+      </p>
+    </note>
+  </section>
+  <section id="game-play">
+    <title>Play a session</title>
+    <note style="tip">
+      <p>
+        When you play a game, always read the instructions carefully!
+      </p>
+    </note>
+    <p>
+      The game session begins by showing you the problem and then asking for the answer.
+      At the bottom of the window is the main set of controls that you can use to interact with the game.
+    </p>
+    <p>
+      Once you know the answer to the problem, type it in the <gui style="input">Answer</gui>
+      text entry and press <gui style="button">OK</gui>.
+    </p>
+    <p>
+      To proceed to the next game, click <gui style="button">Next</gui>.
+    </p>
+    <note>
+      <p>
+        If you click <gui style="button">Next</gui> before completing the game,
+        or without providing an answer, that game will be counted in your results.
+      </p>
+    </note>
+  </section>
+</page>

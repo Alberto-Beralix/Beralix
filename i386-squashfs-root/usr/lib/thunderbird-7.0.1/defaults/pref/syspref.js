@@ -1,0 +1,1 @@
+/etc/thunderbird/syspref.js

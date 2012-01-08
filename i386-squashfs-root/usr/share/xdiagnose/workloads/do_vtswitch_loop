@@ -1,0 +1,48 @@
+#!/bin/bash
+
+DESCRIPTION="Workload that cycles between X and a vt console"
+
+PREREQS="Must be run as administrative user"
+DEPENDS="fgconsole"
+
+CYCLE_DELAY=${CYCLE_DELAY:-4}
+
+check() {
+    if $UID = 0; then
+        return 0
+    fi
+    return 1
+}
+
+workload() {
+    CUR_CON=$(sudo fgconsole)
+    chvt 1
+    sleep $CYCLE_DELAY
+    chvt $CUR_CON
+    sleep $CYCLE_DELAY
+}
+
+case $1 in
+    info)
+        echo $DESCRIPTION
+        echo $PREREQS
+        ;;
+    depends) echo $DEPENDS     ;;
+    check)   check             ;;
+    setup)                     ;;
+    once)    workload          ;;
+    run)
+        echo $$
+        while :
+        do
+            workload
+        done
+        ;;
+    *)
+        echo $DESCRIPTION
+        echo
+        echo $PREREQS
+        echo
+        echo "Usage: $0 {info|depends|setup|check|once|run} [VIDEO]"
+        exit 1
+esac

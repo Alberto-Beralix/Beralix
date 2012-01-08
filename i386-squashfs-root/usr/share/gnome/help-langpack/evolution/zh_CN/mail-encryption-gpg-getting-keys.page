@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-encryption-gpg-getting-keys" xml:lang="zh_CN">
+
+  <info>
+    <desc>Getting and Using GPG Public Keys.</desc>
+
+    <link type="guide" xref="mail-encryption#gpg"/>
+
+    <revision pkgversion="2.32.1" version="0.2" date="2011-07-27" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/encryption.html.en#encrypt-getting-key -->
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Getting and using GPG public keys</title>
+<!-- TODO:POST-3-2: Update and rewrite using Seahorse. Needs a complete rewrite once https://bugzilla.gnome.org/show_bug.cgi?id=508744 is fixed. -->
+
+<p>要发送一个加密邮件，您需要使用收信人的公有密钥和自己的私有密钥。Evolution会自行处理加密过程，但您需要得到公有密钥并加入到您的钥匙环中。</p>
+
+<p>To get public keys from a public key server, enter the command <code>gpg --recv-keys --keyserver wwwkeys.pgp.net keyid</code>, substituting <code>keyid</code> by your recipient's ID. You need to enter your password, and the ID is automatically added to your keyring.</p>
+
+<p>If someone sends you a public key directly, save it as a plain text file and enter the command <code>gpg --import</code> to add it to your keyring.</p>
+</page>

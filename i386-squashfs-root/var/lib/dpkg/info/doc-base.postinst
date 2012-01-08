@@ -1,0 +1,75 @@
+#!/bin/sh
+# $Id: postinst 224 2011-03-04 14:05:50Z robert $
+# vim:ts=4:sts=4:et:sw
+# postinst for doc-base
+
+# Abort if any command returns an error value
+set -e
+
+package=doc-base
+# upgrades prior to this version require complete re-registration
+compat_ver=0.10.0~
+
+ctrldir="/usr/share/$package"
+libdir="/var/lib/$package"
+infodir="$libdir/info"
+docsdir="$libdir/documents"
+omfdir="$libdir/omf"
+status_db="$infodir/status.yml"
+files_db="$infodir/files.yml"
+VERBOSE=
+
+if [ "$DOC_BASE_MAINT_DEBUG" ]; then
+    echo entering $package postinst
+    [ -z "$DOC_BASE_MAINT_VERBOSE" ] || VERBOSE=-v
+    set -x
+fi
+
+reinstall_docs () {
+    status=0
+    install-docs ${VERBOSE} "--install-$1" || status=$?
+
+    if [ "$status" = 10 ] ; then # error processing databases
+        echo                                                                     >&2
+        echo "**  Trying to recover from the above install-docs error by"        >&2
+        echo "**  removing its internal databases and re-calling it afterwards"  >&2
+        echo                                                                     >&2
+
+        ext="possibly_corrupted"
+        mv -f "$status_db" "${status_db}.${ext}"
+        mv -f "$files_db" "${files_db}.${ext}"
+        rm -rf "$docsdir" "$omfdir"; mkdir -p -m 755  "$docsdir" "$omfdir"
+        find "$infodir"  -type f '!' -name "*.${ext}" -exec rm -f {} ';'
+
+        install-docs ${VERBOSE} --install-all && status=$? || status=$? 
+
+        [ "$status" != 0 ] || rm -f "${status_db}.${ext}" "${files_db}.${ext}"
+    fi
+    [ "$status" = 0 ] || exit $status
+   
+}
+
+case "$1" in
+    configure)
+        if dpkg --compare-versions "$2" lt-nl "$compat_ver" ||
+          [ ! -f "$status_db"  ]; then
+            # version is less than last compatable version, we need to
+            # re-register all the docs
+            reinstall_docs all
+        else
+            reinstall_docs changed
+        fi
+        ;;
+
+    triggered)
+        if [ -f "$status_db" ]; then
+            reinstall_docs changed
+        else
+            echo "doc-base seems not to be configured yet, skipping triggers run"
+        fi
+        ;;
+esac
+
+
+
+exit 0

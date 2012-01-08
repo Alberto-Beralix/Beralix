@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="guide" id="mail-composer-custom-header-lines" xml:lang="es">
+
+  <info>
+    <desc>Usar campos personalizados en la cabecera de la edición de correos</desc>
+
+    <link type="guide" xref="index#mail-composing-advanced"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-30" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-send.html.en#b1a5azam -->
+ </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Cabeceras personalizadas</title>
+
+<p>Puede añadir líneas de cabeceras arbitrarias en los correos salientes.</p>
+
+<section id="managing">
+<title>Activar y gestionar cabeceras personalizadas</title>
+<p>Para configurar el complemento Cabecera personalizada:</p>
+<steps>
+<item><p>Seleccione <guiseq><gui>Editar</gui><gui>Complementos</gui></guiseq>.</p></item>
+<item><p>Actíve <gui>Cabecera personalizada</gui>.</p></item>
+<item><p>Pulse la pestaña <gui>Configuración</gui>.</p></item>
+<item><p>You can add, edit, or remove the header fields. For every header field you add, you can specify the keys and values. The key is used as the title of the Custom Header. You can enter multiple values for the keys. You must use a semicolon to separate every value you enter.</p></item>
+</steps>
+</section>
+
+<section id="inserting">
+<title>Insertar cabeceras personalizadas en un correo</title>
+<steps>
+<item><p>Pulse <guiseq><gui>Nuevo</gui><gui>Mensaje de correo</gui></guiseq> o pulse <keyseq><key>Mayús</key><key>Ctrl</key><key>M</key></keyseq> para abrir la ventana del editor de correos.</p></item>
+<item><p>Seleccione <guiseq><gui>Insertar</gui><gui>Cabeceras personalizadas</gui></guiseq>.</p>
+<p>En la ventana <gui>Cabeceras personalizadas del correo-e</gui> puede ver todos campos de cabeceras y valores que puede añadir.</p></item>
+<item><p>Establezca los valores para los campos de cabecera usando la lista desplegable.</p></item>
+<item><p>Pulse <gui style="button">Aceptar</gui>.</p></item>
+</steps>
+</section>
+
+</page>

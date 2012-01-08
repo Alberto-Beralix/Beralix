@@ -1,0 +1,18 @@
+All Workloads must be named do_*.  Workloads should be named "do_*_loop"
+if they run continuously until killed.
+
+A given workload can have dependencies above and beyond xdiagnose
+itself, but must include functionality to test and install what it
+needs.  In general workloads should strive to not require any packages
+which are not available in the Ubuntu main, universe, or multiverse
+archives.
+
+Workloads should take a command as first argument:
+  info    - Returns a string documenting the workload and its prerequisites
+  depends - Returns a list of prerequisite packages this workload requires
+  check   - Test if prerequisites are satisfied
+  setup   - Set up working directories, etc.
+  once    - Execute the process one time only
+  run     - Execute the process in a loop indefinitely
+
+

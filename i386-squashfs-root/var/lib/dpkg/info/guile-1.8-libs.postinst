@@ -1,0 +1,34 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  configure)
+    if test -d /usr/share/slib; then
+      dpkg-trigger /usr/share/slib
+    fi
+    ;;
+  triggered)
+    case " $2 " in
+      *" /usr/share/slib "*)
+        # Configure slib support.
+        if test -d /usr/share/slib
+        then
+          (cd /usr/share/guile/1.8 && ln -sf ../../slib .)
+          /usr/lib/guile-1.8/bin/guile -c \
+            "(use-modules (ice-9 slib)) (require 'new-catalog)"
+        else
+        # slib isn't installed -- clean up symlink.
+          rm -f /usr/share/guile/1.8/slib
+        fi
+        ;;
+    esac
+    ;;
+esac
+
+# Automatically added by dh_makeshlibs
+if [ "$1" = "configure" ]; then
+	ldconfig
+fi
+# End automatically added section
+

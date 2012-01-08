@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_flat_review" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#reviewing"/>
+    <link type="next" xref="howto_orca_find"/>
+    <title type="sort">2. Revisión</title>
+    <desc>Examinar espacialmente una ventana</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Revisión</title>
+  <p>La característica «Revisión» de <app>Orca</app> le permite revisar espacialmente el contenido, tanto el texto como los widgets, de la ventana activa. En este modo, <app>Orca</app> trata la ventana como si fuera una hoja de texto bidimensional, eliminando cualquier noción de jerarquía de widget u otro agrupamiento lógico dentro de la ventana.</p>
+  <p>El contenido «aplanado», también conocido como «el contexto de revisión», se puede <link xref="commands_flat_review">navegar</link> por línea, palabra, carácter y objeto. Además, puede pulsar con el botón derecho o el izquierdo sobre el objeto que se está revisando. Finalmente, puede usar la <link xref="howto_orca_find">búsqueda de Orca</link>, una característica basada en la revisión para buscar el contenido de la ventana activa.</p>
+  <p>Puesto que el contexto de la revisión es una representación espacial del contenido de la ventana activa, este se crea cuando usted entra por primera vez a la revisión y sólo contiene aquellos objetos que son visibles. Como consecuencia, no podrá usar la revisión para acceder a los elementos que están en la ventana, pero que actualmente no se ven en la pantalla. Además, si el contenido de la ventana cambia por sí solo, el contexto de la revisión no se actualizará automáticamente. Puede crear un nuevo contexto desactivando la revisión y volviendo a activarla.</p>
+  <p>Finalmente, la revisión por naturaleza es un modo que no se puede usar al mismo tiempo que <app>Orca</app> está siguiendo la trayectoria del foco. Por lo tanto, si está en revisión y luego usa los comandos de navegación de la aplicación para mover el cursor o dar el foco a otro objeto, abandonará automáticamente la revisión.</p>
+</page>

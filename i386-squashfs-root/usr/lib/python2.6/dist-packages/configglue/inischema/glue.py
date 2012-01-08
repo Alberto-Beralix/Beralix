@@ -1,0 +1,1 @@
+../../../../../share/pyshared/configglue/inischema/glue.py

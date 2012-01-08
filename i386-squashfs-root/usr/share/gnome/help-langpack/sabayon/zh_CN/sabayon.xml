@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.29.0">
+<!ENTITY manrevision "1.0">
+<!ENTITY date "November 2009">
+<!ENTITY app "<application>sabayon</application>">
+<!ENTITY appname "<application>Sabayon</application>">
+<!ENTITY ldquo "&#147;">
+<!-- Left Double Quote --><!ENTITY rdquo "&#148;">
+<!-- Right Double Quote -->]>
+<article id="index" lang="zh_CN">
+    <articleinfo>
+        <title><application>Sabayon</application> 管理员参考资料</title>
+        <abstract role="description">
+            <para><application>Sabayon</application> 是 GNOME 的配置编辑器。</para>
+        </abstract>
+
+        <copyright>
+            <year>2005</year>
+            <year>2009</year>
+            <holder>CRI74</holder>
+            <holder>Scott Balneaves</holder>
+        </copyright><copyright><year>2010</year><holder>ZenMindLei (zenmindlei@gmail.com)</holder></copyright>
+
+        <publisher role="maintainer">
+            <publishername>Scott Balneaves</publishername>
+        </publisher>
+
+        <!-- License -->
+          <legalnotice id="legalnotice">
+	<para>
+	  Permission is granted to copy, distribute and/or modify this
+	  document under the terms of the GNU Free Documentation
+	  License (GFDL), Version 1.1 or any later version published
+	  by the Free Software Foundation with no Invariant Sections,
+	  no Front-Cover Texts, and no Back-Cover Texts.  You can find
+	  a copy of the GFDL at this <ulink type="help" url="ghelp:fdl">link</ulink> or in the file COPYING-DOCS
+	  distributed with this manual.
+         </para>
+         <para> This manual is part of a collection of GNOME manuals
+          distributed under the GFDL.  If you want to distribute this
+          manual separately from the collection, you can do so by
+          adding a copy of the license to the manual, as described in
+          section 6 of the license.
+	</para>
+
+	<para>
+	  Many of the names used by companies to distinguish their
+	  products and services are claimed as trademarks. Where those
+	  names appear in any GNOME documentation, and the members of
+	  the GNOME Documentation Project are made aware of those
+	  trademarks, then the names are in capital letters or initial
+	  capital letters.
+	</para>
+
+	<para>
+	  DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED
+	  UNDER  THE TERMS OF THE GNU FREE DOCUMENTATION LICENSE
+	  WITH THE FURTHER UNDERSTANDING THAT:
+
+	  <orderedlist>
+		<listitem>
+		  <para>DOCUMENT IS PROVIDED ON AN "AS IS" BASIS,
+                    WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+                    IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES
+                    THAT THE DOCUMENT OR MODIFIED VERSION OF THE
+                    DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR
+                    A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE
+                    RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE
+                    OF THE DOCUMENT OR MODIFIED VERSION OF THE
+                    DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR
+                    MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT,
+                    YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY
+                    CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY
+                    SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER
+                    OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS
+                    LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED
+                    VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER
+                    EXCEPT UNDER THIS DISCLAIMER; AND
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL
+                       THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE),
+                       CONTRACT, OR OTHERWISE, SHALL THE AUTHOR,
+                       INITIAL WRITER, ANY CONTRIBUTOR, OR ANY
+                       DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION
+                       OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH
+                       PARTIES, BE LIABLE TO ANY PERSON FOR ANY
+                       DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR
+                       CONSEQUENTIAL DAMAGES OF ANY CHARACTER
+                       INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
+                       OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR
+                       MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR
+                       LOSSES ARISING OUT OF OR RELATING TO USE OF THE
+                       DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT,
+                       EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF
+                       THE POSSIBILITY OF SUCH DAMAGES.
+		  </para>
+		</listitem>
+	  </orderedlist>
+	</para>
+  </legalnotice>
+
+
+
+        <authorgroup>
+            <author>
+                <firstname>Phillipe</firstname>
+                <surname>Tonguet</surname>
+            </author>
+            <author>
+                <firstname>Scott</firstname>
+                <surname>Balneaves</surname>
+            </author>
+        </authorgroup>
+
+        <revhistory>
+            <revision>
+                <revnumber>V1.0</revnumber>
+                <date>2009年11月</date>
+            </revision>
+        </revhistory>
+
+<!--
+        <releaseinfo>
+            This manual describes.
+        </releaseinfo>
+-->
+
+        <legalnotice>
+            <title>反馈</title>
+            <para>
+                To report a bug or make a suggestion regarding the <application>sabayon</application>
+                application or this manual, follow the directions in
+                the <ulink url="ghelp:gnome-feedback" type="help">GNOME Feedback
+                Page</ulink>.
+            </para>
+        </legalnotice>
+    </articleinfo>
+    <indexterm zone="index">
+        <primary><application>sabayon</application></primary>
+    </indexterm>
+    <indexterm zone="index">
+        <primary>配置</primary>
+    </indexterm>
+
+<!-- XXXXXXXXXXXXXXXX Document XXXXXXXXXXXXXXX -->
+
+    <sect1 id="introduction">
+        <title>介绍</title>
+        <sect2>
+            <title>描述</title>
+            <para>
+                <application>Sabayon</application> is a system administration tool to manage GNOME desktop
+                settings. <application>Sabayon</application> provides a sane way to edit GConf defaults
+                and GConf mandatory keys: the same way you edit your desktop.
+                <application>Sabayon</application> launches profiles in a <application>Xephyr</application>
+				window, which provides an X session within an X session, like
+				<application>Xnest</application>.
+            </para>
+            <para>
+                Any changes you make in the <application>Xnest</application> window
+				are saved back to the profile file, which can then be applied to
+				user's accounts. Currently <application>Sabayon</application> is limited to the creation and 
+				update of user preference profiles. It does not deal with the very
+				large problem of actually populating target system with those
+				preferences. So far <application>Sabayon</application> supports complete files and the
+				configuration format for:
+            </para>
+            <itemizedlist>
+                <listitem>
+                    <para>GConf</para>
+                </listitem>
+                <listitem>
+                    <para>Mozilla/Firefox</para>
+                </listitem>
+                <listitem>
+                    <para>OpenOffice.org</para>
+                </listitem>
+            </itemizedlist>
+        </sect2>
+    </sect1>
+    <sect1 id="installation">
+        <title>安装</title>
+        <sect2>
+            <title>Installation from a tarball</title>
+            <para>在 <ulink url="http://ftp.gnome.org/pub/GNOME/sources/sabayon/"/> 下载 <application>Sabayon</application> </para>
+            <para>
+                To unpack the source, open a terminal and type :
+            </para>
+            <screen>
+$  tar -zxvf ~/sabayon-2.29.0.tar.gz
+$  cd sabayon-2.29.0
+            </screen>
+            <para>然后你就能配置和编译这个程序：</para>
+            <screen>
+$  ./configure --prefix=/usr --sysconfdir=/etc --mandir=/usr/share/man
+$  make
+$  sudo make install
+            </screen>
+            <para>增加新用户（你必须拥有根准允权）：</para>
+            <screen>
+# /usr/sbin/useradd -c "<application>Sabayon</application> user" -d /var/sabayon -g nogroup -s /sbin/nologin sabayon
+            </screen>
+            <para>创建目录 <filename>/var/sabayon</filename> ：</para>
+            <screen>
+# mkdir /var/sabayon
+            </screen>
+            <para>应用下列许可权：</para>
+            <screen>
+# chown -R sabayon /var/sabayon
+# chgrp -R nogroup /var/sabayon
+            </screen>
+        </sect2>
+        <sect2 id="distropackage">
+            <title>Installing your distributions package</title>
+            <para>
+                Your distribution probably contains a pre-packaged version of
+                <application>Sabayon</application> which will be supported directly by your distribution.
+                Search for the package 'sabayon' in your distribution's package
+                management tools.
+            </para>
+        </sect2>
+        <sect2 id="git">
+            <title>Installing from the git repository</title>
+            <para>
+                For those who wish to be on the bleeding edge, you can install
+                <application>Sabayon</application> from GNOME's git repository.
+            </para>
+            <para>
+                Installing from git is precisely the procedure as installing
+                from the tarball, with the exception of obtaining the release
+                from git, and running the autoconfigure tools.
+            </para>
+            <screen>
+$ git clone git://git.gnome.org/sabayon
+$ cd sabayon
+$ ./autogen.sh –prefix=/usr
+            </screen>
+            <para>
+                At this point, simply follow the same instructions for
+                configuring and compiling the program as you did for installing
+                from a tarball.
+            </para>
+        </sect2>
+    </sect1>
+    <sect1 id="profile_create">
+        <title>创建配置文件</title>
+        <para>
+            Your first step in creating profiles for your users will be to
+            map out what functions you want your users to have.  If you're a
+            business, you may wish to provide a GNOME top panel with a set of
+            launchers already pre-defined.  A teacher may want to disable the
+            <guimenuitem>Administration</guimenuitem> and
+			<guimenuitem>Preferences</guimenuitem> menu items.  These are all
+            things you can do with <application>Sabayon</application>.
+        </para>
+        <sect2>
+            <title>正在创建配置文件</title>
+            <para>
+                Your first step will be to launch <application>Sabayon</application>.  If you've installed
+                <application>Sabayon</application> from your distribution's package manager, it may have an
+                icon available for you under the <guimenu>Administration</guimenu>
+				menu.  If you've installed from source, you may need to launch it
+                manually.  Press
+            <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, and type:
+            </para>
+            <screen>
+gksu sabayon
+            </screen>
+            <para>
+                and press <keycap>Enter</keycap>.  After you've authenticated,
+				you should see the main window for <application>Sabayon</application>:
+            </para>
+            <figure>
+                <title>主窗口</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="figures/main-window.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                        <phrase><application>Sabayon</application> 的主窗口</phrase>
+                    </textobject>
+                    <caption>
+                        <para>
+                            <application>Sabayon</application>'s main window for creating, and applying
+                            profiles.
+                        </para>
+                    </caption>
+                </mediaobject>
+            </figure>
+            <para>
+                To create a new profile, just click on the <guibutton>Add</guibutton>
+				button. You'll see a window, called <guilabel>Add Profile</guilabel>,
+				where you can name the profile, and optionally, select an existing
+				profile which will be the basis, or starting point of this profile:
+            </para>
+            <figure>
+                <title>增加配置文件</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="figures/add-profile.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                        <phrase>Add Profile window for <application>Sabayon</application></phrase>
+                    </textobject>
+                    <caption>
+                        <para>
+                            Add Profile window for <application>Sabayon</application>.
+                        </para>
+                    </caption>
+                </mediaobject>
+            </figure>
+            <para>
+               Now that you've created the profile, you will want to edit it.
+               Select the profile name, and click on the <guibutton>Edit</guibutton>
+			   button:
+            </para>
+            <figure>
+                <title>主窗口 - 编辑</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="figures/main-window-edit.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                        <phrase>主窗口 - 编辑</phrase>
+                    </textobject>
+                    <caption>
+                        <para>主窗口 - 编辑</para>
+                    </caption>
+                </mediaobject>
+            </figure>
+            <para>
+               A "desktop within a window" is opened:
+            </para>
+            <figure>
+                <title>编辑桌面</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="figures/edit-desktop.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                        <phrase>编辑桌面</phrase>
+                    </textobject>
+                    <caption>
+                        <para>编辑桌面</para>
+                    </caption>
+                </mediaobject>
+            </figure>
+            <para>
+                Within this window, you may make whatever changes to the
+                profile that you wish.  You can add launchers or applets to the
+                panels, add launchers to the desktop, or create example files
+                in the home directory.
+            </para>
+            <para>
+                When you are done, you may want to look at what changes to the
+                default session that <application>Sabayon</application> has detected you've made.  You may
+                do this by clicking on the <guimenu>Edit</guimenu> menu, and selecting
+                <guibutton>Changes</guibutton>.  You should see a screen that looks
+				like the following:
+            </para>
+            <figure>
+                <title>改变窗口</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="figures/changes.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                        <phrase>改变窗口</phrase>
+                    </textobject>
+                    <caption>
+                        <para>
+                            Edit <application>Sabayon</application>'s saved actions in the changes window
+                            Edit desktop
+                        </para>
+                    </caption>
+                </mediaobject>
+            </figure>
+            <para>
+                You can modify what <application>Sabayon</application> will save in the profile in the
+                changes screen:
+            </para>
+            <orderedlist>
+                <listitem>
+                    <para>
+                        If you want <application>Sabayon</application> to ignore a setting that's been
+                        made, check the <guibutton>Ignore</guibutton> checkbox for 							that item.
+                   </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        To have a gconf key set as a "default" setting,
+                        simply leave it as is on the
+                        <emphasis>wooden</emphasis>  shield.
+                        it's silver.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        To have a gconf key set as a "mandatory" setting,
+                        click on it once to turn it into a
+                        <emphasis>iron</emphasis> shield.
+                    </para>
+                </listitem>
+            </orderedlist>
+            <para>
+                Then save the profile by selecting <menuchoice><guimenu>Profile
+				</guimenu><guimenuitem>Save The Profile</guimenuitem>
+            	</menuchoice> is saved in <filename>/etc/sabayon/profiles</filename>,
+				as a <emphasis>.zip</emphasis> file with the name you selected
+				for the profile.
+            </para>
+         </sect2>
+         <sect2>
+             <title>锁定编辑器</title>
+             <para>
+                 GNOME also includes the lockdown features of
+                 <application>Pessulus</application>, which allow you to do things
+                 like prevent users from modifying their panels, opening a
+                 <guilabel>Run Application</guilabel> dialogue, etc.
+             </para>
+             <para>
+                 You can use the lockdown editor by selecting <menuchoice>
+	 		     <guimenu>Edit</guimenu><guimenuitem>Lockdown</guimenuitem>
+            	 </menuchoice> on the <guilabel>Desktop editor</guilabel> window.
+             </para>
+            <figure>
+                <title>锁定编辑器</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="figures/lockdown.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                        <phrase>锁定编辑器</phrase>
+                    </textobject>
+                    <caption>
+                        <para>
+                            Edit GNOME's lockdown settings from <application>Sabayon</application>.
+                        </para>
+                    </caption>
+                </mediaobject>
+            </figure>
+        </sect2>
+    </sect1>
+    <sect1 id="apply">
+        <title>正在应用配置文件</title>
+        <sect2>
+           <title>Applying a profile</title>
+           <para>
+               Important: it is advisable to create a new user to test the profile.
+           </para>
+           <para>
+               Select the profile that you want to apply and click on
+			   <guibutton>Users</guibutton> : Then, select the users that you
+			   want to apply the profile. In this example <emphasis>Eleve1
+			   </emphasis> and <emphasis>Eleve 2</emphasis> will have the profile
+			   <filename>my_profile</filename>.
+            </para>
+            <figure>
+                <title>Apply profile by user</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="figures/apply-by-user.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                        <phrase>Apply profile by user</phrase>
+                    </textobject>
+                    <caption>
+                        <para>
+                            Apply a profile to only certain users.
+                        </para>
+                    </caption>
+                </mediaobject>
+            </figure>
+        </sect2>
+        <sect2>
+            <title>Applying profiles by group</title>
+            <para>
+                A common desire of systems administrators is to apply profiles
+                by group.  You can do this either in the gui tool itself, or
+                alternatively, by a manual script.
+            </para>
+            <sect3>
+                <title>Via the gui</title>
+                <para>
+                    Simply use the simply <command>sabayon-apply</command> script,
+					which is shipped with <application>Sabayon</application> by default, but within the gui
+					tool, select the <guibutton>Group</guibutton> button, and check
+					off which groups you wish to apply the profile to.
+                </para>
+                <figure>
+                    <title>Apply profile by group</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="figures/apply-by-group.png" format="PNG"/>
+                        </imageobject>
+                        <textobject>
+                            <phrase>Apply profile by group</phrase>
+                        </textobject>
+                        <caption>
+                            <para>
+                                Apply a profile to users who are members of
+                                a group.
+                            </para>
+                        </caption>
+                    </mediaobject>
+                </figure>
+            </sect3>
+        </sect2>
+    </sect1>
+</article>

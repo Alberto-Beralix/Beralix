@@ -1,0 +1,43 @@
+#!/bin/sh
+
+set -e
+
+# Automatically added by dh_installinit
+if [ "$1" = install ] || [ "$1" = upgrade ]; then
+	if [ -e "/etc/init.d/acpid" ] && [ ! -L "/etc/init.d/acpid" ]; then
+		if [ "`md5sum \"/etc/init.d/acpid\" | sed -e \"s/ .*//\"`" != \
+		     "`dpkg-query -W -f='${Conffiles}' acpid | sed -n -e \"\\\\' /etc/init.d/acpid '{s/ obsolete$//;s/.* //p}\"`" ]
+		then
+			echo "Obsolete conffile /etc/init.d/acpid has been modified by you, renaming to .dpkg-bak"
+			mv -f "/etc/init.d/acpid" "/etc/init.d/acpid.dpkg-bak"
+		else
+			rm -f "/etc/init.d/acpid"
+		fi
+	fi
+fi
+# End automatically added section
+
+
+# Remove a no-longer used conffile
+rm_conffile() {
+    PKGNAME="$1"
+    CONFFILE="$2"
+    if [ -e "$CONFFILE" ]; then
+        md5sum="`md5sum \"$CONFFILE\" | sed -e \"s/ .*//\"`"
+        old_md5sum="`dpkg-query -W -f='${Conffiles}' $PKGNAME | sed -n -e \"\\\\' $CONFFILE '{s/ obsolete$//;s/.* //p}\"`"
+        if [ "$md5sum" != "$old_md5sum" ]; then
+            echo "Obsolete conffile $CONFFILE has been modified by you."
+            echo "Saving as $CONFFILE.dpkg-bak ..."
+            mv -f "$CONFFILE" "$CONFFILE".dpkg-bak
+        else
+            echo "Removing obsolete conffile $CONFFILE ..."
+            rm -f "$CONFFILE"
+        fi
+    fi
+}
+
+case "$1" in
+  install|upgrade)
+    rm_conffile acpid /etc/logrotate.d/acpid
+  ;;
+esac

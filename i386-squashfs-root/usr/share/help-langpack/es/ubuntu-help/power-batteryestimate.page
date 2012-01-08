@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="power-batteryestimate" xml:lang="es">
+
+  <info>
+  
+    <link type="guide" xref="power#battery"/>
+    
+    <desc>El nivel de batería mostrado es solo una estimación.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Dice X minutos de batería restante, pero no es cierto</title>
+
+<p>Cuando compruebe el nivel de carga restante de la batería, puede que observe que el <em>tiempo restante</em> muestra un valor diferente de lo que dura <em>realmente</em> la batería. Esto se debe a que el nivel de carga restante de la batería solo puede estimarse, aunque las estimaciones van mejorando con el tiempo.</p>
+
+<p>Para poder estimar el nivel de batería restante, se deben tener en cuenta varios factores. Uno es la cantidad de energía que el equipo está usando actualmente: el consumo de energía varía en función de cuántos programas tenga abiertos, qué dispositivos tiene conectados, y de si está ejecutando tareas intensivas (como ver un DVD o convertir archivos de música, por ejemplo). Esto cambia de un momento a otro, y es difícil de predecir.</p>
+
+<p>Otro factor es cómo se descarga la batería. Algunas baterías pierden su carga más rápidamente de la que reciben. Sin un conocimiento preciso de cómo se descarga la batería, solo se podrá hacer una estimación aproximada del nivel de batería restante.</p>
+
+<p>A medida que la batería se vaya descargando, el Gestor de energía se irá haciendo una idea de sus propiedades de descarga y aprenderá a mejorar sus estimaciones sobre el nivel de la batería, aunque nunca serán completamente precisas.</p>
+
+<note>
+ <p>Si obtiene una estimación completamente ridícula del nivel de la batería (digamos, ¡cientos de días!), probablemente es que el Gestor de energía no tenga los datos que necesite para hacer una estimación coherente.</p>
+ <p>Si desenchufa la alimentación, trabaja con el portátil usando la batería durante un tiempo, y luego vuelve a enchufar la alimentación y deja que se recargue de nuevo, el Gestor de energía debería poder obtener los datos que necesita.</p>
+</note>
+
+</page>

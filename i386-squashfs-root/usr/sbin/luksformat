@@ -1,0 +1,104 @@
+#!/usr/bin/perl -w
+
+# luksformat - wrapper around LUKS-capable cryptsetup and mkfs for easy
+# creation of an encrypted device.
+#
+# (C) 2005 Canonical Ltd.
+# Author: Martin Pitt <martin.pitt@ubuntu.com>
+# License: GNU General Public License, v2 or any later
+# (http://www.gnu.org/copyleft/gpl.html)
+
+use Getopt::Long qw(:config pass_through);
+
+sub help() {
+    print "luksformat - Create and format an encrypted LUKS device
+Usage: luksformat [-t <file system>] <device> [ mkfs options ]\n";
+    exit 1;
+}
+
+# default file system
+$fs = 'vfat';
+exit 1 unless GetOptions ('t|type=s' => \$fs);
+
+help() if $#ARGV < 0;
+
+if ($> != 0) {
+    print STDERR "This program needs to be started as root\n";
+    exit 1;
+}
+
+$device = shift(@ARGV);
+
+open(MOUNTS, "/proc/mounts");
+while (<MOUNTS>) {
+    die "Error: device mounted: $device\n" if (/\Q$device\E/)
+}
+
+if (-x "/sbin/mkfs.$fs") {
+    $mkfs = "/sbin/mkfs.$fs";
+}
+elsif (-x "/usr/sbin/mkfs.$fs") {
+    $mkfs = "/usr/sbin/mkfs.$fs";
+}
+else {
+    print STDERR "Error: invalid file system: $fs\n";
+    exit 1;
+}
+
+# generate temporary mapped device name which is not yet used
+$name = "";
+for ($i = 1; $i < 100; $i++) {
+    if (! -e "/dev/mapper/luksformat$i") {
+	$name = "luksformat$i";
+	last;
+    }
+}
+
+$name or die "Error: could not generate temporary mapped device name";
+
+# we do not need to be overly concerned with race conditions here, cryptsetup
+# will just fail if the name already exists now.
+print "Creating encrypted device on $device...\n";
+if ((system 'cryptsetup', 'luksFormat', '-s', '256', '--cipher', 'aes-cbc-essiv:sha256', $device)) {
+    die "Could not create LUKS device $device";
+}
+
+print "Please enter your passphrase again to verify it\n";
+if ((system 'cryptsetup', 'luksOpen', $device, $name) != 0) {
+    print STDERR "The passphrases you entered were not identical\n";
+    exit 1;
+}
+
+$result = system $mkfs, "/dev/mapper/$name", @ARGV;
+print "\n";
+system 'cryptsetup', 'luksClose', $name;
+
+die "Could not format device with file system $fs" if $result;
+
+__END__
+
+=head1 NAME
+
+luksformat - Create and format an encrypted LUKS device 
+
+=head1 SYNOPSIS
+
+B<luksformat> [B<-t> I<fstype>] I<device> [ mkfs options ]
+
+=head1 DESCRIPTION
+
+B<luksformat> is a wrapper around B<cryptsetup> and B<mkfs> which provides an
+easy interface for creating an encrypted device that follows the LUKS standard
+and for putting a file system onto the encrypted device.
+
+The default file system is B<vfat> since that is most commonly used on
+removable devices. However, you can specify any available file system with the
+B<-t> option.
+
+=head1 SEE ALSO
+
+L<cryptsetup(8)>, L<mkfs(8)>
+
+=head1 AUTHOR
+
+This program was written by Martin Pitt <martin.pitt@ubuntu.com>.

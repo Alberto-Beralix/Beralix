@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="hardware-driver-proprietary" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="hardware" group="more"/>
+    
+    <desc>Los controladores de dispositivos propietarios no están disponibles libremente o no son de código abierto.</desc>
+    
+    <revision version="11.10" date="2011-09-12" status="final"/>
+    <credit type="author">
+      <name>Ubuntu Documentation Teak</name>
+      <email>ubuntu-doc@lists.ubuntu.com</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Qué son controladores propietarios?</title>
+
+  <p>Most of the devices (hardware) attached to your computer should function
+  properly in Ubuntu. These devices are likely to have open source drivers, which means
+  that the drivers can be modified by the Ubuntu developers and problems with
+  them can be fixed.</p>
+
+  <p>Some hardware does not have open source drivers, usually because the hardware
+  manufacturer has not released details of their hardware which would make it
+  possible to create such a driver. These devices may have limited functionality
+  or may not work at all.</p>
+
+  <p>If a proprietary driver is available for a certain device, you can install it
+  in order to allow your device to function properly, or to add new features. For
+  example, installing a proprietary driver for certain graphics cards may allow you
+  to use more advanced visual effects.</p>
+
+  <p>Muchos equipos no necesitan controladores propietarios porque los controladores de código abierto soportan totalmente el hardware.</p>
+
+  <note style="warning">
+    <p>La mayoría de problemas con los controladores propietarios no los pueden corregir los desarrolladores de Ubuntu.</p>
+  </note>
+
+</page>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="sound-nosound" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="sound-broken"/>
+    
+    <desc>Compruebe que no está silenciado, que los cables están enchufados correctamente y que la tarjeta de sonido se ha detectado.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>No puedo oír ningún sonido en el equipo</title>
+
+<p>Si no puede escuchar ningún sonido en su equipo, por ejemplo, cuando intenta reproducir música, siga estos pasos de solución de problemas para ver si puede solucionar el problema.</p>
+
+<section id="mute">
+ <title>Asegúrese de que el sonido no está silenciado</title>
+ <p>Pulse en el <gui>icono de sonido</gui> en el panel superior (parece a un altavoz) y asegúrese de que el sonido no esté silenciado o en la posición hacia abajo.</p>
+ <p>Algunos equipos portátiles tienen interruptores de silencio o teclas en sus teclados, pruebe a pulsar esa tecla para ver si se activa el sonido.</p>
+ <p>También debe comprobar que no ha silenciado la aplicación que está utilizando para reproducir el sonido (por ejemplo, su reproductor de música o reproductor de películas). Para poder comprobar esto, la aplicación puede tener un botón de silencio o de volumen en su ventana principal. También puede pulsar en el icono de sonido en el panel superior y seleccionar <gui>Configuración de sonido</gui>. Cuando la ventana de <gui>Sonido</gui> aparezca, vaya a la pestaña <gui>Aplicaciones</gui> y compruebe que su aplicación no está silenciada aquí.</p>
+</section>
+
+<section id="speakers">
+ <title>Compruebe que los altavoces están encendidos y conectados correctamente</title>
+ <p>Si su equipo tiene altavoces externos, asegúrese de que están encendidos y que el volumen está activado. Asegúrese de que el cable del altavoz esté conectado al zócalo de la «salida» en la parte posterior del equipo. Esta toma es por lo general de color verde claro.</p>
+ 
+ <p>Algunas tarjetas de sonido son capaces de cambiar el zócalo que usan para la salida (de los altavoces) y la entrada (desde el micrófono, por ejemplo). El zócalo de salida puede ser diferente cuando se ejecuta Linux en vez de Windows o Mac OS. Intente conectar el cable del altavoz a los diferentes zócalos de audio en el equipo sucesivamente, para ver si funciona.</p>
+ 
+ <p>Una última cosa que comprobar es que el cable de sonido esté conectado correctamente en la parte trasera de los altavoces. Algunos altavoces tienen más de una entrada.</p>
+</section>
+
+<section id="device">
+ <title>Compruebe que el dispositivo de sonido correcto está seleccionado</title>
+ <p>Algunos equipos tienen varios «dispositivos de sonido» instalados. Algunos de estos son capaces de hacer salir el sonido y otros no, así que usted debe comprobar que tiene seleccionado el correcto. Esto podría implicar algún ensayo y error para elegir el correcto.</p>
+ <steps>
+  <item>
+   <p>Pulse en el <gui>menú de sonido</gui> del <gui>panel superior</gui> y pulse <gui>Configuración de sonido</gui>.</p>
+  </item>
+  <item>
+   <p>En la ventana de <gui>Sonido</gui> que aparece, vaya a la pestaña <gui>Hardware</gui>. Tome nota de qué dispositivo y perfil están seleccionados (para que pueda volver a las selecciones predeterminadas si el cambio no funciona).</p>
+  </item>
+  <item>
+   <p>Con el dispositivio seleccionado, pruebe a cambiar su perfil; reproduzca un sonido después de cambiar el perfil para ver si funciona. Puede que necesite probar con todos los perfiles de la lista.</p>
+  </item>
+  <item>
+   <p>Si eso no funciona, puede intentar hacer lo mismo con cualquiera de los dispositivos que se muestran.</p>
+  </item>
+  <item>
+   <p>Pruebe también a cambiar la opción <gui>Conector</gui> en la pestaña <gui>Salida</gui>.</p>
+  </item>
+ </steps>
+</section>
+
+<section id="hardware-detected">
+ <title>Compruebe que la tarjeta de sonido se ha detectado correctamente</title>
+ <p>Puede que su tarjeta de sonido no se haya detectado correctamente. Si ocurriera eso, su equipo pensará que no puede reproducir ningún sonido. Una posible causa para ello es que no se hayan instalado los controladores para esa tarjeta.</p>
+ <steps>
+  <item>
+   <p>Vaya al <link xref="unity-dash-intro">Tablero</link> y abra un Terminal.</p>
+  </item>
+  <item>
+   <p>Introduzca <cmd>aplay -l</cmd> y presione <key>Intro</key>.</p>
+  </item>
+  <item>
+   <p>Se mostrará una lista de dispositivos. Si no aparece ningún <gui>dispositivo hardware de reproducción</gui> es que no se ha detectado su tarjeta de sonido.</p>
+  </item>
+ </steps>
+ 
+ <p>Si no se detecta su tarjeta de sonido, puede que tenga que instalar manualmente los controladores. La forma de hacerlo dependerá de la tarjeta que tenga.</p>
+ 
+ <p>Puede saber qué tarjeta de sonido tiene usando la orden <cmd>lspci</cmd> en el <app>Terminal</app>. Puede obtener resultados más completos si ejecuta <cmd>lspci</cmd> como <link xref="user-admin-explain">superusuario</link>; introduzca <cmd>sudo lspci</cmd> y teclee su contraseña. Compruebe si aparece algún <em>controlador de sonido («audio controller»)</em> o <em>dispositivo de sonido («audio device»)</em>; deberán aparecer los números de marca y el modelo de la tarjeta de osnido. <cmd>sudo lspci -v</cmd> mostrará una lista con información más detallada.</p>
+  
+ <p>Podrá encontrar e instalar controladores para su tarjeta buscando en Internet. En caso contrario, puede <link xref="ubuntu-report-bug">informar de un problema</link>.</p>
+ 
+ <p>Si no puede conseguir los controladores para la tarjeta de sonido, es posible que prefiera comprar una tarjeta de sonido nueva. Puede obtener tarjetas de sonido que se puedan instalar en el equipo y tarjetas de sonido externas USB.</p>
+</section>
+
+</page>

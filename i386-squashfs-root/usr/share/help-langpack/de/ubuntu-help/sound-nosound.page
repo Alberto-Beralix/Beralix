@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="sound-nosound" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="sound-broken"/>
+    
+    <desc>Überprüfen Sie, ob es nicht stummgeschaltet ist, ob die Kabel ordentlich einegsteckt sind und ob die Soundkarte erkannt wurde.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Ich kann keine Klänge auf dem Rechner hören</title>
+
+<p>Falls Sie keine Klänge Ihres Rechners hören können, beispielsweise bei der Musikwiedergabe, versuchen Sie Folgendes, um das Problem zu beheben.</p>
+
+<section id="mute">
+ <title>Stellen Sie sicher, dass der Ton nicht stumm geschaltet ist</title>
+ <p>Öffnen Sie das <gui>Audiomenü</gui> im oberen Panel (mit einem Klick auf das Lautsprechersymbol) und stellen Sie sicher, dass der Ton weder stumm noch leise gestellt ist.</p>
+ <p>Einige Laptops haben Stummschalter oder entsprechend wirkende Tasten. Versuchen Sie diese Schalter oder Tasten zu bedienen, um zu sehen, ob der Klang nicht stummgeschaltet ist.</p>
+ <p>You should also check that you haven't muted the application that you're using to play sound (e.g. your music player or movie player). The application may have a mute or volume button in its main window, so check that. Also, click the sound menu on the top panel and choose <gui>Sound Settings</gui>. When the <gui>Sound</gui> window appears, go to the <gui>Applications</gui> tab and check that your application is not muted on there.</p>
+</section>
+
+<section id="speakers">
+ <title>Überprüfen Sie, ob die Lautsprecher korrekt angeschlossen und eingeschaltet sind</title>
+ <p>Falls Ihr Rechner über externe Lautsprecher verfügt, stellen Sie sicher, dass diese eingeschaltet sind und die Lautstärke hochgeregelt ist. Überprüfen Sie außerdem, ob das Anschlusskabel fest in die »«Ausgabe«-Buchse an der Rückseite des Rechners eingesteckt ist. Diese Buchse ist üblicherweise in hellgrüner Farbe gekennzeichnet.</p>
+ 
+ <p>Mit einigen Soundkarten ist es möglich, die Belegung der Buchsen für die Ausgabe (zu den Lautsprechern) und die Eingabe (z.B. von einem Mikrofon) zu ändern. Die Ausgabebuchse kann unter Linux durchaus eine andere sein als unter Windows oder MacOS. Versuchen Sie, das Lautsprecherkabel in andere Buchsen des Rechners zu stecken, um zu sehen, ob es funktioniert.</p>
+ 
+ <p>Zuletzt können Sie noch prüfen, ob das Audiokabel fest in den Buchsen an der Rückseite der Lautsprecher sitzt. Einige Lautsprecher haben mehrere Eingangsbuchsen.</p>
+</section>
+
+<section id="device">
+ <title>Überprüfen Sie, ob das richtige Klangausgabegerät angeschlossen ist</title>
+ <p>Auf einigen Rechnern sind mehrere »Audiogeräte« installiert. Einige davon können Klänge ausgeben, andere nicht. Überprüfen Sie also, ob das richtige Gerät ausgewählt ist. Einige Testläufe könnten nötig sein, um das richtige Gerät zu finden.</p>
+ <steps>
+  <item>
+   <p>Click the <gui>sound menu</gui> in the <gui>top panel</gui> and click <gui>Sound Settings</gui>.</p>
+  </item>
+  <item>
+   <p>Im erscheindenden <gui>Klang</gui>-Fenster öffnen Sie den Reiter <gui>Hardware</gui>. Notieren Sie sich, welches Gerät und welches Profil ausgewählt ist. So können Sie jederzeit die Vorgabeeinstellungen wiederherstellen, falls Änderungen nicht zum Erfolg führen.</p>
+  </item>
+  <item>
+   <p>Versuchen Sie, für das ausgewählte Gerät das Profil zu ändern. Spielen Sie anschließend einen Klang ab, um zu sehen, ob es funktioniert. Möglicherweise müssen Sie nun die Liste weiter durcharbeiten und jedes Profil testen.</p>
+  </item>
+  <item>
+   <p>Falls das nicht funktioniert, müssen Sie das Gleiche für eines der anderen aufgelisteten Geräte tun.</p>
+  </item>
+  <item>
+   <p>Versuchen Sie auch die Option <gui>Anschluss</gui> im Reiter <gui>Ausgabe</gui> zu ändern.</p>
+  </item>
+ </steps>
+</section>
+
+<section id="hardware-detected">
+ <title>Überprüfen Sie, ob die Soundkarte von Ihrem Rechner richtig erkannt wurde</title>
+ <p>Ihre Soundkarte könnte nicht richtig erkannt worden sein. Falls dem so ist, »denkt« Ihr Rechner, dass er keine Klänge wiedergeben kann. Ein möglicher Grund hierfür könnte sein, dass die Treiber für die Karte nicht installiert sind.</p>
+ <steps>
+  <item>
+   <p>Go to the <link xref="unity-dash-intro">dash</link> and open the Terminal.</p>
+  </item>
+  <item>
+   <p>Tippen Sie <cmd>aplay -l</cmd> und drücken Sie die <key>Eingabetaste</key>.</p>
+  </item>
+  <item>
+   <p>Eine Geräteliste  wird angezeigt. Falls es keine <gui>Geräte zur Tonausgabe</gui> gibt, wurde Ihre Soundkarte nicht erkannt.</p>
+  </item>
+ </steps>
+ 
+ <p>Falls Ihre Soundkarte nicht erkannt wurde, müssen Sie die Treiber dafür manuell einrichten. Wie das zu geschehen hat, hängt von Ihrer Soundkarte ab.</p>
+ 
+ <p>You can see what sound card you have by using the <cmd>lspci</cmd> command in the <app>Terminal</app>. You can get more complete results if you run <cmd>lspci</cmd> as <link xref="user-admin-explain">superuser</link>; enter <cmd>sudo lspci</cmd> and type your password. See if an <em>audio controller</em> or <em>audio device</em> is listed—it should have the sound card's make and model number. <cmd>sudo lspci -v</cmd> will show a list with more detailed information.</p>
+  
+ <p>You may be able to find and install drivers for your card by searching the Internet. Otherwise, you can <link xref="ubuntu-report-bug">file a bug</link>.</p>
+ 
+ <p>Falls keine Treiber für Ihre Soundkarte zu finden sind, könnte es sinnvoll sein, eine neue Soundkarte zu kaufen. Sie können Soundkarten kaufen, die für die Installation innerhalb des Rechners vorgesehen sind, und externe Soundkarten, die über USB angeschlossen werden.</p>
+</section>
+
+</page>

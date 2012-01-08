@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="Tùy biến phông">
+							<longdesc>Tùy biến phông cho thanh ngôn ngữ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="Dùng phông chữ tùy biến">
+							<longdesc>Dùng phông tùy biến cho thanh ngôn ngữ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="Hiển thị tên kiểu gõ">
+							<longdesc>Hiển thị tên kiểu gõ trên thanh ngôn ngữ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="Hiển thị biểu tượng trên khay hệ thống">
+							<longdesc>Hiển thị biểu tượng trên khay hệ thống</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="Hướng của bảng tra cứu">
+							<longdesc>Hướng của bảng tra cứu. 0 = Ngang, 1 = Dọc</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="Vị trí thanh ngôn ngữ:">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="Vị trí thanh ngôn ngữ:">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="Tự động ẩn">
+							<longdesc>Cách hiển thị thanh ngôn ngữ. 0 = Nhúng vào menu, 1 = Tự  động ẩn, 2 = Luôn hiện</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="use_global_engine">
+						<local_schema short_desc="Dùng chung kiểu gõ cho toàn hệ thống">
+							<longdesc>Chia sẻ cùng kiểu gõ cho tất cả các ứng dụng</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="Nhúng văn bản tiền soạn thảo">
+							<longdesc>Nhúng văn bản tiền soạn thảo trong cửa sổ ứng dụng</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="Dùng kiểu bố trí bàn phím của hệ thống">
+							<longdesc>Dùng kiểu bố trí bàn phím hệ thống (XKB)</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="Nạp trước các kiểu gõ">
+							<longdesc>Nạp trước các kiểu gõ khi khởi động ibus</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="Phím tắt cho kiểu gõ trước">
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="Phím tắt cho kiểu gõ trước">
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="Phím tắt cho kiểu gõ kế tiếp">
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="Phím tắt cho kiểu gõ kế tiếp">
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="Phím tắt kích hoạt">
+								<longdesc>Phím tắt để bật hoặc tắt kiểu gõ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="Tắt tạo WiFi">
+						<longdesc>Đặt là TRUE để tắt tạo mạng adhock bằng applet.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="Temp">
+						<longdesc>Dùng để xác định thiết lập có được chuyển sang phiên bản mới không.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="Ngăn thông báo mạng sẵn sàng">
+						<longdesc>Đặt là TRUE để tắt thông báo khi có mạng không dây.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="Tắt thông báo ngắt kết nối">
+						<longdesc>Đặt là TRUE để tắt thông báo khi ngắt mạng.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="Tắt thông báo kết nối">
+						<longdesc>Đặt là TRUE để tắt thông báo khi nối mạng.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

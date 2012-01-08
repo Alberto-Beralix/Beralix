@@ -1,0 +1,99 @@
+#!/bin/sh
+
+set -eu
+
+# This script can be called in the following ways:
+#
+# After the package was installed:
+#       <postinst> configure <old-version>
+#
+#
+# If prerm fails during upgrade or fails on failed upgrade:
+#       <old-postinst> abort-upgrade <new-version>
+#
+# If prerm fails during deconfiguration of a package:
+#       <postinst> abort-deconfigure in-favour <new-package> <version>
+#                  removing <old-package> <version>
+#
+# If prerm fails during replacement due to conflict:
+#       <postinst> abort-remove in-favour <new-package> <version>
+
+# Move a conffile without triggering a dpkg question
+mv_conffile() {
+    local OLDCONFFILE="$1"
+    local NEWCONFFILE="$2"
+
+    [ -e "$OLDCONFFILE" ] || return 0
+
+    echo "Preserving user changes to $NEWCONFFILE ..."
+    mv -f "$NEWCONFFILE" "$NEWCONFFILE".dpkg-new
+    mv -f "$OLDCONFFILE" "$NEWCONFFILE"
+}
+
+# This script can be called in the following ways:
+#
+# After the package was installed:
+#	<postinst> configure <old-version>
+#
+#
+# If prerm fails during upgrade or fails on failed upgrade:
+#	<old-postinst> abort-upgrade <new-version>
+#
+# If prerm fails during deconfiguration of a package:
+#	<postinst> abort-deconfigure in-favour <new-package> <version>
+#	           removing <old-package> <version>
+#
+# If prerm fails during replacement due to conflict:
+#	<postinst> abort-remove in-favour <new-package> <version>
+
+# Move a conffile without triggering a dpkg question
+mv_conffile() {
+    local OLDCONFFILE="$1"
+    local NEWCONFFILE="$2"
+
+    [ -e "$OLDCONFFILE" ] || return 0
+
+    echo "Preserving user changes to $NEWCONFFILE ..."
+    mv -f "$NEWCONFFILE" "$NEWCONFFILE".dpkg-new
+    mv -f "$OLDCONFFILE" "$NEWCONFFILE"
+}
+
+case "$1" in
+    configure)
+        # if you come from a really old network manager we have
+        # to comment the auto dhcp lines as a best effort approach
+
+        if dpkg --compare-versions "$2" "lt-nl" "0.6.5-0ubuntu12"; then
+            sh /usr/lib/network-manager/ifblacklist_migrate.sh
+            sleep 2
+        fi
+        # move nm-system-settings.conf to NetworkManager.conf starting
+        # from anything below natty, rather than 0.8.1-2 like Debian
+        if dpkg --compare-versions "$2" lt "0.8.3+git.20110210t152733.00327fb"; then
+            mv_conffile "/etc/NetworkManager/nm-system-settings.conf" "/etc/NetworkManager/NetworkManager.conf"
+        fi
+
+        # request a reboot (NM tears down interfaces on restart
+        # which is not the way we want to go)
+        [ -x /usr/share/update-notifier/notify-reboot-required ] && \
+            /usr/share/update-notifier/notify-reboot-required
+
+        [ -x /etc/init.d/NetworkManager.dpkg-moving ] && \
+            rm -f /etc/init.d/NetworkManager.dpkg-moving
+        [ -x /etc/init.d/NetworkManager.dpkg-removing ] && \
+            rm -f /etc/init.d/NetworkManager.dpkg-removing
+
+        update-rc.d -f NetworkManager remove >/dev/null
+    ;;
+
+    abort-upgrade|abort-deconfigure|abort-remove)
+        ;;
+
+    *)
+        echo "$0 called with unknown argument \`$1'" 1>&2
+        exit 1
+        ;;
+esac
+
+
+

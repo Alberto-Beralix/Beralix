@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="set-custom-status" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#accounts"/>
+    <link type="seealso" xref="change-status"/>
+	  <link type="seealso" xref="status-icons"/>
+    <desc>Hinzufügen, Bearbeiten oder Löschen persönlicher Nachrichten für Ihren Status.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-30" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-10" status="review"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>Festlegen einer benutzerdefinierten Nachricht</title>
+
+  <p>Vielleicht wollen Sie eine benutzerdefinierte Nachricht für Ihren Status festlegen, zum Beispiel um jemanden darüber zu informieren, dass Sie für eine bestimmte Zeitspanne nicht verfügbar sein werden.</p>
+  <p>Es ist möglich, eine benutzerdefinierte Nachricht festzulegen, basierend auf den verfügbaren Status.</p>
+
+  <steps>
+    <item>
+      <p>Klicken Sie im<gui>Kontaktlisten</gui>-Fenster in die Auswahlliste oben.</p>
+    </item>
+    <item>
+      <p>Wählen Sie den Status aus, dem Sie eine benutzerdefinierte Nachricht zuordnen wollen. Sie müssen denjenigen mit der Bezeichnung <gui>Benutzerdefinierte Nachricht</gui> auswählen.</p>
+    </item>
+    <item>
+      <p>Geben Sie Ihre benutzerdefinierte Nachricht in das Textfeld am oberen Rand des Fensters ein und drücken Sie die <key>Eingabetaste</key>, um sie zu speichern.</p>
+    </item>
+    <item>
+      <p>Wenn Sie die benutzerdefinierte Nachricht als bevorzugt festlegen wollen, speichern Sie sie, um sie wiederverwenden zu können. Klicken Sie anschließend auf den kleinen Stern an der rechten Seite des Textfeldes, in welches Sie Ihre benutzerdefinierte Nachricht eingegeben haben.</p>
+      <p>Falls Sie es nicht tun, dann wird die benutzerdefinierte Nachricht bei der nächsten Benutzung von <app>Empathy</app> nicht verfügbar sein. Sie wird nur für die aktuelle Sitzung gespeichert.</p>
+    </item>
+  </steps>
+
+  <section id="edit-custom">
+
+  <title>Bearbeiten, Entfernen und Hinzufügen einer benutzerdefinierten Nachricht</title>
+
+  <steps>
+    <item>
+     <p>Klicken Sie im<gui>Kontaktlisten</gui>-Fenster in die Auswahlliste oben.</p>
+    </item>
+    <item>
+      <p>Wählen Sie <gui>Benutzerdefinierte Nachrichten bearbeiten</gui>.</p>
+    </item>
+	  <item>
+	    <list>
+	      <item>
+	        <p>So bearbeiten Sie eine benutzerdefinierte Nachricht:</p>
+	        <steps>
+	          <item>
+	            <p>Wählen Sie in <gui>Gespeicherte Voreinstellungen</gui> die Statusmeldung aus, die Sie bearbeiten wollen, und klicken Sie zweimal darauf.</p>
+            </item>
+            <item>
+              <p>Geben Sie die neue benutzerdefinierte Nachricht ein und drücken Sie die <key>Eingabetaste</key>, um die Änderungen anzuwenden.</p>
+            </item>
+          </steps>
+        </item>
+        <item>
+          <p>So entfernen Sie eine benutzerdefinierte Nachricht:</p>
+          <steps>
+            <item>
+              <p>Wählen Sie in <gui>Gespeicherte Voreinstellungen</gui> die Statusmeldung aus, die Sie entfernen wollen.</p>
+            </item>
+            <item>
+              <p>Klicken Sie auf den Knopf <gui>Entfernen</gui>.</p>
+            </item>
+          </steps>
+        </item>
+        <item>
+          <p>So fügen Sie im Abschnitt <gui>Neue Voreinstellung hinzufügen</gui> eine neue benutzerdefinierte Nachricht hinzu:</p>
+          <steps>
+            <item>
+              <p>Klicken Sie auf die Auswahlliste, um den Status auszuwählen, dem Sie die benutzerdefinierte Nachricht zuordnen wollen.</p>
+            </item>
+            <item>
+              <p>Klicken Sie in das Textfeld und geben Sie die neue benutzerdefinierte Nachricht ein.</p>
+            </item>
+            <item>
+              <p>Klicken Sie auf <gui>Hinzufügen</gui>, um die neue Nachricht zu den voreingestellten Nachrichten hinzuzufügen.</p>
+            </item>
+          </steps>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>Klicken Sie auf <gui>Schließen</gui>, sobald Sie fertig sind.</p>
+    </item>
+  </steps>
+
+  <note style="tip">
+    <p>Wenn Sie eine neue benutzerdefinierte Nachricht hinzufügen oder bearbeiten, wird diese nicht als aktuelle Statusnachricht festgelegt. Sie müssen Sie im <gui>Kontaktlisten</gui>-Fenster auswählen.</p>
+  </note>
+
+  </section>
+
+</page>

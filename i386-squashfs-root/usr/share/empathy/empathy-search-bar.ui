@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkToolbar" id="search_widget">
+    <property name="visible">True</property>
+    <property name="icon_size">1</property>
+    <property name="toolbar_style">GTK_TOOLBAR_BOTH_HORIZ</property>
+    <child>
+      <object class="GtkToolItem" id="search_entry_toolitem">
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkAlignment" id="alignment1">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkHBox" id="hbox1">
+                <property name="visible">True</property>
+                <property name="spacing">6</property>
+                <child>
+                  <object class="GtkLabel" id="search_label">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Find:</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="search_entry">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="search_previous">
+        <property name="label" translatable="yes">_Previous</property>
+        <property name="visible">True</property>
+        <property name="is_important">True</property>
+        <property name="icon_name">gtk-go-back-ltr</property>
+        <property name="use_underline">True</property>
+      </object>
+      <packing>
+        <property name="homogeneous">True</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="search_next">
+        <property name="label" translatable="yes">_Next</property>
+        <property name="visible">True</property>
+        <property name="is_important">True</property>
+        <property name="icon_name">gtk-go-forward-ltr</property>
+        <property name="use_underline">True</property>
+      </object>
+      <packing>
+        <property name="homogeneous">True</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkToolItem" id="search_match_case_toolitem">
+        <property name="visible">True</property>
+        <property name="is_important">True</property>
+        <child>
+          <object class="GtkCheckButton" id="search_match_case">
+            <property name="label" translatable="yes">Mat_ch case</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="draw_indicator">True</property>
+            <property name="use_underline">True</property>
+          </object>
+        </child>
+      </object>
+      <packing>
+        <property name="homogeneous">True</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkToolItem" id="search_not_found_toolitem">
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkAlignment" id="alignment2">
+            <property name="visible">True</property>
+            <property name="left_padding">6</property>
+            <child>
+              <object class="GtkHBox" id="search_not_found">
+                <property name="spacing">6</property>
+                <child>
+                  <object class="GtkImage" id="image1">
+                    <property name="visible">True</property>
+                    <property name="stock">gtk-dialog-error</property>
+                  </object>
+                  <packing>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="not_found_label">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Phrase not found</property>
+                  </object>
+                  <packing>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorToolItem" id="expander1">
+        <property name="visible">True</property>
+      </object>
+      <packing>
+        <property name="expand">True</property>
+        <property name="homogeneous">True</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="search_close">
+        <property name="visible">True</property>
+        <property name="is_important">False</property>
+        <property name="stock_id">gtk-close</property>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="homogeneous">True</property>
+      </packing>
+    </child>
+  </object>
+</interface>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="addremove-sources" xml:lang="es">
+  <info>
+    <link type="guide" xref="addremove"/>
+
+    <revision version="11.04" date="2011-04-21" status="final"/>
+
+    <credit type="author">
+      <name>Equipo de documentación de Ubuntu</name>
+    </credit>
+
+    <desc>Añadir otros repositorios para ampliar los orígenes de software que usa Ubuntu para instalar y actualizar.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Añadir repositorios adicionales</title>
+  <p>Además de los repositorios de software predeterminados de Ubuntu, también hay programas disponibles en orígenes de terceros. Si quiere instalar programas desde un repositorio de terceros, deberá añadirlo en la lista de repositorios disponibles de Ubuntu.</p>
+  <note style="warning"><p>Añada programas solamente de repositorios en los que confía. Los repositorios de programas de terceros no son vigilados por los miembros de seguridad de Ubuntu y podrían contener programas dañinos para su equipo.</p></note>
+
+    <steps>
+        <title>Instalar otros repositorios</title>
+        <item><p>Abra el icono del <app>Centro de software de Ubuntu</app> en el Lanzador, o busque «Centro de software de Ubuntu» en la barra de búsqueda del <app>Tablero</app>.</p></item>
+        <item><p>Cuando se inicie el Centro de software, pulse <guiseq><gui>Editar&gt;</gui><gui>Orígenes del software</gui></guiseq></p></item>
+        <item><p>Se le solicitará que introduzca su contraseña. Cuando lo haya hecho, vaya a la pestaña <gui>Otro software</gui>.</p></item>
+        <item><p>Pulse <gui>Añadir</gui> e introduzca la línea de APT del repositorio. Debería estar disponible en el sitio web del repositorio, y tiener un aspecto similar a este:</p>
+        <p><code>deb http://archive.ubuntu.com/ubuntu/ maverick main</code></p></item>
+        <item><p>Pulse <gui>Añadir origen</gui> y luego cierre la ventana de Orígenes del software. El Centro de software de Ubuntu comprobará sus orígenes del software en busca de nuevas actualizaciones.</p></item>
+    </steps>
+
+  <section id="canonical-partner">
+    <title>Activar el repositorio de socios de Canonical</title>
+    <p>El repositorio de Socios de Canonical ofrece algunas aplicaciones privativas, gratuitas pero de código cerrado. Entre ellas se incluyen programas como <app>Skype</app>, <app>Adobe Reader</app> y el <app>complemento de Adobe Flash</app>. Los programas de este repositorio aparecerán en las búsquedas del Centro de software pero no se podrán instalar hasta que active el repositorio.</p>
+    <p>Para activar el repositorio, siga los pasos anteriores para abrir la pestaña <gui>Otro software</gui> en <app>Orígenes del software</app>. Si ve el repositorio <gui>Socios de Canonical («Canonical Partners»)</gui> en la lista, asegúrese de marcarlo y luego cierre la ventana de Orígenes del software. Si no lo ve, pulse <gui>Añadir</gui> e introduzca:</p>
+    <p><code>deb http://archive.canonical.com/ubuntu natty partner</code></p>
+   <p>Pulse <gui>Añadir origen</gui> y luego cierre la ventana de Orígenes del software. Espere un momento a que el Centro de software de Ubuntu descargue la información del repositorio.</p>
+  </section>
+
+</page>

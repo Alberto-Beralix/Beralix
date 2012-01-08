@@ -1,0 +1,1132 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="Brugertilpasset skrifttype">
+							<longdesc>Tilpasset skrifttypenavn til sprogpanel</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="Brug tilpasset skrifttype">
+							<longdesc>Brug tilpasset skrifttypenavn til sprogpanel</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="Vis navn på inputmetode">
+							<longdesc>Vis navn på inputmetode i sprogpanel</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="Vis ikon i statusfelt">
+							<longdesc>Vis ikon i statusfelt</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="Orientering af opslagstabel">
+							<longdesc>Orientering af opslagstabel. 0 = Horisontal, 1 = Vertikal</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="Placering for sprogpanel">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="Placering for sprogpanel">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="Skjul automatisk">
+							<longdesc>Sprogpanelets opførsel. 0 = Indlejret i menu, 1 = Skjul automatisk, 2 = Vis altid</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="enable_by_default">
+						<local_schema short_desc="Aktivér inputmetode som standard">
+							<longdesc>Aktivér inputmetoder som standard når programmerne modtaget inputfokus</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_global_engine">
+						<local_schema short_desc="Brug global inputmetode">
+							<longdesc>Del den samme inputmetode i alle programmer</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="Indbyg forudredigeret tekst">
+							<longdesc>Indlejr forudredigeret tekst i programvindue</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="Brug tastaturlayout for system">
+							<longdesc>Brug systemttastaturlayout (XKB)</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="Forindlæs motorer">
+							<longdesc>Forindlæs motorer under opstarten af IBus</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="Genvejstaster for forrige motor">
+								<longdesc>Genvejstasterne for at skifte til forrige inputmetode</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="Genvejstaster for forrige motor">
+								<longdesc>Genvejstasterne for at skifte til forrige inputmetode</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="Genvejstaster for næste motor">
+								<longdesc>Genvejstasterne for at skrive til næste inputmetode i listen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="Genvejstaster for næste motor">
+								<longdesc>Genvejstasterne for at skrive til næste inputmetode i listen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="disable_unconditional">
+							<local_schema short_desc="Deaktivér genvejstaster">
+								<longdesc>Genvejstasterne for slukning af inputmetode</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_unconditional">
+							<local_schema short_desc="Aktivér genvejstaster">
+								<longdesc>Genvejstasterne for at tænde inputmetode</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="Udløser tastaturgenveje">
+								<longdesc>Genvejstasterne for at tænde og slukke inputmetode</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="Afbryd oprettelse til trådløs forbindelse">
+						<longdesc>Vælg TRUE for at deaktivere oprettelse af adhoc-netværk, når dette program bruges.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="Stempel">
+						<longdesc>Bliver brugt til at bestemme, hvorvidt indstillinger skal genbruges til en ny version.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="Tilbagehold påmindelser om tilgængelige netværk">
+						<longdesc>Vælg TRUE for at deaktivere påmindelser, når trådløse netværk er tilgængelige.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="Deaktivér påmindelse ved afbrudt forbindelse">
+						<longdesc>Vælg TRUE for at deaktivere påmindelser ved afbrydelse af forbindelse til netværk.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="Deaktivér påmindelse ved etableret forbindelse">
+						<longdesc>Vælg TRUE for at deaktivere påmindelser ved oprettelse af forbindelse til netværk.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="fade">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="fullscreen_visual_bell">
+									<local_schema short_desc="Visuel klokke i fuld skærm">
+										<longdesc>Fadeeffekt i fuld skærm ved systemtone</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="visual_bell">
+									<local_schema short_desc="Visuel klokke">
+										<longdesc>Fadeeffekt ved systemtone</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_speed">
+									<local_schema short_desc="Fadehastighed">
+										<longdesc>Window fade speed (0.1 - 25.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="wobbly">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="maximize_effect">
+									<local_schema short_desc="Maksimeringseffekt">
+										<longdesc>Vinduerne &quot;slingrer&quot;, når de maksimeres eller gendannes</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_effect">
+									<local_schema short_desc="Fokuseffekt">
+										<longdesc>Effekt ved fokus på vinduer (0 = Ingen, 1 = Rysten)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_effect">
+									<local_schema short_desc="Tilknytningseffekt">
+										<longdesc>Effekt ved tilknytning af vinduer (0 = Ingen, 1 = Rysten)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="min_grid_size">
+									<local_schema short_desc="Mindste gitterstørrelse">
+										<longdesc>Knudernes minimumstørrelse i gitteret (4 - 128)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grid_resolution">
+									<local_schema short_desc="Gitteropløsning">
+										<longdesc>Opløsning for knuder i gitteret (1 - 64)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spring_k">
+									<local_schema short_desc="Fjeder-K">
+										<longdesc>Fjederkonstant (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="friction">
+									<local_schema short_desc="Friktion">
+										<longdesc>Fjerderfriktion (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shiver">
+									<local_schema short_desc="Rysten">
+										<longdesc>Lad vinduer dirre</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_inverted">
+									<local_schema short_desc="Omvendt fastgøring">
+										<longdesc>Omvendt fastgøring af vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_key">
+									<local_schema short_desc="Fastgør vinduer">
+										<longdesc>Slå fastgøring af vinduer til/fra</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="scale">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_output_key">
+									<local_schema short_desc="Start vinduesvælgeren for vinduer i det aktuelle outputområde">
+										<longdesc>Arranger og start omdannelsen af vinduer i det aktuelle outputområde</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_button">
+									<local_schema short_desc="Start vinduesvælgeren for vinduer i det aktuelle outputområde">
+										<longdesc>Arranger og start omdannelsen af vinduer i det aktuelle outputområde</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_edge">
+									<local_schema short_desc="Start vinduesvælgeren for vinduer i det aktuelle outputområde">
+										<longdesc>Arranger og start omdannelsen af vinduer i det aktuelle outputområde</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_key">
+									<local_schema short_desc="Start vinduesvælger for vinduesgruppe">
+										<longdesc>Arranger og start omdannelsen af vinduesgruppen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_button">
+									<local_schema short_desc="Start vinduesvælger for vinduesgruppe">
+										<longdesc>Arranger og start omdannelsen af vinduesgruppen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_edge">
+									<local_schema short_desc="Start vinduesvælger for vinduesgruppe">
+										<longdesc>Arranger og start omdannelsen af vinduesgruppen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_key">
+									<local_schema short_desc="Start vinduesvælger for alle vinduer">
+										<longdesc>Arranger og start omdannelsen af alle vinduerne</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_button">
+									<local_schema short_desc="Start vinduesvælger for alle vinduer">
+										<longdesc>Arranger og start omdannelsen af alle vinduerne</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_edge">
+									<local_schema short_desc="Start vinduesvælger for alle vinduer">
+										<longdesc>Arranger og start omdannelsen af alle vinduerne</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Start vinduesvælger">
+										<longdesc>Arranger og start omdannelsen af vinduerne</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Start vinduesvælger">
+										<longdesc>Arranger og start omdannelsen af vinduerne</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_edge">
+									<local_schema short_desc="Start vinduesvælger">
+										<longdesc>Arranger og start omdannelsen af vinduerne</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlay_icon">
+									<local_schema short_desc="Overlejringsikon">
+										<longdesc>Sæt et ikon på vinduerne, når de er skaleret (0 = Ingen, 1 = Emblem, 2 = Stor)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Uigennemsigtighed">
+										<longdesc>Uigennemsigtighed i procent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="darken_back">
+									<local_schema short_desc="Gør baggrund mørkere">
+										<longdesc>Gør baggrunden mørkere, når vinduerne skaleres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Tidstrin">
+										<longdesc>Tidstrin for skalering (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hastighed">
+										<longdesc>Skaleringshastighed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spacing">
+									<local_schema short_desc="Mellemrum">
+										<longdesc>Mellemrum mellem vinduer (0 - 250)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="number_of_desktops">
+									<local_schema short_desc="Antal skriveborde">
+										<longdesc>Number of virtual desktops (1 - 36)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="vsize">
+									<local_schema short_desc="Lodret virtuel størrelse">
+										<longdesc>Screen size multiplier for vertical virtual size (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hsize">
+									<local_schema short_desc="Vandret virtuel størrelse">
+										<longdesc>Screen size multiplier for horizontal virtual size (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_shaded_key">
+									<local_schema short_desc="Slå medtoning af vindue til/fra">
+										<longdesc>Slå nedtoning af det aktive vindue til/fra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_vertically_key">
+									<local_schema short_desc="Slå lodret maksimering af vindue til/fra">
+										<longdesc>Slå lodret maksimering af det aktive vindue til/fra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_horizontally_key">
+									<local_schema short_desc="Slå vandret maksimering af vindue til/fra">
+										<longdesc>Slå den vandrette maksimering af det aktive vindue til/fra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_button">
+									<local_schema short_desc="Slå maksimering af vindue til/fra">
+										<longdesc>Slå maksimering af det aktive vindue til/fra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_key">
+									<local_schema short_desc="Slå maksimering af vindue til/fra">
+										<longdesc>Slå maksimering af det aktive vindue til/fra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_button">
+									<local_schema short_desc="Vinduesmenu">
+										<longdesc>Window menu button binding</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_key">
+									<local_schema short_desc="Vinduesmenu">
+										<longdesc>Window menu key binding</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_vertically_key">
+									<local_schema short_desc="Maksimer vindue lodret">
+										<longdesc>Maksimer det aktive vindue i højden</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_horizontally_key">
+									<local_schema short_desc="Maksimer vindue vandret">
+										<longdesc>Maksimer det aktive vindue i bredden</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unmaximize_window_key">
+									<local_schema short_desc="Gendan vindue">
+										<longdesc>Ophæv maksimeringen af det aktive vindue</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="Maksimer vindue">
+										<longdesc>Maksimer det aktive vindue</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_button">
+									<local_schema short_desc="Minimer vindue">
+										<longdesc>Minimer det aktive vindue</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_key">
+									<local_schema short_desc="Minimer vindue">
+										<longdesc>Minimer det aktive vindue</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_button">
+									<local_schema short_desc="Sænk vindue">
+										<longdesc>Placer vinduet under de andre vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_key">
+									<local_schema short_desc="Sænk vindue">
+										<longdesc>Placer vinduet under de andre vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_button">
+									<local_schema short_desc="Hæv vindue">
+										<longdesc>Hæv vinduet over de andre vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_key">
+									<local_schema short_desc="Hæv vindue">
+										<longdesc>Hæv vinduet over de andre vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_button">
+									<local_schema short_desc="Luk vindue">
+										<longdesc>Luk det aktive vindue</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_key">
+									<local_schema short_desc="Luk vindue">
+										<longdesc>Luk det aktive vindue</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise_delay">
+									<local_schema short_desc="Forsinkelse ved automatisk hævning">
+										<longdesc>Interval before raising selected windows (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise">
+									<local_schema short_desc="Automatisk hævning">
+										<longdesc>Hæv de valgte vinduer efter interval</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_click">
+									<local_schema short_desc="Hæv ved klik">
+										<longdesc>Hæv vinduerne, når der klikkes</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="Klik for at fokusere">
+										<longdesc>Fokus flyttes til vinduet, når der klikkes på det.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outputs">
+									<local_schema short_desc="Udgange">
+										<longdesc>Liste over strenge, der beskriver udgangsenheder</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_outputs">
+									<local_schema short_desc="Registrer udgange">
+										<longdesc>Automatisk registrering af udgangsenheder</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="default_icon">
+									<local_schema short_desc="Standardikon">
+										<longdesc>Standardbillede til vinduesikon</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hide_skip_taskbar_windows">
+									<local_schema short_desc="Skjul vinduer, der ikke er på opgavelinjen">
+										<longdesc>Skjul vinduer, der ikke er på opgavelinjen, når skrivebordet vises</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ignore_hints_when_maximized">
+									<local_schema short_desc="Ignorer vink, når maksimeret">
+										<longdesc>Ignorer vink om størrelsesforøgning og -aspekter, når vinduet er maksimeret</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="audible_bell">
+									<local_schema short_desc="Hørbar klokke">
+										<longdesc>Hørbar systemtone</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_plugins">
+									<local_schema short_desc="Aktive plugins">
+										<longdesc>Liste over aktive plugins</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="opengl">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="sync_to_vblank">
+									<local_schema short_desc="Synkroniser med lodret slukning">
+										<longdesc>Udfør kun skærmopdatering i den lodrette slukkeperiode</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lighting">
+									<local_schema short_desc="Belysning">
+										<longdesc>Brug spredt lys, når skærmbilledet omdannes</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="texture_filter">
+									<local_schema short_desc="Teksturfilter">
+										<longdesc>Texture filtering (0 = Hurtig, 1 = God, 2 = Bedste)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="gnomecompat">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command_window_screenshot_key">
+									<local_schema short_desc="Tag et skærmbillede af et vindue">
+										<longdesc>Tag et skærmbillede af et vindue</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_window_screenshot">
+									<local_schema short_desc="Kommandolinje til vindueskærmbillede">
+										<longdesc>Kommandolinje til vindueskærmbillede</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_screenshot_key">
+									<local_schema short_desc="Tag et skærmbillede">
+										<longdesc>Tag et skærmbillede</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_screenshot">
+									<local_schema short_desc="Kommandolinje til skærmbillede">
+										<longdesc>Kommandolinje til skærmbillede</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_key">
+									<local_schema short_desc="Dialogboksen Kør">
+										<longdesc>Vis dialogboksen til kørsel af program</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="main_menu_key">
+									<local_schema short_desc="Vis hovedmenu">
+										<longdesc>Vis hovedmenuen</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="screenshot">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_button">
+									<local_schema short_desc="Start">
+										<longdesc>Initiate rectangle screenshot</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="unredirect_fullscreen_windows">
+									<local_schema short_desc="Omdiriger ikke fuldskærmsvinduer">
+										<longdesc>Tillad trækning af fuldskærmsvinduer, uden at der omdirrigeres til pixmaps uden for skærmbilledet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="refresh_rate">
+									<local_schema short_desc="Opdateringshastighed">
+										<longdesc>The rate at which the screen is redrawn (times/second) (1 - 200)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_refresh_rate">
+									<local_schema short_desc="Registrer opdateringshastighed">
+										<longdesc>Automatisk registrering af opdateringshastighed</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="slow_animations_key">
+									<local_schema short_desc="Langsomme animationer">
+										<longdesc>Slå brugen af langsomme animationer til/fra</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="decor">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Allow mipmaps to be generated for decoration textures</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command">
+									<local_schema short_desc="Kommando">
+										<longdesc>Dekoratørkommandolinje, som udføres, hvis der ikke allerede kører en dekoratør</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_y_offset">
+									<local_schema short_desc="Skyggeforskydning Y">
+										<longdesc>Slagskyggeforskydning Y (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_x_offset">
+									<local_schema short_desc="Skyggeforskydning X">
+										<longdesc>Slagskyggeforskydning X (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_opacity">
+									<local_schema short_desc="Skyggens uigennemsigtighed">
+										<longdesc>Slagskyggens uigennemsigtighed (0.01 - 6.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_radius">
+									<local_schema short_desc="Skyggeradius">
+										<longdesc>Slagskyggeradius (0.1 - 18.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="zoom">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="timestep">
+									<local_schema short_desc="Tidstrin">
+										<longdesc>Zoom Timestep (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hastighed">
+										<longdesc>Zoom Speed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Start">
+										<longdesc>Zoom In</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="resize">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_key">
+									<local_schema short_desc="Start tilpasning af vinduets størrelse">
+										<longdesc>Start tilpasning af vinduesstørrelsen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Start tilpasning af vinduets størrelse">
+										<longdesc>Start tilpasning af vinduesstørrelsen</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="cube">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="skydome_gradient_end_color">
+									<local_schema short_desc="Slutfarve til himmelkuplens farvegraduering">
+										<longdesc>Farve til det nederste farvestop i himmelkuplens aftagende farveforløb</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_start_color">
+									<local_schema short_desc="Startfarve til himmelkuplens farvegraduering">
+										<longdesc>Farve til det øverste farvestop i himmelkuplens aftagende farveforløb</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_animated">
+									<local_schema short_desc="Animer himmelkuppel">
+										<longdesc>Animer himmelkuplen, når kubussen roteres</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_image">
+									<local_schema short_desc="Billede til himmelkuppel">
+										<longdesc>Billede, der skal bruges som tekstur til himmelkuplen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome">
+									<local_schema short_desc="Himmelkuppel">
+										<longdesc>Vis himmelkuppel</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Tidstrin">
+										<longdesc>Tidstrin for foldning (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hastighed">
+										<longdesc>Foldehastighed (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Acceleration">
+										<longdesc>Foldeaccelaration (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="in">
+									<local_schema short_desc="Kubus indvendig">
+										<longdesc>Kubus indvendig</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Generer mipmaps, når det er muligt, for at opnå en højere kvalitetsskalering</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unfold_key">
+									<local_schema short_desc="Fold ud">
+										<longdesc>Fold kubussen ud</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="water">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="title_wave">
+									<local_schema short_desc="Titelbølge">
+										<longdesc>Bølgeeffekt til vinduestitel</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rain_delay">
+									<local_schema short_desc="Regnforsinkelse">
+										<longdesc>Forsinkelse (i ms) mellem hver regndråbe (1 - 3600000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="offset_scale">
+									<local_schema short_desc="Forskydningsstørrelse">
+										<longdesc>Størrelse på vandforskydning (0 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_wiper_key">
+									<local_schema short_desc="Visker til/fra">
+										<longdesc>Slå viskereffekten til/fra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_rain_key">
+									<local_schema short_desc="Regn til/fra">
+										<longdesc>Slå regneffekten til/fra</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Start">
+										<longdesc>Aktiver markørvandeffekter</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="rotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="rotate_flip_right_edge">
+									<local_schema short_desc="Roter og vend til højre">
+										<longdesc>Vend til højre visningsområde, og bevar markøren på dens nuværende relative placering på skærmen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_left_edge">
+									<local_schema short_desc="Roter og vend til venstre">
+										<longdesc>Vend til venstre visningsområde, og bevar markøren på dens nuværende relative placering på skærmen</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_key">
+									<local_schema short_desc="Roter til">
+										<longdesc>Roter til visningsområde</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_button">
+									<local_schema short_desc="Roter til højre med vindue">
+										<longdesc>Rotate right and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_key">
+									<local_schema short_desc="Roter til højre med vindue">
+										<longdesc>Rotate right and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_button">
+									<local_schema short_desc="Roter til venstre med vindue">
+										<longdesc>Rotate left and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_key">
+									<local_schema short_desc="Roter til venstre med vindue">
+										<longdesc>Rotate left and bring active window along</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_button">
+									<local_schema short_desc="Roter højre">
+										<longdesc>Roter til højre</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_key">
+									<local_schema short_desc="Roter højre">
+										<longdesc>Roter til højre</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_button">
+									<local_schema short_desc="Roter venstre">
+										<longdesc>Roter til venstre</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_key">
+									<local_schema short_desc="Roter venstre">
+										<longdesc>Roter til venstre</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Start">
+										<longdesc>Start rotation</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Tidstrin">
+										<longdesc>Tidstrin for rotation (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hastighed">
+										<longdesc>Rotationshastighed (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Acceleration">
+										<longdesc>Rotationsacceleration (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sensitivity">
+									<local_schema short_desc="Markørfølsomhed">
+										<longdesc>Det følsomhedsniveau, der skal anvendes til markørbevægelserne (0.01 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="flip_time">
+									<local_schema short_desc="Vendingstid">
+										<longdesc>Den tid, der går, inden visningsområdet skifter (0 - 1000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Zoom">
+										<longdesc>Rotation Zoom (0.0 - 2.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_top">
+									<local_schema short_desc="Fastgør til oversiden">
+										<longdesc>Fastgør kubusrotation til oversiden</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="invert_y">
+									<local_schema short_desc="Omvendt Y-akse for markør">
+										<longdesc>Vend Y-aksen for markørbevægelser</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_dnd">
+									<local_schema short_desc="Træk-og-slip til kant, vend">
+										<longdesc>Vend til næste visningsområde, når et objekt trækkes til skærmens kant</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_window">
+									<local_schema short_desc="Flyt til kant, vend">
+										<longdesc>Vend til næste visningsområde, når vinduet flyttes til skærmens kant</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_pointer">
+									<local_schema short_desc="Markør til kant, vend">
+										<longdesc>Vend til næste visningsområde, når markøren flyttes til skærmens kant</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="switcher">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="minimized">
+									<local_schema short_desc="Minimeret">
+										<longdesc>Vis minimerede vinduer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="icon">
+									<local_schema short_desc="Ikon">
+										<longdesc>Vis ikon ud for miniaturebillede</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Zoom">
+										<longdesc>Fjernskrivebord zoomes ud, når der skiftes til et andet vindue (0 - 5)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="bring_to_front">
+									<local_schema short_desc="Placer forrest">
+										<longdesc>Placer det valgte vindue forrest</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Uigennemsigtighed">
+										<longdesc>Uigennemsigtighed i procent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness">
+									<local_schema short_desc="Lysstyrke">
+										<longdesc>Lysstyrken angivet i procent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="Farvemætning">
+										<longdesc>Farvemætningen angivet i procent (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Generer mipmaps, når det er muligt, for at opnå en højere kvalitetsskalering</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Tidstrin">
+										<longdesc>Tidstrin for programskifter (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hastighed">
+										<longdesc>Hastighed for programskifter (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_key">
+									<local_schema short_desc="Forrige vindue">
+										<longdesc>Vis opgaveskifteren, hvis den ikke er synlig, og vælg forrige vindue</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_button">
+									<local_schema short_desc="Forrige vindue">
+										<longdesc>Vis opgaveskifteren, hvis den ikke er synlig, og vælg forrige vindue</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_key">
+									<local_schema short_desc="Næste vindue">
+										<longdesc>Vis opgaveskifteren, hvis den ikke er synlig, og vælg næste vindue</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_button">
+									<local_schema short_desc="Næste vindue">
+										<longdesc>Vis opgaveskifteren, hvis den ikke er synlig, og vælg næste vindue</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="move">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="snapoff_maximized">
+									<local_schema short_desc="Frigør maksimerede vinduer">
+										<longdesc>Frigør og gendan automatisk maksimerede vinduer, når de trækkes</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="constrain_y">
+									<local_schema short_desc="Begræns Y">
+										<longdesc>Begræns Y-koordinaten til arbejdsområdet</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Uigennemsigtighed">
+										<longdesc>Uigennemsigtighedsniveau ved flytning af vinduer (1 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Start vinduesflytning">
+										<longdesc>Start flytning af vindue</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Start vinduesflytning">
+										<longdesc>Start flytning af vindue</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="place">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="workarounds">
+									<local_schema short_desc="Løsninger">
+										<longdesc>Løsninger til vinduesplaceringer</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="clone">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_button">
+									<local_schema short_desc="Start">
+										<longdesc>Initiate clone selection</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

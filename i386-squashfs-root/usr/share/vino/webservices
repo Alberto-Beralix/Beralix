@@ -1,0 +1,28 @@
+# This file lists all webservices URLs that can be used by vino to provide
+# a connectivity test.
+
+# The webservice must be a XMLRPC service, which provides a method 'vino.check':
+# vino.check (
+#   IN int port, -> port to be tested against. Default is 5900.
+#   IN int timeout, -> timeout, in seconds to cancel the testing. Default is 10.
+#   OUT string IP, -> The public IP of the machine (variable 'REMOTE_ADDR').
+#   OUT bool status, -> True if can connect to the host at specified port.
+#   OUT string version -> Version of the method signature, currently is "0.1".
+# )
+# 
+# Basically what the service does is: Try to open a connection into the
+# incoming host (REMOTE_ADDR) at the specified port. It returns the IP and
+# if the connection was established successfully.
+
+# Check a PHP implementation of that service in the file org.gnome.vino.Service.php,
+# shipped in vino source code, in 'capplet' folder.
+
+# Put one address per line. Blank lines and started with a '#' are ignored.
+
+
+
+# Jorge Pereira
+http://blog.jorgepereira.com.br/jorge/org.gnome.vino.Service.php
+
+# Jonh Wendell
+http://www.bani.com.br/vino/vino.php

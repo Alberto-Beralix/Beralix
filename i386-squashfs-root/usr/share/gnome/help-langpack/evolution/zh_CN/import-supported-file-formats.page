@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="import-supported-file-formats" xml:lang="zh_CN">
+
+  <info>
+    <desc>Supported file formats for importing data.</desc>
+    
+    <link type="guide" xref="import-data"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-31" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/importing-mail-and-settings.html.en#importing-mail -->
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+
+  </info>
+
+  <title>Supported file formats</title>
+
+<p>Evolution支持下列格式文件的导入：</p>
+
+<section id="mail">
+<title>邮件</title>
+<list>
+<item><p>
+Berkeley Mailbox (.mbox or no extension):</p>
+<p>The email format used by Mozilla, Netscape, Evolution (for local folders until version 2.32), Eudora, and many other email clients.
+</p></item>
+<item><p>
+Maildir (no extension):</p>
+<p>The format used by Evolution (for local folders since version 3.0). There is no need to import Maildir files as you can <link xref="mail-account-manage-maildir-format-directories">configure a Maildir account</link> in Evolution and point to the folder where the Maildir files are stored.
+</p></item>
+<item><p>
+Outlook Express 5/6 Personal Folders (.dbx):</p>
+<p>The email file format used by Microsoft Outlook Express 5/6. For newer versions PST import is recommended.
+</p></item>
+</list>
+</section>
+
+<section id="calendar">
+<title>日历</title>
+<list>
+<item><p>
+vCalendar (.vcs):</p>
+<p>一种存储日历文件的格式，主要用于Evolution，Microsoft Outlook， Sunbird和Korganizer。</p></item>
+<item><p>iCalendar或 iCal (.ics)：</p>
+<p>A format for storing calendar files. iCalendar is used by Evolution, Microsoft Outlook, Palm OS handhelds, and others.
+</p></item>
+</list>
+</section>
+
+<section id="contacts">
+<title>联系人</title>
+<list>
+<item><p>
+LDAP Data Interchange Format (.ldif):</p>
+<p>联系人名片的标准数据格式。</p></item>
+<item><p>vCard (.vcf, .gcrd)：</p>
+<p>这种地址簿格式被用于GNOME，KDE和许多其它联系人管理程序。您应该可以从任何地址簿软件中导出vCard格式文件。</p></item>
+</list>
+</section>
+
+<section id="misc">
+<title>Miscellaneous</title>
+<list>
+<item><p>Evolution/Mozilla/Outlook CSV/Tab (.csv, .tab)：</p>
+<p>CSV (Comma-separated values) or Tabulator files saved by using Evolution, Microsoft Outlook and Mozilla.
+</p></item>
+<item><p>个人存储表格 (.pst)：</p>
+<p>一种文件格式，用于存储微软软件如Microsoft Exchange Client，Windows Messaging和Microsoft Outlook内的本地的邮件、日历事件和其它条目的拷贝。</p></item>
+</list>
+</section>
+
+</page>

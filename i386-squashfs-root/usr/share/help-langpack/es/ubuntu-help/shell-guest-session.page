@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="shell-guest-session" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="shell-overview#desktop"/>
+    <link type="guide" xref="user-accounts#manage"/>
+
+    <desc>Permite a un amigo o colega compartir su equipo de una manera segura.</desc>
+    <revision version="11.04" date="2011-04-06" status="final"/>
+    <credit type="author">
+      <name>Gunnar Hjalmarsson</name>
+      <email>ubuntu@gunnar.cc</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Lanzar una sesión de invitado restringida</title>
+
+<section id="restricted">
+<title>Sesión temporal con privilegios restringidos</title>
+
+<p>De vez en cuando, un amigo, familiar o compañero de trabajo puede pedirle prestado su equipo. La característica <app>Sesión de invitado</app> de Ubuntu le proporciona una forma adecuada, con un alto nivel de seguridad, de prestar su equipo a otra persona. Esta opción está disponible para cualquier usuario normal cuando ha iniciado una sesión.</p>
+
+<p>To launch a guest session, click your name in the <gui>menu bar</gui> 
+and select <gui>Guest Session</gui>. This will lock the screen for your own session and
+start the guest session. A guest cannot view the home folders of other users, and by default
+any saved data or changed settings will be removed/reset at logout. It means that each
+session starts with a fresh environment, unaffected by what previous guests did.</p>
+
+</section>
+
+<section id="customize">
+<title>Personalización</title>
+
+<p>El tutorial sobre <link href="http://ubuntuforums.org/showthread.php?t=1566078">Personalización de la sesión de invitado (en inglés)</link> le muestra algunas formas de personalizar el aspecto y el comportamiento.</p>
+
+</section>
+
+</page>

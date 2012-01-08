@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_gecko" xml:lang="de">
+  <info>
+    <link type="guide" xref="preferences#application"/>
+    <link type="next" xref="preferences_table_navigation"/>
+    <title type="sort">1. Gecko-Navigation</title>
+    <title type="link">Gecko-Navigation</title>
+    <desc>Einstellungen der <app>Orca</app>-Unterstützung für <app>Firefox</app> und <app>Thunderbird</app></desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+  <title>Einstellungen für Gecko-Navigation</title>
+  <section id="page_navigation">
+    <title>Seitennavigation</title>
+    <media type="image" mime="image/png" src="figures/preferences_gecko_page_navigation.png"/>
+    <p>
+      The <gui>Page Navigation</gui> group of controls make it possible for you
+      to customize how <app>Orca</app> presents, and allow you to interact with,
+      text and other content.
+    </p>
+    <section>
+      <title>Orca Caret-Navigation verwenden</title>
+      <p>
+        This checkbox toggles <app>Orca</app>'s caret navigation on and off.
+        When it is on, <app>Orca</app> takes control of the caret as you arrow
+        around within a page; when it is off, Gecko's native caret navigation is
+        active.
+      </p>
+      <p>Standardwert: aktiviert</p>
+      <note style="tip">
+        <title>This setting can be toggled on the fly</title>
+        <p>
+          To toggle this setting on the fly without saving it, use
+          <keyseq><key>Orca Modifier</key><key>F12</key></keyseq>.
+        </p>
+       </note>
+    </section>
+    <section>
+      <title>Orca-Strukturennavigation verwenden.</title>
+      <p>
+        This checkbox toggles <app>Orca</app>'s
+        <link xref="howto_structural_navigation">Structural Navigation</link>
+        on and off. Structural Navigation allows you to navigate by elements
+        such as headings, links, and form fields.
+      </p>
+      <p>Standardwert: aktiviert</p>
+      <note style="tip">
+        <title>This setting can be toggled on the fly</title>
+        <p>
+          To toggle this setting on the fly without saving it, use
+          <keyseq><key>Orca Modifier</key><key>Z</key></keyseq>.
+        </p>
+       </note>
+    </section>
+    <section>
+      <title>Beim Navigieren Fokus an Objekte vergeben</title>
+      <p>
+        If this checkbox is checked, <app>Orca</app> will perform an explicit
+        focus grab as you navigate using the <app>Orca</app>-controlled caret.
+        Doing this was necessary in older versions of <app>Firefox</app> and
+        <app>Thunderbird</app>.
+      </p>
+      <p>Standardwert: nicht aktiviert</p>
+    </section>
+    <section>
+      <title>Cursor beim vertikalen Navigieren an den Zeilenanfang positionieren</title>
+      <p>
+        If this checkbox is checked, <app>Orca</app> will always move the caret
+        to the beginning of the line when <app>Orca</app> is controlling the
+        caret and you press Up or Down Arrow to read the previous or next line.
+        If this checkbox is not checked, <app>Orca</app> will attempt to keep
+        the caret in the same horizontal position as you navigate Up or Down.
+      </p>
+      <p>Standardwert: nicht aktiviert</p>
+    </section>
+  </section>
+  <section id="find_options">
+    <title>Suchoptionen</title>
+    <media type="image" mime="image/png" src="figures/preferences_gecko_find_options.png"/>
+    <p>
+      The <gui>Find Options</gui> group of controls make it possible for you to
+      customize how <app>Orca</app> presents the results of a search conducted
+      using the application's built-in search functionality.
+    </p>
+    <section>
+      <title>Treffer während der Suche vorlesen</title>
+      <p>
+         If this checkbox is checked, <app>Orca</app> will read the line which
+         matches your current search query.
+      </p>
+      <p>Standardwert: aktiviert</p>
+    </section>
+    <section>
+      <title>Nur veränderte Zeilen während der Suche vorlesen</title>
+      <p>
+          If this checkbox is checked, <app>Orca</app> will not present the
+          matching line if it is the same line as the previous match. This
+          option is designed to prevent "chattiness" on a line with multiple
+          instances of the string for which you are searching.
+      </p>
+      <p>Standardwert: nicht aktiviert</p>
+    </section>
+    <section>
+      <title>Minimale Länge der Trefferübereinstimmung</title>
+      <p>
+        This editable spin button is where you can specify the number of
+        characters which much match before <app>Orca</app> announces the
+        matching line. This option is also designed to prevent "chattiness"
+        as there are many matches when you first begin typing string for
+        which you are searching.
+      </p>
+      <p>Vorgabewert: 4</p>
+    </section>
+  </section>
+</page>

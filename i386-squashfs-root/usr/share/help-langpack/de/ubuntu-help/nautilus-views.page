@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-views" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-views"/>
+
+    <desc>Die Standardansicht, -anordnung und -vergrößerungsstufe der Dateiverwaltung festlegen.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Einstellungen für die Ansichten in der Dateiverwaltung</title>
+<p>Sie können die Vorgabeansicht für neue Ordner bestimmen, wie Dateien und Ordner standardmäßig sortiert werden, die Vergrößerungsstufe für die Symbol- und die Kompaktansicht und ob die Dateien in einer Baumansicht dargestellt werden sollen. Klicken Sie dazu in einem beliebigen Fenster der Dateiverwaltung <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq> und wählen Sie den Reiter <gui>Ansichten</gui>.</p>
+
+<section id="default-view">
+<title>Vorgabeansicht</title>
+<terms>
+  <item>
+    <title><gui>Neue Ordner anzeigen mit</gui></title>
+    <p>Neue Ordner werden standardmäßig in der Symbolansicht angezeigt. Sie können für jeden einzelnen Ordner, den Sie betrachten, eine eigene Ansicht bestimmen und die Dateiverwaltung wird sich die Ansicht merken, die Sie bevorzugen. Wenn Sie aber öfter die Listen- oder Kompaktansicht verwenden, können Sie diese als Vorgabe einstellen.</p>
+    <p>Ändern Sie die Ansicht für einen einzelnen Ordner im <gui>Ansicht</gui>-Menü, indem Sie auf <gui>Symbole</gui>, <gui>Liste</gui> oder <gui>Kompakt</gui> klicken.</p>
+  </item>
+  <item>
+    <title><gui>Objekte anordnen</gui></title>
+    <p>Sie können die Objekte in Ihrem Ordner nach dem Namen ordnen oder nach Dateigröße, Dateityp, der letzten Änderung, dem letzten Zugriff oder wann Sie in den Müll verschoben wurden. Wie die Dateien in einem bestimmten Ordner sortiert werden, können Sie ändern, indem Sie das Menü <guiseq><gui>Ansicht</gui><gui>Objekte anordnen</gui></guiseq> verwenden oder in der Listenansicht den jeweiligen Spaltenkopf anklicken. Siehe <link xref="files-sort"/> für Details. Dieses Menü wirkt sich nur auf den aktuellen Ordner aus und die Dateiverwaltung merkt sich Ihre bevorzugte Sortierung für jeden einzelnen Ordner.</p>
+    <p>Verwenden Sie die <gui>Objekte anordnen</gui>-Auswahlliste in den Einstellungen, um die Vorgabe für neue Ordner zu ändern.</p>
+  </item>
+  <item>
+    <title><gui>Ordner vor Dateien anzeigen</gui></title>
+    <p>By default, the file manager will show all folders before files. Folders
+    and files will each be arranged according to the selected sort order. If
+    you would rather not treat folders specially and have them mixed with files
+    according to the sort order, select this option.</p>
+  </item>
+  <item>
+    <title><gui>Verborgene Dateien und Sicherheitskopien anzeigen</gui></title>
+    <p>Die Dateiverwaltung zeigt verborgene Dateien und Ordner standardmäßig nicht an. Siehe <link xref="files-hidden"/> für Informationen über verborgene Dateien. Sie können verborgene Dateien in einem bestimmten Fenster mit dem <gui>Ansicht</gui>-Menü anzeigen lassen. Wenn Sie es bevorzugen, verborgene Dateien immer anzeigen zu lassen oder die verborgenen Dateien in jedem offenen Fenster der Dateiverwaltung sehen wollen, dann wählen Sie diese Einstellung.</p>
+  </item>
+</terms>
+</section>
+
+
+<section id="icon-view-defaults">
+<title>Vorgaben für Symbolansicht</title>
+  <terms>
+   <item>
+    <title><gui>Voreingestellte Vergrößerungsstufe</gui></title>
+    <p>Sie können die Symbole und ihre Beschriftung in der Symbolansicht vergrößern oder verkleinern. Sie können dies für einzelne Ordner im <gui>Ansicht</gui>-Menü einstellen und die Dateiverwaltung wird sich Ihre Vergrößerungsstufe für jeden einzelnen Ordner merken. Wenn Sie häufig eine größere oder kleinere Vergrößerungsstufe verwenden, können Sie mit dieser Einstellung die Vorgabe setzen.</p>
+    <p>In der Symbolansicht werden je nach Vergrößerungsstufe mehr oder weniger Beschriftungen angezeigt. Siehe <link xref="nautilus-display#icon-captions"/> für weitere Informationen.</p>
+   </item>
+   <item>
+    <title><gui>Text neben Symbolen</gui></title>
+    <p>Diese Einstellung platziert Ordner- und Dateinamen rechts neben den Symbolen statt darunter. Das ergibt ein kompakteres Layout und ermöglicht Ihnen, mehr Informationen auf einmal zu überblicken.</p>
+   </item>
+  </terms>
+</section>
+
+
+<section id="compact-view-defaults">
+ <title>Vorgaben für kompakte Ansicht</title>
+
+  <terms>
+   <item>
+    <title><gui>Voreingestellte Vergrößerungsstufe</gui></title>
+    <p>Sie können die Symbole und ihre Beschriftung in der Kompaktansicht vergrößern oder verkleinern. Sie können dies für einzelne Ordner im <gui>Ansicht</gui>-Menü einstellen und die Dateiverwaltung wird sich Ihre Vergrößerungsstufe für jeden einzelnen Ordner merken. Wenn Sie häufig eine größere oder kleinere Vergrößerungsstufe verwenden, können Sie mit dieser Einstellung die Vorgabe setzen.</p>
+   </item>
+   <item>
+    <title><gui>Gleiche Spaltenbreiten</gui></title>
+    <p>Jede Spalte in der Kompaktansicht ist standardmäßig so breit, dass die Namen der Objekte in dieser Spalte vollständig dargestellt werden können. Diese Einstellung macht alle Spalten gleich breit. Dateien und Ordner mit längeren Namen als die Spaltenbreite werden mit einer Ellipse (…) am Ende dargestellt.</p>
+   </item>
+  </terms>
+</section>
+
+
+<section id="list-view-defaults">
+ <title>Vorgaben für Listenansicht</title>
+  <terms>
+   <item>
+    <title><gui>Voreingestellte Vergrößerungsstufe</gui></title>
+    <p>Sie können die Symbole und ihre Beschriftung in der Listenansicht vergrößern oder verkleinern. Sie können dies für einzelne Ordner im <gui>Ansicht</gui>-Menü einstellen und die Dateiverwaltung wird sich Ihre Vergrößerungsstufe für jeden einzelnen Ordner merken. Wenn Sie häufig eine größere oder kleinere Vergrößerungsstufe verwenden, können Sie mit dieser Einstellung die Vorgabe setzen.</p>
+   </item>
+  </terms>
+</section>
+
+
+<section id="tree-view-defaults">
+<title>Vorgaben für Baumansicht</title>
+<p>You can show a full folder tree in your file manager sidebar by selecting
+<guiseq><gui>View</gui><gui>Sidebar</gui><gui>Tree</gui></guiseq>. By default,
+the tree sidebar only shows folders. If you want to show files in the sidebar
+as well, turn <gui>Show only folders</gui> off.</p>
+</section>
+
+</page>

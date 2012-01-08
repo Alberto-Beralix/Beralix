@@ -1,0 +1,77 @@
+=head1 NAME
+
+Pango::Cairo::FontMap - Pango font maps with Cairo
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Interface
+  +----Pango::Cairo::FontMap
+
+
+
+=cut
+
+=for object Pango::Cairo::FontMap - Pango font maps with Cairo
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 fontmap = Pango::Cairo::FontMap-E<gt>B<new> 
+
+=head2 fontmap = Pango::Cairo::FontMap-E<gt>B<new_for_font_type> ($fonttype)
+
+=over
+
+=item * $fonttype (Cairo::FontType) 
+
+=back
+
+Since: pango 1.18
+
+=head2 scalar = $fontmap-E<gt>B<create_context> 
+
+=head2 fontmap = Pango::Cairo::FontMap-E<gt>B<get_default> 
+
+=head2 fonttype = $fontmap-E<gt>B<get_font_type> 
+
+Since: pango 1.18
+
+=head2 double = $fontmap-E<gt>B<get_resolution> 
+
+=head2 $fontmap-E<gt>B<set_resolution> ($dpi)
+
+=over
+
+=item * $dpi (double) 
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Interface>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

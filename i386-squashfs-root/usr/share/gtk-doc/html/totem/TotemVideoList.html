@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TotemVideoList</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Totem Reference Manual">
+<link rel="up" href="widget-api.html" title="Widgets">
+<link rel="prev" href="widget-api.html" title="Widgets">
+<link rel="next" href="TotemCellRendererVideo.html" title="TotemCellRendererVideo">
+<meta name="generator" content="GTK-Doc V1.17.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="widget-api.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="widget-api.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Totem Reference Manual</th>
+<td><a accesskey="n" href="TotemCellRendererVideo.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#TotemVideoList.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#TotemVideoList.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#TotemVideoList.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#TotemVideoList.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#TotemVideoList.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#TotemVideoList.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="TotemVideoList"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="TotemVideoList.top_of_page"></a>TotemVideoList</span></h2>
+<p>TotemVideoList — a <a href="http://library.gnome.org/devel/gtk/GtkTreeView.html"><span class="type">GtkTreeView</span></a> widget for listing videos</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="TotemVideoList.stability-level"></a><h2>Stability Level</h2>
+Unstable, unless otherwise indicated
+</div>
+<div class="refsynopsisdiv">
+<a name="TotemVideoList.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;totem-video-list.h&gt;
+
+                    <a class="link" href="TotemVideoList.html#TotemVideoList-struct" title="TotemVideoList">TotemVideoList</a>;
+                    <a class="link" href="TotemVideoList.html#TotemVideoListClass" title="TotemVideoListClass">TotemVideoListClass</a>;
+<a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="returnvalue">TotemVideoList</span></a> *    <a class="link" href="TotemVideoList.html#totem-video-list-new" title="totem_video_list_new ()">totem_video_list_new</a>                (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/gtk/GtkUIManager.html"><span class="returnvalue">GtkUIManager</span></a> *      <a class="link" href="TotemVideoList.html#totem-video-list-get-ui-manager" title="totem_video_list_get_ui_manager ()">totem_video_list_get_ui_manager</a>     (<em class="parameter"><code><a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="type">TotemVideoList</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="TotemVideoList.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a href="http://library.gnome.org/devel/gtk/GtkWidget.html">GtkWidget</a>
+               +----<a href="http://library.gnome.org/devel/gtk/GtkContainer.html">GtkContainer</a>
+                     +----<a href="http://library.gnome.org/devel/gtk/GtkTreeView.html">GtkTreeView</a>
+                           +----TotemVideoList
+</pre>
+</div>
+<div class="refsect1">
+<a name="TotemVideoList.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+TotemVideoList implements
+ AtkImplementorIface,  <a href="http://library.gnome.org/devel/gtk/GtkBuildable.html">GtkBuildable</a> and  <a href="http://library.gnome.org/devel/gtk/GtkScrollable.html">GtkScrollable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="TotemVideoList.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="TotemVideoList.html#TotemVideoList--mrl-column" title='The "mrl-column" property'>mrl-column</a>"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="TotemVideoList.html#TotemVideoList--show-tooltip-uri" title='The "show-tooltip-uri" property'>show-tooltip-uri</a>"         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="TotemVideoList.html#TotemVideoList--tooltip-column" title='The "tooltip-column" property'>tooltip-column</a>"           <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="TotemVideoList.html#TotemVideoList--totem" title='The "totem" property'>totem</a>"                    <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>*          : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="TotemVideoList.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="TotemVideoList.html#TotemVideoList-starting-video" title='The "starting-video" signal'>starting-video</a>"                                 : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="TotemVideoList.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="type">TotemVideoList</span></a> is a <a href="http://library.gnome.org/devel/gtk/GtkTreeView.html"><span class="type">GtkTreeView</span></a> designed for listing videos by their thumbnails using <a class="link" href="TotemCellRendererVideo.html" title="TotemCellRendererVideo"><span class="type">TotemCellRendererVideo</span></a>.
+It supports tooltips, loading the videos by activating tree view rows, and <a href="http://library.gnome.org/devel/gtk/GtkUIManager.html"><span class="type">GtkUIManager</span></a> actions in the popup menu.
+</p>
+<p>
+Note that it requires <a class="link" href="TotemVideoList.html#TotemVideoList--totem" title='The "totem" property'><span class="type">"totem"</span></a> to be set to an instance of <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> to work.
+</p>
+</div>
+<div class="refsect1">
+<a name="TotemVideoList.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="TotemVideoList-struct"></a><h3>TotemVideoList</h3>
+<pre class="programlisting">typedef struct _TotemVideoList TotemVideoList;</pre>
+<p>
+All the fields in the <a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="type">TotemVideoList</span></a> structure are private and should never be accessed directly.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TotemVideoListClass"></a><h3>TotemVideoListClass</h3>
+<pre class="programlisting">typedef struct {
+	GtkTreeViewClass parent;
+	gboolean (*starting_video) (TotemVideoList *video_list, GtkTreePath *path);
+} TotemVideoListClass;
+</pre>
+<p>
+The class structure for the <a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="type">TotemVideoList</span></a> type.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><span class="type">GtkTreeViewClass</span> <em class="structfield"><code><a name="TotemVideoListClass.parent"></a>parent</code></em>;</span></p></td>
+<td>the parent class</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="TotemVideoListClass.starting-video"></a>starting_video</code></em> ()</span></p></td>
+<td>the generic signal handler for the <a class="link" href="TotemVideoList.html#TotemVideoList-starting-video" title='The "starting-video" signal'><span class="type">"starting-video"</span></a> signal,
+which can be overridden by inheriting classes</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="totem-video-list-new"></a><h3>totem_video_list_new ()</h3>
+<pre class="programlisting"><a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="returnvalue">TotemVideoList</span></a> *    totem_video_list_new                (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Creates a new <a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="type">TotemVideoList</span></a> with default properties.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new <a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="type">TotemVideoList</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="totem-video-list-get-ui-manager"></a><h3>totem_video_list_get_ui_manager ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gtk/GtkUIManager.html"><span class="returnvalue">GtkUIManager</span></a> *      totem_video_list_get_ui_manager     (<em class="parameter"><code><a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="type">TotemVideoList</span></a> *self</code></em>);</pre>
+<p>
+Returns the <a href="http://library.gnome.org/devel/gtk/GtkUIManager.html"><span class="type">GtkUIManager</span></a> in use by <em class="parameter"><code>self</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="type">TotemVideoList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<em class="parameter"><code>self</code></em>'s <a href="http://library.gnome.org/devel/gtk/GtkUIManager.html"><span class="type">GtkUIManager</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="TotemVideoList.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="TotemVideoList--mrl-column"></a><h3>The <code class="literal">"mrl-column"</code> property</h3>
+<pre class="programlisting">  "mrl-column"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>
+The column number of the <a href="http://library.gnome.org/devel/gtk/GtkTreeModel.html"><span class="type">GtkTreeModel</span></a> column containing MRLs of the videos in the video list.
+If it's set to -1, video rows will not be activatable (e.g. by double-clicking them).
+</p>
+<p>Allowed values: &gt;= G_MAXULONG</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TotemVideoList--show-tooltip-uri"></a><h3>The <code class="literal">"show-tooltip-uri"</code> property</h3>
+<pre class="programlisting">  "show-tooltip-uri"         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>
+If this is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the URI of each video will be displayed in the tooltip for that video (or a message saying "No video URI" will be
+displayed if the URI is unset); otherwise, the tooltip will only display the video name.
+</p>
+<p>Default value: TRUE</p>
+<p class="since">Since 2.90.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TotemVideoList--tooltip-column"></a><h3>The <code class="literal">"tooltip-column"</code> property</h3>
+<pre class="programlisting">  "tooltip-column"           <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>
+The column number of the <a href="http://library.gnome.org/devel/gtk/GtkTreeModel.html"><span class="type">GtkTreeModel</span></a> column containing tooltips to be displayed by the video list.
+If it's set to -1, no tooltips shall be displayed.
+</p>
+<p>Allowed values: &gt;= G_MAXULONG</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="TotemVideoList--totem"></a><h3>The <code class="literal">"totem"</code> property</h3>
+<pre class="programlisting">  "totem"                    <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a>*          : Read / Write</pre>
+<p>
+A <a class="link" href="TotemObject.html" title="TotemObject"><span class="type">TotemObject</span></a> for integration purposes.
+</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="TotemVideoList.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="TotemVideoList-starting-video"></a><h3>The <code class="literal">"starting-video"</code> signal</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            user_function                      (<a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="type">TotemVideoList</span></a> *video_list,
+                                                        <a href="http://library.gnome.org/devel/gtk/GtkTreeModel.html#GtkTreePath"><span class="type">GtkTreePath</span></a>    *tree_path,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)       : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The <a class="link" href="TotemVideoList.html#TotemVideoList-starting-video" title='The "starting-video" signal'><span class="type">"starting-video"</span></a> signal is emitted when a video row is activated, just before the video is
+added to the playlist. It allows for the video's MRL in the <a href="http://library.gnome.org/devel/gtk/GtkTreeModel.html"><span class="type">GtkTreeModel</span></a> to be modified, for example.
+</p>
+<p>
+If this returns <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the video will be played; otherwise, it will not.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>video_list</code></em> :</span></p></td>
+<td>the <a class="link" href="TotemVideoList.html" title="TotemVideoList"><span class="type">TotemVideoList</span></a> which received the signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tree_path</code></em> :</span></p></td>
+<td>the <a href="http://library.gnome.org/devel/gtk/GtkTreeModel.html#GtkTreePath"><span class="type">GtkTreePath</span></a> of the video row about to be played</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="TotemVideoList.see-also"></a><h2>See Also</h2>
+<a class="link" href="TotemCellRendererVideo.html" title="TotemCellRendererVideo"><span class="type">TotemCellRendererVideo</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17.1</div>
+</body>
+</html>

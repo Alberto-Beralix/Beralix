@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="ubuntu-report-bug" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="more-help"/>
+    <desc>Cómo y dónde informar de problemas con Ubuntu.</desc>
+
+    <revision version="11.04" date="2011-04-24" status="final"/>
+    <credit type="author">
+      <name>Equipo de documentación de Ubuntu</name>
+      <email>ubuntu-doc@lists.ubuntu.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Informar de un problema en Ubuntu</title>
+
+<p>Si tiene algún problema con Ubuntu, puede enviar un <em>informe de fallo</em>.</p>
+
+<steps>
+ <item>
+  <p>En muchos programas puede pulsar en <gui>Ayuda</gui> y seleccionar <gui>Informar de un problema</gui></p>
+  <p>Con otros programas puede pulsar <keyseq><key>Alt</key><key>F2</key></keyseq> y teclear <input>ubuntu-bug nombre_del_programa</input></p>
+  <p>Si tiene un problema de hardware o no sabe el nombre del programa afectado, teclee simplemente <input>ubuntu-bug</input></p>
+ </item>
+
+ <item><p>Después de ejecutar uno de las órdenes anteriores, Ubuntu recopilará información sobre el fallo. Pulse <gui>Contenido del informe</gui> para revisar la información recopilada si lo desea. Pulse <gui>Enviar informe</gui> para continuar.</p>
+ </item>
+
+ <item><p>Se abrirá una nueva pestaña del navegador para continuar el procesamiento de los datos del fallo. Ubuntu usa el sitio web <app>Launchpad</app> para gestionar sus informes de fallos. Si no dispone de una cuenta en Launchpad, tendrá que registrarse para poder notificar un fallo y recibir actualizaciones por correo sobre su estado. Puede hacerlo pulsando en <gui>Crear una cuenta nueva</gui>.</p>
+ </item>
+
+
+ <item><p>Una vez haya iniciado sesión en Launchpad, introduzca una descripción del problema en el campo de resumen («summary»).</p>
+ </item>
+
+ <item><p>Tras pulsar «Siguiente» (<gui>Next</gui>), Launchpad buscará fallos similares en caso de que el fallo que está notificando ya haya sido notificado. Si el fallo ya se hubiese notificado, podrá marcar que el fallo también le afecta a usted. También puede suscribirse al informe de fallo para recibir actualizaciones sobre el proceso de corrección del mismo. Si el fallo aún no ha sido notificado, pulse en «No, necesito notificar un nuevo fallo» (<gui>No, I need to report a new bug</gui>).</p>
+ </item>
+
+ <item><p>Rellene el campo de descripción con toda la información que pueda. Es importante que especifique, al menos, tres cosas:</p>
+  <list type="lower-alpha">
+  <item><p>Qué esperaba que ocurriera</p></item>
+  <item><p>Qué ocurrió realmente</p></item>
+  <item><p>If possible, a minimal series of steps necessary to make it happen, where step 1 is "start the
+program"</p></item></list>
+ </item>
+  <item><p>Su informe recibirá un número identificativo, y su estado se irá actualizando conforme se vaya trabajando en él. ¡Gracias por ayudar a mejorar Ubuntu!</p>
+ </item>
+</steps>
+
+<note><p>Si recibe el mensaje de error «Este no es un paquete Ubuntu auténtico», significa que el programa para el que está intentando notificar un fallo no proviene de los repositorios oficiales de Ubuntu. En tal caso, no podrá usar la herramienta integrada de notificación de fallos de Ubuntu.</p></note>
+
+<p>Para más información sobre notificación de fallos en Ubuntu, consulte la amplia <link href="https://help.ubuntu.com/community/ReportingBugs">documentación en línea</link>.</p>
+</page>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-manual" xml:lang="es">
+  <info>
+    <link type="guide" xref="net-wired"/>
+    <link type="guide" xref="net-wireless"/>
+
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc/>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Establecer la configuración de la red manualmente</title>
+
+<p>Si la red no asigna automáticamente la configuración de red a su equipo, puede que tenga que introducir manualmente la configuración. Se asume que ya conoce la configuración correcta que ha de usar. Si no, puede que tenga que pedirla a su administrador de red o mirar la configuración de su router o switch.</p>
+
+<p>ParaeEstablecer la configuración de la red manualmente:</p>
+
+<steps>
+ <item>
+  <p>Pulse en el <gui>menú de red</gui> del panel superior y pulse <gui>Editar las conexiones</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Busque la conexión de red que quiere configurar manualmente. Por ejemplo si se conecta a la red con un cable, busque la pestaña <gui>Cableada</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Para seleccionarla, pulse en la conexión que quiera editar y después pulse <gui>Editar</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Vaya a la pestaña <gui>Configuración de IPv4</gui> y cambie la opción <gui>Método</gui> a <gui>Manual</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Pulse <gui>Añadir</gui> y teclee la <em>dirección IP</em>, <em>máscara de red</em> and <em>dirección IP de la pasarela</em> en las columnas en la lista de <gui>Direcciones</gui>. Pulse <key>Intro</key> cuando termine de teclear cada dirección.</p>
+  <p>Las tres direcciones deben ser «direcciones IP», es decir, cuatro números separados por puntos  (p.ej. 123.45.6.78).</p>
+ </item>
+ 
+ <item>
+  <p>Teclee las direcciones IP de los servidores DNS que quiera usar, separados por comas.</p>
+ </item>
+ 
+ <item>
+  <p>Pulse <gui>Guardar</gui>. Si no está conectado a la red, vaya al icono de red en la barra superior y conéctese. Compruebe los ajustes de red intentando ver un sitio web o examinando los archivos compartidos en la red, por ejemplo.</p>
+ </item>
+ 
+</steps>
+
+</page>

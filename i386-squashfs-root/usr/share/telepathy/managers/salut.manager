@@ -1,0 +1,69 @@
+
+[ConnectionManager]
+BusName=org.freedesktop.Telepathy.ConnectionManager.salut
+ObjectPath=/org/freedesktop/Telepathy/ConnectionManager/salut
+Interfaces=
+
+[Protocol local-xmpp]
+param-nickname=s
+param-first-name=s required
+param-last-name=s required
+param-jid=s
+param-email=s
+param-published-name=s
+RequestableChannelClasses=contactlist-list-1;filetransfer-1on1-2;text-1on1-3;text-multi-4;tubes-multi-5;streamtube-multi-6;dbustube-multi-7;roomlist-8;tubes-1on1-9;streamtube-1on1-10;
+Interfaces=
+ConnectionInterfaces=org.freedesktop.Telepathy.Connection.Interface.Aliasing;org.freedesktop.Telepathy.Connection.Interface.Avatars;org.freedesktop.Telepathy.Connection.Interface.Contacts;org.freedesktop.Telepathy.Connection.Interface.Presence;org.freedesktop.Telepathy.Connection.Interface.SimplePresence;org.freedesktop.Telepathy.Connection.Interface.Requests;org.freedesktop.Telepathy.Connection.Interface.ContactCapabilities;org.freedesktop.Telepathy.Connection.FUTURE;org.laptop.Telepathy.BuddyInfo;org.laptop.Telepathy.ActivityProperties;
+VCardField=
+EnglishName=Link-local XMPP
+Icon=im-local-xmpp
+
+[contactlist-list-1]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.ContactList
+org.freedesktop.Telepathy.Channel.TargetHandleType u=3
+allowed=org.freedesktop.Telepathy.Channel.TargetHandle;org.freedesktop.Telepathy.Channel.TargetID;
+
+[filetransfer-1on1-2]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.FileTransfer
+org.freedesktop.Telepathy.Channel.TargetHandleType u=1
+allowed=org.freedesktop.Telepathy.Channel.Type.FileTransfer.ContentHashType;org.freedesktop.Telepathy.Channel.TargetHandle;org.freedesktop.Telepathy.Channel.TargetID;org.freedesktop.Telepathy.Channel.Type.FileTransfer.ContentType;org.freedesktop.Telepathy.Channel.Type.FileTransfer.Filename;org.freedesktop.Telepathy.Channel.Type.FileTransfer.Size;org.freedesktop.Telepathy.Channel.Type.FileTransfer.ContentHash;org.freedesktop.Telepathy.Channel.Type.FileTransfer.Description;org.freedesktop.Telepathy.Channel.Type.FileTransfer.Date;org.freedesktop.Telepathy.Channel.Type.FileTransfer.InitialOffset;org.freedesktop.Telepathy.Channel.Type.FileTransfer.URI;
+
+[text-1on1-3]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.Text
+org.freedesktop.Telepathy.Channel.TargetHandleType u=1
+allowed=org.freedesktop.Telepathy.Channel.TargetHandle;org.freedesktop.Telepathy.Channel.TargetID;
+
+[text-multi-4]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.Text
+org.freedesktop.Telepathy.Channel.TargetHandleType u=2
+allowed=org.freedesktop.Telepathy.Channel.TargetHandle;org.freedesktop.Telepathy.Channel.TargetID;
+
+[tubes-multi-5]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.Tubes
+org.freedesktop.Telepathy.Channel.TargetHandleType u=2
+allowed=org.freedesktop.Telepathy.Channel.TargetHandle;org.freedesktop.Telepathy.Channel.TargetID;
+
+[streamtube-multi-6]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.StreamTube
+org.freedesktop.Telepathy.Channel.TargetHandleType u=2
+allowed=org.freedesktop.Telepathy.Channel.TargetHandle;org.freedesktop.Telepathy.Channel.TargetID;org.freedesktop.Telepathy.Channel.Type.StreamTube.Service;
+
+[dbustube-multi-7]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.DBusTube
+org.freedesktop.Telepathy.Channel.TargetHandleType u=2
+allowed=org.freedesktop.Telepathy.Channel.TargetHandle;org.freedesktop.Telepathy.Channel.TargetID;org.freedesktop.Telepathy.Channel.Type.DBusTube.ServiceName;
+
+[roomlist-8]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.RoomList
+org.freedesktop.Telepathy.Channel.TargetHandleType u=0
+allowed=
+
+[tubes-1on1-9]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.Tubes
+org.freedesktop.Telepathy.Channel.TargetHandleType u=1
+allowed=org.freedesktop.Telepathy.Channel.TargetHandle;
+
+[streamtube-1on1-10]
+org.freedesktop.Telepathy.Channel.ChannelType s=org.freedesktop.Telepathy.Channel.Type.StreamTube
+org.freedesktop.Telepathy.Channel.TargetHandleType u=1
+allowed=org.freedesktop.Telepathy.Channel.TargetHandle;org.freedesktop.Telepathy.Channel.TargetID;org.freedesktop.Telepathy.Channel.Type.StreamTube.Service;

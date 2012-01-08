@@ -1,0 +1,83 @@
+#!/bin/sh
+
+set -e
+
+# This script can be called in the following ways:
+#
+# Before the package is installed:
+#       <new-preinst> install
+#
+# Before removed package is upgraded:
+#       <new-preinst> install <old-version>
+#
+# Before the package is upgraded:
+#       <new-preinst> upgrade <old-version>
+#
+#
+# If postrm fails during upgrade or fails on failed upgrade:
+#       <old-preinst> abort-upgrade <new-version>
+
+
+# Remove a no-longer used conffile
+rm_conffile()
+{
+    local PKGNAME="$1"
+    local CONFFILE="$2"
+
+    [ -e "$CONFFILE" ] || return 0
+
+    local md5sum="`md5sum \"$CONFFILE\" | sed -e \"s/ .*//\"`"
+    local old_md5sum="`dpkg-query -W -f='${Conffiles}' $PKGNAME | \
+            sed -n -e \"\\\\' $CONFFILE'{s/ obsolete$//;s/.* //p}\"`"
+    if [ "$md5sum" != "$old_md5sum" ]; then
+        echo "Obsolete conffile $CONFFILE has been modified by you."
+        echo "Saving as $CONFFILE.dpkg-bak ..."
+        mv -f "$CONFFILE" "$CONFFILE".dpkg-bak
+    else
+        echo "Removing obsolete conffile $CONFFILE ..."
+        rm -f "$CONFFILE"
+    fi
+}
+
+# Prepare to move a conffile without triggering a dpkg question
+prep_mv_conffile() {
+    local PKGNAME="$1"
+    local CONFFILE="$2"
+
+    [ -e "$CONFFILE" ] || return 0
+
+    local md5sum="$(md5sum $CONFFILE | sed -e 's/ .*//')"
+    local old_md5sum="$(dpkg-query -W -f='${Conffiles}' $PKGNAME | \
+            sed -n -e "\' $CONFFILE ' { s/ obsolete$//; s/.* //; p }")"
+    if [ "$md5sum" = "$old_md5sum" ]; then
+        rm -f "$CONFFILE"
+    fi
+}
+
+case "$1" in
+    install|upgrade)
+        # Upgrade from nm 0.6.x
+        if dpkg --compare-versions "$2" lt "0.7~~"; then
+             # dont stop the 0.6.x instance as we will ask for reboot
+             rm_conffile /etc/dbus-1/event.d/26NetworkManagerDispatcher
+             rm_conffile /etc/dbus-1/event.d/25NetworkManager
+        fi
+        # debian moves the conf file starting from 0.8.1-2, but
+        # let's make sure upgrades from all ubuntu version will move it too
+        if dpkg --compare-versions "$2" lt "0.8.3+git.20110210t152733.00327fb"; then
+            prep_mv_conffile network-manager /etc/NetworkManager/nm-system-settings.conf
+        fi
+
+        rm_conffile /etc/init.d/NetworkManager
+        ;;
+
+    abort-upgrade)
+        ;;
+
+    *)
+        echo "$0 called with unknown argument \`$1'" 1>&2
+	exit 1
+	;;
+esac
+
+

@@ -1,0 +1,1782 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="Kablosuz bağlantı oluşturmayı engelle">
+						<longdesc>adhoc ağ bağlantısı oluşturulmasını engellemek istiyorsanız bu seçeneği TRUE yapın.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="Damga">
+						<longdesc>Ayarların yeni bir sürüme göç ettirip ettirilmeyeceğini belirtmek için kullanılır.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="&apos;Erişilebilir ağ&apos; bildirimlerini kapat">
+						<longdesc>Kablosuz ağ bulunduğunda bildirim çıkmasını istemiyorsanız bu seçeneği TRUE yapın.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="Bağlantı kesildi bildirimlerini kapat">
+						<longdesc>Bir ağ bağlantısını keserken bildirim çıkmasını istemiyorsanız bu seçeneği TRUE yapın.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="Bağlantı bildirimlerini kapat">
+						<longdesc>Bir ağa bağlanırken bildirim çıkmasını istemiyorsanız bu seçeneği TRUE yapın.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="fade">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="unresponsive_saturation">
+									<local_schema short_desc="Tepki Vermeyen Pencere Doygunluğu">
+										<longdesc>Tepki vermeyen pencerelerin doygunluğu (in %) (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unresponsive_brightness">
+									<local_schema short_desc="Tepki Vermeyen Pencere Parlaklığı">
+										<longdesc>Brightness (in %) of unresponsive windows (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="dim_unresponsive">
+									<local_schema short_desc="Tepki Vermeyen Pencreleri Donuklaştır">
+										<longdesc>Pencere yöneticisinin isteklerine yanıt vermeyen pencereleri donuklaştır</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fullscreen_visual_bell">
+									<local_schema short_desc="Tam Ekran Görünür Zil">
+										<longdesc>Sistem bip durumunda tam ekran solma efektini uygula</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="visual_bell">
+									<local_schema short_desc="Görünür Zil">
+										<longdesc>Sistem bip sesinde solma efekti açık</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Pencereleri soldur">
+										<longdesc>Solması gereken pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_time">
+									<local_schema short_desc="Solma Süresi">
+										<longdesc>Window fade time (in ms) in &quot;Constant time&quot; mode (1 - 5000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_speed">
+									<local_schema short_desc="Solma Hızı">
+										<longdesc>Window fade speed (0.1 - 25.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_mode">
+									<local_schema short_desc="Solma Kipi">
+										<longdesc>Pencere solma kipi (0 = Constant speed, 1 = Constant time)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="wobbly">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="maximize_effect">
+									<local_schema short_desc="Büyütme Efekti">
+										<longdesc>Büyütülmüş ve büyütülmemiş durumdaki pencereler için sallanma efekti</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="move_window_match">
+									<local_schema short_desc="Pencereleri Taşı">
+										<longdesc>Taşındığında sallanacak pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grab_window_match">
+									<local_schema short_desc="Pencereleri Yakala">
+										<longdesc>Yakalandığında sallanacak pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_window_match">
+									<local_schema short_desc="Pencereleri Odakla">
+										<longdesc>Odaklandığında sallanacak pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_window_match">
+									<local_schema short_desc="Pencereleri Haritala">
+										<longdesc>Haritalandığında sallanacak pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_effect">
+									<local_schema short_desc="Odaklama Efekti">
+										<longdesc>Pencere Odaklama Efekti (0 = Hiçbiri, 1 = Titreme)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_effect">
+									<local_schema short_desc="Haritalama Efekti">
+										<longdesc>Pencere Haritalama Efekti (0 = Hiçbiri, 1 = Titreme)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="min_grid_size">
+									<local_schema short_desc="En Küçük Izgara Boyutu">
+										<longdesc>En Küçük Tepe Izgara Boyutu (4 - 128)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grid_resolution">
+									<local_schema short_desc="Izgara Çözünürlüğü">
+										<longdesc>Tepe Izgara Çözünürlüğü (1 - 64)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spring_k">
+									<local_schema short_desc="K Sıçraması">
+										<longdesc>Sıçrama Sabiti (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="friction">
+									<local_schema short_desc="Sürtünme">
+										<longdesc>Sıçrama Sürtünmesi (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shiver">
+									<local_schema short_desc="Titreme">
+										<longdesc>Pencereyi titret</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_inverted">
+									<local_schema short_desc="Ters Çevrilmiş Şekilde Kopar">
+										<longdesc>Ters çevrilmiş pencere koparma efekti</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_key">
+									<local_schema short_desc="Pencereleri kopar">
+										<longdesc>Pencere koparma efektini aç / kapat</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="scale">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="show_desktop">
+									<local_schema short_desc="Masaüstünü Göstermek için Masaüstüne Tıkla">
+										<longdesc>Boyutlandırma sırasında masaüstüne tıklanırsa Masaüstünü Göster kipine geç</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_key">
+									<local_schema short_desc="Geçerli Çıktıyı Kullanan Pencereler için Pencere Yakalayıcıyı Başlat">
+										<longdesc>Geçerli çıktıyı kullanan pencereleri yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_button">
+									<local_schema short_desc="Geçerli Çıktıyı Kullanan Pencereler için Pencere Yakalayıcıyı Başlat">
+										<longdesc>Geçerli çıktıyı kullanan pencereleri yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_edge">
+									<local_schema short_desc="Geçerli Çıktıyı Kullanan Pencereler için Pencere Yakalayıcıyı Başlat">
+										<longdesc>Geçerli çıktıyı kullanan pencereleri yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_key">
+									<local_schema short_desc="Pencere Grubu için Pencere Yakalayıcıyı Başlat">
+										<longdesc>Pencere grubunu yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_button">
+									<local_schema short_desc="Pencere Grubu için Pencere Yakalayıcıyı Başlat">
+										<longdesc>Pencere grubunu yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_edge">
+									<local_schema short_desc="Pencere Grubu için Pencere Yakalayıcıyı Başlat">
+										<longdesc>Pencere grubunu yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_key">
+									<local_schema short_desc="Tüm Pencereler için Pencere Yakalayıcıyı Başlat">
+										<longdesc>Tüm pencereleri yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_button">
+									<local_schema short_desc="Tüm Pencereler için Pencere Yakalayıcıyı Başlat">
+										<longdesc>Tüm pencereleri yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_edge">
+									<local_schema short_desc="Tüm Pencereler için Pencere Yakalayıcıyı Başlat">
+										<longdesc>Tüm pencereleri yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Pencere Tutucuyu Başlat">
+										<longdesc>Pencereleri yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Pencere Tutucuyu Başlat">
+										<longdesc>Pencereleri yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_edge">
+									<local_schema short_desc="Pencere Tutucuyu Başlat">
+										<longdesc>Pencereleri yerleştir ve dönüştür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Çoklu Çıktı Kipi">
+										<longdesc>Çoklu çıktı aygıtı kullanılıyorken boyutlandırılmış pencereleri seçer. (0 = Sadece geçerli çıktı aygıtı üzerinde, 1 = Tüm çıktı aygıtları üzerinde)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Pencereleri Boyutlandır">
+										<longdesc>Boyutlandırma kipinde boyutlandırılacak pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlay_icon">
+									<local_schema short_desc="Örtülü Durum Simgesi">
+										<longdesc>Boyutlandırılan pencerelerin üzerinde simge göster (0 = Hiçbiri, 1 = Simge, 2 = Büyük)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Matlık">
+										<longdesc>Yüzde olarak matlık miktarı (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="darken_back">
+									<local_schema short_desc="Arkaplanı Koyulaştır">
+										<longdesc>Pencereleri yeniden boyutlandırırken arkaplanı koyulaştır</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Süre aralığı">
+										<longdesc>Boyutlandırma zamanı basamağı (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hız">
+										<longdesc>Boyutlandırma hızı (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spacing">
+									<local_schema short_desc="Aralık">
+										<longdesc>Pencereler arasında bırakılacak boşluk (0 - 250)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="number_of_desktops">
+									<local_schema short_desc="Masaüstü Sayısı">
+										<longdesc>Sanal masaüstü sayısı (1 - 36)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="vsize">
+									<local_schema short_desc="Dikey Sanal Boyut">
+										<longdesc>Dikey sanal boyut için ekran boyutu çoklayıcı (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hsize">
+									<local_schema short_desc="Yatay Sanal Boyut">
+										<longdesc>Yatay sanal boyut için ekran boyutu çoklayıcı (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_shaded_key">
+									<local_schema short_desc="Pencereyi Gölgele / Geri Yükle">
+										<longdesc>Etkin pencereyi gölgele / geri yükle</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_vertically_key">
+									<local_schema short_desc="Pencereyi Dikey Olarak Büyüt / Küçült">
+										<longdesc>Etkin pencereyi dikey olarak büyüt / geri yükle</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_horizontally_key">
+									<local_schema short_desc="Pencereyi Yatay Olarak Büyüt / Küçült">
+										<longdesc>Etkin pencereyi yatay olarak büyüt / geri yükle</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_button">
+									<local_schema short_desc="Pencereyi Büyüt / Küçült">
+										<longdesc>Etkin pencereyi büyüt / geri yükle</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_key">
+									<local_schema short_desc="Pencereyi Büyüt / Küçült">
+										<longdesc>Etkin pencereyi büyüt / geri yükle</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_edge">
+									<local_schema short_desc="Masaüstünü Göster">
+										<longdesc>Tüm pencereleri gizle ve masaüstünü odakla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_key">
+									<local_schema short_desc="Masaüstünü Göster">
+										<longdesc>Tüm pencereleri gizle ve masaüstünü odakla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_button">
+									<local_schema short_desc="Pencere Menüsü">
+										<longdesc>Pencere menüsü düğme bağlayıcısı</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_key">
+									<local_schema short_desc="Pencere Menüsü">
+										<longdesc>Pencere menüsü kısayol bağlayıcısı</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_vertically_key">
+									<local_schema short_desc="Pencereyi Dikey Olarak Büyüt">
+										<longdesc>Etkin pencereyi dikey olarak büyüt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_horizontally_key">
+									<local_schema short_desc="Pencereyi Yatay Olarak Büyüt">
+										<longdesc>Etkin pencereyi yatay olarak büyüt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unmaximize_window_key">
+									<local_schema short_desc="Pencereyi Büyütme">
+										<longdesc>Etkin pencereyi büyütme</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="Pencereyi Büyüt">
+										<longdesc>Etkin pencereyi büyüt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_button">
+									<local_schema short_desc="Pencereyi Küçült">
+										<longdesc>Etkin pencereyi küçült</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_key">
+									<local_schema short_desc="Pencereyi Küçült">
+										<longdesc>Etkin pencereyi küçült</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_button">
+									<local_schema short_desc="Pencereyi Alta Gönder">
+										<longdesc>Pencereyi diğer pencerelerin altına gönder</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_key">
+									<local_schema short_desc="Pencereyi Alta Gönder">
+										<longdesc>Pencereyi diğer pencerelerin altına gönder</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_button">
+									<local_schema short_desc="Pencereyi Yükselt">
+										<longdesc>Pencereyi diğer pencerelerin üzerine yükselt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_key">
+									<local_schema short_desc="Pencereyi Yükselt">
+										<longdesc>Pencereyi diğer pencerelerin üzerine yükselt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_button">
+									<local_schema short_desc="Pencereyi Kapat">
+										<longdesc>Etkin pencereyi kapat</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_key">
+									<local_schema short_desc="Pencereyi Kapat">
+										<longdesc>Etkin pencereyi kapat</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_match">
+									<local_schema short_desc="Odaklanma Önleyici Pencereleri">
+										<longdesc>Odaklanma önleyici pencereleri (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_level">
+									<local_schema short_desc="Odaklanma Önleyici Seviyesi">
+										<longdesc>Odaklanma çalınmasının önlenme seviyesi (0 = Kapalı, 1 = Düşük, 2 = Normal, 3 = Yüksek, 4 = Çok Yüksek)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise_delay">
+									<local_schema short_desc="Otomatik-Yükselme Gecikmesi">
+										<longdesc>Seçilen pencerelerin yükseltilmesinden önce geçecek süre (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise">
+									<local_schema short_desc="Otomatik-Yükselt">
+										<longdesc>Süre bittiğinde seçilen pencereleri yükselt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_click">
+									<local_schema short_desc="Tıklayınca Yükselt">
+										<longdesc>Tıklayınca pencereleri yükselt</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="Odaklamak için Tıkla">
+										<longdesc>Pencereyi odaklamaya almak için tıkla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outputs">
+									<local_schema short_desc="Çıktılar">
+										<longdesc>Çıktı aygıtlarını tanımlayan sözcüklerin listesi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_outputs">
+									<local_schema short_desc="Çıktıları Bul">
+										<longdesc>Çıktı aygıtlarını otomatik bul</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlapping_outputs">
+									<local_schema short_desc="Örtüşen Çıktı İşlemesi">
+										<longdesc>Üst üste binen çıktı aygıtlarından hangisi tercih edilmeli (0 = Akıllı kip, 1 = Daha büyük çıktıyı tercih et, 2 = Daha küçük çıktıyı tercih et)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="default_icon">
+									<local_schema short_desc="Öntanımlı Simge">
+										<longdesc>Öntanımlı pencere simge resmi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ping_delay">
+									<local_schema short_desc="Ping Gecikmesi">
+										<longdesc>Ping mesajları arasında geçecek süre (1000 - 30000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_delay">
+									<local_schema short_desc="Kenar Tetikleme Gecikmesi">
+										<longdesc>Duration the pointer must rest in a screen edge before an edge action is taken. (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hide_skip_taskbar_windows">
+									<local_schema short_desc="Görev Çubuğu Pencerelerini Atlamayı Gizle">
+										<longdesc>Masaüstünü Göster Kipine geçerken görev çubuğunda olmayan pencereleri gizle</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ignore_hints_when_maximized">
+									<local_schema short_desc="Büyütülünce ipuçlarını yoksay">
+										<longdesc>Pencere büyütülmüşse boyut büyütmeyi ve ipuçlarını pasifleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="audible_bell">
+									<local_schema short_desc="İşitilebilir Zil">
+										<longdesc>İşitilebilir sistem bip sesi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_plugins">
+									<local_schema short_desc="Etkin Eklentiler">
+										<longdesc>Algılanan eklentilerin listesi</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="opengl">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="texture_compression">
+									<local_schema short_desc="Doku Sıkıştırma">
+										<longdesc>Eğer mümkünse, görüntülerden dönüştürülmüş dokular için sıkıştırma kullan</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sync_to_vblank">
+									<local_schema short_desc="Dikey Boşaltma ile Eşzamanla">
+										<longdesc>Ekran güncellemeyi sadece dikey boşaltma sürecinde yap</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lighting">
+									<local_schema short_desc="Aydınlatma">
+										<longdesc>Ekran boyutu değiştirildiğinde geçirgenlik ışığı kullan</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="texture_filter">
+									<local_schema short_desc="Doku Filtresi">
+										<longdesc>Doku filtreleme (0 = Hızlı, 1 = İyi, 2 = En iyi)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="gnomecompat">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command_terminal_key">
+									<local_schema short_desc="Bir konsol aç">
+										<longdesc>Bir konsol aç</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_terminal">
+									<local_schema short_desc="Uçbirim komut satırı">
+										<longdesc>Uçbirim komut satırı</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_window_screenshot_key">
+									<local_schema short_desc="Bir pencerenin ekran görüntüsünü al">
+										<longdesc>Bir pencerenin ekran görüntüsünü al</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_window_screenshot">
+									<local_schema short_desc="Pencere ekran görüntüsü alma komutu">
+										<longdesc>Pencere ekran görüntüsü alma komutu</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_screenshot_key">
+									<local_schema short_desc="Ekran görüntüsü al">
+										<longdesc>Ekran görüntüsü al</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_screenshot">
+									<local_schema short_desc="Ekran görüntüsü komut satırı">
+										<longdesc>Ekran görüntüsü komut satırı</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_key">
+									<local_schema short_desc="Çalıştırma Penceresi">
+										<longdesc>Uygulama Çalıştırma Penceresini Göster</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="main_menu_key">
+									<local_schema short_desc="Ana Menüyü Göster">
+										<longdesc>Ana menüyü göster</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="screenshot">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="launch_app">
+									<local_schema short_desc="Uygulamayı Başlat">
+										<longdesc>Ekran görüntüsünü otomatik olarak bu uygulama ile aç</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="directory">
+									<local_schema short_desc="Dizin">
+										<longdesc>Put screenshot images in this directory. If empty, the desktop directory will be used.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Başla">
+										<longdesc>Dikdörtgen ekran görüntüsünü başlat</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="force_independent_output_painting">
+									<local_schema short_desc="Bağımsız çıkış boyamasına zorla">
+										<longdesc>Çıktı aygıtları birbiriyle örtüşse dahi her çıktı aygıtını bağımsız olarak boya</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unredirect_fullscreen_windows">
+									<local_schema short_desc="Tam Ekran Pencerelerin Yönlendirmesini Geri Al">
+										<longdesc>Pencere dışındaki gözek haritalarına yönlendirilmemeleri için tam ekran pencerelerini germeye izin ver</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="refresh_rate">
+									<local_schema short_desc="Tazeleme Oranı">
+										<longdesc>Ekranın yeniden çizilmesinde kullanılacak oran (tekrar sayısı/saniye) (1 - 200)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_refresh_rate">
+									<local_schema short_desc="Tazeleme Oranını Bul">
+										<longdesc>Tazeleme oranını otomatik bul</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="slow_animations_key">
+									<local_schema short_desc="Yavaş Animasyonlar">
+										<longdesc>Yavaş canlandırmaları aç / kapat</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="annotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stroke_width">
+									<local_schema short_desc="Vurgu genişliği">
+										<longdesc>Notlar için vurgu genişliği (1.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="stroke_color">
+									<local_schema short_desc="Not Vurgu Rengi">
+										<longdesc>Notlar için vurgulama rengi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="Not Dolgu Rengi">
+										<longdesc>Notlar için dolgu rengi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_button">
+									<local_schema short_desc="Temizle">
+										<longdesc>Temizle</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_key">
+									<local_schema short_desc="Temizle">
+										<longdesc>Temizle</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="decor">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="shadow_match">
+									<local_schema short_desc="Pencereleri gölgelendir">
+										<longdesc>Gölge kullanılması gereken pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="decoration_match">
+									<local_schema short_desc="Pencere dekorasyonu">
+										<longdesc>Dekorasyon kullanılması gereken pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Dekorasyon dokuları için mipmaplerin yaratılmalarına izin ver</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command">
+									<local_schema short_desc="Komut">
+										<longdesc>Eğer hiçbir pencere dekorasyonu çalışmıyorsa çalıştırılacak dekoratör komut satırı</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_y_offset">
+									<local_schema short_desc="Gölge Konumu Y">
+										<longdesc>Düşen gölge Dikey konumu (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_x_offset">
+									<local_schema short_desc="Gölge Konumu X">
+										<longdesc>Düşen gölge Yatay konumu (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_color">
+									<local_schema short_desc="Gölge Rengi">
+										<longdesc>Düşen gölge rengi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_opacity">
+									<local_schema short_desc="Gölge Matlığı">
+										<longdesc>Düşen gölge matlığı (0.01 - 6.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_radius">
+									<local_schema short_desc="Gölge Yarıçapı">
+										<longdesc>Düşen gölge yarıçapı (0.1 - 18.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="zoom">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="timestep">
+									<local_schema short_desc="Süre aralığı">
+										<longdesc>Zoom Timestep (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hız">
+										<longdesc>Zoom Speed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Başla">
+										<longdesc>Zoom In</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="commands">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command11_edge">
+									<local_schema short_desc="11. komutu çalıştır">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_edge">
+									<local_schema short_desc="10. komutu çalıştır">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_edge">
+									<local_schema short_desc="9. komutu çalıştır">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_edge">
+									<local_schema short_desc="8. komutu çalıştır">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_edge">
+									<local_schema short_desc="7. komutu çalıştır">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_edge">
+									<local_schema short_desc="6. komutu çalıştır">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_edge">
+									<local_schema short_desc="5. komutu çalıştır">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_edge">
+									<local_schema short_desc="4. komutu çalıştır">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_edge">
+									<local_schema short_desc="3. komutu çalıştır">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_edge">
+									<local_schema short_desc="2. komutu çalıştır">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_edge">
+									<local_schema short_desc="1. komutu çalıştır">
+										<longdesc>An edge binding that when invoked, will run the shell command identified by command1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_button">
+									<local_schema short_desc="11. komutu çalıştır">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command11</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_button">
+									<local_schema short_desc="10. komutu çalıştır">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command10</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_button">
+									<local_schema short_desc="9. komutu çalıştır">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command9</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_button">
+									<local_schema short_desc="8. komutu çalıştır">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command8</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_button">
+									<local_schema short_desc="7. komutu çalıştır">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command7</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_button">
+									<local_schema short_desc="6. komutu çalıştır">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command6</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_button">
+									<local_schema short_desc="5. komutu çalıştır">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command5</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_button">
+									<local_schema short_desc="4. komutu çalıştır">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command4</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_button">
+									<local_schema short_desc="3. komutu çalıştır">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command3</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_button">
+									<local_schema short_desc="2. komutu çalıştır">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command2</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_button">
+									<local_schema short_desc="1. komutu çalıştır">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command1</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_key">
+									<local_schema short_desc="11. komutu çalıştır">
+										<longdesc>Tetiklendiğinde komut11 olarak tanımlanmış olan kabuk komutunu çalıştıracak bir kısayol birleşimi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_key">
+									<local_schema short_desc="10. komutu çalıştır">
+										<longdesc>Tetiklendiğinde komut10 olarak tanımlanmış olan kabuk komutunu çalıştıracak bir kısayol birleşimi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_key">
+									<local_schema short_desc="9. komutu çalıştır">
+										<longdesc>Tetiklendiğinde komut9 olarak tanımlanmış olan kabuk komutunu çalıştıracak bir kısayol birleşimi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_key">
+									<local_schema short_desc="8. komutu çalıştır">
+										<longdesc>Tetiklendiğinde komut8 olarak tanımlanmış olan kabuk komutunu çalıştıracak bir kısayol birleşimi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_key">
+									<local_schema short_desc="7. komutu çalıştır">
+										<longdesc>Tetiklendiğinde komut7 olarak tanımlanmış olan kabuk komutunu çalıştıracak bir kısayol birleşimi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_key">
+									<local_schema short_desc="6. komutu çalıştır">
+										<longdesc>Tetiklendiğinde komut6 olarak tanımlanmış olan kabuk komutunu çalıştıracak bir kısayol birleşimi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_key">
+									<local_schema short_desc="5. komutu çalıştır">
+										<longdesc>Tetiklendiğinde komut5 olarak tanımlanmış olan kabuk komutunu çalıştıracak bir kısayol birleşimi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_key">
+									<local_schema short_desc="4. komutu çalıştır">
+										<longdesc>Tetiklendiğinde komut4 olarak tanımlanmış olan kabuk komutunu çalıştıracak bir kısayol birleşimi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_key">
+									<local_schema short_desc="3. komutu çalıştır">
+										<longdesc>Tetiklendiğinde komut3 olarak tanımlanmış olan kabuk komutunu çalıştıracak bir kısayol birleşimi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_key">
+									<local_schema short_desc="2. komutu çalıştır">
+										<longdesc>Tetiklendiğinde komut2 olarak tanımlanmış olan kabuk komutunu çalıştıracak bir kısayol birleşimi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_key">
+									<local_schema short_desc="1. komutu çalıştır">
+										<longdesc>Tetiklendiğinde komut1 olarak tanımlanmış olan kabuk komutunu çalıştıracak bir kısayol birleşimi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command11">
+									<local_schema short_desc="11. komut satırı">
+										<longdesc>Komut11_çalıştır çağrıldığında kabukta çalıştırılacak komut</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command10">
+									<local_schema short_desc="10. komut satırı">
+										<longdesc>Komut10_çalıştır çağrıldığında kabukta çalıştırılacak komut</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command9">
+									<local_schema short_desc="9. komut satırı">
+										<longdesc>Komut9_çalıştır çağrıldığında kabukta çalıştırılacak komut</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command8">
+									<local_schema short_desc="8. komut satırı">
+										<longdesc>Komut8_çalıştır çağrıldığında kabukta çalıştırılacak komut</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command7">
+									<local_schema short_desc="7. komut satırı">
+										<longdesc>Komut7_çalıştır çağrıldığında kabukta çalıştırılacak komut</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command6">
+									<local_schema short_desc="6. komut satırı">
+										<longdesc>Komut6_çalıştır çağrıldığında kabukta çalıştırılacak komut</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command5">
+									<local_schema short_desc="5. komut satırı">
+										<longdesc>Komut5_çalıştır çağrıldığında kabukta çalıştırılacak komut</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command4">
+									<local_schema short_desc="4. komut satırı">
+										<longdesc>Komut4_çalıştır çağrıldığında kabukta çalıştırılacak komut</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command3">
+									<local_schema short_desc="3. komut satırı">
+										<longdesc>Komut3_çalıştır çağrıldığında kabukta çalıştırılacak komut</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command2">
+									<local_schema short_desc="2. komut satırı">
+										<longdesc>Komut2_çalıştır çağrıldığında kabukta çalıştırılacak komut</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command1">
+									<local_schema short_desc="1. komut satırı">
+										<longdesc>Komut1_çalıştır çağrıldığında kabukta çalıştırılacak komut</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="resize">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stretch_match">
+									<local_schema short_desc="Pencereleri Gergin Şekilde Yeniden Boyutlandır">
+										<longdesc>Gerginlik kullanılarak yeniden boyutlandırma kullanılacak pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rectangle_match">
+									<local_schema short_desc="Pencereleri Dikdörtgen Şeklinde Yeniden Boyutlandır">
+										<longdesc>Dikdörtgen yeniden boyutlandırma kullanılacak pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outline_match">
+									<local_schema short_desc="Yeniden Boyutlandırmada Taslak Göster">
+										<longdesc>Taslak görünümünde yeniden boyutlandırma kullanılacak pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="normal_match">
+									<local_schema short_desc="Pencereleri Normal Şekilde Yeniden Boyutlandır">
+										<longdesc>Normal yeniden boyutlandırma kullanılacak pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="Dolgu Rengi">
+										<longdesc>Dolgu rengi dikdörtgen şeklinde yeniden boyutlandırmada kullanılır</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="border_color">
+									<local_schema short_desc="Kenarlık Rengi">
+										<longdesc>Taslak görünümü ve dikdörtgen yeniden boyutlandırma kipinde kullanılacak kenarlık rengi</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="Öntanımlı Yeniden Boyutlandırma Kipi">
+										<longdesc>Pencereleri yeniden boyutlandırmak için kullanılacak öntanımlı kip (0 = Normal, 1 = Taslak, 2 = Dikdörtgen, 3 = Gergin)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Pencereyi Yeniden Boyutlandırmaya Başla">
+										<longdesc>Pencereyi yeniden boyutlandırmaya başla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Pencereyi Yeniden Boyutlandırmaya Başla">
+										<longdesc>Pencereyi yeniden boyutlandırmaya başla</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="cube">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="transparent_manual_only">
+									<local_schema short_desc="Sadece Fare ile Döndürüldüğünde Şeffaflaştır">
+										<longdesc>Küp şeffaflığını sadece döndürme işlemi fare ile yapılıyorsa başlatır.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="inactive_opacity">
+									<local_schema short_desc="Döndürülmezken Kullanılan Matlık">
+										<longdesc>Döndürülmediği esnada masaüstü penceresinin matlığı. (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_opacity">
+									<local_schema short_desc="Döndürme Sırasındaki Matlık">
+										<longdesc>Döndürme sırasında masaüstü penceresinin matlığı. (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_end_color">
+									<local_schema short_desc="Arkaplan Gradyan Bitim Rengi">
+										<longdesc>Gök kubbe-geri düşüş-eğiminin alttaki renk-durağında kullanılacak renk</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_start_color">
+									<local_schema short_desc="Arkaplan Gradyan Başlangıç Rengi">
+										<longdesc>Gök kubbe-geri düşüş-eğiminin üstteki renk-durağında kullanılacak renk</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_animated">
+									<local_schema short_desc="Arkaplanı Canlandır">
+										<longdesc>Küpü döndürürken arkaplanı canlandır</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_image">
+									<local_schema short_desc="Arkaplan Resmi">
+										<longdesc>Arkaplan dokusu olarak kullanılacak resim</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome">
+									<local_schema short_desc="Arkaplan">
+										<longdesc>Arkaplanı hazırla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Süre aralığı">
+										<longdesc>Katlama Zaman Aralığı (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hız">
+										<longdesc>Katlama Hızı (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Hızlandırma">
+										<longdesc>Katlama Hızlandırması (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="in">
+									<local_schema short_desc="Küpün İçerisine Gir">
+										<longdesc>Küpün içerisine gir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Çoklu Çıktı Kipi">
+										<longdesc>Çoklu çıktı aygıtı kullanılırken küpün nasıl gösterileceğini seçer. (0 = Otomatik, 1 = Çoklu küp, 2 = Tek büyük küp)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Yüksek kalitede ölçeklendirme için mümkün olduğunda mipmapler oluştur</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unfold_key">
+									<local_schema short_desc="Katlamayı Geri Al">
+										<longdesc>Küpü Katlamayı Geri Al</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="water">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="title_wave">
+									<local_schema short_desc="Pencere başlığı dalgası">
+										<longdesc>Pencere başlığı dalga efekti</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rain_delay">
+									<local_schema short_desc="Yağmur Gecikmesi">
+										<longdesc>Yağmur damlaları arasında geçecek süre (ms olarak) (1 - 3600000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="offset_scale">
+									<local_schema short_desc="Yerleşim Boyutu">
+										<longdesc>Su yerleşim boyutu (0 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_wiper_key">
+									<local_schema short_desc="Siliciyi aç /kapat">
+										<longdesc>Siliciyi efektini aç /kapat</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_rain_key">
+									<local_schema short_desc="Yağmuru aç / kapat">
+										<longdesc>Yağmur efektini aç / kapat</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Başla">
+										<longdesc>İşaretçi su efektini etkinleştir</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="rotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="rotate_to_12_window_key">
+									<local_schema short_desc="12. Yüze Pencere ile Döndür">
+										<longdesc>12. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_window_key">
+									<local_schema short_desc="11. Yüze Pencere ile Döndür">
+										<longdesc>11. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_window_key">
+									<local_schema short_desc="10. Yüze Pencere ile Döndür">
+										<longdesc>10. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_window_key">
+									<local_schema short_desc="9. Yüze Pencere ile Döndür">
+										<longdesc>9. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_window_key">
+									<local_schema short_desc="8. Yüze Pencere ile Döndür">
+										<longdesc>8. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_window_key">
+									<local_schema short_desc="7. Yüze Pencere ile Döndür">
+										<longdesc>7. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_window_key">
+									<local_schema short_desc="6. Yüze Pencere ile Döndür">
+										<longdesc>6. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_window_key">
+									<local_schema short_desc="5. Yüze Pencere ile Döndür">
+										<longdesc>5. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_window_key">
+									<local_schema short_desc="4. Yüze Pencere ile Döndür">
+										<longdesc>4. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_window_key">
+									<local_schema short_desc="3. Yüze Pencere ile Döndür">
+										<longdesc>3. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_window_key">
+									<local_schema short_desc="2. Yüze Pencere ile Döndür">
+										<longdesc>2. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_window_key">
+									<local_schema short_desc="1. Yüze Pencere ile Döndür">
+										<longdesc>1. yüze döndür </longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_12_key">
+									<local_schema short_desc="12. Yüze Döndür">
+										<longdesc>12. yüze döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_key">
+									<local_schema short_desc="11. Yüze Döndür">
+										<longdesc>11. yüze döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_key">
+									<local_schema short_desc="10. Yüze Döndür">
+										<longdesc>10. yüze döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_key">
+									<local_schema short_desc="9. Yüze Döndür">
+										<longdesc>9. yüze döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_key">
+									<local_schema short_desc="8. Yüze Döndür">
+										<longdesc>8. yüze döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_key">
+									<local_schema short_desc="7. Yüze Döndür">
+										<longdesc>7. yüze döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_key">
+									<local_schema short_desc="6. Yüze Döndür">
+										<longdesc>6. yüze döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_key">
+									<local_schema short_desc="5. Yüze Döndür">
+										<longdesc>5. yüze döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_key">
+									<local_schema short_desc="4. Yüze Döndür">
+										<longdesc>4. yüze döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_key">
+									<local_schema short_desc="3. Yüze Döndür">
+										<longdesc>3. yüze döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_key">
+									<local_schema short_desc="2. Yüze Döndür">
+										<longdesc>2. yüze döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_key">
+									<local_schema short_desc="1. Yüze Döndür">
+										<longdesc>1. yüze döndür ve etkin pencereyi yerleştir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_right_edge">
+									<local_schema short_desc="Döndürürken Sağa Çevir">
+										<longdesc>Flip to right viewport and warp pointer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_left_edge">
+									<local_schema short_desc="Döndürürken Sola Çevir">
+										<longdesc>Flip to left viewport and warp pointer</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_window_key">
+									<local_schema short_desc="Pencereyi döndür">
+										<longdesc>Pencere ile birlikte döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_key">
+									<local_schema short_desc="Buraya Döndür">
+										<longdesc>Masaüstüne döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_button">
+									<local_schema short_desc="Pencere ile birlikte Sağa Döndür">
+										<longdesc>Sağa döndür ve etkin pencereyi getir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_key">
+									<local_schema short_desc="Pencere ile birlikte Sağa Döndür">
+										<longdesc>Sağa döndür ve etkin pencereyi getir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_button">
+									<local_schema short_desc="Pencere ile birlikte Sola Döndür">
+										<longdesc>Sola döndür ve etkin pencereyi getir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_key">
+									<local_schema short_desc="Pencere ile birlikte Sola Döndür">
+										<longdesc>Sola döndür ve etkin pencereyi getir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_button">
+									<local_schema short_desc="Sağa Döndür">
+										<longdesc>Sağa döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_key">
+									<local_schema short_desc="Sağa Döndür">
+										<longdesc>Sağa döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_button">
+									<local_schema short_desc="Sola Döndür">
+										<longdesc>Sola döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_key">
+									<local_schema short_desc="Sola Döndür">
+										<longdesc>Sola döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Başla">
+										<longdesc>Döndürmeyi Başlat</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Süre aralığı">
+										<longdesc>Döndürme zaman aralığı (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hız">
+										<longdesc>Döndürme Hızı (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="Hızlandırma">
+										<longdesc>Döndürme Hızlandırması (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sensitivity">
+									<local_schema short_desc="İşaretçi Hassasiyeti">
+										<longdesc>İşaretçi hareketinin hassaslığı (0.01 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="flip_time">
+									<local_schema short_desc="Çevirme Zamanı">
+										<longdesc>Masaüstü değiştirme zamanaşımı (0 - 1000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Büyüt">
+										<longdesc>Döndürme Büyütmesi (0.0 - 2.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_rotate">
+									<local_schema short_desc="Döndürürken Yüksel">
+										<longdesc>Döndürülürken pencereleri yükselt</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="blur">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="independent_tex">
+									<local_schema short_desc="Bağımsız doku getirmek">
+										<longdesc>Mümkün olduğunca çok bağımsız doku getirisi sağlamak için, müsait olan doku birimlerini kullan.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="occlusion">
+									<local_schema short_desc="Bulanıklaştırma Emilimi">
+										<longdesc>Diğer pencereler tarafından örtülen ekran bölgelerini bulanıklaştırma</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="Bulanıklaştırma Doygunluğu">
+										<longdesc>Bulanıklaştırma doygunluğu (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap_lod">
+									<local_schema short_desc="Mipmap LOD">
+										<longdesc>Mipmap ayrıntı-düzeyi (0.1 - 5.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_strength">
+									<local_schema short_desc="Gaussian Sertliği">
+										<longdesc>Gaussian sertliği (0.0 - 1.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_radius">
+									<local_schema short_desc="Gaussian Yarıçapı">
+										<longdesc>Gaussian yarıçapı (1 - 15)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="filter">
+									<local_schema short_desc="Bulanıklaştırma Filtresi">
+										<longdesc>Bulanıklaştırma işlemi için kullanılacak filtre (0 = 4 kat Çift Doğrusal, 1 = Gaussian, 2 = Mipmap)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur">
+									<local_schema short_desc="Alpha Bulanıklaştırma">
+										<longdesc>Pencerelerin saydam kısımlarının arkasını bulanıklaştır</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur_match">
+									<local_schema short_desc="Pencereleri alpha kanalı ile bulanıklaştır">
+										<longdesc>Öntanımlı olarak alpha bulanıklaştırması kullanan pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur">
+									<local_schema short_desc="Odaklama Bulanıklaştırması">
+										<longdesc>Odaklanmamış pencereleri bulanıklaştır</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur_match">
+									<local_schema short_desc="Odaklanan pencereleri bulanıklaştır">
+										<longdesc>Odaklama bulanıklaştırmasından etkilenecek pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="blur_speed">
+									<local_schema short_desc="Bulanıklaştırma Hızı">
+										<longdesc>Pencere bulanıklaştırma hızı (0.1 - 10.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="pulse">
+									<local_schema short_desc="Darbe">
+										<longdesc>Darbe efekti</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="switcher">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="auto_rotate">
+									<local_schema short_desc="Otomatik Döndür">
+										<longdesc>Değiştirirken seçilen pencereyi döndür</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimized">
+									<local_schema short_desc="Küçültülmüş">
+										<longdesc>Küçültülmüş pencereleri göster</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="icon">
+									<local_schema short_desc="Simge">
+										<longdesc>Show icon next to thumbnail</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="Büyüt">
+										<longdesc>Masaüstünün pencereler değiştirilirken uzaklaştırılacağı mesafe (0 - 5)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="bring_to_front">
+									<local_schema short_desc="Öne Getir">
+										<longdesc>Seçilen pencereyi öne getir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Matlık">
+										<longdesc>Yüzde olarak matlık miktarı (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness">
+									<local_schema short_desc="Parlaklık">
+										<longdesc>Yüzde olarak parlaklık miktarı (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="Doygunluk">
+										<longdesc>Yüzde olarak doygunluk miktarı (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>Yüksek kalitede ölçeklendirme için mümkün olduğunda mipmapler oluştur</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="Pencere değiştirici">
+										<longdesc>Değiştiricide gösterilmesi gereken pencereler (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="Süre aralığı">
+										<longdesc>Değiştirici zaman aralığı (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="Hız">
+										<longdesc>Değiştirici hızı (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_panel_key">
+									<local_schema short_desc="Önceki Panel">
+										<longdesc>Select previous panel type window.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_panel_button">
+									<local_schema short_desc="Önceki Panel">
+										<longdesc>Select previous panel type window.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_panel_key">
+									<local_schema short_desc="Sonraki Panel">
+										<longdesc>Select next panel type window.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_panel_button">
+									<local_schema short_desc="Sonraki Panel">
+										<longdesc>Select next panel type window.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_key">
+									<local_schema short_desc="Önceki pencere (Açılabilir pencere yok)">
+										<longdesc>Select previous window without showing the popup window.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_button">
+									<local_schema short_desc="Önceki pencere (Açılabilir pencere yok)">
+										<longdesc>Select previous window without showing the popup window.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_key">
+									<local_schema short_desc="Sonraki pencere (Açılabilir pencere yok)">
+										<longdesc>Select next window without showing the popup window.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_button">
+									<local_schema short_desc="Sonraki pencere (Açılabilir pencere yok)">
+										<longdesc>Select next window without showing the popup window.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_key">
+									<local_schema short_desc="Önceki pencere (Tüm pencereler)">
+										<longdesc>Popup switcher if not visible and select previous window out of all windows</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_button">
+									<local_schema short_desc="Önceki pencere (Tüm pencereler)">
+										<longdesc>Popup switcher if not visible and select previous window out of all windows</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_key">
+									<local_schema short_desc="Sonraki pencere (Tüm pencereler)">
+										<longdesc>Popup switcher if not visible and select next window out of all windows</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_button">
+									<local_schema short_desc="Sonraki pencere (Tüm pencereler)">
+										<longdesc>Popup switcher if not visible and select next window out of all windows</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_key">
+									<local_schema short_desc="Önceki pencere">
+										<longdesc>Popup switcher if not visible and select previous window</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_button">
+									<local_schema short_desc="Önceki pencere">
+										<longdesc>Popup switcher if not visible and select previous window</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_key">
+									<local_schema short_desc="Sonraki pencere">
+										<longdesc>Popup switcher if not visible and select next window</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_button">
+									<local_schema short_desc="Sonraki pencere">
+										<longdesc>Popup switcher if not visible and select next window</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="move">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="lazy_positioning">
+									<local_schema short_desc="Tembel Konumlandırma">
+										<longdesc>Taşıma işi bitirilene kadar pencerenin konumunu sunucu tarafında güncelleme</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snapoff_maximized">
+									<local_schema short_desc="Büyütülmüş pencerelerde koparma efekti kapalı">
+										<longdesc>Büyütülmüş pencereleri sürüklerken kopar ve otomatik olarak büyütülmemiş hale getir</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="constrain_y">
+									<local_schema short_desc="Dikey (Y) Sınırlama">
+										<longdesc>Y eksenini çalışma alanı ile sınırla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="Matlık">
+										<longdesc>Taşınan pencerelerin matlık düzeyi (1 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="Pencereleri Taşımaya Başla">
+										<longdesc>Pencereleri taşımaya başla</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="Pencereleri Taşımaya Başla">
+										<longdesc>Pencereleri taşımaya başla</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="place">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="viewport_y_values">
+									<local_schema short_desc="Y Görünüm Yüzü Konumları">
+										<longdesc>Dikey masaüstü konumları</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_x_values">
+									<local_schema short_desc="X Görünüm Yüzü Konumları">
+										<longdesc>Yatay masaüstü konumları</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_matches">
+									<local_schema short_desc="Masaüstüne konumlandırılacak pencereler">
+										<longdesc>Öntanımlı olarak belirli bir masaüstüne konumlandırılacak pencereler</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_constrain_workarea">
+									<local_schema short_desc="Çalışma Bölgesinde Kal">
+										<longdesc>Keep placed window in work area, even if that means that the position might differ from the specified position</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_y_values">
+									<local_schema short_desc="Y Konumları">
+										<longdesc>Y konum değerleri</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_x_values">
+									<local_schema short_desc="X Konumları">
+										<longdesc>X konum değerleri</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_matches">
+									<local_schema short_desc="Konumlandırılmış pencereler">
+										<longdesc>Öntanımlı olarak konumlandırılacak pencereler</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="force_placement_match">
+									<local_schema short_desc="Pencerelerin Yetleşimini Zorla">
+										<longdesc>Windows that should forcedly be placed, even if they indicate the window manager should avoid placing them. (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="Çoklu Çıktı Kipi">
+										<longdesc>Selects how window placement should behave if multiple outputs are selected (0 = Use active output device, 1 = Çıktı aygıtını işaretçi ile kullan, 2 = Use output device of focussed window, 3 = Place across all outputs)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="Yerleştirme Kipi">
+										<longdesc>Pencere yerleşimi için kullanılacak algoritma (0 = Basamakla, 1 = Ortalanmış, 2 = Akıllı, 3 = Büyüt, 4 = Rastgele, 5 = Pointer)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="workarounds">
+									<local_schema short_desc="Hızlı Çözümler">
+										<longdesc>Pencere konumlandırma hızlı çözümleri</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="clone">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_button">
+									<local_schema short_desc="Başla">
+										<longdesc>İkileme seçimini başlat</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

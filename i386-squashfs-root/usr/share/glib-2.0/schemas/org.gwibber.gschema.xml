@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/org/gwibber/" id="org.gwibber" gettext-domain="gwibber">
+    <child schema="org.gwibber.preferences" name="preferences"/>
+    <child schema="org.gwibber.state" name="state"/>
+  </schema>
+  <schema path="/org/gwibber/preferences/" id="org.gwibber.preferences" gettext-domain="gwibber">
+    <key type="b" name="autostart">
+      <default>false</default>
+      <summary>Autostart service</summary>
+      <description>Autostart the Gwibber Service</description>
+    </key>
+
+    <key type="i" name="interval">
+      <default>15</default>
+      <summary>Refresh interval</summary>
+      <description>Refresh interval</description>
+    </key>
+
+    <key type="b" name="no-notifications">
+      <default>false</default>
+      <summary>Do not display notifications</summary>
+      <description>Do not display notifications</description>
+    </key>
+
+    <key type="b" name="notify-mentions-only">
+      <default>false</default>
+      <summary>Mentions and replies only</summary>
+      <description>Display notifications for mentions and replies only</description>
+    </key>
+
+    <key type="b" name="show-notifications">
+      <default>true</default>
+      <summary>All messages</summary>
+      <description>Display notifications for all messages</description>
+    </key>
+
+    <key type="b" name="presence-check">
+      <default>true</default>
+      <summary>Check current presence status</summary>
+      <description>Check the current presence status</description>
+    </key>
+
+
+    <key type="b" name="show-fullname">
+      <default>true</default>
+      <summary>Show fullnames in posts</summary>
+      <description>Show fullnames in posts</description>
+    </key>
+
+    <key type="b" name="reply-append-colon">
+      <default>true</default>
+      <summary>Append a colon when replying</summary>
+      <description>Append a colon when replying</description>
+    </key>
+
+    <key type="b" name="shorten-urls">
+      <default>true</default>
+      <summary>Shorten URLS</summary>
+      <description>Shorten URLs in posts</description>
+    </key>
+
+    <key type="s" name="urlshorter">
+      <default>"is.gd"</default>
+      <summary>URL shortening service</summary>
+      <description>Preferred URL shortening service</description>
+    </key>
+
+    <key type="s" name="image-uploader">
+      <default>"yfrong"</default>
+      <summary>Imaging uploading service</summary>
+      <description>Preferred Image uploading service</description>
+    </key>
+  </schema>
+  <schema path="/org/gwibber/state/" id="org.gwibber.state" gettext-domain="gwibber">
+    <key type="b" name="run">
+      <default>false</default>
+    </key>
+
+    <key type="i" name="position-x">
+      <default>50</default>
+    </key>
+
+    <key type="i" name="position-y">
+      <default>24</default>
+    </key>
+
+    <key type="i" name="width">
+      <default>400</default>
+    </key>
+
+    <key type="i" name="height">
+      <default>600</default>
+    </key>
+
+    <key type="i" name="stream-sort-order">
+      <default>1</default>
+    </key>
+
+  </schema>
+
+</schemalist>

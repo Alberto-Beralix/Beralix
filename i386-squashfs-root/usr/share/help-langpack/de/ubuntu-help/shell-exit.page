@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="shell-exit" xml:lang="de">
+
+  <info>
+
+    <link type="guide" xref="index" group="shell-exit"/>
+    <link type="guide" xref="shell-overview#desktop"/>
+
+    <desc>Erfahren Sie, wie Sie Ihr Benutzerkonto verlassen können, indem Sie sich abmelden, den Benutzer wechseln und so weiter.</desc>
+    <!-- Should this be a guide which links to other topics? -->
+    
+    <revision version="11.04" date="2011-04-30" status="review"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Abmelden, ausschalten oder Benutzer wechseln</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>More links would be good, especially in #logout. Could go final
+  as-is. Incomplete for now</p>
+</comment>
+
+<p>Wenn Sie Ihren Rechner nicht mehr benutzen, können Sie ihn ausschalten, in Bereitschaft versetzen (um Strom zu sparen) oder eingeschaltet lassen und sich einfach nur abmelden.</p>
+
+<section id="logout">
+<title>Abmelden oder Benutzer wechseln</title>
+<p>Um andere Benutzer Ihren Rechner benutzen zu lassen, können Sie sich entweder abmelden oder angemeldet bleiben und einfach nur den Benutzer wechseln. Wenn Sie den Benutzer wechseln, laufen alle Ihre Anwendungen weiter, und wenn Sie sich wieder anmelden, finden Sie alles wieder so vor, wie Sie es verlassen haben.</p>
+<p>To log out or switch users, click the <link xref="unity-appmenu-intro">session menu</link> at the
+very right of the top panel and select the appropriate option.</p>
+</section>
+
+<section id="lock-screen">
+<info>
+  <link type="seealso" xref="session-screenlocks"/>
+</info>
+<title>Bildschirm sperren</title>
+<p>Wenn Sie Ihren Rechner für eine kurze Zeit verlassen, sollten Sie den Bildschirm sperren, damit andere Personen nicht auf Ihre Dateien zugreifen und Anwendungen starten können. Wenn Sie zurückkehren, geben Sie einfach Ihr Passwort ein, um sich wieder anzumelden. Wenn Sie den Bildschirm nicht sperren, wird er nach einer gewissen Zeit automatisch gesperrt.</p>
+
+<p>To lock your screen, click the <gui>session menu</gui> in the top panel and select
+<gui>Lock Screen</gui>.</p>
+
+<p>Wenn der Bildschirm gesperrt ist, können sich andere Benutzer an ihrem eigenen Benutzerkonto anmelden, indem sie auf <gui>Benutzer wechseln</gui> am Passwortbildschirm klicken. Sie selbst können zu Ihrer Arbeitsumgebung zurückwechseln, wenn die anderen Benutzer fertig sind.</p>
+</section>
+
+<section id="shut-down">
+<info>
+  <link type="seealso" xref="power-suspendhibernate"/>
+</info>
+<title>Bereitschaft, ausschalten oder neu starten.</title>
+
+<p>To save power, suspend your computer when you aren't using it. This saves your state to your computer's
+memory and powers off most of your computer's functions. A very small amount of
+power is still used during suspend.</p>
+
+<p>To suspend your computer, click the <gui>session menu</gui> in the top panel and select
+<gui>Suspend</gui>. Or, if you have a laptop, simply close the lid. Your
+computer will automatically suspend when the lid is closed.</p>
+
+<p>If you want to power off your computer entirely, or do a full restart,
+click the <gui>session menu</gui> and
+select <gui>Shut Down</gui>.</p>
+
+<note><p>Wenn andere Benutzer angemeldet sind, ist es Ihnen möglicherweise nicht erlaubt, den Rechner auszuschalten oder neu zu starten, weil dies deren Sitzung beenden würde. Wenn Sie über die Rechte des Systemverwalters verfügen, werden Sie eventuell nach Ihrem Passwort gefragt, um den Rechner auszuschalten.</p></note>
+</section>
+</page>

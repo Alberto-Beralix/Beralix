@@ -1,0 +1,1 @@
+../../../../share/pyshared/usbcreator/install.py

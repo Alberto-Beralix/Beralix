@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task a11y" id="a11y-bouncekeys" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="a11y#mobility" group="keyboard"/>
+    <link type="guide" xref="keyboard"/>
+
+    <revision date="2011-04-06" status="outdated"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <desc>Ignorar os rápidos pressionamentos repetitivos da mesma tecla.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Ative as teclas de repercussão</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Turn on from the keyboard?! How do I turn these features on from
+  the keyboard then? Used to be there were odd shortcuts. I think
+  5x Shift turned one of them on. Fix for 3.2</p>
+</comment>
+
+<p>Ative as <em>teclas de repercussão</em> para ignorar pressionamentos de teclas que são repetidos rapidamente. Por exemplo, se você tem tremores de mão que fazem com que você pressione uma tecla múltiplas vezes quando você queria pressionar somente uma vez, você deve ativar as teclas de repercussão.</p>
+
+<steps>
+  <item><p>Clique no ícone que está no canto direito da <gui>barra superior</gui> e selecione <gui>Configurações do sistema</gui>.</p></item>
+  <item><p>Clique em <gui>Acesso universal</gui>.</p></item>
+  <item><p>Selecione a aba <gui>Digitação</gui>.</p></item>
+  <item><p>Selecione <gui>Ativar recursos de acessibilidade pelo teclado</gui>.</p></item>
+  <item><p>Ative <gui>Teclas de repercussão</gui>.</p></item>
+</steps>
+
+<p>Use a barra deslizante <gui>Atraso de aceitação</gui> para mudar quanto tempo as teclas de repercussão esperaram antes de registrar outro pressionamento de tecla, depois de pressionada a tecla pela primeira vez. Selecione <gui>Alarme sonoro quando uma tecla é rejeitada</gui> se você quiser que o computador faça um som cada vez que ignorar um pressionamento de tecla, porque ele aconteceu muito cedo após o pressionamento de tecla anterior.</p>
+
+ <note style="tip">
+ <p>Você pode ligar e desligar rapidamente esse recurso a partir do <link xref="a11y-icon">menu de acesso universal</link>.</p>
+ </note>
+
+</page>

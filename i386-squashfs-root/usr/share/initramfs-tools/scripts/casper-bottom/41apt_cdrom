@@ -1,0 +1,29 @@
+#! /bin/sh
+
+PREREQ=""
+DESCRIPTION="Adding APT-CDROM source..."
+
+prereqs()
+{
+       echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+. /scripts/casper-functions
+
+mount -n -o bind /sys /root/sys
+mount -n -o bind /proc /root/proc
+mount -n -o bind /dev /root/dev
+chroot /root apt-cdrom -o Acquire::cdrom::mount=/cdrom \
+		       -o Dir::Media::MountPath=/cdrom \
+		       -o Acquire::cdrom::AutoDetect=false -m add
+umount /root/dev
+umount /root/proc
+umount /root/sys

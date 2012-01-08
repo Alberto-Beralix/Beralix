@@ -1,0 +1,141 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="favorite-rooms">
+
+  <info>
+    <link type="guide" xref="index#text-conv"/>
+    <link type="guide" xref="irc-manage#manage"/>
+    <link type="seealso" xref="irc-join-room"/>
+    <link type="seealso" xref="group-conversations"/>
+    <desc>Set, join and manage favorite rooms.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-21" status="draft"/>
+    <revision pkgversion="2.30" version="0.2" date="2010-02-03" status="review"/>    
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Favorite rooms</title>
+
+  <section id="set-favorite">
+  <title>Set a room as a favorite</title>
+  <steps>
+    <item>
+      <p>
+        Join a room.
+      </p>
+      <list>
+        <item>
+          <p>
+             See <link xref="irc-join-room"/> for more information on how to join
+             an IRC room.
+          </p>
+        </item>
+        <item>
+          <p>
+            See <link xref="group-conversations"/> for more information on how to
+            start or join a group conversation.
+          </p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>
+        From the conversation window, choose 
+        <guiseq><gui>Conversation</gui><gui>Favorite Chat Room</gui></guiseq>.
+      </p>
+    </item>
+  </steps>
+  </section>
+
+  <section id="join-favorite">
+  <title>Join favorite rooms</title>
+  <steps>
+    <item>
+      <p>
+        From the <gui>Contact List</gui> window, perform one of the following:
+      </p>
+      <list>
+        <item>
+          <p>
+            Press <key>F5</key>.
+          </p>
+        </item>
+        <item>
+          <p>
+            Choose <guiseq><gui>Room</gui><gui>Join Favorites</gui></guiseq>, to
+            join all your favorite rooms.
+          </p>
+        </item>
+        <item>
+          <p>
+            Choose <gui>Room</gui>, and select the favorite room you want to join.
+          </p>
+        </item>
+      </list>
+    </item>
+  </steps>
+  <note>
+    <p>
+      To join a favorite room, you need to be connected to the Internet and to
+      your account.
+    </p>
+  </note>
+  </section>
+
+  <section id="manage-favorite">
+  <title>Manage favorite rooms</title>
+  <steps>
+    <item>
+      <p>
+        From the <gui>Contact List</gui> window, choose
+        <guiseq><gui>Room</gui><gui>Manage Favorites</gui></guiseq>.
+      </p>
+    </item>
+    <item>
+      <p>
+        From the <gui>Account</gui> drop-down list, select the account you want to
+        manage the favorite rooms of.
+      </p>
+      <p>
+        Select <gui>All</gui> to see all you favorite rooms.
+      </p>
+    </item>
+    <item>
+      <p>
+        Select the favorite room you want to manage:
+      </p>
+      <list>
+        <item>
+          <p>
+            Select the <gui>Auto-Connect</gui> check-box in order to automatically
+            join that room when you connect to your account.
+          </p>
+        </item>
+        <item>
+          <p>
+            Click on <gui>Remove</gui> to remove the room from your favorites.
+          </p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>
+        When done, click <gui>Close</gui>.
+      </p>
+    </item>
+  </steps>
+  </section>
+
+</page>

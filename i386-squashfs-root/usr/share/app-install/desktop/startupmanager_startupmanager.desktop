@@ -1,0 +1,15 @@
+[Desktop Entry]
+X-AppInstall-Package=startupmanager
+X-AppInstall-Popcon=2352
+X-AppInstall-Section=universe
+
+Name=StartUp-Manager
+Comment=Change settings for the bootloader and splash screen
+Exec=su-to-root -X -c /usr/sbin/startupmanager
+Icon=startupmanager
+Terminal=false
+StartupNotify=false
+Type=Application
+Categories=GNOME;System;Settings;
+
+X-Ubuntu-Gettext-Domain=app-install-data

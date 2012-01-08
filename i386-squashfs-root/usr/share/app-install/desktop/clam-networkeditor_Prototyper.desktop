@@ -1,0 +1,21 @@
+[Desktop Entry]
+X-AppInstall-Package=clam-networkeditor
+X-AppInstall-Popcon=0
+X-AppInstall-Section=universe
+
+Name=CLAM Prototyper
+GenericName=Prototype runner
+Comment=Runs an audio processing core under a QT designer interface
+Icon=_usr_share_pixmaps_clam-prototyper
+Type=Application
+Categories=Application;AudioVideo;Audio;Development;GUIDesigner;Qt;
+Exec=Prototyper
+Terminal=false
+MimeType=application/vnd.clam.network;
+
+[Desktop Action Run]
+Exec=Prototyper %f
+Name=Run with Prototyper
+
+
+X-Ubuntu-Gettext-Domain=app-install-data

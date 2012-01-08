@@ -1,0 +1,44 @@
+#!/bin/sh
+# IBM specific hack to disable/enable bluetooth.
+# TODO: Doesn't the working USB suspend/resume functionality
+#       make this code more or less obsolete?
+
+. "${PM_FUNCTIONS}"
+
+[ -f /proc/acpi/ibm/bluetooth ] || exit $NA
+
+suspend_bluetooth()
+{
+	if grep -q enabled /proc/acpi/ibm/bluetooth; then
+		savestate ibm_bluetooth enable
+		echo disable > /proc/acpi/ibm/bluetooth
+
+		# wait for up to 2 seconds for the module to actually get
+		# unused
+		TIMEOUT=20
+		while [ $TIMEOUT -ge 0 ]; do
+		    [ `cat /sys/module/btusb/refcnt` = 0 ] && break
+		    TIMEOUT=$((TIMEOUT-1))
+		    sleep 0.1
+		done
+	else
+		savestate ibm_bluetooth disable
+	fi
+}
+
+resume_bluetooth()
+{
+	state_exists ibm_bluetooth || return
+	restorestate ibm_bluetooth > /proc/acpi/ibm/bluetooth
+}
+
+case "$1" in
+	hibernate|suspend)
+		suspend_bluetooth
+		;;
+	thaw|resume)
+		resume_bluetooth
+		;;
+	*) exit $NA
+		;;
+esac

@@ -1,0 +1,22 @@
+[ConnectionManager]
+Name = butterfly
+BusName = org.freedesktop.Telepathy.ConnectionManager.butterfly
+ObjectPath = /org/freedesktop/Telepathy/ConnectionManager/butterfly
+
+[Protocol msn]
+param-account = s required
+param-password = s required secret
+param-server = s
+param-port = q
+param-http-proxy-server = s
+param-http-proxy-port = q
+param-http-proxy-username = s
+param-http-proxy-password = s secret
+param-https-proxy-server = s
+param-https-proxy-port = q
+param-https-proxy-username = s
+param-https-proxy-password = s secret
+param-http-method = b
+default-server = messenger.hotmail.com
+default-port = 1863
+default-http-method = false

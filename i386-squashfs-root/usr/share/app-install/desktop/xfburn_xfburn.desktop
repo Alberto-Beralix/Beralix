@@ -1,0 +1,26 @@
+[Desktop Entry]
+X-AppInstall-Package=xfburn
+X-AppInstall-Popcon=1266
+X-AppInstall-Section=universe
+
+Version=1.0
+Type=Application
+Name=Xfburn
+Comment=CD and DVD burning application
+Exec=xfburn
+TryExec=xfburn
+Icon=media-cdrom
+MimeType=application/x-cd-image;x-content/audio-cdda;x-content/blank-cd;
+Terminal=false
+Categories=X-XFCE;GTK;DiscBurning;Archiving;AudioVideo;Utility;
+StartupNotify=true
+
+Actions=BurnImage;
+
+[Desktop Action BurnImage]
+MimeType=application/x-cd-image;x-content/audio-cdda;x-content/blank-cd;
+Icon=media-cdrom
+Exec=xfburn -i %f
+Name=Burn Image (xfburn)
+
+X-Ubuntu-Gettext-Domain=app-install-data

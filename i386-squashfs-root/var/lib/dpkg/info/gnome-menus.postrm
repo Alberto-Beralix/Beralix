@@ -1,0 +1,10 @@
+#! /bin/sh
+set -e
+
+# Remove no-longer used conffiles
+dpkg-maintscript-helper rm_conffile \
+	/etc/xdg/menus/gnome-preferences.menu 2.22.2-4 -- "$@"
+dpkg-maintscript-helper rm_conffile \
+	/etc/xdg/menus/gnome-settings.menu 2.30.3-2 -- "$@"
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="video-sending" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="media#videos"/>
+    
+    <desc>Comprobar que tiene instalados los códecs de vídeo adecuados.</desc>
+    
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Otras personas no pueden reproducir los vídeos que yo hice</title>
+
+<p>Si ha realizado un vídeo en su equipo Linux y lo envió a alguien que usa Windows o Mac OS, es posible que tengan problemas para reproducir el vídeo.</p>
+
+<p>Para poder reproducir su vídeo, la persona a la que lo envió debe tener instalados los <em>códecs</em> adecuados. Un códec es una pequeña pieza de software que sabe cómo coger el vídeo y mostrarlo en la pantalla. Hay un montón de formatos de vídeo diferentes y cada uno requiere un códec para reproducirse.</p>
+
+<p>Puede comprobar qué formato interno usa su vídeo con el <link xref="files-browse">gestor de archivos</link>, pulsando con el botón derecho sobre él y seleccionando <gui>Propiedades</gui>. Vaya a la pestaña de <gui>Audio/Vídeo</gui> y observe qué <gui>códec</gui> aparece en <gui>Vídeo</gui>.</p>
+
+<p>Pregunte a la persona que tiene problemas con la reproducción si tienen el códec correcto instalado. Es posible que le resulte útil buscar en la web el nombre del códec más el nombre de su aplicación de reproducción de vídeo. Por ejemplo, si el vídeo utiliza el formato <em>Theora</em> y tiene un amigo que usa Windows Media Player para tratar de verlo, busque «theora Windows Media Player». Normalmente será capaz de descargar el códec adecuado de manera gratuita, si no está instalado.</p>
+
+<p>Si no encuentra el códec adecuado, pruebe con el <link href="http://www.videolan.org/vlc/">Reproductor multimedia VLC</link>. Funciona en Windows y Mac OS además de Linux, y admite una amplia variedad de formatos de vídeo. También puede ser intentar convertir su vídeo a un formato diferente. La mayoría de los editores de vídeo pueden hacer esto y hay aplicaciones específicas para conversión de vídeo. Consulte el <app>Centro de software de Ubuntu</app> para ver cuáles están disponibles.</p>
+
+<note>
+ <p>Hay algunos pocos problemas más, que pueden evitar que alguien reproduzca el vídeo. El vídeo podría haberse dañado cuando se envió (a veces los archivos grandes no se copian a la perfección), puede haber problemas con su aplicación de reproducción de vídeo o el vídeo puede no haberse creado correctamente (podría haber habido algunos errores en el momento de guardar el vídeo).</p>
+</note>
+	
+</page>

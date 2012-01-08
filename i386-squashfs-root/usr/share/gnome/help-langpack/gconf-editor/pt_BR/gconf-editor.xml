@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.8">
+<!ENTITY manrevision "2.8">
+<!ENTITY date "September 2004">
+<!ENTITY app "Configuration Editor">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Feb 12, 2002
+-->
+<article id="index" lang="pt_BR">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Manual do Editor de Configurações</title>       
+    <copyright> 
+      <year>2004</year>
+      <holder>Sun Microsystems</holder> 
+    </copyright><copyright><year>2008</year><holder>Fabrício Godoy (skarllot@gmail.com)</holder></copyright><copyright><year>2009</year><holder>Leonardo Ferreira Fontenelle (leonardof@gnome.org)</holder></copyright>
+    <!-- translators: uncomment this:
+         <copyright>
+         <year>2003</year>
+         <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+         </copyright>
+    -->
+
+    <publisher role="maintainer"> 
+      <publishername>Projeto de Documentação do GNOME</publishername> 
+    </publisher> 
+
+       <legalnotice id="legalnotice">
+         <para>Permissão concedida para copiar, distribuir e/ou modificar este documento sob os termos da Licença de Documentação Livre GNU (GNU Free Documentation License), Versão 1.1 ou qualquer versão mais recente publicada pela Free Software Foundation; sem Seções Invariantes, sem Textos de Capa Frontal, e sem Textos de Contracapa. Você pode encontrar uma cópia da licença GFDL no <ulink type="help" url="ghelp:fdl">link</ulink> ou no arquivo COPYING-DOCS distribuído com este manual.</para>
+          <para>Este manual é parte da coleção de manuais do GNOME distribuídos sob a GFDL. Se você quiser distribuí-lo separadamente da coleção, você pode fazê-lo adicionando ao manual uma cópia da licença, como descrito na seção 6 da licença.</para>
+ 
+         <para>Muitos dos nomes usados por empresas para distinguir seus produtos e serviços são reivindicados como marcas registradas. Onde esses nomes aparecem em qualquer documentação do GNOME e os membros do Projeto de Documentação do GNOME estiverem cientes dessas marcas registradas, os nomes aparecerão impressos em letras maiúsculas ou com iniciais em maiúsculas.</para>
+ 
+         <para>O DOCUMENTO E VERSÕES MODIFICADAS DO DOCUMENTO SÃO FORNECIDOS SOB OS TERMOS DA GNU FREE DOCUMENTATION LICENSE COM O ENTENDIMENTO ADICIONAL DE QUE: <orderedlist>
+                 <listitem>
+                   <para>O DOCUMENTO É FORNECIDO NA BASE "COMO ESTÁ", SEM GARANTIAS DE QUALQUER TIPO, TANTO EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO LIMITADO A, GARANTIAS DE QUE O DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO SEJA COMERCIALIZÁVEL, LIVRE DE DEFEITOS, PRÓPRIO PARA UM PROPÓSITO ESPECÍFICO OU SEM INFRAÇÕES. TODO O RISCO A RESPEITO DA QUALIDADE, EXATIDÃO, E DESEMPENHO DO DOCUMENTO OU VERSÕES MODIFICADAS DO DOCUMENTO É DE SUA RESPONSABILIDADE. SE ALGUM DOCUMENTO OU VERSÃO MODIFICADA SE PROVAR DEFEITUOSO EM QUALQUER ASPECTO, VOCÊ (NÃO O ESCRITOR INICIAL, AUTOR OU QUALQUER CONTRIBUIDOR) ASSUME O CUSTO DE QUALQUER SERVIÇO NECESSÁRIO, REPARO OU CORREÇÃO. ESSA RENÚNCIA DE GARANTIAS CONSTITUI UMA PARTE ESSENCIAL DESTA LICENÇA. NENHUM USO DESTE DOCUMENTO OU VERSÃO MODIFICADA DESTE DOCUMENTO É AUTORIZADO SE NÃO FOR SOB ESSA RENÚNCIA; E</para>
+                 </listitem>
+                 <listitem>
+                   <para>SOB NENHUMA CIRCUNSTÂNCIA E SOB NENHUMA TEORIA LEGAL, TANTO EM DANO (INCLUINDO NEGLIGÊNCIA), CONTRATO, OU OUTROS, DEVEM O AUTOR, ESCRITOR INICIAL, QUALQUER CONTRIBUIDOR, OU QUALQUER DISTRIBUIDOR DO DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO, OU QUALQUER FORNECEDOR DE ALGUMA DESSAS PARTES, SER CONSIDERADOS RESPONSÁVEIS A QUALQUER PESSOA POR QUALQUER DANO, SEJA DIRETO, INDIRETO, ESPECIAL, ACIDENTAL OU CONSEQÜENCIAL DE QUALQUER INDIVÍDUO, INCLUINDO, MAS NÃO LIMITADO A, DANOS POR PERDA DE BOA VONTADE, TRABALHO PARADO, FALHA OU MAU FUNCIONAMENTO DO COMPUTADOR, OU QUALQUER E TODOS OS OUTROS DANOS OU PERDAS RESULTANTES OU RELACIONADOS AO USO DO DOCUMENTO E VERSÕES MODIFICADAS, MESMO QUE TAL PARTE TENHA SIDO INFORMADA DA POSSIBILIDADE DE TAIS DANOS.</para>
+                 </listitem>
+           </orderedlist></para>
+   </legalnotice>
+ 
+    <!-- This file  contains link to license for the documentation (GNU FDL), and 
+         other legal stuff such as "NO WARRANTY" statement. Please do not change 
+         any of this. -->
+
+    <authorgroup>
+      <author>
+        <firstname>Sun</firstname>
+        <surname>Time de Documentação do GNOME</surname>
+        <affiliation><orgname>Sun Microsystems</orgname></affiliation>
+      </author>
+      <author>
+        <firstname>Angela</firstname>
+        <surname>Boyle</surname>
+        <affiliation>
+          <orgname>Projeto de Documentação do GNOME</orgname>
+        </affiliation>
+      </author>
+      <editor>
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>Projeto de Documentação do GNOME</orgname>
+        </affiliation>
+      </editor>
+      <!-- This is appropriate place for other contributors: translators,
+           maintainers,  etc. Commented out by default.
+           <othercredit role="translator">
+           <firstname>Latin</firstname> 
+           <surname>Translator 1</surname> 
+           <affiliation> 
+           <orgname>Latin Translation Team</orgname> 
+           <address> <email>translator@gnome.org</email> </address> 
+           </affiliation>
+           <contrib>Latin translation</contrib>
+           </othercredit>
+      -->
+    </authorgroup>
+    <abstract role="description"><para>O Editor de Configurações pode ser usado para alterar as opções de configuração usadas pelos aplicativos, opções essas que podem não estar disponíveis por meio das janelas de preferências</para></abstract>
+
+    <revhistory>
+      <revision>
+        <revnumber>Versão 2.8</revnumber>
+        <date>Setembro de 2004</date>
+        <revdescription>
+          <para role="author">Projeto de Documentação do GNOME</para>
+          <para role="publisher">Projeto de Documentação do GNOME</para>
+          <para role="status">não-revisado</para>
+        </revdescription>
+      </revision>
+      <revision> 
+        <revnumber>Versão 2.1</revnumber> 
+        <date>Agosto de 2004</date> 
+        <revdescription> 
+          <para role="author">Time de Documentação da Sun para o GNOME</para>
+          <para role="publisher">Projeto de Documentação do GNOME</para>
+        </revdescription> 
+      </revision>
+      <revision> 
+        <revnumber>Versão 2.0.1</revnumber> 
+        <date>Janeiro de 2004</date> 
+        <revdescription> 
+          <para role="author">Time de Documentação da Sun para o GNOME</para>
+          <para role="publisher">Projeto de Documentação do GNOME</para>
+        </revdescription> 
+      </revision>
+    </revhistory> 
+    <releaseinfo>Este manual descreve a versão 2.8 do Editor de Configurações.</releaseinfo> 
+    <legalnotice> 
+      <title>Feedback</title> 
+      <para>Para relatar um erro ou fazer uma sugestão relacionada ao aplicativo Editor de Configurações ou este manual, veja a <ulink url="ghelp:gnome-feedback" type="help">página de feedback do GNOME</ulink>.</para>
+      <!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+</articleinfo> 
+
+<indexterm> 
+  <primary>Editor GConf</primary> 
+</indexterm>
+
+<sect1 id="introduction">
+  <title>Introdução</title>
+  <para>O ambiente GNOME e muitos aplicativos usam o <application>GConf</application> para armazenar preferências de usuário e dados de configuração do sistema. O <application>GConf</application> fornece um local centralizado de armazenamento para preferências, simplificando o gerenciamento de configurações para usuários e administradores de sistema. Mais informações sobre o <application>GConf</application> podem ser encontradas no <ulink url="ghelp:system-admin-guide#gconf-0">Guia do Administrador de Sistemas do GNOME</ulink>.</para>
+  <para>O <application>Editor de Configurações</application> permite que os usuários modifiquem suas preferências para todo o ambiente do GNOME e qualquer aplicativo que use o <application>GConf</application>. Além disso, administradores do sistema podem usar o <application>Editor de Configurações</application> para definir configurações padrão e obrigatórias que afetarão todos usuários.</para>
+  <para>As preferências são armazenadas no <application>GConf</application> em uma hierarquia de chaves. Cada chave tem um valor associado especificando sua definição para aquela preferência. Por exemplo, a chave <literal>/apps/glines/preferences/ball_theme</literal> armazena qual tema você usa no jogo <application>Cinco ou Mais</application>.</para>
+  <caution><para>O <application>Editor de Configurações</application> permite que você modifique suas fontes de configurações diretamente. Se você não for um usuário experiente, não use o <application>Editor de Configurações</application> para definir preferências para o ambiente GNOME. Ao invés disso, use as ferramentas de preferências do ambiente GNOME. Para informações sobre como usar as ferramentas de preferências, veja a última versão do <ulink url="ghelp:user-guide">Guia do Usuário do GNOME</ulink> para sua plataforma.</para></caution>
+</sect1>
+
+<sect1 id="getting-started"> 
+  <title>Primeiros passos</title>
+
+  <sect2 id="to-start"> 
+    <title>Iniciando o Editor de Configurações</title>
+    <para>Você pode iniciar o <application>Editor de Configurações</application> das seguintes maneiras:</para>
+    <variablelist>
+      <varlistentry>
+        <term>Menu <guimenu>Aplicativos</guimenu></term>
+        <listitem>
+          <para>Vá até <menuchoice><guisubmenu>Ferramentas do Sistema</guisubmenu><guimenuitem>Editor de Configurações</guimenuitem></menuchoice>.</para>
+          <note><para>Algumas distribuições ocultam esse menu. Nesse caso, use o segundo método, descrito abaixo.</para></note>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Linha de comando</term>
+        <listitem>
+          <para>Execute o seguinte comando: <command>gconf-editor</command></para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+
+  <sect2 id="when-you-start">
+    <title>Quando você inicia o Editor de Configurações</title>
+    <para>Quando você inicia o <application>Editor de Configurações</application> a seguinte janela é exibida.</para>
+    <figure id="gconf_editor_window"> 
+      <title>A janela do <application>Editor de Configurações</application></title>
+      <screenshot> 
+        <mediaobject> 
+          <imageobject>
+            <imagedata fileref="figures/gconf_editor_anno_window.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Mostra a janela do Editor GConf com o painel hierárquico, painel de modificações e o painel de documentação.</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+    <para>A janela do <application>Editor de Configurações</application> contém os seguintes painéis:</para>
+    <variablelist>
+      <varlistentry>
+        <term>Painel hierárquico</term>
+        <listitem><para>Permite que você navegue na hierarquia de chaves do <application>GConf</application>. Use esse painel para exibir as chaves que você quer modificar no painel de modificações. O painel hierárquico está do lado esquerdo da janela.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Painel de modificações</term>
+        <listitem>
+          <para>Exibe as chaves do local do <application>GConf</application> de acordo com o que foi selecionado pelo painel hierárquico. Use esse painel para selecionar chaves que você quer modificar e modificar os valores dessas chaves. O painel de modificações está na parte superior direita da janela.</para>
+          <para>Os ícones ao lado das chaves no painel de modificações indicam qual o tipo de valor que você pode inserir para a chave. Por exemplo, o ícone de marca de seleção ao lado da chave <literal>/system/http_proxy/use_http_proxy</literal> indica que você pode inserir um valor Booleano (verdadeiro ou falso) para a chave. Veja a <xref linkend="icons"/> para mais informações de cada ícone.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Painel de documentação</term>
+        <listitem><para>Exibe a documentação da chave atualmente selecionada. Use esse painel para ter mais informações sobre as chaves de preferências do <application>GConf</application>.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Painel de resultados (não mostrado)</term>
+        <listitem><para>Permite que você veja os resultados da pesquisa ou pesquisar através da sua lista de nomes de chaves vistas recentemente. O resto da janela exibe informações de qualquer chave que você tiver selecionado nesse painel. O painel de resultados aparecerá na parte inferior da janela quando você listar chaves recentes ou fizer uma pesquisa.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+</sect1>
+
+<sect1 id="workwindows">
+  <title>Trabalhando com janelas</title>
+  <sect2 id="workwindows-opennew">
+    <title>Abrindo novas janelas</title>
+    <para>Há três tipos de janelas que você pode abrir no <application>Editor de Configurações</application>: <application>Configurações</application>, <application>Configurações padrão</application> e <application>Configurações obrigatórias</application>. Os valores que o <application>Editor de Configurações</application> define dependem de qual tipo de janela você abriu. Você pode abrir cada tipo de janela com o item apropriado por meio do menu <guimenu>Arquivo</guimenu>.</para>
+    <note><para>Como as configurações das janelas <application>Configurações padrão</application> e <application>Configurações obrigatórias</application> afetam todos os usuários do computador, apenas administradores do sistema podem usar esses tipos de janelas. Para mudar suas preferências, você deve usar a janela <application>Configurações</application>.</para></note>
+    <variablelist>
+      <varlistentry>
+        <term><application>Configurações</application></term>
+        <listitem><para>Você pode usar a janela <application>Configurações</application> para definir suas preferências pessoais. Mudanças feitas na janela <application>Configurações</application> apenas afetam sua área de trabalho. Você não pode mudar as configurações que o administrador do sistema definiu como obrigatórias.</para></listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <varlistentry>
+        <term><application>Configurações padrão</application></term>
+        <listitem><para>Se você for um administrador do sistema, você pode usar a janela <application>Configurações padrão</application> para editar as configurações iniciais para todos os usuários. Se um usuário não definir um valor para a chave explicitamente, o valor será pego das configurações padrão. Os usuários sempre podem sobrescrever as configurações padrão.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><application>Configurações obrigatórias</application></term>
+        <listitem><para>Se você for um administrador do sistema, você pode usar a janela <application>Configurações obrigatórias</application> para editar as configurações obrigatórias para todos os usuários. Quando um valor obrigatório for definido para uma chave, os usuários não poderão mudar este valor. Isso pode ser usado para bloquear certas opções.</para></listitem>
+      </varlistentry>
+    </variablelist>
+  </sect2>
+
+  <sect2 id="workwindows-close">
+    <title>Fechando e saindo</title>
+    <para>Você pode fechar uma janela do <application>Editor de Configurações</application> selecionado <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Fechar janela</guimenuitem></menuchoice> nesta janela. Para fechar todas as janelas do <application>Editor de Configurações</application> e sair do aplicativo completamente, vá até <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Sair</guimenuitem></menuchoice> em qualquer janela do <application>Editor de Configurações</application>.</para>
+  </sect2>
+</sect1>
+
+<sect1 id="workkeys">
+  <title>Trabalhando com chaves</title>
+  <para>Por meio das chaves você é capaz de buscar por um valor. Todas preferências armazenadas no <application>GConf</application> têm uma chave determinada. Os aplicativos que usam o <application>GConf</application> acessam os valores das chaves para determinar como se parecer e se comportar. Quando você muda algo nas <guilabel>preferências</guilabel> de um aplicativo, você está mudando o valor associado a uma chave do <application>GConf</application>.</para>
+
+  <sect2 id="copy-key">
+    <title>Copiando o nome de uma chave</title>
+    <para>Para copiar um nome de chave para a área de transferência, selecione o nome da chave que você quer copiar no painel de modificações. Vá até <menuchoice><guimenu>Editar</guimenu><guimenuitem>Copiar nome da chave</guimenuitem></menuchoice>. Você pode colar o nome da chave em qualquer outro aplicativo.</para>
+  </sect2>
+  <sect2 id="list-key">
+    <title>Vendo os nomes de chaves recentes</title>
+    <para>Para ver os nomes de chaves recentes, vá até <menuchoice><guimenu>Editar</guimenu><guimenuitem>Listar chaves recentes</guimenuitem></menuchoice>. Esta ação abrirá o painel de resultados na parte inferior da janela atual. Você pode mover-se na lista de resultados rolando para cima ou para baixo com a barra de rolagem ou as teclas de direção. As informações da chave ou pasta selecionada aparecerão normalmente na janela.</para>
+    <para>Ver chaves recentes é útil se você precisa voltar para uma chave que você acabou de mudar e não se lembra de onde ela está.</para>
+    <!-- REMARK -->
+    <remark>Uma captura de tela pode estar em seqüência. Particularmente, os botões fechar, copiar e limpar no painel de resultados deveriam ser explicados.</remark>
+  </sect2>
+  <sect2 id="modify-key">
+    <title>Modificando o valor de uma chave</title>
+    <para>Os ícones próximos ao nome da chave exibem o tipo de valor que a chave pode receber. Veja a <xref linkend="icons"/> para mais informações sobre cada ícone. Para modificar o valor de uma chave, efetue os seguintes passos:</para>
+    <procedure>
+      <step><para>Use o painel hierárquico para exibir a chave que você quer modificar no painel de modificações.</para></step>
+      <step><para>Selecione a chave para modificá-la no painel de modificações.</para></step>
+      <step>
+        <para>Para alterar o valor de uma chave de tipo número inteiro ou uma chave de tipo texto, clique na coluna <guilabel>Valor</guilabel> da chave. Digite o novo valor para a chave. Alternativamente, clique com o botão direito na chave e selecione <guimenuitem>Editar chave</guimenuitem> do menu de contexto.</para>
+        <para>Para alterar o valor de uma chave Booleana, clique na coluna <guilabel>Valor</guilabel> da chave para marcar ou desmarcar a caixa de seleção. Alternativamente, clique com o botão direito na chave e selecione <guimenuitem>Editar chave</guimenuitem> do menu de contexto.</para>
+        <para>Para alterar o valor de uma chave de tipo lista, clique com o botão direito na chave e selecione <guimenuitem>Editar chave</guimenuitem> do menu de contexto. O diálogo <application>Editar chave</application> fornece uma lista de valores associados àquela chave. Você pode usar esta janela para editar cada valor da lista individualmente, adicionar ou remover valores da lista, e mover cada valor para cima ou para baixo na lista.</para>
+      </step>
+    </procedure>
+    <para>Seu administrador do sistema pode ter bloqueado certas chaves estabelecendo valores obrigatórios. Se a chave selecionada tiver um valor obrigatório definido, você não será capaz de editar o valor. O painel de documentação exibirá o rótulo <guilabel>Esta chave não é gravável</guilabel> se você não tiver permissão para editar o valor dessa chave.</para>
+  </sect2>
+</sect1>
+
+<sect1 id="finding">
+  <title>Localizando chaves rapidamente</title>
+  <para>Para localizar chaves rapidamente, o <application>Editor de Configurações</application> permite que você pesquise os nomes de chave no <application>GConf</application>. Além disso, você pode usar marcadores para localizar diretórios de chaves que você precise acessar com freqüência.</para>
+
+  <sect2 id="using-bookmark">
+    <title>Usando marcadores</title>
+    <para>Para acessar um local de diretório em seus marcadores, escolha o local do menu <guimenu>Marcadores</guimenu>. Você pode adicionar e remover locais de diretórios do seu menu <guimenu>Marcadores</guimenu>.</para>
+    <para>Para adicionar um marcador, selecione o local que você quer marcar no painel hierárquico. Escolha <menuchoice><guimenu>Marcadores</guimenu><guimenuitem>Adicionar marcador</guimenuitem></menuchoice>.</para>
+    <para>Para excluir um marcador, efetue os seguintes passos:</para>
+    <procedure>
+      <step><para>Vá até <menuchoice><guimenu>Marcadores</guimenu><guimenuitem>Editar marcadores</guimenuitem></menuchoice>.</para></step>
+      <step><para>Selecione o marcador no diálogo <application>Editar marcadores</application>, depois clique em <guibutton>Excluir</guibutton>.</para></step>
+      <step><para>Clique em <guibutton>Fechar</guibutton>.</para></step>
+    </procedure>
+  </sect2>
+  <sect2 id="search">
+    <title>Pesquisando chaves</title>
+    <para>Para pesquisar chaves, efetue os seguintes passos:</para>
+    <procedure>
+      <step><para>Vá até <menuchoice><guimenu>Editar</guimenu><guimenuitem>Localizar</guimenuitem></menuchoice>.</para></step>
+      <step><para>Digite a palavra chave que você quer localizar no campo <guilabel>Pesquisar por</guilabel>. Opcionalmente, você pode selecionar as caixas de seleção <guilabel>Pesquisar também em nome de chaves</guilabel> e <guilabel>Pesquisar também em valores de chaves</guilabel>. Se essas caixas de seleção não estiverem selecionadas, a busca será feita apenas nos nomes de pasta. Selecionando essas caixas os parâmetros de busca serão expandidos.</para></step>
+      <step><para>Clique em <guibutton>Localizar</guibutton>.</para></step>
+    </procedure>
+    <para>Os resultados da busca aparecerão no painel de resultados. Para navegar entre a lista de resultados, primeiro selecione esse painel. Então, você pode navegar entre os resultados usando a barra de rolagem ou as teclas de direção. As informações referentes à chave selecionada aparecerão no restante da janela.</para>
+    <!-- REMARK -->
+    <remark>Uma captura de tela pode estar em seqüência. Particularmente, os botões fechar, copiar e limpar no painel de resultados deveriam ser explicados.</remark>
+  </sect2> 
+</sect1>
+
+<sect1 id="defaults-mandatory">
+  <title>Configurações padrão e obrigatórias</title>
+  <para>Se você for um administrador do sistema, você pode definir as configurações padrão e obrigatórias no <application>GConf</application> que afetam todos usuários. As configurações padrão são usadas quando o usuário não definiu um valor explicitamente, e os usuários podem sempre sobrescrevê-las. Configurações obrigatórias são sempre usadas por todos usuários, e eles não podem sobrescrevê-las.</para>
+  <para>Você pode usar as janelas <application>Configurações padrão</application> e <application>Configurações obrigatórias</application> para editar e remover as configurações padrão e obrigatórias. As janelas <application>Configurações padrão</application> e <application>Configurações obrigatórias</application> apenas exibirão as configurações definidas como padrão ou obrigatórias. Você não pode usar essas janelas para criar novas configurações padrão ou obrigatórias. Entretanto, você pode definir as configurações como padrão ou obrigatórias pela janela <application>Configurações</application>.</para>
+  <para>Para abrir uma janela <application>Configurações padrão</application>, vá até <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Nova janela de configurações padrão</guimenuitem></menuchoice>. Para abrir uma janela <application>Configurações obrigatórias</application>, vá até <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Nova janela de configurações obrigatórias</guimenuitem></menuchoice>.</para>
+
+  <sect2 id="creating-defaults">
+    <title>Criando configurações padrão</title>
+    <para>Para criar uma configuração padrão, efetue os seguintes passos:</para>
+    <procedure>
+      <step><para>Na janela <application>Configurações</application>, use o painel hierárquico para exibir a chave que você quer definir o valor como padrão.</para></step>
+      <step><para>Clique com o botão direito na chave e selecione <guimenuitem>Definir com padrão</guimenuitem> do menu de contexto.</para></step>
+    </procedure>
+  </sect2>
+  <sect2 id="creating-mandatory">
+    <title>Criando configurações obrigatórias</title>
+    <para>Para criar uma configuração obrigatória, efetue os seguintes passos:</para>
+    <procedure>
+      <step><para>Na janela <application>Configurações</application>, use o painel hierárquico para exibir a chave que você quer definir o valor como obrigatório.</para></step>
+      <step><para>Clique com o botão direito na chave e selecione <guimenuitem>Definir como obrigatório</guimenuitem> do menu de contexto.</para></step>
+    </procedure>
+  </sect2>
+  <sect2 id="modifying-defaults-mandatory">
+    <title>Modificando e removendo configurações padrão e obrigatórias</title>
+    <para>Você pode usar as janelas <application>Configurações padrão</application> e <application>Configurações obrigatórias</application> para modificar e remover configurações padrão e obrigatórias. Para modificar uma configuração padrão ou obrigatória, use a janela apropriada e modifique a chave da mesma maneira que você faria com as chaves na janela <application>Configurações</application>. Veja a <xref linkend="modify-key"/> para mais informações em como modificar chaves.</para>
+    <para>Para remover uma chave padrão ou obrigatória, efetue os seguintes passos:</para>
+    <procedure>
+      <step><para>Na janela apropriada, use o painel hierárquico para exibir a chave que você quer remover das configurações padrão ou obrigatórias.</para></step>
+      <step><para>Clique com o botão direito na chave e selecione <guimenuitem>Limpar chave</guimenuitem> do menu de contexto.</para></step>
+    </procedure>
+  </sect2>
+</sect1>
+
+<sect1 id="icons">
+  <title>Tipos de ícones e chaves</title>
+  <para>Os ícones ao lado das chaves no painel de modificações indicam qual o tipo do valor que você pode inserir para a chave. A seguinte lista mostra os possíveis ícones e quais tipos de valores eles representam.</para>
+  <variablelist>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+        <imagedata fileref="figures/entry-bool.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Chave Booleana</term>
+      <listitem><para>Pode ser tanto verdadeira quanto falsa. O <application>Editor de Configurações</application> fornecerá uma caixa de seleção para este tipo de chave.</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-number.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Chave numérica</term>
+      <listitem><para>Pode armazenar números. Estes podem ser tanto números inteiros quanto números de ponto flutuante (fracionários).</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-string.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Chave de texto</term>
+      <listitem><para>Pode armazenar qualquer seqüência de texto.</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-schema.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Chave esquema</term>
+      <listitem><para>Usada para documentar outras chaves. A documentação de cada chave é fornecida por uma chave separada, tipicamente através do diretório <literal>/schemas</literal>. Usuários e administradores do sistema geralmente não precisam lidar diretamente com chaves esquema.</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-list.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Chave em lista</term>
+      <listitem><para>Lista de tamanho arbitrário. Cada elemento da lista precisa ser do mesmo tipo, que pode ser um dos tipos primitivos: booleana, numérica ou texto.</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-blank.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Chave dupla</term>
+      <listitem><para>Pode armazenar exatamente dois valores. Os dois valores precisam ser um dos tipos primitivos, mas eles não têm que ser do mesmo tipo. Atualmente, o <application>Editor de Configurações</application> não é capaz de editar chaves duplas.</para></listitem>
+    </varlistentry>
+    <varlistentry>
+      <term><inlinemediaobject><imageobject>
+      <imagedata fileref="figures/entry-blank.png" format="PNG"/>
+      </imageobject></inlinemediaobject> Vazia</term>
+      <listitem><para>Usada quando o <application>Editor de Configurações</application> não é capaz de interpretar o tipo de chave. O ícone vazio é também atualmente usado para chaves duplas.</para></listitem>
+    </varlistentry>
+  </variablelist>
+</sect1>
+</article>

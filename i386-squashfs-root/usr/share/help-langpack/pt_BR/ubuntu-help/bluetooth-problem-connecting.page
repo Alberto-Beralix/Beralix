@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="problem" id="bluetooth-problem-connecting" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="hardware-problems-bluetooth"/>
+    <link type="guide" xref="bluetooth"/>
+    <link type="seealso" xref="hardware-driver"/>
+    
+    <desc>O adaptador pode ser desligado ou pode não ter drivers, ou Bluetooth pode ser desativado ou bloqueado.</desc>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Por que não consigo conectar o meu dispositivo Bluetooth?</title>
+
+<p>Há uma série de motivos pelos quais você não consegue se conectar a um dispositivo Bluetooth (como um celular ou um fone de ouvido):</p>
+
+<list>
+ <item>
+  <p>Conexão bloqueada ou não confiável</p>
+  <p>Alguns dispositivos Bluetooth bloqueiam conexões por padrão, ou exigem que você alterar uma configuração para permitir conexões a serem feitas. Certifique-se que o dispositivo esteja configurado para permitir conexões.</p>
+ </item>
+ 
+ <item>
+  <p>Hardware Bluetooth não reconhecido</p>
+  <p>O adaptador Bluetooth pode não ter sido reconhecido pelo computador. Isto pode ser porque os drivers para o adaptador não estão instalados. Alguns adaptadores Bluetooth não são suportadas no Linux, e assim você pode não ser capaz de obter os drivers certos para eles. Neste caso, você provavelmente terá que obter um adaptador Bluetooth diferente.</p>
+ </item>
+ 
+ <item>
+  <p>Adaptador não está ligado</p>
+  <p>Verifique se o seu adaptador Bluetooth está ligado. Clique no <gui>menu Bluetooth</gui> no <gui>painel superior</gui> e verifique se não está desligado.</p>
+ </item>
+ 
+ <item>
+  <p>Conexão do dispositivo Bluetooth desligado</p>
+  <p>Verifique se o Bluetooth está ligado no dispositivo que você está tentando se conectar. Por exemplo, se você está tentando se conectar a um telefone, certifique-se que não é no modo avião</p>
+ </item>
+
+ <item>
+  <p>Nenhum adaptador Bluetooth no seu computador</p>
+  <p>Muitos computadores não tem adaptadores Bluetooth. Você poderá comprar um adaptador se quiser usar Bluetooth.</p>
+ </item>
+</list>
+
+</page>

@@ -1,0 +1,104 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="share-desktop">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <desc>
+      Show your desktop to your contacts.
+    </desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-02" status="stub"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-10" status="review"/>
+    <revision pkgversion="2.28" version="0.3" date="2009-09-05" status="review"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <credit type="author">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Share your desktop</title>
+
+  <p>
+    It is possible to share your desktop with some of your contacts. You can
+    use this functionality to show your desktop to your contacts to, for
+    example, ask for help or help your contacts resolve a problem.
+  </p>
+
+  <note style="tip">
+    <p>
+      To be able to share your desktop, you need to have a VNC server, which
+      has support for the feature, installed on your system. <app>Vino</app>,
+      the GNOME VNC server, has the required support.
+    </p>
+  </note>
+
+  <steps>
+    <item>
+      <p>
+        From the <gui>Contact List</gui> window, do one of the following:
+      </p>
+      <list>
+        <item>
+          <p>
+            Select the contact you want to share your desktop with and choose
+            <guiseq><gui>Edit</gui><gui>Contact</gui>
+	    <gui>Share My Desktop</gui></guiseq>.
+          </p>
+        </item>
+        <item>
+          <p>
+            Right-click on the name of the contact you want to share your
+	    desktop with and select <gui>Share My Desktop</gui>.
+          </p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>
+	An invitation to view your desktop will be sent to the contact you have
+	selected. To view your desktop, they will need to accept it.
+      </p>
+    </item>
+    <item>
+      <p>
+        You can disconnect the contact from your computer using your desktop
+	sharing application.
+      </p>
+      <note>
+        <p>
+	  For more information about how to use the remote desktop sharing
+	  application, refer to its help.
+        </p>
+      </note>
+    </item>
+  </steps>
+
+  <p>
+    When you share your desktop with someone else, it is possible to experience
+    system performance slowdown and low Internet speed.
+  </p>
+
+  <note>
+    <p>
+      Some of your contacts may not be able to use this feature. It is
+      necessary for them to have version 2.28, or newer, of <app>Empathy</app>
+      and a compatible remote desktop viewer application installed in their
+      system.
+    </p>
+  </note>
+
+</page>

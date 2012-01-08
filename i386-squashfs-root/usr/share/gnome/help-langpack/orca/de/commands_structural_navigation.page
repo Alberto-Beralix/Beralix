@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="commands_structural_navigation" xml:lang="de">
+  <info>
+    <link type="next" xref="commands_table"/>
+    <link type="guide" xref="commands#reading_documents"/>
+    <link type="seealso" xref="howto_forms"/>
+    <title type="sort">2. Strukturennavigation</title>
+    <title type="link">Strukturennavigation</title>
+    <desc>Befehle für elementweises Navigieren</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+  <title>Befehle der Strukturennavigation</title>
+  <p>
+    The following commands can be used to navigate by headings, links,
+    and other elements found in applications for which <app>Orca</app>
+    provides structural navigation support.
+  </p>
+  <list>
+    <item>
+      <p>
+        Enable/disable Structural Navigation keys:
+        <keyseq><key>Orca Modifier</key><key>Z</key></keyseq>
+      </p>
+    </item>
+  </list>
+  <section id="headings">
+    <title>Überschriften</title>
+      <list>
+        <item>
+          <p>Nächste und vorhergehende Überschrift: <keyseq><key>H</key></keyseq> und <keyseq><key>Umschalttaste</key><key>H</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächste und vorhergehende Überschrift oberster Ebene: <keyseq><key>1</key></keyseq> und <keyseq><key>Umschalttaste</key><key>1</key></keyseq></p>
+        </item>
+        <item>
+          <p>Nächste und vorhergehende Überschrift zweiter Ebene: <keyseq><key>2</key></keyseq> und <keyseq><key>Umschalttaste</key><key>2</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächste und vorhergehende Überschrift dritter Ebene: <keyseq><key>3</key></keyseq> und <keyseq><key>Umschalttaste</key><key>3</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächste und vorhergehende Überschrift vierter Ebene: <keyseq><key>4</key></keyseq> und <keyseq><key>Umschalttaste</key><key>4</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächste und vorhergehende Überschrift fünfter Ebene: <keyseq><key>5</key></keyseq> und <keyseq><key>Umschalttaste</key><key>5</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächste und vorhergehende Überschrift sechster Ebene: <keyseq><key>6</key></keyseq> und <keyseq><key>Umschalttaste</key><key>6</key></keyseq></p>
+        </item> 
+      </list>
+    </section>
+    <section id="forms">
+      <title>Formulare</title>
+      <list>
+        <item>
+          <p>Nächstes und vorhergehendes Formularfeld: <keyseq><key>Orca-Zusatztaste</key><key>Tabulator</key></keyseq> und <keyseq><key>Orca-Zusatztaste</key><key>Umschalttaste</key><key>Tabulator</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächster und vorhergehender Knopf: <keyseq><key>B</key></keyseq> und <keyseq><key>Umschalttaste</key><key>B</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächstes und vorhergehendes Auswahlfeld: <keyseq><key>C</key></keyseq> und <keyseq><key>Umschalttaste</key><key>C</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächster und vorhergehender Eintrag: <keyseq><key>E</key></keyseq> und <keyseq><key>Umschalttaste</key><key>E</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächster und vorhergehender Auswahlknopf: <keyseq><key>R</key></keyseq> und <keyseq><key>Umschalttaste</key><key>R</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächstes und vorhergehendes Ankreuzfeld: <keyseq><key>X</key></keyseq> und <keyseq><key>Umschalttaste</key><key>X</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächstes und vorhergehendes Objekt (um das Feld zu verlassen): <keyseq><key>Orca-Zusatztaste</key><key>Rechts</key></keyseq> und <keyseq><key>Orca-Zusatztaste</key><key>Links</key></keyseq></p>
+        </item> 
+      </list>
+    </section>
+    <section id="links">
+    <title>Links</title>
+      <list>
+        <item>
+          <p>Nächster und vorhergehender nicht besuchter Verweis: <keyseq><key>U</key></keyseq> und <keyseq><key>Umschalttaste</key><key>U</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächster und vorhergehender besuchter Verweis: <keyseq><key>V</key></keyseq> und <keyseq><key>Umschalttaste</key><key>V</key></keyseq></p>
+        </item> 
+      </list>
+    </section>
+    <section id="lists">
+      <title>Listen</title>
+      <list>
+        <item>
+          <p>Nächste und vorhergehende Liste: <keyseq><key>L</key></keyseq> und <keyseq><key>Umschalttaste</key><key>L</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächstes und vorhergehendes Listenelement: <keyseq><key>I</key></keyseq> und <keyseq><key>Umschalttaste</key><key>I</key></keyseq></p>
+        </item> 
+      </list>
+    </section>
+    <section id="tables">
+      <title>Tabellen</title>
+      <list>
+        <item>
+          <p>Nächste und vorhergehende Tabelle: <keyseq><key>T</key></keyseq> und <keyseq><key>Umschalttaste</key><key>T</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Zelle zur linken: <keyseq><key>Alt</key><key>Umschalt</key><key>Links</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Zelle zur rechten: <keyseq><key>Alt</key><key>Umschalt</key><key>Rechts</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Zelle darüber: <keyseq><key>Alt</key><key>Umschalt</key><key>Hoch</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Zelle darunter: <keyseq><key>Alt</key><key>Umschalt</key><key>Runter</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Erste Zelle in der Tabelle: <keyseq><key>Alt</key><key>Umschalt</key><key>Pos1</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Letzte Zelle in der Tabelle: <keyseq><key>Alt</key><key>Umschalt</key><key>Ende</key></keyseq></p>
+        </item> 
+      </list>
+    </section>
+    <section id="text_blocks">
+      <title>Textblöcke</title>
+      <list>
+        <item>
+          <p>Nächster und vorhergehender Paragraf: <keyseq><key>P</key></keyseq> und <keyseq><key>Umschalttaste</key><key>P</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächstes und vorhergehendes Zitat: <keyseq><key>Q</key></keyseq> und <keyseq><key>Umschalttaste</key><key>Q</key></keyseq></p>
+        </item> 
+        <item>
+          <p>Nächstes und vorhergehendes »großes Objekt«: <keyseq><key>O</key></keyseq> und <keyseq><key>Umschalttaste</key><key>O</key></keyseq></p>
+        </item> 
+       </list>
+    </section>
+    <section id="other">
+      <title>Weitere Elemente</title>
+      <list>
+        <item>
+          <p>
+            Next and previous landmark:
+            <keyseq><key>M</key></keyseq> and
+            <keyseq><key>Shift</key><key>M</key></keyseq>
+          </p>
+        </item> 
+        <item>
+          <p>Nächster und vorhergehender Trenner: <keyseq><key>S</key></keyseq> und <keyseq><key>Umschalttaste</key><key>S</key></keyseq></p>
+        </item> 
+        <item>
+          <p>
+            Next and previous anchor:
+            <keyseq><key>A</key></keyseq> and
+            <keyseq><key>Shift</key><key>A</key></keyseq>
+          </p>
+        </item> 
+      </list>
+    </section>
+</page>

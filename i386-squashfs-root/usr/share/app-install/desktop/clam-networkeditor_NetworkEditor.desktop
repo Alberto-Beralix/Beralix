@@ -1,0 +1,21 @@
+[Desktop Entry]
+X-AppInstall-Package=clam-networkeditor
+X-AppInstall-Popcon=0
+X-AppInstall-Section=universe
+
+Name=CLAM Network Editor
+GenericName=CLAM patching tool
+Comment=An audio tool to build processing networks by connecting functional boxes
+Icon=_usr_share_pixmaps_clam-networkeditor
+Type=Application
+Categories=Application;AudioVideo;Audio;Qt;
+Exec=NetworkEditor
+Terminal=false
+MimeType=application/vnd.clam.network;
+
+[Desktop Action Edit]
+Exec=NetworkEditor %f
+Name=Edit (NetworkEditor)
+
+
+X-Ubuntu-Gettext-Domain=app-install-data

@@ -1,0 +1,63 @@
+#!/bin/sh
+
+DESCRIPTION="Workload to build the kernel source tree repeatedly"
+
+PREREQS=""
+DEPENDS="linux-source"
+
+WORKING_DIR=${WORKING_DIR:-~/linux-build}
+DISTFILE=${DISTFILE:-$(ls /usr/src/linux*tar.bz2 | head -n 1)}
+
+check() {
+    # Verify that linux source got installed
+    if [ -z "$DISTFILE" ]; then
+        echo "Error:  Linux source tarball is not present"
+        return 1
+    fi
+}
+
+setup() {
+    check || return 1
+
+    mkdir -p $WORKING_DIR
+    if [ ! -d $WORKING_DIR ]; then
+        echo "Error:  $WORKING_DIR does not exist"
+        return 2
+    fi
+    cd $WORKING_DIR
+
+    echo "Unpacking linux source tar file"
+    rm -rf ${WORKING_DIR}/*
+    tar xjf $DISTFILE
+    mv ${WORKING_DIR}/* linux-source
+}
+
+workload() {
+    cd $WORKING_DIR/linux-source
+    make mrproper
+    make defconfig
+    make -j20 bzImage
+}
+
+case $1 in
+    info)
+        echo $DESCRIPTION
+        ;;
+    depends) echo $DEPENDS     ;;
+    check)   check             ;;
+    setup)   setup             ;;
+    once)    setup ; workload  ;;
+    run)
+        echo $$
+        setup || exit 1
+        while :
+        do
+            workload
+        done
+        ;;
+    *)
+        echo $DESCRIPTION
+        echo
+        echo "Usage: $0 {info|depends|setup|check|once|run}"
+        exit 1
+esac

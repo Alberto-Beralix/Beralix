@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY author1 "Sun">
+<!ENTITY author2 "Java Desktop System Documentation Team">
+<!ENTITY publisher "Sun Microsystems, Inc.">
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.6.0">
+<!ENTITY app "<application>Zenity</application>">
+<!ENTITY appname "Zenity">
+<!ENTITY date "August 2004">
+<!ENTITY manrevision "2.0">
+]>
+<!-- ================ Document Header ================= -->
+<article id="index" lang="zh_CN">
+
+  <articleinfo>
+    <title>Zenity 手册</title>
+    <subtitle>Zenity 桌面程序手册 V2.0</subtitle>
+    <copyright>
+	    <year>2003</year>
+	    <year>2004</year>
+	    <holder>Sun Microsystems, Inc.</holder>
+    </copyright><copyright><year>2010</year><holder>TeliuTe (teliute@163.com)</holder></copyright>
+
+    <!-- Translators: uncomment this
+    <copyright>
+	    <year>2004</year>
+	    <holder>ME_THE_TRANSLATOR</holder>
+    </copyright>
+    -->
+
+    <publisher>
+	    <publishername>Sun Microsystems, Inc.</publishername>
+    </publisher>
+
+      <legalnotice id="legalnotice">
+	<para>对于本文档的复制、分发和／或修改必须遵循自由软件基金会 (Free Software Foundation) 发布的 GNU 自由文档许可证 (GFDL) 版本 1.1 或更高版本，该许可证没有固定的部分、没有封面和背页文本。您可以在此<ulink type="help" url="ghelp:fdl">链接</ulink>上或在随本手册一起分发的 COPYING-DOCS 文件中找到 GFDL 的副本。</para>
+         <para>本手册是在 GFDL 许可之下分发的 GNOME 手册集合的一部分。如果想要单独分发此手册，可以在手册中添加该许可证的一份副本然后分发，如该许可证的第 6 部分所述。</para>
+
+	<para>各个公司使用的许多用于区别它们产品和服务的名称都声明为商标。在所有的 GNOME 文档以及 GNOME 文档项目的成员中，这些名称都是以全大写字母或首字母大写显示，从而表明它们是商标。</para>
+
+	<para>本文档以及文档的修改版本都是在遵循 GNU 自由文档许可证的条款下提供，这表示具有以下含义：<orderedlist>
+		<listitem>
+		  <para>文档按“原样”提供，不提供任何明示或暗示的保证，包括但不限于：文档或文档的修改版本没有适销性方面的缺陷、适合特定目的的适用性，以及没有侵权行为。您将自行承担本文档以及文档修改版本的质量、准确性以及性能方面的风险。如果任何文档或文档修改版本存在缺陷，您(而不是最初的编写者、作者或撰写人)将承担所有必需的服务、维修或更正的费用。此免责声明是本许可证的重要组成部分。如果不接受此免责声明，那么您就没有权利使用任何文档或文档的修改版本；并且</para>
+		</listitem>
+		<listitem>
+		  <para>无论在任何情况以及在任何法律理论下，本文档或文档修改版本的作者、最初的编写者、任何撰写人或任何分发者，或者任意这些方的任何提供者都不对任何人由于使用本文档或文档修改版本引起或带来的任何直接的、间接的、特殊的、偶然的或继发的损失承担任何民事(包括疏忽)、合同或其它方面的责任，这些损失包括但不限于信誉损失、工作停止、计算机失败或故障，或任何以及所有其它损失或由此引发的或与之相关的损失，即使这些方已被告知存在出现此类损失的可能性时也是如此。</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup>
+      <author>
+        <firstname>Sun</firstname>
+        <surname>Java 桌面系统文档小组</surname>
+        <affiliation><orgname>Sun Microsystems, Inc.</orgname></affiliation>
+      </author>
+      <author role="maintainer">
+        <firstname>Glynn</firstname>
+        <surname>Foster</surname>
+        <affiliation>
+          <orgname>GNOME 文档项目</orgname>
+        </affiliation>
+      </author>
+      <editor>
+        <firstname>Nicholas</firstname>
+        <surname>Curran</surname>
+        <affiliation>
+          <orgname>GNOME 文档项目</orgname>
+        </affiliation>
+      </editor>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>Zenity 桌面程序手册 V2.0</revnumber>
+        <date>2004年8月</date>
+        <revdescription>
+          <para role="author">Sun Java 桌面系统文档小组</para>
+          <para role="publisher">Sun Microsystems, Inc.</para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Zenity 手册 V1.0</revnumber>
+        <date>2003年1月</date>
+        <revdescription>
+          <para role="author">Glynn Foster</para>
+          <para role="publisher">GNOME 文档项目</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>本手册讲述的是 Zenity 2.6.0 版。</releaseinfo>
+
+    <legalnotice>
+	    <title>反馈</title>
+	    <para>要发送反馈信息，请参照 <ulink url="ghelp:gnome-feedback" type="help">GNOME 反馈页</ulink> 上的指导。</para>
+<!-- Translators may also add here feedback address for translations -->
+
+    </legalnotice>
+    <abstract role="description">
+            <para>Zenity 是 gdialog 的重写，dialog 的 GNOME 移植，可以用命令或 shell 脚本显示对话框。</para>
+    </abstract>
+  </articleinfo>
+  
+  <indexterm>
+    <primary>zenity 命令</primary>
+  </indexterm>
+  <indexterm>
+    <primary>对话框创建器</primary>
+  </indexterm>
+<!-- ================ Document Body ================= -->
+
+<!-- ==== Introduction ====== -->
+
+  <sect1 id="zenity-introduction">
+    <title>介绍</title>
+
+    <para><application>Zenity</application> 可以创建下列类型的简单对话框：</para>
+
+    <itemizedlist>
+        <listitem><para>日历</para></listitem>
+	<listitem><para>文件选择框</para></listitem>
+	<listitem><para>列表框</para></listitem>
+	<listitem><para>提示图标</para></listitem>
+        <listitem><para>消息框</para>
+            <itemizedlist>
+	        <listitem><para>错误框</para></listitem>
+		<listitem><para>信息框</para></listitem>
+		<listitem><para>询问框</para></listitem>
+		<listitem><para>警告框</para></listitem>
+	    </itemizedlist>
+	</listitem>
+	<listitem><para>进度框</para></listitem>
+        <listitem><para>文本框</para></listitem>
+	<listitem><para>文本信息框</para></listitem>
+    </itemizedlist>
+
+  </sect1>
+
+<!-- ==== Usage ====== -->
+
+  <sect1 id="zenity-usage">
+    <title>用法</title>
+
+    <para>在您写脚本时，可以使用<application>Zenity</application> 创建简单的交互式对话框，例如：</para>
+    <itemizedlist>
+      <listitem>
+        <para>您可以创建从用户那儿获得信息的对话框。例如，您可以提示用户从日历对话框中选择日期，或者从文件选择框里选择一个文件。</para>
+      </listitem>
+      <listitem>
+        <para>您可以创建向用户提供信息的对话框。例如，您可以用进度条来显示一个操作的当前运行状态，或者用一个警告框提醒用户。</para>
+      </listitem>
+    </itemizedlist>
+    <para>当用户关闭了对话框，<application>Zenity</application> 将输出对话框操作的文本到显示器。</para>
+
+    <note>
+      <para>当您写了 <application>Zenity</application> 命令，确保每个参数用双引号括起来。</para>
+      <para>例如，使用 : <screen><userinput><command>zenity --calendar --title="假期安排"</command></userinput></screen> 不要用: <screen><userinput><command>zenity --calendar --title=假期安排</command></userinput></screen></para>
+      <para>如果您没有使用双引号，可能会产生不可预料的结果。</para>
+    </note>
+
+    <sect2 id="zenity-usage-mnemonics">
+      <title>访问键</title>
+	<para>访问键允许您用键盘来执行一个操作，而不是用鼠标点击菜单命令或对话框按钮。每个访问键有一个标识符，是一个在菜单或对话框选项上的带下划线的字母。</para>
+	<para>一些 <application>Zenity</application> 对话框支持使用访问键，要指定一个字符用于访问键，在对话框的文本字符前面加一个下划线，下面的例子是如何让字母“C”作为访问键：</para>
+	<screen><userinput>"选择(_C)".</userinput></screen>
+    </sect2>
+
+    <sect2 id="zenity-usage-exitcodes">
+      <title>退出代码</title>
+    <para><application>Zenity</application> 返回以下退出代码：</para>
+
+    <informaltable frame="all">
+      <tgroup cols="2" colsep="1" rowsep="1">
+        <colspec colname="COLSPEC0" colwidth="50*"/>
+        <colspec colname="COLSPEC1" colwidth="50*"/>
+        <thead>
+          <row valign="top">
+            <entry colname="COLSPEC0">
+              <para>退出代码</para></entry>
+            <entry colname="COLSPEC1">
+              <para>描述</para></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row valign="top">
+            <entry>
+              <para><varname>0</varname></para>
+            </entry>
+            <entry>
+              <para>用户按了 <guibutton>确定</guibutton> 或 <guibutton>关闭</guibutton>。</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>1</varname></para>
+            </entry>
+            <entry>
+              <para>用户按了 <guibutton>取消</guibutton>，或者点了窗口关闭按钮。</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>-1</varname></para>
+            </entry>
+            <entry>
+              <para>发生了一个有异常。</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>5</varname></para>
+            </entry>
+            <entry>
+              <para>对话框因超时而关闭。</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+
+    </sect2>
+
+
+  <!-- ==== General Options ====== -->
+
+  <sect2 id="zenity-usage-general-options">
+    <title>常规选项</title>
+
+    <para>所有 <application>Zenity</application> 对话框支持以下常规选项：</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--title</option>=<replaceable>标题</replaceable></term>
+	<listitem>
+	  <para>指定对话框的标题。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--window-icon</option>=<replaceable>图标路径</replaceable></term>
+	<listitem>
+	  <para>指定显示在窗口框架上的图标，有四个图标也可以用下列关键字 - 'info'， 'warning'， 'question' 和 'error'。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--width</option>=<replaceable>宽度</replaceable></term>
+	<listitem>
+	  <para>指定对话框的宽度。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--height</option>=<replaceable>高度</replaceable></term>
+	<listitem>
+	  <para>指定对话框的高度。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--timeout</option>=<replaceable>超时</replaceable></term>
+	<listitem>
+	  <para>指定超出时间(秒)后对话框自动关闭。</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-help-options">
+    <title>帮助选项</title>
+
+    <para><application>Zenity</application> 提供以下帮助选项：</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--help</option></term>
+	<listitem>
+	  <para>显示简短的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--help-all</option></term>
+	<listitem>
+	  <para>显示所有对话框的完整帮助。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-general</option></term>
+	<listitem>
+	  <para>显示常规对话框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-calendar</option></term>
+	<listitem>
+	  <para>显示日历对话框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-entry</option></term>
+	<listitem>
+	  <para>显示文本输入框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-error</option></term>
+	<listitem>
+	  <para>显示错误框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-info</option></term>
+	<listitem>
+	  <para>显示信息框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-file-selection</option></term>
+	<listitem>
+	  <para>显示文件打开框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-list</option></term>
+	<listitem>
+	  <para>显示列表框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-notification</option></term>
+	<listitem>
+	  <para>显示提示框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-progress</option></term>
+	<listitem>
+	  <para>显示进度框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-question</option></term>
+	<listitem>
+	  <para>显示询问框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-warning</option></term>
+	<listitem>
+	  <para>显示警告框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-text-info</option></term>
+	<listitem>
+	  <para>显示信息框选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-misc</option></term>
+	<listitem>
+	  <para>显示其他杂项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-gtk</option></term>
+	<listitem>
+	  <para>显示 GTK+ 选项的帮助文本。</para>
+	</listitem>
+      </varlistentry>
+ 
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-miscellaneous-options">
+    <title>杂项</title>
+
+    <para><application>Zenity</application> 也提供了其他的选项：</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--about</option></term>
+	<listitem>
+	  <para>显示 <guilabel>关于 Zenity</guilabel> 对话框，包含 <application>Zenity</application> 版本信息、版权入信息和开发信息。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--version</option></term>
+	<listitem>
+	  <para>显示 <application>Zenity</application> 的版本号。</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== GTK+ Options ====== -->
+
+  <sect2 id="zenity-gtk-options">
+    <title>GTK+ 选项</title>
+
+    <para><application>Zenity</application> 支持标准的 GTK+ 选项，更多 GTK+ 选项的相关信息，请输入 <command>zenity -?</command> 命令。</para>
+
+  </sect2>
+
+<!-- ==== Environment variables ==== -->
+
+  <sect2 id="zenity-environment-variables">
+    <title>环境变量</title>
+
+    <para>通常，<application>Zenity</application> 会检测启动它的终端窗口，并保持在它之上。这个行为也可以通过不设置 <envar>WINDOWID</envar> 环境变量来禁用。</para>
+
+  </sect2>
+
+  </sect1>
+<!-- ==== Calendar Options ====== -->
+
+  <sect1 id="zenity-calendar-options">
+    <title>日历对话框</title>
+
+    <para>使用 <option>--calendar</option> 选项来创建日历对话框。<application>Zenity</application> 返回选定的日期，并把它输出到显示器，如果没有在命令行指定日期，就使用当前系统日期。</para>
+    <para>日历对话框支持以下选项：</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>文本</replaceable></term>
+	<listitem>
+	  <para>指定日历对话框里显示的文本。</para>
+	</listitem>
+      </varlistentry>
+     	
+      <varlistentry>
+        <term><option>--day</option>=<replaceable>日</replaceable></term>
+	<listitem>
+	  <para>指定日历对话框中的天数，<replaceable>day</replaceable> 必须是介于 1~31 之间的数字。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--month</option>=<replaceable>月</replaceable></term>
+	<listitem>
+	  <para>指定日历对话框中的月份，<replaceable>month</replaceable> 必须是介于 1~12 之间的数字。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--year</option>=<replaceable>年</replaceable></term>
+	<listitem>
+	  <para>指定日历对话框中的年份。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--date-format</option>=<replaceable>日期格式</replaceable></term>
+	<listitem>
+	  <para>指定选定的日期返回时的样式，默认的格式取决于您的区域设置，<replaceable>日期格式</replaceable> 必须可以被 <command>strftime</command> 函数接受，例如 <literal>%A %d/%m/%y</literal>。</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>下面的脚本示范了如何创建一个日历对话框： <programlisting>
+        #!/bin/sh
+
+
+        if zenity --calendar \
+        --title="选择日期" \
+        --text="通过点击选择日期。" \
+        --day=10 --month=8 --year=2004
+          then echo $?
+          else echo "没有选择日期"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-calendar-screenshot">
+      <title>日历对话框范例</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-calendar-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase><application>Zenity</application> 日历对话框范例</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+
+<!-- ==== File Selection Options ====== -->
+
+  <sect1 id="zenity-file-selection-options">
+    <title>文件选择对话框</title>
+
+    <para>使用 <option>--file-selection</option> 选项创建一个文件选择对话框，<application>Zenity</application> 在标准输出返回选中的文件或目录。默认的文件选择对话框模式是打开对话框。</para>
+    <para>文件对话框支持以下选项：</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>文件名</replaceable></term>
+	<listitem>
+	  <para>指定文件选择对话框在第一次显示时，选定的文件或文件夹。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--multiple</option></term>
+	<listitem>
+	  <para>允许在文件选择对话框里选中多个文件。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--directory</option></term>
+	<listitem>
+	  <para>在文件选择对话框里只允许选中文件夹</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--save</option></term>
+	<listitem>
+	  <para>设置文件选择对话框模式为保存对话框。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--separator</option>=<replaceable>分隔符</replaceable></term>
+	<listitem>
+	  <para>指定用于分隔返回的文件名列表的字符。</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>下面的脚本示范了如何创建一个文件选择对话框：<programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection --title="选择文件"`
+
+        case $? in
+                 0)
+                        echo "\"$FILE\" 被选中。";;
+                 1)
+                        echo "没有选择文件。";;
+                -1)
+                        echo "没有选择文件。";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-fileselection-screenshot">
+      <title>文件选择对话框范例</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-fileselection-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> 文件选择对话框范例</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Notification Options ====== -->
+  <sect1 id="zenity-notification-options">
+    <title>通知区域图标</title>
+
+    <para>
+    </para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>文本</replaceable></term>
+	<listitem>
+	  <para>指定显示在通知区域的文本。</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>下面的脚本示范了如何创建一个通知区域图标：<programlisting>
+        #!/bin/sh
+
+        zenity --notification\
+          --window-icon="info" \
+          --text="有系统更新软件包！"
+      </programlisting></para>
+
+    <figure id="zenity-notification-screenshot">
+      <title>通知区域图标范例</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-notification-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase><application>Zenity</application> 通知图标范例</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+<!-- ==== List Options ====== -->
+
+  <sect1 id="zenity-list-options">
+    <title>列表框</title>
+
+    <para>使用 <option>--list</option> 选项创建一个列表框，<application>Zenity</application> 在标准输出返回选中行的第一列项目。</para>
+
+    <para>对话框里的数据必须指定行和列，可以由标准输入提供，每一项都必须由换行符分隔。</para>
+
+    <para>如果您使用 <option>--checklist</option> 或 <option>--radiolist</option> 选项，每一行必须由“TRUE”或“FALSE”开始。</para>
+
+    <para>列表框支持以下选项：</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--column</option>=<replaceable>列</replaceable></term>
+	<listitem>
+	  <para>指定列表框显示的列标题，您必须为每个要显示的列，用 <option>--column</option> 指定一个列标题。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--checklist</option></term>
+	<listitem>
+	  <para>指定列表框的第一列包含一个复选框。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--radiolist</option></term>
+	<listitem>
+	  <para>指定列表框的第一列包含单选按钮。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+	<listitem>
+	  <para>指定显示的项可以编辑。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--separator</option>=<replaceable>分隔符</replaceable></term>
+	<listitem>
+	  <para>指定当列表框返回选中项时，使用什么字符。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--print-column</option>=<replaceable>列</replaceable></term>
+	<listitem>
+	  <para>指定选择列上显示什么，默认是“1”，“ALL”用于在列表上显示所有列。</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>下面的例子示范了如何创建一个列表框： <programlisting>
+        #!/bin/sh
+
+        zenity --list \
+          --title="选择您想查看的 Bugs" \
+          --column="Bug 编号" --column="严重" --column="描述" \
+            992383 Normal "多选时 GtkTreeView 崩溃" \
+            293823 High "GNOME 字典不能使用代理" \
+            393823 Critical "菜单编辑器在 GNOME 2.0 中不能运行"
+      </programlisting></para>
+
+    <figure id="zenity-list-screenshot">
+      <title>列表框范例</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-list-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> 列表框范例</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Message Options ====== -->
+
+  <sect1 id="zenity-message-options">
+    <title>消息框</title>
+
+    <para><application>Zenity</application> 可以创建四种消息框：</para>
+    <itemizedlist>
+      <listitem>
+        <para>错误框</para>
+      </listitem>
+      <listitem>
+        <para>信息框</para>
+      </listitem>
+      <listitem>
+        <para>询问框</para>
+      </listitem>
+      <listitem>
+        <para>警告框</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>对于每一种类型，使用 <option>--text</option> 选项来指定显示在对话框里的文本。</para>
+
+    <sect2 id="zenity-error-dialog">
+      <title>错误框</title>
+
+      <para>使用 <option>--error</option> 选项创建一个错误框。</para>
+
+      <para>下面的脚本示范了如何创建一个错误框： <programlisting>
+          #!/bin/bash
+
+          zenity --error \
+          --text="找不到 /var/log/syslog."
+        </programlisting></para>
+
+      <figure id="zenity-error-screenshot">
+        <title>错误框范例</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-error-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> 错误框范例</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-info-dialog">
+      <title>信息框</title>
+
+      <para>使用 <option>--info</option> 选项创建一个信息框。</para>
+
+      <para>下面的脚本示范了如何创建一个信息框： <programlisting>
+          #!/bin/bash
+
+          zenity --info \
+          --text="全部合并。更新第 3 个文件，总共 10 个。"
+        </programlisting></para>
+
+      <figure id="zenity-information-screenshot">
+        <title>信息框范例</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-information-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> 信息框范例</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-question-dialog">
+      <title>询问框</title>
+
+      <para>使用 <option>--question</option> 选项创建一个询问框。</para>
+
+      <para>下面的脚本示范了如何创建一个询问框： <programlisting>
+          #!/bin/bash
+
+          zenity --question \
+          --text="您确定要执行吗？"
+        </programlisting></para>
+
+      <figure id="zenity-question-screenshot">
+        <title>询问框范例</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-question-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> 询问框范例</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-warning-dialog">
+      <title>警告框</title>
+
+      <para>使用 <option>--warning</option> 选项创建一个警告框。</para>
+
+      <para>下面的脚本示范了如何创建一个警告框： <programlisting>
+          #!/bin/bash
+        
+          zenity --warning \
+          --text="断开电源以防止冲击电流。"
+        </programlisting></para>
+
+      <figure id="zenity-warning-screenshot">
+        <title>警告框范例</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-warning-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> 警告框范例</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+  </sect1>
+
+<!-- ==== Progress Options ====== -->
+
+  <sect1 id="zenity-progress-options">
+    <title>进度框</title>
+
+    <para>使用 <option>--progress</option> 选项创建一个进度框。</para>
+
+    <para><application>Zenity</application> 从标准输入一行行读取数据。如果某一行以 # 开头，进度框里的文本会被那一行上的文本替换，如果某一行只是一个数字，数字会被换成进度条的百分比。</para>
+	
+    <para>进度框支持以下选项：</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>文本</replaceable></term>
+	<listitem>
+	  <para>指定显示在进度框里的文本。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--percentage</option>=<replaceable>百分比</replaceable></term>
+	<listitem>
+	  <para>指定进度框开始时的百分比设定。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--auto-close</option></term>
+	<listitem>
+	  <para>当达到 100% 时自动关闭对话框。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--pulsate</option></term>
+	<listitem>
+	  <para>指定进度条跳动，直到从标准输入读到一个 EOF 文件结束符。</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>下面的脚本示范了如何创建一个进度框： <programlisting>
+        #!/bin/sh
+        (
+        echo "10" ; sleep 1
+        echo "# 更新邮件日志" ; sleep 1
+        echo "20" ; sleep 1
+        echo "# 复位定时计划任务" ; sleep 1
+        echo "50" ; sleep 1
+        echo "这一行会被忽略" ; sleep 1
+        echo "75" ; sleep 1
+        echo "# 重启系统" ; sleep 1
+        echo "100" ; sleep 1
+        ) |
+        zenity --progress \
+          --title="更新系统日志" \
+          --text="扫描邮件日志..." \
+          --percentage=0
+
+        if [ "$?" = -1 ] ; then
+                zenity --error \
+                  --text="更新被取消。"
+        fi
+
+      </programlisting></para>
+
+    <figure id="zenity-progress-screenshot">
+      <title>进度框范例</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-progress-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> 进度框范例</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Text Entry Options ====== -->
+
+  <sect1 id="zenity-text-entry-options">
+    <title>文本框</title>
+
+    <para>使用 <option>--entry</option> 选项，创建一个文本框，<application>Zenity</application> 将文本框的内容返回到标准输出。</para>	
+    <para>文本框支持以下选项：</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>文本</replaceable></term>
+	<listitem>
+	  <para>指定在文本框中显示的文本。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--entry-text</option>=<replaceable>文本</replaceable></term>
+	<listitem>
+	  <para>指定显示在文本框的文本域里的文本。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--hide-text</option></term>
+	<listitem>
+	  <para>隐藏文本框中文本域中的内容。</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>下面的脚本示范了如何创建一个文本框： <programlisting>
+        #!/bin/sh
+
+        if zenity --entry \
+        --title="添加一项" \
+        --text="请输入您的密码：" \
+        --entry-text "密码" \
+        --hide-text
+          then echo $?
+          else echo "没有输入密码"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-entry-screenshot">
+      <title>文本框范例</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-entry-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> 文本框范例</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+
+<!-- ==== Text Information Options ====== -->
+
+  <sect1 id="zenity-text-options">
+    <title>文本信息框</title>
+
+    <para>使用 <option>--text-info</option> 选项来创建一个文本信息框。</para>
+	
+    <para>文本信息框支持以下选项：</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>文件名</replaceable></term>
+	<listitem>
+	  <para>指定一个加载到文本信息框里的文件。</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+        <listitem>
+          <para>显示的文本允许编辑，当对话框关闭后，编辑后的文本显示到显示器上。</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>下面的脚本示范了如何创建一个文本信息框： <programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection \
+          --title="选择一个文件"`
+
+        case $? in
+                 0)
+                        zenity --text-info \
+                          --title=$FILE \
+                          --filename=$FILE \
+                          --editable 2&gt;/tmp/tmp.txt;;
+                 1)
+                        echo "没有选择文件。";;
+                -1)
+                        echo "没有选择文件.";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-text-screenshot">
+      <title>文本信息框范例</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-text-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> 文本信息框范例</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+</article>

@@ -1,0 +1,56 @@
+= Ubuntu Single Sign-On Client =
+
+Ubuntu Single Sign-On Client has been ported to windows to allow Windows
+applications to take advantage of the service. This README contains instructions
+on how to build the project so that it can be distributed as a .exe file.
+
+In order to be able to build a .exe for the client py2exe is used. The
+following are a number of recommendations to follow to ensure that your
+environment is correctly setup in order to use py2exe successfully.
+
+== Egg support ==
+
+As version 0.6.5 py2exe does not have egg support out of the box an therefore
+when building the .exe file you have to work around this limitation. At the
+moment the recommended way to work around this issue is to tell easy_install
+to always unzip the eggs so that py2xe can work with them. In order to
+unzip an egg when installing it with easy_install you can use the
+--always-unzip option.
+
+Example:
+
+easy_install --always-unzip oauth
+
+== PyQt issues ==
+
+Do to the way that py2exe works, there are a number of issues that may happen
+depending on the setup of you system.
+
+=== PyQt and PySide ===
+
+If you have PyQt and PySide py2exe will try to include both of them. The reason
+for this to happen is due to the way in which py2exe looks for dependencies. The
+module_finder form py2exe does not distinguish between normal imports and those
+that are wrapped around a try/except block. This means that the following code
+from the qtreactor will make py2exe believe that both are needed:
+
+This is a dangerous situation because PyQt and PySide do have different release
+cycles and normally do not depend on the same version of Qt. If in you system
+you have the two libraries using different version of Qt the build package
+might import dlls from different version which results in a runtime error.
+
+There are two ways to solve this issue:
+
+* Uninstall PySide
+* Ensure that both libs do depend on the same version of Qt.
+
+== PyQt and PyInstaller ===
+
+PyInstaller has support for PyQt application out of the box. This means that
+PyInstaller has the Qt dlls in its installation. As with the issue with PySide
+it might happen that the dlls used by PyInstaller and the ones used by the PyQt
+version installed in you machine differ in their version. In cases where
+PyInstaller is present in you python path (for example in C:\Python27\Scripts)
+py2exe will copy the dlls found in the PyInstaller directory for an unknown
+reason. This will raise a runtime error complaining about the use of dlls from
+different versions.

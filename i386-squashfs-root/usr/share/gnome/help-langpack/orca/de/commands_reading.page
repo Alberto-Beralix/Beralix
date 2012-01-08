@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="commands_reading" xml:lang="de">
+  <info>
+    <link type="next" xref="commands_structural_navigation"/>
+    <link type="guide" xref="commands#reading_documents"/>
+    <link type="seealso" xref="howto_documents"/>
+    <link type="seealso" xref="howto_text_attributes"/>
+    <link type="seealso" xref="howto_whereami"/>
+    <title type="sort">1. Lesen</title>
+    <title type="link">Lesen</title>
+    <desc>Befehle zum Zugriff auf den Text von Dokumenten</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+  <title>Lesebefehle</title>
+  <p>
+    In addition to the caret navigation commands which are part of GNOME,
+    <app>Orca</app> provides a number of commands which you can use to read a
+    document.
+  </p>
+  <note style="tip">
+    <p>
+      In the lists that follow, you will see several references to "KP". All
+      "KP" keys are located on the numeric keypad. You will also notice that
+      there are different keystrokes depending upon whether you are using a
+      desktop or a laptop -- or more accurately, whether you are using
+      <app>Orca</app>'s Desktop keyboard layout or its Laptop keyboard layout.
+      For additional information, please see the
+      <link xref="howto_keyboard_layout">Keyboard Layout</link> topic.
+    </p>
+  </note>
+  <section id="flat_review">
+    <title>Reading Your Current Location</title>
+    <p>
+      The following <app>Orca</app> <link xref="commands_flat_review">Flat
+      Review Commands</link> can be used to read your current location:
+    </p>
+    <list>
+      <item>
+        <p>Die aktuelle Zeile lesen:</p>
+        <list>
+          <item>
+            <p>Desktop: <keyseq><key>8 (Nmblck)</key></keyseq></p>
+          </item>
+          <item>
+            <p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>I</key></keyseq></p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Das aktuelle Wort lesen:</p>
+        <list>
+          <item>
+            <p>Desktop: <keyseq><key>5 (Nmblck)</key></keyseq></p>
+          </item>
+          <item>
+            <p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>K</key></keyseq></p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Das aktuelle Wort buchstabieren:</p>
+        <list>
+          <item>
+            <p>Desktop: <keyseq><key>5 (Nmblck)</key></keyseq> (Doppelklick)</p>
+          </item>
+          <item>
+            <p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>K</key></keyseq> (Doppelklick)</p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Das aktuelle Wort phonetisch buchstabieren:</p>
+        <list>
+          <item>
+            <p>Desktop: <keyseq><key>5 (Nmblck)</key></keyseq> (Dreifach-Klick)</p>
+          </item>
+          <item>
+            <p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>K</key></keyseq> (Dreifach-Klick)</p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Das aktuelle Zeichen vorlesen:</p>
+        <list>
+          <item>
+            <p>Desktop: <keyseq><key>2 (Nmblck)</key></keyseq></p>
+          </item>
+          <item>
+            <p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>,</key></keyseq></p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Das aktuelle Zeichen phonetisch vorlesen:</p>
+        <list>
+          <item>
+            <p>Desktop: <keyseq><key>2 (Nmblck)</key></keyseq> (Doppelklick)</p>
+          </item>
+          <item>
+            <p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>,</key></keyseq> (Doppelklick)</p>
+          </item>
+        </list>
+      </item>
+      <item>
+        <p>Den Unicode-Wert des aktuellen Zeichens vorlesen:</p>
+        <list>
+          <item>
+            <p>Desktop: <keyseq><key>2 (Nmblck)</key></keyseq> (Dreifach-Klick)</p>
+          </item>
+          <item>
+            <p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>,</key></keyseq> (Dreifach-Klick)</p>
+          </item>
+        </list>
+      </item>
+    </list>
+  </section>
+  <section id="say_all">
+    <title>Alles vorlesen</title>
+    <p>
+      Orca's Say All command will cause <app>Orca</app> to speak the
+      entire document beginning from your current location.
+    </p>
+    <list>
+      <item>
+        <p>Desktop: <key>+ (Nmblck)</key></p>
+      </item>
+      <item>
+        <p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>;</key></keyseq></p>
+      </item>
+    </list>
+  </section>
+  <section id="attributes_and_selection">
+    <title>Textattribute und ausgewählter Text</title>
+    <p>
+      Orca has a dedicated command for obtaining the attributes of the
+      text at the caret location. In addition, if you use <app>Orca</app>'s
+      Where Am I commands from within a text object in which text has been
+      selected, <app>Orca</app> will announce the selected text.
+    </p>
+    <list>
+      <item>
+        <p>Die Textattribute ausgeben: <keyseq><key>Orca-Zusatztaste</key><key>F</key></keyseq></p>
+      </item>
+      <item>
+        <p>Die einfache »Wo bin ich«-Funktion ausführen:</p>
+        <list>
+          <item>
+            <p>Desktop: <key>Eingabetaste (Nmblck)</key></p>
+          </item>
+          <item>
+            <p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>Eingabetaste</key></keyseq></p>
+          </item>
+        </list>
+    </item>
+    <item>
+      <p>Die detaillierte »Wo bin ich«-Funktion ausführen:</p>
+      <list>
+        <item>
+          <p>Desktop: <key>Eingabetaste (Nmblck)</key> (Doppelklick)</p>
+        </item>
+        <item>
+          <p>Laptop: <keyseq><key>Orca-Zusatztaste</key><key>Eingabetaste</key></keyseq> (Doppelklick)</p>
+        </item>
+      </list>
+    </item>
+  </list>
+</section>
+</page>

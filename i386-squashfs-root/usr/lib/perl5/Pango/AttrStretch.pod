@@ -1,0 +1,88 @@
+=head1 NAME
+
+Pango::AttrStretch - Pango font stretch attribute
+
+=cut
+
+=for object Pango::AttrStretch - Pango font stretch attribute
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 attribute = Pango::AttrStretch-E<gt>B<new> ($stretch, ...)
+
+=over
+
+=item * $stretch (Pango::Stretch) 
+
+=item * ... (list) 
+
+=back
+
+=head2 stretch = $attr-E<gt>B<value> (...)
+
+=over
+
+=item * ... (list) 
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Pango::Stretch
+
+=over
+
+=item * 'ultra-condensed' / 'PANGO_STRETCH_ULTRA_CONDENSED'
+
+=item * 'extra-condensed' / 'PANGO_STRETCH_EXTRA_CONDENSED'
+
+=item * 'condensed' / 'PANGO_STRETCH_CONDENSED'
+
+=item * 'semi-condensed' / 'PANGO_STRETCH_SEMI_CONDENSED'
+
+=item * 'normal' / 'PANGO_STRETCH_NORMAL'
+
+=item * 'semi-expanded' / 'PANGO_STRETCH_SEMI_EXPANDED'
+
+=item * 'expanded' / 'PANGO_STRETCH_EXPANDED'
+
+=item * 'extra-expanded' / 'PANGO_STRETCH_EXTRA_EXPANDED'
+
+=item * 'ultra-expanded' / 'PANGO_STRETCH_ULTRA_EXPANDED'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="calendar-free-busy" xml:lang="es">
+
+  <info>
+    <desc>Usar la vista de disponibilidad para concertar reuniones.</desc>
+
+    <link type="guide" xref="calendar-sharing-information"/>
+
+    <revision pkgversion="3.1.5" version="0.4" date="2011-08-24" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-calendar-apts.html.en and http://library.gnome.org/users/evolution/2.32/usage-calendar-apts.html.en#usage-calendar-freebusy -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Información de disponibilidad</title>
+
+<p>Puede usar la búsqueda de Disponibilidad para reuniones y determinar la disponibilidad de los invitados.</p>
+
+<p>Además de las herramientas estándar de planificación de reuniones puede usar la vista de disponibilidad para comprobar de antemano si la gente estará ocupada o no. La característica de disponibilidad es una función dedicada a servidores GruopWare tales como Microsoft Exchange y Novell GroupWise. Sin embargo puede publicar la información de la disponibilidad en línea y acceder a la información publicada en cualquier sitio. Si no todas las personas con las que colabora publican su información de disponibilidad, todavía puede usar los acontecimientos iCal en forma de <link xref="calendar-meetings-sending-invitation">invitaciones</link> para coordinar las agendas con otras personas.</p>
+
+<p>Para acceder a la vista de disponibilidad:</p>
+<steps>
+<item><p>Pulse <guiseq><gui>Archivo</gui><gui>Nuevo</gui><gui>Reunión</gui></guiseq>.</p></item>
+<item><p>Pulse <gui style="button">Añadir</gui> para añadir las direcciones de correo-e de las personas a las que quiere invitar.</p></item>
+<item><p>Pulse el botón <gui>Disponibilidad</gui> en la barra de herramientas o pulse <guiseq><gui>Opciones</gui><gui>Disponibilidad</gui></guiseq>.</p></item>
+<item><p>Ajuste la hora de reunión, arrastrando los bordes de la reunión o pulsando en <gui>Autoseleccionar</gui> para hacer una elección automática, después pulse <gui style="button">Cerrar</gui>. Los asistentes en un servidor Exchange tendrán sus datos actualizados automáticamente, el resto recibirá una notificación por correo electrónico de cualquier cambio en los planes.</p></item>
+</steps>
+
+<list>
+<item><p>Lista de asistentes:</p><p>La Lista de asistentes muestra a las personas que han sido invitadas a la reunión.</p></item>
+<item><p>Cuadrícula de planificación:</p><p>La rejilla del horario muestra la información de Disponibilidad publicada para las personas que ha invitado. Aquí es donde puede comparar los horarios para encontrar una hora libre para planificar una cita. Los individuos tienen su información de planificación visible sólo si usan el mismo servidor Novell GruopWise o Microsoft Exchange que usted (esto es, si están en la misma compañía) o si han publicado su información de Disponibilidad en un URL y ha introducido ese URL en la tarjeta del contacto usando el editor de contactos.</p></item>
+</list>
+
+<p>Puede publicar la información de Disponibilidad y el Calendario a un WebDAV, servidor FTP o a una máquina remota a traes de SSH u otro servidor web con soporte HTTP PUT.</p>
+<p>El servidor predeterminado se puede definir en <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Calendario y tareas</gui><gui>Información de publicación</gui><gui>Servidor de disponibilidad predeterminado</gui></guiseq>.</p>
+<!-- This is the location since 3.1.5, see bug https://bugzilla.gnome.org/show_bug.cgi?id=655666 -->
+
+<section id="no-groupware">
+<title>Acceder a datos de Disponibilidad sin un servidor Groupware</title>
+
+<p>Si personas individuales de proporcionan sus datos de Disponibilidad en un URL o sus calendarios Web, puede añadir el URL bajo <guiseq><gui>Información personal</gui><gui>Dirección web</gui></guiseq> en el <link xref="contacts-usage-edit-contact">Editor de contactos</link>. Después, cuando planifique una reunión con ellos, Evolution comprueba los horarios y los muestra en los datos de Disponibilidad.</p>
+</section>
+
+</page>

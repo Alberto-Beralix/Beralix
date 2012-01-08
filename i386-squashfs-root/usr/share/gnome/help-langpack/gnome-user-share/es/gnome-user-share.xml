@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "2.26">
+<!ENTITY app "gnome-user-share">
+]>
+<article id="index" lang="es">
+  <articleinfo>
+	 <title>Manual de Compartición de archivos personales</title>
+	 <copyright>
+		<year>2009</year>
+		<holder>Red Hat, Inc.</holder>
+         </copyright><copyright><year>2009</year><holder>Jorge González (jorgegonz@svn.gnome.org)</holder></copyright>
+
+	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+	 <authorgroup>
+           <author role="maintainer">
+             <firstname>Matthias</firstname>
+             <surname>Clasen</surname>
+           </author>
+	 </authorgroup>
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+	 <revhistory>
+		<revision>
+		  <revnumber>1.0</revnumber>
+		  <date>2009</date>
+		  <revdescription>
+			 <para role="author">Matthias Clasen <email>mclasen@redhat.com</email></para>
+		  </revdescription>
+		</revision>
+	 </revhistory>
+	 <releaseinfo>Este manual describe la versión 2.26 de Compartición de archivos personales.</releaseinfo>
+	 <legalnotice>
+		<title>Comentarios</title>
+		<para>Para informar de un fallo, o hacer alguna sugerencia acerca de la aplicación Compartición de archivos personales o este manual, siga las indicaciones en la <ulink url="ghelp:user-guide?feedback-bugs" type="help">Página de comentarios de GNOME</ulink>.</para>
+	 </legalnotice>
+    <abstract role="description">
+      <para>Compartición de archivos personales es un servicio de sesión que activa la compartición sencilla de archivos entre varios equipos.</para>
+    </abstract>
+  </articleinfo>
+  <indexterm><primary>gnome-user-share</primary></indexterm>
+  <indexterm><primary>compartición de archivos</primary></indexterm>
+  <indexterm><primary>compartir</primary></indexterm>
+
+  <sect1 id="gnome-user-share-intro">
+	 <title>Introducción</title>
+	 <para>Compartición de archivos personales es un servicio de sesión que exporta el contenido de la carpeta <filename>Public</filename> en su directorio personal, de tal forma que pueden ser fácilmente accesibles desde otros equipos en la misma red local. En los otros equipos, la carpeta compartida aparecerá con un nombre como «Archivos compartidos de <replaceable>usuario</replaceable>» en la ventana de Red de <application>Nautilus</application>, donde <replaceable>usuario</replaceable> se reemplazará por su nombre de usuario.</para>
+	 <para>Compartición de archivos personales usa un servidor WebDAV para compartir la carpeta <filename>Public</filename> y publica la compartición en la red local usando mDNS.</para>
+         <para>Además, Compartición de archivos personales puede hacer que los archivos compartidos estén disponibles a través de ObexFTP sobre Bluetooth, y recibir archivos enviados a su equipo a través de ObexPush sobre Bluetooth.</para>
+  </sect1>
+
+  <sect1 id="gnome-user-share-getting-started">
+    <title>Para empezar</title>
+
+    <sect2 id="gnome-user-share-start">
+       <title>Iniciar Compartición de archivos personales</title>
+
+       <para>Generalmente el servicio Compartición de archivos personales lo inicia <application>gnome-session</application> al iniciar su sesión. Puede cambiar esto abriendo <menuchoice><guimenu>Preferencias</guimenu><guimenu>Aplicaciones al inicio</guimenu></menuchoice> en el menú <guimenu>Sistema</guimenu>, y modificar la entrada «Comparticiones de usuario» en la lista de programas de inicio.</para>
+
+       <para>Para configurar los diversos aspectos de la compartición de archivos use las Preferencias de compartición de archivos que se pueden encontrar en el menú <guimenu>Sistema</guimenu> bajo <menuchoice><guimenu>Preferencias</guimenu><guimenu>Compartición de archivos personales</guimenu></menuchoice>.</para>
+       <figure id="file-sharing-preferences">
+         <title>Preferencias de compartición de archivos</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/file-sharing-preferences.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+ 
+     </sect2>
+     <sect2 id="gnome-user-share-enabling-sharing">
+       <title>Activar la compartición de archivos en la red</title>
+       <para>Abra las Preferencias de compartición de archivos usando <menuchoice><guimenu>Preferencias</guimenu><guimenu>Compartición de archivos personales</guimenu></menuchoice> en el menú <guimenu>Sistema</guimenu>.</para>
+       <figure id="sharing-over-the-network">
+         <title>Compartir archivos en la red</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/sharing-over-the-network.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>Para activar la compartición a través de WebDAV, use la casilla de selección <guilabel>Compartir archivos públicos por red</guilabel>. Cuando la compartición de archivos está activada, los controles de contraseña permiten establecer una contraseña que se debe especificar antes de que se garantice el acceso a los archivos compartidos a otro equipo. <note><para>Algunas configuraciones de cortafuegos en el equipo local pueden causar problemas con el anunciamiento, así como con el acceso a los archivos compartidos. Consulte con el administrador de su sistema para obtener más detalles.</para></note><itemizedlist>
+           <listitem>
+              <para>Seleccione <guilabel>Nunca</guilabel> para permitir que todo el mundo pueda leer o escribir archivos en la carpetas compartidas.</para>
+           </listitem>
+           <listitem>
+              <para>Seleccione <guilabel>Siempre</guilabel> para requerir contraseña para leer o escribir archivos en la carpetas compartidas.</para>
+           </listitem>
+           <listitem>
+              <para>Seleccione <guilabel>Al escribir archivos</guilabel> para permitir que todo el mundo pueda leer libremente archivos en las carpetas compartidas, pero se requiera una contraseña al escribir archivos.</para>
+           </listitem>
+         </itemizedlist><note><para>Cuando establece una contraseña tiene que proporcionar la contraseña a todos los usuarios a los que quiera permitir el acceso a sus archivos compartidos. Por ello, debería usar una contraseña diferente de aquellas que use.</para></note></para>  
+     </sect2>
+
+     <sect2 id="gnome-user-share-enabling-bluetooth">
+       <title>Activar la compartición por Bluetooth</title>
+       <para>Abra las Preferencias de compartición de archivos usando <menuchoice><guimenu>Preferencias</guimenu><guimenu>Compartición de archivos personales</guimenu></menuchoice> en el menú <guimenu>Sistema</guimenu>.</para>
+       <figure id="sharing-over-bluetooth">
+         <title>Compartir archivos por Bluetooth</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/sharing-over-bluetooth.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>Para activar la compartición de archivos a través de Bluetooth use la casilla de selección <guilabel>Compartir archivos públicos por Bluetooth</guilabel>. Para permitir que dispositivos remotos Bluetooth borren sus archivos en su carpeta compartida, use la casilla de selección <guilabel>Permitir que los dispositivos remotos borren archivos</guilabel>. Para permitir que archivos remotos accedan a sus archivos compartidos incluso cuando no están vinculados con su equipo, use la casilla de selección <guilabel>Requerir que los dispositivos remotos se vinculen con este equipo</guilabel>.  <note><para>Cuando permite que dispositivos remotos no vinculados accedan a sus archivos compartidos, cualquiera con un teléfono Bluetooth cerca de su equipo puede acceder e incluso modificar sus archivos compartidos.</para></note></para>
+     </sect2>
+
+     <sect2 id="gnome-user-share-bluetooth-receiving">
+       <title>Recibir archivos por Bluetooth</title>
+       <para>Abra las Preferencias de compartición de archivos usando <menuchoice><guimenu>Preferencias</guimenu><guimenu>Compartición de archivos personales</guimenu></menuchoice> en el menú <guimenu>Sistema</guimenu>.</para>
+       <figure id="receiving-over-bluetooth">
+         <title>Recibir archivos por Bluetooth</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/receiving-over-bluetooth.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>Para permitir que dispositivos Bluetooth remotos envíen archivos a su equipo use la casilla de selección <guilabel>Recibir los archivos por Bluetooth en la carpeta Descargas</guilabel>. Los archivos recibidos se almacenarán en la carpeta <filename>Descargas</filename> de su carpeta personal. Cuando la recepción de archivos está activada, la selección <guilabel>Aceptar archivo</guilabel> le permitirá determinar qué dispositivos remotos pueden enviar archivos. <itemizedlist>
+            <listitem>
+              <para>Seleccione <guilabel>Siempre</guilabel> para permitir que cualquier dispositivo remoto envíe archivos.</para>
+            </listitem>
+            <listitem>
+              <para>Seleccione <guilabel>Sólo para dispositivos vinculados</guilabel> para aceptar archivos sólo de dispositivos vinculados. <note><para>Los dispositivos vinculados son aquellos que se conectaron con su equipo y hubo que introducir un código PIN para conectarse con ellos o a ellos.</para></note></para>
+            </listitem>
+            <listitem>
+              <para>Seleccione <guilabel>Sólo para dispositivos vinculados y de confianza</guilabel> para aceptar archivos sólo de dispositivos vinculados. <note><para>Los dispositivos se pueden marcar como confiados en la sección <guilabel>Dispositivos conocidos</guilabel> de <application>Preferencias de Bluetooth</application>.</para></note></para>
+            </listitem>
+          </itemizedlist></para>
+        <para>Use la casilla de selección <guilabel>Notificar acerca de los archivos recibidos</guilabel> para seleccionar si quiere ser notificado siempre que se reciba un archivo a través de Bluetooth.</para>
+     </sect2>
+  </sect1>
+
+</article>

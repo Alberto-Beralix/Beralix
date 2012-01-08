@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="printing-setup" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="printing#setup" group="#first"/>
+
+    <desc>Configurar uma impressora que está conectada ao seu computador.</desc>
+
+    <revision version="11.04" date="2011-05-05" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Paul W. Frields</name>
+      <email>stickster@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Steven Richards</name>
+      <email>steven.richardspc@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Configurar uma impressora local</title>
+  <p>O seu sistema pode reconhecer muitos tipos de impressoras automaticamente, uma vez que elas estejam conectadas. A maioria das impressoras são conectadas por um cabo usb que é anexado ao seu computador.</p>
+
+  <comment>
+    <cite date="2011-04-04">shaunm</cite>
+    <p>Do we have anything on what to do when your printer isn't found? 3.0.1?</p>
+  </comment>
+
+  <steps>
+    <item>
+      <p>Tenha certeza que a impressora esteja ligada.</p>
+    </item>
+    <item>
+      <p>Conecte a impressora ao seu sistema através do cabo apropriado. Você talvez veja uma atividade na tela assim enquanto o sistema procura por módulos, e você pode ser solicitado a se autenticar para instalar eles.</p>
+    </item>
+    <item>
+      <p>Uma mensagem irá aparecer quando o sistema terminar de instalar a impressora. Selecione <gui>imprimir página de teste</gui> para imprimir uma página de teste, ou configurar para fazer mudanças adicionais na configuração da impressora.</p>
+    </item>
+  </steps>
+
+  <p>Se sua impressora não foi configurada automaticamente, você pode adicioná-la nas configurações de impressora.</p>
+
+  <steps>
+    <item><p>Clique no <link xref="unity-appmenu-intro">menu do sistema</link> mais à direita no painel superior e selecione <gui>Impressoras</gui>.</p></item>
+
+    <item><p>Clique em <gui>Adicionar</gui> e selecione a impressora da janela de Dispositivos.</p></item>
+    <item><p>Clique em <gui>Avançar</gui> e espere enquanto ele procura pelos drivers.</p></item>
+    <item><p>Você pode personalizar o nome da impressora, descrição e localização se você quiser. Quando terminar, clique em <gui>Aplicar</gui>.</p></item>
+    <item><p>Você pode agora imprimir uma página de testes ou clicar em <gui>Cancelar</gui> para pular essa etapa.</p></item>
+  </steps>
+
+  <note>
+    <p>Se houver múltiplos drivers disponíveis para o seu computador, você pode ser solicitado a escolher um driver. Para usar o driver recomendado, clique em Avançar nas telas de marca e modelo.</p>
+  </note>
+
+  <p>Depois de instalar a impressora, você pode desejar <link xref="printing-setup-default-printer"> alterar sua impressora padrão</link>.</p>
+</page>

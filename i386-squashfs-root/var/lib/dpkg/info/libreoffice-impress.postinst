@@ -1,0 +1,22 @@
+#! /bin/sh -e
+
+case "$1" in
+    configure)
+	docdir=/usr/share/doc/libreoffice-impress
+	if [ -d $docdir ] && [ ! -h $docdir ]; then
+	    rm -rf $docdir
+	    ln -s uno-libs3 $docdir
+	fi
+esac
+
+# Automatically added by dh_installmime
+if [ "$1" = "configure" ] && [ -x "`which update-mime 2>/dev/null`" ]; then
+	update-mime
+fi
+# End automatically added section
+# Automatically added by dh_installmenu
+if [ "$1" = "configure" ] && [ -x "`which update-menus 2>/dev/null`" ]; then
+	update-menus
+fi
+# End automatically added section
+

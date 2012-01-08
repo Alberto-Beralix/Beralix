@@ -1,0 +1,9 @@
+* possibly use ntfs-3g group for trusted users, see
+  http://www.tuxera.com/community/ntfs-3g-faq/#useroption
+* currently, ntfsprogs are included within the ntfs-3g package;
+  they should be splittet into an own package for those people
+  that do not need/want the fuse dependent parts.
+  .
+  This should wait until upstream has decided upon merging the
+  two code bases together (then, we would do ntfs-3g and
+  ntfs-3g-fuse), or keeping them seperated (ntfs-3g and ntfsprogs).

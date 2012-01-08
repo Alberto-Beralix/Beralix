@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="unity-appmenu-intro" xml:lang="es">
+  <info>
+    <link type="guide" xref="index" group="unity-appmenu-intro"/>
+    <revision version="11.04" date="2011-04-20" status="final"/>
+
+    <credit type="author">
+      <name>Equipo de documentación de Ubuntu</name>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+  <title>Gestionar aplicaciones y configuraciones con los menús indicadores</title>
+
+  <comment>
+    <p><link href="http://askubuntu.com/questions/30334/list-of-application-indicators">additional indicators</link></p>
+  </comment>
+
+  <p>Ubuntu tiene muchos <em>menús indicadores</em> diferentes en la parte derecha del panel. Los menús indicadores son un lugar donde consultar y modificar el estado de su equipo de de sus aplicaciones. Algunos de los menús indicadores que podrá observar sirven para:</p>
+
+  <list>
+
+    <item>
+      <p><em>Menú de mensajería</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/24/indicator-messages.svg">Icono de mensaje</media></p>
+      <p>Enviar y recibir fácilmente notificaciones entrantes de aplicaciones de mensajería, incluyendo correo electrónico, redes sociales y charlas por Internet.</p>
+    </item>
+
+    <item>
+      <p><em>Menú de batería</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/24/battery-100.svg">Icono de batería</media></p>
+      <p>Comprueba el estado de carga de la batería del portátil. Este menú se oculta si no se detecta ninguna batería.</p>
+    </item>
+
+    <item>
+      <p><em>Menú de Bluetooth</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/24/bluetooth-active.svg">Icono de Bluetooth</media></p>
+      <p>Envía o recibe archivos por <link xref="bluetooth">Bluetooth</link>. Este menú no aparece si no se detecta ningún dispositivo Bluetooth compatible.</p>
+    </item>
+
+    <item>
+      <p><em>Menú de red</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/24/network-offline.svg">Icono de red desconectada</media></p>
+      <p>Conectar con redes <link xref="net-wired-connect">cableadas</link>, <link xref="net-wireless-connect">inalámbricas</link>, <link xref="net-mobile">móviles</link> y and <link xref="net-vpn-connect">VPN</link>.</p>
+    </item>
+
+    <item>
+      <p><em>Menú de sonido</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/24/audio-volume-high-panel.svg">Icono de volumen</media></p>
+      <p>Establecer el <link xref="sound-volume">volumen</link>, configurar las <link xref="media">opciones</link> de sonido y controlar reproductores multimedia como <app>Banshee</app>.</p>
+    </item>
+
+    <item>
+      <p><em>&gt;Reloj</em></p>
+      <p>Acceder a la fecha y hora actual.</p>
+    </item>
+      <comment>
+      Appointments from your <link href="ghelp:evolution?usage-calendar">Evolution calendar</link>  will also display here.
+      </comment>
+
+    <item>
+      <p><em>Menú de usuario</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/stock/22/stock_person-panel.svg">Icono de usuario desconectado</media></p>
+      <p>Cambia su contraseña, configuración de idioma o imagen de inicio de sesión. Cambiar rápidamente de una cuenta de usuario a otra sin tener que cerrar sesión.</p>
+    </item>
+
+    <item>
+      <p><em>Menú del sistema</em> <media type="image" mime="image/svg" src="/usr/share/icons/ubuntu-mono-light/status/22/system-devices-panel.svg">Icono de rueda dentada de potencia</media></p>
+      <p>Accede a la <link xref="prefs">configuración del sistema</link>. Bloquea la pantalla, cierra la sesión, entra en modo de suspensión, reinicia o apaga el equipo.</p>
+    </item>
+
+  </list>
+
+<note><p>Algunos de los iconos usados por los menús indicadores cambian en función del estado de la aplicación.</p></note>
+<p>Otros programas como <app>Tomboy</app> o <app>Transmission</app> también pueden añadir menús indicadores al panel.</p>
+
+  <comment>
+    <cite date="2011-02-22" href="https://ubuntuaccessibility.wordpress.com/2011/02/22/indicators-and-accessibility/">Penelope Stowe</cite>
+    <p>Indicators and Accessibility</p>
+  </comment>
+
+</page>

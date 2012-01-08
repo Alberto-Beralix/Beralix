@@ -1,0 +1,66 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+#
+# Author: Natalia B. Bidart <natalia.bidart@canonical.com>
+#
+# Copyright 2010 Canonical Ltd.
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License version 3, as published
+# by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranties of
+# MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+# PURPOSE.  See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+"""The script tu ron the Ubuntu One Login D-Bus service."""
+
+# Invalid name "ubuntuone-login"
+# pylint: disable=C0103
+
+import logging
+import os
+import sys
+
+import dbus.mainloop.glib
+import dbus.service
+import glib
+
+from ubuntuone.logger import basic_formatter
+from ubuntuone.platform.credentials import logger
+from ubuntuone.platform.credentials.linux import (
+    DBUS_BUS_NAME, DBUS_CREDENTIALS_PATH,
+    CredentialsManagement,
+)
+
+dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
+
+
+if __name__ == "__main__":
+    # Register DBus service for making sure we run only one instance
+    bus = dbus.SessionBus()
+    name = bus.request_name(DBUS_BUS_NAME,
+                            dbus.bus.NAME_FLAG_DO_NOT_QUEUE)
+    if name == dbus.bus.REQUEST_NAME_REPLY_EXISTS:
+        logger.error("Ubuntu One login manager already running, quitting.")
+        sys.exit(0)
+
+    if os.environ.get('U1_CREDENTIALS_DEBUG'):
+        debug_handler = logging.StreamHandler(sys.stderr)
+        debug_handler.setFormatter(basic_formatter)
+        debug_handler.setLevel(logging.DEBUG)
+        logger.setLevel(logging.DEBUG)
+        logger.addHandler(debug_handler)
+
+    logger.info("Starting Ubuntu One login manager for bus %r.", DBUS_BUS_NAME)
+    bus_name = dbus.service.BusName(DBUS_BUS_NAME, bus=dbus.SessionBus())
+    mainloop = glib.MainLoop()
+    CredentialsManagement(timeout_func=glib.timeout_add,
+                          shutdown_func=mainloop.quit,
+                          bus_name=bus_name, object_path=DBUS_CREDENTIALS_PATH)
+
+    mainloop.run()

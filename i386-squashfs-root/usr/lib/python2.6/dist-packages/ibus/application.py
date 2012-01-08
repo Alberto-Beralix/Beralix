@@ -1,0 +1,1 @@
+../../../../share/pyshared/ibus/application.py

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="commands_debugging" xml:lang="de">
+  <info>
+    <link type="guide" xref="commands#troubleshooting"/>
+    <title type="sort">1. Fehlerdiagnose</title>
+    <title type="link">Fehlerdiagnose</title>
+    <desc>Befehle zur Fehlerdiagnose</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+  <title>Befehle zur Fehlerdiagnose</title>
+    <list>
+      <item>
+        <p>
+          Report information on the currently active script:
+          <keyseq><key>Ctrl</key><key>Alt</key><key>Orca Modifier</key>
+          <key>Home</key></keyseq>
+        </p>
+      </item>
+    </list>
+    <note style="tip">
+    <p>Um die folgenden drei Befehle verwenden zu können, ist es erforderlich, dass <app>Orca</app> von einer virtuellen Konsole oder durch <app>gnome-terminal</app> gestartet wird. Die Ausgabe erfolgt ausschließlich auf der Konsole (das bedeutet, dass keine Ausgabe über die Sprachausgabe oder Braille-Zeile erfolgt).</p>
+  </note>
+  <list>
+    <item>
+      <p>
+        Print a debug listing of all known applications to the console where
+        <app>Orca</app> is running:
+        <keyseq>
+          <key>Ctrl</key><key>Alt</key><key>Orca Modifier</key><key>End</key>
+        </keyseq>
+      </p>
+    </item>
+    <item>
+      <p>
+        Print debug information about the ancestry of the object with focus:
+        <keyseq>
+          <key>Ctrl</key><key>Alt</key><key>Orca Modifier</key><key>Page Up</key>
+        </keyseq>
+      </p>
+    </item>
+    <item>
+      <p>
+        Print debug information about the hierarchy of the application with focus:
+        <keyseq>
+          <key>Ctrl</key><key>Alt</key><key>Orca Modifier</key><key>Page Down</key>
+        </keyseq>
+      </p>
+    </item>
+  </list>
+</page>

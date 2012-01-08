@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="contacts-using-contact-lists" xml:lang="es">
+
+  <info>
+    <desc>Usar listas de contactos para agrupar contactos.</desc>
+
+    <link type="guide" xref="contacts-organizing"/>
+
+    <revision pkgversion="2.32.1" version="0.2" date="2011-07-28" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-contact-organize.html.en#usage-contact-organize-group-list -->
+ </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Usar listas de contactos</title>
+
+<p>Una lista de contactos es un conjunto de contactos que crea con un solo apodo. Cuando envía correos electrónicos a este apodo, se envían a cada miembro de la lista. Esto es diferente a una lista de correo «real» que existe sólo en su equipo para su conveniencia, en lugar de ser una dirección de correo real gestionada por una aplicación para listas de correo en un servidor.</p>
+
+<p>Por ejemplo, puede crear una tarjeta para cada miembro de su familia, después añadir esas tarjetas a una lista de contactos llamada «Familia». Después, en lugar de introducir cada dirección de correo electrónico de cada persona individualmente, puede enviar un correo electrónico a «Familia» y el mensaje se enviará a todos ellos.</p>
+
+<section id="create-contact-list">
+<title>Crear una lista de contactos</title>
+<steps>
+<item><p>Pulse <guiseq><gui>Archivo</gui><gui>Nuevo</gui><gui>Lista de contactos</gui></guiseq>.</p></item>
+<item><p>Introduzca el nombre que quiera.</p></item>
+<item><p>Selecciones la libreta de direcciones bajo <gui>Dónde:</gui> en la que quiere añadirlo.</p></item>
+<item><p>Specify the list members by either entering the names or email addresses of contacts (the text field supports autocompletion), or by dragging contacts from the Contacts window into the list, or by using the <gui style="button">Select...</gui> button.</p></item>
+<item><p>Elija si quiere ocultar las direcciones de los correos-e cuando envíe un mensaje a la lista.</p><p>A no ser que sea una lista muy pequeña, es recomendable que oculte las direcciones. Este funcionamiento es similar al de la característica «Cco:», comentada en <link xref="mail-composer-several-recipients">Especificar destinatarios adicionales para correo electrónico</link>.</p></item>
+<item><p>Pulse <gui style="button">Aceptar</gui>.</p></item>
+</steps>
+
+<p>La libreta de direcciones se añadirá a la libreta de direcciones seleccionada en Evolution.</p>
+</section>
+
+<section id="send-to-contact-list">
+<title>Enviar mensajes a listas de contactos</title>
+<p>Para enviar un correo a la lista de contactos, introduzca el nombre que eligió para la lista de contactos como el destinatario del correo en el editor. También puede pulsar con el botón derecho en la lista de contactos en su libreta de direcciones y seleccionar <gui>Enviar un mensaje a la lista</gui>.</p>
+</section>
+ 
+</page>

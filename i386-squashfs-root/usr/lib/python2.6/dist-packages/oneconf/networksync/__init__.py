@@ -1,0 +1,1 @@
+../../../../../share/pyshared/oneconf/networksync/__init__.py

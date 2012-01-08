@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="user-admin-change" xml:lang="de">
+
+  <info>
+    
+    <link type="guide" xref="user-accounts#privileges"/>
+    <link type="seealso" xref="user-admin-explain"/>
+    
+    <desc>Sie können ändern, welche Benutzer Änderungen am System vornehmen dürfen, indem Sie Ihnen Systemverwalterrechte geben.</desc>
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Ändern der Inhaber von Systemverwalterrechten</title>
+
+<p>Mit Systemverwalterrechten können Sie entscheiden, welcher Benutzer wichtige Teile des Systems ändern darf und welcher nicht. Sie können jedem einzelnen Benutzer Systemverwalterrechte zuweisen oder nicht zuweisen. Dies ist eine gute Methode, um Ihr System abzusichern und unbeabsichtigte Schäden zu vermeiden.</p>
+
+<steps>
+ <item>
+  <p>Klicken Sie auf Ihren Namen in der <gui>Menüleiste</gui> und wählen Sie <gui>Benutzerkonten</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Klicken Sie auf <gui>Entsperren</gui> und geben Sie Ihr Passwort ein um die Kontoeinstellungen zu entsperren. (Um einem Benutzer Systemverwalterrechte zu geben, müssen Sie selbst Systemverwalterrechte besitzen).</p>
+ </item>
+
+ <item>
+  <p>Wählen Sie den Benutzer, dessen Rechte Sie ändern wollen und klicken Sie auf die Option neben <gui>Kontotyp</gui>.</p>
+ </item>
+ 
+ <!-- FIXME: Check that the definitions below are correct! -->
+ <item>
+  <list>
+   <item>
+    <p>Wählen Sie <gui>Systemverwalter</gui>, wenn Sie wollen, dass der Benutzer Systemverwalter-Aufgaben ausführen kann, zum Beispiel neue Anwendungen installieren.</p>
+   </item>
+   <item>
+    <p>Wählen Sie <gui>Standard</gui> wenn Sie nicht wollen, dass der Benutzer administrative Aufgaben durchführen kann.</p>
+   </item>
+  </list>
+ </item>
+ 
+ <item>
+  <p>Schließen Sie das Benutzerkonten-Fenster. Die Rechte der Benutzer werden geändert, wenn sie sich das nächste Mal anmelden.</p>
+  </item>
+</steps>
+
+<note>
+ <p>Das erste Benutzerkonto hat Systemverwalterrechte. Das ist dasjenige Benutzerkonto, welches bei der ersten Installation des Systems angelegt wurde.</p>
+<p>Es ist nicht ratenswert, dass zu viele Benutzer <gui>Systemverwalterrechte</gui> auf dem System besitzen.</p>
+</note>
+
+  <comment>
+   <cite date="2010-10-31" href="mailto:gnome-doc-list@gnome.org">GNOME Documentation Project</cite>
+   <p>Explain how admin privileges can be given to other people, or removed. Warn the reader about how it's unwise to have too many admins on a system.</p>
+  </comment>
+	
+</page>

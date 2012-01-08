@@ -1,0 +1,71 @@
+#!/bin/bash
+
+DESCRIPTION="Workload that exercises screensaver functionality"
+
+PREREQS=""
+DEPENDS="mesa-utils"
+
+CYCLE_DELAY=${CYCLE_DELAY:-1}
+
+check() {
+    glxinfo > /dev/null
+    if [ $? -ne 0 ]; then
+        echo "Error:  glx utilities missing"
+        return 1
+    fi
+
+    return 0
+}
+
+workload() {
+    pi=3.1415
+    origin_x=200
+    origin_y=200
+    r=100
+    n=60
+
+    glxgears -geometry 400x400+${origin_x}+$((${origin_y}+${r})) > /dev/null &
+
+    for i in $(seq 0 $n); do
+        x=$(echo "$origin_x + $r * s($i * 4 * $pi / $n)" | bc -l)
+        y=$(echo "$origin_y + $r * c($i * 4 * $pi / $n)" | bc -l)
+        coords="${x%\.*},${y%\.*}"
+        sleep 0.001
+        #echo $coords
+        wmctrl -r glxgears -e 0,$coords,-1,-1
+    done
+    sleep $CYCLE_DELAY
+    wmctrl -c glxgears
+    sleep $CYCLE_DELAY
+}
+
+restore() {
+    wmctrl -c glxgears
+}
+
+case $1 in
+    info)
+        echo $DESCRIPTION
+        echo $PREREQS
+        ;;
+    depends) echo $DEPENDS     ;;
+    check)   check             ;;
+    setup)                     ;;
+    once)    workload; restore ;;
+    restore) restore           ;;
+    run)
+        echo $$
+        while :
+        do
+            workload
+        done
+        restore
+        ;;
+    *)
+        echo $DESCRIPTION
+        echo
+        echo $PREREQS
+        echo
+        echo "Usage: $0 {info|depends|setup|check|once|run|restore}"
+        exit 1
+esac

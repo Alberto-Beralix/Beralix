@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="net-editcon" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-wireless"/>
+
+    <revision version="11.04" date="2011-04-10" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <desc>Saiba como alterar as opções de conexão sem fio.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Editar uma conexão sem fio</title>
+
+<comment>
+ <p>This topic needs significant revision to be comprehensive. A number of settings remain undocumented.</p>
+</comment>
+
+<p>Este tópico descreve todas as opções que estarão disponíveis quando você editar uma conexão de rede sem fio. Para editar uma conexão, clique no <gui>menu de rede</gui> no painel superior e selecione <gui>Editar conexões</gui>.</p>
+
+<note>
+ <p>A maioria das redes funcionará bem se você mantiver deixar as configurações padrão, então você provavelmente não precisará modificar nenhuma delas. Muitas das opções disponíveis são providas com o intuito de dar maior controle sobre redes mais complexas.</p>
+</note>
+
+<section id="available">
+ <title>Conectar-se automaticamente / Disponível para todos os usuários</title>
+ <terms>
+  <item>
+   <title><gui>Conectar automaticamente</gui></title>
+   <p>Marque esta opção caso você deseja que o computador tente se conectar a essa rede sem fio sempre que estiver dentro do alcance.</p>
+   <p>Se muitas redes que estiverem configuradas para conectar-se automaticamente estiverem ao alcance, o computador conectar-se-á à primeira que estiver listada na aba <gui>Sem-fio</gui> da janela <gui>Conexões de rede</gui>. Ele não desconectará de uma rede disponível para se conectar a outra que acabou de mostrar sinal.</p>
+  </item>
+  
+  <item>
+   <title><gui>Disponível para todos usuários</gui></title>
+   <p>Marque essa opção se você desejar que todos os usuários do computador tenham acesso a esta rede sem-fio. Se a rede tiver uma <link xref="net-wireless-wepwpa">senha WEP/WPA</link> e você tiver marcado essa opção, você só precisará digitar a senha uma vez. Todos os demais usuários de seu computador poderão acessar a rede sem ter de saber a senha.</p>
+   <p>Se estiver marcada, é necessário que você seja um <link xref="user-admin-explain">administrador</link> para modificar qualquer definição para esta rede. Poderá ser necessário digitar a sua senha de administrador.</p>
+  </item>
+ </terms>
+</section>
+
+<section id="wireless">
+ <title>Sem Fio</title>
+ <terms>
+  <item>
+   <title><gui>SSID</gui></title>
+   <p>Este é o nome da rede sem-fio a que você está se conectando, também conhecida como <em>Configurações do serviço</em>. Não mude isso a não ser que tenha mudado o nome da rede sem-fio (por exemplo, modificando as configurações de seu roteador ou estação-base).</p>
+  </item>
+  
+  <item>
+   <title><gui>Modo</gui></title>
+   <p>Use isso para especificar se você está conectando em uma rede de <gui>infraestrutura</gui> (uma aonde computadores se conectam, sem fio, a uma estação base central ou roteador) ou uma rede <gui>ad-hoc</gui>  (onde não existe uma estação base, e os computadores da rede se conectam um no outro. A maioria das rede são do tipo infraestrutura; embora você talvez queira <link xref="net-adhoc">configurar sua própria rede ad-hoc</link></p>
+   <p>Se você escolher <gui>ad-hoc</gui>, você verá duas outras opções, <gui>banda</gui> e <gui>Canal</gui>.  Elas determinam qual frequência de banda sem fio a rede ad-hoc sem fio irá operar. Alguns computadores s'são capazes de trabalhar em certas bandas (por exemplo, apenas <gui>a</gui> ou apenas <gui>b/g</gui>), então você talvez queira escolher uma banda que todos os computadores na rede ad-hoc possam usar. Em lugares cheios, deve existir várias redes sem fio compartilhando o mesmo canal, isso pode deixar sua conexão mais lenta, então você pode mudar  de canal que você está usando.</p>
+  </item>
+  
+  <item>
+   <title><gui>BSSID</gui></title>
+   <p>Este é o <em>Basic Service Set Identifier</em> (identificador do conjunto de serviços básicos). O SSID (veja acima) é o nome da rede que seres humanos podem ler, já o BSSID é um nome que o computador entende (é uma sequência de letras e números que deveria ser única para a rede sem-fio). Se uma <link xref="net-wireless-hidden">rede está oculta</link>, ela não terá um SSID mas terá um BSSID.</p>
+  </item>
+  
+  <item>
+   <title><gui>Endereço MAC do dispositivo</gui></title>
+   <p>Um <link xref="net-macaddress">endereço mac</link> é um código que identifica um pedaço de hardware de rede ( por exemplo, uma placa de rede sem fio, uma placa de rede ethernet ou um roteador). Todo dispositivo que  você usa para conectar em uma rede tem um endereço mac único que foi determinado de fábrica.</p>
+   <p>Esta opção pode ser usada para alterar o endereço MAC da placa de rede.</p>
+  </item>
+  
+  <item>
+   <title><gui>Endereço MAC clonado</gui></title>
+   <p>Seu hardware de rede (placa de rede sem fio) pode pretender ter um endereço mac diferente. Isso é útil se você tem um dispositivo ou serviço o qual irá apenas se comunicar com um determinado endereço mac (por exemplo,  um modem de cabo broadband). Se você colocar esse endereço mac em um computador(box) <gui>com um endereço mac clonado</gui>, o dispositivo/serviço irá pensar que seu computador tem o endereço mac clonado, ao invés de seu verdadeiro endereço mac.</p>
+  </item>
+  
+  <item>
+   <title><gui>MTU</gui></title>
+   <p>Essa configuração altera a <em>Unidade de Transmissão Máxima</em> (MTU), que é o tamanho máximo de um bloco de dados que pode ser enviado através da rede. Quando os arquivos são enviados por uma rede, os dados são quebrados em pequenos pedaços (ou pacotes). A MTU ideal para a sua rede vai depender de o quanto é provável que os pacotes sejam perdidos (devido a uma conexão ruidosa) e de quão rápida é a conexão. Em geral, você não deve precisar alterar essa configuração.</p>
+  </item>
+  
+ </terms>
+</section>
+
+<section id="security">
+ <title>Segurança da rede sem fio</title>
+ <terms>
+  <item>
+   <title><gui>Segurança</gui></title>
+   <p>Isso define que tipo de <em>criptografia</em> da rede sem fio usar. As conexões criptografadas ajudam proteger sua conexão sem fio de serem interceptadas, para que outras pessoas não poderem "ouvir" e ver os sites que você está visitando e assim por diante.</p>
+   <p>Alguns tipos de criptografia são mais fortes que outros, mas podem não ser suportados por equipamentos de rede sem fio antigos. Você normalmente irá precisar digitar uma senha para a conexão; tipos mais sofisticados de segurança também requerem um nome de usuário e um "certificado" digital. Veja <link xref="net-wireless-wepwpa"/> para mais informações sobre tipos populares de criptografia sem fio.</p>
+  </item>
+ </terms>
+</section>
+
+<section id="ipv4">
+ <title>Configurações IPv4</title>
+
+<comment>
+<cite>shaunm</cite>
+<p>There's also Shared to other computers</p>
+<p>Then there's addresses and dns servers and ipv4 addressing routes.</p>
+<p>All current info correct, but incomplete</p>
+</comment>
+ 
+ <p>Utilize esta aba para definir informações como o endereço IP de seu computador e qual servidores DNS ele deve usar. Troque o <gui>Método</gui> para ver diferentes maneiras de buscar e configurar essa informação.</p>
+ <p>Os seguintes métodos estão disponíveis:</p>
+ <terms>
+  <item>
+   <title><gui>Automático (DHCP)</gui></title>
+   <p>Obtenha informações como o endereço IP e o servidor DNS para usar a partir de um <em>servidor DHCP</em>. Um servidor DHCP é um computador (ou outro dispositivo, como um roteador) conectado à rede, que decide quais configurações de rede o computador deve ter - quando você se conectar à rede pela primeira vez, as configurações corretas lhe serão automaticamente atribuídas. A maioria das redes usa DHCP.</p>
+  </item>
+  
+  <item>
+   <title><gui>Somente endereços automáticos (DHCP)</gui></title>
+   <p>Se você optar por esta opção, seu computador irá adquirir o endereço IP do servidor DHCP, mas terá que definir manualmente outros detalhes (como qual servidor DNS utilizar).</p>
+  </item>
+  
+  <item>
+   <title><gui>Manual</gui></title>
+   <p>Escolha essa opção se você quiser definir todas as configurações de rede você mesmo, incluindo qual endereço IP o computador deve usar.</p>
+  </item>
+  
+  <item>
+   <title><gui>Apenas Link-Local</gui></title>
+   <p><em>Link-Local</em> é uma maneira de conectar computadores em uma rede sem a necessidade de um servidor DHCP ou da definição manual de endereços IP e outras informações. Se você conecta a uma rede Link-Local, os computadores na rede irão decidir entre eles mesmos quais endereço IP usar e assim por diante. Isto é útil se você quer conectar temporariamente alguns computadores para que eles se comuniquem entre si.</p>
+  </item>
+  
+  <item>
+   <title><gui>Desabilitado</gui></title>
+   <p>Essa opção irá desativar a conexão de rede e evitar que você se conecte a ela. Note que <gui>IPv4</gui> e <gui>IPv6</gui> são tratados como conexões separadas mesmo estando na mesma placa de rede. Se você tem um habilitado, você pode desejar definir a outra como desabilitada.</p>
+  </item>
+  
+ </terms>
+</section>
+
+<section id="ipv6">
+ <title>Configurações IPv6</title>
+<comment>
+<cite>shaunm</cite>
+<p>The list of methods is a bit different</p>
+</comment>
+ <p>Isso é similar à aba <gui>IPv4</gui> com a exceção de que essa trata do mais novo padrão IPv6. As redes mais modernas usam IPv6, mas o IPv4 ainda é o mais popular no momento.</p>
+</section>
+
+</page>

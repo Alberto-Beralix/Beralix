@@ -1,0 +1,22 @@
+[Desktop Entry]
+X-AppInstall-Package=amarok
+X-AppInstall-Popcon=7448
+X-AppInstall-Section=main
+
+Type=Application
+Version=1.0
+Name=Amarok
+GenericName=Audio Player
+Exec=amarok %U
+Comment=Amarok - Rediscover Your Music!
+Icon=amarok
+# Add pure audio formats here, for other formats see amarok_*.desktop files
+# See bug 242292
+MimeType=audio/aac;audio/mp4;audio/mpeg;audio/mpegurl;audio/vnd.rn-realaudio;audio/vorbis;audio/x-flac;audio/x-mp3;audio/x-mpegurl;audio/x-ms-wma;audio/x-musepack;audio/x-oggflac;audio/x-pn-realaudio;audio/x-scpls;audio/x-speex;audio/x-vorbis;audio/x-wav;application/x-ogm-audio;audio/x-vorbis+ogg;audio/ogg;
+X-DocPath=amarok/index.html
+X-KDE-Keywords=music,podcast
+X-KDE-Protocols=http
+Terminal=false
+Categories=Qt;KDE;AudioVideo;Audio;Player;
+
+X-Ubuntu-Gettext-Domain=app-install-data

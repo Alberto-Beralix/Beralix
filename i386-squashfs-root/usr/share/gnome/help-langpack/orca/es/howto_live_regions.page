@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_live_regions" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#reading"/>
+    <link type="next" xref="howto_whereami"/>
+    <title type="sort">6. Regiones activas</title>
+    <desc>Interactuar con contenido web dinámico</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Regiones activas</title>
+  <p>Una región activa es una sección de una página web que se actualiza dinámicamente, como una tabla de estadísticas de deportes, una lista de los precios actuales de las acciones, el registro de un chat, o un mensaje de alerta mostrado por la página que está leyendo. Mientras que las regiones activas aparecen con bastante frecuencia, las páginas web completamente accesibles con regiones activas se encuentran con menos frecuencia. Este problema lo están abordando activamente muchas organizaciones.</p>
+  <section>
+    <title>Niveles de comportamiento de las regiones activas</title>
+    <p>Las regiones activas tienen un nivel de «comportamiento» asociado establecido por el autor como un medio para transmitir la importancia de la información y para sugerir cuándo las tecnologías de asistencia deberían informar a los usuarios sobre las actualizaciones realizadas en esa región. Las regiones activas pueden ser «desactivada», «cortés» o «agresiva» hasta el punto de ser «grosera».</p>
+  </section>
+  <section>
+    <title>Soporte de <app>Orca</app> para regiones activas</title>
+    <p>Puesto que podría no estar de acuerdo con el nivel de comportamiento especificado por el autor cuya página usted está viendo, <app>Orca</app> proporciona varios <link xref="commands_live_regions">comandos de regiones dinámicas</link> que le permiten modificar el nivel de algunas o de todas las regiones de una página. Además, puede:</p>
+    <list>
+      <item>
+        <p>Activar o desactivar el soporte de regiones activas</p>
+      </item>
+      <item>
+        <p>Saltar espacialmente a las regiones activas siguiente y anterior</p>
+      </item>
+      <item>
+        <p>Saltar a la última región activa que mostró información</p>
+      </item>
+      <item>
+        <p>Revisar los nueve últimos mensajes de las regiones activas que se mostraron</p>
+    </item>
+    </list>
+  </section>
+</page>

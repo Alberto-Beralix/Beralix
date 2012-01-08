@@ -1,0 +1,18 @@
+
+SpliX for Ubuntu Linux
+----------------------
+
+This is the SpliX printer driver for Samsung's laser printers using the SPL2
+(monochrome) and SPLc (color) printing languages.
+
+The PPD files coming with this package (in ppd/) are generated with
+"ppdc" of the CUPS DDK from http://www.cups.org/ based on the
+instructions in the ppd/samsung.drv file. So ppd/samsung.drv is the
+source code of the PPDs. In addition, CUPS DDK is free software, so
+all requirements for the PPDs being in the main part of Ubuntu Linux
+are fulfilled.
+
+The ready-made PPD files are there for convenience, to not require
+from the user to have CUPS DDK installed.
+
+ -- Till Kamppeter <till.kamppeter@gmail.com>, Fri, 12 Jan 2007 20:47:46 +0000

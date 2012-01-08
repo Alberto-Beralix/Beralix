@@ -1,0 +1,2006 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="自訂字型">
+							<longdesc>為語言面板自訂字型</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="使用自訂字型">
+							<longdesc>語言面板是否使用自訂字型</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="顯示輸入法名稱">
+							<longdesc>在語言列上顯示輸入法名稱</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="在系統匣內顯示圖示">
+							<longdesc>在系統匣內顯示圖示</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="查選表單表排列方向">
+							<longdesc>查詢表單的排列方向。0 = 水平，1 = 垂直</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="語言面板位置">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="語言面板位置">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="自動隱藏">
+							<longdesc>語言面板行為。0 = 嵌入選單內，1 = 自動隱藏，2 = 永遠顯示</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="enable_by_default">
+						<local_schema short_desc="預設啟用輸入法">
+							<longdesc>當應用程式取得輸入焦點時，預設將輸入法啟用</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_global_engine">
+						<local_schema short_desc="使用全域輸入法">
+							<longdesc>在所有的應用程式中共享同一個輸入法</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="內嵌編輯模式">
+							<longdesc>在應用程式視窗中內嵌編輯模式</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="使用系統鍵盤配置">
+							<longdesc>使用系統鍵盤 (XKB) 配置</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="預先載入引擎">
+							<longdesc>當 ibus 啟動時預先載入引擎</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="「上一個引擎」快捷鍵">
+								<longdesc>用來切換到清單內上一個輸入法的快捷鍵</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="「上一個引擎」快捷鍵">
+								<longdesc>用來切換到清單內上一個輸入法的快捷鍵</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="「下一個引擎」快捷鍵">
+								<longdesc>用來切換到清單內下一個輸入法的快捷鍵</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="「下一個引擎」快捷鍵">
+								<longdesc>用來切換到清單內下一個輸入法的快捷鍵</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="disable_unconditional">
+							<local_schema short_desc="停用快捷鍵">
+								<longdesc>關閉輸入法的快捷鍵</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_unconditional">
+							<local_schema short_desc="啟用快捷鍵">
+								<longdesc>開啟輸入法的快捷鍵</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="觸發用快捷鍵">
+								<longdesc>用來開啟或關閉輸入法的快捷鍵</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="禁止建立 WiFi">
+						<longdesc>將這設為「TRUE」，以停用使用面板程式建立 adhoc 網路。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="戳記">
+						<longdesc>用來決定設定是不是要轉移到新版本上。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="停止可用網路的通知">
+						<longdesc>將這設為「TRUE」，以停用有無線網路可用時的通知。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="停止已離線的通知">
+						<longdesc>將這設為「TRUE」，以停用網路離線時的通知。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="停止已連線的通知">
+						<longdesc>將這設為「TRUE」，以停用網路連線時的通知。</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="fade">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="unresponsive_saturation">
+									<local_schema short_desc="無反應視窗的飽和度">
+										<longdesc>無反應視窗的飽和度(以%來設定) (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unresponsive_brightness">
+									<local_schema short_desc="無反應視窗的亮度">
+										<longdesc>未響應視窗亮度(%) (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="dim_unresponsive">
+									<local_schema short_desc="暗淡無響應視窗">
+										<longdesc>暗淡化對於視窗管理器沒有反應的視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fullscreen_visual_bell">
+									<local_schema short_desc="全螢幕警示鈴聲">
+										<longdesc>系統發出嗶聲時啟用全螢幕淡出/淡入特效</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="visual_bell">
+									<local_schema short_desc="視覺鈴聲">
+										<longdesc>系統發出嗶聲時啟用淡入/淡出特效</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="淡入/淡出視窗">
+										<longdesc>應該淡入/淡出的視窗類型 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_time">
+									<local_schema short_desc="淡入/淡出時間">
+										<longdesc>視窗淡入/淡出速度以「時間常數」模式進行(以ms毫秒為基數) (1 - 5000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_speed">
+									<local_schema short_desc="淡入/淡出速度">
+										<longdesc>Window fade speed (0.1 - 25.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_mode">
+									<local_schema short_desc="淡入/淡出模式">
+										<longdesc>視窗淡入/淡出模式 (0 = 速度常數, 1 = 時間常數)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="wobbly">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="maximize_effect">
+									<local_schema short_desc="最大化特效">
+										<longdesc>視窗最大化和解除最大化時啟用搖擺特效</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="move_window_match">
+									<local_schema short_desc="移動視窗">
+										<longdesc>移動視窗時搖擺視窗 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grab_window_match">
+									<local_schema short_desc="格線視窗">
+										<longdesc>抓取視窗時搖擺視窗 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_window_match">
+									<local_schema short_desc="視窗定焦">
+										<longdesc>視窗定焦時搖擺視窗 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_window_match">
+									<local_schema short_desc="映射視窗">
+										<longdesc>視窗映射時搖擺視窗 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_effect">
+									<local_schema short_desc="定焦特效">
+										<longdesc>定焦視窗特效 (0 = 無, 1 = 晃動)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_effect">
+									<local_schema short_desc="映射特效">
+										<longdesc>映射視窗特效 (0 = 無, 1 = 晃動)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="min_grid_size">
+									<local_schema short_desc="最小格線大小">
+										<longdesc>最小頂點格線大小 (4 - 128)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grid_resolution">
+									<local_schema short_desc="格線解析度">
+										<longdesc>頂點格線解析度 (1 - 64)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spring_k">
+									<local_schema short_desc="彈簧 K 值">
+										<longdesc>彈簧常數 (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="friction">
+									<local_schema short_desc="摩擦力">
+										<longdesc>彈簧摩擦力 (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shiver">
+									<local_schema short_desc="晃動">
+										<longdesc>讓視窗晃動</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_inverted">
+									<local_schema short_desc="反向吸附">
+										<longdesc>視窗反向吸附</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_key">
+									<local_schema short_desc="視窗吸附">
+										<longdesc>切換視窗吸附</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="scale">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="show_desktop">
+									<local_schema short_desc="按下桌面來顯示桌面">
+										<longdesc>在縮放時，點擊桌面將會進入桌面顯示模式</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_key">
+									<local_schema short_desc="在目前輸出中的視窗上啟始化視窗選擇器">
+										<longdesc>在目前輸出配置並開始轉換視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_button">
+									<local_schema short_desc="在目前輸出中的視窗上啟始化視窗選擇器">
+										<longdesc>在目前輸出配置並開始轉換視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_edge">
+									<local_schema short_desc="在目前輸出中的視窗上啟始化視窗選擇器">
+										<longdesc>在目前輸出配置並開始轉換視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_key">
+									<local_schema short_desc="啟始化視窗群組的視窗選擇器">
+										<longdesc>配置並開始轉換視窗群組</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_button">
+									<local_schema short_desc="啟始化視窗群組的視窗選擇器">
+										<longdesc>配置並開始轉換視窗群組</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_edge">
+									<local_schema short_desc="啟始化視窗群組的視窗選擇器">
+										<longdesc>配置並開始轉換視窗群組</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_key">
+									<local_schema short_desc="啟始化所有視窗的視窗選擇器">
+										<longdesc>配置並開始轉換所有視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_button">
+									<local_schema short_desc="啟始化所有視窗的視窗選擇器">
+										<longdesc>配置並開始轉換所有視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_edge">
+									<local_schema short_desc="啟始化所有視窗的視窗選擇器">
+										<longdesc>配置並開始轉換所有視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="起始化視窗選擇器">
+										<longdesc>配置和開始轉換視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="起始化視窗選擇器">
+										<longdesc>配置和開始轉換視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_edge">
+									<local_schema short_desc="起始化視窗選擇器">
+										<longdesc>配置和開始轉換視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="button_bindings_toggle">
+									<local_schema short_desc="視窗縮放切換的滑鼠鍵盤設定">
+										<longdesc>設定滑鼠與鍵盤的按鍵，當按下時進行視窗縮放，放開之後停止視窗縮放。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="key_bindings_toggle">
+									<local_schema short_desc="設定鍵盤聯結切換縮放模式">
+										<longdesc>鍵盤的縮放聯結按鍵代替滑鼠的縮放調整，當放開鍵盤聯結按鍵之後，會自動關閉縮放調整。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="多重輸出模式">
+										<longdesc>假如已使用多個輸出裝置時，則選擇在哪個視窗中縮放 (0 = 在目前輸出裝置上, 1 = 在所有的輸出裝置上)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="縮放視窗">
+										<longdesc>縮放模式下應該縮放的視窗類型 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlay_icon">
+									<local_schema short_desc="覆蓋圖示">
+										<longdesc>縮放視窗時覆蓋圖示 (0 = 無, 1 = 象徵, 2 = 大)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="不透明度">
+										<longdesc>不透明度比例 (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="darken_back">
+									<local_schema short_desc="暗化背景">
+										<longdesc>調整視窗比例時暗化背景</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="時間間隔">
+										<longdesc>縮放時間間隔 (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="速度">
+										<longdesc>縮放速度 (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spacing">
+									<local_schema short_desc="間距">
+										<longdesc>視窗間隔 (0 - 250)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="number_of_desktops">
+									<local_schema short_desc="桌面數">
+										<longdesc>虛擬桌面數 (1 - 36)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="vsize">
+									<local_schema short_desc="垂直虛擬桌面數量">
+										<longdesc>垂直方向虛擬桌面的數量設定 (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hsize">
+									<local_schema short_desc="水平虛擬桌面數量">
+										<longdesc>水平方向虛擬桌面的數量設定 (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_shaded_key">
+									<local_schema short_desc="將視窗切換到遮蔽">
+										<longdesc>將使用中視窗切換到遮蔽</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_vertically_key">
+									<local_schema short_desc="將視窗垂直切換到最大">
+										<longdesc>將使用中視窗垂直切換到最大</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_horizontally_key">
+									<local_schema short_desc="將視窗水平切換到最大">
+										<longdesc>將使用中視窗水平切換到最大</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_button">
+									<local_schema short_desc="將視窗切換到最大">
+										<longdesc>將使用中視窗切換到最大</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_key">
+									<local_schema short_desc="將視窗切換到最大">
+										<longdesc>將使用中視窗切換到最大</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_edge">
+									<local_schema short_desc="顯示桌面">
+										<longdesc>隱藏全部視窗並定焦桌面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_key">
+									<local_schema short_desc="顯示桌面">
+										<longdesc>隱藏全部視窗並定焦桌面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_button">
+									<local_schema short_desc="視窗選單">
+										<longdesc>視窗選單滑鼠按鍵設定</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_key">
+									<local_schema short_desc="視窗選單">
+										<longdesc>視窗選單鍵盤按鍵設定</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_vertically_key">
+									<local_schema short_desc="將視窗垂直最大化">
+										<longdesc>將作用中視窗垂直最大化</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_horizontally_key">
+									<local_schema short_desc="將視窗水平最大化">
+										<longdesc>將作用中視窗水平最大化</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unmaximize_window_key">
+									<local_schema short_desc="視窗解除最大化">
+										<longdesc>作用中視窗解除最大化</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="最大化視窗">
+										<longdesc>最大化作用中視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_button">
+									<local_schema short_desc="最小化視窗">
+										<longdesc>最小化作用中視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_key">
+									<local_schema short_desc="最小化視窗">
+										<longdesc>最小化作用中視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_button">
+									<local_schema short_desc="後景視窗">
+										<longdesc>將視窗降低到其他前景視窗之下</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_key">
+									<local_schema short_desc="後景視窗">
+										<longdesc>將視窗降低到其他前景視窗之下</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_button">
+									<local_schema short_desc="前景視窗">
+										<longdesc>將選定的視窗移到其他視窗最前面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_key">
+									<local_schema short_desc="前景視窗">
+										<longdesc>將選定的視窗移到其他視窗最前面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_button">
+									<local_schema short_desc="關閉視窗">
+										<longdesc>關閉作用中視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_key">
+									<local_schema short_desc="關閉視窗">
+										<longdesc>關閉作用中視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_match">
+									<local_schema short_desc="防止定焦視窗">
+										<longdesc>防止定焦視窗 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_level">
+									<local_schema short_desc="防止定焦程度">
+										<longdesc>預防定焦程度 (0 = 關, 1 = 低, 2 = 一般, 3 = 高, 4 = 非常高)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise_delay">
+									<local_schema short_desc="自動選定視窗移動到前景的延遲時間">
+										<longdesc>在將選定的視窗移到前景的緩衝時間 (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise">
+									<local_schema short_desc="自動選定視窗到前景">
+										<longdesc>在設定的時間間隔後，將選定的視窗移到前景</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_click">
+									<local_schema short_desc="按一下視窗時選定該視窗到前景">
+										<longdesc>在按一下時將選定的視窗排列到最前景</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="按一下視窗才選定該視窗">
+										<longdesc>在視窗上按一下便可將輸入焦點移動到該視窗(啟用此功能會導致下方「自動選定視窗到前景」功能失效)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outputs">
+									<local_schema short_desc="輸出">
+										<longdesc>描述輸出設備的字串清單</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_outputs">
+									<local_schema short_desc="偵測輸出">
+										<longdesc>自動偵測輸出設備</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlapping_outputs">
+									<local_schema short_desc="重疊輸出處理">
+										<longdesc>設定哪個重疊輸出裝置為首選 (0 = 聰明模式自動調整, 1 = 首選大的輸出, 2 = 首選小的輸出)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="default_icon">
+									<local_schema short_desc="預設圖示">
+										<longdesc>預設的視窗圖示影像</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ping_delay">
+									<local_schema short_desc="Ping延遲">
+										<longdesc>在ping訊息之間的緩衝時間 (1000 - 30000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_delay">
+									<local_schema short_desc="螢幕外緣啟動(Edge)延遲">
+										<longdesc>螢幕外緣啟動(Edge)的延遲啟動時間。 (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hide_skip_taskbar_windows">
+									<local_schema short_desc="隱藏跳過工作列視窗">
+										<longdesc>進入顯示桌面模式時隱藏未在工作列的視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ignore_hints_when_maximized">
+									<local_schema short_desc="最大化時忽略提示">
+										<longdesc>視窗最大化時忽略大小增量與畫面提示</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="audible_bell">
+									<local_schema short_desc="可以聽見鈴聲">
+										<longdesc>可以聽見系統鈴聲</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_plugins">
+									<local_schema short_desc="啟用外掛程式">
+										<longdesc>顯示目前啟用中的外掛程式清單</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="opengl">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="texture_compression">
+									<local_schema short_desc="材質壓縮">
+										<longdesc>如果可能，從圖片影像當中取得的紋理材質進行壓縮</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sync_to_vblank">
+									<local_schema short_desc="同步化到 VBlank">
+										<longdesc>只在垂直空白期間執行螢幕更新</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lighting">
+									<local_schema short_desc="光源">
+										<longdesc>在螢幕轉換時使用擴散光</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="texture_filter">
+									<local_schema short_desc="材質過濾器">
+										<longdesc>材質篩選 (0 = 快速, 1 = 好, 2 = 最佳)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="gnomecompat">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command_terminal_key">
+									<local_schema short_desc="開啟一個終端機執行">
+										<longdesc>開啟一個終端機執行</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_terminal">
+									<local_schema short_desc="終端機的指令">
+										<longdesc>終端機的指令</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_window_screenshot_key">
+									<local_schema short_desc="擷取視窗螢幕畫面">
+										<longdesc>擷取視窗螢幕畫面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_window_screenshot">
+									<local_schema short_desc="視窗螢幕擷取指令">
+										<longdesc>視窗螢幕擷取指令</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_screenshot_key">
+									<local_schema short_desc="擷取螢幕畫面">
+										<longdesc>擷取螢幕畫面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_screenshot">
+									<local_schema short_desc="螢幕擷取指令">
+										<longdesc>螢幕擷取指令</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_key">
+									<local_schema short_desc="執行對話方塊">
+										<longdesc>顯示執行應用程式對話方塊</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="main_menu_key">
+									<local_schema short_desc="顯示主功能表">
+										<longdesc>顯示主功能表</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="screenshot">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="launch_app">
+									<local_schema short_desc="啟動的應用程式">
+										<longdesc>在這個應用程式中自動開啟螢幕擷取</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="directory">
+									<local_schema short_desc="目錄">
+										<longdesc>Put screenshot images in this directory. If empty, the desktop directory will be used.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="開始畫按鍵">
+										<longdesc>啟用矩型選擇擷取螢幕</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="force_independent_output_painting">
+									<local_schema short_desc="強制單獨描繪輸出">
+										<longdesc>繪製每個獨立的輸出裝置，即使是輸出裝置有重複</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unredirect_fullscreen_windows">
+									<local_schema short_desc="全螢幕視窗解除重新導向">
+										<longdesc>使全螢幕的描繪動作不會重新導向到幕後像素映射</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="refresh_rate">
+									<local_schema short_desc="重新整理速率">
+										<longdesc>螢幕重新描繪的速率 (次數/秒) (1 - 200)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_refresh_rate">
+									<local_schema short_desc="偵測重新整理速率">
+										<longdesc>自動偵測重新整理速率</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="slow_animations_key">
+									<local_schema short_desc="減慢動畫速度">
+										<longdesc>切換使用減慢動畫速度</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="annotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stroke_width">
+									<local_schema short_desc="桌面畫筆描述寬度">
+										<longdesc>桌面畫筆的描述寬度 (1.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="stroke_color">
+									<local_schema short_desc="桌面畫筆描述色彩">
+										<longdesc>桌面畫筆描述顏色</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="桌面畫筆色彩">
+										<longdesc>畫筆要用的色彩</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_button">
+									<local_schema short_desc="清除桌面塗鴉">
+										<longdesc>清除桌面塗鴉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_key">
+									<local_schema short_desc="清除桌面塗鴉">
+										<longdesc>清除桌面塗鴉</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="decor">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="shadow_match">
+									<local_schema short_desc="陰影視窗">
+										<longdesc>設定哪些視窗結構應該擁有陰影 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="decoration_match">
+									<local_schema short_desc="裝飾視窗">
+										<longdesc>設定哪些視窗結構應該被裝飾 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>允許裝飾紋理材質產生mipmaps</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command">
+									<local_schema short_desc="指令">
+										<longdesc>如果沒有裝飾程式正在執行，則需指定要執行的視窗裝飾程式指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_y_offset">
+									<local_schema short_desc="陰影偏移 Y 軸">
+										<longdesc>陰影 Y 軸偏移 (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_x_offset">
+									<local_schema short_desc="陰影偏移 X 軸">
+										<longdesc>陰影 X 軸偏移 (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_color">
+									<local_schema short_desc="陰影顏色">
+										<longdesc>設定陰影顏色</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_opacity">
+									<local_schema short_desc="陰影不透明度">
+										<longdesc>陰影不透明度 (0.01 - 6.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_radius">
+									<local_schema short_desc="陰影半徑">
+										<longdesc>陰影半徑 (0.1 - 18.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="zoom">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="timestep">
+									<local_schema short_desc="時間間隔">
+										<longdesc>Zoom Timestep (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="速度">
+										<longdesc>Zoom Speed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="開始畫按鍵">
+										<longdesc>Zoom In</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="commands">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command12_edge">
+									<local_schema short_desc="執行指令 12">
+										<longdesc>A edge binding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_edge">
+									<local_schema short_desc="執行指令 11">
+										<longdesc>當螢幕外緣啟動(edge)有設定，將會執行第11個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_edge">
+									<local_schema short_desc="執行指令 10">
+										<longdesc>當螢幕外緣啟動(edge)有設定，將會執行第10個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_edge">
+									<local_schema short_desc="執行指令 9">
+										<longdesc>當螢幕外緣啟動(edge)有設定，將會執行第9個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_edge">
+									<local_schema short_desc="執行指令 8">
+										<longdesc>當螢幕外緣啟動(edge)有設定，將會執行第8個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_edge">
+									<local_schema short_desc="執行指令 7">
+										<longdesc>當螢幕外緣啟動(edge)有設定，將會執行第7個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_edge">
+									<local_schema short_desc="執行指令 6">
+										<longdesc>當螢幕外緣啟動(edge)有設定，將會執行第6個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_edge">
+									<local_schema short_desc="執行指令 5">
+										<longdesc>當螢幕外緣啟動(edge)有設定，將會執行第5個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_edge">
+									<local_schema short_desc="執行指令 4">
+										<longdesc>當螢幕外緣啟動(edge)有設定，將會執行第4個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_edge">
+									<local_schema short_desc="執行指令 3">
+										<longdesc>當螢幕外緣啟動(edge)有設定，將會執行第3個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_edge">
+									<local_schema short_desc="執行指令 2">
+										<longdesc>當螢幕外緣啟動(edge)有設定，將會執行第2個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_edge">
+									<local_schema short_desc="執行指令 1">
+										<longdesc>當螢幕外緣啟動(edge)有設定，將會執行第1個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command12_button">
+									<local_schema short_desc="執行指令 12">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_button">
+									<local_schema short_desc="執行指令 11">
+										<longdesc>當滑鼠按鍵設定啟用，將會執行第11個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_button">
+									<local_schema short_desc="執行指令 10">
+										<longdesc>當滑鼠按鍵設定啟用，將會執行第10個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_button">
+									<local_schema short_desc="執行指令 9">
+										<longdesc>當滑鼠按鍵設定啟用，將會執行第9個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_button">
+									<local_schema short_desc="執行指令 8">
+										<longdesc>當滑鼠按鍵設定啟用，將會執行第8個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_button">
+									<local_schema short_desc="執行指令 7">
+										<longdesc>當滑鼠按鍵設定啟用，將會執行第7個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_button">
+									<local_schema short_desc="執行指令 6">
+										<longdesc>當滑鼠按鍵設定啟用，將會執行第6個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_button">
+									<local_schema short_desc="執行指令 5">
+										<longdesc>當滑鼠按鍵設定啟用，將會執行第5個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_button">
+									<local_schema short_desc="執行指令 4">
+										<longdesc>當滑鼠按鍵設定啟用，將會執行第4個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_button">
+									<local_schema short_desc="執行指令 3">
+										<longdesc>當滑鼠按鍵設定啟用，將會執行第3個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_button">
+									<local_schema short_desc="執行指令 2">
+										<longdesc>當滑鼠按鍵設定啟用，將會執行第2個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_button">
+									<local_schema short_desc="執行指令 1">
+										<longdesc>當滑鼠按鍵設定啟用，將會執行第1個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command12_key">
+									<local_schema short_desc="執行指令 12">
+										<longdesc>A keybinding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_key">
+									<local_schema short_desc="執行指令 11">
+										<longdesc>當鍵盤按鍵設定啟用，將會執行第11個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_key">
+									<local_schema short_desc="執行指令 10">
+										<longdesc>當鍵盤按鍵設定啟用，將會執行第10個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_key">
+									<local_schema short_desc="執行指令 9">
+										<longdesc>當鍵盤按鍵設定啟用，將會執行第9個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_key">
+									<local_schema short_desc="執行指令 8">
+										<longdesc>當鍵盤按鍵設定啟用，將會執行第8個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_key">
+									<local_schema short_desc="執行指令 7">
+										<longdesc>當鍵盤按鍵設定啟用，將會執行第7個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_key">
+									<local_schema short_desc="執行指令 6">
+										<longdesc>當鍵盤按鍵設定啟用，將會執行第6個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_key">
+									<local_schema short_desc="執行指令 5">
+										<longdesc>當鍵盤按鍵設定啟用，將會執行第5個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_key">
+									<local_schema short_desc="執行指令 4">
+										<longdesc>當鍵盤按鍵設定啟用，將會執行第4個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_key">
+									<local_schema short_desc="執行指令 3">
+										<longdesc>當鍵盤按鍵設定啟用，將會執行第3個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_key">
+									<local_schema short_desc="執行指令 2">
+										<longdesc>當鍵盤按鍵設定啟用，將會執行第2個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_key">
+									<local_schema short_desc="執行指令 1">
+										<longdesc>當鍵盤按鍵設定啟用，將會執行第1個shell指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command12">
+									<local_schema short_desc="shell指令 12">
+										<longdesc>Command line to be executed in shell when run_command12 is invoked</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command11">
+									<local_schema short_desc="shell指令 11">
+										<longdesc>當shell指令11設定之後，將會在shell裏面執行這個指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command10">
+									<local_schema short_desc="shell指令 10">
+										<longdesc>當shell指令10設定之後，將會在shell裏面執行這個指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command9">
+									<local_schema short_desc="shell指令 9">
+										<longdesc>當shell指令9設定之後，將會在shell裏面執行這個指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command8">
+									<local_schema short_desc="shell指令 8">
+										<longdesc>當shell指令8設定之後，將會在shell裏面執行這個指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command7">
+									<local_schema short_desc="shell指令 7">
+										<longdesc>當shell指令7設定之後，將會在shell裏面執行這個指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command6">
+									<local_schema short_desc="shell指令 6">
+										<longdesc>當shell指令6設定之後，將會在shell裏面執行這個指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command5">
+									<local_schema short_desc="shell指令 5">
+										<longdesc>當shell指令5設定之後，將會在shell裏面執行這個指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command4">
+									<local_schema short_desc="shell指令 4">
+										<longdesc>當shell指令4設定之後，將會在shell裏面執行這個指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command3">
+									<local_schema short_desc="shell指令 3">
+										<longdesc>當shell指令3設定之後，將會在shell裏面執行這個指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command2">
+									<local_schema short_desc="shell指令 2">
+										<longdesc>當shell指令2設定之後，將會在shell裏面執行這個指令。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command1">
+									<local_schema short_desc="shell指令 1">
+										<longdesc>當shell指令1設定之後，將會在shell裏面執行這個指令。</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="resize">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stretch_match">
+									<local_schema short_desc="拉伸調整視窗">
+										<longdesc>拉伸視窗調整應該使用在 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rectangle_match">
+									<local_schema short_desc="矩型調整視窗">
+										<longdesc>矩形視窗調整應該使用在 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outline_match">
+									<local_schema short_desc="調整視窗外框">
+										<longdesc>外框視窗調整應該使用在 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="normal_match">
+									<local_schema short_desc="正常的視窗調整">
+										<longdesc>正常視窗調整應該使用在 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="填滿色彩">
+										<longdesc>在矩型調整模式下填滿色彩</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="border_color">
+									<local_schema short_desc="邊框顏色">
+										<longdesc>邊框顏色用於外框與矩形調整模式</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="預設調整大小方法">
+										<longdesc>調整視窗大小的預設方法 (0 = 一般, 1 = 外框, 2 = 矩形, 3 = 拉伸)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="開始調整視窗大小">
+										<longdesc>開始調整視窗大小</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="開始調整視窗大小">
+										<longdesc>開始調整視窗大小</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="obs">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="saturation_values">
+									<local_schema short_desc="幅度數值">
+										<longdesc>視窗的飽和度</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation_matches">
+									<local_schema short_desc="何種視窗">
+										<longdesc>預設視窗應該有一個不同的飽和度</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation_step">
+									<local_schema short_desc="幅度">
+										<longdesc>飽和度幅度 (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness_values">
+									<local_schema short_desc="幅度數值">
+										<longdesc>視窗的亮度值</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness_matches">
+									<local_schema short_desc="何種視窗">
+										<longdesc>預設視窗應該有一個不同的亮度</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness_step">
+									<local_schema short_desc="幅度">
+										<longdesc>亮度幅度 (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity_values">
+									<local_schema short_desc="幅度數值">
+										<longdesc>視窗的不透明度</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity_matches">
+									<local_schema short_desc="何種視窗">
+										<longdesc>預設視窗應該有一個不同的不透明度</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity_step">
+									<local_schema short_desc="幅度">
+										<longdesc>不透明度幅度 (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="cube">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="transparent_manual_only">
+									<local_schema short_desc="使用滑鼠旋轉時才透明化">
+										<longdesc>用滑鼠轉動立方體時展現立方體透明化效果</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="inactive_opacity">
+									<local_schema short_desc="非旋轉時的透明度">
+										<longdesc>桌面視窗在未旋轉時的透明度 (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_opacity">
+									<local_schema short_desc="旋轉時的透明度">
+										<longdesc>桌面視窗在旋轉時的透明度 (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_end_color">
+									<local_schema short_desc="天空頂漸層結束色彩">
+										<longdesc>使用顏色逐漸變化的方式，到底部結束顏色</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_start_color">
+									<local_schema short_desc="天空頂漸層開始色彩">
+										<longdesc>使用顏色逐漸變化的方式，到頂部結束顏色</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_animated">
+									<local_schema short_desc="天空頂動態展示">
+										<longdesc>旋轉立方體時天空頂以動態展現</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_image">
+									<local_schema short_desc="天空頂影像">
+										<longdesc>用來作為天空頂材質的影像</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome">
+									<local_schema short_desc="天空頂">
+										<longdesc>描繪天空頂</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="時間間隔">
+										<longdesc>摺疊時間間隔 (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="速度">
+										<longdesc>摺疊速度 (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="加速">
+										<longdesc>摺疊加速 (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="in">
+									<local_schema short_desc="立方體內部">
+										<longdesc>立方體內部</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="多重輸出模式">
+										<longdesc>選擇立方體要如何顯示，如果有多個輸出裝置可使用 (0 = 自動, 1 = 多重立方體, 2 = 一個大的單獨立方體)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>有可能產生mipmaps來產生更高品質的縮放</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unfold_key">
+									<local_schema short_desc="展開">
+										<longdesc>展開立方體</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="water">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="title_wave">
+									<local_schema short_desc="標題波紋">
+										<longdesc>視窗標題的波紋效果</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rain_delay">
+									<local_schema short_desc="下雨延遲">
+										<longdesc>每滴雨之間的延遲 (毫秒) (1 - 3600000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="offset_scale">
+									<local_schema short_desc="偏移比例">
+										<longdesc>水波偏移比例 (0 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_wiper_key">
+									<local_schema short_desc="切換雨刷">
+										<longdesc>切換雨刷效果</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_rain_key">
+									<local_schema short_desc="切換下雨">
+										<longdesc>切換下雨特效</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="開始畫按鍵">
+										<longdesc>啟用指標水波特效</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="rotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="rotate_to_12_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第12面">
+										<longdesc>連同現行的視窗旋轉到第12面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第11面">
+										<longdesc>連同現行的視窗旋轉到第11面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第10面">
+										<longdesc>連同現行的視窗旋轉到第10面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第9面">
+										<longdesc>連同現行的視窗旋轉到第9面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第8面">
+										<longdesc>連同現行的視窗旋轉到第8面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第7面">
+										<longdesc>連同現行的視窗旋轉到第7面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第6面">
+										<longdesc>連同現行的視窗旋轉到第6面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第5面">
+										<longdesc>連同現行的視窗旋轉到第5面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第4面">
+										<longdesc>連同現行的視窗旋轉到第4面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第3面">
+										<longdesc>連同現行的視窗旋轉到第3面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第2面">
+										<longdesc>連同現行的視窗旋轉到第2面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_window_key">
+									<local_schema short_desc="視窗跟隨旋轉到第1面">
+										<longdesc>連同現行的視窗旋轉到第1面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_12_key">
+									<local_schema short_desc="旋轉到第12面">
+										<longdesc>旋轉到第12面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_key">
+									<local_schema short_desc="旋轉到第11面">
+										<longdesc>旋轉到第11面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_key">
+									<local_schema short_desc="旋轉到第10面">
+										<longdesc>旋轉到第10面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_key">
+									<local_schema short_desc="旋轉到第9面">
+										<longdesc>旋轉到第9面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_key">
+									<local_schema short_desc="旋轉到第8面">
+										<longdesc>旋轉到第8面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_key">
+									<local_schema short_desc="旋轉到第7面">
+										<longdesc>旋轉到第7面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_key">
+									<local_schema short_desc="旋轉到第6面">
+										<longdesc>旋轉到第6面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_key">
+									<local_schema short_desc="旋轉到第5面">
+										<longdesc>旋轉到第5面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_key">
+									<local_schema short_desc="旋轉到第4面">
+										<longdesc>旋轉到第4面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_key">
+									<local_schema short_desc="旋轉到第3面">
+										<longdesc>旋轉到第3面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_key">
+									<local_schema short_desc="旋轉到第2面">
+										<longdesc>旋轉到第2面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_key">
+									<local_schema short_desc="旋轉到第1面">
+										<longdesc>旋轉到第1面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_right_edge">
+									<local_schema short_desc="往右旋轉翻轉">
+										<longdesc>往右檢視區翻轉並跳躍指標</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_left_edge">
+									<local_schema short_desc="往左旋轉翻轉">
+										<longdesc>往左檢視區翻轉並跳躍指標</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_window_key">
+									<local_schema short_desc="旋轉視窗">
+										<longdesc>隨視窗旋轉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_key">
+									<local_schema short_desc="旋轉至">
+										<longdesc>往檢視區旋轉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_button">
+									<local_schema short_desc="視窗跟隨往右旋轉">
+										<longdesc>連同現行的視窗往右旋轉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_key">
+									<local_schema short_desc="視窗跟隨往右旋轉">
+										<longdesc>連同現行的視窗往右旋轉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_button">
+									<local_schema short_desc="視窗跟隨往左旋轉">
+										<longdesc>連同現行的視窗往左旋轉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_key">
+									<local_schema short_desc="視窗跟隨往左旋轉">
+										<longdesc>連同現行的視窗往左旋轉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_button">
+									<local_schema short_desc="往右旋轉">
+										<longdesc>往右旋轉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_key">
+									<local_schema short_desc="往右旋轉">
+										<longdesc>往右旋轉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_button">
+									<local_schema short_desc="往左旋轉">
+										<longdesc>往左旋轉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_key">
+									<local_schema short_desc="往左旋轉">
+										<longdesc>往左旋轉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="開始畫按鍵">
+										<longdesc>開始旋轉</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="時間間隔">
+										<longdesc>旋轉時間間隔 (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="速度">
+										<longdesc>旋轉速度 (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="加速">
+										<longdesc>旋轉加速 (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sensitivity">
+									<local_schema short_desc="指標靈敏度">
+										<longdesc>指標移動靈敏度 (0.01 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="flip_time">
+									<local_schema short_desc="翻轉時間">
+										<longdesc>翻轉視點前的逾時時間 (0 - 1000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="縮放">
+										<longdesc>旋轉縮放 (0.0 - 2.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_bottom">
+									<local_schema short_desc="吸附到下面">
+										<longdesc>吸附立方體旋轉至下面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_top">
+									<local_schema short_desc="吸附到上面">
+										<longdesc>吸附立方體旋轉至頂面</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="invert_y">
+									<local_schema short_desc="指標 Y 軸相反">
+										<longdesc>指標移動時的 Y 軸相反</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_rotate">
+									<local_schema short_desc="在旋轉時提高">
+										<longdesc>在旋轉時提高視窗高度</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_dnd">
+									<local_schema short_desc="邊緣翻轉拖放">
+										<longdesc>將物件拖曳到螢幕邊緣時翻轉到下一個檢視區</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_window">
+									<local_schema short_desc="邊緣翻轉移動">
+										<longdesc>將視窗移動到螢幕邊緣時翻轉到下一個檢視區</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_pointer">
+									<local_schema short_desc="邊緣翻轉點">
+										<longdesc>將指標移動到螢幕邊緣時翻轉到下一個檢視區</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="blur">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="independent_tex">
+									<local_schema short_desc="擷取獨立紋理">
+										<longdesc>使用現有的材質單元，做盡可能多的獨立紋理擷取</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="occlusion">
+									<local_schema short_desc="柔化咬合">
+										<longdesc>關閉其他視窗遮蔽螢幕區域的柔化功能</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="柔化飽和度">
+										<longdesc>柔化飽和度 (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap_lod">
+									<local_schema short_desc="Mipmap LOD">
+										<longdesc>Mipmap 細節層次 (0.1 - 5.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_strength">
+									<local_schema short_desc="高斯柔化強度">
+										<longdesc>高斯柔化強度 (0.0 - 1.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_radius">
+									<local_schema short_desc="高斯柔化半徑">
+										<longdesc>高斯柔化半徑 (1 - 15)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="filter">
+									<local_schema short_desc="柔化濾鏡">
+										<longdesc>模糊過濾器的使用方式 (0 = 4x雙線性過濾器, 1 = 高斯柔化, 2 = Mipmap)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur">
+									<local_schema short_desc="Alpha柔化效果">
+										<longdesc>柔化在視窗後面半透明的部份</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur_match">
+									<local_schema short_desc="Alpha柔化視窗">
+										<longdesc>視窗應以alpha柔化為預設值 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur">
+									<local_schema short_desc="焦點柔化">
+										<longdesc>對非前景的視窗採取柔化處理</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur_match">
+									<local_schema short_desc="焦點柔化視窗">
+										<longdesc>應該被聚焦柔化的視窗 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="blur_speed">
+									<local_schema short_desc="柔化速度">
+										<longdesc>視窗柔化速度 (0.1 - 10.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="pulse">
+									<local_schema short_desc="Pulse">
+										<longdesc>Pulse效果</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="switcher">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="auto_rotate">
+									<local_schema short_desc="自動輪流轉換">
+										<longdesc>當切換時交換所選擇的視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimized">
+									<local_schema short_desc="最小化">
+										<longdesc>顯示最小化的視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="icon">
+									<local_schema short_desc="圖示">
+										<longdesc>顯示圖示於縮圖旁</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="縮放">
+										<longdesc>切換視窗時桌面應縮小的距離 (0 - 5)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="bring_to_front">
+									<local_schema short_desc="提到最上層">
+										<longdesc>將選取視窗提到最上層</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="不透明度">
+										<longdesc>不透明度比例 (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness">
+									<local_schema short_desc="亮度">
+										<longdesc>亮度比例 (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="飽和度">
+										<longdesc>飽和度比例 (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="Mipmap">
+										<longdesc>有可能產生mipmaps來產生更高品質的縮放</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="切換視窗">
+										<longdesc>在切換當中要顯示視窗 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="時間間隔">
+										<longdesc>切換時間間隔 (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="速度">
+										<longdesc>切換速度 (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_panel_key">
+									<local_schema short_desc="上一個面板">
+										<longdesc>選取上一個視窗面板樣式</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_panel_button">
+									<local_schema short_desc="上一個面板">
+										<longdesc>選取上一個視窗面板樣式</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_panel_key">
+									<local_schema short_desc="下一個面板">
+										<longdesc>選取下一個視窗面板樣式</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_panel_button">
+									<local_schema short_desc="下一個面板">
+										<longdesc>選取下一個視窗面板樣式</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_key">
+									<local_schema short_desc="上一個視窗(沒有彈出)">
+										<longdesc>選取上一個視窗時不要顯示出提示視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_button">
+									<local_schema short_desc="上一個視窗(沒有彈出)">
+										<longdesc>選取上一個視窗時不要顯示出提示視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_key">
+									<local_schema short_desc="下一個視窗(沒有彈出)">
+										<longdesc>選取下一個視窗不要顯示提示視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_button">
+									<local_schema short_desc="下一個視窗(沒有彈出)">
+										<longdesc>選取下一個視窗不要顯示提示視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_key">
+									<local_schema short_desc="上一個視窗(全部視窗)">
+										<longdesc>看不到切換器時快顯切換器，並從所有視窗選取上一個視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_button">
+									<local_schema short_desc="上一個視窗(全部視窗)">
+										<longdesc>看不到切換器時快顯切換器，並從所有視窗選取上一個視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_key">
+									<local_schema short_desc="下一個視窗(全部視窗)">
+										<longdesc>看不到切換器時快顯切換器，並從所有視窗選取下一個視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_button">
+									<local_schema short_desc="下一個視窗(全部視窗)">
+										<longdesc>看不到切換器時快顯切換器，並從所有視窗選取下一個視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_key">
+									<local_schema short_desc="上一個視窗">
+										<longdesc>看不到切換器時快顯切換器，並選取上一個視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_button">
+									<local_schema short_desc="上一個視窗">
+										<longdesc>看不到切換器時快顯切換器，並選取上一個視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_key">
+									<local_schema short_desc="下一個視窗">
+										<longdesc>看不到切換器時快顯切換器，並選取下一個視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_button">
+									<local_schema short_desc="下一個視窗">
+										<longdesc>看不到切換器時快顯切換器，並選取下一個視窗</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="move">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="lazy_positioning">
+									<local_schema short_desc="懶惰定位">
+										<longdesc>視窗移動結束之前不更新server端視窗的位置</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snapoff_maximized">
+									<local_schema short_desc="解除嵌入最大化視窗">
+										<longdesc>在拖曳已最大化視窗時為其解除嵌入和自動解除最大化</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="constrain_y">
+									<local_schema short_desc="等比縮放 Y 軸">
+										<longdesc>等比縮放 Y 軸對應到工作環境區域</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="不透明度">
+										<longdesc>移動視窗的不透明度 (1 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="開始視窗移動">
+										<longdesc>開始移動視窗</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="開始視窗移動">
+										<longdesc>開始移動視窗</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="place">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="viewport_y_values">
+									<local_schema short_desc="Y座標視點的位置">
+										<longdesc>垂直視點位置</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_x_values">
+									<local_schema short_desc="X座標視點的位置">
+										<longdesc>水平視點位置</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_matches">
+									<local_schema short_desc="視窗的視點位置">
+										<longdesc>預設的自定義視窗視點位置</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode_matches">
+									<local_schema short_desc="何種視窗">
+										<longdesc>Windows that should have a certain positioning mo+de</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_constrain_workarea">
+									<local_schema short_desc="保持在工作區域">
+										<longdesc>保持在視窗工作區域，即使與指定位置不同</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_y_values">
+									<local_schema short_desc="Y座標的位置">
+										<longdesc>Y座標位置的數值</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_x_values">
+									<local_schema short_desc="X座標的位置">
+										<longdesc>X座標位置的數值</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_matches">
+									<local_schema short_desc="視窗的部位">
+										<longdesc>預設的視窗位置</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="force_placement_match">
+									<local_schema short_desc="強制視窗位置">
+										<longdesc>即使視窗管理員禁止放置的區域，仍然強制放置視窗 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="多重輸出模式">
+										<longdesc>如果有多個輸出裝置可使用時，視窗要如何定位。 (0 = 使用已使用中的輸出裝置, 1 = 使用已選點選那個輸出裝置, 2 = 使用已選視窗的那個輸出裝置, 3 = 放置在所有的輸出裝置)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="放置方法">
+										<longdesc>視窗放置的使用方式 (0 = 層疊, 1 = 居中, 2 = 聰明模式, 3 = 最大化, 4 = 隨機亂數, 5 = Pointer)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="workarounds">
+									<local_schema short_desc="視窗位置解決方式">
+										<longdesc>視窗位置的解決方式</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="clone">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_button">
+									<local_schema short_desc="開始畫按鍵">
+										<longdesc>啟動複製畫面選擇</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

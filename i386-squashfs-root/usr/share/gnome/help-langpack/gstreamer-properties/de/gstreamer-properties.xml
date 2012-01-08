@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.2.2">
+<!ENTITY manrevision "2.5">
+<!ENTITY date "June 2010">
+<!ENTITY app "GStreamer Properties">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="de">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Multimedia-System-Handbuch V2.5</title>       
+
+    <copyright>
+      <year>2003</year> 
+      <holder>Christian Fredrik Kalager Schaller</holder> 
+    </copyright><copyright><year>2008, 2009, 2010</year><holder>Mario Blättermann (mariobl@gnome.org)</holder></copyright> 
+
+    <abstract role="description">
+      <para>GStreamer-Eigenschaften erlaubt Ihnen die Konfiguration der auf Hardware und Multimedia bezogenen Parameter</para>
+    </abstract>
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2003</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <publisher> 
+      <publishername>GNOME-Dokumentationsprojekt</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Das vorliegende Dokument kann gemäß den Bedingungen der GNU Free Documentation License (GFDL), Version 1.1 oder jeder späteren, von der Free Software Foundation veröffentlichten Version ohne unveränderbare Abschnitte sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem <ulink type="help" url="ghelp:fdl">Link</ulink> oder in der mit diesem Handbuch gelieferten Datei COPYING-DOCs.</para>
+         <para>Dieses Handbuch ist Teil einer Sammlung von GNOME-Handbüchern, die unter der GFDL veröffentlicht werden. Wenn Sie dieses Handbuch getrennt von der Sammlung weiterverbreiten möchten, können Sie das tun, indem Sie eine Kopie der Lizenz zum Handbuch hinzufügen, wie es in Abschnitt 6 der Lizenz beschrieben ist.</para>
+
+	<para>Viele der Namen, die von Unternehmen verwendet werden, um ihre Produkte und Dienstleistungen von anderen zu unterscheiden, sind eingetragene Warenzeichen. An den Stellen, an denen diese Namen in einer GNOME-Dokumentation erscheinen, werden die Namen in Großbuchstaben oder mit einem großen Anfangsbuchstaben geschrieben, wenn das GNOME-Dokumentationsprojekt auf diese Warenzeichen hingewiesen wird.</para>
+
+	<para>DAS DOKUMENT UND VERÄNDERTE FASSUNGEN DES DOKUMENTS WERDEN UNTER DEN BEDINGUNGEN DER GNU FREE DOCUMENTATION LICENSE ZUR VERFÜGUNG GESTELLT MIT DEM WEITERGEHENDEN VERSTÄNDNIS, DASS: <orderedlist>
+		<listitem>
+		  <para>DIESES DOKUMENT WIRD »WIE VORLIEGEND« GELIEFERT, OHNE GARANTIEN IRGENDEINER ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES BEZIEHT SICH AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT ODER VERÄNDERTE FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR EINEN BESTIMMTEN ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER VERLETZT. DAS VOLLE RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER VERÄNDERTE FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE EIN DOKUMENT ODER EINE VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART BEINHALTEN, TRAGEN SIE (NICHT DER URSPRUNGSAUTOR, DER AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR NOTWENDIGE DIENSTLEISTUNGEN, REPARATUREN ODER FEHLERKORREKTUREN. DIESER HAFTUNGSAUSSCHLUSS IST EIN ESSENZIELLER TEIL DIESER LIZENZ. DIE VERWENDUNG EINES DOKUMENTS ODER EINER VERÄNDERTEN VERSION DES DOKUMENTS IST NICHT GESTATTET AUßER UNTER BEACHTUNG DIESES HAFTUNGSAUSSCHLUSSES UND</para>
+		</listitem>
+		<listitem>
+		  <para>UNTER KEINEN UMSTÄNDEN UND AUF BASIS KEINER RECHTSGRUNDLAGE, EGAL OB DURCH UNERLAUBTEN HANDLUNGEN (EINSCHLIEßLICH FAHRLÄSSIGKEIT), VERTRAG ODER ANDERWEITIG KANN DER AUTOR, URSPRUNGSAUTOR, EIN MITWIRKENDER ODER EIN VERTRIEBSPARTNER DIESES DOKUMENTS ODER EINER VERÄNDERTEN FASSUNG DES DOKUMENTS ODER EIN ZULIEFERER EINER DIESER PARTEIEN, HAFTBAR GEMACHT WERDEN FÜR DIREKTE, INDIREKTE, SPEZIELLE, VERSEHENTLICHE ODER FOLGESCHÄDEN JEGLICHER ART, EINSCHLIEßLICH UND OHNE EINSCHRÄNKUNGEN SCHÄDEN DURCH VERLUST VON KULANZ, ARBEITSAUSFALL, COMPUTERVERSAGEN ODER COMPUTERFEHLFUNKTIONEN ODER ALLE ANDEREN SCHÄDEN ODER VERLUSTE, DIE SICH AUS ODER IN VERBINDUNG MIT DER VERWENDUNG DES DOKUMENTS UND VERÄNDERTER FASSUNGEN DES DOKUMENTS ERGEBEN, AUCH WENN DIE OBEN GENANNTEN PARTEIEN ÜBER DIE MÖGLICHKEIT SOLCHER SCHÄDEN INFORMIERT WAREN.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Christian Fredrik</firstname> 
+	<surname>Kalager Schaller</surname> 
+	<affiliation> 
+	  <orgname>gnome.org</orgname> 
+	  <address/> 
+	</affiliation> 
+      </author> 
+
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>translator@gnome.org</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+
+    <revhistory>
+      <revision> 
+			<revnumber>Multimedia-System-Handbuch V2.5</revnumber> 
+			<date>Juni 2010</date> 
+			<revdescription> 
+	  			<para role="author">Marc-Andre Lureau</para>
+	  			<para role="publisher">GNOME-Dokumentationsprojekt</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Multimedia-System-Handbuch V2.4</revnumber> 
+			<date>Dezember 2003</date> 
+			<revdescription> 
+	  			<para role="author">Christian Fredrik Kalager Schaller</para>
+	  			<para role="publisher">GNOME-Dokumentationsprojekt</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Multimedia-System-Handbuch V1.0</revnumber> 
+			<date>September 2003</date> 
+			<revdescription> 
+	  			<para role="author">Christian Fredrik Kalager Schaller</para>
+	  			<para role="publisher">GNOME-Dokumentationsprojekt</para>
+			</revdescription> 
+      </revision>
+         </revhistory> 
+
+    <releaseinfo>Dieses Handbuch beschreibt Version 2.2.2 des Multimedia-Systems</releaseinfo> 
+    <legalnotice> 
+      <title>Rückmeldungen</title> 
+      <para>Um Fehler zu melden oder einen Vorschlag zum Multimedia-System oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen auf der <ulink url="ghelp:gnome-feedback" type="help">GNOME-Seite für Rückmeldungen</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>Multimedia-System</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="gstreamer-properties-introduction"> 
+    <title>Einführung</title> 
+    <para>Die Anwendung <application>Multimedia-System</application> erlaubt Ihnen die Anpassung der auf die Hardware und die Multimedia-Systeme bezogenen Parameter Ihres Systems.</para>
+    <note><para>Norwalerweise werden dies nur Benutzer mit tiefer gehenden Kenntnissen benötigen, da der Anbieter Ihres Betriebssystems bereits die korrekten Vorgabewerte eingestellt haben dürfte.</para></note>
+  </sect1>
+
+  <sect1 id="gstreamer-properties-getting-started">
+    <title>Erste Schritte</title> 
+
+    <para>Sie können <application>Multimedia-System</application> auf eine der folgenden Arten starten:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Menü <guimenu>Anwendungen</guimenu></term>
+    		<listitem>
+    		<para>Wählen Sie <menuchoice><guisubmenu>Einstellungen</guisubmenu><guimenuitem>Multimedia-System</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Befehlszeile</term>
+    		<listitem>
+    		<para>Geben Sie <command>gstreamer-properties</command>ein, und drücken Sie dann die <keycap>Eingabetaste</keycap>.</para>
+    		<para> 		 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+
+    <para>Wenn Sie <application>Multimedia-System</application> starten, wird folgendes Fenster angezeigt.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="gstreamer-properties-fig"> 
+	<title>Multimedia-System-Fenster</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/gstreamer_properties_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Zeigt das Hauptfenster von Multimedia-System. Enthält Menüleiste, Werkzeugleiste und Aufklappmenüs für die Optionen der Audioeingabe und -ausgabe.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="gstreamer-properties-usage"> 
+    <title>Benutzung</title>
+	<para>Das Multimedia-System-Applet bietet vier Auswahlmenüs innerhalb von zwei Reitern. Es gibt zwei Auswahlmenüs für Audio und zwei für Video. Diese Einstellungen legen die Vorgaben für die meisten GNOME-Anwendungen zur Ein- und Ausgabe von Klängen und Video fest.</para>
+
+    <sect2 id="gstreamer-properties-concepts">
+    	<title>Erläuterung der Menüoptionen</title>
+
+    	<para>Beim Blick auf den Bildschirm werden Sie feststellen, dass zwei Abschnitte mit »Vorgegebene Quelle« und »Vorgegebenes Ziel« benannt sind. Diese Begriffe werden in GStreamer verwendet, das GNOME zur Angabe verwendet, welche Daten gesendet werden bzw. wo diese herkommen. Das vorgegebene Ziel ist, anders ausgedrückt, die Stelle wo GNOME-Anwendungen Klänge ausgeben, während die vorgegebene Quelle die Quelle dieser Klänge ist.</para>
+
+	<para>Das Vorhandensein vieler verschiedener zur Ausgabe geeigneter Audio-Systeme und Soundserver auf UNIX-Systemen könnte der Grund dafür sein, dass Sie diese Einstellungen vielleicht ändern wollen. Populäre Alternativen auf Linux-Systemen sind der PulseAudio-Soundserver oder ALSA.</para>
+
+	<para>Wenn Sie beispielsweise wünschen, dass Ihre GNOME-Anwendungen ihre Klänge über den PulseAudio-Soundserver ausgeben sollen, setzen Sie als Standard-Ausgabegerät PulseAudio. Und wenn Sie wünschen, dass die GNOME-Anwendungen, die über Fähigkeiten zur Tonaufnahme verfügen, das ALSA-Soundsystem benutzen sollen, dann setzen Sie ALSA als Standardquelle.</para>
+
+	<note><para>Wie bereits in dieser Dokumentation erwähnt. Diese Einstellungen sind als Werkzeug für fortgeschrittene Benutzer gedacht, die spezielle Einstellungen benötigen. Als gewöhnlicher Benutzer werden Sie dies nicht ändern müssen, da der Anbieter Ihrer Linux- oder Unix-Distribution bereits sinnvolle Werte voreingestellt haben dürfte.</para></note>
+    	
+    </sect2>
+  </sect1>  
+
+
+</article>

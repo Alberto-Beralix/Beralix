@@ -1,0 +1,80 @@
+=head1 NAME
+
+Pango::AttrUnderline - Pango underline style attribute
+
+=cut
+
+=for object Pango::AttrUnderline - Pango underline style attribute
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 attribute = Pango::AttrUnderline-E<gt>B<new> ($underline, ...)
+
+=over
+
+=item * $underline (Pango::Underline) 
+
+=item * ... (list) 
+
+=back
+
+=head2 underline = $attr-E<gt>B<value> (...)
+
+=over
+
+=item * ... (list) 
+
+=back
+
+
+
+=cut
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Pango::Underline
+
+=over
+
+=item * 'none' / 'PANGO_UNDERLINE_NONE'
+
+=item * 'single' / 'PANGO_UNDERLINE_SINGLE'
+
+=item * 'double' / 'PANGO_UNDERLINE_DOUBLE'
+
+=item * 'low' / 'PANGO_UNDERLINE_LOW'
+
+=item * 'error' / 'PANGO_UNDERLINE_ERROR'
+
+=back
+
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

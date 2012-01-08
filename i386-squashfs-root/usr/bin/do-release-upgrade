@@ -1,0 +1,121 @@
+#!/usr/bin/python
+
+import warnings
+warnings.filterwarnings("ignore", "apt API not stable yet", FutureWarning)
+import apt
+
+from DistUpgrade.DistUpgradeVersion import VERSION
+
+from UpdateManager.Core.MetaRelease import MetaReleaseCore
+from UpdateManager.Core.DistUpgradeFetcherCore import DistUpgradeFetcherCore
+from optparse import OptionParser
+import gettext
+
+import os
+import sys
+import time
+import urllib2
+from DistUpgrade.utils import init_proxy
+
+RELEASE_AVAILABLE=0
+NO_RELEASE_AVAILABLE=1
+
+if __name__ == "__main__":
+  APP="update-manager"
+  DIR="/usr/share/locale"
+
+  gettext.install(APP, DIR, unicode=True)
+  try:
+    locale.setlocale(locale.LC_ALL, "")
+  except:
+    pass
+
+  init_proxy()
+
+  # when run as "check-new-release" we go into "check only" mode
+  check_only = sys.argv[0].endswith("check-new-release")
+
+  parser = OptionParser()
+  parser.add_option ("-V", "--version", action="store_true",
+                     dest="show_version", default=False,
+                     help=_("Show version and exit"))
+  parser.add_option ("-d", "--devel-release", action="store_true",
+                     dest="devel_release", default=False,
+                     help=_("Check if upgrading to the latest devel release "
+                          "is possible"))
+  parser.add_option ("-p", "--proposed", action="store_true",
+                     dest="proposed_release", default=False,
+                     help=_("Try upgrading to the latest release using "
+                            "the upgrader from $distro-proposed"))
+  parser.add_option ("-m", "--mode", default="server",
+                     dest="mode", 
+                     help=_("Run in a special upgrade mode.\n"
+                            "Currently 'desktop' for regular upgrades of "
+                            "a desktop system and 'server' for server "
+                            "systems are supported."))
+  parser.add_option ("-f", "--frontend", default="DistUpgradeViewText",
+                     dest="frontend", 
+                     help=_("Run the specified frontend"))
+  parser.add_option ("-s","--sandbox", action="store_true", default=False,
+                     help=_("Test upgrade with a sandbox aufs overlay"))
+  parser.add_option ("-c", "--check-dist-upgrade-only", action="store_true",
+                     default=check_only,
+                     help=_("Check only if a new distribution release is "
+                            "available and report the result via the "
+                            "exit code"))
+  parser.add_option ("-q", "--quiet", default=False, action="store_true",
+                     dest="quiet")
+
+  (options, args) = parser.parse_args()
+
+
+  if options.show_version:
+    print "%s: version %s" % (os.path.basename(sys.argv[0]), VERSION)
+    sys.exit(0)
+
+  if not options.quiet:
+    print _("Checking for a new ubuntu release")
+
+  m = MetaReleaseCore(useDevelopmentRelease=options.devel_release,
+                      useProposed=options.proposed_release)
+  # this will timeout eventually
+  while m.downloading:
+    time.sleep(0.5)
+
+  # make sure to inform the user if his distro is no longer supported
+  # this will make it appear in motd (that calls do-release-upgrade in
+  #  chech-new-release mode)
+  if m.no_longer_supported is not None:
+    url = "http://www.ubuntu.com/releaseendoflife"
+    print _("Your Ubuntu release is not supported anymore.")
+    print _("For upgrade information, please visit:\n"
+            "%(url)s\n") % { 'url' : url }
+
+  # now inform about a new release
+  if m.new_dist is None:
+    if not options.quiet:
+      print _("No new release found")
+    sys.exit(NO_RELEASE_AVAILABLE)
+
+  if m.new_dist.upgrade_broken:
+    if not options.quiet:
+      print _("Release upgrade not possible right now") 
+      print _("The release upgrade can not be performed currently, "
+              "please try again later. The server reported: '%s'") % m.new_dist.upgrade_broken
+    sys.exit(NO_RELEASE_AVAILABLE)
+
+  # we have a new dist
+  if options.check_dist_upgrade_only:
+    print _("New release '%s' available.") % m.new_dist.version
+    print _("Run 'do-release-upgrade' to upgrade to it.")
+    sys.exit(RELEASE_AVAILABLE)
+
+  progress = apt.progress.text.AcquireProgress()
+  fetcher = DistUpgradeFetcherCore(new_dist=m.new_dist,
+				   progress=progress)
+  fetcher.run_options += ["--mode=%s" % options.mode,
+                          "--frontend=%s" % options.frontend,
+                          ]
+  if options.sandbox:
+    fetcher.run_options.append("--sandbox")
+  fetcher.run()

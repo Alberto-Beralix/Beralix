@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-select" xml:lang="de">
+  <info>
+    <link type="guide" xref="files#faq"/>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <desc>Drücken Sie <keyseq><key>Strg</key><key>S</key></keyseq>, um mehrere Dateien mit ähnlichen Namen auszuwählen.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Dateien anhand eines Musters auswählen</title>
+
+  <p>Sie können Dateien in einem Ordner mit Hilfe eines Musters auswählen. Drücken Sie <keyseq><key>Strg</key><key>S</key></keyseq>, um  das Fenster <gui>Nach Muster auswählen</gui> aufzurufen. Geben Sie ein Muster ein, das die gemeinsamen Namensteile sowie Platzhalter enthält. Es gibt zwei Platzhalterzeichen:</p>
+
+  <list style="compact">
+    <item><p><file>*</file> entspricht einer beliebigen Anzahl beliebiger Zeichen, auch überhaupt keinem Zeichen.</p></item>
+    <item><p><file>?</file> entspricht genau einem beliebigen Zeichen.</p></item>
+  </list>
+
+  <p>Beispielsweise:</p>
+
+  <list>
+    <item><p>Wenn Sie eine OpenDocument-Textdatei, eine PDF-Datei oder ein Bild haben, die alle den gleichen Grundnamen <file>Rechnung</file> haben, wählen Sie alle drei mit dem Muster</p>
+    <example><p><file>Invoice.*</file></p></example></item>
+    
+    <item><p>Wenn Sie einige Fotos haben, die nach dem Schema <file>Urlaub-001.jpg</file>, <file>Urlaub-002.jpg</file>, <file>Urlaub-003.jpg</file> benannt sind, wählen Sie sie alle mit dem Muster</p>
+    <example><p><file>Urlaub-???.jpg</file></p></example></item>
+    
+    <item><p>Wenn Sie Fotos nach dem vorigen Schema haben, aber einige davon bearbeitet und <file>-bearbeitet</file> an den Dateinamen angehängt haben, wählen Sie die bearbeiteten Fotos mit</p>
+    <example><p><file>Urlaub-???-bearbeitet.jpg</file></p></example></item>
+  </list>
+</page>

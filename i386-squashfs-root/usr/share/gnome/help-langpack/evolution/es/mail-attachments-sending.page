@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="guide" id="mail-attachments-sending" xml:lang="es">
+
+  <info>
+    <desc>Añadir archivos a los correos que quiere enviar.</desc>
+
+    <link type="guide" xref="index#mail-composing"/>
+    <link type="guide" xref="mail-attachments"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-30" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-send.html.en#usage-mail-getnsend-send-compose and http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-send.html.en#b17rcxmf -->
+ </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Añadir adjuntos a un correo-e</title>
+
+<section id="attaching">
+<title>Adjuntar archivos</title>
+<p>Para adjuntar un archivo a su correo en el editor:</p>
+<steps>
+<item><p>Pulse <gui>Añadir adjunto...</gui>, <guiseq><gui>Insertar</gui><gui>Adjunto</gui></guiseq> o pulse <keyseq><key>Ctrl</key><key>M</key></keyseq>.</p></item>
+<item><p>Seleccione el archivo que quiere adjuntar.</p></item>
+<item><p>Pulse <gui style="button">Aceptar</gui>.</p></item>
+</steps>
+<p>También puede arrastrar un archivo a la barra de adjuntos de la ventana del editor.</p>
+
+<p>Cuando mande el mensaje irá con él una copia del archivo adjuntado. Tenga presente que los adjuntos de gran tamaño pueden tomar mucho tiempo al ser enviados y recibidos.</p>
+</section>
+
+<section id="reminders">
+<title>Recuerdo de adjuntos</title>
+
+<p>Evolution has an Attachment Reminder plugin you can use to remind yourself to attach a file to an email. If it determines that you have not attached the file, it displays a reminder window before the email is sent.</p>
+
+<p>Para activar el Recuerdo de adjuntos:</p>
+<steps>
+<item><p>Seleccione <guiseq><gui>Editar</gui><gui>Complementos</gui></guiseq>.</p></item>
+<item><p>Actíve <gui>Recuerdo de adjuntos</gui>.</p></item>
+<item><p>Pulse la pestaña <gui>Configuración</gui>.</p></item>
+<item><p>Pulse <gui style="button">Añadir</gui>, después introduzca las palabras claves en su idioma tales como «adjuntar» o «adjunto».</p></item>
+</steps>
+<p>Based on the keywords you have added, Evolution searches the text of every mail you are going to send. If it finds any of the keywords in your email and there is no actual attached file, the reminder window is displayed.</p>
+
+</section>
+
+</page>

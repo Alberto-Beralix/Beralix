@@ -1,0 +1,67 @@
+#!/bin/sh
+
+set -e
+
+APP_NAME=thunderbird
+
+# Remove a no-longer used conffile
+rm_conffile() {
+    local PKGNAME="$1"
+    local CONFFILE="$2"
+
+    [ -e "$CONFFILE" ] || return 0
+
+    local md5sum="$(md5sum $CONFFILE | sed -e 's/ .*//')"
+    local old_md5sum="$(dpkg-query -W -f='${Conffiles}' $PKGNAME | \
+            sed -n -e "\' $CONFFILE ' { s/ obsolete$//; s/.* //; p }")"
+	# The quotes above confuse gedit, which considers the rest of the script to be inside quotes, so balance that out'
+    if [ "$md5sum" != "$old_md5sum" ]; then
+        echo "Obsolete conffile $CONFFILE has been modified by you."
+        echo "Saving as $CONFFILE.dpkg-bak ..."
+        mv -f "$CONFFILE" "$CONFFILE".dpkg-bak
+    else
+        echo "Removing obsolete conffile $CONFFILE ..."
+        rm -f "$CONFFILE"
+    fi
+}
+
+# Prepare to move a conffile without triggering a dpkg question
+prep_mv_conffile() {
+    local PKGNAME="$1"
+    local CONFFILE="$2"
+
+    [ -e "$CONFFILE" ] || return 0
+
+    local md5sum="$(md5sum $CONFFILE | sed -e 's/ .*//')"
+    local old_md5sum="$(dpkg-query -W -f='${Conffiles}' $PKGNAME | \
+            sed -n -e "\' $CONFFILE ' { s/ obsolete$//; s/.* //; p }")"
+	#'
+    if [ "$md5sum" = "$old_md5sum" ]; then
+        rm -f "$CONFFILE"
+    fi
+}
+
+case "$1" in
+install|upgrade)
+    if dpkg --compare-versions "$2" lt "5.0~b1"; then
+        rm_conffile "${APP_NAME}" "/etc/${APP_NAME}/profile/localstore.rdf"
+        rm_conffile "${APP_NAME}" "/etc/${APP_NAME}/profile/mimeTypes.rdf"
+        rm_conffile "${APP_NAME}" "/etc/${APP_NAME}/profile/prefs.js"
+        rm_conffile "${APP_NAME}" "/etc/${APP_NAME}/profile/US/localstore.rdf"
+        rm_conffile "${APP_NAME}" "/etc/${APP_NAME}/profile/US/localstore.rdf"
+    fi
+
+    # What we want to do here is migrate this conffile when:
+    # 1) Upgrading from any version older than Oneiric. Note, as all releases will track the
+    #    the latest Thunderbird version in the future, we can't just simply compare package
+    #    versions
+    # 2) Upgrading from any version older than Thunderbird 5.0~b1 in Oneiric
+    PREV_MAJOR_UBUNTU_VER=`echo "$2" | sed 's/.*ubuntu\(.*\)/\1/' | sed 's/\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\(.*\)/\2/'`
+    PREV_MINOR_UBUNTU_VER=`echo "$2" | sed 's/.*ubuntu\(.*\)/\1/' | sed 's/\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\([[:digit:]]*\)\.*\(.*\)/\3/'`
+    if dpkg --compare-versions "$2" lt "5.0~b1" || \
+       ([ "x$PREV_MAJOR_UBUNTU_VER" != "x" ] && [ "x$PREV_MINOR_UBUNTU_VER" != "x" ] && [ "$PREV_MAJOR_UBUNTU_VER" -lt "11" ] && [ "$PREV_MINOR_UBUNTU_VER" -lt "10" ]); then
+        prep_mv_conffile "${APP_NAME}" "/etc/${APP_NAME}/pref/thunderbird.js"
+    fi
+esac
+
+

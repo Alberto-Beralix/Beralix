@@ -1,0 +1,82 @@
+#!/usr/bin/python
+
+# Copyright (C) 2009 Canonical Ltd.
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License version 3,
+# as published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import os, sys
+import optparse
+from dbus import DBusException
+
+program = sys.argv[0]
+if program.startswith('./') or program.startswith('bin/'):
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+    os.environ['USBCREATOR_LOCAL'] = '1'
+from usbcreator.frontends.gtk import GtkFrontend
+from usbcreator.backends.udisks import UDisksBackend
+from usbcreator.misc import *
+import gettext
+
+sane_path()
+setup_logging()
+gettext.install('usbcreator', localedir='/usr/share/locale', unicode=True)
+
+# TODO evand 2009-07-09: Rename to bin/usb-creator-gtk.in and substitue the
+# version in at build time.
+parser = optparse.OptionParser(usage=_('%prog [options]'), version='0.2.23')
+parser.set_defaults(safe=False,
+                    iso=None,
+                    persistent=True,
+                    allow_system_internal=False,
+                    trace=False)
+# FIXME evand 2009-07-28: Reconnect this option to the install routine.
+parser.add_option('-s', '--safe', dest='safe', action='store_true',
+                  help=_('choose safer options when constructing the startup '
+                         'disk (may slow down the boot process).'))
+parser.add_option('-i', '--iso', dest='img',
+                  help=_('provide a source image (CD or disk) to '
+                         'pre-populate the UI.'))
+parser.add_option('-n', '--not_persistent', dest='persistent',
+                  action='store_false',
+                  help=_('disable persistent setting in the UI'))
+parser.add_option('--allow-system-internal', dest='allow_system_internal',
+                  action='store_true',
+                  help=_('allow writing to system-internal devices'))
+parser.add_option('--show-all', dest='show_all', action='store_true',
+                  help=_('Show all devices'))
+(options, args) = parser.parse_args()
+
+try:
+    backend = UDisksBackend(allow_system_internal=options.allow_system_internal,
+                            show_all=options.show_all)
+    frontend = GtkFrontend(backend, options.img, options.persistent,
+                           allow_system_internal=options.allow_system_internal)
+except DBusException, e:
+    # FIXME evand 2009-07-09: Wouldn't service activation pick this up
+    # automatically?
+    # FIXME evand 2009-07-28: Does this really belong this far out?
+    logging.exception('DBus exception:')
+    if e._dbus_error_name == 'org.freedesktop.DBus.Error.ServiceUnknown':
+        message = _('This program needs udisks running in order to'
+                    'properly function.')
+    else:
+        message = _('An error occurred while talking to the udisks '
+                    'service.')
+    GtkFrontend.startup_failure(message)
+    sys.exit(1)
+except (KeyboardInterrupt, Exception), e:
+    # TODO evand 2009-05-03: What should we do here to make sure devices are
+    # unmounted, etc?
+    logging.exception('Unhandled exception:')
+    message = _('An unhandled exception occurred:\n%s' % unicode(e))
+    GtkFrontend.startup_failure(message)

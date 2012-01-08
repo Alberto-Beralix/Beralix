@@ -1,0 +1,94 @@
+This package was debianized by David Huggins-Daines <dhd@debian.org> on
+Fri, 19 Jun 1998 20:01:01 -0400.  It has been also maintained by Artur 
+R. Czechowski <arturcz@hell.pl> and Torsten Werner <twerner@debian.org>.
+
+It was downloaded from ftp://sunsite.unc.edu/pub/Linux/libs/graphics/
+
+Upstream Author:
+
+    Rainer Menzner <Rainer.Menzner@web.de>
+
+Copyright:
+
+    Copyright (C) 1996-2003 Rainer Menzner
+
+License:
+
+    This package is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2 of the License, or (at your option) any later version.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this package; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU Lesser General
+Public License can be found in `/usr/share/common-licenses/LGPL'.
+
+The Debian packaging is (C) 2008, Ruben Molina <rmolina@udea.edu.co> and
+is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
+
+Please note that there are parts of t1lib that are subject to other licenses:
+- The parseAFM-package is copyrighted by Adobe Systems Inc.
+- The type1 rasterizer is copyrighted by IBM and the X11-consortium.
+
+(from lib/t1lib/parseAFM.c)
+/*
+ * (C) 1988, 1989, 1990 by Adobe Systems Incorporated. All rights reserved.
+ *
+ * This file may be freely copied and redistributed as long as:
+ *   1) This entire notice continues to be included in the file, 
+ *   2) If the file has been modified in any way, a notice of such
+ *      modification is conspicuously indicated.
+ *
+ * PostScript, Display PostScript, and Adobe are registered trademarks of
+ * Adobe Systems Incorporated.
+ * 
+ * ************************************************************************
+ * THE INFORMATION BELOW IS FURNISHED AS IS, IS SUBJECT TO CHANGE WITHOUT
+ * NOTICE, AND SHOULD NOT BE CONSTRUED AS A COMMITMENT BY ADOBE SYSTEMS
+ * INCORPORATED. ADOBE SYSTEMS INCORPORATED ASSUMES NO RESPONSIBILITY OR 
+ * LIABILITY FOR ANY ERRORS OR INACCURACIES, MAKES NO WARRANTY OF ANY 
+ * KIND (EXPRESS, IMPLIED OR STATUTORY) WITH RESPECT TO THIS INFORMATION, 
+ * AND EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES OF MERCHANTABILITY, 
+ * FITNESS FOR PARTICULAR PURPOSES AND NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+ * ************************************************************************
+ */
+
+(from lib/type1/type1.c)
+/* $XConsortium: type1.c,v 1.5 91/10/10 11:20:06 rws Exp $ */
+/* Copyright International Business Machines, Corp. 1991
+ * All Rights Reserved
+ * Copyright Lexmark International, Inc. 1991
+ * All Rights Reserved
+ * Portions Copyright (c) 1990 Adobe Systems Incorporated.
+ * All Rights Reserved
+ *
+ * License to use, copy, modify, and distribute this software and its
+ * documentation for any purpose and without fee is hereby granted,
+ * provided that the above copyright notice appear in all copies and that
+ * both that copyright notice and this permission notice appear in
+ * supporting documentation, and that the name of IBM or Lexmark or Adobe
+ * not be used in advertising or publicity pertaining to distribution of
+ * the software without specific, written prior permission.
+ *
+ * IBM, LEXMARK, AND ADOBE PROVIDE THIS SOFTWARE "AS IS", WITHOUT ANY
+ * WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT
+ * LIMITED TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE, AND NONINFRINGEMENT OF THIRD PARTY RIGHTS.  THE
+ * ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE, INCLUDING
+ * ANY DUTY TO SUPPORT OR MAINTAIN, BELONGS TO THE LICENSEE.  SHOULD ANY
+ * PORTION OF THE SOFTWARE PROVE DEFECTIVE, THE LICENSEE (NOT IBM,
+ * LEXMARK, OR ADOBE) ASSUMES THE ENTIRE COST OF ALL SERVICING, REPAIR AND
+ * CORRECTION.  IN NO EVENT SHALL IBM, LEXMARK, OR ADOBE BE LIABLE FOR ANY
+ * SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER
+ * RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+ * CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ */

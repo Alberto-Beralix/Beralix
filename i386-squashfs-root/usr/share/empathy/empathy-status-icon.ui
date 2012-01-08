@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--*- mode: xml -*-->
+<interface>
+  <object class="GtkUIManager" id="ui_manager">
+    <child>
+      <object class="GtkActionGroup" id="action_group">
+        <child>
+          <object class="GtkToggleAction" id="show_list">
+            <property name="name">show_list</property>
+            <property name="label" translatable="yes">_Show Contact List</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkAction" id="new_message">
+            <property name="icon-name">im-message-new</property>
+            <property name="name">new_message</property>
+            <property name="label" translatable="yes">_New Conversation…</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkAction" id="new_call">
+            <property name="icon-name">audio-input-microphone</property>
+            <property name="name">new_call</property>
+            <property name="label" translatable="yes">New _Call…</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkAction" id="status">
+            <property name="name">status</property>
+            <property name="label" translatable="yes">Status</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkAction" id="quit">
+            <property name="stock_id">gtk-quit</property>
+            <property name="name">quit</property>
+            <property name="label" translatable="yes">_Quit</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <ui>
+      <popup name="menu">
+        <menuitem action="show_list"/>
+        <separator/>
+        <menuitem action="new_message"/>
+        <menuitem action="new_call"/>
+        <menuitem action="status"/>
+        <separator/>
+        <menuitem action="quit"/>
+      </popup>
+    </ui>
+  </object>
+  <object class="GtkMenu" constructor="ui_manager" id="menu">
+    
+    
+    
+    
+    
+    
+  </object>
+</interface>

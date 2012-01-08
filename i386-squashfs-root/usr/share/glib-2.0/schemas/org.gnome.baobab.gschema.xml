@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/org/gnome/baobab/" id="org.gnome.baobab" gettext-domain="@GETTEXT_PACKAGE@">
+    <child schema="org.gnome.baobab.preferences" name="preferences"/>
+    <child schema="org.gnome.baobab.ui" name="ui"/>
+  </schema>
+  <schema path="/org/gnome/baobab/preferences/" id="org.gnome.baobab.preferences" gettext-domain="@GETTEXT_PACKAGE@">
+    <key type="b" name="monitor-home">
+      <default>false</default>
+      <summary>Monitor Home</summary>
+      <description>Whether any change to the home directory should be monitored.</description>
+    </key>
+    <key type="as" name="excluded-uris">
+      <default>[]</default>
+      <summary>Excluded partitions URIs</summary>
+      <description>A list of URIs for partitions to be excluded from scanning.</description>
+    </key>
+  </schema>
+  <schema path="/org/gnome/baobab/ui/" id="org.gnome.baobab.ui" gettext-domain="@GETTEXT_PACKAGE@">
+    <key type="b" name="toolbar-visible">
+      <default>true</default>
+      <summary>Toolbar is Visible</summary>
+      <description>Whether the toolbar should be visible in main window.</description>
+    </key>
+    <key type="b" name="statusbar-visible">
+      <default>false</default>
+      <summary>Statusbar is Visible</summary>
+      <description>Whether the status bar at the bottom of main window should be visible.</description>
+    </key>
+    <key type="s" name="active-chart">
+      <default>'rings'</default>
+      <summary>Active Chart</summary>
+      <description>Which type of chart should be displayed.</description>
+    </key>
+  </schema>
+</schemalist>

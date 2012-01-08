@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="backup-thinkabout" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="files#backup"/>
+    <desc>Una lista de carpetas donde puede encontrar documentos, archivos y configuraciones que podría querer respaldar.</desc>
+    
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>¿Dónde puedo encontrar los archivos de los que quiero hacer copia de seguridad?</title>
+
+<p>Decidir qué archivos respaldar y saber dónde están es el paso más difícil al intentar llevar a cabo una copia de seguridad. A continuación se muestra una relación de dónde deberían la mayoría de sus archivos importantes, para que le resulte más fácil localizarlos.</p>
+<terms>
+
+<item>
+   <title>Sus archivos personales y su configuración</title>
+<p>Normalmente se guardan en su carpeta personal (<cmd>/home/su_nombre</cmd>). Pueden estar en subcarpetas como Escritorio, Documentos, Imágenes, Música, Vídeos y .evolution (para el correo). Si su soporte de copias de seguridad tiene espacio suficiente, plantéese respaldar toda la carpeta <cmd>/home</cmd>. Esto es lo más sencillo.</p>
+
+<p>Si no puede hacer una copia de seguridad de todo <cmd>/home</cmd>, vea a continuación una relación de algunas subcarpetas de la carpeta <cmd>/home</cmd> donde buscar archivos importantes.</p>
+<note>
+<list>
+<item><p><cmd>~/</cmd> representa su carpeta personal <cmd>/home/su_nombre</cmd></p></item>
+
+ <item><p>Se oculta cualquier carpeta o archivo que comience por un punto. Para ver archivos ocultos, pulse <guiseq><gui>Ver</gui><gui>Mostrar archivos ocultos</gui></guiseq> o pulse <keyseq><key>Ctrl</key><key>H</key></keyseq>.</p></item>
+</list>
+</note>
+</item>
+</terms>
+
+<table shade="rows">
+  <tr>
+    <td><p>Sus archivos personales</p></td><td><p><cmd>~/</cmd>, <cmd>~/Escritorio</cmd>, <cmd>~/Documentos</cmd>, <cmd>~/Imágenes</cmd>, <cmd>~/Música</cmd>, <cmd>Vídeos</cmd>, <cmd>~/bin</cmd>, y otros</p></td> <td><p>Contienen archivos creados por su actividad.</p></td>
+
+  </tr>
+  <tr>
+    <td><p>Su configuración personal</p></td> <td><p><cmd>~/.config</cmd>, <cmd>~/.gconf</cmd>, <cmd>~/.local</cmd></p></td>
+    <td><p>Contiene preferencias establecidas por usted para su escritorio y algunas aplicaciones.</p></td>
+  </tr>
+  <tr>
+    <td><p>Configuración del sistema</p></td> <td><p><cmd>/etc</cmd> Ubicado en el sistema de archivos fuera de su carpeta de inicio.</p></td>
+    <td><p>Sus preferencias del sistema. En general, usted no necesita salir de su carpeta personal.</p></td>
+  </tr>
+
+</table>
+
+</page>

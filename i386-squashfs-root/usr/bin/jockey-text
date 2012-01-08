@@ -1,0 +1,128 @@
+#!/usr/bin/python
+
+# (c) 2009 Canonical Ltd.
+#
+# Author: Mario Limonciello <Mario_Limonciello@Dell.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+'''Text user interface implementation.'''
+
+import sys
+import jockey.ui
+
+class TextUI(jockey.ui.AbstractUI):
+    '''Text user interface implementation.'''
+
+    #
+    # Implementation of required AbstractUI methods
+    # 
+
+    def convert_keybindings(self, str):
+        '''Keyboard accelerator aware gettext() wrapper.
+        
+        This optionally converts keyboard accelerators to the appropriate
+        format for the frontend.
+
+        A double underscore ('__') is converted to a real '_'.
+        '''
+        # nothing to do for text
+        return str.replace('_','')
+
+    def ui_init(self):
+        '''Initialize UI.'''
+        pass
+
+    def ui_show_main(self):
+        '''Show main window.'''
+        pass
+
+    def ui_main_loop(self):
+        '''Main loop for the user interface.
+        
+        This should return if the user wants to quit the program, and return
+        the exit code.
+        '''
+        pass
+
+    def error_message(self, title, text):
+        '''Present an error message box.'''
+        print title
+        print text
+
+    def confirm_action(self, title, text, subtext=None, action=None):
+        '''Present a confirmation dialog.
+
+        If action is given, it is used as button label instead of the default
+        'OK'.  Return True if the user confirms, False otherwise.
+        '''
+        print title
+        print text
+        if subtext:
+            print subtext
+        while action:
+            print _("Please enter 'y' or 'n' and press Enter")
+            str = sys.stdin.readline().lower()
+            if str == _('y\n'):
+                return True
+            elif str == _('n\n'):
+                return False
+            else:
+                continue
+        return
+
+    def ui_notification(self, title, text):
+        '''Present a notification popup.
+
+        This should preferably create a tray icon. Clicking on the tray icon or
+        notification should run the GUI.
+        '''
+        pass
+
+    def show_notification(self, data):
+        pass
+
+    def ui_idle(self):
+        '''Process pending UI events and return.
+
+        This is called while waiting for external processes such as package
+        installers.
+        '''
+        pass
+
+    def ui_progress_start(self, title, description, total):
+        '''Create a progress dialog.'''
+
+        print title
+        print description
+        
+    def ui_progress_update(self, current, total):
+        '''Update status of current progress dialog.
+        
+        current/total specify the number of steps done and total steps to
+        do, or -1 if it cannot be determined. In this case the dialog should
+        display an indeterminated progress bar (bouncing back and forth).
+
+        This should return True to cancel, and False otherwise.
+        '''
+        if current < 0 or total < 0:
+            pass
+        else:
+            print float(current)/total
+
+    def ui_progress_finish(self):
+        '''Close the current progress dialog.'''
+
+        pass
+
+if __name__ == '__main__':
+    u = TextUI()
+    sys.exit(u.run())

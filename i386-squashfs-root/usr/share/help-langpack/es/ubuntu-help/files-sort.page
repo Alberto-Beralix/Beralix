@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-sort" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <desc>Ordenar archivos por nombre, tamaño, tipo, o por cuando se modificaron.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Ordenar archivos y carpetas</title>
+
+<p>Puede ordenar los archivos de una carpeta de diferentes formas; por ejemplo, por fecha o tamaño. Vea <link xref="#ways"/> a continuación una lista de formas habituales de ordenar archivos.</p>
+
+<p>La forma en la que ordene los archivos dependerá de la <em>vista de carpeta</em> que esté usando. Puede cambiar la vista actual usando el menú <gui>Ver</gui>.</p>
+
+<p>Cuando cambia la manera de ordenar elementos en una carpeta, solo afecta a esa carpeta. El gestor de archivos recordará sus preferencias de ordenación para esa carpeta, pero usará el criterio de ordenación predeterminado en las demás carpetas. Consulte <link xref="nautilus-views"/> para más información sobre cómo cambiar el criterio de ordenación predeterminado.</p>
+
+<section id="icon-view">
+ <title>Vista de icono</title>
+ <p>Para ordenar los archivos de forma diferente, pulse con el botón derecho en un lugar vacío de la carpeta y seleccione una opción del menú <gui>Organizar los elementos</gui>. También puede usar el menú <guiseq><gui>Ver</gui><gui>Organizar los elementos</gui></guiseq>.</p>
+ <p>Por ejemplo, si selecciona <gui>Ordenar por nombre</gui> en el menú <gui>Organizar los elementos</gui>, los archivos se ordenarán según sus nombres. Consulte otras opciones en <link xref="#ways"/>.</p>
+ <p>Puede ordenar en orden inverso seleccionando <gui>Orden inverso</gui> en el menú <gui>Organizar los elementos</gui>.</p>
+ <p>Para controlar totalmente el orden y la posición de los archivos en la carpeta, pulse con el botón derecho en un lugar vacío de la carpeta y seleccione <guiseq><gui>Organizar los elementos</gui><gui>Manualmente</gui></guiseq>. Así podrá reorganizar los archivos arrastrándolos y soltándolos por la carpeta. La ordenación manual solo funciona en la vista de iconos.</p>
+ <p>La opción <gui>Organización compacta</gui> del menú <gui>Organizar los elementos</gui> organiza los archivos de forma que ocupan el menor espacio posible. Es útil si quiere ver un montón de ficheros al mismo tiempo en una carpeta.</p>
+</section>
+
+<section id="list-view">
+ <title>Vista de lista</title>
+ <p>Para ordenar los archivos de forma diferente, pulse en una de las cabeceras de las columnas en el gestor de archivos. Por ejemplo, pulse en <gui>Tipo</gui> para ordenar por tipo de archivo. Pulse de nuevo en la cabecera de la columna para ordenar en orden inverso.</p>
+ <p>En la vista de lista, puede mostrar las columnas con más atributos y ordenar estas columnas. Pulse en <guiseq> <gui>Vista</gui><gui>Columnas visibles</gui></guiseq> y seleccione las columnas que desea que sean visible. A continuación, podrá ordenar por esas columnas. Vea <link xref="nautilus-list"/> para tener las descripciones de las columnas disponibles.</p>
+</section>
+
+<section id="compact-view">
+ <title>Vista compacta</title>
+ <p>Puede ordenar los archivos en la vista compacta de la misma manera que  puede ordenar la vista de iconos. La única diferencia es que no se puede colocar manualmente los archivos en cualquier lugar que desee, siempre están organizados en una lista en esta vista.</p>
+</section>
+
+<section id="ways">
+ <title>Maneras de ordenar archivos</title>
+ <terms>
+  <item>
+   <title>Por nombre</title>
+   <p>Ordena alfabéticamente por el nombre del archivo.</p>
+  </item>
+  <item>
+   <title>Por tamaño</title>
+   <p>Ordena por el tamaño del archivo (cuánto espacio ocupa). Ordena del menor al mayor de manera predeterminada.</p>
+  </item>
+  <item>
+   <title>Por tipo</title>
+   <p>Ordena alfabéticamente por el tipo de archivo. Los archivos del mismo tipo se agrupan, a continuación, ordenados por nombre.</p>
+  </item>
+  <item>
+   <title>Por fecha de modificación</title>
+   <p>Ordena por fecha y hora en la que un archivo fue modificado por última vez. Ordena de la más antigua a la más reciente de forma predeterminada.</p>
+  </item>
+ </terms>
+</section>
+
+</page>

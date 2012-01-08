@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="backup-thinkabout" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="files#backup"/>
+    <desc>Eine Liste von Ordnern, wo Sie Dokumente, Dateien und Einstellungen finden, die Sie möglicherweise sichern wollen.</desc>
+    
+    <revision version="11.04" date="2011-04-26" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Wo finde ich die Dateien, die ich sichern will?</title>
+
+<p>Sich zu entscheiden, welche Dateien gesichert werden sollen und sie alle zu finden, ist der schwierigste Schritt auf dem Weg zur Datensicherung. Weiter unten finden Sie eine Liste, wo die meisten Ihrer wichtigen Dateien sein sollten, so dass Sie diese einfacher finden.</p>
+<terms>
+
+<item>
+   <title>Ihre persönlichen Dateien und Einstellungen</title>
+<p>Diese sind für gewöhnlich in Ihrem Home-Ordner (<cmd>/home/Ihr_Name</cmd>). Sie können in Unterordnern wie Desktop, Dokumente, Bilder, Musik, Video und/oder .evolution (für E-Mail) sein. Wenn Ihr Datensicherungsmedium genügend Platz bietet, erwägen Sie, den gesamten <cmd>/home</cmd>-Ordner zu sichern. Das ist der einfachste Weg.</p>
+
+<p>Falls es Ihnen nicht möglich ist, alles aus <cmd>/home</cmd> zu sichern, siehe unten für die Liste einiger Unterordner aus dem <cmd>/home</cmd>-Ordner, in denen Sie nach wichtigen Dateien suchen können.</p>
+<note>
+<list>
+<item><p><cmd>~/</cmd> steht für Ihren persönlichen Ordner <cmd>/home/ihr_name</cmd></p></item>
+
+ <item><p>Jede Datei oder jeder Ordner, deren Name mit einem Punkt beginnt, ist standardmäßig verborgen. Um verborgene Dateien anzuzeigen, klicken Sie auf <guiseq><gui>Ansicht</gui><gui>Verborgene Dateien anzeigen</gui></guiseq> oder drücken Sie <keyseq><key>Strg</key><key>H</key></keyseq>.</p></item>
+</list>
+</note>
+</item>
+</terms>
+
+<table shade="rows">
+  <tr>
+    <td><p>Ihre persönlichen Dateien</p></td><td><p><cmd>~/</cmd>, <cmd>~/Arbeitsfläche</cmd>, <cmd>~/Dokumente</cmd>, <cmd>~/Bilder</cmd>, <cmd>~/Musik</cmd>, <cmd>Videos</cmd> und weitere</p></td> <td><p>Enthalten Dateien, die Sie aktiv erstellt haben.</p></td>
+
+  </tr>
+  <tr>
+    <td><p>Ihre persönlichen Einstellungen</p></td> <td><p><cmd>~/.config</cmd>, <cmd>~/.gconf</cmd>, <cmd>~/.local</cmd></p></td>
+    <td><p>Enthalten Einstellung für Ihre Arbeitsfläche und einige Anwendungen.</p></td>
+  </tr>
+  <tr>
+    <td><p>Systemeinstellungen</p></td> <td><p><cmd>/etc</cmd> im Dateisystem außerhalb Ihres persönlichen Ordners.</p></td>
+    <td><p>Ihre Systemeinstellungen. Im Allgemeinen müssen Sie nichts außerhalb Ihres persönlichen Ordners sichern.</p></td>
+  </tr>
+
+</table>
+
+</page>

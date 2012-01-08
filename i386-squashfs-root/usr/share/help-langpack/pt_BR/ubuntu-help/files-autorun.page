@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="files-autorun" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="media#photos"/>
+    <link type="guide" xref="files#removable"/>
+    <link type="guide" xref="nautilus-prefs" group="last"/>
+    
+    <desc>Executar automaticamente aplicativos para CDs e DVDs, câmeras, reprodutor de áudio e outros dispositivos e meios de comunicação.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Abra um aplicativo ao conectar um dispositivo</title>
+
+<p>Você pode fazer um aplicativo iniciar automaticamente ao se conectar um dispositivo. Por exemplo, você pode desejar que seu organizador de fotos comece quando você conecta uma câmera digital. Você também pode desligar esse recurso, de forma que nada acontecerá quando você conecta algo.</p>
+
+<p>Para decidir que aplicativos devem ser iniciados ao conectar diversos dispositivos:</p>
+
+<steps>
+ <item>
+  <p>Clique no ícone bem à direita do <gui>painel superior</gui> e selecione <gui>Configurações do sistema</gui>.</p>
+ </item>
+ 
+ <item>
+  <p>Abrir <gui>Mídia removível</gui> e alterar as opções debaixo de <gui>Selecione como a mídia deve ser manipulada</gui>.</p>
+  <p>Em vez de simplesmente iniciar um aplicativo, você também poderá definir que:</p>
+  <list>
+   <item><p>O dispositivo será mostrado no gerenciador de arquivos (escolha <gui>Abrir pasta</gui>)</p></item>
+   <item><p>Você será perguntado sobre o que fazer (<gui>Pergunte o que fazer</gui>)</p></item>
+   <item><p>Absolutamente nada acontecerá (<gui>Fazer nada</gui>).</p></item>
+  </list>
+ </item>
+ 
+ <item>
+  <p>A opção <gui>Software</gui> é levemente diferente das demais - se o computador detectar que há um software em um disco que você inseriu, ele pode tentar executar automaticamente o software, se assim você desejar. Isso é bom no caso de você ter um aplicativo instalado em um D e quiser iniciá-lo quando o disco é inserido (por exemplo, uma apresentação de slides).</p>
+ </item>
+ 
+ <item>
+  <p>Se você não vê na lista o tipo de dispositivo ou mídia que você quer mudar (como discos Blu-ray ou leitores de E-book), clique em <gui>Outras mídias</gui> para ver uma lista mais detalhada de dispositivos.</p>
+ </item>
+</steps>
+
+<note style="tip">
+ <title>Não abrir <em>nenhum</em> aplicativo automaticamente</title>
+ <p>Se você não quer que nenhuma aplicação seja aberta automaticamente, o que quer que seja que você conecte, cheque <gui>Nunca questionar ou iniciar programas quando forem inseridas mídias</gui> na parte inferior da janela de mídia removível.</p>
+</note>
+
+</page>

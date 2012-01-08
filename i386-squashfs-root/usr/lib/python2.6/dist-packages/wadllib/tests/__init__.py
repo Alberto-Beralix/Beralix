@@ -1,0 +1,1 @@
+../../../../../share/pyshared/wadllib/tests/__init__.py

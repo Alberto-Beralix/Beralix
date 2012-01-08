@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="power-batteryestimate" xml:lang="de">
+
+  <info>
+  
+    <link type="guide" xref="power#battery"/>
+    
+    <desc>Die angezeigte Nutzungsdauer des Akkus ist nur eine Schätzung.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>GNOME-Dokumentationsprojekt</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Die Anzeige besagt, es verbleiben noch X Minuten Akkulaufzeit, aber das stimmt nicht</title>
+
+<p>Wenn Sie die verbleibende Akkulaufzeit überprüfen, kann es sein, dass Sie feststellen, dass die <em>verbleibende Zeit</em>, die angezeigt wird, nicht mit der <em>tatsächlichen</em> Akkulaufzeit übereinstimmt. Dies kommt vor, da es sich bei der verbleibenden Akkulaufzeit um eine Schätzung handelt. Die Schätzungen sollten allerdings mit der Zeit besser werden.</p>
+
+<p>Um die verbleibende Akkulaufzeit zu schätzen, müssen einige Faktoren berücksichtigt werden. Ein Faktor ist der aktuelle Stromverbrauch des Rechners: Der Stromverbrauch ist abhängig von der Anzahl ausgeführter Programme, von angeschlossenen Geräten und davon, ob Sie rechenintensive Aufgaben ausführen (wie eine DVD ansehen oder Musikdateien umwandeln). Dies ändert sich ständig und ist daher schwer vorauszusagen.</p>
+
+<p>Ein weiterer Faktor ist die Art, wie sich der Akku entlädt. Einige Akkus entladen sich schneller, umso leerer sie werden. Ohne genaue Informationen zum Entladevorgang eines Akkus ist nur eine grobe Schätzung der verbleibenden Akkulaufzeit möglich.</p>
+
+<p>Während sich der Akku entlädt, beobachtet die Energieverwaltung den Entladevorgang und lernt, daraus bessere Schätzungen der Akkulaufzeit zu erstellen. Allerdings werden diese nie vollkommen korrekt sein.</p>
+
+<note>
+ <p>Wenn die Schätzung der Akkulaufzeit total daneben liegt (sagen wir Hunderte von Tagen), fehlen der Energieverwaltung vermutlich einige Daten, die sie zur genauen Schätzung benötigt.</p>
+ <p>Wenn Sie die Stromversorgung abstellen, den Laptop einige Zeit über den Akku betreiben, das Stromkabel dann wieder anschließen und der Akku sich auflädt, sollte die Energieverwaltung die benötigten Daten erhalten.</p>
+</note>
+
+</page>

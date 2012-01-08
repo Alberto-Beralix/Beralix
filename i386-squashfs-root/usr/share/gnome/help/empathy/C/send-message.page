@@ -1,0 +1,74 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="topic"
+      id="send-message">
+
+  <info>
+    <link type="guide" xref="index#text-conv"/>
+    <desc>Send a message to one of your contacts.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-14" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-14" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-09" status="deferred"/>
+      -->
+    </revision>
+    <revision pkgversion="2.32" version="0.3" date="2010-09-09" status="review"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>Send a message to someone</title>
+
+  <steps>
+    <item>
+      <p>
+        From the <gui>Contact List</gui> window, double-click the name of the
+        contact that you want to have a conversation with.
+      </p>
+    </item>
+    <item>
+      <p>
+        A new window will open. Type a message into the box at the
+        bottom of the window and press <key>Enter</key> to send it.
+      </p>
+    </item>
+  </steps>
+  
+  <section id="send-meta-contact" style="2column">
+    <title>Send a message to a meta-contact</title>
+    <steps>
+      <item>
+        <p>
+          From the <gui>Contact List</gui> window, right-click on the meta-contact.   
+        </p>
+      </item>
+      <item>
+        <p>
+          Select the contact you want to have the conversation, and from the menu
+          select <gui style="menuitem">Chat</gui>.
+        </p>
+      </item>
+    </steps>
+    <note style="tip">
+      <p>
+        To recognize if a contact is a <em>meta-contact</em>, move your mouse on
+        a contact in the <gui>Contact List</gui> window, and stop over it for a
+        second: a small pop-up message will appear showing the number of the
+        contacts that form the meta-contact.
+      </p>
+    </note>
+  </section>
+
+</page>

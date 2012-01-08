@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p gnome-codec-install 
+fi
+
+# End automatically added section
+
+
+update-alternatives --install /usr/bin/gstreamer-codec-install gstreamer-codec-install /usr/bin/gnome-codec-install 85
+

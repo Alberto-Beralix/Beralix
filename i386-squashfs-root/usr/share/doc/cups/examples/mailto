@@ -1,0 +1,161 @@
+#!/usr/bin/python
+
+#
+# $Id: mailto,v 1.3 2003/01/02 17:59:19 gurubert Exp $
+#
+
+#
+# This is a mailto backend for CUPS (www.cups.org)
+#
+# (C) 2002 Robert Sander <robert.sander@epigenomics.com>
+#
+# Released under GPL
+#
+# NO WARRANTY AT ALL
+#
+
+import sys, os, tempfile, MimeWriter, mimetools, mimetypes
+
+log = "\nLog:\n"
+
+def guess_type(file):
+    global log
+    
+    type, enc = mimetypes.guess_type(file)
+    if (not type) or (type == 'application/octet-stream'):
+        enc = None
+        try:
+            type = os.popen("/usr/bin/file -bi %s 2> /dev/null" % file).read().rstrip()
+            if type == "" or type == "data":
+                type = "application/octet-stream"
+        except:
+            type = "application/octet-stream"
+    if log:
+        log = "%stype is %s\n" % (log, type)
+    return (type, enc)
+
+def guess_extension(mimetype):
+    return(mimetypes.guess_extension(mimetype))
+
+argc = len(sys.argv)
+
+if argc == 1:
+    print "network mailto \"Unknown\" \"SMTP\""
+    sys.exit(0)
+
+sys.stderr.write("INFO: mailto argv[%s] =" % argc)
+if log:
+    log = "%smailto argv[%s] =" % (log, argc)
+for arg in sys.argv[1:]:
+    sys.stderr.write(" '%s'" % arg)
+    if log:
+        log = "%s '%s'" % (log, arg)
+sys.stderr.write("\n")
+if log:
+    log = "%s\n" % log
+
+if argc < 6 or argc > 7:
+    sys.stderr.write("ERROR: %s job-id user title copies options [file]\n" % sys.argv[0])
+    sys.exit(1)
+
+jobid = sys.argv[1]
+user = sys.argv[2]
+title = sys.argv[3]
+opts = sys.argv[5].split(" ")
+
+if argc == 7:
+    sys.stderr.write("INFO: file is %s\n" % sys.argv[6])
+    if log:
+        log = "%sfile is %s\n" % (log, sys.argv[6])
+    infilename = sys.argv[6]
+else:
+    infilename = tempfile.mktemp(".mailto")
+    try:
+        infile = open(infilename, "w")
+    except:
+        sys.stderr.write("ERROR: unable to create tmp file %s\n" % infilename)
+        sys.exit(1)
+    sys.stderr.write("INFO: file is stdin\n")
+    try:
+        infile.write(sys.stdin.read())
+    except:
+        sys.stderr.write("ERROR: unable to copy into tmpfile\n")
+        sys.exit(1)
+    infile.close()
+    if log:
+        log = "%scopied stdin to %s\n" % (log, infilename)
+
+infile = open(infilename, "r")
+
+sys.stderr.write("INFO: creating tmp mail file\n")
+
+try:
+    mimemailfile = tempfile.TemporaryFile()
+    mimemail = MimeWriter.MimeWriter(mimemailfile)
+except:
+    sys.stderr.write("ERROR: unable to create tmp file for MIME_MAIL\n")
+    sys.exit(1)
+
+mailto = None
+mailfrom = None
+for opt in opts:
+    if log:
+        log = "%sopt = '%s'\n" % (log, opt)
+    if opt[:7] == "mailto=":
+        mailto = opt[7:]
+        if log:
+            log = "%smailto = '%s'\n" % (log, mailfrom)
+    if opt[:9] == "mailfrom=":
+        mailfrom = opt[9:]
+        if log:
+            log = "%smailfrom = '%s'\n" % (log, mailfrom)
+if not mailto:
+    if user:
+        mailto = user
+    else:
+        mailto = mailfrom
+else:
+    if not mailfrom:
+        if user:
+            mailfrom = user
+if not mailfrom:
+    mailfrom = "lp"
+
+# Essential lines to put into the header of a MIME mail.
+mimemail.addheader("From", mailfrom)
+mimemail.addheader("To", mailto)
+mimemail.addheader("Subject", title)
+mimemail.addheader("MIME-Version", "1.0")
+if mailto != user and mailfrom != user:
+    mimemail.addheader("X-CUPS-mailto-started-by", user)
+
+mimemail.startmultipartbody("mixed")
+
+body = mimemail.nextpart()
+
+body.addheader("Content-Transfer-Encoding", "8bit")
+
+body.startbody("text/plain").write("You printed %s with jobid %s\n%s" % (title, jobid, log))
+
+attachment = mimemail.nextpart()
+type, enc = guess_type(infilename)
+ext = guess_extension(type)
+if not ext:
+    ext = ""
+attachment.addheader("Content-Transfer-Encoding", "base64")
+att = attachment.startbody('%s; name="%s%s"' % (type, os.path.basename(title), ext))
+mimetools.encode(infile, att, "base64")
+mimemail.lastpart()
+
+mimemailfile.seek(0)
+
+os.popen("/usr/sbin/sendmail -t -f%s" % mailfrom, "w").write(mimemailfile.read())
+
+att.close()
+infile.close()
+mimemailfile.close()
+
+if argc == 6:
+    os.unlink(infilename)
+
+sys.exit(0)

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-working-offline" xml:lang="de">
+
+  <info>
+    <desc>Work with your mail while not being connected to the network.</desc>
+<!-- TODO:POST-3-2: Offline work for web calendars etc also exists => create index page for Offline working? -->
+    <link type="guide" xref="index#mail-basic"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-30" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-getnsend-send.html.en#usage-mail-getnsend-offline -->
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+
+  </info>
+
+<title>Offline arbeiten</title>
+
+<p>Offline mode helps you communicate with remote mail storage systems like GroupWise, IMAP or Exchange, in situations where you are not connected to the network at all times. Evolution keeps a local copy of one or more folders to allow you to compose messages, storing them in your Outbox to be sent the next time you connect.</p>
+
+<p>POP lädt alle Nachrichten auf Ihre lokale Festplatte herunter, andere Verbindungsarten jedoch laden oftmals nur die Kopfzeilen herunter, und alles weitere erst dann, wenn Sie die Nachricht wirklich lesen wollen. Bevor Sie offline gehen lädt Evolution die ungelesenen Nachrichten aus den Ordnern herunter, die Sie zur Speicherung ausgewählt haben.</p>
+
+<section id="mark-folders">
+<title>Ordner für die Offline-Nutzung markieren</title>
+<p>To mark a mail folder for offline use,</p>
+<steps>
+<item><p>Klicken Sie mit der rechten Maustaste auf den Ordner, und wählen Sie <gui>Eigenschaften</gui>.</p></item>
+<item><p>Click <gui>Copy folder content locally for offline operation</gui>.</p></item>
+</steps>
+</section>
+
+<section id="sync-for-offline">
+<title>Syncing messages for offline usage</title>
+<p>Your connection status is shown by the small icon in the lower left corner of the Evolution main window. When you are online, it displays two connected cables. When you go offline via clicking the icon or via <guiseq><gui>File</gui><gui>Work Offline</gui></guiseq>, the cables separate. You will be asked whether you want to go offline immediately or synchronize folders locally before you go offline.</p>
+<p>To download Messages for Offline Operations without immediately going offline, select <guiseq><gui>File</gui><gui>Download Messages for Offline Usage</gui></guiseq>.</p>
+</section>
+
+<section id="network-manager-integration">
+<title>Automatische Erkennung des Verbindungsstatus</title>
+<p>Evolution erkennt automatisch den Netzwerkstatus und verhält sich dementsprechend. Evolution geht automatisch in den Offline-Modus wenn die Netzwerkverbindung getrennt wird und geht in den Online-Modus, wenn das Netzwerk wieder verfügbar ist. Stellen Sie sicher, dass die Anwendung Network Manager installiert ist, damit diese Funktion funktioniert.</p>
+</section>
+
+</page>

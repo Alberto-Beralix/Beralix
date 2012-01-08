@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/launcher_reveal_edge</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/launcher_reveal_edge</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Left</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Reveal Mode</short>
+        <long>From which edge should the launcher reveal.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/launcher_reveal_edge_timeout</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/launcher_reveal_edge_timeout</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>150</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Edge Reveal Timeout</short>
+        <long>How long (in ms) wait before revealing the launcher when the mouse pointer is touching the edge. (1 - 1000)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/launcher_hide_mode</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/launcher_hide_mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>2</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Hide Launcher</short>
+        <long>Make the launcher hide automatically after some time of inactivity: always or just when the focussed window is not over the launcher (0 = Never, 1 = Autohide, 2 = Dodge Windows, 3 = Dodge Active Window)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/show_launcher</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/show_launcher</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Super&gt;</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Key to show the launcher</short>
+        <long>Make the launcher appear with that key</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/keyboard_focus</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/keyboard_focus</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F1</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Key to put keyboard-focus on launcher</short>
+        <long>Set the keyboard-focus on the launcher so it can be navigated with the cursor-keys</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/execute_command</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/execute_command</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F2</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Key to execute a command</short>
+        <long>Key to open a folder or execute a command</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/panel_first_menu</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/panel_first_menu</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>F10</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Key to open the first panel menu</short>
+        <long>Open the first menu on the panel, allowing keyboard navigation thereafter.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_timeout</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_timeout</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Automatically grid windows on timer in switcher</short>
+        <long>fixme</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_bias_viewport</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_bias_viewport</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>false</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Bias alt-tab sorting to prefer windows on the current viewport</short>
+        <long>fixme</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_forward</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_forward</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Tab</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Key to start the switcher</short>
+        <long>fixme</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_prev</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_prev</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;&lt;Shift&gt;Tab</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Key to start the switcher in reverse</short>
+        <long>fixme</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_right</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_right</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Right</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Go right in the switcher</short>
+        <long>fixme</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_left</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_left</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Left</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Go left in the switcher</short>
+        <long>fixme</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_detail_start</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_detail_start</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Down</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Key to expose the windows in the switcher</short>
+        <long>fixme</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_detail_stop</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_detail_stop</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Up</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Key to collapse windows in the switcher</short>
+        <long>fixme</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_next_window</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_next_window</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Key to flip through windows in the switcher</short>
+        <long>fixme</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_prev_window</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_prev_window</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Key to flip through windows in the switcher backwards</short>
+        <long>fixme</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/show_minimized_windows</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/show_minimized_windows</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>true</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Show minimized windows in switcher</short>
+        <long>Hack to enable minimized windows in switcher. Disable and report bugs if problems are caused</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/backlight_mode</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/backlight_mode</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>0</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Backlight Mode</short>
+        <long>Change how the icons are backlit (0 = Backlight Always On, 1 = Backlight Toggles, 2 = Backlight Always Off, 3 = Edge Illumination Toggles, 4 = Backlight and Edge Illumination Toggles)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/launch_animation</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/launch_animation</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Launch Animation</short>
+        <long>Animation played when a launcher icon is in the process of spawning a process (0 = None, 1 = Pulse Until Running, 2 = Blink)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/urgent_animation</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/urgent_animation</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>2</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Urgent Animation</short>
+        <long>Animation played when a launcher icon is in the urgent state (0 = None, 1 = Pulse, 2 = Wiggle)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/panel_opacity</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/panel_opacity</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>1.0</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Panel Opacity</short>
+        <long>The opacity of the Panel background. (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/launcher_opacity</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/launcher_opacity</applyto>
+      <owner>compiz-1</owner>
+      <type>float</type>
+      <default>0.6667</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Launcher Opacity</short>
+        <long>The opacity of the Launcher background. (0.0 - 1.0)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/icon_size</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/icon_size</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>48</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Launcher icon size</short>
+        <long>The size of the launcher icons (32 - 64)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/autohide_animation</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/autohide_animation</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>3</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Hide Animation</short>
+        <long>Animation played when the launcher is showing or hiding (0 = Fade on bfb and Slide, 1 = Slide only, 2 = Fade only, 3 = Fade and Slide)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/dash_blur_experimental</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/dash_blur_experimental</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>2</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Dash Blur</short>
+        <long>Type of blur in the Dash (0 = No Blur, 1 = Static Blur, 2 = Active Blur)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/automaximize_value</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/automaximize_value</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>75</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Automaximize value</short>
+        <long>The minimum value to trigger automaximize. (1 - 100)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/unityshell/screen0/options/devices_option</key>
+      <applyto>/apps/compiz-1/plugins/unityshell/screen0/options/devices_option</applyto>
+      <owner>compiz-1</owner>
+      <type>int</type>
+      <default>1</default>
+      <gettext_domain>unity</gettext_domain>
+      <locale name="C">
+        <short>Show Devices</short>
+        <long>Show devices in the launcher (0 = Never, 1 = Only Mounted, 2 = Always)</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

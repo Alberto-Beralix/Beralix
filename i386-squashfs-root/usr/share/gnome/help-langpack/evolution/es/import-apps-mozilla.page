@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="import-apps-mozilla" xml:lang="es">
+
+  <info>
+    <desc>Importar datos de Mozilla Thunderbird.</desc>
+    
+    <link type="guide" xref="import-data#import-from-apps"/>
+
+    <revision pkgversion="2.32.2" version="0.2" date="2011-07-30" status="draft"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+
+  </info>
+
+  <title>Mozilla</title>
+<!-- TODO:DEVELOPERS: Does <guiseq><gui>File</gui><gui>Import</gui><gui>Import data and settings from older programs</gui></guiseq> recognize Outlook and Thunderbird? If yes, "Evolution searches for old mail programs and, if possible, imports the data from them." -->
+<!-- TODO: This really needs some testing in 3.1 -->
+<steps>
+<item><p>Pulse <guiseq><gui>Archivo</gui><gui>Importar</gui></guiseq>.</p></item>
+<item><p>En la pestaña <gui>Tipo de importador</gui> pulse <gui>Importar un único archivo</gui>.</p></item>
+<item><p>Seleccione los archivos de Thunderbird que quiere importar.</p><p>Se determinará automáticamente el tipo de archivo.</p></item>
+<item><p>Elija el destino (ej. la carpeta en Evolution) para los datos importados.</p></item>
+<item><p>Repita los pasos de importación hasta que haya importado todos sus datos.</p></item>
+</steps>
+</page>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-wireless-troubleshooting-hardware-check" xml:lang="pt-BR">
+  <info>
+    <link type="next" xref="net-wireless-troubleshooting-device-drivers"/>
+
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+
+    <credit type="author">
+      <name>Contribuidores da wiki de documentação do Ubuntu</name>
+    </credit>
+
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+
+    <desc>Solucionar problemas de conexão para uma rede sem fio.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Verificar seu hardware</title>
+
+  <p>Vamos ver se seu computador reconhece seu adaptador sem fio.</p>
+  <steps>
+   <item><p>Abra uma janela do <app>terminal</app> e entre com <cmd>sudo lshw -C network</cmd>.</p>
+    <p>Se você não obter resposta, você pode precisar instalar o programa <app>lshw</app> no seu computador; você pode instalá-lo digitando <code>sudo apt-get install lshw</code> em um terminal.</p></item>
+   <item><p>Leia a saída do comando e verifique para a seção <em>interface sem fio</em>. Se seu adaptador sem fio for detectado, a saída deve ser similar a essa:</p>
+   <example>
+   <code>*-network
+       description: Wireless interface
+       product: PRO/Wireless 3945ABG [Golan] Network Connection
+       vendor: Intel Corporation
+       physical id: 0
+       bus info: pci@0000:03:00.0
+       logical name: wlan0
+       version: 02
+       serial: 00:1b:77:11:5a:a7
+       width: 32 bits
+       clock: 33MHz
+       capabilities: pm msi pciexpress bus_master cap_list ethernet physical wireless
+       configuration: broadcast=yes driver=iwl3945 driverversion=2.6.38.2-9.fc15.i686
+       firmware=15.32.2.9 ip=192.168.1.42 latency=0 link=yes multicast=yes
+       wireless=IEEE 802.11abg
+       resources: irq:46 memory:edf00000-edf00fff</code>
+   </example>
+</item>
+  </steps>
+  <p>Se um dispositivo sem fio está listado, então continue para a <link xref="net-wireless-troubleshooting-device-drivers">página de drivers de dispositivos</link>.</p>
+  <p>Se um dispositivo sem fio não está listado, os próximos passos irão lhe ajudar a localizar a informação do hardware.</p>
+
+   <section id="net-wireless-hardware-check2">
+    <title>Outras verificações de hardware sem fio</title>
+  <p>Porque seu adaptador sem fio não foi encontrado com o comando anterior, você precisa de mais alguns passos para ter certeza que seu computador reconhece seu adaptador.</p>
+  <p>As etapas necessárias dependerão do tipo de dispositivo que você usa. Consulte a seção que é relevante ao tipo de adaptador sem fio que você usa com o seu computador: PCI (interno), USB ou PCMCIA.</p>
+  <note><p>Adaptadores PCI internos são mais comuns e são encontrados em laptops feitos dentro dos últimos anos. Adaptadores PCMCIA são adaptadores estilo cartão, externos, e são mais comuns em laptops antigos.</p></note>
+      <section id="net-wireless-hardware-pcicheck">
+        <title>Verificando por um dispositivo PCI (interno)</title>
+      <p>Para verificar se o seu computador consegue reconhecer a sua placa de rede sem-fio PCI, digite <cmd>sudo lspci</cmd> na janela do terminal. O terminal irá apresentar uma lista dos dispositivos PCI que foram encontrados no seu computador.</p>
+      <p>Embora isso possa ser uma pouco difícil para ler, procure o nome e o número do modelo do seu adaptador sem fio. Aqui está um exemplo do que uma listagem de dispositivos PCI pode parecer:</p>
+      <example>
+        <p><code>Network controller: Intel Corporation PRO/Wireless 3945ABG [Golan] Network Connection</code></p>
+      </example>
+      <p>Se seu dispositivo foi reconhecido pelo comando anterior, ótimo! Prossiga à página <link xref="net-wireless-troubleshooting-device-drivers">drivers do dispositivo</link>. Se o comando acima não mostrar qualquer saída relacionada ao seu adaptador sem fio, veja as instruções na parte inferior dessa página.</p>
+      </section>
+      <section id="net-wireless-hard-ware-usbcheck">
+        <title>Verificando por um dispositivo USB</title>
+      <p>Para verificar se seu computador reconhece seu adaptador USB sem fio, digite <cmd>sudo lsusb</cmd> numa janela de terminal. O terminal exibirá uma lista de dispositivos USB encontrados no seu computador.</p>
+     <p>Embora possa ser difícil ler, procure pelo nome e número do modelo de seu adaptador USB sem fio. Aqui estão alguns exemplos de saída do comando <cmd>lsusb</cmd>:</p>
+     <example>
+        <p><code>Bus 005 Device 009: ID 12d1:140b Huawei Technologies Co., Ltd. EC1260 Wireless Data Modem HSD USB Card</code></p>
+     </example>
+     <p>Se seu dispositivo foi reconhecido pelo comando anterior, ótimo! Prossiga à página <link xref="net-wireless-troubleshooting-device-drivers">drivers do dispositivo</link>. Se o comando acima não mostrar qualquer saída relacionada ao seu adaptador sem fio, veja as instruções na parte inferior dessa página.</p>
+      </section>
+      <section id="net-wireless-hard-ware-pcmciacheck">
+        <title>Verificando por um dispositivo PCMCIA</title>
+      <p>Para verificar se seu computador reconhece a placa PCMCIA, siga os seguintes passos:</p>
+        <steps>
+          <item><p>Inicie sem computador <em>sem</em> o adaptador sem fio conectado.</p></item>
+          <item><p>Efetue login quando/se for solicitado.</p></item>
+          <item><p>Quando a área de trabalho for carregada, abra uma janela terminal e digite o seguinte comando:</p>
+                   <p><cmd>sudo tail -f /var/log/messages</cmd></p></item>
+          <item><p>Insira seu adaptador sem fio no slot disponível.</p></item>
+          <item><p>Repita o comando acima e note a diferença entre os dois.</p></item>
+  </steps>
+
+      <p>Se o seu dispositivo é reconhecido pelo comando anterior, ótimo! Vá para a página <link xref="net-wireless-troubleshooting-device-drivers">Drivers de dispositivos</link>.</p>
+
+   <note><p>Se o dispositivo não é reconhecido por nenhum dos comandos acima, pode significar que o seu dispositivo não está funcionando, ou que o dispositivo não é suportado pelo seu sistema operacional.</p>
+   <p>Para obter ajuda adicional, envie uma mensagem para um fórum de usuário apropriado ao seu sistema operacional (por exemplo, fóruns Fedora, OpenSUSE, ou Ubuntu, etc), ou poste uma mensagem em uma lista de discussão apropriada.</p></note>
+   <links type="series"/>
+   </section>
+   </section>
+</page>

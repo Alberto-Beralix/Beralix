@@ -1,0 +1,13 @@
+# vim:syntax=apparmor
+#
+# abstraction for allowing graphical bittorrent clients in Ubuntu
+#
+  /usr/bin/azureus PUxr,
+  /usr/bin/bitstormlite PUxr,
+  /usr/bin/btmaketorrentgui PUxr,
+  /usr/bin/deluge PUxr,
+  /usr/bin/gnome-btdownload PUxr,
+  /usr/bin/kget PUxr,
+  /usr/bin/ktorrent PUxr,
+  /usr/bin/qbittorrent PUxr,
+  /usr/bin/transmission PUxr,

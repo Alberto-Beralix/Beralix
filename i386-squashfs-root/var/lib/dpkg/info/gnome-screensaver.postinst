@@ -1,0 +1,8 @@
+#! /bin/sh
+set -e
+
+if [ "$1" = configure ] && dpkg --compare-versions "$2" lt-nl "2.28.0-2"; then
+    rm -f /etc/xdg/autostart/gnome-screensaver.desktop
+fi
+
+

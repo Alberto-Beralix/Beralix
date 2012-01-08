@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="intro-first-run" xml:lang="es">
+
+  <info>
+    <desc>Inicio de Evolution por primera vez.</desc>
+
+    <link type="guide" xref="index#getting-started"/>
+
+    <revision pkgversion="2.30.2" version="0.2" date="2011-09-11" status="stub"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Inicio de <em>Evolution</em> por primera vez</title>
+
+<p>La primera vez que ejecuta Evolution se abre el Asistente de primera ejecución que le ayuda a configurar sus cuentas de correo electrónico e <link xref="import-data">importar datos de otras aplicaciones</link>.</p>
+
+<section id="identity">
+<title>Identidad</title>
+<p>Introduzca aquí su nombre y su dorección de correo electrónico.</p>
+<p>Optionally you can make this account your default account (e.g. when writing emails), set a Reply-To email address (if you want replies to messages sent to a different address), and set an organization (the company where you work, or the organization you represent when you send email from this account).</p>
+</section>
+
+<section id="restore">
+<title>Restaurar desde un respaldo</title>
+<p>Se le preguntará si quiere estaurar un respaldo de una versión anterior. Si tiene tal respaldo, continúe <link xref="backup-restore#restore">aquí</link>. De lo contrario, continúe con la siguiente página.</p>
+</section>
+
+<section id="receiving">
+<title>Recepción de correo</title>
+<p>Primero, elija el tipo de servidor en la lista desplegable <gui>Tipo de servidor</gui>.</p>
+<p>Si no está seguro del tipo de servidor que elegir, pregúntele a su administrador de sistemas o a su proveedor de servicios de Internet.</p>
+
+
+<section id="common-server-types">
+<title>Tipos comunes de servidor</title>
+<p>Los tipos más comunes de servidores disponibles son:</p>
+<list>
+<item><p>Ninguno: si no tiene intención de usar Evolution para recibir correo.</p><p>Continúe <link xref="#sending">aquí</link> para la configuración.</p></item>
+<item><p>IMAP: conserva su correo-e en el servidor para que pueda acceder a él de diversas formas.</p><p>Continue <link xref="mail-receiving-options-imap">aquí</link> para la configuración.</p></item>
+<!-- TODO:DEVELOPERS: So what's the difference between IMAP and IMAP+, and what is recommended, dear developers? -->
+<item><p>IMAP+: conserva su correo-e en el servidor para que pueda acceder a él de diversas formas.</p><p>Continue <link xref="mail-receiving-options-imap-plus">aquí</link> para la configuración.</p></item>
+<item><p>POP: descarga su corre-e a su disco duro</p><p>Continue <link xref="mail-receiving-options-pop">aquí</link> para la configuración.</p></item>
+<item><p>Noticias USENET: conecta con un servidor de noticias y descarga una lista de los compendios de noticias disponibles.</p><p>Continue <link xref="mail-receiving-options-usenet-news">aquí</link> para la configuración.</p></item>
+</list>
+</section>
+
+<section id="corporate-server-types">
+<title>Tipos de servidor corporativos</title>
+<p>Los servidores disponibles para usuarios corporativos son:</p>
+<!-- TODO:POST-3-2: Add evolution-ews once it is stable -->
+<list>
+<item><p>Exchange MAPI: para conectar con servidores Microsoft Exchange 2007/2010 u OpenChange.</p><p>Continue <link xref="mail-receiving-options-exchange-mapi">aquí</link> para la configuración.</p>
+<note style="tip"><p>Esto requiere tener instalado el paquete «evolution-mapi». <link action="install:evolution-mapi" href="http://ftp.gnome.org/pub/gnome/sources/evolution-mapi/">Instalar evolution-mapi ahora.</link></p></note>
+</item>
+<item><p>Microsoft Exchange: para conectarse con un servidor Microsoft Exchange 2000 o 2003.</p><p>Continue <link xref="mail-receiving-options-evolution-exchange">aquí</link> para la configuración.</p>
+<note style="tip"><p>Esto requiere tener instalado el paquete «evolution-exchange». <link action="install:evolution-exchange" href="http://ftp.gnome.org/pub/gnome/sources/evolution-exchange/">Instalar evolution-exchange ahora.</link></p></note>
+</item>
+<item><p>Novell Groupwise: para conectarse con un servidor Novell GroupWise</p><p>Continue <link xref="mail-receiving-options-novell-groupwise">aquí</link> para la configuración.</p></item>
+</list>
+</section>
+
+<section id="local-account-server-types">
+<title>Tipos de servidor de cuentas locales</title>
+<p>Los tipos de servidor para cuentas locales disponibles para usuarios avanzados son:</p>
+<list>
+<item><p>Elija esta opciones si quiere mover el correo desde el buzón local a su carpeta personal. Necesita proporcionar la ruta al buzón de correo que quiere usar, Si quiere dejar el correo en los archivos de spools del sistema, elija la opción «Mbox estándar de Unix».</p><p>Continue <link xref="mail-receiving-options-local-delivery">aquí</link> para la configuración.</p></item>
+
+<item><p>MH-Format Mail Directories: For downloading email using MH or another MH-style program.</p><p>Debe proporcionar la ruta al directorio de correo que quiere usar.</p><p>Continue <link xref="mail-receiving-options-mh-format-directories">aquí</link> para la configuración.</p></item>
+
+<item><p>Maildir-Format Mail Directories: For downloading your email using Qmail or another Maildir-style program.</p><p>Debe proporcionar la ruta al directorio de correo que quiere usar.</p><p>Continue <link xref="mail-receiving-options-maildir-format-directories">aquí</link> para la configuración.</p></item>
+
+<item><p>Archivo spool mbox estándar de Unix: para leer y almacenar correo en el archivo de correo spool de su sistema local.</p><p>You need to provide the path to the mail spool file you want to use.</p><p>Continue <link xref="mail-receiving-options-unix-mbox-spool-file">aquí</link> para la configuración.</p></item>
+
+<item><p>Standard Unix mbox spool directory: For reading and storing email in the mail spool directory on your local system.</p><p>Debe proporcionar la ruta al directorio de correo que quiere usar.</p><p>Continue <link xref="mail-receiving-options-unix-mbox-spool-directory">aquí</link> para la configuración.</p></item>
+</list>
+
+<note style="tip"><p>Más tarde, si quiere cambiar esta cuenta, o si quiere crear una nueva, pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Cuentas de correo</gui></guiseq>. Seleccione la cuenta que quiera cambiar y pulse <gui style="button">Editar</gui>. Alternativamente, añada una cuenta nueva pulsando <gui style="button">Añadir</gui>.</p></note>
+</section>
+
+</section>
+
+<section id="sending"> <!-- Do not rename, we link to it from the subpages -->
+<title>Envío de correo</title>
+<p>Los tipos de servidor disponibles son:</p>
+<list>
+<item><p>SMTP: envía correo usando un servidor de correo saliente. Esta es la opción más común para enviar correo.</p><p>Continue <link xref="mail-sending-options-smtp">aquí</link> para la configuración.</p></item>
+<item><p>Sendmail: utiliza el programa Sendmail para enviar el correo desde su sistema. No es fácil de configurar por lo que sólo debería elegir esta opción si sabe cómo poner en marcha un servicio Sendmail.</p></item>
+</list>
+</section>
+
+<section id="account-information">
+<title>Información de la cuenta</title>
+<p>Dé a la cuenta el nombre que prefiera.</p>
+</section>
+
+<section id="account-import">
+<title>Importar correo (opcional)</title>
+<p>Continúe con <link xref="import-data">Importa datos de otros programas</link>.</p>
+</section>
+
+</page>

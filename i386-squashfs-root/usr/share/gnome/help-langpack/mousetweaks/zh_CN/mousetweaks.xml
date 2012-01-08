@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "2.24.0">
+<!ENTITY manrevision "0.2">
+<!ENTITY date "October 2007">
+<!ENTITY app "Mousetweaks">
+<!ENTITY application "<application>&app;</application>">
+<!ENTITY legal SYSTEM "legal.xml">
+]>
+<article id="index" lang="zh_CN">
+  <articleinfo>
+    <title>Mousetweaks 手册</title>
+
+    <abstract role="description">
+      <para><application>Mousetweaks</application> 为 GNOME 桌面提供增强的鼠标辅助功能。</para>
+    </abstract>
+
+    <copyright>
+      <year>2007 - 2010</year>
+
+      <holder>Francesco Fumanti</holder>
+    </copyright><copyright><year>2009, 2010</year><holder>TeliuTe (teliute@163.com)</holder></copyright>
+
+    
+<legalnotice id="legalnotice">
+  <para>对于本文档的复制、分发和/或修改必须遵循自由软件基金会 (Free Software Foundation) 发布的 GNU 自由文档许可证 (GFDL) 版本 1.3 或更高版本，该许可证没有固定的部分、没有封面和背页文本。您可以在此<ulink type="http" url="http://www.gnu.org/licenses/fdl-1.3.txt">链接</ulink>上或在 Mousetweak 源文件包所在的最高一级目录中找到 GFDL 的副本。</para>
+
+  <para>本手册是在 GFDL 许可之下分发的 GNOME 手册集合的一部分。如果想要单独分发此手册，可以在手册中添加该许可证的一份副本然后分发，如该许可证的第 6 部分所述。</para>
+
+  <para>各个公司使用的许多用于区别它们产品和服务的名称都声明为商标。在所有的 GNOME 文档以及 GNOME 文档项目的成员中，这些名称都是以全大写字母或首字母大写显示，从而表明它们是商标。</para>
+
+  <para>本文档以及文档的修改版本都是在遵循 GNU 自由文档许可证的条款下提供，这表示具有以下含义：<orderedlist>
+      <listitem>
+        <para>文档按“原样”提供，不提供任何明示或暗示的保证，包括但不限于：文档或文档的修改版本没有适销性方面的缺陷、适合特定目的的适用性，以及没有侵权行为。您将自行承担本文档以及文档修改版本的质量、准确性以及性能方面的风险。如果任何文档或文档修改版本存在缺陷，您(而不是最初的编写者、作者或撰写人)将承担所有必需的服务、维修或更正的费用。此免责声明是本许可证的重要组成部分。如果不接受此免责声明，那么您就没有权利使用任何文档或文档的修改版本；并且</para>
+      </listitem>
+
+      <listitem>
+        <para>无论在任何情况以及在任何法律理论下，本文档或文档修改版本的作者、最初的编写者、任何撰写人或任何分发者，或者任意这些方的任何提供者都不对任何人由于使用本文档或文档修改版本引起或带来的任何直接的、间接的、特殊的、偶然的或继发的损失承担任何民事(包括疏忽)、合同或其它方面的责任，这些损失包括但不限于信誉损失、工作停止、计算机失败或故障，或任何以及所有其它损失或由此引发的或与之相关的损失，即使这些方已被告知存在出现此类损失的可能性时也是如此。</para>
+      </listitem>
+    </orderedlist></para>
+</legalnotice>
+
+
+    <authorgroup>
+      <author role="maintainer">
+        <firstname>Francesco</firstname>
+
+        <surname>Fumanti</surname>
+
+        <affiliation>
+          <address><email>frfumanti@svn.gnome.org</email> </address>
+        </affiliation>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>版本 2.32</revnumber>
+
+        <date>2010年8月</date>
+
+        <revdescription>
+          <para role="author">本手册内容已根据 GNOME 2.32 中 mousetweaks 的改进进行了更新。Francesco Fumanti <email>frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>版本 2.30</revnumber>
+
+        <date>2010年3月</date>
+
+        <revdescription>
+          <para role="author">本手册内容已根据 GNOME 2.30 中 mousetweaks 的改进进行了更新。<email>Francesco Fumanti &lt;frfumanti@svn.gnome.org&gt;</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>版本 2.28</revnumber>
+
+        <date>2009年9月</date>
+
+        <revdescription>
+          <para role="author">本手册内容已根据 GNOME 2.28 中 mousetweaks 的改进进行了更新。<email>Francesco Fumanti &lt;frfumanti@svn.gnome.org&gt;</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>版本 2.25.90</revnumber>
+
+        <date>2009年2月2日</date>
+
+        <revdescription>
+          <para role="author">本手册根据 GNOME 2.26 中 mousetweaks 的更改进行了修订。此外，本手册的许可协议升至 GFDL 1.3 版。<email>Francesco Fumanti &lt;frfumanti@svn.gnome.org&gt;</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>版本 2.24</revnumber>
+
+        <date>2008年7月</date>
+
+        <revdescription>
+          <para role="author">本手册内容已根据 GNOME 2.24 中 mousetweaks 的改进进行了更新。<email>Francesco Fumanti &lt;frfumanti@svn.gnome.org&gt;</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>版本 2.21.5</revnumber>
+
+        <date>2008年1月</date>
+
+        <revdescription>
+          <para role="author">本手册内容已根据 GNOME 2.22 中 mousetweaks 的改进进行了更新。Francesco Fumanti <email>frfumanti@svn.gnome.org</email></para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>版本 0.2</revnumber>
+
+        <date>2007年11月</date>
+
+        <revdescription>
+          <para role="author">手册内容已经调整到 GNOME 默认的 Clearlooks 主题。这一版包含在 Mousetweaks 0.2.6 鼠标增强工具包中。Francesco Fumanti <email>francesco.fumanti@gmx.net</email> </para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>版本 0.1</revnumber>
+
+        <date>2007年10月</date>
+
+        <revdescription>
+          <para role="author">手册的第一稿。Francesco Fumanti <email>francesco.fumanti@gmx.net</email></para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>本手册讲述了由 Mousetweak 提供的鼠标辅助工具，它们由鼠标首选项面板的辅助功能面板和两个面板小程序组成的图形用户界面。</releaseinfo>
+
+    <contrib>要报告一个 Mousetweaks 鼠标增强工具包或本手册的缺陷或提出建议，请访问 GNOME's Bugzilla。</contrib>
+
+    <legalnotice>
+      <title>反馈</title>
+
+      <para>要报告关于<application>mousetweaks 模块</application>(例如: 鼠标辅助功能)、用户界面或使用手册中的缺陷，或者提出建议，请使用 <ulink type="http" url="http://bugzilla.gnome.org/">GNOME's Bugzilla</ulink> 提供的方法。</para>
+    </legalnotice>
+  </articleinfo>
+
+  <indexterm zone="index">
+    <primary>Mousetweaks</primary>
+  </indexterm>
+
+  <indexterm zone="index">
+    <primary>mousetweaks</primary>
+  </indexterm>
+
+  <sect1 id="mouse-a11y-introduction">
+    <title>介绍</title>
+
+    <para><application>Mousetweaks</application> 鼠标增强工具，为 GNOME 桌面提供了鼠标辅助功能。实际上，它提供了下列功能：</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>模拟右键点击：允许用户通过按住左键一段时间，就可以执行右键点击。</para>
+      </listitem>
+
+      <listitem>
+        <para>悬停点击：允许用户不需要按下任何<hardware>鼠标按钮</hardware>，就可以执行各种点击操作。</para>
+      </listitem>
+
+      <listitem>
+        <para>指针锁定：允许用户把指针锁定在面板的一个区域中，直到用户按下一个预设的按键或鼠标按钮来释放它。</para>
+      </listitem>
+    </itemizedlist>
+
+    <note>
+      <para>从 2.31.3 版开始，mousetweaks 不再依赖任何 AT-SPI 辅助功能框架。</para>
+    </note>
+  </sect1>
+
+  <sect1 id="mouse-a11y-how-to-start-features">
+    <title>如何使用这些功能</title>
+
+    <para>模拟右键点击和悬停点击依赖于 mousetweaks 进程；而指针锁定小程序依赖于 GNOME 面板。所以，使用这些功能的方法也不尽相同。</para>
+
+    <sect2 id="mouse-a11y-start-ssc">
+      <title>启动模拟右键点击功能</title>
+
+      <para>你可以用两种方法启动模拟右键点击功能：</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>从图形界面启动</para>
+        </listitem>
+
+        <listitem>
+          <para>从命令行启动</para>
+        </listitem>
+      </itemizedlist>
+
+      <sect3 id="mouse-a11y-start-ssc-by-gui">
+        <title>从图形界面启动</title>
+
+        <para>要从图形界面中启动模拟右键点击功能，需要使用鼠标首选项面板的辅助工具。要打开它，请点击菜单<menuchoice><guimenu>系统</guimenu><guisubmenu>首选项</guisubmenu><guimenuitem>控制中心</guimenuitem></menuchoice>，打开控制中心面板。在里面找到鼠标首选项打开，再打开辅助工具标签，可以看到下面的选项：</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-tab.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>鼠标首选项面板图示</para>
+          </textobject>
+        </mediaobject>
+
+        <para>要启用模拟右键点击功能，打勾选中这个复选框：</para>
+
+        <para><quote>按住左键(主要按钮)来触发右键(次要按钮)的点击</quote></para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-ssc-checkbox.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>启用模拟右键点击复选框的图示</para>
+          </textobject>
+        </mediaobject>
+      </sect3>
+
+      <sect3 id="mouse-a11y-start-ssc-by-cli">
+        <title>从命令行启动</title>
+
+        <para>要从命令行启动模拟右键点击，打开<application>终端</application>并输入下面的命令：</para>
+
+        <para><command>mousetweaks <parameter>--ssc</parameter></command></para>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-start-dwell">
+      <title>启动悬停点击功能</title>
+
+      <para>你可以有三种方法来启动悬停点击功能：</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>从鼠标首选项面板的辅助工具标签中启用</para>
+        </listitem>
+
+        <listitem>
+          <para>从命令行启动</para>
+        </listitem>
+
+        <listitem>
+          <para>从悬停点击面板小程序上的开/关按钮上启用</para>
+        </listitem>
+      </itemizedlist>
+
+      <sect3 id="mouse-a11y-start-dwell-by-gui">
+        <title>从鼠标首选项面板的辅助工具标签中启用</title>
+
+        <para>要从图形界面中启动模拟右键点击功能，需要使用鼠标首选项面板的辅助工具。要打开它，请点击菜单<menuchoice><guimenu>系统</guimenu><guisubmenu>首选项</guisubmenu><guimenuitem>控制中心</guimenuitem></menuchoice>，在里面找到并打开鼠标首选项，再点击辅助工具标签，你将会看到下面的设置：</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-tab.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>鼠标首选项面板图示</para>
+          </textobject>
+        </mediaobject>
+
+        <para>要启用悬停点击功能，打勾选中这个复选框：</para>
+
+        <para><quote>当指针停止移动时，初始化点击</quote></para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-checkbox.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>启用悬停点击复选框的图示</para>
+          </textobject>
+        </mediaobject>
+      </sect3>
+
+      <sect3 id="mouse-a11y-start-dwell-by-cli">
+        <title>从命令行启动</title>
+
+        <para>要从命令行启动悬停点击并显示点击类型窗口，打开<application>终端</application>并输入下面的命令：</para>
+
+        <para><command>mousetweaks <parameter>--dwell --show-ctw</parameter></command></para>
+
+        <note>
+          <para>启动参数 --login 和 --daemonize 是添加允许 GDM 启动和退出 mousetweaks：第一个是启动时不检查辅助技术框架；不忽略第二个，mousetweaks 运行后将保留进程号，以便 GDM 可以通过进程号来关闭它。</para>
+        </note>
+      </sect3>
+
+      <sect3 id="mouse-a11y-start-dwell-by-panel-applet">
+        <title>从悬停点击面板小程序的开/关按钮来启用</title>
+
+        <para>您还可以将鼠标指针指向悬停点击面板小程序上的开关按钮，只需停留一会儿就可以启用悬停点击功能。事实上，这个鼠标样的图标是一个可悬停点击的开/关按钮，用颜色的填满程度来显示悬停的时间。当颜色填充满格子，按钮显示激活状态，悬停点击启动。</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-click-type-applet.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>GNOME 菜单右边显示的点击类型小程序图示</para>
+          </textobject>
+        </mediaobject>
+
+        <note>
+          <para>要获得关于如何在 GNOME 面板上添加悬停点击小程序的介绍，请参阅 <link linkend="mouse-a11y-start-pointer-capture">启动指针锁定功能</link>，那里讲解了怎样添加指针锁定小程序。操作步骤跟悬停点击是相似的。</para>
+        </note>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-start-pointer-capture">
+      <title>启动指针锁定功能</title>
+
+      <para>因为指针锁定是一个面板小程序，它的启动跟随 GNOME 面板。因此，要启用指针锁定功能，您必须要在面板上添加相应的小程序，然后它就可以自动运行了。</para>
+
+      <para>要添加它到面板上，操作跟其他小程序相同：在面板上点右键，打开快捷菜单，选择<guimenuitem>添加到面板</guimenuitem>，出现一个面板小程序列表。</para>
+
+      <para>在添加到面板窗口中双击<guilabel>指针锁定</guilabel>项，指针锁定小程序就会添加到面板。它会一直运行，除非您从面板上删除它。</para>
+    </sect2>
+  </sect1>
+
+  <sect1 id="mouse-a11y-how-to-stop-features">
+    <title>如何退出这个功能</title>
+
+    <para>类似启动这个功能，它们的退出也依赖于您想退出的功能。</para>
+
+    <sect2 id="mouse-a11y-stop-ssc">
+      <title>退出模拟右键点击</title>
+
+      <para>退出右键点击可以有两种方法：</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>不选中 <application>Mousetweaks</application> 首选项面板上对应的复选框。</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-ssc-checkbox.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>启用模拟右键点击特性的复选框图示</para>
+            </textobject>
+          </mediaobject>
+
+          <para>请访问<link linkend="mouse-a11y-start-ssc-by-gui">从图形界面启用模拟右键点击功能</link>，来找到这个复选框的位置。</para>
+        </listitem>
+
+        <listitem>
+          <para>通过在命令行中输入下面的命令：</para>
+
+          <para><command>mousetweaks</command>
+          <parameter>--shutdown</parameter></para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+
+    <sect2 id="mouse-a11y-stop-dwell">
+      <title>退出悬停点击</title>
+
+      <para>退出悬停悬停点击的方法可以有三种：</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>不选中 <application>Mousetweaks</application> 首选项面板上对应的复选框。</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-checkbox.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>启用无按钮点击特性的复选框图示</para>
+            </textobject>
+          </mediaobject>
+
+          <para>请参考<link linkend="mouse-a11y-start-dwell-by-gui">从图形界面启动悬停点击</link>，找到这个复选框的位置。</para>
+        </listitem>
+
+        <listitem>
+          <para>通过在命令行中输入下面的命令：</para>
+
+          <para><command>mousetweaks</command>
+          <parameter>--shutdown</parameter></para>
+        </listitem>
+
+        <listitem>
+          <para>如果悬停点击小程序已经添加到 GNOME 面板，可以把指针悬停在开/关按钮上来禁用此功能。</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-click-type-applet.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>GNOME 菜单右边显示的点击类型小程序图示</para>
+            </textobject>
+          </mediaobject>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+
+    <sect2 id="mouse-a11y-stop-pointer-capture">
+      <title>退出指针锁定功能</title>
+
+      <para>因为指针锁定功能是一个面板小程序，您必须像别的小程序那样退出它：从面板上删除它。要做到这一点，在小程序的竖线手柄上点右键，然后在出来的快捷菜单中选择<guimenuitem>从面板上删除</guimenuitem>命令。</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-context-menu.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>指针捕获区域(绿色)及其快捷菜单图示</para>
+        </textobject>
+      </mediaobject>
+
+      <tip>
+        <para>当使用默认的 GNOME 主题时，指针锁定小程序的手柄就是捕获区域左边的两条垂直竖线。</para>
+      </tip>
+    </sect2>
+  </sect1>
+
+  <sect1 id="mouse-a11y-functions-description">
+    <title>功能介绍</title>
+
+    <para>Mousetweaks 鼠标增强工具提供了三项辅助功能。在这一节里你将看到三个功能的描述：<itemizedlist>
+        <listitem>
+          <para><xref linkend="mouse-a11y-ssc-description"/></para>
+        </listitem>
+
+        <listitem>
+          <para><xref linkend="mouse-a11y-dwell-description"/></para>
+        </listitem>
+
+        <listitem>
+          <para><xref linkend="mouse-a11y-pointer-capture-description"/></para>
+        </listitem>
+      </itemizedlist></para>
+
+    <sect2 id="mouse-a11y-ssc-description">
+      <title>模拟右键点击描述</title>
+
+      <para>用户激活这一特性后，可以通过按住<mousebutton>鼠标左键</mousebutton>来执行右键点击动作。这对那些只能使用一个<mousebutton>鼠标按钮</mousebutton> 的用户非常有用。</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-ssc-delay-slider.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>图示右键点击的设置选项。</para>
+        </textobject>
+      </mediaobject>
+
+      <sect3 id="mouse-a11y-ssc-usage">
+        <title>它是怎样工作的？</title>
+
+        <para>假定已经启用了模拟右键点击特性。</para>
+
+        <para>要执行右键的点击动作，需要按住<mousebutton>左键</mousebutton>一段时间，这个时间的长度是由模拟右键功能的延时滑块确定的。按住左键时，指针的箭头将使用不同的颜色进行填充，以反映经过的时间。</para>
+
+        <para>如果在指针的颜色还没有填充满前，用户就松开了<mousebutton>左键</mousebutton>，系统将只产生<mousebutton>左键</mousebutton>按下和释放的消息。</para>
+
+        <para>如果用户松开<mousebutton>左键</mousebutton>时，指针的颜色已经填充满，在产生<mousebutton>左键</mousebutton>点击事件后，将会接着产生一个<mousebutton>右键</mousebutton>点击事件。事实上，用户一松开<mousebutton>左键</mousebutton> mousetweaks 就会创建模拟<mousebutton>右键</mousebutton>点击事件。</para>
+
+        <para>上面的解释是假定<mousebutton>鼠标左键</mousebutton>在按住和松开的时间内，指针没有移动，如果在<mousebutton>鼠标左键</mousebutton>松开前，指针发生了移动，将不会产生模拟右键点击动作。因此，要取消模拟点击，用户只需在松开<mousebutton>鼠标左键</mousebutton>前移动一下鼠标指针即可。</para>
+
+        <para>此外，模拟的右键点击产生之前，会有一个优先的左键点击事件，当模拟点击一个对左键有响应的对象时，这使它点击的对象行为跟预期不同。更多详细介绍，请参阅 <link linkend="mouse-a11y-ssc-pecularities">与普通右键点击的差异</link>。 </para>
+      </sect3>
+
+      <sect3>
+        <title id="mouse-a11y-ssc-delay">延时滑块</title>
+
+        <para>在启用复选框的下面，有一个<guilabel>延时</guilabel>滑块，指定用户需要按住<mousebutton>左键</mousebutton>多久，才能触发动作。拖动滑块，用户可以设定合适的时间。</para>
+      </sect3>
+
+      <sect3>
+        <title id="mouse-a11y-ssc-motion-treshold">运动阈值</title>
+
+        <para>对于很难保证按住指针不动的用户，可以设定“运动阈值”特性。这个选项可以让 Mousetweaks 忽略指针轻微的移动，即使指针有少量的移动，仍然可以保证右键点击特性的实现。您可以在<link linkend="mouse-a11y-dwell-motion-treshold">悬停点击的运动阈值特性</link>里，找到更多相关信息。</para>
+
+        <note>
+          <para><guilabel>悬停点击</guilabel>下面的<guilabel>运动阈值</guilabel> 选项也会影响到<guilabel>模拟右键点击</guilabel>特性，甚至在没有启用<guilabel>悬停点击</guilabel>的情况下。</para>
+        </note>
+      </sect3>
+
+      <sect3 id="mouse-a11y-ssc-pecularities">
+        <title>与普通的右键点击的不同点</title>
+
+        <para>因为模拟右键点击无法忽略<mousebutton>左键</mousebutton>的按下和松开事件，所以在产生右键点击前会先发生一个左键点击。换句话说，这一功能产生的右键点击将会在前面自动追加一个左键的点击，这和普通的<mousebutton>右键点击</mousebutton>有一点不同。例如：</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>选中多个项时不能执行右键点击动作，因为右键点击前的那次左键点击将会取消选择。</para>
+          </listitem>
+
+          <listitem>
+            <para>在网页链接上执行模拟右键点击时，执行模拟右键点击的左键将在模拟右键打开链接的快捷菜单之前打开链接的网页。</para>
+
+            <tip>
+              <para>按住 Ctrl 键，然后再在网页链接上执行模拟右键点击，可以打开上下文菜单。它能工作的原因是，当链接收到按住 Ctrl 和左键的组合键信息时，会在新标签页打开链接，这也可以看作是，按住 Ctrl 修饰键在一个链接上，用模拟右键点击打开上下文菜单时的一个副作用影响。</para>
+
+              <para>不过浏览器要配置成打开新标签时不自动切换到新标签，否则当前页会变成新标签页，上下文菜单也会消失。</para>
+            </tip>
+          </listitem>
+
+          <listitem>
+            <para>在面板上的回收站图标上执行模拟右键时，不仅会出现快捷菜单，而且回收站文件夹也会打开。(出现快捷菜单是由于右键点击，打开回收站文件夹是因为右键点击前的那次左键点击。)</para>
+          </listitem>
+        </itemizedlist>
+
+        <note>
+          <para>列出所有的歧义行为不大可能，因为这要依赖于应用程序对由左键产生的右键点击的反应。</para>
+        </note>
+
+        <para>从另一方面来看，按住<mousebutton>左键</mousebutton>很长时间也没有触发模拟右键点击是不可能的，除非指针在<mousebutton>左键</mousebutton>松开前发生移动，这也会产生一些不可预料的结果，例如：</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>当在滚动条的按钮的箭头上按住左键，滚动条会跳至底部。这实际上是在滚动条按钮上点击右键的正常行为。</para>
+
+            <tip>
+              <para>要避免滚动条跳到底部，只需要在释放左键之前将指针移动到滚动条的箭头之外。这种方法将不会触发模拟右键点击。</para>
+            </tip>
+          </listitem>
+        </itemizedlist>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-dwell-description">
+      <title>悬停点击描述</title>
+
+      <para>一些用户不能使用任何鼠标按钮，通过启用<guilabel>悬停点击</guilabel>，他们可以使用鼠标执行各种点击，而不需要按下按钮。可以执行的点击类型有：单击、双击、拖动和右键点击。</para>
+
+      <note>
+        <para>当悬停点击激活以后，<mousebutton>鼠标按钮</mousebutton>继续保持正常的点击功能，而且，当悬停点击运行时，如果用<mousebutton>鼠标按钮</mousebutton>执行了一次点击，悬停点击将会停止，不会有模拟产生；要开始一次新的悬停点击，用户得重新进行移动和停止鼠标的动作。</para>
+      </note>
+
+      <sect3 id="mouse-a11y-dwell-usage">
+        <title>它是怎样工作的？</title>
+
+        <para>每次指针停下来的时候，就开始悬停点击。为了给用户反馈，在进行点击前的倒计时，mousetweaks 将使用其它颜色填充指针箭头。</para>
+
+        <para>点击如何完成，以及选择什么点击类型，依赖于用户选择的模式。可用的模式有：</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>选择预设的点击类型</para>
+          </listitem>
+
+          <listitem>
+            <para>用鼠标手势决定点击类型</para>
+          </listitem>
+        </itemizedlist>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-mode-choice.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>悬停模式的单选按钮图示</para>
+          </textobject>
+        </mediaobject>
+
+        <para>要选择悬停模式，用户需要根据自己需要选择一个单选按钮。</para>
+
+        <sect4 id="mouse-a11y-dwell-mode-ctw">
+          <title>使用预设的点击类型自动完成点击。</title>
+
+          <para>当用户选择<guilabel>选择预设的点击类型</guilabel>时激活这种模式。事实上，当鼠标停止运动了<guilabel>延时</guilabel>滑块指定的时间，系统就会自动执行点击类型窗口所选的点击类型，如下：</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-click-type-window.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>点击类型窗口图示</para>
+            </textobject>
+          </mediaobject>
+
+          <para>要显示<guimenu>点击类型窗口</guimenu>，用户必须选中<application><quote><guilabel>显示点击类型窗口</guilabel></quote>复选框：</application></para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-ctw-checkbox.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>显示点击类型窗口的复选框图示</para>
+            </textobject>
+          </mediaobject>
+
+          <para>完成点击后，自动回到单击类型。为了选择其他点击类型，用户需要到<guilabel>点击类型窗口</guilabel>里再执行一次启用<guibutton>按钮</guibutton>自动点击。</para>
+
+          <para>与点击类型窗口不同，一些用户可能更喜欢在面板上的<guilabel>悬停点击</guilabel>小程序，其方便之处在于：</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-click-type-applet.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>GNOME 菜单右边显示的点击类型小程序图示</para>
+            </textobject>
+          </mediaobject>
+
+          <para>实际上，使用<guilabel>悬停点击</guilabel>面板小程序可以：<itemizedlist>
+              <listitem>
+                <para>用户不需要使用<guilabel>点击类型窗口</guilabel>，它可能会挡住桌面上其他的窗口。</para>
+              </listitem>
+
+              <listitem>
+                <para>用户可以直接使用<guilabel>悬停点击</guilabel>小程序上的<guilabel>开/关</guilabel>按钮来启用或停止此项功能。这对于想暂时禁用悬停点击来阅读一些文本来说非常有用。</para>
+              </listitem>
+            </itemizedlist></para>
+
+          <para>要在 GNOME 面板上显示<guilabel>悬停点击</guilabel>小程序，可以使用通常的方法来添加。您可以在这一节里找到添加方法：<link linkend="mouse-a11y-start-pointer-capture">启用指针锁定功能</link>。</para>
+
+          <para><guilabel>点击类型窗口</guilabel>和<guilabel>悬停点击</guilabel>小程序可以同时使用，也可以分别单独使用。</para>
+        </sect4>
+
+        <sect4 id="mouse-a11y-dwell-mode-gestures">
+          <title>使用鼠标手势来完成点击和选择点击类型</title>
+
+          <para>当用户选择<guilabel>使用鼠标手势来完成点击和选择点击类型</guilabel>时激活这种模式。事实上，当鼠标停止移动一定的时间(在<link linkend="mouse-a11y-dwell-delay">延时</link>中指定)，指针的形状会有一个短时间的改变；我们把这个形状叫手势指针：</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>当鼠标显示手势指针时，移动鼠标就可以在最后停止的位置产生一个点击动作，然后指针恢复到正常形状。点击的类型由移动方向来决定。指针移动时会有一条线跟随指针，可以给用户提供视觉反馈。</para>
+            </listitem>
+
+            <listitem>
+              <para>如果用户在移动鼠标前，指针已经恢复到普通形态，这时候的移动就不会产生点击动作。下次停止移动时重新开始悬停功能。</para>
+            </listitem>
+          </itemizedlist>
+
+          <para>用户也可以设定指针匹配移动方向，通过四个可用的<guimenu>下拉列表</guimenu>：</para>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/mouse-a11y-dwell-gesture-mapping.png" format="PNG"/>
+            </imageobject>
+
+            <textobject>
+              <para>移动方向对应点击类型的配置选项图示</para>
+            </textobject>
+          </mediaobject>
+
+          <para>在每个<guimenu>下拉列表</guimenu>里还有一项<guimenuitem>禁用</guimenuitem>项。如果不想自动执行某些点击类型，可以禁用相应的选项。这对那些仅仅某一项点击困难的用户有很大帮助。</para>
+        </sect4>
+      </sect3>
+
+      <sect3>
+        <title id="mouse-a11y-dwell-delay">悬停延时设置</title>
+
+        <para>拖动<guilabel>延时</guilabel>滑块，用户可以配置鼠标停止多久后开始悬停点击。</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-delay-slider.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>悬停点击的延时设置图示</para>
+          </textobject>
+        </mediaobject>
+
+        <note>
+          <para>悬停延时设置仅仅与悬停点击有关。</para>
+        </note>
+      </sect3>
+
+      <sect3 id="mouse-a11y-dwell-motion-treshold">
+        <title>运动阈值设置</title>
+
+        <para>对于保持鼠标静止有困难的用户，这个<guilabel>运动阈值</guilabel>项很有用处。</para>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/mouse-a11y-dwell-motion-treshold.png" format="PNG"/>
+          </imageobject>
+
+          <textobject>
+            <para>悬停点击的运动阈值设定图示</para>
+          </textobject>
+        </mediaobject>
+
+        <para>当设置滑块为低时，很小的移动也会被注意到；而设到高阈值时，鼠标移动很多时才作为运动。</para>
+
+        <note>
+          <para>运动阈值的设置不仅关系到悬停点击，也会影响到模拟右键点击，而这与悬停点击是否被禁用无关。</para>
+        </note>
+      </sect3>
+    </sect2>
+
+    <sect2 id="mouse-a11y-pointer-capture-description">
+      <title>锁定指针描述</title>
+
+      <para>一些用户不仅仅是在电脑上使用指点设备。他们想把指针锁定在屏幕的一块区域里，以便可以让指点设备执行其它任务。</para>
+
+      <para>实际上，指针锁定小程序会在面板上创建一块区域，用户可以把指针锁定在这里，直到用预设的方法来释放指针。</para>
+
+      <note>
+        <para>看一下<link linkend="mouse-a11y-start-pointer-capture">启动指针锁定功能</link>可以了解怎样在 GNOME 面板上添加指针锁定小程序。</para>
+      </note>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-context-menu.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>指针捕获区域(绿色)及其快捷菜单图示</para>
+        </textobject>
+
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-locked.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>指针被锁定时的捕获区域图示</para>
+        </textobject>
+      </mediaobject>
+
+      <para>在<guilabel>指针锁定</guilabel>小程序上点右键，选择<guimenu>首选项</guimenu>菜单，可以设置<guilabel>指针锁定</guilabel>小程序的选项。</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="figures/mouse-a11y-pointer-capture-preferences.png" format="PNG"/>
+        </imageobject>
+
+        <textobject>
+          <para>指针锁定小程序的首选项图示</para>
+        </textobject>
+      </mediaobject>
+
+      <para><guilabel>指针锁定</guilabel>小程序的<guilabel>首选项</guilabel>窗口包含三个小节： </para>
+
+      <itemizedlist>
+        <listitem>
+          <para><guilabel>锁定指针</guilabel>一节里，用户可以指定指针进入捕获区域后，执行什么操作来锁定指针。例如，如果选中了 Ctrl 修饰键，那么按住 Ctrl 键就可以锁定指针。如果没有设定修饰键，鼠标按钮设定的是 0，当指针进入捕获区域时，将会被自动锁定。</para>
+
+          <para>您也可以指定修饰键和鼠标按钮组合使用。</para>
+        </listitem>
+
+        <listitem>
+          <para><guilabel>释放指针</guilabel>小节里，可以指定哪一个修饰键或鼠标按钮来释放指针。</para>
+
+          <para>您也可以指定修饰键和鼠标按钮组合使用。</para>
+        </listitem>
+
+        <listitem>
+          <para><guilabel>捕获区域的范围</guilabel>小节里，可以设定捕获区域在 GNOME 面板上的宽度。</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+
+  <sect1 id="mouse-a11y-about">
+    <title>关于 <application>Mousetweaks</application></title>
+
+    <sect2>
+      <title>作者和主页</title>
+
+      <para><application>Mousetweaks</application> 是基于 Launchpad 平台<ulink type="https" url="https://wiki.ubuntu.com/Accessibility/Specs/MouseTweaks">规范</ulink>。目前由 Gerd Kohlberger (<email>gerdk@svn.gnome.org</email>)负责，和本文作者(<email>frfumanti@svn.gnome.org</email>)帮助测试和服务。</para>
+
+      <para>您可以在 <ulink type="https" url="https://launchpad.net/mousetweaks">Launchpad</ulink> 和 <ulink url="http://live.gnome.org//Mousetweaks/Home">GNOME Live</ulink> 上找到更多相关信息。</para>
+    </sect2>
+
+    <sect2>
+      <title>反馈</title>
+
+      <para>要报告 <application>Mousetweaks</application> 模块、用户界面、本手册的缺陷或提出建议，请使用 <ulink type="http" url="http://bugzilla.gnome.org/">GNOME's Bugzilla</ulink> 系统提供的方法。如果是鼠标首选项面板的辅助工具布局，请归类到 gnome-control-center 模块；其他 Mousetweaks 相关请归类到 Mousetweaks 模块。</para>
+    </sect2>
+
+    <sect2>
+      <title>版权</title>
+
+      <para>Mousetweaks 在 FSF 的 GNU 许可协议下发布；是版本 3，或者(你愿意的)之后的版本。协议的副本可以在 <ulink type="http" url="http://www.gnu.org/licenses/gpl-3.0.txt">链接</ulink> 里找到，或者在这个程序的源代码里找到 COPYING.GPL 这个文件。</para>
+
+      <para>本手册由 FSF 的 GNU Free Documentation License 许可协议发布，是在 1.3 版本的许可协议，或者(你愿意)之后的版本。协议的副本可以在 <ulink type="http" url="http://www.gnu.org/licenses/fdl-1.3.txt">链接</ulink> 里找到，或者在这个程序的源代码里找到 COPYING.FDL 这个文件</para>
+    </sect2>
+  </sect1>
+</article>

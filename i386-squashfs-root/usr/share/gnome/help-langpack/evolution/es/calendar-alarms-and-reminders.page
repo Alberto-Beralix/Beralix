@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="calendar-alarms-and-reminders" xml:lang="es">
+
+  <info>
+    <desc>Establecer notificaciones de recordatorios para citas.</desc>
+    
+    <link type="guide" xref="index#calendar"/>
+
+    <revision pkgversion="3.1.5" version="0.4" date="2011-08-02" status="draft"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/config-prefs-cal.html.en#CACHCGCI -->
+ </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>  
+
+  </info>
+
+<title>Recordatorios para citas</title>
+
+<section id="general-settings">
+<title>Configuración general</title>
+
+<p>Bajo <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Calendario y tareas</gui><gui>Recordatorios</gui></guiseq> puede seleccionar esos calendarios para los que quiere recibir notificaciones de recordatorios. Si no selecciona un calendario no recibirá recordatorios para ningún evento en ese calendario. También puede definir si quiere mostrar un recordatorio para cada cita  para cada cumpleaños y aniversario.</p>
+
+</section>
+
+<section id="manual-reminders">
+<title>Recordatorios manuales</title>
+
+<p>Además de la configuración general, también puede establecer recordatorios manuales en el editor de citas, solo para cierto tipo de citas:</p>
+<steps>
+<item><p>Pulse <guiseq><gui>Opciones</gui><gui>Recordatorios</gui></guiseq> o pulse el botón Recordatorio en la barra de herramientas.</p></item>
+<item><p>Del menú desplegable, elija una de las opciones predeterminadas disponibles para mostrar un recordatorio de notificación, o elija <gui>Personalizar</gui>.</p></item>
+<!-- TODO: Test how this is in GNOME3? Displayed in Notification area, permanently? --> 
+<item><p>En caso de <gui>Personalizar</gui>, el recordatorio puede ser una ventana emergente, la reproducción de un sonido o la ejecución de un programa. También puede definir si se debe repetir el recordatorio.</p></item>
+</steps>
+
+</section>
+
+</page>

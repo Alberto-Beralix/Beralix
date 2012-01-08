@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "2.26">
+<!ENTITY app "gnome-user-share">
+]>
+<article id="index" lang="pt_BR">
+  <articleinfo>
+	 <title>Manual de Compartilhamento de Arquivos Pessoais</title>
+	 <copyright>
+		<year>2009</year>
+		<holder>Red Hat, Inc.</holder>
+         </copyright><copyright><year>2010</year><holder>Marcelo Rodrigues Pires Filho (marcelopires@mmsantos.com.br)</holder></copyright>
+
+	 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+	 <authorgroup>
+           <author role="maintainer">
+             <firstname>Matthias</firstname>
+             <surname>Clasen</surname>
+           </author>
+	 </authorgroup>
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+	 <revhistory>
+		<revision>
+		  <revnumber>1.0</revnumber>
+		  <date>2009</date>
+		  <revdescription>
+			 <para role="author">Matthias Clasen <email>mclasen@redhat.com</email></para>
+		  </revdescription>
+		</revision>
+	 </revhistory>
+	 <releaseinfo>Este manual descreve a versão 2.26 do gnome-user-share.</releaseinfo>
+	 <legalnotice>
+		<title>Feedback</title>
+		<para>Para reportar uma falha ou fazer uma sugestão a respeito do aplicação do gnome-user-share ou este manual, siga as direções no <ulink url="ghelp:user-guide?feedback-bugs" type="help">Página de feedback do GNOME</ulink>.</para>
+	 </legalnotice>
+    <abstract role="description">
+      <para>gnome-user-share é um serviço de sessão que possibilita o compartilhamento de arquivos entre diversos computadores.</para>
+    </abstract>
+  </articleinfo>
+  <indexterm><primary>gnome-user-share</primary></indexterm>
+  <indexterm><primary>compartilhamento de arquivos</primary></indexterm>
+  <indexterm><primary>compartilhamento</primary></indexterm>
+
+  <sect1 id="gnome-user-share-intro">
+	 <title>Introdução</title>
+	 <para>gnome-user-share é um serviço de sessão que exporta conteúdo da pasta <filename>Pública</filename> para seu diretório home, para que este conteúdo possa ser facilmente acessado de outros computadores na mesma rede local. Nos outros computadores, a pasta compartilhada aparecera com um nome parecido com 'arquivos compartilhados do <replaceable>usuário</replaceable>' na janela de rede do <application>nautilus</application>, onde <replaceable>usuário</replaceable> será substituído pelo nome do usuário.</para>
+	 <para>O gnome-user-share usa um servidor WebDAV para compartilhar a pasta <filename>Public</filename>, e anuncia o compartilhamento na rede local usando mDNS.</para>
+         <para>Adicionalmente, o gnome-user-share pode tornar arquivos compartilhados disponíveis via ObexFTP por Bluetooth, e receber arquivos que são enviados ao seu computador por Bluetooth via ObexPush.</para>
+  </sect1>
+
+  <sect1 id="gnome-user-share-getting-started">
+    <title>Iniciando</title>
+
+    <sect2 id="gnome-user-share-start">
+       <title>Iniciando o gnome-user-share</title>
+
+       <para>O serviço gnome-user-share é normalmente iniciado por <application>gnome-session</application> quando você entra no sistema. você pode mudar isto abrindo <menuchoice><guimenu>Preferências</guimenu><guimenu>Aplicativos de sessão</guimenu></menuchoice> no menu <guimenu>Sistema</guimenu>, e modificando a opção 'Compartilhamento de arquivos' na lista de programas iniciais.</para>
+
+       <para>Para configurar vários aspectos do compartilhamento de arquivos, use Preferência de compartilhamento de arquivos, que pode ser encontrado no menu <guimenu>Sistema</guimenu> <menuchoice><guimenu>Preferências</guimenu><guimenu>Compartilhamento de arquivos pessoais</guimenu></menuchoice>.</para>
+       <figure id="file-sharing-preferences">
+         <title>Preferências de compartilhamento de arquivos</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/file-sharing-preferences.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+ 
+     </sect2>
+     <sect2 id="gnome-user-share-enabling-sharing">
+       <title>Habilitando compartilhamento de arquivos na rede</title>
+       <para>Abra as Preferências de compartilhamento de arquivos <menuchoice><guimenu>Preferências</guimenu><guimenu>Compatilhamento de Arquivos pessoais</guimenu></menuchoice> no menu <guimenu>Sistema</guimenu>.</para>
+       <figure id="sharing-over-the-network">
+         <title>Compartilhar arquivos na rede</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/sharing-over-the-network.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>Para habilitar o compartilhamento de arquivo por WebDAV, use a opção <guilabel>Compartilhar arquivos públicos na rede</guilabel>. Quando o compartilhamento de arquivos é habilitado os controles de proteção de senha permitem a definição de senha que necessite ser especificado antes que um usuário em outro computador tenha o acesso permitido a arquivos compartilhados. <note><para>Algumas configurações de Firewall na maquina local devem causar problemas com a exibição, assim como ao acesso de arquivos compartilhados. Consulte seu administrador de sistema para mais detalhes.</para></note><itemizedlist>
+           <listitem>
+              <para>Selecione <guilabel>Nunca</guilabel> para permitir a todos acessar e escrever livremente arquivos numa pasta compartilhada.</para>
+           </listitem>
+           <listitem>
+              <para>Selecione <guilabel>Sempre</guilabel> para requisitar a senha para ler ou escrever arquivos numa pasta compartilhada.</para>
+           </listitem>
+           <listitem>
+              <para>Selecione <guilabel>Quando escrevendo arquivos</guilabel> para permitir a todos que leiam livremente arquivos na pasta compartilhada, mas requisite senha quando escrever arquivos.</para>
+           </listitem>
+         </itemizedlist><note><para>Quando você define uma senha, você deve dar a senha para todos os usuários que você quer que tenham acesso aos seus arquivos compartilhados. Assim, você deve usar uma senha diferente de outras senhas que você use.</para></note></para>  
+     </sect2>
+
+     <sect2 id="gnome-user-share-enabling-bluetooth">
+       <title>Habilitando o compartilhamento de arquivos por Bluetooth</title>
+       <para>Abra as Preferências de compartilhamento de arquivos <menuchoice><guimenu>Preferências</guimenu><guimenu>Compatilhamento de Arquivos pessoais</guimenu></menuchoice> no menu <guimenu>Sistema</guimenu>.</para>
+       <figure id="sharing-over-bluetooth">
+         <title>Compartilhe Arquivos por Bluetooth</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/sharing-over-bluetooth.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>Para habilitar o compartilhamento de arquivos por Bluetooth, use marque a opção <guilabel>Compartilhar arquivos públicos por Bluetooth</guilabel>. Para permitir dispositivos Bluetooth remotos deletarem seus arquivos compartilhados use a opção <guilabel>Permitir que dispositivos remotos deletem arquivos</guilabel>. Para permitir que dispositivos Bluetooth remotos acessem seus arquivos compartilhados até quando eles não estão interligados com seu computador, marque a opção <guilabel>Requisitar que dispositivos remotos pareiem com esse computador</guilabel>.  <note><para>Quando você permite serviços remotos externos a acessar seus arquivos compartilhados, qualquer um com um celular com Bluetooth no alcance de seu computador pode acessar e talvez até modificar seus arquivos compartilhados.</para></note></para>
+     </sect2>
+
+     <sect2 id="gnome-user-share-bluetooth-receiving">
+       <title>Recebendo Arquivos por Bluetooth</title>
+       <para>Abra as Preferências de compartilhamento de arquivos <menuchoice><guimenu>Preferências</guimenu><guimenu>Compatilhamento de Arquivos pessoais</guimenu></menuchoice> no menu <guimenu>Sistema</guimenu>.</para>
+       <figure id="receiving-over-bluetooth">
+         <title>Receba Arquivos por Bluetooth</title>
+         <screenshot>
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="figures/receiving-over-bluetooth.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </screenshot>
+       </figure>
+       <para>Para deixar dispositivos Bluetooth remotos enviarem arquivos para seu computador, marque a opção <guilabel>Receber arquivos por Bluetooth na pasta Downloads</guilabel>Arquivos recebidos serão armazenados na pasta <filename>Downloads</filename> no seu diretório home. Quando o recebimento de arquivos é habilitado, a seleção <guilabel>Aceitar arquivos</guilabel> permite que você determine quais dispositivos remotos são permitidos a enviar arquivos. <itemizedlist>
+            <listitem>
+              <para>Selecione <guilabel>Sempre</guilabel> para permitir qualquer dispositivo remoto enviar arquivos.</para>
+            </listitem>
+            <listitem>
+              <para>Selecione <guilabel>Apenas para dispositivos interligados</guilabel> para aceitar arquivos apenas de dispositivos interligados. <note><para>Dispositivos interligados são aqueles que estão conectados ao seu computador, e tiveram que entrar com um código PIN para se conectar com ele ou dele.</para></note></para>
+            </listitem>
+            <listitem>
+              <para>Selecione <guilabel>Apenas para dispositivos confiáveis e interligados</guilabel> para aceitar arquivos apenas de dispositivos interligados. <note><para>Aparelhos podem ser marcados como confiáveis na sessão <application>propriedades de bluetoothapplication&gt; dentro de Dispositivos conhecidos.
+            
+          </application></para></note></para></listitem></itemizedlist></para>
+        <para>Use a opção <guilabel>Notificar sobre arquivos recebidos</guilabel> para selecionar se você quer ser notificado quando um arquivo é recebido por Bluetooth.</para>
+     </sect2>
+  </sect1>
+
+</article>

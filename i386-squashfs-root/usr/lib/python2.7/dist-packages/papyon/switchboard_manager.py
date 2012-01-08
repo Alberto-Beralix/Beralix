@@ -1,0 +1,1 @@
+../../../../share/pyshared/papyon/switchboard_manager.py

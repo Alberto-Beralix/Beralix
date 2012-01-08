@@ -1,0 +1,1 @@
+../../../../../share/pyshared/telepathy/client/conn.py

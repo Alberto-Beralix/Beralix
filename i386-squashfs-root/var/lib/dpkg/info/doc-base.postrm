@@ -1,0 +1,12 @@
+#!/bin/sh
+# postrm for doc-base
+
+set -e
+
+if [ "$1" = "remove" ]; then
+    rm -rf /var/lib/doc-base
+fi
+
+
+
+exit 0

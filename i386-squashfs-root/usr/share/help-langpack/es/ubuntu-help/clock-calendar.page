@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="clock-calendar" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="clock"/>
+    <link type="guide" xref="shell-overview#desktop"/>
+    
+    <desc>Mostrar sus citas en el calendario en la parte superior de la pantalla.</desc>
+    
+    <revision version="11.04" date="2011-04-06" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Ver citas en su calendario</title>
+
+
+<p>Puede organizar las citas de su calendario pulsando en el reloj del panel, si va a usar una aplicación de correo y calendario llamada <app>Evolution</app>.</p>
+
+<p>Si ya ha configurado Evolution, pulse en el reloj del panel superior y luego pulse en <gui>Añadir evento</gui> para empezar a añadir citas. Una vez que se añade una cita, ésta aparece debajo del calendario cuando pulsa en el reloj.</p>
+
+<p>Para sacar el calendario completo de Evolution, pulse en el reloj y luego en la primera línea donde esté la fecha de hoy.</p>
+
+<!--Disabling unless someone wants to make a screenshot
+<media type="image" src="figures/shell-appts.png"
+       width="500" height="282">
+  <p>Clock, calendar, and appointments</p>
+</media>-->
+
+<note><p>Esto solo funcionará si ya dispone de una cuenta en <app>Evolution</app>. En caso contrario, se mostrará una ventana con los pasos necesarios para que pueda añadir su primera cuenta.</p></note>
+
+<section id="turn-off-appointments">
+  <title>Desactivar la integración del calendario de Evolution</title>
+<p>También puede desactivar esta característica si quiere.</p>
+
+<steps>
+  <item><p>Pulse en el reloj y seleccione <gui>Configuración de fecha y hora</gui>.</p></item>
+  <item><p>Ahora, vaya a la pestaña <gui>Reloj</gui>.</p></item>
+  <item><p>Desmarque la casilla <gui>Próximos eventos del calendario de Evolution</gui>.</p></item>
+</steps>
+
+</section>
+
+<comment>
+    <cite date="2011-02-10" href="mailto:nruz@alumnos.inf.utfsm.cl">Natalia Ruz</cite>
+    <p>Should have some information or link to "how to add a mail account to Evolution", and possibly an image (but maybe a screenshot is too big).</p>
+  </comment>
+</page>

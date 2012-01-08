@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="printing-select" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="printing#paper"/>
+    <desc>Nur bestimmte Seiten drucken, oder nur einen bestimmten Bereich an Seitenzahlen.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Nur bestimmte Seiten drucken</title>
+
+<p>So drucken Sie nur bestimmte Seiten eines Dokuments:</p>
+<steps>
+ <item><p>Klicken Sie auf <guiseq><gui>Datei</gui><gui>Drucken</gui></guiseq>.</p></item>
+ <item><p>Wählen Sie im Reiter <gui>Allgemein</gui> des Druckfensters <gui>Seiten</gui> im Abschnitt <gui>Bereich</gui>.</p></item>
+<item><p>Geben Sie die zu druckenden Seitennummern in das Textfeld ein, durch Kommata getrennt. Verwenden Sie einen Bindestrich, um einen Seitenbereich anzugeben.</p></item>
+</steps>
+
+<note>
+<p>Wenn Sie zum Beispiel »1,3,5-7,9« in das <gui>Seiten</gui>-Textfeld eingeben, werden die Seiten 1,3,5,6,7 und 9 gedruckt.</p>
+ <media type="image" src="figures/printing-select.png"/>
+</note>
+
+</page>

@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+bansheedir=${libdir}/banshee
+
+Name: Banshee Hyena
+Description: Hyena sqlite libraries for the Banshee Media Framework
+Version: 2.2.0
+Requires: banshee-hyena
+Libs: -r:${bansheedir}/Hyena.Data.Sqlite.dll
+

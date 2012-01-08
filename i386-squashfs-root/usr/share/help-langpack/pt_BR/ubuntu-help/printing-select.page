@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="printing-select" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="printing#paper"/>
+    <desc>Imprimir apenas páginas específicas, ou apenas um intervalo de  páginas</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Imprimir apenas certas páginas</title>
+
+<p>Para imprimir apenas certas páginas de um documento:</p>
+<steps>
+ <item><p>Clique <guiseq><gui>arquivo</gui><gui>imprimir</gui></guiseq></p></item>
+ <item><p>Na aba <gui>geral</gui> na janela <gui>imprimir</gui> escolha <gui>páginas</gui> na seção <gui>intervalo</gui>.</p></item>
+<item><p>Digite os números das páginas que você deseja imprimir na caixa de texto, separados por vírgulas. Use um traço para denotar um intervalo de páginas.</p></item>
+</steps>
+
+<note>
+<p>Por exemplo, se você entar "1,3,5-7,9" na caixa de texto <gui>Páginas</gui>, as páginas 1,3,5,6,7 e 9 serão impressas.</p>
+ <media type="image" src="figures/printing-select.png"/>
+</note>
+
+</page>

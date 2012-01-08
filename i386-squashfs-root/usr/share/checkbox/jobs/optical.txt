@@ -1,0 +1,104 @@
+plugin: manual
+name: optical/detect
+requires: device.category == 'CDROM' 
+command:
+ cat <<'EOF' | run_templates -t -s 'udev_resource | filter_templates -w "category=CDROM"' | sed '/^$/d'
+ $vendor $product
+ EOF
+description:
+ The following optical drives were detected:
+ .
+ $output
+ .
+ Is this correct?
+
+plugin: local
+name: optical/read
+requires: device.category == 'CDROM'
+description: Optical Storage device read tests
+description-cs.UTF-8: Testy čtení z optických médií
+description-de.UTF-8: Lesetest für optische Speicherlaufwerke
+description-en_AU.UTF-8: Optical Storage device read tests
+description-en_GB.UTF-8: Optical Storage device read tests
+description-es.UTF-8: Pruebas de lectura de dispositivo de almacenamiento óptico
+description-gl.UTF-8: Probas de lectura de dispositivos de almacenamento óptico
+description-hu.UTF-8: Optikai tárolóeszközök olvasásának tesztelése
+description-it.UTF-8: Test di lettura dei dispositivi ottici di memorizzazione
+description-pt_BR.UTF-8: Testes de leitura de dispositivo de armazenamento ótico
+description-ru.UTF-8: Проверка чтения на оптическом дисководе
+description-sl.UTF-8: Preizkus branja z optičnih naprav
+command:
+ cat <<'EOF' | run_templates -t -s 'udev_resource | filter_templates -w "category=CDROM"'
+ plugin: manual
+ name: optical/read_`ls /sys$path/block`
+ requires: device.path == "$path" and package.name == 'linux'
+ depends: optical/detect
+ user: root
+ command: optical_read_test /dev/`ls /sys$path/block`
+ _description:
+  Please insert appropriate non-blank media into your optical drive(s) and click "Test" to automatically test reading.
+  .
+  The test result will be updated when the test is complete.
+ EOF
+
+plugin: manual
+name: optical/cdrom-write
+depends: optical/detect
+requires: device.category == 'CDROM'
+description:
+ The detected optical drive seems to support writing. Enter a blank CDROM \
+ into your drive and try writing to it.
+ .
+ Does writing work?
+
+plugin: manual
+name: optical/cdrom-audio-playback
+depends: optical/read
+description:
+ CD audio playback procedure:
+ 1.- Insert an audio cd in your optical drive.
+ 2.- An icon should appear on the desktop.
+ 3.- Right-click on the icon and select "Open with Rhythmbox".
+ 4.- Select the CD as the playback source and press play button.
+ 5.- The music should reproduce.
+ 6.- Stop music reproduction after some time.
+ 7.- Right click on the desktop icon and select "Eject Volume".
+ 8.- The CD should be ejected and the icon removed from the desktop.
+ .
+ Did all the steps work?
+
+plugin: manual
+name: optical/dvd-write
+depends: optical/detect
+requires: device.category == 'CDROM'
+description:
+ The detected optical drive seems to support writing. Enter a blank DVD \
+ into your drive and try writing to it.
+ .
+ Does writing work?
+
+plugin: manual
+name: optical/dvd_movie_playback
+depends: optical/read
+description:
+ DVD movie playback procedure:
+ 1.- Insert a DVD that contains any movie in your optical drive.
+ 2.- A window should appear with some actions that you may choose. Select 'Open Movie Player'.
+ 3.- The player should be opened and the movie should reproduce.
+ 4.- Stop movie reproduction after some time.
+ 5.- An icon should appear in the desktop.
+ 6.- Right click on the icon and select "Eject Volume".
+ 7.- The DVD should be ejected and the icon removed from the desktop.
+ .
+ Did all the steps work?
+
+plugin: manual
+name: optical/dvd_playback
+command: totem /media/cdrom
+requires:
+ device.category == 'CDROM'
+ package.name == 'totem'
+description:
+ Insert a DVD.  Then select Test to play the DVD in Totem.
+ .
+ Did the file play?

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences_general" xml:lang="es">
+  <info>
+    <title type="sort">1. General</title>
+    <title type="link">General</title>
+    <desc>Configurar el comportamiento básico de <app>Orca</app></desc>
+    <link type="guide" xref="preferences#orca"/>
+    <link type="next" xref="preferences_speech"/>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Preferencias generales</title>
+  <section id="keyboardlayout">
+    <info>
+      <desc>Opción del cuadro de diálogo de preferencias para seleccionar qué disposición del teclado de <app>Orca</app> usar, sobremesa o portátil.</desc>
+    </info>
+    <title>Distribución del teclado</title>
+    <media type="image" mime="image/png" src="figures/preferences_keyboard_layout.png"/>
+    <p>El grupo de botones de radio <gui>distribución de teclado</gui> le permite especificar si trabajará en un equipo sobremesa (es decir, con un teclado numérico) o con un teclado de portátil. La distribución que elija determinará tanto el <key>Modificador de Orca</key> como cierto número de atajos de teclado para los comandos de <app>Orca</app>.</p>
+    <p>Valor predeterminado: <gui>Escritorio</gui></p>
+  </section>
+  <section id="quitorca">
+    <info>
+      <desc>Opción del cuadro de diálogo de preferencias para salir de <app>Orca</app> sin mostrar un diálogo de confirmación.</desc>
+    </info>
+    <title>Salir de Orca sin confirmación</title>
+      <media type="image" mime="image/png" src="figures/preferences_quit_Orca_without_confirmation.png"/>
+      <p>Generalmente, cuando sale de <app>Orca</app> aparece un diálogo de confirmación preguntando si realmente quiere salir de <app>Orca</app>. Desmarcar la casilla <gui>Salir de Orca sin confirmación</gui> evita que aparezca esta ventana de confirmación.</p>
+    <p>Valor predeterminado: no marcado</p>
+  </section>
+  <section id="presenttooltips">
+    <info>
+      <desc>Opción del cuadro de diálogo de preferencias para activar la presentación de consejos que aparece al pasar el ratón por encima.</desc>
+    </info>
+    <title>Mostrar consejos</title>
+    <media type="image" mime="image/png" src="figures/preferences_present_tooltips.png"/>
+    <p>Cuando está marcada, esta opción le dirá a <app>Orca</app> que presente información sobre los consejos cuando estos aparezcan como resultado de pasar el ratón. Las acciones específicas para forzar que se muestren los consejos, tales como presionar <keyseq><key>Ctrl</key><key>F1</key></keyseq> cuando un objeto tiene el foco, siempre hará que se presente el consejo independientemente de este ajuste.</p>
+    <p>Valor predeterminado: no marcado</p>
+  </section>
+  <section id="showmainwindow">
+    <info>
+      <desc>Opción del cuadro de diálogo de preferencias para mostrar u ocultar la ventana principal de <app>Orca</app>.</desc>
+    </info>
+    <title>Mostrar la ventana principal de Orca</title>
+    <media type="image" mime="image/png" src="figures/preferences_show_Orca_main_window.png"/>
+    <figure>
+      <title>La ventana principal de Orca</title>
+      <media type="image" mime="image/png" src="figures/main_window.png"/>
+      <desc>La ventana principal de <app>Orca</app>le proporciona una forma gráfica de mostrar el diálogo de <link xref="preferences">preferencias de Orca</link>, acceder al contenido de la ayuda, mostrar el diálogo «Acerca de» y salir de <app>Orca</app>.</desc>
+    </figure>
+    <p>A muchos usuarios no les gusta la ventana principal de <app>Orca</app> porque ésta se muestra en el orden de tabulación del gestor de ventanas cuando pulsa <keyseq><key>Alt</key><key>Tab</key></keyseq> para cambiar de ventana. Al desmarcar esta casilla <gui>Mostrar ventana principal de <app>Orca</app></gui>, puede indicarle a <app>Orca</app> que no muestre la ventana principal.</p>
+    <p>Valor predeterminado: marcado</p>
+  </section>
+  <section id="autolaunch">
+    <info>
+      <desc>Opción del cuadro de diálogo de preferencias para hacer que <app>Orca</app> se ejecute automáticamente al iniciar sesión.</desc>
+    </info>
+    <title>Ejecutar Orca al iniciar sesión</title>
+    <media type="image" mime="image/png" src="figures/preferences_start_Orca_when_you_login.png"/>
+    <p>Cuando está activada, esta opción le dice al sistema que lance <app>Orca</app> automáticamente cuando inicia la sesión.</p>
+    <p>Valor predeterminado: no marcado</p>
+  </section>
+  <section id="objectundermouse">
+    <info>
+      <desc>Opción del cuadro de diálogo de preferencias para activar la presentación del objeto de debajo del puntero del ratón.</desc>
+    </info>
+    <title>Leer el objeto de debajo del ratón</title>
+    <media type="image" mime="image/png" src="figures/preferences_speak_object_under_mouse.png"/>
+    <p>Cuando está marcada, esta opción hace que <app>Orca</app> presente la información acerca del objeto bajo el puntero del ratón, según lo mueve alrededor de la pantalla, usando la característica <link xref="howto_mouse_review">Revisión del ratón</link> de <app>Orca</app>.</p>
+    <p>Valor predeterminado: no marcado</p>
+  </section>
+  <section id="timeanddate">
+    <info>
+      <desc>Opciones del cuadro de diálogo de preferencias para personalizar los formatos de fecha y hora usados por <app>Orca</app>.</desc>
+    </info>
+    <title>Formato de fecha y hora</title>
+    <media type="image" mime="image/png" src="figures/preferences_date_and_time.png"/>
+    <p>Los cuadros combinados <gui>Formato de hora</gui> y <gui>Formato de fecha</gui> le permite especificar cómo leerá y mostrará <app>Orca</app> en Braille la hora y la fecha.</p>
+    <p>Valor predeterminado: utilizar el formato de la configuración regional del sistema para cada uno</p>
+  </section>
+  <section id="profiles">
+    <info>
+      <desc>Opciones del cuadro de diálogo de preferencias para gestionar perfiles de configuración.</desc>
+    </info>
+    <title>Perfiles</title>
+    <media type="image" mime="image/png" src="figures/preferences_profiles.png"/>
+    <p>El grupo de controles <gui>Perfiles</gui>, que aparece en la parte inferior de la página <gui>General</gui>, le permite mantener y usar varias configuraciones.</p>
+   <list>
+      <item>
+        <p>El cuadro combinado <gui>Perfil activo</gui> muestra el perfil actual y le permite seleccionar un perfil diferente que cargar.</p>
+      </item>
+      <item>
+        <p>El botón <gui>Cargar</gui> hará que <app>Orca</app> cargue el perfil indicado en el cuadro combinado <gui>Perfil activo</gui>.</p>
+      </item>
+      <item>
+        <p>El botón <gui>Guardar como</gui> le permite guardar el conjunto actual de opciones desde el cuadro de diálogo de preferencias a un perfil con nombre.</p>
+      </item>
+      <item>
+        <p>El cuadro combinado <gui>Perfil inicial</gui> le permite selección qué perfil se cargará automáticamente cada vez que ejecute <app>Orca</app>.</p>
+      </item>
+    </list>
+  </section>
+</page>

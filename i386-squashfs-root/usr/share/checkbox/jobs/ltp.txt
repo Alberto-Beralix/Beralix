@@ -1,0 +1,67 @@
+name: ltp
+plugin: remote
+description: Linux Test Project
+description-ace.UTF-8: Proyek Uji Linux
+description-ar.UTF-8: مشروع اختبار لينِكس
+description-ast.UTF-8: Proyeutu Linux Test
+description-bg.UTF-8: Проект за тестване на хардуер
+description-bn.UTF-8: লিনাক্স পরীক্ষার প্রকল্প
+description-bo.UTF-8: Linux་བརྟག་ཞིབ་ལས་གཞི
+description-br.UTF-8: Raktres prouadoù evit Linux
+description-bs.UTF-8: Linux test projekat
+description-ca.UTF-8: Projecte de proves del Linux
+description-cs.UTF-8: Projekt testování Linuxu
+description-da.UTF-8: Linux-testprojektet
+description-de.UTF-8: Linux-Test-Projekt
+description-el.utf-8: Σχέδιο Δοκιμών Linux
+description-en_AU.UTF-8: Linux Test Project
+description-en_CA.UTF-8: Linux Test Project
+description-en_GB.UTF-8: Linux Test Project
+description-eo.UTF-8: Linuks-test-a projekto
+description-es.UTF-8: Proyecto Linux Test
+description-eu.UTF-8: Linuxen Proben Proiektua
+description-fi.UTF-8: Linuxin testausprojekti
+description-fr.UTF-8: Projet de tests Linux
+description-gl.UTF-8: Proxecto de probas de Linux
+description-he.UTF-8: מיזם הבדיקה של לינוקס
+description-hi.UTF-8: लाइनेक्स जाँच परियोजना
+description-hr.UTF-8: Linux testni projekt
+description-hu.UTF-8: Linux tesztelési projekt
+description-it.UTF-8: Linux Test Project
+description-ja.UTF-8: Linux テストプロジェクト
+description-kk.UTF-8: Linux тексеріліс жобасы
+description-ko.UTF-8: 리눅스 테스트 프로젝트
+description-lt.UTF-8: Linux testavimo projektas
+description-lv.UTF-8: Linux testēšanas projekts
+description-ms.UTF-8: Projek Ujian Linux
+description-nb.UTF-8: Linux Testprosjekt.
+description-ne.UTF-8: लिनक्स परीक्षण परियोजना
+description-nl.UTF-8: Linux Test Project
+description-oc.UTF-8: Projècte de tèsts Linux
+description-pl.UTF-8: Projekt testowania systemu Linux
+description-pt.UTF-8: Projecto de Testes do Linux
+description-pt_BR.UTF-8: Projeto Linux Test
+description-ro.UTF-8: Proiect de teste Linux
+description-ru.UTF-8: Проект тестирования Linux
+description-sk.UTF-8: Linuxový testovací projekt
+description-sl.UTF-8: Projekt preizkusa Linuxa
+description-sq.UTF-8: Testime të projektit Linux
+description-sr.UTF-8: Линуксов пројекат тестирања
+description-sv.UTF-8: Linux testprojekt
+description-th.UTF-8: โครงการทดสอบลินุกซ์
+description-tr.UTF-8: Linux Test Projesi
+description-ug.UTF-8: Linux سىناق قۇرۇلۇشى
+description-uk.UTF-8: Проект тестування Linux
+description-vi.UTF-8: Dự án Linux Test
+description-zh_CN.UTF-8: Linux 测试项目
+description-zh_HK.UTF-8: Linux 測試專案
+description-zh_TW.UTF-8: Linux 測試專案
+requires:
+ package.alias == 'linux'
+ package.name == 'cvs'
+ package.name == 'flex'
+ package.name == 'make'
+ package.name == 'autoconf'
+user: root
+timeout: 1200
+command: ltp_suite | filter_templates --whitelist='name=syscalls'

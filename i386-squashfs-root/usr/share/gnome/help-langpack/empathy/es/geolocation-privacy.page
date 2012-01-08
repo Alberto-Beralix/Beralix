@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" id="geolocation-privacy" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="geolocation#geoloc"/>
+    <desc>Qué información se envía y a quién.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-19" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-09" status="deferred"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Privacidad en la geolocalización</title>
+
+  <section id="info-sent">
+  <title>Qué información se envía</title>
+  <p>Es posible enviar: su país, región, localidad, área, calle, edificio, planta, habitación, código postal, longitud y altitud, velocidad y orientación.</p>
+  <p>La precisión y cantidad de información acerca de su posición geográfica se basa en el software o en la infraestructura usada para descubrir su posición.</p>
+  <p>Diferentes tipos de redes pueden tener diferentes ajustes de precisión y pueden enviar diferente información. El uso de dispositivos externos tales como un GPS o teléfono móvil puede aumentar la precisión de la información enviada.</p>
+  <p>Cuando el modo de privacidad está activado, no se enviará nada más preciso que la ciudad, incluso si está usando un dispositivo externo.</p>
+  </section>
+  
+  <section id="see-info">
+  <title>Quién puede ver la información enviada</title>
+  <p>Sólo sus contactos pueden ver su posición geográfica.</p>
+  </section>
+  
+  <section id="privacy-mode">
+  <title>Cuál es el modo de privacidad</title>
+  <p>El modo de privacidad, activado de forma predeterminada, es un modo de precisión reducida de la información de posición geográfica enviada a sus contactos.</p>
+  </section>
+  
+  <section id="privacy-overview">
+  <title>Visión general de la privacidad</title>
+  <p>Visión general de los ajustes de privacidad en la geolocalización de <app>Empathy</app>.</p>
+  <list>
+    <item>
+      <p>De forma predeterminada la geolocalización no está activada.</p>
+    </item>
+    <item>
+      <p>De forma predeterminada está activado el modo de privacidad.</p>
+    </item>
+    <item>
+      <p>El modo de privacidad prevalece incluso cuando se está usando dispositivos externos más precisos.</p>
+    </item>
+    <item>
+      <p>Sólo sus contactos pueden ver su posición.</p>
+    </item>
+  </list>
+  </section>
+
+</page>

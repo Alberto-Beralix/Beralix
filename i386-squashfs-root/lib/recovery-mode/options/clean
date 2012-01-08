@@ -1,0 +1,20 @@
+#!/bin/sh
+
+. /lib/recovery-mode/l10n.sh
+
+if [ "$READONLY" = "true" ]; then
+  exit 1
+fi
+
+if [ "$1" = "test" ]; then
+  echo $(eval_gettext "Try to make free space")
+  exit 0
+fi
+
+apt-get clean
+
+echo ""
+echo $(eval_gettext "Finished, please press ENTER")
+read TMP
+
+exit 0

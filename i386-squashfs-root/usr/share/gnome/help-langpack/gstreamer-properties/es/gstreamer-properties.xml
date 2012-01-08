@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.2.2">
+<!ENTITY manrevision "2.5">
+<!ENTITY date "June 2010">
+<!ENTITY app "GStreamer Properties">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="es">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Manual del Selector de sistemas multimedia V2.5</title>       
+
+    <copyright>
+      <year>2003</year> 
+      <holder>Christian Fredrik Kalager Schaller</holder> 
+    </copyright><copyright><year>2007-2010</year><holder>Jorge González (jorgegonz@svn.gnome.org)</holder></copyright> 
+
+    <abstract role="description">
+      <para>El Selector de sistemas multimedia le permite configurar parámetros multimedia relacionados con el hardware</para>
+    </abstract>
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2003</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <publisher> 
+      <publishername>Proyecto de documentación de GNOME</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Se concede permiso para copiar, distribuir o modificar este documento según las condiciones de la GNU Free Documentation License (GFDL), Versión 1.1 o cualquier versión posterior publicada por la Free Software Foundation sin Secciones invariantes, Textos de portada y Textos de contraportada. Encontrará una copia de la GFDL en este <ulink type="help" url="ghelp:fdl">enlace</ulink> o en el archivo COPYING-DOCS distribuido con este manual.</para>
+         <para>Este manual forma parte de una colección de documentos de GNOME distribuidos según la GFDL. Si desea distribuir este manual de forma independiente de la colección, puede hacerlo agregando una copia de la licencia al documento, según se describe en la sección 6 de la misma.</para>
+
+	<para>Muchos de los nombres utilizados por las empresas para distinguir sus productos y servicios se consideran marcas comerciales. Cuando estos nombres aparezcan en la documentación de GNOME, y siempre que se haya informado a los miembros del Proyecto de documentación de GNOME de dichas marcas comerciales, los nombres aparecerán en mayúsculas o con las iniciales en mayúsculas.</para>
+
+	<para>ESTE DOCUMENTO Y LAS VERSIONES MODIFICADAS DEL MISMO SE PROPORCIONAN SEGÚN LAS CONDICIONES ESTABLECIDAS EN LA LICENCIA DE DOCUMENTACIÓN LIBRE DE GNU (GFDL) Y TENIENDO EN CUENTA QUE: <orderedlist>
+		<listitem>
+		  <para>EL DOCUMENTO SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, NI EXPLÍCITA NI IMPLÍCITA INCLUYENDO, SIN LIMITACIÓN, GARANTÍA DE QUE EL DOCUMENTO O VERSIÓN MODIFICADA DE ÉSTE CAREZCA DE DEFECTOS COMERCIALES, SEA ADECUADO A UN FIN CONCRETO O INCUMPLA ALGUNA NORMATIVA. TODO EL RIESGO RELATIVO A LA CALIDAD, PRECISIÓN Y UTILIDAD DEL DOCUMENTO O SU VERSIÓN MODIFICADA RECAE EN USTED. SI CUALQUIER DOCUMENTO O VERSIÓN MODIFICADA DE AQUÉL RESULTARA DEFECTUOSO EN CUALQUIER ASPECTO, USTED (Y NO EL REDACTOR INICIAL, AUTOR O CONTRIBUYENTE) ASUMIRÁ LOS COSTES DE TODA REPARACIÓN, MANTENIMIENTO O CORRECCIÓN NECESARIOS. ESTA RENUNCIA DE GARANTÍA ES UNA PARTE ESENCIAL DE ESTA LICENCIA. NO SE AUTORIZA EL USO DE NINGÚN DOCUMENTO NI VERSIÓN MODIFICADA DE ÉSTE POR EL PRESENTE, SALVO DENTRO DEL CUMPLIMIENTO DE LA RENUNCIA;Y</para>
+		</listitem>
+		<listitem>
+		  <para>EN NINGUNA CIRCUNSTANCIA NI BAJO NINGUNA TEORÍA LEGAL, SEA POR ERROR (INCLUYENDO NEGLIGENCIA) CONTRATO O DOCUMENTO DE OTRO TIPO, EL AUTOR, EL ESCRITOR INICIAL, EL AUTOR DE APORTACIONES NI NINGÚN DISTRIBUIDOR DEL DOCUMENTO O VERSIÓN MODIFICADA DEL DOCUMENTO, NI NINGÚN PROVEEDOR DE NINGUNA DE ESAS PARTES, SERÁ RESPONSABLE ANTE NINGUNA PERSONA POR NINGÚN DAÑO DIRECTO, INDIRECTO, ESPECIAL, INCIDENTAL O DERIVADO DE NINGÚN TIPO, INCLUYENDO, SIN LIMITACIÓN DAÑOS POR PÉRDIDA DE FONDO DE COMERCIO, PARO TÉCNICO, FALLO INFORMÁTICO O AVERÍA O CUALQUIER OTRO POSIBLE DAÑO O AVERÍA DERIVADO O RELACIONADO CON EL USO DEL DOCUMENTO O SUS VERSIONES MODIFICADAS, AUNQUE DICHA PARTE HAYA SIDO INFORMADA DE LA POSIBILIDAD DE QUE SE PRODUJESEN ESOS DAÑOS.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Christian Fredrik</firstname> 
+	<surname>Kalager Schaller</surname> 
+	<affiliation> 
+	  <orgname>gnome.org</orgname> 
+	  <address/> 
+	</affiliation> 
+      </author> 
+
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>translator@gnome.org</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+
+    <revhistory>
+      <revision> 
+			<revnumber>Manual del Selector de sistemas multimedia V2.5</revnumber> 
+			<date>Junio de 2010</date> 
+			<revdescription> 
+	  			<para role="author">Marc-Andre Lureau</para>
+	  			<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Manual del Selector de sistemas multimedia V2.4</revnumber> 
+			<date>Diciembre de 2003</date> 
+			<revdescription> 
+	  			<para role="author">Christian Fredrik Kalager Schaller</para>
+	  			<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>Manual del Selector de sistemas multimedia V1.0</revnumber> 
+			<date>Septiembre de 2003</date> 
+			<revdescription> 
+	  			<para role="author">Christian Fredrik Kalager Schaller</para>
+	  			<para role="publisher">Proyecto de documentación de GNOME</para>
+			</revdescription> 
+      </revision>
+         </revhistory> 
+
+    <releaseinfo>Este manual describe la versión 2.2.2 del Selector de sistemas multimedia.</releaseinfo> 
+    <legalnotice> 
+      <title>Comentarios</title> 
+      <para>Para informar de un fallo o hacer alguna sugerencia acerca de la aplicación Selector de sistemas multimedia o este manual, siga las indicaciones en la <ulink url="ghelp:gnome-feedback" type="help">Página de comentarios de GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>Selector de sistemas multimedia</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="gstreamer-properties-introduction"> 
+    <title>Introducción</title> 
+    <para>La aplicación <application>Selector de sistemas multimedia</application> le permite configurar parámetros multimedia relacionados con el hardware en su sistema.</para>
+    <note><para>Sólo los usuarios avanzados necesitan esta aplicación ya que los distribuidores de sistemas operativos deberían preparar el sistema con los valores correctos.</para></note>
+  </sect1>
+
+  <sect1 id="gstreamer-properties-getting-started">
+    <title>Inicio</title> 
+
+    <para>Puede iniciar el <application>Selector de sistemas multimedia</application> de las siguientes formas:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Menú <guimenu>Aplicaciones</guimenu></term>
+    		<listitem>
+    		<para>Elija <menuchoice><guisubmenu>Preferencias</guisubmenu><guimenuitem>Selector de sistemas multimedia</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Línea de comandos</term>
+    		<listitem>
+    		<para>Escriba <command>gstreamer-properties</command>, después pulse <keycap>Intro</keycap>.</para>
+    		<para> 		 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+
+    <para>Se mostrará la siguiente ventana al iniciar el <application>Selector de sistemas multimedia</application>.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="gstreamer-properties-fig"> 
+	<title>Ventana principal del Selector de sistemas multimedia</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/gstreamer_properties_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Muestra la ventana principal del Selector de sistemas multimedia. Contiene una barra de menú, una barra de herramientas, menús desplegables para las opciones de entrada y salida de sonido.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="gstreamer-properties-usage"> 
+    <title>Uso</title>
+	<para>La aplicación Selector de sistemas multimedia le ofrece cuatro menús desplegables en cada una de las dos solapas. Existen dos menús desplegables para sonido y dos para vídeo. Estas elecciones establecen los valores predeterminados de salida y entrada de sonido y vídeo para la mayoría de las aplicaciones en GNOME.</para>
+
+    <sect2 id="gstreamer-properties-concepts">
+    	<title>Entender las opciones del menú</title>
+
+    	<para>Al mirar la pantalla para establecer las opciones de sonido notará que hay dos secciones llamadas Default Sink y Default Source. Estos son términos del entorno de GStreamer que usa GNOME para describir dónde se envían los datos y de dónde vienen. Default sink es, en otras palabras, donde las aplicaciones de GNOME deberían encauzar su salida de sonido mientras que Default source es de donde proviene el sonido.</para>
+
+	<para>La razón por la que puede querer cambiar estos ajustes es porque bajo UNIX existen muchos sistemas de sonido diferentes así como cambiar el servidor de sonido al que desea enviar la salida. Por ejemplo, bajo Linux las alternativas populares son el servidor de sonido PulseAudio y ALSA.</para>
+
+	<para>Si quiere que sus aplicaciones en GNOME encaucen su salida de sonido al servidor de sonido PulseAudio debe establecer Default Sink para que use PulseAudio. Y si quiere que sus aplicaciones en GNOME que tienen capacidad de grabación de sonido usen el sistema de sonido ALSA, debe elegir ALSA como Default Source.</para>
+
+	<note><para>Como se ha mencionado en otra parte de esta guía. Estos ajustes son parte de una herramienta para usuarios avanzados que tienen unas necesidades específicas. Como usuario normal no debería necesitar cambiar estos ajustes ya que el distribuidor de su sistema debería haberlos establecido correctamente.</para></note>
+    	
+    </sect2>
+  </sect1>  
+
+
+</article>

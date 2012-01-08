@@ -1,0 +1,24 @@
+[Desktop Entry]
+X-AppInstall-Package=libreoffice-impress
+X-AppInstall-Popcon=63577
+X-AppInstall-Section=main
+
+Version=1.0
+Terminal=false
+Icon=libreoffice34-impress
+Type=Application
+Categories=Office;
+Exec=libreoffice --impress %U
+MimeType=application/vnd.oasis.opendocument.presentation;application/vnd.oasis.opendocument.presentation-flat-xml;application/vnd.oasis.opendocument.presentation-template;application/vnd.sun.xml.impress;application/vnd.sun.xml.impress.template;application/vnd.stardivision.impress;application/mspowerpoint;application/vnd.ms-powerpoint;application/vnd.openxmlformats-officedocument.presentationml.presentation;application/vnd.ms-powerpoint.presentation.macroenabled.12;application/vnd.openxmlformats-officedocument.presentationml.template;application/vnd.ms-powerpoint.template.macroenabled.12;
+Name=LibreOffice Impress
+GenericName=Presentation
+Comment=Create and edit presentations for slideshows, meeting and Web pages by using Impress.
+InitialPreference=5
+X-Ayatana-Desktop-Shortcuts=New
+[New Shortcut Group]
+Name=New Presentation
+Exec=libreoffice -impress %U
+TargetEnvironment=Unity
+X-KDE-Protocols=file,http,smb,ftp,webdav
+
+X-Ubuntu-Gettext-Domain=app-install-data

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_forms" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#reading"/>
+     <link type="next" xref="howto_live_regions"/>
+    <title type="sort">5. Rellenar formularios</title>
+    <desc>Acceder a los widgets incorporados en los documentos.</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Rellenar formularios</title>
+  <p>Cuando interactúa con páginas web y otros documentos usando <app>Orca</app>, está interactuando con el documento en sí, no con una copia en el búfer de ese documento. Por lo tanto, no existe un modo especial en el cual entrar o salir cuando quiera rellenar un formulario. En cambio, simplemente navegue a cada campo cuyo contenido quiere cambiar e interactúe con el widget como si fuera un cuadro de diálogo.</p>
+  <section>
+    <title>Navegar entre los campos de un formulario</title>
+    <p>Para navegar entre los campos de un formulario, tiene varias opciones:</p>
+    <list>
+      <item>
+        <p>Use <key>Tab</key> y <keyseq><key>Mayús</key><key>Tab</key></keyseq> para navegar entre objetos enfocables, sin importar el tipo.</p>
+      </item>
+      <item>
+        <p>Use <link xref="commands_structural_navigation#forms">los comandos de navegación estructural para formularios</link> de <app>Orca</app>.</p>
+      </item>
+      <item>
+        <p>Dependiendo del formulario, también puede usar los comandos de navegación del cursor de <app>Orca</app>, en otras palabras, las flechas de dirección cuando <app>Orca</app> esté controlando el cursor.</p>
+      </item>
+   </list>
+  </section>
+  <section>
+    <title>Salir de los campos de un formulario</title>
+    <p>Puesto que en <app>Orca</app> no hay un modo especial para interactuar con los formularios, la pregunta más frecuente es cómo salir de un campo de formulario enfocado. Para esto también tiene varias opciones:</p>
+    <list>
+      <item>
+        <p>Use <key>Tab</key>/<keyseq><key>Mayús</key><key>Tab</key></keyseq> si quiere abandonar el campo de formulario actualmente enfocado e ir hacia el objeto enfocable siguiente/anterior, sin importar lo que ese objeto resulte ser.</p>
+      </item>
+      <item>
+        <p>Use la <link xref="commands_structural_navigation#forms">navegación estructural</link> de <app>Orca</app> para ir al campo de formulario siguiente/anterior: <keyseq><key>Modificador de Orca</key><key>Tab</key></keyseq>/<keyseq><key>Modificador de Orca</key><key>Mayús</key><key>Tab</key></keyseq>.</p>
+      </item>
+      <item>
+        <p>Use los comandos de <app>Orca</app> para ir al objeto o bloque de texto siguiente/anterior: <keyseq><key>Modificador de Orca</key><key>Derecha</key></keyseq>/<keyseq><key>Modificador de Orca</key><key>Izquierda</key></keyseq>.</p>
+      </item>
+      <item>
+        <p>Si no está en una lista o caja combinada, puede usar los comandos de navegación del cursor para salir del campo de formulario, siempre que <app>Orca</app> esté controlando el cursor.</p>
+      </item>
+    </list>
+  </section>
+</page>

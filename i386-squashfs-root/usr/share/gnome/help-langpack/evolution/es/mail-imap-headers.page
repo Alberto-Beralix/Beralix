@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-imap-headers" xml:lang="es">
+
+  <info>
+    <desc>Defina qué cabeceras de correo descargar cuando use IMAP.</desc>
+    
+    <link type="guide" xref="index#mail-advanced-imap"/>
+    <link type="guide" xref="mail-account-manage-imap#imap-headers"/>
+
+    <revision pkgversion="3.1.5" version="0.3" date="2011-07-29" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/b15fx7uz.html.en -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+
+<title>Cabeceras IMAP</title>
+
+<note><p>La pestaña <gui>Cabeceras IMAP</gui> sólo se muestra en el <gui>Editor de cuentas</gui> si <guiseq><gui>Editar</gui><gui>Complementos</gui><gui>Cabeceras IMAP</gui></guiseq> está activada.</p></note>
+
+<p>Evolution le permite elegir para las cuentas IMAP las cabeceras que quiere descargar para reducir el tiempo de descarga y filtrar o mover sus correos de la manera que quiera. Las opciones de las cabeceras de correo IMAP son las siguientes:</p>
+<list>
+<item><p>Obtener todas las cabeceras:</p><p>Se descargarán todas las cabeceras IMAP disponibles para todos los mensajes.</p></item>
+<item><p>Cabeceras básicas (lo más rápido):</p><p>Esto incluirá Fecha, De, Para, Cc, Asunto, Preferencias, Responder a, Id del mensaje, Versión MIME y Tipo de contenido. Si sólo quiere obtener el correo y ver los correos sin tener que filtrar los correos por categorías basados en sus listas de correo, elija esta opción. Esto hará que Evolution trabaje más rápido y generalmente se recomienda para usuarios normales.</p></item>
+<item><p>Cabeceras básicas y de listas de correo (predeterminadas):</p><p>Active esta opción para tener filtros basados en las cabeceras de las listas de correo (como id-lista) además de las cabeceras básicas, se obtendrán también las cabeceras que correspondan a listas de correo. Las cabeceras de las listas de correo contendrán información tal como el ID de la lista de correo, el propietario de la lista de correo y demás, con lo que puede crear un filtro para listas de correo.</p><p>Estas son las preferencias predeterminadas en Evolution para las Cabeceras. Cuando se elige esta opción, Evolution descargará un juego básico de cabeceras (como se describió anteriormente) junto con las cabeceras necesarias para los filtros de correo del cliente, basados en listas de correo. Si no tiene ningún filtro en Evolution, se recomienda que cambie a la opción <gui>Cabeceras básicas</gui>.</p></item>
+</list>
+
+<p>Para establecer las cabeceras de correo IMAP:</p>
+<steps>
+<item><p>Seleccione <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Cuentas de correo</gui></guiseq>.</p></item>
+<item><p>Seleccione la cuenta IMAP.</p></item>
+<item><p>Pulse <gui>Editar</gui>.</p></item>
+<item><p>Pulse en le pestaña <gui>Cabeceras IMAP</gui>.</p></item>
+<item><p>Opcionalmente: si quiere definir cabeceras adicionales para descargar puede añadirlas en la sección <gui>Cabeceras personalizadas</gui>.</p></item>
+</steps>
+
+<note><p>Actualmente la opción para definir las cabeceras IMAP sólo está disponible para cuentas IMAP, pero no para cuentas IMAP+.</p></note><!-- TODO:DEVELOPERS: Recheck this once https://bugzilla.gnome.org/show_bug.cgi?id=655519 has been fixed -->
+</page>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.5.2">
+<!ENTITY manrevision "2.5">
+<!ENTITY date "February 2004">
+<!ENTITY app "Sound Recorder">
+<!ENTITY ug "GNOME Desktop User Guide">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+  
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="zh_CN">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>录音机手册 V2.5</title>       
+
+    <copyright> 
+      <year>2002</year>
+      <year>2003</year> 
+      <year>2004</year> 
+      <holder>Sun Microsystems</holder> 
+    </copyright><copyright><year>2009.</year><holder>TeliuTe (teliute@163.com)</holder></copyright> 
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2003</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+    <abstract role="description">
+      <para>录音机是一个简单的应用程序，可以录制和播放不同的音乐文件</para>
+    </abstract>
+
+    <publisher> 
+      <publishername>GNOME 文档项目</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>对于本文档的复制、分发和/或修改必须遵循自由软件基金会 (Free Software Foundation) 发布的 GNU 自由文档许可证 (GFDL) 版本 1.1 或更高版本， 该许可证没有固定的部分、没有封面和背页文本。您可以在此<ulink type="help" url="ghelp:fdl">链接</ulink>上或在随本手册一起分发的 COPYING-DOCS 文件中找到 GFDL 的副本。</para>
+         <para>本手册是在 GFDL 许可之下分发的 GNOME 手册集合的一部分。如果想要单独分发此手册，可以在手册中添加该许可证的一份副本然后分发，如该许可证的第 6 部分所述。</para>
+
+	<para>各个公司使用的许多用于区别它们产品和服务的名称都声明为商标。在所有的 GNOME 文档以及 GNOME 文档项目的成员中，这些名称都是以全大写字母或首字母大写显示，从而表明它们是商标。</para>
+
+	<para>本文档以及文档的修改版本都是在遵循 GNU 自由文档许可证的条款下提供，这表示具有以下含义：<orderedlist>
+		<listitem>
+		  <para>文档按“原样”提供，不提供任何明示或暗示的保证，包括但不限于：文档或文档的修改版本没有适销性方面的缺陷、适合特定目的的适用性，以及没有侵权行为。您将自行承担本文档以及文档修改版本的质量、准确性以及性能方面的风险。如果任何文档或文档修改版本存在缺陷，您(而不是最初的编写者、作者或撰写人)将承担所有必需的服务、维修或更正的费用。此免责声明是本许可证的重要组成部分。如果不接受此免责声明，那么您就没有权利使用任何文档或文档的修改版本；并且</para>
+		</listitem>
+		<listitem>
+		  <para>无论在任何情况以及在任何法律理论下，本文档或文档修改版本的作者、最初的编写者、任何撰写人或任何分发者，或者任意这些方的任何提供者都不对任何人由于使用本文档或文档修改版本引起或带来的任何直接的、间接的、特殊的、偶然的或继发的损失承担任何民事(包括疏忽)、合同或其它方面的责任，这些损失包括但不限于信誉损失、工作停止、计算机失败或故障，或任何以及所有其它损失或由此引发的或与之相关的损失，即使这些方已被告知存在出现此类损失的可能性时也是如此。</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Sun</firstname> 
+	<surname>GNOME 文档小组</surname> 
+	<affiliation> 
+	  <orgname>Sun Microsystems</orgname> 
+	  <address/> 
+	</affiliation> 
+      </author> 
+
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>translator@gnome.org</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+
+    <revhistory>
+      <revision> 
+			<revnumber>录音机手册 V2.5</revnumber> 
+			<date>2004年2月</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME Documentation Team</para>
+	  			<para role="publisher">GNOME 文档项目</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>录音机手册 V2.4</revnumber> 
+			<date>2003年9月</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME Documentation Team</para>
+	  			<para role="publisher">GNOME 文档项目</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>录音机手册 V2.3</revnumber> 
+			<date>2003年1月</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME Documentation Team</para>
+	  			<para role="publisher">GNOME 文档项目</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>录音机手册 V2.2</revnumber> 
+			<date>2002年8月</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME Documentation Team</para>
+	  			<para role="publisher">GNOME 文档项目</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>录音机手册 V2.1</revnumber> 
+			<date>2002年6月</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME Documentation Team</para>
+	  			<para role="publisher">GNOME 文档项目</para>
+			</revdescription> 
+      </revision>
+      <revision> 
+			<revnumber>录音机手册 V2.0</revnumber> 
+			<date>2002年5月</date> 
+			<revdescription> 
+	  			<para role="author">Sun GNOME Documentation Team</para>
+	  			<para role="publisher">GNOME 文档项目</para>
+			</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>本手册讲述的是录音机手册 2.5.2 版。</releaseinfo> 
+    <legalnotice> 
+      <title>反馈</title> 
+      <para>要报告关于录音机工具或使用手册中的缺陷，或者提出建议，请参照 <ulink url="ghelp:gnome-feedback" type="help">GNOME 反馈页</ulink> 上的指导。</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm> 
+    <primary>录音机</primary> 
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+
+  <sect1 id="grecord-introduction"> 
+    <title>介绍</title> 
+    <para><application>录音机</application> 程序允许您录制和播放 <filename>.flac</filename>、<filename>.ogg</filename> (OGG 音频，或者 <filename>.oga</filename>) 和 <filename>.wav</filename> 类型的音乐文件。</para>
+  </sect1>
+
+  <sect1 id="grecord-getting-started">
+    <title>快速入门</title> 
+
+    <para>您可以用下面的方法来启动 <application>录音机</application>：</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term><guilabel>应用程序</guilabel> 菜单</term>
+    		<listitem>
+                  <para>选择 <menuchoice><guisubmenu>影音</guisubmenu><guimenuitem>录音机</guimenuitem></menuchoice>。</para> 
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>命令行</term>
+    		<listitem>
+    		<para>运行下面的命令：<command>gnome-sound-recorder</command></para>
+    		<para> 		 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+
+    <para>当您启动了 <application>录音机</application>，会出来下面的窗口。</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="grecord-fig"> 
+	<title>录音机窗口</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject>
+	    <imagedata fileref="figures/grecord_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>显示录音机主窗口。包括菜单栏、工具栏、进度条和状态栏。</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+
+  <sect1 id="grecord-usage"> 
+    <title>用法</title>
+
+    <sect2 id="grecord-record">
+    	<title>开始一个新的录制</title>
+    	<para>要开始一个新的录制会话，请按下面的步骤操作：</para> 
+    	<orderedlist>
+    		<listitem><para>点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>新建</guimenuitem></menuchoice>。</para></listitem>
+    		<listitem><para>点击 <guilabel>录制为</guilabel> 下拉列表中选择下面的一个录制选项：</para>
+                <itemizedlist>
+                  <listitem>
+                    <para><guilabel>CD 质量，无损</guilabel></para>
+                  </listitem>
+                  <listitem>
+                    <para><guilabel>CD 质量，有损</guilabel></para>
+                  </listitem>
+                  <listitem>
+                    <para><guilabel>语音</guilabel></para>
+                  </listitem>
+                </itemizedlist>
+</listitem>
+    		<listitem><para>要开始录制，点菜单 <menuchoice><guimenu>控制</guimenu><guimenuitem>录制</guimenuitem></menuchoice>。</para></listitem>
+    		<listitem><para>要停止录制，点菜单 <menuchoice><guimenu>控制</guimenu><guimenuitem>停止</guimenuitem></menuchoice>。</para></listitem>
+    		<listitem><para>要回放录音，点菜单 <menuchoice><guimenu>控制</guimenu><guimenuitem>播放</guimenuitem></menuchoice>。</para></listitem>
+		<listitem><para>要运行音频混音器，点菜单  <menuchoice><guimenu>文件</guimenu><guimenuitem>打开音量控制</guimenuitem></menuchoice>。</para></listitem>
+    		<listitem><para>要保存录音，点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>另存为</guimenuitem></menuchoice>，然后输入音乐文件的名称。</para></listitem>    		
+    	</orderedlist>
+    </sect2>
+ 
+    <sect2 id="grecord-play">
+    	<title>播放音乐文件</title>
+    	<para>要播放一个音乐文件，点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>打开</guimenuitem></menuchoice>，在出来的 <guilabel>打开</guilabel> 对话框里选择一个文件，然后点 <guibutton>打开</guibutton>。<application>录音机</application> 会在播放进度条的下面，显示文件的播放时间的分钟和秒。要播放这个文件，点菜单 <menuchoice><guimenu>控制</guimenu><guimenuitem>播放</guimenuitem></menuchoice>。进度条上移动的滑块会指示播放的进度。</para> 
+    </sect2>  
+ 
+    <sect2 id="grecord-props">
+    	<title>显示音乐文件的属性</title>
+    	<para>要显示一个音乐文件的属性，点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>文件信息</guimenuitem></menuchoice>，<application>录音机</application> 会显示下面的相关信息：</para>
+        <variablelist>
+          <varlistentry>
+            <term><guilabel>文件信息</guilabel></term>
+            <listitem>
+              <para><guilabel>文件夹</guilabel> 显示了文件所在的位置。</para>
+              <para><guilabel>文件名</guilabel> 显示了文件的名称。</para>
+              <para><guilabel>文件大小</guilabel> 显示了文件的大小尺寸。</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><guilabel>音频信息</guilabel></term>
+            <listitem>
+              <para><guilabel>声音长度</guilabel> 显示了文件中的音频数据长度。</para>
+              <para><guilabel>声道数</guilabel> 显示了录制的音频数据声道数。</para>
+              <para><guilabel>采样率</guilabel> 显示了录制的音频数据的采样率。</para>
+              <para><guilabel>位率</guilabel> 显示了录制的音频数据的位率。</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+ 
+    </sect2>  
+    
+  </sect1>
+
+</article>

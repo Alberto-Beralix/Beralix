@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-encryption-gpg-decrypting" xml:lang="es">
+
+  <info>
+    <desc>Descifrar y comprobar la firma de correos GPG recibidos.</desc>
+
+    <link type="guide" xref="mail-encryption#gpg"/>
+
+    <revision pkgversion="2.32.1" version="0.1" date="2011-01-05" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/encryption.html.en#unencrypting -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Recibir mensajes cifrados o firmados con GPG</title>
+
+<section id="decryption">
+<title>Descifrar un mensaje recibido</title>
+<p>Si recibe un mensaje cifrado necesita descifrarlo antes de poder leerlo.</p>
+<p>Cuando vea el mensaje, Evolution le pedirá que escriba su contraseña PGP. Escríbala y el mensaje se mostrará apropiadamente.</p>
+<note style="tip"><p>Los remitentes deben tener su clave GPG pública antes de poder enviarle correos cifrados.</p></note>
+</section>
+
+<section id="signature">
+<title>Comprobar la firma de un correo recibido</title>
+<p>To check the sender's signature of a received message, scroll down to the bottom of the message and click the logo. Evolution will display <gui>Security Information</gui> for the message.</p>
+</section>
+</page>

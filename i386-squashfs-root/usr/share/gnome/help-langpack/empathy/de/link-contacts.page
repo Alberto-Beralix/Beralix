@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="link-contacts" xml:lang="de">
+      
+  <info>
+    <link type="guide" xref="index#contacts"/>
+    <link type="seealso" xref="send-message"/>
+    <link type="seealso" xref="audio-call"/>
+    <link type="seealso" xref="video-call"/>
+    <desc>Verschiedene Kontakte in einen einzigen zusammenführen oder diese aufteilen.</desc>
+    <revision pkgversion="2.32" version="0.1" date="2010-09-06" status="draft"/>
+    <revision pkgversion="2.32" version="0.2" date="2010-09-09" status="review"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+  <title>Kontakte zusammenlegen und aufteilen</title>
+  <p>Wenn ein oder mehrere Kontakte verschiedene Konten bei unterschiedlichen Nachrichtendiensten haben, so können Sie diese Kontakte in einen einzigen zusammenlegen.</p>
+  <p>Der entstehende Kontakt wird als <em>Meta-Kontakt</em> bezeichnet: Ein Kontakt, der aus unterschiedlichen einzelnen Kontakten gebildet wird.</p>
+  <p>Wenn Sie einen Kontakt »Janina Schmitt« haben, der drei verschiedene Nachrichtendienste verwende, wie z.B.:</p>
+  <list>
+    <item>
+      <p>janinas@facebook</p>
+    </item>
+    <item>
+      <p>Janina Schmitt@gmail</p>
+    </item>
+    <item>
+      <p>Janina_Schmitt@hotmail</p>
+    </item>
+  </list>
+  <p>Dann können Sie diese Kontakte in einen einzigen zusammenlegen.</p>
+  
+  <section id="linking">
+    <title>Kontakte zusammenlegen</title>
+    <steps>
+      <item>
+        <p>Klicken Sie mit der rechten Maustaste im Fenster <gui>Kontaktliste</gui> auf einen Kontakt, der verschiedene Konten verwendet, und wählen Sie <gui style="menuitem">Kontakte verknüpfen …</gui>.</p>
+      </item>
+      <item>
+        <p>Wählen Sie in der linken Seitenleiste im Fenster <gui>Kontakte verknüpfen</gui> die Kontakte aus, die Sie zusammenlegen wollen.</p>
+      </item>
+      <item>
+        <p>Klicken Sie auf <gui style="button">Verknüpfen</gui>.</p>
+      </item>
+    </steps>
+    <note>
+      <p>Wenn ein Meta-Kontakt erstellt wurde wird derjenige Kontakt bei einer Unterhaltung verwendet, der die längste Zeit angemeldet ist.</p>
+    </note>
+  </section>
+  
+  <section id="unlinkg">
+    <title>Kontakte aufteilen</title>
+    <steps>
+      <item>
+        <p>Wählen Sie in der <gui>Kontakliste</gui> den Kontakt mit der rechten Maustaste aus, den Sie aufteilen möchten, und wählen Sie <gui style="menuitem">Kontakte verknüpfen …</gui>.</p>
+      </item>
+      <item>
+        <p>Klicken Sie auf <gui style="button">Verknüpfung aufheben</gui>.</p>
+      </item>
+    </steps>
+  </section>
+</page>

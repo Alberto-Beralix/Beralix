@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_mouse_review" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#reviewing"/>
+    <link type="next" xref="howto_notifications"/>
+    <title type="sort">4. Revisión del ratón</title>
+    <desc>Usar el puntero para examinar la pantalla</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Revisión del ratón</title>
+  <p>La característica «Revisión del ratón» de <app>Orca</app> hace que <app>Orca</app> muestre el objeto bajo el puntero del ratón. A diferencia de la característica <link xref="howto_flat_review">revisión</link> de <app>Orca</app>, la revisión del ratón no se limita a la ventana activa; en lugar de eso, <app>Orca</app> tratará de identificar qué objeto accesible, si existe alguno, se encuentra visualmente bajo el puntero cuando mueve el ratón. Si ha movido el puntero sobre un objeto accesible con información que mostrar, <app>Orca</app> le mostrará ese objeto y su información.</p>
+  <p>Puesto que activar la «Revisión del ratón» hace que <app>Orca</app> esté atento a todos los cambios en la posición del puntero del ratón y luego los procese, esta característica está desactivada de manera predeterminada. Para que siempre esté activada, marque la casilla <gui>Leer el objeto debajo del ratón</gui> que se encuentra en la <link xref="preferences_general">página general del diálogo de preferencias</link> de <app>Orca</app>. Además, encontrará un comando sin asociar con el nombre <gui>Alternar modo de revisión del ratón</gui> en la <link xref="preferences_key_bindings">página de asociaciones de teclas</link> de ese mismo cuadro de diálogo. Al asociar este comando, como se describe en la <link xref="howto_key_bindings">introducción a las asociaciones de teclas</link>, puede activar y desactivar la revisión del ratón cuando sea necesario.</p>
+  <note style="tip">
+    <title>La configuración predeterminada y los atajos de teclado son independientes entre sí</title>
+    <p>Tenga en cuenta que puede elegir entre tener la «Revisión del ratón» siempre activada o no y aún poder activarla y desactivarla asociando y usando el comando <gui>Alternar modo de revisión del ratón</gui>. No es necesario activarla para poder alternarla ya que las configuraciones y asociaciones de teclas son independientes entre sí.</p>
+  </note>
+</page>

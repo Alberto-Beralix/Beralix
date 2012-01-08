@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="import-supported-file-formats" xml:lang="de">
+
+  <info>
+    <desc>Supported file formats for importing data.</desc>
+    
+    <link type="guide" xref="import-data"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-31" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/importing-mail-and-settings.html.en#importing-mail -->
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+
+  </info>
+
+  <title>Unterstützte Dateiformate</title>
+
+<p>Evolution kann Dateien der folgenden Typen importieren:</p>
+
+<section id="mail">
+<title>E-Mail</title>
+<list>
+<item><p>Berkley Mailbox (.mbox oder keine Dateiendung):</p>
+<p>The email format used by Mozilla, Netscape, Evolution (for local folders until version 2.32), Eudora, and many other email clients.
+</p></item>
+<item><p>
+Maildir (no extension):</p>
+<p>The format used by Evolution (for local folders since version 3.0). There is no need to import Maildir files as you can <link xref="mail-account-manage-maildir-format-directories">configure a Maildir account</link> in Evolution and point to the folder where the Maildir files are stored.
+</p></item>
+<item><p>Persönliche Ordner aus Outlook Express 5/6 (.dbx):</p>
+<p>The email file format used by Microsoft Outlook Express 5/6. For newer versions PST import is recommended.
+</p></item>
+</list>
+</section>
+
+<section id="calendar">
+<title>Kalender:</title>
+<list>
+<item><p>vCalendar (.vcs):</p>
+<p>Ein Format zum Speichern von Kalenderdateien, welches im Allgemeinenvon Evolution, Microsoft Outlook, Sunbird und Korganizer verwendet wird.</p></item>
+<item><p>iCalendar oder iCal (.ics):</p>
+<p>Ein Format zum Speichern von Kalenderdateien. iCalendar wird von Evolution, Microsoft Outlook, Palm OS Handhelds und weiteren verwendet.</p></item>
+</list>
+</section>
+
+<section id="contacts">
+<title>Kontakte</title>
+<list>
+<item><p>LDAP-Datenaustauschformat (.ldif)</p>
+<p>Ein Standard-Datenformat für Visitenkarten.</p></item>
+<item><p>vCard (.vcf, .gcrd):</p>
+<p>Das von GNOME, KDE und vielen weiteren Kontaktverwaltungsprogrammen benutzte Adressbuchformat. Das Exportieren in das vCard-Format sollte in jedem Kontaktverwaltungsprogramm möglich sein.</p></item>
+</list>
+</section>
+
+<section id="misc">
+<title>Verschiedenes</title>
+<list>
+<item><p>Evolution/Mozilla/Outlook CSV/Tab (.csv, .tab):</p>
+<p>CSV- (durch Kommta getrennte Werte) oder Tabulator-Dateien, die von Evolution, Microsoft Outlook und Mozilla gespeichert wurden.</p></item>
+<item><p>Persönliche Outlook-Ordner (.pst):</p>
+<p>Ein Dateiformat, welches zum Speichern von lokalen Kopien von Nachrichten, Kalendereinträgen und weiteren Dingen von Microsoft Software mit Microsoft Exchange Client, Windows Messaging und Microsoft Outlook benutzt wird.</p></item>
+</list>
+</section>
+
+</page>

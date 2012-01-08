@@ -1,0 +1,71 @@
+=head1 NAME
+
+Pango::Attribute - Pango base class for attributes
+
+=cut
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----Pango::Attribute
+
+
+
+=cut
+
+=for object Pango::Attribute - Pango base class for attributes
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 integer = $attr-E<gt>B<end_index> (...)
+
+=over
+
+=item * ... (list) 
+
+=back
+
+=head2 boolean = $attr1-E<gt>B<equal> ($attr2)
+
+=over
+
+=item * $attr2 (Pango::Attribute) 
+
+=back
+
+=head2 integer = $attr-E<gt>B<start_index> (...)
+
+=over
+
+=item * ... (list) 
+
+=back
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>, L<Glib::Boxed>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

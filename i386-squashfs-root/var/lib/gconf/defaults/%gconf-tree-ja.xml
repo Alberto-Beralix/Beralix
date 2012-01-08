@@ -1,0 +1,1996 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="カスタムフォント">
+							<longdesc>言語パネル用のカスタムフォント名</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="カスタムフォントを使う">
+							<longdesc>言語パネル用にカスタムフォント名を使用する</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="インプットメソッド名を表示する">
+							<longdesc>言語バーにインプットメソッド名を表示する</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="システムトレイにアイコンを表示する">
+							<longdesc>システムトレイにアイコンを表示する</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="検索テーブルの方位">
+							<longdesc>検索テーブルの方位。0 = 横、1 = 縦</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="言語パネルの位置">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="言語パネルの位置">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="自動的に隠す">
+							<longdesc>言語パネルの動作。0 = メニューに組み込む、1 = 自動的に隠す、2 = 常に表示</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="enable_by_default">
+						<local_schema short_desc="標準でインプットメソッドを有効にする">
+							<longdesc>アプリケーションに入力フォーカスが当たったとき標準でインプットメソッドを有効にする</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_global_engine">
+						<local_schema short_desc="グローバルインプットメソッドを使用する">
+							<longdesc>すべてのアプリケーション間で同じインプットメソッドを共有する</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="前編集テキストを組み込む">
+							<longdesc>アプリケーションウィンドウにプリエディットテキストを組み込む</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="システムキーボードレイアウトを使用する">
+							<longdesc>システムキーボード (XKB) レイアウトを使用する</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="エンジンのプリロード">
+							<longdesc>ibus の開始中にエンジンをプリロード</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="前のエンジンへのショートカットキー">
+								<longdesc>リスト中のひとつ前のインプットメソッドに切り替えるためのショートカットキー</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="前のエンジンへのショートカットキー">
+								<longdesc>リスト中のひとつ前のインプットメソッドに切り替えるためのショートカットキー</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="次のエンジンへのショートカットキー">
+								<longdesc>リスト中の次のインプットメソッドに切り替えるためのショートカットキー</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="次のエンジンへのショートカットキー">
+								<longdesc>リスト中の次のインプットメソッドに切り替えるためのショートカットキー</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="トリガーショートカットキー">
+								<longdesc>インプットメソッドをオン、オフするためのショートカットキーを設定します</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="WiFi の作成を無効にする">
+						<longdesc>アプレットを使用する時にこれを TRUE にセットするとアドホックネットワークの作成を無効にします。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="スタンプ">
+						<longdesc>セッティングが新規バージョンに移行すべきかどうかの判定に使用されます。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="ネットワーク使用可能通知を抑制する">
+						<longdesc>無線ネットワークが利用可能な時にこれを TRUE にセットすると通知を無効にします。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="切断済み通知を無効にする">
+						<longdesc>ネットワークから切断する時点にこれを TRUE にセットすると通知を無効にします。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="接続済み通知を無効にする">
+						<longdesc>ネットワークに接続する時点にこれを TRUE にセットすると通知を無効にします。</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="compiz-1">
+				<dir name="plugins">
+					<dir name="fade">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="unresponsive_saturation">
+									<local_schema short_desc="不応答ウィンドウの彩度">
+										<longdesc>不応答ウィンドウの彩度（パーセント） (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unresponsive_brightness">
+									<local_schema short_desc="不応答ウィンドウの明度">
+										<longdesc>不応答ウィンドウの明度（パーセント） (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="dim_unresponsive">
+									<local_schema short_desc="不応答ウィンドウを薄暗くする">
+										<longdesc>ウィンドウ・マネージャの要求に応答しないウィンドウを薄暗くする</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fullscreen_visual_bell">
+									<local_schema short_desc="全画面効果による視覚ベル">
+										<longdesc>システムビープ音イベント時の全画面フェード効果</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="visual_bell">
+									<local_schema short_desc="視覚ベル">
+										<longdesc>システムビープ音時のフェード効果</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="フェード・ウィンドウ">
+										<longdesc>フェードさせる対象ウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_time">
+									<local_schema short_desc="フェード時間">
+										<longdesc>「一定時間」モードのウィンドウのフェード時間（ミリ秒） (1 - 5000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_speed">
+									<local_schema short_desc="フェード速度">
+										<longdesc>Window fade speed (0.1 - 25.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fade_mode">
+									<local_schema short_desc="フェード・モード">
+										<longdesc>ウィンドウのフェード形式 (0 = 一定速度, 1 = 一定時間)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="wobbly">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="maximize_effect">
+									<local_schema short_desc="最大化時の効果">
+										<longdesc>ウィンドウの最大化および最大化解除時に揺れる効果</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="move_window_match">
+									<local_schema short_desc="移動時効果ウィンドウ">
+										<longdesc>移動時に揺らす対象ウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grab_window_match">
+									<local_schema short_desc="つかみ時効果ウィンドウ">
+										<longdesc>つかまれた時に揺らす対象ウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_window_match">
+									<local_schema short_desc="フォーカス時効果ウィンドウ">
+										<longdesc>フォーカス時に揺ゆらす対象ウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_window_match">
+									<local_schema short_desc="開く時効果ウィンドウ">
+										<longdesc>開いた時に揺らす対象ウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_effect">
+									<local_schema short_desc="フォーカス時の効果">
+										<longdesc>ウィンドウがフォーカスされた時の効果 (0 = なし, 1 = 震動)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="map_effect">
+									<local_schema short_desc="開いた時の効果">
+										<longdesc>ウィンドウが開かれた時の効果 (0 = なし, 1 = 震動)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="min_grid_size">
+									<local_schema short_desc="最小グリッドサイズ">
+										<longdesc>最小頂点グリッドサイズ (4 - 128)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="grid_resolution">
+									<local_schema short_desc="グリッド解像度">
+										<longdesc>頂点グリッド解像度 (1 - 64)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spring_k">
+									<local_schema short_desc="バネ定数">
+										<longdesc>バネ定数 (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="friction">
+									<local_schema short_desc="摩擦">
+										<longdesc>バネ摩擦 (0.1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shiver">
+									<local_schema short_desc="震動">
+										<longdesc>ウィンドウを震動させる</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_inverted">
+									<local_schema short_desc="スナップの反転">
+										<longdesc>ウィンドウ・スナップの反転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_key">
+									<local_schema short_desc="ウィンドウをスナップ">
+										<longdesc>ウィンドウ・スナップの切り替え</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="scale">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="show_desktop">
+									<local_schema short_desc="デスクトップのクリックでデスクトップの表示">
+										<longdesc>スケール中にデスクトップがクリックされたとき&quot;デスクトップの表示&quot;モードに入る</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_key">
+									<local_schema short_desc="現在の出力上ウィンドウ対象のウィンドウピッカー起動">
+										<longdesc>現在の出力デバイス上のウィンドウを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_button">
+									<local_schema short_desc="現在の出力上ウィンドウ対象のウィンドウピッカー起動">
+										<longdesc>現在の出力デバイス上のウィンドウを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_output_edge">
+									<local_schema short_desc="現在の出力上ウィンドウ対象のウィンドウピッカー起動">
+										<longdesc>現在の出力デバイス上のウィンドウを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_key">
+									<local_schema short_desc="ウィンドウグループ対象のウィンドウピッカー起動">
+										<longdesc>ウィンドウグループを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_button">
+									<local_schema short_desc="ウィンドウグループ対象のウィンドウピッカー起動">
+										<longdesc>ウィンドウグループを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_group_edge">
+									<local_schema short_desc="ウィンドウグループ対象のウィンドウピッカー起動">
+										<longdesc>ウィンドウグループを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_key">
+									<local_schema short_desc="すべてのウィンドウ対象のウィンドウピッカー起動">
+										<longdesc>すべてのウィンドウを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_button">
+									<local_schema short_desc="すべてのウィンドウ対象のウィンドウピッカー起動">
+										<longdesc>すべてのウィンドウを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_all_edge">
+									<local_schema short_desc="すべてのウィンドウ対象のウィンドウピッカー起動">
+										<longdesc>すべてのウィンドウを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="ウィンドウピッカー起動">
+										<longdesc>ウィンドウを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="ウィンドウピッカー起動">
+										<longdesc>ウィンドウを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_edge">
+									<local_schema short_desc="ウィンドウピッカー起動">
+										<longdesc>ウィンドウを配列して変換を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="button_bindings_toggle">
+									<local_schema short_desc="ボタンによるスケール・モードのオンオフ">
+										<longdesc>ボタンを離すとスケール・モードが無効になる基本動作を、ボタンを押すたびにオンオフが切り替わる動作に代える</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="key_bindings_toggle">
+									<local_schema short_desc="キーによるスケール・モードのオンオフ">
+										<longdesc>キーを離すとスケール・モードが無効になる基本動作を、キーを押すたびにオンオフが切り替わる動作に代える。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="マルチ出力の形式">
+										<longdesc>複数の出力デバイスを使用している場合に、ウィンドウをどこにスケールするかの選択 (0 = 現在の出力デバイス上に, 1 = すべての出力デバイス上に)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="スケール・ウィンドウ">
+										<longdesc>スケールモードでスケールされる対象ウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlay_icon">
+									<local_schema short_desc="重ね表示アイコン">
+										<longdesc>ウィンドウ調整後にアイコンを重ね表示 (0 = なし, 1 = エンブレム, 2 = 大きい)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="不透明度">
+										<longdesc>不透明度(%) (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="darken_back">
+									<local_schema short_desc="背景を暗くする">
+										<longdesc>ウィンドウのスケール時に背景を暗くする</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="描画の時間刻み">
+										<longdesc>スケール位置算出の時間刻み (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="速度">
+										<longdesc>スケール速度 (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="spacing">
+									<local_schema short_desc="間隔">
+										<longdesc>ウィンドウ間の間隔の大きさ (0 - 250)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="core">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="number_of_desktops">
+									<local_schema short_desc="デスクトップ数">
+										<longdesc>仮想デスクトップ数 (1 - 36)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="vsize">
+									<local_schema short_desc="垂直仮想サイズ">
+										<longdesc>垂直仮想サイズ指定のための、画面サイズに対する乗数 (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hsize">
+									<local_schema short_desc="水平仮想サイズ">
+										<longdesc>水平仮想サイズ指定のための、画面サイズに対する乗数 (1 - 32)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_shaded_key">
+									<local_schema short_desc="ウィンドウのシェード/解除の切り替え">
+										<longdesc>アクティブ・ウィンドウのシェード/解除の切り替え</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_vertically_key">
+									<local_schema short_desc="ウィンドウの垂直方向最大化/解除の切り替え">
+										<longdesc>アクティブ・ウィンドウの垂直方向最大化/解除の切り替え</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_horizontally_key">
+									<local_schema short_desc="ウィンドウの水平方向最大化/解除の切り替え">
+										<longdesc>アクティブ・ウィンドウの水平方向最大化/解除の切り替え</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_button">
+									<local_schema short_desc="ウィンドウの最大化/解除の切り替え">
+										<longdesc>アクティブ・ウィンドウの最大化/解除の切り替え</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_window_maximized_key">
+									<local_schema short_desc="ウィンドウの最大化/解除の切り替え">
+										<longdesc>アクティブ・ウィンドウの最大化/解除の切り替え</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_edge">
+									<local_schema short_desc="デスクトップの表示">
+										<longdesc>全ウィンドウを隠してデスクトップにフォーカス</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="show_desktop_key">
+									<local_schema short_desc="デスクトップの表示">
+										<longdesc>全ウィンドウを隠してデスクトップにフォーカス</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_button">
+									<local_schema short_desc="ウィンドウメニュー">
+										<longdesc>ウィンドウメニューのボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_menu_key">
+									<local_schema short_desc="ウィンドウメニュー">
+										<longdesc>ウィンドウメニューのキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_vertically_key">
+									<local_schema short_desc="垂直方向にウィンドウを最大化">
+										<longdesc>アクティブなウィンドウを垂直方向に最大化</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_horizontally_key">
+									<local_schema short_desc="水平方向にウィンドウを最大化">
+										<longdesc>アクティブなウィンドウを水平方向に最大化</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unmaximize_window_key">
+									<local_schema short_desc="ウィンドウの最大化解除">
+										<longdesc>アクティブ・ウィンドウの最大化解除</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="maximize_window_key">
+									<local_schema short_desc="ウィンドウを最大化">
+										<longdesc>アクティブなウィンドウを最大化</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_button">
+									<local_schema short_desc="ウィンドウを最小化">
+										<longdesc>アクティブなウィンドウを最小化</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimize_window_key">
+									<local_schema short_desc="ウィンドウを最小化">
+										<longdesc>アクティブなウィンドウを最小化</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_button">
+									<local_schema short_desc="ウィンドウを下げる">
+										<longdesc>他のウィンドウの下にウィンドウを下げる</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lower_window_key">
+									<local_schema short_desc="ウィンドウを下げる">
+										<longdesc>他のウィンドウの下にウィンドウを下げる</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_button">
+									<local_schema short_desc="ウィンドウを上げる">
+										<longdesc>ウィンドウを他のウィンドウの前面に上げる</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_window_key">
+									<local_schema short_desc="ウィンドウを上げる">
+										<longdesc>ウィンドウを他のウィンドウの前面に上げる</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_button">
+									<local_schema short_desc="ウィンドウを閉じる">
+										<longdesc>アクティブなウィンドウを閉じる</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="close_window_key">
+									<local_schema short_desc="ウィンドウを閉じる">
+										<longdesc>アクティブなウィンドウを閉じる</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_match">
+									<local_schema short_desc="フォーカス奪取防止ウィンドウ">
+										<longdesc>フォーカスを奪われないようにするウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_prevention_level">
+									<local_schema short_desc="フォーカス奪取防止レベル">
+										<longdesc>フォーカス奪取防止のレベル (0 = オフ, 1 = 低, 2 = 通常, 3 = 高, 4 = 非常に高)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise_delay">
+									<local_schema short_desc="自動最前面移動の待ち時間">
+										<longdesc>選択ウィンドウの最前面への持ち上げを開始するまでの時間間隔 (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="autoraise">
+									<local_schema short_desc="自動で最前面に上げる">
+										<longdesc>指定時間間隔後に選択ウィンドウを最前面に上げる</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_click">
+									<local_schema short_desc="クリックで上げる">
+										<longdesc>クリックでウィンドウを最前面に上げる</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="click_to_focus">
+									<local_schema short_desc="クリックでフォーカス">
+										<longdesc>ウィンドウのクリックで入力フォーカスがそのウィンドウに移動</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outputs">
+									<local_schema short_desc="出力">
+										<longdesc>出力デバイスを表す文字列リスト</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_outputs">
+									<local_schema short_desc="出力検出">
+										<longdesc>出力デバイスの自動検出</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="overlapping_outputs">
+									<local_schema short_desc="マルチ出力で重なり部分がある場合の取扱い">
+										<longdesc>マルチ出力で重なり部分がある場合にどちらのデバイスが選好されるべきか (0 = スマートモード, 1 = 大きい方の出力を選好, 2 = 小さい方の出力を選好)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="default_icon">
+									<local_schema short_desc="デフォルトのアイコン">
+										<longdesc>アイコン未指定ウィンドウに適用するデフォルトのウィンドウアイコン画像</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ping_delay">
+									<local_schema short_desc="Ping の待ち時間">
+										<longdesc>Ping メッセージ間の間隔 (1000 - 30000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_delay">
+									<local_schema short_desc="エッジ開始遅延時間">
+										<longdesc>エッジ・アクションの開始までにポインタをスクリーンエッジに置き続ける必要がある時間 (0 - 10000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="hide_skip_taskbar_windows">
+									<local_schema short_desc="タスクバー省略ウィンドウを隠す">
+										<longdesc>&quot;デスクトップの表示&quot;モード移行時にタスクバーにないウィンドウ（ウィジェット等）を隠す</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="ignore_hints_when_maximized">
+									<local_schema short_desc="最大化時にヒントを無視">
+										<longdesc>ウィンドウ最大化時に、サイズ加算分と縦横比のジオメトリ・ヒントを無視</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="audible_bell">
+									<local_schema short_desc="音響ベル">
+										<longdesc>音響システムビープ音</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_plugins">
+									<local_schema short_desc="アクティブなプラグイン">
+										<longdesc>現在アクティブなプラグインのリスト</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="opengl">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="texture_compression">
+									<local_schema short_desc="テクスチャ圧縮">
+										<longdesc>利用可能な場合は画像から変換されたテクスチャに圧縮を使用する</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sync_to_vblank">
+									<local_schema short_desc="垂直ブランクに同期化">
+										<longdesc>垂直帰線期間にのみ画面を更新する</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="lighting">
+									<local_schema short_desc="照明">
+										<longdesc>画面の変換時に拡散反射光を使用</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="texture_filter">
+									<local_schema short_desc="テクスチャ・フィルタ">
+										<longdesc>テクスチャ・フィルタ (0 = 速さ重視, 1 = 良, 2 = 最高)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="gnomecompat">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command_terminal_key">
+									<local_schema short_desc="端末を開く">
+										<longdesc>端末を開く</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_terminal">
+									<local_schema short_desc="端末起動コマンドライン">
+										<longdesc>端末起動コマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_window_screenshot_key">
+									<local_schema short_desc="ウィンドウのスクリーンショットを撮る">
+										<longdesc>ウィンドウのスクリーンショットを撮る</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_window_screenshot">
+									<local_schema short_desc="ウィンドウ・スクリーンショットのコマンドライン">
+										<longdesc>ウィンドウ・スクリーンショットのコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command_screenshot_key">
+									<local_schema short_desc="スクリーンショットを撮る">
+										<longdesc>スクリーンショットを撮る</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command_screenshot">
+									<local_schema short_desc="スクリーンショットのコマンドライン">
+										<longdesc>スクリーンショットのコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_key">
+									<local_schema short_desc="アプリケーション実行ダイアログ">
+										<longdesc>&quot;アプリケーションの実行&quot;ダイアログの表示</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="main_menu_key">
+									<local_schema short_desc="メインメニューの表示">
+										<longdesc>メインメニューの表示</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="screenshot">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="launch_app">
+									<local_schema short_desc="起動アプリケーション">
+										<longdesc>スクリーンショット画像をこのアプリケーションで自動的に開く</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="directory">
+									<local_schema short_desc="ディレクトリ">
+										<longdesc>Put screenshot images in this directory. If empty, the desktop directory will be used.</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="開始">
+										<longdesc>矩形選択スクリーンショットを開始</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="composite">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="force_independent_output_painting">
+									<local_schema short_desc="各出力別に独立した描画を強制">
+										<longdesc>出力デバイス同士に重なり部分がある場合でも、それぞれを別個に描画</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unredirect_fullscreen_windows">
+									<local_schema short_desc="全画面ウィンドウのリダイレクトを解除">
+										<longdesc>オフスクリーン・ピクスマップにリダイレクトしない直接の全画面ウィンドウ描画を許可</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="refresh_rate">
+									<local_schema short_desc="リフレッシュレート">
+										<longdesc>画面の再描画レート(回/秒) (1 - 200)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="detect_refresh_rate">
+									<local_schema short_desc="リフレッシュレートの検出">
+										<longdesc>リフレッシュレートの自動検出</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="slow_animations_key">
+									<local_schema short_desc="アニメーションのスロー再生">
+										<longdesc>スロー再生アニメーション使用のオンオフ</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="annotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stroke_width">
+									<local_schema short_desc="ストロークの幅">
+										<longdesc>注釈線のストロークの幅 (1.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="stroke_color">
+									<local_schema short_desc="注釈のストロークの色">
+										<longdesc>注釈線のストロークの色</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="注釈線の塗り色">
+										<longdesc>注釈線の塗り色</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_button">
+									<local_schema short_desc="消去">
+										<longdesc>消去</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="clear_key">
+									<local_schema short_desc="消去">
+										<longdesc>消去</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="decor">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="shadow_match">
+									<local_schema short_desc="影を付けるウィンドウ">
+										<longdesc>影を付ける対象ウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="decoration_match">
+									<local_schema short_desc="装飾適用ウィンドウ">
+										<longdesc>装飾の適用対象ウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="ミップマップ">
+										<longdesc>装飾テキスチャ用ミップマップの生成を許可</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command">
+									<local_schema short_desc="コマンド">
+										<longdesc>デコレータ未動作の場合に実行されるデコレータ起動コマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_y_offset">
+									<local_schema short_desc="影オフセット Y 座標">
+										<longdesc>影のオフセット Y 座標 (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_x_offset">
+									<local_schema short_desc="影オフセット X 座標">
+										<longdesc>影のオフセット X 座標 (-16 - 16)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_color">
+									<local_schema short_desc="影の色">
+										<longdesc>影の色</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_opacity">
+									<local_schema short_desc="影の不透明度">
+										<longdesc>影の不透明度 (0.01 - 6.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="shadow_radius">
+									<local_schema short_desc="影の半径">
+										<longdesc>影の半径 (0.1 - 18.0)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="zoom">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="timestep">
+									<local_schema short_desc="描画の時間刻み">
+										<longdesc>Zoom Timestep (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="速度">
+										<longdesc>Zoom Speed (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="開始">
+										<longdesc>Zoom In</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="commands">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="run_command12_edge">
+									<local_schema short_desc="コマンド 12 を実行">
+										<longdesc>A edge binding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_edge">
+									<local_schema short_desc="コマンド 11 を実行">
+										<longdesc>呼び出し時に コマンドライン 11 で指定されたシェルコマンドを実行するエッジ割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_edge">
+									<local_schema short_desc="コマンド 10 を実行">
+										<longdesc>呼び出し時に コマンドライン 10 で指定されたシェルコマンドを実行するエッジ割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_edge">
+									<local_schema short_desc="コマンド 9 を実行">
+										<longdesc>呼び出し時に コマンドライン 9 で指定されたシェルコマンドを実行するエッジ割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_edge">
+									<local_schema short_desc="コマンド 8 を実行">
+										<longdesc>呼び出し時に コマンドライン 8 で指定されたシェルコマンドを実行するエッジ割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_edge">
+									<local_schema short_desc="コマンド 7 を実行">
+										<longdesc>呼び出し時に コマンドライン 7 で指定されたシェルコマンドを実行するエッジ割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_edge">
+									<local_schema short_desc="コマンド 6 を実行">
+										<longdesc>呼び出し時に コマンドライン 6 で指定されたシェルコマンドを実行するエッジ割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_edge">
+									<local_schema short_desc="コマンド 5 を実行">
+										<longdesc>呼び出し時に コマンドライン 5 で指定されたシェルコマンドを実行するエッジ割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_edge">
+									<local_schema short_desc="コマンド 4 を実行">
+										<longdesc>呼び出し時に コマンドライン 4 で指定されたシェルコマンドを実行するエッジ割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_edge">
+									<local_schema short_desc="コマンド 3 を実行">
+										<longdesc>呼び出し時に コマンドライン 3 で指定されたシェルコマンドを実行するエッジ割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_edge">
+									<local_schema short_desc="コマンド 2 を実行">
+										<longdesc>呼び出し時に コマンドライン 2 で指定されたシェルコマンドを実行するエッジ割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_edge">
+									<local_schema short_desc="コマンド 1 を実行">
+										<longdesc>呼び出し時に コマンドライン 1 で指定されたシェルコマンドを実行するエッジ割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command12_button">
+									<local_schema short_desc="コマンド 12 を実行">
+										<longdesc>A button binding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_button">
+									<local_schema short_desc="コマンド 11 を実行">
+										<longdesc>呼び出し時に コマンドライン 11 で指定されたシェルコマンドを実行するボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_button">
+									<local_schema short_desc="コマンド 10 を実行">
+										<longdesc>呼び出し時に コマンドライン 10 で指定されたシェルコマンドを実行するボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_button">
+									<local_schema short_desc="コマンド 9 を実行">
+										<longdesc>呼び出し時に コマンドライン 9 で指定されたシェルコマンドを実行するボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_button">
+									<local_schema short_desc="コマンド 8 を実行">
+										<longdesc>呼び出し時に コマンドライン 8 で指定されたシェルコマンドを実行するボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_button">
+									<local_schema short_desc="コマンド 7 を実行">
+										<longdesc>呼び出し時に コマンドライン 7 で指定されたシェルコマンドを実行するボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_button">
+									<local_schema short_desc="コマンド 6 を実行">
+										<longdesc>呼び出し時に コマンドライン 6 で指定されたシェルコマンドを実行するボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_button">
+									<local_schema short_desc="コマンド 5 を実行">
+										<longdesc>呼び出し時に コマンドライン 5 で指定されたシェルコマンドを実行するボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_button">
+									<local_schema short_desc="コマンド 4 を実行">
+										<longdesc>呼び出し時に コマンドライン 4 で指定されたシェルコマンドを実行するボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_button">
+									<local_schema short_desc="コマンド 3 を実行">
+										<longdesc>呼び出し時に コマンドライン 3 で指定されたシェルコマンドを実行するボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_button">
+									<local_schema short_desc="コマンド 2 を実行">
+										<longdesc>呼び出し時に コマンドライン 2 で指定されたシェルコマンドを実行するボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_button">
+									<local_schema short_desc="コマンド 1 を実行">
+										<longdesc>呼び出し時に コマンドライン 1 で指定されたシェルコマンドを実行するボタン割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command12_key">
+									<local_schema short_desc="コマンド 12 を実行">
+										<longdesc>A keybinding that when invoked, will run the shell command identified by command12</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command11_key">
+									<local_schema short_desc="コマンド 11 を実行">
+										<longdesc>呼び出し時に コマンドライン 11 で指定されたシェルコマンドを実行するキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command10_key">
+									<local_schema short_desc="コマンド 10 を実行">
+										<longdesc>呼び出し時に コマンドライン 10 で指定されたシェルコマンドを実行するキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command9_key">
+									<local_schema short_desc="コマンド 9 を実行">
+										<longdesc>呼び出し時に コマンドライン 9 で指定されたシェルコマンドを実行するキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command8_key">
+									<local_schema short_desc="コマンド 8 を実行">
+										<longdesc>呼び出し時に コマンドライン 8 で指定されたシェルコマンドを実行するキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command7_key">
+									<local_schema short_desc="コマンド 7 を実行">
+										<longdesc>呼び出し時に コマンドライン 7 で指定されたシェルコマンドを実行するキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command6_key">
+									<local_schema short_desc="コマンド 6 を実行">
+										<longdesc>呼び出し時に コマンドライン 6 で指定されたシェルコマンドを実行するキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command5_key">
+									<local_schema short_desc="コマンド 5 を実行">
+										<longdesc>呼び出し時に コマンドライン 5 で指定されたシェルコマンドを実行するキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command4_key">
+									<local_schema short_desc="コマンド 4 を実行">
+										<longdesc>呼び出し時に コマンドライン 4 で指定されたシェルコマンドを実行するキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command3_key">
+									<local_schema short_desc="コマンド 3 を実行">
+										<longdesc>呼び出し時に コマンドライン 3 で指定されたシェルコマンドを実行するキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command2_key">
+									<local_schema short_desc="コマンド 2 を実行">
+										<longdesc>呼び出し時に コマンドライン 2 で指定されたシェルコマンドを実行するキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="run_command1_key">
+									<local_schema short_desc="コマンド 1 を実行">
+										<longdesc>呼び出し時に コマンドライン 1 で指定されたシェルコマンドを実行するキー割り当て</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command12">
+									<local_schema short_desc="コマンドライン 12">
+										<longdesc>Command line to be executed in shell when run_command12 is invoked</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command11">
+									<local_schema short_desc="コマンドライン 11">
+										<longdesc>コマンド 11 を実行 の呼び出し時にシェルで実行されるコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command10">
+									<local_schema short_desc="コマンドライン 10">
+										<longdesc>コマンド 10 を実行 の呼び出し時にシェルで実行されるコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command9">
+									<local_schema short_desc="コマンドライン 9">
+										<longdesc>コマンド 9 を実行 の呼び出し時にシェルで実行されるコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command8">
+									<local_schema short_desc="コマンドライン 8">
+										<longdesc>コマンド 8 を実行 の呼び出し時にシェルで実行されるコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command7">
+									<local_schema short_desc="コマンドライン 7">
+										<longdesc>コマンド 7 を実行 の呼び出し時にシェルで実行されるコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command6">
+									<local_schema short_desc="コマンドライン 6">
+										<longdesc>コマンド 6 を実行 の呼び出し時にシェルで実行されるコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command5">
+									<local_schema short_desc="コマンドライン 5">
+										<longdesc>コマンド 5 を実行 の呼び出し時にシェルで実行されるコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command4">
+									<local_schema short_desc="コマンドライン 4">
+										<longdesc>コマンド 4 を実行 の呼び出し時にシェルで実行されるコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command3">
+									<local_schema short_desc="コマンドライン 3">
+										<longdesc>コマンド 3 を実行 の呼び出し時にシェルで実行されるコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command2">
+									<local_schema short_desc="コマンドライン 2">
+										<longdesc>コマンド 2 を実行 の呼び出し時にシェルで実行されるコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="command1">
+									<local_schema short_desc="コマンドライン 1">
+										<longdesc>コマンド 1 を実行 の呼び出し時にシェルで実行されるコマンドライン</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="resize">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="stretch_match">
+									<local_schema short_desc="伸縮サイズ変更ウィンドウ">
+										<longdesc>サイズ変更描画に伸縮形式を使用するウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rectangle_match">
+									<local_schema short_desc="矩形サイズ変更ウィンドウ">
+										<longdesc>サイズ変更描画に矩形形式を使用するウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="outline_match">
+									<local_schema short_desc="輪郭サイズ変更ウィンドウ">
+										<longdesc>サイズ変更描画に輪郭形式を使用するウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="normal_match">
+									<local_schema short_desc="通常サイズ変更ウィンドウ">
+										<longdesc>サイズ変更描画に通常形式を使用するウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="fill_color">
+									<local_schema short_desc="塗り色">
+										<longdesc>矩形のサイズ変更描画形式に使用する塗り色</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="border_color">
+									<local_schema short_desc="境界線の色">
+										<longdesc>輪郭や矩形のサイズ変更描画形式で使用する境界線の色</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="デフォルトのサイズ変更形式">
+										<longdesc>ウィンドウのサイズ変更に使用するデフォルトの描画形式 (0 = 通常, 1 = 輪郭, 2 = 矩形, 3 = 伸縮)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="ウィンドウのサイズ変更開始">
+										<longdesc>ウィンドウのサイズ変更を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="ウィンドウのサイズ変更開始">
+										<longdesc>ウィンドウのサイズ変更を開始</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="obs">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="saturation_values">
+									<local_schema short_desc="ウィンドウの値">
+										<longdesc>ウィンドウに適用する彩度</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation_matches">
+									<local_schema short_desc="ウィンドウ">
+										<longdesc>デフォルトで他と異なる彩度を持たせるウィンドウ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation_step">
+									<local_schema short_desc="変化刻み">
+										<longdesc>彩度の変化刻み (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness_values">
+									<local_schema short_desc="ウィンドウの値">
+										<longdesc>ウィンドウに適用する明度</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness_matches">
+									<local_schema short_desc="ウィンドウ">
+										<longdesc>デフォルトで他と異なる明度を持たせるウィンドウ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness_step">
+									<local_schema short_desc="変化刻み">
+										<longdesc>明度の変化刻み (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity_values">
+									<local_schema short_desc="ウィンドウの値">
+										<longdesc>ウィンドウの不透明度</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity_matches">
+									<local_schema short_desc="ウィンドウ">
+										<longdesc>デフォルトで他と異なる不透明度を持たせるウィンドウ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity_step">
+									<local_schema short_desc="変化刻み">
+										<longdesc>不透明度の変化刻み (1 - 10)</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="cube">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="transparent_manual_only">
+									<local_schema short_desc="マウスによる回転時のみ透明化を使用">
+										<longdesc>マウスによる回転時のみキューブの透明化を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="inactive_opacity">
+									<local_schema short_desc="非回転時の不透明度">
+										<longdesc>非回転時のデスクトップ・ウィンドウの不透明度 (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="active_opacity">
+									<local_schema short_desc="回転時の不透明度">
+										<longdesc>回転時のデスクトップ・ウィンドウの不透明度 (0.0 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_end_color">
+									<local_schema short_desc="スカイドームグラデーション終了色">
+										<longdesc>スカイドームフォールバックグラデーションの下部カラーストップに使用する色</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_gradient_start_color">
+									<local_schema short_desc="スカイドームグラデーション開始色">
+										<longdesc>スカイドームフォールバックグラデーションの上部カラーストップに使用する色</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_animated">
+									<local_schema short_desc="スカイドームをアニメーション化">
+										<longdesc>キューブの回転時にスカイドームをアニメーション化</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome_image">
+									<local_schema short_desc="スカイドーム画像">
+										<longdesc>スカイドームのテクスチャとして使用する画像</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="skydome">
+									<local_schema short_desc="スカイドーム">
+										<longdesc>スカイドームの描画</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="描画の時間刻み">
+										<longdesc>展開描画の時間刻み (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="速度">
+										<longdesc>展開速度 (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="加速度">
+										<longdesc>展開加速度 (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="in">
+									<local_schema short_desc="キューブ内部">
+										<longdesc>キューブ内部</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="マルチ出力の形式">
+										<longdesc>複数の出力デバイス使用の場合におけるキューブ表示方法の選択 (0 = 自動調整, 1 = 複数のキューブ, 2 = １つの大きなキューブ)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="ミップマップ">
+										<longdesc>高品質スケーリングが可能な場合ミップマップを生成</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="unfold_key">
+									<local_schema short_desc="展開">
+										<longdesc>キューブを展開</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="water">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="title_wave">
+									<local_schema short_desc="タイトルの波">
+										<longdesc>ウィンドウタイトルからウェーブ効果</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rain_delay">
+									<local_schema short_desc="雨の待ち時間">
+										<longdesc>各水滴間の遅延時間（ミリ秒） (1 - 3600000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="offset_scale">
+									<local_schema short_desc="オフセットスケール">
+										<longdesc>水オフセットスケール (0 - 10)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_wiper_key">
+									<local_schema short_desc="ワイパーの切り替え">
+										<longdesc>ワイパー効果の切り替え</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="toggle_rain_key">
+									<local_schema short_desc="雨の切り替え">
+										<longdesc>雨効果の切り替え</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="開始">
+										<longdesc>ポインタの水効果を有効にする</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="rotate">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="rotate_to_12_window_key">
+									<local_schema short_desc="面 12 に回転（ウィンドウと一緒に）">
+										<longdesc>面 12 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_window_key">
+									<local_schema short_desc="面 11 に回転（ウィンドウと一緒に）">
+										<longdesc>面 11 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_window_key">
+									<local_schema short_desc="面 10 に回転（ウィンドウと一緒に）">
+										<longdesc>面 10 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_window_key">
+									<local_schema short_desc="面 9 に回転（ウィンドウと一緒に）">
+										<longdesc>面 9 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_window_key">
+									<local_schema short_desc="面 8 に回転（ウィンドウと一緒に）">
+										<longdesc>面 8 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_window_key">
+									<local_schema short_desc="面 7 に回転（ウィンドウと一緒に）">
+										<longdesc>面 7 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_window_key">
+									<local_schema short_desc="面 6 に回転（ウィンドウと一緒に）">
+										<longdesc>面 6 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_window_key">
+									<local_schema short_desc="面 5 に回転（ウィンドウと一緒に）">
+										<longdesc>面 5 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_window_key">
+									<local_schema short_desc="面 4 に回転（ウィンドウと一緒に）">
+										<longdesc>面 4 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_window_key">
+									<local_schema short_desc="面 3 に回転（ウィンドウと一緒に）">
+										<longdesc>面 3 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_window_key">
+									<local_schema short_desc="面 2 に回転（ウィンドウと一緒に）">
+										<longdesc>面 2 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_window_key">
+									<local_schema short_desc="面 1 に回転（ウィンドウと一緒に）">
+										<longdesc>面 1 に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_12_key">
+									<local_schema short_desc="面 12 に回転">
+										<longdesc>面 12 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_11_key">
+									<local_schema short_desc="面 11 に回転">
+										<longdesc>面 11 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_10_key">
+									<local_schema short_desc="面 10 に回転">
+										<longdesc>面 10 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_9_key">
+									<local_schema short_desc="面 9 に回転">
+										<longdesc>面 9 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_8_key">
+									<local_schema short_desc="面 8 に回転">
+										<longdesc>面 8 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_7_key">
+									<local_schema short_desc="面 7 に回転">
+										<longdesc>面 7 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_6_key">
+									<local_schema short_desc="面 6 に回転">
+										<longdesc>面 6 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_5_key">
+									<local_schema short_desc="面 5 に回転">
+										<longdesc>面 5 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_4_key">
+									<local_schema short_desc="面 4 に回転">
+										<longdesc>面 4 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_3_key">
+									<local_schema short_desc="面 3 に回転">
+										<longdesc>面 3 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_2_key">
+									<local_schema short_desc="面 2 に回転">
+										<longdesc>面 2 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_1_key">
+									<local_schema short_desc="面 1 に回転">
+										<longdesc>面 1 に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_right_edge">
+									<local_schema short_desc="右にフリップ回転">
+										<longdesc>右ビューポートにフリップして、ポインタをワープ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_flip_left_edge">
+									<local_schema short_desc="左にフリップ回転">
+										<longdesc>左ビューポートにフリップして、ポインタをワープ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_window_key">
+									<local_schema short_desc="指定先にウィンドウと一緒に回転">
+										<longdesc>ウィンドウと一緒に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_to_key">
+									<local_schema short_desc="指定先に回転">
+										<longdesc>ビューポートに回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_button">
+									<local_schema short_desc="右に回転（ウィンドウと一緒に）">
+										<longdesc>右に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_window_key">
+									<local_schema short_desc="右に回転（ウィンドウと一緒に）">
+										<longdesc>右に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_button">
+									<local_schema short_desc="左に回転（ウィンドウと一緒に）">
+										<longdesc>左に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_window_key">
+									<local_schema short_desc="左に回転（ウィンドウと一緒に）">
+										<longdesc>左に回転（アクティブなウィンドウと一緒に）</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_button">
+									<local_schema short_desc="右に回転">
+										<longdesc>右に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_right_key">
+									<local_schema short_desc="右に回転">
+										<longdesc>右に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_button">
+									<local_schema short_desc="左に回転">
+										<longdesc>左に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="rotate_left_key">
+									<local_schema short_desc="左に回転">
+										<longdesc>左に回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="開始">
+										<longdesc>回転の開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="描画の時間刻み">
+										<longdesc>回転の時間刻み (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="速度">
+										<longdesc>回転速度 (0.1 - 50.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="acceleration">
+									<local_schema short_desc="加速度">
+										<longdesc>回転の加速度 (1.0 - 20.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="sensitivity">
+									<local_schema short_desc="ポインタ感度">
+										<longdesc>ポインタの移動感度 (0.01 - 100.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="flip_time">
+									<local_schema short_desc="フリップ開始時間">
+										<longdesc>ビューポートのフリップ移動を開始する前のタイムアウト (0 - 1000)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="ズーム">
+										<longdesc>回転時のズーム距離 (0.0 - 2.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_bottom">
+									<local_schema short_desc="キューブ下面にスナップ">
+										<longdesc>キューブ回転をキューブ下面にスナップ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snap_top">
+									<local_schema short_desc="キューブ上面にスナップ">
+										<longdesc>キューブ回転をキューブ上面にスナップ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="invert_y">
+									<local_schema short_desc="ポインタ操作の Y 反転">
+										<longdesc>ポインタ移動の Y 軸を反転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="raise_on_rotate">
+									<local_schema short_desc="回転時に前面に上げる">
+										<longdesc>回転時にウィンドウを上げる</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_dnd">
+									<local_schema short_desc="エッジへのドラッグ＆ドロップでフリップ">
+										<longdesc>オブジェクトを画面端にドラッグした際に、次のビューポートにフリップ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_window">
+									<local_schema short_desc="エッジへの移動でフリップ">
+										<longdesc>ウィンドウを画面端に移動した際に、次のビューポートにフリップ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="edge_flip_pointer">
+									<local_schema short_desc="エッジへのポインタ移動でフリップ">
+										<longdesc>ポインタを画面端に移動した際に、次のビューポートにフリップ</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="blur">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="independent_tex">
+									<local_schema short_desc="テクスチャの独立読み出し">
+										<longdesc>利用可能なテクスチャ・ユニットを使用してテクスチャを可能な限り多く独立読み出しさせる</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="occlusion">
+									<local_schema short_desc="ブラー遮蔽">
+										<longdesc>他のウィンドウで覆い隠された画面域のブラーを無効化</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="ブラー彩度">
+										<longdesc>ぼかしの彩度 (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap_lod">
+									<local_schema short_desc="ミップマップ詳細レベル">
+										<longdesc>ミップマップの詳細レベル (0.1 - 5.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_strength">
+									<local_schema short_desc="ガウス強度">
+										<longdesc>ガウス強度 (0.0 - 1.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="gaussian_radius">
+									<local_schema short_desc="ガウス半径">
+										<longdesc>ガウス半径 (1 - 15)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="filter">
+									<local_schema short_desc="ブラーフィルタ">
+										<longdesc>ブラーに使用するフィルタ方法 (0 = 4x バイリニア, 1 = ガウス, 2 = ミップマップ)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur">
+									<local_schema short_desc="アルファ・ブラー">
+										<longdesc>ウィンドウの透過部分の背後をぼかす</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="alpha_blur_match">
+									<local_schema short_desc="アルファ・ブラー対象ウィンドウ">
+										<longdesc>デフォルトでアルファ・ブラー使用対象にするウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur">
+									<local_schema short_desc="フォーカス・ブラー">
+										<longdesc>フォーカスがないウィンドウをぼかす</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="focus_blur_match">
+									<local_schema short_desc="フォーカス・ブラー対象ウィンドウ">
+										<longdesc>フォーカス・ブラーの効果対象ウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="blur_speed">
+									<local_schema short_desc="ブラー速度">
+										<longdesc>ウィンドウ・ブラーの速度 (0.1 - 10.0)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="pulse">
+									<local_schema short_desc="点滅">
+										<longdesc>点滅効果</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="switcher">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="auto_rotate">
+									<local_schema short_desc="自動回転">
+										<longdesc>スイッチ中に選択ウィンドウへ回転</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="minimized">
+									<local_schema short_desc="最小化">
+										<longdesc>最小化されているウィンドウも表示</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="icon">
+									<local_schema short_desc="アイコン">
+										<longdesc>サムネイルの隣にアイコンを表示</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="zoom">
+									<local_schema short_desc="ズーム">
+										<longdesc>ウィンドウのスイッチ中にデスクトップがズームアウトされる距離 (0 - 5)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="bring_to_front">
+									<local_schema short_desc="手前に提示">
+										<longdesc>選択ウィンドウを手前に提示</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="不透明度">
+										<longdesc>不透明度(%) (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="brightness">
+									<local_schema short_desc="明度">
+										<longdesc>明るさの量(%) (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="saturation">
+									<local_schema short_desc="彩度">
+										<longdesc>鮮やかさの量(%) (0 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mipmap">
+									<local_schema short_desc="ミップマップ">
+										<longdesc>高品質スケーリングが可能な場合ミップマップを生成</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="window_match">
+									<local_schema short_desc="スイッチャー・ウィンドウ">
+										<longdesc>スイッチャーに表示する対象ウィンドウ (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="timestep">
+									<local_schema short_desc="描画の時間刻み">
+										<longdesc>スイッチャー描画の時間刻み (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="speed">
+									<local_schema short_desc="速度">
+										<longdesc>スイッチャー速度 (0.1 - 50)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_panel_key">
+									<local_schema short_desc="前のパネル">
+										<longdesc>前のパネルタイプのウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_panel_button">
+									<local_schema short_desc="前のパネル">
+										<longdesc>前のパネルタイプのウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_panel_key">
+									<local_schema short_desc="次のパネル">
+										<longdesc>次のパネルタイプのウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_panel_button">
+									<local_schema short_desc="次のパネル">
+										<longdesc>次のパネルタイプのウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_key">
+									<local_schema short_desc="前のウィンドウ（ポップアップなし）">
+										<longdesc>ポップアップウィンドウ表示なしで前のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_no_popup_button">
+									<local_schema short_desc="前のウィンドウ（ポップアップなし）">
+										<longdesc>ポップアップウィンドウ表示なしで前のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_key">
+									<local_schema short_desc="次のウィンドウ（ポップアップなし）">
+										<longdesc>ポップアップウィンドウ表示なしで次のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_no_popup_button">
+									<local_schema short_desc="次のウィンドウ（ポップアップなし）">
+										<longdesc>ポップアップウィンドウ表示なしで次のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_key">
+									<local_schema short_desc="前のウィンドウ（全ウィンドウから）">
+										<longdesc>スイッチャーが非表示の場合ポップアップして、すべてのウィンドウから前のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_all_button">
+									<local_schema short_desc="前のウィンドウ（全ウィンドウから）">
+										<longdesc>スイッチャーが非表示の場合ポップアップして、すべてのウィンドウから前のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_key">
+									<local_schema short_desc="次のウィンドウ（全ウィンドウから）">
+										<longdesc>スイッチャーが非表示の場合ポップアップして、すべてのウィンドウから次のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_all_button">
+									<local_schema short_desc="次のウィンドウ（全ウィンドウから）">
+										<longdesc>スイッチャーが非表示の場合ポップアップして、すべてのウィンドウから次のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_key">
+									<local_schema short_desc="前のウィンドウ">
+										<longdesc>スイッチャーが非表示の場合ポップアップして、前のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="prev_button">
+									<local_schema short_desc="前のウィンドウ">
+										<longdesc>スイッチャーが非表示の場合ポップアップして、前のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_key">
+									<local_schema short_desc="次のウィンドウ">
+										<longdesc>スイッチャーが非表示の場合ポップアップして、次のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="next_button">
+									<local_schema short_desc="次のウィンドウ">
+										<longdesc>スイッチャーが非表示の場合ポップアップして、次のウィンドウを選択</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="move">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="lazy_positioning">
+									<local_schema short_desc="緩慢な位置取り">
+										<longdesc>ウィンドウの移動完了までXサーバ側での配置位置を更新しない</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="snapoff_maximized">
+									<local_schema short_desc="最大化したウィンドウのスナップ解除">
+										<longdesc>最大化ウィンドウのドラッグ時、スナップを解除して最大化を自動解除</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="constrain_y">
+									<local_schema short_desc="Ｙ 座標制約">
+										<longdesc>Y 座標をワークスペースエリアに制約</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="opacity">
+									<local_schema short_desc="不透明度">
+										<longdesc>移動ウィンドウの不透明度 (1 - 100)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_key">
+									<local_schema short_desc="ウィンドウの移動開始">
+										<longdesc>ウィンドウの移動を開始</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="initiate_button">
+									<local_schema short_desc="ウィンドウの移動開始">
+										<longdesc>ウィンドウの移動を開始</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="place">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="viewport_y_values">
+									<local_schema short_desc="Y ビューポート位置">
+										<longdesc>垂直ビューポート位置</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_x_values">
+									<local_schema short_desc="X ビューポート位置">
+										<longdesc>水平ビューポート位置</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="viewport_matches">
+									<local_schema short_desc="固定ビューポート・ウィンドウ">
+										<longdesc>デフォルトで特定ビューポートに配置するウィンドウ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode_matches">
+									<local_schema short_desc="ウィンドウ">
+										<longdesc>Windows that should have a certain positioning mo+de</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_constrain_workarea">
+									<local_schema short_desc="ワークエリアに限定">
+										<longdesc>結果として指定位置とは異なってしまう場合でも、ウィンドウの配置位置をワークエリア内に限定。</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_y_values">
+									<local_schema short_desc="Y 位置">
+										<longdesc>Y 位置の値</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_x_values">
+									<local_schema short_desc="X 位置">
+										<longdesc>X 位置の値</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="position_matches">
+									<local_schema short_desc="固定位置ウィンドウ">
+										<longdesc>デフォルトで特定位置に配置するウィンドウ</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="force_placement_match">
+									<local_schema short_desc="強制配置ウィンドウ">
+										<longdesc>強制的に配置させるウィンドウ。ウィンドウ・マネージャに配置の対象外とするようにウィンドウが指示している場合でも配置します。 (match)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="multioutput_mode">
+									<local_schema short_desc="マルチ出力の形式">
+										<longdesc>マルチ出力が選択されている場合の、ウィンドウ配置の振る舞いの選択 (0 = アクティブ状態の出力デバイスを使用, 1 = ポインタが置かれている出力デバイスを使用, 2 = フォーカス・ウィンドウの出力デバイスを使用, 3 = すべての出力デバイスにわたって配置)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="mode">
+									<local_schema short_desc="配置形式">
+										<longdesc>ウィンドウ配置に使用するアルゴリズム (0 = カスケード, 1 = 中央, 2 = スマート, 3 = 最大化, 4 = ランダム, 5 = Pointer)</longdesc>
+									</local_schema>
+								</entry>
+								<entry name="workarounds">
+									<local_schema short_desc="回避策">
+										<longdesc>モーダルダイアログ向けの配置問題回避策</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+					<dir name="clone">
+						<dir name="screen0">
+							<dir name="options">
+								<entry name="initiate_button">
+									<local_schema short_desc="開始">
+										<longdesc>複製選択の開始</longdesc>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

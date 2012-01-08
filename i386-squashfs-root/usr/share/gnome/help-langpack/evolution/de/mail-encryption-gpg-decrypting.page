@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-encryption-gpg-decrypting" xml:lang="de">
+
+  <info>
+    <desc>Decrypting and checking the signature of received GPG messages.</desc>
+
+    <link type="guide" xref="mail-encryption#gpg"/>
+
+    <revision pkgversion="2.32.1" version="0.1" date="2011-01-05" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/encryption.html.en#unencrypting -->
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Receiving messages encrypted or signed via GPG</title>
+
+<section id="decryption">
+<title>Eine empfangene Nachricht entschlüsseln</title>
+<p>Wenn Sie eine verschlüsselte Nachricht erhalten, so müssen Sie diese entschlüsseln bevor Sie sie lesen können.</p>
+<p>Wenn Sie die verschlüsselte Nachricht betrachten, fragt Sie Evolution nach Ihrem PGP-Passwort. Nach Eingabe wird die unverschlüsselte Nachricht angezeigt.</p>
+<note style="tip"><p>Der Absender benötigt Ihren öffentlichen GPG-Schlüssel, bevor er Ihnen eine verschlüsselte Nachricht schicken kann.</p></note>
+</section>
+
+<section id="signature">
+<title>Die Signatur einer empfangenen Nachricht überprüfen</title>
+<p>To check the sender's signature of a received message, scroll down to the bottom of the message and click the logo. Evolution will display <gui>Security Information</gui> for the message.</p>
+</section>
+</page>

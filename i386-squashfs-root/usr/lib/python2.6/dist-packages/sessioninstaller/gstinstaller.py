@@ -1,0 +1,1 @@
+../../../../share/pyshared/sessioninstaller/gstinstaller.py

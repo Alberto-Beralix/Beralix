@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="net-security-tips" xml:lang="es">
+
+  <info>
+    <revision version="11.04" date="2011-04-30" status="final"/>
+
+    <link type="guide" xref="net-general"/>
+
+    <desc>Consejos generales a tener en cuenta al usar Internet</desc>
+ 
+    <credit type="author">
+      <name>Steven Richards</name>
+      <email>steven.richardspc@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Mantenerse seguro en Internet</title>
+
+<p>Una razón por la que puede que esté usando Linux es por la robusta seguridad por la que es conocido. Uno de los motivos por los que Linux está relativamente libre de malware y virus es el número de personas que lo usan. Los virus suelen tener como objetivo a sistemas operativos populares como Windows que tienen una enorme base de usuarios. Linux también es muy seguro por su naturaleza de fuentes abiertas que permite a los expertos modificar y mejorar las características de seguridad incluidas en cada distribución.</p>
+
+<p>A pesar de las medidas tomadas para asegurar que su instalación de Linux sea segura, siempre hay vulnerabilidades. Como usuario medio de Internet aún es susceptible de:</p>
+
+ <list>
+  <item><p>Estafas de «phishing» (sitios que tratan de obtener información sensible mediante engaños)</p></item>
+  <item><p><link xref="net-email-virus">Reenviar correos maliciosos</link></p></item>
+  <item><p><link xref="net-antivirus">Aplicaciones con intenciones maliciosas (virus)</link></p></item>
+  <item><p><link xref="net-wireless-wepwpa">Unwarranted remote/local network access</link></p></item>
+ </list>
+
+<p>Para estar a salvo de ataques maliciosos, tenga en cuenta los siguientes consejos:</p>
+
+ <list>
+  <item><p>No abra correos, adjuntos o enlaces enviados por personas que no conozca.</p></item>
+  <item><p>Si un sitio web ofrece algo demasiado bueno para ser cierto o solicita información sensible sin que parezca necesario, entonces piénselo dos veces antes de enviarla, así como las consecuencias potenciales si esa información resulta comprometida por ladrones de identidad u otros delincuentes.</p></item>
+  <item><p>Tenga cuidado al proporcionar permisos de nivel administrador a cualquier aplicación, especialmente a aquellas que no haya usado antes o que no sean bien conocidas. Conceder privilegios de administración a cualquiera pone su equipo en grave riesgo de ser atacado.</p></item>
+  <item><p>Compruebe que solo se están ejecutando los servicios de acceso remoto que sean necesarios. Tener funcionando <app>SSH</app> o <app>VNC</app> puede ser útil pero también deja su equipo abierto a la intrusión si no se asegura adecuadamente. Considere la posibilidad de usar un <link xref="net-firewall-on-off.page">cortafuegos</link> para ayudar a proteger a su equipo de los intrusos.</p></item>
+ </list>
+
+</page>

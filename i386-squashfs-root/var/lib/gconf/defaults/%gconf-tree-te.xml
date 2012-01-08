@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="ibus">
+				<dir name="panel">
+					<entry name="custom_font">
+						<local_schema short_desc="మలచుకొనిన ఫాంటు">
+							<longdesc>భాష ప్యానల్ కొరకు మలచుకొనిన ఫాంటు పేరు</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font">
+						<local_schema short_desc="మలచుకొనిన ఫాంటు ఉపయోగించు">
+							<longdesc>భాషా ప్యానల్ కొరకు మలచుకొనిన ఫాంట్ నామము వుపయోగించుము</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_im_name">
+						<local_schema short_desc="ఇన్‌పుట్ పద్ధతి పేరును చూపించు">
+							<longdesc>భాషా పట్టీపై ఇన్‌పుట్ పద్ధతి పేరును చూపించు</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_icon_on_systray">
+						<local_schema short_desc="సిస్టమ్ ట్రే నందు ప్రతీకను చూపుము">
+							<longdesc>సిస్టమ్ ట్రే నందు ప్రతీకను చూపుము</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="lookup_table_orientation">
+						<local_schema short_desc="లుకప్ పట్టిక సర్దుబాటు">
+							<longdesc>లుకప్ పట్టిక సర్దుబాటు. 0 = చదరముగా, 1 = నిలువుగా</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="y">
+						<local_schema short_desc="భాషా ప్యానల్ స్థానము">
+						</local_schema>
+					</entry>
+					<entry name="x">
+						<local_schema short_desc="భాషా ప్యానల్ స్థానము">
+						</local_schema>
+					</entry>
+					<entry name="show">
+						<local_schema short_desc="స్వయంచాలకంగా దాగిఉండు">
+							<longdesc>భాషా ప్యానల్ యొక్క ప్రవర్తన. 0 = మెనూనందు యెంబెడ్‌చేయి, 1 = స్వయంచాలకంగా మరుగునవుంచు, 2 = ఎల్లప్పుడూ చూపించు</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<entry name="enable_by_default">
+						<local_schema short_desc="ఇన్‌పుట్ పద్ధతిని అప్రమేయంగా చేతనముచేయుము">
+							<longdesc>అనువర్తనము ఇన్‌పుట్ ఫోకస్‌ను పొందగానే ఇన్‌పుట్ పద్ధతిని అప్రమేయంగా చేతనము చేయుము</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_global_engine">
+						<local_schema short_desc="గ్లోబల్ ఇన్‌పుట్ పద్ధతిని ఉపయోగించుము">
+							<longdesc>అన్ని అనువర్తనములనందు యిన్పుట్ పద్దతిని భాగస్వామ్యపరచుము</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="embed_preedit_text">
+						<local_schema short_desc="ఎంబెడెడ్ ప్రిఎడిట్ పాఠము">
+							<longdesc>అనువర్తన విండోనందు ఎంబెడెడ్ ప్రిఎడిట్ పాఠము</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_system_keyboard_layout">
+						<local_schema short_desc="సిస్టమ్ కీబోర్డు నమూనా ఉపయోగించుము">
+							<longdesc>సిస్టమ్ కీబోర్డు (XKB) నమూనా ఉపయోగించుము</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="preload_engines">
+						<local_schema short_desc="ముందుగా లోడైన ఇంజన్లు">
+							<longdesc>ibus ప్రారంభమునందు ఇంజన్లు ముందుగా లోడుచేయి</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="hotkey">
+						<entry name="previous_engine">
+							<local_schema short_desc="మునుపటి ఇంజన్ లఘువులు">
+								<longdesc>జాబితానందలి ముందరి ఇన్‌పుట్ పద్ధతినకు మారుటకు లఘువులు</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="prev_engine">
+							<local_schema short_desc="మునుపటి ఇంజన్ లఘువులు">
+								<longdesc>జాబితానందలి ముందరి ఇన్‌పుట్ పద్ధతినకు మారుటకు లఘువులు</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine_in_menu">
+							<local_schema short_desc="తరువాతి ఇంజన్‌కు లఘువులు">
+								<longdesc>జాబితానందలి తరువాతి ఇన్పుట్ పద్ధతినకు మారుటకు లఘువులు</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="next_engine">
+							<local_schema short_desc="తరువాతి ఇంజన్‌కు లఘువులు">
+								<longdesc>జాబితానందలి తరువాతి ఇన్పుట్ పద్ధతినకు మారుటకు లఘువులు</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="disable_unconditional">
+							<local_schema short_desc="లఘు కీ లను అచేతనంచేయి">
+								<longdesc>ఇన్‌పుట్ పద్ధతి ఆపుటకు కీ లఘువులు</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_unconditional">
+							<local_schema short_desc="లఘు కీ లను చేతనంచేయి">
+								<longdesc>ఇన్‌పుట్ పద్ధతి ఆన్ చేయుటకు కీ లఘువులు</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="trigger">
+							<local_schema short_desc="లఘవులను నొక్కుము">
+								<longdesc>ఇన్‌పుట్ పద్ధతిని ఆన్ చేయుటకు లేదా ఆఫ్ చేయుటకు లఘువులు</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="gstreamer">
+				<dir name="0.10">
+					<dir name="audio">
+						<dir name="profiles">
+							<dir name="aac">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp3">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="mp2">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="voicelossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossless">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+							<dir name="cdlossy">
+								<entry name="description">
+									<local_schema>
+									</local_schema>
+								</entry>
+								<entry name="name">
+									<local_schema>
+									</local_schema>
+								</entry>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="apps">
+			<dir name="gnome-terminal">
+				<dir name="profiles">
+					<dir name="Default">
+						<entry name="title">
+							<local_schema>
+							</local_schema>
+						</entry>
+						<entry name="visible_name">
+							<local_schema>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="global">
+					<entry name="active_encodings">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="gweather">
+				<dir name="prefs">
+					<entry name="coordinates">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location4">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location3">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location2">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location1">
+						<local_schema>
+						</local_schema>
+					</entry>
+					<entry name="location0">
+						<local_schema>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="nm-applet">
+				<entry name="disable-wifi-create">
+					<local_schema short_desc="WiFi సృష్టించుట అచేతనము చేయుము">
+						<longdesc>అప్లెట్‌ను వుపయోగించునప్పుడు adhoc నెట్వర్కుల సృష్టీకరణను అచేతనము చేయుటకు TRUE వుంచండి.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="stamp">
+					<local_schema short_desc="స్టాంప్">
+						<longdesc>అమరికలు కొత్త వర్షన్‌కు మైగ్రేట్ కావాలా అనేది నిర్ణయించుటకు వుపయోగించబడుతుంది.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="suppress-wireless-networks-available">
+					<local_schema short_desc="నెట్వర్కులు అందుబాటులోవున్నాయి నోటీసు అణిచివేయుము">
+						<longdesc>వైర్‌లెస్ నెట్వర్కులు అందుబాటులో వున్నప్పుడు నోటీసులను అచేతనము చేయుటకు దీనిని TRUE గా అమర్చండి.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-disconnected-notifications">
+					<local_schema short_desc="అననుసంధానపు నోటీసులను అచేతనముచేయుము">
+						<longdesc>నెట్వర్కునుండి అననుసంధానము అవుచున్నప్పుడు నోటీసులను అచేతనము చేయుటకు దీనిని TRUE గా అమర్చుము.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="disable-connected-notifications">
+					<local_schema short_desc="అనుసంధానము నోటీసులను అచేతనముచేయుము">
+						<longdesc>నెట్వర్కునకు అనుసంధానమవుచున్నప్పుడు నోటీసులను అచేతనము చేయుటకు దీనిని TRUE గా అమర్చండి.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

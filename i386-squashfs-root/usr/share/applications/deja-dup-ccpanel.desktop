@@ -1,0 +1,60 @@
+[Desktop Entry]
+Version=1.0
+X-Ubuntu-Gettext-Domain=deja-dup
+
+Name=Backup
+Comment=Change your backup settings
+
+Icon=deja-dup
+TryExec=gnome-control-center
+Exec=gnome-control-center deja-dup
+
+StartupNotify=true
+
+Type=Application
+Categories=GNOME;GTK;System;Archiving;Utility;Settings;X-GNOME-SystemSettings;X-GNOME-Settings-Panel;
+X-GNOME-Settings-Panel=deja-dup
+
+OnlyShowIn=GNOME;Unity;
+
+# Translators: Add whatever keywords you want in your language, separated by semicolons
+# These keywords are used when searching for applications in dashes, etc.
+X-GNOME-Keywords=déjà;deja;dup;
+X-GNOME-Keywords[cs]=déjà;deja;dup;
+X-GNOME-Keywords[de]=déjà;deja;dup;backup;datensicherung;
+X-GNOME-Keywords[en_AU]=déjà;deja;dup;
+X-GNOME-Keywords[en_GB]=déjà;deja;dup;
+X-GNOME-Keywords[es]=déjà;deja;dup;
+X-GNOME-Keywords[eu]=déjà;deja;dup;
+X-GNOME-Keywords[fa]=déjà;deja;dup;
+X-GNOME-Keywords[fi]=déjà;deja;dup;
+X-GNOME-Keywords[fo]=déjà;deja;dup;
+X-GNOME-Keywords[fr]=déjà;deja;dup;
+X-GNOME-Keywords[gl]=déjà;deja;dup;
+X-GNOME-Keywords[hu]=déjà;deja;dup;
+X-GNOME-Keywords[it]=déjà;deja;dup;
+X-GNOME-Keywords[ja]=déjà;deja;dup;
+X-GNOME-Keywords[ko]=déjà;deja;dup;데자둡;베껴두기
+X-GNOME-Keywords[lt]=déjà;deja;dup;
+X-GNOME-Keywords[lv]=déjà;deja;dup;deža;dublēt;rezerves
+X-GNOME-Keywords[ms]=déjà;deja;dup;
+X-GNOME-Keywords[nl]=déjà;deja;dup;
+X-GNOME-Keywords[oc]=déjà;deja;dup;
+X-GNOME-Keywords[pl]=déjà;deja;dup;
+X-GNOME-Keywords[pt_BR]=déjà;deja;dup;
+X-GNOME-Keywords[ru]=déjà;deja;dup;дежа;дап;дуп
+X-GNOME-Keywords[sl]=déjà;deja;dup;varnostna;kopija;arhiv
+X-GNOME-Keywords[sv]=déjà;deja;dup;
+X-GNOME-Keywords[th]=déjà;deja;dup;
+X-GNOME-Keywords[tr]=déjà;deja;dup;
+X-GNOME-Keywords[uk]=déjà;deja;dup;
+X-GNOME-Keywords[zh_HK]=déjà;deja;dup;備份
+X-GNOME-Keywords[zh_TW]=déjà;deja;dup;備份
+
+X-AppInstall-Ignore=true
+X-Ayatana-Desktop-Shortcuts=X-BackUpNow;
+
+[X-BackUpNow Shortcut Group]
+Name=Back Up Now
+Exec=deja-dup --backup
+TargetEnvironment=Unity

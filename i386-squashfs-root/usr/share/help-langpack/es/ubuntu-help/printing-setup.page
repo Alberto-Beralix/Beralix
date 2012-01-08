@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="printing-setup" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="printing#setup" group="#first"/>
+
+    <desc>Configurar una impresora que está conectada a su equipo.</desc>
+
+    <revision version="11.04" date="2011-05-05" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Paul W. Frields</name>
+      <email>stickster@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Steven Richards</name>
+      <email>steven.richardspc@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Configurar una impresora local</title>
+  <p>Su sistema puede reconocer automáticamente varios tipos de impresoras cuando se conectan. La mayoría de las impresoras se conectan al equipo con un cable USB.</p>
+
+  <comment>
+    <cite date="2011-04-04">shaunm</cite>
+    <p>Do we have anything on what to do when your printer isn't found? 3.0.1?</p>
+  </comment>
+
+  <steps>
+    <item>
+      <p>Asegúrese que la impresora está encendida.</p>
+    </item>
+    <item>
+      <p>Conecte la impresora a su sistema mediante el cable apropiado. Puede ver la actividad en la pantalla, cuando el sistema busca los controladores, y puede que se le pida que se autentique para instalarlos.</p>
+    </item>
+    <item>
+      <p>Aparecerá un mensaje cuando el sistema haya terminado de instalar la impresora. Seleccione <gui>Imprimir una página de prueba</gui> para imprimir una página de prueba, o «Configurar» para hacer cambios adicionales en la configuración de la impresora.</p>
+    </item>
+  </steps>
+
+  <p>Si su impresora no se estableció de manera automática, puede añadirla en la configuración de impresora.</p>
+
+  <steps>
+    <item><p>Pulse el <link xref="unity-appmenu-intro">menú de sistema</link> en la derecha del panel superior y seleccione <gui>Impresoras</gui>.</p></item>
+
+    <item><p>Pulse <gui>Añadir</gui> y seleccione la impresora de la ventana de dispositivos.</p></item>
+    <item><p>Pulse <gui>Continuar</gui> y espere mientras busca los controladores.</p></item>
+    <item><p>Puede personalizar el nombre de la impresora, descripción y ubicación si quiere. Cuando termine pulse <gui>Aplicar</gui>.</p></item>
+    <item><p>Ahora puede imprimir una página de prueba, o pulsar <gui>Cancelar</gui> para omitir este paso.</p></item>
+  </steps>
+
+  <note>
+    <p>Si hay varios controladores disponibles para su equipo, se le pedirá que elija uno. Para usar el controlador recomendado solamente pulse continuar en hacer y modelar pantallas.</p>
+  </note>
+
+  <p>Después de instalar la impresora puede querer <link xref="printing-setup-default-printer">cambiar su impresora predeterminada</link>.</p>
+</page>

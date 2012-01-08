@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" id="reverse-connections" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#connections"/>
+    <link type="seealso" xref="connect"/>
+    <title type="sort">3</title>
+    <desc>Conectarse con equipos que no están en su red local: evitando las restricciones del cortafuegos en el equipo remoto.</desc>
+    <credit type="author">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@googlemail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+
+  <title>Conexiones inversas…</title>
+
+  <p>Generalmente una conexión inversa se usa para saltarse las restricciones de los cortafuegos sobre los puertos abiertos. Generalmente un cortafuegos bloquea los puertos abiertos pero no bloquea el tráfico saliente. En una conexión directa normal, un cliente se conecta con un servidor a través del puerto abierto del servidor, pero en el caso de una conexión inversa, el cliente abre un puerto al que se conecta el servidor.</p>
+
+  <section id="enable-reverse-connections">
+    <title>Activar conexiones inversas</title>
+
+    <steps>
+      <item>
+        <p>Abra <guiseq><gui>Remoto</gui><gui>Conexiones inversas…</gui></guiseq>.</p>
+      </item>
+      <item>
+        <p>Seleccione <gui>Activar conexiones inversas</gui></p>
+      </item>
+    </steps>
+
+<figure>
+  <title>Diálogo de conexión inversa</title>
+  <media type="image" mime="image/png" src="figures/vinagre-reverse-connections.png"/>
+</figure>
+
+  </section>
+
+  <section id="accessing-behind-firewall">
+    <title>Acceder a un equipo detrás de un cortafuegos</title>
+
+    <p>El equipo remoto necesita conectarse con su equipo usando su dirección IP y número de puerto, que están en el diálogo <gui>Conexiones inversas...</gui>, bajo <gui>Conectividad</gui>.</p>
+
+    <note>
+      <p>Actualmente, <app>Vino</app> el servidor VNC de GNOME no soporta conexiones inversas (también conocido como «modo escucha»). Algunas otras aplicaciones, tales como <app>UltraVNC</app>, <app>RealVNC</app> y <app>TightVNC</app> tienen soporte para conexiones inversas.</p>
+    </note>
+
+    <p>Una vez que el equipo remoto se conecta con su equipo, <app>Vinagre</app> establecerá la conexión inversa.</p>
+
+    <note>
+      <p>Al conectarse a otra máquina que no está en su red local, deberá proporcionar su IP externa y el número de puerto hacia el servidor remoto.</p>
+    </note>
+  </section>
+
+</page>

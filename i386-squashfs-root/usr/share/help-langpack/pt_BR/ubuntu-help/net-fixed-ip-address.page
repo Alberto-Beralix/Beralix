@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="net-fixed-ip-address" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="net-wired"/>
+    <revision version="11.04" date="2011-04-28" status="final"/>
+
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <desc>Usando um endereço IP estático pode tornar mais fácil a administração de alguns serviços de rede.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Criar uma conexão com um endereço IP fixo</title>
+
+ <p>A maioria das redes irá atribuir automaticamente um endereço IP e outros detalhes para o seu computador quando você se conectar à rede. Esses detalhes podem mudar periodicamente, mas você pode querer ter um endereço IP fixo para o computador para que você sempre saiba qual é o seu endereço (por exemplo, se for um servidor de arquivos).</p>
+  <p>Para dar ao seu computador um endereço IP fixo (estático):</p>
+
+<steps>
+<item><p>Clique em <gui>menu de rede</gui> no painel superior e selecione <gui>editar conexões</gui>.</p></item>
+<item><p>Selecione a conexão Auto eth na guia <gui>Com fio</gui> ou sua rede sem fio na guia <gui>Sem fio</gui> e clique em <gui>Editar</gui>.</p></item>
+<item><p>Clique na guia <gui>Configurações  IPv4</gui> e altere o <gui>Método</gui> para <em>Manual</em>.</p></item>
+<item><p>Se nenhuma informação de conexão aparece na lista de <gui>Endereços</gui>, ou se você deseja configurar uma nova conexão, clique em <gui>Adicionar</gui>.</p></item>
+<item><p>Digite as informações sobre o <em>Endereço IP</em>, o <em>Netmask</em>, e o <em>Gateway</em> nas caixas apropriadas. A escolha dessas informações vai depender da configuração de sua rede; há regras específicas que regem quais endereços IP e netmasks são válidos para uma determinada rede.</p></item>
+<item><p>Se necessário, digite um endereço de <em>Servidor de nomes de domínio</em> (DNS) na caixa <gui>Servidor DNS</gui>. Este é um endereço IP de um servidor que procura nomes de domínios; a maioria das redes corporativas e provedores de Internet tem servidores DNS dedicados.</p></item>
+<item><p>Clique em <gui>Salvar</gui>.</p></item>
+<item><p>Feche a janela de configurações de rede.</p></item>
+</steps>
+
+</page>

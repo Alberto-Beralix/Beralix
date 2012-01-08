@@ -1,0 +1,1994 @@
+<gconfschemafile>
+<schemalist>
+<schema>
+	<key>/schemas/apps/gweather/prefs/auto_update</key>
+	<owner>gweather-applet-2</owner>
+	<type>bool</type>
+	<default>true</default>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<short>Update the data automatically</short>
+		<long>Determines whether the applet automatically updates its weather statistics or not.</long>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/auto_update_interval</key>
+	<owner>gweather-applet-2</owner>
+	<type>int</type>
+	<default>1800</default>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<short>Update interval</short>
+		<long>The interval, in seconds, between automatic updates.</long>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/enable_metric</key>
+	<owner>gweather-applet-2</owner>
+	<type>bool</type>
+	<default>false</default>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<short>Use metric units</short>
+		<long>Use metric units instead of english units.</long>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/distance_unit</key>
+	<owner>gweather-applet-2</owner>
+	<type>string</type>
+	<default>Default</default>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<short>Distance unit</short>
+		<long>The unit to use for visibility.</long>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/pressure_unit</key>
+	<owner>gweather-applet-2</owner>
+	<type>string</type>
+	<default>Default</default>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<short>Pressure unit</short>
+		<long>The unit to use for pressure.</long>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/speed_unit</key>
+	<owner>gweather-applet-2</owner>
+	<type>string</type>
+	<default>Default</default>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<short>Speed unit</short>
+		<long>The unit to use for wind speed.</long>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/temperature_unit</key>
+	<owner>gweather-applet-2</owner>
+	<type>string</type>
+	<default>Default</default>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<short>Temperature unit</short>
+		<long>The unit to use for temperature.</long>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/enable_detailed_forecast</key>
+	<owner>gweather-applet-2</owner>
+	<type>bool</type>
+	<default>false</default>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<short>Not used anymore</short>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/enable_radar_map</key>
+	<owner>gweather-applet-2</owner>
+	<type>bool</type>
+	<default>false</default>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<short>Display radar map</short>
+		<long>Fetch a radar map on each update.</long>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/location0</key>
+	<owner>gweather-applet-2</owner>
+	<type>string</type>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<default>DEFAULT_LOCATION</default>
+		<short>Weather location information</short>
+		<long>Weather location information.</long>
+	</locale>
+	<locale name="af">
+		<default>Pretoria</default>
+	</locale>
+	<locale name="ar">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="as">
+		<default>কলকাতা</default>
+	</locale>
+	<locale name="ast">
+		<default>Asturies/Avilés</default>
+	</locale>
+	<locale name="az">
+		<default>New York-JFK Arpt</default>
+	</locale>
+	<locale name="be">
+		<default>Мінск</default>
+	</locale>
+	<locale name="be@latin">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="bg">
+		<default>София</default>
+	</locale>
+	<locale name="bn">
+		<default>বাংলাদেশ</default>
+	</locale>
+	<locale name="bn_IN">
+		<default>কলকাতা</default>
+	</locale>
+	<locale name="br">
+		<default>Roazhon</default>
+	</locale>
+	<locale name="bs">
+		<default>Sarajevo</default>
+	</locale>
+	<locale name="ca">
+		<default>Barcelona</default>
+	</locale>
+	<locale name="ca@valencia">
+		<default>Barcelona</default>
+	</locale>
+	<locale name="crh">
+		<default>Aqmescit</default>
+	</locale>
+	<locale name="cs">
+		<default>Praha</default>
+	</locale>
+	<locale name="cy">
+		<default>Cardiff</default>
+	</locale>
+	<locale name="da">
+		<default>Kastrup</default>
+	</locale>
+	<locale name="de">
+		<default>Berlin</default>
+	</locale>
+	<locale name="dz">
+		<default>སྔོན་སྒྲིག་གནས་ཁོངས།(_L)</default>
+	</locale>
+	<locale name="el">
+		<default>Αθήνα</default>
+	</locale>
+	<locale name="en@shaw">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="en_CA">
+		<default>Ottawa</default>
+	</locale>
+	<locale name="en_GB">
+		<default>London/Heathrow</default>
+	</locale>
+	<locale name="eo">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="es">
+		<default>Madrid (Barajas)</default>
+	</locale>
+	<locale name="es_AR">
+		<default>Buenos Aires</default>
+	</locale>
+	<locale name="es_CL">
+		<default>Santiago</default>
+	</locale>
+	<locale name="es_CO">
+		<default>Bogotá (El Dorado)</default>
+	</locale>
+	<locale name="es_CR">
+		<default>San José</default>
+	</locale>
+	<locale name="es_DO">
+		<default>Santo Domingo</default>
+	</locale>
+	<locale name="es_EC">
+		<default>Quito (Mariscal Sucre)</default>
+	</locale>
+	<locale name="es_ES">
+		<default>Madrid (Barajas)</default>
+	</locale>
+	<locale name="es_GT">
+		<default>Ciudad de Guatemala</default>
+	</locale>
+	<locale name="es_HN">
+		<default>Tegucigalpa</default>
+	</locale>
+	<locale name="es_MX">
+		<default>Ciudad de México</default>
+	</locale>
+	<locale name="es_NI">
+		<default>Managua</default>
+	</locale>
+	<locale name="es_PA">
+		<default>Asunción</default>
+	</locale>
+	<locale name="es_PE">
+		<default>Lima Callao (Jorge Chávez)</default>
+	</locale>
+	<locale name="es_PR">
+		<default>Ciudad de Panamá</default>
+	</locale>
+	<locale name="es_SV">
+		<default>San Salvador (Ilopango)</default>
+	</locale>
+	<locale name="es_UY">
+		<default>Montevideo (Carrasco)</default>
+	</locale>
+	<locale name="es_VE">
+		<default>Caracas Maiquetia Aerop. Intl. Simón Bolívar</default>
+	</locale>
+	<locale name="et">
+		<default>Tallinn</default>
+	</locale>
+	<locale name="eu">
+		<default>Donostia</default>
+	</locale>
+	<locale name="fa">
+		<default>Tehran</default>
+	</locale>
+	<locale name="fi">
+		<default>Helsinki-Malmi</default>
+	</locale>
+	<locale name="fr">
+		<default>Paris/Charles De Gaulle</default>
+	</locale>
+	<locale name="ga">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="gl">
+		<default>Santiago de Compostela</default>
+	</locale>
+	<locale name="gu">
+		<default>અમદાવાદ</default>
+	</locale>
+	<locale name="he">
+		<default>תל אביב</default>
+	</locale>
+	<locale name="hi">
+		<default>New Delhi/Palam</default>
+	</locale>
+	<locale name="hu">
+		<default>Budapest</default>
+	</locale>
+	<locale name="hy">
+		<default>Հիմնական վայր</default>
+	</locale>
+	<locale name="id">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="it">
+		<default>Roma/Urbe</default>
+	</locale>
+	<locale name="ja">
+		<default>新東京国際空港 (成田)</default>
+	</locale>
+	<locale name="ka">
+		<default>თბილისი/თბილისის აეროპორტი</default>
+	</locale>
+	<locale name="kn">
+		<default>ಬೆಂಗಳೂರು</default>
+	</locale>
+	<locale name="ko">
+		<default>Seoul</default>
+	</locale>
+	<locale name="ku">
+		<default>Amed</default>
+	</locale>
+	<locale name="lt">
+		<default>Vilnius</default>
+	</locale>
+	<locale name="lv">
+		<default>Rīga</default>
+	</locale>
+	<locale name="mai">
+		<default>New Delhi/Palam</default>
+	</locale>
+	<locale name="mg">
+		<default>Antananarivo</default>
+	</locale>
+	<locale name="mk">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="ml">
+		<default>തിരുവനന്തപുരം</default>
+	</locale>
+	<locale name="mr">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="ms">
+		<default>Kuala Lumpur</default>
+	</locale>
+	<locale name="nb">
+		<default>Oslo/Gardermoen</default>
+	</locale>
+	<locale name="ne">
+		<default>काठमाडौं</default>
+	</locale>
+	<locale name="nl">
+		<default>Utrecht/Soesterberg</default>
+	</locale>
+	<locale name="nn">
+		<default>Stord/Sorstokken</default>
+	</locale>
+	<locale name="oc">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="or">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="pa">
+		<default>ਅੰਮ੍ਰਿਤਸਰ</default>
+	</locale>
+	<locale name="pl">
+		<default>Warszawa</default>
+	</locale>
+	<locale name="pt">
+		<default>Lisboa</default>
+	</locale>
+	<locale name="pt_BR">
+		<default>Fernando de Noronha</default>
+	</locale>
+	<locale name="ro">
+		<default>București</default>
+	</locale>
+	<locale name="ru">
+		<default>Москва - Шереметьево</default>
+	</locale>
+	<locale name="si">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="sk">
+		<default>Bratislava</default>
+	</locale>
+	<locale name="sl">
+		<default>Ljubljana</default>
+	</locale>
+	<locale name="sq">
+		<default>Tirana</default>
+	</locale>
+	<locale name="sr">
+		<default>Београд,Сурчин</default>
+	</locale>
+	<locale name="sr@latin">
+		<default>Beograd,Surčin</default>
+	</locale>
+	<locale name="sv">
+		<default>Stockholm (Arlanda)</default>
+	</locale>
+	<locale name="ta">
+		<default>சென்னை</default>
+	</locale>
+	<locale name="te">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="th">
+		<default>ดอนเมือง</default>
+	</locale>
+	<locale name="tr">
+		<default>Ataturk</default>
+	</locale>
+	<locale name="ug">
+		<default>ئۈرۈمچى</default>
+	</locale>
+	<locale name="uk">
+		<default>Київ — Бориспіль</default>
+	</locale>
+	<locale name="vi">
+		<default>Hà Nội</default>
+	</locale>
+	<locale name="xh">
+		<default>Johannesburg Airport</default>
+	</locale>
+	<locale name="zh_CN">
+		<default>北京</default>
+	</locale>
+	<locale name="zh_HK">
+		<default>香港國際機場</default>
+	</locale>
+	<locale name="zh_TW">
+		<default>臺北</default>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/location1</key>
+	<owner>gweather-applet-2</owner>
+	<type>string</type>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<default>DEFAULT_CODE</default>
+		<short>Nearby city</short>
+		<long>Nearby major zone, such as a capital city, as found from http://git.gnome.org/cgit/libgweather/plain/data/Locations.xml.in</long>
+	</locale>
+	<locale name="af">
+		<default>FALA</default>
+	</locale>
+	<locale name="ar">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="as">
+		<default>VECC</default>
+	</locale>
+	<locale name="ast">
+		<default>LEAS</default>
+	</locale>
+	<locale name="az">
+		<default>KJFK</default>
+	</locale>
+	<locale name="be">
+		<default>UMMS</default>
+	</locale>
+	<locale name="be@latin">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="bg">
+		<default>LBSF</default>
+	</locale>
+	<locale name="bn">
+		<default>VECC</default>
+	</locale>
+	<locale name="bn_IN">
+		<default>VECC</default>
+	</locale>
+	<locale name="br">
+		<default>LFRN</default>
+	</locale>
+	<locale name="bs">
+		<default>LQSA</default>
+	</locale>
+	<locale name="ca">
+		<default>LEBL</default>
+	</locale>
+	<locale name="ca@valencia">
+		<default>LEBL</default>
+	</locale>
+	<locale name="crh">
+		<default>UKFF</default>
+	</locale>
+	<locale name="cs">
+		<default>LKPR</default>
+	</locale>
+	<locale name="cy">
+		<default>EGFF</default>
+	</locale>
+	<locale name="da">
+		<default>EKCH</default>
+	</locale>
+	<locale name="de">
+		<default>EDDM</default>
+	</locale>
+	<locale name="dz">
+		<default>,སྔོན་སྒྲིག་ཀོཌི།(_C)</default>
+	</locale>
+	<locale name="el">
+		<default>LGAV</default>
+	</locale>
+	<locale name="en@shaw">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="en_CA">
+		<default>CYOW</default>
+	</locale>
+	<locale name="en_GB">
+		<default>EGLL</default>
+	</locale>
+	<locale name="eo">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="es">
+		<default>LEMD</default>
+	</locale>
+	<locale name="es_AR">
+		<default>SABA</default>
+	</locale>
+	<locale name="es_CL">
+		<default>MPSA</default>
+	</locale>
+	<locale name="es_CO">
+		<default>SKBO</default>
+	</locale>
+	<locale name="es_CR">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="es_DO">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="es_EC">
+		<default>SEQU</default>
+	</locale>
+	<locale name="es_ES">
+		<default>LEMD</default>
+	</locale>
+	<locale name="es_GT">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="es_HN">
+		<default>MHTG</default>
+	</locale>
+	<locale name="es_MX">
+		<default>MMMX</default>
+	</locale>
+	<locale name="es_NI">
+		<default>MNMG</default>
+	</locale>
+	<locale name="es_PA">
+		<default>SGAS</default>
+	</locale>
+	<locale name="es_PE">
+		<default>SPIM</default>
+	</locale>
+	<locale name="es_PR">
+		<default>KPFN</default>
+	</locale>
+	<locale name="es_SV">
+		<default>MSSS</default>
+	</locale>
+	<locale name="es_UY">
+		<default>SUMU</default>
+	</locale>
+	<locale name="es_VE">
+		<default>SVMI</default>
+	</locale>
+	<locale name="et">
+		<default>EETN</default>
+	</locale>
+	<locale name="eu">
+		<default>LESO</default>
+	</locale>
+	<locale name="fa">
+		<default>OIII</default>
+	</locale>
+	<locale name="fi">
+		<default>EFHF</default>
+	</locale>
+	<locale name="fr">
+		<default>LFPG</default>
+	</locale>
+	<locale name="ga">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="gl">
+		<default>LEST</default>
+	</locale>
+	<locale name="gu">
+		<default>VAAH</default>
+	</locale>
+	<locale name="he">
+		<default>LLSD</default>
+	</locale>
+	<locale name="hi">
+		<default>VIDP</default>
+	</locale>
+	<locale name="hu">
+		<default>LHBP</default>
+	</locale>
+	<locale name="hy">
+		<default>Դեֆոլտ կոդ</default>
+	</locale>
+	<locale name="id">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="it">
+		<default>LIRU</default>
+	</locale>
+	<locale name="ja">
+		<default>RJAA</default>
+	</locale>
+	<locale name="ka">
+		<default>UUEE</default>
+	</locale>
+	<locale name="kn">
+		<default>VOBG</default>
+	</locale>
+	<locale name="ko">
+		<default>RKSL</default>
+	</locale>
+	<locale name="ku">
+		<default>LTCC</default>
+	</locale>
+	<locale name="lt">
+		<default>EYVI</default>
+	</locale>
+	<locale name="lv">
+		<default>EVRA</default>
+	</locale>
+	<locale name="mai">
+		<default>VIDP</default>
+	</locale>
+	<locale name="mg">
+		<default>FMMI</default>
+	</locale>
+	<locale name="mk">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="ml">
+		<default>VOTV</default>
+	</locale>
+	<locale name="mr">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="ms">
+		<default>WMKK</default>
+	</locale>
+	<locale name="nb">
+		<default>ENGM</default>
+	</locale>
+	<locale name="ne">
+		<default>VNKT</default>
+	</locale>
+	<locale name="nl">
+		<default>EHSB</default>
+	</locale>
+	<locale name="nn">
+		<default>ENSO</default>
+	</locale>
+	<locale name="oc">
+		<default>LFML</default>
+	</locale>
+	<locale name="or">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="pa">
+		<default>VIAR</default>
+	</locale>
+	<locale name="pl">
+		<default>EPWA</default>
+	</locale>
+	<locale name="pt">
+		<default>LPPT</default>
+	</locale>
+	<locale name="pt_BR">
+		<default>SBFN</default>
+	</locale>
+	<locale name="ro">
+		<default>LRBS</default>
+	</locale>
+	<locale name="ru">
+		<default>UUEE</default>
+	</locale>
+	<locale name="si">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="sk">
+		<default>LZIB</default>
+	</locale>
+	<locale name="sl">
+		<default>LJLJ</default>
+	</locale>
+	<locale name="sq">
+		<default>LATI</default>
+	</locale>
+	<locale name="sr">
+		<default>LYBE</default>
+	</locale>
+	<locale name="sr@latin">
+		<default>LYBE</default>
+	</locale>
+	<locale name="sv">
+		<default>ESSA</default>
+	</locale>
+	<locale name="ta">
+		<default>VOMM</default>
+	</locale>
+	<locale name="te">
+		<default>DEFAULT_CODE</default>
+	</locale>
+	<locale name="th">
+		<default>VTBD</default>
+	</locale>
+	<locale name="tr">
+		<default>LTBA</default>
+	</locale>
+	<locale name="ug">
+		<default>ZWWW</default>
+	</locale>
+	<locale name="uk">
+		<default>UKBB</default>
+	</locale>
+	<locale name="vi">
+		<default>VVNB</default>
+	</locale>
+	<locale name="xh">
+		<default>FAJS</default>
+	</locale>
+	<locale name="zh_CN">
+		<default>ZBAA</default>
+	</locale>
+	<locale name="zh_HK">
+		<default>VHHH</default>
+	</locale>
+	<locale name="zh_TW">
+		<default>RCSS</default>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/location2</key>
+	<owner>gweather-applet-2</owner>
+	<type>string</type>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<default>DEFAULT_ZONE</default>
+		<short>Zone location</short>
+		<long>A unique zone for the city, as found from http://git.gnome.org/cgit/libgweather/plain/data/Locations.xml.in</long>
+	</locale>
+	<locale name="af">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ar">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="as">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ast">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="az">
+		<default>NYZ076</default>
+	</locale>
+	<locale name="be">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="be@latin">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="bg">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="bn">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="bn_IN">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="bs">
+		<default>------</default>
+	</locale>
+	<locale name="ca">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ca@valencia">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="crh">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="cs">
+		<default>------</default>
+	</locale>
+	<locale name="cy">
+		<default>:RGPMS</default>
+	</locale>
+	<locale name="da">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="de">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="dz">
+		<default>སྔོན་སྒྲིག་གླིང་སྡེ།(_Z)</default>
+	</locale>
+	<locale name="el">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="en@shaw">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="en_CA">
+		<default>-----</default>
+	</locale>
+	<locale name="en_GB">
+		<default>:RBPMS</default>
+	</locale>
+	<locale name="eo">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es">
+		<default>----</default>
+	</locale>
+	<locale name="es_AR">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_CL">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_CO">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_CR">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_DO">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_EC">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_ES">
+		<default>----</default>
+	</locale>
+	<locale name="es_GT">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_HN">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_MX">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_NI">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_PA">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_PE">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_PR">
+		<default>FLZ012</default>
+	</locale>
+	<locale name="es_SV">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_UY">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="es_VE">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="et">
+		<default>Europe/Tallinn</default>
+	</locale>
+	<locale name="eu">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="fa">
+		<default> </default>
+	</locale>
+	<locale name="fi">
+		<default>------</default>
+	</locale>
+	<locale name="fr">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ga">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="gl">
+		<default>Europe/Madrid</default>
+	</locale>
+	<locale name="gu">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="he">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="hi">
+		<default>28-34N 077-07E</default>
+	</locale>
+	<locale name="hu">
+		<default>------</default>
+	</locale>
+	<locale name="hy">
+		<default>Դեֆոլտ գոտի</default>
+	</locale>
+	<locale name="id">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="it">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ja">
+		<default>JAXX0085</default>
+	</locale>
+	<locale name="ka">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="kn">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ko">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ku">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="lt">
+		<default>------</default>
+	</locale>
+	<locale name="lv">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="mai">
+		<default>28-34N 077-07E</default>
+	</locale>
+	<locale name="mg">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="mk">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ml">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="mr">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ms">
+		<default>----</default>
+	</locale>
+	<locale name="nb">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ne">
+		<default>----</default>
+	</locale>
+	<locale name="nl">
+		<default>EHSB</default>
+	</locale>
+	<locale name="nn">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="oc">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="or">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="pa">
+		<default> </default>
+	</locale>
+	<locale name="pl">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="pt">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="pt_BR">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ro">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ru">
+		<default> </default>
+	</locale>
+	<locale name="si">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="sk">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="sl">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="sq">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="sr">
+		<default> </default>
+	</locale>
+	<locale name="sr@latin">
+		<default> </default>
+	</locale>
+	<locale name="sv">
+		<default> </default>
+	</locale>
+	<locale name="ta">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="te">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="th">
+		<default>------</default>
+	</locale>
+	<locale name="tr">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="ug">
+		<default>Asia/Urumqi</default>
+	</locale>
+	<locale name="uk">
+		<default>Europe/Kiev</default>
+	</locale>
+	<locale name="vi">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="xh">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="zh_CN">
+		<default>------</default>
+	</locale>
+	<locale name="zh_HK">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+	<locale name="zh_TW">
+		<default>DEFAULT_ZONE</default>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/location3</key>
+	<owner>gweather-applet-2</owner>
+	<type>string</type>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<default>DEFAULT_RADAR</default>
+		<short>Radar location</short>
+		<long>A three-digit-long code for retrieving radar maps from weather.com, found from http://git.gnome.org/cgit/libgweather/plain/data/Locations.xml.in</long>
+	</locale>
+	<locale name="af">
+		<default> </default>
+	</locale>
+	<locale name="ar">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="as">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="ast">
+		<default>&quot; &quot;</default>
+	</locale>
+	<locale name="az">
+		<default>nyc</default>
+	</locale>
+	<locale name="be">
+		<default> </default>
+	</locale>
+	<locale name="be@latin">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="bg">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="bn">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="bn_IN">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="bs">
+		<default>---</default>
+	</locale>
+	<locale name="ca">
+		<default> </default>
+	</locale>
+	<locale name="ca@valencia">
+		<default> </default>
+	</locale>
+	<locale name="crh">
+		<default> </default>
+	</locale>
+	<locale name="cs">
+		<default>---</default>
+	</locale>
+	<locale name="cy">
+		<default> </default>
+	</locale>
+	<locale name="da">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="de">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="dz">
+		<default>སྔོན་སྒྲིག་ར་ཌར།(_R)</default>
+	</locale>
+	<locale name="el">
+		<default> </default>
+	</locale>
+	<locale name="en@shaw">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="en_CA">
+		<default>tyx</default>
+	</locale>
+	<locale name="en_GB">
+		<default>---</default>
+	</locale>
+	<locale name="eo">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es">
+		<default>----</default>
+	</locale>
+	<locale name="es_AR">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_CL">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_CO">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_CR">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_DO">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_EC">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_ES">
+		<default>----</default>
+	</locale>
+	<locale name="es_GT">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_HN">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_MX">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_NI">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_PA">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_PE">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_PR">
+		<default>tlh</default>
+	</locale>
+	<locale name="es_SV">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_UY">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="es_VE">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="et">
+		<default>&quot; &quot;</default>
+	</locale>
+	<locale name="eu">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="fa">
+		<default> </default>
+	</locale>
+	<locale name="fi">
+		<default>---</default>
+	</locale>
+	<locale name="fr">
+		<default> </default>
+	</locale>
+	<locale name="ga">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="gl">
+		<default>&quot; &quot;</default>
+	</locale>
+	<locale name="gu">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="he">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="hi">
+		<default>मूलभूत रेडार (_R)</default>
+	</locale>
+	<locale name="hu">
+		<default>---</default>
+	</locale>
+	<locale name="hy">
+		<default>Հիմնական ռադար</default>
+	</locale>
+	<locale name="id">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="it">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="ja">
+		<default>---</default>
+	</locale>
+	<locale name="ka">
+		<default>---</default>
+	</locale>
+	<locale name="kn">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="ko">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="ku">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="lt">
+		<default>---</default>
+	</locale>
+	<locale name="lv">
+		<default>http://www.meteo.lv/pss/pss2.gif</default>
+	</locale>
+	<locale name="mai">
+		<default>मूलभूत रेडार (_R)</default>
+	</locale>
+	<locale name="mg">
+		<default> </default>
+	</locale>
+	<locale name="mk">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="ml">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="mr">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="ms">
+		<default>----</default>
+	</locale>
+	<locale name="nb">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="ne">
+		<default>----</default>
+	</locale>
+	<locale name="nl">
+		<default>EHSB</default>
+	</locale>
+	<locale name="nn">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="oc">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="or">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="pa">
+		<default> </default>
+	</locale>
+	<locale name="pl">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="pt">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="pt_BR">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="ro">
+		<default> </default>
+	</locale>
+	<locale name="ru">
+		<default> </default>
+	</locale>
+	<locale name="si">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="sk">
+		<default> </default>
+	</locale>
+	<locale name="sl">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="sq">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="sr">
+		<default> </default>
+	</locale>
+	<locale name="sr@latin">
+		<default> </default>
+	</locale>
+	<locale name="sv">
+		<default> </default>
+	</locale>
+	<locale name="ta">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="te">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="th">
+		<default>---</default>
+	</locale>
+	<locale name="tr">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="ug">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="uk">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="vi">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="xh">
+		<default>DEFAULT_RADAR</default>
+	</locale>
+	<locale name="zh_CN">
+		<default>---</default>
+	</locale>
+	<locale name="zh_HK">
+		<default> </default>
+	</locale>
+	<locale name="zh_TW">
+		<default> </default>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/location4</key>
+	<owner>gweather-applet-2</owner>
+	<type>string</type>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<default>DEFAULT_LOCATION</default>
+		<short>Weather for a city</short>
+		<long>The city that gweather displays information for.</long>
+	</locale>
+	<locale name="af">
+		<default>Pretoria</default>
+	</locale>
+	<locale name="ar">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="as">
+		<default>কলকাতা</default>
+	</locale>
+	<locale name="ast">
+		<default>Asturies/Avilés</default>
+	</locale>
+	<locale name="az">
+		<default>New York-JFK Arpt</default>
+	</locale>
+	<locale name="be">
+		<default>Мінск</default>
+	</locale>
+	<locale name="be@latin">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="bg">
+		<default>София</default>
+	</locale>
+	<locale name="bn">
+		<default>বাংলাদেশ</default>
+	</locale>
+	<locale name="bn_IN">
+		<default>কলকাতা</default>
+	</locale>
+	<locale name="br">
+		<default>Roazhon</default>
+	</locale>
+	<locale name="bs">
+		<default>Sarajevo</default>
+	</locale>
+	<locale name="ca">
+		<default>Barcelona</default>
+	</locale>
+	<locale name="ca@valencia">
+		<default>Barcelona</default>
+	</locale>
+	<locale name="crh">
+		<default>Aqmescit</default>
+	</locale>
+	<locale name="cs">
+		<default>Praha</default>
+	</locale>
+	<locale name="cy">
+		<default>Cardiff</default>
+	</locale>
+	<locale name="da">
+		<default>Kastrup</default>
+	</locale>
+	<locale name="de">
+		<default>Berlin</default>
+	</locale>
+	<locale name="dz">
+		<default>སྔོན་སྒྲིག་གནས་ཁོངས།(_L)</default>
+	</locale>
+	<locale name="el">
+		<default>Αθήνα</default>
+	</locale>
+	<locale name="en@shaw">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="en_CA">
+		<default>Ottawa</default>
+	</locale>
+	<locale name="en_GB">
+		<default>London/Heathrow</default>
+	</locale>
+	<locale name="eo">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="es">
+		<default>Madrid (Barajas)</default>
+	</locale>
+	<locale name="es_AR">
+		<default>Buenos Aires</default>
+	</locale>
+	<locale name="es_CL">
+		<default>Santiago</default>
+	</locale>
+	<locale name="es_CO">
+		<default>Bogotá (El Dorado)</default>
+	</locale>
+	<locale name="es_CR">
+		<default>San José</default>
+	</locale>
+	<locale name="es_DO">
+		<default>Santo Domingo</default>
+	</locale>
+	<locale name="es_EC">
+		<default>Quito (Mariscal Sucre)</default>
+	</locale>
+	<locale name="es_ES">
+		<default>Madrid (Barajas)</default>
+	</locale>
+	<locale name="es_GT">
+		<default>Ciudad de Guatemala</default>
+	</locale>
+	<locale name="es_HN">
+		<default>Tegucigalpa</default>
+	</locale>
+	<locale name="es_MX">
+		<default>Ciudad de México</default>
+	</locale>
+	<locale name="es_NI">
+		<default>Managua</default>
+	</locale>
+	<locale name="es_PA">
+		<default>Asunción</default>
+	</locale>
+	<locale name="es_PE">
+		<default>Lima Callao (Jorge Chávez)</default>
+	</locale>
+	<locale name="es_PR">
+		<default>Ciudad de Panamá</default>
+	</locale>
+	<locale name="es_SV">
+		<default>San Salvador (Ilopango)</default>
+	</locale>
+	<locale name="es_UY">
+		<default>Montevideo (Carrasco)</default>
+	</locale>
+	<locale name="es_VE">
+		<default>Caracas Maiquetia Aerop. Intl. Simón Bolívar</default>
+	</locale>
+	<locale name="et">
+		<default>Tallinn</default>
+	</locale>
+	<locale name="eu">
+		<default>Donostia</default>
+	</locale>
+	<locale name="fa">
+		<default>Tehran</default>
+	</locale>
+	<locale name="fi">
+		<default>Helsinki-Malmi</default>
+	</locale>
+	<locale name="fr">
+		<default>Paris/Charles De Gaulle</default>
+	</locale>
+	<locale name="ga">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="gl">
+		<default>Santiago de Compostela</default>
+	</locale>
+	<locale name="gu">
+		<default>અમદાવાદ</default>
+	</locale>
+	<locale name="he">
+		<default>תל אביב</default>
+	</locale>
+	<locale name="hi">
+		<default>New Delhi/Palam</default>
+	</locale>
+	<locale name="hu">
+		<default>Budapest</default>
+	</locale>
+	<locale name="hy">
+		<default>Հիմնական վայր</default>
+	</locale>
+	<locale name="id">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="it">
+		<default>Roma/Urbe</default>
+	</locale>
+	<locale name="ja">
+		<default>新東京国際空港 (成田)</default>
+	</locale>
+	<locale name="ka">
+		<default>თბილისი/თბილისის აეროპორტი</default>
+	</locale>
+	<locale name="kn">
+		<default>ಬೆಂಗಳೂರು</default>
+	</locale>
+	<locale name="ko">
+		<default>Seoul</default>
+	</locale>
+	<locale name="ku">
+		<default>Amed</default>
+	</locale>
+	<locale name="lt">
+		<default>Vilnius</default>
+	</locale>
+	<locale name="lv">
+		<default>Rīga</default>
+	</locale>
+	<locale name="mai">
+		<default>New Delhi/Palam</default>
+	</locale>
+	<locale name="mg">
+		<default>Antananarivo</default>
+	</locale>
+	<locale name="mk">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="ml">
+		<default>തിരുവനന്തപുരം</default>
+	</locale>
+	<locale name="mr">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="ms">
+		<default>Kuala Lumpur</default>
+	</locale>
+	<locale name="nb">
+		<default>Oslo/Gardermoen</default>
+	</locale>
+	<locale name="ne">
+		<default>काठमाडौं</default>
+	</locale>
+	<locale name="nl">
+		<default>Utrecht/Soesterberg</default>
+	</locale>
+	<locale name="nn">
+		<default>Stord/Sorstokken</default>
+	</locale>
+	<locale name="oc">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="or">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="pa">
+		<default>ਅੰਮ੍ਰਿਤਸਰ</default>
+	</locale>
+	<locale name="pl">
+		<default>Warszawa</default>
+	</locale>
+	<locale name="pt">
+		<default>Lisboa</default>
+	</locale>
+	<locale name="pt_BR">
+		<default>Fernando de Noronha</default>
+	</locale>
+	<locale name="ro">
+		<default>București</default>
+	</locale>
+	<locale name="ru">
+		<default>Москва - Шереметьево</default>
+	</locale>
+	<locale name="si">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="sk">
+		<default>Bratislava</default>
+	</locale>
+	<locale name="sl">
+		<default>Ljubljana</default>
+	</locale>
+	<locale name="sq">
+		<default>Tirana</default>
+	</locale>
+	<locale name="sr">
+		<default>Београд,Сурчин</default>
+	</locale>
+	<locale name="sr@latin">
+		<default>Beograd,Surčin</default>
+	</locale>
+	<locale name="sv">
+		<default>Stockholm (Arlanda)</default>
+	</locale>
+	<locale name="ta">
+		<default>சென்னை</default>
+	</locale>
+	<locale name="te">
+		<default>DEFAULT_LOCATION</default>
+	</locale>
+	<locale name="th">
+		<default>ดอนเมือง</default>
+	</locale>
+	<locale name="tr">
+		<default>Ataturk</default>
+	</locale>
+	<locale name="ug">
+		<default>ئۈرۈمچى</default>
+	</locale>
+	<locale name="uk">
+		<default>Київ — Бориспіль</default>
+	</locale>
+	<locale name="vi">
+		<default>Hà Nội</default>
+	</locale>
+	<locale name="xh">
+		<default>Johannesburg Airport</default>
+	</locale>
+	<locale name="zh_CN">
+		<default>北京</default>
+	</locale>
+	<locale name="zh_HK">
+		<default>香港國際機場</default>
+	</locale>
+	<locale name="zh_TW">
+		<default>臺北</default>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/coordinates</key>
+	<owner>gweather-applet-2</owner>
+	<type>string</type>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<default>DEFAULT_COORDINATES</default>
+		<short>Location coordinates</short>
+		<long>Latitude and longitude of your location expressed in DD-MM-SS[NS] DD-MM-SS[EW].</long>
+	</locale>
+	<locale name="af">
+		<default>-25.706944 28.229444</default>
+	</locale>
+	<locale name="ar">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="as">
+		<default>22°33′N 88°20′E </default>
+	</locale>
+	<locale name="ast">
+		<default>LEMD</default>
+	</locale>
+	<locale name="be">
+		<default> </default>
+	</locale>
+	<locale name="be@latin">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="bg">
+		<default>42-39N 023-23E</default>
+	</locale>
+	<locale name="bn">
+		<default>22°33′N 88°20′E </default>
+	</locale>
+	<locale name="bn_IN">
+		<default>22°33′N 88°20′E </default>
+	</locale>
+	<locale name="br">
+		<default>48.066667 -1.733333</default>
+	</locale>
+	<locale name="ca">
+		<default>41.383333 2.183333</default>
+	</locale>
+	<locale name="ca@valencia">
+		<default>41.383333 2.183333</default>
+	</locale>
+	<locale name="crh">
+		<default>44.683333 34.133333</default>
+	</locale>
+	<locale name="cs">
+		<default>50-05-20N 14-23-48E</default>
+	</locale>
+	<locale name="cy">
+		<default>51-24N 003-21W</default>
+	</locale>
+	<locale name="da">
+		<default>55-37N 012-39E</default>
+	</locale>
+	<locale name="de">
+		<default>48-21N 011-47E</default>
+	</locale>
+	<locale name="dz">
+		<default>སྔོན་སྒྲིག་ཆ་སྙོམ།(_C)</default>
+	</locale>
+	<locale name="el">
+		<default>37-56N 023-56E</default>
+	</locale>
+	<locale name="en@shaw">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="en_CA">
+		<default>45-19N 075-40W</default>
+	</locale>
+	<locale name="en_GB">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="eo">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="es">
+		<default>LEMD</default>
+	</locale>
+	<locale name="es_AR">
+		<default>34-35S 058-29O</default>
+	</locale>
+	<locale name="es_CL">
+		<default>08-05N 080-57O</default>
+	</locale>
+	<locale name="es_CO">
+		<default>04-43N 074-09O</default>
+	</locale>
+	<locale name="es_CR">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="es_DO">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="es_EC">
+		<default>00-09S 078-29O</default>
+	</locale>
+	<locale name="es_ES">
+		<default>LEMD</default>
+	</locale>
+	<locale name="es_GT">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="es_HN">
+		<default>14-03N 087-13O</default>
+	</locale>
+	<locale name="es_MX">
+		<default>19-26N 099-06O</default>
+	</locale>
+	<locale name="es_NI">
+		<default>12-09N 086-10O</default>
+	</locale>
+	<locale name="es_PA">
+		<default>25-16S 057-38O</default>
+	</locale>
+	<locale name="es_PE">
+		<default>12-00S 077-07O</default>
+	</locale>
+	<locale name="es_PR">
+		<default>30-12-27N 085-41-06O</default>
+	</locale>
+	<locale name="es_SV">
+		<default>13-42N 089-07O</default>
+	</locale>
+	<locale name="es_UY">
+		<default>34-50S 056-00O</default>
+	</locale>
+	<locale name="es_VE">
+		<default>10-36N 066-59O</default>
+	</locale>
+	<locale name="et">
+		<default>59-24N 024-49E</default>
+	</locale>
+	<locale name="eu">
+		<default>43-21N 001-48W</default>
+	</locale>
+	<locale name="fa">
+		<default>35-41N 051-21E</default>
+	</locale>
+	<locale name="fi">
+		<default>60-15N 025-03E</default>
+	</locale>
+	<locale name="fr">
+		<default>49-01N 002-32E</default>
+	</locale>
+	<locale name="ga">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="gl">
+		<default>42-54N 008-26W</default>
+	</locale>
+	<locale name="gu">
+		<default>23-04N 072-38E</default>
+	</locale>
+	<locale name="he">
+		<default>32-06-53N 034-46-56E</default>
+	</locale>
+	<locale name="hi">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="hu">
+		<default>47-26N 019-16E</default>
+	</locale>
+	<locale name="hy">
+		<default>Դեֆոլտ կոորդինատներ</default>
+	</locale>
+	<locale name="id">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="it">
+		<default>41-57N 012-30E</default>
+	</locale>
+	<locale name="ja">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="ka">
+		<default>55-59N 037-30E</default>
+	</locale>
+	<locale name="kn">
+		<default>12-57N 077-40E</default>
+	</locale>
+	<locale name="ko">
+		<default>37-34N 126-58E</default>
+	</locale>
+	<locale name="ku">
+		<default>37-53N 040-11E</default>
+	</locale>
+	<locale name="lt">
+		<default>54-38N 025-06E</default>
+	</locale>
+	<locale name="lv">
+		<default>56-55N 023-58E</default>
+	</locale>
+	<locale name="mai">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="mg">
+		<default> </default>
+	</locale>
+	<locale name="mk">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="ml">
+		<default>8.466667 76.950000</default>
+	</locale>
+	<locale name="mr">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="ms">
+		<default>2-44N 101-42E</default>
+	</locale>
+	<locale name="nb">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="ne">
+		<default>27-41N 085-21E</default>
+	</locale>
+	<locale name="nl">
+		<default>EHSB</default>
+	</locale>
+	<locale name="nn">
+		<default>ENSO</default>
+	</locale>
+	<locale name="oc">
+		<default>LFML</default>
+	</locale>
+	<locale name="or">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="pa">
+		<default>31-38N 074-52E</default>
+	</locale>
+	<locale name="pl">
+		<default>52.166667 20.966667</default>
+	</locale>
+	<locale name="pt">
+		<default>38-46N 009-08W</default>
+	</locale>
+	<locale name="pt_BR">
+		<default>03-51S 032-25W</default>
+	</locale>
+	<locale name="ro">
+		<default>44.500000 26.133333</default>
+	</locale>
+	<locale name="ru">
+		<default>55-59N 037-30E</default>
+	</locale>
+	<locale name="si">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="sk">
+		<default>48.150000 17.116667</default>
+	</locale>
+	<locale name="sl">
+		<default>46-13N 014-29E</default>
+	</locale>
+	<locale name="sq">
+		<default>41-20N 019-47E</default>
+	</locale>
+	<locale name="sr">
+		<default>44-49N 020-17E</default>
+	</locale>
+	<locale name="sr@latin">
+		<default>44-49N 020-17E</default>
+	</locale>
+	<locale name="sv">
+		<default>59-39N 017-57E</default>
+	</locale>
+	<locale name="ta">
+		<default>13-00N 080-11E</default>
+	</locale>
+	<locale name="te">
+		<default>DEFAULT_COORDINATES</default>
+	</locale>
+	<locale name="th">
+		<default>13-55N 100-36E</default>
+	</locale>
+	<locale name="tr">
+		<default>40-58N 028-49E</default>
+	</locale>
+	<locale name="ug">
+		<default>87-46N 43-90E</default>
+	</locale>
+	<locale name="uk">
+		<default>50.333333 30.966667</default>
+	</locale>
+	<locale name="vi">
+		<default>21.016667 105.800000</default>
+	</locale>
+	<locale name="xh">
+		<default>26-08S 028-14E</default>
+	</locale>
+	<locale name="zh_CN">
+		<default>39-54N 116-28E</default>
+	</locale>
+	<locale name="zh_HK">
+		<default>22-20N 114-11E</default>
+	</locale>
+	<locale name="zh_TW">
+		<default>25-04N 121-33E</default>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/use_custom_radar_url</key>
+	<owner>gweather-applet-2</owner>
+	<type>bool</type>
+	<default>false</default>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<short>Use custom url for the radar map</short>
+		<long>If true, then retrieve a radar map from a location specified by the "radar" key.</long>
+	</locale>
+</schema>
+
+<schema>
+	<key>/schemas/apps/gweather/prefs/radar</key>
+	<owner>gweather-applet-2</owner>
+	<type>string</type>
+	<gettext_domain>libgweather-3.0</gettext_domain>
+	<locale name="C">
+		<short>Url for the radar map</short>
+		<long>The custom url from where to retrieve a radar map.</long>
+	</locale>
+</schema>
+
+</schemalist>
+</gconfschemafile>

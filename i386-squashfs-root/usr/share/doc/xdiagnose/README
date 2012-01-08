@@ -1,0 +1,27 @@
+Bulletproof-X
+-------------
+
+This is a failsafe-mode for Xorg, that will be called when Xorg is
+unable to start due to misconfiguration.
+
+Todo
+====
+* Fallback to "vga" where vesa won't work.  So far I've not succeeded
+  in getting vga started in anything better than 320x200, which is
+  unusable, so fallback is not currently enabled.
+* Apply the gdm config changes to gdm.conf
+* Drop failsafeInstall and update this README
+
+
+* Re-enable ctrl-alt-backspace
+* Option to turn debugging on
+* Option to turn KMS on or off
+* Option to set color depth
+* Option to set Xorg.0.log verbosity
+* If AGP system, option to try different AGPMode values
+* Troubleshooting of blank screen on lid close issue
+* Troubleshooting tools for hibernation
+  - Turn on hibernation monitoring
+  - Provide a listing of hibernation attempts and results
+  - Offer any kernel tweaks to make hibernation work better
+  - Offer to file bug report about the issue

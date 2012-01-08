@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" id="connect" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#connections"/>
+    <title type="sort">1</title>
+    <desc>Establecer una conexión con otro equipo en su red local.</desc>
+    <credit type="author">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@googlemail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+
+  <title>Establecer una conexión</title>
+
+  <p>Puede conectarse con otros equipos en su red local usando <app>Vinagre</app>.</p>
+
+  <steps>
+    <item>
+      <p>Elija <guiseq><gui>Remoto</gui><gui>Conectar</gui></guiseq>.</p>
+      <figure>
+        <title>Diálogo de conexión</title>
+        <media type="image" mime="image/png" src="figures/vinagre-connect-dialog.png"/>
+      </figure>
+    </item>
+    <item>
+      <p>Elija el <gui>Protocolo</gui> y el <gui>Equipo</gui>. para la conexión.</p>
+      <note>
+        <p>Algunos protocolos le permiten ver todos los equipos disponibles en su red local pulsando el botón <gui>Buscar</gui>. No se mostrará este botón si no tiene soporte <app>Avahi</app>.</p>
+      </note>
+    </item>
+    <item>
+      <p>Seleccione las opciones que quiere tener activadas cuando se realiza la conexión. Las opciones variarán dependiendo del protocolo que use.</p>
+    </item>
+    <item>
+      <p>Pulse el botón <gui>Conectar</gui>.</p>
+      <note>
+	<p>En este punto, el escritorio remoto puede necesitar confirmar la conexión. Si es el caso, el visor permanecerá en negro hasta que se confirme la conexión.</p>
+      </note>
+      <note>
+        <p>Algunos equipos requieren una conexión segura: se mostrará un diálogo de autenticación solicitando las credenciales. El tipo de credenciales depende del equipo remoto, pueden ser usuario y contraseña. Si selecciona <gui>Recordar estas credenciales</gui> <app>Vinagre</app> almacenará la información usando el <app>Depósito de claves de GNOME</app>.</p>
+      </note>
+    <figure>
+      <title>Diálogo de autenticación</title>
+      <media type="image" mime="image/png" src="figures/vinagre-auth-needed.png"/>
+    </figure>
+    </item>
+  </steps>
+
+  <p>Si se ha usado anteriormente la conexión, entonces también puede acceder a ella a través de <guiseq><gui>Remoto</gui><gui>Conexiones recientes</gui></guiseq>.</p>
+
+  <p>Para cerrar una conexión, elija <guiseq><gui>Remoto</gui><gui>Cerrar</gui></guiseq> o pulse el botón <gui>Cerrar</gui>.</p>
+
+</page>

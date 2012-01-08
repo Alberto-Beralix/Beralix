@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="video-dvd-restricted" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="media#videos" group="#last"/>
+    <link type="seealso" xref="video-dvd"/>
+    
+    <desc>A maioria dos DVDs comerciais são encriptados e não serão exibidos sem um software que consiga decriptá-lo.</desc>
+    
+    <revision pkgversion="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do Ubuntu</name>
+      <email>ubuntu-doc@lists.ubuntu.com</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Como eu habilito codecs restritos para assistir DVDs?</title>
+
+<p>O suporte a DVD não pode ser disponibilizado por padrão no Ubuntu devido a restrições legais e técnicas. A maioria dos DVDs comerciais são encriptados e requerem um software que o decripte para poder tocá-los.</p>
+
+<section id="fluendo">
+ <title>Use Fluendo para assistir DVDs legalmente</title>
+ <p>Você pode comprar um decodificador de DVD comercial que consegue manipular a proteção de cópia: <link href="apt:fluendo-dvd">Fluendo</link>. Ele funciona no Linux e seu uso deve ser legal em todos os países.</p>
+</section>
+
+<section id="restricted">
+ <title>Use softwares alternativos de decriptação</title>
+
+ <note style="warning"><p>Em alguns países, o uso dos softwares não licenciados listados abaixo não são permitidos por lei. Verifique se você tem o direito de utilizá-los.</p></note>
+
+ <steps>
+  <item><p>Instale <link href="apt:libdvdnav4">libdvdnav4</link>, <link href="apt:libdvdread4">libdvdread4</link>, <link href="apt:gstreamer0.10-plugins-bad">gstreamer0.10-plugins-bad</link>, e <link href="apt:gstreamer0.10-plugins-ugly">gstreamer0.10-plugins-ugly</link>.</p></item>
+  <item><p>Se voce quer assistir DVDs encriptados (veja a nota legal acima), abra o Dash e execute o <app>Terminal</app>.</p></item>
+  <item><p>Digite o seguinte na tela que aparece, e pressiona a tecla <key>Enter</key>:</p>
+  <p><code>sudo /usr/share/doc/libdvdread4/install-css.sh</code></p></item>
+  <item><p>Insira sua senha para completar a instalação.</p></item>
+
+</steps>
+</section>
+</page>

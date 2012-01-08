@@ -1,0 +1,220 @@
+
+<!-- Generated data (by glib-mkenums) -->
+
+<schemalist>
+  <enum id='org.gnome.totem.EggDesktopFileType'>
+    <value nick='unrecognized' value='0'/>
+    <value nick='application' value='1'/>
+    <value nick='link' value='2'/>
+    <value nick='directory' value='3'/>
+  </enum>
+  <enum id='org.gnome.totem.EggDesktopFileLaunchOption'>
+    <value nick='clearenv' value='1'/>
+    <value nick='putenv' value='2'/>
+    <value nick='screen' value='3'/>
+    <value nick='workspace' value='4'/>
+    <value nick='directory' value='5'/>
+    <value nick='time' value='6'/>
+    <value nick='flags' value='7'/>
+    <value nick='setup-func' value='8'/>
+    <value nick='return-pid' value='9'/>
+    <value nick='return-stdin-pipe' value='10'/>
+    <value nick='return-stdout-pipe' value='11'/>
+    <value nick='return-stderr-pipe' value='12'/>
+    <value nick='return-startup-id' value='13'/>
+  </enum>
+  <enum id='org.gnome.totem.EggDesktopFileError'>
+    <value nick='invalid' value='0'/>
+    <value nick='not-launchable' value='1'/>
+    <value nick='unrecognized-option' value='2'/>
+  </enum>
+  <enum id='org.gnome.totem.EggSMClientEndStyle'>
+    <value nick='end-session-default' value='0'/>
+    <value nick='logout' value='1'/>
+    <value nick='reboot' value='2'/>
+    <value nick='shutdown' value='3'/>
+  </enum>
+  <enum id='org.gnome.totem.EggSMClientMode'>
+    <value nick='disabled' value='0'/>
+    <value nick='no-restart' value='1'/>
+    <value nick='normal' value='2'/>
+  </enum>
+  <enum id='org.gnome.totem.GsdMediaKeysWindowAction'>
+    <value nick='volume' value='0'/>
+    <value nick='custom' value='1'/>
+  </enum>
+  <enum id='org.gnome.totem.TotemPlaylistStatus'>
+    <value nick='none' value='0'/>
+    <value nick='playing' value='1'/>
+    <value nick='paused' value='2'/>
+  </enum>
+  <enum id='org.gnome.totem.TotemPlaylistDirection'>
+    <value nick='next' value='0'/>
+    <value nick='previous' value='1'/>
+  </enum>
+  <enum id='org.gnome.totem.TotemPlaylistSelectDialog'>
+    <value nick='selected' value='0'/>
+    <value nick='playing' value='1'/>
+  </enum>
+  <enum id='org.gnome.totem.ControlsVisibility'>
+    <value nick='undefined' value='0'/>
+    <value nick='visible' value='1'/>
+    <value nick='hidden' value='2'/>
+    <value nick='fullscreen' value='3'/>
+  </enum>
+  <enum id='org.gnome.totem.TotemStates'>
+    <value nick='playing' value='0'/>
+    <value nick='paused' value='1'/>
+    <value nick='stopped' value='2'/>
+  </enum>
+  <enum id='org.gnome.totem.TotemRemoteCommand'>
+    <value nick='unknown' value='0'/>
+    <value nick='play' value='1'/>
+    <value nick='pause' value='2'/>
+    <value nick='stop' value='3'/>
+    <value nick='playpause' value='4'/>
+    <value nick='next' value='5'/>
+    <value nick='previous' value='6'/>
+    <value nick='seek-forward' value='7'/>
+    <value nick='seek-backward' value='8'/>
+    <value nick='volume-up' value='9'/>
+    <value nick='volume-down' value='10'/>
+    <value nick='fullscreen' value='11'/>
+    <value nick='quit' value='12'/>
+    <value nick='enqueue' value='13'/>
+    <value nick='replace' value='14'/>
+    <value nick='show' value='15'/>
+    <value nick='toggle-controls' value='16'/>
+    <value nick='up' value='17'/>
+    <value nick='down' value='18'/>
+    <value nick='left' value='19'/>
+    <value nick='right' value='20'/>
+    <value nick='select' value='21'/>
+    <value nick='dvd-menu' value='22'/>
+    <value nick='zoom-up' value='23'/>
+    <value nick='zoom-down' value='24'/>
+    <value nick='eject' value='25'/>
+    <value nick='play-dvd' value='26'/>
+    <value nick='mute' value='27'/>
+    <value nick='toggle-aspect' value='28'/>
+  </enum>
+  <enum id='org.gnome.totem.TotemRemoteSetting'>
+    <value nick='shuffle' value='0'/>
+    <value nick='repeat' value='1'/>
+  </enum>
+  <enum id='org.gnome.totem.BvwError'>
+    <value nick='audio-plugin' value='0'/>
+    <value nick='no-plugin-for-file' value='1'/>
+    <value nick='video-plugin' value='2'/>
+    <value nick='audio-busy' value='3'/>
+    <value nick='broken-file' value='4'/>
+    <value nick='file-generic' value='5'/>
+    <value nick='file-permission' value='6'/>
+    <value nick='file-encrypted' value='7'/>
+    <value nick='file-not-found' value='8'/>
+    <value nick='dvd-encrypted' value='9'/>
+    <value nick='invalid-device' value='10'/>
+    <value nick='device-busy' value='11'/>
+    <value nick='unknown-host' value='12'/>
+    <value nick='network-unreachable' value='13'/>
+    <value nick='connection-refused' value='14'/>
+    <value nick='invalid-location' value='15'/>
+    <value nick='generic' value='16'/>
+    <value nick='codec-not-handled' value='17'/>
+    <value nick='audio-only' value='18'/>
+    <value nick='cannot-capture' value='19'/>
+    <value nick='read-error' value='20'/>
+    <value nick='plugin-load' value='21'/>
+    <value nick='empty-file' value='22'/>
+  </enum>
+  <enum id='org.gnome.totem.BvwUseType'>
+    <value nick='video' value='0'/>
+    <value nick='audio' value='1'/>
+    <value nick='capture' value='2'/>
+    <value nick='metadata' value='3'/>
+  </enum>
+  <enum id='org.gnome.totem.BvwConnectionSpeed'>
+    <value nick='14-4-modem' value='0'/>
+    <value nick='19-2-modem' value='1'/>
+    <value nick='28-8-modem' value='2'/>
+    <value nick='33-6-modem' value='3'/>
+    <value nick='34-4-modem' value='4'/>
+    <value nick='56-isdn' value='5'/>
+    <value nick='112-isdn' value='6'/>
+    <value nick='256-dsl' value='7'/>
+    <value nick='384-dsl' value='8'/>
+    <value nick='512-dsl' value='9'/>
+    <value nick='1500-t1' value='10'/>
+    <value nick='lan' value='11'/>
+  </enum>
+  <enum id='org.gnome.totem.BvwMetadataType'>
+    <value nick='title' value='0'/>
+    <value nick='artist' value='1'/>
+    <value nick='year' value='2'/>
+    <value nick='comment' value='3'/>
+    <value nick='album' value='4'/>
+    <value nick='duration' value='5'/>
+    <value nick='track-number' value='6'/>
+    <value nick='cover' value='7'/>
+    <value nick='has-video' value='8'/>
+    <value nick='dimension-x' value='9'/>
+    <value nick='dimension-y' value='10'/>
+    <value nick='video-bitrate' value='11'/>
+    <value nick='video-codec' value='12'/>
+    <value nick='fps' value='13'/>
+    <value nick='has-audio' value='14'/>
+    <value nick='audio-bitrate' value='15'/>
+    <value nick='audio-codec' value='16'/>
+    <value nick='audio-sample-rate' value='17'/>
+    <value nick='audio-channels' value='18'/>
+  </enum>
+  <enum id='org.gnome.totem.BvwVisualizationQuality'>
+    <value nick='small' value='0'/>
+    <value nick='normal' value='1'/>
+    <value nick='large' value='2'/>
+    <value nick='extra-large' value='3'/>
+  </enum>
+  <enum id='org.gnome.totem.BvwVideoProperty'>
+    <value nick='brightness' value='0'/>
+    <value nick='contrast' value='1'/>
+    <value nick='saturation' value='2'/>
+    <value nick='hue' value='3'/>
+  </enum>
+  <enum id='org.gnome.totem.BvwAspectRatio'>
+    <value nick='auto' value='0'/>
+    <value nick='square' value='1'/>
+    <value nick='fourbythree' value='2'/>
+    <value nick='anamorphic' value='3'/>
+    <value nick='dvb' value='4'/>
+  </enum>
+  <enum id='org.gnome.totem.BvwDVDEvent'>
+    <value nick='root-menu' value='0'/>
+    <value nick='title-menu' value='1'/>
+    <value nick='subpicture-menu' value='2'/>
+    <value nick='audio-menu' value='3'/>
+    <value nick='angle-menu' value='4'/>
+    <value nick='chapter-menu' value='5'/>
+    <value nick='next-chapter' value='6'/>
+    <value nick='prev-chapter' value='7'/>
+    <value nick='next-title' value='8'/>
+    <value nick='prev-title' value='9'/>
+    <value nick='next-angle' value='10'/>
+    <value nick='prev-angle' value='11'/>
+    <value nick='root-menu-up' value='12'/>
+    <value nick='root-menu-down' value='13'/>
+    <value nick='root-menu-left' value='14'/>
+    <value nick='root-menu-right' value='15'/>
+    <value nick='root-menu-select' value='16'/>
+  </enum>
+  <enum id='org.gnome.totem.BvwAudioOutputType'>
+    <value nick='stereo' value='0'/>
+    <value nick='4channel' value='1'/>
+    <value nick='41channel' value='2'/>
+    <value nick='5channel' value='3'/>
+    <value nick='51channel' value='4'/>
+    <value nick='ac3passthru' value='5'/>
+  </enum>
+</schemalist>
+
+<!-- Generated data ends here -->
+

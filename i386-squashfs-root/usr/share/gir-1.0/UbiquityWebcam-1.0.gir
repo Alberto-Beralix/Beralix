@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!-- This file was automatically generated from C sources - DO NOT EDIT!
+To affect the contents of this file, edit the original C definitions,
+and/or use gtk-doc annotations.  -->
+<repository version="1.2"
+            xmlns="http://www.gtk.org/introspection/core/1.0"
+            xmlns:c="http://www.gtk.org/introspection/c/1.0"
+            xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+  <include name="Atk" version="1.0"/>
+  <include name="GLib" version="2.0"/>
+  <include name="GModule" version="2.0"/>
+  <include name="GObject" version="2.0"/>
+  <include name="Gdk" version="3.0"/>
+  <include name="GdkPixbuf" version="2.0"/>
+  <include name="Gio" version="2.0"/>
+  <include name="Gst" version="0.10"/>
+  <include name="Gtk" version="3.0"/>
+  <include name="Pango" version="1.0"/>
+  <include name="cairo" version="1.0"/>
+  <include name="libxml2" version="2.0"/>
+  <include name="xlib" version="2.0"/>
+  <namespace name="UbiquityWebcam"
+             version="1.0"
+             shared-library="libubiwebcam.so.0"
+             c:identifier-prefixes="Ubiquity"
+             c:symbol-prefixes="ubiquity">
+    <class name="Webcam"
+           c:symbol-prefix="webcam"
+           c:type="UbiquityWebcam"
+           parent="Gtk.VBox"
+           glib:type-name="UbiquityWebcam"
+           glib:get-type="ubiquity_webcam_get_type"
+           glib:type-struct="WebcamClass">
+      <implements name="Atk.ImplementorIface"/>
+      <implements name="Gtk.Buildable"/>
+      <implements name="Gtk.Orientable"/>
+      <constructor name="new" c:identifier="ubiquity_webcam_new">
+        <return-value transfer-ownership="none">
+          <type name="Webcam" c:type="UbiquityWebcam*"/>
+        </return-value>
+      </constructor>
+      <function name="available" c:identifier="ubiquity_webcam_available">
+        <return-value transfer-ownership="none">
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+      </function>
+      <method name="play" c:identifier="ubiquity_webcam_play">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="stop" c:identifier="ubiquity_webcam_stop">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="test" c:identifier="ubiquity_webcam_test">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <field name="parent">
+        <type name="Gtk.VBox" c:type="GtkVBox"/>
+      </field>
+      <field name="priv">
+        <type name="WebcamPrivate" c:type="UbiquityWebcamPrivate*"/>
+      </field>
+    </class>
+    <record name="WebcamClass"
+            c:type="UbiquityWebcamClass"
+            glib:is-gtype-struct-for="Webcam">
+      <field name="parent_class">
+        <type name="Gtk.VBoxClass" c:type="GtkVBoxClass"/>
+      </field>
+    </record>
+    <record name="WebcamPrivate" c:type="UbiquityWebcamPrivate" disguised="1">
+    </record>
+  </namespace>
+</repository>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="howto_bookmarks" xml:lang="es">
+  <info>
+    <link type="guide" xref="index#reviewing"/>
+    <title type="sort">6. Marcadores</title>
+    <desc>Almacenar y recuperar objetos</desc>
+    <credit type="author">
+      <name>Joanmarie Diggs</name>
+      <email>joanied@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+  </info>
+  <title>Marcadores</title>
+  <p>El soporte de marcadores de <app>Orca</app> le permite indicar que un objeto es interesante. Incluye las siguientes características:</p>
+  <list>
+    <item>
+      <p>No está limitado a un único objeto: puede configurar hasta seis marcadores por entorno. También puede guardar los marcadores, para que se mantengan desde una sesión de Orca a otra.</p>
+    </item>
+    <item>
+      <p>Una vez que ha definido un marcador, puede navegar a este más tarde y puede hacerlo sin importar si ha elegido o no guardar de manera permanente los marcadores asociados a su entorno actual. La navegación se puede basar en el número del marcador si desea saltar directamente a un elemento específico. O bien, puede navegar hacia el marcador siguiente o anterior del mismo modo que con un objeto de <link xref="howto_structural_navigation">navegación estructural</link></p>
+    </item>
+    <item>
+      <p>Los objetos marcables pueden ser widgets dentro de una aplicación u objetos en la página web que está leyendo. El entorno en el cual se encuentra determina lo que sucede a medida que navega entre los marcadores: Si está en contenido web, el cursor se moverá al marcador de modo que pueda continuar leyendo; en caso contrario, la <link xref="howto_flat_review">revisión</link> se activará con el marcador convirtiéndose en el actual elemento de revisión.</p>
+    </item>
+    <item>
+      <p>Finalmente, está la información ¿Dónde estoy? para marcadores, que le permite saber dónde el marcador especificado es relativo a su ubicación actual.</p>
+    </item>
+  </list>
+  <p>Las asociaciones de teclas específicas asociadas con cada una de las siguientes tareas se pueden encontrar en <link xref="commands_bookmarks">Comandos de marcadores</link>.</p>
+</page>

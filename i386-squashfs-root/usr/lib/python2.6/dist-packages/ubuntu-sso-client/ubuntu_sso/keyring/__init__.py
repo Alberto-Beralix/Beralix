@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/ubuntu-sso-client/ubuntu_sso/keyring/__init__.py

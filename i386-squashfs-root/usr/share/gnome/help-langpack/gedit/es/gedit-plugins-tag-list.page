@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-plugins-tag-list" xml:lang="es">
+
+<info>
+  <link type="guide" xref="gedit-plugin-guide#gedit-default-plugins"/>
+  <revision pkgversion="3.2" version="1.0" date="2011-08-15" status="candidate"/>
+  <credit type="author">
+    <name>Daniel Neel</name>
+    <email>dneelyep@gmail.com</email>
+  </credit>
+  <credit type="author">
+    <name>Jim Campbell</name>
+    <email>jwcampbell@gmail.com</email>
+  </credit>
+  <desc>Insertar automáticamente etiquetas, cadenas y caracteres especiales en un documento</desc>
+</info>
+
+<title>Lista de etiquetas</title>
+
+  <p>El complemento <app>Lista de etiquetas</app> le permite insertar etiquetas comunes y caracteres especiales de una lista en el panel lateral. De forma predeterminada el complemento puede insertar etiquetas y caracteres especiales para HTML, XHTML, XSLT, XUL y LaTeX.</p>
+
+  <section id="using-tag-list">
+    <title>Usar el complemento de lista de etiquetas</title>
+
+      <p>Para usar el complemento <app>Lista de etiquetas</app> deberá activar el complemento y después activar la parte de la lista de etiquetas en el panel lateral.</p>
+
+    <section id="enable-tag-list-plugin">
+        <title>Activar el complemento</title>
+<p>Puede activar el complemento seleccionando <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Complementos</gui><gui>Lista de etiquetas</gui></guiseq>. Una vez que lo haya activado, acceda a él seleccionando <guiseq><gui>Ver</gui><gui>Panel lateral</gui></guiseq>, o pulsando <key>F9</key>.</p>
+
+<p>El panel lateral muestra inicialmente una lista de documentos abiertos, por lo que para ver y usar la <app>Lista de etiquetas</app>, deberá pulsar en la pestaña que muestra el icono «más» en la parte inferior del panel lateral. El icono se parece a esto:</p>
+
+    <p>
+      <media type="image" mime="image/png" src="figures/gedit-side-pane3.png"/>
+    </p>
+    </section>
+    <section id="inserting-tags">
+      <title>Insertar etiquetas y caracteres especiales</title>
+
+  <p>La <app>Lista de etiquetas</app> usa un menú desplegable para permitirle elegir de entre diferentes tipos de etiquetas. Por ejemplo, una opción es <gui>HTML: etiquetas</gui>.</p>
+
+  <p>Para insertar etiquetas, complete lo siguiente:</p>
+
+<list type="numbered">
+<item><p>Mueva el cursor a donde quiera insertar la etiqueta o el carácter especial.</p></item>
+<item><p>Seleccione la etiqueta que quiere en el menú desplegable en la parte inferior del panel lateral.</p></item>
+<item><p>Desplácese en la lista hasta encontrar la etiqueta o carácter deseado.</p></item>
+<item><p>Doble pulsación en la etiqueta en la lista de etiquetas.</p></item>
+</list>
+
+<p>La etiqueta o el carácter especial que ha elegido se mostrará en su documento.</p>
+    </section>
+  </section>
+<section id="tag-list-tips">
+  <title>Consejos de la Lista de etiquetas</title>
+<note style="tip"><p>También puede insertar una etiqueta pulsando <key>Intro</key> o <keyseq><key>Mayús</key><key>Intro</key></keyseq>.</p> 
+ <p>Pulsando la tecla <key>Intro</key> se insertará la etiqueta en la posición del cursor y se devolverá el foco al documento. Pulsando <keyseq><key>Mayús</key><key>Intro</key></keyseq> la etiqueta se insertará en la posición del cursor, pero se mantendrá el foco en la <app>Lista de etiquetas</app>.</p></note>
+
+<note style="tip"><p>Puede ver una vista previa de qué texto se insertará por cada etiqueta y cada carácter especial pulsando en la palabra la <gui>Vista previa</gui> en la parte inferior del panel lateral.</p></note>
+  </section>
+</page>

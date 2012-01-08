@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-missingvcgt" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="color#problems"/>
+    <link type="seealso" xref="color-gettingprofiles"/>
+    <desc>La corrección de color de pantalla completa modifica todos los colores  en todas las ventanas.</desc>
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>¿Falta información para la corrección de color de toda la pantalla?</title>
+  <p>
+    Unfortunately, many vendor-supplied ICC profiles do not include the
+    information required for whole-screen color correction.
+    These profiles can still be useful for applications that can do color
+    compensation, but you will not see all the colors of your screen change.
+  </p>
+  <p>Con el fin de crear un perfil de visualización, que incluya tanto datos de calibración y caracterización, tendrá que utilizar un color especial para medir los datos como por ejemplo un colorímetro o un espectrómetro.</p>
+
+</page>

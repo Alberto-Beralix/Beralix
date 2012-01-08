@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="video-dvd" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="media#videos"/>
+    
+    <desc>Puede que no tenga instalados los códecs adecuados, o que el DVD sea de una región equivocada.</desc>
+    
+    <revision version="11.04" date="2011-04-06" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>¿Por qué no puedo reproducir DVD?</title>
+
+<p>Si introduce un DVD en su equipo y no se reproduce, puede que no tenga instalados los «códecs» adecuados para el DVD, o que el DVD sea de otra «región».</p>
+
+<section id="codecs">
+ <title>Instalar los códecs adecuados para reproducir DVD</title>
+ <p>Para poder reproducir DVD, necesita tener instalados los <em>códecs</em> adecuados. Un códec es un software que permite que las aplicaciones puedan leer un determinado formato de vídeo o sonido. Si intenta reproducir un DVD y no tiene instalados los códecs adecuados, el Reproductor multimedia le informará de ello y le dará la opción de instalarlos por usted.</p>
+ <p>Los DVD tambíen están «protegidos contra copia» mediante un sistema denominado CSS. Esto le impide copiar los DVD, pero ademas también le impide reproducirlos a menos que disponga de algún <link xref="video-dvd-restricted">software extra</link> que actúe sobre la protección anticopia.</p>
+</section>
+
+<section id="region">
+ <title>Comprobar la región del DVD</title>
+ <p>Los DVD tienen un «código de región» que indica en qué región del mundo puede reproducir ese DVD. Los reproductores de DVD solo pueden reproducir los DVD de la misma región que ellos. Si tiene un reproductor de DVD de región 1, solo podrá reproducir DVD de Norteamérica.</p>
+ <p>Si la región del reproductor de DVD de su equipo y el DVD que está intentando reproducir no coinciden, no podrá reproducir el DVD. A menudo es posible cambiar la región de su reproductor de DVD, pero solo se puede hacer esto unas cuantas veces, antes de que se bloquee en una región de forma permanente.</p>
+ <p>Para cambiar la región DVD del reproductor de DVD de su equipo, use <link href="apt:regionset">regionset</link>.</p>
+</section>
+	
+</page>

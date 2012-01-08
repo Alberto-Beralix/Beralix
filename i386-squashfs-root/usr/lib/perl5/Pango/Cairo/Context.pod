@@ -1,0 +1,110 @@
+=head1 NAME
+
+Pango::Cairo::Context - Using Cairo contexts with pango
+
+=cut
+
+=for position post_hierarchy
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Pango::Context
+       +----Pango::Cairo::Context
+
+=cut
+
+
+
+=for object Pango::Cairo::Context - Using Cairo contexts with pango
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 fontoptions = Pango::Cairo::Context::get_font_options ($context)
+
+=over
+
+=item * $context (Pango::Context) 
+
+=back
+
+
+
+=head2 Pango::Cairo::Context::set_font_options ($context, $options)
+
+=over
+
+=item * $context (Pango::Context) 
+
+=item * $options (Cairo::FontOptions) 
+
+=back
+
+
+
+=head2 double = Pango::Cairo::Context::get_resolution ($context)
+
+=over
+
+=item * $context (Pango::Context) 
+
+=back
+
+
+
+=head2 Pango::Cairo::Context::set_resolution ($context, $dpi)
+
+=over
+
+=item * $context (Pango::Context) 
+
+=item * $dpi (double) 
+
+=back
+
+
+
+=head2 Pango::Cairo::Context::set_shape_renderer ($context, $func=undef, $data=undef)
+
+=over
+
+=item * $context (Pango::Context) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+
+
+Since: pango 1.18
+
+
+
+=cut
+
+
+=head1 SEE ALSO
+
+L<Pango>
+
+
+=cut
+
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2009 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Pango> for a full notice.
+
+
+
+=cut
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="addremove-remove" xml:lang="es">
+  <info>
+    <link type="guide" xref="addremove" group="#first"/>
+
+    <revision version="11.04" date="2011-04-18" status="final"/>
+
+    <credit type="author">
+      <name>Equipo de documentación de Ubuntu</name>
+    </credit>
+
+    <desc>Desinstalar programas que ya no vaya a usar.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Desinstalar una aplicación</title>
+
+    <p>El <app>Centro de software de Ubuntu</app> hace fácil la desinstalación de software que no use.</p>
+    
+    <steps>
+    <item>
+        <p>Pulse en el icono del <app>Centro de software</app> del <gui>Lanzador</gui>, o abra el <gui>Tablero</gui> y busque el <app>Centro de software</app>.</p>
+    </item>
+    <item>
+      <p>Cuando el <app>Centro de software</app> se abra, pulse en <gui>Software instalado</gui>.</p>
+    </item>
+    <item>
+        <p>En la sección de <em>Software instalado</em>, localice la aplicación que quiere desinstalar, ya sea mirando en la lista o haciendo una búsqueda.</p>
+    </item>
+    <item>
+        <p>Seleccione la aplicación y pulse <gui>Desinstalar</gui>.</p>
+    </item>
+    <item>
+        <p>Quizá se le pida que introduzca su contraseña. Una vez que lo haga, se desinstalará la aplicación. No debería tardar mucho tiempo.</p>
+    </item>
+    </steps>
+    <note><p>Algunas aplicaciones dependen de que otras estén instaladas para funcionar. Si intenta desinstalar una aplicación de la que depende otra aplicación, ambas serán desinstaladas. Se le pedirá que confirme que eso es lo que quiere antes de desinstalarlas.</p></note>
+    <p>Para más información sobre cómo usar el <app>Centro de software de Ubuntu</app>, consulte el <link href="ghelp:software-center">manual del Centro de software de Ubuntu</link>.</p>
+    <p>Si la aplicación que quiere desinstalar no está disponible en el <app>Centro de software de Ubuntu</app>, use <link xref="addremove-install-synaptic">Synaptic </link> en su lugar para desinstalarla.</p>
+
+</page>

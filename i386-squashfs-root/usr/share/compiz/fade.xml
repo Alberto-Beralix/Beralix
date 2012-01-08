@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <plugin useBcop="true" name="fade">
+	<short>Fading Windows</short>
+	<short xml:lang="ca">Esvaïment de finestres</short>
+	<short xml:lang="cs">Slábnutí oken</short>
+	<short xml:lang="da">Fading af vinduer</short>
+	<short xml:lang="de">Fenster ein-/ausblenden</short>
+	<short xml:lang="el">Ξεθωριάζοντας Παράθυρα</short>
+	<short xml:lang="es">Desvanecer ventanas</short>
+	<short xml:lang="eu">Leihoak iraungitzen</short>
+	<short xml:lang="fi">Ikkunoiden häivytys</short>
+	<short xml:lang="fr">Types de fenêtres à animer</short>
+	<short xml:lang="gl">Fiestras Desvanecidas</short>
+	<short xml:lang="he">עמעום חלונות</short>
+	<short xml:lang="hu">Ablakok elhalványítása</short>
+	<short xml:lang="it">Finestre in dissolvenza</short>
+	<short xml:lang="ja">ウィンドウのフェード</short>
+	<short xml:lang="ko">창 페이드 효과</short>
+	<short xml:lang="nb">Inn- og uttonende vinduer</short>
+	<short xml:lang="nl">Vervagende vensters</short>
+	<short xml:lang="or">ଉଇଣ୍ଡୋ ଫିକାହେଉଛି</short>
+	<short xml:lang="pl">Płynne rozjaśnianie/przyciemnianie okien</short>
+	<short xml:lang="pt">Janelas Esmaecidas</short>
+	<short xml:lang="pt_BR">Janelas Desvanecidas</short>
+	<short xml:lang="ro">Decolorarea ferestrelor</short>
+	<short xml:lang="ru">Проявление/исчезание окон</short>
+	<short xml:lang="sk">Stmievanie okien</short>
+	<short xml:lang="sv">Tonande fönster</short>
+	<short xml:lang="tr">Solan Pencereler</short>
+	<short xml:lang="uk">Прояв / зникнення вікон</short>
+	<short xml:lang="zh_CN">渐隐窗口</short>
+	<short xml:lang="zh_TW">視窗淡入/淡出中</short>
+	<long>Fade in windows when mapped and fade out windows when unmapped</long>
+	<long xml:lang="bn">ম্যাপ করার সময় উইন্ডো ফেড ইন করা এবং আনম্যাপ করার সময় উইন্ডো ফেড আউট করা</long>
+	<long xml:lang="bn_IN">ম্যাপ করার সময় উইন্ডো ফেড ইন করা এবং আনম্যাপ করার সময় উইন্ডো ফেড আউট করা</long>
+	<long xml:lang="ca">Es fan aparèixer progressivament les finestres quan s'assignen i s'esvaeixen quan no estan assignades</long>
+	<long xml:lang="cs">Blednutí mapovaných oken a materializace oken nemapovaných</long>
+	<long xml:lang="da">Vinduerne tones ind, når de tilknyttes, og tones ud, når tilknytningen ophæves.</long>
+	<long xml:lang="de">Fenster beim Zuordnen einblenden, beim Aufheben der Zuordnung ausblenden</long>
+	<long xml:lang="el">Ξεθώριασμα μέσα παραθύρων όταν χαρτογραφούνται και ξεθώριασμα έξω όταν τα παράθυρα αποχαρτογραφούνται</long>
+	<long xml:lang="es">Las ventanas aparecen progresivamente cuando se asignan y se desvanecen cuando se desasignan</long>
+	<long xml:lang="eu">Leihoak iraungiz agertu aukeratzean eta iraungiz desagertu aukeraketa galtzean</long>
+	<long xml:lang="fi">Ikkunat häivytetään näkyvistä/näkyviin</long>
+	<long xml:lang="fr">Apparition/disparition en fondu des fenêtres à l'ouverture/fermeture</long>
+	<long xml:lang="gl">Amosar as xanelas cando haxa mapeado e desvanecelas cando sexan desmapeadas</long>
+	<long xml:lang="gu">વિન્ડો આછી કરો જ્યારે જોડાયેલ હોય અને જ્યારે જોડાયેલ નહિં હોય ત્યારે ઘાટી કરો</long>
+	<long xml:lang="he">עמעום פנימה לחלונות בעת מיפוי ועמעום החוצה לחלונות בעת מחיקה</long>
+	<long xml:lang="hi">मैप रहने पर फेड इन विंडोज और मैप नहीं रहने पर फीका बाहर विंडोज</long>
+	<long xml:lang="hu">Leképezés esetén az ablak erősítése, lecsatolás esetén elhalványítása</long>
+	<long xml:lang="it">Applica dissolvenza in entrata alle finestre quando associate e in uscita quando non associate</long>
+	<long xml:lang="ja">ウィンドウが開かれた時フェードイン、閉じた時フェードアウト</long>
+	<long xml:lang="ko">창이 생성될 때는 페이드 인, 종료될 때는 페이드 아웃</long>
+	<long xml:lang="nb">Ton inn vinduer når de kartlegges og ton ut vinduer når de av-kartlegges</long>
+	<long xml:lang="nl">Invagen van vensters als ze gemapped worden en uitvagen als ze gedemapped worden</long>
+	<long xml:lang="or">ଉଇଣ୍ଡୋ ଅଂକିତ ହେବା ସମଯରେ ରେ ଫିକ୍କା ହେବା ଏବଂ ଅଂକିତ ନହେବା ସମଯରେ ବାହାରେ ଫିକ୍କା ହେବା</long>
+	<long xml:lang="pa">ਜਦੋਂ ਮੈਪਿੰਗ ਹੋਵੇ ਤਾਂ ਵਿੰਡੋ ਫੇਡ ਇਨ ਅਤੇ ਜਦੋਂ ਅਣ-ਮੈਪ ਹੋਵੇ ਤਾਂ ਵਿੰਡ ਫੇਡ ਆਉਟ</long>
+	<long xml:lang="pl">Okna powinny płynnie rozjaśniać się podczas ich wyboru i płynnie przyciemniać się podczas wyboru innego okna.</long>
+	<long xml:lang="pt">Avivar janelas quando houver mapeamento e esmaecê-las quando não houver mapeamento</long>
+	<long xml:lang="pt_BR">Revitalizar janelas quando houver mapeamento e esmaecê-las quando não houver mapeamento</long>
+	<long xml:lang="ro">Colorare ferestre la trecerea pe hartă și decolorare la scoaterea de pe hartă</long>
+	<long xml:lang="ru">Постепенное проявление окон при отображении и постепенное исчезновение при отмене отображения</long>
+	<long xml:lang="sk">Rozsvecovanie okien pri mapovaní a stmievania pri odmapovaní</long>
+	<long xml:lang="sv">Tona in fönster när de kopplas och tona ut fönster när de kopplas loss</long>
+	<long xml:lang="tr">Haritalandıklarında pencereler belirsin, haritalanmadıklarında kaybolsun</long>
+	<long xml:lang="uk">Поступовий прояв вікон при відображенні і поступове зникнення при скасуванні відображення</long>
+	<long xml:lang="zh_CN">映射时渐现窗口和不映射时渐弱窗口</long>
+	<long xml:lang="zh_TW">在映射時(mapped)淡入視窗，以及在解除映射時淡出視窗</long>
+	<category>Effects</category>
+	<deps>
+	    <requirement>
+		<plugin>opengl</plugin>
+	    </requirement>
+	    <relation type="after">
+		<plugin>decor</plugin>
+		<plugin>staticswitcher</plugin>
+	    </relation>
+	    <relation type="before">
+		<plugin>cube</plugin>
+		<plugin>scale</plugin>
+	    </relation>
+	</deps>
+	<options>
+	    <option type="int" name="fade_mode">
+		<short>Fade Mode</short>
+		<short xml:lang="el">Είδος Ξεθωριάσματος</short>
+		<short xml:lang="es">Modo de desvanecimiento</short>
+		<short xml:lang="eu">Iraungitze modua</short>
+		<short xml:lang="fi">Häivytystapa</short>
+		<short xml:lang="fr">Mode de Fondu</short>
+		<short xml:lang="gl">Modo de Desvanecemento</short>
+		<short xml:lang="he">מצב עמעום</short>
+		<short xml:lang="hu">Elhalványítási üzemmód</short>
+		<short xml:lang="it">Modalità dissolvenza</short>
+		<short xml:lang="ja">フェード・モード</short>
+		<short xml:lang="ko">페이드 모드</short>
+		<short xml:lang="pl">Sposób zanikania</short>
+		<short xml:lang="pt">Velocidade de Esmaecimento</short>
+		<short xml:lang="ru">Скорость исчезновения</short>
+		<short xml:lang="tr">Solma Kipi</short>
+		<short xml:lang="uk">Швидкість зникнення</short>
+		<short xml:lang="zh_CN">渐隐模式</short>
+		<short xml:lang="zh_TW">淡入/淡出模式</short>
+		<long>Window fade mode</long>
+		<long xml:lang="el">Είδος ξεθωριάσματος παραθύρου</long>
+		<long xml:lang="es">Modo de desvanecimiento de ventana</long>
+		<long xml:lang="eu">Leiho iraungitze modua</long>
+		<long xml:lang="fi">Ikkunan häivytystapa</long>
+		<long xml:lang="fr">Mode de fondu de la fenêtre</long>
+		<long xml:lang="gl">Modo de desvanecemento das xanelas</long>
+		<long xml:lang="he">מצב עמעום חלון</long>
+		<long xml:lang="hu">Ablak elhalványulásának üzemmódja</long>
+		<long xml:lang="it">Modalità dissolvenza finestra</long>
+		<long xml:lang="ja">ウィンドウのフェード形式</long>
+		<long xml:lang="ko">창 페이드 모드</long>
+		<long xml:lang="pl">Sposób zanikania okien</long>
+		<long xml:lang="pt">Modo de esvaecimento das janelas</long>
+		<long xml:lang="ru">Режим проявления/исчезновения окна</long>
+		<long xml:lang="tr">Pencere solma kipi</long>
+		<long xml:lang="uk">Режим прояву / зникнення вікна</long>
+		<long xml:lang="zh_CN">窗口渐隐模式</long>
+		<long xml:lang="zh_TW">視窗淡入/淡出模式</long>
+		<min>0</min>
+		<max>1</max>
+		<default>0</default>
+		<desc>
+		    <value>0</value>
+		    <name>Constant speed</name>
+		    <name xml:lang="bg">Постоянна скорост</name>
+		    <name xml:lang="el">Σταθερή ταχύτητα</name>
+		    <name xml:lang="es">Velocidad constante</name>
+		    <name xml:lang="eu">Abiadura konstantea</name>
+		    <name xml:lang="fi">Vakionopeus</name>
+		    <name xml:lang="fr">Vitesse constante</name>
+		    <name xml:lang="gl">Velocidade constante</name>
+		    <name xml:lang="he">מהירות קבועה</name>
+		    <name xml:lang="hu">Állandó sebesség</name>
+		    <name xml:lang="it">Velocità costante</name>
+		    <name xml:lang="ja">一定速度</name>
+		    <name xml:lang="ko">일정한 속도</name>
+		    <name xml:lang="pl">Stała prędkość</name>
+		    <name xml:lang="pt">Velocidade constante</name>
+		    <name xml:lang="ru">Постоянная скорость</name>
+		    <name xml:lang="uk">Постійна швидкість</name>
+		    <name xml:lang="zh_CN">恒定旋转速度</name>
+		    <name xml:lang="zh_TW">速度常數</name>
+		</desc>
+		<desc>
+		    <value>1</value>
+		    <name>Constant time</name>
+		    <name xml:lang="bg">Постоянно време</name>
+		    <name xml:lang="el">Σταθερός χρόνος</name>
+		    <name xml:lang="es">Tiempo constante</name>
+		    <name xml:lang="eu">Denbora konstantea</name>
+		    <name xml:lang="fi">Vakioaika</name>
+		    <name xml:lang="fr">Temps constant</name>
+		    <name xml:lang="gl">Constante de tempo</name>
+		    <name xml:lang="he">משך קבוע</name>
+		    <name xml:lang="hu">Állandó útidő</name>
+		    <name xml:lang="it">Tempo costante</name>
+		    <name xml:lang="ja">一定時間</name>
+		    <name xml:lang="ko">일정한 시간</name>
+		    <name xml:lang="pl">Stały czas</name>
+		    <name xml:lang="pt">Tempo constante</name>
+		    <name xml:lang="ru">Постоянное время</name>
+		    <name xml:lang="uk">Постійний час</name>
+		    <name xml:lang="zh_CN">恒定旋转时间</name>
+		    <name xml:lang="zh_TW">時間常數</name>
+		</desc>
+	    </option>
+	    <option type="float" name="fade_speed">
+		<short>Fade Speed</short>
+		<short xml:lang="ca">Velocitat d'esvaïment</short>
+		<short xml:lang="cs">Rychlost blednutí</short>
+		<short xml:lang="da">Fadehastighed</short>
+		<short xml:lang="de">Ausblendgeschwindigkeit</short>
+		<short xml:lang="el">Ταχύτητα Ξεθωριάσματος</short>
+		<short xml:lang="es">Velocidad de desvanecimiento</short>
+		<short xml:lang="eu">Iraungitze abiadura</short>
+		<short xml:lang="fi">Häivytyksen nopeus</short>
+		<short xml:lang="fr">Vitesse de fondu</short>
+		<short xml:lang="gl">Velocidade de Desvanecemento</short>
+		<short xml:lang="gu">આછાપણાની ઝડપ</short>
+		<short xml:lang="he">מהירות עמעום</short>
+		<short xml:lang="hu">Elhalványulás sebessége</short>
+		<short xml:lang="it">Velocità dissolvenza</short>
+		<short xml:lang="ja">フェード速度</short>
+		<short xml:lang="ko">페이드 속도</short>
+		<short xml:lang="nb">Toningshastighet</short>
+		<short xml:lang="nl">Vervaag snelheid</short>
+		<short xml:lang="or">ଫିକାହେବା ଗତି</short>
+		<short xml:lang="pl">Szybkość rozjaśniania /ściemniania</short>
+		<short xml:lang="pt">Velocidade de Esmaecimento</short>
+		<short xml:lang="pt_BR">Velocidade de Esmaecimento</short>
+		<short xml:lang="ro">Viteză decolorare</short>
+		<short xml:lang="ru">Скорость затенения</short>
+		<short xml:lang="sk">Rýchlosť stmievania</short>
+		<short xml:lang="sv">Toningshastighet</short>
+		<short xml:lang="tr">Solma Hızı</short>
+		<short xml:lang="uk">Швидкість знебарвлювання</short>
+		<short xml:lang="zh_CN">渐隐速度</short>
+		<short xml:lang="zh_TW">淡入/淡出速度</short>
+		<long>Window fade speed</long>
+		<default>5.0</default>
+		<min>0.1</min>
+		<max>25.0</max>
+		<precision>0.1</precision>
+	    </option>
+	    <option type="int" name="fade_time">
+		<short>Fade Time</short>
+		<short xml:lang="cs">Doba zprůhlednění</short>
+		<short xml:lang="de">Ausblendungszeit</short>
+		<short xml:lang="el">Χρόνος Ξεθωριάσματος</short>
+		<short xml:lang="es">Tiempo de desvanecimiento</short>
+		<short xml:lang="eu">Iraungitze denbora</short>
+		<short xml:lang="fi">Häivytysviive</short>
+		<short xml:lang="fr">Temps de Fondu</short>
+		<short xml:lang="gl">Tempo de desvanecemento</short>
+		<short xml:lang="gu">આછાપણાનો સમય</short>
+		<short xml:lang="he">משך עמעום</short>
+		<short xml:lang="hu">Elhalványítási idő</short>
+		<short xml:lang="it">Tempo dissolvenza</short>
+		<short xml:lang="ja">フェード時間</short>
+		<short xml:lang="ko">페이드 시간</short>
+		<short xml:lang="nb">Uttoningstid</short>
+		<short xml:lang="nl">Verduisteren tijdsduur</short>
+		<short xml:lang="or">ଫିକାହେବା ସମଯ</short>
+		<short xml:lang="pl">Czas przenikania</short>
+		<short xml:lang="pt">Tempo de Esmaecimento</short>
+		<short xml:lang="pt_BR">Tempo de desvanecimento</short>
+		<short xml:lang="ru">Время исчезновения</short>
+		<short xml:lang="sk">Doba stmavnutia</short>
+		<short xml:lang="sv">Toningstid</short>
+		<short xml:lang="tr">Solma Süresi</short>
+		<short xml:lang="uk">Час зникнення</short>
+		<short xml:lang="zh_CN">渐隐时间</short>
+		<short xml:lang="zh_TW">淡入/淡出時間</short>
+		<long>Window fade time (in ms) in "Constant time" mode</long>
+		<long xml:lang="el">Χρόνος ξεθωριάσματος παραθύρου (σε ms) στην κατάσταση "Σταθερής Ταχύτητας"</long>
+		<long xml:lang="es">Tiempo de desvanecimiento (en ms) de ventana cuando "Tiempo constante" está activado</long>
+		<long xml:lang="eu">Leiho iraungitze denbora (ms) "denbora konstante" moduan</long>
+		<long xml:lang="fi">Ikkunan häivytysaika (millisekunneissa) "Vakioaika"-tilassa</long>
+		<long xml:lang="fr">Temps (en ms) du fondu d'une fenêtre dans le mode de "Vitesse constante"</long>
+		<long xml:lang="gl">Modo "Tempo constante" para a Duración do Desvanecemento de Fiestra</long>
+		<long xml:lang="he">משך עמעום חלון במצב "משך קבוע" (במילישניות)</long>
+		<long xml:lang="hu">Ablak elhalványulásának sebessége „Állandó útidő” módban</long>
+		<long xml:lang="it">Tempo (in ms) dissolvenza finestra nella modalità «Tempo costante»</long>
+		<long xml:lang="ja">「一定時間」モードのウィンドウのフェード時間（ミリ秒）</long>
+		<long xml:lang="ko">"일정한 시간" 모드에서 창 사라짐 속도(ms)</long>
+		<long xml:lang="pl">Czas zanikania okien (w ms) w trybie "Stała prędkość"</long>
+		<long xml:lang="pt">Tempo de esmaecimento (em ms) das janelas, em modo "Velocidade constante"</long>
+		<long xml:lang="ru">Время исчезновения окна (в мс) в режиме "Постоянная скорость"</long>
+		<long xml:lang="uk">Час зникнення вікна (в мс) в режимі "Постійна швидкість"</long>
+		<long xml:lang="zh_CN">窗口渐隐时间（秒）设于恒定时间模式</long>
+		<long xml:lang="zh_TW">視窗淡入/淡出速度以「時間常數」模式進行(以ms毫秒為基數)</long>
+		<default>100</default>
+		<min>1</min>
+		<max>5000</max>
+	    </option>
+	    <option type="match" name="window_match">
+		<short>Fade windows</short>
+		<short xml:lang="cs">Blednutí</short>
+		<short xml:lang="de">Ein-/Ausblenden für Fenster</short>
+		<short xml:lang="el">Ξεθώριασμα παραθύρων</short>
+		<short xml:lang="es">Desvanecer ventanas</short>
+		<short xml:lang="eu">Iraungi leihoak</short>
+		<short xml:lang="fi">Häivytä ikkunat</short>
+		<short xml:lang="fr">Fondu des Fenêtres</short>
+		<short xml:lang="gl">Desvanecer xanelas</short>
+		<short xml:lang="he">עמעום חלונות</short>
+		<short xml:lang="hu">Ablak elhalványítása</short>
+		<short xml:lang="it">Finestre da dissolvere</short>
+		<short xml:lang="ja">フェード・ウィンドウ</short>
+		<short xml:lang="ko">창 페이드 효과</short>
+		<short xml:lang="nb">Ton vinduer</short>
+		<short xml:lang="nl">Vervaag vensters</short>
+		<short xml:lang="or">ଫିକା ଉଇଣ୍ଡୋ</short>
+		<short xml:lang="pl">Przyciemniaj/rozjaśniaj okna</short>
+		<short xml:lang="pt">Desvanecer janelas</short>
+		<short xml:lang="pt_BR">Desvanecer janelas</short>
+		<short xml:lang="ro">Decolorare ferestre</short>
+		<short xml:lang="ru">Затенение окон</short>
+		<short xml:lang="sk">Stmievanie okien</short>
+		<short xml:lang="sv">Tona fönster</short>
+		<short xml:lang="tr">Pencereleri soldur</short>
+		<short xml:lang="uk">Знебарвити вікна</short>
+		<short xml:lang="zh_CN">渐隐窗口</short>
+		<short xml:lang="zh_TW">淡入/淡出視窗</short>
+		<long>Windows that should be fading</long>
+		<long xml:lang="bn">যে উইন্ডোগুলি মলিন করা হবে</long>
+		<long xml:lang="bn_IN">যে উইন্ডোগুলি মলিন করা হবে</long>
+		<long xml:lang="cs">Typy oken, která mohou blednout</long>
+		<long xml:lang="de">Fenster, die ein- und ausgeblendet werden sollen</long>
+		<long xml:lang="el">Παράθυρα που πρέπει να ξεθωριάζουν</long>
+		<long xml:lang="es">Ventanas que deberían desvanecerse</long>
+		<long xml:lang="eu">Iraungitu beharreko leihoak</long>
+		<long xml:lang="fi">Ikkunatyypit, joita tulisi häivyttää</long>
+		<long xml:lang="fr">Types de Fenêtres devant utiliser le fondu</long>
+		<long xml:lang="gl">Fiestras que se deben desvanecer</long>
+		<long xml:lang="gu">વિન્ડો કે જેઓ આછી થવી જોઈએ</long>
+		<long xml:lang="he">חלונות האמורים לעבור עמעום</long>
+		<long xml:lang="hi">विंडोज़ जिसे फेड करना चाहिए</long>
+		<long xml:lang="hu">Ablaktípusok, amelyek elhalványulhatnak</long>
+		<long xml:lang="it">Tipi di finestre a cui applicare la dissolvenza</long>
+		<long xml:lang="ja">フェードさせる対象ウィンドウ</long>
+		<long xml:lang="ko">페이드 효과가 적용되는 창</long>
+		<long xml:lang="nb">Vinduer som skal tones</long>
+		<long xml:lang="nl">Vensters die moeten vervagen</long>
+		<long xml:lang="or">ଉଇଣ୍ଡୋ ୟାହାକି ଫିକ୍କା ହେବା ଉଚିତ</long>
+		<long xml:lang="pa">ਵਿੰਡੋ, ਜੋ ਕਿ ਫੇਡ ਕੀਤੀ ਜਾਵੇ</long>
+		<long xml:lang="pl">Typy okien, które powinny być poddawane rozjaśnieniu/ściemnieniu</long>
+		<long xml:lang="pt">Janelas que devem desvanecer</long>
+		<long xml:lang="pt_BR">Janelas que devem desvanecer</long>
+		<long xml:lang="ro">Ferestrele care trebuie să se decoloreze</long>
+		<long xml:lang="ru">Окна, к которым следует применять эффект проявления/исчезания</long>
+		<long xml:lang="sk">Okná, ktoré by mali blednúť</long>
+		<long xml:lang="sv">Fönster som ska tonas</long>
+		<long xml:lang="tr">Solması gereken pencereler</long>
+		<long xml:lang="uk">Вікна, до яких слід застосовувати ефект прояву / зникнення</long>
+		<long xml:lang="zh_CN">应渐隐的窗口</long>
+		<long xml:lang="zh_TW">應該淡入/淡出的視窗類型</long>
+                <default>any &amp; !(title=notify-osd)</default>
+	    </option>
+	    <option type="bell" name="visual_bell">
+		<short>Visual Bell</short>
+		<short xml:lang="bn">দৃশ্যমান বেল</short>
+		<short xml:lang="bn_IN">দৃশ্যমান বেল</short>
+		<short xml:lang="ca">Campana visual</short>
+		<short xml:lang="cs">Vizuální zvonek</short>
+		<short xml:lang="da">Visuel klokke</short>
+		<short xml:lang="de">Visuelle Glocke</short>
+		<short xml:lang="el">Οπτικό Κουδούνι</short>
+		<short xml:lang="es">Timbre visual</short>
+		<short xml:lang="eu">Ikus-Kanpaia</short>
+		<short xml:lang="fi">Näkyvä kello</short>
+		<short xml:lang="fr">Cloche visuelle</short>
+		<short xml:lang="gl">Campá Visual</short>
+		<short xml:lang="gu">દૃશ્યમાન ઘંટડી</short>
+		<short xml:lang="he">פעמון חזותי</short>
+		<short xml:lang="hi">दृश्य बेल</short>
+		<short xml:lang="hu">Vizuális csengő</short>
+		<short xml:lang="it">Segnale acustico visivo</short>
+		<short xml:lang="ja">視覚ベル</short>
+		<short xml:lang="ko">시각 경고음</short>
+		<short xml:lang="nb">Visuell bjelle</short>
+		<short xml:lang="nl">Visueel alarm</short>
+		<short xml:lang="or">ଦୃଶ୍ଯକ୍ଷମ ଘଣ୍ଟା</short>
+		<short xml:lang="pa">ਦਿੱਖ ਬਿੱਲ</short>
+		<short xml:lang="pl">Wizualny dzwonek systemowy</short>
+		<short xml:lang="pt">Campainha Visual</short>
+		<short xml:lang="pt_BR">Campainha Visual</short>
+		<short xml:lang="ro">Clopoțel vizibil</short>
+		<short xml:lang="ru">Визуализация звукового сигнала</short>
+		<short xml:lang="sk">Vizuálny zvonček</short>
+		<short xml:lang="sv">Visuell signal</short>
+		<short xml:lang="tr">Görünür Zil</short>
+		<short xml:lang="uk">Візуалізація звукового сигналу</short>
+		<short xml:lang="zh_CN">视觉振铃</short>
+		<short xml:lang="zh_TW">視覺鈴聲</short>
+		<long>Fade effect on system beep</long>
+		<long xml:lang="bn">সিস্টেম বিপে মলিনতার প্রভাব</long>
+		<long xml:lang="bn_IN">সিস্টেম বিপে মলিনতার প্রভাব</long>
+		<long xml:lang="ca">Efecte d'esvaïment amb avís sonor del sistema</long>
+		<long xml:lang="cs">Efekt blednutí při systémovém pípnutí</long>
+		<long xml:lang="da">Fadeeffekt ved systemtone</long>
+		<long xml:lang="de">Ausblendeffekt für visuelle Glocke</long>
+		<long xml:lang="el">Εφέ ξεθωριάσματος στο μπίπ συστήματος</long>
+		<long xml:lang="es">Efecto de desvanecimiento con pitido del sistema</long>
+		<long xml:lang="eu">Sistemako kanpaian iraungitze efektua</long>
+		<long xml:lang="fi">Häivitystehoste järjestelmän piipauksesta</long>
+		<long xml:lang="fr">Effet de fondu au signal sonore du système</long>
+		<long xml:lang="gl">Efecto de desvanecemento ao soar a campá do sistema</long>
+		<long xml:lang="gu">સિસ્ટમ બીપ પર આછાપણાની અસર</long>
+		<long xml:lang="he">אפקט עמעום בעת צפצוף מערכת</long>
+		<long xml:lang="hu">Elhalványulás effektus rendszerhang esetén</long>
+		<long xml:lang="it">Effetto dissolvenza al suono di sistema</long>
+		<long xml:lang="ja">システムビープ音時のフェード効果</long>
+		<long xml:lang="ko">시스템 경고음 대신 페이드 효과</long>
+		<long xml:lang="nb">Toningseffekt ved systempip</long>
+		<long xml:lang="nl">Vervaag effect bij systeem piep</long>
+		<long xml:lang="or">ସିଷ୍ଟମ ବିପ ଶବ୍ଦରେ ଫିକାହେବା ପ୍ରଭାବ</long>
+		<long xml:lang="pl">Efekt ściemniania przy dzwonku systemowym</long>
+		<long xml:lang="pt">Efeito de esmaecimento no bip do sistema</long>
+		<long xml:lang="pt_BR">Efeito de desvanecimento no bip do sistema</long>
+		<long xml:lang="ro">Efect decolorare la sunet de sistem</long>
+		<long xml:lang="ru">Эффект затенения при системном звуковом сигнале</long>
+		<long xml:lang="sk">Efekt stmievania pri systémovom pípnutí</long>
+		<long xml:lang="sv">Toningseffekt vid systemsignal</long>
+		<long xml:lang="tr">Sistem bip sesinde solma efekti açık</long>
+		<long xml:lang="uk">Ефект знебарвлювання при системному звуковому сигналі</long>
+		<long xml:lang="zh_CN">系统嘟嘟声时使用渐隐效果</long>
+		<long xml:lang="zh_TW">系統發出嗶聲時啟用淡入/淡出特效</long>
+		<default>false</default>
+	    </option>
+	    <option type="bool" name="fullscreen_visual_bell">
+		<short>Fullscreen Visual Bell</short>
+		<short xml:lang="bn">পূর্ণস্ক্রিনের দৃশ্যমান বেল</short>
+		<short xml:lang="bn_IN">পূর্ণস্ক্রিনের দৃশ্যমান বেল</short>
+		<short xml:lang="ca">Campana visual a pantalla completa</short>
+		<short xml:lang="cs">Celoobrazovkový vizuální zvonek</short>
+		<short xml:lang="da">Visuel klokke i fuld skærm</short>
+		<short xml:lang="de">Visuelle Glocke in Vollbild</short>
+		<short xml:lang="el">Οπτικό Κουδούνι Πλήρους Οθόνης</short>
+		<short xml:lang="es">Timbre visual a pantalla completa</short>
+		<short xml:lang="eu">Pantaila osoko ikus-kanpaia</short>
+		<short xml:lang="fi">Kokoruudun näkyvä kello</short>
+		<short xml:lang="fr">Cloche visuelle plein écran</short>
+		<short xml:lang="gl">Campá Visual a Pantalla Completa</short>
+		<short xml:lang="gu">સંપૂર્ણસ્ક્રીન દેખીતી ઘંટડી</short>
+		<short xml:lang="he">פעמון חזותי במסך מלא</short>
+		<short xml:lang="hi">पूर्ण स्क्रीन दृश्य बेल</short>
+		<short xml:lang="hu">Teljes képernyő vizuális csengő</short>
+		<short xml:lang="it">Segnale visivo schermo intero</short>
+		<short xml:lang="ja">全画面効果による視覚ベル</short>
+		<short xml:lang="ko">전체 화면 시각 경고음</short>
+		<short xml:lang="nb">Visuell bjelle i fullskjerm</short>
+		<short xml:lang="nl">Visueel alarm is volledigscherm</short>
+		<short xml:lang="or">ପୂର୍ଣ୍ଣ ସ୍କ୍ରିନ ଦୃଶ୍ଯକ୍ଷମ ଘଣ୍ଟା</short>
+		<short xml:lang="pl">Pełnoekranowy wizualny dzwonek systemowy</short>
+		<short xml:lang="pt">Campainha Visual de Tela Inteira</short>
+		<short xml:lang="pt_BR">Campainha Visual de Tela Inteira</short>
+		<short xml:lang="ro">Clopoțel vizibil în ecran complet</short>
+		<short xml:lang="ru">Полноэкранная визуализация звукового сигнала</short>
+		<short xml:lang="sk">Celoobrazovkový vizuálny zvonček</short>
+		<short xml:lang="sv">Visuell helskärmssignal</short>
+		<short xml:lang="tr">Tam Ekran Görünür Zil</short>
+		<short xml:lang="uk">Повноекранна візуалізація звукового сигналу</short>
+		<short xml:lang="zh_CN">全屏静音</short>
+		<short xml:lang="zh_TW">全螢幕警示鈴聲</short>
+		<long>Fullscreen fade effect on system beep</long>
+		<long xml:lang="bn">সিস্টেম বিপে পূর্ণ পর্দার মলিন প্রভাব</long>
+		<long xml:lang="bn_IN">সিস্টেম বিপে পূর্ণ পর্দার মলিন প্রভাব</long>
+		<long xml:lang="ca">Efecte d'esvaïment a pantalla completa amb avís sonor del sistema</long>
+		<long xml:lang="cs">Celoobrazovkový efekt slábnutí při systémovém pípnutí</long>
+		<long xml:lang="da">Fadeeffekt i fuld skærm ved systemtone</long>
+		<long xml:lang="de">Ausblendeffekt für visuelle Glocke im Vollbildmodus</long>
+		<long xml:lang="el">Εφέ ξεθωριάσματος πλήρους οθόνης στο μπίπ συστήματος</long>
+		<long xml:lang="es">Efecto de desvanecimiento a pantalla completa con el pitido del sistema</long>
+		<long xml:lang="eu">Pantaila osoko iraungitzea sistema kanpaiak jotzean</long>
+		<long xml:lang="fi">Kokoruudun häivytystehoste järjestelmän piippauksesta</long>
+		<long xml:lang="fr">Effet de fondu plein écran au signal sonore du système</long>
+		<long xml:lang="gl">Efecto de desvanecemento da pantalla completa cando sona a campá do sistema</long>
+		<long xml:lang="gu">સિસ્ટમ બીપ પર સંપૂર્ણસ્ક્રીન સ્ક્રીન આછાપણાની અસર</long>
+		<long xml:lang="he">אפקט עמעום במסך מלא בעת צפצוף מערכת</long>
+		<long xml:lang="hi">सिस्टम बीप पर पूर्ण स्क्रीन फेड प्रभाव</long>
+		<long xml:lang="hu">Teljes képernyő halványuló effektus rendszercsengő esetén</long>
+		<long xml:lang="it">Effetto dissolvenza schermo intero al suono di sistema</long>
+		<long xml:lang="ja">システムビープ音イベント時の全画面フェード効果</long>
+		<long xml:lang="ko">시스템 경고음 대신 전체 화면 페이드 효과</long>
+		<long xml:lang="nb">Fullskjerms toningseffekt ved systempip</long>
+		<long xml:lang="nl">Volledig scherm vervagen bĳ systeem piep</long>
+		<long xml:lang="or">ସିଷ୍ଟମ ବିପ ଶବ୍ଦରେ ପୂର୍ଣ୍ଣ ସ୍କ୍ରିନ ଫିକ୍କା ପ୍ରଭାବ</long>
+		<long xml:lang="pa">ਸਿਸਟਮ ਬੀਪ ਉੱਤੇ ਪੂਰੀ ਸਕਰੀਨ ਫੇਡ ਪਰਭਾਵ</long>
+		<long xml:lang="pl">Pełnoekranowy efekt przyciemnienia przy dzwonku systemowym</long>
+		<long xml:lang="pt">Efeito de esmaecimento de tela inteira ao som de bip do sistema</long>
+		<long xml:lang="pt_BR">Efeito de desvanecimento de tela inteira ao som de bip do sistema</long>
+		<long xml:lang="ro">Efect de decolorare la sunet de sistem în ecran complet</long>
+		<long xml:lang="ru">Полноэкранный эффект проявления/исчезания при системном звуковом сигнале</long>
+		<long xml:lang="sk">Celoobrazovkový efekt blednutia pri systémovom pípnutí</long>
+		<long xml:lang="sv">Helskärmstoningseffekt vid systemsignal</long>
+		<long xml:lang="tr">Sistem bip durumunda tam ekran solma efektini uygula</long>
+		<long xml:lang="uk">Повноекранний ефект прояву / зникнення при системному звуковому сигналі</long>
+		<long xml:lang="zh_CN">系统嘟嘟声的全屏渐隐效果</long>
+		<long xml:lang="zh_TW">系統發出嗶聲時啟用全螢幕淡出/淡入特效</long>
+		<default>false</default>
+	    </option>
+	    <option type="bool" name="dim_unresponsive">
+		<short>Dim Unresponsive Windows</short>
+		<short xml:lang="el">Σκοτείνιασμα Μη-Ανταποκρινόμενων Παραθύρων</short>
+		<short xml:lang="es">Atenuar las ventanas que no respondan</short>
+		<short xml:lang="eu">Erantzuten ez duten leihoen tamaina aldatu</short>
+		<short xml:lang="fi">Himmennä ikkunat, jotka eivät vastaa</short>
+		<short xml:lang="fr">Fenêtres ne répondant pas ternes</short>
+		<short xml:lang="gl">Escurecer as Fiestras que non Responden</short>
+		<short xml:lang="he">עמעם חלונות שאינם מגיבים</short>
+		<short xml:lang="hu">Nem válaszoló ablak elhalványítása</short>
+		<short xml:lang="it">Oscurare finestre bloccate</short>
+		<short xml:lang="ja">不応答ウィンドウを薄暗くする</short>
+		<short xml:lang="ko">응답하지 않는 창을 흐리게 함</short>
+		<short xml:lang="pl">Przyciemnienie nieodpowiadających okien</short>
+		<short xml:lang="pt">Escurecer Janelas que Não Respondem</short>
+		<short xml:lang="ru">Затемнение не отвечающего окна</short>
+		<short xml:lang="tr">Tepki Vermeyen Pencreleri Donuklaştır</short>
+		<short xml:lang="uk">Затемнення вікна, що не відповідає</short>
+		<short xml:lang="zh_CN">暗化无反应窗口</short>
+		<short xml:lang="zh_TW">暗淡無響應視窗</short>
+		<long>Dim windows that are not responding to window manager requests</long>
+		<long xml:lang="el">Σκοτείνιασμα παραθύρων που δεν ανταποκρίνονται στις εντολές του διαχειριστή παραθύρων</long>
+		<long xml:lang="es">Atenuar las ventanas que no estén respondiendo las peticiones del gestor de ventanas</long>
+		<long xml:lang="eu">Leiho kudeatzailearen eskariei erantzuten ez duten leihoen tamaina aldatu</long>
+		<long xml:lang="fi">Himmennä ikkunat, jotka eivät vastaa ikkunanhallinnan pyyntöihin</long>
+		<long xml:lang="fr">Les Fenêtres ternes qui ne répondent pas aux requêtes du gestionnaire de fenêtres.</long>
+		<long xml:lang="gl">Escurecer as xanelas que non están a responder ao que o xestor de xanelas require</long>
+		<long xml:lang="he">עמעם חלונות שאינם מגיבים להודעות מנהל החלונות</long>
+		<long xml:lang="hu">Azon ablakok elhalványítása, amelyek nem válaszolnak az ablakkezelő kéréseire</long>
+		<long xml:lang="it">Oscurare le finestre che non rispondono alle richieste del gestore di finestre</long>
+		<long xml:lang="ja">ウィンドウ・マネージャの要求に応答しないウィンドウを薄暗くする</long>
+		<long xml:lang="ko">창관리자의 요청에 응답하지 않는 창을 흐리게 함</long>
+		<long xml:lang="pl">Przyciemnienie okien, które nie odpowiadają na polecenia menadżera okien</long>
+		<long xml:lang="pt">Escurece janelas que não respondem aos pedidos do gestor de janelas</long>
+		<long xml:lang="ru">Затемнение окна, которое не отвечает на запросы менеджера окон</long>
+		<long xml:lang="tr">Pencere yöneticisinin isteklerine yanıt vermeyen pencereleri donuklaştır</long>
+		<long xml:lang="uk">Затемнення вікна, яке не відповідає на запити менеджера вікон</long>
+		<long xml:lang="zh_CN">暗化对窗口管理器请求无反应的窗口</long>
+		<long xml:lang="zh_TW">暗淡化對於視窗管理器沒有反應的視窗</long>
+		<default>true</default>
+	    </option>
+	    <option type="int" name="unresponsive_brightness">
+		<short>Unresponsive Window Brightness</short>
+		<short xml:lang="de">Helligkeit von nicht-reagierenden Fenstern</short>
+		<short xml:lang="el">Φωτεινότητα Μη-Ανταποκρινόμενων Παραθύρων</short>
+		<short xml:lang="es">Brillo de las ventanas que no respondan</short>
+		<short xml:lang="eu">Erantzuten ez duen leiho distira</short>
+		<short xml:lang="fi">Kirkkaus ikkunoille, jotka eivät vastaa</short>
+		<short xml:lang="fr">Luminosité d'une fenêtre ne répondant pas</short>
+		<short xml:lang="gl">Brillo das Fiestras Bloqueadas</short>
+		<short xml:lang="he">בהירות חלונות שאינם מגיבים</short>
+		<short xml:lang="hu">Nem válaszoló ablak fényerőssége</short>
+		<short xml:lang="it">Luminosità finestre bloccate</short>
+		<short xml:lang="ja">不応答ウィンドウの明度</short>
+		<short xml:lang="ko">응답하지 않는 창 밝기</short>
+		<short xml:lang="pl">Jasność nieodpowiadających okien</short>
+		<short xml:lang="pt">Luminosidade Janelas que Não Respondem</short>
+		<short xml:lang="ru">Яркость не отвечающего окна</short>
+		<short xml:lang="tr">Tepki Vermeyen Pencere Parlaklığı</short>
+		<short xml:lang="uk">Яскравість вікна що не відповідає</short>
+		<short xml:lang="zh_CN">无反应窗口的亮度</short>
+		<short xml:lang="zh_TW">無反應視窗的亮度</short>
+		<long>Brightness (in %) of unresponsive windows</long>
+		<long xml:lang="bg">Яркост(в %) на прозорците които не отговарят</long>
+		<long xml:lang="de">Helligkeit (%) von nicht-reagierenden Fenstern</long>
+		<long xml:lang="el">Φωτεινότητα (σε %) των μη-ανταποκρινόμενων παραθύρων</long>
+		<long xml:lang="es">Brillo (en %) de las ventanas que no respondan</long>
+		<long xml:lang="eu">Distira (%tan) erantzuten ez duen leihoek</long>
+		<long xml:lang="fi">Kirkkaus prosenteissa ikkunoille, jotka eivät vastaa</long>
+		<long xml:lang="fr">Luminosité (en %) des fenêtres ne répondant pas</long>
+		<long xml:lang="gl">Brillo (en %) das xanelas bloqueadas</long>
+		<long xml:lang="he">בהירות חלונות שאינם מגיבים (באחוזים)</long>
+		<long xml:lang="hu">Nem válaszoló ablak fényerőssége (százalékban megadva)</long>
+		<long xml:lang="it">Luminosità (in percentuale) delle finestre bloccate</long>
+		<long xml:lang="ja">不応答ウィンドウの明度（パーセント）</long>
+		<long xml:lang="ko">반응하지 않는 창의 밝기(%)</long>
+		<long xml:lang="pl">Jasność (w %) nieodpowiadających okien</long>
+		<long xml:lang="pt">Luminosidade (em %) de janelas que não respondem</long>
+		<long xml:lang="ru">Яркость (в %) неотвечающих окон</long>
+		<long xml:lang="uk">Яскравість (у %) вікон які не відповідають</long>
+		<long xml:lang="zh_CN">未响应窗口的亮度(%)</long>
+		<long xml:lang="zh_TW">未響應視窗亮度(%)</long>
+		<min>0</min>
+		<max>100</max>
+		<default>65</default>
+	    </option>
+	    <option type="int" name="unresponsive_saturation">
+		<short>Unresponsive Window Saturation</short>
+		<short xml:lang="de">Sättigung von nicht-reagierenden Fenstern</short>
+		<short xml:lang="el">Κορεσμός Μή-Ανταποκρινόμενων Παραθύρων</short>
+		<short xml:lang="es">Saturación de las ventanas que no respondan</short>
+		<short xml:lang="eu">Erantzuten ez duen leiho saturazioa</short>
+		<short xml:lang="fi">Värikylläisyys ikkunoille, jotka eivät vastaa</short>
+		<short xml:lang="fr">Saturation d'une fenêtre ne répondant pas</short>
+		<short xml:lang="gl">Saturación das Fiestras Bloqueadas</short>
+		<short xml:lang="he">רווית חלונות שאינם מגיבים</short>
+		<short xml:lang="hu">Nem válaszoló ablak telítettsége</short>
+		<short xml:lang="it">Saturazione finestre bloccate</short>
+		<short xml:lang="ja">不応答ウィンドウの彩度</short>
+		<short xml:lang="ko">응답하지 않는 창 채도</short>
+		<short xml:lang="pl">Nasycenie nieodpowiadających okien</short>
+		<short xml:lang="pt">Saturação Janelas que Não Respondem</short>
+		<short xml:lang="ru">Насыщенность не отвечающего окна</short>
+		<short xml:lang="tr">Tepki Vermeyen Pencere Doygunluğu</short>
+		<short xml:lang="uk">Насиченість вікна, що не відповідає</short>
+		<short xml:lang="zh_CN">无反应窗口的饱和度</short>
+		<short xml:lang="zh_TW">無反應視窗的飽和度</short>
+		<long>Saturation (in %) of unresponsive windows</long>
+		<long xml:lang="de">Sättigung (%) von nicht-reagierenden Fenstern</long>
+		<long xml:lang="el">Κορεσμός (σε %) των μη-ανταποκρινόμενων παραθύρων</long>
+		<long xml:lang="es">Saturación (en %) de las ventanas que no respondan</long>
+		<long xml:lang="eu">Erantzuten ez duten leihoen saturazioa (%tan)</long>
+		<long xml:lang="fi">Värikylläisyys prosenteissa ikkunoille, jotka eivät vastaa</long>
+		<long xml:lang="fr">Saturation (en %) des fenêtres ne répondant pas</long>
+		<long xml:lang="gl">Saturación das xanelas bloqueadas (en %)</long>
+		<long xml:lang="he">רווית חלונות שאינם מגיבים (באחוזים)</long>
+		<long xml:lang="hu">Nem válaszoló ablak telítettsége (százalékban megadva)</long>
+		<long xml:lang="it">Saturazione (in percentuale) delle finestre bloccate</long>
+		<long xml:lang="ja">不応答ウィンドウの彩度（パーセント）</long>
+		<long xml:lang="ko">응답하지 않는 창의 채도(%)</long>
+		<long xml:lang="pl">Nasycenie (w %) nieodpowiadających okien</long>
+		<long xml:lang="pt">Saturação (em %) de janelas que não respondem</long>
+		<long xml:lang="ru">Насыщенность (в %) не отвечающего окна</long>
+		<long xml:lang="tr">Tepki vermeyen pencerelerin doygunluğu (in %)</long>
+		<long xml:lang="uk">Насиченість (у %) вікна, що не відповідає</long>
+		<long xml:lang="zh_CN">无反应窗口的饱和度百分比</long>
+		<long xml:lang="zh_TW">無反應視窗的飽和度(以%來設定)</long>
+		<min>0</min>
+		<max>100</max>
+		<default>0</default>
+	    </option>
+	</options>
+    </plugin>
+</compiz>

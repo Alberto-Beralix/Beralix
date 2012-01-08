@@ -1,0 +1,83 @@
+#!/usr/bin/python
+
+from gi.repository import Gio
+import sys, optparse, gobject, dbus
+from os.path import join, dirname, exists, realpath, abspath
+from os import popen, getpid
+from dbus.mainloop.glib import DBusGMainLoop
+
+DBusGMainLoop(set_as_default=True)
+loop = gobject.MainLoop()
+
+LAUNCH_DIR = abspath(sys.path[0])
+SOURCE_DIR = join(LAUNCH_DIR, "..", "gwibber")
+DISPATCHER = join(SOURCE_DIR, "microblog", "dispatcher.py")
+
+######################################################################
+# Setup path
+if exists(DISPATCHER):
+  sys.path.insert(0, realpath(dirname(SOURCE_DIR)))
+  try:
+    from gwibber.microblog.util import log
+    log.logger.name = "Gwibber Service"
+    log.logger.info("Running from the source tree")
+    from gwibber.microblog import dispatcher
+  finally:
+    del sys.path[0]
+
+else:
+  from gwibber.microblog.util import log
+  log.logger.name = "Gwibber Service"
+  log.logger.info("Running from the system path")
+  from gwibber.microblog import dispatcher
+
+######################################################################
+# Options 
+from optparse import OptionParser
+parser = OptionParser()
+parser.add_option("-d", "--debug", action="store_true",
+                  dest="debug", default=False,
+                  help="Log debug messages")
+parser.add_option("-o", action="store_true",
+                  dest="stdout", default=False,
+                  help="Log to stdout")
+(options, args) = parser.parse_args()
+
+if options.debug:
+  log.logger.setLevel(log.logging.DEBUG)
+else:
+  log.logger.setLevel(log.logging.INFO)
+
+if options.stdout:
+  # define a Handler which writes INFO messages or higher to the sys.stderr
+  console = log.logging.StreamHandler()
+  if options.debug:
+    console.setLevel(log.logging.DEBUG)
+  else:
+    console.setLevel(log.logging.INFO)
+  # set a format which is simpler for console use
+  formatter = log.logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
+  console.setFormatter(formatter)
+  log.logger.addHandler(console)
+
+# if gwibber-serivce is already running, don't start
+if "com.Gwibber.Connection" in dbus.SessionBus().list_names():
+  log.logger.info("Found gwibber-service already running, exiting")
+  quit()
+
+"""
+## Check to see if the database needs to be purged
+dispatcher.purge()
+
+account_monitor = dispatcher.AccountMonitor()
+stream_monitor = dispatcher.StreamMonitor()
+message_monitor = dispatcher.MessagesMonitor()
+"""
+
+log.logger.debug("Setting up monitors")
+connection_monitor = dispatcher.ConnectionMonitor()
+urlshortener = dispatcher.URLShorten()
+translator = dispatcher.Translate()
+uploader = dispatcher.Uploader()
+dispatcher = dispatcher.Dispatcher(loop)
+loop.run()

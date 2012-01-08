@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/ubuntuone-control-panel/ubuntuone/controlpanel/login_client.py

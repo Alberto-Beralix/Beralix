@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-folders" xml:lang="es">
+
+  <info>
+    <desc>Use carpetas para orgranizar su correo.</desc>
+
+    <link type="guide" xref="mail-organizing"/>
+    <link type="seealso" xref="mail-filters"/>
+
+    <revision pkgversion="3.0.2" version="0.2" date="2011-07-30" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>April Gonzales</name>
+      <email>loonycookie@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-organize-folders.html.en -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+    
+  </info>
+
+  <title>Usar las carpetas</title>
+  
+<p>Evolution, al igual que muchos otros sistemas de correo, almacena el correo en carpetas. Al comenzar a usar Evolution existen unas pocas carpetas, como la Bandeja de entrada y la carpeta Borradores, pero puede crear tantas como desee.</p>
+
+<section id="create-folder">
+<title>Crear una carpeta</title>
+<p>Para crear una carpeta:</p>
+<steps>
+<item><p>Pulse en <gui>Carpeta</gui> y seleccione <gui>Nuevo</gui>. También puede pulsar con el botón derecho del ratón en cualquier parte de la lista de carpetas y seleccionar la opción <gui>Carpeta nueva</gui>.</p></item>
+<item><p>Especificque el nombre y la ubicación de la carpeta nueva.</p></item>
+<item><p>Pulse el botón <gui>Crear</gui>.</p></item>
+</steps>
+<p>La carpeta nueva se mostrará en la vista de carpetas. Entonces podrá mover mensajes dentro de la carpeta.</p>
+
+<note>
+<p>El Buzón de entrada de la mayoría de los servidores IMAP no puede contener a la vez subcarpetas y mensajes. Cuando crea carpetas adicionales en su servidor de correo IMAP, debe hacerlas partir de la raíz del árbol de carpetas de cuentas IMAP, y no desde el buzón de entrada. Si crea subcarpetas en el buzón de entrada es posible que no pueda leer los mensajes que existen en esta carpeta. Si esto sucede, mueva las carpetas a la cuenta IMAP.</p>
+</note>
+
+</section>
+
+<section id="use-folder">
+<title>Mover mensajes a carpetas nuevas</title>
+<p>Puede mover mensajes en las carpetas usando uno de los siguientes métodos:</p>
+<list>
+<item><p>Arrastre y suelte los mensajes en la carpeta.</p></item>
+<item><p>Pulse con el botón derecho del ratón sobre el mensaje y seleccione la opción <gui>Mover a la carpeta...</gui>.</p></item>
+<item><p>Seleccione un correo y pulse <keyseq><key>Mayús</key><key>Ctrl</key><key>V</key></keyseq>.</p></item>
+<item><p>Seleccione un correo y pulse <guiseq><gui>Mensaje</gui><gui>Mover a la carpeta</gui></guiseq>.</p></item>
+</list>
+
+<p>Los pasos para copiar son similares.</p>
+
+<note><p>Mover archivos se puede hacer automáticamente configurando <link xref="mail-filters">filtros</link>.</p></note>
+
+</section>
+
+<!--Reuse http://library.gnome.org/users/evolution/2.32/usage-mail-organize-folders.html.en and add "Novell, Inc" as an author to this page. Mention the combination with filters (see seealso link)-->
+	
+</page>

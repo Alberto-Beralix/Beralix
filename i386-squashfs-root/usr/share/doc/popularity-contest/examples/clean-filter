@@ -1,0 +1,51 @@
+#!/usr/bin/perl
+#
+# Author: Alain Schroeder
+# Date:   2005-07-09
+# Modified by Petter Reinholdtsen 2005-07-15
+
+
+use strict;
+
+my %table;
+my $foundentry = 0;
+my $ignorecount = 0;
+my $debug = 0;
+
+open (PACKAGES, '< packages') or
+    die ("packages not found. please run get-packages.sh first\n");
+
+while (<PACKAGES>) {
+    chomp;
+    $table{$_} = "1";
+}
+close PACKAGES;
+
+# Truncate timestamps to the start of the day, to avoid giving out
+# timezone information.
+sub fuzzy_timestamp {
+    my $timestamp = shift;
+    return 86400 * int($timestamp / 86400);
+}
+
+while (my $line = <STDIN>) {
+    
+    if ($line =~ m/^POPULARITY-CONTEST-0/i) {
+	$foundentry = 1;
+	$ignorecount = 0;
+	$line =~ s/\b(TIME:)(\d+)\b/sprintf("%s%s", $1,fuzzy_timestamp($2))/e;
+    } elsif ($line =~ m/^END-POPULARITY-CONTEST-0/i) {
+	$foundentry = 0;
+	print "# Ignored $ignorecount entries\n";
+	$line =~ s/\b(TIME:)(\d+)\b/sprintf("%s%s", $1,fuzzy_timestamp($2))/e;
+    } elsif ($line =~ m/^\d+ \d+ (\S*).*/i && !exists $table{$1}) {
+	print STDERR "Ignoring package $1\n" if $debug;
+	$ignorecount++;
+	next;
+    } elsif ($line =~ m/^(\d+) (\d+) (\S+) (.+)$/i && exists $table{$3}) {
+	# Package entry
+	$line = sprintf("%d %d %s %s\n", fuzzy_timestamp($1),
+			fuzzy_timestamp($2), $3, $4);
+    }
+    print $line;
+}

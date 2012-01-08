@@ -1,0 +1,1 @@
+../../../../../share/pyshared/configglue/app/plugin.py

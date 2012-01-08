@@ -1,0 +1,1 @@
+../../../../share/pyshared/zope/__init__.py

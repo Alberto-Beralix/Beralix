@@ -1,0 +1,27 @@
+<compiz>
+    <plugin name="session" useBcop="true">
+	<short>Session Management</short>
+	<long>Talk to session manager and save/load window state</long>
+	<category>Utility</category>
+	<deps>
+	    <relation type="after">
+		<plugin>composite</plugin>
+		<plugin>opengl</plugin>
+		<plugin>place</plugin>
+		<plugin>decor</plugin>
+	    </relation>
+	</deps>
+	<options>
+	    <option name="save_legacy" type="bool">
+		<short>Save Legacy Apps</short>
+		<long>Also try to save and restore legacy apps that don't support the X session management protocol. This setting only should be used in KDE, as only KDE's session manager also saves those applications.</long>
+		<default>false</default>
+	    </option>
+	    <option name="ignore_match" type="match">
+	    	<short>Windows to ignore</short>
+	    	<long>Matching windows will not be handled by the session plugin</long>
+    		<default/>
+            </option>
+	</options>
+    </plugin>
+</compiz>

@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <plugin useBcop="true" name="resize">
+	<short>Resize Window</short>
+	<short xml:lang="bn">উইন্ডোর আকার পরিবর্তন করা</short>
+	<short xml:lang="bn_IN">উইন্ডোর আকার পরিবর্তন করা</short>
+	<short xml:lang="ca">Canvia la mida de la finestra</short>
+	<short xml:lang="cs">Změnit velikost okna</short>
+	<short xml:lang="da">Tilpas vinduets størrelse</short>
+	<short xml:lang="de">Fenster skalieren</short>
+	<short xml:lang="el">Μορφοποίηση Παραθύρου</short>
+	<short xml:lang="es">Cambiar de tamaño la ventana</short>
+	<short xml:lang="eu">Tamaina-aldatu Leihoari</short>
+	<short xml:lang="fi">Muuta ikkunan kokoa</short>
+	<short xml:lang="fr">Redimensionner la Fenêtre</short>
+	<short xml:lang="gl">Dimensionar Fiestra</short>
+	<short xml:lang="gu">વિન્ડોનું માપ બદલો</short>
+	<short xml:lang="he">שינוי גודל חלון</short>
+	<short xml:lang="hu">Ablak átméretezése</short>
+	<short xml:lang="it">Ridimensiona finestre</short>
+	<short xml:lang="ja">ウィンドウのサイズ変更</short>
+	<short xml:lang="ko">창 크기 조절</short>
+	<short xml:lang="nb">Endre størrelse på vindu</short>
+	<short xml:lang="nl">Grootte aanpassing venster</short>
+	<short xml:lang="or">ଉଇଣ୍ଡୋକୁ ପୁନଃଆକାରଦିଅ</short>
+	<short xml:lang="pl">Zmień rozmiar okna</short>
+	<short xml:lang="pt">Redimensionar Janela</short>
+	<short xml:lang="pt_BR">Redimensionar Janela</short>
+	<short xml:lang="ru">Изменение размеров окна</short>
+	<short xml:lang="sk">Zmeniť veľkosť okna</short>
+	<short xml:lang="sv">Skala fönster</short>
+	<short xml:lang="tr">Pencereyi Yeniden Boyutlandır</short>
+	<short xml:lang="uk">Зміна розмірів вікна</short>
+	<short xml:lang="zh_CN">调整窗口大小</short>
+	<short xml:lang="zh_TW">調整視窗大小</short>
+	<long>Resize window</long>
+	<long xml:lang="bn">উইন্ডোর আকার পরিবর্তন করা</long>
+	<long xml:lang="bn_IN">উইন্ডোর আকার পরিবর্তন করা</long>
+	<long xml:lang="ca">Canvia la mida de la finestra</long>
+	<long xml:lang="cs">Změnit velikost okna</long>
+	<long xml:lang="da">Tilpas størrelsen på vinduet</long>
+	<long xml:lang="de">Fenster skalieren</long>
+	<long xml:lang="el">Μορφοποίηση παραθύρου</long>
+	<long xml:lang="es">Cambia de tamaño la ventana</long>
+	<long xml:lang="eu">Tamaina-aldatu leihoari</long>
+	<long xml:lang="fi">Muuta ikkunan kokoa</long>
+	<long xml:lang="fr">Redimensionner la fenêtre</long>
+	<long xml:lang="gl">Dimensionar xanela</long>
+	<long xml:lang="gu">વિન્ડોનુ માપ બદલો</long>
+	<long xml:lang="he">שינוי גודל חלון</long>
+	<long xml:lang="hu">Ablak átméretezése</long>
+	<long xml:lang="it">Ridimensiona le finestre</long>
+	<long xml:lang="ja">ウィンドウのサイズ変更</long>
+	<long xml:lang="ko">창 크기 조절</long>
+	<long xml:lang="nb">Endre størrelse på vindu</long>
+	<long xml:lang="nl">Grootte aanpassing venster</long>
+	<long xml:lang="or">ଉଇଣ୍ଡୋକୁ ପୁନଃଆକାରଦିଅ</long>
+	<long xml:lang="pl">Zmień rozmiar okna</long>
+	<long xml:lang="pt">Redimensionar janela</long>
+	<long xml:lang="pt_BR">Redimensionar janela</long>
+	<long xml:lang="ru">Изменение размеров окна</long>
+	<long xml:lang="sk">Zmeniť veľkosť okna</long>
+	<long xml:lang="sv">Skala fönster</long>
+	<long xml:lang="tr">Pencereyi yeniden boyutlandır</long>
+	<long xml:lang="uk">Зміна розмірів вікна</long>
+	<long xml:lang="zh_CN">调整窗口大小</long>
+	<long xml:lang="zh_TW">調整視窗大小</long>
+	<category>Window Management</category>
+	<deps>
+	    <relation type="after">
+		<plugin>composite</plugin>
+		<plugin>opengl</plugin>
+		<plugin>decor</plugin>
+	    </relation>
+	</deps>
+	<options>
+	    <group>
+		<short>Bindings</short>
+		<short xml:lang="el">Συνδυασμοί</short>
+		<short xml:lang="es">Vínculos</short>
+		<short xml:lang="eu">Laster-bideak</short>
+		<short xml:lang="fi">Pikanäppäimet</short>
+		<short xml:lang="fr">Assignations</short>
+		<short xml:lang="gl">Atallos de teclado</short>
+		<short xml:lang="he">צירופים</short>
+		<short xml:lang="hu">Gyorsbillentyűk</short>
+		<short xml:lang="it">Associazioni</short>
+		<short xml:lang="ja">割り当て</short>
+		<short xml:lang="ko">바로가기</short>
+		<short xml:lang="pl">Przyporządkowanie klawiszy</short>
+		<short xml:lang="pt">Atalhos</short>
+		<short xml:lang="ru">Закрепление</short>
+		<short xml:lang="uk">Закріплення</short>
+		<short xml:lang="zh_CN">绑定</short>
+		<short xml:lang="zh_TW">連結</short>
+		<option type="button" name="initiate_button">
+		    <short>Initiate Window Resize</short>
+		    <short xml:lang="ca">Inicia el canvi de mida de la finestra</short>
+		    <short xml:lang="cs">Iniciovat změnu velikosti okna</short>
+		    <short xml:lang="da">Start tilpasning af vinduets størrelse</short>
+		    <short xml:lang="de">Fensterskalierung initiieren</short>
+		    <short xml:lang="el">Εκκίνηση Μορφοποίησης Παραθύρου</short>
+		    <short xml:lang="es">Iniciar cambio de tamaño de ventanas</short>
+		    <short xml:lang="eu">Hasi Lehio Tamaina-aldaketa</short>
+		    <short xml:lang="fi">Muuta ikkunan kokoa</short>
+		    <short xml:lang="fr">Lancer le redimensionnement de fenêtre</short>
+		    <short xml:lang="gl">Iniciar Dimensión de Fiestras</short>
+		    <short xml:lang="he">התחל לשנות גודל חלון</short>
+		    <short xml:lang="hu">Ablakátméretezés indítása</short>
+		    <short xml:lang="it">Inizializza ridimensionamento finestre</short>
+		    <short xml:lang="ja">ウィンドウのサイズ変更開始</short>
+		    <short xml:lang="ko">창 크기 조절 시작</short>
+		    <short xml:lang="nb">Begynn størrelsesendring av vindu</short>
+		    <short xml:lang="nl">Initiëer venster grootte aanpassing</short>
+		    <short xml:lang="or">ଉଇଣ୍ଡୋ ପୁନଃଆକାରଦେବା ପ୍ରାରମ୍ଭ କର</short>
+		    <short xml:lang="pl">Rozpocznij zmianę rozmiarów okna</short>
+		    <short xml:lang="pt">Iniciar Redimensionamento de Janelas</short>
+		    <short xml:lang="pt_BR">Iniciar Redimensionamento de Janelas</short>
+		    <short xml:lang="ru">Инициировать изменение размеров окна</short>
+		    <short xml:lang="sk">Začať zmenu veľkosti okna</short>
+		    <short xml:lang="sv">Initiera fönsterskalning</short>
+		    <short xml:lang="tr">Pencereyi Yeniden Boyutlandırmaya Başla</short>
+		    <short xml:lang="uk">Ініціювати зміну розмірів вікна</short>
+		    <short xml:lang="zh_CN">启动窗口大小调整</short>
+		    <short xml:lang="zh_TW">開始調整視窗大小</short>
+		    <long>Start resizing window</long>
+		    <long xml:lang="bn">উইন্ডোর আকার পরিবর্তন শুরু করুন</long>
+		    <long xml:lang="bn_IN">উইন্ডোর আকার পরিবর্তন শুরু করুন</long>
+		    <long xml:lang="ca">Comença el canvi de mida de la finestra</long>
+		    <long xml:lang="cs">Zahájit změnu velikosti okna</long>
+		    <long xml:lang="da">Start tilpasning af vinduesstørrelsen</long>
+		    <long xml:lang="de">Fensterskalierung starten</long>
+		    <long xml:lang="el">Έναρξη μορφοποίησης παραθύρου</long>
+		    <long xml:lang="es">Empieza a cambiar el tamaño de la ventana</long>
+		    <long xml:lang="eu">Hasi tamaina-aldatzen leihoari</long>
+		    <long xml:lang="fi">Aloita ikkunan koon muuttaminen</long>
+		    <long xml:lang="fr">Commencer à redimensionner la fenêtre</long>
+		    <long xml:lang="gl">Iniciar dimensionado de xanela</long>
+		    <long xml:lang="gu">વિન્ડોનું માપ બદલવાનું શરૂ કરો</long>
+		    <long xml:lang="he">התחל לשנות את גודל החלון</long>
+		    <long xml:lang="hu">Ablak átméretezésének indítása</long>
+		    <long xml:lang="it">Avvia il ridimensionamento della finestra</long>
+		    <long xml:lang="ja">ウィンドウのサイズ変更を開始</long>
+		    <long xml:lang="ko">창 크기 조절 시작</long>
+		    <long xml:lang="nb">Begynn å endre størrelse på vindu</long>
+		    <long xml:lang="nl">Begin met grootte aanpassing venster</long>
+		    <long xml:lang="or">ଉଇଣ୍ଡୋକୁ ପୁନଃଆକାର ଦେବା ଆରମ୍ଭକର</long>
+		    <long xml:lang="pl">Rozpocznij zmianę rozmiaru okna</long>
+		    <long xml:lang="pt">Iniciar redimensionamento da janela</long>
+		    <long xml:lang="pt_BR">Iniciar redimensionamento da janela</long>
+		    <long xml:lang="ro">Începe redimensionarea</long>
+		    <long xml:lang="ru">Запуск изменения размеров окна</long>
+		    <long xml:lang="sk">Začať zmenu veľkosti okna</long>
+		    <long xml:lang="sv">Börja skala fönster</long>
+		    <long xml:lang="tr">Pencereyi yeniden boyutlandırmaya başla</long>
+		    <long xml:lang="uk">Запуск зміни розмірів вікна</long>
+		    <long xml:lang="zh_CN">开始调整窗口大小</long>
+		    <long xml:lang="zh_TW">開始調整視窗大小</long>
+		    <default>&lt;Alt&gt;Button2</default>
+		</option>
+		<option type="key" name="initiate_key">
+		    <short>Initiate Window Resize</short>
+		    <short xml:lang="ca">Inicia el canvi de mida de la finestra</short>
+		    <short xml:lang="cs">Iniciovat změnu velikosti okna</short>
+		    <short xml:lang="da">Start tilpasning af vinduets størrelse</short>
+		    <short xml:lang="de">Fensterskalierung initiieren</short>
+		    <short xml:lang="el">Εκκίνηση Μορφοποίησης Παραθύρου</short>
+		    <short xml:lang="es">Iniciar cambio de tamaño de ventanas</short>
+		    <short xml:lang="eu">Hasi Lehio Tamaina-aldaketa</short>
+		    <short xml:lang="fi">Muuta ikkunan kokoa</short>
+		    <short xml:lang="fr">Lancer le redimensionnement de fenêtre</short>
+		    <short xml:lang="gl">Iniciar Dimensión de Fiestras</short>
+		    <short xml:lang="he">התחל לשנות גודל חלון</short>
+		    <short xml:lang="hu">Ablakátméretezés indítása</short>
+		    <short xml:lang="it">Inizializza ridimensionamento finestre</short>
+		    <short xml:lang="ja">ウィンドウのサイズ変更開始</short>
+		    <short xml:lang="ko">창 크기 조절 시작</short>
+		    <short xml:lang="nb">Begynn størrelsesendring av vindu</short>
+		    <short xml:lang="nl">Initiëer venster grootte aanpassing</short>
+		    <short xml:lang="or">ଉଇଣ୍ଡୋ ପୁନଃଆକାରଦେବା ପ୍ରାରମ୍ଭ କର</short>
+		    <short xml:lang="pl">Rozpocznij zmianę rozmiarów okna</short>
+		    <short xml:lang="pt">Iniciar Redimensionamento de Janelas</short>
+		    <short xml:lang="pt_BR">Iniciar Redimensionamento de Janelas</short>
+		    <short xml:lang="ru">Инициировать изменение размеров окна</short>
+		    <short xml:lang="sk">Začať zmenu veľkosti okna</short>
+		    <short xml:lang="sv">Initiera fönsterskalning</short>
+		    <short xml:lang="tr">Pencereyi Yeniden Boyutlandırmaya Başla</short>
+		    <short xml:lang="uk">Ініціювати зміну розмірів вікна</short>
+		    <short xml:lang="zh_CN">启动窗口大小调整</short>
+		    <short xml:lang="zh_TW">開始調整視窗大小</short>
+		    <long>Start resizing window</long>
+		    <long xml:lang="bn">উইন্ডোর আকার পরিবর্তন শুরু করুন</long>
+		    <long xml:lang="bn_IN">উইন্ডোর আকার পরিবর্তন শুরু করুন</long>
+		    <long xml:lang="ca">Comença el canvi de mida de la finestra</long>
+		    <long xml:lang="cs">Zahájit změnu velikosti okna</long>
+		    <long xml:lang="da">Start tilpasning af vinduesstørrelsen</long>
+		    <long xml:lang="de">Fensterskalierung starten</long>
+		    <long xml:lang="el">Έναρξη μορφοποίησης παραθύρου</long>
+		    <long xml:lang="es">Empieza a cambiar el tamaño de la ventana</long>
+		    <long xml:lang="eu">Hasi tamaina-aldatzen leihoari</long>
+		    <long xml:lang="fi">Aloita ikkunan koon muuttaminen</long>
+		    <long xml:lang="fr">Commencer à redimensionner la fenêtre</long>
+		    <long xml:lang="gl">Iniciar dimensionado de xanela</long>
+		    <long xml:lang="gu">વિન્ડોનું માપ બદલવાનું શરૂ કરો</long>
+		    <long xml:lang="he">התחל לשנות את גודל החלון</long>
+		    <long xml:lang="hu">Ablak átméretezésének indítása</long>
+		    <long xml:lang="it">Avvia il ridimensionamento della finestra</long>
+		    <long xml:lang="ja">ウィンドウのサイズ変更を開始</long>
+		    <long xml:lang="ko">창 크기 조절 시작</long>
+		    <long xml:lang="nb">Begynn å endre størrelse på vindu</long>
+		    <long xml:lang="nl">Begin met grootte aanpassing venster</long>
+		    <long xml:lang="or">ଉଇଣ୍ଡୋକୁ ପୁନଃଆକାର ଦେବା ଆରମ୍ଭକର</long>
+		    <long xml:lang="pl">Rozpocznij zmianę rozmiaru okna</long>
+		    <long xml:lang="pt">Iniciar redimensionamento da janela</long>
+		    <long xml:lang="pt_BR">Iniciar redimensionamento da janela</long>
+		    <long xml:lang="ro">Începe redimensionarea</long>
+		    <long xml:lang="ru">Запуск изменения размеров окна</long>
+		    <long xml:lang="sk">Začať zmenu veľkosti okna</long>
+		    <long xml:lang="sv">Börja skala fönster</long>
+		    <long xml:lang="tr">Pencereyi yeniden boyutlandırmaya başla</long>
+		    <long xml:lang="uk">Запуск зміни розмірів вікна</long>
+		    <long xml:lang="zh_CN">开始调整窗口大小</long>
+		    <long xml:lang="zh_TW">開始調整視窗大小</long>
+		    <default>&lt;Alt&gt;F8</default>
+		</option>
+	    </group>
+	    <option type="int" name="mode">
+		<short>Default Resize Mode</short>
+		<short xml:lang="bn">প্রথাস্বরূপ পুনরাকৃতির প্রণালী</short>
+		<short xml:lang="bn_IN">প্রথাস্বরূপ পুনরাকৃতির প্রণালী</short>
+		<short xml:lang="cs">Výchozí mód změny velikosti</short>
+		<short xml:lang="de">Standard-Modus</short>
+		<short xml:lang="el">Προκαθορισμένη Κατάσταση Μορφοποίησης</short>
+		<short xml:lang="es">Modo de Cambio de Tamaño por defecto</short>
+		<short xml:lang="eu">Lehenetsitako Tamaina aldaketa Modua</short>
+		<short xml:lang="fi">Koon muuttamisen oletustapa</short>
+		<short xml:lang="fr">Mode de redimensionnement par défaut</short>
+		<short xml:lang="gl">Modo de Dimensionado por Omisión</short>
+		<short xml:lang="gu">મૂળભૂત માપ બદલવાની સ્થિતિ</short>
+		<short xml:lang="he">מצב שינוי גודל</short>
+		<short xml:lang="hi">मूलभूत आकार बदलाव प्रकार</short>
+		<short xml:lang="hu">Alapértelmezett átméretezési mód</short>
+		<short xml:lang="it">Modalità ridimensionamento predefinita</short>
+		<short xml:lang="ja">デフォルトのサイズ変更形式</short>
+		<short xml:lang="ko">기본 창 크기 조절 모드</short>
+		<short xml:lang="nb">Standardmodus for størrelsesendring</short>
+		<short xml:lang="nl">Standaard grootte aanpassing modus</short>
+		<short xml:lang="or">ଡିଫଲ୍ଟ ପୁନଃଆକାର ମୋଡ</short>
+		<short xml:lang="pa">ਡਿਫਾਲਟ ਰੀਸਾਇਜ਼ ਮੋਡ</short>
+		<short xml:lang="pl">Domyślny ryb zmiany zmiaru</short>
+		<short xml:lang="pt">Modo de redimensionamento por omissão</short>
+		<short xml:lang="pt_BR">Modo padrão de redimensionamento</short>
+		<short xml:lang="ro">Regim de redimensionare implicit</short>
+		<short xml:lang="ru">Режим изменения размера по умолчанию</short>
+		<short xml:lang="sk">Štandardný režim zmeny veľkosti</short>
+		<short xml:lang="sv">Standard storlekändringsläge</short>
+		<short xml:lang="tr">Öntanımlı Yeniden Boyutlandırma Kipi</short>
+		<short xml:lang="uk">Режим зміни розміру за замовчуванням</short>
+		<short xml:lang="zh_CN">默认大小调整模式</short>
+		<short xml:lang="zh_TW">預設調整大小方法</short>
+		<long>Default mode used for window resizing</long>
+		<long xml:lang="bn">উইন্ডো পুনরাকৃতির জন্য প্রথাস্বরূপ প্রণালী</long>
+		<long xml:lang="bn_IN">উইন্ডো পুনরাকৃতির জন্য প্রথাস্বরূপ প্রণালী</long>
+		<long xml:lang="cs">Vývhozí mód použití při změně velikosti oken</long>
+		<long xml:lang="de">Normalerweise für Fensterskalierung verwendeter Modus.</long>
+		<long xml:lang="el">Προκαθορισμένη κατάσταση για μορφοποιήση παραθύρου</long>
+		<long xml:lang="es">Modo usado por defecto para cambiar tamaño de ventanas</long>
+		<long xml:lang="eu">Lehenetsitako modua leiho tamaina aldaketan</long>
+		<long xml:lang="fi">Ikkunan koon muuttamiseen käytettävä oletustapa</long>
+		<long xml:lang="fr">Mode utilisé par défaut pour le redimentionnement de fenêtre</long>
+		<long xml:lang="gl">Modo a empregar por omisión no dimensionado de xanelas</long>
+		<long xml:lang="gu">વિન્ડોનું માપ બદલવા માટે વપરાતી મૂળભૂત સ્થિતિ</long>
+		<long xml:lang="he">ברירת מחדל למצב שינוי גודל חלון</long>
+		<long xml:lang="hi">विंडो पुनः आकार के लिए प्रयुक्त मूलभूत विधि</long>
+		<long xml:lang="hu">Alapértelmezett ablakátméretezési mód</long>
+		<long xml:lang="it">Modalità predefinita per il ridimensionamento delle finestre</long>
+		<long xml:lang="ja">ウィンドウのサイズ変更に使用するデフォルトの描画形式</long>
+		<long xml:lang="ko">창 크기 조절할 때의 기본 모드</long>
+		<long xml:lang="nb">Standard modus som brukes for størrelsesendring av vinduer</long>
+		<long xml:lang="nl">Standaard modus gebruikt voor grootte aanpassing van vensters</long>
+		<long xml:lang="or">ଡିଫଲ୍ଟ ମୋଡ ଉଇଣ୍ଡୋ ପୁନଃଆକାର ଦେବା ପାଇଁ ଉପୟୋଗ ହୋଇଥାଏ</long>
+		<long xml:lang="pa">ਵਿੰਡੋ ਮੁੜ-ਆਕਾਰ ਕਰਨ ਦੌਰਾਨ ਵਰਤਣ ਲਈ ਡਿਫਾਲਟ ਮੋਡ</long>
+		<long xml:lang="pl">Domyślny tryb używany podczas zmiany rozmiaru okna</long>
+		<long xml:lang="pt">Modo a usar por omissão para redimensionamento de janelas</long>
+		<long xml:lang="pt_BR">Modo a usar por padrão para o redimensionamento de janelas</long>
+		<long xml:lang="ro">Regimul implicit utilizat pentru redimensionarea ferestrelor</long>
+		<long xml:lang="ru">Режим по умолчанию, используемый для изменения размера окна</long>
+		<long xml:lang="sk">Štandardný režim použitý pre zmenu veľkosti okna</long>
+		<long xml:lang="sv">Standard läged använt för fönster storleksändring</long>
+		<long xml:lang="tr">Pencereleri yeniden boyutlandırmak için kullanılacak öntanımlı kip</long>
+		<long xml:lang="uk">Режим за замовчуванням, який використовується для зміни розміру вікна</long>
+		<long xml:lang="zh_CN">窗口大小调整的默认模式</long>
+		<long xml:lang="zh_TW">調整視窗大小的預設方法</long>
+		<default>2</default>
+		<min>0</min>
+		<max>3</max>
+		<desc>
+		    <value>0</value>
+		    <name>Normal</name>
+		    <name xml:lang="af">Normaal</name>
+		    <name xml:lang="bg">Нормална</name>
+		    <name xml:lang="bn">স্বাভাবিক</name>
+		    <name xml:lang="bn_IN">স্বাভাবিক</name>
+		    <name xml:lang="ca">Normal</name>
+		    <name xml:lang="cs">Běžná</name>
+		    <name xml:lang="da">Normal</name>
+		    <name xml:lang="de">Normal</name>
+		    <name xml:lang="el">Κανονική</name>
+		    <name xml:lang="es">Normal</name>
+		    <name xml:lang="et">Normaalne</name>
+		    <name xml:lang="eu">Normala</name>
+		    <name xml:lang="fi">Tavallinen</name>
+		    <name xml:lang="fr">Normal</name>
+		    <name xml:lang="gl">Normal</name>
+		    <name xml:lang="gu">સામાન્ય</name>
+		    <name xml:lang="he">רגיל</name>
+		    <name xml:lang="hi">सामान्य</name>
+		    <name xml:lang="hu">Szokványos</name>
+		    <name xml:lang="it">Normale</name>
+		    <name xml:lang="ja">通常</name>
+		    <name xml:lang="km">ធម្មតា</name>
+		    <name xml:lang="ko">기본</name>
+		    <name xml:lang="lt">Normalus</name>
+		    <name xml:lang="nb">Normal</name>
+		    <name xml:lang="nl">Normaal</name>
+		    <name xml:lang="or">ସାମାନ୍ଯ</name>
+		    <name xml:lang="pa">ਸਧਾਰਨ</name>
+		    <name xml:lang="pl">Normalne</name>
+		    <name xml:lang="pt">Normal</name>
+		    <name xml:lang="pt_BR">Normal</name>
+		    <name xml:lang="ro">Normală</name>
+		    <name xml:lang="ru">Нормальное</name>
+		    <name xml:lang="sk">Normálny</name>
+		    <name xml:lang="sl">Navaden</name>
+		    <name xml:lang="sv">Normal</name>
+		    <name xml:lang="tr">Normal</name>
+		    <name xml:lang="uk">Нормальний</name>
+		    <name xml:lang="zh_CN">常规</name>
+		    <name xml:lang="zh_TW">一般</name>
+		</desc>
+		<desc>
+		    <value>1</value>
+		    <name>Outline</name>
+		    <name xml:lang="bn">বহির্রেখা</name>
+		    <name xml:lang="bn_IN">বহির্রেখা</name>
+		    <name xml:lang="cs">Obrysové</name>
+		    <name xml:lang="de">Umriss</name>
+		    <name xml:lang="el">Περίγραμμα</name>
+		    <name xml:lang="es">Linea Exterior</name>
+		    <name xml:lang="eu">Kanpo-lerroa</name>
+		    <name xml:lang="fi">Ääriviiva</name>
+		    <name xml:lang="fr">Contour</name>
+		    <name xml:lang="gl">Contorno</name>
+		    <name xml:lang="gu">બાહ્ય કિનારી</name>
+		    <name xml:lang="he">קו מתאר</name>
+		    <name xml:lang="hu">Körvonal</name>
+		    <name xml:lang="it">Sagoma</name>
+		    <name xml:lang="ja">輪郭</name>
+		    <name xml:lang="ko">외곽선</name>
+		    <name xml:lang="nb">Omriss</name>
+		    <name xml:lang="nl">Omtrek</name>
+		    <name xml:lang="or">ବାହ୍ଯରେଖା</name>
+		    <name xml:lang="pl">Kontur</name>
+		    <name xml:lang="pt">Contorno</name>
+		    <name xml:lang="pt_BR">Contorno</name>
+		    <name xml:lang="ro">Contur</name>
+		    <name xml:lang="ru">Граница</name>
+		    <name xml:lang="sk">Obrys</name>
+		    <name xml:lang="sv">Kontur</name>
+		    <name xml:lang="tr">Taslak</name>
+		    <name xml:lang="uk">Кордон</name>
+		    <name xml:lang="zh_CN">轮廓</name>
+		    <name xml:lang="zh_TW">外框</name>
+		</desc>
+		<desc>
+		    <value>2</value>
+		    <name>Rectangle</name>
+		    <name xml:lang="bn">আয়তক্ষেত্র</name>
+		    <name xml:lang="bn_IN">আয়তক্ষেত্র</name>
+		    <name xml:lang="cs">Překrytí</name>
+		    <name xml:lang="de">Rechteck</name>
+		    <name xml:lang="el">Τετράγωνο</name>
+		    <name xml:lang="es">Rectángulo</name>
+		    <name xml:lang="eu">Laukia</name>
+		    <name xml:lang="fi">Suorakulmio</name>
+		    <name xml:lang="fr">Rectangle</name>
+		    <name xml:lang="gl">Rectángulo</name>
+		    <name xml:lang="gu">લંબચોરસ</name>
+		    <name xml:lang="he">מרובע</name>
+		    <name xml:lang="hi">आयत</name>
+		    <name xml:lang="hu">Téglalap</name>
+		    <name xml:lang="it">Rettangolo</name>
+		    <name xml:lang="ja">矩形</name>
+		    <name xml:lang="ko">사각형</name>
+		    <name xml:lang="nb">Rektangulær</name>
+		    <name xml:lang="nl">Rechthoek</name>
+		    <name xml:lang="or">ଆଯତାକାର</name>
+		    <name xml:lang="pa">ਚਤੁਰਭੁਜ</name>
+		    <name xml:lang="pl">Prostokąt</name>
+		    <name xml:lang="pt">Rectângulo</name>
+		    <name xml:lang="pt_BR">Retângulo</name>
+		    <name xml:lang="ro">Dreptunghi</name>
+		    <name xml:lang="ru">Прямоугольник</name>
+		    <name xml:lang="sk">Obdĺžnik</name>
+		    <name xml:lang="sv">Rektangel</name>
+		    <name xml:lang="tr">Dikdörtgen</name>
+		    <name xml:lang="uk">Прямокутник</name>
+		    <name xml:lang="zh_CN">矩形</name>
+		    <name xml:lang="zh_TW">矩形</name>
+		</desc>
+		<desc>
+		    <value>3</value>
+		    <name>Stretch</name>
+		    <name xml:lang="bg">Разтягане</name>
+		    <name xml:lang="bn">প্রসারিত করা</name>
+		    <name xml:lang="bn_IN">প্রসারিত করা</name>
+		    <name xml:lang="cs">Rozpětí</name>
+		    <name xml:lang="de">Strecken</name>
+		    <name xml:lang="el">Παραμόρφωση</name>
+		    <name xml:lang="es">Estirar</name>
+		    <name xml:lang="eu">Tiratu</name>
+		    <name xml:lang="fi">Venytä</name>
+		    <name xml:lang="fr">Étirer</name>
+		    <name xml:lang="gl">Estirado</name>
+		    <name xml:lang="gu">ખેંચો</name>
+		    <name xml:lang="he">מתיחה</name>
+		    <name xml:lang="hi">विस्तार</name>
+		    <name xml:lang="hu">Nyújtás</name>
+		    <name xml:lang="it">Elastico</name>
+		    <name xml:lang="ja">伸縮</name>
+		    <name xml:lang="ko">잡아당기기</name>
+		    <name xml:lang="nb">Strekk</name>
+		    <name xml:lang="nl">Rekken</name>
+		    <name xml:lang="or">ବିସ୍ତାରିତ</name>
+		    <name xml:lang="pa">ਖਿੱਚੋ</name>
+		    <name xml:lang="pl">Rozciągnij</name>
+		    <name xml:lang="pt">Esticar</name>
+		    <name xml:lang="pt_BR">Esticar</name>
+		    <name xml:lang="ro">Întinde</name>
+		    <name xml:lang="ru">Растянуть</name>
+		    <name xml:lang="sk">Roztiahnutie</name>
+		    <name xml:lang="sv">Töj</name>
+		    <name xml:lang="tr">Gergin</name>
+		    <name xml:lang="uk">Розтягнути</name>
+		    <name xml:lang="zh_CN">拉伸</name>
+		    <name xml:lang="zh_TW">拉伸</name>
+		</desc>
+	    </option>
+	    <option type="bool" name="resize_from_center">
+		<short>Resize From Center</short>
+		<long>Same as setting 'any' for resize_from_center_match</long>
+		<default>false</default>
+		</option>
+	    <option type="color" name="border_color">
+		<short>Border Color</short>
+		<short xml:lang="bn">প্রান্তরেখার রঙ</short>
+		<short xml:lang="bn_IN">প্রান্তরেখার রঙ</short>
+		<short xml:lang="cs">Barva okraje</short>
+		<short xml:lang="de">Rahmenfarbe</short>
+		<short xml:lang="el">Χρώμα Ορίου</short>
+		<short xml:lang="es">Color de borde</short>
+		<short xml:lang="eu">Ertz Kolorea</short>
+		<short xml:lang="fi">Reunan väri</short>
+		<short xml:lang="fr">Couleur de Bordure</short>
+		<short xml:lang="gl">Cor do borde</short>
+		<short xml:lang="gu">કિનારી રંગ</short>
+		<short xml:lang="he">צבע גבול</short>
+		<short xml:lang="hu">Kocka színe</short>
+		<short xml:lang="it">Colore bordo</short>
+		<short xml:lang="ja">境界線の色</short>
+		<short xml:lang="ko">테두리 색</short>
+		<short xml:lang="nb">Kantfarge</short>
+		<short xml:lang="nl">Rand kleur</short>
+		<short xml:lang="or">ସୀମାନ୍ତ ରଙ୍ଗ</short>
+		<short xml:lang="pl">Kolor brzegów</short>
+		<short xml:lang="pt">Cor da borda</short>
+		<short xml:lang="pt_BR">Cor da borda</short>
+		<short xml:lang="ro">Culoare bordură</short>
+		<short xml:lang="ru">Цвет границы</short>
+		<short xml:lang="sk">Farba ohraničenia</short>
+		<short xml:lang="sv">Ramfärg</short>
+		<short xml:lang="tr">Kenarlık Rengi</short>
+		<short xml:lang="uk">Колір кордону</short>
+		<short xml:lang="zh_CN">边框颜色</short>
+		<short xml:lang="zh_TW">邊框顏色</short>
+		<long>Border color used for outline and rectangle resize modes</long>
+		<long xml:lang="bn">বহির্রেখা এবং আয়তাকার পুনরাকৃতি প্রণালীতে ব্যবহৃত প্রান্তরেখার রঙ</long>
+		<long xml:lang="bn_IN">বহির্রেখা এবং আয়তাকার পুনরাকৃতি প্রণালীতে ব্যবহৃত প্রান্তরেখার রঙ</long>
+		<long xml:lang="cs">Barva okraje použitá pro obrysové a překrývací typy změny velikosti</long>
+		<long xml:lang="de">Für die Modi "Umriss" und "Rechteck" verwendete Rahmenfarbe.</long>
+		<long xml:lang="el">Χρώμα ορίου για τις καταστάσεις μορφοποίησης τετράγωνο και περίγραμμα</long>
+		<long xml:lang="es">Color de borde usado para modos de cambiar tamaño línea exterior y rectángulo</long>
+		<long xml:lang="eu">Kanpoko-lerro eta lauki tamaina aldaketa moduan ertz kolorea</long>
+		<long xml:lang="fi">Reunan väri, jota käytetätään Ääriviiva- ja Suorakulmio-venytys metodeille</long>
+		<long xml:lang="fr">Couleur de la bordure utilisée pour les modes de redimensionnement Rectangulaire et Contour</long>
+		<long xml:lang="gl">Cor do borde dos extremos e modos de dimesionado por rectángulos</long>
+		<long xml:lang="gu">બાહ્ય કિનારી અને લંબચોરસ માપ સ્થિતિઓ માટે વપરાતો કિનારી રંગ</long>
+		<long xml:lang="he">צבע המסגרת עבור מצבי שינוי הגודל "קו מתאר" ו-"מרובע"</long>
+		<long xml:lang="hi">खाके व आयताकार पुनः आकार मोड के लिए किनारा रंग</long>
+		<long xml:lang="hu">Az átméretezéshez használt körvonal és téglalap színe </long>
+		<long xml:lang="it">Colore bordo usato nelle modalità di ridimensionamento «Sagoma» e «Rettangolo»</long>
+		<long xml:lang="ja">輪郭や矩形のサイズ変更描画形式で使用する境界線の色</long>
+		<long xml:lang="ko">외곽선 창 크기 조절 모드와 사각형 창 크기 조절 모드에서 사용할 테두리 색</long>
+		<long xml:lang="nb">Kantfarge brukt for omriss og rektangel ved gjør-om-størrelse-modus</long>
+		<long xml:lang="nl">Rand kleur gebruikt voor omtrek en rechthoek grootte aanpassing modi</long>
+		<long xml:lang="or">ବୋର୍ଡର ରଙ୍ଗ ବାହ୍ଯରେଖା ଏବଂ ଆଯତାକାର ପୁନଃଆକାର ମୋଡଗୁଡିକ ପାଇଁ ଉପୟୋଗ ହୋଇଥାଏ </long>
+		<long xml:lang="pa">ਬਾਰਡਰ ਰੰਗ, ਜੋ ਕਿ ਆਉਟਲਾਈਨ ਅਤੇ ਚਤੁਰਭੁਜ ਰੀਸਾਇਜ਼ ਮੋਡ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ</long>
+		<long xml:lang="pl">Kolor brzegów używany dla trybow zmiany rozmiarów z obrysem oraz z obrysem i wypenieniem</long>
+		<long xml:lang="pt">Cor do contorno usado para o modo contorno e rectangular de redimensionameto</long>
+		<long xml:lang="pt_BR">Cor do contorno usado para o modo contorno e retangular de redimensionameto</long>
+		<long xml:lang="ro">Culoarea bordurii utilizate pentru regimurile de redimensionare dreptunghică și conturată</long>
+		<long xml:lang="ru">Цвет границы, используемый для обрисовки контура и режимов изменения размеров прямоугольника</long>
+		<long xml:lang="sk">Farba okraja, ktorý sa použije pri režimoch obrysov a zmeny veľkosti obdĺžnikom</long>
+		<long xml:lang="sv">Ramfärg använd för kontur och rektangel fönsterstorleksändringsläge</long>
+		<long xml:lang="tr">Taslak görünümü ve dikdörtgen yeniden boyutlandırma kipinde kullanılacak kenarlık rengi</long>
+		<long xml:lang="uk">Колір кордону, який використовується для окреслення контуру і режимів зміни розмірів прямокутника</long>
+		<long xml:lang="zh_CN">用于描边和矩形大小调整模式的边颜色</long>
+		<long xml:lang="zh_TW">邊框顏色用於外框與矩形調整模式</long>
+		<default>
+		    <red>0xfbfb</red>
+		    <green>0x8b8b</green>
+		    <blue>0x0</blue>
+		    <alpha>0x9f9f</alpha>
+		</default>
+	    </option>
+	    <option type="color" name="fill_color">
+		<short>Fill Color</short>
+		<short xml:lang="bn">রঙ পূর্ণ করা</short>
+		<short xml:lang="bn_IN">রঙ পূর্ণ করা</short>
+		<short xml:lang="cs">Výplňová barva</short>
+		<short xml:lang="de">Füllfarbe</short>
+		<short xml:lang="el">Χρώμα Γεμίσματος</short>
+		<short xml:lang="es">Color de relleno</short>
+		<short xml:lang="eu">Betetze Kolorea</short>
+		<short xml:lang="fi">Täyttöväri</short>
+		<short xml:lang="fr">Couleur de Remplissage</short>
+		<short xml:lang="gl">Cor de recheo</short>
+		<short xml:lang="gu">રંગ ભરો</short>
+		<short xml:lang="he">צבע מילוי</short>
+		<short xml:lang="hu">Kitöltőszín</short>
+		<short xml:lang="it">Colore riempimento</short>
+		<short xml:lang="ja">塗り色</short>
+		<short xml:lang="ko">채우기 색</short>
+		<short xml:lang="nb">Fyllfarge</short>
+		<short xml:lang="nl">Vul kleur</short>
+		<short xml:lang="or">ରଙ୍ଗ ପୁରଣକର</short>
+		<short xml:lang="pl">Kolor wypełniania</short>
+		<short xml:lang="pt">Cor de preenchimento</short>
+		<short xml:lang="pt_BR">Cor de preenchimento</short>
+		<short xml:lang="ro">Culoare de umplere</short>
+		<short xml:lang="ru">Цвет заливки</short>
+		<short xml:lang="sk">Farba výplne</short>
+		<short xml:lang="sv">Fyllnadsfärg</short>
+		<short xml:lang="tr">Dolgu Rengi</short>
+		<short xml:lang="uk">Колір заливки</short>
+		<short xml:lang="zh_CN">填充颜色</short>
+		<short xml:lang="zh_TW">填滿色彩</short>
+		<long>Fill color used for rectangle resize mode</long>
+		<long xml:lang="bn">আয়তাকার পুনরাকৃতি প্রণালীর জন্য ব্যবহৃত পূর্ণকরণ রঙ</long>
+		<long xml:lang="bn_IN">আয়তাকার পুনরাকৃতি প্রণালীর জন্য ব্যবহৃত পূর্ণকরণ রঙ</long>
+		<long xml:lang="cs">Barva použitá pro překrytí plochy okna při použití obrysové změny velikosti okna</long>
+		<long xml:lang="de">Im Modus "Rechteck" verwendete Füllfarbe.</long>
+		<long xml:lang="el">Χρώμα για χρήση στην τετράγωνη κατάσταση μορφοποίησης</long>
+		<long xml:lang="es">Color de relleno usado por el modo de cambio de tamaño rectangulo</long>
+		<long xml:lang="eu">Kanpoko-lerro eta lauki tamaina aldaketa moduan betetze kolorea</long>
+		<long xml:lang="fi">Täyttöväri suorakulmio-tapaan</long>
+		<long xml:lang="fr">Couleur de remplissage pour le mode de redimensionnement rectangulaire</long>
+		<long xml:lang="gl">Cor de recheo empregada para o modo de dimensionado por rectángulo</long>
+		<long xml:lang="gu">લંબચોરસ માપ બદલો સ્થિતિ માટે વપરાતો ભરવાનો રંગ</long>
+		<long xml:lang="he">צבע מילוי עבור מצב שינוי גודל "מרובע"</long>
+		<long xml:lang="hi">आयताकार पुनः आकार मोड के लिए प्रयुक्त रंग</long>
+		<long xml:lang="hu">Téglalap átméretezés kitöltő színe</long>
+		<long xml:lang="it">Colore del riempimento nella modalità di ridimensionamento «Rettangolo»</long>
+		<long xml:lang="ja">矩形のサイズ変更描画形式に使用する塗り色</long>
+		<long xml:lang="ko">사각형 창 크기 조절 모드에서의 채우기 색</long>
+		<long xml:lang="nb">Fyllfarge brukt for omriss og rektangel ved gjør-om-størrelse-modus</long>
+		<long xml:lang="nl">Vul kleur gebruikt voor de rechthoek grootte aanpassing modus</long>
+		<long xml:lang="or">ଆଯତାକାର ପୁନଃଆକାର ମୋଡ ପାଇଁ ପୁରଣ ରଙ୍ଗ ଉପୟୋଗ ହୋଇଥାଏ</long>
+		<long xml:lang="pa">ਚਤੁਰਭੁਜ ਮੁੜ-ਆਕਾਰ ਮੋਡ ਲਈ ਭਰਨ ਵਾਸਤੇ ਰੰਗ</long>
+		<long xml:lang="pl">Kolor wypełnienia dla prostokątnego trybu zmiany wielkości</long>
+		<long xml:lang="pt">Cor de preenchimento usada para o modo rectangular de redimensionamento</long>
+		<long xml:lang="pt_BR">Cor de preenchimento usada para o modo retangular de redimensionamento</long>
+		<long xml:lang="ro">Culoarea de umplere folosită pentru regimul de redimensionare dreptunghică</long>
+		<long xml:lang="ru">Цвет заливки, используемый для режима изменения размеров прямоугольника</long>
+		<long xml:lang="sk">Farba výplne použitá pre pravouhlú zmenu veľkosti</long>
+		<long xml:lang="sv">Fyllningsfärg för rektangeln i justeringsläge</long>
+		<long xml:lang="tr">Dolgu rengi dikdörtgen şeklinde yeniden boyutlandırmada kullanılır</long>
+		<long xml:lang="uk">Колір заливки, що використовується для режиму зміни розмірів прямокутника</long>
+		<long xml:lang="zh_CN">用于矩形大小调整模式的填充颜色</long>
+		<long xml:lang="zh_TW">在矩型調整模式下填滿色彩</long>
+		<default>
+		    <red>0xfbfb</red>
+		    <green>0x8b8b</green>
+		    <blue>0x0</blue>
+		    <alpha>0x1919</alpha>
+		</default>
+	    </option>
+	    <subgroup>
+			<short>Specific Window Matches</short>
+			<option type="match" name="normal_match">
+			<short>Normal Resize Windows</short>
+			<short xml:lang="cs">Normálně měněné okna</short>
+			<short xml:lang="de">"Normal" skalierte Fenster</short>
+			<short xml:lang="el">Κανονική Μορφοποίηση Παραθύρων</short>
+			<short xml:lang="es">Cambiar Tamaño Ventanas Normal</short>
+			<short xml:lang="eu">Leihoak Normal Tamainaz-aldatu</short>
+			<short xml:lang="fi">Ikkunan koon muuttaminen tavallisesti</short>
+			<short xml:lang="fr">Redimensionne les fenêtres en mode Normal</short>
+			<short xml:lang="gl">Dimensionado Normal de Fiestras</short>
+			<short xml:lang="he">שינוי גודל חלונות במצב רגיל</short>
+			<short xml:lang="hu">Hagyományos ablakátméretezés</short>
+			<short xml:lang="it">Ridimensionamento finestre normale</short>
+			<short xml:lang="ja">通常サイズ変更ウィンドウ</short>
+			<short xml:lang="ko">기본 창 크기 조절 모드</short>
+			<short xml:lang="nb">Normal størrelsesemdring av vinduer</short>
+			<short xml:lang="nl">Normale grootte aanpassing van vensters</short>
+			<short xml:lang="or">ସାମାନ୍ଯ ପୁନଃଆକାର ଉଇଣ୍ଡୋ</short>
+			<short xml:lang="pl">Normalna zmiana rozmiaru okna</short>
+			<short xml:lang="pt">Redimensionamento Normal de Janelas</short>
+			<short xml:lang="pt_BR">Redimensionamento Normal de Janelas</short>
+			<short xml:lang="ru">Нормальное изменение размеров окна</short>
+			<short xml:lang="sk">Normálna veľkosť okien</short>
+			<short xml:lang="sv">Ändra fönstrets storlek normalt</short>
+			<short xml:lang="tr">Pencereleri Normal Şekilde Yeniden Boyutlandır</short>
+			<short xml:lang="uk">Нормальна зміна розмірів вікна</short>
+			<short xml:lang="zh_CN">普通窗口大小调整</short>
+			<short xml:lang="zh_TW">正常的視窗調整</short>
+			<long>Windows that normal resize should be used for</long>
+			<long xml:lang="bn">যে উইন্ডোর জন্য স্বাভাবিক পুনরাকৃতি প্রয়োগ করা হবে</long>
+			<long xml:lang="bn_IN">যে উইন্ডোর জন্য স্বাভাবিক পুনরাকৃতি প্রয়োগ করা হবে</long>
+			<long xml:lang="cs">Typy oken, která budou měnit velikost normálně</long>
+			<long xml:lang="de">Fenstertypen, die im Modus "Normal" skaliert werden sollen</long>
+			<long xml:lang="el">Παράθυρα στα οποία θα χρησιμοποιηθεί κανονική μορφοποίηση</long>
+			<long xml:lang="es">Ventanas que deben usar cambio de tamaño normal</long>
+			<long xml:lang="eu">Tamaina-aldatze normala erabiliko duten leihoak</long>
+			<long xml:lang="fi">Ikkunat, joilla käytetään normaalia koon muuttamista</long>
+			<long xml:lang="fr">Types de fenêtres qui devraient utiliser le redimensionnement Normal</long>
+			<long xml:lang="gl">Fiestras que deben empregar dimensionado normal</long>
+			<long xml:lang="gu">વિન્ડો કે જેના માટે સામાન્ય માપ બદલવાનું વપરાવું જોઈએ</long>
+			<long xml:lang="he">חלונות עבורם יש להשתמש בשינוי גודל רגיל</long>
+			<long xml:lang="hi">विंडोज़ जो सामान्य आकार बदलाव के लिए प्रयोग किया जाना चाहिए</long>
+			<long xml:lang="hu">Hagyományos ablakátméretezést használó ablakok</long>
+			<long xml:lang="it">Tipi di finestre a cui applicare il ridimensionamento «Normale»</long>
+			<long xml:lang="ja">サイズ変更描画に通常形式を使用するウィンドウ</long>
+			<long xml:lang="ko">기본 창 크기 조절 모드를 사용할 창</long>
+			<long xml:lang="nb">Vinduer som skal endre størrelse på normalt vis</long>
+			<long xml:lang="nl">Vensters waar normale grootte aanpassing voor gebruikt zou moeten worden</long>
+			<long xml:lang="or">ଉଇଣ୍ଡୋ ୟାହା ପାଇଁ ସାମାନ୍ଯ ପୁନଃଆକାର ଉପୟୋଗ ହେବା ଉଚିତ</long>
+			<long xml:lang="pa">ਵਿੰਡੋ, ਜੋ ਕਿ ਨਾਰਮਲ ਮੁੜ-ਸਾਈਜ਼ ਲਈ ਵਰਤਣੀ ਹੈ</long>
+			<long xml:lang="pl">Typy okien, których rozmiar ma być zmieniany w standardowy sposób</long>
+			<long xml:lang="pt">Janelas que devem usar redimensionamento normal</long>
+			<long xml:lang="pt_BR">Janelas que devem usar redimensionamento normal</long>
+			<long xml:lang="ro">Ferestre cu care se folosește redimensionarea normală</long>
+			<long xml:lang="ru">Типы окон, которым следует применять эффект нормального изменения размера</long>
+			<long xml:lang="sk">Okná, pre ktoré bude použitá normálna zmena veľkosti</long>
+			<long xml:lang="sv">Fönster som normal storleksändring ska användas för</long>
+			<long xml:lang="tr">Normal yeniden boyutlandırma kullanılacak pencereler</long>
+			<long xml:lang="uk">Типи вікон, яким слід застосовувати ефект нормальної зміни розміру</long>
+			<long xml:lang="zh_CN">正常调整大小的窗口</long>
+			<long xml:lang="zh_TW">正常視窗調整應該使用在</long>
+			<default/>
+			</option>
+			<option type="match" name="outline_match">
+			<short>Outline Resize Windows</short>
+			<short xml:lang="bn">পুনরাকার উইন্ডোর বহির্রেখা</short>
+			<short xml:lang="bn_IN">পুনরাকার উইন্ডোর বহির্রেখা</short>
+			<short xml:lang="cs">Obrysová změna velikosti okna</short>
+			<short xml:lang="de">"Umriss"-skalierte Fenster</short>
+			<short xml:lang="el">Μορφοποίηση Περίγράμματος</short>
+			<short xml:lang="es">Cambio Tamaño Ventanas Linea Exterior</short>
+			<short xml:lang="eu">Kanpo-lerroaz Tamaina-aldatu Leihoei</short>
+			<short xml:lang="fi">Ikkunan koon muuttaminen ääriviivoilla</short>
+			<short xml:lang="fr">Redimensionne les fenêtres en mode Contour</short>
+			<short xml:lang="gl">Dimensionado de Fiestras co Contorno</short>
+			<short xml:lang="gu">બાહ્ય કિનારી માપ બદલો વિન્ડો</short>
+			<short xml:lang="he">שינוי גודל חלונות במצב קו מתאר</short>
+			<short xml:lang="hu">Átméretezés az ablak körvonalával</short>
+			<short xml:lang="it">Ridimensionamento finestre sagoma</short>
+			<short xml:lang="ja">輪郭サイズ変更ウィンドウ</short>
+			<short xml:lang="ko">외곽선 창 크기 조절 모드</short>
+			<short xml:lang="nb">Omriss-størrelsesendring av vinduer</short>
+			<short xml:lang="nl">Omtrek grootte aanpassing van vensters</short>
+			<short xml:lang="or">ବାହ୍ଯରେଖା ପୁନଃଆକାର ଉଇଣ୍ଡୋ</short>
+			<short xml:lang="pl">Zmiana rozmiaru konturu okna</short>
+			<short xml:lang="pt">Redimensionar janelas pelo contorno</short>
+			<short xml:lang="pt_BR">Redimensionar janelas pelo contorno</short>
+			<short xml:lang="ru">Граница изменение размеров окна</short>
+			<short xml:lang="sk">Obrysová zmena veľkosti okien</short>
+			<short xml:lang="tr">Yeniden Boyutlandırmada Taslak Göster</short>
+			<short xml:lang="uk">Кордон зміни розмірів вікна</short>
+			<short xml:lang="zh_CN">窗口外框大小调整</short>
+			<short xml:lang="zh_TW">調整視窗外框</short>
+			<long>Windows that outline resize should be used for</long>
+			<long xml:lang="bn">যে উইন্ডোর জন্য বহির্রেখা পুনরাকৃতি প্রয়োগ করা হবে</long>
+			<long xml:lang="bn_IN">যে উইন্ডোর জন্য বহির্রেখা পুনরাকৃতি প্রয়োগ করা হবে</long>
+			<long xml:lang="cs">Typy oken, která budou měnit velikost s efektem obrysu</long>
+			<long xml:lang="de">Fenstertypen, die im Modus Umriss" skaliert werden sollen</long>
+			<long xml:lang="el">Παράθυρα στα οποία θα χρησιμοποιηθεί μορφοποίηση περιγράμματος</long>
+			<long xml:lang="es">Ventanas que deben usar cambio de tamaño con linea exterior</long>
+			<long xml:lang="eu">Tamaina-aldatzea kanpo-lerroaz egingo duten leihoak</long>
+			<long xml:lang="fi">Ikkunat, joilla käytetään ääriviivatapaa koon muuttamiseen</long>
+			<long xml:lang="fr">Types de fenêtres qui devraient utiliser le redimensionnement Contour</long>
+			<long xml:lang="gl">Fiestras que deben empregar dimensionado co contorno</long>
+			<long xml:lang="gu">વિન્ડો કે બાહ્ય કિનારીનું માપ બદલવા માટે વાપરવામાં આવવી જોઈએ</long>
+			<long xml:lang="he">חלונות עבורם יש להשתמש בשינוי גודל בעזרת קו מתאר</long>
+			<long xml:lang="hi">विंडोज़ जो खाका आकार बदलाव के लिए प्रयोग किया जाना चाहिए</long>
+			<long xml:lang="hu">Körvonalas ablakátméretezést használó ablakok</long>
+			<long xml:lang="it">Tipi di finestre a cui applicare il ridimensionamento «Sagoma»</long>
+			<long xml:lang="ja">サイズ変更描画に輪郭形式を使用するウィンドウ</long>
+			<long xml:lang="ko">외곽선 창 조절 모드를 사용할 창</long>
+			<long xml:lang="nb">Vinduer som skal endre størrelse med omriss</long>
+			<long xml:lang="nl">Vensters waarvoor omtrek grootte aanpassing gebruikt zou moeten worden</long>
+			<long xml:lang="or">ଉଇଣ୍ଡୋ ୟାହା ପାଇଁ ବାହ୍ଯରେଖା ପୁନଃଆକାର ଉପୟୋଗ ହେବା ଉଚିତ</long>
+			<long xml:lang="pa">ਵਿੰਡੋ, ਜੋ ਕਿ ਆਉਟਲਾਈਨ ਮੁੜ-ਸਾਈਜ਼ ਲਈ ਵਰਤਣਾ ਹੈ</long>
+			<long xml:lang="pl">Typy okien, których rozmiar ma być zmieniany poprzez kontur okna</long>
+			<long xml:lang="pt">Janelas que devem usar redimensionamento pelo contorno</long>
+			<long xml:lang="pt_BR">Janelas que devem usar redimensionamento pelo contorno</long>
+			<long xml:lang="ro">Ferestre cu care se folosește redimensionarea cu contur</long>
+			<long xml:lang="ru">Типы окон, которым следует применять эффект изменения размера граница</long>
+			<long xml:lang="sk">Okná, pre ktoré bude použitá zmena veľkosti s efektom obrysu</long>
+			<long xml:lang="sv">Fönster som storleksändring med kontur ska användas för</long>
+			<long xml:lang="tr">Taslak görünümünde yeniden boyutlandırma kullanılacak pencereler</long>
+			<long xml:lang="uk">Типи вікон, яким слід застосовувати ефект зміни розміру кордон</long>
+			<long xml:lang="zh_CN">框架调整大小的窗口</long>
+			<long xml:lang="zh_TW">外框視窗調整應該使用在</long>
+			<default/>
+			</option>
+			<option type="match" name="rectangle_match">
+			<short>Rectangle Resize Windows</short>
+			<short xml:lang="cs">Změnit velikost okna překrytím</short>
+			<short xml:lang="de">"Rechteck"-skalierte Fenster</short>
+			<short xml:lang="el">Τετράγωνη Μορφοποίηση Παραθύρων</short>
+			<short xml:lang="es">Cambio Tamaño Ventanas Rectángulo</short>
+			<short xml:lang="eu">Laukiaz Tamaina-aldatu Leihoei</short>
+			<short xml:lang="fi">Ikkunan koon muttaminen suorakulmiolla</short>
+			<short xml:lang="fr">Redimensionne les fenêtres en mode Rectangle</short>
+			<short xml:lang="gl">Dimensionado de Fiestras co Rectángulo</short>
+			<short xml:lang="gu">લંબચોરસ માપ બદલો વિન્ડો</short>
+			<short xml:lang="he">שינוי גודל חלונות במצב מרובע</short>
+			<short xml:lang="hu">Téglalap ablakátméretezés</short>
+			<short xml:lang="it">Ridimensionamento finestre rettangolo</short>
+			<short xml:lang="ja">矩形サイズ変更ウィンドウ</short>
+			<short xml:lang="ko">사각형 창 크기 조절 모드</short>
+			<short xml:lang="nb">Rektangulær størrelsesendring av vinduer</short>
+			<short xml:lang="nl">Rechthoek grootte aanpassing</short>
+			<short xml:lang="or">ଆଯତାକାର ପୁନଃଆକାର ଉଇଣ୍ଡୋ</short>
+			<short xml:lang="pl">Prostokątna zmiana rozmiaru okna</short>
+			<short xml:lang="pt">Redimensionar Janelas rectangularmente</short>
+			<short xml:lang="pt_BR">Redimensionar Janelas retangularmente</short>
+			<short xml:lang="ru">Прямоугольник изменение размеров окна</short>
+			<short xml:lang="sk">Pravouhlá zmena veľkosti okien</short>
+			<short xml:lang="tr">Pencereleri Dikdörtgen Şeklinde Yeniden Boyutlandır</short>
+			<short xml:lang="uk">Прямокутна зміна розмірів вікна</short>
+			<short xml:lang="zh_CN">矩形窗口大小调整</short>
+			<short xml:lang="zh_TW">矩型調整視窗</short>
+			<long>Windows that rectangle resize should be used for</long>
+			<long xml:lang="bn">যে উইন্ডোর জন্য আয়তাকার পুনরাকৃতি প্রয়োগ করা হবে</long>
+			<long xml:lang="bn_IN">যে উইন্ডোর জন্য আয়তাকার পুনরাকৃতি প্রয়োগ করা হবে</long>
+			<long xml:lang="cs">Typy oken, která budou měnit velikost s efektem překrytí</long>
+			<long xml:lang="de">Fenstertypen, die im Modus "Rechteck" skaliert werden sollen</long>
+			<long xml:lang="el">Παράθυρα στα οποία θα χρησιμοποιηθεί τετραγωνική μορφοποίηση</long>
+			<long xml:lang="es">Ventanas que deben usar cambio de tamaño con rectángulo</long>
+			<long xml:lang="eu">Tamaina-aldatzea laukiaz egingo duten leihoak</long>
+			<long xml:lang="fi">Ikkunat, joilla käytetään suorakulmiota koon muuttamiseen</long>
+			<long xml:lang="fr">Types de fenêtres qui devraient utiliser le redimensionnement Rectangle</long>
+			<long xml:lang="gl">Fiestras que deben empregar o dimensionado por rectángulo</long>
+			<long xml:lang="gu">વિન્ડો કે લંબચોરસનું માપ બદલવા માટે વાપરવામાં આવવી જોઈએ</long>
+			<long xml:lang="he">חלונות עבורם יש להשתמש בשינוי גודל בעזרת מרובע</long>
+			<long xml:lang="hi">विंडोज़ जो आयत आकार बदलाव के लिए प्रयोग किया जाना चाहिए</long>
+			<long xml:lang="hu">Téglalap ablakátméretezést használó ablakok</long>
+			<long xml:lang="it">Tipi di finestre a cui applicare il ridimensionamento «Rettangolo»</long>
+			<long xml:lang="ja">サイズ変更描画に矩形形式を使用するウィンドウ</long>
+			<long xml:lang="ko">사각형 창 크기 조절 모드를 사용할 창</long>
+			<long xml:lang="nb">Vinduer som skal endre størrelse rektangulært</long>
+			<long xml:lang="nl">Vensters waarvoor rechthoek grootte aanpassing gebruikt zou moeten worden</long>
+			<long xml:lang="or">ଉଇଣ୍ଡୋ ୟାହା ପାଇଁ  ଆଯତାକାର ପୁନଃଆକାର ଉପୟୋଗ ହେବା ଉଚିତ</long>
+			<long xml:lang="pa">ਵਿੰਡੋ, ਜੋ ਕਿ ਆਉਟਲਾਈਨ ਮੁੜ-ਸਾਈਜ਼ ਲਈ ਵਰਤਣਾ ਹੈ</long>
+			<long xml:lang="pl">Typy okien, których rozmiar ma być zmieniany w prostokątny sposób</long>
+			<long xml:lang="pt">Janelas que devem usar redimensionamento rectangular</long>
+			<long xml:lang="pt_BR">Janelas que devem usar redimensionamento retangular</long>
+			<long xml:lang="ro">Ferestre cu care se folosește redimensionarea cu dreptunghi</long>
+			<long xml:lang="ru">Типы окон, которым следует применять эффект изменения размера прямоугольник</long>
+			<long xml:lang="sk">Okná, pre ktoré bude použitá zmena veľkosti s efektom obdĺžnika</long>
+			<long xml:lang="sv">Fönster som rektangulär storleksändring ska användas för</long>
+			<long xml:lang="tr">Dikdörtgen yeniden boyutlandırma kullanılacak pencereler</long>
+			<long xml:lang="uk">Типи вікон, яким слід застосовувати ефект зміни розміру прямокутник</long>
+			<long xml:lang="zh_CN">矩形调整大小的窗口</long>
+			<long xml:lang="zh_TW">矩形視窗調整應該使用在</long>
+			<default/>
+			</option>
+			<option type="match" name="stretch_match">
+			<short>Stretch Resize Windows</short>
+			<short xml:lang="cs">Rozpětím změnit velikost okna</short>
+			<short xml:lang="de">Gestreckt skalierte Fenster</short>
+			<short xml:lang="el">Μορφοποίηση Παραθύρου με Παραμόρφωση</short>
+			<short xml:lang="es">Cambiar Tamaño Ventana Estirar</short>
+			<short xml:lang="eu">Tamaina-aldatu leihoei tiratuz</short>
+			<short xml:lang="fi">Ikkunan koon muttaminen Venytä metodilla</short>
+			<short xml:lang="fr">Redimensionne les fenêtres en mode Étiré</short>
+			<short xml:lang="gl">Dimensionar Fiestras Estirándoas</short>
+			<short xml:lang="gu">વિન્ડોનું માપ બદલવા ખેંચો</short>
+			<short xml:lang="he">שינוי גודל חלונות במתיחה</short>
+			<short xml:lang="hu">Átméretezés az ablak nyújtásával</short>
+			<short xml:lang="it">Ridimensionamento finestre elastico</short>
+			<short xml:lang="ja">伸縮サイズ変更ウィンドウ</short>
+			<short xml:lang="ko">잡아당기기 창 크기 조절 모드</short>
+			<short xml:lang="nb">Strekk-størrelsesendring av vinduer</short>
+			<short xml:lang="nl">Rekken grootte aanpassing van vensters</short>
+			<short xml:lang="or">ପୁନଃଆକାର ଉଇଣ୍ଡୋଗୁଡିକୁ ଟାଣିଲମ୍ବାକର</short>
+			<short xml:lang="pl">Zmień rozmiar okna poprzez rozciąganie</short>
+			<short xml:lang="pt">Redimensionar janelas esticando-as</short>
+			<short xml:lang="pt_BR">Redimensionar janelas esticando-as</short>
+			<short xml:lang="ru">Растяжение изменение размеров окна</short>
+			<short xml:lang="sk">Zmena veľkosti okien roztiahnutím</short>
+			<short xml:lang="sv">Töj ut fönstrets storlek</short>
+			<short xml:lang="tr">Pencereleri Gergin Şekilde Yeniden Boyutlandır</short>
+			<short xml:lang="uk">Зміна розмірів вікна розтягуванням</short>
+			<short xml:lang="zh_CN">拉伸调整窗口大小</short>
+			<short xml:lang="zh_TW">拉伸調整視窗</short>
+			<long>Windows that stretch resize should be used for</long>
+			<long xml:lang="bn">যে উইন্ডোর জন্য বিস্তৃতি পুনরাকৃতি প্রয়োগ করা হবে</long>
+			<long xml:lang="bn_IN">যে উইন্ডোর জন্য বিস্তৃতি পুনরাকৃতি প্রয়োগ করা হবে</long>
+			<long xml:lang="cs">Typy oken, která budou měnit velikost s efektem rozpětí</long>
+			<long xml:lang="de">Fenstertypen, die im Modus "Strecken" skaliert werden sollen</long>
+			<long xml:lang="el">Παράθυρα στα οποία θα χρησιμοποιηθεί μορφοποίηση με παραμόρφωση</long>
+			<long xml:lang="es">Ventanas que deben usar cambio de tamaño con estiramiento</long>
+			<long xml:lang="eu">Tamaina-aldatzea tiratuz egingo duten leihoak</long>
+			<long xml:lang="fi">Ikkunat, joilla käytetään venyttämistä koon muuttamista</long>
+			<long xml:lang="fr">Types de fenêtres qui devraient utiliser le redimensionnement Étiré</long>
+			<long xml:lang="gl">Fiestras que deben empregar dimensionamento por estiramento</long>
+			<long xml:lang="gu">વિન્ડો કે ખેંચવાનું માપ બદલવા માટે વાપરવામાં આવવી જોઈએ</long>
+			<long xml:lang="he">חלונות עבורם יש להשתמש בשינוי גודל בעזרת מתיחה</long>
+			<long xml:lang="hi">विंडोज़ जो विस्तार आकार बदलाव के लिए प्रयोग किया जाना चाहिए</long>
+			<long xml:lang="hu">Nyújtásos ablakátméretezést használó ablakok</long>
+			<long xml:lang="it">Tipi di finestre a cui applicare il ridimensionamento «Elastico»</long>
+			<long xml:lang="ja">サイズ変更描画に伸縮形式を使用するウィンドウ</long>
+			<long xml:lang="ko">잡아당기기 창 크기 조절 모드를 사용할 창</long>
+			<long xml:lang="nb">Vinduer som skal endre størrelse ved strekking</long>
+			<long xml:lang="nl">Vensters waarvoor rekken grootte aanpassing gebruikt zou moeten worden</long>
+			<long xml:lang="or">ଉଇଣ୍ଡୋ ୟାହା ପାଇଁ ବିସ୍ତାରିତ ପୁନଃଆକାର ଉପୟୋଗ ହେବା ଉଚିତ</long>
+			<long xml:lang="pa">ਵਿੰਡੋ, ਜੋ ਕਿ ਮੁੜ-ਸਾਈਜ਼ ਤਾਣੀ ਜਾਣ ਲਈ ਵਰਤੀ ਜਾਵੇਗੀ</long>
+			<long xml:lang="pl">Typy okien, których rozmiar ma być zmieniany poprzez rozciąganie</long>
+			<long xml:lang="pt">Janelas que devem usar redimensionamento por esticamento</long>
+			<long xml:lang="pt_BR">Janelas que devem usar redimensionamento por esticamento</long>
+			<long xml:lang="ro">Ferestre cu care se folosește redimensionarea prin întindere</long>
+			<long xml:lang="ru">Типы окон, которым следует применять эффект изменения размера растяжение</long>
+			<long xml:lang="sk">Okná, pre ktoré bude použitá zmena veľkosti s efektom roztiahnutia</long>
+			<long xml:lang="sv">Fönster som storleksändring med sträckning ska användas för</long>
+			<long xml:lang="tr">Gerginlik kullanılarak yeniden boyutlandırma kullanılacak pencereler</long>
+			<long xml:lang="uk">Типи вікон, яким слід застосовувати ефект зміни розміру розтягуванням</long>
+			<long xml:lang="zh_CN">拉伸调整大小的窗口</long>
+			<long xml:lang="zh_TW">拉伸視窗調整應該使用在</long>
+			<default/>
+			</option>
+			<option type="match" name="resize_from_center_match">
+			<short>Resize From Center Windows</short>
+			<long>Windows that should be resized from center</long>
+			<default/>
+			</option>
+		</subgroup>
+		<group>
+		<short>Additional Modifier Keys</short>
+		<subgroup>
+			<short>Outline Modifier</short>
+			<option type="list" name="outline_modifier">
+				<short>Outline Modifier</short>
+				<long>Use these bindings to resize with an outline.</long>
+				<type>int</type>
+				<min>0</min>
+				<max>3</max>
+				<desc>
+				<value>0</value>
+				<name>Shift</name>
+				</desc>
+				<desc>
+				<value>1</value>
+				<name>Alt</name>
+				</desc>
+				<desc>
+				<value>2</value>
+				<name>Control</name>
+				</desc>
+				<desc>
+				<value>3</value>
+				<name>Meta</name>
+				</desc>
+			</option>
+		</subgroup>
+		<subgroup>
+			<short>Rectangle Modifier</short>
+			<option type="list" name="rectangle_modifier">
+				<short>Rectangle Modifier</short>
+				<long>Use these bindings to resize with an rectangle.</long>
+				<type>int</type>
+				<min>0</min>
+				<max>3</max>
+				<desc>
+				<value>0</value>
+				<name>Shift</name>
+				</desc>
+				<desc>
+				<value>1</value>
+				<name>Alt</name>
+				</desc>
+				<desc>
+				<value>2</value>
+				<name>Control</name>
+				</desc>
+				<desc>
+				<value>3</value>
+				<name>Meta</name>
+				</desc>
+			</option>
+		</subgroup>
+		<subgroup>
+			<short>Stretch Modifier</short>
+			<option type="list" name="stretch_modifier">
+				<short>Stretch Modifier</short>
+				<long>Use these bindings to resize by stretching.</long>
+				<type>int</type>
+				<min>0</min>
+				<max>3</max>
+				<desc>
+				<value>0</value>
+				<name>Shift</name>
+				</desc>
+				<desc>
+				<value>1</value>
+				<name>Alt</name>
+				</desc>
+				<desc>
+				<value>2</value>
+				<name>Control</name>
+				</desc>
+				<desc>
+				<value>3</value>
+				<name>Meta</name>
+				</desc>
+			</option>
+		</subgroup>
+		<subgroup>
+			<short>Centered Modifier</short>
+			<option type="list" name="centered_modifier">
+				<short>Centered Modifier</short>
+				<long>Use these bindings to resize from the center.</long>
+				<type>int</type>
+				<min>0</min>
+				<max>3</max>
+				<default>
+				<value>0</value>
+				</default>
+				<desc>
+				<value>0</value>
+				<name>Shift</name>
+				</desc>
+				<desc>
+				<value>1</value>
+				<name>Alt</name>
+				</desc>
+				<desc>
+				<value>2</value>
+				<name>Control</name>
+				</desc>
+				<desc>
+				<value>3</value>
+				<name>Meta</name>
+				</desc>
+			</option>
+		</subgroup>
+		</group>
+	</options>
+    </plugin>
+</compiz>

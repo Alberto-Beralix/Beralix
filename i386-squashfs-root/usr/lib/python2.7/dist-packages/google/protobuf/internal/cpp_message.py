@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/google/protobuf/internal/cpp_message.py

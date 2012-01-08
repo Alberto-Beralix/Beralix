@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-preview" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-preview"/>
+
+    <desc>Legen Sie fest, wann Vorschauen für Dateien angezeigt werden sollen.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Einstellungen für die Vorschauen in der Dateiverwaltung</title>
+
+<p>The file manager creates thumbnails to preview image and video files,
+and can also preview text files and sound files. Previews can be slow for
+large files or over networks, so you can control when previews are made.
+In any file manager window, click <guiseq><gui>Edit</gui>
+<gui>Preferences</gui></guiseq> and select the <gui>Preview</gui> tab.</p>
+
+<p>Standardmäßig werden alle Vorschauen nur für lokale Dateien auf Ihrem Rechner oder damit verbundenen externen Laufwerken erstellt. Die Dateiverwaltung kann auch <link xref="nautilus-connect">Dateien auf anderen Rechnern durchsuchen</link>, etwa in einem lokalen Netzwerk oder im Internet. Wenn Sie öfter Dateien in einem lokalen Netzwerk durchsuchen und das Netzwerk eine hohe Bandbreite aufweist, möchten Sie vielleicht einige oder alle Vorschaueinstellungen auf <gui>Immer</gui> setzen.</p>
+
+<terms>
+  <item>
+    <title><gui>Textdateien</gui></title>
+    <p>Das Symbol für einfache Textdateien sieht aus wie ein bedrucktes Blatt Papier. Die Dateiverwaltung liest automatisch die ersten paar Zeilen der Textdatei ein und zeigt sie im Symbol an. Sie können diese Funktion ein- oder ausschalten oder nur für Dateien auf Ihrem Rechner und auf lokalen, externen Laufwerken einschalten.</p>
+  </item>
+  <item>
+    <title><gui>Andere Dateien mit Vorschaumöglichkeit</gui></title>
+    <p>Die Dateiverwaltung kann automatisch Vorschauen für Bilder, Videos, PDF-Dateien und verschiedene andere Dateitypen erstellen. Anwendungen mit eigenen Dateitypen können sogar eine Vorschauunterstützung für jene Dateien bereitstellen, die sie erstellen. Sie können diese Funktion ein- oder ausschalten oder nur für Dateien auf Ihrem Rechner und auf lokalen, externen Laufwerken einschalten. Sie können auch Vorschauen nur für Dateien unter einer bestimmten Dateigröße erlauben.</p>
+  </item>
+  <item>
+    <title><gui>Audio-Dateien</gui></title>
+    <p>You can <link xref="files-preview-music">preview music and other
+    sounds files</link> by hovering your mouse. You can turn this feature
+    on or off, or turn it on only for files on your computer and local
+    external drives.</p>
+  </item>
+  <item>
+    <title><gui>Ordner</gui></title>
+    <p>Wenn Sie die Dateigröße in einer Spalte der <link xref="nautilus-list">Listenansicht</link> oder in <link xref="nautilus-display#icon-captions">Symbolbeschriftungen</link> anzeigen, werden Ordner mit der Anzahl der Dateien und Ordner, die sie enthalten, dargestellt. Das Zählen dieser Objekte kann langsam sein, besonders bei sehr großen Ordnern oder über ein Netzwerk. Sie können diese Funktion ein- oder ausschalten oder nur für Dateien auf Ihrem Rechner und auf lokalen, externen Laufwerken einschalten.</p>
+  </item>
+</terms>
+</page>

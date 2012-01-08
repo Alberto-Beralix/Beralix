@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-receiving-options-novell-groupwise" xml:lang="es">
+
+  <info>
+    <desc>Opciones de recepción para cuentas Novell Groupwise.</desc>
+
+    <link type="guide" xref="mail-receiving-options#corporate-server-types"/>
+    <link type="guide" xref="mail-account-manage-novell-groupwise#receiving-email"/>
+
+    <revision pkgversion="3.0.2" version="0.3" date="2011-08-09" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Opciones de recepción para Novell Groupwise</title>
+
+<section id="receiving-email">
+<title>Recepción de correo</title>
+
+<p>On the <gui>Receiving Email</gui> page (accessible via <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Accounts</gui><gui style="button">Edit</gui><gui>Receiving Email</gui></guiseq>):</p>
+
+<list>
+<item><p>Introduzca la dirección del servidor de correo electrónico en el campo <gui>Servidor</gui> e introduzca su nombre de usuario para ese servidor.</p></item>
+<item><p>Seleccione su quiere usar una conexión segura (SSL o TLS).</p><p>Debería activar esta opción si su servidor la soporta.</p>
+<note style="tip"><p>Si está en un acontecimiento organizado puede que quiera contactar con el administrador de su sistema para obtener más información.</p></note></item>
+<item><p>Seleccione el tipo de autenticación en la lista de Autenticación o pulse <gui style="button">Comprobar tipos soportados</gui> para que Evolution compruebe qué tipos están soportados. Algunos servidores no informan de qué mecanismos de autenticación soportan esto, así que pulsar este botón no garantiza que los mecanismos disponibles actualmente funcionen.</p></item>
+<item><p>Marque si quiere que Evolution recuerde su contraseña.</p></item>
+</list>
+
+</section>
+
+<section id="receiving-options">
+<title>Opciones de recepción</title>
+
+<p>On the <gui>Receiving Options</gui> page (accessible via <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Accounts</gui><gui style="button">Edit</gui><gui>Receiving Options</gui></guiseq>):</p>
+
+<list>
+<item><p>Si quiere que Evolution compruebe automáticamente si hay correo nuevo, seleccione la opción <gui>Comprobar si hay mensajes nuevos cada ... minutos</gui> y seleccione la frecuencia en minutos.</p></item>
+<item><p>Introduzca el puerto del Agente SOAP de Oficina de correos.</p>
+<p>Si no está seguro de qué puerto es para su Agente SOAP de Oficina de Correos, contacte con su administrador de sistemas.</p></item>
+</list>
+
+</section>
+
+<section id="return-to-assistant-bottom-link">
+<!-- TODO:XINCLUDE: Maybe later replace this "go back" workaround by doing some content sharing with xinclude and xpointer in intro-first-run.page itself? <include href="foo.xml" xmlns="http://www.w3.org/2001/XInclude"/> See gnome-user-docs module for example usage. -->
+<p>Si ha llegado a esta página desde la página del asistente de primera ejecución, pulse <link xref="intro-first-run#sending">aquí</link> para continuar con el siguiente paso.</p>
+</section>
+</page>

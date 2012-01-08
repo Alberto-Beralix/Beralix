@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-behavior" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-behavior"/>
+
+    <desc>Einfacher Klick, um Dateien zu öffnen, ausführbare Textdateien ausführen oder anzeigen, Einstellungen für den Müll.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:mal="http://projectmallard.org/1.0/" its:version="1.0">
+      <its:withinTextRule withinText="no" selector="//mal:item/mal:title/mal:gui[not(preceding-sibling::node() or following-sibling::node())]"/>
+    </its:rules>
+  </info>
+
+<title>Einstellungen für das Verhalten der Dateiverwaltung</title>
+<p>Sie können festlegen, ob Sie Dateien mit einfachem oder Doppelklick öffnen, ob Ordner in einem neuen Fenster geöffnet werden, was mit ausführbaren Textdateien geschehen soll und wie mit Müll umgegangen wird. Klicken Sie dazu in einem beliebigen Fenster der Dateiverwaltung auf <guiseq><gui>Bearbeiten</gui><gui>Einstellungen</gui></guiseq> und wählen Sie den Reiter <gui>Verhalten</gui>.</p>
+
+<section id="behavior">
+<title>Verhalten</title>
+<terms>
+ <item>
+  <title><gui>Einfacher Klick zum Öffnen von Objekten</gui></title>
+  <title><gui>Doppelklick zum Öffnen von Objekten</gui></title>
+  <p>In den Standardeinstellungen werden Dateien mit einem einfachen Klick ausgewählt und mit einem Doppelklick geöffnet. Sie können stattdessen einstellen, dass Dateien und Ordner mit nur einem Klick geöffnet werden. Wenn Sie den Einfach-Klick-Modus benutzen, können Sie <key>Strg</key>-Taste während des Klickens gedrückt halten, um eine oder mehrere Dateien auszuwählen.</p>
+ </item>
+ <item>
+  <title><gui>Jeden Ordner in seinem eigenen Fenster öffnen</gui></title>
+  <p>Wenn Sie einen Ordner in der Dateiverwaltung öffnen, wird er normalerweise im selben Fenster geöffnet. Sie können aber auch auf einen Ordner mit der rechten Maustaste klicken und <gui>In neuem Fenster öffnen</gui> wählen, um jeden beliebigen Ordner in einem neuen Fenster zu öffnen. Wenn Sie das öfter tun, wählen Sie diese Einstellung, wenn Sie lieber jeden Ordner als Vorgabe in einem eigenen Fenster öffnen wollen.</p>
+ </item>
+</terms>
+
+</section>
+<section id="executable">
+<title>Ausführbare Textdateien</title>
+ <p>An executable text file is a file that contains a program that you can run (execute).  The <link xref="nautilus-file-properties-permissions#files">file permissions</link> must also allow for the file to run as a program.  The most common are Shell, Python, and Perl scripts.  These have extensions .sh, .py, and .pl respectively.</p>
+ <p>You can select to <gui>Run executable text files when they are opened</gui>, <gui>View executable text files when they are opened</gui> or <gui>Ask each time</gui>. If the last option is selected, a dialog box will appear asking if you wish to run or view the selected text file.</p>
+
+
+</section>
+<section id="trash">
+<info>
+<link type="seealso" xref="files-delete"/>
+<title type="link">Einstellungen für Müll in der Dateiverwaltung</title>
+</info>
+<title>Mülleimer</title>
+
+<terms>
+ <item>
+  <title><gui>Vor dem Leeren des Mülls oder dem Löschen von Dateien nachfragen</gui></title>
+  <p>Dies ist die Standardeinstellung. Wenn der Müll geleert werden soll, wird eine Nachricht darüber angezeigt und Sie müssen bestätigen, dass Sie den Müll leeren oder Dateien löschen wollen.</p>
+ </item>
+ <item>
+  <title><gui>Einen Löschbefehl bereitstellen, der den Müll umgeht</gui></title>
+  <p>Wenn diese Einstellung gewählt ist, wird der Menüeintrag <gui>Löschen</gui> zum <gui>Bearbeiten</gui>-Menü hinzugefügt sowie zum Menü, das auftaucht, wenn Sie mit der rechten Maustaste auf ein Objekt in der Anwendung <app>Dateien</app> klicken.</p>
+<note style="warning">
+<p>Das Löschen eines Objekts mit dem <gui>Löschen</gui>-Menüeintrag umgeht den Müll. Das Objekt wird aus dem System vollständig entfernt. Es gibt keine Möglichkeit, das gelöschte Objekt wiederherzustellen.</p>
+</note>
+ </item>
+</terms>
+</section>
+
+</page>

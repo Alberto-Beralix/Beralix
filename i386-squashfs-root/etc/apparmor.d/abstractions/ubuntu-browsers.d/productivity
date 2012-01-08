@@ -1,0 +1,25 @@
+# vim:syntax=apparmor
+
+  # Openoffice.org
+  /usr/bin/ooffice PUxr,
+  /usr/bin/oocalc PUxr,
+  /usr/bin/oodraw PUxr,
+  /usr/bin/ooimpress PUxr,
+  /usr/bin/oowriter PUxr,
+  /usr/lib/openoffice/program/soffice PUxr,
+
+  # LibreOffice
+  /usr/bin/libreoffice PUxr,
+  /usr/bin/localc PUxr,
+  /usr/bin/lodraw PUxr,
+  /usr/bin/loimpress PUxr,
+  /usr/bin/lowriter PUxr,
+  /usr/lib/libreoffice/program/soffice PUxr,
+
+  # PDFs
+  /usr/bin/evince PUxr,
+  /usr/bin/okular PUxr,
+
+  owner @{HOME}/.adobe/** rw,
+  /opt/Adobe/Reader9/bin/acroread PUxr,
+  /opt/Adobe/Reader9/** r,

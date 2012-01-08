@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="history" xml:lang="pt_BR">
+  <info>
+    <link type="guide" xref="index#play"/>
+    <desc>Acessar seu histórico pessoal de jogos</desc>
+    <revision pkgversion="2.30" version="0.1" date="2010-01-22" status="draft"/>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+  <title>Histórico pessoal de jogos</title>
+  
+  <p>
+    The <gui>Player's Game History</gui> dialog shows your performance in every 
+    game type during the last few game sessions.
+  </p>
+  
+  <section id="history-personal">
+    <title>Visualizar o histórico de jogos</title>
+    <p>
+      To access your personal game history, choose <guiseq><gui style="menu">View</gui>
+      <gui style="menuitem">Player's Game History</gui></guiseq>.
+    </p>
+  </section>
+  
+  <section id="history-change-graphic">
+    <title>Selecionar quais resultados para mostrar</title>
+    <p>
+      To select the results that will be shown in the graphic, use the different 
+      check boxes located under the graph.
+    </p>
+  </section>
+  
+  <section id="history-save-prefs">
+    <title>Mudar o número de jogos salvos</title>
+    <p>
+      <app>gbrainy</app> saves the player's scores so it can track how they evolve.
+    </p>
+    <p>
+      In order to change the number of sessions recorded or how many games will
+      be stored in the history, proceed as follows:
+    </p>
+    <steps>
+      <item>
+        <p>
+          Choose <guiseq><gui style="menu">Settings</gui><gui style="menuitem">
+          Preferences</gui></guiseq>.
+        </p>
+      </item>
+      <item>
+        <p>
+          In the <gui>Player's Game History</gui> section:
+        </p>
+        <list>
+          <item>
+            <p>
+              Use the first spin box to change how many game sessions need to
+              be recorded before you can start to see the results in the history graphic. 
+            </p>
+          </item>
+          <item>
+            <p>
+              Use the second spin box to change how many game sessions will be shown
+              in the history graphic.
+            </p>
+          </item>
+        </list>
+      </item>
+    </steps>
+  </section>
+</page>

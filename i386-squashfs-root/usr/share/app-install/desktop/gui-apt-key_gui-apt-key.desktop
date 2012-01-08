@@ -1,0 +1,17 @@
+[Desktop Entry]
+X-AppInstall-Package=gui-apt-key
+X-AppInstall-Popcon=71
+X-AppInstall-Section=universe
+
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Name=APT Key Manager
+Comment=Graphical administration tool for digital keys used with APT
+Icon=gui-apt-key
+Exec=/usr/bin/su-to-root -X -c /usr/sbin/gak
+Terminal=false
+StartupNotify=false
+Categories=Security;GTK;System;
+
+X-Ubuntu-Gettext-Domain=app-install-data

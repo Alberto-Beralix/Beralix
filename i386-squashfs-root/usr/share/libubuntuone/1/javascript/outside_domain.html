@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<title>Loading error</title>
+<link rel="stylesheet" href="reset.css" type="text/css" media="all"> 
+<link rel="stylesheet" href="screen.css" type="text/css" media="all"> 
+<script>
+function goback() {
+    // We should have been passed, to this page, the referrer and the URL they went to in error, separated by :::
+    if (location.search && location.search.indexOf(":::") != -1) {
+        var parts = location.search.substr(1).split(":::");
+        if (parts.length != 2) {
+            history.go(-1);
+        }
+        var from_url = parts[0];
+        var to_url = parts[1];
+        var combining = "&";
+        if (from_url.indexOf("?") == -1) {
+            combining = "?"
+        }
+        var go_back_url = from_url + combining + "went_to_url_in_error=" + escape(to_url);
+        location.href = go_back_url;
+    } else {
+        history.go(-1);
+    }
+}
+</script>
+</head>
+<body class="downloads">
+<div id="header">
+
+<div class="wrap">
+<h1 id="logo">Ubuntu One Music Store</h1>
+    
+</div><!-- close .wrap -->
+</div><!-- close #header -->
+    
+<div class="superfluous">
+<div id="content">
+<div class="access">
+   <h1>Sorry!</h1>
+<h2>The link you clicked is currently unsupported. 
+Please try exploring a different part of the music store.</h2>
+
+<p><button onclick="goback()"><span>Go back</span></button></p>
+</div>
+</div>
+
+</div>
+</div>
+<div id="footer">
+<div class="wrap">
+</div>
+</div>
+</body>
+</html>

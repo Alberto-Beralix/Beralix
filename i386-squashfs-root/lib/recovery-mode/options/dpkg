@@ -1,0 +1,48 @@
+#!/bin/sh
+
+. /lib/recovery-mode/l10n.sh
+
+if [ "$READONLY" = "true" ]; then
+  exit 1
+fi
+
+if [ "$1" = "test" ]; then
+  echo $(eval_gettext "Repair broken packages")
+  exit 0
+fi
+
+# do some cleanup
+rm /var/lib/apt/lists/partial/*
+rm /var/cache/apt/archives/partial/*
+
+# check and use dist-upgraders partial mode if we have it,
+# it contains a lot of useful repair code
+for v in 2.7 2.6 2.5; do
+  python="/usr/bin/python$v"
+  script_new="/usr/lib/python$v/dist-packages/DistUpgrade/dist-upgrade.py"
+  script_old="/usr/lib/python$v/site-packages/DistUpgrade/dist-upgrade.py"
+  if [ -x "$python" ]; then
+    if [ -e "$script_new" ]; then
+      script=$script_new
+    elif [ -e "$script_old" ]; then
+      script=$script_old
+    else
+      continue
+    fi
+    "$python" "$script" --partial --frontend DistUpgradeViewText \
+      --datadir /usr/share/update-manager/
+    break
+  fi
+done
+
+# now run the apt foo again (if u-m was ok that shouldn't be needed
+dpkg --configure -a
+apt-get update
+apt-get install -f
+apt-get dist-upgrade
+
+echo ""
+echo $(eval_gettext "Finished, please press ENTER")
+read TMP
+
+exit 0

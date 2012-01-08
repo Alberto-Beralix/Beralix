@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+bansheedir=${libdir}/banshee
+
+Name: Banshee WebBrowser
+Description: Embedded web browser for the Banshee Media Framework
+Version: 2.2.0
+Requires: banshee-services banshee-hyena-gui banshee-thickclient
+Libs: -r:${bansheedir}/Banshee.WebBrowser.dll
+

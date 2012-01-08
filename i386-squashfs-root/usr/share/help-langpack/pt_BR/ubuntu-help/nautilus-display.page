@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="nautilus-display" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="nautilus-prefs" group="nautilus-display"/>
+
+    <desc>Controle legendas dos ícones e o formato de data usado no gerenciador de arquivos.</desc>
+
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Preferências de exibição do gerenciador de arquivos</title>
+
+<p>Você pode controlar vários aspectos de como o gerenciador de arquivos exibe os arquivos, incluindo legendas sob ícones e como datas são formatadas. Em qualquer janela do gerenciador de arquivos, clique em <guiseq><gui>Editar</gui><gui>Preferências</gui></guiseq> e selecione a aba <gui>Exibir</gui>.</p>
+
+<section id="icon-captions">
+  <title>Legendas dos ícones</title>
+  <media type="image" src="figures/nautilus-icons.png" width="250" height="110" style="floatend floatright">
+    <p>Ícones do gerenciador de arquivos com legendas</p>
+  </media>
+  <p>Quando você usa visão de ícone, você pode escolher ter informação extra sobre arquivos e pastas exibida em uma legenda embaixo de cada ícone. Isso é útil, por exemplo, se você precisa ver com frequência quem é proprietário de um arquivo ou quando ele foi modificado pela última vez.</p>
+  <p>Conforme você amplia uma pasta (sob o menu <gui>Ver</gui>), o gerenciador de arquivos exibirá mais e mais informações nas legendas. Você pode escolher três coisas para mostrar nas legendas. A primeira será exibida na maioria dos níveis de ampliação. A última será mostrada nos tamanhos maiores.</p>
+  <p>A informação que você mostra nas legendas dos ícones é a mesma das colunas que você pode usar na visão de lista. Veja <link xref="nautilus-list"/> para mais informações.</p>
+  <note><p>Se você tem uma janela do gerenciador de arquivos aberta, você pode ter que recarregar para alterar a legenda do ícone para ter efeito. Clique em <guiseq><gui>Ver</gui><gui>Recarregar</gui></guiseq> ou pressione <keyseq><key>Ctrl</key><key>R</key></keyseq>.</p></note>
+</section>
+
+<section id="date">
+  <title>Formato da data</title>
+  <p>Acesso e datas de modificação de arquivos podem ser exibidos em legendas de ícones ou em colunas de visão de lista. Você pode escolher o formato de data que é mais fácil para você da lista suspensa <gui>Formato</gui>. Formatos disponíveis incluem um formato detalhado como você pode escrever a mão, um formato padrão internacional e um formato que usa frases relativas como <em>hoje</em> e <em>ontem</em>. A lista suspensa mostra os formatos de exemplo, mostrando a data e hora atual no formato.</p>
+</section>
+
+
+</page>

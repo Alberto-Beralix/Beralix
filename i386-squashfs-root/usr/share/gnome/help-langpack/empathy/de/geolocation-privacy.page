@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" id="geolocation-privacy" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="geolocation#geoloc"/>
+    <desc>Welche Informationen gesendet werden und an wen.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-08-19" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-09" status="deferred"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+-->
+  </info>
+
+  <title>Datenschutz bei Geoposition</title>
+
+  <section id="info-sent">
+  <title>Gesendete Informationen</title>
+  <p>Gesendet werden können: Ihr Land, Bundesland, Ort, Bereich, Straße, Gebäude, Etage und Raum sowie Ihre Postleitzahl, der Längengrad, der Breitengrad, die Höhe über dem Meeresspiegel, die Geschwindigkeit die Funkpeilung.</p>
+  <p>Die Genauigkeit und die Menge der verfügbaren Informationen über Ihre geografische Position hängen von der Software oder der Infrastruktur ab, die für die Ermittlung Ihrer Position zum Einsatz kommt.</p>
+  <p>Verschiedene Arten von Netzwerken haben unterschiedliche Genauigkeitseinstellungen und senden daher verschiedene Informationen. Die Benutzung externer Geräte wie GPS oder Mobiltelefone erhöht die Genauigkeit der gesendeten Informationen.</p>
+  <p>Wenn der Privatsphäre-Modus aktiviert ist, wird nichts Genaueres als lediglich Angaben über die Stadt gesendet, in der Sie sich befinden, selbst dann, wenn Sie ein externes Gerät verwenden.</p>
+  </section>
+  
+  <section id="see-info">
+  <title>Wer die gesendeten Informationen sehen kann</title>
+  <p>Nur Ihre Kontakte können Ihre geografische Position sehen.</p>
+  </section>
+  
+  <section id="privacy-mode">
+  <title>Datenschutzmodus</title>
+  <p>Der per Vorgabe aktivierte Privatsphäre-Modus ist ein Modus mit verminderter Genauigkeit. Die Genauigkeit der zu Ihren Kontakten gesendeten geografischen Position wird dabei verringert.</p>
+  </section>
+  
+  <section id="privacy-overview">
+  <title>Datenschutz-Überblick</title>
+  <p>Überblick über die verschiedenen Privatsphäre-Einstellungen für die Geoposition in <app>Empathy</app>.</p>
+  <list>
+    <item>
+      <p>Geoposition ist per Vorgabe nicht aktiviert.</p>
+    </item>
+    <item>
+      <p>Der Datenschutzmodus ist per Vorgabe aktiviert.</p>
+    </item>
+    <item>
+      <p>Der Privatsphäre-Modus ist auch dann wirksam, wenn externe und genauere Geräte benutzt werden.</p>
+    </item>
+    <item>
+      <p>Nur Ihre Kontakte können Ihre Position sehen.</p>
+    </item>
+  </list>
+  </section>
+
+</page>

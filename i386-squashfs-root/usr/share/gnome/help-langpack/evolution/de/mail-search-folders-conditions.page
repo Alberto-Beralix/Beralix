@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-search-folders-conditions" xml:lang="de">
+
+  <info>
+    <desc>Available conditions for setting up search folders.</desc>
+
+    <link type="seealso" xref="mail-search-folders"/>
+
+    <revision pkgversion="3.0.2" version="0.1" date="2011-08-01" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+ <credit type="author">
+   <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/usage-mail-organize-vfolders.html.en -->
+ </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+    
+  </info>
+
+  <title>Available Search folder conditions</title>
+
+<list>
+<item><p>Absender:</p>
+<p>Die E-Mail-Adresse oder der Name des Absenders.</p></item>
+
+<item><p>Empfänger:</p>
+<p>Die Empfänger der Nachricht.</p></item>
+
+<item><p>CC:</p>
+<p>Only the CC recipients of the message.</p></item>
+
+<item><p>BCC:</p>
+<p>Only the BCC recipients of the message. Obviously this can only be applied to outgoing filters.</p></item>
+
+<item><p>Absender oder Empfänger:</p>
+<p>The sender's email address or the name of the sender or the recipients of the message.</p></item>
+
+<item><p>Betreff:</p>
+<p>Die Betreffzeile der Nachricht.</p></item>
+
+<item><p>Bestimmte Kopfzeile:</p>
+<p>Any header including <link xref="mail-composer-custom-header-lines">custom ones</link>.</p>
+<p>If a message uses a header more than once, Evolution pays attention only to the first instance, even if the message defines the header differently the second time. For example, if a message declares the Resent-From: header as "engineering@example.com" and then restates it as "marketing@example.com", Evolution filters as though the second declaration did not occur. To filter on messages that use headers multiple times, use a regular expression.</p></item>
+
+<item><p>Nachrichtenrumpf:</p>
+<p>Sucht im Nachrichtentext der Nachricht.</p></item>
+
+<item><p>Ausdruck:</p>
+<p>(For programmers only) Match a message according to an expression you write in the Scheme language used to define <link xref="mail-filters">filters</link> in Evolution.</p></item>
+
+<item><p>Verschickt-Datum:</p>
+<p>Filtert Nachrichten gemäß dem Datum, an dem sie verschickt wurden. Wählen Sie zunächst die Bedingungen, die auf eine Nachricht zutreffen sollen, wie zum Beispiel vor einem bestimmten Zeitpunkt oder nach einem bestimmten Zeitpunkt. Wählen Sie dann den Zeitpunkt aus. Der Filter vergleicht den Zeitstempel der Nachricht mit der Systemzeit wenn der Filter angewendet wird, oder mit einem von Ihnen vorgegebenen Zeitpunkt. Es kann auch nach einem relativen Zeitpunkt gefiltert werden, also zum Beispiel zwei oder vier Tage zuvor.</p></item>
+
+<item><p>Empfangsdatum:</p>
+<p>Dies funktioniert genau so wie das Filtern gemäß dem Verschickt-Datum, nur dass hierbei der Zeitpunkt verglichen wird, an dem Sie die Nachricht erhalten haben.</p></item>
+
+<item><p>Beschriftung:</p>
+<p>Nachrichten können <link xref="mail-labels">Beschriftungen</link> wie Wichtig, Geschäftlich, Persönlich, Zu erledigen oder Später haben. Sie können Beschriftungen durch Filter oder per Hand anwenden.</p></item>
+
+<item><p>Bewertung:</p>
+<p>Setzt die Bewertung der Nachricht auf einen ganzzahligen Wert der größer als 0 ist. Sie können einen Filter haben, der die Bewertung setzt, und einen weiteren Filter, der auf der Bewertung basierend die Nachrichten in Ordner verschiebt. Eine Bewertung basiert auf keinen speziellen Eigenschaften, es handelt sich nur um eine Nummer, die Sie Nachrichten zuweisen können, damit andere Filter diese weiterverarbeiten können.</p></item>
+
+<item><p>Größe (kB):</p>
+<p>Sortiert gemäß der Größe der Nachricht in Kilobyte.</p></item>
+
+<item><p>Status:</p>
+<p>Filtert gemäß dem Status einer Nachricht, der Beantwortet, Entwurf, Wichtig, Gelesen, oder Unerwünscht sein kann.</p></item>
+
+<item><p>Folgenachricht-Markierung</p>
+<p>Checks whether the message is <link xref="mail-follow-up-flag">flagged for follow-up</link>.</p></item>
+
+<item><p>Abgeschlossen am:</p></item>
+<!-- TODO: Explain usage of this option. -->
+
+<item><p>Anlagen:</p>
+<p>Filtert je nachdem, ob eine Nachricht einen Anhang besitzt.</p></item>
+
+<item><p>Mailingliste</p>
+<p>Filtert basierend auf der Mailingliste, von welcher die Nachricht stammt. Dieser Filter prüft auf die X-BeenThere-Kopfzeile von Nachrichten, welche genutzt wird, um Mailinglisten zu kennzeichnen. E-Mails die von List-Servern stammen, die diese Kopfzeile nicht korrekt benutzen, werden von diesem Filter nicht erkannt.</p></item>
+
+<item><p>Regex-Treffer:</p>
+<p>(For programmers only) If you know your way around a <link href="https://secure.wikimedia.org/wikipedia/en/wiki/Regular_expression">regex</link>, or regular expression, this option allows you to search for complex patterns of letters, so that you can find, for example, all words that start with a and end with m, and are between six and fifteen letters long, or all messages that declare a particular header twice. For information about how to use regular expressions, check the man page for the grep command.</p></item>
+
+<item><p>Nachrichtenort:</p></item>
+<!-- TODO: Explain usage of this option. -->
+
+<item><p>Auf alles zutreffen:</p></item>
+<!-- TODO: Explain usage of this option. -->
+</list>
+</page>

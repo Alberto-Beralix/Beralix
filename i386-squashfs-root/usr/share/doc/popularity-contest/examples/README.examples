@@ -1,0 +1,33 @@
+
+This directory contains some scripts used to post-process popularity-contest
+entries.  You should have a lot of submissions from different users (at
+least 100 of them, if possible) for these results to be valid.
+
+To collect results, use procmail or some other mail alias to e-mail
+submissions to a file called, say, new-popcon-entries.
+
+You should run popcon-process.sh once a day, or so.  It calls prepop.pl to
+split the mailbox file into a directory (popcon-entries) with one file per
+submission, and only one submission per participant.  (Since each
+participant makes a submission only once per day, it's very important to
+remove duplicates.)
+
+HINT: if you have an account on popcon.debian.org, you can find a pre-processed
+popcon-entries directory in /org/popcon.debian.org/popcon-mail.  Feel free to
+use these files to generate your own statistics.
+
+Now you can do, for example:
+
+	cat popcon-entries/*/* | popanal.py
+	
+which creates a file named results.  Output lines look like this:
+
+   <name> <vote> <old> <recent-ctime> <no-files>
+   
+<name> is the package name;
+<vote> is the number of people who use this package regularly;
+<old> is the number of people who installed, but don't use this package
+	regularly;
+<recent-ctime> is the number of people who upgraded this package recently;
+<no-files> is the number of people whose entry didn't contain enough
+	information (atime and ctime were 0).

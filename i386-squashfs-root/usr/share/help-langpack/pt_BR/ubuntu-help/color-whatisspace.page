@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-whatisspace" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="color#profiles"/>
+    <link type="seealso" xref="color-whatisprofile"/>
+    <desc>Um espaço de cor  é um intervalo definido de cores.</desc>
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>O que é um espaço de cor?</title>
+
+  <p>Um espaço de cor é um intervalo definido de cores. Espaços de cor conhecidos incluem sRGB, AdobeRGB e ProPhotoRGB.</p>
+
+  <p>O sistema de visão humana não é um simples sensor RGB, mas nós podemos ter uma noção próxima de como o olho responde com um diagrama de cromaticidade CIE 1931, que mostra a resposta visual humana como a forma uma ferradura. Você pode perceber que a visão humana detecta muito mais tons de verde que de azul ou de vermelho. Com um espaço de cor tricromático, como o RGB, nós representamos as cores no computador usando três valores, que restringem a codificação a um <em>triângulo</em> de cores.</p>
+
+  <note>
+    <p>Usar modelos como um diagrama de cromaticidade CIE 1931 é uma enorme simplificação do sistema de visão humana, e gamas reais são expressadas como profundidade tridimensional em vez de projeções bidimensionais. Uma projeção bidimensional de uma forma tridimensional pode ser enganosa às vezes, então se você quer ver a profundidade tridimensional, use o aplicativo <code>gcm-viewer</code>.</p>
+  </note>
+
+  <figure>
+    <desc>sRGB, AdobeRGB e ProPhotoRGB representados por triângulos brancos</desc>
+    <media type="image" mime="image/png" src="figures/color-space.png"/>
+  </figure>
+
+  <p>Primeiro, olhando o sRGB, que é o menor espaço e pode codificar o menor número de cores. Ele é uma aproximação de um velho monitor CRT, então a maioria dos monitores modernos podem facilmente exibir mais cores que isto. O sRGB é um padrão de <em>menor denominador comum</em> e é utilizado em um grande número de aplicativos (inclusive na Internet).</p>
+  <p>O AdobeRGB é frequentemente usado como um <em>espaço de edição</em>. Ele pode codificar mais cores que o sRGB, o que significa que você pode ajustar as cores numa fotografia sem se preocupar muito se as cores mais brilhantes serão cortadas no limite superior ou as cores escuras achatadas no limite inferior.</p>
+  <p>ProPhoto é o maior espaço de cores disponível e é frequentemente usado para arquivamento de documentos. Ele pode codificar aproximadamente o intervalo de cores detectado pelo olho humano, e até mesmo codificar cores que o olho não pode detectar!</p>
+
+  <p>Agora, se ProPhoto é claramente melhor, por que não usá-lo para tudo? A resposta tem a ver com <em>quantização</em>. Se você só tem 8 bits (256 níveis) para codificar cada canal, um intervalo maior vai ter passos maiores entre cada valor.</p>
+  <p>Passos maiores significam maior erro entre a cor capturada e a cor armazenada, e para algumas cores isso é um grande problema. Acontece que as cores-chave, como cores de pele, são muito importantes e até mesmo pequenos erros farão com que espectadores destreinados percebam que algo parece errado em uma fotografia.</p>
+  <p>É claro, usar uma imagem de 16 bits vai deixa-la com muito mais passos e com um erro de quantização muito menor, mas isso dobra o tamanho de cada arquivo de imagem. A maior parte do conteúdo que existente hoje é 8bpp, ou seja, 8 bits por pixel.</p>
+  <p>O gerenciamento de cores é um processo para a conversão de um espaço de cor para outro, onde um espaço de cor pode ser um espaço bem conhecido e definido como o sRGB, ou um espaço personalizado, como o perfil do monitor ou da impressora.</p>
+
+</page>

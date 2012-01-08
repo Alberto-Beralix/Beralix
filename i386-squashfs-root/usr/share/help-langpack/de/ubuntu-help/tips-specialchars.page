@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="tips-specialchars" xml:lang="de">
+  <info>
+    <link type="guide" xref="tips"/>
+    <link type="seealso" xref="keyboard-layouts"/>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+
+    <desc>Geben Sie Zeichen ein, die nicht auf Ihrer Tastatur verfügbar sind, beispielsweise fremede Alphabete, mathematische Zeichen, Symbole und Piktogramme.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Sonderzeichen eingeben</title>
+
+  <comment>
+    <cite date="2011-04-04">shaunm</cite>
+    <p>Marking complete for 3.0. We didn't get keyboard-inputmethods in.
+    If we get it for 3.0.1, uncomment the last section, write something,
+    and link.</p>
+  </comment>
+
+  <p>Sie können Tausende von Zeichen aus den meisten Schriftsystemen der Welt eingeben und betrachten, auch wenn diese auf Ihrer Tastatur nicht verfügbar sind. In diesem Abschnitt finden Sie einige Wege, wie Sie spezielle Zeichen eingeben können.</p>
+
+  <links type="section">
+    <title>Methoden zum Eingeben von Zeichen</title>
+  </links>
+
+  <section id="charmap">
+    <title>Zeichentabelle</title>
+    <p>GNOME liefert eine Zeichentabelle, die Ihnen das Durchsuchen aller Unicode-Zeichen ermöglicht. Verwenden Sie diese Zeichentabelle, um die gewünschten Zeichen zu finden, und fügen Sie sie anschließend ein, wo immer Sie wollen.</p>
+    <p>Sie finden die <app>Zeichentabelle</app> im <gui>Dash</gui>. Für mehr Informationen, lesen Sie das <link href="ghelp:gucharmap">Handbuch</link>.</p>
+  </section>
+
+  <section id="compose">
+    <title>PCompose-Taste</title>
+    <p>Eine Compose-Taste ist eine spezielle Taste, die Ihnen das Drücken mehrerer Tasten auf einmal ermöglicht, um ein spezielles Zeichen zu erzeugen. Um beispielsweise den akzentuierten Buchstaben <em>é</em> einzugeben, drücken Sie die <key>Compose-Taste</key>, dann <key>'</key> und dann <key>e</key>.</p>
+    <p>Tastaturen haben keine festen Compose-Tasten. Stattdessen können Sie eine der vorhandenen Tasten Ihrer Tastatur als Compose-Taste festlegen.</p>
+    <steps>
+      <title>Eine Compose-Taste festlegen</title>
+      <item><p>Klicken Sie auf das Symbol ganz rechts im <gui>Panel</gui> und wählen Sie <gui>Systemeinstellungen</gui>.</p></item>
+      <item><p>Klicken Sie auf <gui>Region und Sprache</gui>.</p></item>
+      <item><p>Wählen Sie den Reiter <gui>Layouts</gui> und klicken Sie auf <gui>Optionen</gui>.</p></item>
+      <item><p>Suchen Sie nach der Gruppe <gui>Position der Compose-Taste</gui>. Wählen Sie die Taste oder die Tasten aus, die Sie als Compose-Taste verwenden wollen. Sie können Tasten wie die <key>Feststelltaste</key>, eine der <key>Alt</key>-Tasten oder die Menütaste verwenden. Allerdings werden dann alle von Ihnen ausgewählten Tasten nur noch als Compose-Tasten verwendbar sein und nicht mehr für ihren eigentlichen Zweck.</p></item>
+    </steps>
+    <p>Sie können viele häufig vorkommende Zeichen mit der Compose-Taste eingeben, zum Beispiel:</p>
+    <list>
+      <item><p>Drücken Sie die <key>Compose-Taste</key>, dann <key>'</key> und dann den Buchstaben, über den Sie ein Acute-Akzentzeichen setzen wollen, zum Beispiel <em>é</em>.</p></item>
+      <item><p>Drücken Sie die <key>Compose-Taste</key>, dann <key>`</key> und dann den Buchstaben, über den Sie ein Grave-Akzentzeichen setzen wollen, zum Beispiel <em>è</em>.</p></item>
+      <item><p>Drücken Sie die <key>Compose-Taste</key>, dann <key>"</key> und dann den Buchstaben, über den Sie Umlautpunkte setzen wollen, zum Beispiel <em>ë</em>.</p></item>
+      <item><p>Drücken Sie die <key>Compose-Taste</key>, dann <key>-</key> und dann den Buchstaben, über den Sie ein Makron setzen wollen, zum Beispiel <em>ē</em>.</p></item>
+    </list>
+    <p>Weitere Tastaturfolgen für die Nutzung der Compose-Taste finden Sie auf der <link href="http://de.wikipedia.org/wiki/Compose-Taste">entsprechenden Seite in Wikipedia</link>.</p>
+  </section>
+
+  <section id="ctrlshiftu">
+    <title>Ersetzungscodes</title>
+    <p>Sie können jedes Unicode-Zeichen ausschließlich über die Tastatur mit dem numerischen Ersetzungscode des Zeichens eingegeben werden. Jedes Zeichen wird über einen vierstelligen Code definiert. Um den Code für Ihr gewünschtes Zeichen zu suchen, suchen Sie nach dem Zeichen in der Zeichentabelle und schauen Sie in der Statuszeile nach den <gui>Zeichendetails</gui>. Der Code besteht aus vier Zeichen nach <gui>U+</gui>.</p>
+
+    <p>Um ein Zeichen über dessen Ersetzungscode einzugeben, halten Sie die <key>Strg</key>- und <key>Umschalttaste</key> gedrückt, geben Sie <key>u</key> gefolgt von dem vierstelligen Ersetzungscode ein und lassen Sie dann die <key>Strg</key>- und <key>Umschalttaste</key> los. Falls Sie oft Zeichen verwenden, die Sie nicht leichter über andere Wege erreichen können, dann sollten Sie sich den entsprechenden Ersetzungscode merken, so dass Sie ihn schneller eingeben können.</p>
+  </section>
+
+  <section id="layout">
+    <title>Tastaturbelegungen</title>
+    <p>Sie können Ihre Tastatur so einstellen, dass Sie sich wie eine Tastatur für eine andere Sprache verhält, ungeachtet der auf den Tasten abgebildeten Buchstaben. Sie können sogar mittels eines Symbols im oberen Panel einfach zwischen verschiedenen Tastaturbelegungen wechseln. In <link xref="keyboard-layouts"/> finden Sie weitere Informationen darüber.</p>
+  </section>
+
+<!--
+  <section id="im">
+    <title>Input methods</title>
+    <p>XXXXX: write input methods page, link</p>
+  </section>
+-->
+
+</page>

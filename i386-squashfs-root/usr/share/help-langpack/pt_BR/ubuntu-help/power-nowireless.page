@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="power-nowireless" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="power#problems"/>
+    <link type="guide" xref="net-problem"/>
+    <link type="seealso" xref="power-suspendfail"/>
+    
+    <desc>Alguns dispositivos sem fio têm problemas quando o computador é suspenso e não acorda adequadamente.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Eu não tenho rede sem fio quando eu acordo meu computador</title>
+
+<p>Se você colocou seu computador para dormir (suspender) ou hibernar, talvez você perceba que sua conexão de internet sem fio parou de funcionar quando o computador acordou. Isso acontece quando os <link xref="hardware-driver">drivers</link> do dispositivo sem fio não suportam completamente certos recursos de economia de energia. Tipicamente, a conexão sem fio falha em ligar corretamente assim que o computador acorda.</p>
+
+<p>Se isso acontecer, experimente desligar sua conexão sem fio e ligá-la novamente. Se você tiver um interruptor para a placa de rede, desligue-a e ligue-a novamente para ver se funciona. Alguns laptops possuem um atalho de teclado que pode seu usado para ligar e desligar a placa. Seu ícone frequentemente parece com ondas de rádio. Você também pode tentar clicar no ícone de rede no painel, desmarcar <gui>Habilitar rede sem-fio</gui>, aguardar alguns segundos e remarcar a opção.</p>
+
+<p>Se isso não funcionar, reinicializar seu computador deverá fazer a rede sem fio funcionar novamente.</p>
+
+</page>

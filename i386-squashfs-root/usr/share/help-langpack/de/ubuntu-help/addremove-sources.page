@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="addremove-sources" xml:lang="de">
+  <info>
+    <link type="guide" xref="addremove"/>
+
+    <revision version="11.04" date="2011-04-21" status="final"/>
+
+    <credit type="author">
+      <name>Ubuntu-Dokumentationsteam</name>
+    </credit>
+
+    <desc>Weitere Paketquellen hinzufügen, um die Ubuntu-Paketquellen für Installationen und Aktualisierungen zu erweitern.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Zusätzliche Paketquellen hinzufügen</title>
+  <p>Software ist sowohl aus Drittquellen als auch den normalen Ubuntu Paketquellen verfügbar. Wenn Sie Software von Drittquellen installieren möchten, müssen Sie diese Paketquellen zunächst zu Ubuntu hinzufügen.</p>
+  <note style="warning"><p>Fügen Sie nur Paketquellen hinzu, wenn Sie deren Quellen vertrauen. Paketquellen von Drittanbietern werden von Ubuntu-Mitgliedern nicht auf Vertrauenswürdigkeit geprüft und können Anwendungen enthalten, die schädlich für Ihren Rechner sind.</p></note>
+
+    <steps>
+        <title>Andere Paketquellen installieren</title>
+        <item><p>Klicken Sie auf das <app>Ubuntu Software Center</app> im Launcher, oder Suchen SIe in der Suchleiste der <app>Dash</app> danach.</p></item>
+        <item><p>Klicken Sie im Menü des Software-Centers auf <guiseq><gui>Bearbeiten</gui><gui>Software-Paketquellen …</gui></guiseq></p></item>
+        <item><p>Sie werden aufgefordert, Ihr Passwort einzugeben. Nachdem Sie das getan haben, wählen Sie den Reiter <gui>Andere Software</gui>.</p></item>
+        <item><p>Klicken Sie auf <gui>Hinzufügen</gui> und geben Sie die APT-Zeile der Quelle ein. Diese sollte auf der Webseite der Paketquelle verfügbar sein und ungefähr folgendermaßen ausschauen:</p>
+        <p><code>deb http://archive.ubuntu.com/ubuntu/ maverick main</code></p></item>
+        <item><p>Klicken Sie auf <gui>Software-Paketquelle hinzufügen</gui> und schließen die das Fenster. Das Ubuntu Software-Center wird nun Ihre Paketquellen auf Aktualisierungen überprüfen.</p></item>
+    </steps>
+
+  <section id="canonical-partner">
+    <title>Die Paketquelle von Canonical-Partnern aktivieren</title>
+    <p>Die Paketquelle der Partner von Canonical stellen einige proprietäre Anwendungen bereit, die zwar kostenlos, aber nicht quelloffen sind. Sie beinhalten Programme wie <app>Skype</app>, den <app>Adobe Reader</app> und das <app>Adobe Flash-Plugin</app>. Die Anwendungen werden in den Suchergebnissen des Ubuntu Software-Centers erscheinen, aber bis zur Aktivierung der Paketquelle nicht installierbar sein.</p>
+    <p>To enable the repository, follow the steps above to open the <gui>Other Software</gui>
+tab in <app>Software Sources</app>. If you see the <gui>Canonical Partners</gui> repository in
+the list, make sure it is checked then close the Software Sources window. If you don't see it,
+click <gui>Add</gui> and enter:</p>
+    <p><code>deb http://archive.canonical.com/ubuntu natty partner</code></p>
+   <p>Click <gui>Add Source</gui> then close the Software Sources window. Wait a moment for
+Ubuntu Software Center to download the repository information.</p>
+  </section>
+
+</page>

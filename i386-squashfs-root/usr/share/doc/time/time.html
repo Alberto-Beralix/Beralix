@@ -1,0 +1,902 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on October 22, 2010 by texi2html 1.82
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+-->
+<head>
+<title>Measuring Program Resource Use</title>
+
+<meta name="description" content="Measuring Program Resource Use">
+<meta name="keywords" content="Measuring Program Resource Use">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.82">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.roman {font-family:serif; font-weight:normal;}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="Top"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="settitle">Measuring Program Resource Use</h1>
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#Resource-Measurement">1. Measuring Program Resource Use</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  Measuring program resource use.
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+ &mdash; The Detailed Node Listing &mdash;
+
+Measuring Program Resource Use
+
+</pre></th></tr><tr><td align="left" valign="top"><a href="#Setting-Format">1.1 Setting the Output Format</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">      Selecting the information reported by <code>time</code>.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Format-String">1.2 The Format String</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	The information <code>time</code> can report.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Redirecting">1.3 Redirecting Output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">         Writing the information to a file.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Examples">1.4 Examples</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">		Examples of using <code>time</code>.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Accuracy">1.5 Accuracy</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">		Limitations on the accuracy of <code>time</code> output.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Invoking-time">1.6 Running the <code>time</code> Command</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	Summary of the options to the <code>time</code> command.
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+The Format String
+
+</pre></th></tr><tr><td align="left" valign="top"><a href="#Time-Resources">1.2.1 Time Resources</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Memory-Resources">1.2.2 Memory Resources</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#I_002fO-Resources">1.2.3 I/O Resources</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Command-Info">1.2.4 Command Info</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="1">
+<a name="Resource-Measurement"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Top" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Setting-Format" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[ &lt;&lt; ]</td>
+<td valign="middle" align="left">[<a href="#Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Measuring-Program-Resource-Use"></a>
+<h1 class="chapter">1. Measuring Program Resource Use</h1>
+<a name="index-time"></a>
+<a name="index-time-1"></a>
+<a name="index-time-2"></a>
+<a name="index-measurement"></a>
+
+<p>The <code>time</code> command runs another program, then displays information
+about the resources used by that program, collected by the system while
+the program was running.  You can select which information is reported
+and the format in which it is shown (see section <a href="#Setting-Format">Setting the Output Format</a>), or have
+<code>time</code> save the information in a file instead of displaying it on the
+screen (see section <a href="#Redirecting">Redirecting Output</a>).
+</p>
+<p>The resources that <code>time</code> can report on fall into the general
+categories of time, memory, and I/O and IPC calls.  Some systems do not
+provide much information about program resource use; <code>time</code>
+reports unavailable information as zero values (see section <a href="#Accuracy">Accuracy</a>).
+</p>
+<p>The format of the <code>time</code> command is:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">time <span class="roman">[</span>option&hellip;<span class="roman">]</span> <var>command</var> <span class="roman">[</span><var>arg</var>&hellip;<span class="roman">]</span>
+</pre></td></tr></table>
+
+<a name="index-resources"></a>
+<p><code>time</code> runs the program <var>command</var>, with any given arguments
+<var>arg</var>&hellip;.  When <var>command</var> finishes, <code>time</code> displays
+information about resources used by <var>command</var>.
+</p>
+<p>Here is an example of using <code>time</code> to measure the time and other
+resources used by running the program <code>grep</code>:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">eg$ time grep nobody /etc/aliases
+nobody:/dev/null
+etc-files:nobody
+misc-group:nobody
+0.07user 0.50system 0:06.69elapsed 8%CPU (0avgtext+489avgdata 324maxresident)k
+46inputs+7outputs (43major+251minor)pagefaults 0swaps
+</pre></td></tr></table>
+
+<p>Mail suggestions and bug reports for GNU <code>time</code> to
+<code>bug-gnu-utils@prep.ai.mit.edu</code>.  Please include the version of
+<code>time</code>, which you can get by running &lsquo;<samp>time --version</samp>&rsquo;, and the
+operating system and C compiler you used.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#Setting-Format">1.1 Setting the Output Format</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">      Selecting the information reported by <code>time</code>.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Format-String">1.2 The Format String</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	The information <code>time</code> can report.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Redirecting">1.3 Redirecting Output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">         Writing the information to a file.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Examples">1.4 Examples</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">		Examples of using <code>time</code>.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Accuracy">1.5 Accuracy</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">		Limitations on the accuracy of <code>time</code> output.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Invoking-time">1.6 Running the <code>time</code> Command</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	Summary of the options to the <code>time</code> command.
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Setting-Format"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Resource-Measurement" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Format-String" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Setting-the-Output-Format"></a>
+<h2 class="section">1.1 Setting the Output Format</h2>
+
+<p><code>time</code> uses a <em>format string</em> to determine which information to
+display about the resources used by the command it runs.  See section <a href="#Format-String">The Format String</a>, for the interpretation of the format string contents.
+</p>
+<p>You can specify a format string with the command line options listed
+below.  If no format is specified on the command line, but the
+<code>TIME</code> environment variable is set, its value is used as the format
+string.  Otherwise, the default format built into <code>time</code> is used:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">%Uuser %Ssystem %Eelapsed %PCPU (%Xtext+%Ddata %Mmax)k
+%Iinputs+%Ooutputs (%Fmajor+%Rminor)pagefaults %Wswaps
+</pre></td></tr></table>
+
+<p>The command line options to set the format are:
+</p>
+<dl compact="compact">
+<dt> <code>-f <var>format</var></code></dt>
+<dt> <code>--format=<var>format</var></code></dt>
+<dd><p>Use <var>format</var> as the format string.
+</p>
+</dd>
+<dt> <code>-p</code></dt>
+<dt> <code>--portability</code></dt>
+<dd><p>Use the following format string, for conformance with POSIX standard
+1003.2:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">real %e
+user %U
+sys %S
+</pre></td></tr></table>
+
+</dd>
+<dt> <code>-q</code></dt>
+<dt> <code>--quiet</code></dt>
+<dd><p>Suppress non-zero error code from the executed program.
+</p>
+</dd>
+<dt> <code>-v</code></dt>
+<dt> <code>--verbose</code></dt>
+<dd><a name="index-format"></a>
+<p>Use the built-in verbose format, which displays each available piece of
+information on the program&rsquo;s resource use on its own line, with an
+English description of its meaning.
+</p></dd>
+</dl>
+
+<hr size="6">
+<a name="Format-String"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Setting-Format" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Time-Resources" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="The-Format-String"></a>
+<h2 class="section">1.2 The Format String</h2>
+
+<a name="index-format-1"></a>
+<a name="index-resource"></a>
+<p>The <em>format string</em> controls the contents of the <code>time</code> output.
+It consists of <em>resource specifiers</em> and <em>escapes</em>, interspersed
+with plain text.
+</p>
+<p>A backslash introduces an <em>escape</em>, which is translated
+into a single printing character upon output.  The valid escapes are
+listed below.  An invalid escape is output as a question mark followed
+by a backslash.
+</p>
+<dl compact="compact">
+<dt> <code>\t</code></dt>
+<dd><p>a tab character
+</p>
+</dd>
+<dt> <code>\n</code></dt>
+<dd><p>a newline
+</p>
+</dd>
+<dt> <code>\\</code></dt>
+<dd><p>a literal backslash
+</p></dd>
+</dl>
+
+<p><code>time</code> always prints a newline after printing the resource use
+information, so normally format strings do not end with a newline
+character (or &lsquo;<samp>\n</samp>&rsquo;).
+</p>
+<p>A resource specifier consists of a percent sign followed by another
+character.  An invalid resource specifier is output as a question mark
+followed by the invalid character.  Use &lsquo;<samp>%%</samp>&rsquo; to output a literal
+percent sign.
+</p>
+<p>The resource specifiers, which are a superset of those recognized by the
+<code>tcsh</code> builtin <code>time</code> command, are listed below.  Not all
+resources are measured by all versions of Unix, so some of the values
+might be reported as zero (see section <a href="#Accuracy">Accuracy</a>).
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#Time-Resources">1.2.1 Time Resources</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Memory-Resources">1.2.2 Memory Resources</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#I_002fO-Resources">1.2.3 I/O Resources</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Command-Info">1.2.4 Command Info</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Time-Resources"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Format-String" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Memory-Resources" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Format-String" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Time-Resources-1"></a>
+<h3 class="subsection">1.2.1 Time Resources</h3>
+
+<dl compact="compact">
+<dt> <code>E</code></dt>
+<dd><p>Elapsed real (wall clock) time used by the process, in
+[hours:]minutes:seconds.
+</p>
+</dd>
+<dt> <code>e</code></dt>
+<dd><p>Elapsed real (wall clock) time used by the process, in
+seconds.
+</p>
+</dd>
+<dt> <code>S</code></dt>
+<dd><p>Total number of CPU-seconds used by the system on behalf of the process
+(in kernel mode), in seconds.
+</p>
+</dd>
+<dt> <code>U</code></dt>
+<dd><p>Total number of CPU-seconds that the process used directly (in user
+mode), in seconds.
+</p>
+</dd>
+<dt> <code>P</code></dt>
+<dd><p>Percentage of the CPU that this job got.  This is just user + system
+times divied by the total running time.
+</p></dd>
+</dl>
+
+<hr size="6">
+<a name="Memory-Resources"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Time-Resources" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#I_002fO-Resources" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Format-String" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Memory-Resources-1"></a>
+<h3 class="subsection">1.2.2 Memory Resources</h3>
+
+<dl compact="compact">
+<dt> <code>M</code></dt>
+<dd><p>Maximum resident set size of the process during its lifetime, in
+Kilobytes.
+</p>
+</dd>
+<dt> <code>t</code></dt>
+<dd><p>Average resident set size of the process, in Kilobytes.
+</p>
+</dd>
+<dt> <code>K</code></dt>
+<dd><p>Average total (data+stack+text) memory use of the process, in Kilobytes.
+</p>
+</dd>
+<dt> <code>D</code></dt>
+<dd><p>Average size of the process&rsquo;s unshared data area, in Kilobytes.
+</p>
+</dd>
+<dt> <code>p</code></dt>
+<dd><p>Average size of the process&rsquo;s unshared stack, in Kilobytes.
+</p>
+</dd>
+<dt> <code>X</code></dt>
+<dd><p>Average size of the process&rsquo;s shared text, in Kilobytes.
+</p>
+</dd>
+<dt> <code>Z</code></dt>
+<dd><p>System&rsquo;s page size, in bytes.  This is a per-system constant, but
+varies between systems.
+</p></dd>
+</dl>
+
+<hr size="6">
+<a name="I_002fO-Resources"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Memory-Resources" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Command-Info" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Format-String" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="I_002fO-Resources-1"></a>
+<h3 class="subsection">1.2.3 I/O Resources</h3>
+
+<dl compact="compact">
+<dt> <code>F</code></dt>
+<dd><p>Number of major, or I/O-requiring, page faults that occurred while the
+process was running.  These are faults where the page has actually
+migrated out of primary memory.
+</p>
+</dd>
+<dt> <code>R</code></dt>
+<dd><p>Number of minor, or recoverable, page faults.  These are pages that are
+not valid (so they fault) but which have not yet been claimed by other
+virtual pages.  Thus the data in the page is still valid but the system
+tables must be updated.
+</p>
+</dd>
+<dt> <code>W</code></dt>
+<dd><p>Number of times the process was swapped out of main memory.
+</p>
+</dd>
+<dt> <code>c</code></dt>
+<dd><p>Number of times the process was context-switched involuntarily (because
+the time slice expired).
+</p>
+</dd>
+<dt> <code>w</code></dt>
+<dd><p>Number of times that the program was context-switched voluntarily, for
+instance while waiting for an I/O operation to complete.
+</p>
+</dd>
+<dt> <code>I</code></dt>
+<dd><p>Number of file system inputs by the process.
+</p>
+</dd>
+<dt> <code>O</code></dt>
+<dd><p>Number of file system outputs by the process.
+</p>
+</dd>
+<dt> <code>r</code></dt>
+<dd><p>Number of socket messages received by the process.
+</p>
+</dd>
+<dt> <code>s</code></dt>
+<dd><p>Number of socket messages sent by the process.
+</p>
+</dd>
+<dt> <code>k</code></dt>
+<dd><p>Number of signals delivered to the process.
+</p></dd>
+</dl>
+
+<hr size="6">
+<a name="Command-Info"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#I_002fO-Resources" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Redirecting" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Format-String" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Command-Info-1"></a>
+<h3 class="subsection">1.2.4 Command Info</h3>
+
+<dl compact="compact">
+<dt> <code>C</code></dt>
+<dd><p>Name and command line arguments of the command being timed.
+</p>
+</dd>
+<dt> <code>x</code></dt>
+<dd><p>Exit status of the command.
+</p></dd>
+</dl>
+
+<hr size="6">
+<a name="Redirecting"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Command-Info" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Examples" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Redirecting-Output"></a>
+<h2 class="section">1.3 Redirecting Output</h2>
+
+<p>By default, <code>time</code> writes the resource use statistics to the
+standard error stream.  The options below make it write the statistics
+to a file instead.  Doing this can be useful if the program you&rsquo;re
+running writes to the standard error or you&rsquo;re running <code>time</code>
+noninteractively or in the background.
+</p>
+<dl compact="compact">
+<dt> <code>-o <var>file</var></code></dt>
+<dt> <code>--output=<var>file</var></code></dt>
+<dd><p>Write the resource use statistics to <var>file</var>.  By default, this
+<em>overwrites</em> the file, destroying the file&rsquo;s previous contents.
+</p>
+</dd>
+<dt> <code>-a</code></dt>
+<dt> <code>--append</code></dt>
+<dd><p><em>Append</em> the resource use information to the output file instead
+of overwriting it.  This option is only useful with the &lsquo;<samp>-o</samp>&rsquo; or
+&lsquo;<samp>--output</samp>&rsquo; option.
+</p></dd>
+</dl>
+
+<hr size="6">
+<a name="Examples"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Redirecting" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Accuracy" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Examples-1"></a>
+<h2 class="section">1.4 Examples</h2>
+
+<p>Run the command &lsquo;<samp>wc /etc/hosts</samp>&rsquo; and show the default information:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">eg$ time wc /etc/hosts
+      35     111    1134 /etc/hosts
+0.00user 0.01system 0:00.04elapsed 25%CPU (0avgtext+0avgdata 0maxresident)k
+1inputs+1outputs (0major+0minor)pagefaults 0swaps
+</pre></td></tr></table>
+
+<p>Run the command &lsquo;<samp>ls -Fs</samp>&rsquo; and show just the user, system, and
+wall-clock time:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">eg$ time -f &quot;\t%E real,\t%U user,\t%S sys&quot; ls -Fs
+total 16
+1 account/      1 db/           1 mail/         1 run/
+1 backups/      1 emacs/        1 msgs/         1 rwho/
+1 crash/        1 games/        1 preserve/     1 spool/
+1 cron/         1 log/          1 quotas/       1 tmp/
+        0:00.03 real,   0.00 user,      0.01 sys
+</pre></td></tr></table>
+
+<p>Edit the file &lsquo;<tt>.bashrc</tt>&rsquo; and have <code>time</code> append the elapsed time
+and number of signals to the file &lsquo;<tt>log</tt>&rsquo;, reading the format string
+from the environment variable <code>TIME</code>:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">eg$ export TIME=&quot;\t%E,\t%k&quot; #<span class="roman"> If using bash or ksh</span>
+eg$ setenv TIME &quot;\t%E,\t%k&quot; #<span class="roman"> If using csh or tcsh</span>
+eg$ time -a -o log emacs .bashrc
+eg$ cat log
+        0:16.55,        726
+</pre></td></tr></table>
+
+<p>Run the command &lsquo;<samp>sleep 4</samp>&rsquo; and show all of the information about it
+verbosely:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">eg$ time -v sleep 4
+        Command being timed: &quot;sleep 4&quot;
+        User time (seconds): 0.00
+        System time (seconds): 0.05
+        Percent of CPU this job got: 1%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.26
+        Average shared text size (kbytes): 36
+        Average unshared data size (kbytes): 24
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 60
+        Maximum resident set size (kbytes): 32
+        Average resident set size (kbytes): 24
+        Major (requiring I/O) page faults: 3
+        Minor (reclaiming a frame) page faults: 0
+        Voluntary context switches: 11
+        Involuntary context switches: 0
+        Swaps: 0
+        File system inputs: 3
+        File system outputs: 1
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 1
+        Page size (bytes): 4096
+        Exit status: 0
+</pre></td></tr></table>
+
+<hr size="6">
+<a name="Accuracy"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Examples" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Invoking-time" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Accuracy-1"></a>
+<h2 class="section">1.5 Accuracy</h2>
+<a name="index-error-_0028in-measurement_0029"></a>
+
+<p>The elapsed time is not collected atomically with the execution of the
+program; as a result, in bizarre circumstances (if the <code>time</code>
+command gets stopped or swapped out in between when the program being
+timed exits and when <code>time</code> calculates how long it took to run), it
+could be much larger than the actual execution time.
+</p>
+<p>When the running time of a command is very nearly zero, some values
+(e.g., the percentage of CPU used) may be reported as either zero (which
+is wrong) or a question mark.
+</p>
+<p>Most information shown by <code>time</code> is derived from the <code>wait3</code>
+system call.  The numbers are only as good as those returned by
+<code>wait3</code>.  Many systems do not measure all of the resources that
+<code>time</code> can report on; those resources are reported as zero.  The
+systems that measure most or all of the resources are based on 4.2 or
+4.3BSD.  Later BSD releases use different memory management code that
+measures fewer resources.
+</p>
+<p>On systems that do not have a <code>wait3</code> call that returns status
+information, the <code>times</code> system call is used instead.  It provides
+much less information than <code>wait3</code>, so on those systems <code>time</code>
+reports most of the resources as zero.
+</p>
+<p>The &lsquo;<samp>%I</samp>&rsquo; and &lsquo;<samp>%O</samp>&rsquo; values are allegedly only &ldquo;real&rdquo; input
+and output and do not include those supplied by caching devices.  The
+meaning of &ldquo;real&rdquo; I/O reported by &lsquo;<samp>%I</samp>&rsquo; and &lsquo;<samp>%O</samp>&rsquo; may be
+muddled for workstations, especially diskless ones.
+</p>
+<hr size="6">
+<a name="Invoking-time"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Accuracy" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[ &gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Resource-Measurement" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<a name="Running-the-time-Command"></a>
+<h2 class="section">1.6 Running the <code>time</code> Command</h2>
+
+<p>The format of the <code>time</code> command is:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">time <span class="roman">[</span>option&hellip;<span class="roman">]</span> <var>command</var> <span class="roman">[</span><var>arg</var>&hellip;<span class="roman">]</span>
+</pre></td></tr></table>
+
+<a name="index-resources-1"></a>
+<p><code>time</code> runs the program <var>command</var>, with any given arguments
+<var>arg</var>&hellip;.  When <var>command</var> finishes, <code>time</code> displays
+information about resources used by <var>command</var> (on the standard error
+output, by default).  If <var>command</var> exits with non-zero status or is
+terminated by a signal, <code>time</code> displays a warning message and the
+exit status or signal number.
+</p>
+<p>Options to <code>time</code> must appear on the command line before
+<var>command</var>.  Anything on the command line after <var>command</var> is
+passed as arguments to <var>command</var>.
+</p>
+<dl compact="compact">
+<dt> <code>-o <var>file</var></code></dt>
+<dt> <code>--output=<var>file</var></code></dt>
+<dd><p>Write the resource use statistics to <var>file</var>.
+</p>
+</dd>
+<dt> <code>-a</code></dt>
+<dt> <code>--append</code></dt>
+<dd><p><em>Append</em> the resource use information to the output file instead
+of overwriting it.
+</p>
+</dd>
+<dt> <code>-f <var>format</var></code></dt>
+<dt> <code>--format=<var>format</var></code></dt>
+<dd><p>Use <var>format</var> as the format string.
+</p>
+</dd>
+<dt> <code>--help</code></dt>
+<dd><p>Print a summary of the command line options to <code>time</code> and exit.
+</p>
+</dd>
+<dt> <code>-p</code></dt>
+<dt> <code>--portability</code></dt>
+<dd><p>Use the POSIX format.
+</p>
+</dd>
+<dt> <code>-v</code></dt>
+<dt> <code>--verbose</code></dt>
+<dd><a name="index-format-2"></a>
+<p>Use the built-in verbose format.
+</p>
+</dd>
+<dt> <code>-V</code></dt>
+<dt> <code>--version</code></dt>
+<dd><a name="index-version-number"></a>
+<p>Print the version number of <code>time</code> and exit.
+</p></dd>
+</dl>
+
+<hr size="6">
+<a name="SEC_Contents"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1>Table of Contents</h1>
+<div class="contents">
+
+<ul class="toc">
+  <li><a name="toc-Measuring-Program-Resource-Use" href="#Resource-Measurement">1. Measuring Program Resource Use</a>
+  <ul class="toc">
+    <li><a name="toc-Setting-the-Output-Format" href="#Setting-Format">1.1 Setting the Output Format</a></li>
+    <li><a name="toc-The-Format-String" href="#Format-String">1.2 The Format String</a>
+    <ul class="toc">
+      <li><a name="toc-Time-Resources-1" href="#Time-Resources">1.2.1 Time Resources</a></li>
+      <li><a name="toc-Memory-Resources-1" href="#Memory-Resources">1.2.2 Memory Resources</a></li>
+      <li><a name="toc-I_002fO-Resources-1" href="#I_002fO-Resources">1.2.3 I/O Resources</a></li>
+      <li><a name="toc-Command-Info-1" href="#Command-Info">1.2.4 Command Info</a></li>
+    </ul></li>
+    <li><a name="toc-Redirecting-Output" href="#Redirecting">1.3 Redirecting Output</a></li>
+    <li><a name="toc-Examples-1" href="#Examples">1.4 Examples</a></li>
+    <li><a name="toc-Accuracy-1" href="#Accuracy">1.5 Accuracy</a></li>
+    <li><a name="toc-Running-the-time-Command" href="#Invoking-time">1.6 Running the <code>time</code> Command</a></li>
+  </ul>
+</li>
+</ul>
+</div>
+<hr size="1">
+<a name="SEC_About"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1>About This Document</h1>
+<p>
+  This document was generated by <em>root</em> on <em>October 22, 2010</em> using <a href="http://www.nongnu.org/texi2html/"><em>texi2html 1.82</em></a>.
+</p>
+<p>
+  The buttons in the navigation panels have the following meaning:
+</p>
+<table border="1">
+  <tr>
+    <th> Button </th>
+    <th> Name </th>
+    <th> Go to </th>
+    <th> From 1.2.3 go to</th>
+  </tr>
+  <tr>
+    <td align="center"> [ &lt; ] </td>
+    <td align="center">Back</td>
+    <td>Previous section in reading order</td>
+    <td>1.2.2</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &gt; ] </td>
+    <td align="center">Forward</td>
+    <td>Next section in reading order</td>
+    <td>1.2.4</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &lt;&lt; ] </td>
+    <td align="center">FastBack</td>
+    <td>Beginning of this chapter or previous chapter</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td align="center"> [ Up ] </td>
+    <td align="center">Up</td>
+    <td>Up section</td>
+    <td>1.2</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &gt;&gt; ] </td>
+    <td align="center">FastForward</td>
+    <td>Next chapter</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td align="center"> [Top] </td>
+    <td align="center">Top</td>
+    <td>Cover (top) of document</td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [Contents] </td>
+    <td align="center">Contents</td>
+    <td>Table of contents</td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [Index] </td>
+    <td align="center">Index</td>
+    <td>Index</td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [ ? ] </td>
+    <td align="center">About</td>
+    <td>About (help)</td>
+    <td> &nbsp; </td>
+  </tr>
+</table>
+
+<p>
+  where the <strong> Example </strong> assumes that the current position is at <strong> Subsubsection One-Two-Three </strong> of a document of the following structure:
+</p>
+
+<ul>
+  <li> 1. Section One
+    <ul>
+      <li>1.1 Subsection One-One
+        <ul>
+          <li>...</li>
+        </ul>
+      </li>
+      <li>1.2 Subsection One-Two
+        <ul>
+          <li>1.2.1 Subsubsection One-Two-One</li>
+          <li>1.2.2 Subsubsection One-Two-Two</li>
+          <li>1.2.3 Subsubsection One-Two-Three &nbsp; &nbsp;
+            <strong>&lt;== Current Position </strong></li>
+          <li>1.2.4 Subsubsection One-Two-Four</li>
+        </ul>
+      </li>
+      <li>1.3 Subsection One-Three
+        <ul>
+          <li>...</li>
+        </ul>
+      </li>
+      <li>1.4 Subsection One-Four</li>
+    </ul>
+  </li>
+</ul>
+
+<hr size="1">
+<p>
+ <font size="-1">
+  This document was generated by <em>root</em> on <em>October 22, 2010</em> using <a href="http://www.nongnu.org/texi2html/"><em>texi2html 1.82</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

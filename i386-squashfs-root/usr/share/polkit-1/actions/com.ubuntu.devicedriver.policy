@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+ "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+<policyconfig>
+
+  
+
+  <vendor>Jockey driver manager</vendor>
+  <vendor_url>https://launchpad.net/jockey</vendor_url>
+  <icon_name>jockey</icon_name>
+
+  <action id="com.ubuntu.devicedriver.info">
+    <description gettext-domain="jockey">Get information about local device drivers</description>
+    <message gettext-domain="jockey">System policy prevents querying device drivers</message>
+    <defaults>
+      <allow_any>yes</allow_any>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="com.ubuntu.devicedriver.check">
+    <description gettext-domain="jockey">Check for newly available drivers for, and used drivers on this system</description>
+    <message gettext-domain="jockey">System policy prevents checking driver status</message>
+    <defaults>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="com.ubuntu.devicedriver.update">
+    <description gettext-domain="jockey">Query local and remote driver databases for updated drivers for the system</description>
+    <message gettext-domain="jockey">System policy prevents querying driver databases for updates</message>
+    <defaults>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="com.ubuntu.devicedriver.install">
+    <description gettext-domain="jockey">Install or remove device drivers</description>
+    <message gettext-domain="jockey">System policy prevents installation/removal of device drivers</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+  </action>
+</policyconfig>

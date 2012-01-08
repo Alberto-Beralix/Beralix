@@ -1,0 +1,425 @@
+
+plugin: shell
+name: suspend/resolution_before_suspend
+description: Record the current resolution before suspending.
+description-ar.UTF-8: سَجِّل أبعاد حيِّز العرض قبل التعليق.
+description-ast.UTF-8: Grabar la resolución actual enantes de suspender.
+description-bn.UTF-8: বাতিল করার আগে বর্তমান রেজল্যুশন রেকর্ড।
+description-bs.UTF-8: Zapamti trenutnu rezoluciju prije suspendiranja.
+description-ca.UTF-8: Enregistreu la resolució actual abans de suspendre.
+description-cs.UTF-8: Uložit aktuální rozlišení před uspáním.
+description-da.UTF-8: Husk den nuværende skærmopløsning før hvile.
+description-de.UTF-8: Aktuelle Bildschirmauflösung merken, bevor in Bereitschaft versetzt wird.
+description-el.utf-8: Αποθήκευση της τρέχουσας ανάλυσης πριν την αδρανοποίηση
+description-en_AU.UTF-8: Record the current resolution before suspending.
+description-en_CA.UTF-8: Record the current resolution before suspending.
+description-en_GB.UTF-8: Record the current resolution before suspending.
+description-eo.UTF-8: Konservi la nunan distingivon antaŭ la prokrasta reĝimo
+description-es.UTF-8: Grabar la resolución actual antes de suspender.
+description-fi.UTF-8: Paina muistiin nykyinen tarkkuus ennen valmiustilaan siirtymistä.
+description-fr.UTF-8: Enregistrer la résolution actuelle avant la mise en veille.
+description-gl.UTF-8: Gravar a resolución actual antes da suspensión.
+description-he.UTF-8: הקלטת הרזולוציה הנוכחית לפני ההשהיה.
+description-hi.UTF-8: बरखास्त के पूर्व वर्तमान रिजोलुशन को रिकार्ड कर लें.
+description-hu.UTF-8: Az aktuális felbontás rögzítése a felfüggesztés előtt.
+description-it.UTF-8: Annotare la risoluzione attuale prima di andare in sospensione.
+description-ja.UTF-8: サスペンドの前に現在の解像度を記録する。
+description-ko.UTF-8: 절전 전에 현재 해상도를 기록합니다.
+description-lv.UTF-8: Ierakstīt pašreizējo izšķirtspēju pirms iesnaudināšanas.
+description-ms.UTF-8: Rekod resolusi semasa sebelum ditangguhkan.
+description-nl.UTF-8: Schrijf de huidige resolutie op voordat het systeem in slaapstand gaat.
+description-oc.UTF-8: Enregistrar la resolucion actuala abans la mesa en velha.
+description-pl.UTF-8: Zapis bieżącej rozdzielczości przed wstrzymaniem.
+description-pt.UTF-8: Guarda a resolução actual antes de suspender.
+description-pt_BR.UTF-8: Registre a resolução atual antes de suspender
+description-ro.UTF-8: Memorează rezoluția curentă înainte de suspendare.
+description-ru.UTF-8: Запись текущего разрешения перед переходом в режим пониженного энергопотребления.
+description-sk.UTF-8: Zaznamenať aktuálne rozlíšenie pred prechodom do režimu spánku.
+description-sl.UTF-8: Posnemi trenutno ločljivost pred prehodom v stanje pripravljenosti.
+description-sq.UTF-8: Regjistro rezolucionin e tanishëm para pezullimit.
+description-sr.UTF-8: Сачувајте тренутну сесију пре стављања у режим спавања.
+description-sv.UTF-8: Registrera aktuell upplösning före vänteläge.
+description-tr.UTF-8: Askıya almadan önce mevcut çözünürlüğü kaydet.
+description-ug.UTF-8: توڭلىتىشتىن بۇرۇن ھازىرقى ئېنىقلىقنى خاتىرىلەيدۇ.
+description-uk.UTF-8: Записати поточну розільну здатність, перш ніж перейти у режим економії електроенергії.
+description-vi.UTF-8: Ghi lại độ phân giải hiện tại trước khi nghỉ.
+description-zh_CN.UTF-8: 挂起前记录当前分辨率。
+description-zh_HK.UTF-8: 在暫停之前紀錄目前的解析度。
+description-zh_TW.UTF-8: 在暫停之前紀錄目前的解析度。
+command: xrandr -q |grep '*'| awk '{print $1}' > $CHECKBOX_DATA/resolution_before_suspend.txt
+
+plugin: shell
+name: suspend/audio_before_suspend
+requires:
+ device.category == 'AUDIO'
+ package.name == 'alsa-base'
+description: Test the audio before suspending.
+description-ast.UTF-8: Comprobar el soníu enantes de suspender.
+description-bn.UTF-8: বাতিল করার আগে অডিও টেস্ট।
+description-bs.UTF-8: Provjeri zvuk prije suspendiranja.
+description-ca.UTF-8: Comproveu  l'àudio abans de suspendre.
+description-cs.UTF-8: Otestovat zvuk před uspáním.
+description-da.UTF-8: Afprøv lyden før hvile.
+description-de.UTF-8: Audio testen, bevor in Bereitschaft versetzt wird.
+description-el.utf-8: Δοκιμή ήχου πριν την αδρανοποίηση
+description-en_AU.UTF-8: Test the audio before suspending.
+description-en_CA.UTF-8: Test the audio before suspending.
+description-en_GB.UTF-8: Test the audio before suspending.
+description-eo.UTF-8: Testi la sonon antaŭ la prokrasta reĝimo
+description-es.UTF-8: Comprobar el sonido antes de suspender.
+description-fi.UTF-8: Testaa äänien toimivuus ennen valmiustilaan siirtymistä.
+description-fr.UTF-8: Tester le son avant la mise en veille.
+description-gl.UTF-8: Comprobar o son antes de suspender.
+description-he.UTF-8: בדיקת השמע לפני ההשהיה.
+description-hi.UTF-8: बरखास्त के पूर्व श्रव्य की जाँच कर लें.
+description-hu.UTF-8: A hangrendszer tesztelése a felfüggesztés előtt.
+description-it.UTF-8: Test dell'audio prima della sospensione.
+description-ja.UTF-8: サスペンドの前に音声をテストする。
+description-ko.UTF-8: 절전 전에 오디오를 시험합니다.
+description-lv.UTF-8: Pārbaudīt skaņu pirms iesnaudināšanas.
+description-ms.UTF-8: Uji audio sebelum ditangguhkan.
+description-nl.UTF-8: Test het geluid voordat het systeem in slaapstand gaat.
+description-oc.UTF-8: Testar lo son abans la mesa en velha.
+description-pl.UTF-8: Test audio przed wstrzymaniem.
+description-pt.UTF-8: Testa o áudio antes de suspender.
+description-pt_BR.UTF-8: Teste o som antes de suspender
+description-ro.UTF-8: Testează dispozitivul audio înainte de suspendare.
+description-ru.UTF-8: Проверка звука перед переходом в режим пониженного энергопотребления.
+description-sk.UTF-8: Otestovať zvuk pred prechodom do režimu spánku.
+description-sl.UTF-8: Preverite zvok pred prehodom v stanje pripravljenosti.
+description-sq.UTF-8: Testo audion para pezullimit.
+description-sr.UTF-8: Тестирајте аудио уређаје пре стављања у режим спавања.
+description-sv.UTF-8: Testa ljudet före vänteläge.
+description-tr.UTF-8: Askıya almadan önce sesi test et.
+description-ug.UTF-8: توڭلىتىشتىن بۇرۇن ئۈن سىنايدۇ.
+description-uk.UTF-8: Перевірити звук, перш ніж перейти у режим економії електроенергії.
+description-vi.UTF-8: Kiểm tra âm thanh trước khi nghỉ.
+description-zh_CN.UTF-8: 挂起前测试音频。
+description-zh_HK.UTF-8: 在暫停之前測試音效。
+description-zh_TW.UTF-8: 在暫停之前測試音效。
+command: amixer > $CHECKBOX_DATA/audio_before_suspend.txt
+
+plugin: shell
+name: suspend/cpu_before_suspend
+requires:
+ package.name == 'linux'
+description: Check all the CPUs are online before suspending
+command: cpuinfo_resource > $CHECKBOX_DATA/cpuinfo_before_suspend
+
+plugin: shell
+name: suspend/memory_before_suspend
+requires:
+ package.name == 'linux'
+description:
+ Dumps memory info to a file for comparison after suspend test has been run
+command: meminfo_resource > $CHECKBOX_DATA/meminfo_before_suspend
+
+plugin: shell
+name: suspend/wireless_before_suspend
+depends: networking/wireless_connection
+command: nmcli -t -f UUID con status > $CHECKBOX_DATA/connections && connect_wireless && internet_test --interface=`nmcli dev list | grep -B 1 wireless | grep GENERAL.DEVICE | awk '{print $2}'` && for con in `cat $CHECKBOX_DATA/connections`; do nmcli con up uuid "$con"; done
+description:
+ This test disconnects all connections and then connects to the wireless
+ interface. It then checks the connection to confirm it's working as expected.
+
+plugin: shell
+name: suspend/bluetooth_obex_before_suspend
+requires: package.name == 'bluez' and package.name == 'obexd-client'
+command: obex_send $BTDEVADDR $CHECKBOX_SHARE/data/images/JPEG_Color_Image_Ubuntu.jpg
+description:
+ This test sends an image to the device specified by the BTDEVADDR environment variable.
+
+plugin: manual
+name: suspend/bluetooth_obex_before_suspend_manual
+requires: package.name == 'bluez' and package.name == 'obexd-client'
+command: obex_send `bluetooth_scan` $CHECKBOX_SHARE/data/images/JPEG_Color_Image_Ubuntu.jpg
+description:
+ This test will send the image 'JPEG_Color_Image_Ubuntu.jpg' to a specified device.
+ .
+ Select Test and you will be prompted to enter the Bluetooth device name of a device that can accept file transfers. It may take a few moments after entering the name for the file to begin sending. Accept any prompts that appear on both devices.
+
+plugin: manual
+name: suspend/suspend_advanced
+depends: power-management/rtc networking/detect suspend/resolution_before_suspend suspend/wireless_before_suspend bluetooth/detect-output suspend/bluetooth_mouse_before_suspend suspend/cpu_before_suspend suspend/memory_before_suspend
+requires: package.name == 'pm-utils'
+description:
+ Power management Suspend and Resume test
+ .
+ Select Test and your system will suspend for about 30 - 60 seconds. If your system does not wake itself up after 60 seconds, please press the power button momentarily to wake the system manually. If your system fails to wake at all and must be rebooted, restart System Testing after reboot and mark this test as Failed.
+user: root
+command: sleep_test -d
+
+plugin: shell
+name: suspend/network_after_suspend
+depends: suspend/suspend_advanced networking/detect
+description: Test the network after resuming.
+description-ast.UTF-8: Probar la rede dempués de reanudar.
+description-bn.UTF-8: বিরত করার পর নেটওয়ার্ক টেস্ট।
+description-bs.UTF-8: Test mreže nakon povratka.
+description-ca.UTF-8: Comprovació de la xarxa després de reprendre.
+description-cs.UTF-8: Otestovat síť po probuzení.
+description-da.UTF-8: Test netværket efter genoptagelse.
+description-de.UTF-8: Netzwerk nach Wiedereinschalten prüfen.
+description-el.utf-8: Δοκιμή της σύνδεσης δικτύου μετά την επαναφορά.
+description-en_AU.UTF-8: Test the network after resuming.
+description-en_CA.UTF-8: Test the network after resuming.
+description-en_GB.UTF-8: Test the network after resuming.
+description-eo.UTF-8: Testi la sistemon post revekiĝo.
+description-es.UTF-8: Probar la red después de reanudar.
+description-fi.UTF-8: Testaa verkkoyhteyden toimiminen valmiustilasta palaamisen jälkeen.
+description-fr.UTF-8: Tester le réseau après la reprise.
+description-gl.UTF-8: Comprobar a rede logo de restaurar.
+description-he.UTF-8: יש לבדוק את הרשת לאחר ההמשך.
+description-hi.UTF-8: पुनःआरंभ के पश्चात संजाल की जाँच करें.
+description-hu.UTF-8: Hálózati kapcsolat tesztelése a visszatérés után.
+description-it.UTF-8: Test della rete dopo il ripristino.
+description-ja.UTF-8: レジューム後のネットワークをテストする。
+description-ko.UTF-8: 절전 후 네트워크 시험
+description-lv.UTF-8: Pārbaudīt tīklu pirms pamošanās.
+description-ms.UTF-8: Uji rangkaian selepas disambung semula.
+description-nl.UTF-8: Test het netwerk nadat het systeem uit slaapstand is gekomen.
+description-oc.UTF-8: Testar la ret aprèp la represa.
+description-pl.UTF-8: Testowanie sieci po wznowieniu systemu
+description-pt.UTF-8: Testar a rede depois de resumir.
+description-pt_BR.UTF-8: Teste a rede após retornar.
+description-ro.UTF-8: Testează rețeaua după revenire.
+description-ru.UTF-8: Проверка сети после выхода из режима пониженного энергопотребления.
+description-sk.UTF-8: Otestovať sieť po prebudení.
+description-sl.UTF-8: Preizkusite omrežje po nadaljevanju.
+description-sq.UTF-8: Testo rrjetin as rinisjes.
+description-sr.UTF-8: Тестирајте мрежу након наставка.
+description-sv.UTF-8: Testa nätverket efter vänteläge.
+description-th.UTF-8: ทดสอบระบบเครือข่ายหลังจากกลับคืน
+description-tr.UTF-8: Ağ çıktıktan sonra sınayın.
+description-ug.UTF-8: قايتىلاشتىن ئاۋۋال تورنى سىنايدۇ.
+description-uk.UTF-8: Перевірити мережу після виходу з режиму економії електроенергії
+description-vi.UTF-8: Kiểm tra hệ thống mạng sau khi hồi phục.
+description-zh_CN.UTF-8: 恢复后测试网络。
+description-zh_HK.UTF-8: 在回復之後測試網絡。
+description-zh_TW.UTF-8: 在回復之後測試網路。
+command: internet_test
+
+plugin: shell
+name: suspend/resolution_after_suspend
+depends: suspend/suspend_advanced suspend/resolution_before_suspend
+description: Test to see that we have the same resolution after resuming as before.
+description-ast.UTF-8: Prueba pa ver si tienes la mesma resolución dempués de reanudar.
+description-bn.UTF-8: বিরত করার পরও রেজল্যুশন একই আছে তা দেখার জন্য টেস্ট।
+description-bs.UTF-8: Test da se vidi da li je ista rezolucija nakon buđenja,
+description-ca.UTF-8: Comprovació per veure que hi ha la mateixa resolució després de reprendre.
+description-cs.UTF-8: Test pro ověření, že máme stejné rozlišení po probuzení z režimu spánku.
+description-da.UTF-8: Kontrollér at der bruges samme opløsning efter genoptagelse som før.
+description-de.UTF-8: Testen, ob nach Wiedereinschalten dieselbe Auflösung wie vorher eingestellt ist.
+description-el.utf-8: Δοκιμή διατήρησης της ανάλυσης μετά την επαναφορά.
+description-en_AU.UTF-8: Test to see that we have the same resolution after resuming as before.
+description-en_CA.UTF-8: Test to see that we have the same resolution after resuming as before.
+description-en_GB.UTF-8: Test to see that we have the same resolution after resuming as before.
+description-eo.UTF-8: Tesyo por kontroli ĉu ni havas la saman distingivon post vekiĝo ol antaŭe.
+description-es.UTF-8: Prueba para ver si tiene la misma resolución después de reanudar.
+description-fi.UTF-8: Testaa onko käytössä sama tarkkuus kuin ennen valmiustilaan siirtymistä.
+description-fr.UTF-8: Tester la résolution d'écran et vérifier qu'elle n'a pas changé après la reprise.
+description-gl.UTF-8: Comprobar que despois de restaurar a visualización ten a mesma resolución que  tiña antes.
+description-he.UTF-8: יש לבדוק כדי לראות האם זוהי אותה הרזולוציה לאחר ההמשך כמו בעבר.
+description-hi.UTF-8: देखने के लिए जाँच करे कि पुनःआरंभ के पश्चात पहले की तरह ही रिजोलुशन है.
+description-hu.UTF-8: Annak tesztelése, hogy a felbontás megegyezik-e a felfüggesztési és visszatérési teszt előttivel.
+description-it.UTF-8: Test di verifica del mantenimento della risoluzione dopo il ripristino.
+description-ja.UTF-8: レジューム後の解像度が変わっていないかテストする。
+description-ko.UTF-8: 절전 후에도 이전과 같은 해상도로 되는지를 시험합니다.
+description-lv.UTF-8: Pārbaudīt, vai pēc pamošanās izšķirtspēja nemainīsies.
+description-ms.UTF-8: Ujian untuk melihat sama ada resolusi adalah sama selepas disambung semula seperti sebelum ini.
+description-nl.UTF-8: Test om te controleren of we nog dezelfde resolutie hebben als voor de slaapstand.
+description-oc.UTF-8: Testar la resolucion d'ecran e verificar qu'a pas cambiat aprèp la represa.
+description-pl.UTF-8: Sprawdzenie czy rozdzielczość po wznowieniu odpowiada rozdzielczości sprzed uśpienia.
+description-pt.UTF-8: Teste para verificar se continuamos com a mesma resolução de ecrã depois do retornar do estado anterior.
+description-pt_BR.UTF-8: Veja se a resolução permanece a mesma de antes.
+description-ro.UTF-8: Testează pentru a vedea dacă s-a păstrat rezoluția după revenire.
+description-ru.UTF-8: Убедимся, что разрешение системы осталось тем же, что было до перехода в режим пониженного энергопотребления.
+description-sk.UTF-8: Otestovať, že máte rovnaké rozlíšenie po prebudení ako pred tým.
+description-sl.UTF-8: Preverite, če imate po nadaljevanju enako ločljivost kot prej.
+description-sr.UTF-8: Тестирајте да видите да ли је резолуција након наставка иста као и пре.
+description-sv.UTF-8: Testa för att se att vi har samma upplösning efter vänteläget som vi hade tidigare.
+description-tr.UTF-8: Devamdan sonra önceki gibi aynı çözüme sahip olduğumuzun testi.
+description-ug.UTF-8: قايتا باشلىغاندا ئېنىقلىق دەرىجىسى ئەسلىدىكىگە ئوخشاشمۇ سىنايدۇ.
+description-uk.UTF-8: Переконаємось, що роздільна здатність екрана не змінилась після виходу з режиму економії електроенергії
+description-vi.UTF-8: Kiểm tra xem độ phân giải trước và sau khi hồi phục có giống nhau không.
+description-zh_CN.UTF-8: 测试恢复后分辨率是否与之前相同。
+description-zh_HK.UTF-8: 測試看看在復原之後我們是否能擁有與之前相同的解析度。
+description-zh_TW.UTF-8: 測試看看在復原之後我們是否能擁有與之前相同的解析度。
+command: xrandr -q |grep '*'| awk '{print $1}' | diff $CHECKBOX_DATA/resolution_before_suspend.txt -
+
+plugin: shell
+name: suspend/audio_after_suspend
+requires:
+ device.category == 'AUDIO'
+ package.name == 'alsa-base'
+depends: suspend/suspend_advanced suspend/audio_before_suspend
+description: Test the audio after resuming.
+description-ast.UTF-8: Probar el soníu dempués de reanudar
+description-bn.UTF-8: বিরত করার পর অডিও পরীক্ষা।
+description-bs.UTF-8: Test zvuka nakon povratka.
+description-ca.UTF-8: Comprovació de l'àudio després de reprendre.
+description-cs.UTF-8: Otestovat zvuk po probuzení.
+description-da.UTF-8: Afprøv lyden efter genoptagelse.
+description-de.UTF-8: Audio nach dem Aufwachen aus der Bereitschaft testen.
+description-el.utf-8: Δοκιμή ήχου μετά την επαναφορά.
+description-en_AU.UTF-8: Test the audio after resuming.
+description-en_CA.UTF-8: Test the audio after resuming.
+description-en_GB.UTF-8: Test the audio after resuming.
+description-eo.UTF-8: Testi la sonon post revekiĝo.
+description-es.UTF-8: Probar el sonido después de reanudar.
+description-fi.UTF-8: Testaa toimiiko ääni valmiustilasta palaamisen jälkeen.
+description-fr.UTF-8: Tester le son après la reprise.
+description-gl.UTF-8: Comprobar o son despois de restarurar.
+description-he.UTF-8: בדיקת השמע לאחר ההמשך.
+description-hi.UTF-8: पुनःआरंभ के पश्चात श्रव्य की जाँच करें.
+description-hu.UTF-8: Hangrendszer tesztelése a visszatérés után.
+description-it.UTF-8: Test dell'audio dopo il ripristino.
+description-ja.UTF-8: レジューム後の音声をテストする。
+description-ko.UTF-8: 절전 후 오디오를 시험합니다.
+description-lv.UTF-8: Pārbaudīt skaņu pirms pamošanās.
+description-ms.UTF-8: Uji audio selepas disambung semula.
+description-nl.UTF-8: Test het geluid na hetvatting.
+description-oc.UTF-8: Testar lo son aprèp la represa.
+description-pl.UTF-8: Sprawdzenie dźwięku po wznowieniu działania systemu.
+description-pt.UTF-8: Testar o áudio depois de retornar do estado anterior.
+description-pt_BR.UTF-8: Teste o áudio após retornar.
+description-ro.UTF-8: Testează sunetul după revenire.
+description-ru.UTF-8: Проверка звука после выхода из режима пониженного энергопотребления.
+description-sk.UTF-8: Otestovať zvuk po prebudení.
+description-sl.UTF-8: Preizkusite zvok po nadaljevanju.
+description-sq.UTF-8: Testo audion pas rinisjes.
+description-sr.UTF-8: Тестирајте аудио након наставка.
+description-sv.UTF-8: Testa ljuder efter vänteläge.
+description-th.UTF-8: ทดสอบเสียงหลังจากกลับคืน
+description-tr.UTF-8: Ses çıkıldıktan sonra sınayın.
+description-ug.UTF-8: قايتىلاشتىن ئاۋۋال ئۈننى سىنايدۇ.
+description-uk.UTF-8: Перевірити звук, перш ніж вийти з режиму економії електроенергії.
+description-vi.UTF-8: Kiểm tra âm thanh sau khi hồi phục.
+description-zh_CN.UTF-8: 测试恢复后的音频。
+description-zh_HK.UTF-8: 在回復之後測試音效。
+description-zh_TW.UTF-8: 在回復之後測試音效。
+command: amixer | diff $CHECKBOX_DATA/audio_before_suspend.txt -
+
+plugin: shell
+name: suspend/cpu_after_suspend
+requires:
+ package.name == 'linux'
+depends: suspend/suspend_advanced suspend/cpu_before_suspend
+description: Check all CPUs are online after resuming.
+command: cpuinfo_resource | diff $CHECKBOX_DATA/cpuinfo_before_suspend -
+
+plugin: shell
+name: suspend/memory_after_suspend
+requires:
+ package.name == 'linux'
+depends: suspend/suspend_advanced suspend/memory_before_suspend
+description:
+ Check that all memory is available after resuming from suspend.
+command: meminfo_resource | diff $CHECKBOX_DATA/meminfo_before_suspend -
+
+plugin: manual
+name: suspend/display_after_suspend
+requires:
+ package.name == 'linux'
+depends: suspend/suspend_advanced
+description:
+ Does the display work normally after resuming from suspend?
+
+plugin: shell
+name: suspend/wireless_after_suspend
+depends: suspend/suspend_advanced suspend/wireless_before_suspend
+command: connect_wireless && internet_test --interface=`nmcli dev list | grep -B 1 wireless | grep GENERAL.DEVICE | awk '{print $2}'` && for con in `cat $CHECKBOX_DATA/connections`; do nmcli con up uuid "$con"; done
+description:
+ This test checks that the wireless interface is working after suspending the system. It
+ disconnects all interfaces and then connects to the wireless interface and checks that the
+ connection is working as expected.
+
+plugin: shell
+name: suspend/bluetooth_detect_after_suspend
+depends: suspend/suspend_advanced bluetooth/detect-output
+requires: package.name == 'bluez'
+command: hcitool dev | tail -n+2 | awk '{print $2}' |diff $CHECKBOX_DATA/bluetooth_address -
+description:
+ This test grabs the hardware address of the bluetooth adapter after suspend and compares it to the address grabbed before suspend.
+
+plugin: shell
+name: suspend/bluetooth_obex_after_suspend
+depends: suspend/suspend_advanced suspend/bluetooth_obex_before_suspend
+requires: package.name == 'bluez' and package.name == 'obexd-client'
+command: obex_send $BTDEVADDR $CHECKBOX_SHARE/data/images/JPEG_Color_Image_Ubuntu.jpg
+description:
+ This test sends an image to the device specified by the BTDEVADDR environment variable.
+
+plugin: manual
+name: suspend/bluetooth_obex_after_suspend_manual
+depends: suspend/suspend_advanced suspend/bluetooth_obex_before_suspend_manual
+requires: package.name == 'bluez' and package.name == 'obexd-client'
+command: obex_send `bluetooth_scan` $CHECKBOX_SHARE/data/images/JPEG_Color_Image_Ubuntu.jpg
+description:
+ This test will send the image 'JPEG_Color_Image_Ubuntu.jpg' to a specified device.
+  .
+  Select Test and you will be prompted to enter the Bluetooth device name of a device that can accept file transfers. It may take a few moments after entering the name for the file to begin sending. Accept any prompts that appear on both devices.
+
+plugin: manual
+name: suspend/cycle_resolutions_after_suspend
+requires: package.name == 'xorg'
+depends: suspend/suspend_advanced graphics/cycle_resolution
+description:
+ This test will check to make sure that supported video modes work after a suspend and resume.  Select Test to begin.
+command: xrandr_cycle --keyword=after_suspend
+
+plugin: shell
+name: suspend/cycle_resolutions_after_suspend_auto
+requires: package.name == 'xorg'
+depends: suspend/suspend_advanced graphics/cycle_resolution
+description:
+ This test will check to make sure supported video modes work after a suspend and resume.
+ This is done automatically by taking screenshots and uploading them as an attachment.
+command: xrandr_cycle --keyword=after_suspend
+
+plugin: attachment
+name: suspend/xrandr_screens_after_suspend.tar.gz
+depends: suspend/cycle_resolutions_after_suspend_auto
+command: [ -e $CHECKBOX_DATA/xrandr_screens_after_suspend.tgz ] && cat $CHECKBOX_DATA/xrandr_screens_after_suspend.tgz 
+
+plugin: manual
+name: suspend/usb_storage_after_suspend
+depends: suspend/suspend_advanced
+command: usb_test -t
+description:
+ This will test that USB functionality is restored after a suspend and resume cycle.
+ 1. Plug in at least one USB storage device if one is not already connected.
+ 2. Click Test to begin.
+ .
+ If the test is successful, you'll notice that Yes is now selected. Otherwise, No shoud be selected.
+
+plugin: shell
+name: suspend/record_playback_after_suspend
+depends: suspend/suspend_advanced
+requires:
+ device.category == 'AUDIO'
+ package.name == 'sox'
+ package.name == 'alsa-base'
+command: audio_test
+description:
+ This will check to make sure that your audio device works properly after a suspend and resume.  This may work fine with speakers and onboard microphone, however, it works best if used with a cable connecting the audio-out jack to the audio-in jack.
+
+plugin: shell
+name: suspend/suspend_advanced_auto
+depends: power-management/rtc networking/detect suspend/cpu_before_suspend suspend/memory_before_suspend
+requires: package.name == 'pm-utils'
+description:
+ Automatic power management Suspend and Resume test
+ .
+ Select test and your system will suspend for about 30 - 60 seconds. If your system does not wake itself up after 60 seconds, please press the power button momentarily to wake the system manually. If your system fails to wake at all and must be rebooted, restart System Testing after reboot and mark this test as Failed.
+user: root
+command: sleep_test -d
+
+plugin: shell
+name: suspend/wake_on_lan
+depends: power-management/rtc suspend/suspend_advanced 
+requires: package.name == 'pm-utils' and package.name == 'util-linux'
+description:
+ This automatically tests Wake-on-LAN capability with the aid of a suitably configured server. During this process the system will suspend, then automatically wake up after no more than 5 minutes.
+user: root
+command: wake_on_lan_test ${WAKE_ON_LAN_URL} --debug

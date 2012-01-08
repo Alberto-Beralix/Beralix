@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/ubuntuone-storage-protocol/ubuntuone/storageprotocol/protocol_pb2.py

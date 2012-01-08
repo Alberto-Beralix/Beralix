@@ -1,0 +1,432 @@
+plugin: manual
+name: software/update_manager_finds_updates
+depends: internet_test
+user: root
+requires: package.name == 'update-manager'
+description:
+ This test will execute Update Manager and check to see if there are any available updates for the system. Please follow the prompts and if updates are found, install them. When Update Manager has finished, please close the app by clicking the Close button in the lower right corner.
+command: update-manager --check-dist-upgrades
+
+plugin: manual
+name: software/nautilus_folder_create
+requires: package.name == 'nautilus'
+command: nautilus
+description:
+ Select Test to open the File Browser. On the menu bar, click File -> Create Folder. In the name box for the new folder, enter the name Test Folder and hit Enter.
+ .
+ Do you now have a new folder called Test Folder?
+ .
+ Close the File browser.
+
+plugin: manual
+name: software/nautilus_folder_copy
+depends: software/nautilus_folder_create
+command: nautilus
+description:
+ Select Test to open the File Browser. Right click on the folder called Test Folder and click on Copy.  Right Click on any white area in the window and click on Paste.
+ .
+ Right click on the folder called Test Folder(copy) and click Rename. Enter the name Test Data in the name box and hit Enter.
+ .
+ Do you now have a folder called Test Data?
+ .
+ Close the File browser.
+
+plugin: manual
+name: software/nautilus_folder_move
+depends: software/nautilus_folder_copy
+command: nautilus
+description:
+ Select Test to open the File Browser. Click and drag the folder called Test Data onto the icon called Test Folder. Release the button.
+ .
+ Double click the folder called Test Folder to open it up.
+ .
+ Was the folder called Test Data successfully moved into the folder called Test Folder?
+ .
+ Close the File Browser.
+
+plugin: manual
+name: software/nautilus_file_create
+depends: software/nautilus_folder_create
+command: nautilus $HOME/"Test Folder"
+description:
+ Select Test to open the File Browser. Right click in the white space and click Create Document -> Empty Document. Enter the name Test File 1 in the name box and hit Enter.
+ .
+ Do you now have a file called Test File 1?
+ .
+ Close the File browser.
+
+plugin: manual
+name: software/nautilus_file_copy
+depends: software/nautilus_file_create
+command: nautilus $HOME/"Test Folder"
+description:
+ Select Test to open the File Browser. Right click on the file called Test File 1 and click Copy. Right click in the white space and click Paste.
+ .
+ Right click on the file called Test File 1(copy) and click Rename. Enter the name Test File 2 in the name box and hit Enter.
+ .
+ Do you now have a file called Test File 2?
+ .
+ Close the File Browser.
+
+plugin: manual
+name: software/nautilus_file_move
+depends: software/nautilus_file_copy
+command: nautilus $HOME/"Test Folder"
+description:
+ Select Test to open the File Browser. Click and drag the file called Test File 2 onto the icon for the folder called Test Data. Release the button.
+ .
+ Double click the icon for Test Data to open that folder up.
+ .
+ Was the file Test File 2 successfully moved into the Test Data folder?
+ .
+ Close the File Browser.
+
+plugin: manual
+name: software/nautilus_file_delete
+depends: software/nautilus_file_create
+command: nautilus $HOME/"Test Folder"
+description:
+ Select Test to open the File Browser. Right click on the file called Test File 1 and click on Move To Trash.
+ .
+ Is Test File 1 now gone?
+ .
+ Close the File Browser.
+
+plugin: manual
+name: software/nautilus_folder_delete
+depends: software/nautilus_folder_create
+command: nautilus
+description:
+ Select Test to open the File Browser. Right click on the folder called Test Folder and click on Move To Trash.
+ .
+ Has Test Folder been successfully deleted?
+ .
+ Close the File Browser.
+
+plugin: local
+name: software/view_office_document
+requires: package.name == "ubuntu-desktop"
+description: Common Document Types Test
+description-ast.UTF-8: Prueba de tribes de documentos comunes
+description-bn.UTF-8: সাধারণ ডকুমেন্ট টাইপ টেস্ট
+description-bs.UTF-8: Test standardnih tipova dokumenata
+description-ca.UTF-8: Comprovacions de tipus de documents comuns.
+description-cs.UTF-8: Test běžných typů dokumentů
+description-da.UTF-8: Test for almindelige dokumenttyper
+description-de.UTF-8: Test für gebräuchliche Dokument-Typen
+description-el.utf-8: Δοκιμή τύπων συνηθισμένων εγγράφων
+description-en_AU.UTF-8: Common Document Types Test
+description-en_CA.UTF-8: Common Document Types Test
+description-en_GB.UTF-8: Common Document Types Test
+description-eo.UTF-8: Testo de oftaj dokumenttipoj.
+description-es.UTF-8: Prueba de tipos de documentos comunes
+description-fi.UTF-8: Yleisten asiakirjatyyppien testi
+description-fr.UTF-8: Test des types de document communs
+description-gl.UTF-8: Comprobación dos tipos de documentos comúns
+description-he.UTF-8: בדיקת סוגי מסמכים נפוצים
+description-hi.UTF-8: सामान्य दस्तावेज प्रकार जाँच
+description-hu.UTF-8: Általános dokumentumtípus teszt
+description-it.UTF-8: Test dei tipi di documento comuni
+description-ko.UTF-8: 일반 문서 형식 시험
+description-lv.UTF-8: Parasto dokumentu tipu tests
+description-ms.UTF-8: Ujian Jenis Dokumen Umum
+description-nl.UTF-8: Test veelvoorkomende bestandstypen
+description-pl.UTF-8: Test otwarcia najpopularniejszych typów plików
+description-pt.UTF-8: Testar os Tipos de Documentos Comuns
+description-pt_BR.UTF-8: Tipos de testes de documentos comuns
+description-ro.UTF-8: Test pentru tipuri uzuale de documente
+description-ru.UTF-8: Проверка стандартных типов документов
+description-sk.UTF-8: Testovanie bežných typov dokumentov
+description-sl.UTF-8: Preizkus pogostih vrst dokumentov
+description-sr.UTF-8: Тестирање општих врста докумената
+description-sv.UTF-8: Test av vanliga dokumenttyper
+description-tr.UTF-8: Ortak Belge Türleri Sınaması
+description-ug.UTF-8: ئاممىۋى پۈتۈك تىپى سىنىقى
+description-uk.UTF-8: Перевірка стандартних типів документів
+description-zh_CN.UTF-8: 常用文档类型测试
+description-zh_HK.UTF-8: 常見文件類型測試
+description-zh_TW.UTF-8: 常見文件類型測試
+command:
+ cat <<'EOF' | run_templates -s "find $CHECKBOX_SHARE/data/documents -type f"
+ name: `basename $0`_test
+ plugin: manual
+ description:
+  Now we will attempt to open the file '$0' with its default viewer. After the viewer opens, check out the file that was opened and then close the application (LibreOffice, Doc Viewer, etc.)
+  .
+  Select Test to begin
+  .
+  Did the application open the document properly? (e.g was it displayed and did it function properly?)
+ command: xdg-open $0
+ EOF
+
+plugin: local
+name: software/audio_file_play
+requires: package.name == "ubuntu-desktop"
+description: Common Document Types Test
+description-ast.UTF-8: Prueba de tribes de documentos comunes
+description-bn.UTF-8: সাধারণ ডকুমেন্ট টাইপ টেস্ট
+description-bs.UTF-8: Test standardnih tipova dokumenata
+description-ca.UTF-8: Comprovacions de tipus de documents comuns.
+description-cs.UTF-8: Test běžných typů dokumentů
+description-da.UTF-8: Test for almindelige dokumenttyper
+description-de.UTF-8: Test für gebräuchliche Dokument-Typen
+description-el.utf-8: Δοκιμή τύπων συνηθισμένων εγγράφων
+description-en_AU.UTF-8: Common Document Types Test
+description-en_CA.UTF-8: Common Document Types Test
+description-en_GB.UTF-8: Common Document Types Test
+description-eo.UTF-8: Testo de oftaj dokumenttipoj.
+description-es.UTF-8: Prueba de tipos de documentos comunes
+description-fi.UTF-8: Yleisten asiakirjatyyppien testi
+description-fr.UTF-8: Test des types de document communs
+description-gl.UTF-8: Comprobación dos tipos de documentos comúns
+description-he.UTF-8: בדיקת סוגי מסמכים נפוצים
+description-hi.UTF-8: सामान्य दस्तावेज प्रकार जाँच
+description-hu.UTF-8: Általános dokumentumtípus teszt
+description-it.UTF-8: Test dei tipi di documento comuni
+description-ko.UTF-8: 일반 문서 형식 시험
+description-lv.UTF-8: Parasto dokumentu tipu tests
+description-ms.UTF-8: Ujian Jenis Dokumen Umum
+description-nl.UTF-8: Test veelvoorkomende bestandstypen
+description-pl.UTF-8: Test otwarcia najpopularniejszych typów plików
+description-pt.UTF-8: Testar os Tipos de Documentos Comuns
+description-pt_BR.UTF-8: Tipos de testes de documentos comuns
+description-ro.UTF-8: Test pentru tipuri uzuale de documente
+description-ru.UTF-8: Проверка стандартных типов документов
+description-sk.UTF-8: Testovanie bežných typov dokumentov
+description-sl.UTF-8: Preizkus pogostih vrst dokumentov
+description-sr.UTF-8: Тестирање општих врста докумената
+description-sv.UTF-8: Test av vanliga dokumenttyper
+description-tr.UTF-8: Ortak Belge Türleri Sınaması
+description-ug.UTF-8: ئاممىۋى پۈتۈك تىپى سىنىقى
+description-uk.UTF-8: Перевірка стандартних типів документів
+description-zh_CN.UTF-8: 常用文档类型测试
+description-zh_HK.UTF-8: 常見文件類型測試
+description-zh_TW.UTF-8: 常見文件類型測試
+command:
+ cat <<'EOF' | run_templates -s "find $CHECKBOX_SHARE/data/audio -type f"
+ name: `basename $0`_test
+ plugin: manual
+ description:
+  Now we will attempt to open the audio file '$0' with its default player. After the player opens, listen to the sound and then close the application.
+  .
+  Select Test to begin
+  .
+  Did the application play the audio file properly? (no skips, crackles, etc)
+ command: xdg-open $0
+ EOF
+
+plugin: local
+name: software/video_file_play
+requires: package.name == "ubuntu-desktop"
+description: Common Document Types Test
+description-ast.UTF-8: Prueba de tribes de documentos comunes
+description-bn.UTF-8: সাধারণ ডকুমেন্ট টাইপ টেস্ট
+description-bs.UTF-8: Test standardnih tipova dokumenata
+description-ca.UTF-8: Comprovacions de tipus de documents comuns.
+description-cs.UTF-8: Test běžných typů dokumentů
+description-da.UTF-8: Test for almindelige dokumenttyper
+description-de.UTF-8: Test für gebräuchliche Dokument-Typen
+description-el.utf-8: Δοκιμή τύπων συνηθισμένων εγγράφων
+description-en_AU.UTF-8: Common Document Types Test
+description-en_CA.UTF-8: Common Document Types Test
+description-en_GB.UTF-8: Common Document Types Test
+description-eo.UTF-8: Testo de oftaj dokumenttipoj.
+description-es.UTF-8: Prueba de tipos de documentos comunes
+description-fi.UTF-8: Yleisten asiakirjatyyppien testi
+description-fr.UTF-8: Test des types de document communs
+description-gl.UTF-8: Comprobación dos tipos de documentos comúns
+description-he.UTF-8: בדיקת סוגי מסמכים נפוצים
+description-hi.UTF-8: सामान्य दस्तावेज प्रकार जाँच
+description-hu.UTF-8: Általános dokumentumtípus teszt
+description-it.UTF-8: Test dei tipi di documento comuni
+description-ko.UTF-8: 일반 문서 형식 시험
+description-lv.UTF-8: Parasto dokumentu tipu tests
+description-ms.UTF-8: Ujian Jenis Dokumen Umum
+description-nl.UTF-8: Test veelvoorkomende bestandstypen
+description-pl.UTF-8: Test otwarcia najpopularniejszych typów plików
+description-pt.UTF-8: Testar os Tipos de Documentos Comuns
+description-pt_BR.UTF-8: Tipos de testes de documentos comuns
+description-ro.UTF-8: Test pentru tipuri uzuale de documente
+description-ru.UTF-8: Проверка стандартных типов документов
+description-sk.UTF-8: Testovanie bežných typov dokumentov
+description-sl.UTF-8: Preizkus pogostih vrst dokumentov
+description-sr.UTF-8: Тестирање општих врста докумената
+description-sv.UTF-8: Test av vanliga dokumenttyper
+description-tr.UTF-8: Ortak Belge Türleri Sınaması
+description-ug.UTF-8: ئاممىۋى پۈتۈك تىپى سىنىقى
+description-uk.UTF-8: Перевірка стандартних типів документів
+description-zh_CN.UTF-8: 常用文档类型测试
+description-zh_HK.UTF-8: 常見文件類型測試
+description-zh_TW.UTF-8: 常見文件類型測試
+command:
+ cat <<'EOF' | run_templates -s "find $CHECKBOX_SHARE/data/video -type f"
+ name: `basename $0`_test
+ plugin: manual
+ description:
+  Now we will attempt to play the video '$0' with its default player. After the video plays, close the application.
+  .
+  Select Test to begin
+  .
+  Did the application play '$0' proplerly (no video or audio issues with playback?)
+ command: xdg-open $0
+ EOF
+
+plugin: local
+name: software/view_image_file
+requires: package.name == "ubuntu-desktop"
+description: Common Document Types Test
+description-ast.UTF-8: Prueba de tribes de documentos comunes
+description-bn.UTF-8: সাধারণ ডকুমেন্ট টাইপ টেস্ট
+description-bs.UTF-8: Test standardnih tipova dokumenata
+description-ca.UTF-8: Comprovacions de tipus de documents comuns.
+description-cs.UTF-8: Test běžných typů dokumentů
+description-da.UTF-8: Test for almindelige dokumenttyper
+description-de.UTF-8: Test für gebräuchliche Dokument-Typen
+description-el.utf-8: Δοκιμή τύπων συνηθισμένων εγγράφων
+description-en_AU.UTF-8: Common Document Types Test
+description-en_CA.UTF-8: Common Document Types Test
+description-en_GB.UTF-8: Common Document Types Test
+description-eo.UTF-8: Testo de oftaj dokumenttipoj.
+description-es.UTF-8: Prueba de tipos de documentos comunes
+description-fi.UTF-8: Yleisten asiakirjatyyppien testi
+description-fr.UTF-8: Test des types de document communs
+description-gl.UTF-8: Comprobación dos tipos de documentos comúns
+description-he.UTF-8: בדיקת סוגי מסמכים נפוצים
+description-hi.UTF-8: सामान्य दस्तावेज प्रकार जाँच
+description-hu.UTF-8: Általános dokumentumtípus teszt
+description-it.UTF-8: Test dei tipi di documento comuni
+description-ko.UTF-8: 일반 문서 형식 시험
+description-lv.UTF-8: Parasto dokumentu tipu tests
+description-ms.UTF-8: Ujian Jenis Dokumen Umum
+description-nl.UTF-8: Test veelvoorkomende bestandstypen
+description-pl.UTF-8: Test otwarcia najpopularniejszych typów plików
+description-pt.UTF-8: Testar os Tipos de Documentos Comuns
+description-pt_BR.UTF-8: Tipos de testes de documentos comuns
+description-ro.UTF-8: Test pentru tipuri uzuale de documente
+description-ru.UTF-8: Проверка стандартных типов документов
+description-sk.UTF-8: Testovanie bežných typov dokumentov
+description-sl.UTF-8: Preizkus pogostih vrst dokumentov
+description-sr.UTF-8: Тестирање општих врста докумената
+description-sv.UTF-8: Test av vanliga dokumenttyper
+description-tr.UTF-8: Ortak Belge Türleri Sınaması
+description-ug.UTF-8: ئاممىۋى پۈتۈك تىپى سىنىقى
+description-uk.UTF-8: Перевірка стандартних типів документів
+description-zh_CN.UTF-8: 常用文档类型测试
+description-zh_HK.UTF-8: 常見文件類型測試
+description-zh_TW.UTF-8: 常見文件類型測試
+command:
+ cat <<'EOF' | run_templates -s "find $CHECKBOX_SHARE/data/images -type f"
+ name: `basename $0`_test
+ plugin: manual
+ description:
+  Now we will attempt to open the image '$0' with its default viewer. After the viewer opens, check out the file that was opened and then close the application.
+  .
+  Select Test to begin
+  .
+  Did the image display properly?
+ command: xdg-open $0
+ EOF
+
+plugin: manual
+name: software/firefox
+requires: package.name == 'firefox'
+command: firefox $CHECKBOX_SHARE/data/websites/testindex.html
+description:
+ Select Test to launch Firefox and view the test web page.
+ .
+ Did the Ubuntu Test page load correctly?
+
+plugin: manual
+name: software/firefox-java
+depends: software/firefox
+requires: package.name == 'firefox'
+command: firefox $CHECKBOX_SHARE/data/websites/javatest.html
+description:
+ Select Test to open Firefox with the Java test page, and follow the instructions there.
+ .
+ Did the applet display?
+
+plugin: manual
+name: software/firefox-flash
+depends: software/firefox
+requires: package.name == 'firefox'
+command: firefox $CHECKBOX_SHARE/data/websites/flashtest.html
+description:
+ Select Test to launch Firefox and view a sample Flash test.
+ .
+ Did you see the text?
+
+plugin: manual
+name: software/firefox-flash-video
+depends: software/firefox-flash
+requires: package.name == 'firefox'
+command: firefox $CHECKBOX_SHARE/data/websites/flashvideo.html
+description:
+ Select Test to launch Firefox and view a short flash video.
+ .
+ Did the video play correctly?
+
+plugin: manual
+name: software/firefox-totem
+depends: software/firefox
+requires: package.name == 'firefox'
+command: firefox $CHECKBOX_SHARE/data/video/Quicktime_Video.mov
+description:
+ Select Test to launch Firefox with a sample video.
+ .
+ Did the video play using a plugin?
+
+plugin: manual
+name: software/empathy-facebook_chat
+requires: package.name == "empathy"
+command: empathy
+description:
+ Select Test to launch Empathy, then configure it to connect to the following service. Once you have completed the test, please quit Empathy to continue here.
+ .
+ Facebook Chat
+ .
+ Were you able to connect correctly and send/receive messages?
+
+plugin: manual
+name: software/empathy-google_talk
+requires: package.name == "empathy"
+command: empathy
+description:
+ Select Test to launch Empathy, then configure it to connect to the following service. Once you have completed the test, please quit Empathy to continue here.
+ .
+ Google Talk
+ .
+ Were you able to connect correctly and send/receive messages?
+
+plugin: manual
+name: software/empathy-jabber
+requires: package.name == "empathy"
+command: empathy
+description:
+ Select Test to launch Empathy, then configure it to connect to the following service. Once you have completed the test, please quit Empathy to continue here.
+ .
+ Jabber
+ .
+ Were you able to connect correctly and send/receive messages?
+
+plugin: manual
+name: software/empathy-aim
+requires: package.name == "empathy"
+command: empathy
+description:
+ Select Test to launch Empathy, then configure it to connect to the following service. Once you have completed the test, please quit Empathy to continue here.
+ .
+ AIM
+ .
+ Were you able to connect correctly and send/receive messages?
+
+plugin: manual
+name: software/empathy-msn
+requires: package.name == "empathy"
+command: empathy
+description:
+ Select Test to launch Empathy, then configure it to connect to the following service. Once you have completed the test, please quit Empathy to continue here.
+ .
+ MSN
+ .
+ Were you able to connect correctly and send/receive messages?

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-encryption-s-mime-signing-encrypting" xml:lang="es">
+
+  <info>
+    <desc>Firmar o cifrar los mensajes que envía a través de S/MIME.</desc>
+
+    <link type="guide" xref="mail-encryption#s-mime"/>
+
+    <revision pkgversion="2.32.1" version="0.2" date="2011-08-24" status="draft"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <credit type="author">
+      <name>Novell, Inc</name> <!-- Content partially from http://library.gnome.org/users/evolution/2.32/encryption.html.en#bsqbdkv -->
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Firmar o cifrar correos</title>
+
+<p>Después de que haya <link xref="mail-encryption-s-mime-manage">añadido su certificado</link>, puede firmar o cifrar un correo pulsando <guiseq><gui>Opciones</gui><gui>Firma S/MIME</gui></guiseq> o <gui>Cifrado S/MIME</gui> en el editor de mensajes.</p>
+<p>Para enviar cada mensaje cifrado o firmado:</p>
+<steps>
+<item><p>Seleccione <guiseq><gui>Editar</gui><gui>Preferencias</gui><gui>Cuentas de correo</gui></guiseq>.</p></item>
+<item><p>Seleccione la cuenta en la que cifrar mensajes.</p></item>
+<item><p>Pulse <gui style="button">Editar</gui>.</p></item>
+<item><p>Pulse en la pestaña <gui>Seguridad</gui>.</p></item>
+<item><p>In the <gui>Secure MIME (S/MIME)</gui> section, click <gui style="button">Select</gui> next to <gui>Signing Certificate</gui> and specify the path to your signing certificate, or click <gui style="button">Select</gui> next to <gui>Encryption Certificate</gui> and specify the path to your encryption certificate.</p></item>
+<item><p>Seleccione las opciones apropiadas.</p></item>
+<item><p>Pulse <gui style="button">Aceptar</gui>.</p></item>
+</steps>
+<note style="tip"><p>La línea del Asunto del mensaje no se cifrará y no se debería usar para contener información sensible.</p></note>
+</page>

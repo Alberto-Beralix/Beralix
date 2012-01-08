@@ -1,0 +1,1406 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.26.0">
+<!ENTITY manrevision "2.26.0">
+<!ENTITY date "April 2006">
+<!ENTITY appname "Archive Manager">
+<!ENTITY app "<application>Archive Manager</application>">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file. 
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.GNOME.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Jan 30, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="zh_CN">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title><application>归档管理器</application> 手册</title>
+     <abstract role="description">
+       <para>归档管理器，亦称文件打包器，允许您创建、查看、修改、解包归档文件。</para>
+     </abstract>
+    <copyright>
+      <year>2009</year>
+      <holder>Paul Cutler</holder>
+    </copyright>	    
+	<copyright> 
+      <year>2006</year> 
+      <year>2008</year>
+      <holder>Paolo Bacchilega</holder> 
+    </copyright> 
+     <copyright>
+        <year>2003</year>
+        <year>2004</year>
+        <holder>Sun Microsystems</holder> 
+    </copyright>
+    <copyright> 
+      <year>2003</year> 
+      <holder>Paolo Bacchilega</holder> 
+    </copyright> 
+    <copyright> 
+      <year>2002</year> 
+      <holder>Alexander Kirillov</holder> 
+    </copyright><copyright><year>2009</year><holder>Zhang Miao (mymzhang@gmail.com)</holder></copyright><copyright><year>2010</year><holder>TeliuTe (teliute@163.com)</holder></copyright> 
+
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher role="maintainer"> 
+      <publishername>GNOME 文档项目</publishername> 
+    </publisher> 
+
+      <legalnotice id="legalnotice">
+         <para>对于本文档的复制、分发和／或修改必须遵循自由软件基金会 (Free Software Foundation) 发布的 GNU 自由文档许可证 (GFDL) 版本 1.1 或更高版本，该许可证没有固定的部分、没有封面和背页文本。您可以在此<ulink type="help" url="ghelp:fdl">链接</ulink>上或在随本手册一起分发的 COPYING-DOCS 文件中找到 GFDL 的副本。</para>
+          <para>本手册是在 GFDL 许可之下分发的 GNOME 手册集合的一部分。如果想要单独分发此手册，可以在手册中添加该许可证的一份副本然后分发，如该许可证的第 6 部分所述。</para>
+ 
+         <para>各个公司使用的许多用于区别它们产品和服务的名称都声明为商标。在所有的 GNOME 文档以及 GNOME 文档项目的成员中，这些名称都是以全大写字母或首字母大写显示，从而表明它们是商标。</para>
+ 
+         <para>本文档以及文档的修改版本都是在遵循 GNU 自由文档许可证的条款下提供，这表示具有以下含义：<orderedlist>
+                 <listitem>
+                   <para>文档按“原样”提供，不提供任何明示或暗示的保证，包括但不限于：文档或文档的修改版本没有适销性方面的缺陷、适合特定目的的适用性，以及没有侵权行为。您将自行承担本文档以及文档修改版本的质量、准确性以及性能方面的风险。如果任何文档或文档修改版本存在缺陷，您(而不是最初的编写者、作者或撰写人)将承担所有必需的服务、维修或更正的费用。此免责声明是本许可证的重要组成部分。如果不接受此免责声明，那么您就没有权利使用任何文档或文档的修改版本；并且</para>
+                 </listitem>
+                 <listitem>
+                   <para>无论在任何情况以及在任何法律理论下，本文档或文档修改版本的作者、最初的编写者、任何撰写人或任何分发者，或者任意这些方的任何提供者都不对任何人由于使用本文档或文档修改版本引起或带来的任何直接的、间接的、特殊的、偶然的或继发的损失承担任何民事(包括疏忽)、合同或其它方面的责任，这些损失包括但不限于信誉损失、工作停止、计算机失败或故障，或任何以及所有其它损失或由此引发的或与之相关的损失，即使这些方已被告知存在出现此类损失的可能性时也是如此。</para>
+                 </listitem>
+           </orderedlist></para>
+   </legalnotice>
+  <!-- This file contains link to license for the
+   documentation (GNU FDL), and other legal stuff such as "NO
+   WARRANTY" statement. Please do not change any of this. -->
+
+    <authorgroup> 
+       <author> 
+         <firstname>Sun</firstname>
+         <surname>GNOME 文档团队</surname>
+         <affiliation> 
+            <orgname>Sun Microsystems</orgname>
+        </affiliation>
+      </author>
+      <author> 
+	<firstname>Paolo</firstname> 
+	<surname>Bacchilega</surname> 
+	<affiliation> 
+	  <orgname>GNOME 文档项目</orgname> 
+	</affiliation> 
+      </author> 
+      <author> 
+	<firstname>Alexander</firstname> 
+	<surname>Kirillov</surname> 
+	<affiliation> 
+	  <orgname>GNOME 文档项目</orgname> 
+	  <address> <email>kirillov@math.sunysb.edu</email> </address> 
+	</affiliation> 
+      </author> 
+      <author>
+        <firstname>Paul</firstname>
+        <surname>Cutler</surname>
+        <affiliation>
+          <orgname>GNOME 文档项目</orgname>
+          <address><email>pcutler@foresightlinux.org</email></address>
+        </affiliation>
+      </author>	  
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review">
+		<ulink type="techreview" url="http://bugzilla.gnome.org/show_bug.cgi?id=575419"/>
+	</releaseinfo>
+
+         <revhistory>
+                <revision>
+                  <revnumber>归档管理器手册 V2.26.0</revnumber>
+                  <date>2009年3月</date>
+                  <revdescription>
+                         <para role="author">Paul Cutler</para>
+                         <para role="publisher">GNOME 文档项目</para>
+                  </revdescription>
+                </revision>
+				
+                <revision>
+                  <revnumber>归档管理器手册 2.24.0 版</revnumber>
+                  <date>2008年7月</date>
+                  <revdescription>
+                         <para role="author">Paolo Bacchilega</para>
+                         <para role="publisher">GNOME 文档项目</para>
+                  </revdescription>
+                </revision>
+				
+                <revision>
+                  <revnumber>归档管理器手册 2.6 版</revnumber>
+                  <date>2006年4月</date>
+                  <revdescription>
+                         <para role="author">Paolo Bacchilega</para>
+                         <para role="publisher">GNOME 文档项目</para>
+                  </revdescription>
+                </revision>
+
+                <revision>
+                  <revnumber>文件打包器手册 2.5 版</revnumber>
+                  <date>2004年3月</date>
+                  <revdescription>
+                         <para role="author">Sun GNOME 文档团队</para>
+                         <para role="publisher">GNOME 文档项目</para>
+                  </revdescription>
+                </revision>
+                <revision>
+                  <revnumber>文件打包器手册 2.4 版</revnumber>
+                  <date>2004年2月</date>
+                  <revdescription>
+                         <para role="author">Sun GNOME 文档团队</para>
+                         <para role="publisher">GNOME 文档项目</para>
+                  </revdescription>
+                </revision>
+                <revision>
+                  <revnumber>文件打包器手册 2.3 版</revnumber>
+                  <date>2003年8月</date>
+                  <revdescription>
+                         <para role="author">Sun GNOME 文档团队</para>
+                         <para role="publisher">GNOME 文档项目</para>
+                  </revdescription>
+                </revision>
+                <revision>
+                  <revnumber>文件打包器手册 2.2 版</revnumber>
+                  <date>2003年6月</date>
+                  <revdescription>
+                         <para role="author">Sun GNOME 文档团队</para>
+                         <para role="publisher">GNOME 文档项目</para>
+                  </revdescription>
+                </revision>
+                <revision>
+                  <revnumber>文件打包器手册 2.1 版</revnumber>
+                  <date>2003年1月</date>
+                  <revdescription>
+                         <para role="author">Paolo Bacchilega</para>                         
+                         <para role="publisher">GNOME 文档项目</para>
+                  </revdescription>
+                </revision>
+                <revision>
+                  <revnumber>文件打包器手册 2.0 版</revnumber>
+                  <date>2002年6月</date>
+                  <revdescription>
+                         <para role="author">Alexander Kirillov</para>                         
+                         <para role="publisher">GNOME 文档项目</para>
+                  </revdescription>
+                </revision>
+         </revhistory>
+
+    <releaseinfo>本手册描述的是 2.26 版的归档管理器。</releaseinfo> 
+    <legalnotice> 
+        <title>反馈</title>
+        <para>对 <application>归档管理器</application>程序或本手册报告错误或提供建议，请遵从<ulink url="ghelp:gnome-feedback" type="help">GNOME 反馈页面</ulink> 上的指导。</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
+  </articleinfo> 
+  <indexterm zone="index"> 
+    <primary>文件打包器</primary> 
+  </indexterm> 
+  <indexterm zone="index"> 
+    <primary>file-roller</primary> 
+  </indexterm>
+  <indexterm zone="index"> 
+    <primary>归档</primary> 
+  </indexterm>
+  <indexterm zone="file-roller-add-files"> 
+    <primary>归档</primary> 
+    <secondary>添加文件到</secondary>
+  </indexterm> 
+  <indexterm zone="file-roller-delete-files"> 
+    <primary>归档</primary> 
+    <secondary>从...删除文件</secondary>
+  </indexterm> 
+  <indexterm zone="file-roller-open"> 
+    <primary>归档</primary> 
+    <secondary>打开</secondary>
+  </indexterm> 
+  <indexterm zone="file-roller-view"> 
+    <primary>归档</primary> 
+    <secondary>查看</secondary>
+  </indexterm> 
+  <indexterm zone="file-roller-extract"> 
+    <primary>归档</primary> 
+    <secondary>解压缩</secondary>
+  </indexterm> 
+  <indexterm zone="file-roller-create"> 
+    <primary>归档</primary> 
+    <secondary>创建</secondary>
+  </indexterm> 
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="file-roller-intro"> 
+    <title>简介</title> 
+    <para>您可以使用 <application>归档管理器</application> 来创建、查看、修改或者解包一个归档文件。归档文件是一个包裹其他文件的打包文件，里面可以包含各种文件、文件夹、子文件夹，通常使用压缩格式。</para>
+    <para><application>归档管理器</application> 仅提供一个图形界面，其归档操作依赖于一些命令行组件，如<command>tar</command>，<command>gzip</command>，以及 <command>bzip2</command>。</para>
+    <para>如果您的系统上已经安装了合适的命令行工具，<application>归档管理器</application>支持如下表格中的归档格式。</para> 
+      <informaltable frame="all">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="COLSPEC0" colwidth="50*"/>
+          <colspec colname="COLSPEC1" colwidth="50*"/>
+          <thead>
+            <row valign="top">
+              <entry colname="COLSPEC0">
+                <para>格式</para></entry>
+              <entry colname="COLSPEC1" align="left">
+                <para>文件扩展名</para></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row valign="top">
+              <entry><para>7-Zip 归档格式</para></entry>
+              <entry align="left"><para><filename>.7z</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>WinAce 归档格式</para></entry>
+              <entry align="left"><para><filename>.ace</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>ALZip 归档格式</para></entry>
+              <entry align="left"><para><filename>.alz</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>AIX 小索引文档</para></entry>
+              <entry align="left"><para><filename>.ar</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>ARJ 归档格式</para></entry>
+              <entry align="left"><para><filename>.arj</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>CAB 压缩文件</para></entry>
+              <entry align="left"><para><filename>.cab</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>UNIX CPIO 归档文件</para></entry>
+              <entry align="left"><para><filename>.cpio</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Debian Linux 软件包</para></entry>
+              <entry align="left"><para><filename>.deb</filename></para></entry>
+            </row>            
+            <row valign="top">
+              <entry><para>ISO-9660 CD 光盘镜像</para></entry>
+              <entry align="left"><para><filename>.iso</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Java 归档文件</para></entry>
+              <entry align="left"><para><filename>.jar</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Java 企业归档格式</para></entry>
+              <entry align="left"><para><filename>.ear</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Java web 归档格式</para></entry>
+              <entry align="left"><para><filename>.war</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>LHA 归档格式</para></entry>
+              <entry align="left"><para><filename>.lha</filename>, <filename>.lzh</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>WinRAR 压缩归档格式</para></entry>
+              <entry align="left"><para><filename>.rar</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>RAR 压缩的 Comic Book 归档文件</para></entry>
+              <entry align="left"><para><filename>.cbr</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>RPM Linux 软件包</para></entry>
+              <entry align="left"><para><filename>.rpm</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>未压缩的 tar 归档格式</para></entry>
+              <entry align="left"><para><filename>.tar</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>用<command>bzip</command>压缩的 tar 归档格式</para></entry>
+              <entry align="left"><para><filename>.tar.bz</filename> 或 <filename>.tbz</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>用<command>bzip2</command>压缩的 tar 归档格式</para></entry>
+              <entry align="left"><para><filename>.tar.bz2</filename> 或 <filename>.tbz2</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>用<command>gzip</command> 压缩的 tar 归档格式</para></entry>
+              <entry align="left"><para><filename>.tar.gz</filename> 或 <filename>.tgz</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>用 <command>lzip</command> 压缩的 tar 归档格式</para></entry>
+              <entry align="left"><para><filename>.tar.lz</filename> 或 <filename>.tlz</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para><command>lzop</command>压缩的 tar 归档格式</para></entry>
+              <entry align="left"><para><filename>.tar.lzo</filename> 或 <filename>.tzo</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para><command>compress</command> 压缩的 tar 归档格式</para></entry>
+              <entry align="left"><para><filename>.tar.Z</filename> 或 <filename>.taz</filename></para></entry>
+            </row>
+             <row valign="top">
+              <entry><para>以<command>7zip</command>格式压缩的 tar 归档格式</para></entry>
+              <entry align="left"><para><filename>.tar.7z</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>压缩归档格式</para></entry>
+              <entry align="left"><para><filename>.bin</filename> 或 <filename>.sit</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>PKZIP 或 WinZip 归档格式</para></entry>
+              <entry align="left"><para><filename>.zip</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>ZIP 压缩的 Comic Book 归档文件</para></entry>
+              <entry align="left"><para><filename>.cbz</filename></para></entry>
+            </row>
+            <row valign="top">
+              <entry><para>Zoo 归档格式</para></entry>
+              <entry align="left"><para><filename>.zoo</filename></para></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    <para>在 UNIX 与 Linux 系统上最常见的归档格式为用 <command>gzip</command> 或 <command>bzip2</command>压缩的 tar 归档格式。</para>  
+    <para>微软 Windows 系统最常见的归档格式为 <application>PKZIP</application> 或 <application>WinZip</application>创建的归档。</para>
+    <sect2 id="file-roller-intro-nonarchive">
+      <title>已压缩的非归档文件</title> 
+      <para>压缩的非归档文件是您使用 <command>bzip2</command>、<command>gzip</command>、<command>lzip</command>、<command>lzop</command>、<command>compress</command> 或 <command>rzip</command> 压缩一个非归档文件。例如 <filename>file.txt.gz</filename> 是您用 <command>gzip</command> 压缩 <filename>file.txt</filename> 得来的。</para>
+      <para>您可以使用<application>归档管理器</application>创建，打开，解压一个压缩的非归档文件。</para> 
+    </sect2>
+  </sect1>
+
+<!-- ============= Getting Started =========================== -->
+  <sect1 id="file-roller-get-start">
+    <title>快速入门</title>
+    <para>本部分提供了如何启动<application>归档管理器</application>的信息，并描述了<application>归档管理器</application>的用户界面。</para>
+
+<!-- ============= To Start File Roller ============================ -->
+         <sect2 id="file-roller-to-start">
+                <title>要启动<application>归档管理器</application></title>
+                <para>您可以通过如下方式启动<application>归档管理器</application>：</para>
+                <variablelist>
+                <varlistentry>
+                <term><guimenu>应用程序</guimenu>菜单</term>
+                <listitem>
+                <para>选择 <menuchoice><guisubmenu>附件</guisubmenu><guimenuitem>归档管理器</guimenuitem></menuchoice>。</para>
+                </listitem>
+                </varlistentry>
+                <varlistentry>
+                <term>命令行</term>
+                <listitem>
+                <para>执行如下命令：<command>file-roller</command></para>
+                </listitem>
+                </varlistentry>
+                </variablelist>
+        </sect2>
+
+         <sect2 id="file-roller-when-start">
+                <title>启动 <application>归档管理器</application> 时</title>
+                <para>当您启动 <application>归档管理器</application>时，会显示如下窗口：</para>
+
+                <figure id="file-roller-FIG-main-window">
+                  <title><application>归档管理器</application> 窗口</title>
+                  <screenshot>
+                         <mediaobject>
+                                <imageobject>
+                                  <imagedata fileref="figures/file-roller_main_window.png" format="PNG"/>
+                                         </imageobject>
+                                <textobject> <phrase>显示文件滚动器主窗口。</phrase>
+                                </textobject>
+                        </mediaobject>
+                  </screenshot>
+                </figure>
+
+                <para><application>归档管理器</application> 窗口包含如下组件：</para>
+                <variablelist>
+                  <varlistentry> <term>菜单栏</term>
+                         <listitem>
+                                <para>菜单栏中的各个菜单，是您在 <application>归档管理器</application> 中操作归档文件时所需的各个命令。</para>
+                         </listitem>
+                  </varlistentry>
+                  <varlistentry> <term>工具栏</term>
+                         <listitem>
+                                <para>工具栏上包含一些常用的菜单命令，<application>归档管理器</application> 默认显示工具栏。要隐藏工具栏，点菜单 <menuchoice><guimenu>查看</guimenu><guimenuitem>工具栏</guimenuitem></menuchoice>，要显示工具栏再点一次 <menuchoice><guimenu>查看</guimenu><guimenuitem>工具栏</guimenuitem></menuchoice>。</para>
+                         </listitem>
+                  </varlistentry>
+                  <varlistentry> <term>地址栏</term>
+                         <listitem>
+                                <para>地址栏允许您在归档文件内部访问各个文件夹。<application>归档管理器</application> 仅在文件夹的视图中显示地址栏，更多信息请参阅：<xref linkend="file-roller-view-type-folder"/>。</para>
+                         </listitem>
+                  </varlistentry>
+                  <varlistentry> <term>显示区</term>
+                         <listitem>
+                                <para>显示区显示归档文件的内容。</para>
+                         </listitem>
+                  </varlistentry>
+                  <varlistentry> <term>状态栏</term>
+                         <listitem>
+                                <para>状态栏显示当前<application>归档管理器</application>的状态及归档文件内容的关联信息。<application>归档管理器</application>默认情况下显示状态栏。要隐藏状态栏，选择<menuchoice><guimenu>查看</guimenu><guimenuitem>状态栏</guimenuitem></menuchoice>。要显示状态栏，再次选择 <menuchoice><guimenu>查看</guimenu><guimenuitem>状态栏</guimenuitem></menuchoice>。</para>
+                         </listitem>
+                  </varlistentry>
+                </variablelist>
+                <para>当您在<application>归档管理器</application> 中点右键，会弹出一个菜单，里面包含了绝大多数常用的操作命令。</para>
+
+     <sect3 id="file-roller-bookmarks">
+        <title>浏览文件系统</title>
+        <para>一些 <application>归档管理器</application> 对话框(<guilabel>新建</guilabel>、 <guilabel>打开</guilabel>、<guilabel>解压</guilabel>，等等)，允许您浏览计算机中的文件和文件夹。使用浏览对话框的更多相关信息，请访问： <ulink type="help" url="ghelp:user-guide?filechooser-open">桌面用户指南</ulink>。</para>
+        <para>您也可以参考用户指南的 <ulink type="help" url="ghelp:user-guide?nautilus-bookmarks">书签章节</ulink> 学习如何使用 <guilabel>位置</guilabel> 面板来访问常用的位置。</para>
+     </sect3>
+   </sect2>
+</sect1>
+
+
+
+<!-- ======= Working with archives ============= --> 
+
+<sect1 id="file-roller-working">
+      <title>操作归档文件</title>
+      <para>当您使用 <application>归档管理器</application> 操作一个文档时，所有更改立刻会保存到磁盘。例如，如果您要从文档中删除了一个文件，一旦点击 <guibutton>确定</guibutton> 按钮，<application>归档管理器</application> 就会删除这个文件。这不同于其它大多数应用程序，它们会在您退出时，或是点菜单里的 <guimenuitem>保存</guimenuitem> 时，才会保存更改。</para>
+      <para>如果归档文件很大，或者您的系统很慢，一些归档动作可能花费很长时间。要中止当前的动作，按<keycap>Esc</keycap>。还可选择<menuchoice><guimenu>查看</guimenu><guimenuitem>停止</guimenuitem></menuchoice>，或者在工具条中单击<guibutton>停止</guibutton>。</para>      
+      <para>在 <application>归档管理器</application> 中，您可以用几种方法来完成同一个动作。例如，要打开一个文档，可以用下面的方法： <informaltable frame="all"><tgroup cols="2" colsep="1" rowsep="1"><colspec colname="COLSPEC0" colwidth="50*"/><colspec colname="COLSPEC1" colwidth="50*"/><thead>
+                        <row valign="top">
+                          <entry colname="COLSPEC0">
+                            <para>界面组件</para></entry>
+                          <entry colname="COLSPEC1" align="left"> 
+                            <para>动作</para></entry>
+                        </row>
+                      </thead><tbody>
+                        <row valign="top">               
+                          <entry><para>窗口</para></entry>
+                          <entry><para>从其他应用程序中，如文件管理器中，将一个归档文件拖入<application>归档管理器</application>窗口。</para></entry>
+                        </row>
+                        <row valign="top">               
+                          <entry><para>菜单栏</para></entry>
+                          <entry><para>选择<menuchoice><guimenu>文件</guimenu><guimenuitem>打开</guimenuitem></menuchoice>。</para>
+           <para>如果您最近打开过归档文件，它会直接列在<menuchoice><guimenu>文件</guimenu></menuchoice>菜单中。</para> 
+</entry>
+                        </row>
+                        <row valign="top">               
+                          <entry><para>工具栏</para></entry>
+                          <entry><para>点击工具栏上的 <guibutton>打开</guibutton> 按钮。</para>
+           <para>如果想打开最近访问的文档，点击工具栏上 <guibutton>打开</guibutton> 按钮旁边的下拉箭头。</para></entry>
+                        </row>
+                        <row valign="top">               
+                          <entry><para>右键弹出菜单</para></entry>
+                          <entry><para>右击归档文件，然后在弹出菜单中选择 <guilabel>打开</guilabel>。</para></entry>
+                        </row>
+                        <row valign="top">               
+                          <entry><para>快捷键</para></entry>
+                          <entry><para>按<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>。</para></entry>
+                        </row>
+                      </tbody></tgroup></informaltable></para>
+      <para>本手册提供菜单栏的功能性文档。</para>
+
+    <sect2 id="file-roller-pattern">
+      <title>文件名通配符</title>
+      <para><application>归档管理器</application> 能够让您一次性地添加，解压，或删除数个文件。对所有匹配某一匹配式的文件进行一项操作，在文本框中键入此匹配式。该匹配式可以包含标准通配符，如<keycap>*</keycap>匹配任意字符串， <keycap>?</keycap>匹配任意单个字符。您可以键入数个匹配式，用分号隔开。<application>归档管理器</application> 会对所有至少匹配一个样式的文件进行操作。如下表格中的实例显示了如何使用文件样式来选择文件。 </para>
+      <informaltable frame="all">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="COLSPEC0" colwidth="50*"/>
+          <colspec colname="COLSPEC1" colwidth="50*"/>
+          <thead>
+            <row valign="top">
+              <entry colname="COLSPEC0">
+                <para>通配符</para></entry>
+              <entry colname="COLSPEC1" align="left"> 
+                <para>匹配文件</para></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row valign="top">               
+              <entry><para><filename>*</filename></para></entry>
+              <entry align="left"><para>所有文件</para></entry>
+            </row>
+            <row valign="top">               
+              <entry><para><filename>*.tar*</filename></para></entry>
+              <entry align="left"><para>所有带有 <filename>tar</filename> 扩展名，包括那些在 <filename>tar</filename> 之后，还有一些符号的，如 <filename>filename.tar.gz</filename></para></entry>
+            </row>
+            <row valign="top">               
+              <entry><para><filename>*.jpg; *.jpeg</filename></para></entry>
+              <entry align="left"><para>所有扩展名为<filename>jpg</filename>的文件，以及所有扩展名为<filename>jpeg</filename>的文件。</para></entry>
+            </row>
+            <row valign="top">               
+              <entry><para><filename>file?.gz</filename></para></entry>
+              <entry align="left"><para><filename>gz</filename>扩展名，名称以“file”字符串开头，并且之后为任意单个字符的所有文件，如<filename>file2.gz</filename>，<filename>filex.gz</filename>。</para></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect2>
+
+<!-- ======= To open an archive ============= --> 
+
+<sect2 id="file-roller-open">
+      <title>打开归档文件</title>
+      <para>要打开一个归档文件，遵循如下步骤： <orderedlist>
+          <listitem>
+           <para>点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>打开</guimenuitem></menuchoice> 命令，出现一个 <guilabel>打开</guilabel> 对话框。也可以按组合键 <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>，或者点击工具栏上的 <guibutton>打开</guibutton> 按钮。</para> 
+          </listitem>
+          <listitem>
+           <para>选择您要打开的归档文件。</para> 
+          </listitem>
+          <listitem>
+           <para>点击<guibutton>打开</guibutton>。</para> 
+          </listitem>
+        </orderedlist></para>
+      <para><application>归档管理器</application> 自动决定归档类型，并显示：<itemizedlist>
+          <listitem>
+            <para>窗口标题栏里的归档文件名称</para>
+          </listitem>
+          <listitem>
+            <para>显示区中的归档文件内容</para>
+          </listitem>
+          <listitem>
+            <para>在状态栏中，显示当前位置中的文件与文件夹(目标)，以及解压缩后它们的大小。</para>
+          </listitem>
+        </itemizedlist></para>
+      <para>要打开其他文档，再点菜单<menuchoice><guimenu>文档</guimenu><guimenuitem>打开</guimenuitem></menuchoice> 命令。<application>归档管理器</application> 会在不同窗口打开它们，您不能在相同窗口里，打开其他归档文件。</para>
+      <para>若是你尝试打开一个 <application>归档管理器</application> 无法识别格式的文档，它会显示一条错误信息。在 <xref linkend="file-roller-intro"/> 中列出了所有支持的格式。</para>
+  </sect2>
+
+<!-- ======= Selecting files in an archive  ============= --> 
+    <sect2 id="file-roller-select-files">
+      <title>在归档中选择文件</title>
+    <para>要选择一份文档中的所有文件，选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>全部选中</guimenuitem></menuchoice>，或者按<keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>。</para>
+      <para>要全部不选归档文件中的所有文件，选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>全部不选</guimenuitem></menuchoice>，或按<keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>。</para>
+    </sect2>
+
+  <!-- =========== Extracting Files From an Archive ==================== -->
+
+  <sect2 id="file-roller-extract"> 
+    <title>从归档文件中解压文件</title> 
+    <para>从一个打开的归档文件中释放文件，请按以下步骤操作： <orderedlist>
+        <listitem><para>选择您要解压的文件。要选择更多的文件，按住<keycap>Ctrl</keycap>然后点击您要选择的文件。</para>
+        </listitem>
+        <listitem><para>点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>解压缩</guimenuitem></menuchoice> 命令，将会出来一个 <guilabel>解压缩</guilabel> 对话框，您也可以点工具栏上的 <guibutton>解压缩</guibutton> 按钮。</para>
+        </listitem>
+        <listitem><para>选择<application>归档管理器</application> 释放文件所在的文件夹。</para>
+        </listitem>
+        <listitem><para>选择所需的解压选项。更多关于解压缩选项的信息，参见<xref linkend="file-roller-extract-options"/>。</para>
+        </listitem>
+        <listitem><para>点击<guibutton>解压缩</guibutton>。</para>
+        <note>
+          <para>如果归档中的所有文件由密码保护，并且您未指定密码， <application>归档管理器</application>会要求您键入密码。</para>
+          <para>如果文档中有一部分文件受到密码保护，并且您没有输入密码，那么 <application>归档管理器</application> 将不提示输入密码。这时，<application>归档管理器</application> 会解压出没有密码保护的文件。</para>
+          <para>关于密码的更多信息，参见<xref linkend="file-roller-encrypt-files"/>。</para>
+        </note>
+        </listitem>
+        </orderedlist></para>
+      <para><application>归档管理器</application> 也提供了在文件管理器窗口中从归档文件释放文件的方式，不用打开<application>归档管理器</application>。参见<xref linkend="file-roller-fmgr"/> 获得更多信息。</para>
+    <para>解压操作是从文档中 <emphasis>复制</emphasis> 指定的文件。解压出的文件具有原始文件的权限和修改日期。</para>
+    <para>解压文件不改变压缩文档的内容，关于在文档中删除文件的介绍，请参阅：<xref linkend="file-roller-delete-files"/>。</para>
+  </sect2>
+    
+<!-- ======= Closing the Archive ============= --> 
+  <sect2 id="file-roller-archive-close">
+    <title>关闭归档文件</title>
+    <para>要关闭当前归档文件以及当前<application>归档管理器</application>窗口，选择 <menuchoice><guimenu>归档文件</guimenu><guimenuitem>关闭</guimenuitem></menuchoice>，或者按<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>。</para>
+    <note>
+      <para>不能只关闭当前的文档，而不关闭 <application>归档管理器</application> 窗口。</para>
+    </note>
+  </sect2>
+</sect1>
+
+
+<!-- =============  Creating Archives ============================= -->
+<sect1 id="file-roller-creating"> 
+    <title>创建归档文件</title> 
+    <para>除了打开已有的归档文件，您也可以用<application>归档管理器</application>创建新归档文件。</para>
+    <sect2 id="file-roller-create"> 
+    <title>创建归档文件</title> 
+    <para>要创建归档文件，请按以下步骤操作：<orderedlist>
+        <listitem>
+          <para>点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>新建</guimenuitem></menuchoice> 命令，出现一个新建对话框。您也可以按组合键 <keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo>，或者点工具栏上的 <guibutton>新建</guibutton> 按钮。</para>
+        </listitem>
+        <listitem>
+          <para>在 <guilabel>保存到文件夹</guilabel> 下拉列表中选择位置，指定 <application>归档管理器</application> 放置新建归档文件的位置，如果文件夹不在列表中，点 <guilabel>浏览文件夹</guilabel>，然后选择一个文件夹。您也可以在 <guilabel>名称</guilabel> 文本框中输入路径。</para>
+        </listitem>
+        <listitem>
+          <para>在<guilabel>名称</guilabel> 文本框中输入新文档的文件名，包括文件的扩展名。您也可以不输入扩展名，而是在 <guilabel>文档类型</guilabel> 下拉列表中选择一个，自动添加到文件末尾。</para>
+        </listitem>
+        <listitem><para>点击 <guilabel>其他选项</guilabel> 选择所需的创建选项，更多相关信息，请参阅：<xref linkend="file-roller-create-options"/>。</para>
+        </listitem>
+        <listitem>
+          <para>点击<guibutton>新建</guibutton>。<application>归档管理器</application>会创建一个空的归档文件，但不会写入磁盘。</para>
+        </listitem>
+        <listitem>
+          <para>如<xref linkend="file-roller-add-files"/>中所述，将文件添加到新的归档文件。<note>
+                  <para><application>归档管理器</application> 仅在文档中至少包含一个文件时，才会将新文档存入硬盘，如果您创建了一个新文档，里面没有任何文件，然后又退出了 <application>归档管理器</application>，那么这个文档会被删除。</para>
+                </note></para>
+        </listitem>
+      </orderedlist></para>
+</sect2>
+
+    <!-- ======= Adding files to an archive  ============= --> 
+  <sect2 id="file-roller-add-files">
+    <title>添加文件到归档文件中</title>
+    <para>添加文件到一份归档文件，请按以下步骤操作：<orderedlist>
+         <listitem>
+           <para>要添加文件到文档中，请在文档中打开那个文件所在的位置。</para> 
+         </listitem>
+         <listitem>
+           <para>点菜单 <menuchoice><guimenu>编辑</guimenu><guimenuitem>添加文件</guimenuitem></menuchoice> 命令，出现一个 <guilabel>添加文件</guilabel> 对话框，您也可以点工具栏上的 <guibutton>添加文件</guibutton> 按钮。</para> 
+         </listitem>
+         <listitem>
+           <para>选择您要添加的文件。要选择更多文件，按住<keycap>Ctrl</keycap>并点击文件。</para> 
+         </listitem>
+         <listitem>
+           <para>点击<guibutton>添加</guibutton>。<application>归档管理器</application>会将文件添加到归档文件中的当前文件夹。</para> 
+         </listitem>
+      </orderedlist></para>
+    <para>您不能通过 <guilabel>添加文件</guilabel>对话框来把文件夹添加到归档文件。要添加文件夹参见<xref linkend="file-roller-add-folder"/>。</para>
+    <para><guilabel>添加文件</guilabel> 对话框提供 <guilabel>仅添加新文件</guilabel> 选项，更多相关信息，请参阅 <xref linkend="file-roller-add-options"/>。</para>
+    <para>您也可以在文件管理器窗口中向文档中添加文件，不需要打开 <application>归档管理器</application>。相关信息请参阅：<xref linkend="file-roller-fmgr"/>。</para>
+    <para>添加操作是 <emphasis>复制</emphasis> 指定文件到归档文件中，<application>归档管理器</application> 不删除原始文件，它仍然在文件系统中没有改变。添加到归档文件中的副本文件，具有和原始文件相同的权限和修改日期。</para>
+    </sect2>
+
+<!-- ======= Adding files - Adding folder  ============= --> 
+    <sect2 id="file-roller-add-folder">
+      <title>将文件夹添加到归档文件</title>
+    <para>添加文件夹到归档文件，请按以下步骤操作：<orderedlist>
+         <listitem>
+           <para>要添加文件到文档中，请在文档中打开那个文件所在的位置。</para>
+         </listitem>
+         <listitem>
+           <para>选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>添加文件夹</guimenuitem></menuchoice>，显示<guilabel>添加文件夹</guilabel>对话框。</para> 
+         </listitem>
+         <listitem>
+           <para>选择您要添加的文件夹。</para> 
+         </listitem>
+         <listitem>
+           <para>点 <guibutton>添加</guibutton> 按钮，<application>归档管理器</application> 添加这个文件夹到归档文件的当前文件夹中。</para> 
+         </listitem>
+      </orderedlist></para>
+    <para><guilabel>添加文件夹</guilabel>对话框提供了几种高级选项。参见<xref linkend="file-roller-add-options"/>获取更多信息。</para>
+    </sect2>
+
+  <!-- ======= Converting an Archive to Another Format ============= --> 
+  <sect2 id="file-roller-convert-archive">
+    <title>转换归档文件为另一种格式</title>
+    <para>转换归档文件到另一种格式，并保存为新文件，请按以下步骤操作：</para>
+    <orderedlist>
+      <listitem>
+        <para>打开您要转换的归档文件。</para>
+      </listitem>
+      <listitem>
+        <para>选择<menuchoice><guimenu>文件</guimenu><guimenuitem>另存为</guimenuitem></menuchoice>，显示<guilabel>保存</guilabel> 对话框。</para>
+      </listitem>
+      <listitem>
+        <para>在<guilabel>名称</guilabel>文本框中键入新的归档名称。</para>
+      </listitem>
+      <listitem>
+        <para>在 <guilabel>文档类型</guilabel> 下拉列表中选择新的格式，您也可以在 <guilabel>名称</guilabel> 文本框中输入文档的扩展名，并且在 <guilabel>文档类型</guilabel> 下拉列表中选择 <guilabel>自动</guilabel>。</para>
+      </listitem>
+      <listitem>
+        <para>点击 <guilabel>其他选项</guilabel> 选择所需的创建选项，更多相关信息，请参阅：<xref linkend="file-roller-create-options"/>。</para>
+      </listitem>      
+      <listitem>
+        <para>点击<guibutton>保存</guibutton>。</para>
+        <note>
+          <para>如果归档中的所有文件由密码保护，并且您未指定密码， <application>归档管理器</application>会要求您键入密码。</para>
+          <para>如果文档中有一部分文件受到密码保护，并且您没有输入密码，那么 <application>归档管理器</application> 将不提示输入密码。当然，<application>归档管理器</application> 仅复制进去没有密码保护的文件。</para>
+          <para>关于密码的更多信息，参见<xref linkend="file-roller-encrypt-files"/>。</para>
+        </note>
+      </listitem>
+    </orderedlist>
+  </sect2>
+</sect1>
+
+<!-- ======= Operations on Archive Contents ============= --> 
+<sect1 id="file-roller-modify-contents">
+  <title>修改归档文件中的内容</title>
+  <para>您可以以多种方式修改归档文件内容。</para>
+
+<!-- ======= Encrypting files in an archive  ============= --> 
+    <sect2 id="file-roller-encrypt-files">
+      <title>加密归档文件中的文件。</title>
+    <para>为了安全，您可能想要加密添加到归档文件中的文件。</para>
+      <para>如果文档类型支持加密，您可以指定一个密码，用来加密您添加进去的文档。</para>
+      <note>
+        <para>目前，只有7-Zip、ZIP、RAR 和 ARJ 支持加密。</para>
+      </note>
+     <para>为文件加密指定密码，请按以下步骤操作：</para>
+       <orderedlist>
+          <listitem><para>选择 <menuchoice><guimenu>编辑</guimenu><guimenuitem>密码</guimenuitem></menuchoice> 以显示 <guilabel>密码</guilabel> 对话框。</para></listitem> 
+<listitem><para>在<guilabel>密码</guilabel>文本框中键入密码。</para></listitem>
+<listitem><para>点击<guibutton>确定</guibutton>。</para></listitem>
+       </orderedlist>
+    <para><application>归档管理器</application> 可以使用密码加密添加到文档中的文件，也可以在解压缩文件时使用该密码解密文件。关闭此文档时，<application>归档管理器</application> 将删除此密码。</para>
+      <para>更多关于如何查看一个文档是否包含加密的文件的信息，请参阅：<xref linkend="file-roller-extra-info"/>。</para>
+      <note>
+      <para>压缩工具提供的加密较弱，不安全。如果安全性要求较高，请使用更强的加密工具，如<ulink url="http://www.gnupg.org" type="http">GNU Privacy Guard</ulink>。</para>
+      </note>
+    </sect2>
+
+<!-- ======= Renaming files in an archive  ============= --> 
+  <sect2 id="file-roller-rename-files">
+    <title>重命名归档文件中的文件</title>
+    <para>要重命名归档文件中的文件，请按以下步骤操作：</para>
+      <orderedlist>
+        <listitem>
+          <para>选择您要重命名的文件。</para>
+        </listitem>
+        <listitem>
+          <para>选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>重命名</guimenuitem></menuchoice>，或按<keycombo><keycap>F2</keycap></keycombo>，显示<guilabel>重命名</guilabel>对话框。</para>
+        </listitem>
+        <listitem>
+          <para>在 <guilabel>新文件名</guilabel>文本框中键入新的文件名。</para>
+        </listitem>
+        <listitem>
+          <para>点击 <guibutton>重命名</guibutton>。</para>
+        </listitem>
+      </orderedlist>
+  </sect2>
+
+<!-- ======= Copying files in an archive  ============= --> 
+  <sect2 id="file-roller-copy-files">
+    <title>复制归档文件中的文件</title>
+    <para>复制归档文件中的文件，请按以下步骤操作：</para>
+      <orderedlist>
+        <listitem>
+          <para>选择您要复制的文件。</para>
+        </listitem>
+        <listitem>
+          <para>选择 <menuchoice><guimenu>编辑</guimenu><guimenuitem>复制</guimenuitem></menuchoice>，或按 <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>。</para>
+        </listitem>
+        <listitem>
+          <para>打开您要放置复制文件的位置。</para>
+        </listitem>
+        <listitem>
+          <para>选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>粘贴</guimenuitem></menuchoice>，或者按<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>。</para>
+        </listitem>
+      </orderedlist>
+  </sect2>
+
+<!-- ======= Moving files in an archive  ============= --> 
+  <sect2 id="file-roller-move-files">
+    <title>移动归档文件中的文件</title>
+    <para>要移动归档文件中的文件，请按以下步骤操作：</para>
+      <orderedlist>
+        <listitem>
+          <para>选择您要移动的文件。</para>
+        </listitem>
+        <listitem>
+          <para>选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>剪切</guimenuitem></menuchoice>,或按<keycombo><keycap>Ctrl</keycap><keycap>X</keycap></keycombo>。</para>
+        </listitem>
+        <listitem>
+          <para>打开您要放置移动文件的位置。</para>
+        </listitem>
+        <listitem>
+          <para>选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>粘贴</guimenuitem></menuchoice>，或者按<keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>。</para>
+        </listitem>
+      </orderedlist>
+  </sect2>
+
+<!-- ======= Deleting files from an archive  ============= --> 
+  <sect2 id="file-roller-delete-files">
+    <title>删除归档文件中的文件</title>
+    <para>要删除归档文件中的文件，请按以下步骤操作：</para>
+      <orderedlist>
+        <listitem>
+          <para>选择您要删除的文件。</para>
+        </listitem>
+        <listitem>
+          <para>选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>删除</guimenuitem></menuchoice>，或按 <keycap>删除</keycap>显示<guilabel>删除</guilabel>对话框。</para>
+        </listitem>
+        <listitem>
+          <para>选择如下删除选项中的一项：</para>
+          <variablelist>
+            <varlistentry>
+              <term><guilabel>所有文件</guilabel></term>
+              <listitem>
+                <para>删除归档文件中的所有文件。</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term><guilabel>选择的文件</guilabel></term>
+              <listitem>
+                <para>从归档文件中删除选定的文件</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term><guilabel>文件</guilabel></term>
+              <listitem>
+                <para>从归档文件中删除所有匹配指定模式的文件。参见<xref linkend="file-roller-pattern"/> 中获取更多关于文件名模式的信息。</para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </listitem>
+        <listitem>
+          <para>点击<guibutton>确定</guibutton>。</para>
+        </listitem>
+      </orderedlist>
+  </sect2>
+
+<!-- =============  Modify a File in an Archive ==================== -->
+  <sect2 id="file-roller-modify-archive-file"> 
+    <title>更改归档文件中的文件</title> 
+    <para>要更改归档文件中的文件，请按以下步骤操作：<orderedlist>
+      <listitem><para>双击您要打开的文件。或者右击文件，并选择<menuchoice><guimenuitem>打开</guimenuitem></menuchoice>。</para></listitem>
+      <listitem><para>编辑在步骤 1 中打开的文件，然后保存您的更改。</para></listitem>
+      <listitem><para><application>归档管理器</application>显示一个确认对话框，询问是否确认使用您所作的更改来更新归档文件中的文件。</para></listitem>
+      <listitem><para>点击 <guilabel>更新</guilabel>。</para></listitem>
+      </orderedlist></para>
+    <para><application>归档管理器</application> 使用系统定义的文件打开方式，文件和打开程序的关联可以在文件属性的 <guilabel>打开方式</guilabel> 对话框中显示。如果 <application>归档管理器</application> 不能检测到恰当的打开方式，就会显示一个 <guilabel>打开文件</guilabel> 对话框，让您来选择一个程序，如下所述：</para>
+    <sect3 id="file-roller-modifiy-archive-file-custom-app">
+    <title>用自选应用程序来修改归档文件中的文件</title>
+    <para>您可以使用您指定的应用程序更改文件，来代替默认的程序。要使用外部程序打开文件：<orderedlist>
+      <listitem><para>右击文件。</para></listitem>
+      <listitem><para>选择<menuchoice><guimenuitem>以其他程序打开...</guimenuitem></menuchoice>。</para></listitem>
+      </orderedlist></para>    
+    <para><application>归档管理器</application> 显示的 <guilabel>打开文件</guilabel> 中，列出了所有您可以打开指定类型文件的应用程序，要选择一个程序，只要在它上面双击即可，或者点击程序名，然后点  <guibutton>打开</guibutton> 按钮。您也可以在 <guilabel>应用程序</guilabel> 文本框中输入程序名，然后点 <guibutton>打开</guibutton> 按钮启动您选中的应用程序。</para>
+    <para>一旦程序启动，就可以按照 <xref linkend="file-roller-modify-archive-file"/> 中的第 2 步描述的操作进行。</para>
+    </sect3>
+  </sect2>
+</sect1>
+
+
+<!-- ======= Viewing an archive ============= --> 
+<sect1 id="file-roller-view">
+  <title>查看归档文件</title>
+  <para><application>归档管理器</application> 能够让您查看一份归档文件的数个方面。</para>
+
+<!-- ======= Archive Properties ============= --> 
+    <sect2 id="file-roller-view-archive-properties">
+      <title>查看归档文件的属性</title>
+      <para>要查看一个文档的属性，点菜单 <menuchoice><guimenu>文件</guimenu><guimenuitem>属性</guimenuitem></menuchoice> 命令，出现一个 <guilabel>属性</guilabel> 对话框，它里面显示了文档的下列信息：<variablelist>
+	      <varlistentry>
+	        <term><guilabel>名称</guilabel></term>
+	        <listitem><para>归档文件名称。</para></listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term><guilabel>位置</guilabel></term>
+	        <listitem><para>归档文件在文件系统中的位置。</para></listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term><guilabel>修改时间</guilabel></term>
+	        <listitem><para>归档文件上次修改的日期时间</para></listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term><guilabel>归档文件大小</guilabel></term>
+	        <listitem><para>当压缩后归档文件内容的大小。</para></listitem>
+	      </varlistentry>
+	      <varlistentry>
+	        <term><guilabel>内容大小</guilabel></term>
+	        <listitem><para>解压时归档文件内容的大小。在状态栏中也有此信息。</para></listitem>
+	      </varlistentry>
+
+	      <varlistentry>
+	        <term><guilabel>压缩比</guilabel></term>
+	        <listitem><para>压缩比是一个用来描述压缩比的数值，例如压缩比是 5，意味着压缩后的文档是原来大小的1/5.</para></listitem>
+	      </varlistentry>
+
+	      <varlistentry>
+	        <term><guilabel>文件数</guilabel></term>
+	        <listitem><para>归档文件中文件的数量。</para></listitem>
+	      </varlistentry>
+            </variablelist></para>
+    </sect2>
+ 
+
+<!-- ======= Archive Contents ============= --> 
+    <sect2 id="file-roller-view-archive-contents">
+      <title>查看归档文件中的内容</title>
+
+      <para><application>归档管理器</application>在主窗口以具有如下纵列的文件列表形式显示归档文件内容： <variablelist>
+	  <varlistentry>
+	    <term><guilabel>名称</guilabel></term>
+	    <listitem><para>归档中文件或文件夹的名称。</para></listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>大小</guilabel></term>
+	    <listitem><para>文件从文档中解压后的大小，对于一个文件夹，<guilabel>大小</guilabel> 这儿是空的。更多显示压缩文件大小的相关信息，请参阅：<xref linkend="file-roller-extra-info"/>。</para></listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>类型</guilabel></term>
+	    <listitem><para>文件的类型。对于文件夹，<guilabel>类型</guilabel>项中的值为<literal>文件夹</literal>。</para></listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>修改日期</guilabel></term>
+	    <listitem><para>文件最后修改的日期。对于一个文件夹，<guilabel>修改日期</guilabel>项为空。</para></listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><guilabel>位置</guilabel></term>
+	    <listitem><para>文件在文档内部的路径，这一列仅在窗口是文件视图方式，在文件夹视图方式下，文件的路径显示在 <guilabel>位置</guilabel> 文本框里。更多查看类型的相关信息，请参阅：<xref linkend="file-roller-view-type-folder"/>。</para></listitem>
+	  </varlistentry>
+        </variablelist></para>
+      <para>如果其他程序在<application>归档管理器</application>打开归档文件后修改了归档文件，请选择<menuchoice><guimenu>查看</guimenu><guimenuitem>重新载入</guimenuitem></menuchoice>来从磁盘重新载入归档文件内容。</para>
+      <para>更多关于如何自定义<application>归档管理器</application> 显示归档文件内容的方式，参见<xref linkend="file-roller-archive-custom"/>。</para>
+      <para>对于更多高级任务，请使用系统上的其他应用程序。更多信息，参见<xref linkend="file-roller-view-archive-file"/>。</para>
+    </sect2>
+
+  <!-- =============  Viewing a File in an Archive ==================== -->
+  <sect2 id="file-roller-view-archive-file"> 
+    <title>查看归档文件中的文件</title> 
+    <para>要查看文档中的一个文件，请按照这个步骤操作：<xref linkend="file-roller-modify-archive-file"/>。如果您保存了一个打开的文件，在 <application>归档管理器</application>确认更新文档时，点 <guilabel>取消</guilabel>。</para>
+  </sect2>
+
+<!-- =============  Testing the Integrity of an Archive ==================== -->
+  <sect2 id="file-roller-test-archive"> 
+    <title>测试归档文件完整性</title> 
+    <para>有时归档文件可能由于一些原因而损坏，要检查归档文件是否损坏，选择<menuchoice><guimenu>归档文件</guimenu><guimenuitem>测试完整性</guimenuitem></menuchoice>：<itemizedlist>
+              <listitem>
+                <para>如果归档文件没有错误，<application>归档管理器</application> 会打开<guilabel>测试结果</guilabel>对话框来列出归档文件中的每个文件，并指明每个文件的状态为<literal>正常</literal>。</para>
+              </listitem>
+              <listitem>
+                <para>如果文档包含了一些错误，<application>归档管理器</application> 会打开 <guilabel>测试结果</guilabel> 对话框，显示文档包含错误的部分。</para>
+              </listitem>
+            </itemizedlist></para>
+    <para>损坏的归档文件不能释放，这会导致数据损失。基于这个原因，您应该在删除原始文件前进行归档文件完整性测试。</para>
+    <para>如果归档文件包含加密文件，<application>归档管理器</application>在进行测试时会询问归档文件密码。</para>
+    <note>
+      <para>不是所有的归档格式支持完整性测试，如下格式是能够进行完整性测试的归档文件类型：7-Zip、 RAR、ZIP、ACE、ARJ 以及 Zoo。</para>
+    </note>
+    <tip>
+      <title>小提示</title>
+      <para>要测试不支持完整性测试的归档文件完整性，释放归档文件的所有文件，然后检查操作是否成功完成。</para>      
+    </tip>
+  </sect2>  
+</sect1>
+    
+<!-- ======= Customizing the Archive Display ============= --> 
+<sect1 id="file-roller-archive-custom">
+  <title>自定义归档文件显示</title>
+  <para>您可以自定义<application>归档管理器</application>显示归档文件内容的方式，步骤如下：</para>
+  <itemizedlist>
+    <listitem>
+      <para>在文件夹视图与文件视图间切换。更多信息，参见<xref linkend="file-roller-view-type"/>。</para>
+    </listitem>
+    <listitem>
+      <para>指定列表中显示文件的顺序。更多信息，参见<xref linkend="file-roller-view-sort"/>。</para>
+    </listitem> 
+    <listitem>
+      <para>显示归档文件内容的附加信息。更多信息，参见<xref linkend="file-roller-extra-info"/>。</para>
+    </listitem> 
+  </itemizedlist>
+  <para>当您进行上面所述的任何自定义动作时，<application>归档管理器</application> 会立即更新显示。</para>
+
+  <sect2 id="file-roller-view-type">
+    <title>设置查看类型</title>
+    <para>如果文档包含文件夹，您可以用 <link linkend="file-roller-view-type-folder">文件夹视图</link> 或 <link linkend="file-roller-view-type-file">文件视图</link> 方式显示文档的内容。</para>
+
+    <sect3 id="file-roller-view-type-folder">
+      <title>文件夹试图</title>
+      <para><application>归档管理器</application>默认以文件夹视图来显示归档文件内容。要明确选择文件夹视图，选择<menuchoice><guimenu>查看</guimenu><guimenuitem>以文件夹查看</guimenuitem></menuchoice>。</para>
+      <para>在文件夹视图方式中，<application>归档管理器</application> 跟文件管理器一样显示文件夹的内容。也就是，<application>归档管理器</application> 在显示区域用一个文件夹图标和文件夹名称指示文件夹。要查看文件夹里的内容，双击这个文件夹名称。</para>
+      <para>地址栏，仅在 <application>归档管理器</application> 的文件夹视图中显示，包含的各个组件如下表所述：</para>
+      <informaltable frame="all">
+        <tgroup cols="2" colsep="1" rowsep="1">
+          <colspec colname="COLSPEC0" colwidth="50*"/>
+          <colspec colname="COLSPEC1" colwidth="50*"/>
+          <thead>
+            <row valign="top">
+              <entry colname="COLSPEC0">
+                <para>组件</para></entry>
+              <entry colname="COLSPEC1">
+                <para>描述</para></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row valign="top">
+              <entry>
+                <para>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/file-roller_leftarrow.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>在历史记录访问列表中，显示后退图标。</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </para>
+              </entry>
+              <entry>
+                <para>点击此按钮，在历史记录访问列表中后退一步。</para>
+              </entry>
+            </row>
+            <row valign="top">
+              <entry>
+                <para>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/file-roller_rightarrow.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>在历史记录访问列表中，显示前进图标。</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </para>
+              </entry>
+              <entry>
+                <para>点击此按钮，在历史记录访问列表中前进一步。</para>
+              </entry>
+            </row>
+            <row valign="top">
+              <entry>
+                <para>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/file-roller_uparrow.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>显示树形目录结构中向上一级的图标。</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </para>
+              </entry>
+              <entry>
+                <para>点击此按钮，在树形目录结构中，访问上一级位置。</para>
+              </entry>
+            </row>
+            <row valign="top">
+              <entry>
+                <para>
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="figures/file-roller_home.png" format="PNG"/>
+                    </imageobject>
+                    <textobject>
+                      <phrase>显示打开归档文件中最高一级文件夹的图标。</phrase>
+                    </textobject>
+                  </inlinemediaobject>
+                </para>
+              </entry>
+              <entry>
+                <para>点击此按钮，将会进入文档内上一级的文件夹。</para>
+              </entry>
+            </row>
+            <row valign="top">
+              <entry>
+                <para>
+                  <guilabel>位置</guilabel>
+                </para>
+              </entry>
+              <entry>
+                <para>这里显示的是，归档文件内当前文件夹的完整路径。</para>
+                <para>要在树形目录中进入一个不同级的文件夹，请在 <guilabel>位置</guilabel> 文本框中输入新位置，然后按一下 <keycap>回车键</keycap>。<application>归档管理器</application> 将显示新位置里的内容。</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </sect3>
+
+    <sect3 id="file-roller-view-type-file">
+      <title>文件视图</title>
+      <para>要选择文件视图，选择<menuchoice><guimenu>查看</guimenu><guimenuitem>查看全部文件</guimenuitem></menuchoice>。</para>
+      <para>在文件视图中，<application>归档管理器</application>以单列表的形式显示归档文件中的所有文件，包含子文件夹中的文件。</para>
+    </sect3>
+
+  </sect2>
+
+  <sect2 id="file-roller-view-sort">
+    <title>文件列表排序</title>
+    <para>您可以依照名称、大小、类型、更改日期、位置来对文件列表排序。</para>
+    <para>要指定排序方式，点击相应列的列标题。</para>
+    <para>要反序排列，请再次点击列标题。</para>
+    <para>例如，要按照修改时间来排列文件，点击 <guilabel>修改日期</guilabel> 标题，<application>归档管理器</application>将会按照修改日期重新排列文件，较近的排在前面。要让较早的文件排在前面，请再次点击 <guilabel>修改日期</guilabel> 标题。</para>
+    <para><application>归档管理器</application> 总是再按照文件名排列文件，在上面的例子中，<application>归档管理器</application> 对于相同修改日期的文件再以文件名进行排列。</para>
+  </sect2>
+
+  <sect2 id="file-roller-extra-info">
+    <title>显示附加信息</title>
+      <para>要打开 <guilabel>上次输出</guilabel> 对话框，点菜单 <menuchoice><guimenu>查看</guimenu><guimenuitem>上次输出</guimenuitem></menuchoice>: <itemizedlist>
+              <listitem>
+                <para>如果您在当前会话中测试了文档，那么 <guilabel>上次输出</guilabel> 对话框会显示上次测试的结果。</para>
+              </listitem>
+              <listitem>
+                <para>如果你在当前 <application>归档管理器</application> 会话中，没有进行文档测试，那么 <guilabel>上次输出</guilabel> 对话框显示文档内所有文件列表，但不会指示文件的状态，而是显示每个文件压缩后的大小、每个文件的压缩比、文件最后修改的日期和时间。</para>
+              </listitem>
+            </itemizedlist></para>
+  </sect2>
+</sect1>
+
+<!-- ====== Using the File Manager Popup Menu to Manipulate an Archive ===== -->
+
+<sect1 id="file-roller-fmgr"> 
+    <title>使用文件管理器操作归档文件</title> 
+    <para>您可以使用文件管理器来将文件添加到归档文件，或从归档文件中释放文件。</para>
+
+<!-- ======= Adding files Using File Manager Menu  ============= --> 
+    <sect2 id="file-roller-fmgr-add">
+      <title>使用文件管理器将文件添加到归档文件</title>
+           <para>您可以以如下方式使用文件管理器将文件添加到归档文件：<itemizedlist>
+             <listitem><para>将文件从文件管理器窗口拖入<application>归档管理器</application>窗口。</para>
+             </listitem>
+             <listitem><para>使用文件管理器弹出菜单将文件添加到归档文件。</para>
+             </listitem>
+          </itemizedlist></para>
+      <para>要在文件管理器中使用弹出菜单，向文档内添加文件，请按以下步骤操作：</para>
+      <orderedlist>
+        <listitem><para>在文件管理器窗口中右击文件或文件夹。</para>
+        </listitem>
+        <listitem><para>从文件管理器弹出菜单中选择 <guimenuitem>创建归档文件</guimenuitem>，会显示 <application>归档管理器</application><guilabel>创建归档文件</guilabel>对话框。</para>
+        </listitem>
+        <listitem><para>在 <guilabel>归档</guilabel>文本框中，键入归档文件名称，不必键入扩展名。</para>
+        </listitem>
+        <listitem><para>从下拉列表中选择归档文件类型。</para>
+        </listitem>
+        <listitem><para>在 <guilabel>位置</guilabel> 下拉列表中选择位置，指定放置保存归档文件的位置，如果文件夹不在列表中，在 <guilabel>位置</guilabel> 对话框中点 <guilabel>其他...</guilabel>。</para>
+        </listitem>
+        <listitem><para>点击 <guilabel>其他选项</guilabel> 选择所需的创建选项，更多相关信息，请参阅：<xref linkend="file-roller-create-options"/>。</para>
+        </listitem>
+        <listitem><para>点 <guilabel>创建</guilabel> 添加选中文件到指定文档的根文件夹中。</para>
+                 <note><para>要选择任何高级添加选项，您必须依照<xref linkend="file-roller-to-start"/>中所述来调用<application>归档管理器</application>。</para></note>
+        </listitem>
+      </orderedlist>
+    </sect2>
+
+<!-- ======= Extracting files Using File Manager Menu  ============= --> 
+  <sect2 id="file-roller-fmgr-extract">
+      <title>使用文件管理器从归档文件中提前文件</title>
+           <para>您可以使用文件管理器从归档文件中释放文件，方法如下：<itemizedlist>
+             <listitem><para>从<application>归档管理器</application>窗口中将文件拖入文件管理器窗口。</para>
+             </listitem>
+             <listitem><para>使用文件管理器弹出菜单从归档文件中释放文件。</para>
+             </listitem>
+          </itemizedlist></para>
+      <para>要使用文件管理器弹出菜单从归档文件中释放文件，请按以下步骤操作：</para>
+      <orderedlist>
+        <listitem><para>在文件管理器窗口中右击压缩文件。</para>
+        </listitem>
+        <listitem><para>选择<guimenuitem>解压缩到此处</guimenuitem> 以将所有的归档内容释放到归档文件所在目录中。</para>
+        </listitem>
+      </orderedlist>
+      <note><para>如果归档文件被加密，<application>归档管理器</application>将会在释放文件前要求键入密码。</para></note>
+    </sect2>
+
+</sect1>
+
+<!-- ======= Create Archive Advanced Options  ============= --> 
+    <sect1 id="file-roller-create-options">
+      <title>创建选项</title>
+      <para>如果是创建一个新文档，或是转换一个现存文档到另外一种类型，点击 <guilabel>其他选项</guilabel> 指定下列高级选项：</para>
+      <variablelist>
+       <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>密码</guilabel></term>
+	  <listitem>
+	  <para>键入用于加密归档文件的密码。如果没有指定密码，归档文件将不会被加密。</para>
+	  <note>
+	    <para>不是所有的归档类型都支持加密。更多关于文件加密的信息，参见<xref linkend="file-roller-encrypt-files"/>。</para>
+	  </note>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>	  
+	  <term><guilabel>也加密文件列表</guilabel></term>
+	  <listitem>
+	  <para>选中此项则查看文档包含的文件列表也需要密码，否则它仅在解压文件时才需要密码。这个选项仅在指定密码后才可用。</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>	  
+	  <term><guilabel>分卷</guilabel></term>
+	  <listitem>
+	  <para>选中此项文档被分割成多个指定大小的文件。</para>
+	  <note>
+	    <para>只有 7-Zip 与 RAR 归档支持该特性。</para>
+	  </note>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect1>
+
+<!-- ======= Add Advanced Options  ============= --> 
+    <sect1 id="file-roller-add-options">
+      <title>添加选项</title>
+      <para><guilabel>添加文件</guilabel> 与 <guilabel>添加文件夹</guilabel>对话框提供如下选项：</para>
+      <variablelist>
+       <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>仅添加新文件</guilabel></term>
+	  <listitem>
+            <para>选中此项，则仅在文档中不包含此文件，或者包含的文件是一个旧版本，才会添加这个文件到文档中。<application>归档管理器</application> 使用修改时间来检测文件是否是最近更新，如果文档中的文件是最近的，<application>归档管理器</application> 将不会添加这个文件。</para>
+	    <para>如果您没有选中此项，<application>归档管理器</application> 添加此文件并覆盖原来的内容。</para>
+	    <tip>
+	      <title>小提示</title>
+	      <para>如果用 <application>归档管理器</application> 来创建备份，<guilabel>仅添加新文件</guilabel> 选项是非常有用的。例如，文档 <filename>backup.tar.gz</filename> 包含您上周备份的主文件夹内容。要用当前主文件夹的内容来更新这个备份，请按以下步骤操作：<orderedlist>
+                      <listitem>
+                        <para>在 <application>归档管理器</application> 中打开 <filename>backup.tar.gz</filename> 文档。</para>
+                      </listitem>
+                      <listitem>
+                        <para>选择<menuchoice><guimenu>编辑</guimenu><guimenuitem>添加</guimenuitem></menuchoice>以显示<guilabel>添加文件夹</guilabel>对话框。</para> 
+                      </listitem>
+                      <listitem>
+                        <para>选择您的主文件夹。</para>
+                      </listitem>
+                      <listitem>
+                        <para>选中 <guilabel>仅添加新文件</guilabel> 选项。</para>
+                      </listitem>
+                      <listitem>
+                        <para>点击<guibutton>添加</guibutton>。</para>
+                      </listitem>
+                    </orderedlist></para>
+                <para><application>归档管理器</application> 自动添加自上周以来您创建的文档，以及更新修改过的文件。但是，<application>归档管理器</application> 不会删除您上周以来删除的文档。更新操作要比重新完整备份要快一些。</para>
+	  </tip>
+	</listitem>
+      </varlistentry>
+      </variablelist>
+      <sect2 id="file-roller-add-folder-options">
+      <title>添加到文件夹选项</title>
+      <para>下列选项在 <guilabel>添加文件夹</guilabel> 对话框中可用，允许自动选择并添加符合条件的所有文件：</para>
+      <variablelist>
+       <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>包含文件</guilabel></term>
+	  <listitem>
+            <para>在本文本框中键入文件模式以包含匹配指定模式名称的文件。参见 <xref linkend="file-roller-pattern"/>获得更多关于文件名模式的信息。</para>
+          </listitem>
+	</varlistentry>
+       <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>排除文件</guilabel></term>
+	  <listitem>
+            <para>在文本框中输入文件名模式，所有与此匹配的文件都会被排除，更多文件名模式的相关信息，请参阅：<xref linkend="file-roller-pattern"/>。</para>
+          </listitem>
+	</varlistentry>
+        <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>排除文件夹</guilabel></term>
+	  <listitem>
+            <para>在文本框中输入文件名模式，所有与此匹配的文件夹都会被排除，更多文件名模式的相关信息，请参阅：<xref linkend="file-roller-pattern"/>。</para>
+          </listitem>
+	</varlistentry>      
+       <!-- ============= -->	
+      <varlistentry>
+	<term><guilabel>包含子文件夹</guilabel></term>
+	<listitem>
+          <para>选择该选项以添加当前文件夹中以及子文件夹中所有匹配指定模式的文件。</para>
+          <note>
+          <para>文件名，不是子文件夹名，必须匹配指定的通配符。</para>
+          </note>
+	  <para>如果您未选择该选项，<application>归档管理器</application>仅从当前文件夹中添加匹配的文件。</para>
+        </listitem>
+      </varlistentry>
+       <!-- ============= -->	
+     <varlistentry>
+	<term><guilabel>排除是符号链接的文件夹</guilabel></term>
+	  <listitem>
+            <para>选中此项将忽略来自符号链接文件夹的文件，符号链接是指向其他文件夹的指针或快捷方式。</para>
+	    <para>如果您没有选中此项，<application>归档管理器</application> 将添加符号链接指向文件夹中符合条件的文件。</para>
+          </listitem>
+	</varlistentry>
+       <!-- ============= -->
+     <varlistentry>
+	<term><guibutton>保存选项</guibutton></term>
+	  <listitem>
+            <para>点此按钮保存当前选中的高级选项到一个文件，将出现一个 <guilabel>保存选项</guilabel> 对话框。在 <guilabel>选项名称</guilabel> 文本框中输入相关文件名，然后点 <guibutton>保存</guibutton> 按钮。</para>
+          </listitem>
+	</varlistentry>
+       <!-- ============= -->	
+     <varlistentry>
+	<term><guibutton>载入选项</guibutton></term>
+	  <listitem>
+            <para>点击此按钮载入或删除一个原先保存的高级选项，出现一个 <guilabel>载入选项</guilabel> 对话框。</para>
+            <itemizedlist>
+              <listitem>
+                <para>要载入设定的选项，在列表中选择选项文件，然后点 <guibutton>应用</guibutton> 按钮。</para>
+              </listitem>
+              <listitem>
+                <para>要删除设定的选项，在列表中选择选项文件，然后点 <guibutton>删除</guibutton> 按钮。点 <guibutton>关闭</guibutton> 按钮关闭 <guilabel>载入选项</guilabel> 对话框。</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+	</varlistentry>
+       <!-- ============= -->	
+     <varlistentry>
+	<term><guibutton>重置选项</guibutton></term>
+	  <listitem>
+            <para>点击此按钮重置当前添加的高级选项为默认值。</para>
+          </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect2>
+  </sect1>
+
+<!-- ======= Extract Options  ============= --> 
+  <sect1 id="file-roller-extract-options">
+    <title>释放选项</title>
+      
+    <para><guilabel>解压缩</guilabel> 对话框提供以下，当您退出 <application>归档管理器</application> 时保存的选项：</para>
+      <variablelist>
+       <!-- ============= -->	
+	<varlistentry>
+	  <term><guilabel>解压缩</guilabel></term>
+	  <listitem>
+            <para>选择要释放的文件：</para>
+            <variablelist>
+              <varlistentry>
+                <term><guilabel>所有文件</guilabel></term>
+                <listitem>
+                  <para>从归档文件中释放所有文件。</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term><guilabel>选择的文件</guilabel></term>
+                <listitem>
+                  <para>从归档文件中释放选定的文件。</para>
+                </listitem>
+              </varlistentry>
+              <varlistentry>
+                <term><guilabel>文件</guilabel></term>
+                <listitem>
+                  <para>从归档文件中释放所有匹配指定模式的文件。参见 <xref linkend="file-roller-pattern"/>查看关于文件名模式的更多信息。</para>
+                </listitem>
+              </varlistentry>
+            </variablelist>
+	  </listitem>
+	</varlistentry>
+	<!-- ============= -->	
+	<varlistentry>
+      <term><guilabel>动作</guilabel></term>
+        <listitem>
+          <para>选择如下的释放选项：</para>	
+          <variablelist>
+	        <varlistentry>
+	          <term><guilabel>重建文件夹</guilabel></term>
+	          <listitem><para>选中此项将在解压指定文件时，重建文件的文件夹结构。</para> 
+                <para>例如，您在 <guilabel>文件名</guilabel> 文本框中，指定 <filename>/tmp</filename>，并且选择解压所有文件。此归档文件包含一个名为 <filename>doc</filename> 的子文件夹。<itemizedlist>
+                  <listitem><para>如果您选中 <guilabel>重建文件夹</guilabel> 选项，<application>归档管理器</application> 将解压子文件夹的内容到 <filename>/tmp/doc</filename>。</para>
+                 </listitem>
+                 <listitem><para>如果您没有选中 <guilabel>重建文件夹</guilabel> 选项，<application>归档管理器</application> 将不创建子文件夹。相反，<application>归档管理器</application>  从文档中解压所有文件，包括子文件夹中的文件，解压到 <filename>/tmp</filename>。</para>
+                 </listitem>
+               </itemizedlist></para></listitem>
+	         </varlistentry>
+             <!-- ============= -->	
+	         <varlistentry>
+	           <term><guilabel>覆盖已存在的文件</guilabel> </term>
+	           <listitem><para>选择该选项，以覆盖目标文件夹中任何与指定文件同名的文件。</para>
+	             <para>如果您没有选中此项，<application>归档管理器</application> 将不解压在目标文件夹中已经存在的同名文件。</para>
+	           </listitem>
+	         </varlistentry>
+             <!-- ============= -->	
+	         <varlistentry>
+	           <term><guilabel>不释放旧文件</guilabel> </term>
+	           <listitem>
+	             <para>此选项仅在选中 <guilabel>覆盖已有文件</guilabel> 选项时有效。</para>
+	             <para>选中 <guilabel>不解压旧文件</guilabel> 选项，只有在目标文件夹不包含某文件或目标文件夹包含某文件的旧版本时，才解压此文件。<application>归档管理器</application> 使用修改日期来检测哪些文件是最近更新的。如果文档中的文档较旧，它将不会解压这个文件。</para>
+	             <para>如果您选中 <guilabel>覆盖已有文件</guilabel> 选项，而没有选中 <guilabel>不解压旧文件</guilabel> 选项，<application>归档管理器</application> 将解压指定的文件，并且会覆盖目标文件夹中原有的文件。</para>
+	           </listitem>
+	         </varlistentry>
+	       </variablelist>
+	     </listitem>
+	   </varlistentry>
+     </variablelist>	
+  </sect1>
+
+
+</article>

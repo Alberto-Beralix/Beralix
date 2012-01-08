@@ -1,0 +1,74 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="prob-conn-auth">
+
+  <info>
+    <link type="guide" xref="prob-conn"/>
+    <link type="seealso" xref="create-account"/>
+    <desc>
+        An error message which says “<gui>Authentication failed</gui>” appears
+        in the main window.
+    </desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-17" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-07-23" status="draft"/>
+    <revision pkgversion="2.28" version="0.3" date="2009-08-14" status="review"/>
+    <revision pkgversion="2.30" version="0.4" date="2010-02-16" status="review"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>I get a message that says “Authentication failed”</title>
+
+  <p>
+    This kind of error happens when your instant messaging service is not allowing
+    you to connect because it does not recognize your username or password for some reason.
+  </p>
+
+  <steps>
+    <item>
+      <p>
+        Make sure that you are connected to the Internet, or to a local area network. 
+      </p>
+    </item>
+    <item>
+      <p>
+        Make sure that you have registered an account with the service you are trying
+        to connect to. If you do not have an account, most services will not allow
+        you to connect.
+      </p>
+    </item>
+    <item>
+      <p>
+       Click the <media type="image" mime="image/png" src="figures/gtk-edit.png">edit</media> 
+        icon in the error message.
+      </p>
+    </item>
+    <item>
+      <p>
+        Type your username and password again to make sure that they are correct.
+      </p>
+    </item>
+    <item>
+      <p>
+        Deselect the <gui>Enabled</gui>, and then select it again to try to 
+        reconnect to the service.
+      </p>
+    </item>
+  </steps>
+</page>

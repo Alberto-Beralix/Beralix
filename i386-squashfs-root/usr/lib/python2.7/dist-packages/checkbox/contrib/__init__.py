@@ -1,0 +1,1 @@
+../../../../../share/pyshared/checkbox/contrib/__init__.py

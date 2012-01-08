@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="set-custom-status" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#accounts"/>
+    <link type="seealso" xref="change-status"/>
+	  <link type="seealso" xref="status-icons"/>
+    <desc>Añadir, editar o borrar un mensaje personal para su estado.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-30" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-10" status="review"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>Establecer un mensaje personalizado</title>
+
+  <p>A veces puede querer usar un mensaje personal para su estado, por ejemplo, para hacer saber a sus contactos que no estará disponible por un periodo de tiempo.</p>
+  <p>Es posible establecer un mensaje personalizado basado en los diferentes estados disponibles.</p>
+
+  <steps>
+    <item>
+      <p>Desde la ventana <gui>Lista de contactos</gui>, pulse en la lista desplegable en la parte superior.</p>
+    </item>
+    <item>
+      <p>Seleccione el estado al que quiere añadir el mensaje personalizado. Tiene que seleccionar el identificado con la etiqueta <gui>Mensaje personalizado</gui>.</p>
+    </item>
+    <item>
+      <p>Introduzca su mensaje personalizado en la caja de texto en la parte superior de la ventana y pulse <key>Intro</key> para establecer el mensaje.</p>
+    </item>
+    <item>
+      <p>Si quiere establecer el mensaje personalizado como un favorito, guardándolo para usarlo de nuevo, pulse en la pequeña estrella a la derecha de la caja de texto donde escribió su mensaje personalizado.</p>
+      <p>Si no lo hace el mensaje personalizado no estará disponible la próxima vez que use <app>Empathy</app>. Sólo se guardará durante la sesión actual.</p>
+    </item>
+  </steps>
+
+  <section id="edit-custom">
+
+  <title>Editar, quitar y añadir un mensaje personalizado</title>
+
+  <steps>
+    <item>
+     <p>Desde la ventana <gui>Lista de contactos</gui>, pulse en la lista desplegable en la parte superior.</p>
+    </item>
+    <item>
+      <p>Seleccione <gui>Editar mensaje personalizado</gui>.</p>
+    </item>
+	  <item>
+	    <list>
+	      <item>
+	        <p>Para editar un mensaje personalizado:</p>
+	        <steps>
+	          <item>
+	            <p>Desde la caja <gui>Estados guardados</gui>, seleccione el mensaje de estado que quiere editar y pulse dos veces sobre él.</p>
+            </item>
+            <item>
+              <p>Escriba el mensaje personalizado nuevo y pulse <key>Intro</key> para modificarlo.</p>
+            </item>
+          </steps>
+        </item>
+        <item>
+          <p>Para quitar un mensaje personalizado:</p>
+          <steps>
+            <item>
+              <p>Desde la caja <gui>Estados guardados</gui>, seleccione el mensaje de estado que quiere quitar.</p>
+            </item>
+            <item>
+              <p>Pulse el botón <gui>Quitar</gui>.</p>
+            </item>
+          </steps>
+        </item>
+        <item>
+          <p>Para añadir un mensaje personalizado nuevo, desde la sección <gui>Añadir estado guardado</gui> </p>
+          <steps>
+            <item>
+              <p>Pulse en la lista desplegable para seleccionar el estado en el que quiere establecer un mensaje personalizado.</p>
+            </item>
+            <item>
+              <p>Pulse en la caja de texto y escriba el mensaje personalizado nuevo.</p>
+            </item>
+            <item>
+              <p>Pulse <gui>Añadir</gui> para añadir un mensaje nuevo a los guardados.</p>
+            </item>
+          </steps>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>Cuando haya terminado pulse <gui>Cerrar</gui>.</p>
+    </item>
+  </steps>
+
+  <note style="tip">
+    <p>Cuando edita o añade un mensaje personalizado nuevo no se establece como el mensaje de estado actual. Tiene que seleccionarlo en la ventana de <gui>Lista de contactos</gui>.</p>
+  </note>
+
+  </section>
+
+</page>

@@ -1,0 +1,6 @@
+# libicu44 installs multiple shared libraries, none of which is
+# actually called libicu.so.44, but all of which are libicu*.so.44.
+libicu44: package-name-doesnt-match-sonames
+# libicudata.so.44.0 contains static data only
+libicu44: shared-lib-without-dependency-information
+libicu44: shlib-without-PT_GNU_STACK-section usr/lib/libicudata.so.44.0

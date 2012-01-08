@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/ubuntuone-storage-protocol/ubuntuone/storageprotocol/sharersp.py

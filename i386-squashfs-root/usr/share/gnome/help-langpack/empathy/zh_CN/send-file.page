@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:e="http://projectmallard.org/experimental/" type="topic" id="send-file" xml:lang="zh_CN">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <desc>从您的计算机上发送一个文件至您的联系人。</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-06-14" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-07-21" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-14" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-09" status="deferred"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <license>
+      <p>知识共享-相同方式共享 (Creative Commons Share Alike) 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>发送文件。</title>
+
+  <steps>
+    <item>
+      <p>从 <gui>联系人列表</gui> 窗口，执行下列操作中的一个：</p>
+      <list>
+        <item>
+          <p>右键点击要发送文件的联系人，然后选择 <gui>发送文件</gui>。</p>
+        </item>
+        <item>
+          <p>点击您要发送文件的联系人，然后选择<guiseq><gui>编辑</gui><gui>联系人</gui><gui>发送文件</gui></guiseq>。</p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>选择要发送的文件，然后点击 <gui>发送</gui>。</p>
+    </item>
+    <item>
+      <p>这时会显示 <gui>文件传输</gui>窗口。</p>
+      <p>等待您的联系人接受文件传输，或点击 <gui>停止</gui> 来终止传输。</p>
+    </item>
+    <item>
+      <p>只要传输终止，就可以关闭 <gui>文件传输</gui> 窗口。</p>
+    </item>
+  </steps>
+
+  <note style="tip">
+    <p>如果窗口中列出了很多已经完成的传输，点击 <gui>清除</gui> 可以清空列表。这只会将列表清空，而不会从您的计算机上删除这些文件。</p>
+  </note>
+  <note>
+    <p>只可能使用下列服务进行发送文件：<em>Jabber</em>、<em>Google Talk</em> 和 <em>People Nearby</em>。</p>
+  </note>
+  <note>
+    <p>为了给别人发送文件，您需要连接到互联网，或本地局域网。</p>
+  </note>
+
+</page>

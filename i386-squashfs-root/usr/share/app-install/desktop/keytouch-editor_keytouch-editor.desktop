@@ -1,0 +1,16 @@
+[Desktop Entry]
+X-AppInstall-Package=keytouch-editor
+X-AppInstall-Popcon=44
+X-AppInstall-Section=universe
+
+Name=KeyTouch Editor
+Version=1.0
+Comment=Edit keyboard maps for keytouch
+Exec=/usr/bin/su-to-root -X -c /usr/sbin/keytouch-editor
+Icon=_usr_share_keytouch-editor_pixmaps_icon
+Terminal=false
+Type=Application
+Categories=Settings;HardwareSettings;GTK
+StartupNotify=true
+
+X-Ubuntu-Gettext-Domain=app-install-data

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -e
+
+rm_if_md5sum() {
+    FILE="$1"
+    MD5SUM="$2"
+    if [ -e "$FILE" ]; then
+	md5sum="$(md5sum "$FILE" | sed -e 's/ .*//')"
+	if [ "$md5sum" = "$MD5SUM" ]; then
+	    rm -f "$FILE"
+	fi
+    fi
+}
+
+case "$1" in
+    install|upgrade)
+	if dpkg --compare-versions "$2" lt "4.0.8"; then
+	    # remove obsolete file we used to install before this file
+	    # became a conffile
+	    rm_if_md5sum "/etc/default/brltty" 59911d8dcc8f4ad3cdc13e9845aa73a6
+	fi
+esac

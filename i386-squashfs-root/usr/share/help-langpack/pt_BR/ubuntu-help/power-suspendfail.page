@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="power-suspendfail" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="power#problems"/>
+    <link type="guide" xref="hardware-problems-graphics"/>
+    
+    <desc>Alguns hardware de computadores causam problemas com suspender ou hibernar.</desc>
+    
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Por que meu computador não liga novamente depois que eu o suspendi?</title>
+
+<comment>
+  <cite date="2011-04-04">shaunm</cite>
+  <p>Marked incomplete as of 2011-04-04. Marking final for 3.0. Revisit for 3.2</p>
+</comment>
+
+<p>Se você fazer seu computador dormir (suspendê-lo) ou hibernar, tente acordá-lo ou ligá-lo de volta, você pode perceber que ele não funciona como esperado. Isso pode acontecer, porque suspender/hibernar não é suportado propriamente pelo seu hardware.</p>
+
+<section id="wakeup">
+ <title>Meu computador está dormindo e não acordará</title>
+ <p>Se você fez seu computador dormir (suspendê-lo) e depois pressionou uma tecla ou clicou com o mouse, ele deve acordar e exibir uma tela pedindo sua senha. Se isso não acontecer, tente pressionar o botão liga-desliga (não mantenha apertado; apenas pressione uma vez).</p>
+ <p>Se isso ainda não ajudar, tenha certeza que o monitor do seu computador está ligado e tente pressionar uma tecla no teclado novamente.</p>
+ <p>Como um último recurso, desligue o computador segurando o botão liga-desliga por 5-10 segundos. Você irá perder qualquer trabalho não salvo fazendo isso. Você deve, então, ser capaz de ligar o computador novamente.</p>
+ <p>Se isso acontece toda vez que você coloca seu computador para dormir, o recurso suspender pode não funcionar com seu hardware.</p>
+</section>
+
+<section id="hibernate">
+ <title>Nenhum dos meus aplicativos ou documentos estão abertos quando eu ligo o computador novamente</title>
+ <p>Se você colocou seu computador em hibernação e o ligou novamente, mas nenhum de seus documentos ou aplicativos estiverem abertos, provavelmente o computador não hibernou corretamente. Às vezes isso ocorre por conta de um problema negligenciável; seu computador será capaz de hibernar corretamente da próxima vez. Esse problema também pode ocorrer porque você instalou uma atualização de sistema que precisava reiniciar o computador. Nesse caso, o computador pode ter desligado em vez de hibernado.</p>
+ 
+ <p>Também é possível que o computador não seja capaz de hibernar porque o hardware não suporta esse recurso. Por exemplo, isso pode decorrer de um problema nos drivers do Linux para o seu hardware. Você pode testar essa hipótese colocando o computador para hibernar novamente e vendo se a hibernação dá certo dessa vez. Se não, provavelmente há um problema com os drivers.</p>
+</section>
+
+<section id="hardware">
+ <title>Minha conexão sem fio (ou outro hardware) não funciona quando acordo meu computador</title>
+ <p>Se você mandar seu computador dormir ou hibernar e depois acordar novamente, é possível que sua internet, mouse ou outro dispositivo pare de funcionar adequadamente. Isso pode ser resultado do driver do dispositivo não suportar as funções de suspender/hibernar. Isso é um <link xref="hardware-driver">problema no driver</link>, e não no dispositivo em si.</p>
+ <p>Se um dispositivo tiver um interruptor de força, experimente desligá-lo e ligá-lo novamente. Na maioria dos casos, o dispositivo voltará a funcionar. Se ele é conectado por um cabo USB ou algo do tipo, desconecte o dispositivo e então conecte-o novamente para ver se funciona.</p>
+ <p>Se você não consegue desligar/desconectar o dispositivo ou se ele não funciona, você pode precisar reiniciar o seu computador para que o dispositivo comece a funcionar novamente.</p>
+</section>
+
+</page>

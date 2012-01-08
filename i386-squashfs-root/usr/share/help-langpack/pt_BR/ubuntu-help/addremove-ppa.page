@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="addremove-ppa" xml:lang="pt-BR">
+  <info>
+    <link type="guide" xref="addremove"/>
+
+    <revision version="11.04" date="2011-04-21" status="final"/>
+
+    <credit type="author">
+      <name>Time de documentação do Ubuntu</name>
+    </credit>
+
+    <desc>Adicionar PPAs para ajudar a testar um programa especial ou de pré-lançamento.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Adicionar um arquivo de pacote pessoal (PPA)</title>
+  <p><em>Arquivos de Pacotes Pessoais (PPAs)</em> são repositórios de programas desenhados por usuários do Ubuntu e são mais fácil de se instalar do que outros repositórios de terceiros.</p>
+  <note style="warning"><p>Somente adicione repositórios de aplicativos de fontes em que você confia. Repositórios de aplicativos de terceiros não passam pela verificação de segurança feita pelos membros do Ubuntu, e podem conter aplicativos nocivos ao seu computador.</p></note>
+
+    <steps>
+        <title>Instalar um PPA</title>
+        <item><p>No resumo do PPA, procure o cabeçalho que diz <gui>Adding this PPA to your system</gui>. Anote a localização do PPA, que deve ser algo como <code>ppa:mozillateam/firefox-stable</code>.</p></item>
+        <item><p>Clique no ícone da <app>Central de Programas do Ubuntu</app>, localizado no Lançador ou pesquise pela Central de Programas na barra de pesquisa do <app>Painel</app>.</p></item>
+        <item><p>Quando a Central de Programas iniciar, clique em <guiseq><gui>Editar&gt;</gui><gui>Canais de Software</gui></guiseq></p></item>
+        <item><p>Será solicitado para que você digite a sua senha. Após ter feito isso, mude para a aba <gui>Outro Software</gui>.</p></item>
+        <item><p>Clique em <gui>Adicionar</gui> e digite a localização <code>ppa:</code>.</p></item>
+        <item><p>Clique em <gui>Adicionar Fonte</gui> e feche a janela dos Canais de Software. A Central de Programas do Ubuntu verificará os seus canais de software para novas atualizações.</p></item>
+    </steps>
+
+</page>

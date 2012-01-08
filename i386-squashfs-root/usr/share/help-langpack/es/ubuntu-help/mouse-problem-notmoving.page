@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="problem" id="mouse-problem-notmoving" xml:lang="es">
+<info>
+    <link type="guide" xref="mouse#problems"/>
+    <desc>Cómo comprobar si su ratón no está funcionando.</desc>
+    
+    <revision version="11.04" date="2011-04-28" status="final"/>
+    <credit type="author">
+        <name>Phil Bull</name>
+        <email>philbull@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+</info>
+
+<title>El puntero del ratón no se mueve</title>
+
+<links type="section"/>
+
+<section id="plugged-in">
+ <title>Compruebe que el ratón está conectado</title>
+ <p>Si tiene un ratón con cable, compruebe que esta firmemente conectado en su equipo.</p>
+ <p>Si es un ratón USB (con un conector rectangular), pruebe a conectarlo en un puerto USB distinto. Si es un ratón PS/2 (con un pequeño conector redondo con seis pines), compruebe que está conectado en el puerto verde del ratón, y no en el puerto violeta del teclado. Puede que tenga que reiniciar el equipo si no estaba bien conectado.</p>
+</section>
+
+<section id="connected">
+ <title>Compruebe que el ratón ha sido reconocido por su equipo</title>
+ <steps>
+  <item>
+  <p>Vaya al <link xref="unity-dash-intro">Tablero</link> y abra el <app>Terminal</app>.</p></item>
+  <item>
+   <p>En la ventana de terminal, en el cursor (el $), teclee <cmd>xsetpointer -l | grep Pointer</cmd>, exactamente como aparece aquí y pulse <key>Intro</key>.</p>
+  </item>
+  <item>
+   <p>Aparecerá una pequeña lista de dispositivos de ratón. Compruebe que al menos uno de los elementos diga <sys>[XExtensionPointer]</sys> junto a él, y que uno de los elementos <sys>[XExtensionPointer]</sys> tenga el nombre del ratón a su izquierda.</p>
+  </item>
+  <item><p>Si no hay ninguna entrada con el nombre del ratón seguido de <sys>[XExtensionPointer]</sys>, es que su equipo no reconoció su ratón. Si existe esa entrada, su equipo reconoció su ratón. En este caso debería comprobar que el ratón está <link xref="#plugged-in">conectado</link> y que <link xref="#broken">funcionando</link>.</p></item>
+ </steps>
+
+ <p>Si su ratón tiene un puerto serie (RS-232), puede que tenga que realizar algunos pasos adicionales para que funcione. Los pasos pueden depender de la marca o el modelo del ratón.</p>
+ 
+ <p>Puede ser complicado arreglar los problemas con la detección del ratón. Pida apoyo a su distribuidor o proveedor si piensa que el ratón no se ha detectado correctamente.</p>
+ 
+ <comment>
+ <cite date="2009-09-11">Phil Bull</cite>
+  <p>
+  Should provide some useful advice rather than just saying "you might need to 
+  perform extra steps".
+  </p>
+ </comment>
+</section>
+
+<section id="broken">
+ <title>Compruebe que actualmente el ratón funciona</title>
+ <p>Conecte el ratón en un equipo distinto y vea si funciona.</p>
+ 
+ <p>Si el ratón es un ratón óptico o láser, una luz debería brillar en la parte inferior del ratón, cuando está encendido. Si no hay luz, compruebe que está activado. Si es así y todavía no hay luz, el ratón puede que esté roto.</p>
+</section>
+
+<section id="wireless-mice">
+ <title>Comprobar el ratón inalámbrico</title>
+ 
+ <list>
+  <item>
+   <p>Pulse un botón y compruebe si el puntero del ratón se mueve ahora. Algunos ratones inalámbricos se ponen en reposo para ahorrar energía, por lo que es posible que no respondan hasta que usted pulse un botón.</p>
+  </item>
+  <item>
+   <p>Compruebe que la batería del ratón está cargada</p>
+  </item>
+  <item>
+   <p>Compruebe que el receptor (mochila) está firmemente conectado al equipo.</p>
+  </item>
+  <item>
+   <p>Si el ratón y el receptor pueden funcionar en canales de radio diferentes, asegúrese de que están en el mismo canal.</p>
+  </item>
+  <item>
+   <p>Es posible que tenga que pulsar un botón en el ratón, el receptor o ambos para establecer una conexión. El manual de instrucciones de su ratón debería tener más detalles si este es el caso.</p>
+  </item>
+ </list>
+
+ <p>La mayoría de los ratones inalámbricos RF (radio), deben funcionar automáticamente cuando se conectan al equipo. Si tiene un ratón inalámbrico Bluetooth o IR (infrarrojos), puede que tenga que realizar algunos pasos adicionales para que funcione. Los pasos pueden depender de la marca o el modelo del ratón.</p>
+
+<comment>
+ <cite date="2009-09-11">Phil Bull</cite>
+ <p>Should provide some useful advice rather than just saying "you might need to perform extra steps".</p>
+</comment>
+</section>
+
+</page>

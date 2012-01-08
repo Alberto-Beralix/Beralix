@@ -1,0 +1,33 @@
+Ubuntu One requires acceptance of the Canonical Contributor Agreement. You
+will need to follow the instructions at:
+
+http://www.canonical.com/contributors
+
+Once the agreement is accepted, you will be added to the Ubuntu One Contributor
+Agreement team on Launchpad, so that your branches may be merged in upstream.
+
+
+In order to run tests in ubuntuone-storage-protocol, you will first need
+to build the portion of code which uses Google Protocol Buffers.
+
+$: ./setup.py build
+
+Then you will need to run the tests. This will run lint and style checkers,
+and the unit tests for the package.
+
+$: ./run-tests
+
+
+Ubuntu One uses branch based development on Launchpad, and bugs to track
+features and issues. Make sure a bug is filed for the piece of code you wish
+to work on. When committing your changes, be sure to specify the bug # it
+fixes using the --fixes option in bzr.
+
+$: bzr commit --fixes=lp:<BUGNUMBER>
+
+If you forget to do this, you can link the branch manually on the Launchpad
+web page. After pushing your branch to Launchpad, you will need to propose it
+for merging into the parent branch. You can do this from the Launchpad web
+page for your branch. In order for your branch to be accepted, you will have
+to have accepted the Canonical Contributor Agreement as stated above, and
+there will need to be at least two approvals from Ubuntu One developers.

@@ -1,0 +1,27 @@
+#!/bin/sh
+
+PREREQ=""
+DESCRIPTION="Enabling detection of crashes..."
+
+prereqs()
+{
+       echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+. /scripts/casper-functions
+
+log_begin_msg "$DESCRIPTION"
+
+if [ -e /root/etc/default/apport ]; then
+    sed -i 's/enabled=0/enabled=1/' /root/etc/default/apport
+fi
+
+log_end_msg

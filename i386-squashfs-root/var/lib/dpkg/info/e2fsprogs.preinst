@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+if [ -f /etc/e2fsck.conf ]; then
+	MD5=$(md5sum /etc/e2fsck.conf)
+
+	if [ "$MD5" = "71563145349a6c512471c495ad8d5143" ]; then
+		rm -f /etc/e2fsck.conf
+	else
+		sed -i -e '/\bbuggy_init_scripts\b/d' /etc/e2fsck.conf
+	fi
+fi
+
+
+
+exit 0
+

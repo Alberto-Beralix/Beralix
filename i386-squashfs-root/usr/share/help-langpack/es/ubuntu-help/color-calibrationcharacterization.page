@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-calibrationcharacterization" xml:lang="es">
+
+  <info>
+
+    <link type="guide" xref="color#calibration"/>
+
+    <desc>Calibrar y caracterizar son cosas totalmente diferentes.</desc>
+
+    <credit type="author">
+      <name>Richard Hughes</name>
+      <email>richard@hughsie.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>¿Cuál es la diferencia entre calibración y caracterización?</title>
+  <p>Muchas personas se confunden inicialmente acerca de la diferencia entre calibración y caracterización. La calibración es el proceso de modificar el comportamiento del color de un dispositivo. Esto se realiza normalmente mediante dos mecanismos:</p>
+  <list>
+    <item><p>Cambio de controles o ajustes internos</p></item>
+    <item><p>Aplicar curvas a sus canales de color</p></item>
+  </list>
+  <p>La idea de la calibración es colocar un dispositivo en un estado predefinido con respecto a un color. A menudo se utiliza a diario  para mantener un comportamiento reproducible. Por lo general la calibración se almacenan en formatos de dispositivos o sistemas de archivos específicos que registran la configuración del dispositivo o por canal de curvas de calibración.</p>
+  <p>La caracterización (o perfilado) es <em>grabar</em> la manera en que un dispositivo responde al color. Típicamente los resultados se guardan en un perfil ICC de dispositivo. Dicho perfil no modifica en sí mismo el color de ninguna manera. Le permite a un sistema como un MMC (Módulo de Manejo de Color) o a una aplicación sensible al color modificar el color al combinarse con otro perfil de dispositivo. Solo al conocer las características de dos accesorios, puede lograrse una manera de transferir el color de una representación de dispositivo a otra.</p>
+  <note>
+    <p>Tenga en cuenta que una caracterización (perfil) solamente será válida para un dispositivo si está en el mismo estado de calibración en que lo estaba cuando se caracterizó.</p>
+  </note>
+  <p>En el caso de perfiles de pantalla existe algo de confusión adicional porque frecuentemente la información de calibración se guarda en el perfil por conveniencia. Por convención se guarda en una etiqueta llamada etiqueta <em>vcgt</em>. Aunque se guarda en el perfil, ninguna de las aplicaciones o herramientas basadas en ICC normales son conscientes de ella, ni hacen nada con la misma. De manera similar, las aplicaciones y herramientas de calibración de pantalla típicas no son conscientes de, ni hace nada con, la información de caracterización (perfil) ICC.</p>
+
+</page>

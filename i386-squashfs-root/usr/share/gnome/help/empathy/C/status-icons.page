@@ -1,0 +1,76 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="topic" style="concept"
+      id="status-icons">
+
+  <info>
+    <desc>Understanding the various statuses and status icons.</desc>
+    <revision pkgversion="2.28" version="0.1" date="2009-07-18" status="stub"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-07-21" status="draft"/>
+    <revision pkgversion="2.28" version="0.2" date="2009-08-14" status="review">
+      <!--
+      <e:review by="shaunm@gnome.org" date="2009-09-01" status="done"/>
+      -->
+    </revision>
+    <credit type="author">
+      <name>Milo Casagrande</name>
+      <email>milo@ubuntu.com</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>    
+<!--
+    <copyright>
+      <year>2009</year>
+      <name>GNOME Documentation Project</name>
+    </copyright>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+-->
+  </info>
+
+  <title>Status Types and Icons</title>
+
+  <terms>
+    <item>
+      <title><media type="image" mime="image/png" src="figures/available.png">Available icon</media>
+      <gui>Available</gui></title>
+      <p>Use the <em>Available</em> status when you are at your computer and able
+      to chat with your contacts.  You can set a custom message for this status.</p>
+    </item>
+    <item>
+      <title><media type="image" mime="image/png" src="figures/busy.png">Busy icon</media>
+      <gui>Busy</gui></title>
+      <p>Use the <em>Busy</em> status to let your contacts know that you don’t want
+      to chat right now.  They can still contact you, for instance if they have something
+      urgent they need to discuss.  By default, <app>Empathy</app> will not use notification
+      bubbles and sounds when you are busy.  You can set a custom message for this status.</p>
+    </item>
+    <item>
+      <title><media type="image" mime="image/png" src="figures/away.png">Away icon</media>
+      <gui>Away</gui></title>
+      <p>Use the <em>Away</em> status when you are going away from your computer.
+      <app>Empathy</app> automatically sets your status to Away if you do not use
+      your computer for a while, or if your screensaver is on.  By default,
+      <app>Empathy</app> will not use notification bubbles and sounds when you are
+      away.  You can set a custom message for this status.</p>
+    </item>
+    <item>
+      <title><media type="image" mime="image/png" src="figures/offline.png">Offline icon</media>
+      <gui>Invisible</gui></title>
+      <p>When you set your status to <em>Invisible</em>, you will appear as offline
+      to your contacts.  You will still be connected to your accounts, and you
+      still see your contacts’ statuses and start conversations with them.</p>
+    </item>
+    <item>
+      <title><media type="image" mime="image/png" src="figures/offline.png">Offline icon</media>
+      <gui>Offline</gui></title>
+      <p>Setting your status to <em>Offline</em> disconnects you from all of
+      your accounts.</p>
+    </item>
+  </terms>
+
+</page>

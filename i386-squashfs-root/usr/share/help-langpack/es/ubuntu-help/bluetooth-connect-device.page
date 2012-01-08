@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="bluetooth-connect-device" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="bluetooth"/>
+    <desc>emparejar dispositivos Bluetooth.</desc>
+
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Paul W. Frields</name>
+      <email>stickster@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Conectar su equipo a otro dispositivo Bluetooth</title>
+
+  <p>Antes de poder transferir archivos entre dispositivos Bluetooth, primero tendrá que conectarlos. A esto se le denomina «emparejar» dispositivos Bluetooth.</p>
+
+  <steps>
+    <item>
+      <p><link xref="bluetooth-turn-on-off">Apagar</link> el dispositivo Bluetooth de su equipo.</p>
+    </item>
+    <item>
+      <p>Seleccione el <gui>Menú Bluetooth</gui> en el <gui>panel superior</gui> y seleccione <gui>Configurar un dispositivo nuevo...</gui>.</p>
+    </item>
+    <item>
+      <p>Haga que el otro dispositivo Bluetooth se ponga «descubrible» o visible, y colóquelo a menos de diez metros de su equipo. Luego, seleccione <gui>Adelante</gui>. Su equipo empezará a buscar dispositivos.</p>
+    </item>
+    <item>
+      <p>Si hay demasiados dispositivos en la lista, seleccione la barra desplegable <gui>Tipo de dispositivo</gui> para mostrar un único tipo de dispositivo en la lista.</p>
+    </item>
+    <item>
+      <p>Seleccionar <gui>Opciones de PIN...</gui> para establecer como entregar un PIN a otro dispositivo.</p>
+      <note>
+	<p>La opción de PIN automático usará un código numérico de seis dígitos. Los dispositivos que no dispongan de teclas de entrada o pantalla, como ratones o auriculares, necesitarán que especifique un PIN como 0000, o ninguno en absoluto. Consulte en el manual de su dispositivo cuál es la opción adecuada.</p>
+      </note>
+      <p>Seleccione una opción apropiada de PIN para su dispositivo, y luego pulse en <gui>Cerrar</gui>.</p>
+    </item>
+    <item>
+      <p>Seleccione <gui>Adelante</gui> para continuar. Si no eligió un PIN predefinido, se mostrará el PIN en la pantalla.</p>
+    </item>
+    <item>
+      <p>Introduzca el código PIN de su otro dispositivo, en caso necesario. En la mayoría de los dispositivos, tendrá que introducirlo en menos de veinte segundos, o la conexión no se completará. Si pasara, vuelva a la lista de dispositivos y empiece de nuevo.</p>
+    </item>
+    <item>
+      <p>Aparecerá un mensaje cuando la conexión se complete correctamente. Si el dispositivo ofrece otras características, como Red de área personal (Personal Area Networking, PAN) o un teléfono móvil, podrá habilitarlas usando casillas de verificación. Después, seleccione <gui>Cerrar</gui>.</p>
+    </item>
+  </steps>
+
+  <p>Puede <link xref="bluetooth-remove-connection">eliminar una conexión Bluetooth</link> más adelante, si así lo desea.</p>
+  
+</page>

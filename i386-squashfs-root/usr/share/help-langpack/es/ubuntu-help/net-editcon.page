@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="ui" id="net-editcon" xml:lang="es">
+  <info>
+    <link type="guide" xref="net-wireless"/>
+
+    <revision version="11.04" date="2011-04-10" status="final"/>
+
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jwcampbell@gmail.com</email>
+    </credit>
+
+    <desc>Aprenda cómo cambiar las opciones de una conexión inalámbrica.</desc>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" xlink:type="simple" xlink:href="gnome-help.its"/>
+  </info>
+
+<title>Editar una conexión inalámbrica</title>
+
+<comment>
+ <p>This topic needs significant revision to be comprehensive. A number of settings remain undocumented.</p>
+</comment>
+
+<p>Este apartado describe todas las opciones disponibles al editar una conexión de red inalámbrica. Para editar una conexión, pulse en el <gui>menú de red</gui> del panel superior y seleccione <gui>Editar conexiones</gui>.</p>
+
+<note>
+ <p>La mayoría de las redes no tendrán ningún problema si deja esta configuración predeterminada, por lo que probablemente no será necesario cambiar ninguna de ellas. Muchas de las opciones que aquí se proporcionan lo son para darle un mayor control sobre redes más avanzadas.</p>
+</note>
+
+<section id="available">
+ <title>Disponible para todos los usuarios/Conectar automáticamente</title>
+ <terms>
+  <item>
+   <title><gui>Conectar automáticamente</gui></title>
+   <p>Marque esta opción si desea que el equipo intente conectarse a esta red inalámbrica cuando esté en el rango.</p>
+   <p>Si hay varias redes establecidas en el rango, para conectarse automáticamente, el equipo se conectará a la primera que se muestra en la pestaña <gui>Inalámbrica</gui> en la ventana <gui>Conexiones de red</gui>. No se desconectará de una red disponible para conectarse a una diferente que acabe de aparecer.</p>
+  </item>
+  
+  <item>
+   <title><gui>Disponible para todos los usuarios</gui></title>
+   <p>Marque esta opción si desea que todos los usuarios en el equipo tengan acceso a esta red inalámbrica. Si la red tiene una <link xref="net-wireless-wepwpa">contraseña WEP/WPA</link> y ha seleccionado esta opción, solo tendrá que introducir la contraseña una vez. Todos los demás usuarios en el equipo serán capaces de conectarse a la red sin tener que conocer la contraseña.</p>
+   <p>Si se marca esta opción, tiene que ser </p>
+  </item>
+ </terms>
+</section>
+
+<section id="wireless">
+ <title>Inalámbrica</title>
+ <terms>
+  <item>
+   <title><gui>SSID</gui></title>
+   <p>Este es el nombre de la red inalámbrica a la que se conecta, también conocido como el <em> Identificador de conjunto de servicio (en inglés Service Set Identifier)</em>. No lo cambie a menos que haya cambiado el nombre de la red inalámbrica (por ejemplo, al cambiar la configuración de su router inalámbrico o estación base).</p>
+  </item>
+  
+  <item>
+   <title><gui>Modo</gui></title>
+   <p>Úselo para especificar si desea conectarse a una red de tipo <gui>Infraestructura</gui> (donde los equipos se conectan de forma inalámbrica a una estación base central o un router) o <gui>Ad-hoc</gui> (donde no hay ninguna estación base, y los equipos de la red se conectan directamente con otro). La mayoría de las redes son de tipo infraestructura; sin embargo, es posible que quiera <link xref="net-adhoc">crear su propia red ad-hoc</link>.</p>
+   <p>Si selecciona <gui>Ad-hoc</gui>, verá otras dos opciones: <gui>Banda</gui> y <gui>Canal</gui>, que determinan en qué banda de frecuencias inalámbrica operará la red ad-hoc. Algunos equipos solo pueden funcionar en ciertas bandas (por ejemplo, solo en la <gui>A</gui> o en la <gui>B/G</gui>), por lo que deberá escoger la banda apropiada para que todos los equipos de la red ad-hoc puedan usarla. En lugares concurridos, es posible que existan varias redes inalámbricas compartiendo el mismo canal; esto podría ralentizar su conexión, por lo que también puede cambiar el canal que vaya a usar.</p>
+  </item>
+  
+  <item>
+   <title><gui>BSSID</gui></title>
+   <p>This is the <em>Basic Service Set Identifier</em>. The SSID (see above) is the name of the network which humans are intended to read; the BSSID is a name which the computer understands (it's a string of letters and numbers that is supposed to be unique to the wireless network). If a <link xref="net-wireless-hidden">network is hidden</link>, it will not have an SSID but it will have a BSSID.</p>
+  </item>
+  
+  <item>
+   <title><gui>Dirección MAC del dispositivo:</gui></title>
+   <p>Una <link xref="net-macaddress">dirección MAC</link> es un código que identifica una pieza del hardware de red (por ejemplo, una tarjeta inalámbrica, una tarjeta de red Ethernet o un enrutador. Cada dispositivo que puede conectar a una red tiene una dirección MAC única, asignada de fábrica.</p>
+   <p>Esta opción se puede usar para cambiar la dirección MAC de su tarjeta de red.</p>
+  </item>
+  
+  <item>
+   <title><gui>Dirección MAC clonada</gui></title>
+   <p>Su hardware de red (tarjeta inalámbrica) puede intentar tener una dirección MAC distinta. Esto es útil si tiene un dispositivo o servicio que solo se comunica con una determinada dirección MAC (por ejemplo, un cablemódem de banda ancha). Si pone esa dirección MAC en el apartado <gui>dirección MAC clonada</gui>, el dispositivo o servicio pensará que su equipo tiene la dirección MAC clonada en vez de la real.</p>
+  </item>
+  
+  <item>
+   <title><gui>MTU</gui></title>
+   <p>This setting changes the <em>Maximum Transmission Unit</em>, which is the maximum size of a chunk of data that can be sent over the network. When files are sent over a network, data is broken up into small chunks (or packets). The optimal MTU for your network will depend on how likely it is for packets to be lost (due to a noisy connection) and how fast the connection is. In general, you should not need to change this setting.</p>
+  </item>
+  
+ </terms>
+</section>
+
+<section id="security">
+ <title>Seguridad inalámbrica</title>
+ <terms>
+  <item>
+   <title><gui>Seguridad</gui></title>
+   <p>Esto define qué tipo de <em>cifrado</em> utiliza su red inalámbrica. Las conexiones cifradas ayudan a proteger su conexión inalámbrica de ser interceptada, por lo que otras personas no podrán «escuchar» y ver qué sitios web está visitando, etc.</p>
+   <p>Algunos tipos de cifrado son más fuertes que otros, pero puede que algunos dispositivos de red inalámbrica más antiguos no lo admitan. Normalmente tendrá que teclear una contraseña para conectarse; otros tipos de seguridad más sofisticados también necesitan un nombre de usuario y un «certificado» digital. Consulte <link xref="net-wireless-wepwpa"/> para más información sobre los tipos de cifrado inalámbrico más usuales.</p>
+  </item>
+ </terms>
+</section>
+
+<section id="ipv4">
+ <title>Ajustes de IPv4</title>
+
+<comment>
+<cite>shaunm</cite>
+<p>There's also Shared to other computers</p>
+<p>Then there's addresses and dns servers and ipv4 addressing routes.</p>
+<p>All current info correct, but incomplete</p>
+</comment>
+ 
+ <p>Utilice esta pestaña para definir información como la dirección IP de su equipo y los servidores DNS que debe utilizar. Cambie el <gui>Método</gui> para ver las diferentes maneras de obtener/establecer esa información.</p>
+ <p>Los siguientes métodos están disponibles:</p>
+ <terms>
+  <item>
+   <title><gui>Automático (DHCP)</gui></title>
+   <p>Get information like the IP address and DNS server to use from a <em>DHCP server</em>. A DHCP server is a computer (or other device, like a router) connected to the network which decides which network settings your computer should have - when you first connect to the network, you will automatically be assigned the correct settings. Most networks use DHCP.</p>
+  </item>
+  
+  <item>
+   <title><gui>Solo direcciones automáticas (DHCP)</gui></title>
+   <p>Si elige esta opción, el equipo obtendrá su dirección IP de un servidor DHCP, pero tendrá que definir manualmente otros detalles (como el servidor DNS que usará).</p>
+  </item>
+  
+  <item>
+   <title><gui>Manual</gui></title>
+   <p>Elija esta opción si quiere definir toda la configuración de red, incluyendo la dirección IP que el equipo debe utilizar.</p>
+  </item>
+  
+  <item>
+   <title><gui>Sólo enlace local</gui></title>
+   <p><em>Link-Local</em> is a way of connecting computers together on a network without requiring a DHCP server or manually defining IP addresses and other information. If you connect to a Link-Local network, the computers on the network will decide amongst themselves which IP addresses to use and so on. This is useful if you want to temporarily connect a few computers together so they communicate with each other.</p>
+  </item>
+  
+  <item>
+   <title><gui>Desactivado</gui></title>
+   <p>Esta opción desactivará la conexión a la red y le impedirá conectarse a ella. Observe que <gui>IPv4</gui> y <gui>IPv6</gui> son tratadas como conexiones separadas, incluso aunque vayan por la misma tarjeta de red. Si ha activado una de ellas, puede que quiera desactivar la otra.</p>
+  </item>
+  
+ </terms>
+</section>
+
+<section id="ipv6">
+ <title>Ajustes de IPv6</title>
+<comment>
+<cite>shaunm</cite>
+<p>The list of methods is a bit different</p>
+</comment>
+ <p>Es similar a la pestaña <gui>IPv4</gui> excepto en que trabaja con el estándar IPv6, que es más reciente. Las redes más modernas usan IPv6, pero IPv4 sigue siendo más popular en este momento.</p>
+</section>
+
+</page>

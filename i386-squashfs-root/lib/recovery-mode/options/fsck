@@ -1,0 +1,14 @@
+#!/bin/sh
+
+. /lib/recovery-mode/l10n.sh
+
+if [ "$READONLY" = "false" ]; then
+  exit 1
+fi
+
+if [ "$1" = "test" ]; then
+  echo $(eval_gettext "Check all file systems (will exit read-only mode)")
+  exit 0
+fi
+
+FSCHECK="true" /lib/recovery-mode/options/remount

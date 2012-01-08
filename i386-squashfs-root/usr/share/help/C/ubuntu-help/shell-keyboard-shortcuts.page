@@ -1,0 +1,177 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="tip"
+      id="shell-keyboard-shortcuts">
+
+  <info>
+    <link type="guide" xref="tips"/>
+    <link type="guide" xref="shell-overview"/>
+    <link type="seealso" xref="windows-key"/>
+    
+    <desc>Getting around the desktop using the keyboard.</desc>
+    
+    <revision version="11.04" date="2011-04-30" status="final"/>
+    <credit type="author">
+      <name>GNOME Documentation Project</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Ubuntu Documentation Project</name>
+      <email>ubuntu-doc@lists.ubuntu.com</email>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  </info>
+
+<title>Keyboard shortcuts</title>
+
+<table rules="rows" frame="top bottom">
+<title>Using the Dash and the Launcher</title>
+  <tr>
+    <td><p>Tap <link xref="windows-key"><key>Meta</key></link></p></td>
+    <td><p>Open the <gui>Dash</gui>. Tap again to close.</p></td>
+  </tr>
+  <tr>
+    <td><p/></td>
+    <td><p>The Dash opens with focus on the search box to find applications and files. 
+Using the arrow keys will navigate the results; use <key>Enter</key> to launch.</p></td>
+  </tr>
+  <tr>
+    <td><p>Hold <link xref="windows-key"><key>Meta</key></link></p></td>
+    <td><p>Reveal the <gui>launcher</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>1</key></keyseq></p></td>
+    <td><p>Start the first launcher item or switches to it if it is already running. If <key>Shift</key> 
+is also pressed, will open a new window.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>2</key></keyseq></p></td>
+    <td><p>Start the second launcher item or switches to it if it is already running. This pattern 
+continues until <keyseq><key>Meta</key><key>0</key></keyseq> which opens the tenth item.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F1</key></keyseq></p></td>
+    <td><p>Open the launcher. Use arrow keys to navigate and <key>Enter</key> to start or switch 
+to an application.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F2</key></keyseq></p></td>
+    <td><p>Open the Dash in a special mode to run commands that you type in. Press <key>Enter</key> 
+to run the current command. You can also use the arrow keys to choose a different command and press 
+<key>Enter</key> to run it.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>A</key></keyseq></p></td>
+    <td><p>Open the <gui>Applications lens</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>F</key></keyseq></p></td>
+    <td><p>Open the <gui>Files and folders lens</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>T</key></keyseq></p></td>
+    <td><p>Open the <gui>Trash</gui>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>T</key></keyseq></p></td>
+    <td><p>Open the <app>Terminal</app>.</p></td>
+  </tr>
+  <tr>
+    <td><p><key>Alt</key></p></td>
+    <td><p>Reveal the <gui>Application Menu</gui>. <keyseq><key>Alt</key><key>F</key></keyseq> opens the 
+<gui>File</gui> menu.</p></td>
+  </tr>
+  <tr>
+    <td><p><key>F10</key></p></td>
+    <td><p>Open the menu. Use the arrow keys to navigate. You can also access the <link
+xref="unity-appmenu-intro">indicator menus</link>.</p></td>
+  </tr>
+</table>
+
+<table rules="rows" frame="top bottom">
+<title>Getting around the desktop</title>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F4</key></keyseq></p></td>
+    <td><p>Close the current window.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>F10</key></keyseq></p></td>
+    <td><p>Maximize the current window. If the window is already maximized, unmaximize it.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>Tab</key></keyseq></p></td>
+    <td><p><link xref="shell-windows-switching">Quickly switch between windows.</link>
+    Hold down <key>Shift</key> for reverse order.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>D</key></keyseq></p></td>
+    <td><p>Hide all windows and show the desktop. Press the keys again to restore your windows.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>S</key></keyseq></p></td>
+    <td><p>Activate the workspace switcher. Zoom out on all <link xref="shell-workspaces">workspaces</link>.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Meta</key><key>W</key></keyseq></p></td>
+    <td><p>Activate "Expo" mode. Show all windows from all workspaces.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Shift</key><key>Alt</key><key>&#8593;</key></keyseq></p></td>
+    <td><p>Activate "Expo" mode. Show all windows from current workspace.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Arrow keys</key></keyseq></p></td>
+    <td><p><link xref="shell-workspaces-switch">Switch between workspaces.</link></p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>Shift</key><key>Arrow keys</key></keyseq></p></td>
+    <td><p><link xref="shell-workspaces-movewindow">Move the current window to a different workspace.</link></p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Alt</key><key>L</key></keyseq></p></td>
+    <td><p><link xref="shell-exit#lock-screen">Lock the screen.</link></p></td>
+  </tr>
+</table>
+
+<table rules="rows" frame="top bottom">
+<title>Common editing shortcuts</title>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>A</key></keyseq></p></td>
+    <td><p>Select all text or items in a list.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>X</key></keyseq></p></td>
+    <td><p>Cut (remove) selected text or items and place it on the clipboard.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq></p></td>
+    <td><p>Copy selected text or items to the clipboard.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>V</key></keyseq></p></td>
+    <td><p>Paste the contents of the clipboard.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Ctrl</key><key>Z</key></keyseq></p></td>
+    <td><p>Undo the last action.</p></td>
+  </tr>
+</table>
+
+<table rules="rows" frame="top bottom">
+<title>Capturing from the screen</title>
+  <tr>
+    <td><p><key>Print Screen</key></p></td>
+    <td><p>Take a screenshot.</p></td>
+  </tr>
+  <tr>
+    <td><p><keyseq><key>Alt</key><key>Print Screen</key></keyseq></p></td>
+    <td><p>Take a screenshot of the active window.</p></td>
+  </tr>
+</table>
+
+  <comment>
+    <cite date="2011-04-24">jbicha</cite>
+    <p>Compiz has even more <link href="http://wiki.compiz.org/CommonKeyboardShortcuts">
+keyboard shortcuts</link>.</p>
+  </comment>
+
+</page>

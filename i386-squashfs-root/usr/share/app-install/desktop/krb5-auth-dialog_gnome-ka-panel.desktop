@@ -1,0 +1,30 @@
+[Desktop Entry]
+X-AppInstall-Package=krb5-auth-dialog
+X-AppInstall-Popcon=224
+X-AppInstall-Section=universe
+
+Name=Kerberos Authentication
+Comment=Set your Kerberos network authentication preferences
+Exec=gnome-ka-properties
+Icon=krb-valid-ticket
+Terminal=false
+Type=Application
+StartupNotify=true
+# The X-GNOME-Settings-Panel is necessary to show in the main shell UI
+Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel;
+OnlyShowIn=GNOME;
+X-GNOME-Settings-Panel=ka-panel
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=krb5-auth-dialog
+X-GNOME-Bugzilla-Component=general
+# Translators: those are keywords for the Kerberos authentication control-center panel
+X-GNOME-Keywords=Kerberos;Authentication
+X-GNOME-Keywords[da]=Kerberos;Godkendelse
+X-GNOME-Keywords[de]=Kerberos;Legitimierung
+X-GNOME-Keywords[es]=Kerberos;Autenticación
+X-GNOME-Keywords[fr]=Authentification;Kerberos
+X-GNOME-Keywords[nb]=Kerberos;Autentisering
+X-GNOME-Keywords[sl]=Kerberos;Overitev
+X-GNOME-Keywords[sv]=Kerberos;Autentisering
+
+X-Ubuntu-Gettext-Domain=app-install-data

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="files-search" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="files"/>
+    <link type="guide" xref="shell-overview#files"/>
+    
+    <desc>Busque los archivos basándose en el nombre del archivo y el tipo. Guarde sus búsquedas para su uso posterior.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Proyecto de documentación de GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Shaun McCance</name>
+      <email>shaunm@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+  <title>Buscar archivos</title>
+  
+  <p>Puede buscar archivos según su nombre o su tipo de archivo directamente desde el gestor de archivos. También puede guardar búsquedas frecuentes, que aparecerán como carpetas especiales dentro de su carpeta personal.</p>
+
+  <links type="topic" style="linklist">
+    <title>Otras aplicaciones de búsqueda</title>
+    <!-- This is an extension point where search apps can add
+    their own topics. It's empty by default. -->
+  </links>
+
+  <steps>
+    <title>Buscar</title>
+    <item><p><link xref="files-browse">Abra el gestor de archivos</link>.</p></item>
+    <item><p>Si sabe que los archivos que quiere buscar están en una carpeta determinada, vaya a esa carpeta.</p></item>
+    <item><p>Pulse <gui>Buscar</gui> en la barra de herramientas, o pulse <keyseq><key>Ctrl</key><key>F</key></keyseq>.</p></item>
+    <item><p>Teclee una o varias palabras que sepa que aparecen en el nombre del archivo y pulse Entrar. Por ejemplo, si todas sus facturas contienen en su nombre la palabra «Factura», teclee <input>factura</input>. No hace falta tener en cuenta las mayúsculas y minúsculas.</p></item>
+    <item><p>Puede mejorar sus resultados seleccionando otra carpeta de comienzo diferente en <gui>Lugar</gui>. O pulse en <gui>Lugar</gui> y seleccione <gui>Tipo de archivo</gui> en la lista desplegable para limitar sus resultados dependiendo del tipo de archivo. Pulse el botón <gui>+</gui> para añadir varias filtros si desea reducir la búsqueda según el lugar y el tipo de archivo. Cuando haya hecho los cambios, pulse <gui>Recargar</gui> para volver a buscar.</p></item>
+    <item><p>Puede abrir, copiar, borrar o trabajar con sus archivos desde los resultados de búsqueda, igual como si estuviera en cualquier carpeta en el gestor de archivos.</p></item>
+    <item><p>Pulse de nuevo <gui>Buscar</gui> en la barra de herramientas para salir de la búsqueda y volver a la carpeta.</p></item>
+  </steps>
+
+  <p>Si lleva a cabo ciertas búsquedas muy a menudo, puede guardarlas para acceder a ellas rápidamente.</p>
+
+  <steps>
+    <title>Guardar una búsqueda</title>
+    <item><p>Iniciar una búsqueda como la de arriba.</p></item>
+    <item><p>Cuando esté satisfecho con sus parámetros de búsqueda, pulse <guiseq><gui>Archivo</gui><gui>Guardar búsqueda como</gui></guiseq>.</p></item>
+    <item><p>Asigne un nombre a la búsqueda y pulse <gui>Guardar</gui>. Si lo desea, seleccione una carpeta distinta en la que guardarla. Cuando visualice esa carpeta, verá sus búsquedas guardadas como un icono de carpeta color naranja con una lupa.</p></item>
+  </steps>
+</page>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="power-batterywindows" xml:lang="pt-BR">
+
+  <info>
+    <link type="guide" xref="power#battery"/>
+    <desc>Programas do fabricante e estimativas diferentes de vida útil da bateria podem ser a causa do problema.</desc>
+    <revision version="11.04" date="2011-04-25" status="final"/>
+    <credit type="author">
+      <name>Projeto de documentação do GNOME</name>
+      <email>gnome-doc-list@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+
+<title>Por que eu tenho menos tempo de bateria do que eu tinha no Windows/Mac OS?</title>
+
+<p>Alguns computadores parecem ter uma vida útil de bateria menor quando executando no Linux do que quando executando no Windows ou Mac OS. Uma das razões para isso é que os fornecedores do computador instalam programas especiais para Windows/Mac OS que otimizam várias configurações de hardware/software para um dado modelo de computador. Esses programas são, com frequência, altamente específicos e podem não estar documentados, então inclui-los no Linux é difícil.</p>
+
+<p>Infelizmente, não há uma maneira fácil de você mesmo aplicar esses programas sem saber exatamente quais são eles. Você pode perceber que usar alguns <link xref="power-batterylife">métodos simples de economia de energia</link> ajuda. Se seu computador tem um <link xref="power-batteryslow">processador com velocidade variável</link>, você pode perceber que alterar a configuração dele também é útil.</p>
+
+<p>Uma outra razão possível para a discrepância é que o método de estimativa de vida útil da bateria do Windows/Mac OS é diferente do método do Linux. A vida útil da bateria atual poderia ser exatamente a mesma, mas métodos diferentes fornecem estimativas diferentes. Veja <link xref="power-batteryestimate"/> para mais informações.</p>
+	
+</page>

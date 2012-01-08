@@ -1,0 +1,54 @@
+#!/bin/sh
+#
+# attempts to update the language settings in the user's ~/.profile config file
+
+user=$1
+language_list=$2
+locale_name=$3
+
+test -n "$user" || exit 0
+
+# look up the user's home directory first
+while read line; do
+    [ "${line%%:*}" = $user ] && break
+done < '/etc/passwd'
+if [ -n "$line" ]; then
+    OLDIFS=$IFS
+    IFS=':'
+    i=1
+    for homedir in $line; do
+        if [ $i -ne 6 ]; then
+            i=$(( $i + 1 ))
+            continue
+        fi
+        break
+    done
+    IFS=$OLDIFS
+fi
+if [ "$( echo $homedir )" = '' -o ! -d "$homedir" ]; then
+    exit 0
+fi
+
+# create ~/.profile if it doesn't exist
+test -f "$homedir/.profile" || {
+    touch $homedir/.profile
+    chown $user:$user $homedir/.profile
+}
+
+save_to_profile() {
+    var=$1; value=$2
+    if [ "$( grep "^[[:space:]]*export $var=" $homedir/.profile )" ]; then
+        sed -r -i "s/^[[:space:]]*(export $var=).*/\1\"$value\"/" $homedir/.profile
+    else
+        echo "export $var=\"$value\"" >> $homedir/.profile
+    fi
+}
+test -n "$language_list" && save_to_profile 'LANGUAGE' $language_list
+test -n "$locale_name" && {
+    save_to_profile 'LC_MESSAGES' $locale_name
+    save_to_profile 'LC_CTYPE'    $locale_name
+    save_to_profile 'LC_COLLATE'  $locale_name
+}
+
+exit 0
+

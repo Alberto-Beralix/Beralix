@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" id="mail-receiving-options-unix-mbox-spool-file" xml:lang="es">
+
+  <info>
+    <desc>Opciones de recepción para el archivo spool mbox estándar de Unix.</desc>
+
+    <link type="guide" xref="mail-receiving-options#local-account-server-types"/>
+    <link type="guide" xref="mail-account-manage-unix-mbox-spool-file#receiving-email"/>
+    <revision pkgversion="3.1.90" version="0.3" date="2011-08-25" status="final"/>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Compartir Igual 3.0</p>
+    </license>
+
+  </info>
+
+  <title>Opciones de recepción para el archivo spool mbox estándar de Unix</title>
+
+<section id="receiving-email">
+<title>Recepción de correo</title>
+
+<p>On the <gui>Receiving Email</gui> page (accessible via <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Accounts</gui><gui style="button">Edit</gui><gui>Receiving Email</gui></guiseq>):</p>
+
+<list>
+<item><p>Elija el campo pulsando en el botón junto a <gui>Ruta</gui> en la sección <gui>Configuración</gui>. Esto abrirá una ventana del selector de archivos.</p></item>
+</list>
+
+</section>
+
+<section id="receiving-options">
+<title>Opciones de recepción</title>
+
+<p>On the <gui>Receiving Options</gui> page (accessible via <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Mail Accounts</gui><gui style="button">Edit</gui><gui>Receiving Options</gui></guiseq>):</p>
+
+<list>
+<item><p>Si quiere que Evolution compruebe automáticamente si hay correo nuevo, seleccione la opción <gui>Comprobar si hay mensajes nuevos cada ... minutos</gui> y seleccione la frecuencia en minutos.</p></item>
+<item><p>Si quiere que los <link xref="mail-filters">Filtros</link> se usen automáticamente para los correos nuevos en su Bandeja de entrada, active <gui>Aplicar filtros a los mensajes nuevos en la bandeja de entrada</gui></p></item>
+</list>
+
+</section>
+
+<section id="return-to-assistant-bottom-link">
+<!-- TODO:XINCLUDE: Maybe later replace this "go back" workaround by doing some content sharing with xinclude and xpointer in intro-first-run.page itself? <include href="foo.xml" xmlns="http://www.w3.org/2001/XInclude"/> See gnome-user-docs module for example usage. -->
+<p>Si ha llegado a esta página desde la página del asistente de primera ejecución, pulse <link xref="intro-first-run#sending">aquí</link> para continuar con el siguiente paso.</p>
+</section>
+</page>

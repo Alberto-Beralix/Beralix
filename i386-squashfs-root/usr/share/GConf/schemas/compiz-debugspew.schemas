@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/debugspew/screen0/options/spew_key</key>
+      <applyto>/apps/compiz-1/plugins/debugspew/screen0/options/spew_key</applyto>
+      <owner>compiz-1</owner>
+      <type>string</type>
+      <default>Disabled</default>
+      <locale name="C">
+        <short>Spew Key</short>
+        <long>Keybinding to spew the current compiz state</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz-1/plugins/debugspew/screen0/options/spew_on_fatal</key>
+      <applyto>/apps/compiz-1/plugins/debugspew/screen0/options/spew_on_fatal</applyto>
+      <owner>compiz-1</owner>
+      <type>bool</type>
+      <default>True</default>
+      <locale name="C">
+        <short>Spew on Fatal errors</short>
+        <long>Spew when a plugin indicates that something is going wrong</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>
