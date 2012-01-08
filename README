@@ -1,15 +1,9 @@
-La imagen ISO para poder arrancar tiene configurado como sector de arranque de
-  la ISO el archivo en isolinux/isolinux.bin (suponemos que estamos en la raiz
-  de la ISO.
+The ISO image is configured to boot as the boot sector of the ISO file in isolinux / isolinux.bin (we assume that we are at the root)
 
-El sistema de archivos de la distribución se encuentra en el directorio
-  i386-squashfs-root por lo que es conveniente trabajar como superusuario y
-  tener especial atención a los permisos que se usan en los archivos y
-  directorios.
+The file system of the distribution is located in the i386-squashsfs-root so it is convenient to work as root and take special care to use the permissions on files and directories.
 
-El script para construir la ISO es makeiso.sh y debe ejecutarse como
-  superusuario. Los comandos de Git deben ejecutarse como superusuario.
+The script for building the ISO is makeiso.sh and must be run as root. Git commands must be run as root.
 
-Requisitos para construir la imagen ISO:
- - genisoimage
- - squashfs-tools
+Requirements for building the ISO image:
+-genisoimage
+-squashfs-tools
