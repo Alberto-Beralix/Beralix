@@ -33,15 +33,15 @@
 ##                                                                            ##
 ################################################################################
 
-# Eliminamos una posible compactación que hubiese entre los archivos de la ISO
+# We eliminate a possible compaction had between ISO files
 rm ./i386/casper/filesystem.squashfs
-# Compactamos el sistema de archivos de la distro
+# Compacting the file system of the distribution.
 mksquashfs i386-squashfs-root/ ./i386/casper/filesystem.squashfs
-# Cambiamos los permisos al archivo de arranque de la ISO
+# We change file permissions to the ISO boot file..
 chmod 664 ./i386/isolinux/isolinux.bin
-# Construimos la ISO
+# We build the ISO
 genisoimage -A Beralix -R -b isolinux/isolinux.bin -no-emul-boot -boot-load-size 4 -boot-info-table -o ./Beralix-0.0.0-desktop-i386.iso ./i386/
-# Cambiamos los permisos a la iamgen ISO
+# We change the permissions of the ISO image.
 chmod 444 ./Beralix-0.0.0-desktop-i386.iso
-# Eliminamos la campactación squashfs del sistema de archivos de la distro
+# We eliminate the compaction squashfs from the file system of the distribution.
 rm ./i386/casper/filesystem.squashfs
