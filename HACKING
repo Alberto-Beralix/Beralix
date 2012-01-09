@@ -1,0 +1,13 @@
+
+
+The ISO image is configured the boot sector file in isolinux/isolinux.bin (we
+  assume that we are at the root).
+
+The file system of the distribution is located in the i386-squashsfs-root, take
+  special care to use the permissions on files and directories.
+
+The script makeiso.sh is for building the ISO.
+
+Requirements for building the ISO image:
+ - genisoimage
+ - squashfs-tools

@@ -1,11 +1,23 @@
-The ISO image is configured the boot sector file in isolinux/isolinux.bin (we
-  assume that we are at the root).
+Beralix is a Linux distribution based on Ubuntu.
 
-The file system of the distribution is located in the i386-squashsfs-root, take
-  special care to use the permissions on files and directories.
+  Copyright (C) 2012  Alberto Rodríguez Iglesias
+
+  This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+A copy of icense is in file LICENSE.
 
 The script makeiso.sh is for building the ISO.
-
 Requirements for building the ISO image:
  - genisoimage
  - squashfs-tools
