@@ -33,8 +33,6 @@
 ##                                                                            ##
 ################################################################################
 
-# We eliminate a possible compaction had between ISO files
-rm ./i386/casper/filesystem.squashfs
 # Compacting the file system of the distribution.
 mksquashfs i386-squashfs-root/ ./i386/casper/filesystem.squashfs
 # We change file permissions to the ISO boot file..
