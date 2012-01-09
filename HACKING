@@ -1,7 +1,21 @@
+Beralix used as version control system Git, the official repository can clone
+  from the URL git://github.com/Alberto-Beralix/Beralix.git that is maintained
+  by Alberto Rodríguez Iglesias.
 
+Beralix is free software under the GPL, so if you want to participate in its
+  development must be your contributions under this license, or a compatible
+  license. If you join the development of Beralix, please añadete to the list in
+  the AUTHORS file in the format used.
 
-The ISO image is configured the boot sector file in isolinux/isolinux.bin (we
-  assume that we are at the root).
+The organization followed is known as a "benevolent dictator", the changes you
+  want to send you must first have been reviewed by a "lieutenant" before
+  reaching the official repository. Contact one of the following to send your
+  patch or a pull request to make public your repository:
+    - Diego
+    - Jesús Hernández Gormaz <jhg.jesus@gmail.com>
+
+The ISO image is configured the boot sector file in isolinux/isolinux.bin
+  (Assuming that is at the root of the ISO).
 
 The file system of the distribution is located in the i386-squashsfs-root, take
   special care to use the permissions on files and directories.
@@ -9,5 +23,5 @@ The file system of the distribution is located in the i386-squashsfs-root, take
 The script makeiso.sh is for building the ISO.
 
 Requirements for building the ISO image:
- - genisoimage
- - squashfs-tools
+  - genisoimage
+  - squashfs-tools
