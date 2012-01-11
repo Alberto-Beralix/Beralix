@@ -34,7 +34,7 @@
 ################################################################################
 
 # Compacting the file system of the distribution.
-mksquashfs i386-squashfs-root/ ./i386/casper/filesystem.squashfs
+mksquashfs i386-squashfs-root/ ./i386/casper/filesystem.squashfs -comp lzo -all-root -noappend
 # We change file permissions to the ISO boot file..
 chmod 664 ./i386/isolinux/isolinux.bin
 # We build the ISO.
